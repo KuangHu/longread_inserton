@@ -1,5 +1,7 @@
 # insertion-site-recovery
 
+新增 [TLDR / DeBreak / Palidis / DIVE 实测对比](docs/TOOL_COMPARISON.md)。当前目标允许仅恢复 insertion + occupied flanks，empty site 为可选证据；本次比较已按此记录。下文 CLI 仍是此前的保守双状态原型，尚未替换为新的生产恢复器。
+
 真实 CCS pilot 已运行：结果与配对限制见 [实测报告](docs/REAL_HIFI_PILOT.md)。后续 [长插入审计](docs/HIFI_PILOT_AUDIT.md) 显示，现有流程尚不能直接用于完整 IS 挖掘。
 
 公共长读段下载方法与 8 个真实文件的试下载记录见 [下载规范](docs/DOWNLOADING_LONG_READS.md)，配套脚本位于 `tools/downloads/`。
