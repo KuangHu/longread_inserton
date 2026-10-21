@@ -1,0 +1,76 @@
+{
+  "status": "interrupted",
+  "sample": "SRR28395891",
+  "mode": "run",
+  "config": {
+    "platform": "hifi",
+    "flank": 1000,
+    "anchor": 100,
+    "min_mapq": 20,
+    "min_support": 3,
+    "min_other_support": 2,
+    "min_size": 50,
+    "max_size": 100000,
+    "search_slop": 100,
+    "length_tolerance": 0.25,
+    "max_sequences": 100,
+    "max_reads": 10000,
+    "repeat_limit": 100
+  },
+  "commands": [
+    [
+      "/workspace/scratch/a6ad47cccb09/longread_inserton/validation/real_hifi_pilot/minimap2_lowmem.sh",
+      "-a",
+      "-x",
+      "map-hifi",
+      "-t",
+      "4",
+      "/workspace/scratch/a6ad47cccb09/hifi_marine_pilot/calls/reference.fasta",
+      "/workspace/scratch/a6ad47cccb09/hifi_marine_pilot/reads/SRR28395891_subreads.fastq.gz"
+    ],
+    [
+      "/workspace/scratch/a6ad47cccb09/site_recovery_venv/bin/sniffles",
+      "--input",
+      "/workspace/scratch/a6ad47cccb09/hifi_marine_pilot/calls/alignments.bam",
+      "--vcf",
+      "/workspace/scratch/a6ad47cccb09/hifi_marine_pilot/calls/calls.vcf",
+      "--reference",
+      "/workspace/scratch/a6ad47cccb09/hifi_marine_pilot/calls/reference.fasta",
+      "--threads",
+      "4",
+      "--all-contigs",
+      "--mosaic",
+      "--mosaic-include-germline",
+      "--mosaic-af-min",
+      "0.05",
+      "--max-svlen-mosaic",
+      "100000",
+      "--minsupport",
+      "3",
+      "--minsvlen",
+      "50",
+      "--mapq",
+      "20",
+      "--output-rnames"
+    ]
+  ],
+  "inputs": [
+    {
+      "path": "/workspace/scratch/a6ad47cccb09/hifi_marine_pilot/reference/marine_mag_pool.fasta",
+      "sha256": "adf45f5c5e21d5e30b847bf3fb7ea6cffe63c90907e0e9ca9b661a49cf1b448b"
+    },
+    {
+      "path": "/workspace/scratch/a6ad47cccb09/hifi_marine_pilot/reads/SRR28395891_subreads.fastq.gz",
+      "sha256": "846ee2722405c9f4e811cb1f05201fd862121401c4f707c5fdd730397867bb05"
+    }
+  ],
+  "software": {
+    "insertion-site-recovery": "0.1.0",
+    "pysam": "0.24.1",
+    "edlib": "1.3.9.post1",
+    "pyspoa": "0.3.2",
+    "minimap2": "2.31-r1302",
+    "sniffles": "Sniffles2, Version 2.8.1"
+  },
+  "interruption_reason": "Alignment and sorting completed; broad calling interrupted to select coverage-based MAG targets for a bounded pilot."
+}

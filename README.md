@@ -1,5 +1,7 @@
 # insertion-site-recovery
 
+真实 CCS pilot 已运行：结果与配对限制见 [实测报告](docs/REAL_HIFI_PILOT.md)。
+
 公共长读段下载方法与 8 个真实文件的试下载记录见 [下载规范](docs/DOWNLOADING_LONG_READS.md)，配套脚本位于 `tools/downloads/`。
 
 独立的最小原型：输入 **MAG／assembly + HiFi／CCS 或 Nanopore reads**，恢复插入序列与空位点表示。

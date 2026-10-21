@@ -1,0 +1,313 @@
+mag	event_id	sample	status	reasons	source_call_ids	svtype	contig	reference_start0	reference_end0	insertion_length	upstream_length	downstream_length	empty_site_insertion_pos0	occupied_read_count	empty_read_count
+Actinomarina-LRMED-045	isr_ccebce7fc4ccc626bcb6	SRR28395891	ambiguous	repeat_equivalent_breakpoints	Sniffles2.DEL.3S3	DEL	Actinomarina-LRMED-045__contig_24	125997	126569	572	1000	1000	1000	8	12
+Actinomarina-LRMED-045	isr_49b2335c982e9bb62aa4	SRR28395891	ambiguous	repeat_equivalent_breakpoints	Sniffles2.DEL.15S4	DEL	Actinomarina-LRMED-045__contig_27	77950	79070	1120	1000	1000	1000	24	7
+Alphaproteobacteria-LRMED-289	isr_ace4ea1aad6b307ff8c0	SRR28395891	ambiguous	repeat_equivalent_breakpoints	Sniffles2.INS.4SE	INS	Alphaproteobacteria-LRMED-289__Alphaproteobacteria-LRMED-289-C4	297912	297912	108	1000	1000	1000	5	4
+Alphaproteobacteria-LRMED-289	isr_ded028663228b4e9d4d8	SRR28395891	ambiguous	repeat_equivalent_breakpoints	Sniffles2.DEL.2S12	DEL	Alphaproteobacteria-LRMED-289__Alphaproteobacteria-LRMED-289-C8	49190	49289	99	1000	1000	1000	0	8
+Marinisoma-LRMED-168	isr_fd48dd86160bedd1f935	SRR28395891	read_supported_pair		Sniffles2.DEL.1S19	DEL	Marinisoma-LRMED-168__Marinisoma-LRMED-168-C118	92114	92253	139	1000	1000	1000	3	4
+Pelagibacter-LRMED-227	isr_0049a81ba22d1d42e0f5	SRR28395891	ambiguous	repeat_equivalent_breakpoints	Sniffles2.DEL.ES8F	DEL	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C1098	31940	34747	2807	1000	1000	1000	1	7
+Pelagibacter-LRMED-227	isr_1348c70d6c4e660a6e8f	SRR28395891	ambiguous	repeat_equivalent_breakpoints	Sniffles2.DEL.1S91	DEL	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C11840	13336	13387	51	1000	768	1000	53	8
+Pelagibacter-LRMED-227	isr_01c8b83ac17c7ae1c92b	SRR28395891	ambiguous	repeat_equivalent_breakpoints	Sniffles2.DEL.12S94	DEL	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C250	72563	73057	494	1000	1000	1000	34	4
+Pelagibacter-LRMED-227	isr_1683824548259c3633c4	SRR28395891	read_supported_pair		Sniffles2.DEL.13S94	DEL	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C250	73443	73820	377	1000	1000	1000	17	6
+Pelagibacter-LRMED-227	isr_16f5087ed2f41d4d1e91	SRR28395891	ambiguous	repeat_equivalent_breakpoints	Sniffles2.INS.6S94	INS	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C250	102659	102659	262	1000	1000	1000	14	44
+Pelagibacter-LRMED-227	isr_537e4598a7d52e402665	SRR28395891	ambiguous	repeat_equivalent_breakpoints	Sniffles2.DEL.15S95	DEL	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C252	105052	105125	73	1000	1000	1000	34	5
+Pelagibacter-LRMED-227	isr_a9651163cd87a72b106c	SRR28395891	read_supported_pair		Sniffles2.DEL.8S96	DEL	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C3161	25556	25968	412	1000	1000	1000	10	4
+Pelagibacter-LRMED-227	isr_eb35d57d80e93fa9fd46	SRR28395891	ambiguous	repeat_equivalent_breakpoints	Sniffles2.DEL.DS9A	DEL	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C647	33045	33358	313	1000	1000	1000	32	3
+Prochlorococcus-A-LRMED-150	isr_819d0f20321f3bc5d90b	SRR28395891	ambiguous	repeat_equivalent_breakpoints	Sniffles2.DEL.23SB9	DEL	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C11	180075	180126	51	1000	1000	1000	15	3
+Prochlorococcus-A-LRMED-150	isr_f782597fa2d656405cb4	SRR28395891	ambiguous	repeat_equivalent_breakpoints	Sniffles2.DEL.26SB9	DEL	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C11	399614	399752	138	1000	1000	1000	32	6
+Prochlorococcus-A-LRMED-150	isr_2cf2fb47d6609dba0c75	SRR28395891	ambiguous	repeat_equivalent_breakpoints	Sniffles2.DEL.1ESBD	DEL	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C4	4417	5442	1025	1000	1000	1000	10	5
+Prochlorococcus-A-LRMED-150	isr_1ec7457501675b59c12c	SRR28395891	ambiguous	repeat_equivalent_breakpoints	Sniffles2.DEL.25SBD	DEL	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C4	31786	31937	151	1000	1000	1000	0	6
+Prochlorococcus-A-LRMED-150	isr_dfc855de12b831eadf96	SRR28395891	ambiguous	repeat_equivalent_breakpoints	Sniffles2.DEL.26SBD	DEL	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C4	31932	33400	1468	1000	1000	1000	0	16
+Prochlorococcus-A-LRMED-150	isr_f7dc216b22ed50c099ef	SRR28395891	ambiguous	repeat_equivalent_breakpoints	Sniffles2.INS.18SBD	INS	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C4	394001	394001	1161	1000	1000	1000	10	7
+Prochlorococcus-A-LRMED-150	isr_a3e90d356afa92423fb5	SRR28395891	ambiguous	repeat_equivalent_breakpoints	Sniffles2.DEL.34SBF	DEL	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C7	309509	309562	53	1000	1000	1000	5	10
+Actinomarina-LRMED-045		SRR28395891	unresolved	unsupported_svtype	Sniffles2.BND.3S1	BND	Actinomarina-LRMED-045__contig_10			0	0	0			
+Actinomarina-LRMED-045		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.2S1	DEL	Actinomarina-LRMED-045__contig_10			0	0	0			
+Actinomarina-LRMED-045		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.1S1	DEL	Actinomarina-LRMED-045__contig_10			0	0	0			
+Actinomarina-LRMED-045		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.0S2	INS	Actinomarina-LRMED-045__contig_16			0	0	0			
+Actinomarina-LRMED-045		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.3S2	DEL	Actinomarina-LRMED-045__contig_16			0	0	0			
+Actinomarina-LRMED-045		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.1S2	INS	Actinomarina-LRMED-045__contig_16			0	0	0			
+Actinomarina-LRMED-045		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.2S3	DEL	Actinomarina-LRMED-045__contig_24			0	0	0			
+Actinomarina-LRMED-045		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.0S3	INS	Actinomarina-LRMED-045__contig_24			0	0	0			
+Actinomarina-LRMED-045		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.1S3	INS	Actinomarina-LRMED-045__contig_24			0	0	0			
+Actinomarina-LRMED-045		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.10S4	DEL	Actinomarina-LRMED-045__contig_27			0	0	0			
+Actinomarina-LRMED-045		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.FS4	DEL	Actinomarina-LRMED-045__contig_27			0	0	0			
+Actinomarina-LRMED-045		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.3S4	INS	Actinomarina-LRMED-045__contig_27			0	0	0			
+Actinomarina-LRMED-045		SRR28395891	unresolved	unsupported_svtype	Sniffles2.BND.20S4	BND	Actinomarina-LRMED-045__contig_27			0	0	0			
+Actinomarina-LRMED-045		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.9S4	INS	Actinomarina-LRMED-045__contig_27			0	0	0			
+Actinomarina-LRMED-045		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.AS4	INS	Actinomarina-LRMED-045__contig_27			0	0	0			
+Actinomarina-LRMED-045		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.1BS4	DEL	Actinomarina-LRMED-045__contig_27			0	0	0			
+Actinomarina-LRMED-045		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.5S5	DEL	Actinomarina-LRMED-045__contig_38			0	0	0			
+Actinomarina-LRMED-045		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.0S5	INS	Actinomarina-LRMED-045__contig_38			0	0	0			
+Actinomarina-LRMED-045		SRR28395891	unresolved	unsupported_svtype	Sniffles2.BND.0SA	BND	Actinomarina-LRMED-045__contig_54			0	0	0			
+Alphaproteobacteria-LRMED-289		SRR28395891	unresolved	unsupported_svtype	Sniffles2.BND.0SD	BND	Alphaproteobacteria-LRMED-289__Alphaproteobacteria-LRMED-289-C3			0	0	0			
+Alphaproteobacteria-LRMED-289		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.8SE	DEL	Alphaproteobacteria-LRMED-289__Alphaproteobacteria-LRMED-289-C4			0	0	0			
+Alphaproteobacteria-LRMED-289		SRR28395891	unresolved	insufficient_same_breakpoint_support	Sniffles2.DEL.7SE	DEL	Alphaproteobacteria-LRMED-289__Alphaproteobacteria-LRMED-289-C4	238885	241328	0	0	0			
+Alphaproteobacteria-LRMED-289		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.5SE	INS	Alphaproteobacteria-LRMED-289__Alphaproteobacteria-LRMED-289-C4			0	0	0			
+Alphaproteobacteria-LRMED-289		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.2SF	DEL	Alphaproteobacteria-LRMED-289__Alphaproteobacteria-LRMED-289-C5			0	0	0			
+Alphaproteobacteria-LRMED-289		SRR28395891	unresolved	insufficient_same_breakpoint_support	Sniffles2.DEL.0S10	DEL	Alphaproteobacteria-LRMED-289__Alphaproteobacteria-LRMED-289-C6	67176	68962	0	0	0			
+Alphaproteobacteria-LRMED-289		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.1S12	DEL	Alphaproteobacteria-LRMED-289__Alphaproteobacteria-LRMED-289-C8			0	0	0			
+Alphaproteobacteria-LRMED-289		SRR28395891	unresolved	unsupported_svtype	Sniffles2.BND.0S16	BND	Alphaproteobacteria-LRMED-289__Alphaproteobacteria-LRMED-289-C12			0	0	0			
+Marinisoma-LRMED-168		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.0S19	DEL	Marinisoma-LRMED-168__Marinisoma-LRMED-168-C118			0	0	0			
+Marinisoma-LRMED-168		SRR28395891	unresolved	unsupported_svtype	Sniffles2.BND.0S1D	BND	Marinisoma-LRMED-168__Marinisoma-LRMED-168-C13078			0	0	0			
+Marinisoma-LRMED-168		SRR28395891	unresolved	unsupported_svtype	Sniffles2.BND.0S20	BND	Marinisoma-LRMED-168__Marinisoma-LRMED-168-C1725			0	0	0			
+Marinisoma-LRMED-168		SRR28395891	unresolved	insufficient_same_breakpoint_support	Sniffles2.DEL.2S23	DEL	Marinisoma-LRMED-168__Marinisoma-LRMED-168-C206	49335	49392	0	0	0			
+Marinisoma-LRMED-168		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.0S23	INS	Marinisoma-LRMED-168__Marinisoma-LRMED-168-C206			0	0	0			
+Marinisoma-LRMED-168		SRR28395891	unresolved	unsupported_svtype	Sniffles2.BND.0S26	BND	Marinisoma-LRMED-168__Marinisoma-LRMED-168-C2257			0	0	0			
+Marinisoma-LRMED-168		SRR28395891	unresolved	unsupported_svtype	Sniffles2.BND.0S27	BND	Marinisoma-LRMED-168__Marinisoma-LRMED-168-C2735			0	0	0			
+Marinisoma-LRMED-168		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.1S29	DEL	Marinisoma-LRMED-168__Marinisoma-LRMED-168-C31			0	0	0			
+Marinisoma-LRMED-168		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.0S2F	DEL	Marinisoma-LRMED-168__Marinisoma-LRMED-168-C6303			0	0	0			
+Marinisoma-LRMED-168		SRR28395891	unresolved	unsupported_svtype	Sniffles2.BND.1S34	BND	Marinisoma-LRMED-168__Marinisoma-LRMED-168-C9912			0	0	0			
+Parasynechococcus-LRMED-158		SRR28395891	unresolved	unsupported_svtype	Sniffles2.BND.1S35	BND	Parasynechococcus-LRMED-158__Synechococcus-LRMED-158-C1			0	0	0			
+Parasynechococcus-LRMED-158		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.0S37	INS	Parasynechococcus-LRMED-158__Synechococcus-LRMED-158-C11			0	0	0			
+Parasynechococcus-LRMED-158		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.3S37	DEL	Parasynechococcus-LRMED-158__Synechococcus-LRMED-158-C11			0	0	0			
+Parasynechococcus-LRMED-158		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.1S38	INS	Parasynechococcus-LRMED-158__Synechococcus-LRMED-158-C12			0	0	0			
+Parasynechococcus-LRMED-158		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.0S38	INS	Parasynechococcus-LRMED-158__Synechococcus-LRMED-158-C12			0	0	0			
+Parasynechococcus-LRMED-158		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.3S38	DEL	Parasynechococcus-LRMED-158__Synechococcus-LRMED-158-C12			0	0	0			
+Parasynechococcus-LRMED-158		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.0S39	DEL	Parasynechococcus-LRMED-158__Synechococcus-LRMED-158-C13			0	0	0			
+Parasynechococcus-LRMED-158		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.0S3A	INS	Parasynechococcus-LRMED-158__Synechococcus-LRMED-158-C14			0	0	0			
+Parasynechococcus-LRMED-158		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.1S3A	DEL	Parasynechococcus-LRMED-158__Synechococcus-LRMED-158-C14			0	0	0			
+Parasynechococcus-LRMED-158		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.0S3C	INS	Parasynechococcus-LRMED-158__Synechococcus-LRMED-158-C16			0	0	0			
+Parasynechococcus-LRMED-158		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.0S3F	DEL	Parasynechococcus-LRMED-158__Synechococcus-LRMED-158-C21			0	0	0			
+Parasynechococcus-LRMED-158		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.0S42	DEL	Parasynechococcus-LRMED-158__Synechococcus-LRMED-158-C24			0	0	0			
+Parasynechococcus-LRMED-158		SRR28395891	unresolved	unsupported_svtype	Sniffles2.BND.2S43	BND	Parasynechococcus-LRMED-158__Synechococcus-LRMED-158-C25			0	0	0			
+Parasynechococcus-LRMED-158		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.0S47	DEL	Parasynechococcus-LRMED-158__Synechococcus-LRMED-158-C29			0	0	0			
+Parasynechococcus-LRMED-158		SRR28395891	unresolved	insufficient_same_breakpoint_support	Sniffles2.DEL.0S49	DEL	Parasynechococcus-LRMED-158__Synechococcus-LRMED-158-C30	12647	12836	0	0	0			
+Parasynechococcus-LRMED-158		SRR28395891	unresolved	unsupported_svtype	Sniffles2.BND.0S4B	BND	Parasynechococcus-LRMED-158__Synechococcus-LRMED-158-C32			0	0	0			
+Parasynechococcus-LRMED-158		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.0S4C	INS	Parasynechococcus-LRMED-158__Synechococcus-LRMED-158-C33			0	0	0			
+Parasynechococcus-LRMED-158		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.1S4C	INS	Parasynechococcus-LRMED-158__Synechococcus-LRMED-158-C33			0	0	0			
+Parasynechococcus-LRMED-158		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.0S51	INS	Parasynechococcus-LRMED-158__Synechococcus-LRMED-158-C38			0	0	0			
+Parasynechococcus-LRMED-158		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.0S52	INS	Parasynechococcus-LRMED-158__Synechococcus-LRMED-158-C39			0	0	0			
+Parasynechococcus-LRMED-158		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.1S53	INS	Parasynechococcus-LRMED-158__Synechococcus-LRMED-158-C4			0	0	0			
+Parasynechococcus-LRMED-158		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.6S53	DEL	Parasynechococcus-LRMED-158__Synechococcus-LRMED-158-C4			0	0	0			
+Parasynechococcus-LRMED-158		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.2S53	INS	Parasynechococcus-LRMED-158__Synechococcus-LRMED-158-C4			0	0	0			
+Parasynechococcus-LRMED-158		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.5S54	DEL	Parasynechococcus-LRMED-158__Synechococcus-LRMED-158-C40			0	0	0			
+Parasynechococcus-LRMED-158		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.0S55	DEL	Parasynechococcus-LRMED-158__Synechococcus-LRMED-158-C41			0	0	0			
+Parasynechococcus-LRMED-158		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.0S63	DEL	Parasynechococcus-LRMED-158__Synechococcus-LRMED-158-C54			0	0	0			
+Parasynechococcus-LRMED-158		SRR28395891	unresolved	unsupported_svtype	Sniffles2.BND.0S64	BND	Parasynechococcus-LRMED-158__Synechococcus-LRMED-158-C55			0	0	0			
+Parasynechococcus-LRMED-158		SRR28395891	unresolved	unsupported_svtype	Sniffles2.BND.0S67	BND	Parasynechococcus-LRMED-158__Synechococcus-LRMED-158-C58			0	0	0			
+Parasynechococcus-LRMED-158		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.0S76	INS	Parasynechococcus-LRMED-158__Synechococcus-LRMED-158-C71			0	0	0			
+Parasynechococcus-LRMED-158		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.2S76	DEL	Parasynechococcus-LRMED-158__Synechococcus-LRMED-158-C71			0	0	0			
+Parasynechococcus-LRMED-158		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.4S76	DEL	Parasynechococcus-LRMED-158__Synechococcus-LRMED-158-C71			0	0	0			
+Parasynechococcus-LRMED-158		SRR28395891	unresolved	unsupported_svtype	Sniffles2.BND.8S77	BND	Parasynechococcus-LRMED-158__Synechococcus-LRMED-158-C72			0	0	0			
+Parasynechococcus-LRMED-158		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.5S77	DEL	Parasynechococcus-LRMED-158__Synechococcus-LRMED-158-C72			0	0	0			
+Parasynechococcus-LRMED-158		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.3S77	INS	Parasynechococcus-LRMED-158__Synechococcus-LRMED-158-C72			0	0	0			
+Parasynechococcus-LRMED-158		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.3S78	DEL	Parasynechococcus-LRMED-158__Synechococcus-LRMED-158-C73			0	0	0			
+Parasynechococcus-LRMED-158		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.4S78	DEL	Parasynechococcus-LRMED-158__Synechococcus-LRMED-158-C73			0	0	0			
+Parasynechococcus-LRMED-158		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.0S78	INS	Parasynechococcus-LRMED-158__Synechococcus-LRMED-158-C73			0	0	0			
+Parasynechococcus-LRMED-158		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.1S78	INS	Parasynechococcus-LRMED-158__Synechococcus-LRMED-158-C73			0	0	0			
+Parasynechococcus-LRMED-158		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.2S78	INS	Parasynechococcus-LRMED-158__Synechococcus-LRMED-158-C73			0	0	0			
+Parasynechococcus-LRMED-158		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.5S78	DEL	Parasynechococcus-LRMED-158__Synechococcus-LRMED-158-C73			0	0	0			
+Parasynechococcus-LRMED-158		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.1S79	INS	Parasynechococcus-LRMED-158__Synechococcus-LRMED-158-C74			0	0	0			
+Parasynechococcus-LRMED-158		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.0S7A	DEL	Parasynechococcus-LRMED-158__Synechococcus-LRMED-158-C75			0	0	0			
+Parasynechococcus-LRMED-158		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.3S7B	DEL	Parasynechococcus-LRMED-158__Synechococcus-LRMED-158-C76			0	0	0			
+Parasynechococcus-LRMED-158		SRR28395891	unresolved	insufficient_same_breakpoint_support	Sniffles2.DEL.1S7B	DEL	Parasynechococcus-LRMED-158__Synechococcus-LRMED-158-C76	15870	15925	0	0	0			
+Parasynechococcus-LRMED-158		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.0S7B	INS	Parasynechococcus-LRMED-158__Synechococcus-LRMED-158-C76			0	0	0			
+Parasynechococcus-LRMED-158		SRR28395891	unresolved	unsupported_svtype	Sniffles2.BND.0S7C	BND	Parasynechococcus-LRMED-158__Synechococcus-LRMED-158-C77			0	0	0			
+Parasynechococcus-LRMED-158		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.2S7D	DEL	Parasynechococcus-LRMED-158__Synechococcus-LRMED-158-C78			0	0	0			
+Parasynechococcus-LRMED-158		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.3S7D	DEL	Parasynechococcus-LRMED-158__Synechococcus-LRMED-158-C78			0	0	0			
+Parasynechococcus-LRMED-158		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.0S7F	DEL	Parasynechococcus-LRMED-158__Synechococcus-LRMED-158-C8			0	0	0			
+Parasynechococcus-LRMED-158		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.3S7F	DEL	Parasynechococcus-LRMED-158__Synechococcus-LRMED-158-C8			0	0	0			
+Parasynechococcus-LRMED-158		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.0S80	DEL	Parasynechococcus-LRMED-158__Synechococcus-LRMED-158-C80			0	0	0			
+Parasynechococcus-LRMED-158		SRR28395891	unresolved	unsupported_svtype	Sniffles2.BND.0S81	BND	Parasynechococcus-LRMED-158__Synechococcus-LRMED-158-C81			0	0	0			
+Parasynechococcus-LRMED-158		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.0S82	INS	Parasynechococcus-LRMED-158__Synechococcus-LRMED-158-C82			0	0	0			
+Parasynechococcus-LRMED-158		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.3S82	DEL	Parasynechococcus-LRMED-158__Synechococcus-LRMED-158-C82			0	0	0			
+Parasynechococcus-LRMED-158		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.2S82	INS	Parasynechococcus-LRMED-158__Synechococcus-LRMED-158-C82			0	0	0			
+Parasynechococcus-LRMED-158		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.4S82	DEL	Parasynechococcus-LRMED-158__Synechococcus-LRMED-158-C82			0	0	0			
+Parasynechococcus-LRMED-158		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.0S84	INS	Parasynechococcus-LRMED-158__Synechococcus-LRMED-158-C84			0	0	0			
+Parasynechococcus-LRMED-158		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.1S84	DEL	Parasynechococcus-LRMED-158__Synechococcus-LRMED-158-C84			0	0	0			
+Parasynechococcus-LRMED-158		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.0S8A	INS	Parasynechococcus-LRMED-158__Synechococcus-LRMED-158-C9			0	0	0			
+Parasynechococcus-LRMED-158		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.2S8B	DEL	Parasynechococcus-LRMED-158__Synechococcus-LRMED-158-C90			0	0	0			
+Parasynechococcus-LRMED-158		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.3S8B	DEL	Parasynechococcus-LRMED-158__Synechococcus-LRMED-158-C90			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.BS8F	DEL	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C1098			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.DS8F	DEL	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C1098			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.FS8F	DEL	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C1098			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.CS8F	DEL	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C1098			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.12S8F	DEL	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C1098			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.8S8F	INS	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C1098			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.13S8F	DEL	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C1098			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.1S90	INS	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C1157			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.4S90	DEL	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C1157			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.2S90	INS	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C1157			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.3S90	INS	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C1157			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.2S92	INS	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C1549			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.5S92	INS	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C1549			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.19S92	DEL	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C1549			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.17S92	DEL	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C1549			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.15S92	DEL	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C1549			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.18S92	DEL	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C1549			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.7S92	INS	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C1549			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.1AS92	DEL	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C1549			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.1CS92	DEL	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C1549			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.9S92	INS	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C1549			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.BS92	INS	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C1549			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.10S92	INS	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C1549			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.11S92	INS	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C1549			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.0S93	INS	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C1991			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.2S93	INS	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C1991			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.3S93	INS	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C1991			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.7S93	INS	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C1991			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.9S93	INS	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C1991			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.CS93	INS	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C1991			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	insufficient_same_breakpoint_support	Sniffles2.DEL.DS94	DEL	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C250	32819	32903	0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.FS94	DEL	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C250			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	unsupported_svtype	Sniffles2.BND.27S94	BND	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C250			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.2S94	INS	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C250			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.11S94	DEL	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C250			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.16S94	DEL	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C250			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.17S94	DEL	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C250			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.3S94	INS	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C250			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.19S94	DEL	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C250			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.1BS94	DEL	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C250			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.5S94	INS	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C250			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.1ES94	DEL	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C250			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.1DS94	DEL	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C250			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.1CS94	DEL	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C250			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	insufficient_same_breakpoint_support	Sniffles2.INS.8S94	INS	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C250	106867	106867	0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.AS94	INS	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C250			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.BS94	INS	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C250			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.CS94	INS	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C250			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.25S94	DEL	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C250			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.12S95	DEL	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C252			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.11S95	DEL	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C252			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.5S95	INS	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C252			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	insufficient_same_breakpoint_support	Sniffles2.INS.AS95	INS	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C252	83310	83310	0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.9S95	INS	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C252			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.BS95	INS	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C252			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.16S95	DEL	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C252			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.17S95	DEL	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C252			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.DS97	DEL	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C457			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.CS97	DEL	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C457			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.4S97	INS	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C457			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	insufficient_same_breakpoint_support	Sniffles2.INS.7S97	INS	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C457	17809	17809	0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.8S97	INS	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C457			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.ES97	DEL	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C457			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.10S97	DEL	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C457			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.11S97	DEL	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C457			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.13S97	DEL	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C457			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.AS98	DEL	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C599			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.4S99	INS	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C6148			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	insufficient_same_breakpoint_support	Sniffles2.INS.2S99	INS	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C6148	14869	14869	0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.3S99	INS	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C6148			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.6S9A	DEL	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C647			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.7S9A	DEL	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C647			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.3S9A	INS	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C647			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.0S9B	INS	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C798			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.3S9B	INS	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C798			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.2S9B	INS	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C798			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.ES9B	DEL	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C798			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.4S9B	INS	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C798			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.6S9B	INS	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C798			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.8S9B	INS	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C798			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.AS9B	INS	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C798			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.BS9B	INS	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C798			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.DS9B	INS	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C798			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.11S9B	DEL	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C798			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.10S9B	DEL	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C798			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.12S9B	DEL	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C798			0	0	0			
+Pelagibacter-LRMED-227		SRR28395891	unresolved	unsupported_svtype	Sniffles2.BND.2BS9B	BND	Pelagibacter-LRMED-227__Pelagibacter-LRMED-227-C798			0	0	0			
+Pelagibacter-LRMED-233		SRR28395891	unresolved	unsupported_svtype	Sniffles2.BND.3S9D	BND	Pelagibacter-LRMED-233__Pelagibacter-LRMED-233-C10			0	0	0			
+Pelagibacter-LRMED-233		SRR28395891	unresolved	unsupported_svtype	Sniffles2.BND.0S9F	BND	Pelagibacter-LRMED-233__Pelagibacter-LRMED-233-C12			0	0	0			
+Pelagibacter-LRMED-233		SRR28395891	unresolved	unsupported_svtype	Sniffles2.BND.0SA2	BND	Pelagibacter-LRMED-233__Pelagibacter-LRMED-233-C15			0	0	0			
+Pelagibacter-LRMED-233		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.1SA6	DEL	Pelagibacter-LRMED-233__Pelagibacter-LRMED-233-C19			0	0	0			
+Pelagibacter-LRMED-233		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.0SA6	INS	Pelagibacter-LRMED-233__Pelagibacter-LRMED-233-C19			0	0	0			
+Pelagibacter-LRMED-233		SRR28395891	unresolved	unsupported_svtype	Sniffles2.BND.1SAA	BND	Pelagibacter-LRMED-233__Pelagibacter-LRMED-233-C22			0	0	0			
+Pelagibacter-LRMED-233		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.0SAF	DEL	Pelagibacter-LRMED-233__Pelagibacter-LRMED-233-C27			0	0	0			
+Pelagibacter-LRMED-233		SRR28395891	unresolved	unsupported_svtype	Sniffles2.BND.6SB0	BND	Pelagibacter-LRMED-233__Pelagibacter-LRMED-233-C3			0	0	0			
+Pelagibacter-LRMED-233		SRR28395891	unresolved	unsupported_svtype	Sniffles2.BND.0SB3	BND	Pelagibacter-LRMED-233__Pelagibacter-LRMED-233-C7			0	0	0			
+Pelagibacter-LRMED-234		SRR28395891	unresolved	unsupported_svtype	Sniffles2.DUP.5SB6	DUP	Pelagibacter-LRMED-234__Pelagibacter-LRMED-234-C1			0	0	0			
+Pelagibacter-LRMED-234		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.2SB6	INS	Pelagibacter-LRMED-234__Pelagibacter-LRMED-234-C1			0	0	0			
+Pelagibacter-LRMED-234		SRR28395891	unresolved	unsupported_svtype	Sniffles2.BND.11SB6	BND	Pelagibacter-LRMED-234__Pelagibacter-LRMED-234-C1			0	0	0			
+Pelagibacter-LRMED-234		SRR28395891	unresolved	unsupported_svtype	Sniffles2.BND.1DSB6	BND	Pelagibacter-LRMED-234__Pelagibacter-LRMED-234-C1			0	0	0			
+Pelagibacter-LRMED-234		SRR28395891	unresolved	unsupported_svtype	Sniffles2.BND.22SB6	BND	Pelagibacter-LRMED-234__Pelagibacter-LRMED-234-C1			0	0	0			
+Pelagibacter-LRMED-234		SRR28395891	unresolved	unsupported_svtype	Sniffles2.BND.23SB6	BND	Pelagibacter-LRMED-234__Pelagibacter-LRMED-234-C1			0	0	0			
+Pelagibacter-LRMED-234		SRR28395891	unresolved	unsupported_svtype	Sniffles2.BND.25SB6	BND	Pelagibacter-LRMED-234__Pelagibacter-LRMED-234-C1			0	0	0			
+Pelagibacter-LRMED-234		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.4SB6	DEL	Pelagibacter-LRMED-234__Pelagibacter-LRMED-234-C1			0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	unsupported_svtype	Sniffles2.BND.29SB9	BND	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C11			0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.1FSB9	DEL	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C11			0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.2SB9	INS	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C11			0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	insufficient_same_breakpoint_support	Sniffles2.INS.3SB9	INS	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C11	95195	95195	0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.4SB9	INS	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C11			0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.5SB9	INS	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C11			0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.6SB9	INS	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C11			0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.25SB9	DEL	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C11			0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.7SB9	INS	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C11			0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	insufficient_same_breakpoint_support	Sniffles2.INS.CSB9	INS	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C11	275362	275362	0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	insufficient_same_breakpoint_support	Sniffles2.INS.FSB9	INS	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C11	275366	275366	0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	insufficient_same_breakpoint_support	Sniffles2.INS.12SB9	INS	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C11	295364	295364	0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.13SB9	INS	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C11			0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	insufficient_same_breakpoint_support	Sniffles2.INS.14SB9	INS	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C11	378703	378703	0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.18SB9	INS	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C11			0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.17SB9	INS	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C11			0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	insufficient_same_breakpoint_support	Sniffles2.INS.1DSB9	INS	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C11	500107	500107	0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	discordant_insertion_sequences	Sniffles2.INS.1ESB9	INS	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C11	538296	538296	0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.4SBA	DEL	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C12			0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.5SBA	DEL	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C12			0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.0SBA	INS	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C12			0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.3SBA	INS	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C12			0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	unsupported_svtype	Sniffles2.BND.ESBA	BND	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C12			0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.1SBB	DEL	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C2			0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.0SBD	INS	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C4			0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.1ASBD	DEL	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C4			0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.4SBD	INS	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C4			0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.3SBD	INS	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C4			0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	insufficient_same_breakpoint_support	Sniffles2.INS.1SBD	INS	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C4	2654	2654	0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	insufficient_same_breakpoint_support	Sniffles2.DEL.1DSBD	DEL	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C4	5156	5444	0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.1FSBD	DEL	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C4			0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.24SBD	DEL	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C4			0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	insufficient_same_breakpoint_support	Sniffles2.INS.7SBD	INS	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C4	66975	66975	0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	insufficient_same_breakpoint_support	Sniffles2.INS.9SBD	INS	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C4	79909	79909	0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	insufficient_same_breakpoint_support	Sniffles2.INS.8SBD	INS	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C4	79916	79916	0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	insufficient_same_breakpoint_support	Sniffles2.INS.ASBD	INS	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C4	113750	113750	0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.27SBD	DEL	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C4			0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.BSBD	INS	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C4			0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	insufficient_same_breakpoint_support	Sniffles2.INS.DSBD	INS	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C4	275449	275449	0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.FSBD	INS	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C4			0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	discordant_insertion_sequences	Sniffles2.INS.10SBD	INS	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C4	303760	303760	0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.16SBD	INS	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C4			0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.2ESBD	DEL	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C4			0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.2CSBD	DEL	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C4			0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.17SBD	INS	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C4			0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.0SBF	INS	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C7			0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	insufficient_same_breakpoint_support	Sniffles2.DEL.1ESBF	DEL	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C7	87196	87248	0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.1SBF	INS	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C7			0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.4SBF	INS	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C7			0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.5SBF	INS	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C7			0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.24SBF	DEL	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C7			0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.7SBF	INS	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C7			0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.ASBF	INS	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C7			0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.2CSBF	DEL	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C7			0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.CSBF	INS	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C7			0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.ESBF	INS	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C7			0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.FSBF	INS	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C7			0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.2BSBF	DEL	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C7			0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.16SBF	INS	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C7			0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.2ESBF	DEL	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C7			0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	insufficient_same_breakpoint_support	Sniffles2.INS.17SBF	INS	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C7	246703	246703	0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.30SBF	DEL	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C7			0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	insufficient_same_breakpoint_support	Sniffles2.DEL.31SBF	DEL	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C7	296284	296335	0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.32SBF	DEL	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C7			0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.1BSBF	INS	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C7			0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.1DSBF	INS	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C7			0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.36SBF	DEL	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C7			0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.5SC0	INS	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C8			0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.3SC0	INS	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C8			0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.14SC0	DEL	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C8			0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.6SC0	INS	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C8			0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.15SC0	DEL	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C8			0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.8SC0	INS	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C8			0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.16SC0	DEL	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C8			0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	insufficient_same_breakpoint_support	Sniffles2.DEL.1ASC0	DEL	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C8	60907	61165	0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.BSC0	INS	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C8			0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	insufficient_same_breakpoint_support	Sniffles2.INS.9SC0	INS	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C8	61166	61166	0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.ASC0	INS	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C8			0	0	0			
+Prochlorococcus-A-LRMED-150		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.CSC0	INS	Prochlorococcus-A-LRMED-150__Prochlorococcus-A-pastoris-LRMED-150-C8			0	0	0			
+Puniceispirillales-LRMED-245		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.0SC3	DEL	Puniceispirillales-LRMED-245__PuniceispirillalesLRMED-245-C12			0	0	0			
+Puniceispirillales-LRMED-245		SRR28395891	unresolved	unsupported_svtype	Sniffles2.BND.0SCA	BND	Puniceispirillales-LRMED-245__PuniceispirillalesLRMED-245-C19			0	0	0			
+Puniceispirillales-LRMED-245		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.0SDC	INS	Puniceispirillales-LRMED-245__PuniceispirillalesLRMED-245-C35			0	0	0			
+Puniceispirillales-LRMED-245		SRR28395891	unresolved	unsupported_svtype	Sniffles2.BND.0SDE	BND	Puniceispirillales-LRMED-245__PuniceispirillalesLRMED-245-C37			0	0	0			
+Puniceispirillales-LRMED-245		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.0SE2	INS	Puniceispirillales-LRMED-245__PuniceispirillalesLRMED-245-C40			0	0	0			
+SAR86-LRMED-384		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.2SE9	INS	SAR86-LRMED-384__SAR86-LRMED-384-C1			0	0	0			
+SAR86-LRMED-384		SRR28395891	unresolved	insufficient_same_breakpoint_support	Sniffles2.INS.4SE9	INS	SAR86-LRMED-384__SAR86-LRMED-384-C1	642549	642549	0	0	0			
+SAR86-LRMED-384		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.9SE9	DEL	SAR86-LRMED-384__SAR86-LRMED-384-C1			0	0	0			
+SAR86-LRMED-384		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.INS.6SE9	INS	SAR86-LRMED-384__SAR86-LRMED-384-C1			0	0	0			
+SAR86-LRMED-384		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.CSE9	DEL	SAR86-LRMED-384__SAR86-LRMED-384-C1			0	0	0			
+SAR86-LRMED-384		SRR28395891	unresolved	no_full_cigar_event_with_two_anchors	Sniffles2.DEL.0SEA	DEL	SAR86-LRMED-384__SAR86-LRMED-384-C2			0	0	0			

@@ -1,0 +1,48 @@
+{
+  "status": "complete",
+  "sample": "SRR28395891",
+  "mode": "recover",
+  "config": {
+    "platform": "hifi",
+    "flank": 1000,
+    "anchor": 100,
+    "min_mapq": 20,
+    "min_support": 3,
+    "min_other_support": 2,
+    "min_size": 50,
+    "max_size": 100000,
+    "search_slop": 100,
+    "length_tolerance": 0.25,
+    "max_sequences": 100,
+    "max_reads": 10000,
+    "repeat_limit": 100
+  },
+  "commands": [],
+  "inputs": [
+    {
+      "path": "/workspace/scratch/a6ad47cccb09/hifi_marine_pilot/reference/marine_mag_pool.fasta",
+      "sha256": "adf45f5c5e21d5e30b847bf3fb7ea6cffe63c90907e0e9ca9b661a49cf1b448b"
+    },
+    {
+      "path": "/workspace/scratch/a6ad47cccb09/hifi_marine_pilot/calls/alignments.bam",
+      "sha256": "59315557d820b8ee623adaf77ab247537c0183ebaff0b76bcb25bc9ced977e7e"
+    },
+    {
+      "path": "/workspace/scratch/a6ad47cccb09/hifi_marine_pilot/targeted/calls.vcf",
+      "sha256": "bc16bb0c8601c5753f81df4a99ba101a314f773329b4d8a752dbd842203dd297"
+    }
+  ],
+  "software": {
+    "insertion-site-recovery": "0.1.0",
+    "pysam": "0.24.1",
+    "edlib": "1.3.9.post1",
+    "pyspoa": "0.3.2"
+  },
+  "reference_validation": "header names/lengths and available M5; absent M5 cannot prove sequence identity",
+  "summary": {
+    "ambiguous": 17,
+    "read_supported_pair": 3,
+    "unresolved": 292
+  },
+  "warning": "Synthetic-tested prototype; local allele support does not establish strain or mobility"
+}

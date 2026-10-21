@@ -1,0 +1,21 @@
+{
+  "source": {
+    "run": "SRR28395891",
+    "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR283/091/SRR28395891/SRR28395891_subreads.fastq.gz",
+    "source_size": 547419476,
+    "archive_md5": "d999f9f1451e69992a5d099cec179a17",
+    "ena_metadata": {
+      "run_accession": "SRR28395891",
+      "sample_accession": "SAMN40517305",
+      "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR283/091/SRR28395891/SRR28395891_subreads.fastq.gz",
+      "fastq_bytes": "547419476",
+      "fastq_md5": "d999f9f1451e69992a5d099cec179a17"
+    },
+    "metadata_url": "https://www.ebi.ac.uk/ena/portal/api/filereport?accession=SRR28395891&result=read_run&fields=run_accession,sample_accession,fastq_ftp,fastq_bytes,fastq_md5&format=json"
+  },
+  "original_file_md5_verified": true,
+  "bytes": 547419476,
+  "resumed_at_byte": 413138944,
+  "range_chunks": 17,
+  "retrieved_utc": "2026-10-21T19:14:21Z"
+}
