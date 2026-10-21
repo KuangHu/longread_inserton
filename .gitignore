@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+.venv/
+demo/
+build/
+dist/
+next_probe/
+soil_probe/
+complete_marine/
