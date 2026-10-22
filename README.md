@@ -8,6 +8,10 @@
 [旧版本 5ad842b](https://github.com/KuangHu/longread_inserton/tree/5ad842b0c8261485c27fa685de9fc538ff49cd23)。
 仓库名称沿用，但本 package **不读取 FASTQ/BAM、不执行长读段 SV calling**。
 
+跨物种联合 FNA 发现、长读段从头重复发现和 reads 连接核查的后续实验，见
+[跨物种与长读段评估计划](docs/PLAN_CROSS_SPECIES_LONG_READS.md)。
+该文档是待执行计划，下面描述的仍是当前已实现流程。
+
 ## 固定流程
 
 1. 每个样本独立运行 **PALS → PILER-DF** 和维护版 **RepeatScout**，使用原生默认发现参数。
@@ -53,8 +57,9 @@ Python package 只依赖 Biopython。PALS、PILER、MUSCLE 3、RepeatScout 和 N
 }
 ```
 
-一个样本的染色体和质粒放在同一个 FASTA 中；不同 isolate 分为不同 sample。
-**不要把近缘菌的 MAG 混成一个 sample**：跨 MAG 的保守宿主基因也会被发现为重复。
+当前单株基线中，一个样本的染色体和质粒放在同一个 FASTA 中；不同 isolate 分为不同 sample。
+跨物种联合发现将作为独立实验，保留每条 contig 的来源映射，不能直接混成一个 sample 后
+按单株解释；跨 MAG 的保守宿主基因也会被发现为重复。具体见上述扩展计划。
 注释文件可为 EMBL 或 GenBank；每个已提供注释的序列会与 FASTA 逐碱基核对。
 注释 record ID 必须对应 FASTA ID 或其中竖线分隔的 accession。
 
