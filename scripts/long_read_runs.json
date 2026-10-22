@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "source": "ENA filereport, checked 2026-10-22; see docs/LONG_READ_AVAILABILITY.md",
+  "runs": [
+    {
+      "sample_id": "DdD110",
+      "run": "SRR16235513",
+      "biosample": "SAMN19030608",
+      "assembly": "GCA_020510685.1",
+      "platform": "PACBIO_SMRT",
+      "instrument_model": "Sequel",
+      "role": "phase_C_pacbio_1",
+      "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR162/013/SRR16235513/SRR16235513.fastq.gz",
+      "archive_read_count": 525543,
+      "archive_base_count": 2525540520,
+      "fastq_bytes": 775843604,
+      "fastq_md5": "4b806b690b544dd0e89396a6bb51bc19"
+    },
+    {
+      "sample_id": "RoMoAcy1",
+      "run": "SRR15616890",
+      "biosample": "SAMN12617337",
+      "assembly": "GCA_019856255.1",
+      "platform": "PACBIO_SMRT",
+      "instrument_model": "PacBio RS",
+      "role": "phase_C_pacbio_2",
+      "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR156/090/SRR15616890/SRR15616890_subreads.fastq.gz",
+      "archive_read_count": 122352,
+      "archive_base_count": 1576526964,
+      "fastq_bytes": 1357700967,
+      "fastq_md5": "15c63f8a6f101605744e5172d4bbdfff"
+    },
+    {
+      "sample_id": "AmHOT1A3",
+      "run": "SRR2084418",
+      "biosample": "SAMN03835502",
+      "assembly": "GCA_001578515.1",
+      "platform": "PACBIO_SMRT",
+      "instrument_model": "PacBio RS II",
+      "role": "phase_C_pacbio_3",
+      "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR208/008/SRR2084418/SRR2084418_subreads.fastq.gz",
+      "archive_read_count": 163482,
+      "archive_base_count": 3217055373,
+      "fastq_bytes": 2822177977,
+      "fastq_md5": "e6984e8ad3613912959d7aea9b05a9a4"
+    },
+    {
+      "sample_id": "PaAR2038",
+      "run": "SRR11947722",
+      "biosample": "SAMN14567048",
+      "assembly": "GCA_012689525.1",
+      "platform": "OXFORD_NANOPORE",
+      "instrument_model": "PromethION",
+      "role": "independent_nanopore_control",
+      "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR119/022/SRR11947722/SRR11947722_1.fastq.gz",
+      "archive_read_count": 132813,
+      "archive_base_count": 2112799366,
+      "fastq_bytes": 2146409497,
+      "fastq_md5": "1cfd36ae0a44b7b05db73d8e0b28dee5"
+    }
+  ]
+}

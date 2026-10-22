@@ -1,6 +1,6 @@
 # 跨物种联合发现与长读段评估计划
 
-日期：2026-10-22（运行前审查修订 v3）  
+日期：2026-10-22（运行前审查修订 v4）  
 状态：计划，尚未执行本计划中的联合发现或长读段实验。  
 适用仓库：KuangHu/longread_inserton（multisite-insertion）。
 
@@ -386,7 +386,12 @@ Nanopore 和 PacBio 分别记录：
 - SRA/ENA accession、BioSample、是否与 assembly 同源；
 - read 数、总碱基、长度分布和质量信息；
 - 原始数据、纠错数据、抽样数据的关系与哈希；
-- 抽样方法、随机种子和样本内覆盖不均的限制。
+- 抽样方法、随机种子和样本内覆盖不均的限制；
+- 记录与分子的对应关系（subread / ZMW / CCS / Nanopore read）及依据。
+
+抽样以分子为单位：PacBio CLR 按 ZMW（或已确认的 SRA spot）整体抽取，
+不能独立抽取 subread，否则同一分子的重复读取会改变有效覆盖。
+分组不可得的 run 先记录限制，再决定是否用于需要抽样的工具测试。
 
 不同物种/不同样本之间的结果不能直接解释成测序平台优劣。
 只下载/使用事先核实匹配的数据；没有配套 reads 的 assembly 留在阶段 A。
@@ -475,6 +480,13 @@ not_assessable，不将缺失部分解释成 no_support 或否定 insertion。
 - 多重比对、冲突连接或潜在嵌合，无法确定。
 
 “两个 junction 分别有支持”与“同一分子跨越完整结构”分开。
+
+支持计数以分子为单位，不以 FASTQ 记录为单位。PacBio CLR 中同一 ZMW 的多条
+subread 对同一 junction 只计一个分子；同一分子不同 subread 的结论冲突时记为
+该分子内部不一致，不拆成独立支持。分组依据按 run 预先登记：
+zmw_from_read_name（DdD110）、sra_spot_as_zmw_assumed（AmHOT1A3，待确认）；
+无法分组（当前 RoMoAcy1）时同时报告记录数并标 molecule_grouping_unavailable，
+不能把记录数当作独立分子数。Nanopore 每条 read 视为一个分子。
 宿主背景需有可区分的侧翼/更长上下文；短侧翼不足以分类时不强制给 species。
 
 映射需考虑同一集合内的竞争位点，保留次优/多重比对信息，
@@ -565,3 +577,16 @@ tnp-supported 定义、边界算法或现有导出。
 本轮新增核查只涉及公开元数据与软件文档，未下载 reads、未执行发现或比对。
 [minimap2 NEWS](https://github.com/lh3/minimap2/blob/master/NEWS.md)
 记录 2.27-r1193（2024-03-12）加入 lr:hq。
+
+## 12. 第三轮审查修订（v4）
+
+| 审查项 | 修订 |
+|---|---|
+| CP 定位株的 assembly 未解析 | 候选表：ScL1 → GCA_000147835.3，RoMoAcy1 → GCA_019856255.1，含复制子版本与长度 |
+| PacBio 读段单位与 HiFi 假设 | LONG_READ_AVAILABILITY 读段单位预检：三 run 均为 CLR；D110 质量为占位符 |
+| subread 重复计数 | C2：以分子（ZMW/spot）计连接支持；无法分组的 run 显式标记 |
+| 抽样单位 | B2：按 ZMW/分子抽样，不独立抽 subread |
+| ENA read_count 含义 | 与 SRA spot 数而非 FASTQ 记录数核对 |
+| 下载核验可复现 | `scripts/fetch_long_reads.py` 与 `scripts/long_read_runs.json` |
+
+本轮只读取了各 FASTQ 前 4 MiB 和公开元数据；完整 reads 尚未下载。
