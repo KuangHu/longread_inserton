@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "samples": [
+    {
+      "id": "isolate1",
+      "fasta": "../data/isolate1.fasta",
+      "annotations": ["../data/isolate1.embl"],
+      "annotation_format": "embl"
+    }
+  ]
+}

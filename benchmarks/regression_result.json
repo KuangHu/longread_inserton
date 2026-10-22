@@ -1,0 +1,69 @@
+{
+  "package_version": "0.1.0",
+  "python": "3.12.14",
+  "biopython": "1.88",
+  "unit_tests_passed": 17,
+  "pilot_validation": {
+    "status": "pass",
+    "selected_families": 69,
+    "selected_native_records": 300,
+    "exported_records": 300,
+    "invalid_records_retained": 0,
+    "native_outputs_unchanged": true,
+    "scope": "Data consistency, not biological accuracy or transposition activity"
+  },
+  "pilot_coordinates_equal": true,
+  "pilot_eight_FASTA_files_byte_identical": true,
+  "pilot_family_flank_cross_tool_summaries_equal": true,
+  "synthetic_native_integration": {
+    "status": "pass",
+    "selected_families": 2,
+    "selected_native_records": 8,
+    "exported_records": 8,
+    "invalid_records_retained": 0,
+    "native_outputs_unchanged": true,
+    "scope": "Data consistency, not biological accuracy or transposition activity"
+  },
+  "native_executable_sha256": {
+    "pals": {
+      "sha256": "26f8e0cadc8053304f1e19ca0f97f56842cbe54f838241f50ad28829db9b5eba"
+    },
+    "piler2": {
+      "sha256": "1d4755920daf6abd84c3a639c04c93af2bb3a6f5102f30ae39974a07ded8a8d5"
+    },
+    "muscle": {
+      "sha256": "ee852e2f932d1743db002dc409fd7449fa47ec94289d9eda3e73419e866406ff"
+    },
+    "build_lmer_table": {
+      "sha256": "983a395b2f2d6194470984e1fb7fa745f391c07b84567640b7316a33ffd27136"
+    },
+    "RepeatScout": {
+      "sha256": "b20676de320bb4cc0e82036b868386b2c7995110b681e8354e217740e58e66f8"
+    },
+    "makeblastdb": {
+      "sha256": "c1ffdcf6f15d1d8d75377cc9f37afa42bc9fa06678903bad77c2641e60778fce"
+    },
+    "blastx": {
+      "sha256": "0dac09bed17043dfdf93ad71d50e6e177f273d5311897b9e653e45142bb3ef80"
+    },
+    "blastn": {
+      "sha256": "33b64bc67d3149cee2459b2f7766b363323df632cf12c099546de00aea9698b5"
+    }
+  },
+  "synthetic_first_attempt": {
+    "status": "failed",
+    "reason": "Native integrity guard detected a changed pals.log after native discovery on the workspace filesystem. No integrity guard was disabled. An unchanged-command fresh-directory rerun passed, including subsequent independent validation.",
+    "biological_outputs_used": false
+  },
+  "input_fasta_sha256": {
+    "AltDE": "9a082a042a2231b80bf3a851a7d1900b24788d8fd99a64e96de48957388cc384",
+    "UT26S": "4d8023678604a735582e2786e478d8c4cc3468af8a0a8c433dcdb8dd79ce931d",
+    "RHA1": "b113c06b5c14f10ba6b66c7483607b1db71d500a1e17cb4e690c6f1e50ef7ab0"
+  },
+  "wheel_install_validation": {
+    "version": "0.1.0",
+    "clean_virtual_environment": true,
+    "installed_package_tests_passed": 17,
+    "installed_cli_pilot_validation": "pass"
+  }
+}

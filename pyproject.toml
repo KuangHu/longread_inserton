@@ -1,24 +1,23 @@
 [build-system]
-requires = ["setuptools>=68"]
+requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "insertion-site-recovery"
+name = "multisite-insertion"
 version = "0.1.0"
-description = "Recover insertion sequences and read-supported empty-site coordinates from MAGs and long reads"
+description = "Native repeat discovery with auditable insertion-boundary and flank inference"
+readme = "README.md"
 requires-python = ">=3.10"
-dependencies = ["pysam>=0.22,<0.25", "edlib>=1.3.9,<2", "pyspoa>=0.2.1,<0.4"]
+dependencies = ["biopython>=1.86,<2"]
 
-[project.optional-dependencies]
-test = ["pytest>=8"]
-caller = ["sniffles==2.8.1"]
+[project.urls]
+Repository = "https://github.com/KuangHu/longread_inserton"
+Documentation = "https://github.com/KuangHu/longread_inserton#readme"
 
 [project.scripts]
-insertion-site-recovery = "site_recovery.cli:main"
+multisite-insertion = "multisite_insertion.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
-
-[tool.pytest.ini_options]
-testpaths = ["tests"]
+include = ["multisite_insertion*"]
 

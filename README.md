@@ -1,169 +1,146 @@
-# insertion-site-recovery
+# multisite-insertion
 
-新增 [TLDR / DeBreak / Palidis / DIVE 实测对比](docs/TOOL_COMPARISON.md)。当前目标允许仅恢复 insertion + occupied flanks，empty site 为可选证据；本次比较已按此记录。下文 CLI 仍是此前的保守双状态原型，尚未替换为新的生产恢复器。
+从**组装 FASTA** 中寻找“内部相似、外部不同”的多位点重复区段，并导出候选
+`upstream + insertion + downstream`。无需 perfect empty site。
 
-真实 CCS pilot 已运行：结果与配对限制见 [实测报告](docs/REAL_HIFI_PILOT.md)。后续 [长插入审计](docs/HIFI_PILOT_AUDIT.md) 显示，现有流程尚不能直接用于完整 IS 挖掘。
+这是 `KuangHu/longread_inserton` 的新路线。旧的 reads → SV → 双状态恢复原型已退出
+当前代码和安装入口；历史保留在
+[旧版本 5ad842b](https://github.com/KuangHu/longread_inserton/tree/5ad842b0c8261485c27fa685de9fc538ff49cd23)。
+仓库名称沿用，但本 package **不读取 FASTQ/BAM、不执行长读段 SV calling**。
 
-公共长读段下载方法与 8 个真实文件的试下载记录见 [下载规范](docs/DOWNLOADING_LONG_READS.md)，配套脚本位于 `tools/downloads/`。
+## 固定流程
 
-独立的最小原型：输入 **MAG／assembly + HiFi／CCS 或 Nanopore reads**，恢复插入序列与空位点表示。
-不需要一个物种的大规模 genome group；需要同一位点有可定位的长读段证据。
+1. 每个样本独立运行 **PALS → PILER-DF** 和维护版 **RepeatScout**，使用原生默认发现参数。
+2. 原样保存所有软件输出，解析全部家族和成员；不增加长度、拷贝数、复杂度或注释淘汰规则。
+3. 发现后添加已有 CDS 注释和 BLASTX 蛋白证据，保留全部家族的注释表。
+4. 默认对 **tnp-supported 家族**做上下文比对、候选边界推断和两侧各 500 bp 提取。
+   `--subset all` 可分析全部原生家族；这不会改变原生发现结果。
+5. 输出同家族对应侧翼比较、跨软件坐标重叠和每条记录的依据/未解决状态。
 
-本项目参考 `KuangHu/nanopore_insertion_callout` 的“比对 → SV 候选 → 提取”流程，重新实现序列与坐标恢复。
-原仓库未修改，参考版本为 `b5101b490e833a220626a15e677c10ccae4b8d9c`。
-不包含 tail–head/circle 筛选、蛋白注释、RNA 筛选、自动下载或按属名选择参考。
-
-## 输出的含义
-
-对于每个事件，输出：
-
-- `insertion.fasta`：插入序列；INS 来自同位点 reads 的 POA consensus；DEL 来自 assembly 中被跳过的区间。
-- `empty_site.fasta`：`[upstream][downstream]`，两段均来自指定 assembly。
-- `upstream.fasta`、`downstream.fasta`：可单独使用的两侧序列。
-- `events.tsv`：参考坐标、插入位置、序列长度、两种状态的 read 数和结果状态。
-- `records.jsonl`：完整序列、read 名、序列来源、替代断点、重复引起的边界范围。
-- `manifest.json`：输入 SHA256、实际命令、软件版本、运行状态。失败写入 `failed`，不会伪装成功。
-
-**empty-site 是参考序列上的重建表示，并有单独的局部 read 支持字段；不是菌株分型后的 empty-allele consensus。**
-默认只验证断点两侧各 100 bp 的局部锚定；不能由此宣称整段 2 kb flanks 已被 reads 校正。
-`read_supported_pair` 表示局部 occupied 和 empty 两种结构都有 read 支持，不保证属于同一菌株或同一细胞。
-INS/DEL 是相对参考的描述，不能判定进化上是插入还是删除，也不自动证明该序列是可移动元件。
-
-## 两条路线
-
-| 输入 reads | 比对 | 候选 | 序列恢复 |
-|---|---|---|---|
-| PacBio HiFi／CCS | minimap2 `map-hifi` | Sniffles2 INS + DEL | 同一个位点锚定恢复模块 |
-| Nanopore | minimap2 `map-ont` | Sniffles2 INS + DEL | 同一个恢复模块，使用 ONT identity 门槛 |
-
-参考为空位点时，INS 的 read 序列给出 insertion；参考已占据时，DEL 的 reads 给出空连接，reference interval 给出 insertion。
-后者不能因为 VCF 写着 DEL 就丢掉。
+**原生发现与我们的后处理明确分开。** 边界推断不是 PILER/RepeatScout 的精确插入判定。
+tnp-supported 是家族层面的支持，不要求每个成员都有完整 tnp；也不证明转座活性。
+没有 TIR/TSD 必需条件，没有空位点门槛，不合并跨软件记录为“独立事件数”。
 
 ## 安装
 
-建议 Linux、Python 3.10+。以下以 Python 3.12 为例，minimap2 需要在 PATH 中：
+Linux/WSL，Python ≥3.10。先安装原生依赖，见 [INSTALL.md](docs/INSTALL.md)。
 
 ```bash
-conda create -n insertion-recovery -c conda-forge -c bioconda python=3.12 minimap2=2.31 pip
-conda activate insertion-recovery
-cd insertion_site_recovery
-python -m pip install '.[caller,test]'
+git clone https://github.com/KuangHu/longread_inserton.git
+cd longread_inserton
+python -m pip install .
+multisite-insertion doctor
 ```
 
-也可使用已有 minimap2，或通过 `--minimap2 /path/to/minimap2` 指定。
-`--sniffles /path/to/sniffles` 同理。`requirements-tested.txt` 记录本次验证的 Python 依赖版本。
-Sniffles 固定为 2.8.1；其他版本的行为需要重新验证。
+Python package 只依赖 Biopython。PALS、PILER、MUSCLE 3、RepeatScout 和 NCBI BLAST+
+是独立可执行程序；`pip install` 不会安装它们。未向 PyPI 发布。
 
-## 用法
+## 运行
 
-HiFi／CCS：
+创建 `samples.json`，相对路径相对于 manifest 所在目录：
+
+```json
+{
+  "schema_version": 1,
+  "samples": [
+    {
+      "id": "isolate1",
+      "fasta": "data/isolate1.fasta",
+      "annotations": ["data/chromosome.embl", "data/plasmid.embl"],
+      "annotation_format": "embl"
+    }
+  ]
+}
+```
+
+一个样本的染色体和质粒放在同一个 FASTA 中；不同 isolate 分为不同 sample。
+**不要把近缘菌的 MAG 混成一个 sample**：跨 MAG 的保守宿主基因也会被发现为重复。
+注释文件可为 EMBL 或 GenBank；每个已提供注释的序列会与 FASTA 逐碱基核对。
+注释 record ID 必须对应 FASTA ID 或其中竖线分隔的 accession。
 
 ```bash
-insertion-site-recovery run \
-  --reference assembly.fasta --reads sample.hifi.fastq.gz \
-  --platform hifi --sample sample_hifi --threads 8 --out out_hifi
+multisite-insertion run --manifest samples.json --out runs/isolate1
+multisite-insertion validate --run runs/isolate1
 ```
 
-Nanopore：
+只看软件原始发现结果：
 
 ```bash
-insertion-site-recovery run \
-  --reference assembly.fasta --reads sample.ont.fastq.gz \
-  --platform ont --sample sample_ont --threads 8 --out out_ont
+multisite-insertion discover --manifest samples.json --out runs/native_only
 ```
 
-`--platform ccs` 是 `hifi` 的别名。`--reads` 接受多个 FASTQ/FASTA 文件，支持压缩 reads。
-参考必须是未压缩 FASTA。HiFi／CCS 和 ONT 应分别运行，不混为同一个平台处理。
+没有注释也可以发现和推断：省略 `annotations` 并使用 `run --subset all`。
+此时不会产生 tnp 支持；默认 `tnp-supported` 子集可能为空，但全部原生家族仍保留。
+两种方法可通过 `--methods PILER` 或 `--methods RS` 单独运行。
+所有命令要求新目录或空目录，避免旧结果混入；失败记录为 `failed`，不冒充零命中。
 
-已有同一 assembly 的坐标排序、索引 BAM 及 VCF 时：
+## 复用已有原生输出
+
+在 sample 中添加 `native`；不指定的方法才会重新运行。导入目录应对应**同一份 FASTA**。
+程序核对 contig/坐标并记录导入文件哈希，不能仅凭坐标证明旧输出来自哪一份序列。
+
+```json
+"native": {
+  "PILER": "previous/isolate1_PILER_default",
+  "RS": "previous/isolate1_RS_default"
+}
+```
+
+PILER 目录需含 `families.gff` 和 `library.fasta`；RS 目录需含 `ranges.tsv` 和
+`families.fasta`。完整目录原样复制到新运行的 `native/`。继续使用同一 `run` 命令。
+
+## 主要输出
+
+| 路径 | 内容 |
+|---|---|
+| `native/<sample>/<method>/` | 原生输出和可追踪的导入记录；后处理不修改 |
+| `results/all_native_families.json` | 所有原生家族、成员、有效性与已有注释重叠 |
+| `results/all_families_annotated.json` | 全家族的蛋白证据和 tnp-supported 标记 |
+| `results/member_boundaries.json` | 可提取成员的原生、推断、导出坐标与证据 |
+| `results/record_inventory.json` | 所选子集全部成员，包括未导出序列的越界记录 |
+| `results/invalid_native_records.json` | 越界原生范围原样保留，不裁剪成假序列 |
+| `sequences/candidate_insertion.fasta` | 候选区段；必须结合头部的边界状态解释 |
+| `sequences/upstream_500.fasta`、`downstream_500.fasta` | 同 member ID 的两侧序列；contig 末端可不足 500 bp |
+| `sequences/triplet.fasta` | 三部分按家族方向拼接；负链已反向互补 |
+| `sequences/genomic_*.fasta` | 基因组正向的左侧、核心、右侧版本 |
+| `results/family_summary.*`、`flank_pair_comparison.json` | 全部可提取家族及逐对侧翼证据 |
+| `results/cross_tool_locus_overlaps.json` | 所选家族成员的跨软件原生范围重叠，不自动去重 |
+| `results/candidates.bed`、`member_coordinates.txt` | 逐条坐标；BED 为 0-based 半开区间 |
+| `run.json`、`provenance.json`、`native_manifest.json` | 状态、命令、输入/二进制/原生文件哈希 |
+
+FASTA 头部候选范围是 **1-based 闭区间**；JSON 的 `start0/end0` 为 **0-based 半开区间**。
+up/down 采用原生家族方向，**不一定是 tnp 转录方向**。空侧翼仍保留 FASTA 条目，BLAST
+使用独立的非空侧翼输入。无显著侧翼匹配不等于已证明侧翼完全不相关。
+
+边界状态、算法和局限见 [METHOD.md](docs/METHOD.md)。
+
+## 已做的验证
+
+三个环境分离株（AltDE、UT26S、RHA1）的既有原生输出用于回归验证：
+
+| 方法 | 全部原生家族 | tnp 支持家族 | 所选原生记录 |
+|---|---:|---:|---:|
+| PILER | 23 | 17 | 72 |
+| RepeatScout | 238 | 52 | 228 |
+
+打包后 **300 条坐标记录、8 份 FASTA 与此前结果一致**；家族、侧翼及跨软件重叠统计一致。
+这是软件重构回归，不是独立的生物学准确率评估。详情和可复现检查见
+[benchmarks/README.md](benchmarks/README.md)。
+
+单元测试与无需下载天然基因组的合成运行示例：
 
 ```bash
-insertion-site-recovery recover \
-  --reference assembly.fasta --bam sample.bam --vcf calls.vcf \
-  --platform ont --sample sample_ont --out out_recovered
+python -m unittest discover -s tests -v
+python examples/make_demo.py --out data/demo
+multisite-insertion run --manifest data/demo/manifest.json --out runs/demo
+multisite-insertion validate --run runs/demo
 ```
 
-`recover` 检查 BAM 的参考名称、长度和已有 M5。缺少 M5 时无法证明序列完全一致，必须由输入提供者保证 BAM 与 FASTA 相符。
-输出目录必须不存在或为空，不自动复用旧文件。输入 reference 复制到输出目录后再索引，不修改原输入。
+合成示例只有随机重复序列和人为测试注释，用于检查软件连通性，不能充当天然 IS 阳性证据。
 
-`run` 保留 BAM、VCF 和运行日志。比对暂存 SAM，排序成功后删除，因此需要为 SAM/BAM/reference 预留空间。
-建议使用样本匹配的 assembly。完整 metagenome assembly 可保留更多竞争比对位置；单个 MAG 无法排除未提供的近缘基因组。
-目前没有 MAG bin/taxonomy 自动归属模块：以输出 contig ID 对接自己的 bin 表。
+## 范围与限制
 
-## 坐标约定
-
-全部采用 **0-based、half-open 区间、interbase 插入位置**，方向为 assembly forward。
-VCF POS 只用于定位候选附近，最终断点由支持 reads 的 CIGAR 确定，不直接照抄 VCF。
-
-| 参考状态 | `reference_start0` | `reference_end0` | 意义 |
-|---|---:|---:|---|
-| empty，INS call | p | p | 插入在参考第 p 个与第 p+1 个碱基之间（按 1-based 描述） |
-| occupied，DEL call | s | e | insertion 对应参考区间 `[s,e)` |
-
-`empty_site_insertion_pos0 = len(upstream)`，是 **empty-site FASTA 自己的坐标**，不是原参考坐标。
-例如上下游各 1,000 bp，则 empty-site 长 2,000 bp，插入点为 1,000：
-
-```python
-occupied_representation = empty_site[:position0] + insertion + empty_site[position0:]
-```
-
-重复序列造成等价边界时，JSON 的 `breakpoint_equivalence` 报告替代 start 的范围。
-当前输出是其中一个参考方向表示；不能把它当成唯一的生物学切点。
-
-## 结果分层
-
-| status | 含义 | 序列目录 |
-|---|---|---|
-| `read_supported_pair` | INS/DEL 事件至少 3 条独立 read，另一状态至少 2 条；flanks 完整，边界无检测到的等价重复 | `accepted/` |
-| `reference_backed_only` | 可恢复序列，但另一状态的 read 支持不足 | `candidates/` |
-| `ambiguous` | 可以构建序列表示，但存在重复导致的等价边界 | `candidates/` |
-| `partial` | 两种状态有支持，但 contig 边缘截短了要求的 flanks | `candidates/` |
-| `unresolved` | 证据不足、多个受支持断点、非 INS/DEL、非 PASS 等 | TSV/JSON 中保留原因，不输出猜测的序列 |
-
-状态有优先级；完整细节还应查看 `support`、`full_requested_flanks`、`breakpoint_equivalence`。
-例如 `ambiguous` 不保证另一状态已经达到支持门槛。
-
-默认参数：flank 1,000 bp、anchor 100 bp、MAPQ ≥20、事件长度 50–100,000 bp、
-事件支持 ≥3、另一状态支持 ≥2；局部 identity 为 HiFi 95%、ONT 90%。
-锚定和参考状态验证允许长度 ≤10 bp 的局部 I/D，并继续检查 identity；N/skipped region 和较大 gap 不能当成桥接证据。
-候选搜索 ±100 bp，长度容差 25%。仅在同一个精确断点组内生成 consensus，最多使用 100 条确定性选择的 reads。
-所有该组 read 的插入序列仍需与 consensus 达到 identity 门槛；这不能完全排除相近混合等位型。
-
-Sniffles 使用 `--all-contigs --mosaic --mosaic-include-germline`，包含短 contig 和高频事件。
-`--mosaic-af-min` 默认 0.05；这是候选筛选参数，**不是**保证可检测到 5% 的宏基因组等位型。
-Sniffles 的人类 SV/mosaic 模型不等于已验证的宏基因组菌株模型。
-
-## 当前适用边界
-
-- 这是 full-CIGAR、双侧局部锚定的第一版。仅 split-read、超长插入、复杂重排和需要局部组装的候选会 unresolved；没有伪装成成功的 fallback。
-- 参考与 reads 必须在该局部足够接近；read 需跨过插入及两侧锚点。DEL 的 occupied 支持也要求跨过整个被删除区间。
-- 重复、低覆盖、稀有等位型、MAG 错拼、跨物种误比对、污染和参考中缺失的近缘序列仍可影响结果。
-- 完全固定的 insertion，若样本没有 empty 等位型、参考也不给出有效对照，不能凭 reads 凭空恢复“实际存在过的空位点”。
-- 不进行 strain phasing 或 empty-site SNP polishing；不能当作完整双等位型组装器。
-- 若同位点有多个足够支持的断点，不静默挑一个。重复造成的 1 bp 等价边界也会降为 ambiguous，结果可能偏保守。
-- 分子独立性目前按 read 名去重；无法替代实验级去重。
-- `accepted` 是本工具的筛选结果，不是实验验证结论。
-
-## 验证与复现
-
-```bash
-python -m pytest -q
-python examples/make_synthetic.py demo
-insertion-site-recovery run --reference demo/assembly.fasta --reads demo/hifi.fastq \
-  --platform hifi --sample synthetic_hifi --threads 2 --out demo/result_hifi
-insertion-site-recovery run --reference demo/assembly.fasta --reads demo/ont.fastq \
-  --platform ont --sample synthetic_ont --threads 2 --out demo/result_ont
-python examples/check_synthetic.py demo/truth.json demo/result_hifi/records.jsonl
-python examples/check_synthetic.py demo/truth.json demo/result_ont/records.jsonl
-```
-
-本次验证：Python 3.12、minimap2 2.31-r1302、Sniffles 2.8.1，23 项单元/回归检查。
-两条完整流程各恢复 1 个 INS 和 1 个 DEL；本组合成数据的 insertion identity 均为 100%，empty-site 和坐标与真值相同。
-人工序列无生物学注释，每平台 400 条约 8 kb reads。模拟 HiFi 替换率 0.1%、indel 率 0.01%；
-模拟 ONT 替换率 1.5%、indel 率 0.3%，不代表真实平台的完整误差分布。
-没有进行真实宏基因组 benchmark，不能据此推断真实 recall、precision 或可发现数量。
-
-本次受限进程环境中，Sniffles 可选 psutil 资源监控报 `NoSuchProcess`；在独立测试虚拟环境移除 psutil 后，使用其原生无监控分支完成测试。
-未修改 Sniffles 算法或原仓库代码。正常计算环境不需要因此移除 psutil。
-
-官方工具：<https://github.com/lh3/minimap2>、<https://github.com/fritzsedlazeck/Sniffles>。
+本版本固定为这条 assembly-based 路线，不加载旧 `site_recovery`、Arm A、Arm B、图气泡或
+empty/filled 恢复模块。完整元件边界、独立事件数、历史插入方向和转座活性均需另行验证。
+高度分化的重复、低拷贝元件、组装折叠及断裂仍可能漏检；短/碎片化 RS 输出仍可能只是片段。
+当前 ±2000 bp 上下文和 500 bp 侧翼为 pilot 固定设置，**不跨 circular origin 绕回**。
