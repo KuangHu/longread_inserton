@@ -1,6 +1,6 @@
 # 跨物种联合发现与长读段评估计划
 
-日期：2026-10-22（运行前审查修订 v2）  
+日期：2026-10-22（运行前审查修订 v3）  
 状态：计划，尚未执行本计划中的联合发现或长读段实验。  
 适用仓库：KuangHu/longread_inserton（multisite-insertion）。
 
@@ -78,6 +78,18 @@ X 的内部相似，两侧背景不同。拷贝可以来自同一菌株，也可
 下载后仍须生成含 accession.version、BioSample、文件哈希的 resolved manifest；
 不能默认它们都有可用配套长读段。
 
+**先检查 reads，再冻结输入。** 首轮元数据检索已登记在
+[LONG_READ_AVAILABILITY.md](LONG_READ_AVAILABILITY.md)：DdD110、RoMoAcy1、
+AmHOT1A3 已找到匹配的 PacBio run；其余五株在已查范围内未确认匹配长读段，
+不等于证明不存在。保留原八株作为 A 的候选，C 优先使用这三株。
+独立 Nanopore 对照 PaAR2038 不属于八株，不替代同种的 PaBN5。
+BioSample 匹配与文件下载/校验是不同状态；实际下载、版本和哈希锁定后才冻结 manifest。
+
+AltDE、UT26S、RHA1 均排除在本轮 scale_2/4/8 及其 spike-in 输入之外，
+仅单独作回归检查。ScL1 与 UT26S 同属 Sphingobium，RoMoAcy1 与 RHA1
+同属 Rhodococcus；亲缘关系不是重复样本，但不能据此把回归株静默加入 pool。
+增加近缘株须另行预注册组成及同属背景标签。
+
 每个 discovery pool 记录成员 assembly、BioSample、版本、物种标签及标签来源。
 同一样本的不同组装或同一菌株的重复提交不能无说明地算成独立宿主。
 
@@ -115,7 +127,7 @@ l_table、l_repeat、l_source、版本/提交及日志路径。能从日志获�
 保留两个独立对照系列：
 
 - native_default：每个输入自行使用原生默认值，报告所有实际 l。
-- fixed_l：在查看 discovery 结果前，以冻结的最大计划 pool 的默认 l
+- fixed_l：在查看 discovery 结果前，以冻结的最大计划输入（包括预注册 spike-in pool）的默认 l
   确定 l_fixed；逐株、2/4/8 pool 均在两个可执行程序中显式传同一 -l。
   若源码/日志核对表明值无效，修订配置后重新编号，不临时按结果选值。
 
@@ -164,6 +176,37 @@ RepeatScout 自身的种子频次等默认限制单独记录，不能认为两�
 近缘基因组加入后，PILER 的 flank 在整个输入集合内可能不再独特。
 不同 pool 组成分别运行并记录，不假设添加更多基因组必然提升召回。
 
+#### A2.3 基因组规模的计算 spike-in（天然结果解释前必做）
+
+A2.2 的 toy 阳性验证技术流程，不能证明基因组规模的发现敏感性。
+额外建立 scale_4 和 scale_8 的计算 spike-in 对照，各自与未改动的天然输入配对。
+这是 FASTA 文件上的模拟，不涉及构建生物材料。
+
+- 沿用 A2.2 的随机非编码 X（1,200 bp），每个重复中的三个 X 完全相同；
+  分别放入 SaSB2B、DdD110、ShANA3 的主染色体，每个来源恰好一份。
+  使用种子 11、29、47；每个种子的 scale_4/8 共用相同改动。
+- 插入位置在工具运行前按固定随机规则选择，距记录两端至少 10 kb；
+  保留真实基因组背景，不额外添加 toy 随机侧翼。生成脚本、随机算法、
+  X、位置及 truth BED 在查看 discovery 输出前冻结。
+  冻结前检查 X 在原始输入中的既有同源命中；检查方法、阈值及遇命中时
+  的确定性重生成规则也须先登记，不能根据发现成功与否选择 X 或位置。
+- 只修改隔离的模拟文件，天然 FNA 不改动。保存新记录 ID、前后哈希、
+  修改清单及分段坐标映射；插入片段没有原始坐标，后续区段相应偏移。
+  若触及 CDS，明确原注释已被打断，不能将其描述为完整 CDS。
+  本对照只测试 DNA 发现与坐标恢复，不产生 tnp 生物学结论；
+  天然注释背景比例仅使用未改动的天然输入。
+- 两个规模均运行 native_default 和 fixed_l，并与对应天然输入、
+  逐株基线比较。fixed_l 使用 A2.1 同一个预注册值，不为 spike-in
+  另调 l；native_default 则逐文件记录实际 l，包括加序列导致的变化。
+- 每个工具/规模/种子/参数分支报告 X 召回数（0–3）、是否恢复共同家族、
+  native 与 candidate 的端点误差和双向覆盖率、多余成员、侧翼表现及资源。
+  沿用 A4 的端点/覆盖阈值作结果标记，但分别列出原生与后处理表现。
+
+完成该对照是解释相应规模天然结果的前提，不替代 A4 的 toy 硬门槛。
+若某分支未恢复三份 X，保留结果并标记 genome_scale_sensitivity_unresolved；
+该分支的天然零命中不能解释成不存在重复家族。超时/OOM 记资源阻断，
+不能算作生物学阴性。任何修复或参数试验另行编号，不能覆盖首次结果。
+
 ### A3. 注释、边界和计数
 
 先比较 native discovery，再比较后处理结果。联合运行可能改变蛋白参考库：
@@ -182,7 +225,11 @@ candidate 的 tnp 完整性读取 candidate_overlapping_tnp_CDS，
 同一位置跨工具或多个范围重叠时先报告匹配关系；去重规则须预先记录，
 原始行不删除。相同序列在不同样本出现不自动证明新的插入事件。
 
-边界优先报告已有四类状态及未解决原因。用于评价边界时，
+边界逐项报告 METHOD 中的五个 boundary_source 值及未解决原因：
+deposited_mobile_element、provisional_homology_median、
+homology_extent_censored_at_window、native_interval_only_unresolved、
+invalid_native_coordinates。最后一类保留在 inventory 中，不导出无效区间。
+用于评价边界时，
 采用 deposited annotation 的 candidate 与独立推断结果分开，
 不能用注释替换后的精确一致证明从头边界推断准确。
 
@@ -193,16 +240,28 @@ candidate 的 tnp 完整性读取 candidate_overlapping_tnp_CDS，
 至少 1 bp overlap 记为触及，同时保存重叠 bp 和区间覆盖比例，
 避免将擦边误读成完整包含。
 
-标签为 rRNA、tRNA、core_CDS、other_CDS、no_feature_overlap、
-annotation_unavailable。前四类可多选，不能直接相加成 100%。
+标签为 rRNA、tRNA、panel_single_copy_core_CDS、shared_same_genus_CDS、
+other_CDS、no_feature_overlap、annotation_unavailable。
+前五类可多选，不能直接相加成 100%。
 no_feature_overlap 仅用于有注释覆盖的记录；缺失注释记 unavailable。
 
-core_CDS 必须依据预先冻结的 orthogroup 表或明确的已有 core-gene 标签，
-不能按“CDS”或 housekeeping 产品名称臆测。若需独立蛋白 orthogroup 分析，
-其工具版本和参数在 discovery 结果查看前固定；本轮 core 定义为
-冻结完整 panel 中每个来源恰好一份的 orthogroup，保存成员表及哈希。
-子 pool 沿用这份 panel 定义。未获得该证据时记 core_status=not_assessed，
-不能将 core overlap 报告为零。
+背景基因证据采用独立、预先冻结的 orthogroup 成员表；
+工具版本、参数、蛋白输入、属分类依据及哈希均在 discovery 结果查看前固定。
+不能按“CDS”或 housekeeping 产品名称臆测，也不能用 discovery 家族本身
+循环定义保守背景。
+
+- 主要背景标签 shared_same_genus_CDS：该 CDS 的 orthogroup 在
+  本 pool 的另一个同属来源中也有成员；不要求单拷贝。
+  本轮预注册两对：SaSB2B–ShANA3（Shewanella）和
+  AmHOT1A3–AaH17（Alteromonas）。保存 pair_id、来源及 CDS ID。
+  子 pool 仅评估两株均在其中的配对；无同属伙伴记 not_applicable，
+  有伙伴但分析未完成记 not_assessed，均不能冒充零重叠。
+- panel_single_copy_core_CDS 保留为次要描述：
+  冻结完整八株 panel 中每个来源恰好一份的 orthogroup；
+  子 pool 沿用该定义。它跨越多个属，可能很少，不能代表主要宿主背景混淆。
+  未获得证据时记 core_status=not_assessed。
+- 同属共享 CDS 也可能是移动元件相关基因。与 tnp-supported 标签交叉报告，
+  不把 shared 或 core 标签自动解释为宿主核心功能、假阳性或排除条件。
 
 每类至少输出：
 
@@ -213,7 +272,7 @@ core_CDS 必须依据预先冻结的 orthogroup 表或明确的已有 core-gene 
 - 各类重叠的组合表，以及全无注释/部分缺注释的 family 数。
 
 比较逐株与 pooled 的类别占比、绝对数量和 annotation availability，
-不把 rRNA/tRNA/core 标签作为候选过滤，不从 native 输出删除任何家族。
+不把 rRNA/tRNA/core/shared_same_genus 标签作为候选过滤，不从 native 输出删除任何家族。
 重叠宿主基因也可能由真实插入导致，故该表仅衡量注释关联背景，
 不能直接把全部 overlap 家族称为假阳性或非 IS。
 
@@ -233,6 +292,8 @@ core_CDS 必须依据预先冻结的 orthogroup 表或明确的已有 core-gene 
   原生工具或坐标实现问题；保留失败结果，不临时扩大误差容忍度。
   只有一个工具通过时可继续该工具的天然测试，另一工具单独标 blocked。
 - 2 拷贝、97/93% 及短长度各组必须报告，但它们不通过不触发阳性门槛失败。
+- 相应规模的天然解释前必须完成 A2.3 genome-scale spike-in；
+  未通过分支标记敏感性未解决，不以 toy 通过替代基因组规模验证。
 - 报告逐株独有、联合独有、两者共有的可比家族/位点及匹配依据；
   不能只减去两个家族总数推算“新增”。
 - 报告完整双侧 flank、截断 flank、边界未解决、tnp 完整覆盖及跨来源分布。
@@ -254,6 +315,8 @@ wall time、CPU time、peak RSS、临时/输出磁盘、PALS 命中数、退出�
 任一步 OOM、超时、磁盘越限或未正常完成时停止升级；
 RSS、wall time 或磁盘任一达到预算的 80% 时先复核，修订资源配置并记录
 后才继续，不自动重试放大。完成 8 株阶梯前不启动更大的自然 pool。
+scale_4/8 在资源允许后分别运行 A2.3 配对的 spike-in，使用同样预算和
+升级规则；该对照未完成前不解释对应规模的天然发现结果。
 
 all-vs-all 比较的潜在序列对随规模增加，不能用单株耗时线性外推；
 也不把“时间或内存严格按总长度平方增长”当作已证实事实。
@@ -305,9 +368,17 @@ PacBio HiFi/CCS 和 Nanopore 当作同一种已测试输入。
 
 ### B2. 目标层数据
 
-先找一个环境分离株的“原始长读段＋同一 BioSample 配套 assembly”，
-再找一个混合微生物样本的配套数据。优先依据数据完整性，
-而不是先宣称某个平台更好。
+首轮元数据预检已取得三个 PacBio 候选：
+DdD110（SRR16235513）、RoMoAcy1（SRR15616890）、
+AmHOT1A3（SRR2084418），优先顺序按此列出。
+独立 Nanopore 对照为 PaAR2038（SRR11947722，GCA_012689525.1），
+不属于八株 pool，也不是 PaBN5；仅用于 B/C 的独立环境分离株测试。
+匹配证据、下载地址及未完成项见
+[LONG_READ_AVAILABILITY.md](LONG_READ_AVAILABILITY.md)。
+
+先完成文件校验、参考版本解析和输入类型确认，再安排工具目标测试。
+混合微生物样本的匹配数据仍未选定，不能宣称已覆盖宏基因组场景。
+优先依据数据完整性，不把不同菌株的结果解释为平台优劣。
 
 Nanopore 和 PacBio 分别记录：
 
@@ -353,10 +424,16 @@ assembly（含未分箱 contigs），不能只保留候选所在的 MAG。
 固定 minimap2 版本/提交、参考及索引哈希、完整命令。
 预注册 preset：PacBio HiFi 用 map-hifi，旧 PacBio CLR 用 map-pb；
 Nanopore 高准确度且有元数据支持时用 lr:hq，其余用 map-ont。
+lr:hq 从 minimap2 2.27 起提供，使用该 preset 必须固定 2.27 或更高版本；
+旧 Nanopore run 不能仅凭平台名就认定为高准确度输入。
+PacBio Sequel 仪器名也不等于 HiFi/CCS，须核查 read 类型。
 preset 在查看候选支持结果前根据数据类型选择并记录；
 实际固定版本不支持某 preset 时先修订配置。
 
-主映射设置显式保留 secondary：--secondary=yes -N 50 -p 0.8，
+主映射设置显式保留 secondary：--secondary=yes -N 50 -p 0.8。
+其中 --secondary=yes 和 -p 0.8 已是 minimap2 默认值，写出它们便于审计；
+-N 50 将默认最多 5 条 secondary 增加到 50 条。
+
 输出 SAM/BAM，保存 supplementary 及 unmapped 记录；
 不得用只保留 primary 的处理来决定候选唯一性。
 记录 primary/secondary/supplementary、MAPQ、AS/NM、CIGAR、剪切、
@@ -423,7 +500,8 @@ GitHub 保存计划、manifest、下载说明、版本、命令、汇总和可�
 5. 每个位点的边界、flank、tnp、连接及宿主证据表。
 6. 资源统计和人工核查案例；不以 family 总数代表独立 insertion event 数。
 
-执行顺序：A 技术门槛 → 2/4/8 株资源阶梯 → 天然联合比较；
+执行顺序：reads 元数据预检 → 下载校验和输入冻结 → A 技术门槛 →
+2/4/8 株资源阶梯及 4/8 配对 spike-in → 天然联合解释；
 B0 兼容性预检可独立进行，B 通过工具示例后再上目标数据；
 有匹配 reads 即可按 C 的完整参考比对方案开展连接证据分析。
 
@@ -470,3 +548,20 @@ tnp-supported 定义、边界算法或现有导出。
   preset、secondary 输出、-N/-p 限制与多部分索引的 MAPQ 注意事项。
 - [RepLong README](https://github.com/ruiguo-bio/replong/blob/master/README.md)
   和 [安装脚本](https://github.com/ruiguo-bio/replong/blob/master/install.sh)。
+
+
+## 11. 第二轮审查修订（v3）
+
+| 审查项 | 修订 |
+|---|---|
+| toy 阳性不代表真实规模敏感性 | A2.3：三来源计算 spike-in，scale_4/8 × 两个 l 系列，天然解释前必做 |
+| 全 panel 单拷贝 core 太严格 | A3.1：同属共享 CDS 为主要背景标签，global core 保留为次要描述 |
+| reads 核验时机过晚 | A1/B2：输入冻结前核查；三株 PacBio 已匹配，另列独立 Nanopore 对照 |
+| 回归株和近缘株边界不明确 | A1 与候选表：三回归株排除在所有本轮 pools 及 spike-in 外 |
+| minimap2 默认参数与版本 | C1：-p 0.8 为默认，-N 50 改变默认上限；lr:hq 需 >=2.27 |
+| 边界状态数量 | A3：明确列出 METHOD 五个 boundary_source 值 |
+| D110 / 110 别名 | 候选表与 reads 核查：以 BioSample 关联 D110、110、D.den110 |
+
+本轮新增核查只涉及公开元数据与软件文档，未下载 reads、未执行发现或比对。
+[minimap2 NEWS](https://github.com/lh3/minimap2/blob/master/NEWS.md)
+记录 2.27-r1193（2024-03-12）加入 lr:hq。
