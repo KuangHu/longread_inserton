@@ -11,6 +11,7 @@
 跨物种联合 FNA 发现、长读段从头重复发现和 reads 连接核查的后续实验，见
 [跨物种与长读段评估计划](docs/PLAN_CROSS_SPECIES_LONG_READS.md)。
 该文档是待执行计划，下面描述的仍是当前已实现流程。
+四株长读段证据的首轮结果见 [READ_CALLOUT_RESULTS.md](docs/READ_CALLOUT_RESULTS.md)。
 
 ## 固定流程
 

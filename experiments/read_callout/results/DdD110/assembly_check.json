@@ -1,0 +1,23 @@
+{
+  "sample": "DdD110",
+  "gca": "GCA_020510685.1",
+  "gcf": "GCF_020510685.1",
+  "gca_records": {
+    "CP075185.1": [
+      4619274,
+      "c169d5ae2ac15d9b8d5fe575bc3b83e222956e23aa014af3ca81776c9f06ef66"
+    ]
+  },
+  "gcf_records": {
+    "NZ_CP075185.1": [
+      4619274,
+      "c169d5ae2ac15d9b8d5fe575bc3b83e222956e23aa014af3ca81776c9f06ef66"
+    ]
+  },
+  "identical_sequence_sets": true,
+  "gcf_cds_features": 4326,
+  "fasta": "$PROJ/data/assemblies/DdD110/GCF_020510685.1/ncbi_dataset/data/GCF_020510685.1/GCF_020510685.1_ASM2051068v1_genomic.fna",
+  "fasta_sha256": "9f06bdbd8aef0fb57cb9d31b9356fbc32dd20e008a71d8143fca4d26af27a3bb",
+  "gbff": "$PROJ/data/assemblies/DdD110/GCF_020510685.1/ncbi_dataset/data/GCF_020510685.1/genomic.gbff",
+  "gbff_sha256": "632a8e9cd73198ef5945a2685848b5d887e8f8ffc25b83722fd1ca627f7e5fa9"
+}

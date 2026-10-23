@@ -128,22 +128,31 @@ def probe(run, nbytes):
     return result
 
 
-def download(url, target, expected_bytes):
+def download(url, target, expected_bytes, attempts=8):
     part = target.with_name(target.name + ".part")
-    offset = part.stat().st_size if part.exists() else 0
-    if offset > expected_bytes:
-        raise SystemExit("Partial file larger than archive size: " + str(part))
-    if offset < expected_bytes:
+    for attempt in range(attempts):
+        offset = part.stat().st_size if part.exists() else 0
+        if offset > expected_bytes:
+            raise SystemExit("Partial file larger than archive size: " + str(part))
+        if offset == expected_bytes:
+            break
         headers = {"Range": "bytes=%d-" % offset} if offset else {}
-        with urllib.request.urlopen(urllib.request.Request(url, headers=headers), timeout=300) as response:
-            if offset and response.status != 206:
-                raise SystemExit("Server ignored resume request for " + url)
-            with open(part, "ab") as handle:
-                while True:
-                    block = response.read(CHUNK)
-                    if not block:
-                        break
-                    handle.write(block)
+        try:
+            with urllib.request.urlopen(urllib.request.Request(url, headers=headers), timeout=300) as response:
+                if offset and response.status != 206:
+                    raise SystemExit("Server ignored resume request for " + url)
+                with open(part, "ab") as handle:
+                    while True:
+                        block = response.read(CHUNK)
+                        if not block:
+                            break
+                        handle.write(block)
+        except OSError as error:
+            # Includes timeouts and dropped connections; resume from the partial file.
+            print("download interrupted (%s); attempt %d/%d" % (error, attempt + 1, attempts), file=sys.stderr)
+            time.sleep(30)
+    if part.stat().st_size != expected_bytes:
+        raise SystemExit("Download incomplete after %d attempts: %s" % (attempts, part))
     part.rename(target)
 
 
@@ -190,10 +199,15 @@ def fetch(run, out):
     if all(checks.values()):
         stats = summarize_file(target, run["platform"])
         # ENA read_count counts SRA spots; for PacBio RS a spot can hold several subreads.
+        # Spots absent from the FASTQ are accepted only if they carry no bases,
+        # i.e. the base count still matches exactly (empty ZMWs are not exported).
+        bases_match = stats["bases"] == run["archive_base_count"]
+        missing = run["archive_read_count"] - stats["distinct_sra_spots"]
         checks.update(
-            spot_count_match=stats["distinct_sra_spots"] == run["archive_read_count"],
-            base_count_match=stats["bases"] == run["archive_base_count"],
+            spot_count_match=missing == 0 or (missing > 0 and bases_match),
+            base_count_match=bases_match,
         )
+        result["spots_absent_from_fastq"] = missing
         result["summary"] = stats
     result["checks"] = checks
     result["status"] = "verified" if all(checks.values()) else "mismatch"
