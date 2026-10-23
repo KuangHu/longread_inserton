@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "protocol": "docs/CALLOUT_SCALE_PROTOCOL.md",
+  "source_baseline_commit": "ee229861df8d27b6c265ca04c3693662394daa83",
+  "scope": "Single-isolate assembly candidate insertion export plus matched ONT read evidence",
+  "ready_for_10_sample_batch": false,
+  "checks": {
+    "datatype_and_pipeline_contract": {"status": "fixed", "evidence": "docs/CALLOUT_SCALE_PROTOCOL.md"},
+    "package_and_bundle_tests": {"status": "pass", "tests": 26, "command": "python -m unittest discover -s tests -v"},
+    "archived_four_sample_table_checks": {"status": "pass", "evidence": "experiments/callout_scale_v1/snapshot_checks.json"},
+    "native_tools_demo_on_cluster": {"status": "not_run", "reason": "Native binaries not available in this execution environment"},
+    "round1_results_archive": {"status": "pending", "reason": "Only sample manifest and metadata are present in the inspected baseline; cluster results reported by user"},
+    "audited_filled_site_classifier": {"status": "not_implemented_in_this_change", "reason": "Existing classifier is v1; CIGAR and competing-locus challenge tests required"},
+    "five_sample_live_validation": {"status": "not_run", "reason": "Full cluster runs and raw read alignments unavailable here"},
+    "five_sample_manual_spotchecks": {"status": "not_run"},
+    "resource_calibration": {"status": "pending", "reason": "Use measured per-stage resource records for the frozen five-sample test"}
+  },
+  "not_required_for_this_release": ["empty_site_reads", "cross_species_context_comparison", "nonreference_low_frequency_insertion_calls", "minimum_biological_yield"]
+}

@@ -1,5 +1,9 @@
 # Paraburkholderia 属级面板：逐株发现与 Nanopore 核查，跨株汇总家族
 
+> 当前执行优先级（2026-10-23）：先按 [call-out 扩容规范](CALLOUT_SCALE_PROTOCOL.md)
+> 完成单株输入、发现、导出与 read 证据的固定五株验收。本文件保留跨株比较设计；
+> empty-site / 新背景比较不作为单株 call-out 扩容的依赖。下文历史状态按其版本解释。
+
 日期：2026-10-23  
 状态：计划 v3.1；已完成属级公开数据可用性核查、19 份 assembly 对 AR20-38 及两两 ANI、
 克隆归并与组装连续性分层；尚未冻结面板、下载新增 raw reads 或运行新增菌株 discovery / 位点比较。  

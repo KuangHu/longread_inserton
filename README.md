@@ -10,8 +10,16 @@
 
 四株 assembly＋长读段连接证据的首轮结果见
 [READ_CALLOUT_RESULTS.md](docs/READ_CALLOUT_RESULTS.md)。
-下一步优先执行[Paraburkholderia 属级跨株汇总计划](docs/PLAN_PARABURKHOLDERIA_MULTI_ISOLATE.md)：
-各株独立发现、各自 Nanopore 核查，再比较 X 家族与不同侧翼背景；该扩展尚未执行。
+**当前优先：固定单株 insertion call-out 并完成扩容验收。**
+见 [CALLOUT_SCALE_PROTOCOL.md](docs/CALLOUT_SCALE_PROTOCOL.md)：
+输入固定为单株高连续性 assembly＋同 BioSample 的 genomic Nanopore；
+原生发现不改，固定五株测试和结果检查，先验收再扩大到 10/50 株。
+新增 `scripts/check_callout_bundle.py` 检查 exports 与 v1 read 表的一致性；
+本地测试/小表核对不等于集群完整重跑或审核版 read 验收。
+
+[Paraburkholderia 属级跨株汇总计划](docs/PLAN_PARABURKHOLDERIA_MULTI_ISOLATE.md)
+保留为附加分析；已有 round-1 集群结果汇报，其结果/脚本尚待归档核查。
+跨株 empty-site 验证不阻塞本株 `[up][X][down]` call-out。
 
 真正的 pooled FNA 发现和长读段从头重复发现保留为后续对照，见
 [跨物种与长读段评估计划](docs/PLAN_CROSS_SPECIES_LONG_READS.md)。
