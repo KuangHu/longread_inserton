@@ -1,7 +1,10 @@
 # 跨物种联合发现与长读段评估计划
 
 日期：2026-10-22（运行前审查修订 v4）  
-状态：计划，尚未执行本计划中的联合发现或长读段实验。  
+状态（2026-10-23 更新）：四株 assembly＋reads 连接证据首轮实验已完成，见
+[READ_CALLOUT_RESULTS.md](READ_CALLOUT_RESULTS.md)；联合 FNA 与长读段从头重复发现尚未完成。
+当前下一步优先采用[近缘 Paraburkholderia 逐株发现与跨株汇总](PLAN_PARABURKHOLDERIA_MULTI_ISOLATE.md)。
+下文 A 的 pooled 发现及其对照保留为后续实验；历史修订记录不代表当前执行状态。  
 适用仓库：KuangHu/longread_inserton（multisite-insertion）。
 
 ## 1. 要回答的问题
@@ -68,7 +71,7 @@ X 的内部相似，两侧背景不同。拷贝可以来自同一菌株，也可
 - 冻结现有 tnp-supported 定义；同时保留全部家族，不能以 tnp 子集代替未知元件发现评估。
 - 没有 tnp 注释或蛋白命中不代表没有相关功能；/product 与 /note 证据分别报告。
 
-## 5. 阶段 A：多个 FNA 联合发现（优先）
+## 5. 阶段 A：多个 FNA 联合发现（保留为后续对照）
 
 ### A1. 输入及来源追踪
 
