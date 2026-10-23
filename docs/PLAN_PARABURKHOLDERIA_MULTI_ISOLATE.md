@@ -1,7 +1,7 @@
 # Paraburkholderia 属级面板：逐株发现与 Nanopore 核查，跨株汇总家族
 
 日期：2026-10-23  
-状态：计划 v3；已完成属级公开数据可用性核查、19 份 assembly 对 AR20-38 及两两 ANI、
+状态：计划 v3.1；已完成属级公开数据可用性核查、19 份 assembly 对 AR20-38 及两两 ANI、
 克隆归并与组装连续性分层；尚未冻结面板、下载新增 raw reads 或运行新增菌株 discovery / 位点比较。  
 基准结果：commit [629d37d](https://github.com/KuangHu/longread_inserton/tree/629d37da0d738b6db4bb9e981ddff95be2ebe202)，
 见 [READ_CALLOUT_RESULTS.md](READ_CALLOUT_RESULTS.md)。
@@ -109,31 +109,66 @@ assembly accession 排序；不依据 tnp 数、IS5 有无或候选产量选样�
 
 **克隆归并**（单链接，ANI ≥99.9% 且双方 AF 的较小值 ≥95%）：
 PRJEB88388 的 P. fungorum R-93128、R-92973、R-91495、R-92561、R-92583 两两 ANI 100.00%、
-AF 99.8–100%，视为一个克隆，不计为五个独立菌株。代表按“contig 最少→最大 contig 最长→accession”
-选 R-93128；其余记为 alias，不删除原始记录。同项目 R-91497 不属于该克隆。
-19 份 assembly 归并后为 **15 个独立基因组**。阈值是本面板的操作性定义，不是菌株分类标准。
+AF 99.8–100%，归为一个**去冗余代表组**，避免主分析重复计权；代表按“contig 最少→最大 contig 最长→accession”
+选 R-93128。skani ANI 是近似估计，不是逐碱基或逐结构一致性检查，不能证明插入位置相同。
+其余四份**保留各自样本身份**，不作可忽略的 alias：整体近乎一致而局部插入不同，正是本项目关心的情形，
+后续用已发现 X 逐株补查位置与连接（P5），单列报告。
+五份来自三个地点、五个地下水样本、两类富集（氰化物/石油烃）及 2024–2025 两年
+（[clone_member_sources.tsv](../experiments/metadata_audit/paraburkholderia_20261023/clone_member_sources.tsv)）；
+这既可能是广泛分布的克隆，也可能是富集流程中的交叉污染，本计划不作判断，也不把五份算作独立自然环境重复。
+同项目 R-91497 不属于该克隆，但与克隆成员 R-91495 来自同一地下水样本 DE_STO_02_GW。
+19 份 assembly 归并后为 **15 个去冗余代表组**，不是已证明的 15 个独立环境样本。
+阈值是本面板的操作性定义，不是菌株分类标准。
 
-**连续性分层**（以实际 FNA 计，不依赖 NCBI level 标签）：
+**连续性分层**（以实际 FNA 计，不依赖 NCBI level 标签；只描述组装连续性，不证明接近完整）：
 
 | 层 | 规则 | 独立基因组 |
 |---|---|---|
 | complete | NCBI Complete Genome | AR20-38、DD10、CT11-68 |
-| near_complete | ≤10 条记录且最大记录 ≥3 Mb | R-92578、LjRoot223、SMT4a、FW306-02-B、R-93128、R-91497、LjRoot267 |
+| high_contiguity_draft | ≤10 条记录且最大记录 ≥3 Mb | R-92578、LjRoot223、SMT4a、FW306-02-B、R-93128、R-91497、LjRoot267 |
 | fragmented | 其余 | R-92571、PR3、LjRoot241、LjRoot22、WTPI1 |
 
-complete＋near_complete 共 10 个独立基因组，可作为主面板候选池（仍须来源核实与 reads 文库审计）。
-near_complete 的 contig 末端位点照常标 edge_limited / contig_edge_limited，
-不计为完整背景；记录数阈值在查看 discovery 结果前固定，不按产量调整。
+complete＋high_contiguity_draft 共 10 个代表组，是**候选池，不是 10 个已验证可用样本**。
+是否纳入一个位点，看该位点的 X＋两侧 flank 是否完整、是否跨 gap 或记录边缘、是否得到本株 reads 支持；
+contig 末端位点照常标 edge_limited / contig_edge_limited，不计为完整背景。
+记录数阈值在查看 discovery 结果前固定，不按产量调整。
 
 **同种组**（单链接，ANI ≥95%）：P. fungorum（7 份：克隆 5＋R-91497＋PR3）、
 DD10＋P. terricola SMT4a＋LjRoot223（DD10 与二者同组，与其元数据中的 terricola 描述一致；
 保留档案分类 Paraburkholderia sp.）、P. hospita（3 份）、P. xenovorans（R-92571/R-92578，97.33%）；
 AR20-38、CT11-68、FW306-02-B、WTPI1 各自单独成组。AR20-38 没有同种伙伴。
 
+### 3.2 第一轮执行顺序与文库核查（2026-10-23）
+
+第一轮主要验收问题：**每个共享 X 家族，增加一株后，新增多少个有本株 reads 支持、
+且确认位置不同的完整 `[up][X][down]`**；不以 assembly 数量或候选总数为目标。
+
+| 优先级 | 比较组 | 说明 |
+|---|---|---|
+| 第一 | P. terricola：SMT4a＋LjRoot223（ANI 99.54%，AF 约 94%）；DD10 来源核实后加入 | 检验共享位置与新增位置；不等 DD10 即可准备 |
+| 第二 | P. fungorum：R-93128＋R-91497（ANI 98.51%，AF 84.2/88.1%） | 另一组独立的方法测试 |
+| 基准 | AR20-38 | 已有 11 拷贝 IS5 基准，作回归；跨物种扩展单列，不承担第一轮主要验收 |
+
+四株文库与来源核查见
+[priority_library_audit.tsv](../experiments/metadata_audit/paraburkholderia_20261023/priority_library_audit.tsv)：
+
+| 菌株 | Nanopore 文库 | reads / 深度 | assembly | 需带入分析的限制 |
+|---|---|---|---|---|
+| SMT4a | MinION，library_selection=**PCR** | 45,764 / 约 63× | Illumina＋ONT，Unicycler | PCR 文库可能有扩增嵌合与重复；按 read 计的支持须标注，不当作独立分子已验证 |
+| LjRoot223 | MinION，RANDOM | 18,146 / 约 **14×** | Illumina＋ONT，Unicycler | 深度低，未获 full span 的位点须区分“覆盖不足”与“无支持” |
+| R-93128 | MinION，RANDOM | 182,196 / 约 89× | ONT-only，dragonflye | reads 与组装同源，支持标 assembly_consistency |
+| R-91497 | MinION，RANDOM | 621,035 / 约 207× | ONT-only，dragonflye | 同上；与克隆成员 R-91495 同一地下水样本 |
+
+四株均为培养分离株：SMT4a 为 Emory 实验室保存的土壤分离株（2011，美国佐治亚），
+LjRoot223 为健康百脉根根部分离株（2022，德国），两株 fungorum 为地下水富集培养分离株。
+富集来源不排除，但保留培养历史和取样关系，不当作独立自然环境重复。
+注释统一用各自 GCF（PGAP）；SMT4a 的 GCA 无注释。
+深度为档案碱基数 / 基因组长度的粗算，尚未下载 reads 核验。
+
 由此 P3 应同时报告两种比较，二者不混合：
-- **跨物种（以 AR20-38 为中心）**：complete＋near_complete 候选与 AR20-38 的双方 AF 仅约 25–57%，
-  AR20-38 的大部分候选位点预计落在无共线对应的区域，按规则记 unresolved。
-  可比较分母小是预期结果，不是流程失败；报告必须给出分母。
+- **跨物种（以 AR20-38 为中心）**：complete＋high_contiguity_draft 候选与 AR20-38 的双方 AF 约 25–57%。
+  这是全基因组平均量，候选位点未必均匀分布，不能据此推出多少位点 unresolved；
+  可预期跨物种解析率较低，但实际比例必须在完成候选局部对应后报告，并给出分母。
 - **同种内**：terricola 组（DD10、SMT4a、LjRoot223，两两 ANI 99.22–99.54%，AF 88.9–95.4%）、
   fungorum（R-93128 克隆代表与 R-91497，ANI 98.51%，AF 84.2/88.1%；fragmented 层 PR3 另列）等，
   共线性高，最适合区分“共享同源位置”与“新背景”。这是原问题在现有数据下更可解析的形式，
@@ -238,8 +273,8 @@ P3 以双向全基因组比对中的宿主共线区段和邻近基因顺序为�
 若在这两个较远物种间不能可靠定位宿主同源区域，P3 停留在 unresolved，
 不以放宽一个 identity 数字代替方法验证。
 
-预期结果须事先写明：跨物种（ANI 约 80–89%、AF 约 18–57%）比较中，
-大部分位点没有可用宿主共线对应，unresolved 占多数是方法限制的正常体现；
+预期须事先写明：跨物种（ANI 约 80–89%、AF 约 18–57%）比较的位点解析率预计较低，
+但比例不能由全基因组 AF 推算，unresolved 多时也须区分方法限制与真实缺乏共线；
 同种组（3.1）才是检验“共享位置 vs 新背景”判定的主要可解析对照。
 两者的分母、resolved 数和 unresolved 数分别报告。
 
