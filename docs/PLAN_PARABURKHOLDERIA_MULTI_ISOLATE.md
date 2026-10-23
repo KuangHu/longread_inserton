@@ -1,7 +1,8 @@
-# 近缘 Paraburkholderia：逐株发现与 Nanopore 核查，跨株汇总家族
+# Paraburkholderia 属级面板：逐株发现与 Nanopore 核查，跨株汇总家族
 
 日期：2026-10-23  
-状态：待执行计划 v1；本次只提交计划，未选择新增 run、未下载新增数据、未运行跨株分析。  
+状态：计划 v2；已完成属级公开数据可用性核查及 19 份 assembly 的 ANI 测量；
+尚未冻结面板、下载新增 raw reads 或运行新增菌株 discovery / 位点比较。  
 基准结果：commit [629d37d](https://github.com/KuangHu/longread_inserton/tree/629d37da0d738b6db4bb9e981ddff95be2ebe202)，
 见 [READ_CALLOUT_RESULTS.md](READ_CALLOUT_RESULTS.md)。
 
@@ -47,12 +48,30 @@ PaAR2038_RS_R1 在基准中有 11 个不同候选坐标，长度 1,171–1,173 b
 
 ## 3. P0：先核实新增样本，再冻结面板
 
-目标为 AR20-38 加 2–4 株独立菌株，总计 3–5 株。
-这只是目标规模，不表示已找到足够匹配数据。
-首轮仅检索 P. aromaticivorans；若数量不足，先报告缺口。
-同属近缘物种可另建 near_species 扩展层，冻结前列明名单和原因，
-不把它们冒充同种重复。现有 PaBN5（GCA_002278075.1）可进入元数据核查，
-但目前没有已确认的配套 Nanopore，不能借用 AR20-38 reads。
+主路径改为显式的属级跨物种面板；同种比较是有数据时才报告的独立分层，
+不再把 near_species 写成可有可无的后备。目标仍为 AR20-38 加 2–4 株，
+但数量必须服从数据和来源约束，不能拿目标数替代已核实的可用性。
+
+2026-10-23 的[完整可用性核查](../experiments/metadata_audit/paraburkholderia_20261023/README.md)
+检出 24 个 genomic Nanopore runs；19 个 BioSample 可匹配 current GCA，
+其中只有 3 个 Complete Genome（含 AR20-38）、1 个 Chromosome、15 个 Contig。
+P. aromaticivorans 仅检出既有 SRR11947722。
+P. fungorum 的 9 runs 中，7 个匹配 contig-level assembly，另 2 个未找到关联 assembly；
+不能直接把它设为“完整 assembly＋reads”主面板中心。
+
+| 暂定顺序 | 菌株 / assembly | ANI 到 AR20-38 | AF：候选 / AR20-38 | 来源及待办 |
+|---|---|---:|---|---|
+| 0 | AR20-38 / GCA_012689525.1 | 100.00% | 100 / 100% | 已有基准，森林土壤 |
+| 1 | DD10 / GCA_049177125.1 | 86.54% | 54.08 / 38.34% | 草甸土壤菌丝际；BioSample 使用 MISAG single-amplified 模型，须核实是否培养分离株及扩增历史 |
+| 2 | CT11-68 / GCA_047325075.1 | 84.88% | 52.87 / 33.15% | 小麦根部、NCSU Phytotron 植物生长设施；单列 plant-associated controlled-environment 来源 |
+
+这是数据可用候选顺序，不是已冻结的三株合格面板。
+DD10 的样本模型与 strain/assembly 描述存在需要解释的差异；
+CT11-68 不能标为野外分离株，也不能仅凭生长设施来源断言为工程化菌株。
+若坚持“野外环境培养分离株＋Complete Genome”，当前证据不足以宣布满足三株目标。
+来源未解决时保留候选状态，不提前下载其 reads 或运行 discovery。
+Chromosome/Contig 数据仅可另立明确命名的探索层，不静默放宽主面板要求。
+同种无新增合格样本的事实保留；PaBN5 不可借用 AR20-38 reads。
 
 | 条件 | 纳入主面板的要求 |
 |---|---|
@@ -65,10 +84,14 @@ PaAR2038_RS_R1 在基准中有 11 个不同候选坐标，长度 1,171–1,173 b
 | 读段可解释性 | 记录 chemistry/basecaller、处理历史、原始 read ID、split/duplex 关系的可得性 |
 
 先取得 assembly 元数据及 FNA，再依据全基因组相似度和比对覆盖报告亲缘关系。
-锁定 ANI 工具版本、命令、双方比对覆盖与 taxonomy 来源；ANI 仅用于分层，
+本次已用 skani 0.4.0 对全部 19 份匹配 FNA 测量 ANI，命令、二进制和输入哈希见核查目录。
+ANI 是可比同源部分的估计，必须同时报告双方 aligned fraction；接近 80% 的结果谨慎解释。
+锁定 ANI 工具版本、命令、双方比对覆盖与 taxonomy 来源；ANI 仅用于排序/分层，
 不凭高 ANI 删除可能带有不同插入的独立菌株。
-在符合来源/数据要求的候选中按到 AR20-38 的 ANI 降序选取，平局按
+在同一来源/assembly 合格层内按到 AR20-38 的 ANI 降序选取，平局按
 assembly accession 排序；不依据 tnp 数、IS5 有无或候选产量选样。
+优先接近 AR20-38 是预先选择的设计，会偏向共享位置，报告中说明此偏差。
+来源核实后的纳入/排除与最终顺序须在查看 discovery 产量前固定。
 保留全部候选及未入选原因，便于评估选择偏差。
 
 至少一个新增独立菌株匹配成功，才进入双株技术检查；
@@ -144,7 +167,7 @@ tnp 产品名、单个催化域或同属一个已知 IS 类别，不足以合并
 位点汇总时合并支持 read 的身份集合，不能相加两个软件的支持条数。
 若没有逐 read 身份表，暂不计算合并支持数。
 
-## 6. P3：近缘菌株的同源位置与不同侧翼背景
+## 6. P3：跨物种同源位置判定；未比对上不算新背景
 
 以下四种量必须分开：
 
@@ -159,19 +182,41 @@ N_context 是本次序列/共线性规则下的背景数量，不是历史插入
 菌株数、物种数、未解决位点数、侧翼不足数同时输出。
 例如三株各 11/8/6 个拷贝得到 25 个实例，不代表 25 个不同背景。
 
-每个 locus 用真实左右 500 bp flank 分别对其它菌株的完整 assembly 比较，
-保存所有竞争位置。初始近缘匹配标准：每侧覆盖 >=80%、identity >=90%；
-两侧映射必须方向和次序一致，并共同指向可比较的宿主区域。
-遇候选边界偏移、重复侧翼或多重匹配，辅以独立提取的左右各 2 kb 上下文
-和全基因组共线关系；不以单侧匹配或 tnp 名称判定同源位点。
-具体比对工具版本、参数、等分命中和共线性规则在新增数据解释前冻结。
+取消“flank identity >=90% 即同源，否则视作不同背景”的规则。
+P3 以双向全基因组比对中的宿主共线区段和邻近基因顺序为主要依据；
+500 bp flank 及另存的 2 kb 邻域是局部证据，不能用全基因组 ANI
+直接换算一个局部 identity 阈值，也不能把 ANI 当作局部同源位置的证明。
 
-只有双侧对应与位置关系无歧义时合并为同源背景组。
-整个 flank 不可用、短于 250 bp、跨记录边缘、双侧指向不同位置或无法排除
-重复宿主区域时，记 context_unresolved；不能把每个未解决项都算作新背景。
-图中非传递或多对多关系也保留为未解决，不用连通性强行归组。
-无 flank 命中只表示在本次检索条件下未检出；区分“可评估但未匹配”和“不可评估”。
-新背景的人工审计同时查看全基因组邻域，不能仅靠 contig 名或坐标变化。
+在新增 discovery 前，先用完整 assembly 做成对宿主比对及基因顺序检查。
+首个技术试验使用 MUMmer4 nucmer --maxmatch，交换 reference/query 各运行一次，
+保留未过滤 delta 与 show-coords 输出；1-to-1 筛选仅为辅助视图，不能抹掉竞争位置。
+邻近 CDS 的同源与顺序需另存证据，不凭产品名相同判为同源。
+固定实际二进制版本、其余参数、共线区段和唯一锚点的判定规则。
+工具配置必须在两株技术检查和下述分化对照通过后存入冻结配置；
+本次只运行了 ANI，并未实现或验证该位点比较层。
+若在这两个较远物种间不能可靠定位宿主同源区域，P3 停留在 unresolved，
+不以放宽一个 identity 数字代替方法验证。
+
+每对同家族 locus 保存以下三态及原始证据：
+- same_position：两侧宿主锚点在双向对应的共线区域内，方向/基因次序一致，
+  且保留所有竞争位置后仍能唯一定位；允许 X 的存在/缺失及局部长度变化。
+- distinct_position：有积极的位置证据，例如双方分别落在已解析且不同的
+  宿主同源位置，或株内为已排除重复报告的不同物理位置。
+  跨物种时必须能区分“位置不同”与“宿主区域无法比较”。
+- unresolved：没有命中、只命中一侧、多重匹配、双侧矛盾、未比对的附属区域、
+  flank 短于 250 bp、记录/origin 边缘受限、局部重排无法唯一定位等。
+  原来的“可评估但未匹配”也不进入新增背景计数。
+
+只有无矛盾的 same_position 关系可合并；非传递和多对多关系保持未解决。
+不同组之间也不能仅因缺少 same_position 边就断言 distinct_position。
+N_context 仅针对关系充分解析的可比较子集计算，同时交付成对三态表、
+参与该计数的成员列表及所有被排除的 unresolved 项。
+仍可能合并的孤立组只能作为候选组列出，不作为已证实不同背景。
+株内不同物理位点与跨株位置对应分别报告，避免跨物种未知关系膨胀总 N。
+
+按 same-species / cross-species 分层，逐菌株对报告可定位比例和三态数量；
+没有同种比较时明确写 no additional matched same-species isolate。
+人工审计查看完整邻域和竞争位置，不以名称、坐标变化或未命中证明新背景。
 
 存在同源位置时，允许报告 present / observed_empty / altered / unresolved：
 - observed_empty 必须在另一株真实 assembly 中定位到对应连续区间，
@@ -201,6 +246,9 @@ N_context 是本次序列/共线性规则下的背景数量，不是历史插入
   exact command、CIGAR 分母及端点归属规则须随实现和对照一起冻结。
 
 Nanopore read 数不能无条件等同原始独立分子数：
+公开 SRA 导出的 Nanopore FASTQ 可能已替换原始 read ID（基准 SRR11947722 即如此），
+因此预期多株会缺少 split/duplex 来源关系；这是档案格式限制，不是逐株实验失败。
+每个 run 仍实际检查，不假定所有提交格式相同。
 检查原始 read ID、重复导出、split parent 与 duplex/parent 信息；
 避免对同一原始证据的多个派生记录重复计数。
 不能确认关系时标 independent_molecule_count_unverified，
@@ -235,7 +283,8 @@ Nanopore read 数不能无条件等同原始独立分子数：
 | 对照 | 必须满足的行为 |
 |---|---|
 | 同一成员重复报告、GCA/GCF 重复来源 | alias 增加，sample/locus/context 不增加 |
-| 同一同源位置出现在两株 | sample_locus_count 可增加，context 组不因此翻倍 |
+| 同一同源位置出现在两株，包括宿主侧翼低于 90% identity | 能凭双侧共线/基因顺序恢复时归为同位点，否则 unresolved；绝不因阈值失败增加背景 |
+| 跨物种宿主区域未比对或多重匹配 | unresolved 数增加，已证实新增背景数不增加 |
 | 同一个 X 位于三个独立随机背景 | 在真值已知且完整的比较输入中恢复 1 个 X 组和 3 个背景组 |
 | A–B–C 链式相似、共享短片段和嵌套 | 不无条件合并成一个严格 X 家族 |
 | 反向互补、contig ID 重名、边缘截断 | 来源和切片回写正确；截断不算完整背景 |
@@ -247,11 +296,19 @@ Nanopore read 数不能无条件等同原始独立分子数：
 AR20-38 冻结输入的原生输出若被重新生成，须解释与 629d37d 的任何差异；
 新版报告分类允许变化，但必须给出逐成员差异表。
 
-最小生物学目标：在至少三个匹配菌株的面板中，找到至少一个严格 X 组，
-出现于至少两个独立菌株，且经 P3/P4 审计后的受支持背景数比 AR20-38
-自身基线至少多 1。达不到不改阈值追阳性，报告“未证明新增背景”，
-并区分数据不足、native 未召回、边界/归组歧义和仅共享既有同源位点。
-N=50 不作为承诺；完整报告每个家族的 N、增量与未解决数。
+生物学结果采用连续统计，不再设置“新增 >=1 背景即成功”的通过线。
+每个严格 X 家族逐株报告：原生/补查来源、位点实例数、株内不同位点数、
+跨株共享位置数、有积极证据的新增位置数、unresolved 数、可比较位点分母，
+并分别给出 read-level 支持和分子独立性状态。
+同时报告相对 AR20-38 的逐株增量，以及按冻结加入顺序的累计增量。
+这些增量应由同一版最终对应关系计算；由于新增证据解决旧歧义产生的计数变化
+单列 resolution_change，不混作新株新增位置。顺序会影响边际增量，始终同时列全体总量。
+
+汇总每株/每家族的新增可解析背景及 read 支持背景；
+零增量、家族不共享和无法定位均是有效结果，不修改阈值追阳性。
+严格 DNA 对应可能在属级面板中一个共享家族也找不到，此时报告该限制。
+至少三株仅是面板规模目标，不是生物学成功证据；N=50 不作承诺。
+区分数据不足、native 未召回、DNA 家族分化、边界/宿主位置歧义和共享既有位置。
 
 人工审计至少覆盖：IS5 基准组、一个非 tnp 组（若有）、
 一个跨株新增背景、一个共享同源背景、一个归组歧义项（若有）。
@@ -264,7 +321,9 @@ tnp-negative 不作为“新功能”的证据；本计划不预设功能或新�
 先复用并核对已有 AR20-38 文件，不重复下载已验证的大文件。
 每次重算使用新目录；原实验目录和 v1 小结果保留。
 
-应交付的文件（目前尚未生成）：
+P0 已生成的原始元数据、24-run 可用性表、19-assembly ANI 与下载校验见
+[metadata audit](../experiments/metadata_audit/paraburkholderia_20261023/README.md)。
+下面的 discovery/read/context 文件尚未生成，resolved_manifest 也尚未冻结：
 
 | 文件 | 内容 |
 |---|---|
@@ -273,7 +332,7 @@ tnp-negative 不作为“新功能”的证据；本计划不预设功能或新�
 | family_pair_matches.tsv / global_families.tsv | 比对覆盖/identity、归组规则、歧义及真实代表 |
 | context_matches.tsv / context_groups.tsv | 双侧命中、共线关系、同源背景和未解决原因 |
 | member_read_evidence.tsv | 逐 read 身份与来源、候选边界版本、连接/竞争/冲突证据 |
-| family_context_summary.tsv | raw records、样本、位点、背景、支持背景及相对基准增量 |
+| family_context_summary.tsv | raw records、样本、位点、背景、支持背景、逐株/逐家族边际增量、可比分母及未解决数 |
 | sequences/ 与 coordinates.tsv | 每成员实际 X、up/down、triplet、方向和边界状态 |
 | audit.md / provenance.json | 人工案例、失败、重跑、软件/输入哈希与资源 |
 
@@ -291,6 +350,7 @@ P5 和 pooled 对照在基线报告后单独编号。
 预算是本轮配置，不是运行性能保证；先检查存储可用量再下载。
 OOM/超时停止该分支；任一资源到预算 80% 时复核后记录调整。
 扩大到 3–5 株前先检查两株结果和实际资源，不把全数据库一次混入。
+先两株运行只用于技术/资源检查，不按其产量更换已经冻结的候选顺序。
 
 ## 11. 方法依据
 
@@ -299,6 +359,7 @@ OOM/超时停止该分支；任一资源到预算 80% 时复核后记录调整�
   不代表本计划的跨株归组或审核版 read 判定已经实现。
 - [PILER 官方手册](https://www.drive5.com/piler/piler_userguide.html)：
   多序列输入与 intact/isolated 定义；近缘背景带来的限制。
+- [MUMmer4 官方仓库](https://github.com/mummer4/mummer)：宿主全基因组比对和多重匹配。
 - [minimap2 官方仓库](https://github.com/lh3/minimap2)：
   完整参考比对、preset 与多重比对输出。
 - [NCBI Datasets](https://www.ncbi.nlm.nih.gov/datasets/docs/v2/reference-docs/command-line/datasets/download/genome/)：

@@ -10,7 +10,7 @@
 
 四株 assembly＋长读段连接证据的首轮结果见
 [READ_CALLOUT_RESULTS.md](docs/READ_CALLOUT_RESULTS.md)。
-下一步优先执行[近缘 Paraburkholderia 跨株汇总计划](docs/PLAN_PARABURKHOLDERIA_MULTI_ISOLATE.md)：
+下一步优先执行[Paraburkholderia 属级跨株汇总计划](docs/PLAN_PARABURKHOLDERIA_MULTI_ISOLATE.md)：
 各株独立发现、各自 Nanopore 核查，再比较 X 家族与不同侧翼背景；该扩展尚未执行。
 
 真正的 pooled FNA 发现和长读段从头重复发现保留为后续对照，见

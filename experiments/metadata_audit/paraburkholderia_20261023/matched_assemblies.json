@@ -1,0 +1,3642 @@
+[
+  {
+    "accession": "GCA_049177125.1",
+    "current_accession": "GCA_049177125.1",
+    "paired_accession": "GCF_049177125.1",
+    "source_database": "SOURCE_DATABASE_GENBANK",
+    "organism": {
+      "tax_id": 3409691,
+      "organism_name": "Paraburkholderia sp. DD10",
+      "infraspecific_names": {
+        "strain": "DD10"
+      }
+    },
+    "assembly_info": {
+      "assembly_level": "Complete Genome",
+      "assembly_status": "current",
+      "paired_assembly": {
+        "accession": "GCF_049177125.1",
+        "status": "current",
+        "annotation_name": "GCF_049177125.1-RS_2025_03_31"
+      },
+      "assembly_name": "DD10_assembly",
+      "assembly_type": "haploid",
+      "bioproject_lineage": [
+        {
+          "bioprojects": [
+            {
+              "accession": "PRJNA1235651",
+              "title": "Paraburkholderia terricola strain DD10 isolate:DD10 Genome sequencing"
+            }
+          ]
+        }
+      ],
+      "bioproject_accession": "PRJNA1235651",
+      "release_date": "2025-03-30",
+      "submitter": "Laboratoire de Recherche en Sciences Vegetales",
+      "sequencing_tech": "Oxford Nanopore",
+      "assembly_method": "Flye v. April 2024",
+      "biosample": {
+        "accession": "SAMN47339132",
+        "last_updated": "2025-03-31T05:54:21.530",
+        "publication_date": "2025-03-17T00:00:00.000",
+        "submission_date": "2025-03-13T10:16:13.227",
+        "sample_ids": [
+          {
+            "label": "Sample name",
+            "value": "Parabukholderia sp. strain=DD10"
+          },
+          {
+            "db": "SRA",
+            "value": "SRS24543322"
+          }
+        ],
+        "description": {
+          "title": "MISAG Single Amplified Genome sample from Paraburkholderia sp. DD10",
+          "organism": {
+            "tax_id": 3409691,
+            "organism_name": "Paraburkholderia sp. DD10"
+          },
+          "comment": "Keywords: GSC:MIxS;MISAG:6.0"
+        },
+        "owner": {
+          "name": "Laboratoire de Recherche en Sciences Vegetales",
+          "contacts": [
+            {}
+          ]
+        },
+        "models": [
+          "MISAG.soil"
+        ],
+        "bioprojects": [
+          {
+            "accession": "PRJNA1235651"
+          }
+        ],
+        "package": "MISAG.soil.6.0",
+        "attributes": [
+          {
+            "name": "collection_date",
+            "value": "2022"
+          },
+          {
+            "name": "depth",
+            "value": "20 cm"
+          },
+          {
+            "name": "elev",
+            "value": "80"
+          },
+          {
+            "name": "env_broad_scale",
+            "value": "Grassland"
+          },
+          {
+            "name": "env_local_scale",
+            "value": "Meadow"
+          },
+          {
+            "name": "env_medium",
+            "value": "Soil"
+          },
+          {
+            "name": "geo_loc_name",
+            "value": "France: Sorede"
+          },
+          {
+            "name": "isolation_source",
+            "value": "Hyphosphere of Rhizophagus irregularis found in the meadow"
+          },
+          {
+            "name": "lat_lon",
+            "value": "42.53036 N 2.98508 E"
+          },
+          {
+            "name": "isolate",
+            "value": "missing"
+          },
+          {
+            "name": "strain",
+            "value": "DD10"
+          }
+        ],
+        "status": {
+          "status": "live",
+          "when": "2025-03-17T15:40:31.678"
+        },
+        "collection_date": "2022",
+        "geo_loc_name": "France: Sorede",
+        "isolate": "missing",
+        "isolation_source": "Hyphosphere of Rhizophagus irregularis found in the meadow",
+        "lat_lon": "42.53036 N 2.98508 E",
+        "strain": "DD10"
+      }
+    },
+    "assembly_stats": {
+      "total_number_of_chromosomes": 3,
+      "total_sequence_length": "7684915",
+      "total_ungapped_length": "7684915",
+      "number_of_contigs": 3,
+      "contig_n50": 4077509,
+      "contig_l50": 1,
+      "number_of_scaffolds": 3,
+      "scaffold_n50": 4077509,
+      "scaffold_l50": 1,
+      "number_of_component_sequences": 3,
+      "atgc_count": "7684915",
+      "gc_count": "4878708",
+      "gc_percent": 63.5,
+      "genome_coverage": "55"
+    },
+    "annotation_info": {
+      "name": "NCBI Prokaryotic Genome Annotation Pipeline (PGAP)",
+      "provider": "NCBI",
+      "release_date": "2025-03-24",
+      "stats": {
+        "gene_counts": {
+          "total": 6941,
+          "protein_coding": 6710,
+          "non_coding": 81,
+          "pseudogene": 150
+        }
+      },
+      "method": "Best-placed reference protein set; GeneMarkS-2+",
+      "pipeline": "NCBI Prokaryotic Genome Annotation Pipeline (PGAP)",
+      "software_version": "6.9"
+    },
+    "checkm_info": {
+      "checkm_marker_set": "Burkholderiaceae",
+      "checkm_species_tax_id": 3409691,
+      "checkm_marker_set_rank": "family",
+      "checkm_version": "v1.2.3",
+      "completeness": 99.85,
+      "contamination": 1.81
+    },
+    "average_nucleotide_identity": {
+      "taxonomy_check_status": "OK",
+      "match_status": "genus_match",
+      "submitted_organism": "Paraburkholderia sp. DD10",
+      "submitted_species": "Paraburkholderia sp. DD10",
+      "category": "category_na",
+      "submitted_ani_match": {
+        "assembly": "no-type",
+        "organism_name": "na",
+        "category": "no_type"
+      },
+      "best_ani_match": {
+        "assembly": "GCA_902833815.1",
+        "organism_name": "Paraburkholderia terricola",
+        "category": "type",
+        "ani": 99,
+        "assembly_coverage": 87.84,
+        "type_assembly_coverage": 91.95
+      },
+      "comment": "na"
+    }
+  },
+  {
+    "accession": "GCA_964253395.2",
+    "current_accession": "GCA_964253395.2",
+    "paired_accession": "GCF_964253395.1",
+    "source_database": "SOURCE_DATABASE_GENBANK",
+    "organism": {
+      "tax_id": 169430,
+      "organism_name": "Paraburkholderia hospita",
+      "infraspecific_names": {
+        "isolate": "LjRoot22"
+      }
+    },
+    "assembly_info": {
+      "assembly_level": "Contig",
+      "assembly_status": "current",
+      "paired_assembly": {
+        "accession": "GCF_964253395.1",
+        "status": "current",
+        "annotation_name": "GCF_964253395.1-RS_2026_08_03"
+      },
+      "assembly_name": "LjRoot22v2",
+      "assembly_type": "haploid",
+      "bioproject_lineage": [
+        {
+          "bioprojects": [
+            {
+              "accession": "PRJEB75483",
+              "title": "Hybrid Assembly Lotus japonicus Culture Collection Lj-SPHERE"
+            }
+          ]
+        }
+      ],
+      "bioproject_accession": "PRJEB75483",
+      "release_date": "2025-07-13",
+      "submitter": "Aarhus University",
+      "sequencing_tech": "Illumina Novaseq 6000,MinION",
+      "assembly_method": "Unicycler",
+      "biosample": {
+        "accession": "SAMEA115676877",
+        "last_updated": "2025-01-05T12:35:37.000",
+        "publication_date": "2025-01-05T00:00:00.000",
+        "submission_date": "2025-01-07T10:06:36.361",
+        "sample_ids": [
+          {
+            "db": "SRA",
+            "value": "ERS20185805"
+          }
+        ],
+        "description": {
+          "title": "LjRoot22",
+          "organism": {
+            "tax_id": 169430,
+            "organism_name": "Paraburkholderia hospita"
+          },
+          "comment": "LjRoot22 root isolate"
+        },
+        "owner": {
+          "name": "EBI"
+        },
+        "models": [
+          "Generic"
+        ],
+        "package": "Generic.1.0",
+        "attributes": [
+          {
+            "name": "ENA first public",
+            "value": "2024-01-01"
+          },
+          {
+            "name": "ENA-CHECKLIST",
+            "value": "ERC000011"
+          },
+          {
+            "name": "INSDC center name",
+            "value": "PMB-AU"
+          },
+          {
+            "name": "INSDC status",
+            "value": "public"
+          },
+          {
+            "name": "Submitter Id",
+            "value": "LjRoot22"
+          },
+          {
+            "name": "collection_date",
+            "value": "2022-02-01"
+          },
+          {
+            "name": "geo_loc_name",
+            "value": "Germany"
+          },
+          {
+            "name": "host_health_state",
+            "value": "healthy"
+          },
+          {
+            "name": "host",
+            "value": "Lotus japonicus"
+          },
+          {
+            "name": "isolation_source",
+            "value": "root"
+          },
+          {
+            "name": "sample_name",
+            "value": "LjRoot22"
+          },
+          {
+            "name": "scientific_name",
+            "value": "Paraburkholderia hospita"
+          }
+        ],
+        "status": {
+          "status": "live",
+          "when": "2025-01-07T10:06:36.361"
+        },
+        "collection_date": "2022-02-01",
+        "geo_loc_name": "Germany",
+        "host": "Lotus japonicus",
+        "isolation_source": "root",
+        "sample_name": "LjRoot22"
+      }
+    },
+    "assembly_stats": {
+      "total_sequence_length": "11144613",
+      "total_ungapped_length": "11144613",
+      "number_of_contigs": 11,
+      "contig_n50": 3228297,
+      "contig_l50": 2,
+      "number_of_scaffolds": 11,
+      "scaffold_n50": 3228297,
+      "scaffold_l50": 2,
+      "number_of_component_sequences": 11,
+      "atgc_count": "11144613",
+      "gc_count": "6896473",
+      "gc_percent": 62,
+      "genome_coverage": "132"
+    },
+    "annotation_info": {
+      "name": "Annotation submitted by Aarhus University",
+      "provider": "Aarhus University",
+      "release_date": "2025-07-10",
+      "stats": {
+        "gene_counts": {
+          "total": 10250,
+          "protein_coding": 9760,
+          "non_coding": 92,
+          "pseudogene": 398
+        }
+      }
+    },
+    "wgs_info": {
+      "wgs_project_accession": "CAXURH02",
+      "master_wgs_url": "https://www.ncbi.nlm.nih.gov/nuccore/CAXURH000000000.2",
+      "wgs_contigs_url": "https://www.ncbi.nlm.nih.gov/Traces/wgs/CAXURH02"
+    },
+    "checkm_info": {
+      "checkm_marker_set": "Burkholderiaceae",
+      "checkm_species_tax_id": 169430,
+      "checkm_marker_set_rank": "family",
+      "checkm_version": "v1.2.5",
+      "completeness": 99.5,
+      "contamination": 0.14,
+      "completeness_percentile": 42.8571
+    },
+    "average_nucleotide_identity": {
+      "taxonomy_check_status": "OK",
+      "match_status": "species_match",
+      "submitted_organism": "Paraburkholderia hospita",
+      "submitted_species": "Paraburkholderia hospita",
+      "category": "category_na",
+      "submitted_ani_match": {
+        "assembly": "GCA_002902965.1",
+        "organism_name": "Paraburkholderia hospita",
+        "category": "type",
+        "ani": 98.53,
+        "assembly_coverage": 85.14,
+        "type_assembly_coverage": 82.31
+      },
+      "best_ani_match": {
+        "assembly": "GCA_002902965.1",
+        "organism_name": "Paraburkholderia hospita",
+        "category": "type",
+        "ani": 98.53,
+        "assembly_coverage": 85.14,
+        "type_assembly_coverage": 82.31
+      },
+      "comment": "na"
+    }
+  },
+  {
+    "accession": "GCA_964252875.2",
+    "current_accession": "GCA_964252875.2",
+    "paired_accession": "GCF_964252875.1",
+    "source_database": "SOURCE_DATABASE_GENBANK",
+    "organism": {
+      "tax_id": 169430,
+      "organism_name": "Paraburkholderia hospita",
+      "infraspecific_names": {
+        "isolate": "LjRoot267"
+      }
+    },
+    "assembly_info": {
+      "assembly_level": "Contig",
+      "assembly_status": "current",
+      "paired_assembly": {
+        "accession": "GCF_964252875.1",
+        "status": "current",
+        "annotation_name": "GCF_964252875.1-RS_2026_08_03"
+      },
+      "assembly_name": "LjRoot267v2",
+      "assembly_type": "haploid",
+      "bioproject_lineage": [
+        {
+          "bioprojects": [
+            {
+              "accession": "PRJEB75483",
+              "title": "Hybrid Assembly Lotus japonicus Culture Collection Lj-SPHERE"
+            }
+          ]
+        }
+      ],
+      "bioproject_accession": "PRJEB75483",
+      "release_date": "2025-07-13",
+      "submitter": "Aarhus University",
+      "sequencing_tech": "Illumina Novaseq 6000,MinION",
+      "assembly_method": "Unicycler",
+      "biosample": {
+        "accession": "SAMEA115676917",
+        "last_updated": "2025-01-05T12:36:22.000",
+        "publication_date": "2025-01-05T00:00:00.000",
+        "submission_date": "2025-01-06T08:18:12.090",
+        "sample_ids": [
+          {
+            "db": "SRA",
+            "value": "ERS20185845"
+          }
+        ],
+        "description": {
+          "title": "LjRoot267",
+          "organism": {
+            "tax_id": 169430,
+            "organism_name": "Paraburkholderia hospita"
+          },
+          "comment": "LjRoot267 root isolate"
+        },
+        "owner": {
+          "name": "EBI"
+        },
+        "models": [
+          "Generic"
+        ],
+        "package": "Generic.1.0",
+        "attributes": [
+          {
+            "name": "ENA first public",
+            "value": "2024-01-01"
+          },
+          {
+            "name": "ENA-CHECKLIST",
+            "value": "ERC000011"
+          },
+          {
+            "name": "INSDC center name",
+            "value": "PMB-AU"
+          },
+          {
+            "name": "INSDC status",
+            "value": "public"
+          },
+          {
+            "name": "Submitter Id",
+            "value": "LjRoot267"
+          },
+          {
+            "name": "collection_date",
+            "value": "2022-02-01"
+          },
+          {
+            "name": "geo_loc_name",
+            "value": "Germany"
+          },
+          {
+            "name": "host_health_state",
+            "value": "healthy"
+          },
+          {
+            "name": "host",
+            "value": "Lotus japonicus"
+          },
+          {
+            "name": "isolation_source",
+            "value": "root"
+          },
+          {
+            "name": "sample_name",
+            "value": "LjRoot267"
+          },
+          {
+            "name": "scientific_name",
+            "value": "Paraburkholderia hospita"
+          }
+        ],
+        "status": {
+          "status": "live",
+          "when": "2025-01-07T08:19:48.080"
+        },
+        "collection_date": "2022-02-01",
+        "geo_loc_name": "Germany",
+        "host": "Lotus japonicus",
+        "isolation_source": "root",
+        "sample_name": "LjRoot267"
+      }
+    },
+    "assembly_stats": {
+      "total_sequence_length": "11989812",
+      "total_ungapped_length": "11989812",
+      "number_of_contigs": 6,
+      "contig_n50": 3224631,
+      "contig_l50": 2,
+      "number_of_scaffolds": 6,
+      "scaffold_n50": 3224631,
+      "scaffold_l50": 2,
+      "number_of_component_sequences": 6,
+      "atgc_count": "11989812",
+      "gc_count": "7396337",
+      "gc_percent": 61.5,
+      "genome_coverage": "114"
+    },
+    "annotation_info": {
+      "name": "Annotation submitted by Aarhus University",
+      "provider": "Aarhus University",
+      "release_date": "2025-07-10",
+      "stats": {
+        "gene_counts": {
+          "total": 10993,
+          "protein_coding": 10447,
+          "non_coding": 91,
+          "pseudogene": 455
+        }
+      }
+    },
+    "wgs_info": {
+      "wgs_project_accession": "CAXUPR02",
+      "master_wgs_url": "https://www.ncbi.nlm.nih.gov/nuccore/CAXUPR000000000.2",
+      "wgs_contigs_url": "https://www.ncbi.nlm.nih.gov/Traces/wgs/CAXUPR02"
+    },
+    "checkm_info": {
+      "checkm_marker_set": "Burkholderiaceae",
+      "checkm_species_tax_id": 169430,
+      "checkm_marker_set_rank": "family",
+      "checkm_version": "v1.2.5",
+      "completeness": 99.55,
+      "contamination": 0.5,
+      "completeness_percentile": 78.5714
+    },
+    "average_nucleotide_identity": {
+      "taxonomy_check_status": "OK",
+      "match_status": "species_match",
+      "submitted_organism": "Paraburkholderia hospita",
+      "submitted_species": "Paraburkholderia hospita",
+      "category": "category_na",
+      "submitted_ani_match": {
+        "assembly": "GCA_002902965.1",
+        "organism_name": "Paraburkholderia hospita",
+        "category": "type",
+        "ani": 98.51,
+        "assembly_coverage": 81.05,
+        "type_assembly_coverage": 84.29
+      },
+      "best_ani_match": {
+        "assembly": "GCA_002902965.1",
+        "organism_name": "Paraburkholderia hospita",
+        "category": "type",
+        "ani": 98.51,
+        "assembly_coverage": 81.05,
+        "type_assembly_coverage": 84.29
+      },
+      "comment": "na"
+    }
+  },
+  {
+    "accession": "GCA_977011985.1",
+    "current_accession": "GCA_977011985.1",
+    "paired_accession": "GCF_977011985.1",
+    "source_database": "SOURCE_DATABASE_GENBANK",
+    "organism": {
+      "tax_id": 134537,
+      "organism_name": "Paraburkholderia fungorum",
+      "infraspecific_names": {
+        "isolate": "R-92973",
+        "strain": "R-92973"
+      }
+    },
+    "assembly_info": {
+      "assembly_level": "Contig",
+      "assembly_status": "current",
+      "paired_assembly": {
+        "accession": "GCF_977011985.1",
+        "status": "current",
+        "annotation_name": "GCF_977011985.1-RS_2025_12_01"
+      },
+      "assembly_name": "ASM97701198v1",
+      "assembly_type": "haploid",
+      "bioproject_lineage": [
+        {
+          "bioprojects": [
+            {
+              "accession": "PRJEB88388",
+              "title": "Whole-genome sequencing of bioremediation bacteria"
+            }
+          ]
+        }
+      ],
+      "bioproject_accession": "PRJEB88388",
+      "release_date": "2025-11-28",
+      "submitter": "LM-UGent",
+      "sequencing_tech": "MinION",
+      "assembly_method": "dragonflye v1.2.1",
+      "biosample": {
+        "accession": "SAMEA120399597",
+        "last_updated": "2025-10-30T15:22:00.000",
+        "publication_date": "2025-10-30T00:00:00.000",
+        "submission_date": "2025-10-31T09:48:46.930",
+        "sample_ids": [
+          {
+            "db": "SRA",
+            "value": "ERS27100283"
+          }
+        ],
+        "description": {
+          "title": "Paraburkholderia fungorum R-92973",
+          "organism": {
+            "tax_id": 134537,
+            "organism_name": "Paraburkholderia fungorum"
+          },
+          "comment": "Paraburkholderia fungorum R-92973"
+        },
+        "owner": {
+          "name": "EBI"
+        },
+        "models": [
+          "Generic"
+        ],
+        "package": "Generic.1.0",
+        "attributes": [
+          {
+            "name": "ENA first public",
+            "value": "2025-10-30"
+          },
+          {
+            "name": "ENA-CHECKLIST",
+            "value": "ERC000011"
+          },
+          {
+            "name": "INSDC center name",
+            "value": "LM-UGent"
+          },
+          {
+            "name": "INSDC status",
+            "value": "public"
+          },
+          {
+            "name": "Submitter Id",
+            "value": "DE_RIN_09_GW_JB_14"
+          },
+          {
+            "name": "collection_date",
+            "value": "2024"
+          },
+          {
+            "name": "geo_loc_name",
+            "value": "Germany"
+          },
+          {
+            "name": "isolate",
+            "value": "R-92973"
+          },
+          {
+            "name": "isolation_source",
+            "value": "Cyanide-degrading enrichment culture obtained through enrichment of a cyanide-polluted groundwater sample: DE_RIN_09_GW"
+          },
+          {
+            "name": "sample_name",
+            "value": "DE_RIN_09_GW_JB_14"
+          },
+          {
+            "name": "scientific_name",
+            "value": "Paraburkholderia fungorum"
+          },
+          {
+            "name": "strain",
+            "value": "R-92973"
+          }
+        ],
+        "status": {
+          "status": "live",
+          "when": "2025-11-01T09:32:37.263"
+        },
+        "collection_date": "2024",
+        "geo_loc_name": "Germany",
+        "isolate": "R-92973",
+        "isolation_source": "Cyanide-degrading enrichment culture obtained through enrichment of a cyanide-polluted groundwater sample: DE_RIN_09_GW",
+        "sample_name": "DE_RIN_09_GW_JB_14",
+        "strain": "R-92973"
+      }
+    },
+    "assembly_stats": {
+      "total_sequence_length": "8958099",
+      "total_ungapped_length": "8958099",
+      "number_of_contigs": 4,
+      "contig_n50": 5328796,
+      "contig_l50": 1,
+      "number_of_scaffolds": 4,
+      "scaffold_n50": 5328796,
+      "scaffold_l50": 1,
+      "number_of_component_sequences": 4,
+      "atgc_count": "8958099",
+      "gc_count": "5531455",
+      "gc_percent": 61.5,
+      "genome_coverage": "150"
+    },
+    "annotation_info": {
+      "name": "Annotation submitted by LM-UGent",
+      "provider": "LM-UGent",
+      "release_date": "2025-10-22",
+      "stats": {
+        "gene_counts": {
+          "total": 8018,
+          "other": 8018
+        }
+      }
+    },
+    "wgs_info": {
+      "wgs_project_accession": "CDRNCZ01",
+      "master_wgs_url": "https://www.ncbi.nlm.nih.gov/nuccore/CDRNCZ000000000.1",
+      "wgs_contigs_url": "https://www.ncbi.nlm.nih.gov/Traces/wgs/CDRNCZ01"
+    },
+    "checkm_info": {
+      "checkm_marker_set": "Burkholderiaceae",
+      "checkm_species_tax_id": 134537,
+      "checkm_marker_set_rank": "family",
+      "checkm_version": "v1.2.4",
+      "completeness": 99.39,
+      "contamination": 0.09,
+      "completeness_percentile": 12.5
+    },
+    "average_nucleotide_identity": {
+      "taxonomy_check_status": "OK",
+      "match_status": "species_match",
+      "submitted_organism": "Paraburkholderia fungorum",
+      "submitted_species": "Paraburkholderia fungorum",
+      "category": "category_na",
+      "submitted_ani_match": {
+        "assembly": "GCA_902833645.1",
+        "organism_name": "Paraburkholderia fungorum",
+        "category": "type",
+        "ani": 98.58,
+        "assembly_coverage": 86.18,
+        "type_assembly_coverage": 86.49
+      },
+      "best_ani_match": {
+        "assembly": "GCA_902833645.1",
+        "organism_name": "Paraburkholderia fungorum",
+        "category": "type",
+        "ani": 98.58,
+        "assembly_coverage": 86.18,
+        "type_assembly_coverage": 86.49
+      },
+      "comment": "na"
+    }
+  },
+  {
+    "accession": "GCA_976997115.1",
+    "current_accession": "GCA_976997115.1",
+    "paired_accession": "GCF_976997115.1",
+    "source_database": "SOURCE_DATABASE_GENBANK",
+    "organism": {
+      "tax_id": 36873,
+      "organism_name": "Paraburkholderia xenovorans",
+      "infraspecific_names": {
+        "isolate": "R-92571",
+        "strain": "R-92571"
+      }
+    },
+    "assembly_info": {
+      "assembly_level": "Contig",
+      "assembly_status": "current",
+      "paired_assembly": {
+        "accession": "GCF_976997115.1",
+        "status": "current",
+        "annotation_name": "GCF_976997115.1-RS_2025_11_28"
+      },
+      "assembly_name": "ASM97699711v1",
+      "assembly_type": "haploid",
+      "bioproject_lineage": [
+        {
+          "bioprojects": [
+            {
+              "accession": "PRJEB88388",
+              "title": "Whole-genome sequencing of bioremediation bacteria"
+            }
+          ]
+        }
+      ],
+      "bioproject_accession": "PRJEB88388",
+      "release_date": "2025-11-08",
+      "submitter": "LM-UGent",
+      "sequencing_tech": "MinION",
+      "assembly_method": "dragonflye v1.2.1",
+      "biosample": {
+        "accession": "SAMEA120314562",
+        "last_updated": "2025-10-09T13:01:10.000",
+        "publication_date": "2025-10-09T00:00:00.000",
+        "submission_date": "2025-10-10T08:45:58.043",
+        "sample_ids": [
+          {
+            "db": "SRA",
+            "value": "ERS26976549"
+          }
+        ],
+        "description": {
+          "title": "Paraburkholderia xenovorans R-92571",
+          "organism": {
+            "tax_id": 36873,
+            "organism_name": "Paraburkholderia xenovorans"
+          },
+          "comment": "Paraburkholderia xenovorans R-92571"
+        },
+        "owner": {
+          "name": "EBI"
+        },
+        "models": [
+          "Generic"
+        ],
+        "package": "Generic.1.0",
+        "attributes": [
+          {
+            "name": "ENA first public",
+            "value": "2025-10-09"
+          },
+          {
+            "name": "ENA-CHECKLIST",
+            "value": "ERC000011"
+          },
+          {
+            "name": "INSDC center name",
+            "value": "LM-UGent"
+          },
+          {
+            "name": "INSDC status",
+            "value": "public"
+          },
+          {
+            "name": "Submitter Id",
+            "value": "DE_KIE_03_GW_JE_14"
+          },
+          {
+            "name": "collection_date",
+            "value": "2025"
+          },
+          {
+            "name": "geo_loc_name",
+            "value": "Germany"
+          },
+          {
+            "name": "isolate",
+            "value": "R-92571"
+          },
+          {
+            "name": "isolation_source",
+            "value": "Petroleum hydrocarbon-degrading enrichment culture obtained through enrichment of a PHC-polluted groundwater sample DE_KIE_03_GW"
+          },
+          {
+            "name": "sample_name",
+            "value": "DE_KIE_03_GW_JE_14"
+          },
+          {
+            "name": "scientific_name",
+            "value": "Paraburkholderia xenovorans"
+          },
+          {
+            "name": "strain",
+            "value": "R-92571"
+          }
+        ],
+        "status": {
+          "status": "live",
+          "when": "2025-10-11T08:07:56"
+        },
+        "collection_date": "2025",
+        "geo_loc_name": "Germany",
+        "isolate": "R-92571",
+        "isolation_source": "Petroleum hydrocarbon-degrading enrichment culture obtained through enrichment of a PHC-polluted groundwater sample DE_KIE_03_GW",
+        "sample_name": "DE_KIE_03_GW_JE_14",
+        "strain": "R-92571"
+      }
+    },
+    "assembly_stats": {
+      "total_sequence_length": "9715413",
+      "total_ungapped_length": "9715413",
+      "number_of_contigs": 21,
+      "contig_n50": 3376181,
+      "contig_l50": 2,
+      "number_of_scaffolds": 21,
+      "scaffold_n50": 3376181,
+      "scaffold_l50": 2,
+      "number_of_component_sequences": 21,
+      "atgc_count": "9715413",
+      "gc_count": "6061282",
+      "gc_percent": 62.5,
+      "genome_coverage": "70"
+    },
+    "annotation_info": {
+      "name": "Annotation submitted by LM-UGent",
+      "provider": "LM-UGent",
+      "release_date": "2025-10-21",
+      "stats": {
+        "gene_counts": {
+          "total": 8968,
+          "other": 8968
+        }
+      }
+    },
+    "wgs_info": {
+      "wgs_project_accession": "CDRLMO01",
+      "master_wgs_url": "https://www.ncbi.nlm.nih.gov/nuccore/CDRLMO000000000.1",
+      "wgs_contigs_url": "https://www.ncbi.nlm.nih.gov/Traces/wgs/CDRLMO01"
+    },
+    "checkm_info": {
+      "checkm_marker_set": "Burkholderiaceae",
+      "checkm_species_tax_id": 36873,
+      "checkm_marker_set_rank": "family",
+      "checkm_version": "v1.2.4",
+      "completeness": 99.94,
+      "contamination": 2.42,
+      "completeness_percentile": 37.5
+    },
+    "average_nucleotide_identity": {
+      "taxonomy_check_status": "OK",
+      "match_status": "species_match",
+      "submitted_organism": "Paraburkholderia xenovorans",
+      "submitted_species": "Paraburkholderia xenovorans",
+      "category": "category_na",
+      "submitted_ani_match": {
+        "assembly": "GCA_000013645.1",
+        "organism_name": "Paraburkholderia xenovorans LB400",
+        "category": "suspected_type",
+        "ani": 98.99,
+        "assembly_coverage": 76.58,
+        "type_assembly_coverage": 76.45
+      },
+      "best_ani_match": {
+        "assembly": "GCA_000013645.1",
+        "organism_name": "Paraburkholderia xenovorans",
+        "category": "suspected_type",
+        "ani": 98.99,
+        "assembly_coverage": 76.58,
+        "type_assembly_coverage": 76.45
+      },
+      "comment": "na"
+    }
+  },
+  {
+    "accession": "GCA_976997195.1",
+    "current_accession": "GCA_976997195.1",
+    "paired_accession": "GCF_976997195.1",
+    "source_database": "SOURCE_DATABASE_GENBANK",
+    "organism": {
+      "tax_id": 36873,
+      "organism_name": "Paraburkholderia xenovorans",
+      "infraspecific_names": {
+        "isolate": "R-92578",
+        "strain": "R-92578"
+      }
+    },
+    "assembly_info": {
+      "assembly_level": "Contig",
+      "assembly_status": "current",
+      "paired_assembly": {
+        "accession": "GCF_976997195.1",
+        "status": "current",
+        "annotation_name": "GCF_976997195.1-RS_2025_11_28"
+      },
+      "assembly_name": "ASM97699719v1",
+      "assembly_type": "haploid",
+      "bioproject_lineage": [
+        {
+          "bioprojects": [
+            {
+              "accession": "PRJEB88388",
+              "title": "Whole-genome sequencing of bioremediation bacteria"
+            }
+          ]
+        }
+      ],
+      "bioproject_accession": "PRJEB88388",
+      "release_date": "2025-11-08",
+      "submitter": "LM-UGent",
+      "sequencing_tech": "MinION",
+      "assembly_method": "dragonflye v1.2.1",
+      "biosample": {
+        "accession": "SAMEA120314567",
+        "last_updated": "2025-10-09T13:01:13.000",
+        "publication_date": "2025-10-09T00:00:00.000",
+        "submission_date": "2025-10-10T08:45:10.613",
+        "sample_ids": [
+          {
+            "db": "SRA",
+            "value": "ERS26976554"
+          }
+        ],
+        "description": {
+          "title": "Paraburkholderia xenovorans R-92578",
+          "organism": {
+            "tax_id": 36873,
+            "organism_name": "Paraburkholderia xenovorans"
+          },
+          "comment": "Paraburkholderia xenovorans R-92578"
+        },
+        "owner": {
+          "name": "EBI"
+        },
+        "models": [
+          "Generic"
+        ],
+        "package": "Generic.1.0",
+        "attributes": [
+          {
+            "name": "ENA first public",
+            "value": "2025-10-09"
+          },
+          {
+            "name": "ENA-CHECKLIST",
+            "value": "ERC000011"
+          },
+          {
+            "name": "INSDC center name",
+            "value": "LM-UGent"
+          },
+          {
+            "name": "INSDC status",
+            "value": "public"
+          },
+          {
+            "name": "Submitter Id",
+            "value": "DE_KIE_06_GW_JE_04"
+          },
+          {
+            "name": "collection_date",
+            "value": "2025"
+          },
+          {
+            "name": "geo_loc_name",
+            "value": "Germany"
+          },
+          {
+            "name": "isolate",
+            "value": "R-92578"
+          },
+          {
+            "name": "isolation_source",
+            "value": "Petroleum hydrocarbon-degrading enrichment culture obtained through enrichment of a PHC-polluted groundwater sample DE_KIE_06_GW"
+          },
+          {
+            "name": "sample_name",
+            "value": "DE_KIE_06_GW_JE_04"
+          },
+          {
+            "name": "scientific_name",
+            "value": "Paraburkholderia xenovorans"
+          },
+          {
+            "name": "strain",
+            "value": "R-92578"
+          }
+        ],
+        "status": {
+          "status": "live",
+          "when": "2025-10-11T08:10:54.580"
+        },
+        "collection_date": "2025",
+        "geo_loc_name": "Germany",
+        "isolate": "R-92578",
+        "isolation_source": "Petroleum hydrocarbon-degrading enrichment culture obtained through enrichment of a PHC-polluted groundwater sample DE_KIE_06_GW",
+        "sample_name": "DE_KIE_06_GW_JE_04",
+        "strain": "R-92578"
+      }
+    },
+    "assembly_stats": {
+      "total_sequence_length": "9592232",
+      "total_ungapped_length": "9592232",
+      "number_of_contigs": 7,
+      "contig_n50": 4887713,
+      "contig_l50": 1,
+      "number_of_scaffolds": 7,
+      "scaffold_n50": 4887713,
+      "scaffold_l50": 1,
+      "number_of_component_sequences": 7,
+      "atgc_count": "9592232",
+      "gc_count": "5987339",
+      "gc_percent": 62.5,
+      "genome_coverage": "73"
+    },
+    "annotation_info": {
+      "name": "Annotation submitted by LM-UGent",
+      "provider": "LM-UGent",
+      "release_date": "2025-10-21",
+      "stats": {
+        "gene_counts": {
+          "total": 8938,
+          "other": 8938
+        }
+      }
+    },
+    "wgs_info": {
+      "wgs_project_accession": "CDRLMQ01",
+      "master_wgs_url": "https://www.ncbi.nlm.nih.gov/nuccore/CDRLMQ000000000.1",
+      "wgs_contigs_url": "https://www.ncbi.nlm.nih.gov/Traces/wgs/CDRLMQ01"
+    },
+    "checkm_info": {
+      "checkm_marker_set": "Burkholderiaceae",
+      "checkm_species_tax_id": 36873,
+      "checkm_marker_set_rank": "family",
+      "checkm_version": "v1.2.4",
+      "completeness": 99.94,
+      "contamination": 1.35,
+      "completeness_percentile": 37.5
+    },
+    "average_nucleotide_identity": {
+      "taxonomy_check_status": "OK",
+      "match_status": "species_match",
+      "submitted_organism": "Paraburkholderia xenovorans",
+      "submitted_species": "Paraburkholderia xenovorans",
+      "category": "category_na",
+      "submitted_ani_match": {
+        "assembly": "GCA_000756045.1",
+        "organism_name": "Paraburkholderia xenovorans LB400",
+        "category": "suspected_type",
+        "ani": 98.67,
+        "assembly_coverage": 74.78,
+        "type_assembly_coverage": 73.93
+      },
+      "best_ani_match": {
+        "assembly": "GCA_000756045.1",
+        "organism_name": "Paraburkholderia xenovorans",
+        "category": "suspected_type",
+        "ani": 98.67,
+        "assembly_coverage": 74.78,
+        "type_assembly_coverage": 73.93
+      },
+      "comment": "na"
+    }
+  },
+  {
+    "accession": "GCA_977005055.1",
+    "current_accession": "GCA_977005055.1",
+    "paired_accession": "GCF_977005055.1",
+    "source_database": "SOURCE_DATABASE_GENBANK",
+    "organism": {
+      "tax_id": 134537,
+      "organism_name": "Paraburkholderia fungorum",
+      "infraspecific_names": {
+        "isolate": "R-91495",
+        "strain": "R-91495"
+      }
+    },
+    "assembly_info": {
+      "assembly_level": "Contig",
+      "assembly_status": "current",
+      "paired_assembly": {
+        "accession": "GCF_977005055.1",
+        "status": "current",
+        "annotation_name": "GCF_977005055.1-RS_2025_11_28"
+      },
+      "assembly_name": "ASM97700505v1",
+      "assembly_type": "haploid",
+      "bioproject_lineage": [
+        {
+          "bioprojects": [
+            {
+              "accession": "PRJEB88388",
+              "title": "Whole-genome sequencing of bioremediation bacteria"
+            }
+          ]
+        }
+      ],
+      "bioproject_accession": "PRJEB88388",
+      "release_date": "2025-11-08",
+      "submitter": "LM-UGent",
+      "sequencing_tech": "MinION",
+      "assembly_method": "dragonflye v1.2.1",
+      "biosample": {
+        "accession": "SAMEA120322877",
+        "last_updated": "2025-10-10T22:04:57.000",
+        "publication_date": "2025-10-11T00:00:00.000",
+        "submission_date": "2025-10-12T08:13:12.990",
+        "sample_ids": [
+          {
+            "db": "SRA",
+            "value": "ERS26984864"
+          }
+        ],
+        "description": {
+          "title": "Paraburkholderia fungorum R-91495",
+          "organism": {
+            "tax_id": 134537,
+            "organism_name": "Paraburkholderia fungorum"
+          },
+          "comment": "Paraburkholderia fungorum R-91495"
+        },
+        "owner": {
+          "name": "EBI"
+        },
+        "models": [
+          "Generic"
+        ],
+        "package": "Generic.1.0",
+        "attributes": [
+          {
+            "name": "ENA first public",
+            "value": "2025-10-11"
+          },
+          {
+            "name": "ENA-CHECKLIST",
+            "value": "ERC000011"
+          },
+          {
+            "name": "INSDC center name",
+            "value": "LM-UGent"
+          },
+          {
+            "name": "INSDC status",
+            "value": "public"
+          },
+          {
+            "name": "Submitter Id",
+            "value": "DE_STO_02_GW_JB_04"
+          },
+          {
+            "name": "collection_date",
+            "value": "2024"
+          },
+          {
+            "name": "geo_loc_name",
+            "value": "Germany"
+          },
+          {
+            "name": "isolate",
+            "value": "R-91495"
+          },
+          {
+            "name": "isolation_source",
+            "value": "Cyanide-degrading enrichment culture obtained through enrichment of a cyanide-polluted groundwater sample: DE_STO_02_GW"
+          },
+          {
+            "name": "sample_name",
+            "value": "DE_STO_02_GW_JB_04"
+          },
+          {
+            "name": "scientific_name",
+            "value": "Paraburkholderia fungorum"
+          },
+          {
+            "name": "strain",
+            "value": "R-91495"
+          }
+        ],
+        "status": {
+          "status": "live",
+          "when": "2025-10-13T08:07:49.803"
+        },
+        "collection_date": "2024",
+        "geo_loc_name": "Germany",
+        "isolate": "R-91495",
+        "isolation_source": "Cyanide-degrading enrichment culture obtained through enrichment of a cyanide-polluted groundwater sample: DE_STO_02_GW",
+        "sample_name": "DE_STO_02_GW_JB_04",
+        "strain": "R-91495"
+      }
+    },
+    "assembly_stats": {
+      "total_sequence_length": "8958119",
+      "total_ungapped_length": "8958119",
+      "number_of_contigs": 4,
+      "contig_n50": 5328804,
+      "contig_l50": 1,
+      "number_of_scaffolds": 4,
+      "scaffold_n50": 5328804,
+      "scaffold_l50": 1,
+      "number_of_component_sequences": 4,
+      "atgc_count": "8958119",
+      "gc_count": "5531460",
+      "gc_percent": 61.5,
+      "genome_coverage": "179"
+    },
+    "annotation_info": {
+      "name": "Annotation submitted by LM-UGent",
+      "provider": "LM-UGent",
+      "release_date": "2025-10-21",
+      "stats": {
+        "gene_counts": {
+          "total": 8021,
+          "other": 8021
+        }
+      }
+    },
+    "wgs_info": {
+      "wgs_project_accession": "CDRMMU01",
+      "master_wgs_url": "https://www.ncbi.nlm.nih.gov/nuccore/CDRMMU000000000.1",
+      "wgs_contigs_url": "https://www.ncbi.nlm.nih.gov/Traces/wgs/CDRMMU01"
+    },
+    "checkm_info": {
+      "checkm_marker_set": "Burkholderiaceae",
+      "checkm_species_tax_id": 134537,
+      "checkm_marker_set_rank": "family",
+      "checkm_version": "v1.2.4",
+      "completeness": 99.5,
+      "contamination": 0.09,
+      "completeness_percentile": 17.5
+    },
+    "average_nucleotide_identity": {
+      "taxonomy_check_status": "OK",
+      "match_status": "species_match",
+      "submitted_organism": "Paraburkholderia fungorum",
+      "submitted_species": "Paraburkholderia fungorum",
+      "category": "category_na",
+      "submitted_ani_match": {
+        "assembly": "GCA_902833645.1",
+        "organism_name": "Paraburkholderia fungorum",
+        "category": "type",
+        "ani": 98.58,
+        "assembly_coverage": 86.18,
+        "type_assembly_coverage": 86.49
+      },
+      "best_ani_match": {
+        "assembly": "GCA_902833645.1",
+        "organism_name": "Paraburkholderia fungorum",
+        "category": "type",
+        "ani": 98.58,
+        "assembly_coverage": 86.18,
+        "type_assembly_coverage": 86.49
+      },
+      "comment": "na"
+    }
+  },
+  {
+    "accession": "GCA_977005035.1",
+    "current_accession": "GCA_977005035.1",
+    "paired_accession": "GCF_977005035.1",
+    "source_database": "SOURCE_DATABASE_GENBANK",
+    "organism": {
+      "tax_id": 134537,
+      "organism_name": "Paraburkholderia fungorum",
+      "infraspecific_names": {
+        "isolate": "R-92561",
+        "strain": "R-92561"
+      }
+    },
+    "assembly_info": {
+      "assembly_level": "Contig",
+      "assembly_status": "current",
+      "paired_assembly": {
+        "accession": "GCF_977005035.1",
+        "status": "current",
+        "annotation_name": "GCF_977005035.1-RS_2025_11_28"
+      },
+      "assembly_name": "ASM97700503v1",
+      "assembly_type": "haploid",
+      "bioproject_lineage": [
+        {
+          "bioprojects": [
+            {
+              "accession": "PRJEB88388",
+              "title": "Whole-genome sequencing of bioremediation bacteria"
+            }
+          ]
+        }
+      ],
+      "bioproject_accession": "PRJEB88388",
+      "release_date": "2025-11-08",
+      "submitter": "LM-UGent",
+      "sequencing_tech": "MinION",
+      "assembly_method": "dragonflye v1.2.1",
+      "biosample": {
+        "accession": "SAMEA120322886",
+        "last_updated": "2025-10-10T22:05:01.000",
+        "publication_date": "2025-10-11T00:00:00.000",
+        "submission_date": "2025-10-12T08:13:13.053",
+        "sample_ids": [
+          {
+            "db": "SRA",
+            "value": "ERS26984873"
+          }
+        ],
+        "description": {
+          "title": "Paraburkholderia fungorum R-92561",
+          "organism": {
+            "tax_id": 134537,
+            "organism_name": "Paraburkholderia fungorum"
+          },
+          "comment": "Paraburkholderia fungorum R-92561"
+        },
+        "owner": {
+          "name": "EBI"
+        },
+        "models": [
+          "Generic"
+        ],
+        "package": "Generic.1.0",
+        "attributes": [
+          {
+            "name": "ENA first public",
+            "value": "2025-10-11"
+          },
+          {
+            "name": "ENA-CHECKLIST",
+            "value": "ERC000011"
+          },
+          {
+            "name": "INSDC center name",
+            "value": "LM-UGent"
+          },
+          {
+            "name": "INSDC status",
+            "value": "public"
+          },
+          {
+            "name": "Submitter Id",
+            "value": "DE_KIE_03_GW_JE_04"
+          },
+          {
+            "name": "collection_date",
+            "value": "2025"
+          },
+          {
+            "name": "geo_loc_name",
+            "value": "Germany"
+          },
+          {
+            "name": "isolate",
+            "value": "R-92561"
+          },
+          {
+            "name": "isolation_source",
+            "value": "Petroleum hydrocarbon-degrading enrichment culture obtained through enrichment of a PHC-polluted groundwater sample DE_KIE_03_GW"
+          },
+          {
+            "name": "sample_name",
+            "value": "DE_KIE_03_GW_JE_04"
+          },
+          {
+            "name": "scientific_name",
+            "value": "Paraburkholderia fungorum"
+          },
+          {
+            "name": "strain",
+            "value": "R-92561"
+          }
+        ],
+        "status": {
+          "status": "live",
+          "when": "2025-10-13T08:07:49.870"
+        },
+        "collection_date": "2025",
+        "geo_loc_name": "Germany",
+        "isolate": "R-92561",
+        "isolation_source": "Petroleum hydrocarbon-degrading enrichment culture obtained through enrichment of a PHC-polluted groundwater sample DE_KIE_03_GW",
+        "sample_name": "DE_KIE_03_GW_JE_04",
+        "strain": "R-92561"
+      }
+    },
+    "assembly_stats": {
+      "total_sequence_length": "8952503",
+      "total_ungapped_length": "8952503",
+      "number_of_contigs": 6,
+      "contig_n50": 5142045,
+      "contig_l50": 1,
+      "number_of_scaffolds": 6,
+      "scaffold_n50": 5142045,
+      "scaffold_l50": 1,
+      "number_of_component_sequences": 6,
+      "atgc_count": "8952503",
+      "gc_count": "5528063",
+      "gc_percent": 61.5,
+      "genome_coverage": "119"
+    },
+    "annotation_info": {
+      "name": "Annotation submitted by LM-UGent",
+      "provider": "LM-UGent",
+      "release_date": "2025-10-21",
+      "stats": {
+        "gene_counts": {
+          "total": 8011,
+          "other": 8011
+        }
+      }
+    },
+    "wgs_info": {
+      "wgs_project_accession": "CDRMMV01",
+      "master_wgs_url": "https://www.ncbi.nlm.nih.gov/nuccore/CDRMMV000000000.1",
+      "wgs_contigs_url": "https://www.ncbi.nlm.nih.gov/Traces/wgs/CDRMMV01"
+    },
+    "checkm_info": {
+      "checkm_marker_set": "Burkholderiaceae",
+      "checkm_species_tax_id": 134537,
+      "checkm_marker_set_rank": "family",
+      "checkm_version": "v1.2.4",
+      "completeness": 99.5,
+      "contamination": 0.09,
+      "completeness_percentile": 17.5
+    },
+    "average_nucleotide_identity": {
+      "taxonomy_check_status": "OK",
+      "match_status": "species_match",
+      "submitted_organism": "Paraburkholderia fungorum",
+      "submitted_species": "Paraburkholderia fungorum",
+      "category": "category_na",
+      "submitted_ani_match": {
+        "assembly": "GCA_902833645.1",
+        "organism_name": "Paraburkholderia fungorum",
+        "category": "type",
+        "ani": 98.58,
+        "assembly_coverage": 86.24,
+        "type_assembly_coverage": 86.49
+      },
+      "best_ani_match": {
+        "assembly": "GCA_902833645.1",
+        "organism_name": "Paraburkholderia fungorum",
+        "category": "type",
+        "ani": 98.58,
+        "assembly_coverage": 86.24,
+        "type_assembly_coverage": 86.49
+      },
+      "comment": "na"
+    }
+  },
+  {
+    "accession": "GCA_964253525.2",
+    "current_accession": "GCA_964253525.2",
+    "paired_accession": "GCF_964253525.1",
+    "source_database": "SOURCE_DATABASE_GENBANK",
+    "organism": {
+      "tax_id": 169427,
+      "organism_name": "Paraburkholderia terricola",
+      "infraspecific_names": {
+        "isolate": "LjRoot223"
+      }
+    },
+    "assembly_info": {
+      "assembly_level": "Contig",
+      "assembly_status": "current",
+      "paired_assembly": {
+        "accession": "GCF_964253525.1",
+        "status": "current",
+        "annotation_name": "GCF_964253525.1-RS_2026_08_03"
+      },
+      "assembly_name": "LjRoot223v2",
+      "assembly_type": "haploid",
+      "bioproject_lineage": [
+        {
+          "bioprojects": [
+            {
+              "accession": "PRJEB75483",
+              "title": "Hybrid Assembly Lotus japonicus Culture Collection Lj-SPHERE"
+            }
+          ]
+        }
+      ],
+      "bioproject_accession": "PRJEB75483",
+      "release_date": "2025-07-13",
+      "submitter": "Aarhus University",
+      "sequencing_tech": "Illumina Novaseq 6000,MinION",
+      "assembly_method": "Unicycler",
+      "biosample": {
+        "accession": "SAMEA115676880",
+        "last_updated": "2025-01-05T12:35:41.000",
+        "publication_date": "2025-01-05T00:00:00.000",
+        "submission_date": "2025-01-06T08:23:31.530",
+        "sample_ids": [
+          {
+            "db": "SRA",
+            "value": "ERS20185808"
+          }
+        ],
+        "description": {
+          "title": "LjRoot223",
+          "organism": {
+            "tax_id": 169427,
+            "organism_name": "Paraburkholderia terricola"
+          },
+          "comment": "LjRoot223 root isolate"
+        },
+        "owner": {
+          "name": "EBI"
+        },
+        "models": [
+          "Generic"
+        ],
+        "package": "Generic.1.0",
+        "attributes": [
+          {
+            "name": "ENA first public",
+            "value": "2024-01-01"
+          },
+          {
+            "name": "ENA-CHECKLIST",
+            "value": "ERC000011"
+          },
+          {
+            "name": "INSDC center name",
+            "value": "PMB-AU"
+          },
+          {
+            "name": "INSDC status",
+            "value": "public"
+          },
+          {
+            "name": "Submitter Id",
+            "value": "LjRoot223"
+          },
+          {
+            "name": "collection_date",
+            "value": "2022-02-01"
+          },
+          {
+            "name": "geo_loc_name",
+            "value": "Germany"
+          },
+          {
+            "name": "host_health_state",
+            "value": "healthy"
+          },
+          {
+            "name": "host",
+            "value": "Lotus japonicus"
+          },
+          {
+            "name": "isolation_source",
+            "value": "root"
+          },
+          {
+            "name": "sample_name",
+            "value": "LjRoot223"
+          },
+          {
+            "name": "scientific_name",
+            "value": "Paraburkholderia terricola"
+          }
+        ],
+        "status": {
+          "status": "live",
+          "when": "2025-01-07T08:26:13.767"
+        },
+        "collection_date": "2022-02-01",
+        "geo_loc_name": "Germany",
+        "host": "Lotus japonicus",
+        "isolation_source": "root",
+        "sample_name": "LjRoot223"
+      }
+    },
+    "assembly_stats": {
+      "total_sequence_length": "7257155",
+      "total_ungapped_length": "7257155",
+      "number_of_contigs": 2,
+      "contig_n50": 4136472,
+      "contig_l50": 1,
+      "number_of_scaffolds": 2,
+      "scaffold_n50": 4136472,
+      "scaffold_l50": 1,
+      "number_of_component_sequences": 2,
+      "atgc_count": "7257155",
+      "gc_count": "4616751",
+      "gc_percent": 63.5,
+      "genome_coverage": "196"
+    },
+    "annotation_info": {
+      "name": "Annotation submitted by Aarhus University",
+      "provider": "Aarhus University",
+      "release_date": "2025-07-10",
+      "stats": {
+        "gene_counts": {
+          "total": 6622,
+          "protein_coding": 6397,
+          "non_coding": 83,
+          "pseudogene": 142
+        }
+      }
+    },
+    "wgs_info": {
+      "wgs_project_accession": "CAXURG02",
+      "master_wgs_url": "https://www.ncbi.nlm.nih.gov/nuccore/CAXURG000000000.2",
+      "wgs_contigs_url": "https://www.ncbi.nlm.nih.gov/Traces/wgs/CAXURG02"
+    },
+    "checkm_info": {
+      "checkm_marker_set": "Burkholderiaceae",
+      "checkm_species_tax_id": 169427,
+      "checkm_marker_set_rank": "family",
+      "checkm_version": "v1.2.5",
+      "completeness": 99.94,
+      "contamination": 0.45,
+      "completeness_percentile": 75
+    },
+    "average_nucleotide_identity": {
+      "taxonomy_check_status": "OK",
+      "match_status": "species_match",
+      "submitted_organism": "Paraburkholderia terricola",
+      "submitted_species": "Paraburkholderia terricola",
+      "category": "category_na",
+      "submitted_ani_match": {
+        "assembly": "GCA_902833815.1",
+        "organism_name": "Paraburkholderia terricola",
+        "category": "type",
+        "ani": 99.16,
+        "assembly_coverage": 91.78,
+        "type_assembly_coverage": 90.73
+      },
+      "best_ani_match": {
+        "assembly": "GCA_902833815.1",
+        "organism_name": "Paraburkholderia terricola",
+        "category": "type",
+        "ani": 99.16,
+        "assembly_coverage": 91.78,
+        "type_assembly_coverage": 90.73
+      },
+      "comment": "na"
+    }
+  },
+  {
+    "accession": "GCA_021483665.1",
+    "current_accession": "GCA_021483665.1",
+    "paired_accession": "GCF_021483665.1",
+    "source_database": "SOURCE_DATABASE_GENBANK",
+    "organism": {
+      "tax_id": 92647,
+      "organism_name": "Paraburkholderia tropica",
+      "infraspecific_names": {
+        "strain": "WTPI1"
+      }
+    },
+    "assembly_info": {
+      "assembly_level": "Contig",
+      "assembly_status": "current",
+      "paired_assembly": {
+        "accession": "GCF_021483665.1",
+        "status": "current",
+        "annotation_name": "GCF_021483665.1-RS_2026_01_26"
+      },
+      "assembly_name": "ASM2148366v1",
+      "assembly_type": "haploid",
+      "bioproject_lineage": [
+        {
+          "bioprojects": [
+            {
+              "accession": "PRJNA691890",
+              "title": "Culture-dependent and independent investigation of a small tar pit in Wietze, Germany"
+            }
+          ]
+        }
+      ],
+      "bioproject_accession": "PRJNA691890",
+      "release_date": "2022-01-15",
+      "submitter": "University of Goettingen",
+      "sequencing_tech": "Illumina MiSeq",
+      "assembly_method": "SPAdes v. 3.15.1",
+      "biosample": {
+        "accession": "SAMN17308412",
+        "last_updated": "2022-01-16T18:39:37.910",
+        "publication_date": "2022-01-16T18:39:37.910",
+        "submission_date": "2021-01-13T13:08:05.563",
+        "sample_ids": [
+          {
+            "label": "Sample name",
+            "value": "Wietze tar pit isolat 1"
+          },
+          {
+            "db": "SRA",
+            "value": "SRS8027269"
+          }
+        ],
+        "description": {
+          "title": "Paraburkholderia tropica isolated from small tar pit in Wietze, Germany",
+          "organism": {
+            "tax_id": 92647,
+            "organism_name": "Paraburkholderia tropica"
+          },
+          "comment": "Keywords: GSC:MIxS;MIGS:6.0"
+        },
+        "owner": {
+          "name": "University of Goettingen",
+          "contacts": [
+            {}
+          ]
+        },
+        "models": [
+          "MIGS.ba",
+          "MIGS/MIMS/MIMARKS.sediment"
+        ],
+        "bioprojects": [
+          {
+            "accession": "PRJNA691890"
+          }
+        ],
+        "package": "MIGS.ba.sediment.6.0",
+        "attributes": [
+          {
+            "name": "strain",
+            "value": "WTPI1"
+          },
+          {
+            "name": "collection_date",
+            "value": "2019-11-05"
+          },
+          {
+            "name": "depth",
+            "value": "5 cm"
+          },
+          {
+            "name": "elev",
+            "value": "32 m"
+          },
+          {
+            "name": "env_broad_scale",
+            "value": "oil field"
+          },
+          {
+            "name": "env_local_scale",
+            "value": "tar pit"
+          },
+          {
+            "name": "env_medium",
+            "value": "tar pit sediment"
+          },
+          {
+            "name": "geo_loc_name",
+            "value": "Germany: Wietze"
+          },
+          {
+            "name": "isol_growth_condt",
+            "value": "https://doi.org/10.1201/EBK1439804063"
+          },
+          {
+            "name": "lat_lon",
+            "value": "52.66895 N 9.82745 E"
+          },
+          {
+            "name": "num_replicons",
+            "value": "1"
+          },
+          {
+            "name": "ref_biomaterial",
+            "value": "unpublished"
+          },
+          {
+            "name": "isolation_source",
+            "value": "tar pit sediment"
+          }
+        ],
+        "status": {
+          "status": "live",
+          "when": "2022-01-16T18:39:37.910"
+        },
+        "collection_date": "2019-11-05",
+        "geo_loc_name": "Germany: Wietze",
+        "isolation_source": "tar pit sediment",
+        "lat_lon": "52.66895 N 9.82745 E",
+        "strain": "WTPI1"
+      }
+    },
+    "assembly_stats": {
+      "total_sequence_length": "8454837",
+      "total_ungapped_length": "8454837",
+      "number_of_contigs": 81,
+      "contig_n50": 297598,
+      "contig_l50": 10,
+      "number_of_scaffolds": 81,
+      "scaffold_n50": 297598,
+      "scaffold_l50": 10,
+      "number_of_component_sequences": 81,
+      "atgc_count": "8454837",
+      "gc_count": "5481248",
+      "gc_percent": 65,
+      "genome_coverage": "32"
+    },
+    "wgs_info": {
+      "wgs_project_accession": "JAGIXD01",
+      "master_wgs_url": "https://www.ncbi.nlm.nih.gov/nuccore/JAGIXD000000000.1",
+      "wgs_contigs_url": "https://www.ncbi.nlm.nih.gov/Traces/wgs/JAGIXD01"
+    },
+    "checkm_info": {
+      "checkm_marker_set": "Burkholderiaceae",
+      "checkm_species_tax_id": 92647,
+      "checkm_marker_set_rank": "family",
+      "checkm_version": "v1.2.4",
+      "completeness": 99.32,
+      "contamination": 0.54,
+      "completeness_percentile": 97.7273
+    },
+    "average_nucleotide_identity": {
+      "taxonomy_check_status": "OK",
+      "match_status": "species_match",
+      "submitted_organism": "Paraburkholderia tropica",
+      "submitted_species": "Paraburkholderia tropica",
+      "category": "category_na",
+      "submitted_ani_match": {
+        "assembly": "GCA_002071575.1",
+        "organism_name": "Paraburkholderia tropica",
+        "category": "type",
+        "ani": 99.07,
+        "assembly_coverage": 90.58,
+        "type_assembly_coverage": 87.54
+      },
+      "best_ani_match": {
+        "assembly": "GCA_002071575.1",
+        "organism_name": "Paraburkholderia tropica",
+        "category": "type",
+        "ani": 99.07,
+        "assembly_coverage": 90.58,
+        "type_assembly_coverage": 87.54
+      },
+      "comment": "na"
+    }
+  },
+  {
+    "accession": "GCA_964252825.2",
+    "current_accession": "GCA_964252825.2",
+    "paired_accession": "GCF_964252825.1",
+    "source_database": "SOURCE_DATABASE_GENBANK",
+    "organism": {
+      "tax_id": 169430,
+      "organism_name": "Paraburkholderia hospita",
+      "infraspecific_names": {
+        "isolate": "LjRoot241"
+      }
+    },
+    "assembly_info": {
+      "assembly_level": "Contig",
+      "assembly_status": "current",
+      "paired_assembly": {
+        "accession": "GCF_964252825.1",
+        "status": "current",
+        "annotation_name": "GCF_964252825.1-RS_2026_08_03"
+      },
+      "assembly_name": "LjRoot241v2",
+      "assembly_type": "haploid",
+      "bioproject_lineage": [
+        {
+          "bioprojects": [
+            {
+              "accession": "PRJEB75483",
+              "title": "Hybrid Assembly Lotus japonicus Culture Collection Lj-SPHERE"
+            }
+          ]
+        }
+      ],
+      "bioproject_accession": "PRJEB75483",
+      "release_date": "2025-07-13",
+      "submitter": "Aarhus University",
+      "sequencing_tech": "Illumina Novaseq 6000,MinION",
+      "assembly_method": "Unicycler",
+      "biosample": {
+        "accession": "SAMEA115676898",
+        "last_updated": "2025-01-05T12:36:02.000",
+        "publication_date": "2025-01-05T00:00:00.000",
+        "submission_date": "2025-01-06T08:23:23.083",
+        "sample_ids": [
+          {
+            "db": "SRA",
+            "value": "ERS20185826"
+          }
+        ],
+        "description": {
+          "title": "LjRoot241",
+          "organism": {
+            "tax_id": 169430,
+            "organism_name": "Paraburkholderia hospita"
+          },
+          "comment": "LjRoot241 root isolate"
+        },
+        "owner": {
+          "name": "EBI"
+        },
+        "models": [
+          "Generic"
+        ],
+        "package": "Generic.1.0",
+        "attributes": [
+          {
+            "name": "ENA first public",
+            "value": "2024-01-01"
+          },
+          {
+            "name": "ENA-CHECKLIST",
+            "value": "ERC000011"
+          },
+          {
+            "name": "INSDC center name",
+            "value": "PMB-AU"
+          },
+          {
+            "name": "INSDC status",
+            "value": "public"
+          },
+          {
+            "name": "Submitter Id",
+            "value": "LjRoot241"
+          },
+          {
+            "name": "collection_date",
+            "value": "2022-02-01"
+          },
+          {
+            "name": "geo_loc_name",
+            "value": "Germany"
+          },
+          {
+            "name": "host_health_state",
+            "value": "healthy"
+          },
+          {
+            "name": "host",
+            "value": "Lotus japonicus"
+          },
+          {
+            "name": "isolation_source",
+            "value": "root"
+          },
+          {
+            "name": "sample_name",
+            "value": "LjRoot241"
+          },
+          {
+            "name": "scientific_name",
+            "value": "Paraburkholderia hospita"
+          }
+        ],
+        "status": {
+          "status": "live",
+          "when": "2025-01-07T08:26:07.000"
+        },
+        "collection_date": "2022-02-01",
+        "geo_loc_name": "Germany",
+        "host": "Lotus japonicus",
+        "isolation_source": "root",
+        "sample_name": "LjRoot241"
+      }
+    },
+    "assembly_stats": {
+      "total_sequence_length": "11360794",
+      "total_ungapped_length": "11360794",
+      "number_of_contigs": 36,
+      "contig_n50": 808119,
+      "contig_l50": 5,
+      "number_of_scaffolds": 36,
+      "scaffold_n50": 808119,
+      "scaffold_l50": 5,
+      "number_of_component_sequences": 36,
+      "atgc_count": "11360794",
+      "gc_count": "7028181",
+      "gc_percent": 62,
+      "genome_coverage": "116"
+    },
+    "annotation_info": {
+      "name": "Annotation submitted by Aarhus University",
+      "provider": "Aarhus University",
+      "release_date": "2025-07-10",
+      "stats": {
+        "gene_counts": {
+          "total": 10485,
+          "protein_coding": 9983,
+          "non_coding": 85,
+          "pseudogene": 417
+        }
+      }
+    },
+    "wgs_info": {
+      "wgs_project_accession": "CAXUPJ02",
+      "master_wgs_url": "https://www.ncbi.nlm.nih.gov/nuccore/CAXUPJ000000000.2",
+      "wgs_contigs_url": "https://www.ncbi.nlm.nih.gov/Traces/wgs/CAXUPJ02"
+    },
+    "checkm_info": {
+      "checkm_marker_set": "Burkholderiaceae",
+      "checkm_species_tax_id": 169430,
+      "checkm_marker_set_rank": "family",
+      "checkm_version": "v1.2.5",
+      "completeness": 99.5,
+      "contamination": 0.13,
+      "completeness_percentile": 42.8571
+    },
+    "average_nucleotide_identity": {
+      "taxonomy_check_status": "OK",
+      "match_status": "species_match",
+      "submitted_organism": "Paraburkholderia hospita",
+      "submitted_species": "Paraburkholderia hospita",
+      "category": "category_na",
+      "submitted_ani_match": {
+        "assembly": "GCA_902833685.1",
+        "organism_name": "Paraburkholderia hospita",
+        "category": "type",
+        "ani": 98.66,
+        "assembly_coverage": 84.55,
+        "type_assembly_coverage": 85.39
+      },
+      "best_ani_match": {
+        "assembly": "GCA_902833685.1",
+        "organism_name": "Paraburkholderia hospita",
+        "category": "type",
+        "ani": 98.66,
+        "assembly_coverage": 84.55,
+        "type_assembly_coverage": 85.39
+      },
+      "comment": "na"
+    }
+  },
+  {
+    "accession": "GCA_977004965.1",
+    "current_accession": "GCA_977004965.1",
+    "paired_accession": "GCF_977004965.1",
+    "source_database": "SOURCE_DATABASE_GENBANK",
+    "organism": {
+      "tax_id": 134537,
+      "organism_name": "Paraburkholderia fungorum",
+      "infraspecific_names": {
+        "isolate": "R-91497",
+        "strain": "R-91497"
+      }
+    },
+    "assembly_info": {
+      "assembly_level": "Contig",
+      "assembly_status": "current",
+      "paired_assembly": {
+        "accession": "GCF_977004965.1",
+        "status": "current",
+        "annotation_name": "GCF_977004965.1-RS_2025_11_28"
+      },
+      "assembly_name": "ASM97700496v1",
+      "assembly_type": "haploid",
+      "bioproject_lineage": [
+        {
+          "bioprojects": [
+            {
+              "accession": "PRJEB88388",
+              "title": "Whole-genome sequencing of bioremediation bacteria"
+            }
+          ]
+        }
+      ],
+      "bioproject_accession": "PRJEB88388",
+      "release_date": "2025-11-08",
+      "submitter": "LM-UGent",
+      "sequencing_tech": "MinION",
+      "assembly_method": "dragonflye v1.2.1",
+      "biosample": {
+        "accession": "SAMEA120322878",
+        "last_updated": "2025-10-10T22:05:16.000",
+        "publication_date": "2025-10-11T00:00:00.000",
+        "submission_date": "2025-10-12T08:13:13.413",
+        "sample_ids": [
+          {
+            "db": "SRA",
+            "value": "ERS26984865"
+          }
+        ],
+        "description": {
+          "title": "Paraburkholderia fungorum R-91497",
+          "organism": {
+            "tax_id": 134537,
+            "organism_name": "Paraburkholderia fungorum"
+          },
+          "comment": "Paraburkholderia fungorum R-91497"
+        },
+        "owner": {
+          "name": "EBI"
+        },
+        "models": [
+          "Generic"
+        ],
+        "package": "Generic.1.0",
+        "attributes": [
+          {
+            "name": "ENA first public",
+            "value": "2025-10-11"
+          },
+          {
+            "name": "ENA-CHECKLIST",
+            "value": "ERC000011"
+          },
+          {
+            "name": "INSDC center name",
+            "value": "LM-UGent"
+          },
+          {
+            "name": "INSDC status",
+            "value": "public"
+          },
+          {
+            "name": "Submitter Id",
+            "value": "DE_STO_02_GW_JB_05"
+          },
+          {
+            "name": "collection_date",
+            "value": "2024"
+          },
+          {
+            "name": "geo_loc_name",
+            "value": "Germany"
+          },
+          {
+            "name": "isolate",
+            "value": "R-91497"
+          },
+          {
+            "name": "isolation_source",
+            "value": "Cyanide-degrading enrichment culture obtained through enrichment of a cyanide-polluted groundwater sample: DE_STO_02_GW"
+          },
+          {
+            "name": "sample_name",
+            "value": "DE_STO_02_GW_JB_05"
+          },
+          {
+            "name": "scientific_name",
+            "value": "Paraburkholderia fungorum"
+          },
+          {
+            "name": "strain",
+            "value": "R-91497"
+          }
+        ],
+        "status": {
+          "status": "live",
+          "when": "2025-10-13T08:07:50.383"
+        },
+        "collection_date": "2024",
+        "geo_loc_name": "Germany",
+        "isolate": "R-91497",
+        "isolation_source": "Cyanide-degrading enrichment culture obtained through enrichment of a cyanide-polluted groundwater sample: DE_STO_02_GW",
+        "sample_name": "DE_STO_02_GW_JB_05",
+        "strain": "R-91497"
+      }
+    },
+    "assembly_stats": {
+      "total_sequence_length": "9378368",
+      "total_ungapped_length": "9378368",
+      "number_of_contigs": 6,
+      "contig_n50": 4809629,
+      "contig_l50": 1,
+      "number_of_scaffolds": 6,
+      "scaffold_n50": 4809629,
+      "scaffold_l50": 1,
+      "number_of_component_sequences": 6,
+      "atgc_count": "9378368",
+      "gc_count": "5789109",
+      "gc_percent": 61.5,
+      "genome_coverage": "162"
+    },
+    "annotation_info": {
+      "name": "Annotation submitted by LM-UGent",
+      "provider": "LM-UGent",
+      "release_date": "2025-10-21",
+      "stats": {
+        "gene_counts": {
+          "total": 8592,
+          "other": 8592
+        }
+      }
+    },
+    "wgs_info": {
+      "wgs_project_accession": "CDRMMT01",
+      "master_wgs_url": "https://www.ncbi.nlm.nih.gov/nuccore/CDRMMT000000000.1",
+      "wgs_contigs_url": "https://www.ncbi.nlm.nih.gov/Traces/wgs/CDRMMT01"
+    },
+    "checkm_info": {
+      "checkm_marker_set": "Burkholderiaceae",
+      "checkm_species_tax_id": 134537,
+      "checkm_marker_set_rank": "family",
+      "checkm_version": "v1.2.4",
+      "completeness": 99.5,
+      "contamination": 1.52,
+      "completeness_percentile": 17.5
+    },
+    "average_nucleotide_identity": {
+      "taxonomy_check_status": "OK",
+      "match_status": "species_match",
+      "submitted_organism": "Paraburkholderia fungorum",
+      "submitted_species": "Paraburkholderia fungorum",
+      "category": "category_na",
+      "submitted_ani_match": {
+        "assembly": "GCA_902833645.1",
+        "organism_name": "Paraburkholderia fungorum",
+        "category": "type",
+        "ani": 99.99,
+        "assembly_coverage": 90.55,
+        "type_assembly_coverage": 95.13
+      },
+      "best_ani_match": {
+        "assembly": "GCA_902833645.1",
+        "organism_name": "Paraburkholderia fungorum",
+        "category": "type",
+        "ani": 99.99,
+        "assembly_coverage": 90.55,
+        "type_assembly_coverage": 95.13
+      },
+      "comment": "na"
+    }
+  },
+  {
+    "accession": "GCA_977004995.1",
+    "current_accession": "GCA_977004995.1",
+    "paired_accession": "GCF_977004995.1",
+    "source_database": "SOURCE_DATABASE_GENBANK",
+    "organism": {
+      "tax_id": 134537,
+      "organism_name": "Paraburkholderia fungorum",
+      "infraspecific_names": {
+        "isolate": "R-92583",
+        "strain": "R-92583"
+      }
+    },
+    "assembly_info": {
+      "assembly_level": "Contig",
+      "assembly_status": "current",
+      "paired_assembly": {
+        "accession": "GCF_977004995.1",
+        "status": "current",
+        "annotation_name": "GCF_977004995.1-RS_2025_11_28"
+      },
+      "assembly_name": "ASM97700499v1",
+      "assembly_type": "haploid",
+      "bioproject_lineage": [
+        {
+          "bioprojects": [
+            {
+              "accession": "PRJEB88388",
+              "title": "Whole-genome sequencing of bioremediation bacteria"
+            }
+          ]
+        }
+      ],
+      "bioproject_accession": "PRJEB88388",
+      "release_date": "2025-11-08",
+      "submitter": "LM-UGent",
+      "sequencing_tech": "MinION",
+      "assembly_method": "dragonflye v1.2.1",
+      "biosample": {
+        "accession": "SAMEA120322892",
+        "last_updated": "2025-10-10T22:05:04.000",
+        "publication_date": "2025-10-11T00:00:00.000",
+        "submission_date": "2025-10-12T08:13:13.236",
+        "sample_ids": [
+          {
+            "db": "SRA",
+            "value": "ERS26984879"
+          }
+        ],
+        "description": {
+          "title": "Paraburkholderia fungorum R-92583",
+          "organism": {
+            "tax_id": 134537,
+            "organism_name": "Paraburkholderia fungorum"
+          },
+          "comment": "Paraburkholderia fungorum R-92583"
+        },
+        "owner": {
+          "name": "EBI"
+        },
+        "models": [
+          "Generic"
+        ],
+        "package": "Generic.1.0",
+        "attributes": [
+          {
+            "name": "ENA first public",
+            "value": "2025-10-11"
+          },
+          {
+            "name": "ENA-CHECKLIST",
+            "value": "ERC000011"
+          },
+          {
+            "name": "INSDC center name",
+            "value": "LM-UGent"
+          },
+          {
+            "name": "INSDC status",
+            "value": "public"
+          },
+          {
+            "name": "Submitter Id",
+            "value": "DE_KIE_06_GW_JE_09"
+          },
+          {
+            "name": "collection_date",
+            "value": "2025"
+          },
+          {
+            "name": "geo_loc_name",
+            "value": "Germany"
+          },
+          {
+            "name": "isolate",
+            "value": "R-92583"
+          },
+          {
+            "name": "isolation_source",
+            "value": "Petroleum hydrocarbon-degrading enrichment culture obtained through enrichment of a PHC-polluted groundwater sample DE_KIE_06_GW"
+          },
+          {
+            "name": "sample_name",
+            "value": "DE_KIE_06_GW_JE_09"
+          },
+          {
+            "name": "scientific_name",
+            "value": "Paraburkholderia fungorum"
+          },
+          {
+            "name": "strain",
+            "value": "R-92583"
+          }
+        ],
+        "status": {
+          "status": "live",
+          "when": "2025-10-13T08:06:12"
+        },
+        "collection_date": "2025",
+        "geo_loc_name": "Germany",
+        "isolate": "R-92583",
+        "isolation_source": "Petroleum hydrocarbon-degrading enrichment culture obtained through enrichment of a PHC-polluted groundwater sample DE_KIE_06_GW",
+        "sample_name": "DE_KIE_06_GW_JE_09",
+        "strain": "R-92583"
+      }
+    },
+    "assembly_stats": {
+      "total_sequence_length": "8952376",
+      "total_ungapped_length": "8952376",
+      "number_of_contigs": 6,
+      "contig_n50": 5141936,
+      "contig_l50": 1,
+      "number_of_scaffolds": 6,
+      "scaffold_n50": 5141936,
+      "scaffold_l50": 1,
+      "number_of_component_sequences": 6,
+      "atgc_count": "8952376",
+      "gc_count": "5527979",
+      "gc_percent": 61.5,
+      "genome_coverage": "152"
+    },
+    "annotation_info": {
+      "name": "Annotation submitted by LM-UGent",
+      "provider": "LM-UGent",
+      "release_date": "2025-10-21",
+      "stats": {
+        "gene_counts": {
+          "total": 8009,
+          "other": 8009
+        }
+      }
+    },
+    "wgs_info": {
+      "wgs_project_accession": "CDRMMS01",
+      "master_wgs_url": "https://www.ncbi.nlm.nih.gov/nuccore/CDRMMS000000000.1",
+      "wgs_contigs_url": "https://www.ncbi.nlm.nih.gov/Traces/wgs/CDRMMS01"
+    },
+    "checkm_info": {
+      "checkm_marker_set": "Burkholderiaceae",
+      "checkm_species_tax_id": 134537,
+      "checkm_marker_set_rank": "family",
+      "checkm_version": "v1.2.4",
+      "completeness": 99.5,
+      "contamination": 0.09,
+      "completeness_percentile": 17.5
+    },
+    "average_nucleotide_identity": {
+      "taxonomy_check_status": "OK",
+      "match_status": "species_match",
+      "submitted_organism": "Paraburkholderia fungorum",
+      "submitted_species": "Paraburkholderia fungorum",
+      "category": "category_na",
+      "submitted_ani_match": {
+        "assembly": "GCA_902833645.1",
+        "organism_name": "Paraburkholderia fungorum",
+        "category": "type",
+        "ani": 98.58,
+        "assembly_coverage": 86.24,
+        "type_assembly_coverage": 86.49
+      },
+      "best_ani_match": {
+        "assembly": "GCA_902833645.1",
+        "organism_name": "Paraburkholderia fungorum",
+        "category": "type",
+        "ani": 98.58,
+        "assembly_coverage": 86.24,
+        "type_assembly_coverage": 86.49
+      },
+      "comment": "na"
+    }
+  },
+  {
+    "accession": "GCA_977008015.1",
+    "current_accession": "GCA_977008015.1",
+    "paired_accession": "GCF_977008015.1",
+    "source_database": "SOURCE_DATABASE_GENBANK",
+    "organism": {
+      "tax_id": 134537,
+      "organism_name": "Paraburkholderia fungorum",
+      "infraspecific_names": {
+        "isolate": "R-93128",
+        "strain": "R-93128"
+      }
+    },
+    "assembly_info": {
+      "assembly_level": "Contig",
+      "assembly_status": "current",
+      "paired_assembly": {
+        "accession": "GCF_977008015.1",
+        "status": "current",
+        "annotation_name": "GCF_977008015.1-RS_2025_11_28"
+      },
+      "assembly_name": "ASM97700801v1",
+      "assembly_type": "haploid",
+      "bioproject_lineage": [
+        {
+          "bioprojects": [
+            {
+              "accession": "PRJEB88388",
+              "title": "Whole-genome sequencing of bioremediation bacteria"
+            }
+          ]
+        }
+      ],
+      "bioproject_accession": "PRJEB88388",
+      "release_date": "2025-11-08",
+      "submitter": "LM-UGent",
+      "sequencing_tech": "MinION",
+      "assembly_method": "dragonflye v1.2.1",
+      "biosample": {
+        "accession": "SAMEA120356365",
+        "last_updated": "2025-10-30T09:34:55.000",
+        "publication_date": "2025-10-30T00:00:00.000",
+        "submission_date": "2025-10-31T09:44:04.310",
+        "sample_ids": [
+          {
+            "db": "SRA",
+            "value": "ERS27018381"
+          }
+        ],
+        "description": {
+          "title": "Paraburkholderia fungorum R-93128",
+          "organism": {
+            "tax_id": 134537,
+            "organism_name": "Paraburkholderia fungorum"
+          },
+          "comment": "Paraburkholderia fungorum R-93128"
+        },
+        "owner": {
+          "name": "EBI"
+        },
+        "models": [
+          "Generic"
+        ],
+        "package": "Generic.1.0",
+        "attributes": [
+          {
+            "name": "ENA first public",
+            "value": "2025-10-30"
+          },
+          {
+            "name": "ENA-CHECKLIST",
+            "value": "ERC000011"
+          },
+          {
+            "name": "INSDC center name",
+            "value": "LM-UGent"
+          },
+          {
+            "name": "INSDC status",
+            "value": "public"
+          },
+          {
+            "name": "Submitter Id",
+            "value": "DE_RIN_03_GW_BT_JB_03"
+          },
+          {
+            "name": "collection_date",
+            "value": "2025"
+          },
+          {
+            "name": "geo_loc_name",
+            "value": "Germany"
+          },
+          {
+            "name": "isolate",
+            "value": "R-93128"
+          },
+          {
+            "name": "isolation_source",
+            "value": "Cyanide-degrading enrichment culture obtained through enrichment of a cyanide-polluted groundwater sample: DE_RIN_03_GW_bt"
+          },
+          {
+            "name": "sample_name",
+            "value": "DE_RIN_03_GW_BT_JB_03"
+          },
+          {
+            "name": "scientific_name",
+            "value": "Paraburkholderia fungorum"
+          },
+          {
+            "name": "strain",
+            "value": "R-93128"
+          }
+        ],
+        "status": {
+          "status": "live",
+          "when": "2025-11-01T09:27:17.813"
+        },
+        "collection_date": "2025",
+        "geo_loc_name": "Germany",
+        "isolate": "R-93128",
+        "isolation_source": "Cyanide-degrading enrichment culture obtained through enrichment of a cyanide-polluted groundwater sample: DE_RIN_03_GW_bt",
+        "sample_name": "DE_RIN_03_GW_BT_JB_03",
+        "strain": "R-93128"
+      }
+    },
+    "assembly_stats": {
+      "total_sequence_length": "8959285",
+      "total_ungapped_length": "8959285",
+      "number_of_contigs": 4,
+      "contig_n50": 5329989,
+      "contig_l50": 1,
+      "number_of_scaffolds": 4,
+      "scaffold_n50": 5329989,
+      "scaffold_l50": 1,
+      "number_of_component_sequences": 4,
+      "atgc_count": "8959285",
+      "gc_count": "5532160",
+      "gc_percent": 61.5,
+      "genome_coverage": "73"
+    },
+    "annotation_info": {
+      "name": "Annotation submitted by LM-UGent",
+      "provider": "LM-UGent",
+      "release_date": "2025-10-21",
+      "stats": {
+        "gene_counts": {
+          "total": 8020,
+          "other": 8020
+        }
+      }
+    },
+    "wgs_info": {
+      "wgs_project_accession": "CDRMWU01",
+      "master_wgs_url": "https://www.ncbi.nlm.nih.gov/nuccore/CDRMWU000000000.1",
+      "wgs_contigs_url": "https://www.ncbi.nlm.nih.gov/Traces/wgs/CDRMWU01"
+    },
+    "checkm_info": {
+      "checkm_marker_set": "Burkholderiaceae",
+      "checkm_species_tax_id": 134537,
+      "checkm_marker_set_rank": "family",
+      "checkm_version": "v1.2.4",
+      "completeness": 99.5,
+      "contamination": 0.09,
+      "completeness_percentile": 17.5
+    },
+    "average_nucleotide_identity": {
+      "taxonomy_check_status": "OK",
+      "match_status": "species_match",
+      "submitted_organism": "Paraburkholderia fungorum",
+      "submitted_species": "Paraburkholderia fungorum",
+      "category": "category_na",
+      "submitted_ani_match": {
+        "assembly": "GCA_902833645.1",
+        "organism_name": "Paraburkholderia fungorum",
+        "category": "type",
+        "ani": 98.58,
+        "assembly_coverage": 86.18,
+        "type_assembly_coverage": 86.49
+      },
+      "best_ani_match": {
+        "assembly": "GCA_902833645.1",
+        "organism_name": "Paraburkholderia fungorum",
+        "category": "type",
+        "ani": 98.58,
+        "assembly_coverage": 86.18,
+        "type_assembly_coverage": 86.49
+      },
+      "comment": "na"
+    }
+  },
+  {
+    "accession": "GCA_022879555.1",
+    "current_accession": "GCA_022879555.1",
+    "paired_accession": "GCF_022879555.1",
+    "source_database": "SOURCE_DATABASE_GENBANK",
+    "organism": {
+      "tax_id": 169427,
+      "organism_name": "Paraburkholderia terricola",
+      "infraspecific_names": {
+        "strain": "SMT4a"
+      }
+    },
+    "assembly_info": {
+      "assembly_level": "Chromosome",
+      "assembly_status": "current",
+      "paired_assembly": {
+        "accession": "GCF_022879555.1",
+        "status": "current",
+        "annotation_name": "GCF_022879555.1-RS_2026_04_26"
+      },
+      "assembly_name": "ASM2287955v1",
+      "assembly_type": "haploid",
+      "bioproject_lineage": [
+        {
+          "bioprojects": [
+            {
+              "accession": "PRJNA765207",
+              "title": "Burkholderiaceae genomic data"
+            }
+          ]
+        }
+      ],
+      "bioproject_accession": "PRJNA765207",
+      "release_date": "2022-04-11",
+      "submitter": "University of Texas at Arlington",
+      "sequencing_tech": "Illumina HiSeq; Oxford Nanopore MinION",
+      "assembly_method": "SPAdes v. 3.13.0; Unicycler v. 2.4.8-beta",
+      "biosample": {
+        "accession": "SAMN21547029",
+        "last_updated": "2022-03-22T09:25:02.077",
+        "publication_date": "2022-03-22T00:00:00.000",
+        "submission_date": "2021-09-22T09:34:04.163",
+        "sample_ids": [
+          {
+            "label": "Sample name",
+            "value": "SMT4a"
+          },
+          {
+            "db": "SRA",
+            "value": "SRS10274577"
+          }
+        ],
+        "description": {
+          "title": "Microbe sample from Paraburkholderia terricola",
+          "organism": {
+            "tax_id": 169427,
+            "organism_name": "Paraburkholderia terricola"
+          }
+        },
+        "owner": {
+          "name": "University of Texas at Arlington",
+          "contacts": [
+            {}
+          ]
+        },
+        "models": [
+          "Microbe, viral or environmental"
+        ],
+        "bioprojects": [
+          {
+            "accession": "PRJNA765207"
+          }
+        ],
+        "package": "Microbe.1.0",
+        "attributes": [
+          {
+            "name": "strain",
+            "value": "SMT4a"
+          },
+          {
+            "name": "isolation_source",
+            "value": "Collected from soil near Alydus sp."
+          },
+          {
+            "name": "collection_date",
+            "value": "2011"
+          },
+          {
+            "name": "geo_loc_name",
+            "value": "USA: Georgia"
+          },
+          {
+            "name": "sample_type",
+            "value": "Cell culture"
+          },
+          {
+            "name": "biomaterial_provider",
+            "value": "Gerardo Lab, Emory University, 201 Dowman Dr, Atlanta, GA 30322"
+          },
+          {
+            "name": "collected_by",
+            "value": "J.R. Garcia"
+          }
+        ],
+        "status": {
+          "status": "live",
+          "when": "2022-03-22T09:25:02.077"
+        },
+        "biomaterial_provider": "Gerardo Lab, Emory University, 201 Dowman Dr, Atlanta, GA 30322",
+        "collected_by": "J.R. Garcia",
+        "collection_date": "2011",
+        "geo_loc_name": "USA: Georgia",
+        "isolation_source": "Collected from soil near Alydus sp.",
+        "strain": "SMT4a"
+      }
+    },
+    "assembly_stats": {
+      "total_number_of_chromosomes": 5,
+      "total_sequence_length": "7205263",
+      "total_ungapped_length": "7205063",
+      "number_of_contigs": 5,
+      "contig_n50": 4037503,
+      "contig_l50": 1,
+      "number_of_scaffolds": 5,
+      "scaffold_n50": 4037603,
+      "scaffold_l50": 1,
+      "number_of_component_sequences": 5,
+      "atgc_count": "7205063",
+      "gc_count": "4581054",
+      "gc_percent": 63.5,
+      "genome_coverage": "60"
+    },
+    "checkm_info": {
+      "checkm_marker_set": "Burkholderiaceae",
+      "checkm_species_tax_id": 169427,
+      "checkm_marker_set_rank": "family",
+      "checkm_version": "v1.2.5",
+      "completeness": 99.94,
+      "completeness_percentile": 75
+    },
+    "average_nucleotide_identity": {
+      "taxonomy_check_status": "OK",
+      "match_status": "species_match",
+      "submitted_organism": "Paraburkholderia terricola",
+      "submitted_species": "Paraburkholderia terricola",
+      "category": "category_na",
+      "submitted_ani_match": {
+        "assembly": "GCA_902833815.1",
+        "organism_name": "Paraburkholderia terricola",
+        "category": "type",
+        "ani": 99.2,
+        "assembly_coverage": 94.86,
+        "type_assembly_coverage": 93.1
+      },
+      "best_ani_match": {
+        "assembly": "GCA_902833815.1",
+        "organism_name": "Paraburkholderia terricola",
+        "category": "type",
+        "ani": 99.2,
+        "assembly_coverage": 94.86,
+        "type_assembly_coverage": 93.1
+      },
+      "comment": "na"
+    }
+  },
+  {
+    "accession": "GCA_047325075.1",
+    "current_accession": "GCA_047325075.1",
+    "paired_accession": "GCF_047325075.1",
+    "source_database": "SOURCE_DATABASE_GENBANK",
+    "organism": {
+      "tax_id": 252970,
+      "organism_name": "Paraburkholderia phenoliruptrix",
+      "infraspecific_names": {
+        "strain": "CT11-68"
+      }
+    },
+    "assembly_info": {
+      "assembly_level": "Complete Genome",
+      "assembly_status": "current",
+      "paired_assembly": {
+        "accession": "GCF_047325075.1",
+        "status": "current",
+        "annotation_name": "GCF_047325075.1-RS_2025_01_31"
+      },
+      "assembly_name": "Paph68_v1.0",
+      "assembly_type": "haploid",
+      "bioproject_lineage": [
+        {
+          "bioprojects": [
+            {
+              "accession": "PRJNA1147241",
+              "title": "Whole genome sequences of bacterial collection obtained from wheat roots"
+            }
+          ]
+        }
+      ],
+      "bioproject_accession": "PRJNA1147241",
+      "release_date": "2025-01-30",
+      "submitter": "North Carolina State University",
+      "refseq_category": "reference genome",
+      "sequencing_tech": "Illumina NextSeq, Oxford Nanopore MinION",
+      "assembly_method": "Flye v. 2.6",
+      "biosample": {
+        "accession": "SAMN43145758",
+        "last_updated": "2025-01-31T12:39:48.203",
+        "publication_date": "2025-01-31T12:39:48.203",
+        "submission_date": "2024-08-12T13:27:06.117",
+        "sample_ids": [
+          {
+            "label": "Sample name",
+            "value": "CT11-68"
+          },
+          {
+            "db": "SRA",
+            "value": "SRS23928326"
+          }
+        ],
+        "description": {
+          "title": "MIGS Cultured Bacterial/Archaeal sample from Paraburkholderia phenoliruptrix",
+          "organism": {
+            "tax_id": 252970,
+            "organism_name": "Paraburkholderia phenoliruptrix"
+          },
+          "comment": "Keywords: GSC:MIxS;MIGS:6.0"
+        },
+        "owner": {
+          "name": "North Carolina State University",
+          "contacts": [
+            {}
+          ]
+        },
+        "models": [
+          "MIGS.ba",
+          "MIGS/MIMS/MIMARKS.plant-associated"
+        ],
+        "bioprojects": [
+          {
+            "accession": "PRJNA1147241"
+          }
+        ],
+        "package": "MIGS.ba.plant-associated.6.0",
+        "attributes": [
+          {
+            "name": "strain_code",
+            "value": "Paph68"
+          },
+          {
+            "name": "bacteria_available_from",
+            "value": "DSMZ/ NCSU Kleiner Lab"
+          },
+          {
+            "name": "culture_collection",
+            "value": "DSM:115906"
+          },
+          {
+            "name": "isolation_source",
+            "value": "roots"
+          },
+          {
+            "name": "plant_age",
+            "value": "Feekes 1.3"
+          },
+          {
+            "name": "geo_loc_name",
+            "value": "USA: NCSU Phytotron, Raleigh, NC"
+          },
+          {
+            "name": "collection_date",
+            "value": "2020-10-13"
+          },
+          {
+            "name": "isolation_medium",
+            "value": "VxylG"
+          },
+          {
+            "name": "host",
+            "value": "Triticum aestivum cv. Catawba"
+          },
+          {
+            "name": "lat_lon",
+            "value": "35.378028 N 77.5605 W"
+          },
+          {
+            "name": "isol_growth_condt",
+            "value": "25 \u02daC"
+          },
+          {
+            "name": "num_replicons",
+            "value": "not provided"
+          },
+          {
+            "name": "ref_biomaterial",
+            "value": "not provided"
+          },
+          {
+            "name": "strain",
+            "value": "CT11-68"
+          },
+          {
+            "name": "env_broad_scale",
+            "value": "not provided"
+          },
+          {
+            "name": "env_local_scale",
+            "value": "not provided"
+          },
+          {
+            "name": "env_medium",
+            "value": "not provided"
+          }
+        ],
+        "status": {
+          "status": "live",
+          "when": "2025-01-31T12:39:48.203"
+        },
+        "collection_date": "2020-10-13",
+        "geo_loc_name": "USA: NCSU Phytotron, Raleigh, NC",
+        "host": "Triticum aestivum cv. Catawba",
+        "isolation_source": "roots",
+        "lat_lon": "35.378028 N 77.5605 W",
+        "strain": "CT11-68"
+      }
+    },
+    "assembly_stats": {
+      "total_number_of_chromosomes": 2,
+      "total_sequence_length": "6797873",
+      "total_ungapped_length": "6797873",
+      "number_of_contigs": 2,
+      "contig_n50": 4115846,
+      "contig_l50": 1,
+      "number_of_scaffolds": 2,
+      "scaffold_n50": 4115846,
+      "scaffold_l50": 1,
+      "number_of_component_sequences": 2,
+      "atgc_count": "6797873",
+      "gc_count": "4319436",
+      "gc_percent": 63.5,
+      "genome_coverage": "100"
+    },
+    "annotation_info": {
+      "name": "NCBI Prokaryotic Genome Annotation Pipeline (PGAP)",
+      "provider": "NCBI",
+      "release_date": "2024-08-28",
+      "stats": {
+        "gene_counts": {
+          "total": 6033,
+          "protein_coding": 5878,
+          "non_coding": 84,
+          "pseudogene": 71
+        }
+      },
+      "method": "Best-placed reference protein set; GeneMarkS-2+",
+      "pipeline": "NCBI Prokaryotic Genome Annotation Pipeline (PGAP)",
+      "software_version": "6.8"
+    },
+    "checkm_info": {
+      "checkm_marker_set": "Burkholderiaceae",
+      "checkm_species_tax_id": 252970,
+      "checkm_marker_set_rank": "family",
+      "checkm_version": "v1.2.4",
+      "completeness": 99.5,
+      "contamination": 0.52,
+      "completeness_percentile": 20
+    },
+    "average_nucleotide_identity": {
+      "taxonomy_check_status": "OK",
+      "match_status": "species_match",
+      "submitted_organism": "Paraburkholderia phenoliruptrix",
+      "submitted_species": "Paraburkholderia phenoliruptrix",
+      "category": "category_na",
+      "submitted_ani_match": {
+        "assembly": "GCA_902833655.1",
+        "organism_name": "Paraburkholderia phenoliruptrix",
+        "category": "type",
+        "ani": 97.59,
+        "assembly_coverage": 86.36,
+        "type_assembly_coverage": 79.77
+      },
+      "best_ani_match": {
+        "assembly": "GCA_902833655.1",
+        "organism_name": "Paraburkholderia phenoliruptrix",
+        "category": "type",
+        "ani": 97.59,
+        "assembly_coverage": 86.36,
+        "type_assembly_coverage": 79.77
+      },
+      "comment": "na"
+    }
+  },
+  {
+    "accession": "GCA_052372855.1",
+    "current_accession": "GCA_052372855.1",
+    "paired_accession": "GCF_052372855.1",
+    "source_database": "SOURCE_DATABASE_GENBANK",
+    "organism": {
+      "tax_id": 134537,
+      "organism_name": "Paraburkholderia fungorum",
+      "infraspecific_names": {
+        "strain": "PR3"
+      }
+    },
+    "assembly_info": {
+      "assembly_level": "Contig",
+      "assembly_status": "current",
+      "paired_assembly": {
+        "accession": "GCF_052372855.1",
+        "status": "current",
+        "annotation_name": "GCF_052372855.1-RS_2026_09_01"
+      },
+      "assembly_name": "ASM5237285v1",
+      "assembly_type": "haploid",
+      "bioproject_lineage": [
+        {
+          "bioprojects": [
+            {
+              "accession": "PRJNA1288479",
+              "title": "Pea Ridge PSMs"
+            }
+          ]
+        }
+      ],
+      "bioproject_accession": "PRJNA1288479",
+      "release_date": "2025-08-30",
+      "submitter": "Missouri University of Science and Technology",
+      "sequencing_tech": "Oxford Nanopore",
+      "assembly_method": "Bakta v. 1.6.1",
+      "biosample": {
+        "accession": "SAMN49849726",
+        "last_updated": "2025-09-23T18:07:24.503",
+        "publication_date": "2025-07-08T00:00:00.000",
+        "submission_date": "2025-07-08T13:09:05.447",
+        "sample_ids": [
+          {
+            "label": "Sample name",
+            "value": "P. fungorum_a"
+          },
+          {
+            "db": "SRA",
+            "value": "SRS26671256"
+          }
+        ],
+        "description": {
+          "title": "MIGS Cultured Bacterial/Archaeal sample from Paraburkholderia fungorum",
+          "organism": {
+            "tax_id": 134537,
+            "organism_name": "Paraburkholderia fungorum"
+          },
+          "comment": "Keywords: GSC:MIxS;MIGS:6.0"
+        },
+        "owner": {
+          "name": "Missouri University of Science and Technology",
+          "contacts": [
+            {}
+          ]
+        },
+        "models": [
+          "MIGS.ba",
+          "MIGS/MIMS/MIMARKS.soil"
+        ],
+        "bioprojects": [
+          {
+            "accession": "PRJNA1288479"
+          }
+        ],
+        "package": "MIGS.ba.soil.6.0",
+        "attributes": [
+          {
+            "name": "strain",
+            "value": "PR3"
+          },
+          {
+            "name": "collection_date",
+            "value": "2024-09-27"
+          },
+          {
+            "name": "depth",
+            "value": "0"
+          },
+          {
+            "name": "elev",
+            "value": "254"
+          },
+          {
+            "name": "env_broad_scale",
+            "value": "ENVO:00000003"
+          },
+          {
+            "name": "env_local_scale",
+            "value": "ENVO:01001048"
+          },
+          {
+            "name": "env_medium",
+            "value": "ENVO:00000546"
+          },
+          {
+            "name": "geo_loc_name",
+            "value": "USA: Missouri"
+          },
+          {
+            "name": "isolation_source",
+            "value": "Sediment from mine tailings pond"
+          },
+          {
+            "name": "lat_lon",
+            "value": "38.13 N 94.04 W"
+          },
+          {
+            "name": "isol_growth_condt",
+            "value": "missing"
+          },
+          {
+            "name": "num_replicons",
+            "value": "missing"
+          },
+          {
+            "name": "ref_biomaterial",
+            "value": "missing"
+          }
+        ],
+        "status": {
+          "status": "live",
+          "when": "2025-07-08T14:50:21.782"
+        },
+        "collection_date": "2024-09-27",
+        "geo_loc_name": "USA: Missouri",
+        "isolation_source": "Sediment from mine tailings pond",
+        "lat_lon": "38.13 N 94.04 W",
+        "strain": "PR3"
+      },
+      "comments": "The annotation was added by the NCBI Prokaryotic Genome Annotation Pipeline (PGAP). Information about PGAP can be found here: https://www.ncbi.nlm.nih.gov/genome/annotation_prok/"
+    },
+    "assembly_stats": {
+      "total_sequence_length": "9729755",
+      "total_ungapped_length": "9729755",
+      "number_of_contigs": 12,
+      "contig_n50": 2499128,
+      "contig_l50": 2,
+      "number_of_scaffolds": 12,
+      "scaffold_n50": 2499128,
+      "scaffold_l50": 2,
+      "number_of_component_sequences": 12,
+      "atgc_count": "9729755",
+      "gc_count": "5994065",
+      "gc_percent": 61.5,
+      "genome_coverage": "95"
+    },
+    "annotation_info": {
+      "name": "NCBI Prokaryotic Genome Annotation Pipeline (PGAP)",
+      "provider": "NCBI",
+      "release_date": "2025-08-25",
+      "stats": {
+        "gene_counts": {
+          "total": 8987,
+          "protein_coding": 8742,
+          "non_coding": 85,
+          "pseudogene": 160
+        }
+      },
+      "method": "Best-placed reference protein set; GeneMarkS-2+",
+      "pipeline": "NCBI Prokaryotic Genome Annotation Pipeline (PGAP)",
+      "software_version": "6.10"
+    },
+    "wgs_info": {
+      "wgs_project_accession": "JBQRWG01",
+      "master_wgs_url": "https://www.ncbi.nlm.nih.gov/nuccore/JBQRWG000000000.1",
+      "wgs_contigs_url": "https://www.ncbi.nlm.nih.gov/Traces/wgs/JBQRWG01"
+    },
+    "checkm_info": {
+      "checkm_marker_set": "Burkholderiaceae",
+      "checkm_species_tax_id": 134537,
+      "checkm_marker_set_rank": "family",
+      "checkm_version": "v1.2.5",
+      "completeness": 99.5,
+      "contamination": 3.38,
+      "completeness_percentile": 17.5
+    },
+    "average_nucleotide_identity": {
+      "taxonomy_check_status": "OK",
+      "match_status": "species_match",
+      "submitted_organism": "Paraburkholderia fungorum",
+      "submitted_species": "Paraburkholderia fungorum",
+      "category": "category_na",
+      "submitted_ani_match": {
+        "assembly": "GCA_902833645.1",
+        "organism_name": "Paraburkholderia fungorum",
+        "category": "type",
+        "ani": 98.56,
+        "assembly_coverage": 77.3,
+        "type_assembly_coverage": 84.26
+      },
+      "best_ani_match": {
+        "assembly": "GCA_902833645.1",
+        "organism_name": "Paraburkholderia fungorum",
+        "category": "type",
+        "ani": 98.56,
+        "assembly_coverage": 77.3,
+        "type_assembly_coverage": 84.26
+      },
+      "comment": "na"
+    }
+  },
+  {
+    "accession": "GCA_058782725.1",
+    "current_accession": "GCA_058782725.1",
+    "paired_accession": "GCF_058782725.1",
+    "source_database": "SOURCE_DATABASE_GENBANK",
+    "organism": {
+      "tax_id": 3693048,
+      "organism_name": "Paraburkholderia sp. FW306-02-B",
+      "infraspecific_names": {
+        "strain": "FW306-02-B"
+      }
+    },
+    "assembly_info": {
+      "assembly_level": "Contig",
+      "assembly_status": "current",
+      "paired_assembly": {
+        "accession": "GCF_058782725.1",
+        "status": "current",
+        "annotation_name": "GCF_058782725.1-RS_2026_07_03"
+      },
+      "assembly_name": "ASM5878272v1",
+      "assembly_type": "haploid",
+      "bioproject_lineage": [
+        {
+          "bioprojects": [
+            {
+              "accession": "PRJNA1433495",
+              "title": "Genomes of subsurface bacteria isolated from groundwater and sediment samples from the Oak Ridge Reservation (ORR) in Tennessee, USA"
+            }
+          ]
+        }
+      ],
+      "bioproject_accession": "PRJNA1433495",
+      "release_date": "2026-07-02",
+      "submitter": "ENIGMA",
+      "sequencing_tech": "Illumina; Oxford Nanopore",
+      "assembly_method": "Unicycler v. 0.4.8",
+      "biosample": {
+        "accession": "SAMN56368888",
+        "last_updated": "2026-03-08T12:58:50.280",
+        "publication_date": "2026-03-06T00:00:00.000",
+        "submission_date": "2026-03-06T13:17:10.280",
+        "sample_ids": [
+          {
+            "label": "Sample name",
+            "value": "environmental sample FWB306-02 isolate FW306-02-B"
+          },
+          {
+            "db": "SRA",
+            "value": "SRS28318764"
+          }
+        ],
+        "description": {
+          "title": "Microbe sample from Paraburkholderia sp. FW306-02-B",
+          "organism": {
+            "tax_id": 3693048,
+            "organism_name": "Paraburkholderia sp. FW306-02-B"
+          },
+          "comment": "soil sample: Vadose"
+        },
+        "owner": {
+          "name": "Berkeley National Lab",
+          "contacts": [
+            {}
+          ]
+        },
+        "models": [
+          "Microbe, viral or environmental"
+        ],
+        "bioprojects": [
+          {
+            "accession": "PRJNA1433495"
+          }
+        ],
+        "package": "Microbe.1.0",
+        "attributes": [
+          {
+            "name": "isolation_source",
+            "value": "Sediment sample FWB306-02 from ORR"
+          },
+          {
+            "name": "strain",
+            "value": "FW306-02-B"
+          },
+          {
+            "name": "geo_loc_name",
+            "value": "USA: Tennessee, Oak Ridge Reservation (ORR)"
+          },
+          {
+            "name": "collection_date",
+            "value": "2015-06-10"
+          },
+          {
+            "name": "collected_by",
+            "value": "Hazen Lab"
+          },
+          {
+            "name": "lat_lon",
+            "value": "35.94087687 N 84.33618348 W"
+          },
+          {
+            "name": "env_broad_scale",
+            "value": "temperate woodland biome [ENVO:01000221]"
+          },
+          {
+            "name": "sample_type",
+            "value": "cell culture"
+          },
+          {
+            "name": "depth",
+            "value": "1.2192 m"
+          }
+        ],
+        "status": {
+          "status": "live",
+          "when": "2026-03-06T16:10:11.869"
+        },
+        "collected_by": "Hazen Lab",
+        "collection_date": "2015-06-10",
+        "geo_loc_name": "USA: Tennessee, Oak Ridge Reservation (ORR)",
+        "isolation_source": "Sediment sample FWB306-02 from ORR",
+        "lat_lon": "35.94087687 N 84.33618348 W",
+        "strain": "FW306-02-B"
+      },
+      "comments": "The annotation was added by the NCBI Prokaryotic Genome Annotation Pipeline (PGAP). Information about PGAP can be found here: https://www.ncbi.nlm.nih.gov/genome/annotation_prok/"
+    },
+    "assembly_stats": {
+      "total_sequence_length": "8244798",
+      "total_ungapped_length": "8244798",
+      "number_of_contigs": 4,
+      "contig_n50": 4639961,
+      "contig_l50": 1,
+      "number_of_scaffolds": 4,
+      "scaffold_n50": 4639961,
+      "scaffold_l50": 1,
+      "number_of_component_sequences": 4,
+      "atgc_count": "8244798",
+      "gc_count": "5101303",
+      "gc_percent": 62,
+      "genome_coverage": "99.0548"
+    },
+    "annotation_info": {
+      "name": "NCBI Prokaryotic Genome Annotation Pipeline (PGAP)",
+      "provider": "NCBI",
+      "release_date": "2026-06-02",
+      "stats": {
+        "gene_counts": {
+          "total": 7526,
+          "protein_coding": 7210,
+          "non_coding": 80,
+          "pseudogene": 236
+        }
+      },
+      "method": "Best-placed reference protein set; GeneMarkS-2+",
+      "pipeline": "NCBI Prokaryotic Genome Annotation Pipeline (PGAP)",
+      "software_version": "6.11"
+    },
+    "wgs_info": {
+      "wgs_project_accession": "JBYSXZ01",
+      "master_wgs_url": "https://www.ncbi.nlm.nih.gov/nuccore/JBYSXZ000000000.1",
+      "wgs_contigs_url": "https://www.ncbi.nlm.nih.gov/Traces/wgs/JBYSXZ01"
+    },
+    "checkm_info": {
+      "checkm_marker_set": "Burkholderiaceae",
+      "checkm_species_tax_id": 3693048,
+      "checkm_marker_set_rank": "family",
+      "checkm_version": "v1.2.5",
+      "completeness": 99.94,
+      "contamination": 0.47
+    },
+    "average_nucleotide_identity": {
+      "taxonomy_check_status": "OK",
+      "match_status": "genus_match",
+      "submitted_organism": "Paraburkholderia sp. FW306-02-B",
+      "submitted_species": "Paraburkholderia sp. FW306-02-B",
+      "category": "category_na",
+      "submitted_ani_match": {
+        "assembly": "no-type",
+        "organism_name": "na",
+        "category": "no_type"
+      },
+      "best_ani_match": {
+        "assembly": "GCA_003353175.1",
+        "organism_name": "Paraburkholderia lacunae",
+        "category": "type",
+        "ani": 90.99,
+        "assembly_coverage": 60.02,
+        "type_assembly_coverage": 58.87
+      },
+      "comment": "na"
+    }
+  },
+  {
+    "accession": "GCA_012689525.1",
+    "current_accession": "GCA_012689525.1",
+    "paired_accession": "GCF_012689525.1",
+    "source_database": "SOURCE_DATABASE_GENBANK",
+    "organism": {
+      "tax_id": 2026199,
+      "organism_name": "Paraburkholderia aromaticivorans",
+      "infraspecific_names": {
+        "strain": "AR20-38"
+      }
+    },
+    "assembly_info": {
+      "assembly_level": "Complete Genome",
+      "assembly_status": "current",
+      "paired_assembly": {
+        "accession": "GCF_012689525.1",
+        "status": "current",
+        "annotation_name": "GCF_012689525.1-RS_2025_06_02"
+      },
+      "assembly_name": "ASM1268952v1",
+      "assembly_type": "haploid",
+      "bioproject_lineage": [
+        {
+          "bioprojects": [
+            {
+              "accession": "PRJNA624061",
+              "title": "Paraburkholderia aromaticivorans strain:AR20-38 sequencing"
+            }
+          ]
+        }
+      ],
+      "bioproject_accession": "PRJNA624061",
+      "release_date": "2020-04-23",
+      "submitter": "University Innsbruck",
+      "sequencing_tech": "Illumina NovaSeq PE150; Nanopore PromethION",
+      "assembly_method": "Unicycler v. v0.4.7; SPAdes v. Nov-2019; Racon v. Nov-2019; Pilon v. Nov 2019",
+      "biosample": {
+        "accession": "SAMN14567048",
+        "last_updated": "2021-02-28T09:17:47.563",
+        "publication_date": "2020-04-09T00:00:00.000",
+        "submission_date": "2020-04-09T10:03:07.930",
+        "sample_ids": [
+          {
+            "label": "Sample name",
+            "value": "AR20-38"
+          },
+          {
+            "db": "SRA",
+            "value": "SRS6791334"
+          }
+        ],
+        "description": {
+          "title": "Microbe sample from Paraburkholderia aromaticivorans",
+          "organism": {
+            "tax_id": 2026199,
+            "organism_name": "Paraburkholderia aromaticivorans"
+          }
+        },
+        "owner": {
+          "name": "University Innsbruck",
+          "contacts": [
+            {}
+          ]
+        },
+        "models": [
+          "Microbe, viral or environmental"
+        ],
+        "package": "Microbe.1.0",
+        "attributes": [
+          {
+            "name": "strain",
+            "value": "AR20-38"
+          },
+          {
+            "name": "isolation_source",
+            "value": "Alpine forest soil"
+          },
+          {
+            "name": "collection_date",
+            "value": "2014-10-15"
+          },
+          {
+            "name": "geo_loc_name",
+            "value": "Italy: 7 km north of Bozen/Bolzano below the Rittner Horn, South Tyrol"
+          },
+          {
+            "name": "sample_type",
+            "value": "clean bacterial culture"
+          },
+          {
+            "name": "subsrc_note",
+            "value": "1,724-1,737 m above sea level"
+          },
+          {
+            "name": "collected_by",
+            "value": "Rosa Margesin"
+          },
+          {
+            "name": "env_broad_scale",
+            "value": "forest biome"
+          }
+        ],
+        "status": {
+          "status": "live",
+          "when": "2020-04-09T10:03:07.931"
+        },
+        "collected_by": "Rosa Margesin",
+        "collection_date": "2014-10-15",
+        "geo_loc_name": "Italy: 7 km north of Bozen/Bolzano below the Rittner Horn, South Tyrol",
+        "isolation_source": "Alpine forest soil",
+        "strain": "AR20-38"
+      },
+      "comments": "Bacteria and source DNA available from Rosa Margesin, Institute of Microbiology, University Innsbruck"
+    },
+    "assembly_stats": {
+      "total_number_of_chromosomes": 4,
+      "total_sequence_length": "10840732",
+      "total_ungapped_length": "10840732",
+      "number_of_contigs": 4,
+      "contig_n50": 3638240,
+      "contig_l50": 2,
+      "number_of_scaffolds": 4,
+      "scaffold_n50": 3638240,
+      "scaffold_l50": 2,
+      "number_of_component_sequences": 4,
+      "atgc_count": "10840732",
+      "gc_count": "6709676",
+      "gc_percent": 62,
+      "genome_coverage": "217"
+    },
+    "checkm_info": {
+      "checkm_marker_set": "Burkholderiaceae",
+      "checkm_species_tax_id": 2026199,
+      "checkm_marker_set_rank": "family",
+      "checkm_version": "v1.2.3",
+      "completeness": 99.8,
+      "contamination": 0.47
+    },
+    "average_nucleotide_identity": {
+      "taxonomy_check_status": "Inconclusive",
+      "match_status": "below_threshold_mismatch",
+      "submitted_organism": "Paraburkholderia aromaticivorans",
+      "submitted_species": "Paraburkholderia aromaticivorans",
+      "category": "category_na",
+      "submitted_ani_match": {
+        "assembly": "GCA_002278075.1",
+        "organism_name": "Paraburkholderia aromaticivorans",
+        "category": "type",
+        "ani": 90.06,
+        "assembly_coverage": 50.98,
+        "type_assembly_coverage": 62.05
+      },
+      "best_ani_match": {
+        "assembly": "GCA_042662565.1",
+        "organism_name": "Paraburkholderia dipogonis",
+        "category": "suspected_type",
+        "ani": 93.25,
+        "assembly_coverage": 59.12,
+        "type_assembly_coverage": 67.13
+      },
+      "comment": "na"
+    }
+  }
+]
