@@ -4,12 +4,42 @@
 本目录是单株候选导出与本株 Nanopore filled-site read 证据的扩容验收，不是新的 discovery 算法。
 运行：2026-10-23，LBL Lawrencium（pc_rubinlab / lr6）。发现与边界算法、PILER/RS 默认参数均未改动。
 
-**当前判定：[release_check.json](release_check.json) `ready_for_10_sample_batch = false`**：
-下述 b772dc7 归档验收曾通过，但补充反例暴露了同 contig 相邻竞争比对被忽略的问题。
-代码已修复为 `classifier_revision=nearby_competition_v2`，本地 45 个测试通过；
-需用五株原始 PAF 重算审核分类、checker、报告和差异表后恢复扩容判定。
-详情及执行步骤见 [NEARBY_COMPETITION_REVIEW.md](NEARBY_COMPETITION_REVIEW.md)。
-下文五株数字保留为修复前结果，不代表修复后产量。
+**当前判定：[release_check.json](release_check.json) `ready_for_10_sample_batch = true`**
+（`classifier_revision=nearby_competition_v2`，2026-10-23 重算）。
+b772dc7 的验收曾通过；补充反例暴露同 contig 相邻竞争比对被忽略（[NEARBY_COMPETITION_REVIEW.md](NEARBY_COMPETITION_REVIEW.md)），
+修复后用五株原有 PAF（SHA256 见 [v2_input_paf_hashes.tsv](v2_input_paf_hashes.tsv)）、相同 reference 与
+member_boundaries 重算审核分类、checker、报告和差异表，结果见下节与 [results_v2/](results_v2/)。
+下文“T1”表为修复前数字，保留作对照；修复后分类计数与之完全相同。
+
+## 相邻竞争修复后重算（nearby_competition_v2）
+
+作业 [reclassify_v2.sbatch](reclassify_v2.sbatch)：五株全部阶段退出码 0；无 read 达 secondary 上限；
+每株 summary 与 checker 均记录 `nearby_competition_v2`；live v1 bundle 检查全部通过。
+
+| 样本 | 分类改变 | 支持单位改变的成员 | 说明 |
+|---|---:|---:|---|
+| PaAR2038 | 0 | 0 | RS_R1 m6/m7 的相邻拷贝 secondary 仍记 competing（3/2），完整单位 150/140 不变 |
+| SMT4a | 0 | 0 | |
+| LjRoot223 | 0 | 0 | |
+| R-93128 | 0 | 4 | 同一 read 在约 750 bp 短 RS 串联阵列内有起点偏移 31/91 bp 的替代路径，现记 competing；各成员仍 78–84 单位 |
+| R-91497 | 0 | 0 | |
+
+差异表：`results_v2/<样本>/qc/diff_vs_previous_audit.tsv`（零差异也保存）。
+人工核查 [spot_checks.tsv](results_v2/report/spot_checks.tsv)：原 53 个成员证据与修复前逐项相同，
+新增上述 4 个单位改变成员，共 57 个成员全部 consistent，切片 0 不符。
+
+**产量的称呼**：下表 priority（X≥400 bp、双侧 500 bp 完整、triplet 仅 ACGT、边界 deposited/provisional）中
+获审核 read 支持者，应称“**有 read 支持的候选结构**”，不是完全确认的 insertion：
+它们含跨软件重叠记录，边界多为 provisional_homology_median，read 跨越不证明精确末端或转座活性。
+
+| 样本 | priority records | 审核支持 | 其中带冲突 | 精确坐标组（支持者） |
+|---|---:|---:|---:|---:|
+| PaAR2038 | 520 | 520 | 0 | 420 |
+| SMT4a | 199 | 199 | 4 | 134 |
+| LjRoot223 | 146 | 146 | 0 | 106 |
+| R-93128 | 174 | 161 | 0 | 128 |
+| R-91497 | 120 | 120 | 0 | 102 |
+
 非参考事件、空位点和候选产量不是验收门槛，本轮也未据此判定。
 
 ## T0：软件与计算对照

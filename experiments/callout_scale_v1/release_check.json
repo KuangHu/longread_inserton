@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "protocol": "docs/CALLOUT_SCALE_PROTOCOL.md",
-  "ready_for_10_sample_batch": false,
+  "ready_for_10_sample_batch": true,
   "evidence_root": "experiments/callout_scale_v1/ (archived copies of $PROJ/callout_scale_v1 run outputs)",
   "scope": "Single-isolate assembly candidate export plus matched ONT filled-site read evidence (v1 and audited)",
   "checks": {
@@ -33,7 +33,7 @@
     "T0_unit_tests_final_code": {
       "status": "pass",
       "evidence": "python -m unittest discover -s tests",
-      "result": "43 passed on login node with final code (556b375 + scripts); compute-node T0 ran 42 before the secondary-conflict fix"
+      "result": "45 passed (login node, commit 2b42b2d); compute-node T0 ran 42 before the two later classifier fixes"
     },
     "T0_native_demo_real_tools": {
       "status": "pass",
@@ -53,119 +53,144 @@
       "PaAR2038": {
         "stages": {
           "status": "pass",
-          "evidence": "results/PaAR2038/stages.tsv",
+          "evidence": "results_v2/PaAR2038/stages.tsv",
           "stages": [
             "verify_inputs",
-            "map",
             "cap_reads",
             "classify",
             "audited_check",
-            "bundle_v1_live"
+            "bundle_v1_live",
+            "diff_vs_previous"
           ]
         },
         "audited_check": {
           "status": "pass",
-          "evidence": "results/PaAR2038/qc/audited_check.json"
+          "evidence": "results_v2/PaAR2038/qc/audited_check.json"
+        },
+        "classifier_revision": {
+          "status": "pass",
+          "evidence": "results_v2/PaAR2038/evidence_audited/summary.json",
+          "required": "nearby_competition_v2"
         },
         "bundle_v1_live": {
           "status": "pass",
-          "evidence": "results/PaAR2038/qc/bundle_v1.json"
+          "evidence": "results_v2/PaAR2038/qc/bundle_v1.json"
         }
       },
       "SMT4a": {
         "stages": {
           "status": "pass",
-          "evidence": "results/SMT4a/stages.tsv",
+          "evidence": "results_v2/SMT4a/stages.tsv",
           "stages": [
             "verify_inputs",
-            "map",
             "cap_reads",
             "classify",
             "audited_check",
-            "bundle_v1_live"
+            "bundle_v1_live",
+            "diff_vs_previous"
           ]
         },
         "audited_check": {
           "status": "pass",
-          "evidence": "results/SMT4a/qc/audited_check.json"
+          "evidence": "results_v2/SMT4a/qc/audited_check.json"
+        },
+        "classifier_revision": {
+          "status": "pass",
+          "evidence": "results_v2/SMT4a/evidence_audited/summary.json",
+          "required": "nearby_competition_v2"
         },
         "bundle_v1_live": {
           "status": "pass",
-          "evidence": "results/SMT4a/qc/bundle_v1.json"
+          "evidence": "results_v2/SMT4a/qc/bundle_v1.json"
         }
       },
       "LjRoot223": {
         "stages": {
           "status": "pass",
-          "evidence": "results/LjRoot223/stages.tsv",
+          "evidence": "results_v2/LjRoot223/stages.tsv",
           "stages": [
             "verify_inputs",
-            "map",
             "cap_reads",
             "classify",
             "audited_check",
-            "bundle_v1_live"
+            "bundle_v1_live",
+            "diff_vs_previous"
           ]
         },
         "audited_check": {
           "status": "pass",
-          "evidence": "results/LjRoot223/qc/audited_check.json"
+          "evidence": "results_v2/LjRoot223/qc/audited_check.json"
+        },
+        "classifier_revision": {
+          "status": "pass",
+          "evidence": "results_v2/LjRoot223/evidence_audited/summary.json",
+          "required": "nearby_competition_v2"
         },
         "bundle_v1_live": {
           "status": "pass",
-          "evidence": "results/LjRoot223/qc/bundle_v1.json"
+          "evidence": "results_v2/LjRoot223/qc/bundle_v1.json"
         }
       },
       "R-93128": {
         "stages": {
           "status": "pass",
-          "evidence": "results/R-93128/stages.tsv",
+          "evidence": "results_v2/R-93128/stages.tsv",
           "stages": [
             "verify_inputs",
-            "map",
             "cap_reads",
             "classify",
             "audited_check",
-            "bundle_v1_live"
+            "bundle_v1_live",
+            "diff_vs_previous"
           ]
         },
         "audited_check": {
           "status": "pass",
-          "evidence": "results/R-93128/qc/audited_check.json"
+          "evidence": "results_v2/R-93128/qc/audited_check.json"
+        },
+        "classifier_revision": {
+          "status": "pass",
+          "evidence": "results_v2/R-93128/evidence_audited/summary.json",
+          "required": "nearby_competition_v2"
         },
         "bundle_v1_live": {
           "status": "pass",
-          "evidence": "results/R-93128/qc/bundle_v1.json"
+          "evidence": "results_v2/R-93128/qc/bundle_v1.json"
         }
       },
       "R-91497": {
         "stages": {
           "status": "pass",
-          "evidence": "results/R-91497/stages.tsv",
+          "evidence": "results_v2/R-91497/stages.tsv",
           "stages": [
             "verify_inputs",
-            "map",
             "cap_reads",
             "classify",
             "audited_check",
-            "bundle_v1_live"
+            "bundle_v1_live",
+            "diff_vs_previous"
           ]
         },
         "audited_check": {
           "status": "pass",
-          "evidence": "results/R-91497/qc/audited_check.json"
+          "evidence": "results_v2/R-91497/qc/audited_check.json"
+        },
+        "classifier_revision": {
+          "status": "pass",
+          "evidence": "results_v2/R-91497/evidence_audited/summary.json",
+          "required": "nearby_competition_v2"
         },
         "bundle_v1_live": {
           "status": "pass",
-          "evidence": "results/R-91497/qc/bundle_v1.json"
+          "evidence": "results_v2/R-91497/qc/bundle_v1.json"
         }
       }
     },
     "T1_manual_spot_checks": {
       "status": "pass",
-      "evidence": "results/report/spot_checks.tsv",
-      "rows": 56,
-      "members_checked": 53,
+      "evidence": "results_v2/report/spot_checks.tsv",
+      "rows": 60,
+      "members_checked": 57,
       "slice_mismatches": 0,
       "not_consistent": []
     },
@@ -177,17 +202,6 @@
       "status": "pass",
       "evidence": "execution_manifest.json",
       "note": "hash-checked against fetch records; PCR libraries flagged (AR20-38, SMT4a)"
-    },
-    "T0_nearby_competition_regression": {
-      "status": "pass",
-      "evidence": "tests/test_audit_filled_site.py",
-      "tests_after_fix": 45,
-      "scope": "Local unit/challenge tests; original archived sample classifications predate this fix"
-    },
-    "T1_nearby_competition_five_sample_rerun": {
-      "status": "pending",
-      "evidence": "experiments/callout_scale_v1/NEARBY_COMPETITION_REVIEW.md",
-      "reason": "Same-contig shifted placements within X length+200 bp were previously exempt from competition; full raw PAF needed to measure actual effect"
     }
   },
   "not_required_for_this_release": [
@@ -196,11 +210,38 @@
     "nonreference_low_frequency_insertion_calls",
     "minimum_biological_yield"
   ],
+  "required_classifier_revision": "nearby_competition_v2",
+  "acceptance_status": "five_sample_acceptance_passed_with_nearby_competition_v2",
+  "previous_acceptance_commit": "b772dc75e80e7926eaaff02a4debeba0aa008177",
+  "reclassification": {
+    "PaAR2038": {
+      "changed_members": 0,
+      "class_changes": 0,
+      "evidence": "results_v2/PaAR2038/qc/diff_vs_previous_audit.tsv"
+    },
+    "SMT4a": {
+      "changed_members": 0,
+      "class_changes": 0,
+      "evidence": "results_v2/SMT4a/qc/diff_vs_previous_audit.tsv"
+    },
+    "LjRoot223": {
+      "changed_members": 0,
+      "class_changes": 0,
+      "evidence": "results_v2/LjRoot223/qc/diff_vs_previous_audit.tsv"
+    },
+    "R-93128": {
+      "changed_members": 4,
+      "class_changes": 0,
+      "evidence": "results_v2/R-93128/qc/diff_vs_previous_audit.tsv"
+    },
+    "R-91497": {
+      "changed_members": 0,
+      "class_changes": 0,
+      "evidence": "results_v2/R-91497/qc/diff_vs_previous_audit.tsv"
+    }
+  },
   "conditions_for_batch": [
     "Max 2 concurrent samples; resources from measured stages.tsv",
     "Panel fixed by source/data eligibility before discovery; see next_batch_proposal.tsv"
-  ],
-  "previous_acceptance_commit": "b772dc75e80e7926eaaff02a4debeba0aa008177",
-  "acceptance_status": "pending_five_sample_reclassification_after_nearby_competition_fix",
-  "required_classifier_revision": "nearby_competition_v2"
+  ]
 }

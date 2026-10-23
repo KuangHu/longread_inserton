@@ -56,8 +56,11 @@ def main():
     p.add_argument("--manifest", type=Path, required=True)
     p.add_argument("--report", type=Path, required=True, help="sample_report.py output directory")
     p.add_argument("--proj", type=Path, default=Path("/global/scratch/users/kh36969/longread_callout"))
+    p.add_argument("--audit-root", default="callout_scale_v1")
+    p.add_argument("--include-members", type=Path, help="file of extra member IDs to check (e.g. all class changes)")
     p.add_argument("--out", type=Path, required=True)
     a = p.parse_args()
+    extra = set(a.include_members.read_text().split()) if a.include_members else set()
     rows = defaultdict(list)
     for r in csv.DictReader(open(a.report / "members.tsv"), delimiter="\t"):
         rows[r["sample"]].append(r)
@@ -68,12 +71,16 @@ def main():
         seq_dir = Path(e["v1_callout"]) / "sequences"
         x, up, down = (fasta(seq_dir / f) for f in ("candidate_insertion.fasta", "upstream_500.fasta", "downstream_500.fasta"))
         bounds = {m["member"]: m for m in json.loads((Path(e["v1_callout"]) / "results/member_boundaries.json").read_text())}
-        p_dir = a.proj / "callout_scale_v1" / sample / "evidence_audited"
+        p_dir = a.proj / a.audit_root / sample / "evidence_audited"
         audit = {r["member"]: r for r in csv.DictReader(open(p_dir / "member_audit.tsv"), delimiter="\t")}
         reads = defaultdict(list)
         for r in csv.DictReader(open(p_dir / "read_evidence.tsv"), delimiter="\t"):
             reads[r["member"]].append(r)
-        for r, why in select(rows[sample]):
+        picks = select(rows[sample])
+        chosen = {r["member"] for r, _ in picks if r}
+        picks += [(r, "class changed in reclassification") for r in sorted(rows[sample], key=lambda r: r["member"])
+                  if r["member"] in extra and r["member"] not in chosen]
+        for r, why in picks:
             if r is None:
                 out.append(dict(sample=sample, selection=why))
                 continue

@@ -1,6 +1,6 @@
 # Insertion call-out：扩容前固定规范 v1
 
-日期：2026-10-23。状态：**输入、发现与报告规范已固定；原固定五株验收已归档，补充相邻竞争比对反例修复后待重算 read 分类，当前 `ready_for_10_sample_batch = false`**，见 [callout_scale_v1 结果](../experiments/callout_scale_v1/README.md)。
+日期：2026-10-23。状态：**输入、发现与报告规范已固定；固定五株验收在相邻竞争比对修复（nearby_competition_v2）后已重算并通过，`ready_for_10_sample_batch = true`**，见 [callout_scale_v1 结果](../experiments/callout_scale_v1/README.md)。
 优先级：先把单株 `[upstream][candidate X][downstream]` 做成可批量复现的输出。
 跨株同源位置、empty-site reads、低频非参考插入、跨物种 pooled discovery 均为后续独立模块，
 不作为这一轮单株 call-out 的依赖。本规范取代此前“先扩展跨株比较”的执行优先级。

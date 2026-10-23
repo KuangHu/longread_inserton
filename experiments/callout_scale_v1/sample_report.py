@@ -119,13 +119,14 @@ def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--manifest", type=Path, default=Path(__file__).resolve().parent / "execution_manifest.json")
     p.add_argument("--proj", type=Path, default=Path("/global/scratch/users/kh36969/longread_callout"))
+    p.add_argument("--audit-root", default="callout_scale_v1", help="run directory under --proj holding <sample>/evidence_audited")
     p.add_argument("--out", type=Path, required=True)
     a = p.parse_args()
     a.out.mkdir(parents=True, exist_ok=False)
     all_rows, all_fams, summaries = [], [], []
     for e in json.load(open(a.manifest))["samples"]:
         rows, fams, summary = report(e["sample_id"], Path(e["v1_callout"]), Path(e["v1_evidence"]),
-                                     a.proj / "callout_scale_v1" / e["sample_id"] / "evidence_audited")
+                                     a.proj / a.audit_root / e["sample_id"] / "evidence_audited")
         all_rows += rows
         all_fams += fams
         summaries.append(summary)

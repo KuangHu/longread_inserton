@@ -30,11 +30,26 @@ def item(ok, evidence, **extra):
     return dict(status=status, evidence=evidence, **extra)
 
 
+def reclassification(results):
+    """Per-sample changes against the previous audited run, from diff_vs_previous_audit.tsv."""
+    out = {}
+    for s in SAMPLES:
+        f = results / s / "qc/diff_vs_previous_audit.tsv"
+        if f.exists():
+            rows = list(csv.DictReader(open(f), delimiter="\t"))
+            out[s] = dict(changed_members=len(rows), class_changes=sum(r["class_changed"] == "True" for r in rows),
+                          evidence=str(f.relative_to(HERE)))
+    return out
+
+
 def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--proj", type=Path, default=Path("/global/scratch/users/kh36969/longread_callout"))
     p.add_argument("--spot-checks", type=Path, required=True, help="reviewed spot_checks.tsv with verdicts")
     p.add_argument("--local-tests", required=True, help="e.g. '43 passed' from the final unittest run")
+    p.add_argument("--audit-root", default="callout_scale_v1", help="run directory holding the per-sample audits")
+    p.add_argument("--results-dir", default="results", help="archive directory for per-sample evidence paths")
+    p.add_argument("--require-revision", default="nearby_competition_v2")
     p.add_argument("--out", type=Path, default=HERE / "release_check.json")
     a = p.parse_args()
     run = a.proj / "callout_scale_v1"
@@ -62,21 +77,24 @@ def main():
                                                          members=reg and reg["members_new"])
     per_sample = {}
     for s in SAMPLES:
-        d = run / s
+        d = a.proj / a.audit_root / s
         ok, names = stages_ok(d / "stages.tsv") or (None, [])
         audited = load(d / "qc/audited_check.json")
         bundle = load(d / "qc/bundle_v1.json")
+        summ = load(d / "evidence_audited/summary.json") or {}
+        rev_ok = summ.get("classifier_revision") == a.require_revision and (audited or {}).get("classifier_revision") == a.require_revision
         per_sample[s] = dict(
-            stages=item(ok, f"results/{s}/stages.tsv", stages=names),
-            audited_check=item(audited and audited["status"] == "pass", f"results/{s}/qc/audited_check.json"),
-            bundle_v1_live=item(bundle and bundle["status"] == "live_exports_and_v1_tables_consistent", f"results/{s}/qc/bundle_v1.json"),
+            stages=item(ok, f"{a.results_dir}/{s}/stages.tsv", stages=names),
+            audited_check=item(audited and audited["status"] == "pass", f"{a.results_dir}/{s}/qc/audited_check.json"),
+            classifier_revision=item(rev_ok, f"{a.results_dir}/{s}/evidence_audited/summary.json", required=a.require_revision),
+            bundle_v1_live=item(bundle and bundle["status"] == "live_exports_and_v1_tables_consistent", f"{a.results_dir}/{s}/qc/bundle_v1.json"),
         )
     checks["T1_five_samples"] = per_sample
     spots = list(csv.DictReader(open(a.spot_checks), delimiter="\t"))
     reviewed = [r for r in spots if r["member"]]
     checks["T1_manual_spot_checks"] = item(
         all(r["verdict"].startswith("consistent") for r in reviewed) and all(r["slice_matches_exports"] == "True" for r in reviewed),
-        "results/report/spot_checks.tsv",
+        f"{a.results_dir}/report/spot_checks.tsv",
         rows=len(spots), members_checked=len(reviewed), slice_mismatches=sum(r["slice_matches_exports"] != "True" for r in reviewed),
         not_consistent=[r["member"] for r in reviewed if not r["verdict"].startswith("consistent")])
     checks["T1_round1_results_archive"] = item(True, "experiments/paraburkholderia_round1/ (commit 4a99370)")
@@ -91,6 +109,10 @@ def main():
         checks=checks,
         not_required_for_this_release=["empty_site_reads", "cross_species_context_comparison",
                                        "nonreference_low_frequency_insertion_calls", "minimum_biological_yield"],
+        required_classifier_revision=a.require_revision,
+        acceptance_status="five_sample_acceptance_passed_with_" + a.require_revision if ready else "pending",
+        previous_acceptance_commit="b772dc75e80e7926eaaff02a4debeba0aa008177",
+        reclassification=reclassification(HERE / a.results_dir),
         conditions_for_batch=["Max 2 concurrent samples; resources from measured stages.tsv",
                               "Panel fixed by source/data eligibility before discovery; see next_batch_proposal.tsv"],
     )
