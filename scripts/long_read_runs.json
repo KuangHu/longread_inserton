@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source": "ENA filereport, checked 2026-10-22; see docs/LONG_READ_AVAILABILITY.md",
+  "source": "ENA filereport, checked 2026-10-22 (first four) and 2026-10-23 (Paraburkholderia round 1)",
   "runs": [
     {
       "sample_id": "DdD110",
@@ -57,6 +57,62 @@
       "archive_base_count": 2112799366,
       "fastq_bytes": 2146409497,
       "fastq_md5": "1cfd36ae0a44b7b05db73d8e0b28dee5"
+    },
+    {
+      "sample_id": "SMT4a",
+      "run": "SRR16014013",
+      "biosample": "SAMN21547029",
+      "assembly": "GCA_022879555.1",
+      "platform": "OXFORD_NANOPORE",
+      "instrument_model": "MinION",
+      "role": "paraburkholderia_round1_terricola",
+      "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR160/013/SRR16014013/SRR16014013_1.fastq.gz",
+      "archive_read_count": 45764,
+      "archive_base_count": 453322692,
+      "fastq_bytes": 446432875,
+      "fastq_md5": "b479754a00d708deb0a9bbafa128af5d"
+    },
+    {
+      "sample_id": "LjRoot223",
+      "run": "ERR13194296",
+      "biosample": "SAMEA115676880",
+      "assembly": "GCA_964253525.2",
+      "platform": "OXFORD_NANOPORE",
+      "instrument_model": "MinION",
+      "role": "paraburkholderia_round1_terricola",
+      "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR131/096/ERR13194296/ERR13194296.fastq.gz",
+      "archive_read_count": 18146,
+      "archive_base_count": 104222747,
+      "fastq_bytes": 99129012,
+      "fastq_md5": "eb034543edb71553616061eb637d8e9b"
+    },
+    {
+      "sample_id": "R-93128",
+      "run": "ERR15696517",
+      "biosample": "SAMEA120356365",
+      "assembly": "GCA_977008015.1",
+      "platform": "OXFORD_NANOPORE",
+      "instrument_model": "MinION",
+      "role": "paraburkholderia_round1_fungorum",
+      "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR156/017/ERR15696517/ERR15696517.fastq.gz",
+      "archive_read_count": 182196,
+      "archive_base_count": 795887499,
+      "fastq_bytes": 673321293,
+      "fastq_md5": "b1859e212f531414d81c2ea8f7e0b382"
+    },
+    {
+      "sample_id": "R-91497",
+      "run": "ERR15693036",
+      "biosample": "SAMEA120322878",
+      "assembly": "GCA_977004965.1",
+      "platform": "OXFORD_NANOPORE",
+      "instrument_model": "MinION",
+      "role": "paraburkholderia_round1_fungorum",
+      "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR156/036/ERR15693036/ERR15693036.fastq.gz",
+      "archive_read_count": 621035,
+      "archive_base_count": 1943956481,
+      "fastq_bytes": 1558741756,
+      "fastq_md5": "68d09d77975b5e1374edd409f2bae06d"
     }
   ]
 }
