@@ -11,6 +11,7 @@ import hashlib
 import json
 import re
 import statistics
+import subprocess
 import sys
 import time
 import urllib.request
@@ -19,6 +20,7 @@ from pathlib import Path
 
 REGISTRY = Path(__file__).with_name("long_read_runs.json")
 CHUNK = 1 << 20
+MD5_ATTEMPTS = 3
 
 # PacBio read names: movie/zmw/start_end (subread), movie/zmw/ccs, movie/zmw.
 SUBREAD = re.compile(r"^(m[^/\s]+)/(\d+)/(\d+)_(\d+)$")
@@ -129,6 +131,8 @@ def probe(run, nbytes):
 
 
 def download(url, target, expected_bytes, attempts=8):
+    # curl, not urllib: urllib downloads of full length repeatedly carried a
+    # short corrupted stretch, while curl copies of the same files were clean.
     part = target.with_name(target.name + ".part")
     for attempt in range(attempts):
         offset = part.stat().st_size if part.exists() else 0
@@ -136,22 +140,14 @@ def download(url, target, expected_bytes, attempts=8):
             raise SystemExit("Partial file larger than archive size: " + str(part))
         if offset == expected_bytes:
             break
-        headers = {"Range": "bytes=%d-" % offset} if offset else {}
-        try:
-            with urllib.request.urlopen(urllib.request.Request(url, headers=headers), timeout=300) as response:
-                if offset and response.status != 206:
-                    raise SystemExit("Server ignored resume request for " + url)
-                with open(part, "ab") as handle:
-                    while True:
-                        block = response.read(CHUNK)
-                        if not block:
-                            break
-                        handle.write(block)
-        except OSError as error:
-            # Includes timeouts and dropped connections; resume from the partial file.
-            print("download interrupted (%s); attempt %d/%d" % (error, attempt + 1, attempts), file=sys.stderr)
+        cmd = ["curl", "-sS", "-f", "-L", "--connect-timeout", "60", "--speed-limit", "1000",
+               "--speed-time", "300", "-C", "-", "-o", str(part), url]
+        result = subprocess.run(cmd, capture_output=True, text=True)
+        if result.returncode != 0:
+            print("download interrupted (curl exit %d: %s); attempt %d/%d"
+                  % (result.returncode, result.stderr.strip(), attempt + 1, attempts), file=sys.stderr)
             time.sleep(30)
-    if part.stat().st_size != expected_bytes:
+    if not part.exists() or part.stat().st_size != expected_bytes:
         raise SystemExit("Download incomplete after %d attempts: %s" % (attempts, part))
     part.rename(target)
 
@@ -187,15 +183,26 @@ def fetch(run, out):
         raise SystemExit("Refusing to overwrite existing " + str(report_path))
     target = work / run["url"].rsplit("/", 1)[1]
     started = time.strftime("%Y-%m-%dT%H:%M:%S%z")
-    if not target.exists():
-        download(run["url"], target, run["fastq_bytes"])
-    size = target.stat().st_size
-    md5, sha256 = file_hashes(target)
+    # Full-length files with a short corrupted stretch have been seen; keep each
+    # bad copy for the record and download again.
+    rejected = []
+    for attempt in range(MD5_ATTEMPTS):
+        if not target.exists():
+            download(run["url"], target, run["fastq_bytes"])
+        size = target.stat().st_size
+        md5, sha256 = file_hashes(target)
+        if md5 == run["fastq_md5"] or attempt == MD5_ATTEMPTS - 1:
+            break
+        bad = work / ("md5_mismatch_attempt%d" % (attempt + 1))
+        bad.mkdir(exist_ok=True)
+        target.rename(bad / target.name)
+        rejected.append(dict(attempt=attempt + 1, md5=md5, bytes=size, kept_as=str(bad / target.name)))
     checks = dict(
         bytes_match=size == run["fastq_bytes"],
         md5_match=md5 == run["fastq_md5"],
     )
-    result = dict(run=run, download_started=started, local_file=str(target), bytes=size, md5=md5, sha256=sha256)
+    result = dict(run=run, download_started=started, local_file=str(target), bytes=size, md5=md5, sha256=sha256,
+                  rejected_downloads=rejected)
     if all(checks.values()):
         stats = summarize_file(target, run["platform"])
         # ENA read_count counts SRA spots; for PacBio RS a spot can hold several subreads.
