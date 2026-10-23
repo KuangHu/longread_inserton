@@ -8,10 +8,14 @@
 [旧版本 5ad842b](https://github.com/KuangHu/longread_inserton/tree/5ad842b0c8261485c27fa685de9fc538ff49cd23)。
 仓库名称沿用，但本 package **不读取 FASTQ/BAM、不执行长读段 SV calling**。
 
-跨物种联合 FNA 发现、长读段从头重复发现和 reads 连接核查的后续实验，见
+四株 assembly＋长读段连接证据的首轮结果见
+[READ_CALLOUT_RESULTS.md](docs/READ_CALLOUT_RESULTS.md)。
+下一步优先执行[近缘 Paraburkholderia 跨株汇总计划](docs/PLAN_PARABURKHOLDERIA_MULTI_ISOLATE.md)：
+各株独立发现、各自 Nanopore 核查，再比较 X 家族与不同侧翼背景；该扩展尚未执行。
+
+真正的 pooled FNA 发现和长读段从头重复发现保留为后续对照，见
 [跨物种与长读段评估计划](docs/PLAN_CROSS_SPECIES_LONG_READS.md)。
-该文档是待执行计划，下面描述的仍是当前已实现流程。
-四株长读段证据的首轮结果见 [READ_CALLOUT_RESULTS.md](docs/READ_CALLOUT_RESULTS.md)。
+下面描述的是当前 package 已实现流程；实验脚本与计划不表示 package 已有 reads/pool 模式。
 
 ## 固定流程
 
