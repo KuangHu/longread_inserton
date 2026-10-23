@@ -53,6 +53,7 @@ class AuditChallengeTests(unittest.TestCase):
             with open(tmp / "out/member_audit.tsv") as h:
                 audit = {r["member"]: r for r in csv.DictReader(h, delimiter="\t")}
             self.assertEqual(json.loads((tmp / "out/summary.json").read_text())["schema"], "audited_filled_site_v1")
+            self.assertEqual(json.loads((tmp / "out/summary.json").read_text())["classifier_revision"], "nearby_competition_v2")
             return audit
 
     def cls(self, lines, **kw):
@@ -98,6 +99,21 @@ class AuditChallengeTests(unittest.TestCase):
 
     def test_secondary_at_candidate(self):
         self.assertEqual(self.cls([full("r1", tp="S"), full("r2", tp="S")]), "ambiguous_competing")
+
+    def test_equal_competing_adjacent_copy_on_same_contig(self):
+        # Shift by 1300 bp: distinct position, inside the old L+200 exemption.
+        lines = []
+        for q, off in (("r1", 0), ("r2", 7)):
+            lines += [full(q, off=off),
+                      paf(q, 5300-off, 8800, f"{3500+off}M", tp="S", AS=7000, mapq=0)]
+        audit = self.run_case(lines)["m1"]
+        self.assertEqual(audit["audited_class"], "ambiguous_competing")
+        self.assertEqual(audit["units_full_support"], "0")
+
+    def test_identical_alignment_path_is_not_a_competing_position(self):
+        lines = [full("r1"), full("r1", tp="S", mapq=0),
+                 full("r2", off=7), full("r2", off=7, tp="S", mapq=0)]
+        self.assertEqual(self.cls(lines), "audited_full_span")
 
     def test_secondary_cap_needs_recheck(self):
         lines = [full("r1"), full("r2", off=7)]

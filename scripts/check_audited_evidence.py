@@ -3,7 +3,7 @@
 Independent of the classifier: recomputes each member's support units from
 read_evidence.tsv, re-derives the audited class with the same precedence, and
 checks member identity/coordinates against member_boundaries.json. It does not
-re-map reads and cannot certify independence of molecules.
+re-map reads, recompute alignment competition, or certify molecule independence.
 """
 
 import argparse
@@ -81,7 +81,9 @@ def check(audit_dir, members_json, reference):
     require(all(summary["audited_class_counts"].get(c, 0) == v for c, v in counts.items()), "Summary class counts mismatch")
     require(summary["members"] == len(audit), "Summary member count mismatch")
     return dict(schema="audited_evidence_check_v1", sample=summary["sample"], status="pass", members=len(audit),
-                audited_class_counts=dict(counts), scope="Recomputed units/classes from read_evidence.tsv; no re-mapping")
+                classifier_revision=summary.get("classifier_revision", "legacy_unspecified"),
+                audited_class_counts=dict(counts),
+                scope="Recomputed units/classes from emitted read verdicts; no re-mapping or independent competition check")
 
 
 def main():

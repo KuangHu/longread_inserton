@@ -26,6 +26,7 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 SCHEMA = "audited_filled_site_v1"
+CLASSIFIER_REVISION = "nearby_competition_v2"
 ANCHOR_BP = 100
 MIN_ANCHOR_COVER = 0.90  # aligned (M/=/X) reference bases in each 100 bp anchor
 MIN_X_COVER = 0.90  # aligned reference bases inside the candidate
@@ -167,8 +168,11 @@ def competing(a, alns, L):
     for b in alns:
         if b is a:
             continue
-        same_place = b["t"] == a["t"] and abs(b["ts"] - a["ts"]) <= L + 200 and b["strand"] == a["strand"]
-        if same_place:
+        # Proximity is not placement equivalence: adjacent repeat copies can
+        # have equal-scoring alignments of exactly the same query region.
+        # Exempt only a duplicated alignment path, never a shifted placement.
+        same_path = all(b[k] == a[k] for k in ("t", "strand", "ts", "te", "qs", "qe", "cg"))
+        if same_path:
             continue
         ov = min(a["qe"], b["qe"]) - max(a["qs"], b["qs"])
         if ov >= COMPETE_QUERY_OVERLAP * (a["qe"] - a["qs"]) and b["AS"] >= COMPETE_AS * a["AS"]:
@@ -340,7 +344,8 @@ def classify(args):
     counts = Counter(r["audited_class"] for r in summary_rows)
     long_rows = [r for r in summary_rows if r["length"] >= 400]
     summary = dict(
-        schema=SCHEMA, sample=args.sample, members=len(summary_rows), reads_touching_candidates=len(by_read),
+        schema=SCHEMA, classifier_revision=CLASSIFIER_REVISION,
+        sample=args.sample, members=len(summary_rows), reads_touching_candidates=len(by_read),
         cap_reads=len(capped), cap_reads_rechecked=len(set(recheck) & capped),
         audited_class_counts={c: counts.get(c, 0) for c in CLASSES},
         long_member_class_counts={c: sum(1 for r in long_rows if r["audited_class"] == c) for c in CLASSES},

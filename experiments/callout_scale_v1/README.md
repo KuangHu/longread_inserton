@@ -4,7 +4,12 @@
 本目录是单株候选导出与本株 Nanopore filled-site read 证据的扩容验收，不是新的 discovery 算法。
 运行：2026-10-23，LBL Lawrencium（pc_rubinlab / lr6）。发现与边界算法、PILER/RS 默认参数均未改动。
 
-**判定：[release_check.json](release_check.json) `ready_for_10_sample_batch = true`**，T0/T1 各项均 pass。
+**当前判定：[release_check.json](release_check.json) `ready_for_10_sample_batch = false`**：
+下述 b772dc7 归档验收曾通过，但补充反例暴露了同 contig 相邻竞争比对被忽略的问题。
+代码已修复为 `classifier_revision=nearby_competition_v2`，本地 45 个测试通过；
+需用五株原始 PAF 重算审核分类、checker、报告和差异表后恢复扩容判定。
+详情及执行步骤见 [NEARBY_COMPETITION_REVIEW.md](NEARBY_COMPETITION_REVIEW.md)。
+下文五株数字保留为修复前结果，不代表修复后产量。
 非参考事件、空位点和候选产量不是验收门槛，本轮也未据此判定。
 
 ## T0：软件与计算对照

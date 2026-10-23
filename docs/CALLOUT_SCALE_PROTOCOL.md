@@ -1,6 +1,6 @@
 # Insertion call-out：扩容前固定规范 v1
 
-日期：2026-10-23。状态：**输入、发现与报告规范已固定；固定五株 T0/T1 验收已完成，`ready_for_10_sample_batch = true`**，见 [callout_scale_v1 结果](../experiments/callout_scale_v1/README.md)。
+日期：2026-10-23。状态：**输入、发现与报告规范已固定；原固定五株验收已归档，补充相邻竞争比对反例修复后待重算 read 分类，当前 `ready_for_10_sample_batch = false`**，见 [callout_scale_v1 结果](../experiments/callout_scale_v1/README.md)。
 优先级：先把单株 `[upstream][candidate X][downstream]` 做成可批量复现的输出。
 跨株同源位置、empty-site reads、低频非参考插入、跨物种 pooled discovery 均为后续独立模块，
 不作为这一轮单株 call-out 的依赖。本规范取代此前“先扩展跨株比较”的执行优先级。
@@ -87,7 +87,7 @@ M/=/X 参考覆盖在 candidate 与每个 100 bp anchor 中分别 ≥90%；candi
 缺失原始 parent/split/duplex 或 PCR 分子信息时标 independence_unverified，保留 read-level 支持。
 同批用于组装的 reads 标 assembly_consistency，不称独立实验验证。
 
-**审核版尚未由本次提交实现或验证**。在集群实现它、通过技术测试并重算固定五株之前，
+**审核版已实现并归档五株验收；后续相邻竞争定位修复尚待五株重算**。在该修复完成集群验收之前，
 可以继续小批探索性 call-out，但不能把 v1 批量输出发布为“已审核的完整 insertion 集合”。
 empty-site reads 实现不阻塞上述 filled-site 验收。
 
@@ -183,9 +183,9 @@ Snapshot 模式只查小表和归档状态，无法复验 FASTA 切片/原始 re
 
 已交付：本规范、固定五株 test_panel、bundle checker、破坏输入/错配回归测试，
 以及[四株旧归档检查结果](../experiments/callout_scale_v1/snapshot_checks.json)。
-本地测试包含合法零命中 live run 和输入 hash 被改写后拒绝通过；未重新运行真实 PILER/RS/minimap2。
-当前执行环境没有集群原始 reads、完整 round-1 run 和这些原生二进制，不能声称完成 T0/T1。
+最初本地检查包含合法零命中 live run 和输入 hash 被改写后拒绝通过；之后集群已完成并归档原 T0/T1。
+最新复核发现相邻位置竞争例的误报，修复后 45 个本地测试通过；五株分类重算尚待集群执行。
 
-下一执行任务：按 [CLUSTER_TASK.md](../experiments/callout_scale_v1/CLUSTER_TASK.md)
-归档 round-1 → filled-site wrapper/审核版 → 固定五株检查 → release_check.json。
+下一执行任务：按 [相邻竞争修复复核](../experiments/callout_scale_v1/NEARBY_COMPETITION_REVIEW.md)
+重算固定五株审核分类、检查器、报告和差异表，再更新 release_check.json；原生发现无需重跑。
 现有发现与边界算法保持不变；修复必须解释具体失败例，而非换路线或为增加产量改阈值。
