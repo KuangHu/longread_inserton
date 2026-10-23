@@ -1,19 +1,192 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "protocol": "docs/CALLOUT_SCALE_PROTOCOL.md",
-  "source_baseline_commit": "ee229861df8d27b6c265ca04c3693662394daa83",
-  "scope": "Single-isolate assembly candidate insertion export plus matched ONT read evidence",
-  "ready_for_10_sample_batch": false,
+  "ready_for_10_sample_batch": true,
+  "evidence_root": "experiments/callout_scale_v1/ (archived copies of $PROJ/callout_scale_v1 run outputs)",
+  "scope": "Single-isolate assembly candidate export plus matched ONT filled-site read evidence (v1 and audited)",
   "checks": {
-    "datatype_and_pipeline_contract": {"status": "fixed", "evidence": "docs/CALLOUT_SCALE_PROTOCOL.md"},
-    "package_and_bundle_tests": {"status": "pass", "tests": 26, "command": "python -m unittest discover -s tests -v"},
-    "archived_four_sample_table_checks": {"status": "pass", "evidence": "experiments/callout_scale_v1/snapshot_checks.json"},
-    "native_tools_demo_on_cluster": {"status": "not_run", "reason": "Native binaries not available in this execution environment"},
-    "round1_results_archive": {"status": "pending", "reason": "Only sample manifest and metadata are present in the inspected baseline; cluster results reported by user"},
-    "audited_filled_site_classifier": {"status": "not_implemented_in_this_change", "reason": "Existing classifier is v1; CIGAR and competing-locus challenge tests required"},
-    "five_sample_live_validation": {"status": "not_run", "reason": "Full cluster runs and raw read alignments unavailable here"},
-    "five_sample_manual_spotchecks": {"status": "not_run"},
-    "resource_calibration": {"status": "pending", "reason": "Use measured per-stage resource records for the frozen five-sample test"}
+    "T0_stages_exit_zero": {
+      "status": "pass",
+      "evidence": "results/t0/stages.tsv",
+      "stages": [
+        "warm_tools",
+        "doctor",
+        "unit_tests",
+        "demo_data",
+        "demo_run",
+        "demo_validate",
+        "ar2038_run",
+        "ar2038_validate",
+        "ar2038_compare"
+      ]
+    },
+    "T0_doctor": {
+      "status": "pass",
+      "evidence": "results/t0/doctor.json",
+      "note": "BLAST+ warmed before doctor: cold start ~200 s vs fixed 15 s probe"
+    },
+    "T0_unit_tests_on_compute_node": {
+      "status": "pass",
+      "evidence": "results/t0/unit_tests.log",
+      "ran": "Ran 42 tests in 2.572s"
+    },
+    "T0_unit_tests_final_code": {
+      "status": "pass",
+      "evidence": "python -m unittest discover -s tests",
+      "result": "43 passed on login node with final code (556b375 + scripts); compute-node T0 ran 42 before the secondary-conflict fix"
+    },
+    "T0_native_demo_real_tools": {
+      "status": "pass",
+      "evidence": "results/t0/demo/validate.json"
+    },
+    "T0_audited_challenge_tests": {
+      "status": "pass",
+      "evidence": "tests/test_audit_filled_site.py",
+      "cases": "full span, single unit, reverse strand, X deleted, mixed conflict, secondary lacking X, accumulated indels, missing anchor, CIGAR N, equal competing, secondary at candidate, secondary cap with/without re-map, duplicate derived read, two one-sided reads, contig edge, internal only, legitimate zero vs malformed input, tampered class rejected by checker"
+    },
+    "T1_AR20-38_native_export_regression": {
+      "status": "pass",
+      "evidence": "results/t0/ar2038/regression.json",
+      "members": 762
+    },
+    "T1_five_samples": {
+      "PaAR2038": {
+        "stages": {
+          "status": "pass",
+          "evidence": "results/PaAR2038/stages.tsv",
+          "stages": [
+            "verify_inputs",
+            "map",
+            "cap_reads",
+            "classify",
+            "audited_check",
+            "bundle_v1_live"
+          ]
+        },
+        "audited_check": {
+          "status": "pass",
+          "evidence": "results/PaAR2038/qc/audited_check.json"
+        },
+        "bundle_v1_live": {
+          "status": "pass",
+          "evidence": "results/PaAR2038/qc/bundle_v1.json"
+        }
+      },
+      "SMT4a": {
+        "stages": {
+          "status": "pass",
+          "evidence": "results/SMT4a/stages.tsv",
+          "stages": [
+            "verify_inputs",
+            "map",
+            "cap_reads",
+            "classify",
+            "audited_check",
+            "bundle_v1_live"
+          ]
+        },
+        "audited_check": {
+          "status": "pass",
+          "evidence": "results/SMT4a/qc/audited_check.json"
+        },
+        "bundle_v1_live": {
+          "status": "pass",
+          "evidence": "results/SMT4a/qc/bundle_v1.json"
+        }
+      },
+      "LjRoot223": {
+        "stages": {
+          "status": "pass",
+          "evidence": "results/LjRoot223/stages.tsv",
+          "stages": [
+            "verify_inputs",
+            "map",
+            "cap_reads",
+            "classify",
+            "audited_check",
+            "bundle_v1_live"
+          ]
+        },
+        "audited_check": {
+          "status": "pass",
+          "evidence": "results/LjRoot223/qc/audited_check.json"
+        },
+        "bundle_v1_live": {
+          "status": "pass",
+          "evidence": "results/LjRoot223/qc/bundle_v1.json"
+        }
+      },
+      "R-93128": {
+        "stages": {
+          "status": "pass",
+          "evidence": "results/R-93128/stages.tsv",
+          "stages": [
+            "verify_inputs",
+            "map",
+            "cap_reads",
+            "classify",
+            "audited_check",
+            "bundle_v1_live"
+          ]
+        },
+        "audited_check": {
+          "status": "pass",
+          "evidence": "results/R-93128/qc/audited_check.json"
+        },
+        "bundle_v1_live": {
+          "status": "pass",
+          "evidence": "results/R-93128/qc/bundle_v1.json"
+        }
+      },
+      "R-91497": {
+        "stages": {
+          "status": "pass",
+          "evidence": "results/R-91497/stages.tsv",
+          "stages": [
+            "verify_inputs",
+            "map",
+            "cap_reads",
+            "classify",
+            "audited_check",
+            "bundle_v1_live"
+          ]
+        },
+        "audited_check": {
+          "status": "pass",
+          "evidence": "results/R-91497/qc/audited_check.json"
+        },
+        "bundle_v1_live": {
+          "status": "pass",
+          "evidence": "results/R-91497/qc/bundle_v1.json"
+        }
+      }
+    },
+    "T1_manual_spot_checks": {
+      "status": "pass",
+      "evidence": "results/report/spot_checks.tsv",
+      "rows": 56,
+      "members_checked": 53,
+      "slice_mismatches": 0,
+      "not_consistent": []
+    },
+    "T1_round1_results_archive": {
+      "status": "pass",
+      "evidence": "experiments/paraburkholderia_round1/ (commit 4a99370)"
+    },
+    "T1_reads_and_library_audit": {
+      "status": "pass",
+      "evidence": "execution_manifest.json",
+      "note": "hash-checked against fetch records; PCR libraries flagged (AR20-38, SMT4a)"
+    }
   },
-  "not_required_for_this_release": ["empty_site_reads", "cross_species_context_comparison", "nonreference_low_frequency_insertion_calls", "minimum_biological_yield"]
+  "not_required_for_this_release": [
+    "empty_site_reads",
+    "cross_species_context_comparison",
+    "nonreference_low_frequency_insertion_calls",
+    "minimum_biological_yield"
+  ],
+  "conditions_for_batch": [
+    "Max 2 concurrent samples; resources from measured stages.tsv",
+    "Panel fixed by source/data eligibility before discovery; see next_batch_proposal.tsv"
+  ]
 }

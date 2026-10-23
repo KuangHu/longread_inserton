@@ -8,7 +8,7 @@
 #SBATCH --cpus-per-task=16
 #SBATCH --mem=64G
 #SBATCH --time=6:00:00
-#SBATCH --output=/global/scratch/users/kh36969/longread_callout/logs/%x_%A_%a.out
+#SBATCH --output=/global/home/users/kh36969/logs/callout_scale_v1/%x_%A_%a.out
 # Filled-site read check only (protocol 3.5 / 4): explicit inputs from execution_manifest.json,
 # new output directory, audited classifier and checkers. No non-reference insertion step,
 # no deletion of earlier evidence.
@@ -16,6 +16,14 @@ set -euo pipefail
 PROJ=/global/scratch/users/kh36969/longread_callout
 CODE=/global/home/users/kh36969/middle_insertion_callout/longread_inserton
 HERE=$CODE/experiments/callout_scale_v1
+# Some lr6 nodes had a hung /global/scratch (writes blocked, nothing visible elsewhere);
+# probe it with a timeout before doing anything, and leave the log on /global/home.
+echo "[$(date -Is)] host=$(hostname) task=$SLURM_ARRAY_TASK_ID"
+if ! timeout 60 bash -c "echo ok > $PROJ/logs/.probe_${SLURM_JOB_ID} && cat $PROJ/logs/.probe_${SLURM_JOB_ID} > /dev/null"; then
+    echo "scratch_unavailable on $(hostname); exiting 75 for resubmission elsewhere" >&2
+    exit 75
+fi
+rm -f $PROJ/logs/.probe_${SLURM_JOB_ID}
 source ~/miniconda3/etc/profile.d/conda.sh
 conda activate $PROJ/env/msi
 
