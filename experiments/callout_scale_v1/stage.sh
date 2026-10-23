@@ -11,7 +11,9 @@ stage() {
     wall=$(grep -m1 "Elapsed (wall clock)" "$LOG_DIR/time_$name.txt" | awk '{print $NF}' || true)
     rss=$(grep -m1 "Maximum resident" "$LOG_DIR/time_$name.txt" | awk '{print $NF}' || true)
     [ -s "$LOG_DIR/stages.tsv" ] || printf 'stage\tstart\tend\texit_code\twall\tmax_rss_kb\tcommand\n' > "$LOG_DIR/stages.tsv"
-    printf '%s\t%s\t%s\t%s\t%s\t%s\t%s\n' "$name" "$start" "$end" "$rc" "$wall" "$rss" "$*" >> "$LOG_DIR/stages.tsv"
+    local cmd
+    cmd=$(printf '%s ' "$@" | tr '\n\t' '  ' | tr -s ' ')
+    printf '%s\t%s\t%s\t%s\t%s\t%s\t%s\n' "$name" "$start" "$end" "$rc" "$wall" "$rss" "$cmd" >> "$LOG_DIR/stages.tsv"
     if [ "$rc" -ne 0 ]; then
         echo "stage $name failed with exit code $rc" >&2
         exit "$rc"

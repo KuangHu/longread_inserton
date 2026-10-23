@@ -23,6 +23,9 @@ LOG_DIR=$OUT
 source $HERE/stage.sh
 git -C $CODE rev-parse HEAD > $OUT/source_commit.txt
 
+# Cold starts of BLAST+ from the scratch-hosted env took ~200 s (93 shared libraries), beyond
+# doctor's fixed 15 s probe; load each tool once first. The package timeout is not changed.
+stage warm_tools bash -c "for t in blastn blastx makeblastdb pals piler2 muscle RepeatScout build_lmer_table; do command -v \$t; \$t -version > /dev/null 2>&1 || true; done"
 stage doctor bash -c "multisite-insertion doctor > $OUT/doctor.json"
 stage unit_tests bash -c "cd $CODE && python -m unittest discover -s tests -v > $OUT/unit_tests.log 2>&1"
 stage demo_data python $CODE/examples/make_demo.py --out $OUT/demo/data
