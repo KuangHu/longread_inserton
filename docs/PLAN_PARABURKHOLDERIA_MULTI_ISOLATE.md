@@ -1,8 +1,8 @@
 # Paraburkholderia 属级面板：逐株发现与 Nanopore 核查，跨株汇总家族
 
 日期：2026-10-23  
-状态：计划 v2；已完成属级公开数据可用性核查及 19 份 assembly 的 ANI 测量；
-尚未冻结面板、下载新增 raw reads 或运行新增菌株 discovery / 位点比较。  
+状态：计划 v3；已完成属级公开数据可用性核查、19 份 assembly 对 AR20-38 及两两 ANI、
+克隆归并与组装连续性分层；尚未冻结面板、下载新增 raw reads 或运行新增菌株 discovery / 位点比较。  
 基准结果：commit [629d37d](https://github.com/KuangHu/longread_inserton/tree/629d37da0d738b6db4bb9e981ddff95be2ebe202)，
 见 [READ_CALLOUT_RESULTS.md](READ_CALLOUT_RESULTS.md)。
 
@@ -70,7 +70,8 @@ DD10 的样本模型与 strain/assembly 描述存在需要解释的差异；
 CT11-68 不能标为野外分离株，也不能仅凭生长设施来源断言为工程化菌株。
 若坚持“野外环境培养分离株＋Complete Genome”，当前证据不足以宣布满足三株目标。
 来源未解决时保留候选状态，不提前下载其 reads 或运行 discovery。
-Chromosome/Contig 数据仅可另立明确命名的探索层，不静默放宽主面板要求。
+NCBI assembly level 不再单独决定纳入；按 3.1 的实测连续性分层，
+fragmented 层仍只作探索，不静默并入主面板。
 同种无新增合格样本的事实保留；PaBN5 不可借用 AR20-38 reads。
 
 | 条件 | 纳入主面板的要求 |
@@ -97,6 +98,46 @@ assembly accession 排序；不依据 tnp 数、IS5 有无或候选产量选样�
 至少一个新增独立菌株匹配成功，才进入双株技术检查；
 有三个合格独立菌株才称为完成目标中的最小多株 pilot。
 不足三株时报告有限样本结果，不静默放宽样本类型或拿重复 run 凑数。
+
+### 3.1 克隆归并、连续性分层与同种组（2026-10-23 实测）
+
+数据：[ani_all_pairs.tsv](../experiments/metadata_audit/paraburkholderia_20261023/ani_all_pairs.tsv)
+（skani 0.4.0 triangle，与对 AR20-38 核查相同的 `--slow -s 80 --min-af 15`，171/171 对有输出）、
+[genome_groups.json](../experiments/metadata_audit/paraburkholderia_20261023/genome_groups.json)、
+[panel_tiers.tsv](../experiments/metadata_audit/paraburkholderia_20261023/panel_tiers.tsv)。
+19 份 FNA 在独立目录重新下载，SHA256 与核查记录 19/19 一致；对 AR20-38 的 ANI/AF 复现一致。
+
+**克隆归并**（单链接，ANI ≥99.9% 且双方 AF 的较小值 ≥95%）：
+PRJEB88388 的 P. fungorum R-93128、R-92973、R-91495、R-92561、R-92583 两两 ANI 100.00%、
+AF 99.8–100%，视为一个克隆，不计为五个独立菌株。代表按“contig 最少→最大 contig 最长→accession”
+选 R-93128；其余记为 alias，不删除原始记录。同项目 R-91497 不属于该克隆。
+19 份 assembly 归并后为 **15 个独立基因组**。阈值是本面板的操作性定义，不是菌株分类标准。
+
+**连续性分层**（以实际 FNA 计，不依赖 NCBI level 标签）：
+
+| 层 | 规则 | 独立基因组 |
+|---|---|---|
+| complete | NCBI Complete Genome | AR20-38、DD10、CT11-68 |
+| near_complete | ≤10 条记录且最大记录 ≥3 Mb | R-92578、LjRoot223、SMT4a、FW306-02-B、R-93128、R-91497、LjRoot267 |
+| fragmented | 其余 | R-92571、PR3、LjRoot241、LjRoot22、WTPI1 |
+
+complete＋near_complete 共 10 个独立基因组，可作为主面板候选池（仍须来源核实与 reads 文库审计）。
+near_complete 的 contig 末端位点照常标 edge_limited / contig_edge_limited，
+不计为完整背景；记录数阈值在查看 discovery 结果前固定，不按产量调整。
+
+**同种组**（单链接，ANI ≥95%）：P. fungorum（7 份：克隆 5＋R-91497＋PR3）、
+DD10＋P. terricola SMT4a＋LjRoot223（DD10 与二者同组，与其元数据中的 terricola 描述一致；
+保留档案分类 Paraburkholderia sp.）、P. hospita（3 份）、P. xenovorans（R-92571/R-92578，97.33%）；
+AR20-38、CT11-68、FW306-02-B、WTPI1 各自单独成组。AR20-38 没有同种伙伴。
+
+由此 P3 应同时报告两种比较，二者不混合：
+- **跨物种（以 AR20-38 为中心）**：complete＋near_complete 候选与 AR20-38 的双方 AF 仅约 25–57%，
+  AR20-38 的大部分候选位点预计落在无共线对应的区域，按规则记 unresolved。
+  可比较分母小是预期结果，不是流程失败；报告必须给出分母。
+- **同种内**：terricola 组（DD10、SMT4a、LjRoot223，两两 ANI 99.22–99.54%，AF 88.9–95.4%）、
+  fungorum（R-93128 克隆代表与 R-91497，ANI 98.51%，AF 84.2/88.1%；fragmented 层 PR3 另列）等，
+  共线性高，最适合区分“共享同源位置”与“新背景”。这是原问题在现有数据下更可解析的形式，
+  但不同于“与 AR20-38 同种”的原始目标，须单独命名。
 
 冻结清单至少包含：
 sample_id、strain_aliases、taxon/来源、BioSample、assembly/replicon accession.version、
@@ -196,6 +237,11 @@ P3 以双向全基因组比对中的宿主共线区段和邻近基因顺序为�
 本次只运行了 ANI，并未实现或验证该位点比较层。
 若在这两个较远物种间不能可靠定位宿主同源区域，P3 停留在 unresolved，
 不以放宽一个 identity 数字代替方法验证。
+
+预期结果须事先写明：跨物种（ANI 约 80–89%、AF 约 18–57%）比较中，
+大部分位点没有可用宿主共线对应，unresolved 占多数是方法限制的正常体现；
+同种组（3.1）才是检验“共享位置 vs 新背景”判定的主要可解析对照。
+两者的分母、resolved 数和 unresolved 数分别报告。
 
 每对同家族 locus 保存以下三态及原始证据：
 - same_position：两侧宿主锚点在双向对应的共线区域内，方向/基因次序一致，
