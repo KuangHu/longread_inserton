@@ -192,7 +192,12 @@ def classify_read(m, alns, contig_len, cap_reads, recheck):
         spans = a["ts"] <= s - ANCHOR_BP and a["te"] >= e + ANCHOR_BP
         reasons = []
         if met["largest_del_x"] >= X_DELETED * L:
-            status = "x_deleted"
+            # A read lacking X is conflict evidence only from its best placement; a secondary
+            # alignment over a neighbouring copy is a competing placement, not an absent X.
+            if a["tp"] == "P":
+                status = "x_deleted"
+            else:
+                status, reasons = "competing", ["secondary_alignment_lacks_x"]
         elif spans:
             if met["cov_left"] < MIN_ANCHOR_COVER * ANCHOR_BP:
                 reasons.append("left_anchor_cover")

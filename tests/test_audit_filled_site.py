@@ -73,6 +73,13 @@ class AuditChallengeTests(unittest.TestCase):
         self.assertEqual(self.cls([full("r1"), full("r2", off=7), deleted("d1"), paf("d2", 3990, 7500, "1010M1200D1300M")]),
                          "audited_full_span_with_conflict")
 
+    def test_secondary_alignment_lacking_x_is_not_conflict(self):
+        # Two adjacent copies: a read's runner-up placement can skip X; that is not an absent X.
+        secondary_skip = lambda q: paf(q, 4000, 7500, "1000M1200D1300M", tp="S", mapq=0)
+        self.assertEqual(self.cls([full("r1"), full("r2", off=7), secondary_skip("s1"), secondary_skip("s2")]),
+                         "audited_full_span")
+        self.assertEqual(self.cls([secondary_skip("s1")]), "ambiguous_competing")
+
     def test_accumulated_small_indels_fail(self):
         cg = "1000M" + "17M3D" * 60 + "1300M"  # 180 bp of deletions inside a 1200 bp X
         self.assertEqual(self.cls([paf("r1", 4000, 7500, cg), paf("r2", 4000, 7500, cg)]), "full_span_cigar_fail")
