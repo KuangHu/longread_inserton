@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source": "ENA filereport, checked 2026-10-22 (first four) and 2026-10-23 (Paraburkholderia round 1); batch10 from experiments/callout_scale_v1/next_batch_inputs.tsv (ENA re-checked 2026-10-23); batch50 from experiments/callout_scale_v1/batch50/selection_manifest.tsv (ENA 2026-10-24)",
+  "source": "ENA filereport, checked 2026-10-22 (first four) and 2026-10-23 (Paraburkholderia round 1); batch10 from experiments/callout_scale_v1/next_batch_inputs.tsv (ENA re-checked 2026-10-23); batch50 from experiments/callout_scale_v1/batch50/selection_manifest.tsv (ENA 2026-10-24); Sam8H1 PacBio HiFi pilot from ENA filereport SRR13837247 (2026-10-24)",
   "runs": [
     {
       "sample_id": "DdD110",
@@ -953,6 +953,20 @@
       "archive_base_count": 200792592,
       "fastq_bytes": 189460686,
       "fastq_md5": "4b5bb40ad880f84ddbadebababdcfecb"
+    },
+    {
+      "sample_id": "Sam8H1",
+      "run": "SRR13837247",
+      "biosample": "SAMN17825431",
+      "assembly": "GCA_016904925.1",
+      "platform": "PACBIO_SMRT",
+      "instrument_model": "Sequel II",
+      "role": "pacbio_hifi_pilot",
+      "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR138/047/SRR13837247/SRR13837247_subreads.fastq.gz",
+      "archive_read_count": 35763,
+      "archive_base_count": 277511453,
+      "fastq_bytes": 269402451,
+      "fastq_md5": "fd288a5f52bf55203482cffca98ac1f1"
     }
   ]
 }
