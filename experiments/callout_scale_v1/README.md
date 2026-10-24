@@ -100,14 +100,18 @@ anchor 缺失、CIGAR N、等分竞争、candidate 处为 secondary、secondary 
   filled_site.sbatch 现先以 60 s 超时探测 scratch（失败以 75 退出），日志写到 /global/home；重跑均排除这些节点。
 - T0 作业记录的 source commit 为 406dae8；作业启动约 20 s 后提交的 a8856f6 只改了 stage 日志格式、预热和两个未在 T0 使用的脚本。
 
-## 下一批 10 株（提议，先最多 2 个并发）
+## 下一批 10 株（已按 metadata 冻结，先最多 2 个并发）
 
-[next_batch_proposal.tsv](next_batch_proposal.tsv)：Paraburkholderia 剩余合格样本 9 个——CT11-68、DD10（Complete）；
-FW306-02-B、LjRoot267、R-92578（高连续性 draft）；fungorum 克隆成员 R-92583、R-92561、R-91495、R-92973
-（保留各自样本身份，检查局部插入差异）。按来源与数据资格选取，未参考候选产量。
-第 10 个名额固定规则：Burkholderiaceae 中 BioSample 精确匹配 Complete Genome 的 genomic ONT WGS、
-环境或植物相关培养分离株、非 PCR 文库，取最小 assembly accession；需先审计 ENA 上 654 个 runs，未执行。
-DD10 的 MISAG 模板问题须在运行前核实。
+[next_batch_proposal.tsv](next_batch_proposal.tsv)：10 个待跑样本已经按来源与数据资格固定，未参考候选产量。
+Paraburkholderia 9 个保留：CT11-68、DD10（Complete）；FW306-02-B、LjRoot267、R-92578（高连续性 draft）；
+fungorum 克隆成员 R-92583、R-92561、R-91495、R-92973（保留各自样本身份，检查局部插入差异）。
+第 10 个按预注册规则从 Burkholderiaceae family 级别 metadata 选出：Bs869T2，Complete Genome，
+BioSample 精确匹配，ONT RANDOM library，surface-sterilized vetiver roots 来源。
+
+审计记录见 [NEXT_BATCH_10_AUDIT.md](NEXT_BATCH_10_AUDIT.md)。输入下载 metadata 见
+[next_batch_inputs.tsv](next_batch_inputs.tsv)，family-level exact-match 审计见
+[next_batch_selection_audit.tsv](next_batch_selection_audit.tsv)。DD10 的 BioSample MISAG/single-amplified 模板问题
+已由 2026 genome announcement 解析为模板选择冲突：DD10 是培养分离株，Nanopore DNA 来自液体培养。
 
 资源估计（按本轮实测，非保证）：每株 callout 2 CPU 约 5–20 min、<0.5 GB；filled-site 16 CPU ≤10 min、峰值 ≤8 GB；
 reads 下载 0.1–2.2 GB，ENA 约 0.5–1 MB/s，为主要耗时（≤1 h/株）。2 个并发时 10 株约 5–6 h wall；

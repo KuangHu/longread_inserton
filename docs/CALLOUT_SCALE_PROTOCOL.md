@@ -87,8 +87,8 @@ M/=/X 参考覆盖在 candidate 与每个 100 bp anchor 中分别 ≥90%；candi
 缺失原始 parent/split/duplex 或 PCR 分子信息时标 independence_unverified，保留 read-level 支持。
 同批用于组装的 reads 标 assembly_consistency，不称独立实验验证。
 
-**审核版已实现并归档五株验收；后续相邻竞争定位修复尚待五株重算**。在该修复完成集群验收之前，
-可以继续小批探索性 call-out，但不能把 v1 批量输出发布为“已审核的完整 insertion 集合”。
+**审核版已实现并在相邻竞争定位修复后归档五株重算，classifier revision 为 `nearby_competition_v2`**。
+五株分类均未因该修复改变；R-93128 只有 4 条短 tandem-repeat records 的支持 read 数减少 1。
 empty-site reads 实现不阻塞上述 filled-site 验收。
 
 ## 5. Test run 固定五株

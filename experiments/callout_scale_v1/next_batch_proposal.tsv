@@ -1,6 +1,6 @@
 order	sample_id	species	run	biosample	assembly	tier	records	largest_bp	ani_to_AR20_38	caveat
 1	CT11-68	Paraburkholderia phenoliruptrix	SRR32164161	SAMN43145758	GCA_047325075.1	complete	2	4115846	84.88	Complete; DSM 115906, wheat root in NCSU Phytotron (controlled facility source)
-2	DD10	Paraburkholderia sp. DD10	SRR33434047	SAMN47339132	GCA_049177125.1	complete	3	4077509	86.54	Complete; BioSample uses MISAG single-amplified template; confirm cultured isolate before run
+2	DD10	Paraburkholderia sp. DD10	SRR33434047	SAMN47339132	GCA_049177125.1	complete	3	4077509	86.54	Complete; meadow-soil hyphosphere cultured isolate; MISAG BioSample model resolved by 2026 genome announcement
 3	FW306-02-B	Paraburkholderia sp. FW306-02-B	SRR37523597	SAMN56368888	GCA_058782725.1	high_contiguity_draft	4	4639961	85.51	high_contiguity_draft; sediment (ORR)
 4	LjRoot267	Paraburkholderia hospita	ERR13194333	SAMEA115676917	GCA_964252875.2	high_contiguity_draft	6	4148324	80.84	high_contiguity_draft; P. hospita; Lotus japonicus root
 5	R-92578	Paraburkholderia xenovorans	ERR15686608	SAMEA120314567	GCA_976997195.1	high_contiguity_draft	7	4887713	88.49	high_contiguity_draft; P. xenovorans; petroleum enrichment culture
@@ -8,4 +8,4 @@ order	sample_id	species	run	biosample	assembly	tier	records	largest_bp	ani_to_AR
 7	R-92561	Paraburkholderia fungorum	ERR15693049	SAMEA120322886	GCA_977005035.1	high_contiguity_draft	6	5142045	85.34	fungorum clone member; petroleum enrichment DE_KIE_03
 8	R-91495	Paraburkholderia fungorum	ERR15693035	SAMEA120322877	GCA_977005055.1	high_contiguity_draft	4	5328804	85.33	fungorum clone member; cyanide enrichment DE_STO_02 (same groundwater sample as R-91497)
 9	R-92973	Paraburkholderia fungorum	ERR15741619	SAMEA120399597	GCA_977011985.1	high_contiguity_draft	4	5328796	85.33	fungorum clone member (100% ANI to R-93128); own sample identity kept; cyanide enrichment DE_RIN_09
-10	pending	-	-	-	-	-	-	-	-	Fixed rule for slot 10: Burkholderiaceae genomic ONT WGS run with exact BioSample-matched Complete Genome, environmental or plant-associated cultured isolate, non-PCR library, lowest assembly accession; audit 654 ENA runs before selection; not chosen by candidate yield
+10	Bs869T2	Burkholderia seminalis	SRR14075918	SAMN02720836	GCA_000705535.2	complete	3	3012498	not_run	Complete; plant endophyte 869T2 from surface-sterilized vetiver roots; lowest-accession eligible family-level ONT/Complete exact-BioSample match
