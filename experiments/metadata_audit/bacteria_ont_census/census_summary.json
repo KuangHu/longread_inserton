@@ -1,0 +1,32 @@
+{
+  "schema": "bacteria_ont_census_v1",
+  "scope": "metadata only; not a panel; largest record not checked",
+  "provenance": {
+    "date": "2026-10-24",
+    "ena_url": "https://www.ebi.ac.uk/ena/portal/api/search?result=read_run&query=tax_tree%282%29+AND+instrument_platform%3D%22OXFORD_NANOPORE%22+AND+library_source%3D%22GENOMIC%22&fields=run_accession%2Cstudy_accession%2Csample_accession%2Ctax_id%2Cscientific_name%2Cinstrument_model%2Clibrary_strategy%2Clibrary_selection%2Cread_count%2Cbase_count%2Cfastq_bytes%2Cfastq_md5%2Cfastq_ftp%2Chost%2Chost_scientific_name%2Cisolation_source%2Cenvironmental_sample%2Cfirst_public&format=tsv&limit=0",
+    "ena_rows": 84889,
+    "ena_sha256": "37b9353a7362fa2fa9028182e3c2c8c74d575feb0e89b19450d7a70c32620fb1",
+    "assembly_summary_url": "https://ftp.ncbi.nlm.nih.gov/genomes/genbank/bacteria/assembly_summary.txt",
+    "assembly_rows_scanned": 3420265,
+    "assembly_rows_matched": 38467
+  },
+  "funnel": {
+    "genomic_runs": 84889,
+    "wgs": 75659,
+    "wgs_non_pcr": 72077,
+    "with_ena_fastq_md5": 68289,
+    "exact_biosample_assembly": 38897,
+    "level:Complete Genome": 21510,
+    "complete_or_le10_records": 30246,
+    "complete_genome": 21510,
+    "after_rough_source_screen": 16225,
+    "level:Contig": 16605,
+    "host_or_source_clinical_animal_keyword": 14021,
+    "level:Scaffold": 559,
+    "level:Chromosome": 966,
+    "wgs_pcr": 3582
+  },
+  "distinct_biosamples_exact_match_wgs_non_pcr": 35627,
+  "genera_with_exact_match": 872,
+  "genera_after_rough_screen": 742
+}

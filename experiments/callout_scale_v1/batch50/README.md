@@ -169,3 +169,28 @@ ENA 与 NCBI 都是活数据库，重查可能多出新 run 或新版本；冻�
 - 把 50 个 run 加入 `scripts/long_read_runs.json`，生成 batch50 的 `samples.tsv`，沿用 batch10 作业（`prepare_assembly.py` 再核对一次 GCA/GCF）。
 - 存储：reads 48.5 GB，按 batch10 比例估计输出约 13 GB；ENA 下载按 0.3–1 MB/s 估计，合计 13–45 小时。
 - **本审计没有提交 50 株 SLURM 作业。**
+
+## 可执行化与 2 株 smoke test（2026-10-24）
+
+选择未改动。[make_samples.py](make_samples.py) 由 selection_manifest 生成 [samples.tsv](samples.tsv)，并把 50 个 run（role `callout_scale_v1_batch50`）加入 `scripts/long_read_runs.json`。
+samples.tsv 保留 batch10 的列（order…preset），另加 panel rank、ENA reads/bases/bytes/MD5/URL、选用的 FASTA 来源与 accession、期望 SHA256 和记录数、read policy。
+所选 FASTA：49 株用 GCF（序列集与 GCA 逐条一致），SFA1 用 GCA（`prepare_assembly.py --gcf none`）。
+
+[batch_sample.sbatch](batch_sample.sbatch) 的 array 序号就是 samples.tsv 的 `order`，每次提交 10 个，并发 2，例如 `sbatch --array=1-10%2 --exclude=<故障节点> batch_sample.sbatch`。
+与 batch10 相比多两步：`assembly_expected` 要求集群上选出的 FASTA 与冻结的 SHA256 和来源一致；
+ENA bases / assembly bp >200× 的 9 株（H16、DZH-419、Tfa17、DSM_11853、GP95、R-91474、R-93091、R-91747、R-93106）
+在完整下载并通过 MD5 校验后，用 [downsample_reads.py](downsample_reads.py) 按分子降采样到 80×，只用于 minimap2 和 read 检查。
+降采样规则：按 SHA256(“seed:read 名”) 排序取到目标碱基数，seed 固定为 20261024；输出的 gzip 头固定，SHA256 可复现。
+原始 FASTQ 和降采样 FASTQ 留在集群，只记录 SHA256 与 seed（`results/<株>/qc/downsample.json`）。发现步骤不使用 reads。
+
+Smoke test（只提交两株，**尚未提交其余 48 株**）：
+
+| 株 | 角色 | 结果 |
+|---|---|---|
+| CS-K2（#25） | Complete、SAMN、小 FASTQ（0.19 GB，56.7×，全部 reads） | 全部阶段 exit 0；validate、checker 均 pass；11 个原生家族（0 个 tnp-supported），100 records（≥400 bp 30 条），100 条全部 audited_full_span |
+| R-93091（#34） | draft 3 条记录、SAMEA、236× → 降采样到 80.0×（378,511 → 127,772 reads） | 第 2 次全部阶段 exit 0；validate、checker 均 pass；48 个家族（4 个 tnp-supported），275 records（≥400 bp 167 条）；audited_full_span 264，edge_limited 5，ambiguous_competing 6 |
+
+- 两株在集群上选出的 FASTA 都是 GCF，SHA256 与 samples.tsv 中的期望值一致；reads 的 bytes、MD5、spots、bases 校验全部通过；均无 read 达到 secondary 上限。
+- R-93091 第 1 次在 n0230 上失败：curl 加载共享库时报 Lustre `Error 108`，8 次重试都失败，未写任何结果。这与 DD10 在 n0258 上的节点故障相同，失败目录保存在集群 `batch50_failed/`。
+  第 2 次加 `--exclude n0230` 重交后完成。故障节点名单现为 n0348、n0039、n0292、n0082、n0031、n0258、n0083、n0230。
+- 结果见 [results/](results/)，结构与 batch10 相同（`batch_summary.tsv`、`resources.tsv`、`omitted_large_files.tsv`、`failed_attempts/`）；records 不是独立 insertion 数。
