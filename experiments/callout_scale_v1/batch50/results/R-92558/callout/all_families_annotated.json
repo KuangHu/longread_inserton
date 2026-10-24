@@ -1,0 +1,4812 @@
+[
+  {
+    "query": "R-92558_PILER_0.0",
+    "organism": "R-92558",
+    "method": "PILER",
+    "native_family": "0.0",
+    "length": 1488,
+    "raw_occurrences": 12,
+    "occurrences": [
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 23194,
+        "end0": 24660,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_38",
+            "type": "CDS",
+            "overlap_bp": 1209,
+            "feature_length_bp": 1209,
+            "product": [
+              "IS4-like element ISBvi1 family transposase"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS00095"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_40",
+            "type": "CDS",
+            "overlap_bp": 21,
+            "feature_length_bp": 384,
+            "product": [
+              "sugar ABC transporter"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS00100"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 1603089,
+        "end0": 1604567,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_2877",
+            "type": "CDS",
+            "overlap_bp": 9,
+            "feature_length_bp": 2568,
+            "product": [
+              "efflux RND transporter permease subunit"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS07175"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_2879",
+            "type": "CDS",
+            "overlap_bp": 1209,
+            "feature_length_bp": 1209,
+            "product": [
+              "IS4-like element ISBvi1 family transposase"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS07180"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_2881",
+            "type": "CDS",
+            "overlap_bp": 13,
+            "feature_length_bp": 621,
+            "product": [
+              "efflux RND transporter permease subunit"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS07185"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 2143902,
+        "end0": 2145381,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_3892",
+            "type": "CDS",
+            "overlap_bp": 1,
+            "feature_length_bp": 366,
+            "product": [
+              "NAD-binding protein"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS09705"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_3894",
+            "type": "CDS",
+            "overlap_bp": 1209,
+            "feature_length_bp": 1209,
+            "product": [
+              "IS4-like element ISBvi1 family transposase"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS09710"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_3896",
+            "type": "CDS",
+            "overlap_bp": 28,
+            "feature_length_bp": 594,
+            "product": [
+              "NAD(P)-dependent oxidoreductase"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS09715"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 2528238,
+        "end0": 2529720,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_4570",
+            "type": "CDS",
+            "overlap_bp": 32,
+            "feature_length_bp": 2169,
+            "product": [
+              "two-partner secretion domain-containing protein"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS11400"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_4572",
+            "type": "CDS",
+            "overlap_bp": 1209,
+            "feature_length_bp": 1209,
+            "product": [
+              "IS4-like element ISBvi1 family transposase"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS11405"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 2703073,
+        "end0": 2704545,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_4860",
+            "type": "CDS",
+            "overlap_bp": 21,
+            "feature_length_bp": 1473,
+            "product": [
+              "aldehyde dehydrogenase family protein"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS12125"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_4862",
+            "type": "CDS",
+            "overlap_bp": 1209,
+            "feature_length_bp": 1209,
+            "product": [
+              "IS4-like element ISBvi1 family transposase"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS12130"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 2796133,
+        "end0": 2797618,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_5038",
+            "type": "CDS",
+            "overlap_bp": 1209,
+            "feature_length_bp": 1209,
+            "product": [
+              "IS4-like element ISBvi1 family transposase"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS12570"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 3351199,
+        "end0": 3352684,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_5968",
+            "type": "CDS",
+            "overlap_bp": 29,
+            "feature_length_bp": 18501,
+            "product": [
+              "non-ribosomal peptide synthase/polyketide synthase"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS14895"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_5970",
+            "type": "CDS",
+            "overlap_bp": 1209,
+            "feature_length_bp": 1209,
+            "product": [
+              "IS4-like element ISBvi1 family transposase"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS14900"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 3487393,
+        "end0": 3488866,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_6180",
+            "type": "CDS",
+            "overlap_bp": 1209,
+            "feature_length_bp": 1209,
+            "product": [
+              "IS4-like element ISBvi1 family transposase"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS15425"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 3586870,
+        "end0": 3588335,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_6324",
+            "type": "CDS",
+            "overlap_bp": 77,
+            "feature_length_bp": 1536,
+            "product": [
+              "putative bifunctional diguanylate cyclase/phosphodiesterase"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS15785"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_6326",
+            "type": "CDS",
+            "overlap_bp": 1209,
+            "feature_length_bp": 1209,
+            "product": [
+              "IS4-like element ISBvi1 family transposase"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS15790"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_6328",
+            "type": "CDS",
+            "overlap_bp": 70,
+            "feature_length_bp": 1629,
+            "product": [
+              "7TM diverse intracellular signaling domain-containing protein"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS15795"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 3854536,
+        "end0": 3856005,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_6788",
+            "type": "CDS",
+            "overlap_bp": 1209,
+            "feature_length_bp": 1209,
+            "product": [
+              "IS4-like element ISBvi1 family transposase"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS16945"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 3963754,
+        "end0": 3965229,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_6984",
+            "type": "CDS",
+            "overlap_bp": 5,
+            "feature_length_bp": 339,
+            "product": [
+              "TetR/AcrR family transcriptional regulator"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS17435"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_6986",
+            "type": "CDS",
+            "overlap_bp": 1209,
+            "feature_length_bp": 1209,
+            "product": [
+              "IS4-like element ISBvi1 family transposase"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS17440"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_6988",
+            "type": "CDS",
+            "overlap_bp": 89,
+            "feature_length_bp": 405,
+            "product": [
+              "TetR/AcrR family transcriptional regulator"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS17445"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 6067549,
+        "end0": 6069028,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_10738",
+            "type": "CDS",
+            "overlap_bp": 1209,
+            "feature_length_bp": 1209,
+            "product": [
+              "IS4-like element ISBvi1 family transposase"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS26815"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "R-92558__NZ_OZ344874.1_feature_10738",
+      "identity_pct": 100.0,
+      "alignment_aa": 402,
+      "query_start": 75,
+      "query_end": 1280,
+      "evalue": 0.0,
+      "bitscore": 751.0,
+      "subject_length": 402,
+      "title": "IS4-like element ISBvi1 family transposase"
+    },
+    "best_deposited_tnp_hit": {
+      "subject": "R-92558__NZ_OZ344874.1_feature_10738",
+      "identity_pct": 100.0,
+      "alignment_aa": 402,
+      "query_start": 75,
+      "query_end": 1280,
+      "evalue": 0.0,
+      "bitscore": 751.0,
+      "subject_length": 402,
+      "title": "IS4-like element ISBvi1 family transposase"
+    },
+    "native_records_overlapping_tnp_CDS": 12,
+    "tnp_supported": true,
+    "deposited_tnp_products": [
+      "IS4-like element ISBvi1 family transposase"
+    ]
+  },
+  {
+    "query": "R-92558_PILER_1.1",
+    "organism": "R-92558",
+    "method": "PILER",
+    "native_family": "1.1",
+    "length": 2495,
+    "raw_occurrences": 5,
+    "occurrences": [
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 560221,
+        "end0": 562716,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_1012",
+            "type": "CDS",
+            "overlap_bp": 798,
+            "feature_length_bp": 798,
+            "product": [
+              "IS21-like element helper ATPase IstB"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS02525"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_1014",
+            "type": "CDS",
+            "overlap_bp": 1506,
+            "feature_length_bp": 1506,
+            "product": [
+              "IS21 family transposase"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS02530"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 2660023,
+        "end0": 2662510,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_4772",
+            "type": "CDS",
+            "overlap_bp": 9,
+            "feature_length_bp": 1413,
+            "product": [
+              "MFS transporter"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS11905"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_4774",
+            "type": "CDS",
+            "overlap_bp": 1506,
+            "feature_length_bp": 1506,
+            "product": [
+              "IS21 family transposase"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS11910"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_4776",
+            "type": "CDS",
+            "overlap_bp": 798,
+            "feature_length_bp": 798,
+            "product": [
+              "IS21-like element helper ATPase IstB"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS11915"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_4778",
+            "type": "CDS",
+            "overlap_bp": 1,
+            "feature_length_bp": 459,
+            "product": [
+              "fumarylacetoacetate hydrolase family protein"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS11920"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 3867477,
+        "end0": 3869963,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_6802",
+            "type": "CDS",
+            "overlap_bp": 23,
+            "feature_length_bp": 4194,
+            "product": [
+              "RHS repeat-associated core domain-containing protein"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS16980"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_6804",
+            "type": "CDS",
+            "overlap_bp": 1506,
+            "feature_length_bp": 1506,
+            "product": [
+              "IS21 family transposase"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS16985"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_6806",
+            "type": "CDS",
+            "overlap_bp": 798,
+            "feature_length_bp": 798,
+            "product": [
+              "IS21-like element helper ATPase IstB"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS16990"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_6808",
+            "type": "CDS",
+            "overlap_bp": 42,
+            "feature_length_bp": 360,
+            "product": [
+              "hypothetical protein"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS16995"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 5206395,
+        "end0": 5208880,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_9121",
+            "type": "CDS",
+            "overlap_bp": 24,
+            "feature_length_bp": 807,
+            "product": [
+              "hypothetical protein"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS22775"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_9123",
+            "type": "CDS",
+            "overlap_bp": 798,
+            "feature_length_bp": 798,
+            "product": [
+              "IS21-like element helper ATPase IstB"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS22780"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_9125",
+            "type": "CDS",
+            "overlap_bp": 1506,
+            "feature_length_bp": 1506,
+            "product": [
+              "IS21 family transposase"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS22785"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 5814486,
+        "end0": 5816971,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_10233",
+            "type": "CDS",
+            "overlap_bp": 1506,
+            "feature_length_bp": 1506,
+            "product": [
+              "IS21 family transposase"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS25555"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_10235",
+            "type": "CDS",
+            "overlap_bp": 798,
+            "feature_length_bp": 798,
+            "product": [
+              "IS21-like element helper ATPase IstB"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS25560"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "R-92558__NZ_OZ344874.1_feature_10233",
+      "identity_pct": 99.8,
+      "alignment_aa": 501,
+      "query_start": 120,
+      "query_end": 1622,
+      "evalue": 0.0,
+      "bitscore": 1041.0,
+      "subject_length": 501,
+      "title": "IS21 family transposase"
+    },
+    "best_deposited_tnp_hit": {
+      "subject": "R-92558__NZ_OZ344874.1_feature_10233",
+      "identity_pct": 99.8,
+      "alignment_aa": 501,
+      "query_start": 120,
+      "query_end": 1622,
+      "evalue": 0.0,
+      "bitscore": 1041.0,
+      "subject_length": 501,
+      "title": "IS21 family transposase"
+    },
+    "native_records_overlapping_tnp_CDS": 5,
+    "tnp_supported": true,
+    "deposited_tnp_products": [
+      "IS21 family transposase"
+    ]
+  },
+  {
+    "query": "R-92558_PILER_2.2",
+    "organism": "R-92558",
+    "method": "PILER",
+    "native_family": "2.2",
+    "length": 1348,
+    "raw_occurrences": 6,
+    "occurrences": [
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 1281910,
+        "end0": 1283254,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_2330",
+            "type": "CDS",
+            "overlap_bp": 1236,
+            "feature_length_bp": 1236,
+            "product": [
+              "IS3 family transposase"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS05810"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 2654894,
+        "end0": 2656232,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_4762",
+            "type": "CDS",
+            "overlap_bp": 106,
+            "feature_length_bp": 489,
+            "product": [
+              "aspartate racemase/maleate isomerase family protein"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS11880"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_4764",
+            "type": "CDS",
+            "overlap_bp": 1236,
+            "feature_length_bp": 1236,
+            "product": [
+              "IS3 family transposase"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS11885"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_4766",
+            "type": "CDS",
+            "overlap_bp": 3,
+            "feature_length_bp": 348,
+            "product": [
+              "maleate cis-trans isomerase family protein"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS11890"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 2671115,
+        "end0": 2672459,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_4796",
+            "type": "CDS",
+            "overlap_bp": 1236,
+            "feature_length_bp": 1236,
+            "product": [
+              "IS3 family transposase"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS11965"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 2675828,
+        "end0": 2677174,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_4808",
+            "type": "CDS",
+            "overlap_bp": 1236,
+            "feature_length_bp": 1236,
+            "product": [
+              "IS3 family transposase"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS11995"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_4810",
+            "type": "CDS",
+            "overlap_bp": 111,
+            "feature_length_bp": 729,
+            "product": [
+              "NAD(P)-dependent oxidoreductase"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS12000"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 2784374,
+        "end0": 2785718,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_5014",
+            "type": "CDS",
+            "overlap_bp": 1236,
+            "feature_length_bp": 1236,
+            "product": [
+              "IS3 family transposase"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS12510"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_5016",
+            "type": "CDS",
+            "overlap_bp": 23,
+            "feature_length_bp": 630,
+            "product": [
+              "hypothetical protein"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS12515"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 3650785,
+        "end0": 3652127,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_6436",
+            "type": "CDS",
+            "overlap_bp": 1236,
+            "feature_length_bp": 1236,
+            "product": [
+              "IS3 family transposase"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS16065"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_6438",
+            "type": "CDS",
+            "overlap_bp": 30,
+            "feature_length_bp": 786,
+            "product": [
+              "putative bifunctional diguanylate cyclase/phosphodiesterase"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS16070"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "R-92558__NZ_OZ344874.1_feature_6436",
+      "identity_pct": 99.324,
+      "alignment_aa": 296,
+      "query_start": 934,
+      "query_end": 47,
+      "evalue": 0.0,
+      "bitscore": 583.0,
+      "subject_length": 411,
+      "title": "IS3 family transposase"
+    },
+    "best_deposited_tnp_hit": {
+      "subject": "R-92558__NZ_OZ344874.1_feature_6436",
+      "identity_pct": 99.324,
+      "alignment_aa": 296,
+      "query_start": 934,
+      "query_end": 47,
+      "evalue": 0.0,
+      "bitscore": 583.0,
+      "subject_length": 411,
+      "title": "IS3 family transposase"
+    },
+    "native_records_overlapping_tnp_CDS": 6,
+    "tnp_supported": true,
+    "deposited_tnp_products": [
+      "IS3 family transposase"
+    ]
+  },
+  {
+    "query": "R-92558_RS_R0",
+    "organism": "R-92558",
+    "method": "RS",
+    "native_family": "R=0",
+    "length": 80,
+    "raw_occurrences": 23,
+    "occurrences": [
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 6203984,
+        "end0": 6204060,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_10982",
+            "type": "CDS",
+            "overlap_bp": 76,
+            "feature_length_bp": 750,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS27420"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 5732897,
+        "end0": 5732976,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_10073",
+            "type": "CDS",
+            "overlap_bp": 79,
+            "feature_length_bp": 918,
+            "product": [
+              "nodulation factor ABC transporter ATP-binding protein NodI"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS25155"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 5703665,
+        "end0": 5703743,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_10009",
+            "type": "CDS",
+            "overlap_bp": 78,
+            "feature_length_bp": 714,
+            "product": [
+              "phosphonate C-P lyase system protein PhnL"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS24995"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 4312045,
+        "end0": 4312124,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_7608",
+            "type": "CDS",
+            "overlap_bp": 79,
+            "feature_length_bp": 801,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS18995"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 4311284,
+        "end0": 4311361,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_7606",
+            "type": "CDS",
+            "overlap_bp": 77,
+            "feature_length_bp": 714,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS18990"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 4307194,
+        "end0": 4307272,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_7598",
+            "type": "CDS",
+            "overlap_bp": 78,
+            "feature_length_bp": 1143,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS18970"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 4285778,
+        "end0": 4285857,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_7562",
+            "type": "CDS",
+            "overlap_bp": 79,
+            "feature_length_bp": 1938,
+            "product": [
+              "ATP-binding cassette domain-containing protein"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS18880"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 3763113,
+        "end0": 3763192,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_6632",
+            "type": "CDS",
+            "overlap_bp": 79,
+            "feature_length_bp": 1923,
+            "product": [
+              "ATP-binding cassette domain-containing protein"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS16555"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 3659391,
+        "end0": 3659462,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_6450",
+            "type": "CDS",
+            "overlap_bp": 71,
+            "feature_length_bp": 1596,
+            "product": [
+              "ABC-F family ATPase"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS16100"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 3405723,
+        "end0": 3405797,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_6016",
+            "type": "CDS",
+            "overlap_bp": 74,
+            "feature_length_bp": 744,
+            "product": [
+              "amino acid ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS15015"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 3089074,
+        "end0": 3089151,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_5546",
+            "type": "CDS",
+            "overlap_bp": 77,
+            "feature_length_bp": 1038,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS13840"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 3047391,
+        "end0": 3047470,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_5470",
+            "type": "CDS",
+            "overlap_bp": 79,
+            "feature_length_bp": 1665,
+            "product": [
+              "ABC-F family ATP-binding cassette domain-containing protein"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS13650"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 2837060,
+        "end0": 2837129,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_5104",
+            "type": "CDS",
+            "overlap_bp": 69,
+            "feature_length_bp": 858,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS12735"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 2381527,
+        "end0": 2381604,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_4338",
+            "type": "CDS",
+            "overlap_bp": 77,
+            "feature_length_bp": 1143,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS10820"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 2181710,
+        "end0": 2181789,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_3956",
+            "type": "CDS",
+            "overlap_bp": 79,
+            "feature_length_bp": 963,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS09865"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 1998232,
+        "end0": 1998299,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_3582",
+            "type": "CDS",
+            "overlap_bp": 67,
+            "feature_length_bp": 777,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS08930"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 1963014,
+        "end0": 1963091,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_3516",
+            "type": "CDS",
+            "overlap_bp": 77,
+            "feature_length_bp": 783,
+            "product": [
+              "phosphate ABC transporter ATP-binding protein PstB"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS08765"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 1806369,
+        "end0": 1806448,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_3268",
+            "type": "CDS",
+            "overlap_bp": 79,
+            "feature_length_bp": 1044,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS08150"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 1691452,
+        "end0": 1691513,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_3043",
+            "type": "CDS",
+            "overlap_bp": 61,
+            "feature_length_bp": 774,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS07590"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 1313178,
+        "end0": 1313257,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_2382",
+            "type": "CDS",
+            "overlap_bp": 79,
+            "feature_length_bp": 714,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS05940"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 645839,
+        "end0": 645918,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_1146",
+            "type": "CDS",
+            "overlap_bp": 79,
+            "feature_length_bp": 1668,
+            "product": [
+              "energy-dependent translational throttle protein EttA"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS02860"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 348832,
+        "end0": 348911,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_603",
+            "type": "CDS",
+            "overlap_bp": 79,
+            "feature_length_bp": 2124,
+            "product": [
+              "peptidase domain-containing ABC transporter"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS01505"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 295178,
+        "end0": 295232,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_494",
+            "type": "CDS",
+            "overlap_bp": 54,
+            "feature_length_bp": 750,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS01235"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "R-92558__NZ_OZ344874.1_feature_5072",
+      "identity_pct": 80.769,
+      "alignment_aa": 26,
+      "query_start": 3,
+      "query_end": 80,
+      "evalue": 9.65e-09,
+      "bitscore": 44.7,
+      "subject_length": 230,
+      "title": "ABC transporter ATP-binding protein"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "R-92558_RS_R1",
+    "organism": "R-92558",
+    "method": "RS",
+    "native_family": "R=1",
+    "length": 1469,
+    "raw_occurrences": 14,
+    "occurrences": [
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 6067561,
+        "end0": 6069022,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_10738",
+            "type": "CDS",
+            "overlap_bp": 1209,
+            "feature_length_bp": 1209,
+            "product": [
+              "IS4-like element ISBvi1 family transposase"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS26815"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 3963756,
+        "end0": 3965224,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_6984",
+            "type": "CDS",
+            "overlap_bp": 3,
+            "feature_length_bp": 339,
+            "product": [
+              "TetR/AcrR family transcriptional regulator"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS17435"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_6986",
+            "type": "CDS",
+            "overlap_bp": 1209,
+            "feature_length_bp": 1209,
+            "product": [
+              "IS4-like element ISBvi1 family transposase"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS17440"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_6988",
+            "type": "CDS",
+            "overlap_bp": 84,
+            "feature_length_bp": 405,
+            "product": [
+              "TetR/AcrR family transcriptional regulator"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS17445"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 3854537,
+        "end0": 3856005,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_6788",
+            "type": "CDS",
+            "overlap_bp": 1209,
+            "feature_length_bp": 1209,
+            "product": [
+              "IS4-like element ISBvi1 family transposase"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS16945"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 3586867,
+        "end0": 3588333,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_6324",
+            "type": "CDS",
+            "overlap_bp": 80,
+            "feature_length_bp": 1536,
+            "product": [
+              "putative bifunctional diguanylate cyclase/phosphodiesterase"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS15785"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_6326",
+            "type": "CDS",
+            "overlap_bp": 1209,
+            "feature_length_bp": 1209,
+            "product": [
+              "IS4-like element ISBvi1 family transposase"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS15790"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_6328",
+            "type": "CDS",
+            "overlap_bp": 68,
+            "feature_length_bp": 1629,
+            "product": [
+              "7TM diverse intracellular signaling domain-containing protein"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS15795"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 3487394,
+        "end0": 3488862,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_6180",
+            "type": "CDS",
+            "overlap_bp": 1209,
+            "feature_length_bp": 1209,
+            "product": [
+              "IS4-like element ISBvi1 family transposase"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS15425"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 3351205,
+        "end0": 3352673,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_5968",
+            "type": "CDS",
+            "overlap_bp": 23,
+            "feature_length_bp": 18501,
+            "product": [
+              "non-ribosomal peptide synthase/polyketide synthase"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS14895"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_5970",
+            "type": "CDS",
+            "overlap_bp": 1209,
+            "feature_length_bp": 1209,
+            "product": [
+              "IS4-like element ISBvi1 family transposase"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS14900"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 2796142,
+        "end0": 2797610,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_5038",
+            "type": "CDS",
+            "overlap_bp": 1209,
+            "feature_length_bp": 1209,
+            "product": [
+              "IS4-like element ISBvi1 family transposase"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS12570"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 2703075,
+        "end0": 2704543,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_4860",
+            "type": "CDS",
+            "overlap_bp": 19,
+            "feature_length_bp": 1473,
+            "product": [
+              "aldehyde dehydrogenase family protein"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS12125"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_4862",
+            "type": "CDS",
+            "overlap_bp": 1209,
+            "feature_length_bp": 1209,
+            "product": [
+              "IS4-like element ISBvi1 family transposase"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS12130"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 2528248,
+        "end0": 2529715,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_4570",
+            "type": "CDS",
+            "overlap_bp": 22,
+            "feature_length_bp": 2169,
+            "product": [
+              "two-partner secretion domain-containing protein"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS11400"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_4572",
+            "type": "CDS",
+            "overlap_bp": 1209,
+            "feature_length_bp": 1209,
+            "product": [
+              "IS4-like element ISBvi1 family transposase"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS11405"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 2143909,
+        "end0": 2145377,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_3894",
+            "type": "CDS",
+            "overlap_bp": 1209,
+            "feature_length_bp": 1209,
+            "product": [
+              "IS4-like element ISBvi1 family transposase"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS09710"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_3896",
+            "type": "CDS",
+            "overlap_bp": 24,
+            "feature_length_bp": 594,
+            "product": [
+              "NAD(P)-dependent oxidoreductase"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS09715"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 1603093,
+        "end0": 1604561,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_2877",
+            "type": "CDS",
+            "overlap_bp": 5,
+            "feature_length_bp": 2568,
+            "product": [
+              "efflux RND transporter permease subunit"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS07175"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_2879",
+            "type": "CDS",
+            "overlap_bp": 1209,
+            "feature_length_bp": 1209,
+            "product": [
+              "IS4-like element ISBvi1 family transposase"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS07180"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_2881",
+            "type": "CDS",
+            "overlap_bp": 7,
+            "feature_length_bp": 621,
+            "product": [
+              "efflux RND transporter permease subunit"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS07185"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 841359,
+        "end0": 842826,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_1492",
+            "type": "CDS",
+            "overlap_bp": 1209,
+            "feature_length_bp": 1209,
+            "product": [
+              "IS4-like element ISBvi1 family transposase"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS03715"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_1494",
+            "type": "CDS",
+            "overlap_bp": 43,
+            "feature_length_bp": 780,
+            "product": [
+              "N-acetylmuramate alpha-1-phosphate uridylyltransferase MurU"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS03720"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 719823,
+        "end0": 721285,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_1274",
+            "type": "CDS",
+            "overlap_bp": 1209,
+            "feature_length_bp": 1209,
+            "product": [
+              "IS4-like element ISBvi1 family transposase"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS03175"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 23192,
+        "end0": 24654,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_38",
+            "type": "CDS",
+            "overlap_bp": 1209,
+            "feature_length_bp": 1209,
+            "product": [
+              "IS4-like element ISBvi1 family transposase"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS00095"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_40",
+            "type": "CDS",
+            "overlap_bp": 15,
+            "feature_length_bp": 384,
+            "product": [
+              "sugar ABC transporter"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS00100"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "R-92558__NZ_OZ344874.1_feature_10738",
+      "identity_pct": 100.0,
+      "alignment_aa": 402,
+      "query_start": 67,
+      "query_end": 1272,
+      "evalue": 0.0,
+      "bitscore": 751.0,
+      "subject_length": 402,
+      "title": "IS4-like element ISBvi1 family transposase"
+    },
+    "best_deposited_tnp_hit": {
+      "subject": "R-92558__NZ_OZ344874.1_feature_10738",
+      "identity_pct": 100.0,
+      "alignment_aa": 402,
+      "query_start": 67,
+      "query_end": 1272,
+      "evalue": 0.0,
+      "bitscore": 751.0,
+      "subject_length": 402,
+      "title": "IS4-like element ISBvi1 family transposase"
+    },
+    "native_records_overlapping_tnp_CDS": 14,
+    "tnp_supported": true,
+    "deposited_tnp_products": [
+      "IS4-like element ISBvi1 family transposase"
+    ]
+  },
+  {
+    "query": "R-92558_RS_R2",
+    "organism": "R-92558",
+    "method": "RS",
+    "native_family": "R=2",
+    "length": 1336,
+    "raw_occurrences": 7,
+    "occurrences": [
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 3650790,
+        "end0": 3652125,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_6436",
+            "type": "CDS",
+            "overlap_bp": 1236,
+            "feature_length_bp": 1236,
+            "product": [
+              "IS3 family transposase"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS16065"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_6438",
+            "type": "CDS",
+            "overlap_bp": 28,
+            "feature_length_bp": 786,
+            "product": [
+              "putative bifunctional diguanylate cyclase/phosphodiesterase"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS16070"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 2784377,
+        "end0": 2785712,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_5014",
+            "type": "CDS",
+            "overlap_bp": 1236,
+            "feature_length_bp": 1236,
+            "product": [
+              "IS3 family transposase"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS12510"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_5016",
+            "type": "CDS",
+            "overlap_bp": 17,
+            "feature_length_bp": 630,
+            "product": [
+              "hypothetical protein"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS12515"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 2675834,
+        "end0": 2677169,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_4808",
+            "type": "CDS",
+            "overlap_bp": 1236,
+            "feature_length_bp": 1236,
+            "product": [
+              "IS3 family transposase"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS11995"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_4810",
+            "type": "CDS",
+            "overlap_bp": 106,
+            "feature_length_bp": 729,
+            "product": [
+              "NAD(P)-dependent oxidoreductase"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS12000"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 2671118,
+        "end0": 2672452,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_4796",
+            "type": "CDS",
+            "overlap_bp": 1236,
+            "feature_length_bp": 1236,
+            "product": [
+              "IS3 family transposase"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS11965"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 2654895,
+        "end0": 2656230,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_4762",
+            "type": "CDS",
+            "overlap_bp": 105,
+            "feature_length_bp": 489,
+            "product": [
+              "aspartate racemase/maleate isomerase family protein"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS11880"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_4764",
+            "type": "CDS",
+            "overlap_bp": 1236,
+            "feature_length_bp": 1236,
+            "product": [
+              "IS3 family transposase"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS11885"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_4766",
+            "type": "CDS",
+            "overlap_bp": 1,
+            "feature_length_bp": 348,
+            "product": [
+              "maleate cis-trans isomerase family protein"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS11890"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 1281913,
+        "end0": 1283247,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_2330",
+            "type": "CDS",
+            "overlap_bp": 1236,
+            "feature_length_bp": 1236,
+            "product": [
+              "IS3 family transposase"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS05810"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 15162,
+        "end0": 16497,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_22",
+            "type": "CDS",
+            "overlap_bp": 11,
+            "feature_length_bp": 576,
+            "product": [
+              "Mu transposase domain-containing protein"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS00055"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_24",
+            "type": "CDS",
+            "overlap_bp": 1236,
+            "feature_length_bp": 1236,
+            "product": [
+              "IS3 family transposase"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS00060"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_26",
+            "type": "CDS",
+            "overlap_bp": 8,
+            "feature_length_bp": 954,
+            "product": [
+              "IS21 family transposase"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS00065"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "R-92558__NZ_OZ344874.1_feature_6436",
+      "identity_pct": 99.324,
+      "alignment_aa": 296,
+      "query_start": 929,
+      "query_end": 42,
+      "evalue": 0.0,
+      "bitscore": 583.0,
+      "subject_length": 411,
+      "title": "IS3 family transposase"
+    },
+    "best_deposited_tnp_hit": {
+      "subject": "R-92558__NZ_OZ344874.1_feature_6436",
+      "identity_pct": 99.324,
+      "alignment_aa": 296,
+      "query_start": 929,
+      "query_end": 42,
+      "evalue": 0.0,
+      "bitscore": 583.0,
+      "subject_length": 411,
+      "title": "IS3 family transposase"
+    },
+    "native_records_overlapping_tnp_CDS": 7,
+    "tnp_supported": true,
+    "deposited_tnp_products": [
+      "IS21 family transposase",
+      "IS3 family transposase",
+      "Mu transposase domain-containing protein"
+    ]
+  },
+  {
+    "query": "R-92558_RS_R3",
+    "organism": "R-92558",
+    "method": "RS",
+    "native_family": "R=3",
+    "length": 393,
+    "raw_occurrences": 6,
+    "occurrences": [
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 6162857,
+        "end0": 6163250,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_10910",
+            "type": "CDS",
+            "overlap_bp": 393,
+            "feature_length_bp": 1800,
+            "product": [
+              "methyl-accepting chemotaxis protein"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS27240"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 6160677,
+        "end0": 6161070,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_10908",
+            "type": "CDS",
+            "overlap_bp": 393,
+            "feature_length_bp": 1632,
+            "product": [
+              "methyl-accepting chemotaxis protein"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS27235"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 2418068,
+        "end0": 2418461,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_4404",
+            "type": "CDS",
+            "overlap_bp": 393,
+            "feature_length_bp": 1620,
+            "product": [
+              "methyl-accepting chemotaxis protein"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS10985"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 2121464,
+        "end0": 2121857,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_3854",
+            "type": "CDS",
+            "overlap_bp": 393,
+            "feature_length_bp": 1881,
+            "product": [
+              "methyl-accepting chemotaxis protein"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS09610"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 885308,
+        "end0": 885701,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_1572",
+            "type": "CDS",
+            "overlap_bp": 393,
+            "feature_length_bp": 1623,
+            "product": [
+              "methyl-accepting chemotaxis protein"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS03915"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 51505,
+        "end0": 51898,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_86",
+            "type": "CDS",
+            "overlap_bp": 393,
+            "feature_length_bp": 1872,
+            "product": [
+              "methyl-accepting chemotaxis protein"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS00215"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "R-92558__NZ_OZ344874.1_feature_10910",
+      "identity_pct": 91.736,
+      "alignment_aa": 121,
+      "query_start": 392,
+      "query_end": 30,
+      "evalue": 2.51e-50,
+      "bitscore": 166.0,
+      "subject_length": 599,
+      "title": "methyl-accepting chemotaxis protein"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "R-92558_RS_R4",
+    "organism": "R-92558",
+    "method": "RS",
+    "native_family": "R=4",
+    "length": 2482,
+    "raw_occurrences": 6,
+    "occurrences": [
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 5814488,
+        "end0": 5816969,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_10233",
+            "type": "CDS",
+            "overlap_bp": 1506,
+            "feature_length_bp": 1506,
+            "product": [
+              "IS21 family transposase"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS25555"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_10235",
+            "type": "CDS",
+            "overlap_bp": 798,
+            "feature_length_bp": 798,
+            "product": [
+              "IS21-like element helper ATPase IstB"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS25560"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 5206396,
+        "end0": 5208878,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_9121",
+            "type": "CDS",
+            "overlap_bp": 23,
+            "feature_length_bp": 807,
+            "product": [
+              "hypothetical protein"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS22775"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_9123",
+            "type": "CDS",
+            "overlap_bp": 798,
+            "feature_length_bp": 798,
+            "product": [
+              "IS21-like element helper ATPase IstB"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS22780"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_9125",
+            "type": "CDS",
+            "overlap_bp": 1506,
+            "feature_length_bp": 1506,
+            "product": [
+              "IS21 family transposase"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS22785"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 3867478,
+        "end0": 3869959,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_6802",
+            "type": "CDS",
+            "overlap_bp": 22,
+            "feature_length_bp": 4194,
+            "product": [
+              "RHS repeat-associated core domain-containing protein"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS16980"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_6804",
+            "type": "CDS",
+            "overlap_bp": 1506,
+            "feature_length_bp": 1506,
+            "product": [
+              "IS21 family transposase"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS16985"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_6806",
+            "type": "CDS",
+            "overlap_bp": 798,
+            "feature_length_bp": 798,
+            "product": [
+              "IS21-like element helper ATPase IstB"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS16990"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_6808",
+            "type": "CDS",
+            "overlap_bp": 38,
+            "feature_length_bp": 360,
+            "product": [
+              "hypothetical protein"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS16995"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 2660027,
+        "end0": 2662508,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_4772",
+            "type": "CDS",
+            "overlap_bp": 5,
+            "feature_length_bp": 1413,
+            "product": [
+              "MFS transporter"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS11905"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_4774",
+            "type": "CDS",
+            "overlap_bp": 1506,
+            "feature_length_bp": 1506,
+            "product": [
+              "IS21 family transposase"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS11910"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_4776",
+            "type": "CDS",
+            "overlap_bp": 798,
+            "feature_length_bp": 798,
+            "product": [
+              "IS21-like element helper ATPase IstB"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS11915"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 560229,
+        "end0": 562711,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_1012",
+            "type": "CDS",
+            "overlap_bp": 798,
+            "feature_length_bp": 798,
+            "product": [
+              "IS21-like element helper ATPase IstB"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS02525"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_1014",
+            "type": "CDS",
+            "overlap_bp": 1506,
+            "feature_length_bp": 1506,
+            "product": [
+              "IS21 family transposase"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS02530"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 16498,
+        "end0": 17557,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_26",
+            "type": "CDS",
+            "overlap_bp": 945,
+            "feature_length_bp": 954,
+            "product": [
+              "IS21 family transposase"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS00065"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "R-92558__NZ_OZ344874.1_feature_10233",
+      "identity_pct": 99.8,
+      "alignment_aa": 501,
+      "query_start": 2368,
+      "query_end": 866,
+      "evalue": 0.0,
+      "bitscore": 1041.0,
+      "subject_length": 501,
+      "title": "IS21 family transposase"
+    },
+    "best_deposited_tnp_hit": {
+      "subject": "R-92558__NZ_OZ344874.1_feature_10233",
+      "identity_pct": 99.8,
+      "alignment_aa": 501,
+      "query_start": 2368,
+      "query_end": 866,
+      "evalue": 0.0,
+      "bitscore": 1041.0,
+      "subject_length": 501,
+      "title": "IS21 family transposase"
+    },
+    "native_records_overlapping_tnp_CDS": 6,
+    "tnp_supported": true,
+    "deposited_tnp_products": [
+      "IS21 family transposase"
+    ]
+  },
+  {
+    "query": "R-92558_RS_R5",
+    "organism": "R-92558",
+    "method": "RS",
+    "native_family": "R=5",
+    "length": 1591,
+    "raw_occurrences": 4,
+    "occurrences": [
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 5950695,
+        "end0": 5952285,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_10524",
+            "type": "tRNA",
+            "overlap_bp": 77,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Ile"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS26280"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_10526",
+            "type": "rRNA",
+            "overlap_bp": 1446,
+            "feature_length_bp": 1533,
+            "product": [
+              "16S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS26285"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 5177193,
+        "end0": 5178783,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_9091",
+            "type": "tRNA",
+            "overlap_bp": 77,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Ile"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS22700"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_9093",
+            "type": "rRNA",
+            "overlap_bp": 1446,
+            "feature_length_bp": 1533,
+            "product": [
+              "16S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS22705"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 1500263,
+        "end0": 1501853,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_2697",
+            "type": "rRNA",
+            "overlap_bp": 1445,
+            "feature_length_bp": 1533,
+            "product": [
+              "16S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS06725"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_2699",
+            "type": "tRNA",
+            "overlap_bp": 77,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Ile"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS06730"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 715667,
+        "end0": 717257,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_1266",
+            "type": "rRNA",
+            "overlap_bp": 1445,
+            "feature_length_bp": 1533,
+            "product": [
+              "16S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS03160"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_1268",
+            "type": "tRNA",
+            "overlap_bp": 77,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Ile"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS03165"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "R-92558_RS_R6",
+    "organism": "R-92558",
+    "method": "RS",
+    "native_family": "R=6",
+    "length": 69,
+    "raw_occurrences": 9,
+    "occurrences": [
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 5321586,
+        "end0": 5321652,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_9359",
+            "type": "CDS",
+            "overlap_bp": 66,
+            "feature_length_bp": 726,
+            "product": [
+              "amino acid ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS23370"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 4854396,
+        "end0": 4854463,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_8532",
+            "type": "CDS",
+            "overlap_bp": 67,
+            "feature_length_bp": 1104,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS21305"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 3664694,
+        "end0": 3664760,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_6458",
+            "type": "CDS",
+            "overlap_bp": 66,
+            "feature_length_bp": 1632,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS16120"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 2866665,
+        "end0": 2866733,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_5162",
+            "type": "CDS",
+            "overlap_bp": 68,
+            "feature_length_bp": 723,
+            "product": [
+              "amino acid ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS12880"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 2556764,
+        "end0": 2556824,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_4586",
+            "type": "CDS",
+            "overlap_bp": 60,
+            "feature_length_bp": 834,
+            "product": [
+              "amino acid ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS11440"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 1627579,
+        "end0": 1627643,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_2933",
+            "type": "CDS",
+            "overlap_bp": 64,
+            "feature_length_bp": 777,
+            "product": [
+              "amino acid ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS07315"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 1448255,
+        "end0": 1448308,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_2603",
+            "type": "CDS",
+            "overlap_bp": 53,
+            "feature_length_bp": 1113,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS06490"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 551891,
+        "end0": 551955,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_996",
+            "type": "CDS",
+            "overlap_bp": 64,
+            "feature_length_bp": 795,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS02485"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 330450,
+        "end0": 330518,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_571",
+            "type": "CDS",
+            "overlap_bp": 68,
+            "feature_length_bp": 723,
+            "product": [
+              "amino acid ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS01425"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "R-92558__NZ_OZ344874.1_feature_8152",
+      "identity_pct": 81.818,
+      "alignment_aa": 22,
+      "query_start": 67,
+      "query_end": 2,
+      "evalue": 9.65e-09,
+      "bitscore": 44.7,
+      "subject_length": 266,
+      "title": "amino acid ABC transporter ATP-binding protein"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "R-92558_RS_R7",
+    "organism": "R-92558",
+    "method": "RS",
+    "native_family": "R=7",
+    "length": 1024,
+    "raw_occurrences": 4,
+    "occurrences": [
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 5947108,
+        "end0": 5948132,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_10518",
+            "type": "rRNA",
+            "overlap_bp": 113,
+            "feature_length_bp": 113,
+            "product": [
+              "5S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS26265"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_10520",
+            "type": "rRNA",
+            "overlap_bp": 707,
+            "feature_length_bp": 2879,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS26270"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 5173532,
+        "end0": 5174555,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_9085",
+            "type": "rRNA",
+            "overlap_bp": 113,
+            "feature_length_bp": 113,
+            "product": [
+              "5S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS22685"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_9087",
+            "type": "rRNA",
+            "overlap_bp": 707,
+            "feature_length_bp": 2879,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS22690"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 1504416,
+        "end0": 1505439,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_2703",
+            "type": "rRNA",
+            "overlap_bp": 706,
+            "feature_length_bp": 2879,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS06740"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_2705",
+            "type": "rRNA",
+            "overlap_bp": 113,
+            "feature_length_bp": 113,
+            "product": [
+              "5S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS06745"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 840342,
+        "end0": 841365,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_1488",
+            "type": "rRNA",
+            "overlap_bp": 113,
+            "feature_length_bp": 113,
+            "product": [
+              "5S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS03710"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "R-92558_RS_R8",
+    "organism": "R-92558",
+    "method": "RS",
+    "native_family": "R=8",
+    "length": 2126,
+    "raw_occurrences": 4,
+    "occurrences": [
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 5950695,
+        "end0": 5952820,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_10524",
+            "type": "tRNA",
+            "overlap_bp": 77,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Ile"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS26280"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_10526",
+            "type": "rRNA",
+            "overlap_bp": 1533,
+            "feature_length_bp": 1533,
+            "product": [
+              "16S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS26285"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 5177193,
+        "end0": 5179318,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_9091",
+            "type": "tRNA",
+            "overlap_bp": 77,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Ile"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS22700"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_9093",
+            "type": "rRNA",
+            "overlap_bp": 1533,
+            "feature_length_bp": 1533,
+            "product": [
+              "16S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS22705"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 1499728,
+        "end0": 1501853,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_2697",
+            "type": "rRNA",
+            "overlap_bp": 1533,
+            "feature_length_bp": 1533,
+            "product": [
+              "16S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS06725"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_2699",
+            "type": "tRNA",
+            "overlap_bp": 77,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Ile"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS06730"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 715132,
+        "end0": 717257,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_1266",
+            "type": "rRNA",
+            "overlap_bp": 1533,
+            "feature_length_bp": 1533,
+            "product": [
+              "16S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS03160"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_1268",
+            "type": "tRNA",
+            "overlap_bp": 77,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Ile"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS03165"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "R-92558_RS_R9",
+    "organism": "R-92558",
+    "method": "RS",
+    "native_family": "R=9",
+    "length": 2394,
+    "raw_occurrences": 4,
+    "occurrences": [
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 5948123,
+        "end0": 5950516,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_10520",
+            "type": "rRNA",
+            "overlap_bp": 2181,
+            "feature_length_bp": 2879,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS26270"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 5174546,
+        "end0": 5176937,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_9087",
+            "type": "rRNA",
+            "overlap_bp": 2181,
+            "feature_length_bp": 2879,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS22690"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 1502032,
+        "end0": 1504425,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_2703",
+            "type": "rRNA",
+            "overlap_bp": 2182,
+            "feature_length_bp": 2879,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS06740"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 717436,
+        "end0": 719829,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "R-92558_RS_R10",
+    "organism": "R-92558",
+    "method": "RS",
+    "native_family": "R=10",
+    "length": 56,
+    "raw_occurrences": 8,
+    "occurrences": [
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 4388023,
+        "end0": 4388079,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_7752",
+            "type": "tRNA",
+            "overlap_bp": 56,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Lys"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS19355"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 3975115,
+        "end0": 3975171,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_7006",
+            "type": "tRNA",
+            "overlap_bp": 56,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-His"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS17490"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 3938856,
+        "end0": 3938910,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_6930",
+            "type": "tRNA",
+            "overlap_bp": 54,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Lys"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS17300"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 2627258,
+        "end0": 2627314,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_4710",
+            "type": "tRNA",
+            "overlap_bp": 56,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Val"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS11750"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 1114043,
+        "end0": 1114095,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_1990",
+            "type": "tRNA",
+            "overlap_bp": 52,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Gly"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS04960"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 1065659,
+        "end0": 1065714,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_1896",
+            "type": "tRNA",
+            "overlap_bp": 55,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Asn"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS04725"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 900761,
+        "end0": 900818,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_1598",
+            "type": "tRNA",
+            "overlap_bp": 57,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Met"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS03980"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 214617,
+        "end0": 214672,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_348",
+            "type": "tRNA",
+            "overlap_bp": 55,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Phe"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS00870"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "R-92558_RS_R11",
+    "organism": "R-92558",
+    "method": "RS",
+    "native_family": "R=11",
+    "length": 77,
+    "raw_occurrences": 8,
+    "occurrences": [
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 6041005,
+        "end0": 6041080,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_10678",
+            "type": "tRNA",
+            "overlap_bp": 75,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Ala"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS26665"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 5950578,
+        "end0": 5950654,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_10522",
+            "type": "tRNA",
+            "overlap_bp": 76,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Ala"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS26275"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 5177008,
+        "end0": 5177084,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_9089",
+            "type": "tRNA",
+            "overlap_bp": 76,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Ala"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS22695"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 2318370,
+        "end0": 2318445,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_4210",
+            "type": "tRNA",
+            "overlap_bp": 75,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Ala"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS10500"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 1707164,
+        "end0": 1707240,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_3067",
+            "type": "tRNA",
+            "overlap_bp": 75,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Ala"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS07650"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 1501894,
+        "end0": 1501970,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_2701",
+            "type": "tRNA",
+            "overlap_bp": 75,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Ala"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS06735"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 717298,
+        "end0": 717374,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_1270",
+            "type": "tRNA",
+            "overlap_bp": 75,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Ala"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS03170"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 598050,
+        "end0": 598125,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "R-92558_RS_R12",
+    "organism": "R-92558",
+    "method": "RS",
+    "native_family": "R=12",
+    "length": 84,
+    "raw_occurrences": 6,
+    "occurrences": [
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 4416854,
+        "end0": 4416931,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 3677593,
+        "end0": 3677674,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 2885363,
+        "end0": 2885446,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 1939139,
+        "end0": 1939222,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 934636,
+        "end0": 934712,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 525925,
+        "end0": 526004,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "R-92558_RS_R13",
+    "organism": "R-92558",
+    "method": "RS",
+    "native_family": "R=13",
+    "length": 138,
+    "raw_occurrences": 6,
+    "occurrences": [
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 5095791,
+        "end0": 5095928,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_8953",
+            "type": "CDS",
+            "overlap_bp": 137,
+            "feature_length_bp": 1137,
+            "product": [
+              "porin"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS22355"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 4414743,
+        "end0": 4414880,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_7802",
+            "type": "CDS",
+            "overlap_bp": 137,
+            "feature_length_bp": 1248,
+            "product": [
+              "porin"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS19480"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 1992613,
+        "end0": 1992750,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_3572",
+            "type": "CDS",
+            "overlap_bp": 137,
+            "feature_length_bp": 1167,
+            "product": [
+              "porin"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS08905"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 832743,
+        "end0": 832880,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_1476",
+            "type": "CDS",
+            "overlap_bp": 137,
+            "feature_length_bp": 1155,
+            "product": [
+              "porin"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS03680"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 386051,
+        "end0": 386184,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_675",
+            "type": "CDS",
+            "overlap_bp": 133,
+            "feature_length_bp": 1071,
+            "product": [
+              "porin"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS01685"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 379005,
+        "end0": 379142,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_661",
+            "type": "CDS",
+            "overlap_bp": 137,
+            "feature_length_bp": 1152,
+            "product": [
+              "porin"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS01650"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "R-92558__NZ_OZ344874.1_feature_1476",
+      "identity_pct": 86.957,
+      "alignment_aa": 46,
+      "query_start": 138,
+      "query_end": 1,
+      "evalue": 2.84e-22,
+      "bitscore": 84.0,
+      "subject_length": 384,
+      "title": "porin"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "R-92558_RS_R14",
+    "organism": "R-92558",
+    "method": "RS",
+    "native_family": "R=14",
+    "length": 365,
+    "raw_occurrences": 5,
+    "occurrences": [
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 5384925,
+        "end0": 5385289,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_9449",
+            "type": "CDS",
+            "overlap_bp": 364,
+            "feature_length_bp": 12618,
+            "product": [
+              "filamentous haemagglutinin family protein"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS23595"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 5191921,
+        "end0": 5192207,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_9095",
+            "type": "CDS",
+            "overlap_bp": 286,
+            "feature_length_bp": 13176,
+            "product": [
+              "filamentous haemagglutinin family protein"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS22710"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 4831090,
+        "end0": 4831454,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_8492",
+            "type": "CDS",
+            "overlap_bp": 364,
+            "feature_length_bp": 12264,
+            "product": [
+              "filamentous haemagglutinin family protein"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS21205"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 2542982,
+        "end0": 2543346,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_4582",
+            "type": "CDS",
+            "overlap_bp": 364,
+            "feature_length_bp": 12168,
+            "product": [
+              "filamentous haemagglutinin family protein"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS11430"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 2526438,
+        "end0": 2526802,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_4570",
+            "type": "CDS",
+            "overlap_bp": 364,
+            "feature_length_bp": 2169,
+            "product": [
+              "two-partner secretion domain-containing protein"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS11400"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "R-92558__NZ_OZ344874.1_feature_4582",
+      "identity_pct": 92.562,
+      "alignment_aa": 121,
+      "query_start": 1,
+      "query_end": 363,
+      "evalue": 4.08e-73,
+      "bitscore": 233.0,
+      "subject_length": 4055,
+      "title": "filamentous haemagglutinin family protein"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "R-92558_RS_R15",
+    "organism": "R-92558",
+    "method": "RS",
+    "native_family": "R=15",
+    "length": 94,
+    "raw_occurrences": 6,
+    "occurrences": [
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 5016930,
+        "end0": 5017021,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_8805",
+            "type": "CDS",
+            "overlap_bp": 91,
+            "feature_length_bp": 867,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS21985"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 4391999,
+        "end0": 4392092,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_7760",
+            "type": "CDS",
+            "overlap_bp": 93,
+            "feature_length_bp": 810,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS19375"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 3664498,
+        "end0": 3664589,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_6458",
+            "type": "CDS",
+            "overlap_bp": 91,
+            "feature_length_bp": 1632,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS16120"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 892319,
+        "end0": 892410,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_1584",
+            "type": "CDS",
+            "overlap_bp": 91,
+            "feature_length_bp": 1317,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS03945"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 879075,
+        "end0": 879168,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_1560",
+            "type": "CDS",
+            "overlap_bp": 93,
+            "feature_length_bp": 1203,
+            "product": [
+              "osmoprotectant ABC transporter ATP-binding protein OsmV"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS03885"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 552061,
+        "end0": 552154,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_996",
+            "type": "CDS",
+            "overlap_bp": 93,
+            "feature_length_bp": 795,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS02485"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "R-92558__NZ_OZ344874.1_feature_6158",
+      "identity_pct": 90.0,
+      "alignment_aa": 30,
+      "query_start": 3,
+      "query_end": 92,
+      "evalue": 9.44e-12,
+      "bitscore": 53.5,
+      "subject_length": 264,
+      "title": "ABC transporter ATP-binding protein"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "R-92558_RS_R16",
+    "organism": "R-92558",
+    "method": "RS",
+    "native_family": "R=16",
+    "length": 107,
+    "raw_occurrences": 4,
+    "occurrences": [
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 5384091,
+        "end0": 5384197,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_9449",
+            "type": "CDS",
+            "overlap_bp": 106,
+            "feature_length_bp": 12618,
+            "product": [
+              "filamentous haemagglutinin family protein"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS23595"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 4830214,
+        "end0": 4830318,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_8492",
+            "type": "CDS",
+            "overlap_bp": 104,
+            "feature_length_bp": 12264,
+            "product": [
+              "filamentous haemagglutinin family protein"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS21205"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 2544113,
+        "end0": 2544219,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_4582",
+            "type": "CDS",
+            "overlap_bp": 106,
+            "feature_length_bp": 12168,
+            "product": [
+              "filamentous haemagglutinin family protein"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS11430"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 2527569,
+        "end0": 2527675,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_4570",
+            "type": "CDS",
+            "overlap_bp": 106,
+            "feature_length_bp": 2169,
+            "product": [
+              "two-partner secretion domain-containing protein"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS11400"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "R-92558__NZ_OZ344874.1_feature_4582",
+      "identity_pct": 100.0,
+      "alignment_aa": 35,
+      "query_start": 1,
+      "query_end": 105,
+      "evalue": 3.01e-18,
+      "bitscore": 72.4,
+      "subject_length": 4055,
+      "title": "filamentous haemagglutinin family protein"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "R-92558_RS_R17",
+    "organism": "R-92558",
+    "method": "RS",
+    "native_family": "R=17",
+    "length": 136,
+    "raw_occurrences": 4,
+    "occurrences": [
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 5950520,
+        "end0": 5950655,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_10522",
+            "type": "tRNA",
+            "overlap_bp": 76,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Ala"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS26275"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 5176952,
+        "end0": 5177085,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_9089",
+            "type": "tRNA",
+            "overlap_bp": 76,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Ala"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS22695"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 1501893,
+        "end0": 1502028,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_2701",
+            "type": "tRNA",
+            "overlap_bp": 76,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Ala"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS06735"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 717297,
+        "end0": 717432,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_1270",
+            "type": "tRNA",
+            "overlap_bp": 76,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Ala"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS03170"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "R-92558_RS_R18",
+    "organism": "R-92558",
+    "method": "RS",
+    "native_family": "R=18",
+    "length": 2370,
+    "raw_occurrences": 3,
+    "occurrences": [
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 5950135,
+        "end0": 5952504,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_10520",
+            "type": "rRNA",
+            "overlap_bp": 169,
+            "feature_length_bp": 2879,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS26270"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_10522",
+            "type": "tRNA",
+            "overlap_bp": 76,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Ala"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS26275"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_10524",
+            "type": "tRNA",
+            "overlap_bp": 77,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Ile"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS26280"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_10526",
+            "type": "rRNA",
+            "overlap_bp": 1533,
+            "feature_length_bp": 1533,
+            "product": [
+              "16S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS26285"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 1500044,
+        "end0": 1502413,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_2697",
+            "type": "rRNA",
+            "overlap_bp": 1533,
+            "feature_length_bp": 1533,
+            "product": [
+              "16S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS06725"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_2699",
+            "type": "tRNA",
+            "overlap_bp": 77,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Ile"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS06730"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_2701",
+            "type": "tRNA",
+            "overlap_bp": 76,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Ala"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS06735"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_2703",
+            "type": "rRNA",
+            "overlap_bp": 170,
+            "feature_length_bp": 2879,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS06740"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 715448,
+        "end0": 717817,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_1266",
+            "type": "rRNA",
+            "overlap_bp": 1533,
+            "feature_length_bp": 1533,
+            "product": [
+              "16S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS03160"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_1268",
+            "type": "tRNA",
+            "overlap_bp": 77,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Ile"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS03165"
+            ]
+          },
+          {
+            "feature_id": "NZ_OZ344874.1_feature_1270",
+            "type": "tRNA",
+            "overlap_bp": 76,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Ala"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS03170"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "R-92558_RS_R19",
+    "organism": "R-92558",
+    "method": "RS",
+    "native_family": "R=19",
+    "length": 76,
+    "raw_occurrences": 3,
+    "occurrences": [
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 2318608,
+        "end0": 2318683,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_4212",
+            "type": "tRNA",
+            "overlap_bp": 75,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Glu"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS10505"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 1707255,
+        "end0": 1707330,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_3069",
+            "type": "tRNA",
+            "overlap_bp": 75,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Glu"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS07655"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_OZ344874.1",
+        "accession": "NZ_OZ344874.1",
+        "start0": 598142,
+        "end0": 598217,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_OZ344874.1_feature_1068",
+            "type": "tRNA",
+            "overlap_bp": 75,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Glu"
+            ],
+            "locus_tag": [
+              "ACWGVQ_RS02665"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  }
+]

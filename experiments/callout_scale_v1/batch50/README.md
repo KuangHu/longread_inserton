@@ -194,3 +194,27 @@ Smoke test（只提交两株，**尚未提交其余 48 株**）：
 - R-93091 第 1 次在 n0230 上失败：curl 加载共享库时报 Lustre `Error 108`，8 次重试都失败，未写任何结果。这与 DD10 在 n0258 上的节点故障相同，失败目录保存在集群 `batch50_failed/`。
   第 2 次加 `--exclude n0230` 重交后完成。故障节点名单现为 n0348、n0039、n0292、n0082、n0031、n0258、n0083、n0230。
 - 结果见 [results/](results/)，结构与 batch10 相同（`batch_summary.tsv`、`resources.tsv`、`omitted_large_files.tsv`、`failed_attempts/`）；records 不是独立 insertion 数。
+
+## 第 1 组（order 1–10，2026-10-24）
+
+提交 `sbatch --array=1-10%2`，结果见 [results/batch_summary.tsv](results/batch_summary.tsv)。**10/10 全部阶段 exit 0，validate、checker 均 pass。** 尚未提交 11–20。
+
+| # | 株 | reads | 家族（tnp） | records（≥400 bp） | full span（含 conflict） | edge_limited | 其他 |
+|---|---|---|---|---|---|---|---|
+| 1 | H16 | 降采样 80× | 42（1） | 271（97） | 271（1） | 0 | 0 |
+| 2 | DZH-419 | 降采样 80× | 19（5） | 157（68） | 157（0） | 0 | 0 |
+| 3 | Tfa17 | 降采样 80× | 40（14） | 414（154） | 414（9） | 0 | 0 |
+| 4 | DSM_11853 | 降采样 80× | 57（14） | 404（205） | 396（0） | 2 | 6（single_unit_full_span 2，full_span_cigar_fail 4） |
+| 5 | LMG_24269 | 全部 186× | 50（19） | 372（176） | 372（8） | 0 | 0 |
+| 6 | TMH.W2 | 全部 177× | 63（12） | 659（208） | 659（0） | 0 | 0 |
+| 7 | PCR-C_Y9 | 全部 170× | 47（11） | 338（177） | 334（0） | 4 | 0 |
+| 8 | R-92558 | 全部 169× | 23（6） | 157（92） | 157（0） | 0 | 0 |
+| 9 | H850 | 全部 167× | 110（51） | 582（392） | 581（19） | 1 | 0 |
+| 10 | SBC2 | 全部 166× | 76（46） | 396（280） | 390（5） | 6 | 0 |
+
+- 合计 527 个家族（179 个 tnp-supported），3,750 条有 read 支持检查的候选结构（≥400 bp 1,849 条）；3,731 条 audited full span（其中 42 条带 conflict），13 条 edge_limited，0 条 ambiguous_competing 或 one_side_only，均无 read 达到 secondary 上限。records 不是独立 insertion 数。
+- 10 株在集群上选出的 FASTA 都是 GCF，`assembly_expected` 全部通过（SHA256 与 samples.tsv 一致）。
+- 两次失败，均已重跑，记录在 [results/failed_attempts/](results/failed_attempts/)：
+  - 首次提交（job 27255401）中 9 个 task 落在 n0027，scratch 探针失败，exit 75 退出，未写任何目录。n0027 加入故障节点名单（现为 n0348、n0039、n0292、n0082、n0031、n0258、n0083、n0230、n0027），重交为 job 27256302。
+  - TMH.W2 第 1 次在 `callout` 失败：包只接受 `[A-Za-z0-9_-]` 的 sample ID，而 build_panel.py 保留了 “.”。50 株中只有这一株。
+    修复（1ed129d）：sbatch 给包传 `TMH_W2` 作为 manifest ID，panel 的 sample_id、目录、samples.tsv 和注册表都不变。失败目录（含旧 manifest 的 assembly 目录）移到集群 `batch50_failed/`，job 27258238 重跑通过。
