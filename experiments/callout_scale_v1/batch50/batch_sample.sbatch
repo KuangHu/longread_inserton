@@ -34,12 +34,14 @@ SAMPLE=$(col sample_id); RUN=$(col run); GCA=$(col gca); GCF=$(col gcf); PRESET=
 EXPECT_SHA=$(col expected_fasta_sha256); EXPECT_SRC=$(col selected_fasta_source); POLICY=$(col read_policy)
 ASM_BP=$(col assembly_bp); DS_DEPTH=$(col downsample_depth); DS_SEED=$(col downsample_seed)
 OUT=$PROJ/batch50/$SAMPLE
+# Package manifest IDs allow only [A-Za-z0-9_-]; the panel sample_id is kept for directories and tables.
+LABEL=$(echo "$SAMPLE" | sed 's/[^A-Za-z0-9_-]/_/g')
 [ ! -e "$OUT" ] || { echo "Refusing to reuse existing $OUT" >&2; exit 2; }
 mkdir -p $OUT/mapping $OUT/qc
 LOG_DIR=$OUT
 source $HERE/stage.sh
 git -C $CODE rev-parse HEAD > $OUT/source_commit.txt
-echo "sample=$SAMPLE run=$RUN gca=$GCA gcf=$GCF policy=$POLICY"
+echo "sample=$SAMPLE label=$LABEL run=$RUN gca=$GCA gcf=$GCF policy=$POLICY"
 
 if [ -f $PROJ/data/reads/$RUN/verify.json ]; then
     stage reads_verified python -c "import json,sys; d=json.load(open('$PROJ/data/reads/$RUN/verify.json')); sys.exit(d['status']!='verified')"
@@ -51,7 +53,7 @@ ASM=$PROJ/data/assemblies_batch50/$SAMPLE
 if [ -f $ASM/manifest.json ]; then
     stage assembly_reused python -c "import hashlib,json,sys; c=json.load(open('$ASM/assembly_check.json')); sys.exit(hashlib.sha256(open(c['fasta'],'rb').read()).hexdigest()!=c['fasta_sha256'])"
 else
-    stage prepare_assembly python $HERE/batch10/prepare_assembly.py --sample $SAMPLE --gca $GCA --gcf $GCF --out $ASM
+    stage prepare_assembly python $HERE/batch10/prepare_assembly.py --sample $LABEL --gca $GCA --gcf $GCF --out $ASM
 fi
 # The FASTA chosen on the cluster must be the one frozen in samples.tsv.
 stage assembly_expected python -c "import json,sys; c=json.load(open('$ASM/assembly_check.json')); src='gcf_sequence_and_annotation' if '$EXPECT_SRC'.startswith('gcf') else 'gca_sequence'; ok=c['fasta_sha256']=='$EXPECT_SHA' and c['choice'].startswith(src[:3]); print(c['choice'], c['fasta_sha256']); sys.exit(not ok)"
