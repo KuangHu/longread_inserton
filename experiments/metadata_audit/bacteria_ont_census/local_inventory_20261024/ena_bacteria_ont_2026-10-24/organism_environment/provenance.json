@@ -1,0 +1,33 @@
+{
+  "started_utc": "2026-10-24T19:21:16.631281+00:00",
+  "completed_utc": "2026-10-24T19:21:40.331797+00:00",
+  "query": "tax_tree(2) AND instrument_platform=\"OXFORD_NANOPORE\"",
+  "url": "https://www.ebi.ac.uk/ena/portal/api/search?result=read_run&query=tax_tree%282%29+AND+instrument_platform%3D%22OXFORD_NANOPORE%22&format=json&fields=run_accession%2Csample_accession%2Csecondary_sample_accession%2Ctax_id%2Cscientific_name%2Cstrain%2Csample_alias%2Csample_title%2Csample_description%2Cisolation_source%2Cenvironment_biome%2Cenvironment_feature%2Cenvironment_material%2Cbroad_scale_environmental_context%2Clocal_environmental_context%2Cenvironmental_medium%2Chost%2Chost_scientific_name%2Chost_tax_id%2Chost_body_site%2Ccountry%2Clocation%2Ccollection_date&limit=0",
+  "fields": [
+    "run_accession",
+    "sample_accession",
+    "secondary_sample_accession",
+    "tax_id",
+    "scientific_name",
+    "strain",
+    "sample_alias",
+    "sample_title",
+    "sample_description",
+    "isolation_source",
+    "environment_biome",
+    "environment_feature",
+    "environment_material",
+    "broad_scale_environmental_context",
+    "local_environmental_context",
+    "environmental_medium",
+    "host",
+    "host_scientific_name",
+    "host_tax_id",
+    "host_body_site",
+    "country",
+    "location",
+    "collection_date"
+  ],
+  "source": "ENA public read_run indexed sample metadata",
+  "scope": "Annotates frozen run list; newly indexed runs are reported separately, not silently added."
+}

@@ -1,0 +1,73 @@
+{
+  "run_count": 93682,
+  "count_before": 93682,
+  "count_after": 93682,
+  "count_reconciliation_passed": true,
+  "unique_runs": 93682,
+  "unique_sample_accessions": 83074,
+  "unique_studies": 6347,
+  "availability": {
+    "fastq_listed": 89134,
+    "no_file_link_listed": 2053,
+    "submitted_only": 2495
+  },
+  "library_strategy": {
+    "WGS": 79491,
+    "AMPLICON": 9453,
+    "WGA": 1253,
+    "WCS": 106,
+    "RNA-Seq": 794,
+    "Synthetic-Long-Read": 210,
+    "OTHER": 928,
+    "Targeted-Capture": 387,
+    "Hi-C": 24,
+    "Tn-Seq": 96,
+    "POOLCLONE": 13,
+    "VALIDATION": 60,
+    "WXS": 3,
+    "ncRNA-Seq": 96,
+    "CLONE": 34,
+    "FINISHING": 636,
+    "MRE-Seq": 1,
+    "Bisulfite-Seq": 1,
+    "DNase-Hypersensitivity": 1,
+    "FL-cDNA": 3,
+    "ssRNA-seq": 42,
+    "ChIP-Seq": 1,
+    "ATAC-seq": 1,
+    "MNase-Seq": 48
+  },
+  "library_source": {
+    "GENOMIC": 84889,
+    "METAGENOMIC": 5952,
+    "TRANSCRIPTOMIC": 885,
+    "GENOMIC SINGLE CELL": 325,
+    "TRANSCRIPTOMIC SINGLE CELL": 10,
+    "OTHER": 947,
+    "SYNTHETIC": 602,
+    "VIRAL RNA": 7,
+    "METATRANSCRIPTOMIC": 65
+  },
+  "instrument_model": {
+    "MinION": 53734,
+    "PromethION": 15144,
+    "GridION": 24789,
+    "unspecified": 15
+  },
+  "totals": {
+    "fastq_files": 89800,
+    "submitted_files": 24961,
+    "fastq_runs_complete_metadata": 89134,
+    "known_fastq_bytes_sum_per_run": 56626324129579
+  },
+  "distinct_fastq_urls": 89800,
+  "unique_url_known_fastq_bytes": 56626324129579,
+  "metadata_issue_runs": 0,
+  "sqlite_integrity": "ok",
+  "raw_sha256": "8d266937bcfc2ef5422035b85d2164463cd5a2e4d8898ecf18122191089080cd",
+  "previous_registry_overlap": 65,
+  "assembly_link_status": "not_assessed",
+  "wgs_fastq_runs": 75630,
+  "remote_file_validation": "URLs listed in ENA metadata; not individually probed",
+  "scope": "tax_tree(2) AND instrument_platform=\"OXFORD_NANOPORE\""
+}

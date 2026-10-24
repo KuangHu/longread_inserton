@@ -1,0 +1,518 @@
+[
+  {
+    "output": "ena_bacteria_ont_2026-10-24/all_run_accessions.txt",
+    "bytes": 1109932,
+    "sha256": "c73a0e5b6105cafe55c2a95ef61015a97869c888e18aba7af2c9d11ccd0228e5",
+    "parts": [
+      {
+        "path": "ena_bacteria_ont_2026-10-24/all_run_accessions.txt.gz",
+        "bytes": 208840,
+        "sha256": "e97da0706d73c9c421c0f035cb91e53ff3827f42193632d45551ec5285a77a02"
+      }
+    ]
+  },
+  {
+    "output": "ena_bacteria_ont_2026-10-24/all_runs.jsonl",
+    "bytes": 105802376,
+    "sha256": "5a5f3337f91c03f854b32ef2d3f869f7611f8bb1d58ca59d346be44be66e5c22",
+    "parts": [
+      {
+        "path": "ena_bacteria_ont_2026-10-24/all_runs.jsonl.part001.gz",
+        "bytes": 415334,
+        "sha256": "b5120e9aa9d6f7b032e5b32be91454acdd0db4b92f10297b602be7bd48d2ee04"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/all_runs.jsonl.part002.gz",
+        "bytes": 560850,
+        "sha256": "46f6c5355522e8465a958b72f44ef75edf9e4b3dc4cd620a45136dba36cf58f7"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/all_runs.jsonl.part003.gz",
+        "bytes": 554905,
+        "sha256": "3a579802c17b503c6b0ca2f04fa1daab05f854adab9cb46002d5606557311569"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/all_runs.jsonl.part004.gz",
+        "bytes": 574836,
+        "sha256": "4151028d89fad4bd35fe7dc0bd77c3196909907752c5f7182fa696985d922756"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/all_runs.jsonl.part005.gz",
+        "bytes": 561076,
+        "sha256": "28ec3d28c0cd221ffd45cd4fa9edaa3f09e9b50fd992b23d6eab6a9366143ef3"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/all_runs.jsonl.part006.gz",
+        "bytes": 502396,
+        "sha256": "8c982377b0440dcd0a5efed10e854aef369a886e1a4dca3f9fb41fe2b921afa1"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/all_runs.jsonl.part007.gz",
+        "bytes": 374302,
+        "sha256": "b603b1b3c6e987bdb8b07df2d2b6e621fb61d642512a3a385579c7059efc9397"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/all_runs.jsonl.part008.gz",
+        "bytes": 397369,
+        "sha256": "da9e309e9ca7abce91e82bd9e7e558c710daec27501c452a4b57bc130a0bc2ef"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/all_runs.jsonl.part009.gz",
+        "bytes": 406540,
+        "sha256": "f78df2ffd256da4ab1520542e3902eb98a08794a0281074c4bd94a209f1e5c3f"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/all_runs.jsonl.part010.gz",
+        "bytes": 390841,
+        "sha256": "a730b2a508e142958ece3e3adc465663d7e151ab8e200885de145c38d549728e"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/all_runs.jsonl.part011.gz",
+        "bytes": 396359,
+        "sha256": "3f1ff2c25cbae7374fae61504719a701441e81a6d001bf2698d21f63931a1e8b"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/all_runs.jsonl.part012.gz",
+        "bytes": 382944,
+        "sha256": "690f1417bc8a9527fe0330fb1a177d829717a06cf1fefba88115abe2fd64416c"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/all_runs.jsonl.part013.gz",
+        "bytes": 399031,
+        "sha256": "49e3cd5f1393c5980d5c1f1cad52975fd64eaa976f72eccc4c8916d52e0d4853"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/all_runs.jsonl.part014.gz",
+        "bytes": 372065,
+        "sha256": "1af174f48f9765c5f780cf15308d5b8991872b699f29239f35f71741e799dbda"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/all_runs.jsonl.part015.gz",
+        "bytes": 403780,
+        "sha256": "9cfadc533aad23a6ded29f08355a9055d1acae7d88cc863b8bf371923574137b"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/all_runs.jsonl.part016.gz",
+        "bytes": 377712,
+        "sha256": "d41287d526eb6c534aa01960d8ed4570ac531812b01412cc8f5c93d27a836497"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/all_runs.jsonl.part017.gz",
+        "bytes": 395241,
+        "sha256": "addd3e2cfcb9657e93d6f2132bb04c79debd457817b90a3b4fbabe28ce09f85f"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/all_runs.jsonl.part018.gz",
+        "bytes": 385223,
+        "sha256": "84e76c2be534b6eec924ccb44efdc6e288b5da7ebe4271f6a2784b8979a10537"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/all_runs.jsonl.part019.gz",
+        "bytes": 258768,
+        "sha256": "70ce4e1129e3b40eb6fcf1963b8ca6c610cff3e7406c7fdd94f28630f3dbe100"
+      }
+    ]
+  },
+  {
+    "output": "ena_bacteria_ont_2026-10-24/family_batches/group_to_family.jsonl",
+    "bytes": 2902674,
+    "sha256": "78d78b14a0c3de4e10131ff20067044e4e5b9fe1ccae4185ac40cc30a06b94b6",
+    "parts": [
+      {
+        "path": "ena_bacteria_ont_2026-10-24/family_batches/group_to_family.jsonl.gz",
+        "bytes": 142124,
+        "sha256": "ca3cbdc73d9aa9f976392cfb7c5c684cfddad5a6d600262871b349a8e2651939"
+      }
+    ]
+  },
+  {
+    "output": "ena_bacteria_ont_2026-10-24/family_batches/run_membership.jsonl",
+    "bytes": 32253105,
+    "sha256": "0a3d5ccc24669d6a1e63ed459a53e94a4f4627b9629d9f4d1a822475a807f1d3",
+    "parts": [
+      {
+        "path": "ena_bacteria_ont_2026-10-24/family_batches/run_membership.jsonl.part001.gz",
+        "bytes": 67550,
+        "sha256": "01c216f1af9fe7ee221a9015c0814f18b29a28534bf90ee2d887a1e47c7fbcea"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/family_batches/run_membership.jsonl.part002.gz",
+        "bytes": 52370,
+        "sha256": "fbbdd7d315770f0b8822c85d325c2046232d6a0c2d00bcff0cce9b8db68e8acf"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/family_batches/run_membership.jsonl.part003.gz",
+        "bytes": 60978,
+        "sha256": "9edea7cddcbc04ecb61400ad596ae800fc9cb63c8f6f02d04a5c44c49a4e78fc"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/family_batches/run_membership.jsonl.part004.gz",
+        "bytes": 56906,
+        "sha256": "bb489817e064ed9cec39d5472a585c1d45f31523b036681ec3fb7883e9645990"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/family_batches/run_membership.jsonl.part005.gz",
+        "bytes": 47909,
+        "sha256": "402144188c89c6bd53f23e09e29d67cc06bfc0476f6fee420b80026d37968459"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/family_batches/run_membership.jsonl.part006.gz",
+        "bytes": 67200,
+        "sha256": "c2e7869d33b5d0eddaf18a81c066c93478817ab7419053ef1a4f3a1e61198dfd"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/family_batches/run_membership.jsonl.part007.gz",
+        "bytes": 59969,
+        "sha256": "fb63801e15905123b48951c906ba3822863c21a4cd28ce42235724860b09a44a"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/family_batches/run_membership.jsonl.part008.gz",
+        "bytes": 67615,
+        "sha256": "fdbf6397e580da8875f4cd1613c34d9ab17fac272ff7ed45e82bf84cd65dfc3b"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/family_batches/run_membership.jsonl.part009.gz",
+        "bytes": 82952,
+        "sha256": "6738cd54e2964c2261a7fd6fad26ab41829f78b67770ecc4a607870a7ac881c3"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/family_batches/run_membership.jsonl.part010.gz",
+        "bytes": 79305,
+        "sha256": "283898fbdac075438d66f03b530f3c575c1e7433252e9e7abed55fc55ad5d5e6"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/family_batches/run_membership.jsonl.part011.gz",
+        "bytes": 70408,
+        "sha256": "cba6cad4aa23dbe613d1c66d937cb2d6cb4a3328c52ae8232539b49970626fb0"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/family_batches/run_membership.jsonl.part012.gz",
+        "bytes": 61381,
+        "sha256": "fd98250238c0b5f047e7dbfbec61aef5d029cbe75f4cb2a631af948abff7a4f8"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/family_batches/run_membership.jsonl.part013.gz",
+        "bytes": 67142,
+        "sha256": "9087899850ac949f0f5090fe61a6aa6b6a64092687626b19209c8a7f42e6facc"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/family_batches/run_membership.jsonl.part014.gz",
+        "bytes": 49747,
+        "sha256": "d28e9f82c46afca946602b26d81c7017aac3ac3529c593958288e3e7fcafd741"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/family_batches/run_membership.jsonl.part015.gz",
+        "bytes": 75715,
+        "sha256": "6e3ea84a228753bf5e860ab704eec928a49357aac8c5ab6e3b5556feac53a75d"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/family_batches/run_membership.jsonl.part016.gz",
+        "bytes": 59660,
+        "sha256": "140032767f697d3d9ca722c8808a2d5de385140e3a2aba5585f8d83974bf6cad"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/family_batches/run_membership.jsonl.part017.gz",
+        "bytes": 66110,
+        "sha256": "ce193a4f0e736d01ade51054aa536e9fcf1d473b2f63ca71dbefe03a96754594"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/family_batches/run_membership.jsonl.part018.gz",
+        "bytes": 71501,
+        "sha256": "5ee96092c4877c7d22527cf27429a79e467dc6308146f5a2cd0d9d0d0720aa2a"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/family_batches/run_membership.jsonl.part019.gz",
+        "bytes": 55660,
+        "sha256": "37fc2681978c044735458bdef1b9b2e1eb20913abe06f3d87b5ac353faf07a74"
+      }
+    ]
+  },
+  {
+    "output": "ena_bacteria_ont_2026-10-24/fastq_run_accessions.txt",
+    "bytes": 1056402,
+    "sha256": "2655c6578375688fca512e0e79b49963ad4f19f6dff7bb1f7be771819a4a6645",
+    "parts": [
+      {
+        "path": "ena_bacteria_ont_2026-10-24/fastq_run_accessions.txt.gz",
+        "bytes": 199867,
+        "sha256": "bb292d071469aa048929017ac131114729d124f8f9ea14009a929b68e8124d53"
+      }
+    ]
+  },
+  {
+    "output": "ena_bacteria_ont_2026-10-24/organism_environment/organisms.jsonl",
+    "bytes": 1450807,
+    "sha256": "4bda507a991893bb7d5bc9f0008e13e73027ab3a8ebc07d1c4bc3b8a4b4c5069",
+    "parts": [
+      {
+        "path": "ena_bacteria_ont_2026-10-24/organism_environment/organisms.jsonl.gz",
+        "bytes": 126972,
+        "sha256": "6c776593f886045aa87d5a19d550266d820c50c9c57e7411d9bbee747bb99eec"
+      }
+    ]
+  },
+  {
+    "output": "ena_bacteria_ont_2026-10-24/organism_environment/reported_source_values.jsonl",
+    "bytes": 1431682,
+    "sha256": "7d779c5cdc02cb72d99c24336d8ed9f03075caaa939a11bcabf1883b83157994",
+    "parts": [
+      {
+        "path": "ena_bacteria_ont_2026-10-24/organism_environment/reported_source_values.jsonl.gz",
+        "bytes": 166849,
+        "sha256": "da397cdc4d8a2a52c9e6048314e0c6bb1f17fdce62c4c790c1b8445226736b53"
+      }
+    ]
+  },
+  {
+    "output": "ena_bacteria_ont_2026-10-24/organism_environment/run_organism_environment.jsonl",
+    "bytes": 167986084,
+    "sha256": "a517eeeb5f74a7cd561f7ae1876d11e1c39fe26df385f300fa35a2c7bf924d9b",
+    "parts": [
+      {
+        "path": "ena_bacteria_ont_2026-10-24/organism_environment/run_organism_environment.jsonl.part001.gz",
+        "bytes": 257546,
+        "sha256": "101cf2a14781ffb9c33113b8b6e3dbd138adc365a09d400900e0c23ea4982a3a"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/organism_environment/run_organism_environment.jsonl.part002.gz",
+        "bytes": 193166,
+        "sha256": "d401255c65cc63d77dfbe1371362d8a57bcad6807ebac0d35f12746997a41fb6"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/organism_environment/run_organism_environment.jsonl.part003.gz",
+        "bytes": 200063,
+        "sha256": "93a7b102a7f98361063b1b0c594ac09ca032ae1c3433dca9d8a0acdcc222279c"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/organism_environment/run_organism_environment.jsonl.part004.gz",
+        "bytes": 206037,
+        "sha256": "ee9a8d1b5508d316e74dddcf4ffea96a1522e848e4732f97cc6dcfdda76592a3"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/organism_environment/run_organism_environment.jsonl.part005.gz",
+        "bytes": 174359,
+        "sha256": "0cf3692cf891558fe009f3ff130534539e6c64e1d21deff05a84ba2fbb69cf3c"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/organism_environment/run_organism_environment.jsonl.part006.gz",
+        "bytes": 240627,
+        "sha256": "42f951d86f9a0d587d708f2c993601ba776a95d3ef484b7d8f8bb36dd1ca3981"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/organism_environment/run_organism_environment.jsonl.part007.gz",
+        "bytes": 225978,
+        "sha256": "b22f335a066d2b5d5754262eabdfad9f392d0dfaf945b2f3f420edccdf5ca47a"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/organism_environment/run_organism_environment.jsonl.part008.gz",
+        "bytes": 240618,
+        "sha256": "3fc04422be67cfc2160abde239084beeeb2493e7662266f836da7824bb89674b"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/organism_environment/run_organism_environment.jsonl.part009.gz",
+        "bytes": 248249,
+        "sha256": "141b6515c6e5b70021468ae3dd266133461cb14e9e2b627ded049030238b9a13"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/organism_environment/run_organism_environment.jsonl.part010.gz",
+        "bytes": 276366,
+        "sha256": "250bdf5074c17a56c8f359c9ad327af3c69b552b16ba1ff2bddc8a08eb874c74"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/organism_environment/run_organism_environment.jsonl.part011.gz",
+        "bytes": 273155,
+        "sha256": "06685929fa0e36a0048ac966a1b2dcdc75c43a5f505ef1725ad5c015fe5cb16a"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/organism_environment/run_organism_environment.jsonl.part012.gz",
+        "bytes": 222929,
+        "sha256": "912cfb820538f0bf50bb57e7a1a3cd83e64bb626d68c85d9c631756c06f12033"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/organism_environment/run_organism_environment.jsonl.part013.gz",
+        "bytes": 246536,
+        "sha256": "f05eac41c82efcb94403dd597cfb4a1f74922235eb3de3e4b3650eac31270b21"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/organism_environment/run_organism_environment.jsonl.part014.gz",
+        "bytes": 181057,
+        "sha256": "1d396923e07769ec3c73a3d443656cab451bccc6b78dc7c0118f9b1902b36249"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/organism_environment/run_organism_environment.jsonl.part015.gz",
+        "bytes": 254211,
+        "sha256": "f8981623efbfe5d5a8d802e3a106295be95bd58eec9cc2c01e5c9cc7ae61633c"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/organism_environment/run_organism_environment.jsonl.part016.gz",
+        "bytes": 232779,
+        "sha256": "3f7bbe44e51e6981ef7f5a323dd8d0064f82d82da3945e576b027d8ef4e5012c"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/organism_environment/run_organism_environment.jsonl.part017.gz",
+        "bytes": 239420,
+        "sha256": "a62bf2e03e23c37da8e0fae2571ffe81dc664974b21c21ac998c539e84633953"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/organism_environment/run_organism_environment.jsonl.part018.gz",
+        "bytes": 259513,
+        "sha256": "6cbff10bd64f3d8c4dacc774c57d19707a8f5692d04f7013cbc83d714909f033"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/organism_environment/run_organism_environment.jsonl.part019.gz",
+        "bytes": 199645,
+        "sha256": "c15fe05306b93e692b00051fc450a9844320564d9731e55bf0827fe5c8ec8c7f"
+      }
+    ]
+  },
+  {
+    "output": "ena_bacteria_ont_2026-10-24/runs_with_file_links.txt",
+    "bytes": 1085350,
+    "sha256": "9eb01e44b177b06c76d7ffb236a394936c72cbd1b0e3fcbb23a0d64598ebcd1c",
+    "parts": [
+      {
+        "path": "ena_bacteria_ont_2026-10-24/runs_with_file_links.txt.gz",
+        "bytes": 204469,
+        "sha256": "8d1a5a6620cb89c10f81ae3df92f5ede5859b7be983ef5c96be4bc0d3d280002"
+      }
+    ]
+  },
+  {
+    "output": "ena_bacteria_ont_2026-10-24/taxonomy_batches/run_membership.jsonl",
+    "bytes": 25724220,
+    "sha256": "57582962bba713f53e819b036b252f955d2cb43daca84f3c4a45d3113dfc907a",
+    "parts": [
+      {
+        "path": "ena_bacteria_ont_2026-10-24/taxonomy_batches/run_membership.jsonl.part001.gz",
+        "bytes": 60861,
+        "sha256": "65711c0eb7da5084a5d9cfb306282c2171b1efc8179fdead9a964f19ee3a5b9c"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/taxonomy_batches/run_membership.jsonl.part002.gz",
+        "bytes": 48488,
+        "sha256": "692e50a456058c635f7ac3493334d6e2675e2e0cb31dbc9a3d1eae4d19abd5c8"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/taxonomy_batches/run_membership.jsonl.part003.gz",
+        "bytes": 55269,
+        "sha256": "789583120a0045aa7d5be382ea3b550c159f1701fd47db4110cb90c6b62cc7c1"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/taxonomy_batches/run_membership.jsonl.part004.gz",
+        "bytes": 51868,
+        "sha256": "0fd97e421e4189a5d488455a52d10a1776ff8e9033aae292c17308deb4f8d791"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/taxonomy_batches/run_membership.jsonl.part005.gz",
+        "bytes": 44928,
+        "sha256": "437c1ebf73ff7cdf3a32a5f6c9b79233ddab5024922855954a6a94b7e242d2ef"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/taxonomy_batches/run_membership.jsonl.part006.gz",
+        "bytes": 60649,
+        "sha256": "17758496fcf866bfd6d8ea3ae61c016c58a947be32823fc8336f35c309c85935"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/taxonomy_batches/run_membership.jsonl.part007.gz",
+        "bytes": 55113,
+        "sha256": "cf4c3133cd0322c150a863cf3c16914655f68f29f9aa39669ddb22bcc03bd88f"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/taxonomy_batches/run_membership.jsonl.part008.gz",
+        "bytes": 61429,
+        "sha256": "f06201d17a6b95773dc69b723bd7ec8aadad3dde639e81a8e876ae771adfdd7b"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/taxonomy_batches/run_membership.jsonl.part009.gz",
+        "bytes": 77082,
+        "sha256": "f131068c79ae43d5252d11f7bea8b2232bca32892c2040e163be244208eac369"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/taxonomy_batches/run_membership.jsonl.part010.gz",
+        "bytes": 73323,
+        "sha256": "815ee21fc21695211b71987c59e9dbbb6f912ce26c86c2c04655df9b10b44c46"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/taxonomy_batches/run_membership.jsonl.part011.gz",
+        "bytes": 63762,
+        "sha256": "fa078e2a029daad66f7c80b519aaa53589469a1894cafdfa7e17ad781462cece"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/taxonomy_batches/run_membership.jsonl.part012.gz",
+        "bytes": 55140,
+        "sha256": "43f2abfae718830885548ab108a0e9c1b578a03b7bcd368d94296df897e0cfc1"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/taxonomy_batches/run_membership.jsonl.part013.gz",
+        "bytes": 61465,
+        "sha256": "b0caaafa4d5b19d0c78d612f7a08a2202c95d2441d327ae841b8b1ee4f1ee1c5"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/taxonomy_batches/run_membership.jsonl.part014.gz",
+        "bytes": 45565,
+        "sha256": "76e06e07a082dc0da15ad02a5c3a987a586b0b9f4e94c3109cf4941be0aaf8d0"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/taxonomy_batches/run_membership.jsonl.part015.gz",
+        "bytes": 68989,
+        "sha256": "499a699d9da3ad92291260a0c4e15a8a42bd12a1f72f04072f1df13091554935"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/taxonomy_batches/run_membership.jsonl.part016.gz",
+        "bytes": 54340,
+        "sha256": "cef6db2e59c5b5d44fad3d1daed671c85aff110d8996b0bb71e4e3fc1f3d5df4"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/taxonomy_batches/run_membership.jsonl.part017.gz",
+        "bytes": 59936,
+        "sha256": "6f279f4e15a4cf6879813d7e04d18b457587f91ac248d117321c013ef045014b"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/taxonomy_batches/run_membership.jsonl.part018.gz",
+        "bytes": 64240,
+        "sha256": "3dd67fd46e1ed037323bfb2aa6ea9fdbea0f6d4ccc243bee6d9025983fa0620c"
+      },
+      {
+        "path": "ena_bacteria_ont_2026-10-24/taxonomy_batches/run_membership.jsonl.part019.gz",
+        "bytes": 50434,
+        "sha256": "5c88de452f503fc75a06e609e82e95b89717427182d3f561526c836dfea341b8"
+      }
+    ]
+  },
+  {
+    "output": "ena_bacteria_ont_2026-10-24/taxonomy_batches/species_groups.jsonl",
+    "bytes": 6745124,
+    "sha256": "0585069956e33e36caaa2e4b915302e2af3ad063634d933be0046072d214d9e2",
+    "parts": [
+      {
+        "path": "ena_bacteria_ont_2026-10-24/taxonomy_batches/species_groups.jsonl.gz",
+        "bytes": 339881,
+        "sha256": "e7c895a69ff6d1b3a1093ce0b04d5fb3c4161a4cd78faa19ed21d3c928cac99d"
+      }
+    ]
+  },
+  {
+    "output": "ena_bacteria_ont_2026-10-24/taxonomy_batches/taxon_mapping.jsonl",
+    "bytes": 3621349,
+    "sha256": "f5879dfc94a90a7fdb8f9707bb6f74cf6d60cc076e86ac8b63e02de5b84fe873",
+    "parts": [
+      {
+        "path": "ena_bacteria_ont_2026-10-24/taxonomy_batches/taxon_mapping.jsonl.gz",
+        "bytes": 278441,
+        "sha256": "1d46e9e71e61f7cf3fb3a342da7250d94803677950435a0de911ce97da68c767"
+      }
+    ]
+  },
+  {
+    "output": "current_literature_cache.jsonl",
+    "bytes": 642834,
+    "sha256": "1e8ac4d23448a804d4d3275bdbaaa98a2b36557868300d63cda91e841ea1c1e9",
+    "parts": [
+      {
+        "path": "current_literature_cache.jsonl.gz",
+        "bytes": 73026,
+        "sha256": "0c2a081bcb5957ca58593109308fa8a29b804f75bdefe4b2cf6c2969140bfbb2"
+      }
+    ]
+  }
+]
