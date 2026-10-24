@@ -43,7 +43,12 @@ else
 fi
 READS=$(python -c "import json;print(json.load(open('$PROJ/data/reads/$RUN/verify.json'))['local_file'])")
 ASM=$PROJ/data/assemblies_batch10/$SAMPLE
-stage prepare_assembly python $HERE/batch10/prepare_assembly.py --sample $SAMPLE --gca $GCA --gcf $GCF --out $ASM
+if [ -f $ASM/manifest.json ]; then
+    # Prepared by an earlier attempt: reuse only if the chosen FASTA still has the recorded hash.
+    stage assembly_reused python -c "import hashlib,json,sys; c=json.load(open('$ASM/assembly_check.json')); sys.exit(hashlib.sha256(open(c['fasta'],'rb').read()).hexdigest()!=c['fasta_sha256'])"
+else
+    stage prepare_assembly python $HERE/batch10/prepare_assembly.py --sample $SAMPLE --gca $GCA --gcf $GCF --out $ASM
+fi
 FASTA=$(python -c "import json;print(json.load(open('$ASM/manifest.json'))['samples'][0]['fasta'])")
 
 # Discovery budget per protocol: BLASTX threads 2; native tools use their own defaults.
