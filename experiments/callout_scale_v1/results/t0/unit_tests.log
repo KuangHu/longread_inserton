@@ -1,0 +1,47 @@
+test_accumulated_small_indels_fail (test_audit_filled_site.AuditChallengeTests.test_accumulated_small_indels_fail) ... ok
+test_checker_rejects_tampered_class (test_audit_filled_site.AuditChallengeTests.test_checker_rejects_tampered_class) ... ok
+test_cigar_N_fails (test_audit_filled_site.AuditChallengeTests.test_cigar_N_fails) ... ok
+test_contig_edge_is_edge_limited (test_audit_filled_site.AuditChallengeTests.test_contig_edge_is_edge_limited) ... ok
+test_duplicate_derived_read_is_one_unit (test_audit_filled_site.AuditChallengeTests.test_duplicate_derived_read_is_one_unit) ... ok
+test_equal_competing_position (test_audit_filled_site.AuditChallengeTests.test_equal_competing_position) ... ok
+test_full_span_two_reads (test_audit_filled_site.AuditChallengeTests.test_full_span_two_reads) ... ok
+test_internal_only (test_audit_filled_site.AuditChallengeTests.test_internal_only) ... ok
+test_legitimate_zero_and_malformed_input (test_audit_filled_site.AuditChallengeTests.test_legitimate_zero_and_malformed_input) ... ok
+test_missing_anchor_is_one_side (test_audit_filled_site.AuditChallengeTests.test_missing_anchor_is_one_side) ... ok
+test_reverse_strand_counts (test_audit_filled_site.AuditChallengeTests.test_reverse_strand_counts) ... ok
+test_secondary_at_candidate (test_audit_filled_site.AuditChallengeTests.test_secondary_at_candidate) ... ok
+test_secondary_cap_needs_recheck (test_audit_filled_site.AuditChallengeTests.test_secondary_cap_needs_recheck) ... ok
+test_single_read_is_not_audited_full (test_audit_filled_site.AuditChallengeTests.test_single_read_is_not_audited_full) ... ok
+test_two_one_sided_reads_do_not_make_full_span (test_audit_filled_site.AuditChallengeTests.test_two_one_sided_reads_do_not_make_full_span) ... ok
+test_x_deleted (test_audit_filled_site.AuditChallengeTests.test_x_deleted) ... ok
+test_all_four_archives_reconcile_without_becoming_release_approval (test_callout_bundle.BundleTests.test_all_four_archives_reconcile_without_becoming_release_approval) ... ok
+test_ar2038_is5_record_regression (test_callout_bundle.BundleTests.test_ar2038_is5_record_regression) ... ok
+test_duplicate_read_row_rejected (test_callout_bundle.BundleTests.test_duplicate_read_row_rejected) ... ok
+test_live_zero_hit_run_passes_but_changed_input_fails (test_callout_bundle.BundleTests.test_live_zero_hit_run_passes_but_changed_input_fails) ... ok
+test_missing_read_row_rejected (test_callout_bundle.BundleTests.test_missing_read_row_rejected) ... ok
+test_tnp_subset_cannot_pass_all_family_contract (test_callout_bundle.BundleTests.test_tnp_subset_cannot_pass_all_family_contract) ... ok
+test_v1_support_does_not_resolve_censored_boundaries_or_ns (test_callout_bundle.BundleTests.test_v1_support_does_not_resolve_censored_boundaries_or_ns) ... ok
+test_wrong_coordinate_version_rejected (test_callout_bundle.BundleTests.test_wrong_coordinate_version_rejected) ... ok
+test_wrong_download_sample_rejected (test_callout_bundle.BundleTests.test_wrong_download_sample_rejected) ... ok
+test_adjacent_annotation_two_bp_is_not_adopted (test_pipeline.BoundaryTests.test_adjacent_annotation_two_bp_is_not_adopted) ... ok
+test_annotation_and_inferred_ranges_remain_separate (test_pipeline.BoundaryTests.test_annotation_and_inferred_ranges_remain_separate) ... ok
+test_compound_element_does_not_become_whole_chromosome (test_pipeline.BoundaryTests.test_compound_element_does_not_become_whole_chromosome) ... ok
+test_family_support_does_not_require_every_member (test_pipeline.BoundaryTests.test_family_support_does_not_require_every_member) ... ok
+test_invalid_record_retained_without_sequence (test_pipeline.BoundaryTests.test_invalid_record_retained_without_sequence) ... ok
+test_no_selected_families_produces_empty_files (test_pipeline.BoundaryTests.test_no_selected_families_produces_empty_files) ... ok
+test_reverse_orientation_round_trip (test_pipeline.BoundaryTests.test_reverse_orientation_round_trip) ... ok
+test_unresolved_and_empty_flank_are_not_discarded (test_pipeline.BoundaryTests.test_unresolved_and_empty_flank_are_not_discarded) ... ok
+test_window_edge_is_censored (test_pipeline.BoundaryTests.test_window_edge_is_censored) ... ok
+test_all_invalid_members_complete_without_blast_or_silent_loss (test_pipeline.DataTests.test_all_invalid_members_complete_without_blast_or_silent_loss) ... ok
+test_btop_gaps_consume_correct_axes (test_pipeline.DataTests.test_btop_gaps_consume_correct_axes) ... ok
+test_compound_origin_cds_overlap (test_pipeline.DataTests.test_compound_origin_cds_overlap) ... ok
+test_duplicate_sample_id_is_rejected (test_pipeline.DataTests.test_duplicate_sample_id_is_rejected) ... ok
+test_empty_native_discovery_completes_without_external_tools (test_pipeline.DataTests.test_empty_native_discovery_completes_without_external_tools) ... ok
+test_failure_is_not_zero_candidates (test_pipeline.DataTests.test_failure_is_not_zero_candidates) ... ok
+test_native_duplicate_and_out_of_bounds_occurrences_are_preserved (test_pipeline.DataTests.test_native_duplicate_and_out_of_bounds_occurrences_are_preserved) ... ok
+test_overlapping_windows_outside_partner_core_do_not_support_boundaries (test_pipeline.DataTests.test_overlapping_windows_outside_partner_core_do_not_support_boundaries) ... ok
+
+----------------------------------------------------------------------
+Ran 42 tests in 2.572s
+
+OK

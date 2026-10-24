@@ -1,0 +1,17 @@
+{
+  "package_version": "0.1.0",
+  "subset": "all",
+  "native_families": 30,
+  "native_records": 188,
+  "selected_families": 30,
+  "selected_native_records": 188,
+  "exported_records": 188,
+  "invalid_records": 0,
+  "boundary_sources": {
+    "provisional_homology_median": 174,
+    "native_interval_only_unresolved": 2,
+    "homology_extent_censored_at_window": 12
+  },
+  "flanks_complete": 188,
+  "families_with_exportable_records": 30
+}

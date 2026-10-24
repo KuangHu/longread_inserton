@@ -1,0 +1,170 @@
+[
+  {
+    "sample": "SAMN43145728",
+    "ncbi_response": {
+      "messages": [
+        {
+          "error": {
+            "assembly_error_code": "NO_ASSEMBLIES_FOR_BIOSAMPLE_IDS",
+            "message": "No genomes found for one or more of the requested biosample",
+            "invalid_identifiers": [
+              "SAMN43145728"
+            ]
+          }
+        }
+      ]
+    },
+    "ena_sample_url": "https://www.ebi.ac.uk/ena/browser/api/xml/SAMN43145728",
+    "sample_attributes": {
+      "isolation_and_growth_condition": "25 ˚C",
+      "strain": "CT11-26",
+      "collection_date": "2020-10-12",
+      "INSDC secondary accession": "SRS23928390",
+      "organism": "Paraburkholderia strydomiana",
+      "geographic_location": "USA: NCSU Phytotron, Raleigh, NC",
+      "isolation_medium": "R2A 1/20",
+      "number_of_replicons": "not provided",
+      "reference_for_biomaterial": "not provided",
+      "strain_code": "Past26",
+      "culture_collection": "DSM:115902",
+      "broad-scale_environmental_context": "not provided",
+      "NCBI submission package": "MIGS.ba.plant-associated.6.0",
+      "environmental_medium": "not provided",
+      "bacteria_available_from": "DSMZ/ NCSU Kleiner Lab",
+      "host": "Triticum aestivum cv. Catawba",
+      "local-scale_environmental_context": "not provided",
+      "latitude_and_longitude": "35.378028 N 77.5605 W",
+      "plant_age": "Feekes 1.3",
+      "isolation_source": "roots",
+      "BioSampleModel": "MIGS/MIMS/MIMARKS.plant-associated",
+      "ENA-FIRST-PUBLIC": "2025-10-10",
+      "ENA-LAST-UPDATE": "2025-10-10"
+    }
+  },
+  {
+    "sample": "SAMN38644343",
+    "ncbi_response": {
+      "messages": [
+        {
+          "error": {
+            "assembly_error_code": "NO_ASSEMBLIES_FOR_BIOSAMPLE_IDS",
+            "message": "No genomes found for one or more of the requested biosample",
+            "invalid_identifiers": [
+              "SAMN38644343"
+            ]
+          }
+        }
+      ]
+    },
+    "ena_sample_url": "https://www.ebi.ac.uk/ena/browser/api/xml/SAMN38644343",
+    "sample_attributes": {
+      "strain": "KKMWBUW1",
+      "collection_date": "2019",
+      "isol_growth_condt": "missing",
+      "ref_biomaterial": "missing",
+      "INSDC secondary accession": "SRS19726512",
+      "organism": "Paraburkholderia",
+      "env_broad_scale": "temperate woodland biome [ENVO:01000221]",
+      "env_local_scale": "decayed[PATO:0001432]",
+      "NCBI submission package": "MIGS.ba.symbiont-associated.6.0",
+      "num_replicons": "1",
+      "geo_loc_name": "Poland: Bialowieza",
+      "host_life_stage": "sporulating colony",
+      "host_dependence": "facultative",
+      "env_medium": "wood [ENVO:00002040]|spruce forest soil[ENVO:00005784]",
+      "lat_lon": "52.74 N 23.78 E",
+      "sym_life_cycle_type": "unknown life cycle (possibly simple)",
+      "BioSampleModel": "MIGS/MIMS/MIMARKS.symbiont-associated",
+      "ENA-FIRST-PUBLIC": "2024-06-03",
+      "ENA-LAST-UPDATE": "2026-09-02"
+    }
+  },
+  {
+    "sample": "SAMN61447835",
+    "ncbi_response": {
+      "messages": [
+        {
+          "error": {
+            "assembly_error_code": "NO_ASSEMBLIES_FOR_BIOSAMPLE_IDS",
+            "message": "No genomes found for one or more of the requested biosample",
+            "invalid_identifiers": [
+              "SAMN61447835"
+            ]
+          }
+        }
+      ]
+    },
+    "ena_sample_url": "https://www.ebi.ac.uk/ena/browser/api/xml/SAMN61447835",
+    "sample_attributes": {
+      "strain": "NK-14",
+      "collection_date": "2025-06-07",
+      "isol_growth_condt": "not collected",
+      "ref_biomaterial": "not applicable",
+      "INSDC secondary accession": "SRS29807115",
+      "organism": "Paraburkholderia caledonica",
+      "env_broad_scale": "agricultural ecosystem [ENVO:00000164]",
+      "env_local_scale": "agricultural field [ENVO:00000078]",
+      "NCBI submission package": "MIGS.ba.soil.6.0",
+      "depth": "0-15 cm",
+      "elev": "not collected",
+      "num_replicons": "3",
+      "geo_loc_name": "South Korea: Daegu",
+      "env_medium": "soil [ENVO:00001998]",
+      "lat_lon": "35.9577 N 128.5610 E",
+      "isolation_source": "surface soil from an experimental plot supplied with nitrogen and potassium but deficient in phosphorus at the Gyeongsangbuk-do Agricultural Research and Extension Services",
+      "BioSampleModel": "MIGS/MIMS/MIMARKS.soil",
+      "ENA-FIRST-PUBLIC": "2026-08-30",
+      "ENA-LAST-UPDATE": "2026-08-30"
+    }
+  },
+  {
+    "sample": "SAMEA113236563",
+    "ncbi_response": {
+      "messages": [
+        {
+          "error": {
+            "assembly_error_code": "NO_ASSEMBLIES_FOR_BIOSAMPLE_IDS",
+            "message": "No genomes found for one or more of the requested biosample",
+            "invalid_identifiers": [
+              "SAMEA113236563"
+            ]
+          }
+        }
+      ]
+    },
+    "ena_sample_url": "https://www.ebi.ac.uk/ena/browser/api/xml/SAMEA113236563",
+    "sample_attributes": {
+      "ENA-CHECKLIST": "ERC000011",
+      "organism": "Paraburkholderia fungorum NBRC 102489",
+      "collection date": "2021",
+      "scientific_name": "Paraburkholderia fungorum NBRC 102489",
+      "geographic location (country and/or sea)": "USA",
+      "ENA-LAST-UPDATE": "2023-05-01"
+    }
+  },
+  {
+    "sample": "SAMEA113236564",
+    "ncbi_response": {
+      "messages": [
+        {
+          "error": {
+            "assembly_error_code": "NO_ASSEMBLIES_FOR_BIOSAMPLE_IDS",
+            "message": "No genomes found for one or more of the requested biosample",
+            "invalid_identifiers": [
+              "SAMEA113236564"
+            ]
+          }
+        }
+      ]
+    },
+    "ena_sample_url": "https://www.ebi.ac.uk/ena/browser/api/xml/SAMEA113236564",
+    "sample_attributes": {
+      "ENA-CHECKLIST": "ERC000011",
+      "organism": "Paraburkholderia fungorum NBRC 102489",
+      "collection date": "2021",
+      "scientific_name": "Paraburkholderia fungorum NBRC 102489",
+      "geographic location (country and/or sea)": "USA",
+      "ENA-LAST-UPDATE": "2023-05-01"
+    }
+  }
+]

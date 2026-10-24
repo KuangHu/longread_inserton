@@ -8,9 +8,22 @@
 [旧版本 5ad842b](https://github.com/KuangHu/longread_inserton/tree/5ad842b0c8261485c27fa685de9fc538ff49cd23)。
 仓库名称沿用，但本 package **不读取 FASTQ/BAM、不执行长读段 SV calling**。
 
-跨物种联合 FNA 发现、长读段从头重复发现和 reads 连接核查的后续实验，见
+四株 assembly＋长读段连接证据的首轮结果见
+[READ_CALLOUT_RESULTS.md](docs/READ_CALLOUT_RESULTS.md)。
+**当前优先：固定单株 insertion call-out 并完成扩容验收。**
+见 [CALLOUT_SCALE_PROTOCOL.md](docs/CALLOUT_SCALE_PROTOCOL.md)：
+输入固定为单株高连续性 assembly＋同 BioSample 的 genomic Nanopore；
+原生发现不改，固定五株测试和结果检查，先验收再扩大到 10/50 株。
+新增 `scripts/check_callout_bundle.py` 检查 exports 与 v1 read 表的一致性；
+本地测试/小表核对不等于集群完整重跑或审核版 read 验收。
+
+[Paraburkholderia 属级跨株汇总计划](docs/PLAN_PARABURKHOLDERIA_MULTI_ISOLATE.md)
+保留为附加分析；已有 round-1 集群结果汇报，其结果/脚本尚待归档核查。
+跨株 empty-site 验证不阻塞本株 `[up][X][down]` call-out。
+
+真正的 pooled FNA 发现和长读段从头重复发现保留为后续对照，见
 [跨物种与长读段评估计划](docs/PLAN_CROSS_SPECIES_LONG_READS.md)。
-该文档是待执行计划，下面描述的仍是当前已实现流程。
+下面描述的是当前 package 已实现流程；实验脚本与计划不表示 package 已有 reads/pool 模式。
 
 ## 固定流程
 
