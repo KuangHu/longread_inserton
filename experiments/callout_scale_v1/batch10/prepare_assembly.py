@@ -53,16 +53,21 @@ def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--sample", required=True)
     p.add_argument("--gca", required=True)
-    p.add_argument("--gcf", required=True)
+    p.add_argument("--gcf", required=True, help='RefSeq accession, or "none" when there is no pair')
     p.add_argument("--out", type=Path, required=True)
     a = p.parse_args()
     a.out.mkdir(parents=True, exist_ok=True)
     if (a.out / "manifest.json").exists():
         raise SystemExit("Refusing to overwrite existing " + str(a.out / "manifest.json"))
     gca_fna, gca_gbff = fetch(a.gca, a.out)
-    gcf_fna, gcf_gbff = fetch(a.gcf, a.out)
-    gca_rec, gcf_rec = records(gca_fna), records(gcf_fna)
-    identical = sorted(v[1] for v in gca_rec.values()) == sorted(v[1] for v in gcf_rec.values())
+    if a.gcf == "none":  # no RefSeq pair: GenBank sequence and its own annotation only
+        gcf_fna, gcf_gbff, gcf_rec, identical = None, None, {}, False
+    else:
+        gcf_fna, gcf_gbff = fetch(a.gcf, a.out)
+        gcf_rec = records(gcf_fna)
+    gca_rec = records(gca_fna)
+    if gcf_fna:
+        identical = sorted(v[1] for v in gca_rec.values()) == sorted(v[1] for v in gcf_rec.values())
     if identical and cds_count(gcf_gbff):
         fasta, gbff, choice = gcf_fna, gcf_gbff, "gcf_sequence_and_annotation"
     elif cds_count(gca_gbff):
