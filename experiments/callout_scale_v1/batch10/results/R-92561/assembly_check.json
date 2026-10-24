@@ -1,0 +1,64 @@
+{
+  "sample": "R-92561",
+  "gca": "GCA_977005035.1",
+  "gcf": "GCF_977005035.1",
+  "identical_sequence_sets": true,
+  "choice": "gcf_sequence_and_annotation",
+  "gca_records": {
+    "CDRMMV010000001.1": [
+      5142045,
+      "524f81147dab65eb95624daf15fbd89cabb643f3d742adfdc1f6a7080ec56cec"
+    ],
+    "CDRMMV010000002.1": [
+      3589683,
+      "53427c4e123791f8475c5c21c0cb6040a66581c39e014498d724fd06cf4b0e48"
+    ],
+    "CDRMMV010000003.1": [
+      147137,
+      "8ebd148085fe124f03f327d2e33ddfbc86a9d56a85620cb33767677264626d18"
+    ],
+    "CDRMMV010000004.1": [
+      34015,
+      "594b497d834754d7452e2a739c6b5b93d3e46735d123c2abaf1ec942c754bfa3"
+    ],
+    "CDRMMV010000005.1": [
+      20517,
+      "cbdb9b45eac4db6ff870f2bacb1afebb65d2d1a0544e49ae6edf1127a3c9cf1d"
+    ],
+    "CDRMMV010000006.1": [
+      19106,
+      "99b813f41a570b9188ff6316eb85748af9d7ed226e687366b2c1ae38bc2afa9f"
+    ]
+  },
+  "gcf_records": {
+    "NZ_CDRMMV010000001.1": [
+      5142045,
+      "524f81147dab65eb95624daf15fbd89cabb643f3d742adfdc1f6a7080ec56cec"
+    ],
+    "NZ_CDRMMV010000002.1": [
+      3589683,
+      "53427c4e123791f8475c5c21c0cb6040a66581c39e014498d724fd06cf4b0e48"
+    ],
+    "NZ_CDRMMV010000003.1": [
+      147137,
+      "8ebd148085fe124f03f327d2e33ddfbc86a9d56a85620cb33767677264626d18"
+    ],
+    "NZ_CDRMMV010000004.1": [
+      34015,
+      "594b497d834754d7452e2a739c6b5b93d3e46735d123c2abaf1ec942c754bfa3"
+    ],
+    "NZ_CDRMMV010000005.1": [
+      20517,
+      "cbdb9b45eac4db6ff870f2bacb1afebb65d2d1a0544e49ae6edf1127a3c9cf1d"
+    ],
+    "NZ_CDRMMV010000006.1": [
+      19106,
+      "99b813f41a570b9188ff6316eb85748af9d7ed226e687366b2c1ae38bc2afa9f"
+    ]
+  },
+  "cds_features": 7913,
+  "fasta": "$PROJ/data/assemblies_batch10/R-92561/GCF_977005035.1/ncbi_dataset/data/GCF_977005035.1/GCF_977005035.1_ASM97700503v1_genomic.fna",
+  "fasta_sha256": "83be677594069f94bd6a7d9d322063b69eecfaf0c51d77bc1a494cbb67782977",
+  "gbff": "$PROJ/data/assemblies_batch10/R-92561/GCF_977005035.1/ncbi_dataset/data/GCF_977005035.1/genomic.gbff",
+  "gbff_sha256": "62f13479aaef6ff492791e0adf71d3c6eee92ee8d824932020295885222bfd8e"
+}

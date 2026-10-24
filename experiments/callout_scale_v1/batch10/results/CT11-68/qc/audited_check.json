@@ -1,0 +1,12 @@
+{
+  "schema": "audited_evidence_check_v1",
+  "sample": "CT11-68",
+  "status": "pass",
+  "members": 142,
+  "classifier_revision": "nearby_competition_v2",
+  "audited_class_counts": {
+    "audited_full_span": 139,
+    "one_side_only": 3
+  },
+  "scope": "Recomputed units/classes from emitted read verdicts; no re-mapping or independent competition check"
+}

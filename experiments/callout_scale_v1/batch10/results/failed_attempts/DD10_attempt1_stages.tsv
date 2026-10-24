@@ -1,0 +1,5 @@
+stage	start	end	exit_code	wall	max_rss_kb	command
+fetch_reads	2026-10-23T17:36:24-07:00	2026-10-23T17:50:55-07:00	0	14:30.61	39612	python /global/home/users/kh36969/middle_insertion_callout/longread_inserton/scripts/fetch_long_reads.py fetch --out $PROJ/data/reads --runs SRR33434047 
+prepare_assembly	2026-10-23T17:50:55-07:00	2026-10-23T17:51:10-07:00	0	0:14.70	99348	python /global/home/users/kh36969/middle_insertion_callout/longread_inserton/experiments/callout_scale_v1/batch10/prepare_assembly.py --sample DD10 --gca GCA_049177125.1 --gcf GCF_049177125.1 --out $PROJ/data/assemblies_batch10/DD10 
+warm_tools	2026-10-23T17:51:10-07:00	2026-10-23T17:51:11-07:00	0	0:01.45	3408	bash -c for t in blastn blastx makeblastdb; do $t -version > /dev/null 2>&1 || true; done 
+callout	2026-10-23T17:51:11-07:00	2026-10-23T17:55:50-07:00	1	4:39.00	305380	multisite-insertion run --manifest $PROJ/data/assemblies_batch10/DD10/manifest.json --out $PROJ/batch10/DD10/callout --methods PILER RS --subset all --threads 2 
