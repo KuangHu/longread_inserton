@@ -1,0 +1,8 @@
+{
+  "command": "/global/scratch/users/kh36969/longread_callout/paraburkholderia_ani/skani triangle -l /global/scratch/users/kh36969/longread_callout/fna_pool/comamonadaceae_20261024/s2/genomes.list -E --slow -t 16 -o /global/scratch/users/kh36969/longread_callout/fna_pool/comamonadaceae_20261024/s2/skani_edges.tsv",
+  "version": "skani 0.4.0",
+  "binary_sha256": "1482c7d1cf35210bf73c6d06c1b1fc97659dec18194c5355a31af672b6b03c0b",
+  "edges": "/global/scratch/users/kh36969/longread_callout/fna_pool/comamonadaceae_20261024/s2/skani_edges.tsv",
+  "edges_sha256": "d150b991f9426c915eb9159ecf4374071ea326e1184ddae98f7a9e374ec1fcb5",
+  "rows": 54461
+}

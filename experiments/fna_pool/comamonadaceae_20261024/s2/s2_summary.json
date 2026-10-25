@@ -1,0 +1,89 @@
+{
+  "schema": "fna_pool_s2_v1",
+  "samples": 499,
+  "skani_pairs_reported": 54461,
+  "possible_pairs": 124251,
+  "samples_without_any_skani_hit": [
+    "SAMD00265974",
+    "SAMN51281014",
+    "SAMN51281035",
+    "SAMN51281058",
+    "SAMN51819094",
+    "SAMN02603948",
+    "SAMN03704033",
+    "SAMN03569612",
+    "SAMN06118137",
+    "SAMN10948632",
+    "SAMN14483341",
+    "SAMN18579863"
+  ],
+  "clone_groups": 426,
+  "clone_groups_size_gt1": 37,
+  "species_clusters": 215,
+  "species_cluster_sizes": {
+    "19": 1,
+    "5": 7,
+    "1": 154,
+    "51": 1,
+    "2": 27,
+    "3": 10,
+    "25": 1,
+    "7": 2,
+    "10": 2,
+    "11": 1,
+    "8": 1,
+    "18": 1,
+    "21": 1,
+    "9": 3,
+    "4": 3
+  },
+  "species_clusters_ge_10": 8,
+  "genera": 28,
+  "source_class": {
+    "plant": 117,
+    "unclear": 160,
+    "environmental": 174,
+    "enrichment": 21,
+    "clinical/animal": 27
+  },
+  "source_class_linked": {
+    "plant": 72,
+    "unclear": 68,
+    "environmental": 66,
+    "enrichment": 19,
+    "clinical/animal": 11
+  },
+  "pairs": 1063,
+  "pairs_by_reason": {
+    "nearest_other_species": 425,
+    "species_neighbour": 551,
+    "clone_partner": 71,
+    "audit_all_vs_all": 45
+  },
+  "pairs_both_linked": 401,
+  "pairs_either_linked": 760,
+  "audit_cluster": {
+    "id": "SAMN51281040",
+    "size": 10,
+    "linked": 10,
+    "organisms": {
+      "Variovorax sp. OK222": 1,
+      "Variovorax sp. OK231": 1,
+      "Variovorax sp. OK250": 1,
+      "Variovorax sp. OK565": 1,
+      "Variovorax sp. OK614": 1,
+      "Variovorax sp. OK624": 1,
+      "Variovorax sp. OK632": 1,
+      "Variovorax sp. OK638": 1,
+      "Variovorax sp. OK658": 1,
+      "Variovorax sp. OK629": 1
+    }
+  },
+  "settings": {
+    "clone": "ANI >= 99.99 and AF >= 95 both",
+    "species": "single linkage ANI >= 95 and AF >= 50 both",
+    "neighbours": "1 clone partner, 3 nearest same-species non-clone, 1 nearest other-species (skani hit)",
+    "audit": "all pairs of the species cluster with 10-20 members and the most linked samples",
+    "note": "initial settings for this pool, not calibrated thresholds; skani reports only AF >= 15"
+  }
+}

@@ -97,3 +97,32 @@ P=/global/scratch/users/kh36969/longread_callout/fna_pool/comamonadaceae_2026102
 - sequence report 的 `assignedMoleculeLocationType` 对 draft 的未定位 contig 也写 Chromosome，所以 “Chromosome” 记录数不等于染色体数。
 
 reads（S5）不在本步下载。linked 样本的可用 FASTQ 共约 213 GB（ONT 151，PacBio CLR 25，HiFi 12，类型未定 25），等候选和优先级明确后再分批下载。
+
+## S2：[build_s2.py](build_s2.py)（[s2.sbatch](s2.sbatch)）
+
+`sbatch s2.sbatch comamonadaceae_20261024`（job 27262241，n0323，16 分钟：catalog 14:16，skani 1:32，pairs 0:01）。表格在 [s2/](comamonadaceae_20261024/s2/)。
+
+- **catalog.tsv**：每个 BioSample 一行，含 FNA 路径/SHA256、记录与质粒数、taxon、linked read type、clone group、species cluster，
+  以及 batch50 的来源规则结果（`source_class`/`source_note`，取 BioSample host、isolation_source、env_medium）。来源只作标记，不从发现中移除。
+- **联合 FNA**：集群 `s2/joint.fna.gz`，表头 `sample_id|assembly|contig`，每条 contig 独立，碱基不改；
+  [contig_index.tsv.gz](comamonadaceae_20261024/s2/contig_index.tsv.gz) 记录每条的长度和 SHA256，且每条都与 S1 的记录 SHA256 逐一核对（[joint_index.json](comamonadaceae_20261024/s2/joint_index.json)）。
+- **距离**：skani 0.4.0 `triangle -E --slow`（与 batch50 相同），边表留在集群，SHA256 见 [skani_run.json](comamonadaceae_20261024/s2/skani_run.json)。
+  clone group：ANI ≥99.99 且双向 AF ≥95；species cluster：单链接，ANI ≥95 且双向 AF ≥50；属取 organism 名第一个词。
+- **pair 表**（[pairs.tsv](comamonadaceae_20261024/s2/pairs.tsv)）：每个 assembly 取 1 个 clone 伙伴、最近 3 个同 species 非 clone 邻居、1 个最近的其他 species（须有 skani 输出）；
+  另取 1 个 10–20 成员的 cluster 全对全作为审计，用来衡量邻居选择的漏检。这些是本池的初始设置，不是校准过的阈值。
+
+| 项 | 结果 |
+|---|---:|
+| 样本 / contig / bp | 499 / 1,320 / 2,915,207,232 |
+| 属 | 28（Variovorax 171、Comamonas 63、Acidovorax 59、Delftia 53 …） |
+| skani 报告的 pair | 54,461 / 124,251（只报 AF ≥15） |
+| 与任何样本都无 skani 输出 | 12 |
+| clone group | 426（其中 37 个多于 1 个成员） |
+| species cluster | 215（154 个单例；8 个 ≥10 成员：最大 51，Delftia acidovorans/tsuruhatensis） |
+| 来源标记（全部 / linked） | environmental 174/66，plant 117/72，enrichment 21/19，clinical/animal 27/11，unclear 160/68 |
+| S3 pair | 1,063：同 species 邻居 551，clone 伙伴 71，最近其他 species 425，审计全对全 45；两端都 linked 401 |
+| linked 样本的 pair 覆盖 | 179/236 有同 species 伙伴；52 只有其他 species 伙伴；5 没有任何 pair |
+
+- 审计 cluster 是 10 株 Variovorax sp. OK*（全部 linked），但都来自同一 BioProject PRJNA1327437，作为漏检审计代表性有限。
+- 只有其他 species 伙伴的样本，跨 FNA 比较的局部共线性可能不足；没有 pair 的 12 个样本（5 个 linked）无法进入 pairwise 路线，留给单株发现或多 FNA 图方法。
+- unclear 主要是 BioSample 无 host/来源字段；clinical/animal 的 27 个仍在池中，报告时分层。
