@@ -233,4 +233,35 @@ v0.2 改动（判定阈值 ≥3、≤10% 不变）：
 
 仍是组装一致性检查，不是独立验证。E1p 只说明伙伴空位点有读段支持，不能排除 carrier 组装假象。
 
-尚未做：全部 1,221 对；S4 的正式注释/边界复核；core 蛋白合并。
+### 长读段等位检查 v0.3（复核 1e6243e 后；commit b9b2e7b，复用 job 27272478 的比对重新汇总，结果在 `readcheck_v03/`）
+
+复核用两个构造记录复现了 v0.2 的定位漏洞：v0.2 只要求某条基因组比对**碰到**位点窗口，(a) 读段的另一段碰到窗口 1 bp、实际支持等位的那段在别处，仍算 ok；(b) 更强的重复拷贝比对只碰到窗口边缘，就被豁免竞争。v0.3：局部比对保留链和两个锚点（检验区间两端，U 侧和 D 侧，都在 core 之外）对应的读段位置；每个锚点必须由同链的基因组比对放在组装中预期位置 ±50 bp（LOCUS_TOL）内，且没有别的比对把同一读段位置放到别处、得分差 <20。锚点在 core 外，所以另一等位的读段不会因为不匹配组装里的 core 被排除。测试加入这两个反例（并确认 v0.2 规则接受它们）和一条负链读段，24/24。
+
+| locus（704 / <2500 bp 525） | v0.2 | v0.3 | v0.3 <2500 bp |
+|---|---:|---:|---:|
+| E2 | 267 | 269 | 218 |
+| E2s | 7 | 7 | 3 |
+| E1c | 171 | 172 | 140 |
+| E1p | 222 | 222 | 163 |
+| E0 | 33 | 33 | 0 |
+| X | 4 | 1 | 1 |
+
+只有 3 个 locus 改变等级，都是 v0.2 的 mixed：L_647ba3ad9f35（11.6 kb）、L_e4aff037c528（4.2 kb）→ E2，L_43ea79084943（1,301 bp）→ E1c。它们的 absent 读段（47 / 35 / 17）现在都是 off_locus：一个锚点在预期位置，另一个锚点在基因组上偏开约一个 core 长度（−11,616 / +4,224 / +1,271 bp）。即这些读段是从一侧伸进 core 的 present 等位部分读段，core 末端与对侧 flank 相似（像移动元件的末端重复），局部 absent 等位因此能被冒充。剩下唯一的 X 是 L_dc88a873e166（216 bp tandem 样，伙伴 240 条读段全部有 core），仍是**疑似**伙伴组装塌缩。排除的分子-检验对：cigar_fail 1,832，locus_ambiguous 1,456（v0.2 为 195），off_locus 691。
+
+计数比例的限制不变：长度匹配只去掉“根本跨不过去”的读段，接近门槛时短等位仍更容易被完整跨越，所以 mixed 的生物学解释和“另一等位 ≤10%”都带着这个偏倚。
+
+**E2 不等于目标 insertion。** `s3_pilot.py crosstab` 写出 `short_loci_review.tsv`（<2500 bp 锚定 locus：carrier GFF3 中 core 含几个完整 CDS、边界是否切断 CDS/rRNA/tRNA，加 difference_class、边界一致性、证据等级）。525 个短 locus：边界切断特征 287，0 个完整 CDS 164，1–2 个完整 CDS 且不切断 72，>2 个 2（之前预览说 68，是未入库的临时计算，以此表为准）。218 个短 E2：
+
+| 短 E2 | 1–2 完整 CDS 不切断 | 0 完整 CDS | 切断特征 | >2 CDS |
+|---|---:|---:|---:|---:|
+| presence_absence（87） | 14 | 36 | 37 | 0 |
+| complex_small_other（118） | 21 | 33 | 63 | 1 |
+| replacement（13） | 3 | 0 | 10 | 0 |
+
+同时满足 E2、presence_absence、1–2 个完整 CDS 不切断、边界 exact、非 tandem、按分子计数的有 14 个（10 个 IS3/IS30/IS481/ISL3/ISNCY transposase，另有 Fic、HD domain、AbiEii/AbiGii、hypothetical；1 个含 pseudo CDS）。这是复核清单，不是 S4 结论：仍要看边界、重复结构和注释。17 个短 E2 的 carrier（DRR396223）只能按 read record 计数。
+
+## S3 全量候选发现（1,221 对）
+
+`s3_pilot.py allpairs` 把 s2/pairs.tsv 全部 1,221 对（489 个样本）写成同样格式；`s3_full_calls.sbatch`（25 个 array 任务，每对调用后删除可重建的整基因组 PAF）→ `s3_full_merge.sbatch`（合并、difference_class、逐对汇总、短 locus 复核表；大表留在 scratch，repo 只放汇总、短锚定 locus 表和 sha256）。距离分层对照照常调用，汇总按 reasons 分开报告。发现阶段不要求有读段。为全量合并，merge 只和仍可能匹配的 cluster 比较（结果与 pilot 合并逐列相同）；summary 改为按 pair 索引（pilot 输出逐字相同）。
+
+尚未做：全量 read check；S4 的正式注释/边界复核；core 蛋白合并。

@@ -390,12 +390,13 @@ def merge_calls(calls):
         by[(c["carrier"], c["carrier_contig"])].append(c)
     loci = []
     for (carrier, contig), cs in sorted(by.items()):
+        max_tol = BOUNDARY_TOL + max(max(int(c["shift_left"]), int(c["shift_right"])) for c in cs)
         cs.sort(key=lambda c: (int(c["core_start"]), int(c["core_end"])))
-        clusters = []
+        clusters, active = [], []  # active: clusters (in creation order) that a later call can still match
         for c in cs:
             s, e = int(c["core_start"]), int(c["core_end"])
             tol = BOUNDARY_TOL + max(int(c["shift_left"]), int(c["shift_right"]))
-            for cl in clusters:
+            for cl in active:
                 rs, re_ = cl["s"], cl["e"]
                 ov = max(0, min(e, re_) - max(s, rs))
                 if (ov >= 0.8 * (e - s) and ov >= 0.8 * (re_ - rs)) or (abs(s - rs) <= tol and abs(e - re_) <= tol):
@@ -403,6 +404,9 @@ def merge_calls(calls):
                     break
             else:
                 clusters.append(dict(s=s, e=e, calls=[c]))
+                active.append(clusters[-1])
+            # calls come by start; a cluster ending before s - max_tol can match neither rule for any later call
+            active = [cl for cl in active if cl["e"] >= s - max_tol]
         for cl in clusters:
             good = [c for c in cl["calls"] if c["status"] == "two_flank_anchored"] or cl["calls"]
             (s, e), _ = Counter((int(c["core_start"]), int(c["core_end"])) for c in good).most_common(1)[0]
