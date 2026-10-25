@@ -38,8 +38,11 @@
 <polygon points="109.8,229 115.8,223 248.9,223 248.9,235 115.8,235" fill="#3b6fb6"><title>thymidylate synthase 1475447-1476299 -</title></polygon>
 <polygon points="269.0,205 385.9,205 391.9,211 385.9,217 269.0,217" fill="#3b6fb6"><title>peptidylprolyl isomerase 1476422-1477175 +</title></polygon>
 <text x="269.0" y="201" font-size="8" fill="#333">peptidylprolyl isomerase</text>
-<polygon points="395.0,229 401.0,223 630.6,223 630.6,235 401.0,235" fill="#999"><title>FAD-binding oxidoreductase 1477194-1478512 -</title></polygon>
+<line x1="549.8" y1="229" x2="570.2" y2="229" stroke="#555" stroke-dasharray="2,2"/>
+<polygon points="395.0,229 401.0,223 549.8,223 549.8,235 401.0,235" fill="#999"><title>FAD-binding oxidoreductase 1477194-1478142 -</title></polygon>
 <text x="395.0" y="245" font-size="8" fill="#333">FAD-binding oxidoreductase</text>
+<polygon points="570.2,229 576.2,223 630.6,223 630.6,235 576.2,235" fill="#999"><title>FAD-binding oxidoreductase 1478142-1478512 -</title></polygon>
+<text x="570.2" y="245" font-size="8" fill="#333">FAD-binding o</text>
 <polygon points="638.0,229 644.0,223 704.6,223 704.6,235 644.0,235" fill="#3b6fb6"><title>DUF2069 domain-containing protein 1478557-1478965 -</title></polygon>
 <text x="638.0" y="245" font-size="8" fill="#333">DUF2069 domain</text>
 <polygon points="708.0,205 906.2,205 912.2,211 906.2,217 708.0,217" fill="#3b6fb6"><title>YihY family inner membrane protein 1478986-1480237 +</title></polygon>

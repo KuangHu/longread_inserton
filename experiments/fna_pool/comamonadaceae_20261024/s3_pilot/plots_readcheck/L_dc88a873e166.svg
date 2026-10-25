@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="300" font-family="sans-serif">
+<rect width="100%" height="100%" fill="white"/>
+<text x="4" y="16" font-size="12">L_dc88a873e166  SAMD00571185  core 216 bp  two_flank_anchored  support all_calls_anchored  boundary exact  tandem True  core copies carrier/partner 1/1</text>
+<line x1="542.6" y1="30" x2="542.6" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<line x1="577.4" y1="30" x2="577.4" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<text x="4" y="64" font-size="11" font-weight="bold">SAMD00571185 NZ_AP027205.1 (carrier)</text>
+<line x1="60" y1="100" x2="1060" y2="100" stroke="#888"/>
+<rect x="381.8" y="132" width="160.9" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="462.2" y="152" font-size="9" text-anchor="middle">U</text>
+<rect x="542.6" y="132" width="34.7" height="8" fill="#e76f51" opacity="0.55"/>
+<text x="560.0" y="152" font-size="9" text-anchor="middle">core 216</text>
+<rect x="577.4" y="132" width="160.9" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="657.8" y="152" font-size="9" text-anchor="middle">D</text>
+<polygon points="60.0,109 66.0,103 141.7,103 141.7,115 66.0,115" fill="#3b6fb6"><title>L,D-transpeptidase family protein 4755176-4756685 -</title></polygon>
+<text x="60.0" y="125" font-size="8" fill="#333">L,D-transpeptidas</text>
+<polygon points="141.6,109 147.6,103 358.7,103 358.7,115 147.6,115" fill="#3b6fb6"><title>L,D-transpeptidase Cds6 family protein 4756684-4758034 -</title></polygon>
+<polygon points="436.0,85 1054.0,85 1060.0,91 1054.0,97 436.0,97" fill="#3b6fb6"><title>hypothetical protein 4758514-4763287 +</title></polygon>
+<text x="436.0" y="81" font-size="8" fill="#333">hypothetical protein</text>
+<text x="60" y="166" font-size="9" fill="#666">NZ_AP027205.1:4756177-4762393  core 4759177-4759393</text>
+<text x="4" y="184" font-size="11" font-weight="bold">SAMD00407106 NZ_AP025556.1 (partner, + strand, two_flank_anchored, pair P00033)</text>
+<line x1="60" y1="220" x2="1060" y2="220" stroke="#888"/>
+<rect x="381.8" y="252" width="160.9" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="462.2" y="272" font-size="9" text-anchor="middle">U'</text>
+<rect x="577.4" y="252" width="160.9" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="657.8" y="272" font-size="9" text-anchor="middle">D'</text>
+<rect x="542.6" y="252" width="34.7" height="8" fill="#ffffff" opacity="0.55"/>
+<polygon points="60.0,229 66.0,223 146.6,223 146.6,235 66.0,235" fill="#3b6fb6"><title>L,D-transpeptidase family protein 5000213-5001722 -</title></polygon>
+<text x="60.0" y="245" font-size="8" fill="#333">L,D-transpeptidase</text>
+<polygon points="146.4,229 152.4,223 358.7,223 358.7,235 152.4,235" fill="#3b6fb6"><title>L,D-transpeptidase Cds6 family protein 5001721-5003041 -</title></polygon>
+<line x1="542.6" y1="211" x2="577.4" y2="211" stroke="#555" stroke-dasharray="2,2"/>
+<polygon points="436.0,205 536.6,205 542.6,211 536.6,217 436.0,217" fill="#3b6fb6"><title>beta strand repeat-containing protein 5003521-5004184 +</title></polygon>
+<text x="436.0" y="201" font-size="8" fill="#333">beta strand repeat-cont</text>
+<polygon points="577.4,205 1054.0,205 1060.0,211 1054.0,217 577.4,217" fill="#3b6fb6"><title>beta strand repeat-containing protein 5004184-5008141 +</title></polygon>
+<text x="577.4" y="201" font-size="8" fill="#333">beta strand repeat-containing protein</text>
+<text x="60" y="286" font-size="9" fill="#666">NZ_AP025556.1 site 5004184  other-side gap 0 bp  this call's core 4759177-4759393</text>
+<rect x="542.6" y="218" width="34.7" height="4" fill="#f4f4f4"/><text x="560.0" y="272" font-size="9" text-anchor="middle" fill="#a5372f">empty site</text>
+</svg>

@@ -34,6 +34,7 @@ import subprocess
 import sys
 from collections import Counter, defaultdict
 from pathlib import Path
+from urllib.parse import unquote
 
 VERSION = "s3_pair_calls_v0.1"
 MM = ["-x", "asm20", "-c", "--eqx", "--secondary=yes", "-N", "20", "-p", "0.5"]
@@ -496,7 +497,7 @@ def read_gff_cds(path):
         f = line.rstrip("\n").split("\t")
         if len(f) < 9 or f[2] not in ("CDS", "rRNA", "tRNA"):
             continue
-        at = dict(kv.split("=", 1) for kv in f[8].split(";") if "=" in kv)
+        at = {k: unquote(v) for k, v in (kv.split("=", 1) for kv in f[8].split(";") if "=" in kv)}
         cds[f[0]].append((int(f[3]) - 1, int(f[4]), f[6], f[2], at.get("product", "")[:40], at.get("pseudo") == "true"))
     return cds
 
@@ -505,26 +506,34 @@ PLOT_W, PLOT_X0, TRACK_H = 1000, 60, 120
 
 
 def partner_map(s, e, ep, gap, strand):
-    """Partner forward coordinate -> carrier coordinate, so the partner track is drawn in carrier orientation with
-    its flanks under U and D: the empty site (or other-side segment of a replacement) is stretched across the core."""
+    """Partner forward base -> carrier coordinate, so the partner track is drawn in carrier orientation with its
+    flanks under U and D: the empty site (or other-side segment of a replacement) is stretched across the core.
+    Base p is left of the site if p < ep, right if p >= ep + gap."""
     def f(p):
         if strand == "+":
-            if p <= ep:
+            if p < ep:
                 return s - (ep - p)
             if p >= ep + gap:
                 return e + (p - ep - gap)
             return s + (p - ep) * (e - s) / max(1, gap)
         if p >= ep + gap:
-            return s - (p - ep - gap)
-        if p <= ep:
-            return e + (ep - p)
+            return s - (p - ep - gap) - 1
+        if p < ep:
+            return e + (ep - p) - 1
         return s + (ep + gap - p) * (e - s) / max(1, gap)
     return f
 
 
-def svg_track(y, label, ws, we, feats, to_carrier, flip, marks, coords):
+def span(f, fs, fe):
+    """Carrier interval of partner bases fs..fe-1."""
+    a, b = sorted((f(fs), f(fe - 1)))
+    return a, b + 1
+
+
+def svg_track(y, label, ws, we, feats, to_carrier, flip, marks, coords, site=None):
     """One genome track in carrier coordinates [ws, we]. Layout from the top: label, + gene names, + arrows, axis,
-    - arrows, - gene names, U/core/D band with names, coordinates."""
+    - arrows, - gene names, U/core/D band with names, coordinates. site: a partner's empty-site position; a feature
+    crossing it is drawn as two pieces joined by a dashed line instead of being stretched across the core."""
     scale = PLOT_W / max(1, we - ws)
     x = lambda c: PLOT_X0 + (min(max(c, ws), we) - ws) * scale
     out = ['<text x="4" y="%d" font-size="11" font-weight="bold">%s</text>' % (y - 36, label),
@@ -536,28 +545,45 @@ def svg_track(y, label, ws, we, feats, to_carrier, flip, marks, coords):
             out.append('<text x="%.1f" y="%d" font-size="9" text-anchor="middle">%s</text>' % ((x1 + x2) / 2, y + 52, name))
     labelled = []
     for fs, fe, strand, typ, prod, pseudo in feats:
-        c1, c2 = sorted((to_carrier(fs), to_carrier(fe)))
-        if c2 < ws or c1 > we:
-            continue
-        if flip:
-            strand = "-" if strand == "+" else "+"
-        x1, x2 = x(c1), x(c2)
-        yy = y - 15 if strand == "+" else y + 3
-        col = {"CDS": "#3b6fb6", "rRNA": "#b63b3b", "tRNA": "#b68a3b"}[typ] if not pseudo else "#999"
-        if strand == "+":
-            base = max(x1, x2 - 6)
-            pts = [(x1, yy), (base, yy), (x2, yy + 6), (base, yy + 12), (x1, yy + 12)]
+        if site is not None and fs < site < fe:
+            (a1, a2), (b1, b2) = span(to_carrier, fs, site), span(to_carrier, site, fe)
+            if a2 > b1:
+                a1, a2, b1, b2 = b1, b2, a1, a2
+            out.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="#555" stroke-dasharray="2,2"/>'
+                       % (x(a2), y - 9 if (strand == "+") != flip else y + 9, x(b1), y - 9 if (strand == "+") != flip else y + 9))
+            pieces = [(fs, site, a1, a2), (site, fe, b1, b2)]
         else:
-            base = min(x2, x1 + 6)
-            pts = [(x1, yy + 6), (base, yy), (x2, yy), (x2, yy + 12), (base, yy + 12)]
-        out.append('<polygon points="%s" fill="%s"><title>%s %d-%d %s</title></polygon>'
-                   % (" ".join("%.1f,%d" % p for p in pts), col, prod, fs, fe, strand))
-        ty = y - 19 if strand == "+" else y + 25
-        if prod and x2 - x1 > 30 and all(not (s2 == strand and x1 < e2 + 6) for s2, e2 in labelled):
-            text = prod[:max(4, int((x2 - x1) / 4.6))]
-            labelled.append((strand, x1 + len(text) * 4.6))
-            out.append('<text x="%.1f" y="%d" font-size="8" fill="#333">%s</text>' % (x1, ty, text))
+            c1, c2 = span(to_carrier, fs, fe)
+            pieces = [(fs, fe, c1, c2)]
+        for ps, pe, c1, c2 in pieces:
+            out += feature_arrow(x, ws, we, y, c1, c2, ps, pe, strand, typ, prod, pseudo, flip, labelled)
     out.append('<text x="%d" y="%d" font-size="9" fill="#666">%s</text>' % (PLOT_X0, y + 66, coords))
+    return out
+
+
+def feature_arrow(x, ws, we, y, c1, c2, fs, fe, strand, typ, prod, pseudo, flip, labelled):
+    """One CDS/rRNA/tRNA arrow (fs-fe in its own genome) drawn at carrier coordinates c1-c2, plus its name if room."""
+    out = []
+    if c2 < ws or c1 > we:
+        return out
+    if flip:
+        strand = "-" if strand == "+" else "+"
+    x1, x2 = x(c1), x(c2)
+    yy = y - 15 if strand == "+" else y + 3
+    col = {"CDS": "#3b6fb6", "rRNA": "#b63b3b", "tRNA": "#b68a3b"}[typ] if not pseudo else "#999"
+    if strand == "+":
+        base = max(x1, x2 - 6)
+        pts = [(x1, yy), (base, yy), (x2, yy + 6), (base, yy + 12), (x1, yy + 12)]
+    else:
+        base = min(x2, x1 + 6)
+        pts = [(x1, yy + 6), (base, yy), (x2, yy), (x2, yy + 12), (base, yy + 12)]
+    out.append('<polygon points="%s" fill="%s"><title>%s %d-%d %s</title></polygon>'
+               % (" ".join("%.1f,%d" % p for p in pts), col, prod, fs, fe, strand))
+    ty = y - 19 if strand == "+" else y + 25
+    if prod and x2 - x1 > 30 and all(not (s2 == strand and x1 < e2 + 6) for s2, e2 in labelled):
+        text = prod[:max(4, int((x2 - x1) / 4.6))]
+        labelled.append((strand, x1 + len(text) * 4.6))
+        out.append('<text x="%.1f" y="%d" font-size="8" fill="#333">%s</text>' % (x1, ty, text))
     return out
 
 
@@ -605,7 +631,8 @@ def cmd_plot(a):
                                                                             c["status"], c["pair_id"]),
                               ws, we, feats.get(c["empty"], {}).get(c["empty_contig"], []), f, c["aln_strand"] == "-",
                               [(cs - UD, cs, "#2a9d8f", "U'"), (ce, ce + UD, "#2a9d8f", "D'")] + mid,
-                              "%s site %d  other-side gap %d bp  this call's core %d-%d" % (c["empty_contig"], ep, gap, cs, ce))
+                              "%s site %d  other-side gap %d bp  this call's core %d-%d" % (c["empty_contig"], ep, gap, cs, ce),
+                              site=ep if not gap else None)
             if not gap:
                 xs = PLOT_X0 + (cs - ws) * PLOT_W / max(1, we - ws)
                 xe = PLOT_X0 + (ce - ws) * PLOT_W / max(1, we - ws)

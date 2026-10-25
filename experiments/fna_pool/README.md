@@ -140,7 +140,7 @@ reads（S5）不在本步下载。linked 样本的可用 FASTQ 共约 213 GB（O
   每条原始 call 保存两侧坐标、比对方向和链、两侧 200 bp flank 的 identity/覆盖、contig 末端、tandem 样、边界滑动窗口、另一侧 gap（replacement）。只写“carrier 有 X、空位点无 X”，不推断插入/删除方向。
 - probe：每条 call 的左右 flank 和 core 作为短序列分别比对两个基因组（`map-pb`；asm/HiFi 预设会隐藏短序列的等分次级比对）。任一 flank 在任一基因组有 >1 个位置 → `flank_not_unique`，不锚定；记录 core 在两侧的拷贝数。
 - 一侧 flank：两个基因组在比对末端之外都还有未比对序列（如紧邻 contig 末端）→ `one_flank.tsv`，unresolved，不进 locus 表。
-- `merge`：同 carrier contig 上，相互重叠 ≥0.8 或两端都在滑动窗口+20 bp 内才合并；相邻但不重叠的 core 不合并。`boundary_consistency`：exact / within_shift / partner_dependent（不同伙伴给出不同边界，原始 call 全部保留）。
+- `merge`：同 carrier contig 上，相互重叠 ≥0.8 或两端都在滑动窗口+20 bp 内才合并；相邻但不重叠的 core 不合并。`boundary_consistency`：exact / within_shift / partner_dependent（不同伙伴边界不同）/ direction_dependent（同一伙伴、两个比对方向边界不同）；原始 call 全部保留。`anchored_support`：all_calls_anchored / partner_mixed（另一伙伴的 call 是 replacement/unresolved）/ direction_mixed（同一伙伴的另一方向不锚定）。`max_other_side_gap(_anchored)`：replacement 判定允许另一侧 ≤ max(10 bp, core 的 10%)，这一列显示锚定 call 实际带了多少另一侧序列。
 - 阈值（MIN_CORE 50、FLANK 200、identity/覆盖 0.9、EDGE 1 kb 等）是原型设置，不是校准值。
 
 挑战测试 [test_s3.py](test_s3.py)：13/13 通过——单一插入（两个方向）、反向互补、相距 300 bp 的两个插入、tandem 复制、重复 flank、contig 末端、replacement、同一 core 在不同位置、两个 pair 的同一位点合并、60 bp 调用而 30 bp 不调用、20 kb、60 kb、两 block PAF（split-block 路径；minimap2 把 60 kb 也放在一个 CIGAR 里）。
@@ -167,9 +167,35 @@ reads（S5）不在本步下载。linked 样本的可用 FASTQ 共约 213 GB（O
 
 - 距离越远，差异越多但能锚定的越少：<90% ANI 的 pair 有 1,905 个 locus，只有 53 个锚定；unresolved 主要是 flank identity/覆盖不足（3,842 个，flank identity 中位 0.81）。
 - 同一 pair 的两个比对方向给出相同边界；锚定 locus 中 644 个两个方向都调用，25 个只有一个方向。
-- 锚定 locus 的边界：exact 453，within_shift 211，partner_dependent 40。partner_dependent 多是 10–70 kb 的岛，不同伙伴一个是干净空位点、另一个是 replacement；<2500 bp 中只有 18 个。
+- 锚定 locus 的边界：exact 453，within_shift 211，direction_dependent 33，partner_dependent 7（**更正**：之前把 40 个都记作 partner_dependent、且说 <2500 bp 有 18 个；拆分后 <2500 bp 的 15 个全是同一伙伴两个方向的差异，差 20–40 bp，来自 P00290/P00111 这类较远配对的分歧连接区；7 个真正 partner_dependent 都是 10–77 kb 的岛）。
 - flank 不唯一而不锚定的有 233 个，tandem 样锚定 9 个。
 - 预览（不是 S4）：525 个锚定 <2500 bp core 中，68 个恰含 1–2 个完整 CDS 且边界不切断任何注释特征，产物多为 IS3/IS481/ISL3/IS5 transposase、type II toxin-antitoxin、hypothetical protein；其余多数是 0 个完整 CDS 或边界切断基因。
 - 图：`plots/`（每对按状态各取几个）和 `plots_short_cds/`（上面 8 个 1–2 CDS 示例），SVG，carrier 窗口（GFF3 CDS/rRNA/tRNA，U/core/D）＋伙伴空位点窗口。
 
-尚未做：全部 1,221 对；S4 的正式注释/边界复核；与长读段的关联。
+### 复核后补充（2026-10-25）
+
+- **锚定不等于每个 call 都锚定**：`status` 取最好的 call。704 个锚定 locus 中 all_calls_anchored 634，direction_mixed 56，partner_mixed 14；<2500 bp 的 525 个中分别为 479 / 42 / 4。
+- **10% replacement 容许**：锚定 call 的另一侧 gap，<2500 bp 中 0–10 bp 352，11–50 bp 144，51–250 bp 29；全部锚定中 >250 bp 的 36 个都是长 core（如 91 kb 岛带 4,673 bp 另一侧序列仍算锚定）。阈值未改，只把数值写进 loci.tsv。
+- **实际渲染检查**（rsvg-convert 转 PNG 逐张看）发现并修正：轨道标题压住基因名；负链伙伴未翻转、与 carrier 基因顺序相反；短 core 的 U/core/D 标签重叠；横跨空位点的伙伴基因被拉伸成整段 core 长（如 44 kb 噬菌体位点的 tRNA-Leu）；GFF3 产物名未 URL 解码。现在伙伴轨道按 carrier 方向画，U'/D' 对齐 U/D，每个伙伴/边界组合一条轨道。
+- 新图：`plots_boundary/`（7 个 partner_dependent ＋ 15 个 <2500 bp direction_dependent），`plots_readcheck/`（下面 7 个 mixed/contradicted）。
+
+### 长读段等位检查（[s3_readcheck.py](s3_readcheck.py)，job 27263902，3 h 37 min，大部分是下载）
+
+每个锚定 locus 的每条原始 call 一个检验：在**各样本自己的组装**上构建 present（U+core+D）和 absent（U+另一侧+D）两个局部等位（各 2 kb flank），用该 BioSample 关联的 run 比对（ONT map-ont，HiFi map-hifi，其余 PacBio map-pb），只数**跨过两个连接点各 300 bp（加滑动窗口）**的读段；两个等位都跨过时按 AS 差 ≥20 判定。判定规则预先固定（≥3 条跨越读段；另一等位 ≤10% 为 consistent），没有按试跑调。
+
+**这些读段通常就是组装用的读段，所以这是组装一致性检查，不是独立测序验证。** 12 个 run 下载后 MD5/字节/碱基数全部核对通过（verify_*.json）。4 个 pilot 样本没有关联 run（P00290、P00111、P00384、P00007 只有一侧有读段）。构建检查：1,938 个伙伴等位中 1,925 个与同一检验的 carrier 对应等位最匹配，13 个（12 个检验）无命中或不一致。
+
+| 检验（969 个，carrier/伙伴） | 数 |
+|---|---:|
+| 两侧都 consistent | 294 |
+| 只有一侧有读段且 consistent | 617 |
+| carrier 跨越读段不足（长 core），伙伴无读段或 consistent | 51 |
+| mixed | 6 |
+| contradicted | 1 |
+
+- <2500 bp 的 525 个锚定 locus：两侧 consistent 220，一侧 consistent 301，mixed 3，contradicted 1；有读段的一侧没有一个是读段不足（跨越读段中位数 carrier 110、伙伴 111）。15 个 direction_dependent 都只有一侧有读段，读段支持 carrier 的 core，但区分不了两个方向的边界。
+- contradicted：L_dc88a873e166，216 bp tandem 样 core，在 beta-strand repeat 蛋白基因内；伙伴 SAMD00407106 的 240 条跨越读段全部支持“有 core”，伙伴组装很可能塌缩了一个重复单元——这是组装假象，不是真实差异。
+- mixed：L_02729f48424a（318 bp，carrier 有 6 个拷贝，carrier 读段 51 present / 29 absent）和 L_43ea79084943（1,301 bp，33/17）可能是样本内亚群或重复相关；L_128138f94820（54 bp）有 54 条 ambiguous；另外 3 个是 4–39 kb 长 core，跨越 present 等位需要更长读段，计数天然偏向 absent，不能直接解读。
+- PacBio 计数单位：SRA 规范化的 subread 同一 spot 同名，按一条计；DRR396223 名字里没有 ZMW 信息，可能把同一分子的多个 subread 重复计数。
+
+尚未做：全部 1,221 对；S4 的正式注释/边界复核；core 蛋白合并。

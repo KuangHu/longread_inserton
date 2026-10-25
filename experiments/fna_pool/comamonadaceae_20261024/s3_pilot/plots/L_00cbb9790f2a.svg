@@ -56,7 +56,9 @@
 <polygon points="829.3,349 835.3,343 932.7,343 932.7,355 835.3,355" fill="#3b6fb6"><title>HD domain-containing protein 5029029-5029656 -</title></polygon>
 <polygon points="741.1,325 818.2,325 824.2,331 818.2,337 741.1,337" fill="#3b6fb6"><title>hypothetical protein 5029687-5030191 +</title></polygon>
 <text x="741.1" y="321" font-size="8" fill="#333">hypothetical prote</text>
-<polygon points="553.5,325 735.8,325 741.8,331 735.8,337 553.5,337" fill="#3b6fb6"><title>beta-ketoacyl synthase N-terminal-like d 5030187-5031264 +</title></polygon>
+<line x1="554.6" y1="331" x2="565.4" y2="331" stroke="#555" stroke-dasharray="2,2"/>
+<polygon points="553.5,325 553.5,325 554.6,331 553.5,337 553.5,337" fill="#3b6fb6"><title>beta-ketoacyl synthase N-terminal-like d 5030187-5031257 +</title></polygon>
+<polygon points="565.4,325 735.8,325 741.8,331 735.8,337 565.4,337" fill="#3b6fb6"><title>beta-ketoacyl synthase N-terminal-like d 5031257-5031264 +</title></polygon>
 <polygon points="516.1,325 548.1,325 554.1,331 548.1,337 516.1,337" fill="#3b6fb6"><title>acyl carrier protein 5031260-5031491 +</title></polygon>
 <polygon points="318.4,325 503.3,325 509.3,331 503.3,337 318.4,337" fill="#3b6fb6"><title>ABC transporter permease 5031532-5032690 +</title></polygon>
 <polygon points="167.7,325 311.5,325 317.5,331 311.5,337 167.7,337" fill="#3b6fb6"><title>ABC transporter ATP-binding protein 5032695-5033604 +</title></polygon>

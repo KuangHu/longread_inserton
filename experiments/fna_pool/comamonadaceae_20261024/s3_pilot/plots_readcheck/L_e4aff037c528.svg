@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="300" font-family="sans-serif">
+<rect width="100%" height="100%" fill="white"/>
+<text x="4" y="16" font-size="12">L_e4aff037c528  SAMEA120308855  core 4242 bp  two_flank_anchored  support all_calls_anchored  boundary exact  tandem False  core copies carrier/partner 1/0</text>
+<line x1="352.9" y1="30" x2="352.9" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<line x1="767.1" y1="30" x2="767.1" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<text x="4" y="64" font-size="11" font-weight="bold">SAMEA120308855 NZ_CDRKIR010000001.1 (carrier)</text>
+<line x1="60" y1="100" x2="1060" y2="100" stroke="#888"/>
+<rect x="255.3" y="132" width="97.6" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="304.1" y="152" font-size="9" text-anchor="middle">U</text>
+<rect x="352.9" y="132" width="414.2" height="8" fill="#e76f51" opacity="0.55"/>
+<text x="560.0" y="152" font-size="9" text-anchor="middle">core 4242</text>
+<rect x="767.1" y="132" width="97.6" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="815.9" y="152" font-size="9" text-anchor="middle">D</text>
+<polygon points="60.0,109 66.0,103 200.1,103 200.1,115 66.0,115" fill="#3b6fb6"><title>TonB-dependent siderophore receptor 3710670-3713133 -</title></polygon>
+<text x="60.0" y="125" font-size="8" fill="#333">TonB-dependent siderophore rec</text>
+<polygon points="209.0,109 215.0,103 307.1,103 307.1,115 215.0,115" fill="#3b6fb6"><title>FecR domain-containing protein 3713224-3714229 -</title></polygon>
+<text x="209.0" y="125" font-size="8" fill="#333">FecR domain-containin</text>
+<polygon points="305.0,109 311.0,103 354.5,103 354.5,115 311.0,115" fill="#3b6fb6"><title>sigma-70 family RNA polymerase sigma fac 3714207-3714714 -</title></polygon>
+<polygon points="366.1,109 372.1,103 609.8,103 609.8,115 372.1,115" fill="#3b6fb6"><title>TonB-dependent siderophore receptor 3714833-3717329 -</title></polygon>
+<text x="366.1" y="125" font-size="8" fill="#333">TonB-dependent siderophore receptor</text>
+<polygon points="619.1,109 625.1,103 717.8,103 717.8,115 625.1,115" fill="#3b6fb6"><title>FecR domain-containing protein 3717424-3718435 -</title></polygon>
+<text x="619.1" y="125" font-size="8" fill="#333">FecR domain-containin</text>
+<polygon points="717.4,109 723.4,103 769.2,103 769.2,115 723.4,115" fill="#3b6fb6"><title>sigma-70 family RNA polymerase sigma fac 3718431-3718962 -</title></polygon>
+<polygon points="791.5,85 1038.3,85 1044.3,91 1038.3,97 791.5,97" fill="#3b6fb6"><title>sensor domain-containing protein 3719190-3721779 +</title></polygon>
+<text x="791.5" y="81" font-size="8" fill="#333">sensor domain-containing protein</text>
+<text x="60" y="166" font-size="9" fill="#666">NZ_CDRKIR010000001.1:3711698-3721940  core 3714698-3718940</text>
+<text x="4" y="184" font-size="11" font-weight="bold">SAMD00407106 NZ_AP025556.1 (partner, + strand, two_flank_anchored, pair P00034)</text>
+<line x1="60" y1="220" x2="1060" y2="220" stroke="#888"/>
+<rect x="255.3" y="252" width="97.6" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="304.1" y="272" font-size="9" text-anchor="middle">U'</text>
+<rect x="767.1" y="252" width="97.6" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="815.9" y="272" font-size="9" text-anchor="middle">D'</text>
+<rect x="352.9" y="252" width="414.2" height="8" fill="#ffffff" opacity="0.55"/>
+<polygon points="60.0,229 66.0,223 199.4,223 199.4,235 66.0,235" fill="#3b6fb6"><title>TonB-dependent siderophore receptor 3707669-3710114 -</title></polygon>
+<text x="60.0" y="245" font-size="8" fill="#333">TonB-dependent siderophore rec</text>
+<polygon points="208.1,229 214.1,223 307.1,223 307.1,235 214.1,235" fill="#3b6fb6"><title>FecR domain-containing protein 3710203-3711217 -</title></polygon>
+<text x="208.1" y="245" font-size="8" fill="#333">FecR domain-containin</text>
+<line x1="352.9" y1="229" x2="767.1" y2="229" stroke="#555" stroke-dasharray="2,2"/>
+<polygon points="305.0,229 311.0,223 352.9,223 352.9,235 311.0,235" fill="#3b6fb6"><title>sigma-70 family RNA polymerase sigma fac 3711195-3711686 -</title></polygon>
+<polygon points="767.1,229 769.2,223 769.2,223 769.2,235 769.2,235" fill="#3b6fb6"><title>sigma-70 family RNA polymerase sigma fac 3711686-3711708 -</title></polygon>
+<polygon points="791.4,205 1038.2,205 1044.2,211 1038.2,217 791.4,217" fill="#3b6fb6"><title>sensor domain-containing protein 3711935-3714524 +</title></polygon>
+<text x="791.4" y="201" font-size="8" fill="#333">sensor domain-containing protein</text>
+<text x="60" y="286" font-size="9" fill="#666">NZ_AP025556.1 site 3711686  other-side gap 0 bp  this call's core 3714698-3718940</text>
+<rect x="352.9" y="218" width="414.2" height="4" fill="#f4f4f4"/><text x="560.0" y="272" font-size="9" text-anchor="middle" fill="#a5372f">empty site</text>
+</svg>

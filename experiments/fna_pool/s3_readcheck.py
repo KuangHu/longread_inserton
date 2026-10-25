@@ -7,7 +7,9 @@ favour one allele:
   partner (role E): absent = U' + other + D', present = U' + core + D' (core oriented to the partner's strand)
 with FLANK bp of U/D. A read supports an allele when its alignment to that allele covers both junctions plus ANCHOR bp
 (plus the boundary shift window) on each side; a read spanning both alleles goes to the higher alignment score if
-the difference is >= MIN_DELTA_AS, otherwise it is ambiguous. Partial reads are not counted.
+the difference is >= MIN_DELTA_AS, otherwise it is ambiguous. Partial reads are not counted. Reads are counted by
+FASTQ name: SRA-normalised PacBio subreads of one spot share a name and count once; runs without ZMW information in
+the names (molecule_grouping_unavailable in verify.json) may count several subreads of one molecule.
 
 Role verdicts (expected allele: C present, E absent), from spanning reads n = expected + other:
   insufficient (n < MIN_SPAN), consistent (other <= MAX_OTHER_FRACTION * n), contradicted (expected <= that
@@ -224,7 +226,7 @@ def verdict(expected, other):
 def cmd_summarize(a):
     tests = read(a.work / "tests.tsv")
     paf_dir = a.work / "paf"
-    have = {p.stem for p in paf_dir.glob("*.json")}
+    have = {p.stem for p in paf_dir.glob("*.json") if json.load(open(str(p)))["runs"]}  # samples with >= 1 mapped run
     counts = classify(sorted(paf_dir.glob("*.paf")), tests)
     rows = []
     for t in tests:
@@ -267,7 +269,9 @@ def cmd_summarize(a):
                 short_loci=len(short), short_locus_verdicts=dict(Counter(l["locus_verdict"] for l in short)),
                 short_by_support={s: dict(Counter(l["locus_verdict"] for l in short if l["locus_support"] == s))
                                   for s in sorted({l["locus_support"] for l in short})},
-                short_partner_dependent=dict(Counter(l["locus_verdict"] for l in short if l["boundary_consistency"] == "partner_dependent")),
+                short_by_boundary={b: dict(Counter(l["locus_verdict"] for l in short if l["boundary_consistency"] == b))
+                                   for b in sorted({l["boundary_consistency"] for l in short})},
+                side_verdicts=dict(Counter("%s/%s" % (r["C_verdict"], r["E_verdict"]) for r in rows)),
                 samples_with_reads=sorted(have))
     (a.out / "readcheck_summary.json").write_text(json.dumps(summ, indent=1) + "\n")
     print(json.dumps(summ, indent=1))

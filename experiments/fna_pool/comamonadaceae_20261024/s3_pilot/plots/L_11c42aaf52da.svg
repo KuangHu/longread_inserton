@@ -32,7 +32,9 @@
 <rect x="504.6" y="252" width="110.7" height="8" fill="#ffffff" opacity="0.55"/>
 <polygon points="60.0,205 146.3,205 152.3,211 146.3,217 60.0,217" fill="#3b6fb6"><title>fimbria/pilus chaperone family protein 3590493-3591210 +</title></polygon>
 <text x="60.0" y="201" font-size="8" fill="#333">fimbria/pilus chaper</text>
-<polygon points="156.6,205 619.7,205 625.7,211 619.7,217 156.6,217" fill="#3b6fb6"><title>fimbria/pilus outer membrane usher prote 3591239-3593657 +</title></polygon>
+<line x1="504.6" y1="211" x2="615.4" y2="211" stroke="#555" stroke-dasharray="2,2"/>
+<polygon points="156.6,205 498.6,205 504.6,211 498.6,217 156.6,217" fill="#3b6fb6"><title>fimbria/pilus outer membrane usher prote 3591239-3593587 +</title></polygon>
+<polygon points="615.4,205 619.7,205 625.7,211 619.7,217 615.4,217" fill="#3b6fb6"><title>fimbria/pilus outer membrane usher prote 3593587-3593657 +</title></polygon>
 <polygon points="626.2,205 749.6,205 755.6,211 749.6,217 626.2,217" fill="#3b6fb6"><title>response regulator transcription factor 3593660-3594533 +</title></polygon>
 <text x="626.2" y="201" font-size="8" fill="#333">response regulator transcrip</text>
 <polygon points="757.9,229 763.9,223 900.7,223 900.7,235 763.9,235" fill="#3b6fb6"><title>LysR family transcriptional regulator 3594549-3595512 -</title></polygon>

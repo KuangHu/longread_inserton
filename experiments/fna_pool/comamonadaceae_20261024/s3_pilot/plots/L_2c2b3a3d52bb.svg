@@ -49,8 +49,10 @@
 <rect x="236.4" y="252" width="647.1" height="8" fill="#ffffff" opacity="0.55"/>
 <polygon points="60.0,205 130.3,205 136.3,211 130.3,217 60.0,217" fill="#3b6fb6"><title>IMP dehydrogenase 1655396-1656866 +</title></polygon>
 <text x="60.0" y="201" font-size="8" fill="#333">IMP dehydrogenas</text>
-<polygon points="140.5,205 878.1,205 884.1,211 878.1,217 140.5,217" fill="#3b6fb6"><title>glutamine-hydrolyzing GMP synthase 1656936-1658577 +</title></polygon>
-<text x="140.5" y="201" font-size="8" fill="#333">glutamine-hydrolyzing GMP synthase</text>
+<line x1="236.4" y1="211" x2="883.6" y2="211" stroke="#555" stroke-dasharray="2,2"/>
+<polygon points="140.5,205 230.4,205 236.4,211 230.4,217 140.5,217" fill="#3b6fb6"><title>glutamine-hydrolyzing GMP synthase 1656936-1658568 +</title></polygon>
+<text x="140.5" y="201" font-size="8" fill="#333">glutamine-hydrolyzin</text>
+<polygon points="883.6,205 883.6,205 884.1,211 883.6,217 883.6,217" fill="#3b6fb6"><title>glutamine-hydrolyzing GMP synthase 1658568-1658577 +</title></polygon>
 <polygon points="886.7,205 916.9,205 922.9,211 916.9,217 886.7,217" fill="#3b6fb6"><title>FMN-binding negative transcriptional reg 1658622-1659237 +</title></polygon>
 <text x="886.7" y="201" font-size="8" fill="#333">FMN-bin</text>
 <polygon points="923.0,205 997.8,205 1003.8,211 997.8,217 923.0,217" fill="#3b6fb6"><title>tRNA adenosine(34) deaminase TadA 1659239-1660613 +</title></polygon>
