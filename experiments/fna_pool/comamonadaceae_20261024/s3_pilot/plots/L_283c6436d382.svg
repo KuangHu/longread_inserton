@@ -1,175 +1,171 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="250" font-family="sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="420" font-family="sans-serif">
 <rect width="100%" height="100%" fill="white"/>
-<text x="4" y="14" font-size="12">L_283c6436d382  SAMD00407106  core 93508 bp  status two_flank_anchored  pairs 2  tandem False  core copies carrier/empty 1/0</text>
-<text x="4" y="66" font-size="11">SAMD00407106 NZ_AP025556.1 (carrier)</text>
-<line x1="60" y1="80" x2="1060" y2="80" stroke="#888"/>
-<rect x="80.1" y="75" width="10.0" height="10" fill="#2a9d8f" opacity="0.45"/><text x="80.1" y="98" font-size="9">U</text>
-<rect x="90.1" y="75" width="939.7" height="10" fill="#e76f51" opacity="0.45"/><text x="90.1" y="98" font-size="9">core</text>
-<rect x="1029.9" y="75" width="10.0" height="10" fill="#2a9d8f" opacity="0.45"/><text x="1029.9" y="98" font-size="9">D</text>
-<polygon points="60.0,64 60.0,64 62.7,70 60.0,76 60.0,76" fill="#3b6fb6"><title>GNAT family N-acetyltransferase 4266826-4267414 +</title></polygon>
-<polygon points="63.2,64 66.2,64 72.2,70 66.2,76 63.2,76" fill="#3b6fb6"><title>glutamate racemase 4267472-4268363 +</title></polygon>
-<polygon points="72.2,90 78.2,84 78.4,84 78.4,96 78.2,96" fill="#3b6fb6"><title>M48 metallopeptidase family protein 4268364-4268976 -</title></polygon>
-<polygon points="78.7,90 84.7,84 85.0,84 85.0,96 84.7,96" fill="#3b6fb6"><title>DUF6806 family protein 4269008-4269635 -</title></polygon>
-<polygon points="88.3,90 89.2,84 89.2,84 89.2,96 89.2,96" fill="#b68a3b"><title>tRNA-Leu 4269963-4270054 -</title></polygon>
-<polygon points="94.2,90 99.3,84 99.3,84 99.3,96 99.3,96" fill="#3b6fb6"><title>DUF305 domain-containing protein 4270558-4271059 -</title></polygon>
-<polygon points="103.8,64 105.3,64 111.3,70 105.3,76 103.8,76" fill="#3b6fb6"><title>hypothetical protein 4271509-4272256 +</title></polygon>
-<polygon points="112.5,64 112.5,64 114.6,70 112.5,76 112.5,76" fill="#3b6fb6"><title>AlpA family transcriptional regulator 4272374-4272587 +</title></polygon>
-<polygon points="115.1,64 117.9,64 123.9,70 117.9,76 115.1,76" fill="#3b6fb6"><title>ParA family protein 4272629-4273505 +</title></polygon>
-<polygon points="123.7,64 123.7,64 126.4,70 123.7,76 123.7,76" fill="#3b6fb6"><title>hypothetical protein 4273488-4273758 +</title></polygon>
-<polygon points="126.3,64 137.2,64 143.2,70 137.2,76 126.3,76" fill="#3b6fb6"><title>ParB family protein 4273750-4275430 +</title></polygon>
-<polygon points="143.4,64 143.4,64 149.0,70 143.4,76 143.4,76" fill="#3b6fb6"><title>DUF2857 domain-containing protein 4275444-4276005 +</title></polygon>
-<polygon points="149.0,64 155.5,64 161.5,70 155.5,76 149.0,76" fill="#3b6fb6"><title>STY4528 family pathogenicity island repl 4276008-4277247 +</title></polygon>
-<polygon points="165.8,64 167.7,64 173.7,70 167.7,76 165.8,76" fill="#3b6fb6"><title>PFL_4669 family integrating conjugative  4277676-4278468 +</title></polygon>
-<polygon points="173.7,64 173.7,64 179.0,70 173.7,76 173.7,76" fill="#3b6fb6"><title>DUF3158 family protein 4278464-4278992 +</title></polygon>
-<polygon points="179.7,64 179.7,64 184.2,70 179.7,76 179.7,76" fill="#3b6fb6"><title>single-stranded DNA-binding protein 4279065-4279506 +</title></polygon>
-<polygon points="187.0,64 201.4,64 207.4,70 201.4,76 187.0,76" fill="#3b6fb6"><title>DNA topoisomerase III 4279789-4281820 +</title></polygon>
-<polygon points="214.7,90 220.7,84 221.1,84 221.1,96 220.7,96" fill="#3b6fb6"><title>cation efflux transmembrane domain-conta 4282543-4283179 -</title></polygon>
-<polygon points="224.9,64 224.9,64 227.3,70 224.9,76 224.9,76" fill="#3b6fb6"><title>sterol desaturase family protein 4283563-4283800 +</title></polygon>
-<polygon points="227.6,64 227.6,64 231.2,70 227.6,76 227.6,76" fill="#3b6fb6"><title>DUF3703 domain-containing protein 4283824-4284187 +</title></polygon>
-<polygon points="231.9,90 235.9,84 235.9,84 235.9,96 235.9,96" fill="#3b6fb6"><title>Cd(II)/Pb(II)-responsive transcriptional 4284254-4284653 -</title></polygon>
-<polygon points="236.8,64 260.1,64 266.1,70 260.1,76 236.8,76" fill="#3b6fb6"><title>heavy metal translocating P-type ATPase 4284744-4287657 +</title></polygon>
-<polygon points="266.1,64 266.1,64 271.1,70 266.1,76 266.1,76" fill="#3b6fb6"><title>signal peptidase II 4287660-4288161 +</title></polygon>
-<polygon points="274.5,64 274.5,64 277.7,70 274.5,76 274.5,76" fill="#3b6fb6"><title>hypothetical protein 4288497-4288809 +</title></polygon>
-<polygon points="281.0,64 281.0,64 283.2,70 281.0,76 281.0,76" fill="#3b6fb6"><title>hypothetical protein 4289146-4289359 +</title></polygon>
-<polygon points="283.4,64 283.4,64 287.3,70 283.4,76 283.4,76" fill="#3b6fb6"><title>hypothetical protein 4289380-4289773 +</title></polygon>
-<polygon points="289.2,64 290.1,64 296.1,70 290.1,76 289.2,76" fill="#3b6fb6"><title>hypothetical protein 4289955-4290642 +</title></polygon>
-<polygon points="296.9,64 298.3,64 304.3,70 298.3,76 296.9,76" fill="#3b6fb6"><title>DUF5983 family protein 4290725-4291463 +</title></polygon>
-<polygon points="305.3,64 305.3,64 308.1,70 305.3,76 305.3,76" fill="#3b6fb6"><title>hypothetical protein 4291560-4291839 +</title></polygon>
-<polygon points="311.0,64 313.3,64 319.3,70 313.3,76 311.0,76" fill="#3b6fb6"><title>hypothetical protein 4292127-4292952 +</title></polygon>
-<polygon points="321.9,90 326.0,84 326.0,84 326.0,96 326.0,96" fill="#3b6fb6"><title>Hg(II)-responsive transcriptional regula 4293213-4293621 -</title></polygon>
-<polygon points="326.7,64 326.7,64 330.3,70 326.7,76 326.7,76" fill="#3b6fb6"><title>mercuric ion transporter MerT 4293692-4294043 +</title></polygon>
-<polygon points="330.4,64 330.4,64 333.3,70 330.4,76 330.4,76" fill="#3b6fb6"><title>mercury resistance system periplasmic bi 4294055-4294343 +</title></polygon>
-<polygon points="333.4,64 344.3,64 350.3,70 344.3,76 333.4,76" fill="#3b6fb6"><title>mercury(II) reductase 4294353-4296042 +</title></polygon>
-<polygon points="350.5,64 350.5,64 355.7,70 350.5,76 350.5,76" fill="#3b6fb6"><title>Tn3 family transposase 4296060-4296576 +</title></polygon>
-<polygon points="355.3,64 355.3,64 360.6,70 355.3,76 355.3,76" fill="#999"><title>Tn3 family transposase 4296539-4297058 +</title></polygon>
-<polygon points="360.9,64 360.9,64 363.9,70 360.9,76 360.9,76" fill="#999"><title>DUF3085 domain-containing protein 4297091-4297388 +</title></polygon>
-<polygon points="365.3,64 365.3,64 369.8,70 365.3,76 365.3,76" fill="#999"><title>XF1762 family protein 4297529-4297980 +</title></polygon>
-<polygon points="372.9,64 376.0,64 382.0,70 376.0,76 372.9,76" fill="#3b6fb6"><title>DUF3577 domain-containing protein 4298290-4299196 +</title></polygon>
-<polygon points="383.5,64 385.8,64 391.8,70 385.8,76 383.5,76" fill="#3b6fb6"><title>DUF932 domain-containing protein 4299341-4300169 +</title></polygon>
-<polygon points="392.8,64 393.7,64 399.7,70 393.7,76 392.8,76" fill="#3b6fb6"><title>DUF3275 family protein 4300264-4300954 +</title></polygon>
-<polygon points="400.7,64 400.7,64 404.1,70 400.7,76 400.7,76" fill="#3b6fb6"><title>hypothetical protein 4301048-4301390 +</title></polygon>
-<polygon points="405.1,64 405.1,64 409.2,70 405.1,76 405.1,76" fill="#3b6fb6"><title>hypothetical protein 4301493-4301901 +</title></polygon>
-<polygon points="409.4,64 409.4,64 412.0,70 409.4,76 409.4,76" fill="#3b6fb6"><title>hypothetical protein 4301917-4302178 +</title></polygon>
-<polygon points="412.8,64 413.3,64 419.3,70 413.3,76 412.8,76" fill="#3b6fb6"><title>hypothetical protein 4302254-4302905 +</title></polygon>
-<polygon points="419.7,64 425.1,64 431.1,70 425.1,76 419.7,76" fill="#3b6fb6"><title>DUF6094 domain-containing protein 4302945-4304079 +</title></polygon>
-<polygon points="431.6,64 431.6,64 434.9,70 431.6,76 431.6,76" fill="#3b6fb6"><title>hypothetical protein 4304130-4304451 +</title></polygon>
-<polygon points="435.7,64 435.7,64 438.8,70 435.7,76 435.7,76" fill="#3b6fb6"><title>hypothetical protein 4304539-4304845 +</title></polygon>
-<polygon points="440.2,64 457.1,64 463.1,70 457.1,76 440.2,76" fill="#3b6fb6"><title>helicase-related protein 4304980-4307260 +</title></polygon>
-<polygon points="464.5,64 464.5,64 470.5,70 464.5,76 464.5,76" fill="#3b6fb6"><title>PFGI-1 class ICE element type IV pilus p 4307398-4307998 +</title></polygon>
-<polygon points="470.5,64 470.9,64 476.9,70 470.9,76 470.5,76" fill="#3b6fb6"><title>hypothetical protein 4307994-4308639 +</title></polygon>
-<polygon points="477.1,64 478.5,64 484.5,70 478.5,76 477.1,76" fill="#3b6fb6"><title>TIGR03759 family integrating conjugative 4308651-4309389 +</title></polygon>
-<polygon points="484.3,64 484.3,64 490.2,70 484.3,76 484.3,76" fill="#3b6fb6"><title>transglycosylase SLT domain-containing p 4309370-4309961 +</title></polygon>
-<polygon points="490.2,64 490.2,64 495.7,70 490.2,76 490.2,76" fill="#3b6fb6"><title>integrating conjugative element protein 4309957-4310506 +</title></polygon>
-<polygon points="495.7,64 505.4,64 511.4,70 505.4,76 495.7,76" fill="#999"><title>type IV conjugative transfer system coup 4310510-4312067 +</title></polygon>
-<polygon points="512.9,64 523.3,64 529.3,70 523.3,76 512.9,76" fill="#3b6fb6"><title>IS21 family transposase 4312222-4313845 +</title></polygon>
-<polygon points="529.2,64 530.8,64 536.8,70 530.8,76 529.2,76" fill="#3b6fb6"><title>IS21-like element helper ATPase IstB 4313841-4314600 +</title></polygon>
-<polygon points="537.6,64 538.0,64 544.0,70 538.0,76 537.6,76" fill="#999"><title>TraM recognition domain-containing prote 4314672-4315314 +</title></polygon>
-<polygon points="544.0,64 545.5,64 551.5,70 545.5,76 544.0,76" fill="#3b6fb6"><title>TIGR03747 family integrating conjugative 4315310-4316060 +</title></polygon>
-<polygon points="551.9,90 557.9,84 578.3,84 578.3,96 557.9,96" fill="#3b6fb6"><title>AAA family ATPase 4316100-4318725 -</title></polygon>
-<polygon points="578.4,90 584.4,84 585.7,84 585.7,96 584.4,96" fill="#3b6fb6"><title>CBASS effector endonuclease NucC 4318734-4319460 -</title></polygon>
-<polygon points="586.1,90 592.1,84 595.1,84 595.1,96 592.1,96" fill="#3b6fb6"><title>CBASS oligonucleotide cyclase 4319498-4320401 -</title></polygon>
-<polygon points="595.1,90 600.2,84 600.2,84 600.2,96 600.2,96" fill="#3b6fb6"><title>type III CBASS phage resistance system C 4320400-4320901 -</title></polygon>
-<polygon points="600.1,90 604.9,84 604.9,84 604.9,96 604.9,96" fill="#3b6fb6"><title>type III CBASS phage resistance system C 4320897-4321368 -</title></polygon>
-<polygon points="604.8,90 610.8,84 614.0,84 614.0,96 610.8,96" fill="#3b6fb6"><title>CBASS system CD-NTase-associated protein 4321364-4322279 -</title></polygon>
-<polygon points="614.2,90 620.0,84 620.0,84 620.0,96 620.0,96" fill="#3b6fb6"><title>PIN domain-containing protein 4322296-4322872 -</title></polygon>
-<polygon points="619.9,90 624.7,84 624.7,84 624.7,96 624.7,96" fill="#3b6fb6"><title>helix-turn-helix domain-containing prote 4322868-4323339 -</title></polygon>
-<polygon points="626.7,64 626.7,64 630.6,70 626.7,76 626.7,76" fill="#3b6fb6"><title>integrative conjugative element protein% 4323542-4323926 +</title></polygon>
-<polygon points="630.5,64 630.5,64 632.9,70 630.5,76 630.5,76" fill="#3b6fb6"><title>TIGR03758 family integrating conjugative 4323922-4324156 +</title></polygon>
-<polygon points="633.0,64 633.0,64 636.7,70 633.0,76 633.0,76" fill="#3b6fb6"><title>TIGR03745 family integrating conjugative 4324172-4324532 +</title></polygon>
-<polygon points="636.8,64 636.8,64 640.8,70 636.8,76 636.8,76" fill="#3b6fb6"><title>TIGR03750 family conjugal transfer prote 4324543-4324942 +</title></polygon>
-<polygon points="640.7,64 641.7,64 647.7,70 641.7,76 640.7,76" fill="#3b6fb6"><title>PFL_4703 family integrating conjugative  4324938-4325631 +</title></polygon>
-<polygon points="647.7,64 650.8,64 656.8,70 650.8,76 647.7,76" fill="#3b6fb6"><title>TIGR03749 family integrating conjugative 4325627-4326539 +</title></polygon>
-<polygon points="656.7,64 665.0,64 671.0,70 665.0,76 656.7,76" fill="#3b6fb6"><title>TIGR03752 family integrating conjugative 4326528-4327947 +</title></polygon>
-<polygon points="670.8,64 670.8,64 675.3,70 670.8,76 670.8,76" fill="#3b6fb6"><title>TIGR03751 family conjugal transfer lipop 4327927-4328377 +</title></polygon>
-<polygon points="675.3,64 698.4,64 704.4,70 698.4,76 675.3,76" fill="#3b6fb6"><title>conjugative transfer ATPase 4328376-4331268 +</title></polygon>
-<polygon points="704.6,64 706.3,64 712.3,70 706.3,76 704.6,76" fill="#3b6fb6"><title>DsbA family protein 4331292-4332060 +</title></polygon>
-<polygon points="714.1,64 714.1,64 719.0,70 714.1,76 714.1,76" fill="#3b6fb6"><title>JAB domain-containing protein 4332235-4332730 +</title></polygon>
-<polygon points="720.7,64 720.7,64 725.2,70 720.7,76 720.7,76" fill="#3b6fb6"><title>TIGR03757 family integrating conjugative 4332894-4333341 +</title></polygon>
-<polygon points="726.0,64 728.7,64 734.7,70 728.7,76 726.0,76" fill="#3b6fb6"><title>TIGR03756 family integrating conjugative 4333424-4334288 +</title></polygon>
-<polygon points="734.8,64 742.8,64 748.8,70 742.8,76 734.8,76" fill="#3b6fb6"><title>integrating conjugative element protein 4334297-4335692 +</title></polygon>
-<polygon points="748.8,64 748.8,64 752.4,70 748.8,76 748.8,76" fill="#3b6fb6"><title>hypothetical protein 4335688-4336048 +</title></polygon>
-<polygon points="752.5,64 761.8,64 767.8,70 761.8,76 752.5,76" fill="#3b6fb6"><title>conjugal transfer protein TraG N-termina 4336061-4337582 +</title></polygon>
-<polygon points="767.9,90 771.6,84 771.6,84 771.6,96 771.6,96" fill="#3b6fb6"><title>DUF3742 family protein 4337593-4337959 -</title></polygon>
-<polygon points="772.4,90 778.4,84 778.8,84 778.8,96 778.4,96" fill="#3b6fb6"><title>RES family NAD+ phosphorylase 4338043-4338676 -</title></polygon>
-<polygon points="778.9,90 784.9,84 785.2,84 785.2,96 784.9,96" fill="#3b6fb6"><title>hypothetical protein 4338688-4339315 -</title></polygon>
-<polygon points="788.4,64 801.0,64 807.0,70 801.0,76 788.4,76" fill="#3b6fb6"><title>MobH family relaxase 4339630-4341478 +</title></polygon>
-<polygon points="809.9,64 815.9,64 821.9,70 815.9,76 809.9,76" fill="#999"><title>efflux RND transporter periplasmic adapt 4341771-4342968 +</title></polygon>
-<polygon points="822.9,64 822.9,64 827.7,70 822.9,76 822.9,76" fill="#999"><title>efflux RND transporter permease subunit 4343060-4343542 +</title></polygon>
-<polygon points="830.1,64 838.9,64 844.9,70 838.9,76 830.1,76" fill="#999"><title>chromosome partitioning protein ParB 4343785-4345252 +</title></polygon>
-<polygon points="847.0,90 852.2,84 852.2,84 852.2,96 852.2,96" fill="#3b6fb6"><title>GNAT family N-acetyltransferase 4345459-4345978 -</title></polygon>
-<polygon points="852.3,90 858.3,84 864.7,84 864.7,96 858.3,96" fill="#3b6fb6"><title>chromate efflux transporter 4345995-4347225 -</title></polygon>
-<polygon points="864.7,90 868.0,84 868.0,84 868.0,96 868.0,96" fill="#3b6fb6"><title>PadR family transcriptional regulator 4347221-4347551 -</title></polygon>
-<polygon points="868.7,90 872.9,84 872.9,84 872.9,96 872.9,96" fill="#3b6fb6"><title>arsenate reductase (glutaredoxin) 4347622-4348045 -</title></polygon>
-<polygon points="873.1,90 879.1,84 884.0,84 884.0,96 879.1,96" fill="#3b6fb6"><title>ACR3 family arsenite efflux transporter 4348059-4349145 -</title></polygon>
-<polygon points="884.1,90 889.1,84 889.1,84 889.1,96 889.1,96" fill="#3b6fb6"><title>arsenate reductase ArsC 4349155-4349653 -</title></polygon>
-<polygon points="889.2,90 894.0,84 894.0,84 894.0,96 894.0,96" fill="#3b6fb6"><title>ArsI/CadI family heavy metal resistance  4349665-4350136 -</title></polygon>
-<polygon points="894.1,90 897.4,84 897.4,84 897.4,96 897.4,96" fill="#3b6fb6"><title>ArsR/SmtB family transcription factor 4350149-4350479 -</title></polygon>
-<polygon points="906.9,90 912.9,84 921.2,84 921.2,96 912.9,96" fill="#3b6fb6"><title>Cu(+)/Ag(+) sensor histidine kinase 4351426-4352851 -</title></polygon>
-<polygon points="921.1,90 927.1,84 928.0,84 928.0,96 927.1,96" fill="#3b6fb6"><title>heavy metal response regulator transcrip 4352834-4353527 -</title></polygon>
-<polygon points="930.6,64 943.7,64 949.7,70 943.7,76 930.6,76" fill="#3b6fb6"><title>copper resistance system multicopper oxi 4353781-4355683 +</title></polygon>
-<polygon points="950.0,64 953.8,64 959.8,70 953.8,76 950.0,76" fill="#3b6fb6"><title>copper resistance protein B 4355708-4356689 +</title></polygon>
-<polygon points="960.2,64 960.2,64 965.1,70 960.2,76 960.2,76" fill="#3b6fb6"><title>DUF411 domain-containing protein 4356726-4357212 +</title></polygon>
-<polygon points="965.4,64 965.4,64 968.1,70 965.4,76 965.4,76" fill="#3b6fb6"><title>DUF2933 domain-containing protein 4357245-4357518 +</title></polygon>
-<polygon points="969.3,64 988.2,64 994.2,70 988.2,76 969.3,76" fill="#3b6fb6"><title>heavy metal translocating P-type ATPase 4357631-4360112 +</title></polygon>
-<polygon points="995.6,64 995.6,64 999.5,70 995.6,76 995.6,76" fill="#3b6fb6"><title>copper homeostasis periplasmic binding p 4360253-4360640 +</title></polygon>
-<polygon points="999.6,64 1002.9,64 1008.9,70 1002.9,76 999.6,76" fill="#3b6fb6"><title>copper homeostasis membrane protein CopD 4360644-4361571 +</title></polygon>
-<polygon points="1010.2,64 1010.2,64 1013.0,70 1010.2,76 1010.2,76" fill="#3b6fb6"><title>CopK family periplasmic copper-binding p 4361699-4361984 +</title></polygon>
-<polygon points="1015.8,64 1015.8,64 1018.4,70 1015.8,76 1015.8,76" fill="#3b6fb6"><title>IS3 family transposase 4362261-4362523 +</title></polygon>
-<polygon points="1018.4,64 1021.3,64 1027.3,70 1021.3,76 1018.4,76" fill="#3b6fb6"><title>IS3 family transposase 4362522-4363409 +</title></polygon>
-<polygon points="1029.9,90 1030.6,84 1030.6,84 1030.6,96 1030.6,96" fill="#b68a3b"><title>tRNA-Gly 4363661-4363737 -</title></polygon>
-<polygon points="1032.0,90 1038.0,84 1039.7,84 1039.7,96 1038.0,96" fill="#3b6fb6"><title>metalloprotease LoiP 4363876-4364641 -</title></polygon>
-<polygon points="1044.6,90 1046.7,84 1046.7,84 1046.7,96 1046.7,96" fill="#3b6fb6"><title>hypothetical protein 4365123-4365336 -</title></polygon>
-<polygon points="1049.8,90 1055.8,84 1058.6,84 1058.6,96 1055.8,96" fill="#3b6fb6"><title>hypothetical protein 4365640-4366522 -</title></polygon>
-<polygon points="1059.2,90 1060.0,84 1060.0,84 1060.0,96 1060.0,96" fill="#3b6fb6"><title>DGQHR domain-containing protein 4366576-4367605 -</title></polygon>
-<text x="60" y="114" font-size="9" fill="#666">SAMD00407106:4267150-4366658</text>
-<text x="4" y="176" font-size="11">SAMD00571185 NZ_AP027205.1 (empty site, +)</text>
-<line x1="60" y1="190" x2="1060" y2="190" stroke="#888"/>
-<rect x="162.1" y="185" width="1.0" height="10" fill="#e76f51" opacity="0.45"/><text x="162.1" y="208" font-size="9">site</text>
-<polygon points="60.0,174 63.0,174 69.0,180 63.0,186 60.0,186" fill="#3b6fb6"><title>GNAT family N-acetyltransferase 4111704-4112292 +</title></polygon>
-<polygon points="71.0,174 95.3,174 101.3,180 95.3,186 71.0,186" fill="#3b6fb6"><title>glutamate racemase 4112350-4113241 +</title></polygon>
-<text x="71.0" y="172" font-size="8" fill="#333">glutamate racemase</text>
-<polygon points="101.4,200 107.4,194 122.2,194 122.2,206 107.4,206" fill="#3b6fb6"><title>M48 metallopeptidase family protein 4113242-4113854 -</title></polygon>
-<polygon points="123.3,200 129.3,194 144.6,194 144.6,206 129.3,206" fill="#3b6fb6"><title>DUF6806 family protein 4113886-4114513 -</title></polygon>
-<polygon points="155.8,200 158.9,194 158.9,194 158.9,206 158.9,206" fill="#b68a3b"><title>tRNA-Leu 4114840-4114931 -</title></polygon>
-<polygon points="162.2,200 164.8,194 164.8,194 164.8,206 164.8,206" fill="#b68a3b"><title>tRNA-Gly 4115030-4115106 -</title></polygon>
-<polygon points="169.5,200 175.5,194 195.6,194 195.6,206 175.5,206" fill="#3b6fb6"><title>metalloprotease LoiP 4115245-4116010 -</title></polygon>
-<polygon points="208.6,200 212.4,194 212.4,194 212.4,206 212.4,206" fill="#b68a3b"><title>tRNA-Ser 4116392-4116503 -</title></polygon>
-<polygon points="212.5,200 218.5,194 237.2,194 237.2,206 218.5,206" fill="#3b6fb6"><title>SOS response-associated peptidase 4116506-4117232 -</title></polygon>
-<polygon points="241.8,174 248.4,174 254.4,180 248.4,186 241.8,186" fill="#3b6fb6"><title>hypothetical protein 4117368-4117737 +</title></polygon>
-<polygon points="254.7,174 255.7,174 261.7,180 255.7,186 254.7,186" fill="#3b6fb6"><title>hypothetical protein 4117747-4117951 +</title></polygon>
-<polygon points="273.8,200 279.8,194 323.6,194 323.6,206 279.8,206" fill="#3b6fb6"><title>toll/interleukin-1 receptor domain-conta 4118308-4119772 -</title></polygon>
-<text x="273.8" y="216" font-size="8" fill="#333">toll/interleukin-1 recep</text>
-<polygon points="330.0,200 336.0,194 347.6,194 347.6,206 336.0,206" fill="#3b6fb6"><title>hypothetical protein 4119958-4120477 -</title></polygon>
-<polygon points="347.7,200 353.7,194 381.6,194 381.6,206 353.7,206" fill="#3b6fb6"><title>lysozyme family protein 4120479-4121475 -</title></polygon>
-<text x="347.7" y="216" font-size="8" fill="#333">lysozyme family protein</text>
-<polygon points="384.3,200 390.3,194 392.1,194 392.1,206 390.3,206" fill="#3b6fb6"><title>hypothetical protein 4121553-4121784 -</title></polygon>
-<polygon points="392.0,200 398.0,194 456.5,194 456.5,206 398.0,206" fill="#3b6fb6"><title>hypothetical protein 4121780-4123676 -</title></polygon>
-<text x="392.0" y="216" font-size="8" fill="#333">hypothetical protein</text>
-<polygon points="456.6,200 462.6,194 470.9,194 470.9,206 462.6,206" fill="#3b6fb6"><title>hypothetical protein 4123679-4124099 -</title></polygon>
-<polygon points="470.8,200 476.8,194 484.2,194 484.2,206 476.8,206" fill="#3b6fb6"><title>hypothetical protein 4124095-4124488 -</title></polygon>
-<polygon points="484.3,200 490.3,194 524.7,194 524.7,206 490.3,206" fill="#3b6fb6"><title>hypothetical protein 4124493-4125678 -</title></polygon>
-<text x="484.3" y="216" font-size="8" fill="#333">hypothetical protein</text>
-<polygon points="525.3,200 531.3,194 589.6,194 589.6,206 531.3,206" fill="#3b6fb6"><title>hypothetical protein 4125695-4127585 -</title></polygon>
-<text x="525.3" y="216" font-size="8" fill="#333">hypothetical protein</text>
-<polygon points="590.3,200 596.3,194 653.7,194 653.7,206 596.3,206" fill="#3b6fb6"><title>hypothetical protein 4127606-4129469 -</title></polygon>
-<text x="590.3" y="216" font-size="8" fill="#333">hypothetical protein</text>
-<polygon points="653.6,200 659.6,194 667.9,194 667.9,206 659.6,206" fill="#3b6fb6"><title>hypothetical protein 4129465-4129885 -</title></polygon>
-<polygon points="668.0,200 674.0,194 801.6,194 801.6,206 674.0,206" fill="#3b6fb6"><title>tape measure protein 4129889-4133813 -</title></polygon>
-<text x="668.0" y="216" font-size="8" fill="#333">tape measure protein</text>
-<polygon points="802.3,174 802.6,174 808.6,180 802.6,186 802.3,186" fill="#3b6fb6"><title>hypothetical protein 4133835-4134018 +</title></polygon>
-<polygon points="808.6,200 814.6,194 835.0,194 835.0,206 814.6,206" fill="#3b6fb6"><title>phage tail tube protein 4134018-4134795 -</title></polygon>
-<polygon points="837.2,200 843.2,194 853.0,194 853.0,206 843.2,206" fill="#3b6fb6"><title>hypothetical protein 4134860-4135322 -</title></polygon>
-<polygon points="852.8,200 858.8,194 864.3,194 864.3,206 858.8,206" fill="#3b6fb6"><title>hypothetical protein 4135318-4135654 -</title></polygon>
-<polygon points="864.3,200 870.3,194 882.2,194 882.2,206 870.3,206" fill="#3b6fb6"><title>DUF7210 family protein 4135656-4136181 -</title></polygon>
-<polygon points="882.4,200 888.4,194 914.3,194 914.3,206 888.4,206" fill="#3b6fb6"><title>major capsid protein 4136186-4137125 -</title></polygon>
-<text x="882.4" y="216" font-size="8" fill="#333">major capsid protein</text>
-<polygon points="915.6,200 921.6,194 928.2,194 928.2,206 921.6,206" fill="#3b6fb6"><title>capsid cement protein 4137161-4137533 -</title></polygon>
-<polygon points="929.5,200 935.5,194 975.5,194 975.5,206 935.5,206" fill="#3b6fb6"><title>S49 family peptidase 4137570-4138923 -</title></polygon>
-<text x="929.5" y="216" font-size="8" fill="#333">S49 family peptidase</text>
-<polygon points="975.7,200 981.7,194 986.4,194 986.4,206 981.7,206" fill="#3b6fb6"><title>hypothetical protein 4138927-4139242 -</title></polygon>
-<polygon points="986.3,200 992.3,194 1040.8,194 1040.8,206 992.3,206" fill="#3b6fb6"><title>phage portal protein 4139238-4140840 -</title></polygon>
-<text x="986.3" y="216" font-size="8" fill="#333">phage portal protein</text>
-<polygon points="1041.0,200 1047.0,194 1049.3,194 1049.3,206 1047.0,206" fill="#3b6fb6"><title>DUF6148 family protein 4140846-4141089 -</title></polygon>
-<polygon points="1049.2,200 1055.2,194 1060.0,194 1060.0,206 1055.2,206" fill="#3b6fb6"><title>hypothetical protein 4141088-4141841 -</title></polygon>
-<text x="60" y="224" font-size="9" fill="#666">SAMD00571185:4112027-4141404</text>
+<text x="4" y="16" font-size="12">L_283c6436d382  SAMD00407106  core 93508 bp  two_flank_anchored  support partner_mixed  boundary exact  tandem False  core copies carrier/partner 1/0</text>
+<line x1="90.1" y1="30" x2="90.1" y2="412" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<line x1="1029.9" y1="30" x2="1029.9" y2="412" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<text x="4" y="64" font-size="11" font-weight="bold">SAMD00407106 NZ_AP025556.1 (carrier)</text>
+<line x1="60" y1="100" x2="1060" y2="100" stroke="#888"/>
+<rect x="80.1" y="132" width="10.0" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="85.1" y="152" font-size="9" text-anchor="middle">U</text>
+<rect x="90.1" y="132" width="939.7" height="8" fill="#e76f51" opacity="0.55"/>
+<text x="560.0" y="152" font-size="9" text-anchor="middle">core 93508</text>
+<rect x="1029.9" y="132" width="10.0" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="1034.9" y="152" font-size="9" text-anchor="middle">D</text>
+<polygon points="60.0,85 60.0,85 62.7,91 60.0,97 60.0,97" fill="#3b6fb6"><title>GNAT family N-acetyltransferase 4266826-4267414 +</title></polygon>
+<polygon points="63.2,85 66.2,85 72.2,91 66.2,97 63.2,97" fill="#3b6fb6"><title>glutamate racemase 4267472-4268363 +</title></polygon>
+<polygon points="72.2,109 78.2,103 78.4,103 78.4,115 78.2,115" fill="#3b6fb6"><title>M48 metallopeptidase family protein 4268364-4268976 -</title></polygon>
+<polygon points="78.7,109 84.7,103 85.0,103 85.0,115 84.7,115" fill="#3b6fb6"><title>DUF6806 family protein 4269008-4269635 -</title></polygon>
+<polygon points="88.3,109 89.2,103 89.2,103 89.2,115 89.2,115" fill="#b68a3b"><title>tRNA-Leu 4269963-4270054 -</title></polygon>
+<polygon points="94.2,109 99.3,103 99.3,103 99.3,115 99.3,115" fill="#3b6fb6"><title>DUF305 domain-containing protein 4270558-4271059 -</title></polygon>
+<polygon points="103.8,85 105.3,85 111.3,91 105.3,97 103.8,97" fill="#3b6fb6"><title>hypothetical protein 4271509-4272256 +</title></polygon>
+<polygon points="112.5,85 112.5,85 114.6,91 112.5,97 112.5,97" fill="#3b6fb6"><title>AlpA family transcriptional regulator 4272374-4272587 +</title></polygon>
+<polygon points="115.1,85 117.9,85 123.9,91 117.9,97 115.1,97" fill="#3b6fb6"><title>ParA family protein 4272629-4273505 +</title></polygon>
+<polygon points="123.7,85 123.7,85 126.4,91 123.7,97 123.7,97" fill="#3b6fb6"><title>hypothetical protein 4273488-4273758 +</title></polygon>
+<polygon points="126.3,85 137.2,85 143.2,91 137.2,97 126.3,97" fill="#3b6fb6"><title>ParB family protein 4273750-4275430 +</title></polygon>
+<polygon points="143.4,85 143.4,85 149.0,91 143.4,97 143.4,97" fill="#3b6fb6"><title>DUF2857 domain-containing protein 4275444-4276005 +</title></polygon>
+<polygon points="149.0,85 155.5,85 161.5,91 155.5,97 149.0,97" fill="#3b6fb6"><title>STY4528 family pathogenicity island repl 4276008-4277247 +</title></polygon>
+<polygon points="165.8,85 167.7,85 173.7,91 167.7,97 165.8,97" fill="#3b6fb6"><title>PFL_4669 family integrating conjugative  4277676-4278468 +</title></polygon>
+<polygon points="173.7,85 173.7,85 179.0,91 173.7,97 173.7,97" fill="#3b6fb6"><title>DUF3158 family protein 4278464-4278992 +</title></polygon>
+<polygon points="179.7,85 179.7,85 184.2,91 179.7,97 179.7,97" fill="#3b6fb6"><title>single-stranded DNA-binding protein 4279065-4279506 +</title></polygon>
+<polygon points="187.0,85 201.4,85 207.4,91 201.4,97 187.0,97" fill="#3b6fb6"><title>DNA topoisomerase III 4279789-4281820 +</title></polygon>
+<polygon points="214.7,109 220.7,103 221.1,103 221.1,115 220.7,115" fill="#3b6fb6"><title>cation efflux transmembrane domain-conta 4282543-4283179 -</title></polygon>
+<polygon points="224.9,85 224.9,85 227.3,91 224.9,97 224.9,97" fill="#3b6fb6"><title>sterol desaturase family protein 4283563-4283800 +</title></polygon>
+<polygon points="227.6,85 227.6,85 231.2,91 227.6,97 227.6,97" fill="#3b6fb6"><title>DUF3703 domain-containing protein 4283824-4284187 +</title></polygon>
+<polygon points="231.9,109 235.9,103 235.9,103 235.9,115 235.9,115" fill="#3b6fb6"><title>Cd(II)/Pb(II)-responsive transcriptional 4284254-4284653 -</title></polygon>
+<polygon points="236.8,85 260.1,85 266.1,91 260.1,97 236.8,97" fill="#3b6fb6"><title>heavy metal translocating P-type ATPase 4284744-4287657 +</title></polygon>
+<polygon points="266.1,85 266.1,85 271.1,91 266.1,97 266.1,97" fill="#3b6fb6"><title>signal peptidase II 4287660-4288161 +</title></polygon>
+<polygon points="274.5,85 274.5,85 277.7,91 274.5,97 274.5,97" fill="#3b6fb6"><title>hypothetical protein 4288497-4288809 +</title></polygon>
+<polygon points="281.0,85 281.0,85 283.2,91 281.0,97 281.0,97" fill="#3b6fb6"><title>hypothetical protein 4289146-4289359 +</title></polygon>
+<polygon points="283.4,85 283.4,85 287.3,91 283.4,97 283.4,97" fill="#3b6fb6"><title>hypothetical protein 4289380-4289773 +</title></polygon>
+<polygon points="289.2,85 290.1,85 296.1,91 290.1,97 289.2,97" fill="#3b6fb6"><title>hypothetical protein 4289955-4290642 +</title></polygon>
+<polygon points="296.9,85 298.3,85 304.3,91 298.3,97 296.9,97" fill="#3b6fb6"><title>DUF5983 family protein 4290725-4291463 +</title></polygon>
+<polygon points="305.3,85 305.3,85 308.1,91 305.3,97 305.3,97" fill="#3b6fb6"><title>hypothetical protein 4291560-4291839 +</title></polygon>
+<polygon points="311.0,85 313.3,85 319.3,91 313.3,97 311.0,97" fill="#3b6fb6"><title>hypothetical protein 4292127-4292952 +</title></polygon>
+<polygon points="321.9,109 326.0,103 326.0,103 326.0,115 326.0,115" fill="#3b6fb6"><title>Hg(II)-responsive transcriptional regula 4293213-4293621 -</title></polygon>
+<polygon points="326.7,85 326.7,85 330.3,91 326.7,97 326.7,97" fill="#3b6fb6"><title>mercuric ion transporter MerT 4293692-4294043 +</title></polygon>
+<polygon points="330.4,85 330.4,85 333.3,91 330.4,97 330.4,97" fill="#3b6fb6"><title>mercury resistance system periplasmic bi 4294055-4294343 +</title></polygon>
+<polygon points="333.4,85 344.3,85 350.3,91 344.3,97 333.4,97" fill="#3b6fb6"><title>mercury(II) reductase 4294353-4296042 +</title></polygon>
+<polygon points="350.5,85 350.5,85 355.7,91 350.5,97 350.5,97" fill="#3b6fb6"><title>Tn3 family transposase 4296060-4296576 +</title></polygon>
+<polygon points="355.3,85 355.3,85 360.6,91 355.3,97 355.3,97" fill="#999"><title>Tn3 family transposase 4296539-4297058 +</title></polygon>
+<polygon points="360.9,85 360.9,85 363.9,91 360.9,97 360.9,97" fill="#999"><title>DUF3085 domain-containing protein 4297091-4297388 +</title></polygon>
+<polygon points="365.3,85 365.3,85 369.8,91 365.3,97 365.3,97" fill="#999"><title>XF1762 family protein 4297529-4297980 +</title></polygon>
+<polygon points="372.9,85 376.0,85 382.0,91 376.0,97 372.9,97" fill="#3b6fb6"><title>DUF3577 domain-containing protein 4298290-4299196 +</title></polygon>
+<polygon points="383.5,85 385.8,85 391.8,91 385.8,97 383.5,97" fill="#3b6fb6"><title>DUF932 domain-containing protein 4299341-4300169 +</title></polygon>
+<polygon points="392.8,85 393.7,85 399.7,91 393.7,97 392.8,97" fill="#3b6fb6"><title>DUF3275 family protein 4300264-4300954 +</title></polygon>
+<polygon points="400.7,85 400.7,85 404.1,91 400.7,97 400.7,97" fill="#3b6fb6"><title>hypothetical protein 4301048-4301390 +</title></polygon>
+<polygon points="405.1,85 405.1,85 409.2,91 405.1,97 405.1,97" fill="#3b6fb6"><title>hypothetical protein 4301493-4301901 +</title></polygon>
+<polygon points="409.4,85 409.4,85 412.0,91 409.4,97 409.4,97" fill="#3b6fb6"><title>hypothetical protein 4301917-4302178 +</title></polygon>
+<polygon points="412.8,85 413.3,85 419.3,91 413.3,97 412.8,97" fill="#3b6fb6"><title>hypothetical protein 4302254-4302905 +</title></polygon>
+<polygon points="419.7,85 425.1,85 431.1,91 425.1,97 419.7,97" fill="#3b6fb6"><title>DUF6094 domain-containing protein 4302945-4304079 +</title></polygon>
+<polygon points="431.6,85 431.6,85 434.9,91 431.6,97 431.6,97" fill="#3b6fb6"><title>hypothetical protein 4304130-4304451 +</title></polygon>
+<polygon points="435.7,85 435.7,85 438.8,91 435.7,97 435.7,97" fill="#3b6fb6"><title>hypothetical protein 4304539-4304845 +</title></polygon>
+<polygon points="440.2,85 457.1,85 463.1,91 457.1,97 440.2,97" fill="#3b6fb6"><title>helicase-related protein 4304980-4307260 +</title></polygon>
+<polygon points="464.5,85 464.5,85 470.5,91 464.5,97 464.5,97" fill="#3b6fb6"><title>PFGI-1 class ICE element type IV pilus p 4307398-4307998 +</title></polygon>
+<polygon points="470.5,85 470.9,85 476.9,91 470.9,97 470.5,97" fill="#3b6fb6"><title>hypothetical protein 4307994-4308639 +</title></polygon>
+<polygon points="477.1,85 478.5,85 484.5,91 478.5,97 477.1,97" fill="#3b6fb6"><title>TIGR03759 family integrating conjugative 4308651-4309389 +</title></polygon>
+<polygon points="484.3,85 484.3,85 490.2,91 484.3,97 484.3,97" fill="#3b6fb6"><title>transglycosylase SLT domain-containing p 4309370-4309961 +</title></polygon>
+<polygon points="490.2,85 490.2,85 495.7,91 490.2,97 490.2,97" fill="#3b6fb6"><title>integrating conjugative element protein 4309957-4310506 +</title></polygon>
+<polygon points="495.7,85 505.4,85 511.4,91 505.4,97 495.7,97" fill="#999"><title>type IV conjugative transfer system coup 4310510-4312067 +</title></polygon>
+<polygon points="512.9,85 523.3,85 529.3,91 523.3,97 512.9,97" fill="#3b6fb6"><title>IS21 family transposase 4312222-4313845 +</title></polygon>
+<polygon points="529.2,85 530.8,85 536.8,91 530.8,97 529.2,97" fill="#3b6fb6"><title>IS21-like element helper ATPase IstB 4313841-4314600 +</title></polygon>
+<polygon points="537.6,85 538.0,85 544.0,91 538.0,97 537.6,97" fill="#999"><title>TraM recognition domain-containing prote 4314672-4315314 +</title></polygon>
+<polygon points="544.0,85 545.5,85 551.5,91 545.5,97 544.0,97" fill="#3b6fb6"><title>TIGR03747 family integrating conjugative 4315310-4316060 +</title></polygon>
+<polygon points="551.9,109 557.9,103 578.3,103 578.3,115 557.9,115" fill="#3b6fb6"><title>AAA family ATPase 4316100-4318725 -</title></polygon>
+<polygon points="578.4,109 584.4,103 585.7,103 585.7,115 584.4,115" fill="#3b6fb6"><title>CBASS effector endonuclease NucC 4318734-4319460 -</title></polygon>
+<polygon points="586.1,109 592.1,103 595.1,103 595.1,115 592.1,115" fill="#3b6fb6"><title>CBASS oligonucleotide cyclase 4319498-4320401 -</title></polygon>
+<polygon points="595.1,109 600.2,103 600.2,103 600.2,115 600.2,115" fill="#3b6fb6"><title>type III CBASS phage resistance system C 4320400-4320901 -</title></polygon>
+<polygon points="600.1,109 604.9,103 604.9,103 604.9,115 604.9,115" fill="#3b6fb6"><title>type III CBASS phage resistance system C 4320897-4321368 -</title></polygon>
+<polygon points="604.8,109 610.8,103 614.0,103 614.0,115 610.8,115" fill="#3b6fb6"><title>CBASS system CD-NTase-associated protein 4321364-4322279 -</title></polygon>
+<polygon points="614.2,109 620.0,103 620.0,103 620.0,115 620.0,115" fill="#3b6fb6"><title>PIN domain-containing protein 4322296-4322872 -</title></polygon>
+<polygon points="619.9,109 624.7,103 624.7,103 624.7,115 624.7,115" fill="#3b6fb6"><title>helix-turn-helix domain-containing prote 4322868-4323339 -</title></polygon>
+<polygon points="626.7,85 626.7,85 630.6,91 626.7,97 626.7,97" fill="#3b6fb6"><title>integrative conjugative element protein% 4323542-4323926 +</title></polygon>
+<polygon points="630.5,85 630.5,85 632.9,91 630.5,97 630.5,97" fill="#3b6fb6"><title>TIGR03758 family integrating conjugative 4323922-4324156 +</title></polygon>
+<polygon points="633.0,85 633.0,85 636.7,91 633.0,97 633.0,97" fill="#3b6fb6"><title>TIGR03745 family integrating conjugative 4324172-4324532 +</title></polygon>
+<polygon points="636.8,85 636.8,85 640.8,91 636.8,97 636.8,97" fill="#3b6fb6"><title>TIGR03750 family conjugal transfer prote 4324543-4324942 +</title></polygon>
+<polygon points="640.7,85 641.7,85 647.7,91 641.7,97 640.7,97" fill="#3b6fb6"><title>PFL_4703 family integrating conjugative  4324938-4325631 +</title></polygon>
+<polygon points="647.7,85 650.8,85 656.8,91 650.8,97 647.7,97" fill="#3b6fb6"><title>TIGR03749 family integrating conjugative 4325627-4326539 +</title></polygon>
+<polygon points="656.7,85 665.0,85 671.0,91 665.0,97 656.7,97" fill="#3b6fb6"><title>TIGR03752 family integrating conjugative 4326528-4327947 +</title></polygon>
+<polygon points="670.8,85 670.8,85 675.3,91 670.8,97 670.8,97" fill="#3b6fb6"><title>TIGR03751 family conjugal transfer lipop 4327927-4328377 +</title></polygon>
+<polygon points="675.3,85 698.4,85 704.4,91 698.4,97 675.3,97" fill="#3b6fb6"><title>conjugative transfer ATPase 4328376-4331268 +</title></polygon>
+<polygon points="704.6,85 706.3,85 712.3,91 706.3,97 704.6,97" fill="#3b6fb6"><title>DsbA family protein 4331292-4332060 +</title></polygon>
+<polygon points="714.1,85 714.1,85 719.0,91 714.1,97 714.1,97" fill="#3b6fb6"><title>JAB domain-containing protein 4332235-4332730 +</title></polygon>
+<polygon points="720.7,85 720.7,85 725.2,91 720.7,97 720.7,97" fill="#3b6fb6"><title>TIGR03757 family integrating conjugative 4332894-4333341 +</title></polygon>
+<polygon points="726.0,85 728.7,85 734.7,91 728.7,97 726.0,97" fill="#3b6fb6"><title>TIGR03756 family integrating conjugative 4333424-4334288 +</title></polygon>
+<polygon points="734.8,85 742.8,85 748.8,91 742.8,97 734.8,97" fill="#3b6fb6"><title>integrating conjugative element protein 4334297-4335692 +</title></polygon>
+<polygon points="748.8,85 748.8,85 752.4,91 748.8,97 748.8,97" fill="#3b6fb6"><title>hypothetical protein 4335688-4336048 +</title></polygon>
+<polygon points="752.5,85 761.8,85 767.8,91 761.8,97 752.5,97" fill="#3b6fb6"><title>conjugal transfer protein TraG N-termina 4336061-4337582 +</title></polygon>
+<polygon points="767.9,109 771.6,103 771.6,103 771.6,115 771.6,115" fill="#3b6fb6"><title>DUF3742 family protein 4337593-4337959 -</title></polygon>
+<polygon points="772.4,109 778.4,103 778.8,103 778.8,115 778.4,115" fill="#3b6fb6"><title>RES family NAD+ phosphorylase 4338043-4338676 -</title></polygon>
+<polygon points="778.9,109 784.9,103 785.2,103 785.2,115 784.9,115" fill="#3b6fb6"><title>hypothetical protein 4338688-4339315 -</title></polygon>
+<polygon points="788.4,85 801.0,85 807.0,91 801.0,97 788.4,97" fill="#3b6fb6"><title>MobH family relaxase 4339630-4341478 +</title></polygon>
+<polygon points="809.9,85 815.9,85 821.9,91 815.9,97 809.9,97" fill="#999"><title>efflux RND transporter periplasmic adapt 4341771-4342968 +</title></polygon>
+<polygon points="822.9,85 822.9,85 827.7,91 822.9,97 822.9,97" fill="#999"><title>efflux RND transporter permease subunit 4343060-4343542 +</title></polygon>
+<polygon points="830.1,85 838.9,85 844.9,91 838.9,97 830.1,97" fill="#999"><title>chromosome partitioning protein ParB 4343785-4345252 +</title></polygon>
+<polygon points="847.0,109 852.2,103 852.2,103 852.2,115 852.2,115" fill="#3b6fb6"><title>GNAT family N-acetyltransferase 4345459-4345978 -</title></polygon>
+<polygon points="852.3,109 858.3,103 864.7,103 864.7,115 858.3,115" fill="#3b6fb6"><title>chromate efflux transporter 4345995-4347225 -</title></polygon>
+<polygon points="864.7,109 868.0,103 868.0,103 868.0,115 868.0,115" fill="#3b6fb6"><title>PadR family transcriptional regulator 4347221-4347551 -</title></polygon>
+<polygon points="868.7,109 872.9,103 872.9,103 872.9,115 872.9,115" fill="#3b6fb6"><title>arsenate reductase (glutaredoxin) 4347622-4348045 -</title></polygon>
+<polygon points="873.1,109 879.1,103 884.0,103 884.0,115 879.1,115" fill="#3b6fb6"><title>ACR3 family arsenite efflux transporter 4348059-4349145 -</title></polygon>
+<polygon points="884.1,109 889.1,103 889.1,103 889.1,115 889.1,115" fill="#3b6fb6"><title>arsenate reductase ArsC 4349155-4349653 -</title></polygon>
+<polygon points="889.2,109 894.0,103 894.0,103 894.0,115 894.0,115" fill="#3b6fb6"><title>ArsI/CadI family heavy metal resistance  4349665-4350136 -</title></polygon>
+<polygon points="894.1,109 897.4,103 897.4,103 897.4,115 897.4,115" fill="#3b6fb6"><title>ArsR/SmtB family transcription factor 4350149-4350479 -</title></polygon>
+<polygon points="906.9,109 912.9,103 921.2,103 921.2,115 912.9,115" fill="#3b6fb6"><title>Cu(+)/Ag(+) sensor histidine kinase 4351426-4352851 -</title></polygon>
+<polygon points="921.1,109 927.1,103 928.0,103 928.0,115 927.1,115" fill="#3b6fb6"><title>heavy metal response regulator transcrip 4352834-4353527 -</title></polygon>
+<polygon points="930.6,85 943.7,85 949.7,91 943.7,97 930.6,97" fill="#3b6fb6"><title>copper resistance system multicopper oxi 4353781-4355683 +</title></polygon>
+<polygon points="950.0,85 953.8,85 959.8,91 953.8,97 950.0,97" fill="#3b6fb6"><title>copper resistance protein B 4355708-4356689 +</title></polygon>
+<polygon points="960.2,85 960.2,85 965.1,91 960.2,97 960.2,97" fill="#3b6fb6"><title>DUF411 domain-containing protein 4356726-4357212 +</title></polygon>
+<polygon points="965.4,85 965.4,85 968.1,91 965.4,97 965.4,97" fill="#3b6fb6"><title>DUF2933 domain-containing protein 4357245-4357518 +</title></polygon>
+<polygon points="969.3,85 988.2,85 994.2,91 988.2,97 969.3,97" fill="#3b6fb6"><title>heavy metal translocating P-type ATPase 4357631-4360112 +</title></polygon>
+<polygon points="995.6,85 995.6,85 999.5,91 995.6,97 995.6,97" fill="#3b6fb6"><title>copper homeostasis periplasmic binding p 4360253-4360640 +</title></polygon>
+<polygon points="999.6,85 1002.9,85 1008.9,91 1002.9,97 999.6,97" fill="#3b6fb6"><title>copper homeostasis membrane protein CopD 4360644-4361571 +</title></polygon>
+<polygon points="1010.2,85 1010.2,85 1013.0,91 1010.2,97 1010.2,97" fill="#3b6fb6"><title>CopK family periplasmic copper-binding p 4361699-4361984 +</title></polygon>
+<polygon points="1015.8,85 1015.8,85 1018.4,91 1015.8,97 1015.8,97" fill="#3b6fb6"><title>IS3 family transposase 4362261-4362523 +</title></polygon>
+<polygon points="1018.4,85 1021.3,85 1027.3,91 1021.3,97 1018.4,97" fill="#3b6fb6"><title>IS3 family transposase 4362522-4363409 +</title></polygon>
+<polygon points="1029.9,109 1030.6,103 1030.6,103 1030.6,115 1030.6,115" fill="#b68a3b"><title>tRNA-Gly 4363661-4363737 -</title></polygon>
+<polygon points="1032.0,109 1038.0,103 1039.7,103 1039.7,115 1038.0,115" fill="#3b6fb6"><title>metalloprotease LoiP 4363876-4364641 -</title></polygon>
+<polygon points="1044.6,109 1046.7,103 1046.7,103 1046.7,115 1046.7,115" fill="#3b6fb6"><title>hypothetical protein 4365123-4365336 -</title></polygon>
+<polygon points="1049.8,109 1055.8,103 1058.6,103 1058.6,115 1055.8,115" fill="#3b6fb6"><title>hypothetical protein 4365640-4366522 -</title></polygon>
+<polygon points="1059.2,109 1060.0,103 1060.0,103 1060.0,115 1060.0,115" fill="#3b6fb6"><title>DGQHR domain-containing protein 4366576-4367605 -</title></polygon>
+<text x="60" y="166" font-size="9" fill="#666">NZ_AP025556.1:4267150-4366658  core 4270150-4363658</text>
+<text x="4" y="184" font-size="11" font-weight="bold">SAMD00571185 NZ_AP027205.1 (partner, + strand, two_flank_anchored, pair P00033)</text>
+<line x1="60" y1="220" x2="1060" y2="220" stroke="#888"/>
+<rect x="80.1" y="252" width="10.0" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="85.1" y="272" font-size="9" text-anchor="middle">U'</text>
+<rect x="1029.9" y="252" width="10.0" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="1034.9" y="272" font-size="9" text-anchor="middle">D'</text>
+<rect x="90.1" y="252" width="939.7" height="8" fill="#ffffff" opacity="0.55"/>
+<polygon points="60.0,205 60.0,205 62.7,211 60.0,217 60.0,217" fill="#3b6fb6"><title>GNAT family N-acetyltransferase 4111704-4112292 +</title></polygon>
+<polygon points="63.2,205 66.2,205 72.2,211 66.2,217 63.2,217" fill="#3b6fb6"><title>glutamate racemase 4112350-4113241 +</title></polygon>
+<polygon points="72.2,229 78.2,223 78.4,223 78.4,235 78.2,235" fill="#3b6fb6"><title>M48 metallopeptidase family protein 4113242-4113854 -</title></polygon>
+<polygon points="78.7,229 84.7,223 85.0,223 85.0,235 84.7,235" fill="#3b6fb6"><title>DUF6806 family protein 4113886-4114513 -</title></polygon>
+<polygon points="88.3,229 89.2,223 89.2,223 89.2,235 89.2,235" fill="#b68a3b"><title>tRNA-Leu 4114840-4114931 -</title></polygon>
+<polygon points="1029.9,229 1030.6,223 1030.6,223 1030.6,235 1030.6,235" fill="#b68a3b"><title>tRNA-Gly 4115030-4115106 -</title></polygon>
+<polygon points="1032.0,229 1038.0,223 1039.7,223 1039.7,235 1038.0,235" fill="#3b6fb6"><title>metalloprotease LoiP 4115245-4116010 -</title></polygon>
+<polygon points="1043.6,229 1044.7,223 1044.7,223 1044.7,235 1044.7,235" fill="#b68a3b"><title>tRNA-Ser 4116392-4116503 -</title></polygon>
+<polygon points="1044.7,229 1050.7,223 1052.0,223 1052.0,235 1050.7,235" fill="#3b6fb6"><title>SOS response-associated peptidase 4116506-4117232 -</title></polygon>
+<polygon points="1053.4,205 1053.4,205 1057.1,211 1053.4,217 1053.4,217" fill="#3b6fb6"><title>hypothetical protein 4117368-4117737 +</title></polygon>
+<polygon points="1057.2,205 1057.2,205 1059.2,211 1057.2,217 1057.2,217" fill="#3b6fb6"><title>hypothetical protein 4117747-4117951 +</title></polygon>
+<text x="60" y="286" font-size="9" fill="#666">NZ_AP027205.1 site 4115027  other-side gap 0 bp  this call's core 4270150-4363658</text>
+<rect x="90.1" y="218" width="939.7" height="4" fill="#f4f4f4"/><text x="560.0" y="272" font-size="9" text-anchor="middle" fill="#a5372f">empty site</text>
+<text x="4" y="304" font-size="11" font-weight="bold">SAMEA120308855 NZ_CDRKIR010000001.1 (partner, + strand, unresolved, pair P00034)</text>
+<line x1="60" y1="340" x2="1060" y2="340" stroke="#888"/>
+<rect x="80.1" y="372" width="10.0" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="85.1" y="392" font-size="9" text-anchor="middle">U'</text>
+<rect x="1029.9" y="372" width="10.0" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="1034.9" y="392" font-size="9" text-anchor="middle">D'</text>
+<rect x="90.1" y="372" width="939.7" height="8" fill="#ffffff" opacity="0.55"/>
+<polygon points="60.0,325 60.0,325 62.7,331 60.0,337 60.0,337" fill="#3b6fb6"><title>GNAT family N-acetyltransferase 4404081-4404669 +</title></polygon>
+<polygon points="63.2,325 66.2,325 72.2,331 66.2,337 63.2,337" fill="#3b6fb6"><title>glutamate racemase 4404727-4405618 +</title></polygon>
+<polygon points="72.2,349 78.2,343 78.4,343 78.4,355 78.2,355" fill="#3b6fb6"><title>M48 metallopeptidase family protein 4405619-4406231 -</title></polygon>
+<polygon points="78.7,349 84.7,343 85.0,343 85.0,355 84.7,355" fill="#3b6fb6"><title>DUF6806 family protein 4406263-4406890 -</title></polygon>
+<polygon points="88.3,349 89.2,343 89.2,343 89.2,355 89.2,355" fill="#b68a3b"><title>tRNA-Leu 4407219-4407310 -</title></polygon>
+<polygon points="1029.9,349 1030.6,343 1030.6,343 1030.6,355 1030.6,355" fill="#b68a3b"><title>tRNA-Gly 4407408-4407484 -</title></polygon>
+<polygon points="1032.1,349 1038.1,343 1039.8,343 1039.8,355 1038.1,355" fill="#3b6fb6"><title>metalloprotease LoiP 4407633-4408398 -</title></polygon>
+<polygon points="1043.7,349 1044.4,343 1044.4,343 1044.4,355 1044.4,355" fill="#b68a3b"><title>tRNA-Cys 4408781-4408855 -</title></polygon>
+<polygon points="1044.9,349 1045.6,343 1045.6,343 1045.6,355 1045.6,355" fill="#b68a3b"><title>tRNA-Gly 4408898-4408974 -</title></polygon>
+<polygon points="1046.2,349 1047.0,343 1047.0,343 1047.0,355 1047.0,355" fill="#b68a3b"><title>tRNA-Gly 4409033-4409109 -</title></polygon>
+<polygon points="1047.6,349 1048.4,343 1048.4,343 1048.4,355 1048.4,355" fill="#b68a3b"><title>tRNA-Gly 4409176-4409252 -</title></polygon>
+<polygon points="1049.4,349 1055.4,343 1060.0,343 1060.0,355 1055.4,355" fill="#3b6fb6"><title>endopeptidase La 4409355-4411770 -</title></polygon>
+<text x="60" y="406" font-size="9" fill="#666">NZ_CDRKIR010000001.1 site 4407405  other-side gap 0 bp  this call's core 4270150-4363658</text>
+<rect x="90.1" y="338" width="939.7" height="4" fill="#f4f4f4"/><text x="560.0" y="392" font-size="9" text-anchor="middle" fill="#a5372f">empty site</text>
 </svg>

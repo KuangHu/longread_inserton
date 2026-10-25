@@ -13,7 +13,11 @@ call    For one pair, maps each genome onto the other (minimap2 -x asm20 -c --eq
 merge   Merges raw calls of all pairs into per-genome loci (same carrier contig; reciprocal overlap >= 0.8 or both
         boundaries within the shift window + BOUNDARY_TOL). Adjacent but non-overlapping cores stay separate.
         Writes loci.tsv, calls_merged.tsv and U/core/D FASTA.
-plot    SVG per locus: carrier window with GFF3 CDS arrows, U/core/D marked, and the partner's empty site window.
+        anchored_support says whether every call agrees (max_other_side_gap shows how much replacement the
+        10%-of-core allowance admitted): all_calls_anchored, partner_mixed (another partner's
+        call is replacement/unresolved), direction_mixed (same partners, one mapping direction not anchored).
+plot    SVG per locus: carrier window with GFF3 CDS/rRNA/tRNA arrows and U/core/D, then one track per partner and
+        boundary set, drawn in carrier orientation with U'/D' under U/D (minus-strand partners flipped).
 
 Statuses: two_flank_anchored (both flanks >= FLANK_MIN_ID identity and >= FLANK_MIN_COVER aligned, no competing
 placement of either flank, not within EDGE bp of a contig end, other-side gap small), replacement, or unresolved
@@ -400,9 +404,23 @@ def merge_calls(calls):
             (s, e), _ = Counter((int(c["core_start"]), int(c["core_end"])) for c in good).most_common(1)[0]
             lid = "L_" + hashlib.sha256(("%s|%s|%d|%d" % (carrier, contig, s, e)).encode()).hexdigest()[:12]
             st = Counter(c["status"] for c in cl["calls"])
+            # status is the best call; anchored_support says whether every call (all partners, both mapping
+            # directions) agrees, so a locus anchored by one partner but not another stays visible.
+            partners_anchored = sorted({c["empty"] for c in cl["calls"] if c["status"] == "two_flank_anchored"})
+            partners_other = sorted({c["empty"] for c in cl["calls"]} - set(partners_anchored))
+            if not st["two_flank_anchored"]:
+                support = "not_anchored"
+            elif len(st) == 1:
+                support = "all_calls_anchored"
+            elif partners_other:
+                support = "partner_mixed"
+            else:
+                support = "direction_mixed"
             loci.append(dict(
                 locus_id=lid, carrier=carrier, contig=contig, core_start=s, core_end=e, core_len=e - s,
                 status="two_flank_anchored" if st["two_flank_anchored"] else ("replacement" if st["replacement"] else "unresolved"),
+                anchored_support=support, partners_anchored=";".join(partners_anchored),
+                partners_not_anchored=";".join(partners_other),
                 n_calls=len(cl["calls"]), n_pairs=len({c["pair_id"] for c in cl["calls"]}),
                 empty_partners=";".join(sorted({c["empty"] for c in cl["calls"]})),
                 mappings=len({(c["pair_id"], c["mapping"]) for c in cl["calls"]}), call_status=json.dumps(dict(st)),
@@ -410,6 +428,8 @@ def merge_calls(calls):
                 end_spread=max(int(c["core_end"]) for c in cl["calls"]) - min(int(c["core_end"]) for c in cl["calls"]),
                 boundary_consistency=boundary_consistency(cl["calls"]),
                 tandem_like=any(c["tandem_like"] in (True, "True") for c in cl["calls"]),
+                max_other_side_gap=max(int(c["other_side_gap"]) for c in cl["calls"]),
+                max_other_side_gap_anchored=max([int(c["other_side_gap"]) for c in cl["calls"] if c["status"] == "two_flank_anchored"] or [0]),
                 core_copies_carrier=max(int(c.get("core_copies_carrier") or 0) for c in cl["calls"]),
                 core_copies_empty=max(int(c.get("core_copies_empty") or 0) for c in cl["calls"]),
                 near_contig_end=any(c["near_contig_end"] in (True, "True") for c in cl["calls"]),
@@ -421,15 +441,29 @@ def merge_calls(calls):
 
 def boundary_consistency(calls):
     """exact: all calls give the same core; within_shift: differences fit the indel shift window + BOUNDARY_TOL;
-    partner_dependent: calls against different partners give different boundaries (raw calls are kept)."""
+    otherwise the boundaries differ between partners (partner_dependent), between calls against the same partner
+    (direction_dependent, e.g. the two mapping directions), or both. Raw calls are kept."""
     ss = {int(c["core_start"]) for c in calls}
     ee = {int(c["core_end"]) for c in calls}
     if len(ss) == 1 and len(ee) == 1:
         return "exact"
     tol = BOUNDARY_TOL + max(max(int(c["shift_left"]), int(c["shift_right"])) for c in calls)
-    if max(ss) - min(ss) <= tol and max(ee) - min(ee) <= tol:
+
+    def differ(cs):
+        s = [int(c["core_start"]) for c in cs]
+        e = [int(c["core_end"]) for c in cs]
+        return max(s) - min(s) > tol or max(e) - min(e) > tol
+
+    if not differ(calls):
         return "within_shift"
-    return "partner_dependent"
+    groups = defaultdict(list)
+    for c in calls:
+        groups[c["empty"]].append(c)
+    within = any(differ(g) for g in groups.values())
+    between = len(groups) > 1 and differ([g[0] for g in groups.values()])
+    if within and between:
+        return "partner_and_direction_dependent"
+    return "direction_dependent" if within else "partner_dependent"
 
 
 def cmd_merge(a):
@@ -467,20 +501,48 @@ def read_gff_cds(path):
     return cds
 
 
-def svg_track(y, label, contig_len, ws, we, feats, marks, width=1000):
-    scale = width / max(1, we - ws)
-    x = lambda p: 60 + (p - ws) * scale
-    out = ['<text x="4" y="%d" font-size="11">%s</text>' % (y - 14, label),
-           '<line x1="60" y1="%d" x2="%d" y2="%d" stroke="#888"/>' % (y, 60 + width, y)]
+PLOT_W, PLOT_X0, TRACK_H = 1000, 60, 120
+
+
+def partner_map(s, e, ep, gap, strand):
+    """Partner forward coordinate -> carrier coordinate, so the partner track is drawn in carrier orientation with
+    its flanks under U and D: the empty site (or other-side segment of a replacement) is stretched across the core."""
+    def f(p):
+        if strand == "+":
+            if p <= ep:
+                return s - (ep - p)
+            if p >= ep + gap:
+                return e + (p - ep - gap)
+            return s + (p - ep) * (e - s) / max(1, gap)
+        if p >= ep + gap:
+            return s - (p - ep - gap)
+        if p <= ep:
+            return e + (ep - p)
+        return s + (ep + gap - p) * (e - s) / max(1, gap)
+    return f
+
+
+def svg_track(y, label, ws, we, feats, to_carrier, flip, marks, coords):
+    """One genome track in carrier coordinates [ws, we]. Layout from the top: label, + gene names, + arrows, axis,
+    - arrows, - gene names, U/core/D band with names, coordinates."""
+    scale = PLOT_W / max(1, we - ws)
+    x = lambda c: PLOT_X0 + (min(max(c, ws), we) - ws) * scale
+    out = ['<text x="4" y="%d" font-size="11" font-weight="bold">%s</text>' % (y - 36, label),
+           '<line x1="%d" y1="%d" x2="%d" y2="%d" stroke="#888"/>' % (PLOT_X0, y, PLOT_X0 + PLOT_W, y)]
     for s, e, color, name in marks:
-        out.append('<rect x="%.1f" y="%d" width="%.1f" height="10" fill="%s" opacity="0.45"/><text x="%.1f" y="%d" font-size="9">%s</text>'
-                   % (x(max(s, ws)), y - 5, max(1, x(min(e, we)) - x(max(s, ws))), color, x(max(s, ws)), y + 18, name))
-    seen = set()
-    for s, e, strand, typ, prod, pseudo in feats:
-        if e < ws or s > we:
+        x1, x2 = x(s), x(e)
+        out.append('<rect x="%.1f" y="%d" width="%.1f" height="8" fill="%s" opacity="0.55"/>' % (x1, y + 32, max(1.5, x2 - x1), color))
+        if name:
+            out.append('<text x="%.1f" y="%d" font-size="9" text-anchor="middle">%s</text>' % ((x1 + x2) / 2, y + 52, name))
+    labelled = []
+    for fs, fe, strand, typ, prod, pseudo in feats:
+        c1, c2 = sorted((to_carrier(fs), to_carrier(fe)))
+        if c2 < ws or c1 > we:
             continue
-        x1, x2 = x(max(s, ws)), x(min(e, we))
-        yy = y - 16 if strand == "+" else y + 4
+        if flip:
+            strand = "-" if strand == "+" else "+"
+        x1, x2 = x(c1), x(c2)
+        yy = y - 15 if strand == "+" else y + 3
         col = {"CDS": "#3b6fb6", "rRNA": "#b63b3b", "tRNA": "#b68a3b"}[typ] if not pseudo else "#999"
         if strand == "+":
             base = max(x1, x2 - 6)
@@ -489,12 +551,13 @@ def svg_track(y, label, contig_len, ws, we, feats, marks, width=1000):
             base = min(x2, x1 + 6)
             pts = [(x1, yy + 6), (base, yy), (x2, yy), (x2, yy + 12), (base, yy + 12)]
         out.append('<polygon points="%s" fill="%s"><title>%s %d-%d %s</title></polygon>'
-                   % (" ".join("%.1f,%d" % p for p in pts), col, prod, s, e, strand))
-        key = (round(x1 / 40), strand)
-        if prod and key not in seen and x2 - x1 > 30:
-            seen.add(key)
-            out.append('<text x="%.1f" y="%d" font-size="8" fill="#333">%s</text>' % (x1, yy - 2 if strand == "+" else yy + 22, prod[:24]))
-    out.append('<text x="60" y="%d" font-size="9" fill="#666">%s:%d-%d</text>' % (y + 34, label.split()[0], ws, we))
+                   % (" ".join("%.1f,%d" % p for p in pts), col, prod, fs, fe, strand))
+        ty = y - 19 if strand == "+" else y + 25
+        if prod and x2 - x1 > 30 and all(not (s2 == strand and x1 < e2 + 6) for s2, e2 in labelled):
+            text = prod[:max(4, int((x2 - x1) / 4.6))]
+            labelled.append((strand, x1 + len(text) * 4.6))
+            out.append('<text x="%.1f" y="%d" font-size="8" fill="#333">%s</text>' % (x1, ty, text))
+    out.append('<text x="%d" y="%d" font-size="9" fill="#666">%s</text>' % (PLOT_X0, y + 66, coords))
     return out
 
 
@@ -505,6 +568,9 @@ def cmd_plot(a):
     gff = dict(x.split("=", 1) for x in (a.gff or []))
     lens = {k: {c: len(s) for c, s in read_fasta(v).items()} for k, v in fa.items()}
     feats = {k: read_gff_cds(v) for k, v in gff.items()}
+    by_locus = defaultdict(list)
+    for c in calls:
+        by_locus[c.get("locus_id")].append(c)
     a.out.mkdir(parents=True, exist_ok=True)
     want = set(a.loci_ids or [])
     for l in loci:
@@ -512,18 +578,40 @@ def cmd_plot(a):
             continue
         s, e = int(l["core_start"]), int(l["core_end"])
         ws, we = max(0, s - UD - a.pad), min(lens[l["carrier"]][l["contig"]], e + UD + a.pad)
-        c = [c for c in calls if c.get("locus_id") == l["locus_id"]][0]
-        ep = int(c["empty_pos"])
-        es, ee = max(0, ep - UD - a.pad), min(lens[c["empty"]][c["empty_contig"]], ep + UD + a.pad + (e - s) // 4)
-        body = ['<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="250" font-family="sans-serif">',
+        # One partner track per (partner, its own boundaries): anchored calls first, both mapping directions collapsed.
+        tracks = {}
+        for c in sorted(by_locus[l["locus_id"]], key=lambda c: c["status"] != "two_flank_anchored"):
+            tracks.setdefault((c["empty"], c["empty_contig"], c["empty_pos"], c["other_side_gap"], c["core_start"], c["core_end"]), c)
+        tracks = list(tracks.values())
+        h = 60 + TRACK_H * (1 + len(tracks))
+        body = ['<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="%d" font-family="sans-serif">' % h,
                 '<rect width="100%" height="100%" fill="white"/>',
-                '<text x="4" y="14" font-size="12">%s  %s  core %d bp  status %s  pairs %s  tandem %s  core copies carrier/empty %s</text>'
-                % (l["locus_id"], l["carrier"], e - s, l["status"], l["n_pairs"], l["tandem_like"],
-                   "%s/%s" % (l["core_copies_carrier"], l["core_copies_empty"]))]
-        body += svg_track(80, "%s %s (carrier)" % (l["carrier"], l["contig"]), 0, ws, we, feats.get(l["carrier"], {}).get(l["contig"], []),
-                          [(max(0, s - UD), s, "#2a9d8f", "U"), (s, e, "#e76f51", "core"), (e, e + UD, "#2a9d8f", "D")])
-        body += svg_track(190, "%s %s (empty site, %s)" % (c["empty"], c["empty_contig"], c["aln_strand"]), 0, es, ee,
-                          feats.get(c["empty"], {}).get(c["empty_contig"], []), [(ep - 1, ep + 1, "#e76f51", "site")])
+                '<text x="4" y="16" font-size="12">%s  %s  core %d bp  %s  support %s  boundary %s  tandem %s  core copies carrier/partner %s/%s</text>'
+                % (l["locus_id"], l["carrier"], e - s, l["status"], l.get("anchored_support", ""), l["boundary_consistency"],
+                   l["tandem_like"], l["core_copies_carrier"], l["core_copies_empty"])]
+        for xb in (s, e):
+            xx = PLOT_X0 + (xb - ws) * PLOT_W / max(1, we - ws)
+            body.append('<line x1="%.1f" y1="30" x2="%.1f" y2="%d" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>' % (xx, xx, h - 8))
+        body += svg_track(40 + 60, "%s %s (carrier)" % (l["carrier"], l["contig"]), ws, we,
+                          feats.get(l["carrier"], {}).get(l["contig"], []), lambda p: p, False,
+                          [(s - UD, s, "#2a9d8f", "U"), (s, e, "#e76f51", "core %d" % (e - s)), (e, e + UD, "#2a9d8f", "D")],
+                          "%s:%d-%d  core %d-%d" % (l["contig"], ws, we, s, e))
+        for i, c in enumerate(tracks):
+            ep, gap, cs, ce = int(c["empty_pos"]), int(c["other_side_gap"]), int(c["core_start"]), int(c["core_end"])
+            f = partner_map(cs, ce, ep, gap, c["aln_strand"])
+            mid = [(cs, ce, "#9b5de5", "other side %d" % gap)] if gap else [(cs, ce, "#ffffff", "")]
+            body += svg_track(40 + 60 + TRACK_H * (i + 1),
+                              "%s %s (partner, %s strand, %s, pair %s)" % (c["empty"], c["empty_contig"], c["aln_strand"],
+                                                                            c["status"], c["pair_id"]),
+                              ws, we, feats.get(c["empty"], {}).get(c["empty_contig"], []), f, c["aln_strand"] == "-",
+                              [(cs - UD, cs, "#2a9d8f", "U'"), (ce, ce + UD, "#2a9d8f", "D'")] + mid,
+                              "%s site %d  other-side gap %d bp  this call's core %d-%d" % (c["empty_contig"], ep, gap, cs, ce))
+            if not gap:
+                xs = PLOT_X0 + (cs - ws) * PLOT_W / max(1, we - ws)
+                xe = PLOT_X0 + (ce - ws) * PLOT_W / max(1, we - ws)
+                yy = 100 + TRACK_H * (i + 1)
+                body.append('<rect x="%.1f" y="%d" width="%.1f" height="%d" fill="#f4f4f4"/><text x="%.1f" y="%d" font-size="9" '
+                            'text-anchor="middle" fill="#a5372f">empty site</text>' % (xs, yy - 2, max(1.5, xe - xs), 4, (xs + xe) / 2, yy + 52))
         body.append("</svg>")
         (a.out / (l["locus_id"] + ".svg")).write_text("\n".join(body) + "\n")
     print("plots in", a.out)

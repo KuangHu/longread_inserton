@@ -1,56 +1,67 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="250" font-family="sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="300" font-family="sans-serif">
 <rect width="100%" height="100%" fill="white"/>
-<text x="4" y="14" font-size="12">L_00e6fc147ec6  SAMN13450421  core 5415 bp  status replacement  pairs 1  tandem False  core copies carrier/empty 1/0</text>
-<text x="4" y="66" font-size="11">SAMN13450421 NZ_CP065695.1 (carrier)</text>
-<line x1="60" y1="80" x2="1060" y2="80" stroke="#888"/>
-<rect x="235.2" y="75" width="87.6" height="10" fill="#2a9d8f" opacity="0.45"/><text x="235.2" y="98" font-size="9">U</text>
-<rect x="322.8" y="75" width="474.4" height="10" fill="#e76f51" opacity="0.45"/><text x="322.8" y="98" font-size="9">core</text>
-<rect x="797.2" y="75" width="87.6" height="10" fill="#2a9d8f" opacity="0.45"/><text x="797.2" y="98" font-size="9">D</text>
-<polygon points="60.0,90 66.0,84 121.3,84 121.3,96 66.0,96" fill="#3b6fb6"><title>HD domain-containing phosphohydrolase 6145203-6146511 -</title></polygon>
-<text x="60.0" y="106" font-size="8" fill="#333">HD domain-containing pho</text>
-<polygon points="132.2,64 155.9,64 161.9,70 155.9,76 132.2,76" fill="#3b6fb6"><title>hypothetical protein 6146635-6146974 +</title></polygon>
-<polygon points="191.8,90 197.8,84 222.0,84 222.0,96 197.8,96" fill="#3b6fb6"><title>hypothetical protein 6147315-6147660 -</title></polygon>
-<text x="191.8" y="106" font-size="8" fill="#333">hypothetical protein</text>
-<polygon points="255.0,90 261.0,84 319.4,84 319.4,96 261.0,96" fill="#3b6fb6"><title>hypothetical protein 6148037-6148772 -</title></polygon>
-<text x="255.0" y="106" font-size="8" fill="#333">hypothetical protein</text>
-<polygon points="365.5,90 371.5,84 394.5,84 394.5,96 371.5,96" fill="#3b6fb6"><title>IS5 family transposase 6149298-6149629 -</title></polygon>
-<polygon points="323.6,90 329.6,84 365.6,84 365.6,96 329.6,96" fill="#3b6fb6"><title>IS5 family transposase 6148820-6149299 -</title></polygon>
-<text x="323.6" y="106" font-size="8" fill="#333">IS5 family transposase</text>
-<polygon points="416.1,90 422.1,84 503.1,84 503.1,96 422.1,96" fill="#3b6fb6"><title>acyltransferase family protein 6149876-6150869 -</title></polygon>
-<text x="416.1" y="106" font-size="8" fill="#333">acyltransferase family p</text>
-<polygon points="520.8,64 525.9,64 531.9,70 525.9,76 520.8,76" fill="#999"><title>IS5/IS1182 family transposase 6151071-6151198 +</title></polygon>
-<polygon points="541.9,64 559.3,64 565.3,70 559.3,76 541.9,76" fill="#3b6fb6"><title>transposase 6151312-6151579 +</title></polygon>
-<polygon points="558.6,64 616.2,64 622.2,70 616.2,76 558.6,76" fill="#3b6fb6"><title>IS3 family transposase 6151503-6152229 +</title></polygon>
-<text x="558.6" y="62" font-size="8" fill="#333">IS3 family transposase</text>
-<polygon points="624.9,64 634.4,64 640.4,70 634.4,76 624.9,76" fill="#3b6fb6"><title>integrase core domain-containing protein 6152259-6152436 +</title></polygon>
-<polygon points="645.4,64 663.5,64 669.5,70 663.5,76 645.4,76" fill="#999"><title>IS30 family transposase 6152493-6152769 +</title></polygon>
-<polygon points="669.9,64 688.1,64 694.1,70 688.1,76 669.9,76" fill="#999"><title>IS3 family transposase 6152773-6153049 +</title></polygon>
-<polygon points="700.2,64 723.2,64 729.2,70 723.2,76 700.2,76" fill="#3b6fb6"><title>IS5 family transposase 6153119-6153450 +</title></polygon>
-<polygon points="729.1,64 765.1,64 771.1,70 765.1,76 729.1,76" fill="#3b6fb6"><title>IS5 family transposase 6153449-6153928 +</title></polygon>
-<text x="729.1" y="62" font-size="8" fill="#333">IS5 family transposase</text>
-<polygon points="805.6,64 885.3,64 891.3,70 885.3,76 805.6,76" fill="#3b6fb6"><title>tRNA dihydrouridine(20/20a) synthase Dus 6154322-6155300 +</title></polygon>
-<text x="805.6" y="62" font-size="8" fill="#333">tRNA dihydrouridine(20/2</text>
-<polygon points="906.0,64 1020.4,64 1026.4,70 1020.4,76 906.0,76" fill="#3b6fb6"><title>polyhydroxyalkanoate depolymerase 6155468-6156842 +</title></polygon>
-<text x="906.0" y="62" font-size="8" fill="#333">polyhydroxyalkanoate dep</text>
-<polygon points="1028.4,64 1054.0,64 1060.0,70 1054.0,76 1028.4,76" fill="#3b6fb6"><title>electron transport complex subunit RsxB 6156865-6157582 +</title></polygon>
-<text x="1028.4" y="62" font-size="8" fill="#333">electron transport compl</text>
-<text x="60" y="114" font-size="9" fill="#666">SAMN13450421:6145811-6157226</text>
-<text x="4" y="176" font-size="11">SAMEA118088312 NZ_OZ253481.1 (empty site, -)</text>
-<line x1="60" y1="190" x2="1060" y2="190" stroke="#888"/>
-<rect x="467.9" y="185" width="1.0" height="10" fill="#e76f51" opacity="0.45"/><text x="467.9" y="208" font-size="9">site</text>
-<polygon points="60.0,200 66.0,194 109.1,194 109.1,206 66.0,206" fill="#3b6fb6"><title>electron transport complex subunit RsxB 555443-556160 -</title></polygon>
-<text x="60.0" y="216" font-size="8" fill="#333">electron transport compl</text>
-<polygon points="112.2,200 118.2,194 299.1,194 299.1,206 118.2,206" fill="#3b6fb6"><title>polyhydroxyalkanoate depolymerase 556183-557557 -</title></polygon>
-<text x="112.2" y="216" font-size="8" fill="#333">polyhydroxyalkanoate dep</text>
-<polygon points="321.9,200 327.9,194 454.9,194 454.9,206 327.9,206" fill="#3b6fb6"><title>tRNA dihydrouridine(20/20a) synthase Dus 557725-558703 -</title></polygon>
-<text x="321.9" y="216" font-size="8" fill="#333">tRNA dihydrouridine(20/2</text>
-<polygon points="484.3,174 512.6,174 518.6,180 512.6,186 484.3,186" fill="#3b6fb6"><title>hypothetical protein 558919-559171 +</title></polygon>
-<text x="484.3" y="172" font-size="8" fill="#333">hypothetical protein</text>
-<polygon points="522.5,174 620.6,174 626.6,180 620.6,186 522.5,186" fill="#3b6fb6"><title>site-specific integrase 559200-559965 +</title></polygon>
-<text x="522.5" y="172" font-size="8" fill="#333">site-specific integrase</text>
-<polygon points="640.0,174 672.0,174 678.0,180 672.0,186 640.0,186" fill="#3b6fb6"><title>hypothetical protein 560064-560343 +</title></polygon>
-<text x="640.0" y="172" font-size="8" fill="#333">hypothetical protein</text>
-<polygon points="689.1,200 695.1,194 1060.0,194 1060.0,206 695.1,206" fill="#3b6fb6"><title>IPTL-CTERM sorting domain-containing pro 560425-563221 -</title></polygon>
-<text x="689.1" y="216" font-size="8" fill="#333">IPTL-CTERM sorting domai</text>
-<text x="60" y="224" font-size="9" fill="#666">SAMEA118088312:555799-563152</text>
+<text x="4" y="16" font-size="12">L_00e6fc147ec6  SAMN13450421  core 5415 bp  replacement  support not_anchored  boundary exact  tandem False  core copies carrier/partner 1/0</text>
+<line x1="322.8" y1="30" x2="322.8" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<line x1="797.2" y1="30" x2="797.2" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<text x="4" y="64" font-size="11" font-weight="bold">SAMN13450421 NZ_CP065695.1 (carrier)</text>
+<line x1="60" y1="100" x2="1060" y2="100" stroke="#888"/>
+<rect x="235.2" y="132" width="87.6" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="279.0" y="152" font-size="9" text-anchor="middle">U</text>
+<rect x="322.8" y="132" width="474.4" height="8" fill="#e76f51" opacity="0.55"/>
+<text x="560.0" y="152" font-size="9" text-anchor="middle">core 5415</text>
+<rect x="797.2" y="132" width="87.6" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="841.0" y="152" font-size="9" text-anchor="middle">D</text>
+<polygon points="60.0,109 66.0,103 121.3,103 121.3,115 66.0,115" fill="#3b6fb6"><title>HD domain-containing phosphohydrolase 6145203-6146511 -</title></polygon>
+<text x="60.0" y="125" font-size="8" fill="#333">HD domain-con</text>
+<polygon points="132.2,85 155.9,85 161.9,91 155.9,97 132.2,97" fill="#3b6fb6"><title>hypothetical protein 6146635-6146974 +</title></polygon>
+<polygon points="191.8,109 197.8,103 222.0,103 222.0,115 197.8,115" fill="#3b6fb6"><title>hypothetical protein 6147315-6147660 -</title></polygon>
+<text x="191.8" y="125" font-size="8" fill="#333">hypoth</text>
+<polygon points="255.0,109 261.0,103 319.4,103 319.4,115 261.0,115" fill="#3b6fb6"><title>hypothetical protein 6148037-6148772 -</title></polygon>
+<text x="255.0" y="125" font-size="8" fill="#333">hypothetical </text>
+<polygon points="365.5,109 371.5,103 394.5,103 394.5,115 371.5,115" fill="#3b6fb6"><title>IS5 family transposase 6149298-6149629 -</title></polygon>
+<polygon points="323.6,109 329.6,103 365.6,103 365.6,115 329.6,115" fill="#3b6fb6"><title>IS5 family transposase 6148820-6149299 -</title></polygon>
+<text x="323.6" y="125" font-size="8" fill="#333">IS5 famil</text>
+<polygon points="416.1,109 422.1,103 503.1,103 503.1,115 422.1,115" fill="#3b6fb6"><title>acyltransferase family protein 6149876-6150869 -</title></polygon>
+<text x="416.1" y="125" font-size="8" fill="#333">acyltransferase fa</text>
+<polygon points="520.8,85 525.9,85 531.9,91 525.9,97 520.8,97" fill="#999"><title>IS5/IS1182 family transposase 6151071-6151198 +</title></polygon>
+<polygon points="541.9,85 559.3,85 565.3,91 559.3,97 541.9,97" fill="#3b6fb6"><title>transposase 6151312-6151579 +</title></polygon>
+<polygon points="558.6,85 616.2,85 622.2,91 616.2,97 558.6,97" fill="#3b6fb6"><title>IS3 family transposase 6151503-6152229 +</title></polygon>
+<text x="558.6" y="81" font-size="8" fill="#333">IS3 family tr</text>
+<polygon points="624.9,85 634.4,85 640.4,91 634.4,97 624.9,97" fill="#3b6fb6"><title>integrase core domain-containing protein 6152259-6152436 +</title></polygon>
+<polygon points="645.4,85 663.5,85 669.5,91 663.5,97 645.4,97" fill="#999"><title>IS30 family transposase 6152493-6152769 +</title></polygon>
+<polygon points="669.9,85 688.1,85 694.1,91 688.1,97 669.9,97" fill="#999"><title>IS3 family transposase 6152773-6153049 +</title></polygon>
+<polygon points="700.2,85 723.2,85 729.2,91 723.2,97 700.2,97" fill="#3b6fb6"><title>IS5 family transposase 6153119-6153450 +</title></polygon>
+<polygon points="729.1,85 765.1,85 771.1,91 765.1,97 729.1,97" fill="#3b6fb6"><title>IS5 family transposase 6153449-6153928 +</title></polygon>
+<text x="729.1" y="81" font-size="8" fill="#333">IS5 famil</text>
+<polygon points="805.6,85 885.3,85 891.3,91 885.3,97 805.6,97" fill="#3b6fb6"><title>tRNA dihydrouridine(20/20a) synthase Dus 6154322-6155300 +</title></polygon>
+<text x="805.6" y="81" font-size="8" fill="#333">tRNA dihydrouridin</text>
+<polygon points="906.0,85 1020.4,85 1026.4,91 1020.4,97 906.0,97" fill="#3b6fb6"><title>polyhydroxyalkanoate depolymerase 6155468-6156842 +</title></polygon>
+<text x="906.0" y="81" font-size="8" fill="#333">polyhydroxyalkanoate depol</text>
+<polygon points="1028.4,85 1054.0,85 1060.0,91 1054.0,97 1028.4,97" fill="#3b6fb6"><title>electron transport complex subunit RsxB 6156865-6157582 +</title></polygon>
+<text x="60" y="166" font-size="9" fill="#666">NZ_CP065695.1:6145811-6157226  core 6148811-6154226</text>
+<text x="4" y="184" font-size="11" font-weight="bold">SAMEA118088312 NZ_OZ253481.1 (partner, - strand, replacement, pair P00290)</text>
+<line x1="60" y1="220" x2="1060" y2="220" stroke="#888"/>
+<rect x="235.2" y="252" width="87.6" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="279.0" y="272" font-size="9" text-anchor="middle">U'</text>
+<rect x="797.2" y="252" width="87.6" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="841.0" y="272" font-size="9" text-anchor="middle">D'</text>
+<rect x="322.8" y="252" width="474.4" height="8" fill="#9b5de5" opacity="0.55"/>
+<text x="560.0" y="272" font-size="9" text-anchor="middle">other side 5112</text>
+<polygon points="1028.4,205 1054.0,205 1060.0,211 1054.0,217 1028.4,217" fill="#3b6fb6"><title>electron transport complex subunit RsxB 555443-556160 +</title></polygon>
+<text x="1028.4" y="201" font-size="8" fill="#333">electr</text>
+<polygon points="906.0,205 1020.4,205 1026.4,211 1020.4,217 906.0,217" fill="#3b6fb6"><title>polyhydroxyalkanoate depolymerase 556183-557557 +</title></polygon>
+<polygon points="805.6,205 885.3,205 891.3,211 885.3,217 805.6,217" fill="#3b6fb6"><title>tRNA dihydrouridine(20/20a) synthase Dus 557725-558703 +</title></polygon>
+<polygon points="762.7,229 768.7,223 786.1,223 786.1,235 768.7,235" fill="#3b6fb6"><title>hypothetical protein 558919-559171 -</title></polygon>
+<polygon points="689.0,229 695.0,223 760.0,223 760.0,235 695.0,235" fill="#3b6fb6"><title>site-specific integrase 559200-559965 -</title></polygon>
+<text x="689.0" y="245" font-size="8" fill="#333">site-specific i</text>
+<polygon points="653.9,229 659.9,223 679.8,223 679.8,235 659.9,235" fill="#3b6fb6"><title>hypothetical protein 560064-560343 -</title></polygon>
+<polygon points="386.8,205 640.3,205 646.3,211 640.3,217 386.8,217" fill="#3b6fb6"><title>IPTL-CTERM sorting domain-containing pro 560425-563221 +</title></polygon>
+<polygon points="281.3,229 287.3,223 340.9,223 340.9,235 287.3,235" fill="#3b6fb6"><title>hypothetical protein 563716-564385 -</title></polygon>
+<polygon points="222.6,229 228.6,223 267.5,223 267.5,235 228.6,235" fill="#3b6fb6"><title>LPD38 domain-containing protein 564542-565055 -</title></polygon>
+<polygon points="200.7,229 206.7,223 228.8,223 228.8,235 206.7,235" fill="#3b6fb6"><title>LPD38 domain-containing protein 564984-565305 -</title></polygon>
+<polygon points="182.7,229 188.7,223 200.3,223 200.3,235 188.7,235" fill="#3b6fb6"><title>hypothetical protein 565309-565510 -</title></polygon>
+<polygon points="131.6,205 146.6,205 152.6,211 146.6,217 131.6,217" fill="#3b6fb6"><title>hypothetical protein 565854-566094 +</title></polygon>
+<polygon points="75.4,229 81.4,223 130.6,223 130.6,235 81.4,235" fill="#3b6fb6"><title>hypothetical protein 566105-566735 -</title></polygon>
+<polygon points="60.0,229 61.0,223 61.0,223 61.0,235 61.0,235" fill="#3b6fb6"><title>hypothetical protein 566900-567467 -</title></polygon>
+<text x="60" y="286" font-size="9" fill="#666">NZ_OZ253481.1 site 558799  other-side gap 5112 bp  this call's core 6148811-6154226</text>
 </svg>

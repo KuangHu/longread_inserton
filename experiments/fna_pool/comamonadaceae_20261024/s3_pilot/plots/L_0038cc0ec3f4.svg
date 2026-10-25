@@ -1,34 +1,57 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="250" font-family="sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="420" font-family="sans-serif">
 <rect width="100%" height="100%" fill="white"/>
-<text x="4" y="14" font-size="12">L_0038cc0ec3f4  SAMEA120782404  core 94 bp  status replacement  pairs 1  tandem False  core copies carrier/empty 1/0</text>
-<text x="4" y="66" font-size="11">SAMEA120782404 NZ_OZ409863.1 (carrier)</text>
-<line x1="60" y1="80" x2="1060" y2="80" stroke="#888"/>
-<rect x="388.2" y="75" width="164.1" height="10" fill="#2a9d8f" opacity="0.45"/><text x="388.2" y="98" font-size="9">U</text>
-<rect x="552.3" y="75" width="15.4" height="10" fill="#e76f51" opacity="0.45"/><text x="552.3" y="98" font-size="9">core</text>
-<rect x="567.7" y="75" width="164.1" height="10" fill="#2a9d8f" opacity="0.45"/><text x="567.7" y="98" font-size="9">D</text>
-<polygon points="60.0,64 68.6,64 74.6,70 68.6,76 60.0,76" fill="#3b6fb6"><title>ketol-acid reductoisomerase 4894295-4895312 +</title></polygon>
-<polygon points="104.8,64 234.2,64 240.2,70 234.2,76 104.8,76" fill="#3b6fb6"><title>CDP-diacylglycerol--serine O-phosphatidy 4895496-4896321 +</title></polygon>
-<text x="104.8" y="62" font-size="8" fill="#333">CDP-diacylglycerol--seri</text>
-<polygon points="272.7,64 546.3,64 552.3,70 546.3,76 272.7,76" fill="#3b6fb6"><title>2-isopropylmalate synthase 4896519-4898223 +</title></polygon>
-<text x="272.7" y="62" font-size="8" fill="#333">2-isopropylmalate syntha</text>
-<polygon points="572.5,64 819.0,64 825.0,70 819.0,76 572.5,76" fill="#3b6fb6"><title>2-isopropylmalate synthase 4898346-4899885 +</title></polygon>
-<text x="572.5" y="62" font-size="8" fill="#333">2-isopropylmalate syntha</text>
-<polygon points="844.2,64 1037.6,64 1043.6,70 1037.6,76 844.2,76" fill="#3b6fb6"><title>serine hydrolase 4900002-4901217 +</title></polygon>
-<text x="844.2" y="62" font-size="8" fill="#333">serine hydrolase</text>
-<polygon points="1058.2,90 1060.0,84 1060.0,84 1060.0,96 1060.0,96" fill="#3b6fb6"><title>IclR family transcriptional regulator 4901306-4902137 -</title></polygon>
-<text x="60" y="114" font-size="9" fill="#666">SAMEA120782404:4895223-4901317</text>
-<text x="4" y="176" font-size="11">SAMN51281044 NZ_CM191372.1 (empty site, -)</text>
-<line x1="60" y1="190" x2="1060" y2="190" stroke="#888"/>
-<rect x="557.9" y="185" width="1.0" height="10" fill="#e76f51" opacity="0.45"/><text x="557.9" y="208" font-size="9">site</text>
-<polygon points="60.0,174 62.0,174 68.0,180 62.0,186 60.0,186" fill="#3b6fb6"><title>IclR family transcriptional regulator 3527240-3528077 +</title></polygon>
-<polygon points="83.2,200 89.2,194 281.0,194 281.0,206 89.2,206" fill="#3b6fb6"><title>serine hydrolase 3528169-3529360 -</title></polygon>
-<text x="83.2" y="216" font-size="8" fill="#333">serine hydrolase</text>
-<polygon points="300.4,200 306.4,194 555.9,194 555.9,206 306.4,206" fill="#3b6fb6"><title>2-isopropylmalate synthase 3529477-3531016 -</title></polygon>
-<text x="300.4" y="216" font-size="8" fill="#333">2-isopropylmalate syntha</text>
-<polygon points="565.7,200 571.7,194 848.6,194 848.6,206 571.7,206" fill="#3b6fb6"><title>2-isopropylmalate synthase 3531075-3532779 -</title></polygon>
-<text x="565.7" y="216" font-size="8" fill="#333">2-isopropylmalate syntha</text>
-<polygon points="883.0,200 889.0,194 1020.0,194 1020.0,206 889.0,206" fill="#3b6fb6"><title>CDP-diacylglycerol--serine O-phosphatidy 3532986-3533811 -</title></polygon>
-<text x="883.0" y="216" font-size="8" fill="#333">CDP-diacylglycerol--seri</text>
-<polygon points="1050.5,200 1056.5,194 1060.0,194 1060.0,206 1056.5,206" fill="#3b6fb6"><title>ketol-acid reductoisomerase 3533995-3535012 -</title></polygon>
-<text x="60" y="224" font-size="9" fill="#666">SAMN51281044:3528029-3534052</text>
+<text x="4" y="16" font-size="12">L_0038cc0ec3f4  SAMEA120782404  core 94 bp  replacement  support not_anchored  boundary within_shift  tandem False  core copies carrier/partner 1/0</text>
+<line x1="552.3" y1="30" x2="552.3" y2="412" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<line x1="567.7" y1="30" x2="567.7" y2="412" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<text x="4" y="64" font-size="11" font-weight="bold">SAMEA120782404 NZ_OZ409863.1 (carrier)</text>
+<line x1="60" y1="100" x2="1060" y2="100" stroke="#888"/>
+<rect x="388.2" y="132" width="164.1" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="470.2" y="152" font-size="9" text-anchor="middle">U</text>
+<rect x="552.3" y="132" width="15.4" height="8" fill="#e76f51" opacity="0.55"/>
+<text x="560.0" y="152" font-size="9" text-anchor="middle">core 94</text>
+<rect x="567.7" y="132" width="164.1" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="649.8" y="152" font-size="9" text-anchor="middle">D</text>
+<polygon points="60.0,85 68.6,85 74.6,91 68.6,97 60.0,97" fill="#3b6fb6"><title>ketol-acid reductoisomerase 4894295-4895312 +</title></polygon>
+<polygon points="104.8,85 234.2,85 240.2,91 234.2,97 104.8,97" fill="#3b6fb6"><title>CDP-diacylglycerol--serine O-phosphatidy 4895496-4896321 +</title></polygon>
+<text x="104.8" y="81" font-size="8" fill="#333">CDP-diacylglycerol--serine O-</text>
+<polygon points="272.7,85 546.3,85 552.3,91 546.3,97 272.7,97" fill="#3b6fb6"><title>2-isopropylmalate synthase 4896519-4898223 +</title></polygon>
+<text x="272.7" y="81" font-size="8" fill="#333">2-isopropylmalate synthase</text>
+<polygon points="572.5,85 819.0,85 825.0,91 819.0,97 572.5,97" fill="#3b6fb6"><title>2-isopropylmalate synthase 4898346-4899885 +</title></polygon>
+<text x="572.5" y="81" font-size="8" fill="#333">2-isopropylmalate synthase</text>
+<polygon points="844.2,85 1037.6,85 1043.6,91 1037.6,97 844.2,97" fill="#3b6fb6"><title>serine hydrolase 4900002-4901217 +</title></polygon>
+<text x="844.2" y="81" font-size="8" fill="#333">serine hydrolase</text>
+<polygon points="1058.2,109 1060.0,103 1060.0,103 1060.0,115 1060.0,115" fill="#3b6fb6"><title>IclR family transcriptional regulator 4901306-4902137 -</title></polygon>
+<text x="60" y="166" font-size="9" fill="#666">NZ_OZ409863.1:4895223-4901317  core 4898223-4898317</text>
+<text x="4" y="184" font-size="11" font-weight="bold">SAMN51281044 NZ_CM191372.1 (partner, - strand, replacement, pair P00384)</text>
+<line x1="60" y1="220" x2="1060" y2="220" stroke="#888"/>
+<rect x="388.2" y="252" width="164.1" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="470.2" y="272" font-size="9" text-anchor="middle">U'</text>
+<rect x="570.3" y="252" width="164.1" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="652.4" y="272" font-size="9" text-anchor="middle">D'</text>
+<rect x="552.3" y="252" width="18.1" height="8" fill="#9b5de5" opacity="0.55"/>
+<text x="561.3" y="272" font-size="9" text-anchor="middle">other side 46</text>
+<polygon points="1054.7,229 1060.0,223 1060.0,223 1060.0,235 1060.0,235" fill="#3b6fb6"><title>IclR family transcriptional regulator 3527240-3528077 -</title></polygon>
+<polygon points="844.2,205 1033.7,205 1039.7,211 1033.7,217 844.2,217" fill="#3b6fb6"><title>serine hydrolase 3528169-3529360 +</title></polygon>
+<text x="844.2" y="201" font-size="8" fill="#333">serine hydrolase</text>
+<polygon points="572.5,205 819.0,205 825.0,211 819.0,217 572.5,217" fill="#3b6fb6"><title>2-isopropylmalate synthase 3529477-3531016 +</title></polygon>
+<polygon points="272.7,205 546.3,205 552.3,211 546.3,217 272.7,217" fill="#3b6fb6"><title>2-isopropylmalate synthase 3531075-3532779 +</title></polygon>
+<polygon points="103.3,205 232.7,205 238.7,211 232.7,217 103.3,217" fill="#3b6fb6"><title>CDP-diacylglycerol--serine O-phosphatidy 3532986-3533811 +</title></polygon>
+<polygon points="60.0,205 67.1,205 73.1,211 67.1,217 60.0,217" fill="#3b6fb6"><title>ketol-acid reductoisomerase 3533995-3535012 +</title></polygon>
+<text x="60" y="286" font-size="9" fill="#666">NZ_CM191372.1 site 3531029  other-side gap 46 bp  this call's core 4898223-4898333</text>
+<text x="4" y="304" font-size="11" font-weight="bold">SAMN51281044 NZ_CM191372.1 (partner, - strand, unresolved, pair P00384)</text>
+<line x1="60" y1="340" x2="1060" y2="340" stroke="#888"/>
+<rect x="388.2" y="372" width="164.1" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="470.2" y="392" font-size="9" text-anchor="middle">U'</text>
+<rect x="567.7" y="372" width="164.1" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="649.8" y="392" font-size="9" text-anchor="middle">D'</text>
+<rect x="552.3" y="372" width="15.4" height="8" fill="#9b5de5" opacity="0.55"/>
+<text x="560.0" y="392" font-size="9" text-anchor="middle">other side 30</text>
+<polygon points="1054.7,349 1060.0,343 1060.0,343 1060.0,355 1060.0,355" fill="#3b6fb6"><title>IclR family transcriptional regulator 3527240-3528077 -</title></polygon>
+<polygon points="844.2,325 1033.7,325 1039.7,331 1033.7,337 844.2,337" fill="#3b6fb6"><title>serine hydrolase 3528169-3529360 +</title></polygon>
+<text x="844.2" y="321" font-size="8" fill="#333">serine hydrolase</text>
+<polygon points="572.5,325 819.0,325 825.0,331 819.0,337 572.5,337" fill="#3b6fb6"><title>2-isopropylmalate synthase 3529477-3531016 +</title></polygon>
+<polygon points="272.7,325 546.3,325 552.3,331 546.3,337 272.7,337" fill="#3b6fb6"><title>2-isopropylmalate synthase 3531075-3532779 +</title></polygon>
+<polygon points="103.3,325 232.7,325 238.7,331 232.7,337 103.3,337" fill="#3b6fb6"><title>CDP-diacylglycerol--serine O-phosphatidy 3532986-3533811 +</title></polygon>
+<polygon points="60.0,325 67.1,325 73.1,331 67.1,337 60.0,337" fill="#3b6fb6"><title>ketol-acid reductoisomerase 3533995-3535012 +</title></polygon>
+<text x="60" y="406" font-size="9" fill="#666">NZ_CM191372.1 site 3531045  other-side gap 30 bp  this call's core 4898223-4898317</text>
 </svg>

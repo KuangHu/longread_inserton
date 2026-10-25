@@ -1,52 +1,58 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="250" font-family="sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="300" font-family="sans-serif">
 <rect width="100%" height="100%" fill="white"/>
-<text x="4" y="14" font-size="12">L_1bc127c71d44  SAMD00411011  core 4906 bp  status two_flank_anchored  pairs 1  tandem False  core copies carrier/empty 1/0</text>
-<text x="4" y="66" font-size="11">SAMD00411011 NZ_AP025193.1 (carrier)</text>
-<line x1="60" y1="80" x2="1060" y2="80" stroke="#888"/>
-<rect x="243.4" y="75" width="91.7" height="10" fill="#2a9d8f" opacity="0.45"/><text x="243.4" y="98" font-size="9">U</text>
-<rect x="335.1" y="75" width="449.8" height="10" fill="#e76f51" opacity="0.45"/><text x="335.1" y="98" font-size="9">core</text>
-<rect x="784.9" y="75" width="91.7" height="10" fill="#2a9d8f" opacity="0.45"/><text x="784.9" y="98" font-size="9">D</text>
-<polygon points="60.0,64 93.4,64 99.4,70 93.4,76 60.0,76" fill="#3b6fb6"><title>sensor domain-containing diguanylate cyc 4671859-4673425 +</title></polygon>
-<text x="60.0" y="62" font-size="8" fill="#333">sensor domain-containing</text>
-<polygon points="140.2,64 168.1,64 174.1,70 168.1,76 140.2,76" fill="#3b6fb6"><title>DUF1428 domain-containing protein 4673870-4674239 +</title></polygon>
-<text x="140.2" y="62" font-size="8" fill="#333">DUF1428 domain-containin</text>
-<polygon points="231.7,90 237.7,84 332.4,84 332.4,96 237.7,96" fill="#3b6fb6"><title>redox-regulated ATPase YchF 4674868-4675966 -</title></polygon>
-<text x="231.7" y="106" font-size="8" fill="#333">redox-regulated ATPase Y</text>
-<polygon points="341.2,64 445.5,64 451.5,70 445.5,76 341.2,76" fill="#3b6fb6"><title>tyrosine-type recombinase/integrase 4676062-4677265 +</title></polygon>
-<text x="341.2" y="62" font-size="8" fill="#333">tyrosine-type recombinas</text>
-<polygon points="489.2,64 524.2,64 530.2,70 524.2,76 489.2,76" fill="#3b6fb6"><title>GIY-YIG nuclease family protein 4677676-4678123 +</title></polygon>
-<text x="489.2" y="62" font-size="8" fill="#333">GIY-YIG nuclease family </text>
-<polygon points="541.4,90 547.4,84 598.1,84 598.1,96 547.4,96" fill="#3b6fb6"><title>recombinase family protein 4678245-4678863 -</title></polygon>
-<text x="541.4" y="106" font-size="8" fill="#333">recombinase family prote</text>
-<polygon points="631.8,64 705.6,64 711.6,70 705.6,76 631.8,76" fill="#3b6fb6"><title>hypothetical protein 4679231-4680101 +</title></polygon>
-<text x="631.8" y="62" font-size="8" fill="#333">hypothetical protein</text>
-<polygon points="773.0,90 779.0,84 782.1,84 782.1,96 779.0,96" fill="#999"><title>GTPase 4680771-4680870 -</title></polygon>
-<polygon points="807.2,90 813.2,84 836.9,84 836.9,96 813.2,96" fill="#3b6fb6"><title>hypothetical protein 4681144-4681468 -</title></polygon>
-<polygon points="846.7,90 852.7,84 928.1,84 928.1,96 852.7,96" fill="#3b6fb6"><title>MOSC domain-containing protein 4681575-4682463 -</title></polygon>
-<text x="846.7" y="106" font-size="8" fill="#333">MOSC domain-containing p</text>
-<polygon points="943.2,64 1040.6,64 1046.6,70 1040.6,76 943.2,76" fill="#3b6fb6"><title>FAD-dependent monooxygenase 4682627-4683755 +</title></polygon>
-<text x="943.2" y="62" font-size="8" fill="#333">FAD-dependent monooxygen</text>
-<polygon points="1058.3,64 1058.3,64 1060.0,70 1058.3,76 1058.3,76" fill="#3b6fb6"><title>DsbC family protein 4683883-4684591 +</title></polygon>
-<text x="60" y="114" font-size="9" fill="#666">SAMD00411011:4672995-4683901</text>
-<text x="4" y="176" font-size="11">SAMD00076718 NZ_AP026738.1 (empty site, +)</text>
-<line x1="60" y1="190" x2="1060" y2="190" stroke="#888"/>
-<rect x="475.0" y="185" width="1.0" height="10" fill="#e76f51" opacity="0.45"/><text x="475.0" y="208" font-size="9">site</text>
-<polygon points="60.0,174 123.2,174 129.2,180 123.2,186 60.0,186" fill="#3b6fb6"><title>sensor domain-containing diguanylate cyc 5068092-5069712 +</title></polygon>
-<text x="60.0" y="172" font-size="8" fill="#333">sensor domain-containing</text>
-<polygon points="130.9,174 147.7,174 153.7,180 147.7,186 130.9,186" fill="#3b6fb6"><title>hypothetical protein 5069724-5069889 +</title></polygon>
-<polygon points="180.8,174 225.9,174 231.9,180 225.9,186 180.8,186" fill="#3b6fb6"><title>DUF1428 domain-containing protein 5070085-5070454 +</title></polygon>
-<text x="180.8" y="172" font-size="8" fill="#333">DUF1428 domain-containin</text>
-<polygon points="319.2,200 325.2,194 471.2,194 471.2,206 325.2,206" fill="#3b6fb6"><title>redox-regulated ATPase YchF 5071085-5072183 -</title></polygon>
-<text x="319.2" y="216" font-size="8" fill="#333">redox-regulated ATPase Y</text>
-<polygon points="509.1,200 515.1,194 553.9,194 553.9,206 515.1,206" fill="#3b6fb6"><title>hypothetical protein 5072457-5072781 -</title></polygon>
-<text x="509.1" y="216" font-size="8" fill="#333">hypothetical protein</text>
-<polygon points="568.7,200 574.7,194 691.6,194 691.6,206 574.7,206" fill="#3b6fb6"><title>MOSC domain-containing protein 5072888-5073776 -</title></polygon>
-<text x="568.7" y="216" font-size="8" fill="#333">MOSC domain-containing p</text>
-<polygon points="714.3,174 864.4,174 870.4,180 864.4,186 714.3,186" fill="#3b6fb6"><title>FAD-dependent monooxygenase 5073940-5075068 +</title></polygon>
-<text x="714.3" y="172" font-size="8" fill="#333">FAD-dependent monooxygen</text>
-<polygon points="888.1,174 980.1,174 986.1,180 980.1,186 888.1,186" fill="#3b6fb6"><title>DsbC family protein 5075196-5075904 +</title></polygon>
-<text x="888.1" y="172" font-size="8" fill="#333">DsbC family protein</text>
-<polygon points="999.1,174 1054.0,174 1060.0,180 1054.0,186 999.1,186" fill="#3b6fb6"><title>M61 family metallopeptidase 5075998-5077816 +</title></polygon>
-<text x="999.1" y="172" font-size="8" fill="#333">M61 family metallopeptid</text>
-<text x="60" y="224" font-size="9" fill="#666">SAMD00076718:5069212-5076438</text>
+<text x="4" y="16" font-size="12">L_1bc127c71d44  SAMD00411011  core 4906 bp  two_flank_anchored  support all_calls_anchored  boundary exact  tandem False  core copies carrier/partner 1/0</text>
+<line x1="335.1" y1="30" x2="335.1" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<line x1="784.9" y1="30" x2="784.9" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<text x="4" y="64" font-size="11" font-weight="bold">SAMD00411011 NZ_AP025193.1 (carrier)</text>
+<line x1="60" y1="100" x2="1060" y2="100" stroke="#888"/>
+<rect x="243.4" y="132" width="91.7" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="289.2" y="152" font-size="9" text-anchor="middle">U</text>
+<rect x="335.1" y="132" width="449.8" height="8" fill="#e76f51" opacity="0.55"/>
+<text x="560.0" y="152" font-size="9" text-anchor="middle">core 4906</text>
+<rect x="784.9" y="132" width="91.7" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="830.8" y="152" font-size="9" text-anchor="middle">D</text>
+<polygon points="60.0,85 93.4,85 99.4,91 93.4,97 60.0,97" fill="#3b6fb6"><title>sensor domain-containing diguanylate cyc 4671859-4673425 +</title></polygon>
+<text x="60.0" y="81" font-size="8" fill="#333">sensor d</text>
+<polygon points="140.2,85 168.1,85 174.1,91 168.1,97 140.2,97" fill="#3b6fb6"><title>DUF1428 domain-containing protein 4673870-4674239 +</title></polygon>
+<text x="140.2" y="81" font-size="8" fill="#333">DUF1428</text>
+<polygon points="231.7,109 237.7,103 332.4,103 332.4,115 237.7,115" fill="#3b6fb6"><title>redox-regulated ATPase YchF 4674868-4675966 -</title></polygon>
+<text x="231.7" y="125" font-size="8" fill="#333">redox-regulated ATPas</text>
+<polygon points="341.2,85 445.5,85 451.5,91 445.5,97 341.2,97" fill="#3b6fb6"><title>tyrosine-type recombinase/integrase 4676062-4677265 +</title></polygon>
+<text x="341.2" y="81" font-size="8" fill="#333">tyrosine-type recombina</text>
+<polygon points="489.2,85 524.2,85 530.2,91 524.2,97 489.2,97" fill="#3b6fb6"><title>GIY-YIG nuclease family protein 4677676-4678123 +</title></polygon>
+<text x="489.2" y="81" font-size="8" fill="#333">GIY-YIG </text>
+<polygon points="541.4,109 547.4,103 598.1,103 598.1,115 547.4,115" fill="#3b6fb6"><title>recombinase family protein 4678245-4678863 -</title></polygon>
+<text x="541.4" y="125" font-size="8" fill="#333">recombinase </text>
+<polygon points="631.8,85 705.6,85 711.6,91 705.6,97 631.8,97" fill="#3b6fb6"><title>hypothetical protein 4679231-4680101 +</title></polygon>
+<text x="631.8" y="81" font-size="8" fill="#333">hypothetical prot</text>
+<polygon points="773.0,109 779.0,103 782.1,103 782.1,115 779.0,115" fill="#999"><title>GTPase 4680771-4680870 -</title></polygon>
+<polygon points="807.2,109 813.2,103 836.9,103 836.9,115 813.2,115" fill="#3b6fb6"><title>hypothetical protein 4681144-4681468 -</title></polygon>
+<polygon points="846.7,109 852.7,103 928.1,103 928.1,115 852.7,115" fill="#3b6fb6"><title>MOSC domain-containing protein 4681575-4682463 -</title></polygon>
+<text x="846.7" y="125" font-size="8" fill="#333">MOSC domain-conta</text>
+<polygon points="943.2,85 1040.6,85 1046.6,91 1040.6,97 943.2,97" fill="#3b6fb6"><title>FAD-dependent monooxygenase 4682627-4683755 +</title></polygon>
+<text x="943.2" y="81" font-size="8" fill="#333">FAD-dependent monooxyg</text>
+<polygon points="1058.3,85 1058.3,85 1060.0,91 1058.3,97 1058.3,97" fill="#3b6fb6"><title>DsbC family protein 4683883-4684591 +</title></polygon>
+<text x="60" y="166" font-size="9" fill="#666">NZ_AP025193.1:4672995-4683901  core 4675995-4680901</text>
+<text x="4" y="184" font-size="11" font-weight="bold">SAMD00076718 NZ_AP026738.1 (partner, + strand, two_flank_anchored, pair P00007)</text>
+<line x1="60" y1="220" x2="1060" y2="220" stroke="#888"/>
+<rect x="243.4" y="252" width="91.7" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="289.2" y="272" font-size="9" text-anchor="middle">U'</text>
+<rect x="784.9" y="252" width="91.7" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="830.8" y="272" font-size="9" text-anchor="middle">D'</text>
+<rect x="335.1" y="252" width="449.8" height="8" fill="#9b5de5" opacity="0.55"/>
+<text x="560.0" y="272" font-size="9" text-anchor="middle">other side 2</text>
+<polygon points="60.0,205 99.8,205 105.8,211 99.8,217 60.0,217" fill="#3b6fb6"><title>sensor domain-containing diguanylate cyc 5068092-5069712 +</title></polygon>
+<text x="60.0" y="201" font-size="8" fill="#333">sensor do</text>
+<polygon points="106.9,205 116.1,205 122.1,211 116.1,217 106.9,217" fill="#3b6fb6"><title>hypothetical protein 5069724-5069889 +</title></polygon>
+<polygon points="140.0,205 167.9,205 173.9,211 167.9,217 140.0,217" fill="#3b6fb6"><title>DUF1428 domain-containing protein 5070085-5070454 +</title></polygon>
+<text x="140.0" y="201" font-size="8" fill="#333">DUF1428</text>
+<polygon points="231.7,229 237.7,223 332.4,223 332.4,235 237.7,235" fill="#3b6fb6"><title>redox-regulated ATPase YchF 5071085-5072183 -</title></polygon>
+<text x="231.7" y="245" font-size="8" fill="#333">redox-regulated ATPas</text>
+<polygon points="807.2,229 813.2,223 836.9,223 836.9,235 813.2,235" fill="#3b6fb6"><title>hypothetical protein 5072457-5072781 -</title></polygon>
+<polygon points="846.7,229 852.7,223 928.1,223 928.1,235 852.7,235" fill="#3b6fb6"><title>MOSC domain-containing protein 5072888-5073776 -</title></polygon>
+<text x="846.7" y="245" font-size="8" fill="#333">MOSC domain-conta</text>
+<polygon points="943.2,205 1040.6,205 1046.6,211 1040.6,217 943.2,217" fill="#3b6fb6"><title>FAD-dependent monooxygenase 5073940-5075068 +</title></polygon>
+<text x="943.2" y="201" font-size="8" fill="#333">FAD-dependent monooxyg</text>
+<polygon points="1058.3,205 1058.3,205 1060.0,211 1058.3,217 1058.3,217" fill="#3b6fb6"><title>DsbC family protein 5075196-5075904 +</title></polygon>
+<text x="60" y="286" font-size="9" fill="#666">NZ_AP026738.1 site 5072212  other-side gap 2 bp  this call's core 4675995-4680901</text>
 </svg>

@@ -71,6 +71,19 @@ def cases():
                     and abs(loci[0]["core_start"] - 100000) <= 2 and {c["aln_strand"] for c in calls} == {"-"},
                     [(l["carrier"], l["core_start"], l["core_len"], l["status"]) for l in loci]))
 
+    # Read-check alleles on the same minus-strand pair, from both mapping directions: the partner's alleles must be
+    # the reverse complement of the carrier's (flanks are identical apart from 0.5% SNPs, so compare against BASE).
+    import s3_readcheck as rcheck
+    Aseq, Bseq = ins(BASE, 100000, X), s3.rc(BASE)
+    calls, _ = run(tmp, dict(A=Aseq, B=Bseq), [("A", "B")])
+    res = []
+    for c in calls:
+        al = rcheck.build_alleles(c, Aseq, Bseq)
+        cp, ca, ep, ea = al[("C", "P")], al[("C", "A")], al[("E", "P")], al[("E", "A")]
+        res.append(cp[0] == s3.rc(ep[0]) and ca[0] == s3.rc(ea[0]) and ca[0] in BASE
+                   and cp[2] - cp[1] == 1500 and ea[2] == ea[1] and ep[2] - ep[1] == 1500)
+    ok.append(check("read-check alleles, minus-strand partner", len(res) == 2 and all(res), res))
+
     X2 = rand(700)
     A = ins(ins(BASE, 100000, X), 100000 + 1500 + 300, X2)
     calls, loci = run(tmp, dict(A=A, B=B), [("A", "B")])

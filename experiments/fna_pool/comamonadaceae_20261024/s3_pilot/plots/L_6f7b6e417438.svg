@@ -1,49 +1,52 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="250" font-family="sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="300" font-family="sans-serif">
 <rect width="100%" height="100%" fill="white"/>
-<text x="4" y="14" font-size="12">L_6f7b6e417438  SAMN51281059  core 192 bp  status unresolved  pairs 1  tandem False  core copies carrier/empty 1/1</text>
-<text x="4" y="66" font-size="11">SAMN51281059 NZ_CM191362.1 (carrier)</text>
-<line x1="60" y1="80" x2="1060" y2="80" stroke="#888"/>
-<rect x="383.0" y="75" width="161.5" height="10" fill="#2a9d8f" opacity="0.45"/><text x="383.0" y="98" font-size="9">U</text>
-<rect x="544.5" y="75" width="31.0" height="10" fill="#e76f51" opacity="0.45"/><text x="544.5" y="98" font-size="9">core</text>
-<rect x="575.5" y="75" width="161.5" height="10" fill="#2a9d8f" opacity="0.45"/><text x="575.5" y="98" font-size="9">D</text>
-<polygon points="60.0,64 60.0,64 62.9,70 60.0,76 60.0,76" fill="#3b6fb6"><title>fumarylacetoacetate hydrolase family pro 1874899-1875526 +</title></polygon>
-<polygon points="62.3,64 181.3,64 187.3,70 181.3,76 62.3,76" fill="#3b6fb6"><title>fumarylacetoacetate hydrolase family pro 1875522-1876296 +</title></polygon>
-<text x="62.3" y="62" font-size="8" fill="#333">fumarylacetoacetate hydr</text>
-<polygon points="186.6,64 417.0,64 423.0,70 417.0,76 186.6,76" fill="#3b6fb6"><title>5-carboxymethyl-2-hydroxymuconate semial 1876292-1877756 +</title></polygon>
-<text x="186.6" y="62" font-size="8" fill="#333">5-carboxymethyl-2-hydrox</text>
-<polygon points="422.4,64 573.9,64 579.9,70 573.9,76 422.4,76" fill="#3b6fb6"><title>tripartite tricarboxylate transporter su 1877752-1878727 +</title></polygon>
-<text x="422.4" y="62" font-size="8" fill="#333">tripartite tricarboxylat</text>
-<polygon points="580.3,64 628.6,64 634.6,70 628.6,76 580.3,76" fill="#3b6fb6"><title>aromatic ring-opening dioxygenase subuni 1878730-1879066 +</title></polygon>
-<text x="580.3" y="62" font-size="8" fill="#333">aromatic ring-opening di</text>
-<polygon points="634.0,64 761.7,64 767.7,70 761.7,76 634.0,76" fill="#3b6fb6"><title>DODA-type extradiol aromatic ring-openin 1879062-1879890 +</title></polygon>
-<text x="634.0" y="62" font-size="8" fill="#333">DODA-type extradiol arom</text>
-<polygon points="769.8,64 829.7,64 835.7,70 829.7,76 769.8,76" fill="#3b6fb6"><title>5-carboxymethyl-2-hydroxymuconate Delta- 1879903-1880311 +</title></polygon>
-<text x="769.8" y="62" font-size="8" fill="#333">5-carboxymethyl-2-hydrox</text>
-<polygon points="837.8,64 961.6,64 967.6,70 961.6,76 837.8,76" fill="#3b6fb6"><title>2-oxo-hept-4-ene-1%2C7-dioate hydratase 1880324-1881128 +</title></polygon>
-<text x="837.8" y="62" font-size="8" fill="#333">2-oxo-hept-4-ene-1%2C7-d</text>
-<polygon points="970.0,64 1054.0,64 1060.0,70 1054.0,76 970.0,76" fill="#3b6fb6"><title>4-hydroxy-2-oxoheptanedioate aldolase 1881143-1881965 +</title></polygon>
-<text x="970.0" y="62" font-size="8" fill="#333">4-hydroxy-2-oxoheptanedi</text>
-<text x="60" y="114" font-size="9" fill="#666">SAMN51281059:1875508-1881700</text>
-<text x="4" y="176" font-size="11">SAMN05518800 NZ_OCMW01000001.1 (empty site, +)</text>
-<line x1="60" y1="190" x2="1060" y2="190" stroke="#888"/>
-<rect x="555.9" y="185" width="1.0" height="10" fill="#e76f51" opacity="0.45"/><text x="555.9" y="208" font-size="9">site</text>
-<polygon points="60.0,174 60.0,174 65.1,180 60.0,186 60.0,186" fill="#3b6fb6"><title>fumarylacetoacetate hydrolase family pro 7168248-7168506 +</title></polygon>
-<polygon points="64.5,174 185.9,174 191.9,180 185.9,186 64.5,186" fill="#999"><title>fumarylacetoacetate hydrolase family pro 7168502-7169273 +</title></polygon>
-<text x="64.5" y="172" font-size="8" fill="#333">fumarylacetoacetate hydr</text>
-<polygon points="191.3,174 424.9,174 430.9,180 424.9,186 191.3,186" fill="#999"><title>5-carboxymethyl-2-hydroxymuconate semial 7169269-7170718 +</title></polygon>
-<text x="191.3" y="172" font-size="8" fill="#333">5-carboxymethyl-2-hydrox</text>
-<polygon points="455.3,174 550.9,174 556.9,180 550.9,186 455.3,186" fill="#999"><title>tripartite tricarboxylate transporter su 7170866-7171480 +</title></polygon>
-<text x="455.3" y="172" font-size="8" fill="#333">tripartite tricarboxylat</text>
-<polygon points="576.0,174 625.6,174 631.6,180 625.6,186 576.0,186" fill="#3b6fb6"><title>aromatic ring-opening dioxygenase subuni 7171596-7171932 +</title></polygon>
-<text x="576.0" y="172" font-size="8" fill="#333">aromatic ring-opening di</text>
-<polygon points="661.2,174 676.0,174 682.0,180 676.0,186 661.2,186" fill="#3b6fb6"><title>hypothetical protein 7172111-7172237 +</title></polygon>
-<polygon points="685.3,174 758.2,174 764.2,180 758.2,186 685.3,186" fill="#3b6fb6"><title>hypothetical protein 7172257-7172734 +</title></polygon>
-<text x="685.3" y="172" font-size="8" fill="#333">hypothetical protein</text>
-<polygon points="766.3,174 827.1,174 833.1,180 827.1,186 766.3,186" fill="#999"><title>5-carboxymethyl-2-hydroxymuconate Delta- 7172747-7173151 +</title></polygon>
-<text x="766.3" y="172" font-size="8" fill="#333">5-carboxymethyl-2-hydrox</text>
-<polygon points="835.3,174 962.2,174 968.2,180 962.2,186 835.3,186" fill="#3b6fb6"><title>2-oxo-hept-4-ene-1%2C7-dioate hydratase 7173164-7173968 +</title></polygon>
-<text x="835.3" y="172" font-size="8" fill="#333">2-oxo-hept-4-ene-1%2C7-d</text>
-<polygon points="970.5,174 1054.0,174 1060.0,180 1054.0,186 970.5,186" fill="#3b6fb6"><title>4-hydroxy-2-oxoheptanedioate aldolase 7173982-7174804 +</title></polygon>
-<text x="970.5" y="172" font-size="8" fill="#333">4-hydroxy-2-oxoheptanedi</text>
-<text x="60" y="224" font-size="9" fill="#666">SAMN05518800:7168475-7174523</text>
+<text x="4" y="16" font-size="12">L_6f7b6e417438  SAMN51281059  core 192 bp  unresolved  support not_anchored  boundary exact  tandem False  core copies carrier/partner 1/1</text>
+<line x1="544.5" y1="30" x2="544.5" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<line x1="575.5" y1="30" x2="575.5" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<text x="4" y="64" font-size="11" font-weight="bold">SAMN51281059 NZ_CM191362.1 (carrier)</text>
+<line x1="60" y1="100" x2="1060" y2="100" stroke="#888"/>
+<rect x="383.0" y="132" width="161.5" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="463.7" y="152" font-size="9" text-anchor="middle">U</text>
+<rect x="544.5" y="132" width="31.0" height="8" fill="#e76f51" opacity="0.55"/>
+<text x="560.0" y="152" font-size="9" text-anchor="middle">core 192</text>
+<rect x="575.5" y="132" width="161.5" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="656.3" y="152" font-size="9" text-anchor="middle">D</text>
+<polygon points="60.0,85 60.0,85 62.9,91 60.0,97 60.0,97" fill="#3b6fb6"><title>fumarylacetoacetate hydrolase family pro 1874899-1875526 +</title></polygon>
+<polygon points="62.3,85 181.3,85 187.3,91 181.3,97 62.3,97" fill="#3b6fb6"><title>fumarylacetoacetate hydrolase family pro 1875522-1876296 +</title></polygon>
+<text x="62.3" y="81" font-size="8" fill="#333">fumarylacetoacetate hydrola</text>
+<polygon points="186.6,85 417.0,85 423.0,91 417.0,97 186.6,97" fill="#3b6fb6"><title>5-carboxymethyl-2-hydroxymuconate semial 1876292-1877756 +</title></polygon>
+<polygon points="422.4,85 573.9,85 579.9,91 573.9,97 422.4,97" fill="#3b6fb6"><title>tripartite tricarboxylate transporter su 1877752-1878727 +</title></polygon>
+<text x="422.4" y="81" font-size="8" fill="#333">tripartite tricarboxylate transpor</text>
+<polygon points="580.3,85 628.6,85 634.6,91 628.6,97 580.3,97" fill="#3b6fb6"><title>aromatic ring-opening dioxygenase subuni 1878730-1879066 +</title></polygon>
+<polygon points="634.0,85 761.7,85 767.7,91 761.7,97 634.0,97" fill="#3b6fb6"><title>DODA-type extradiol aromatic ring-openin 1879062-1879890 +</title></polygon>
+<text x="634.0" y="81" font-size="8" fill="#333">DODA-type extradiol aromatic </text>
+<polygon points="769.8,85 829.7,85 835.7,91 829.7,97 769.8,97" fill="#3b6fb6"><title>5-carboxymethyl-2-hydroxymuconate Delta- 1879903-1880311 +</title></polygon>
+<polygon points="837.8,85 961.6,85 967.6,91 961.6,97 837.8,97" fill="#3b6fb6"><title>2-oxo-hept-4-ene-1%2C7-dioate hydratase 1880324-1881128 +</title></polygon>
+<text x="837.8" y="81" font-size="8" fill="#333">2-oxo-hept-4-ene-1%2C7-dioat</text>
+<polygon points="970.0,85 1054.0,85 1060.0,91 1054.0,97 970.0,97" fill="#3b6fb6"><title>4-hydroxy-2-oxoheptanedioate aldolase 1881143-1881965 +</title></polygon>
+<text x="60" y="166" font-size="9" fill="#666">NZ_CM191362.1:1875508-1881700  core 1878508-1878700</text>
+<text x="4" y="184" font-size="11" font-weight="bold">SAMN05518800 NZ_OCMW01000001.1 (partner, + strand, unresolved, pair P00595)</text>
+<line x1="60" y1="220" x2="1060" y2="220" stroke="#888"/>
+<rect x="383.0" y="252" width="161.5" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="463.7" y="272" font-size="9" text-anchor="middle">U'</text>
+<rect x="575.5" y="252" width="161.5" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="656.3" y="272" font-size="9" text-anchor="middle">D'</text>
+<rect x="544.5" y="252" width="31.0" height="8" fill="#9b5de5" opacity="0.55"/>
+<text x="560.0" y="272" font-size="9" text-anchor="middle">other side 91</text>
+<polygon points="60.0,205 60.0,205 65.0,211 60.0,217 60.0,217" fill="#3b6fb6"><title>fumarylacetoacetate hydrolase family pro 7168248-7168506 +</title></polygon>
+<polygon points="64.4,205 182.9,205 188.9,211 182.9,217 64.4,217" fill="#999"><title>fumarylacetoacetate hydrolase family pro 7168502-7169273 +</title></polygon>
+<text x="64.4" y="201" font-size="8" fill="#333">fumarylacetoacetate hydrola</text>
+<polygon points="188.2,205 416.2,205 422.2,211 416.2,217 188.2,217" fill="#999"><title>5-carboxymethyl-2-hydroxymuconate semial 7169269-7170718 +</title></polygon>
+<polygon points="446.1,205 540.2,205 546.2,211 540.2,217 446.1,217" fill="#999"><title>tripartite tricarboxylate transporter su 7170866-7171480 +</title></polygon>
+<text x="446.1" y="201" font-size="8" fill="#333">tripartite tricarboxy</text>
+<polygon points="580.3,205 628.6,205 634.6,211 628.6,217 580.3,217" fill="#3b6fb6"><title>aromatic ring-opening dioxygenase subuni 7171596-7171932 +</title></polygon>
+<text x="580.3" y="201" font-size="8" fill="#333">aromatic ri</text>
+<polygon points="663.5,205 677.9,205 683.9,211 677.9,217 663.5,217" fill="#3b6fb6"><title>hypothetical protein 7172111-7172237 +</title></polygon>
+<polygon points="687.1,205 758.1,205 764.1,211 758.1,217 687.1,217" fill="#3b6fb6"><title>hypothetical protein 7172257-7172734 +</title></polygon>
+<text x="687.1" y="201" font-size="8" fill="#333">hypothetical pro</text>
+<polygon points="766.2,205 825.5,205 831.5,211 825.5,217 766.2,217" fill="#999"><title>5-carboxymethyl-2-hydroxymuconate Delta- 7172747-7173151 +</title></polygon>
+<polygon points="833.6,205 957.4,205 963.4,211 957.4,217 833.6,217" fill="#3b6fb6"><title>2-oxo-hept-4-ene-1%2C7-dioate hydratase 7173164-7173968 +</title></polygon>
+<text x="833.6" y="201" font-size="8" fill="#333">2-oxo-hept-4-ene-1%2C7-dioat</text>
+<polygon points="965.7,205 1054.0,205 1060.0,211 1054.0,217 965.7,217" fill="#3b6fb6"><title>4-hydroxy-2-oxoheptanedioate aldolase 7173982-7174804 +</title></polygon>
+<text x="60" y="286" font-size="9" fill="#666">NZ_OCMW01000001.1 site 7171475  other-side gap 91 bp  this call's core 1878508-1878700</text>
 </svg>

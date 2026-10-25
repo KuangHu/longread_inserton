@@ -1,46 +1,52 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="250" font-family="sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="300" font-family="sans-serif">
 <rect width="100%" height="100%" fill="white"/>
-<text x="4" y="14" font-size="12">L_884c46805d6a  SAMD00735223  core 125 bp  status two_flank_anchored  pairs 1  tandem False  core copies carrier/empty 1/0</text>
-<text x="4" y="66" font-size="11">SAMD00735223 NZ_AP029223.1 (carrier)</text>
-<line x1="60" y1="80" x2="1060" y2="80" stroke="#888"/>
-<rect x="386.5" y="75" width="163.3" height="10" fill="#2a9d8f" opacity="0.45"/><text x="386.5" y="98" font-size="9">U</text>
-<rect x="549.8" y="75" width="20.4" height="10" fill="#e76f51" opacity="0.45"/><text x="549.8" y="98" font-size="9">core</text>
-<rect x="570.2" y="75" width="163.3" height="10" fill="#2a9d8f" opacity="0.45"/><text x="570.2" y="98" font-size="9">D</text>
-<polygon points="60.0,90 66.0,84 108.0,84 108.0,96 66.0,96" fill="#3b6fb6"><title>dihydrofolate reductase 1487510-1487999 -</title></polygon>
-<text x="60.0" y="106" font-size="8" fill="#333">dihydrofolate reductase</text>
-<polygon points="109.8,90 115.8,84 248.9,84 248.9,96 115.8,96" fill="#3b6fb6"><title>thymidylate synthase 1488010-1488862 -</title></polygon>
-<text x="109.8" y="106" font-size="8" fill="#333">thymidylate synthase</text>
-<polygon points="269.0,64 385.9,64 391.9,70 385.9,76 269.0,76" fill="#3b6fb6"><title>peptidylprolyl isomerase 1488985-1489738 +</title></polygon>
-<text x="269.0" y="62" font-size="8" fill="#333">peptidylprolyl isomerase</text>
-<polygon points="395.0,90 401.0,84 630.6,84 630.6,96 401.0,96" fill="#3b6fb6"><title>FAD-binding oxidoreductase 1489757-1491200 -</title></polygon>
-<text x="395.0" y="106" font-size="8" fill="#333">FAD-binding oxidoreducta</text>
-<polygon points="638.0,90 644.0,84 704.6,84 704.6,96 644.0,96" fill="#3b6fb6"><title>DUF2069 domain-containing protein 1491245-1491653 -</title></polygon>
-<text x="638.0" y="106" font-size="8" fill="#333">DUF2069 domain-containin</text>
-<polygon points="708.0,64 906.2,64 912.2,70 906.2,76 708.0,76" fill="#3b6fb6"><title>YihY family inner membrane protein 1491674-1492925 +</title></polygon>
-<text x="708.0" y="62" font-size="8" fill="#333">YihY family inner membra</text>
-<polygon points="920.1,90 926.1,84 971.0,84 971.0,96 926.1,96" fill="#3b6fb6"><title>Mpo1-like protein 1492973-1493285 -</title></polygon>
-<text x="920.1" y="106" font-size="8" fill="#333">Mpo1-like protein</text>
-<polygon points="974.1,90 980.1,84 1060.0,84 1060.0,96 980.1,96" fill="#3b6fb6"><title>cytochrome P450 1493304-1494648 -</title></polygon>
-<text x="974.1" y="106" font-size="8" fill="#333">cytochrome P450</text>
-<text x="60" y="114" font-size="9" fill="#666">SAMD00735223:1487705-1493830</text>
-<text x="4" y="176" font-size="11">SAMD00735224 NZ_AP029224.1 (empty site, +)</text>
-<line x1="60" y1="190" x2="1060" y2="190" stroke="#888"/>
-<rect x="557.3" y="185" width="1.0" height="10" fill="#e76f51" opacity="0.45"/><text x="557.3" y="208" font-size="9">site</text>
-<polygon points="60.0,200 66.0,194 108.7,194 108.7,206 66.0,206" fill="#3b6fb6"><title>dihydrofolate reductase 1474947-1475436 -</title></polygon>
-<text x="60.0" y="216" font-size="8" fill="#333">dihydrofolate reductase</text>
-<polygon points="110.6,200 116.6,194 251.8,194 251.8,206 116.6,206" fill="#3b6fb6"><title>thymidylate synthase 1475447-1476299 -</title></polygon>
-<text x="110.6" y="216" font-size="8" fill="#333">thymidylate synthase</text>
-<polygon points="272.2,174 391.1,174 397.1,180 391.1,186 272.2,186" fill="#3b6fb6"><title>peptidylprolyl isomerase 1476422-1477175 +</title></polygon>
-<text x="272.2" y="172" font-size="8" fill="#333">peptidylprolyl isomerase</text>
-<polygon points="400.2,200 406.2,194 618.8,194 618.8,206 406.2,206" fill="#999"><title>FAD-binding oxidoreductase 1477194-1478512 -</title></polygon>
-<text x="400.2" y="216" font-size="8" fill="#333">FAD-binding oxidoreducta</text>
-<polygon points="626.2,200 632.2,194 693.9,194 693.9,206 632.2,206" fill="#3b6fb6"><title>DUF2069 domain-containing protein 1478557-1478965 -</title></polygon>
-<text x="626.2" y="216" font-size="8" fill="#333">DUF2069 domain-containin</text>
-<polygon points="697.4,174 898.8,174 904.8,180 898.8,186 697.4,186" fill="#3b6fb6"><title>YihY family inner membrane protein 1478986-1480237 +</title></polygon>
-<text x="697.4" y="172" font-size="8" fill="#333">YihY family inner membra</text>
-<polygon points="912.8,200 918.8,194 964.5,194 964.5,206 918.8,206" fill="#3b6fb6"><title>Mpo1-like protein 1480285-1480597 -</title></polygon>
-<text x="912.8" y="216" font-size="8" fill="#333">Mpo1-like protein</text>
-<polygon points="967.6,200 973.6,194 1060.0,194 1060.0,206 973.6,206" fill="#3b6fb6"><title>cytochrome P450 1480616-1481960 -</title></polygon>
-<text x="967.6" y="216" font-size="8" fill="#333">cytochrome P450</text>
-<text x="60" y="224" font-size="9" fill="#666">SAMD00735224:1475142-1481173</text>
+<text x="4" y="16" font-size="12">L_884c46805d6a  SAMD00735223  core 125 bp  two_flank_anchored  support all_calls_anchored  boundary exact  tandem False  core copies carrier/partner 1/0</text>
+<line x1="549.8" y1="30" x2="549.8" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<line x1="570.2" y1="30" x2="570.2" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<text x="4" y="64" font-size="11" font-weight="bold">SAMD00735223 NZ_AP029223.1 (carrier)</text>
+<line x1="60" y1="100" x2="1060" y2="100" stroke="#888"/>
+<rect x="386.5" y="132" width="163.3" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="468.2" y="152" font-size="9" text-anchor="middle">U</text>
+<rect x="549.8" y="132" width="20.4" height="8" fill="#e76f51" opacity="0.55"/>
+<text x="560.0" y="152" font-size="9" text-anchor="middle">core 125</text>
+<rect x="570.2" y="132" width="163.3" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="651.8" y="152" font-size="9" text-anchor="middle">D</text>
+<polygon points="60.0,109 66.0,103 108.0,103 108.0,115 66.0,115" fill="#3b6fb6"><title>dihydrofolate reductase 1487510-1487999 -</title></polygon>
+<text x="60.0" y="125" font-size="8" fill="#333">dihydrofol</text>
+<polygon points="109.8,109 115.8,103 248.9,103 248.9,115 115.8,115" fill="#3b6fb6"><title>thymidylate synthase 1488010-1488862 -</title></polygon>
+<polygon points="269.0,85 385.9,85 391.9,91 385.9,97 269.0,97" fill="#3b6fb6"><title>peptidylprolyl isomerase 1488985-1489738 +</title></polygon>
+<text x="269.0" y="81" font-size="8" fill="#333">peptidylprolyl isomerase</text>
+<polygon points="395.0,109 401.0,103 630.6,103 630.6,115 401.0,115" fill="#3b6fb6"><title>FAD-binding oxidoreductase 1489757-1491200 -</title></polygon>
+<text x="395.0" y="125" font-size="8" fill="#333">FAD-binding oxidoreductase</text>
+<polygon points="638.0,109 644.0,103 704.6,103 704.6,115 644.0,115" fill="#3b6fb6"><title>DUF2069 domain-containing protein 1491245-1491653 -</title></polygon>
+<text x="638.0" y="125" font-size="8" fill="#333">DUF2069 domain</text>
+<polygon points="708.0,85 906.2,85 912.2,91 906.2,97 708.0,97" fill="#3b6fb6"><title>YihY family inner membrane protein 1491674-1492925 +</title></polygon>
+<text x="708.0" y="81" font-size="8" fill="#333">YihY family inner membrane protein</text>
+<polygon points="920.1,109 926.1,103 971.0,103 971.0,115 926.1,115" fill="#3b6fb6"><title>Mpo1-like protein 1492973-1493285 -</title></polygon>
+<text x="920.1" y="125" font-size="8" fill="#333">Mpo1-like p</text>
+<polygon points="974.1,109 980.1,103 1060.0,103 1060.0,115 980.1,115" fill="#3b6fb6"><title>cytochrome P450 1493304-1494648 -</title></polygon>
+<text x="60" y="166" font-size="9" fill="#666">NZ_AP029223.1:1487705-1493830  core 1490705-1490830</text>
+<text x="4" y="184" font-size="11" font-weight="bold">SAMD00735224 NZ_AP029224.1 (partner, + strand, two_flank_anchored, pair P00136)</text>
+<line x1="60" y1="220" x2="1060" y2="220" stroke="#888"/>
+<rect x="386.5" y="252" width="163.3" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="468.2" y="272" font-size="9" text-anchor="middle">U'</text>
+<rect x="570.2" y="252" width="163.3" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="651.8" y="272" font-size="9" text-anchor="middle">D'</text>
+<rect x="549.8" y="252" width="20.4" height="8" fill="#ffffff" opacity="0.55"/>
+<polygon points="60.0,229 66.0,223 108.0,223 108.0,235 66.0,235" fill="#3b6fb6"><title>dihydrofolate reductase 1474947-1475436 -</title></polygon>
+<text x="60.0" y="245" font-size="8" fill="#333">dihydrofol</text>
+<polygon points="109.8,229 115.8,223 248.9,223 248.9,235 115.8,235" fill="#3b6fb6"><title>thymidylate synthase 1475447-1476299 -</title></polygon>
+<polygon points="269.0,205 385.9,205 391.9,211 385.9,217 269.0,217" fill="#3b6fb6"><title>peptidylprolyl isomerase 1476422-1477175 +</title></polygon>
+<text x="269.0" y="201" font-size="8" fill="#333">peptidylprolyl isomerase</text>
+<polygon points="395.0,229 401.0,223 630.6,223 630.6,235 401.0,235" fill="#999"><title>FAD-binding oxidoreductase 1477194-1478512 -</title></polygon>
+<text x="395.0" y="245" font-size="8" fill="#333">FAD-binding oxidoreductase</text>
+<polygon points="638.0,229 644.0,223 704.6,223 704.6,235 644.0,235" fill="#3b6fb6"><title>DUF2069 domain-containing protein 1478557-1478965 -</title></polygon>
+<text x="638.0" y="245" font-size="8" fill="#333">DUF2069 domain</text>
+<polygon points="708.0,205 906.2,205 912.2,211 906.2,217 708.0,217" fill="#3b6fb6"><title>YihY family inner membrane protein 1478986-1480237 +</title></polygon>
+<text x="708.0" y="201" font-size="8" fill="#333">YihY family inner membrane protein</text>
+<polygon points="920.1,229 926.1,223 971.0,223 971.0,235 926.1,235" fill="#3b6fb6"><title>Mpo1-like protein 1480285-1480597 -</title></polygon>
+<text x="920.1" y="245" font-size="8" fill="#333">Mpo1-like p</text>
+<polygon points="974.1,229 980.1,223 1060.0,223 1060.0,235 980.1,235" fill="#3b6fb6"><title>cytochrome P450 1480616-1481960 -</title></polygon>
+<text x="60" y="286" font-size="9" fill="#666">NZ_AP029224.1 site 1478142  other-side gap 0 bp  this call's core 1490705-1490830</text>
+<rect x="549.8" y="218" width="20.4" height="4" fill="#f4f4f4"/><text x="560.0" y="272" font-size="9" text-anchor="middle" fill="#a5372f">empty site</text>
 </svg>

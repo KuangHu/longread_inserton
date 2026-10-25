@@ -1,48 +1,54 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="250" font-family="sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="300" font-family="sans-serif">
 <rect width="100%" height="100%" fill="white"/>
-<text x="4" y="14" font-size="12">L_0526824b9c8a  SAMEA120308855  core 2128 bp  status two_flank_anchored  pairs 1  tandem False  core copies carrier/empty 1/0</text>
-<text x="4" y="66" font-size="11">SAMEA120308855 NZ_CDRKIR010000001.1 (carrier)</text>
-<line x1="60" y1="80" x2="1060" y2="80" stroke="#888"/>
-<rect x="306.1" y="75" width="123.0" height="10" fill="#2a9d8f" opacity="0.45"/><text x="306.1" y="98" font-size="9">U</text>
-<rect x="429.1" y="75" width="261.8" height="10" fill="#e76f51" opacity="0.45"/><text x="429.1" y="98" font-size="9">core</text>
-<rect x="690.9" y="75" width="123.0" height="10" fill="#2a9d8f" opacity="0.45"/><text x="690.9" y="98" font-size="9">D</text>
-<polygon points="60.0,64 62.4,64 68.4,70 62.4,76 60.0,76" fill="#3b6fb6"><title>hypothetical protein 4506209-4506440 +</title></polygon>
-<polygon points="68.9,64 149.6,64 155.6,70 149.6,76 68.9,76" fill="#3b6fb6"><title>hypothetical protein 4506444-4507149 +</title></polygon>
-<text x="68.9" y="62" font-size="8" fill="#333">hypothetical protein</text>
-<polygon points="158.4,64 238.4,64 244.4,70 238.4,76 158.4,76" fill="#3b6fb6"><title>hypothetical protein 4507172-4507871 +</title></polygon>
-<text x="158.4" y="62" font-size="8" fill="#333">hypothetical protein</text>
-<polygon points="248.9,64 334.4,64 340.4,70 334.4,76 248.9,76" fill="#3b6fb6"><title>hypothetical protein 4507907-4508651 +</title></polygon>
-<text x="248.9" y="62" font-size="8" fill="#333">hypothetical protein</text>
-<polygon points="343.8,64 421.6,64 427.6,70 421.6,76 343.8,76" fill="#3b6fb6"><title>hypothetical protein 4508679-4509360 +</title></polygon>
-<text x="343.8" y="62" font-size="8" fill="#333">hypothetical protein</text>
-<polygon points="442.6,64 579.5,64 585.5,70 579.5,76 442.6,76" fill="#3b6fb6"><title>hypothetical protein 4509482-4510643 +</title></polygon>
-<text x="442.6" y="62" font-size="8" fill="#333">hypothetical protein</text>
-<polygon points="585.5,64 679.1,64 685.1,70 679.1,76 585.5,76" fill="#3b6fb6"><title>nucleotidyltransferase family protein 4510643-4511453 +</title></polygon>
-<text x="585.5" y="62" font-size="8" fill="#333">nucleotidyltransferase f</text>
-<polygon points="693.2,90 699.2,84 836.8,84 836.8,96 699.2,96" fill="#3b6fb6"><title>DUF4272 domain-containing protein 4511519-4512686 -</title></polygon>
-<text x="693.2" y="106" font-size="8" fill="#333">DUF4272 domain-containin</text>
-<polygon points="850.1,90 856.1,84 1038.7,84 1038.7,96 856.1,96" fill="#3b6fb6"><title>sigma-54 interaction domain-containing p 4512794-4514327 -</title></polygon>
-<text x="850.1" y="106" font-size="8" fill="#333">sigma-54 interaction dom</text>
-<polygon points="1047.5,90 1053.5,84 1060.0,84 1060.0,96 1053.5,96" fill="#3b6fb6"><title>ArsR/SmtB family transcription factor 4514398-4514719 -</title></polygon>
-<text x="60" y="114" font-size="9" fill="#666">SAMEA120308855:4506372-4514500</text>
-<text x="4" y="176" font-size="11">SAMD00407106 NZ_AP025556.1 (empty site, +)</text>
-<line x1="60" y1="190" x2="1060" y2="190" stroke="#888"/>
-<rect x="519.1" y="185" width="1.0" height="10" fill="#e76f51" opacity="0.45"/><text x="519.1" y="208" font-size="9">site</text>
-<polygon points="74.8,174 175.9,174 181.9,180 175.9,186 74.8,186" fill="#3b6fb6"><title>hypothetical protein 4484601-4485300 +</title></polygon>
-<text x="74.8" y="172" font-size="8" fill="#333">hypothetical protein</text>
-<polygon points="185.4,174 288.7,174 294.7,180 288.7,186 185.4,186" fill="#3b6fb6"><title>hypothetical protein 4485323-4486037 +</title></polygon>
-<text x="185.4" y="172" font-size="8" fill="#333">hypothetical protein</text>
-<polygon points="294.5,174 402.4,174 408.4,180 402.4,186 294.5,186" fill="#3b6fb6"><title>hypothetical protein 4486036-4486780 +</title></polygon>
-<text x="294.5" y="172" font-size="8" fill="#333">hypothetical protein</text>
-<polygon points="440.3,174 511.4,174 517.4,180 511.4,186 440.3,186" fill="#3b6fb6"><title>hypothetical protein 4486988-4487492 +</title></polygon>
-<text x="440.3" y="172" font-size="8" fill="#333">hypothetical protein</text>
-<polygon points="523.4,200 529.4,194 703.0,194 703.0,206 529.4,206" fill="#3b6fb6"><title>DUF4272 domain-containing protein 4487531-4488704 -</title></polygon>
-<text x="523.4" y="216" font-size="8" fill="#333">DUF4272 domain-containin</text>
-<polygon points="717.7,200 723.7,194 952.4,194 952.4,206 723.7,206" fill="#3b6fb6"><title>sigma-54 interaction domain-containing p 4488800-4490333 -</title></polygon>
-<text x="717.7" y="216" font-size="8" fill="#333">sigma-54 interaction dom</text>
-<polygon points="958.8,200 964.8,194 1007.9,194 1007.9,206 964.8,206" fill="#3b6fb6"><title>ArsR/SmtB family transcription factor 4490375-4490696 -</title></polygon>
-<text x="958.8" y="216" font-size="8" fill="#333">ArsR/SmtB family transcr</text>
-<polygon points="1029.4,200 1035.4,194 1060.0,194 1060.0,206 1035.4,206" fill="#3b6fb6"><title>TonB-dependent receptor 4490836-4493359 -</title></polygon>
-<text x="1029.4" y="216" font-size="8" fill="#333">TonB-dependent receptor</text>
-<text x="60" y="224" font-size="9" fill="#666">SAMD00407106:4484504-4491036</text>
+<text x="4" y="16" font-size="12">L_0526824b9c8a  SAMEA120308855  core 2128 bp  two_flank_anchored  support all_calls_anchored  boundary exact  tandem False  core copies carrier/partner 1/0</text>
+<line x1="429.1" y1="30" x2="429.1" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<line x1="690.9" y1="30" x2="690.9" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<text x="4" y="64" font-size="11" font-weight="bold">SAMEA120308855 NZ_CDRKIR010000001.1 (carrier)</text>
+<line x1="60" y1="100" x2="1060" y2="100" stroke="#888"/>
+<rect x="306.1" y="132" width="123.0" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="367.6" y="152" font-size="9" text-anchor="middle">U</text>
+<rect x="429.1" y="132" width="261.8" height="8" fill="#e76f51" opacity="0.55"/>
+<text x="560.0" y="152" font-size="9" text-anchor="middle">core 2128</text>
+<rect x="690.9" y="132" width="123.0" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="752.4" y="152" font-size="9" text-anchor="middle">D</text>
+<polygon points="60.0,85 62.4,85 68.4,91 62.4,97 60.0,97" fill="#3b6fb6"><title>hypothetical protein 4506209-4506440 +</title></polygon>
+<polygon points="68.9,85 149.6,85 155.6,91 149.6,97 68.9,97" fill="#3b6fb6"><title>hypothetical protein 4506444-4507149 +</title></polygon>
+<text x="68.9" y="81" font-size="8" fill="#333">hypothetical prote</text>
+<polygon points="158.4,85 238.4,85 244.4,91 238.4,97 158.4,97" fill="#3b6fb6"><title>hypothetical protein 4507172-4507871 +</title></polygon>
+<text x="158.4" y="81" font-size="8" fill="#333">hypothetical prote</text>
+<polygon points="248.9,85 334.4,85 340.4,91 334.4,97 248.9,97" fill="#3b6fb6"><title>hypothetical protein 4507907-4508651 +</title></polygon>
+<text x="248.9" y="81" font-size="8" fill="#333">hypothetical protei</text>
+<polygon points="343.8,85 421.6,85 427.6,91 421.6,97 343.8,97" fill="#3b6fb6"><title>hypothetical protein 4508679-4509360 +</title></polygon>
+<text x="343.8" y="81" font-size="8" fill="#333">hypothetical prote</text>
+<polygon points="442.6,85 579.5,85 585.5,91 579.5,97 442.6,97" fill="#3b6fb6"><title>hypothetical protein 4509482-4510643 +</title></polygon>
+<text x="442.6" y="81" font-size="8" fill="#333">hypothetical protein</text>
+<polygon points="585.5,85 679.1,85 685.1,91 679.1,97 585.5,97" fill="#3b6fb6"><title>nucleotidyltransferase family protein 4510643-4511453 +</title></polygon>
+<text x="585.5" y="81" font-size="8" fill="#333">nucleotidyltransferas</text>
+<polygon points="693.2,109 699.2,103 836.8,103 836.8,115 699.2,115" fill="#3b6fb6"><title>DUF4272 domain-containing protein 4511519-4512686 -</title></polygon>
+<text x="693.2" y="125" font-size="8" fill="#333">DUF4272 domain-containing prote</text>
+<polygon points="850.1,109 856.1,103 1038.7,103 1038.7,115 856.1,115" fill="#3b6fb6"><title>sigma-54 interaction domain-containing p 4512794-4514327 -</title></polygon>
+<text x="850.1" y="125" font-size="8" fill="#333">sigma-54 interaction domain-containing p</text>
+<polygon points="1047.5,109 1053.5,103 1060.0,103 1060.0,115 1053.5,115" fill="#3b6fb6"><title>ArsR/SmtB family transcription factor 4514398-4514719 -</title></polygon>
+<text x="60" y="166" font-size="9" fill="#666">NZ_CDRKIR010000001.1:4506372-4514500  core 4509372-4511500</text>
+<text x="4" y="184" font-size="11" font-weight="bold">SAMD00407106 NZ_AP025556.1 (partner, + strand, two_flank_anchored, pair P00034)</text>
+<line x1="60" y1="220" x2="1060" y2="220" stroke="#888"/>
+<rect x="306.1" y="252" width="123.0" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="367.6" y="272" font-size="9" text-anchor="middle">U'</text>
+<rect x="690.9" y="252" width="123.0" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="752.4" y="272" font-size="9" text-anchor="middle">D'</text>
+<rect x="429.1" y="252" width="261.8" height="8" fill="#9b5de5" opacity="0.55"/>
+<text x="560.0" y="272" font-size="9" text-anchor="middle">other side 8</text>
+<polygon points="71.9,205 151.9,205 157.9,211 151.9,217 71.9,217" fill="#3b6fb6"><title>hypothetical protein 4484601-4485300 +</title></polygon>
+<text x="71.9" y="201" font-size="8" fill="#333">hypothetical prote</text>
+<polygon points="160.8,205 242.6,205 248.6,211 242.6,217 160.8,217" fill="#3b6fb6"><title>hypothetical protein 4485323-4486037 +</title></polygon>
+<text x="160.8" y="201" font-size="8" fill="#333">hypothetical protei</text>
+<polygon points="248.5,205 334.0,205 340.0,211 334.0,217 248.5,217" fill="#3b6fb6"><title>hypothetical protein 4486036-4486780 +</title></polygon>
+<polygon points="365.6,205 421.6,205 427.6,211 421.6,217 365.6,217" fill="#3b6fb6"><title>hypothetical protein 4486988-4487492 +</title></polygon>
+<text x="365.6" y="201" font-size="8" fill="#333">hypothetical </text>
+<polygon points="693.2,229 699.2,223 837.6,223 837.6,235 699.2,235" fill="#3b6fb6"><title>DUF4272 domain-containing protein 4487531-4488704 -</title></polygon>
+<text x="693.2" y="245" font-size="8" fill="#333">DUF4272 domain-containing prote</text>
+<polygon points="849.4,229 855.4,223 1038.0,223 1038.0,235 855.4,235" fill="#3b6fb6"><title>sigma-54 interaction domain-containing p 4488800-4490333 -</title></polygon>
+<text x="849.4" y="245" font-size="8" fill="#333">sigma-54 interaction domain-containing p</text>
+<polygon points="1043.1,229 1049.1,223 1060.0,223 1060.0,235 1049.1,235" fill="#3b6fb6"><title>ArsR/SmtB family transcription factor 4490375-4490696 -</title></polygon>
+<text x="60" y="286" font-size="9" fill="#666">NZ_AP025556.1 site 4487504  other-side gap 8 bp  this call's core 4509372-4511500</text>
 </svg>

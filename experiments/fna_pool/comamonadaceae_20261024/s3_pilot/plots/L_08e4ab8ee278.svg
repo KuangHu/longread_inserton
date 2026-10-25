@@ -1,48 +1,54 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="250" font-family="sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="300" font-family="sans-serif">
 <rect width="100%" height="100%" fill="white"/>
-<text x="4" y="14" font-size="12">L_08e4ab8ee278  SAMN51658614  core 2970 bp  status unresolved  pairs 1  tandem False  core copies carrier/empty 1/0</text>
-<text x="4" y="66" font-size="11">SAMN51658614 NZ_CM191347.1 (carrier)</text>
-<line x1="60" y1="80" x2="1060" y2="80" stroke="#888"/>
-<rect x="283.0" y="75" width="111.5" height="10" fill="#2a9d8f" opacity="0.45"/><text x="283.0" y="98" font-size="9">U</text>
-<rect x="394.4" y="75" width="331.1" height="10" fill="#e76f51" opacity="0.45"/><text x="394.4" y="98" font-size="9">core</text>
-<rect x="725.6" y="75" width="111.5" height="10" fill="#2a9d8f" opacity="0.45"/><text x="725.6" y="98" font-size="9">D</text>
-<polygon points="60.0,64 121.3,64 127.3,70 121.3,76 60.0,76" fill="#3b6fb6"><title>type II secretion system F family protei 5888662-5889673 +</title></polygon>
-<text x="60.0" y="62" font-size="8" fill="#333">type II secretion system</text>
-<polygon points="127.2,64 227.9,64 233.9,70 227.9,76 127.2,76" fill="#3b6fb6"><title>type II secretion system F family protei 5889672-5890629 +</title></polygon>
-<text x="127.2" y="62" font-size="8" fill="#333">type II secretion system</text>
-<polygon points="233.5,64 330.8,64 336.8,70 330.8,76 233.5,76" fill="#3b6fb6"><title>tetratricopeptide repeat protein 5890625-5891552 +</title></polygon>
-<text x="233.5" y="62" font-size="8" fill="#333">tetratricopeptide repeat</text>
-<polygon points="336.4,64 378.2,64 384.2,70 378.2,76 336.4,76" fill="#3b6fb6"><title>DUF3613 domain-containing protein 5891548-5891977 +</title></polygon>
-<text x="336.4" y="62" font-size="8" fill="#333">DUF3613 domain-containin</text>
-<polygon points="389.5,64 436.7,64 442.7,70 436.7,76 389.5,76" fill="#3b6fb6"><title>TadE/TadG family type IV pilus assembly  5892025-5892502 +</title></polygon>
-<text x="389.5" y="62" font-size="8" fill="#333">TadE/TadG family type IV</text>
-<polygon points="443.3,64 489.8,64 495.8,70 489.8,76 443.3,76" fill="#3b6fb6"><title>TadE/TadG family type IV pilus assembly  5892507-5892978 +</title></polygon>
-<text x="443.3" y="62" font-size="8" fill="#333">TadE/TadG family type IV</text>
-<polygon points="497.2,64 717.0,64 723.0,70 717.0,76 497.2,76" fill="#3b6fb6"><title>TadG family pilus assembly protein 5892991-5895016 +</title></polygon>
-<text x="497.2" y="62" font-size="8" fill="#333">TadG family pilus assemb</text>
-<polygon points="724.8,64 876.6,64 882.6,70 876.6,76 724.8,76" fill="#3b6fb6"><title>sigma 54-interacting transcriptional reg 5895032-5896448 +</title></polygon>
-<text x="724.8" y="62" font-size="8" fill="#333">sigma 54-interacting tra</text>
-<polygon points="897.5,90 903.5,84 1060.0,84 1060.0,96 903.5,96" fill="#3b6fb6"><title>TolC family protein 5896581-5898156 -</title></polygon>
-<text x="897.5" y="106" font-size="8" fill="#333">TolC family protein</text>
-<text x="60" y="114" font-size="9" fill="#666">SAMN51658614:5889069-5898039</text>
-<text x="4" y="176" font-size="11">SAMEA120314636 NZ_OZ344929.1 (empty site, +)</text>
-<line x1="60" y1="190" x2="1060" y2="190" stroke="#888"/>
-<rect x="504.8" y="185" width="1.0" height="10" fill="#e76f51" opacity="0.45"/><text x="504.8" y="208" font-size="9">site</text>
-<polygon points="60.0,174 145.2,174 151.2,180 145.2,186 60.0,186" fill="#3b6fb6"><title>type II secretion system F family protei 5684520-5685534 +</title></polygon>
-<text x="60.0" y="172" font-size="8" fill="#333">type II secretion system</text>
-<polygon points="150.6,174 287.0,174 293.0,180 287.0,186 150.6,186" fill="#3b6fb6"><title>type II secretion system F family protei 5685530-5686490 +</title></polygon>
-<text x="150.6" y="172" font-size="8" fill="#333">type II secretion system</text>
-<polygon points="292.4,174 423.5,174 429.5,180 423.5,186 292.4,186" fill="#3b6fb6"><title>tetratricopeptide repeat protein 5686486-5687410 +</title></polygon>
-<text x="292.4" y="172" font-size="8" fill="#333">tetratricopeptide repeat</text>
-<polygon points="428.9,174 485.6,174 491.6,180 485.6,186 428.9,186" fill="#3b6fb6"><title>DUF3613 domain-containing protein 5687406-5687829 +</title></polygon>
-<text x="428.9" y="172" font-size="8" fill="#333">DUF3613 domain-containin</text>
-<polygon points="499.3,174 571.7,174 577.7,180 571.7,186 499.3,186" fill="#3b6fb6"><title>TadE/TadG family type IV pilus assembly  5687881-5688409 +</title></polygon>
-<text x="499.3" y="172" font-size="8" fill="#333">TadE/TadG family type IV</text>
-<polygon points="577.1,174 637.8,174 643.8,180 637.8,186 577.1,186" fill="#3b6fb6"><title>TadE/TadG family type IV pilus assembly  5688405-5688855 +</title></polygon>
-<text x="577.1" y="172" font-size="8" fill="#333">TadE/TadG family type IV</text>
-<polygon points="645.4,174 926.4,174 932.4,180 926.4,186 645.4,186" fill="#3b6fb6"><title>TadG family pilus assembly protein 5688866-5690801 +</title></polygon>
-<text x="645.4" y="172" font-size="8" fill="#333">TadG family pilus assemb</text>
-<polygon points="937.8,174 1054.0,174 1060.0,180 1054.0,186 937.8,186" fill="#3b6fb6"><title>sigma 54-interacting transcriptional reg 5690837-5692253 +</title></polygon>
-<text x="937.8" y="172" font-size="8" fill="#333">sigma 54-interacting tra</text>
-<text x="60" y="224" font-size="9" fill="#666">SAMEA120314636:5684919-5691661</text>
+<text x="4" y="16" font-size="12">L_08e4ab8ee278  SAMN51658614  core 2970 bp  unresolved  support not_anchored  boundary exact  tandem False  core copies carrier/partner 1/0</text>
+<line x1="394.4" y1="30" x2="394.4" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<line x1="725.6" y1="30" x2="725.6" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<text x="4" y="64" font-size="11" font-weight="bold">SAMN51658614 NZ_CM191347.1 (carrier)</text>
+<line x1="60" y1="100" x2="1060" y2="100" stroke="#888"/>
+<rect x="283.0" y="132" width="111.5" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="338.7" y="152" font-size="9" text-anchor="middle">U</text>
+<rect x="394.4" y="132" width="331.1" height="8" fill="#e76f51" opacity="0.55"/>
+<text x="560.0" y="152" font-size="9" text-anchor="middle">core 2970</text>
+<rect x="725.6" y="132" width="111.5" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="781.3" y="152" font-size="9" text-anchor="middle">D</text>
+<polygon points="60.0,85 121.3,85 127.3,91 121.3,97 60.0,97" fill="#3b6fb6"><title>type II secretion system F family protei 5888662-5889673 +</title></polygon>
+<text x="60.0" y="81" font-size="8" fill="#333">type II secret</text>
+<polygon points="127.2,85 227.9,85 233.9,91 227.9,97 127.2,97" fill="#3b6fb6"><title>type II secretion system F family protei 5889672-5890629 +</title></polygon>
+<polygon points="233.5,85 330.8,85 336.8,91 330.8,97 233.5,97" fill="#3b6fb6"><title>tetratricopeptide repeat protein 5890625-5891552 +</title></polygon>
+<text x="233.5" y="81" font-size="8" fill="#333">tetratricopeptide repe</text>
+<polygon points="336.4,85 378.2,85 384.2,91 378.2,97 336.4,97" fill="#3b6fb6"><title>DUF3613 domain-containing protein 5891548-5891977 +</title></polygon>
+<polygon points="389.5,85 436.7,85 442.7,91 436.7,97 389.5,97" fill="#3b6fb6"><title>TadE/TadG family type IV pilus assembly  5892025-5892502 +</title></polygon>
+<text x="389.5" y="81" font-size="8" fill="#333">TadE/TadG f</text>
+<polygon points="443.3,85 489.8,85 495.8,91 489.8,97 443.3,97" fill="#3b6fb6"><title>TadE/TadG family type IV pilus assembly  5892507-5892978 +</title></polygon>
+<polygon points="497.2,85 717.0,85 723.0,91 717.0,97 497.2,97" fill="#3b6fb6"><title>TadG family pilus assembly protein 5892991-5895016 +</title></polygon>
+<text x="497.2" y="81" font-size="8" fill="#333">TadG family pilus assembly protein</text>
+<polygon points="724.8,85 876.6,85 882.6,91 876.6,97 724.8,97" fill="#3b6fb6"><title>sigma 54-interacting transcriptional reg 5895032-5896448 +</title></polygon>
+<text x="724.8" y="81" font-size="8" fill="#333">sigma 54-interacting transcription</text>
+<polygon points="897.5,109 903.5,103 1060.0,103 1060.0,115 903.5,115" fill="#3b6fb6"><title>TolC family protein 5896581-5898156 -</title></polygon>
+<text x="897.5" y="125" font-size="8" fill="#333">TolC family protein</text>
+<text x="60" y="166" font-size="9" fill="#666">NZ_CM191347.1:5889069-5898039  core 5892069-5895039</text>
+<text x="4" y="184" font-size="11" font-weight="bold">SAMEA120314636 NZ_OZ344929.1 (partner, + strand, unresolved, pair P00351)</text>
+<line x1="60" y1="220" x2="1060" y2="220" stroke="#888"/>
+<rect x="283.0" y="252" width="111.5" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="338.7" y="272" font-size="9" text-anchor="middle">U'</text>
+<rect x="725.6" y="252" width="111.5" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="781.3" y="272" font-size="9" text-anchor="middle">D'</text>
+<rect x="394.4" y="252" width="331.1" height="8" fill="#9b5de5" opacity="0.55"/>
+<text x="560.0" y="272" font-size="9" text-anchor="middle">other side 2925</text>
+<polygon points="60.0,205 122.6,205 128.6,211 122.6,217 60.0,217" fill="#3b6fb6"><title>type II secretion system F family protei 5684520-5685534 +</title></polygon>
+<text x="60.0" y="201" font-size="8" fill="#333">type II secret</text>
+<polygon points="128.1,205 229.1,205 235.1,211 229.1,217 128.1,217" fill="#3b6fb6"><title>type II secretion system F family protei 5685530-5686490 +</title></polygon>
+<polygon points="234.7,205 331.7,205 337.7,211 331.7,217 234.7,217" fill="#3b6fb6"><title>tetratricopeptide repeat protein 5686486-5687410 +</title></polygon>
+<text x="234.7" y="201" font-size="8" fill="#333">tetratricopeptide repe</text>
+<polygon points="337.3,205 378.4,205 384.4,211 378.4,217 337.3,217" fill="#3b6fb6"><title>DUF3613 domain-containing protein 5687406-5687829 +</title></polygon>
+<polygon points="390.2,205 443.9,205 449.9,211 443.9,217 390.2,217" fill="#3b6fb6"><title>TadE/TadG family type IV pilus assembly  5687881-5688409 +</title></polygon>
+<text x="390.2" y="201" font-size="8" fill="#333">TadE/TadG fa</text>
+<polygon points="449.5,205 494.4,205 500.4,211 494.4,217 449.5,217" fill="#3b6fb6"><title>TadE/TadG family type IV pilus assembly  5688405-5688855 +</title></polygon>
+<polygon points="501.6,205 714.7,205 720.7,211 714.7,217 501.6,217" fill="#3b6fb6"><title>TadG family pilus assembly protein 5688866-5690801 +</title></polygon>
+<text x="501.6" y="201" font-size="8" fill="#333">TadG family pilus assembly protein</text>
+<polygon points="724.8,205 876.6,205 882.6,211 876.6,217 724.8,217" fill="#3b6fb6"><title>sigma 54-interacting transcriptional reg 5690837-5692253 +</title></polygon>
+<text x="724.8" y="201" font-size="8" fill="#333">sigma 54-interacting transcription</text>
+<polygon points="897.5,229 903.5,223 1060.0,223 1060.0,235 903.5,235" fill="#3b6fb6"><title>TolC family protein 5692386-5693961 -</title></polygon>
+<text x="897.5" y="245" font-size="8" fill="#333">TolC family protein</text>
+<text x="60" y="286" font-size="9" fill="#666">NZ_OZ344929.1 site 5687919  other-side gap 2925 bp  this call's core 5892069-5895039</text>
 </svg>

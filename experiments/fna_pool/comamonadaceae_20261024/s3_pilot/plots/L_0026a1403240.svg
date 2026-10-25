@@ -1,49 +1,53 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="250" font-family="sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="300" font-family="sans-serif">
 <rect width="100%" height="100%" fill="white"/>
-<text x="4" y="14" font-size="12">L_0026a1403240  SAMEA120308855  core 2532 bp  status replacement  pairs 1  tandem False  core copies carrier/empty 1/1</text>
-<text x="4" y="66" font-size="11">SAMEA120308855 NZ_CDRKIR010000001.1 (carrier)</text>
-<line x1="60" y1="80" x2="1060" y2="80" stroke="#888"/>
-<rect x="294.4" y="75" width="117.2" height="10" fill="#2a9d8f" opacity="0.45"/><text x="294.4" y="98" font-size="9">U</text>
-<rect x="411.6" y="75" width="296.8" height="10" fill="#e76f51" opacity="0.45"/><text x="411.6" y="98" font-size="9">core</text>
-<rect x="708.4" y="75" width="117.2" height="10" fill="#2a9d8f" opacity="0.45"/><text x="708.4" y="98" font-size="9">D</text>
-<polygon points="60.0,90 66.0,84 97.6,84 97.6,96 66.0,96" fill="#3b6fb6"><title>branched-chain amino acid ABC transporte 4486856-4487858 -</title></polygon>
-<text x="60.0" y="106" font-size="8" fill="#333">branched-chain amino aci</text>
-<polygon points="97.2,90 103.2,84 185.1,84 185.1,96 103.2,96" fill="#3b6fb6"><title>branched-chain amino acid ABC transporte 4487854-4488604 -</title></polygon>
-<polygon points="184.6,90 190.6,84 276.4,84 276.4,96 190.6,96" fill="#3b6fb6"><title>ABC transporter ATP-binding protein 4488600-4489383 -</title></polygon>
-<text x="184.6" y="106" font-size="8" fill="#333">ABC transporter ATP-bind</text>
-<polygon points="276.7,90 282.7,84 417.7,84 417.7,96 282.7,96" fill="#3b6fb6"><title>substrate-binding domain-containing prot 4489386-4490589 -</title></polygon>
-<text x="276.7" y="106" font-size="8" fill="#333">substrate-binding domain</text>
-<polygon points="450.1,90 456.1,84 570.3,84 570.3,96 456.1,96" fill="#3b6fb6"><title>methionine synthase 4490865-4491891 -</title></polygon>
-<text x="450.1" y="106" font-size="8" fill="#333">methionine synthase</text>
-<polygon points="582.5,90 588.5,84 697.8,84 697.8,96 588.5,96" fill="#3b6fb6"><title>DUF1852 domain-containing protein 4491995-4492979 -</title></polygon>
-<text x="582.5" y="106" font-size="8" fill="#333">DUF1852 domain-containin</text>
-<polygon points="702.9,90 708.9,84 771.1,84 771.1,96 708.9,96" fill="#3b6fb6"><title>FMN reductase 4493022-4493604 -</title></polygon>
-<text x="702.9" y="106" font-size="8" fill="#333">FMN reductase</text>
-<polygon points="796.2,90 802.2,84 817.0,84 817.0,96 802.2,96" fill="#999"><title>ABC transporter permease 4493818-4493996 -</title></polygon>
-<polygon points="821.0,90 827.0,84 878.0,84 878.0,96 827.0,96" fill="#3b6fb6"><title>hypothetical protein 4494030-4494516 -</title></polygon>
-<text x="821.0" y="106" font-size="8" fill="#333">hypothetical protein</text>
-<polygon points="879.2,90 885.2,84 1014.2,84 1014.2,96 885.2,96" fill="#3b6fb6"><title>hypothetical protein 4494526-4495678 -</title></polygon>
-<text x="879.2" y="106" font-size="8" fill="#333">hypothetical protein</text>
-<polygon points="1033.0,90 1039.0,84 1060.0,84 1060.0,96 1039.0,96" fill="#3b6fb6"><title>LysR substrate-binding domain-containing 4495839-4496742 -</title></polygon>
-<text x="60" y="114" font-size="9" fill="#666">SAMEA120308855:4487537-4496069</text>
-<text x="4" y="176" font-size="11">SAMD00407106 NZ_AP025556.1 (empty site, +)</text>
-<line x1="60" y1="190" x2="1060" y2="190" stroke="#888"/>
-<rect x="512.1" y="185" width="1.0" height="10" fill="#e76f51" opacity="0.45"/><text x="512.1" y="208" font-size="9">site</text>
-<polygon points="60.0,200 66.0,194 108.4,194 108.4,206 66.0,206" fill="#3b6fb6"><title>branched-chain amino acid ABC transporte 4468683-4469676 -</title></polygon>
-<text x="60.0" y="216" font-size="8" fill="#333">branched-chain amino aci</text>
-<polygon points="107.8,200 113.8,194 220.9,194 220.9,206 113.8,206" fill="#3b6fb6"><title>branched-chain amino acid ABC transporte 4469672-4470422 -</title></polygon>
-<text x="107.8" y="216" font-size="8" fill="#333">branched-chain amino aci</text>
-<polygon points="220.3,200 226.3,194 338.3,194 338.3,206 226.3,206" fill="#3b6fb6"><title>ABC transporter ATP-binding protein 4470418-4471201 -</title></polygon>
-<text x="220.3" y="216" font-size="8" fill="#333">ABC transporter ATP-bind</text>
-<polygon points="338.8,200 344.8,194 518.8,194 518.8,206 344.8,206" fill="#3b6fb6"><title>substrate-binding domain-containing prot 4471204-4472398 -</title></polygon>
-<text x="338.8" y="216" font-size="8" fill="#333">substrate-binding domain</text>
-<polygon points="571.4,200 577.4,194 659.1,194 659.1,206 577.4,206" fill="#3b6fb6"><title>FMN reductase 4472747-4473329 -</title></polygon>
-<text x="571.4" y="216" font-size="8" fill="#333">FMN reductase</text>
-<polygon points="703.9,200 709.9,194 840.0,194 840.0,206 709.9,206" fill="#3b6fb6"><title>LysR family transcriptional regulator 4473626-4474529 -</title></polygon>
-<text x="703.9" y="216" font-size="8" fill="#333">LysR family transcriptio</text>
-<polygon points="856.8,174 997.8,174 1003.8,180 997.8,186 856.8,186" fill="#3b6fb6"><title>Bug family tripartite tricarboxylate tra 4474640-4475615 +</title></polygon>
-<text x="856.8" y="172" font-size="8" fill="#333">Bug family tripartite tr</text>
-<polygon points="1011.9,174 1054.0,174 1060.0,180 1054.0,186 1011.9,186" fill="#3b6fb6"><title>substrate-binding domain-containing prot 4475669-4476515 +</title></polygon>
-<text x="1011.9" y="172" font-size="8" fill="#333">substrate-binding domain</text>
-<text x="60" y="224" font-size="9" fill="#666">SAMD00407106:4469355-4475988</text>
+<text x="4" y="16" font-size="12">L_0026a1403240  SAMEA120308855  core 2532 bp  replacement  support not_anchored  boundary exact  tandem False  core copies carrier/partner 1/1</text>
+<line x1="411.6" y1="30" x2="411.6" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<line x1="708.4" y1="30" x2="708.4" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<text x="4" y="64" font-size="11" font-weight="bold">SAMEA120308855 NZ_CDRKIR010000001.1 (carrier)</text>
+<line x1="60" y1="100" x2="1060" y2="100" stroke="#888"/>
+<rect x="294.4" y="132" width="117.2" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="353.0" y="152" font-size="9" text-anchor="middle">U</text>
+<rect x="411.6" y="132" width="296.8" height="8" fill="#e76f51" opacity="0.55"/>
+<text x="560.0" y="152" font-size="9" text-anchor="middle">core 2532</text>
+<rect x="708.4" y="132" width="117.2" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="767.0" y="152" font-size="9" text-anchor="middle">D</text>
+<polygon points="60.0,109 66.0,103 97.6,103 97.6,115 66.0,115" fill="#3b6fb6"><title>branched-chain amino acid ABC transporte 4486856-4487858 -</title></polygon>
+<text x="60.0" y="125" font-size="8" fill="#333">branched</text>
+<polygon points="97.2,109 103.2,103 185.1,103 185.1,115 103.2,115" fill="#3b6fb6"><title>branched-chain amino acid ABC transporte 4487854-4488604 -</title></polygon>
+<polygon points="184.6,109 190.6,103 276.4,103 276.4,115 190.6,115" fill="#3b6fb6"><title>ABC transporter ATP-binding protein 4488600-4489383 -</title></polygon>
+<text x="184.6" y="125" font-size="8" fill="#333">ABC transporter ATP</text>
+<polygon points="276.7,109 282.7,103 417.7,103 417.7,115 282.7,115" fill="#3b6fb6"><title>substrate-binding domain-containing prot 4489386-4490589 -</title></polygon>
+<polygon points="450.1,109 456.1,103 570.3,103 570.3,115 456.1,115" fill="#3b6fb6"><title>methionine synthase 4490865-4491891 -</title></polygon>
+<text x="450.1" y="125" font-size="8" fill="#333">methionine synthase</text>
+<polygon points="582.5,109 588.5,103 697.8,103 697.8,115 588.5,115" fill="#3b6fb6"><title>DUF1852 domain-containing protein 4491995-4492979 -</title></polygon>
+<text x="582.5" y="125" font-size="8" fill="#333">DUF1852 domain-containing</text>
+<polygon points="702.9,109 708.9,103 771.1,103 771.1,115 708.9,115" fill="#3b6fb6"><title>FMN reductase 4493022-4493604 -</title></polygon>
+<polygon points="796.2,109 802.2,103 817.0,103 817.0,115 802.2,115" fill="#999"><title>ABC transporter permease 4493818-4493996 -</title></polygon>
+<polygon points="821.0,109 827.0,103 878.0,103 878.0,115 827.0,115" fill="#3b6fb6"><title>hypothetical protein 4494030-4494516 -</title></polygon>
+<text x="821.0" y="125" font-size="8" fill="#333">hypothetical</text>
+<polygon points="879.2,109 885.2,103 1014.2,103 1014.2,115 885.2,115" fill="#3b6fb6"><title>hypothetical protein 4494526-4495678 -</title></polygon>
+<polygon points="1033.0,109 1039.0,103 1060.0,103 1060.0,115 1039.0,115" fill="#3b6fb6"><title>LysR substrate-binding domain-containing 4495839-4496742 -</title></polygon>
+<text x="60" y="166" font-size="9" fill="#666">NZ_CDRKIR010000001.1:4487537-4496069  core 4490537-4493069</text>
+<text x="4" y="184" font-size="11" font-weight="bold">SAMD00407106 NZ_AP025556.1 (partner, + strand, replacement, pair P00034)</text>
+<line x1="60" y1="220" x2="1060" y2="220" stroke="#888"/>
+<rect x="294.4" y="252" width="117.2" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="353.0" y="272" font-size="9" text-anchor="middle">U'</text>
+<rect x="708.4" y="252" width="117.2" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="767.0" y="272" font-size="9" text-anchor="middle">D'</text>
+<rect x="411.6" y="252" width="296.8" height="8" fill="#9b5de5" opacity="0.55"/>
+<text x="560.0" y="272" font-size="9" text-anchor="middle">other side 439</text>
+<polygon points="60.0,229 66.0,223 97.6,223 97.6,235 66.0,235" fill="#3b6fb6"><title>branched-chain amino acid ABC transporte 4468683-4469676 -</title></polygon>
+<text x="60.0" y="245" font-size="8" fill="#333">branched</text>
+<polygon points="97.2,229 103.2,223 185.1,223 185.1,235 103.2,235" fill="#3b6fb6"><title>branched-chain amino acid ABC transporte 4469672-4470422 -</title></polygon>
+<polygon points="184.6,229 190.6,223 276.4,223 276.4,235 190.6,235" fill="#3b6fb6"><title>ABC transporter ATP-binding protein 4470418-4471201 -</title></polygon>
+<text x="184.6" y="245" font-size="8" fill="#333">ABC transporter ATP</text>
+<polygon points="276.7,229 282.7,223 440.7,223 440.7,235 282.7,235" fill="#3b6fb6"><title>substrate-binding domain-containing prot 4471204-4472398 -</title></polygon>
+<polygon points="676.6,229 682.6,223 771.1,223 771.1,235 682.6,235" fill="#3b6fb6"><title>FMN reductase 4472747-4473329 -</title></polygon>
+<text x="676.6" y="245" font-size="8" fill="#333">FMN reductase</text>
+<polygon points="805.9,229 811.9,223 911.7,223 911.7,235 811.9,235" fill="#3b6fb6"><title>LysR family transcriptional regulator 4473626-4474529 -</title></polygon>
+<text x="805.9" y="245" font-size="8" fill="#333">LysR family transcripti</text>
+<polygon points="924.7,205 1033.0,205 1039.0,211 1033.0,217 924.7,217" fill="#3b6fb6"><title>Bug family tripartite tricarboxylate tra 4474640-4475615 +</title></polygon>
+<text x="924.7" y="201" font-size="8" fill="#333">Bug family tripartite tr</text>
+<polygon points="1045.3,205 1054.0,205 1060.0,211 1054.0,217 1045.3,217" fill="#3b6fb6"><title>substrate-binding domain-containing prot 4475669-4476515 +</title></polygon>
+<text x="60" y="286" font-size="9" fill="#666">NZ_AP025556.1 site 4472355  other-side gap 439 bp  this call's core 4490537-4493069</text>
 </svg>

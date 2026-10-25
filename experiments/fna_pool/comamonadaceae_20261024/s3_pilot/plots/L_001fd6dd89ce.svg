@@ -1,38 +1,45 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="250" font-family="sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="300" font-family="sans-serif">
 <rect width="100%" height="100%" fill="white"/>
-<text x="4" y="14" font-size="12">L_001fd6dd89ce  SAMN13450421  core 55 bp  status unresolved  pairs 1  tandem False  core copies carrier/empty 1/0</text>
-<text x="4" y="66" font-size="11">SAMN13450421 NZ_CP065695.1 (carrier)</text>
-<line x1="60" y1="80" x2="1060" y2="80" stroke="#888"/>
-<rect x="390.3" y="75" width="165.2" height="10" fill="#2a9d8f" opacity="0.45"/><text x="390.3" y="98" font-size="9">U</text>
-<rect x="555.5" y="75" width="9.1" height="10" fill="#e76f51" opacity="0.45"/><text x="555.5" y="98" font-size="9">core</text>
-<rect x="564.5" y="75" width="165.2" height="10" fill="#2a9d8f" opacity="0.45"/><text x="564.5" y="98" font-size="9">D</text>
-<polygon points="60.0,64 114.6,64 120.6,70 114.6,76 60.0,76" fill="#3b6fb6"><title>aminotransferase-like domain-containing  5448084-5449578 +</title></polygon>
-<text x="60.0" y="62" font-size="8" fill="#333">aminotransferase-like do</text>
-<polygon points="115.3,90 121.3,84 211.4,84 211.4,96 121.3,96" fill="#3b6fb6"><title>peroxidase-related enzyme 5449546-5450128 -</title></polygon>
-<text x="115.3" y="106" font-size="8" fill="#333">peroxidase-related enzym</text>
-<polygon points="231.3,90 237.3,84 384.4,84 384.4,96 237.3,96" fill="#3b6fb6"><title>LysR family transcriptional regulator 5450248-5451175 -</title></polygon>
-<text x="231.3" y="106" font-size="8" fill="#333">LysR family transcriptio</text>
-<polygon points="406.3,64 549.5,64 555.5,70 549.5,76 406.3,76" fill="#3b6fb6"><title>alpha/beta fold hydrolase 5451308-5452211 +</title></polygon>
-<text x="406.3" y="62" font-size="8" fill="#333">alpha/beta fold hydrolas</text>
-<polygon points="626.6,64 877.3,64 883.3,70 877.3,76 626.6,76" fill="#3b6fb6"><title>YdgA family protein 5452642-5454196 +</title></polygon>
-<text x="626.6" y="62" font-size="8" fill="#333">YdgA family protein</text>
-<polygon points="889.9,90 895.9,84 1020.2,84 1020.2,96 895.9,96" fill="#3b6fb6"><title>IclR family transcriptional regulator 5454236-5455025 -</title></polygon>
-<text x="889.9" y="106" font-size="8" fill="#333">IclR family transcriptio</text>
-<polygon points="1041.2,64 1054.0,64 1060.0,70 1054.0,76 1041.2,76" fill="#3b6fb6"><title>Bug family tripartite tricarboxylate tra 5455152-5456154 +</title></polygon>
-<text x="60" y="114" font-size="9" fill="#666">SAMN13450421:5449211-5455266</text>
-<text x="4" y="176" font-size="11">SAMEA118088312 NZ_OZ253481.1 (empty site, -)</text>
-<line x1="60" y1="190" x2="1060" y2="190" stroke="#888"/>
-<rect x="558.8" y="185" width="1.0" height="10" fill="#e76f51" opacity="0.45"/><text x="558.8" y="208" font-size="9">site</text>
-<polygon points="60.0,200 66.0,194 82.3,194 82.3,206 66.0,206" fill="#3b6fb6"><title>Bug family tripartite tricarboxylate tra 1208288-1209290 -</title></polygon>
-<polygon points="103.4,174 228.6,174 234.6,180 228.6,186 103.4,186" fill="#3b6fb6"><title>IclR family transcriptional regulator 1209417-1210206 +</title></polygon>
-<text x="103.4" y="172" font-size="8" fill="#333">IclR family transcriptio</text>
-<polygon points="241.3,200 247.3,194 499.7,194 499.7,206 247.3,206" fill="#3b6fb6"><title>YdgA family protein 1210246-1211800 -</title></polygon>
-<text x="241.3" y="216" font-size="8" fill="#333">YdgA family protein</text>
-<polygon points="565.1,200 571.1,194 715.2,194 715.2,206 571.1,206" fill="#3b6fb6"><title>alpha/beta fold hydrolase 1212193-1213096 -</title></polygon>
-<text x="565.1" y="216" font-size="8" fill="#333">alpha/beta fold hydrolas</text>
-<polygon points="737.4,174 885.5,174 891.5,180 885.5,186 737.4,186" fill="#3b6fb6"><title>LysR family transcriptional regulator 1213229-1214156 +</title></polygon>
-<text x="737.4" y="172" font-size="8" fill="#333">LysR family transcriptio</text>
-<polygon points="911.5,174 1002.3,174 1008.3,180 1002.3,186 911.5,186" fill="#3b6fb6"><title>peroxidase-related enzyme 1214276-1214858 +</title></polygon>
-<text x="911.5" y="172" font-size="8" fill="#333">peroxidase-related enzym</text>
-<text x="60" y="224" font-size="9" fill="#666">SAMEA118088312:1209156-1215169</text>
+<text x="4" y="16" font-size="12">L_001fd6dd89ce  SAMN13450421  core 55 bp  unresolved  support not_anchored  boundary exact  tandem False  core copies carrier/partner 1/0</text>
+<line x1="555.5" y1="30" x2="555.5" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<line x1="564.5" y1="30" x2="564.5" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<text x="4" y="64" font-size="11" font-weight="bold">SAMN13450421 NZ_CP065695.1 (carrier)</text>
+<line x1="60" y1="100" x2="1060" y2="100" stroke="#888"/>
+<rect x="390.3" y="132" width="165.2" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="472.9" y="152" font-size="9" text-anchor="middle">U</text>
+<rect x="555.5" y="132" width="9.1" height="8" fill="#e76f51" opacity="0.55"/>
+<text x="560.0" y="152" font-size="9" text-anchor="middle">core 55</text>
+<rect x="564.5" y="132" width="165.2" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="647.1" y="152" font-size="9" text-anchor="middle">D</text>
+<polygon points="60.0,85 114.6,85 120.6,91 114.6,97 60.0,97" fill="#3b6fb6"><title>aminotransferase-like domain-containing  5448084-5449578 +</title></polygon>
+<text x="60.0" y="81" font-size="8" fill="#333">aminotransfer</text>
+<polygon points="115.3,109 121.3,103 211.4,103 211.4,115 121.3,115" fill="#3b6fb6"><title>peroxidase-related enzyme 5449546-5450128 -</title></polygon>
+<text x="115.3" y="125" font-size="8" fill="#333">peroxidase-related e</text>
+<polygon points="231.3,109 237.3,103 384.4,103 384.4,115 237.3,115" fill="#3b6fb6"><title>LysR family transcriptional regulator 5450248-5451175 -</title></polygon>
+<text x="231.3" y="125" font-size="8" fill="#333">LysR family transcriptional regul</text>
+<polygon points="406.3,85 549.5,85 555.5,91 549.5,97 406.3,97" fill="#3b6fb6"><title>alpha/beta fold hydrolase 5451308-5452211 +</title></polygon>
+<text x="406.3" y="81" font-size="8" fill="#333">alpha/beta fold hydrolase</text>
+<polygon points="626.6,85 877.3,85 883.3,91 877.3,97 626.6,97" fill="#3b6fb6"><title>YdgA family protein 5452642-5454196 +</title></polygon>
+<text x="626.6" y="81" font-size="8" fill="#333">YdgA family protein</text>
+<polygon points="889.9,109 895.9,103 1020.2,103 1020.2,115 895.9,115" fill="#3b6fb6"><title>IclR family transcriptional regulator 5454236-5455025 -</title></polygon>
+<text x="889.9" y="125" font-size="8" fill="#333">IclR family transcriptional </text>
+<polygon points="1041.2,85 1054.0,85 1060.0,91 1054.0,97 1041.2,97" fill="#3b6fb6"><title>Bug family tripartite tricarboxylate tra 5455152-5456154 +</title></polygon>
+<text x="60" y="166" font-size="9" fill="#666">NZ_CP065695.1:5449211-5455266  core 5452211-5452266</text>
+<text x="4" y="184" font-size="11" font-weight="bold">SAMEA118088312 NZ_OZ253481.1 (partner, - strand, unresolved, pair P00290)</text>
+<line x1="60" y1="220" x2="1060" y2="220" stroke="#888"/>
+<rect x="390.3" y="252" width="165.2" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="472.9" y="272" font-size="9" text-anchor="middle">U'</text>
+<rect x="564.5" y="252" width="165.2" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="647.1" y="272" font-size="9" text-anchor="middle">D'</text>
+<rect x="555.5" y="252" width="9.1" height="8" fill="#9b5de5" opacity="0.55"/>
+<text x="560.0" y="272" font-size="9" text-anchor="middle">other side 37</text>
+<polygon points="1037.9,205 1054.0,205 1060.0,211 1054.0,217 1037.9,217" fill="#3b6fb6"><title>Bug family tripartite tricarboxylate tra 1208288-1209290 +</title></polygon>
+<polygon points="886.6,229 892.6,223 1016.9,223 1016.9,235 892.6,235" fill="#3b6fb6"><title>IclR family transcriptional regulator 1209417-1210206 -</title></polygon>
+<text x="886.6" y="245" font-size="8" fill="#333">IclR family transcriptional </text>
+<polygon points="623.3,205 874.0,205 880.0,211 874.0,217 623.3,217" fill="#3b6fb6"><title>YdgA family protein 1210246-1211800 +</title></polygon>
+<text x="623.3" y="201" font-size="8" fill="#333">YdgA family protein</text>
+<polygon points="406.3,205 549.5,205 555.5,211 549.5,217 406.3,217" fill="#3b6fb6"><title>alpha/beta fold hydrolase 1212193-1213096 +</title></polygon>
+<polygon points="231.3,229 237.3,223 384.4,223 384.4,235 237.3,235" fill="#3b6fb6"><title>LysR family transcriptional regulator 1213229-1214156 -</title></polygon>
+<polygon points="115.3,229 121.3,223 211.4,223 211.4,235 121.3,235" fill="#3b6fb6"><title>peroxidase-related enzyme 1214276-1214858 -</title></polygon>
+<text x="60" y="286" font-size="9" fill="#666">NZ_OZ253481.1 site 1212156  other-side gap 37 bp  this call's core 5452211-5452266</text>
 </svg>

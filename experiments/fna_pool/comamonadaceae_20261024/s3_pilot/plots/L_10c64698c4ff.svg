@@ -1,33 +1,42 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="250" font-family="sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="300" font-family="sans-serif">
 <rect width="100%" height="100%" fill="white"/>
-<text x="4" y="14" font-size="12">L_10c64698c4ff  SAMEA120314636  core 1049 bp  status two_flank_anchored  pairs 1  tandem False  core copies carrier/empty 3/1</text>
-<text x="4" y="66" font-size="11">SAMEA120314636 NZ_OZ344929.1 (carrier)</text>
-<line x1="60" y1="80" x2="1060" y2="80" stroke="#888"/>
-<rect x="343.7" y="75" width="141.9" height="10" fill="#2a9d8f" opacity="0.45"/><text x="343.7" y="98" font-size="9">U</text>
-<rect x="485.6" y="75" width="148.8" height="10" fill="#e76f51" opacity="0.45"/><text x="485.6" y="98" font-size="9">core</text>
-<rect x="634.4" y="75" width="141.9" height="10" fill="#2a9d8f" opacity="0.45"/><text x="634.4" y="98" font-size="9">D</text>
-<polygon points="60.0,90 66.0,84 279.2,84 279.2,96 66.0,96" fill="#3b6fb6"><title>arylsulfatase 2261748-2264109 -</title></polygon>
-<text x="60.0" y="106" font-size="8" fill="#333">arylsulfatase</text>
-<polygon points="286.7,90 292.7,84 426.3,84 426.3,96 292.7,96" fill="#3b6fb6"><title>Bug family tripartite tricarboxylate tra 2264162-2265146 -</title></polygon>
-<text x="286.7" y="106" font-size="8" fill="#333">Bug family tripartite tr</text>
-<polygon points="461.0,90 467.0,84 484.5,84 484.5,96 467.0,96" fill="#999"><title>acyl-CoA dehydrogenase family protein 2265391-2265556 -</title></polygon>
-<polygon points="485.7,90 491.7,84 620.6,84 620.6,96 491.7,96" fill="#3b6fb6"><title>IS481 family transposase 2265565-2266516 -</title></polygon>
-<text x="485.7" y="106" font-size="8" fill="#333">IS481 family transposase</text>
-<polygon points="634.5,90 640.5,84 1019.3,84 1019.3,96 640.5,96" fill="#3b6fb6"><title>FAD-dependent oxidoreductase 2266614-2269326 -</title></polygon>
-<text x="634.5" y="106" font-size="8" fill="#333">FAD-dependent oxidoreduc</text>
-<polygon points="1049.9,90 1055.9,84 1060.0,84 1060.0,96 1055.9,96" fill="#3b6fb6"><title>winged helix-turn-helix domain-containin 2269542-2270199 -</title></polygon>
-<text x="60" y="114" font-size="9" fill="#666">SAMEA120314636:2262564-2269613</text>
-<text x="4" y="176" font-size="11">SAMN51658614 NZ_CM191347.1 (empty site, +)</text>
-<line x1="60" y1="190" x2="1060" y2="190" stroke="#888"/>
-<rect x="538.9" y="185" width="1.0" height="10" fill="#e76f51" opacity="0.45"/><text x="538.9" y="208" font-size="9">site</text>
-<polygon points="60.0,200 66.0,194 306.6,194 306.6,206 66.0,206" fill="#3b6fb6"><title>arylsulfatase 2404423-2406784 -</title></polygon>
-<text x="60.0" y="216" font-size="8" fill="#333">arylsulfatase</text>
-<polygon points="315.3,200 321.3,194 472.5,194 472.5,206 321.3,206" fill="#3b6fb6"><title>Bug family tripartite tricarboxylate tra 2406839-2407823 -</title></polygon>
-<text x="315.3" y="216" font-size="8" fill="#333">Bug family tripartite tr</text>
-<polygon points="511.5,200 517.5,194 537.8,194 537.8,206 517.5,206" fill="#999"><title>acyl-CoA dehydrogenase family protein 2408067-2408232 -</title></polygon>
-<polygon points="539.2,200 545.2,194 972.3,194 972.3,206 545.2,206" fill="#3b6fb6"><title>FAD-dependent oxidoreductase 2408241-2410953 -</title></polygon>
-<text x="539.2" y="216" font-size="8" fill="#333">FAD-dependent oxidoreduc</text>
-<polygon points="1006.8,200 1012.8,194 1060.0,194 1060.0,206 1012.8,206" fill="#3b6fb6"><title>winged helix-turn-helix domain-containin 2411169-2411826 -</title></polygon>
-<text x="1006.8" y="216" font-size="8" fill="#333">winged helix-turn-helix </text>
-<text x="60" y="224" font-size="9" fill="#666">SAMN51658614:2405240-2411502</text>
+<text x="4" y="16" font-size="12">L_10c64698c4ff  SAMEA120314636  core 1049 bp  two_flank_anchored  support all_calls_anchored  boundary exact  tandem False  core copies carrier/partner 3/1</text>
+<line x1="485.6" y1="30" x2="485.6" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<line x1="634.4" y1="30" x2="634.4" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<text x="4" y="64" font-size="11" font-weight="bold">SAMEA120314636 NZ_OZ344929.1 (carrier)</text>
+<line x1="60" y1="100" x2="1060" y2="100" stroke="#888"/>
+<rect x="343.7" y="132" width="141.9" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="414.7" y="152" font-size="9" text-anchor="middle">U</text>
+<rect x="485.6" y="132" width="148.8" height="8" fill="#e76f51" opacity="0.55"/>
+<text x="560.0" y="152" font-size="9" text-anchor="middle">core 1049</text>
+<rect x="634.4" y="132" width="141.9" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="705.3" y="152" font-size="9" text-anchor="middle">D</text>
+<polygon points="60.0,109 66.0,103 279.2,103 279.2,115 66.0,115" fill="#3b6fb6"><title>arylsulfatase 2261748-2264109 -</title></polygon>
+<text x="60.0" y="125" font-size="8" fill="#333">arylsulfatase</text>
+<polygon points="286.7,109 292.7,103 426.3,103 426.3,115 292.7,115" fill="#3b6fb6"><title>Bug family tripartite tricarboxylate tra 2264162-2265146 -</title></polygon>
+<text x="286.7" y="125" font-size="8" fill="#333">Bug family tripartite tricarbo</text>
+<polygon points="461.0,109 467.0,103 484.5,103 484.5,115 467.0,115" fill="#999"><title>acyl-CoA dehydrogenase family protein 2265391-2265556 -</title></polygon>
+<polygon points="485.7,109 491.7,103 620.6,103 620.6,115 491.7,115" fill="#3b6fb6"><title>IS481 family transposase 2265565-2266516 -</title></polygon>
+<text x="485.7" y="125" font-size="8" fill="#333">IS481 family transposase</text>
+<polygon points="634.5,109 640.5,103 1019.3,103 1019.3,115 640.5,115" fill="#3b6fb6"><title>FAD-dependent oxidoreductase 2266614-2269326 -</title></polygon>
+<text x="634.5" y="125" font-size="8" fill="#333">FAD-dependent oxidoreductase</text>
+<polygon points="1049.9,109 1055.9,103 1060.0,103 1060.0,115 1055.9,115" fill="#3b6fb6"><title>winged helix-turn-helix domain-containin 2269542-2270199 -</title></polygon>
+<text x="60" y="166" font-size="9" fill="#666">NZ_OZ344929.1:2262564-2269613  core 2265564-2266613</text>
+<text x="4" y="184" font-size="11" font-weight="bold">SAMN51658614 NZ_CM191347.1 (partner, + strand, two_flank_anchored, pair P00351)</text>
+<line x1="60" y1="220" x2="1060" y2="220" stroke="#888"/>
+<rect x="343.7" y="252" width="141.9" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="414.7" y="272" font-size="9" text-anchor="middle">U'</text>
+<rect x="634.4" y="252" width="141.9" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="705.3" y="272" font-size="9" text-anchor="middle">D'</text>
+<rect x="485.6" y="252" width="148.8" height="8" fill="#ffffff" opacity="0.55"/>
+<polygon points="60.0,229 66.0,223 279.0,223 279.0,235 66.0,235" fill="#3b6fb6"><title>arylsulfatase 2404423-2406784 -</title></polygon>
+<text x="60.0" y="245" font-size="8" fill="#333">arylsulfatase</text>
+<polygon points="286.8,229 292.8,223 426.4,223 426.4,235 292.8,235" fill="#3b6fb6"><title>Bug family tripartite tricarboxylate tra 2406839-2407823 -</title></polygon>
+<text x="286.8" y="245" font-size="8" fill="#333">Bug family tripartite tricarbo</text>
+<polygon points="461.0,229 467.0,223 484.5,223 484.5,235 467.0,235" fill="#999"><title>acyl-CoA dehydrogenase family protein 2408067-2408232 -</title></polygon>
+<polygon points="634.5,229 640.5,223 1019.3,223 1019.3,235 640.5,235" fill="#3b6fb6"><title>FAD-dependent oxidoreductase 2408241-2410953 -</title></polygon>
+<text x="634.5" y="245" font-size="8" fill="#333">FAD-dependent oxidoreductase</text>
+<polygon points="1049.9,229 1055.9,223 1060.0,223 1060.0,235 1055.9,235" fill="#3b6fb6"><title>winged helix-turn-helix domain-containin 2411169-2411826 -</title></polygon>
+<text x="60" y="286" font-size="9" fill="#666">NZ_CM191347.1 site 2408240  other-side gap 0 bp  this call's core 2265564-2266613</text>
+<rect x="485.6" y="218" width="148.8" height="4" fill="#f4f4f4"/><text x="560.0" y="272" font-size="9" text-anchor="middle" fill="#a5372f">empty site</text>
 </svg>

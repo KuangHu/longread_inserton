@@ -1,42 +1,50 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="250" font-family="sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="300" font-family="sans-serif">
 <rect width="100%" height="100%" fill="white"/>
-<text x="4" y="14" font-size="12">L_045a2e5e9df9  SAMD00076718  core 72 bp  status two_flank_anchored  pairs 1  tandem False  core copies carrier/empty 1/0</text>
-<text x="4" y="66" font-size="11">SAMD00076718 NZ_AP026738.1 (carrier)</text>
-<line x1="60" y1="80" x2="1060" y2="80" stroke="#888"/>
-<rect x="389.4" y="75" width="164.7" height="10" fill="#2a9d8f" opacity="0.45"/><text x="389.4" y="98" font-size="9">U</text>
-<rect x="554.1" y="75" width="11.9" height="10" fill="#e76f51" opacity="0.45"/><text x="554.1" y="98" font-size="9">core</text>
-<rect x="565.9" y="75" width="164.7" height="10" fill="#2a9d8f" opacity="0.45"/><text x="565.9" y="98" font-size="9">D</text>
-<polygon points="60.0,90 66.0,84 124.2,84 124.2,96 66.0,96" fill="#3b6fb6"><title>GlxA family transcriptional regulator 3781741-3782686 -</title></polygon>
-<text x="60.0" y="106" font-size="8" fill="#333">GlxA family transcriptio</text>
-<polygon points="143.3,64 269.3,64 275.3,70 269.3,76 143.3,76" fill="#3b6fb6"><title>SDR family NAD(P)-dependent oxidoreducta 3782802-3783603 +</title></polygon>
-<text x="143.3" y="62" font-size="8" fill="#333">SDR family NAD(P)-depend</text>
-<polygon points="278.7,64 459.5,64 465.5,70 459.5,76 278.7,76" fill="#3b6fb6"><title>thiolase family protein 3783624-3784758 +</title></polygon>
-<text x="278.7" y="62" font-size="8" fill="#333">thiolase family protein</text>
-<polygon points="473.0,64 535.7,64 541.7,70 535.7,76 473.0,76" fill="#3b6fb6"><title>PaaI family thioesterase 3784804-3785221 +</title></polygon>
-<text x="473.0" y="62" font-size="8" fill="#333">PaaI family thioesterase</text>
-<polygon points="616.8,90 622.8,84 757.1,84 757.1,96 622.8,96" fill="#3b6fb6"><title>NAD-dependent protein deacetylase 3785677-3786529 -</title></polygon>
-<text x="616.8" y="106" font-size="8" fill="#333">NAD-dependent protein de</text>
-<polygon points="757.0,90 763.0,84 994.1,84 994.1,96 763.0,96" fill="#3b6fb6"><title>cardiolipin synthase 3786528-3787968 -</title></polygon>
-<text x="757.0" y="106" font-size="8" fill="#333">cardiolipin synthase</text>
-<polygon points="1021.8,64 1054.0,64 1060.0,70 1054.0,76 1021.8,76" fill="#3b6fb6"><title>helix-turn-helix transcriptional regulat 3788136-3788433 +</title></polygon>
-<text x="1021.8" y="62" font-size="8" fill="#333">helix-turn-helix transcr</text>
-<text x="60" y="114" font-size="9" fill="#666">SAMD00076718:3782296-3788368</text>
-<text x="4" y="176" font-size="11">SAMD00411011 NZ_AP025193.1 (empty site, +)</text>
-<line x1="60" y1="190" x2="1060" y2="190" stroke="#888"/>
-<rect x="558.3" y="185" width="1.0" height="10" fill="#e76f51" opacity="0.45"/><text x="558.3" y="208" font-size="9">site</text>
-<polygon points="60.0,200 66.0,194 125.0,194 125.0,206 66.0,206" fill="#3b6fb6"><title>GlxA family transcriptional regulator 3288149-3289094 -</title></polygon>
-<text x="60.0" y="216" font-size="8" fill="#333">GlxA family transcriptio</text>
-<polygon points="144.2,174 271.3,174 277.3,180 271.3,186 144.2,186" fill="#3b6fb6"><title>SDR family NAD(P)-dependent oxidoreducta 3289210-3290011 +</title></polygon>
-<text x="144.2" y="172" font-size="8" fill="#333">SDR family NAD(P)-depend</text>
-<polygon points="280.8,174 463.3,174 469.3,180 463.3,186 280.8,186" fill="#3b6fb6"><title>thiolase family protein 3290032-3291166 +</title></polygon>
-<text x="280.8" y="172" font-size="8" fill="#333">thiolase family protein</text>
-<polygon points="476.9,174 540.2,174 546.2,180 540.2,186 476.9,186" fill="#3b6fb6"><title>PaaI family thioesterase 3291212-3291629 +</title></polygon>
-<text x="476.9" y="172" font-size="8" fill="#333">PaaI family thioesterase</text>
-<polygon points="610.2,200 616.2,194 751.8,194 751.8,206 616.2,206" fill="#3b6fb6"><title>NAD-dependent protein deacetylase 3292014-3292866 -</title></polygon>
-<text x="610.2" y="216" font-size="8" fill="#333">NAD-dependent protein de</text>
-<polygon points="751.6,200 757.6,194 990.9,194 990.9,206 757.6,206" fill="#3b6fb6"><title>cardiolipin synthase 3292865-3294305 -</title></polygon>
-<text x="751.6" y="216" font-size="8" fill="#333">cardiolipin synthase</text>
-<polygon points="1018.8,174 1054.0,174 1060.0,180 1054.0,186 1018.8,186" fill="#3b6fb6"><title>helix-turn-helix transcriptional regulat 3294473-3294770 +</title></polygon>
-<text x="1018.8" y="172" font-size="8" fill="#333">helix-turn-helix transcr</text>
-<text x="60" y="224" font-size="9" fill="#666">SAMD00411011:3288703-3294721</text>
+<text x="4" y="16" font-size="12">L_045a2e5e9df9  SAMD00076718  core 72 bp  two_flank_anchored  support all_calls_anchored  boundary exact  tandem False  core copies carrier/partner 1/0</text>
+<line x1="554.1" y1="30" x2="554.1" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<line x1="565.9" y1="30" x2="565.9" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<text x="4" y="64" font-size="11" font-weight="bold">SAMD00076718 NZ_AP026738.1 (carrier)</text>
+<line x1="60" y1="100" x2="1060" y2="100" stroke="#888"/>
+<rect x="389.4" y="132" width="164.7" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="471.7" y="152" font-size="9" text-anchor="middle">U</text>
+<rect x="554.1" y="132" width="11.9" height="8" fill="#e76f51" opacity="0.55"/>
+<text x="560.0" y="152" font-size="9" text-anchor="middle">core 72</text>
+<rect x="565.9" y="132" width="164.7" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="648.3" y="152" font-size="9" text-anchor="middle">D</text>
+<polygon points="60.0,109 66.0,103 124.2,103 124.2,115 66.0,115" fill="#3b6fb6"><title>GlxA family transcriptional regulator 3781741-3782686 -</title></polygon>
+<text x="60.0" y="125" font-size="8" fill="#333">GlxA family t</text>
+<polygon points="143.3,85 269.3,85 275.3,91 269.3,97 143.3,97" fill="#3b6fb6"><title>SDR family NAD(P)-dependent oxidoreducta 3782802-3783603 +</title></polygon>
+<text x="143.3" y="81" font-size="8" fill="#333">SDR family NAD(P)-dependent </text>
+<polygon points="278.7,85 459.5,85 465.5,91 459.5,97 278.7,97" fill="#3b6fb6"><title>thiolase family protein 3783624-3784758 +</title></polygon>
+<text x="278.7" y="81" font-size="8" fill="#333">thiolase family protein</text>
+<polygon points="473.0,85 535.7,85 541.7,91 535.7,97 473.0,97" fill="#3b6fb6"><title>PaaI family thioesterase 3784804-3785221 +</title></polygon>
+<text x="473.0" y="81" font-size="8" fill="#333">PaaI family th</text>
+<polygon points="616.8,109 622.8,103 757.1,103 757.1,115 622.8,115" fill="#3b6fb6"><title>NAD-dependent protein deacetylase 3785677-3786529 -</title></polygon>
+<text x="616.8" y="125" font-size="8" fill="#333">NAD-dependent protein deacetyl</text>
+<polygon points="757.0,109 763.0,103 994.1,103 994.1,115 763.0,115" fill="#3b6fb6"><title>cardiolipin synthase 3786528-3787968 -</title></polygon>
+<polygon points="1021.8,85 1054.0,85 1060.0,91 1054.0,97 1021.8,97" fill="#3b6fb6"><title>helix-turn-helix transcriptional regulat 3788136-3788433 +</title></polygon>
+<text x="1021.8" y="81" font-size="8" fill="#333">helix-tu</text>
+<text x="60" y="166" font-size="9" fill="#666">NZ_AP026738.1:3782296-3788368  core 3785296-3785368</text>
+<text x="4" y="184" font-size="11" font-weight="bold">SAMD00411011 NZ_AP025193.1 (partner, + strand, two_flank_anchored, pair P00007)</text>
+<line x1="60" y1="220" x2="1060" y2="220" stroke="#888"/>
+<rect x="389.4" y="252" width="164.7" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="471.7" y="272" font-size="9" text-anchor="middle">U'</text>
+<rect x="565.9" y="252" width="164.7" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="648.3" y="272" font-size="9" text-anchor="middle">D'</text>
+<rect x="554.1" y="252" width="11.9" height="8" fill="#9b5de5" opacity="0.55"/>
+<text x="560.0" y="272" font-size="9" text-anchor="middle">other side 2</text>
+<polygon points="60.0,229 66.0,223 124.4,223 124.4,235 66.0,235" fill="#3b6fb6"><title>GlxA family transcriptional regulator 3288149-3289094 -</title></polygon>
+<text x="60.0" y="245" font-size="8" fill="#333">GlxA family t</text>
+<polygon points="143.5,205 269.4,205 275.4,211 269.4,217 143.5,217" fill="#3b6fb6"><title>SDR family NAD(P)-dependent oxidoreducta 3289210-3290011 +</title></polygon>
+<text x="143.5" y="201" font-size="8" fill="#333">SDR family NAD(P)-dependent </text>
+<polygon points="278.9,205 459.6,205 465.6,211 459.6,217 278.9,217" fill="#3b6fb6"><title>thiolase family protein 3290032-3291166 +</title></polygon>
+<text x="278.9" y="201" font-size="8" fill="#333">thiolase family protein</text>
+<polygon points="473.2,205 535.9,205 541.9,211 535.9,217 473.2,217" fill="#3b6fb6"><title>PaaI family thioesterase 3291212-3291629 +</title></polygon>
+<text x="473.2" y="201" font-size="8" fill="#333">PaaI family th</text>
+<polygon points="616.8,229 622.8,223 757.1,223 757.1,235 622.8,235" fill="#3b6fb6"><title>NAD-dependent protein deacetylase 3292014-3292866 -</title></polygon>
+<text x="616.8" y="245" font-size="8" fill="#333">NAD-dependent protein deacetyl</text>
+<polygon points="757.0,229 763.0,223 994.1,223 994.1,235 763.0,235" fill="#3b6fb6"><title>cardiolipin synthase 3292865-3294305 -</title></polygon>
+<polygon points="1021.8,205 1054.0,205 1060.0,211 1054.0,217 1021.8,217" fill="#3b6fb6"><title>helix-turn-helix transcriptional regulat 3294473-3294770 +</title></polygon>
+<text x="1021.8" y="201" font-size="8" fill="#333">helix-tu</text>
+<text x="60" y="286" font-size="9" fill="#666">NZ_AP025193.1 site 3291703  other-side gap 2 bp  this call's core 3785296-3785368</text>
 </svg>

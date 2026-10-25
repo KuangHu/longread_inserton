@@ -1,37 +1,47 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="250" font-family="sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="300" font-family="sans-serif">
 <rect width="100%" height="100%" fill="white"/>
-<text x="4" y="14" font-size="12">L_0b3e1489c496  SAMD00571185  core 1227 bp  status two_flank_anchored  pairs 1  tandem False  core copies carrier/empty 1/2</text>
-<text x="4" y="66" font-size="11">SAMD00571185 NZ_AP027205.1 (carrier)</text>
-<line x1="60" y1="80" x2="1060" y2="80" stroke="#888"/>
-<rect x="336.7" y="75" width="138.4" height="10" fill="#2a9d8f" opacity="0.45"/><text x="336.7" y="98" font-size="9">U</text>
-<rect x="475.1" y="75" width="169.8" height="10" fill="#e76f51" opacity="0.45"/><text x="475.1" y="98" font-size="9">core</text>
-<rect x="644.9" y="75" width="138.4" height="10" fill="#2a9d8f" opacity="0.45"/><text x="644.9" y="98" font-size="9">D</text>
-<polygon points="60.0,64 177.8,64 183.8,70 177.8,76 60.0,76" fill="#3b6fb6"><title>LysR family transcriptional regulator 5482196-5483141 +</title></polygon>
-<text x="60.0" y="62" font-size="8" fill="#333">LysR family transcriptio</text>
-<polygon points="210.1,64 309.2,64 315.2,70 309.2,76 210.1,76" fill="#3b6fb6"><title>sulfite exporter TauE/SafE family protei 5483331-5484090 +</title></polygon>
-<text x="210.1" y="62" font-size="8" fill="#333">sulfite exporter TauE/Sa</text>
-<polygon points="316.5,90 322.5,84 367.2,84 367.2,96 322.5,96" fill="#3b6fb6"><title>Arc family DNA-binding protein 5484100-5484466 -</title></polygon>
-<text x="316.5" y="106" font-size="8" fill="#333">Arc family DNA-binding p</text>
-<polygon points="388.8,64 433.4,64 439.4,70 433.4,76 388.8,76" fill="#3b6fb6"><title>hypothetical protein 5484622-5484988 +</title></polygon>
-<text x="388.8" y="62" font-size="8" fill="#333">hypothetical protein</text>
-<polygon points="483.3,64 637.9,64 643.9,70 637.9,76 483.3,76" fill="#3b6fb6"><title>IS30 family transposase 5485305-5486466 +</title></polygon>
-<text x="483.3" y="62" font-size="8" fill="#333">IS30 family transposase</text>
-<polygon points="1009.9,90 1015.9,84 1060.0,84 1060.0,96 1015.9,96" fill="#3b6fb6"><title>type I-F CRISPR-associated endoribonucle 5489111-5489678 -</title></polygon>
-<text x="1009.9" y="106" font-size="8" fill="#333">type I-F CRISPR-associat</text>
-<text x="60" y="114" font-size="9" fill="#666">SAMD00571185:5482246-5489473</text>
-<text x="4" y="176" font-size="11">SAMD00407106 NZ_AP025556.1 (empty site, +)</text>
-<line x1="60" y1="190" x2="1060" y2="190" stroke="#888"/>
-<rect x="535.6" y="185" width="1.0" height="10" fill="#e76f51" opacity="0.45"/><text x="535.6" y="208" font-size="9">site</text>
-<polygon points="60.0,200 61.0,194 61.0,194 61.0,206 61.0,206" fill="#3b6fb6"><title>acrylyl-CoA reductase (NADPH) 6169637-6170624 -</title></polygon>
-<polygon points="67.5,200 73.5,194 155.5,194 155.5,206 73.5,206" fill="#3b6fb6"><title>CoA transferase 6170665-6171220 -</title></polygon>
-<text x="67.5" y="216" font-size="8" fill="#333">CoA transferase</text>
-<polygon points="153.2,174 195.8,174 201.8,180 195.8,186 153.2,186" fill="#3b6fb6"><title>LysR substrate-binding domain-containing 6171206-6171512 +</title></polygon>
-<text x="153.2" y="172" font-size="8" fill="#333">LysR substrate-binding d</text>
-<polygon points="231.9,174 346.3,174 352.3,180 346.3,186 231.9,186" fill="#3b6fb6"><title>sulfite exporter TauE/SafE family protei 6171702-6172461 +</title></polygon>
-<text x="231.9" y="172" font-size="8" fill="#333">sulfite exporter TauE/Sa</text>
-<polygon points="353.8,200 359.8,194 411.9,194 411.9,206 359.8,206" fill="#3b6fb6"><title>Arc family DNA-binding protein 6172471-6172837 -</title></polygon>
-<text x="353.8" y="216" font-size="8" fill="#333">Arc family DNA-binding p</text>
-<polygon points="436.6,174 488.7,174 494.7,180 488.7,186 436.6,186" fill="#3b6fb6"><title>hypothetical protein 6172993-6173359 +</title></polygon>
-<text x="436.6" y="172" font-size="8" fill="#333">hypothetical protein</text>
-<text x="60" y="224" font-size="9" fill="#666">SAMD00407106:6170618-6176924</text>
+<text x="4" y="16" font-size="12">L_0b3e1489c496  SAMD00571185  core 1227 bp  two_flank_anchored  support all_calls_anchored  boundary exact  tandem False  core copies carrier/partner 1/2</text>
+<line x1="475.1" y1="30" x2="475.1" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<line x1="644.9" y1="30" x2="644.9" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<text x="4" y="64" font-size="11" font-weight="bold">SAMD00571185 NZ_AP027205.1 (carrier)</text>
+<line x1="60" y1="100" x2="1060" y2="100" stroke="#888"/>
+<rect x="336.7" y="132" width="138.4" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="405.9" y="152" font-size="9" text-anchor="middle">U</text>
+<rect x="475.1" y="132" width="169.8" height="8" fill="#e76f51" opacity="0.55"/>
+<text x="560.0" y="152" font-size="9" text-anchor="middle">core 1227</text>
+<rect x="644.9" y="132" width="138.4" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="714.1" y="152" font-size="9" text-anchor="middle">D</text>
+<polygon points="60.0,85 177.8,85 183.8,91 177.8,97 60.0,97" fill="#3b6fb6"><title>LysR family transcriptional regulator 5482196-5483141 +</title></polygon>
+<text x="60.0" y="81" font-size="8" fill="#333">LysR family transcriptiona</text>
+<polygon points="210.1,85 309.2,85 315.2,91 309.2,97 210.1,97" fill="#3b6fb6"><title>sulfite exporter TauE/SafE family protei 5483331-5484090 +</title></polygon>
+<text x="210.1" y="81" font-size="8" fill="#333">sulfite exporter TauE/</text>
+<polygon points="316.5,109 322.5,103 367.2,103 367.2,115 322.5,115" fill="#3b6fb6"><title>Arc family DNA-binding protein 5484100-5484466 -</title></polygon>
+<text x="316.5" y="125" font-size="8" fill="#333">Arc family </text>
+<polygon points="388.8,85 433.4,85 439.4,91 433.4,97 388.8,97" fill="#3b6fb6"><title>hypothetical protein 5484622-5484988 +</title></polygon>
+<text x="388.8" y="81" font-size="8" fill="#333">hypothetica</text>
+<polygon points="483.3,85 637.9,85 643.9,91 637.9,97 483.3,97" fill="#3b6fb6"><title>IS30 family transposase 5485305-5486466 +</title></polygon>
+<text x="483.3" y="81" font-size="8" fill="#333">IS30 family transposase</text>
+<polygon points="1009.9,109 1015.9,103 1060.0,103 1060.0,115 1015.9,115" fill="#3b6fb6"><title>type I-F CRISPR-associated endoribonucle 5489111-5489678 -</title></polygon>
+<text x="1009.9" y="125" font-size="8" fill="#333">type I-F C</text>
+<text x="60" y="166" font-size="9" fill="#666">NZ_AP027205.1:5482246-5489473  core 5485246-5486473</text>
+<text x="4" y="184" font-size="11" font-weight="bold">SAMD00407106 NZ_AP025556.1 (partner, + strand, two_flank_anchored, pair P00033)</text>
+<line x1="60" y1="220" x2="1060" y2="220" stroke="#888"/>
+<rect x="336.7" y="252" width="138.4" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="405.9" y="272" font-size="9" text-anchor="middle">U'</text>
+<rect x="644.9" y="252" width="138.4" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="714.1" y="272" font-size="9" text-anchor="middle">D'</text>
+<rect x="475.1" y="252" width="169.8" height="8" fill="#ffffff" opacity="0.55"/>
+<polygon points="60.0,229 60.8,223 60.8,223 60.8,235 60.8,235" fill="#3b6fb6"><title>acrylyl-CoA reductase (NADPH) 6169637-6170624 -</title></polygon>
+<polygon points="66.5,229 72.5,223 143.3,223 143.3,235 72.5,235" fill="#3b6fb6"><title>CoA transferase 6170665-6171220 -</title></polygon>
+<text x="66.5" y="245" font-size="8" fill="#333">CoA transferase</text>
+<polygon points="141.4,205 177.7,205 183.7,211 177.7,217 141.4,217" fill="#3b6fb6"><title>LysR substrate-binding domain-containing 6171206-6171512 +</title></polygon>
+<text x="141.4" y="201" font-size="8" fill="#333">LysR subs</text>
+<polygon points="210.0,205 309.0,205 315.0,211 309.0,217 210.0,217" fill="#3b6fb6"><title>sulfite exporter TauE/SafE family protei 6171702-6172461 +</title></polygon>
+<text x="210.0" y="201" font-size="8" fill="#333">sulfite exporter TauE/</text>
+<polygon points="316.4,229 322.4,223 367.0,223 367.0,235 322.4,235" fill="#3b6fb6"><title>Arc family DNA-binding protein 6172471-6172837 -</title></polygon>
+<text x="316.4" y="245" font-size="8" fill="#333">Arc family </text>
+<polygon points="388.6,205 433.3,205 439.3,211 433.3,217 388.6,217" fill="#3b6fb6"><title>hypothetical protein 6172993-6173359 +</title></polygon>
+<text x="388.6" y="201" font-size="8" fill="#333">hypothetica</text>
+<text x="60" y="286" font-size="9" fill="#666">NZ_AP025556.1 site 6173618  other-side gap 0 bp  this call's core 5485246-5486473</text>
+<rect x="475.1" y="218" width="169.8" height="4" fill="#f4f4f4"/><text x="560.0" y="272" font-size="9" text-anchor="middle" fill="#a5372f">empty site</text>
 </svg>

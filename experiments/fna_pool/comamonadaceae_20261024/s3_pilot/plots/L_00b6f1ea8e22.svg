@@ -1,44 +1,72 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="250" font-family="sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="420" font-family="sans-serif">
 <rect width="100%" height="100%" fill="white"/>
-<text x="4" y="14" font-size="12">L_00b6f1ea8e22  SAMD00076718  core 2134 bp  status replacement  pairs 2  tandem False  core copies carrier/empty 1/0</text>
-<text x="4" y="66" font-size="11">SAMD00076718 NZ_AP026738.1 (carrier)</text>
-<line x1="60" y1="80" x2="1060" y2="80" stroke="#888"/>
-<rect x="305.9" y="75" width="122.9" height="10" fill="#2a9d8f" opacity="0.45"/><text x="305.9" y="98" font-size="9">U</text>
-<rect x="428.8" y="75" width="262.4" height="10" fill="#e76f51" opacity="0.45"/><text x="428.8" y="98" font-size="9">core</text>
-<rect x="691.2" y="75" width="122.9" height="10" fill="#2a9d8f" opacity="0.45"/><text x="691.2" y="98" font-size="9">D</text>
-<polygon points="60.0,64 141.7,64 147.7,70 141.7,76 60.0,76" fill="#3b6fb6"><title>OPT family oligopeptide transporter 295256-297257 +</title></polygon>
-<text x="60.0" y="62" font-size="8" fill="#333">OPT family oligopeptide </text>
-<polygon points="147.2,64 242.6,64 248.6,70 242.6,76 147.2,76" fill="#3b6fb6"><title>hypothetical protein 297253-298078 +</title></polygon>
-<text x="147.2" y="62" font-size="8" fill="#333">hypothetical protein</text>
-<polygon points="263.7,64 299.4,64 305.4,70 299.4,76 263.7,76" fill="#3b6fb6"><title>YegP family protein 298201-298540 +</title></polygon>
-<text x="263.7" y="62" font-size="8" fill="#333">YegP family protein</text>
-<polygon points="310.7,90 316.7,84 410.6,84 410.6,96 316.7,96" fill="#3b6fb6"><title>alpha/beta hydrolase 298583-299396 -</title></polygon>
-<text x="310.7" y="106" font-size="8" fill="#333">alpha/beta hydrolase</text>
-<polygon points="511.4,90 517.4,84 674.8,84 674.8,96 517.4,96" fill="#3b6fb6"><title>ATP-binding protein 300216-301545 -</title></polygon>
-<text x="511.4" y="106" font-size="8" fill="#333">ATP-binding protein</text>
-<polygon points="691.2,90 697.2,84 776.4,84 776.4,96 697.2,96" fill="#3b6fb6"><title>excinuclease ABC subunit A 301678-302371 -</title></polygon>
-<text x="691.2" y="106" font-size="8" fill="#333">excinuclease ABC subunit</text>
-<polygon points="792.1,90 798.1,84 971.4,84 971.4,96 798.1,96" fill="#3b6fb6"><title>Asp-tRNA(Asn)/Glu-tRNA(Gln) amidotransfe 302499-303957 -</title></polygon>
-<text x="792.1" y="106" font-size="8" fill="#333">Asp-tRNA(Asn)/Glu-tRNA(G</text>
-<polygon points="989.8,90 995.8,84 1060.0,84 1060.0,96 995.8,96" fill="#3b6fb6"><title>Asp-tRNA(Asn)/Glu-tRNA(Gln) amidotransfe 304107-305598 -</title></polygon>
-<text x="989.8" y="106" font-size="8" fill="#333">Asp-tRNA(Asn)/Glu-tRNA(G</text>
-<text x="60" y="114" font-size="9" fill="#666">SAMD00076718:296544-304678</text>
-<text x="4" y="176" font-size="11">SAMD00411011 NZ_AP025193.1 (empty site, +)</text>
-<line x1="60" y1="190" x2="1060" y2="190" stroke="#888"/>
-<rect x="519.1" y="185" width="1.0" height="10" fill="#e76f51" opacity="0.45"/><text x="519.1" y="208" font-size="9">site</text>
-<polygon points="60.0,174 135.4,174 141.4,180 135.4,186 60.0,186" fill="#3b6fb6"><title>OPT family oligopeptide transporter 313090-315091 +</title></polygon>
-<text x="60.0" y="172" font-size="8" fill="#333">OPT family oligopeptide </text>
-<polygon points="140.8,174 261.1,174 267.1,180 261.1,186 140.8,186" fill="#3b6fb6"><title>hypothetical protein 315087-315912 +</title></polygon>
-<text x="140.8" y="172" font-size="8" fill="#333">hypothetical protein</text>
-<polygon points="285.6,174 331.5,174 337.5,180 331.5,186 285.6,186" fill="#3b6fb6"><title>YegP family protein 316033-316372 +</title></polygon>
-<text x="285.6" y="172" font-size="8" fill="#333">YegP family protein</text>
-<polygon points="343.8,200 349.8,194 468.2,194 468.2,206 349.8,206" fill="#3b6fb6"><title>alpha/beta hydrolase 316413-317226 -</title></polygon>
-<text x="343.8" y="216" font-size="8" fill="#333">alpha/beta hydrolase</text>
-<polygon points="640.4,200 646.4,194 746.5,194 746.5,206 646.4,206" fill="#3b6fb6"><title>hypothetical protein 318351-319044 -</title></polygon>
-<text x="640.4" y="216" font-size="8" fill="#333">hypothetical protein</text>
-<polygon points="770.5,200 776.5,194 993.7,194 993.7,206 776.5,206" fill="#3b6fb6"><title>Asp-tRNA(Asn)/Glu-tRNA(Gln) amidotransfe 319201-320659 -</title></polygon>
-<text x="770.5" y="216" font-size="8" fill="#333">Asp-tRNA(Asn)/Glu-tRNA(G</text>
-<polygon points="1016.7,200 1022.7,194 1060.0,194 1060.0,206 1022.7,206" fill="#3b6fb6"><title>Asp-tRNA(Asn)/Glu-tRNA(Gln) amidotransfe 320809-322300 -</title></polygon>
-<text x="1016.7" y="216" font-size="8" fill="#333">Asp-tRNA(Asn)/Glu-tRNA(G</text>
-<text x="60" y="224" font-size="9" fill="#666">SAMD00411011:314559-321092</text>
+<text x="4" y="16" font-size="12">L_00b6f1ea8e22  SAMD00076718  core 2134 bp  replacement  support not_anchored  boundary partner_dependent  tandem False  core copies carrier/partner 1/0</text>
+<line x1="428.8" y1="30" x2="428.8" y2="412" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<line x1="691.2" y1="30" x2="691.2" y2="412" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<text x="4" y="64" font-size="11" font-weight="bold">SAMD00076718 NZ_AP026738.1 (carrier)</text>
+<line x1="60" y1="100" x2="1060" y2="100" stroke="#888"/>
+<rect x="305.9" y="132" width="122.9" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="367.4" y="152" font-size="9" text-anchor="middle">U</text>
+<rect x="428.8" y="132" width="262.4" height="8" fill="#e76f51" opacity="0.55"/>
+<text x="560.0" y="152" font-size="9" text-anchor="middle">core 2134</text>
+<rect x="691.2" y="132" width="122.9" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="752.6" y="152" font-size="9" text-anchor="middle">D</text>
+<polygon points="60.0,85 141.7,85 147.7,91 141.7,97 60.0,97" fill="#3b6fb6"><title>OPT family oligopeptide transporter 295256-297257 +</title></polygon>
+<text x="60.0" y="81" font-size="8" fill="#333">OPT family oligopep</text>
+<polygon points="147.2,85 242.6,85 248.6,91 242.6,97 147.2,97" fill="#3b6fb6"><title>hypothetical protein 297253-298078 +</title></polygon>
+<polygon points="263.7,85 299.4,85 305.4,91 299.4,97 263.7,97" fill="#3b6fb6"><title>YegP family protein 298201-298540 +</title></polygon>
+<text x="263.7" y="81" font-size="8" fill="#333">YegP fami</text>
+<polygon points="310.7,109 316.7,103 410.6,103 410.6,115 316.7,115" fill="#3b6fb6"><title>alpha/beta hydrolase 298583-299396 -</title></polygon>
+<text x="310.7" y="125" font-size="8" fill="#333">alpha/beta hydrolase</text>
+<polygon points="511.4,109 517.4,103 674.8,103 674.8,115 517.4,115" fill="#3b6fb6"><title>ATP-binding protein 300216-301545 -</title></polygon>
+<text x="511.4" y="125" font-size="8" fill="#333">ATP-binding protein</text>
+<polygon points="691.2,109 697.2,103 776.4,103 776.4,115 697.2,115" fill="#3b6fb6"><title>excinuclease ABC subunit A 301678-302371 -</title></polygon>
+<text x="691.2" y="125" font-size="8" fill="#333">excinuclease ABC s</text>
+<polygon points="792.1,109 798.1,103 971.4,103 971.4,115 798.1,115" fill="#3b6fb6"><title>Asp-tRNA(Asn)/Glu-tRNA(Gln) amidotransfe 302499-303957 -</title></polygon>
+<text x="792.1" y="125" font-size="8" fill="#333">Asp-tRNA(Asn)/Glu-tRNA(Gln) amidotrans</text>
+<polygon points="989.8,109 995.8,103 1060.0,103 1060.0,115 995.8,115" fill="#3b6fb6"><title>Asp-tRNA(Asn)/Glu-tRNA(Gln) amidotransfe 304107-305598 -</title></polygon>
+<text x="989.8" y="125" font-size="8" fill="#333">Asp-tRNA(Asn)/G</text>
+<text x="60" y="166" font-size="9" fill="#666">NZ_AP026738.1:296544-304678  core 299544-301678</text>
+<text x="4" y="184" font-size="11" font-weight="bold">SAMD00411011 NZ_AP025193.1 (partner, + strand, unresolved, pair P00007)</text>
+<line x1="60" y1="220" x2="1060" y2="220" stroke="#888"/>
+<rect x="329.7" y="252" width="122.9" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="391.2" y="272" font-size="9" text-anchor="middle">U'</text>
+<rect x="691.2" y="252" width="122.9" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="752.6" y="272" font-size="9" text-anchor="middle">D'</text>
+<rect x="452.7" y="252" width="238.5" height="8" fill="#9b5de5" opacity="0.55"/>
+<text x="571.9" y="272" font-size="9" text-anchor="middle">other side 792</text>
+<polygon points="60.0,205 143.3,205 149.3,211 143.3,217 60.0,217" fill="#3b6fb6"><title>OPT family oligopeptide transporter 313090-315091 +</title></polygon>
+<text x="60.0" y="201" font-size="8" fill="#333">OPT family oligopep</text>
+<polygon points="148.8,205 244.2,205 250.2,211 244.2,217 148.8,217" fill="#3b6fb6"><title>hypothetical protein 315087-315912 +</title></polygon>
+<polygon points="265.1,205 300.7,205 306.7,211 300.7,217 265.1,217" fill="#3b6fb6"><title>YegP family protein 316033-316372 +</title></polygon>
+<text x="265.1" y="201" font-size="8" fill="#333">YegP fami</text>
+<polygon points="311.8,229 317.8,223 411.7,223 411.7,235 317.8,235" fill="#3b6fb6"><title>alpha/beta hydrolase 316413-317226 -</title></polygon>
+<text x="311.8" y="245" font-size="8" fill="#333">alpha/beta hydrolase</text>
+<polygon points="691.2,229 697.2,223 776.4,223 776.4,235 697.2,235" fill="#3b6fb6"><title>hypothetical protein 318351-319044 -</title></polygon>
+<text x="691.2" y="245" font-size="8" fill="#333">hypothetical prote</text>
+<polygon points="795.7,229 801.7,223 974.9,223 974.9,235 801.7,235" fill="#3b6fb6"><title>Asp-tRNA(Asn)/Glu-tRNA(Gln) amidotransfe 319201-320659 -</title></polygon>
+<text x="795.7" y="245" font-size="8" fill="#333">Asp-tRNA(Asn)/Glu-tRNA(Gln) amidotrans</text>
+<polygon points="993.4,229 999.4,223 1060.0,223 1060.0,235 999.4,235" fill="#3b6fb6"><title>Asp-tRNA(Asn)/Glu-tRNA(Gln) amidotransfe 320809-322300 -</title></polygon>
+<text x="993.4" y="245" font-size="8" fill="#333">Asp-tRNA(Asn)/</text>
+<text x="60" y="286" font-size="9" fill="#666">NZ_AP025193.1 site 317559  other-side gap 792 bp  this call's core 299738-301678</text>
+<text x="4" y="304" font-size="11" font-weight="bold">SAMN38562701 NZ_CP139994.1 (partner, + strand, replacement, pair P00022)</text>
+<line x1="60" y1="340" x2="1060" y2="340" stroke="#888"/>
+<rect x="305.9" y="372" width="122.9" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="367.4" y="392" font-size="9" text-anchor="middle">U'</text>
+<rect x="691.2" y="372" width="122.9" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="752.6" y="392" font-size="9" text-anchor="middle">D'</text>
+<rect x="428.8" y="372" width="262.4" height="8" fill="#9b5de5" opacity="0.55"/>
+<text x="560.0" y="392" font-size="9" text-anchor="middle">other side 922</text>
+<polygon points="60.0,325 198.3,325 204.3,331 198.3,337 60.0,337" fill="#3b6fb6"><title>OPT family oligopeptide transporter 292449-294450 +</title></polygon>
+<text x="60.0" y="321" font-size="8" fill="#333">OPT family oligopeptide transpo</text>
+<polygon points="203.8,325 298.5,325 304.5,331 298.5,337 203.8,337" fill="#3b6fb6"><title>hypothetical protein 294446-295265 +</title></polygon>
+<polygon points="310.7,349 316.7,343 410.6,343 410.6,355 316.7,355" fill="#3b6fb6"><title>alpha/beta hydrolase 295315-296128 -</title></polygon>
+<text x="310.7" y="365" font-size="8" fill="#333">alpha/beta hydrolase</text>
+<polygon points="691.2,349 697.2,343 776.4,343 776.4,355 697.2,355" fill="#3b6fb6"><title>excinuclease ABC subunit A 297198-297891 -</title></polygon>
+<text x="691.2" y="365" font-size="8" fill="#333">excinuclease ABC s</text>
+<polygon points="792.1,349 798.1,343 971.4,343 971.4,355 798.1,355" fill="#3b6fb6"><title>Asp-tRNA(Asn)/Glu-tRNA(Gln) amidotransfe 298019-299477 -</title></polygon>
+<text x="792.1" y="365" font-size="8" fill="#333">Asp-tRNA(Asn)/Glu-tRNA(Gln) amidotrans</text>
+<polygon points="985.4,349 991.4,343 1060.0,343 1060.0,355 991.4,355" fill="#3b6fb6"><title>Asp-tRNA(Asn)/Glu-tRNA(Gln) amidotransfe 299591-301082 -</title></polygon>
+<text x="985.4" y="365" font-size="8" fill="#333">Asp-tRNA(Asn)/Gl</text>
+<text x="60" y="406" font-size="9" fill="#666">NZ_CP139994.1 site 296276  other-side gap 922 bp  this call's core 299544-301678</text>
 </svg>

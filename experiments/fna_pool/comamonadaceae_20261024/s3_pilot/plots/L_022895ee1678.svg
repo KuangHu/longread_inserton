@@ -1,34 +1,42 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="250" font-family="sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="300" font-family="sans-serif">
 <rect width="100%" height="100%" fill="white"/>
-<text x="4" y="14" font-size="12">L_022895ee1678  SAMN38562701  core 857 bp  status replacement  pairs 1  tandem False  core copies carrier/empty 2/0</text>
-<text x="4" y="66" font-size="11">SAMN38562701 NZ_CP139994.1 (carrier)</text>
-<line x1="60" y1="80" x2="1060" y2="80" stroke="#888"/>
-<rect x="351.7" y="75" width="145.8" height="10" fill="#2a9d8f" opacity="0.45"/><text x="351.7" y="98" font-size="9">U</text>
-<rect x="497.5" y="75" width="125.0" height="10" fill="#e76f51" opacity="0.45"/><text x="497.5" y="98" font-size="9">core</text>
-<rect x="622.5" y="75" width="145.8" height="10" fill="#2a9d8f" opacity="0.45"/><text x="622.5" y="98" font-size="9">D</text>
-<polygon points="60.0,90 66.0,84 131.6,84 131.6,96 66.0,96" fill="#3b6fb6"><title>bifunctional pyr operon transcriptional  4800578-4801097 -</title></polygon>
-<text x="60.0" y="106" font-size="8" fill="#333">bifunctional pyr operon </text>
-<polygon points="131.0,90 137.0,84 205.8,84 205.8,96 137.0,96" fill="#3b6fb6"><title>Holliday junction resolvase RuvX 4801093-4801606 -</title></polygon>
-<text x="131.0" y="106" font-size="8" fill="#333">Holliday junction resolv</text>
-<polygon points="205.3,90 211.3,84 292.8,84 292.8,96 211.3,96" fill="#3b6fb6"><title>YqgE/AlgH family protein 4801602-4802202 -</title></polygon>
-<text x="205.3" y="106" font-size="8" fill="#333">YqgE/AlgH family protein</text>
-<polygon points="296.0,64 507.4,64 513.4,70 507.4,76 296.0,76" fill="#3b6fb6"><title>cryptochrome/photolyase family protein 4802224-4803715 +</title></polygon>
-<text x="296.0" y="62" font-size="8" fill="#333">cryptochrome/photolyase </text>
-<polygon points="616.2,90 622.2,84 1060.0,84 1060.0,96 622.2,96" fill="#3b6fb6"><title>Hpt domain-containing protein 4804420-4811245 -</title></polygon>
-<text x="616.2" y="106" font-size="8" fill="#333">Hpt domain-containing pr</text>
-<text x="60" y="114" font-size="9" fill="#666">SAMN38562701:4800606-4807463</text>
-<text x="4" y="176" font-size="11">SAMD00076718 NZ_AP026738.1 (empty site, +)</text>
-<line x1="60" y1="190" x2="1060" y2="190" stroke="#888"/>
-<rect x="542.6" y="185" width="1.0" height="10" fill="#e76f51" opacity="0.45"/><text x="542.6" y="208" font-size="9">site</text>
-<polygon points="60.0,200 66.0,194 139.0,194 139.0,206 66.0,206" fill="#3b6fb6"><title>bifunctional pyr operon transcriptional  5007179-5007698 -</title></polygon>
-<text x="60.0" y="216" font-size="8" fill="#333">bifunctional pyr operon </text>
-<polygon points="138.4,200 144.4,194 220.9,194 220.9,206 144.4,206" fill="#3b6fb6"><title>Holliday junction resolvase RuvX 5007694-5008207 -</title></polygon>
-<text x="138.4" y="216" font-size="8" fill="#333">Holliday junction resolv</text>
-<polygon points="220.3,200 226.3,194 316.8,194 316.8,206 226.3,206" fill="#3b6fb6"><title>YqgE/AlgH family protein 5008203-5008803 -</title></polygon>
-<text x="220.3" y="216" font-size="8" fill="#333">YqgE/AlgH family protein</text>
-<polygon points="320.4,174 554.3,174 560.3,180 554.3,186 320.4,186" fill="#3b6fb6"><title>cryptochrome/photolyase family protein 5008825-5010316 +</title></polygon>
-<text x="320.4" y="172" font-size="8" fill="#333">cryptochrome/photolyase </text>
-<polygon points="589.3,200 595.3,194 1060.0,194 1060.0,206 595.3,206" fill="#3b6fb6"><title>hybrid sensor histidine kinase/response  5010496-5017072 -</title></polygon>
-<text x="589.3" y="216" font-size="8" fill="#333">hybrid sensor histidine </text>
-<text x="60" y="224" font-size="9" fill="#666">SAMD00076718:5007207-5013421</text>
+<text x="4" y="16" font-size="12">L_022895ee1678  SAMN38562701  core 857 bp  replacement  support not_anchored  boundary exact  tandem False  core copies carrier/partner 2/0</text>
+<line x1="497.5" y1="30" x2="497.5" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<line x1="622.5" y1="30" x2="622.5" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<text x="4" y="64" font-size="11" font-weight="bold">SAMN38562701 NZ_CP139994.1 (carrier)</text>
+<line x1="60" y1="100" x2="1060" y2="100" stroke="#888"/>
+<rect x="351.7" y="132" width="145.8" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="424.6" y="152" font-size="9" text-anchor="middle">U</text>
+<rect x="497.5" y="132" width="125.0" height="8" fill="#e76f51" opacity="0.55"/>
+<text x="560.0" y="152" font-size="9" text-anchor="middle">core 857</text>
+<rect x="622.5" y="132" width="145.8" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="695.4" y="152" font-size="9" text-anchor="middle">D</text>
+<polygon points="60.0,109 66.0,103 131.6,103 131.6,115 66.0,115" fill="#3b6fb6"><title>bifunctional pyr operon transcriptional  4800578-4801097 -</title></polygon>
+<text x="60.0" y="125" font-size="8" fill="#333">bifunctional py</text>
+<polygon points="131.0,109 137.0,103 205.8,103 205.8,115 137.0,115" fill="#3b6fb6"><title>Holliday junction resolvase RuvX 4801093-4801606 -</title></polygon>
+<polygon points="205.3,109 211.3,103 292.8,103 292.8,115 211.3,115" fill="#3b6fb6"><title>YqgE/AlgH family protein 4801602-4802202 -</title></polygon>
+<text x="205.3" y="125" font-size="8" fill="#333">YqgE/AlgH family pr</text>
+<polygon points="296.0,85 507.4,85 513.4,91 507.4,97 296.0,97" fill="#3b6fb6"><title>cryptochrome/photolyase family protein 4802224-4803715 +</title></polygon>
+<text x="296.0" y="81" font-size="8" fill="#333">cryptochrome/photolyase family protein</text>
+<polygon points="616.2,109 622.2,103 1060.0,103 1060.0,115 622.2,115" fill="#3b6fb6"><title>Hpt domain-containing protein 4804420-4811245 -</title></polygon>
+<text x="616.2" y="125" font-size="8" fill="#333">Hpt domain-containing protein</text>
+<text x="60" y="166" font-size="9" fill="#666">NZ_CP139994.1:4800606-4807463  core 4803606-4804463</text>
+<text x="4" y="184" font-size="11" font-weight="bold">SAMD00076718 NZ_AP026738.1 (partner, + strand, replacement, pair P00022)</text>
+<line x1="60" y1="220" x2="1060" y2="220" stroke="#888"/>
+<rect x="351.7" y="252" width="145.8" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="424.6" y="272" font-size="9" text-anchor="middle">U'</text>
+<rect x="622.5" y="252" width="145.8" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="695.4" y="272" font-size="9" text-anchor="middle">D'</text>
+<rect x="497.5" y="252" width="125.0" height="8" fill="#9b5de5" opacity="0.55"/>
+<text x="560.0" y="272" font-size="9" text-anchor="middle">other side 332</text>
+<polygon points="60.0,229 66.0,223 131.6,223 131.6,235 66.0,235" fill="#3b6fb6"><title>bifunctional pyr operon transcriptional  5007179-5007698 -</title></polygon>
+<text x="60.0" y="245" font-size="8" fill="#333">bifunctional py</text>
+<polygon points="131.0,229 137.0,223 205.8,223 205.8,235 137.0,235" fill="#3b6fb6"><title>Holliday junction resolvase RuvX 5007694-5008207 -</title></polygon>
+<polygon points="205.3,229 211.3,223 292.8,223 292.8,235 211.3,235" fill="#3b6fb6"><title>YqgE/AlgH family protein 5008203-5008803 -</title></polygon>
+<text x="205.3" y="245" font-size="8" fill="#333">YqgE/AlgH family pr</text>
+<polygon points="296.0,205 532.5,205 538.5,211 532.5,217 296.0,217" fill="#3b6fb6"><title>cryptochrome/photolyase family protein 5008825-5010316 +</title></polygon>
+<text x="296.0" y="201" font-size="8" fill="#333">cryptochrome/photolyase family protein</text>
+<polygon points="606.3,229 612.3,223 1060.0,223 1060.0,235 612.3,235" fill="#3b6fb6"><title>hybrid sensor histidine kinase/response  5010496-5017072 -</title></polygon>
+<text x="606.3" y="245" font-size="8" fill="#333">hybrid sensor histidine kinase/response </text>
+<text x="60" y="286" font-size="9" fill="#666">NZ_AP026738.1 site 5010207  other-side gap 332 bp  this call's core 4803606-4804463</text>
 </svg>

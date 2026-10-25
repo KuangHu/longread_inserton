@@ -1,59 +1,61 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="250" font-family="sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="300" font-family="sans-serif">
 <rect width="100%" height="100%" fill="white"/>
-<text x="4" y="14" font-size="12">L_1e497dd44600  SAMEA120314636  core 11236 bp  status two_flank_anchored  pairs 1  tandem False  core copies carrier/empty 1/0</text>
-<text x="4" y="66" font-size="11">SAMEA120314636 NZ_OZ344929.1 (carrier)</text>
-<line x1="60" y1="80" x2="1060" y2="80" stroke="#888"/>
-<rect x="176.0" y="75" width="58.0" height="10" fill="#2a9d8f" opacity="0.45"/><text x="176.0" y="98" font-size="9">U</text>
-<rect x="234.1" y="75" width="651.9" height="10" fill="#e76f51" opacity="0.45"/><text x="234.1" y="98" font-size="9">core</text>
-<rect x="885.9" y="75" width="58.0" height="10" fill="#2a9d8f" opacity="0.45"/><text x="885.9" y="98" font-size="9">D</text>
-<polygon points="60.0,64 194.7,64 200.7,70 194.7,76 60.0,76" fill="#3b6fb6"><title>ATP-binding protein 1357881-1361031 +</title></polygon>
-<text x="60.0" y="62" font-size="8" fill="#333">ATP-binding protein</text>
-<polygon points="208.9,90 214.9,84 229.1,84 229.1,96 214.9,96" fill="#3b6fb6"><title>zinc ribbon domain-containing protein Yj 1361172-1361520 -</title></polygon>
-<polygon points="228.8,90 234.8,84 253.2,84 253.2,96 234.8,96" fill="#3b6fb6"><title>hypothetical protein 1361516-1361936 -</title></polygon>
-<polygon points="257.0,90 263.0,84 272.2,84 272.2,96 263.0,96" fill="#3b6fb6"><title>hypothetical protein 1362002-1362263 -</title></polygon>
-<polygon points="289.2,64 302.0,64 308.0,70 302.0,76 289.2,76" fill="#3b6fb6"><title>ArsR/SmtB family transcription factor 1362557-1362881 +</title></polygon>
-<polygon points="308.7,64 330.5,64 336.5,70 330.5,76 308.7,76" fill="#3b6fb6"><title>ArsI/CadI family heavy metal resistance  1362892-1363372 +</title></polygon>
-<polygon points="337.1,64 360.3,64 366.3,70 360.3,76 337.1,76" fill="#3b6fb6"><title>arsenic resistance N-acetyltransferase A 1363382-1363886 +</title></polygon>
-<polygon points="365.9,64 389.5,64 395.5,70 389.5,76 365.9,76" fill="#3b6fb6"><title>arsenate reductase ArsC 1363878-1364388 +</title></polygon>
-<polygon points="395.2,64 417.6,64 423.6,70 417.6,76 395.2,76" fill="#3b6fb6"><title>arsenate reductase ArsC 1364384-1364873 +</title></polygon>
-<polygon points="423.8,64 479.3,64 485.3,70 479.3,76 423.8,76" fill="#3b6fb6"><title>ACR3 family arsenite efflux transporter 1364877-1365936 +</title></polygon>
-<text x="423.8" y="62" font-size="8" fill="#333">ACR3 family arsenite eff</text>
-<polygon points="494.7,64 508.7,64 514.7,70 508.7,76 494.7,76" fill="#999"><title>MFS transporter 1366098-1366444 +</title></polygon>
-<polygon points="518.2,90 524.2,84 529.7,84 529.7,96 524.2,96" fill="#3b6fb6"><title>ribbon-helix-helix protein%2C CopG famil 1366504-1366702 -</title></polygon>
-<polygon points="593.2,64 607.9,64 613.9,70 607.9,76 593.2,76" fill="#3b6fb6"><title>hypothetical protein 1367796-1368153 +</title></polygon>
-<polygon points="616.6,64 654.4,64 660.4,70 654.4,76 616.6,76" fill="#3b6fb6"><title>spermine/spermidine synthase domain-cont 1368199-1368955 +</title></polygon>
-<text x="616.6" y="62" font-size="8" fill="#333">spermine/spermidine synt</text>
-<polygon points="670.5,64 709.2,64 715.2,70 709.2,76 670.5,76" fill="#3b6fb6"><title>fused MFS/spermidine synthase 1369128-1369899 +</title></polygon>
-<text x="670.5" y="62" font-size="8" fill="#333">fused MFS/spermidine syn</text>
-<polygon points="718.3,64 730.1,64 736.1,70 730.1,76 718.3,76" fill="#3b6fb6"><title>hypothetical protein 1369953-1370259 +</title></polygon>
-<polygon points="756.4,90 762.4,84 796.8,84 796.8,96 762.4,96" fill="#999"><title>putative Na+/H+ antiporter 1370610-1371306 -</title></polygon>
-<text x="756.4" y="106" font-size="8" fill="#333">putative Na+/H+ antiport</text>
-<polygon points="815.6,90 821.6,84 830.9,84 830.9,96 821.6,96" fill="#3b6fb6"><title>glycosyltransferase 1371630-1371894 -</title></polygon>
-<polygon points="861.2,90 867.2,84 880.3,84 880.3,96 867.2,96" fill="#3b6fb6"><title>NrsF family protein 1372415-1372745 -</title></polygon>
-<polygon points="885.4,90 891.4,84 919.8,84 919.8,96 891.4,96" fill="#3b6fb6"><title>hypothetical protein 1372832-1373426 -</title></polygon>
-<text x="885.4" y="106" font-size="8" fill="#333">hypothetical protein</text>
-<polygon points="922.7,90 928.7,84 1022.6,84 1022.6,96 928.7,96" fill="#3b6fb6"><title>single-stranded-DNA-specific exonuclease 1373475-1375197 -</title></polygon>
-<text x="922.7" y="106" font-size="8" fill="#333">single-stranded-DNA-spec</text>
-<polygon points="1022.3,90 1028.3,84 1060.0,84 1060.0,96 1028.3,96" fill="#3b6fb6"><title>hypothetical protein 1375193-1376171 -</title></polygon>
-<text x="1022.3" y="106" font-size="8" fill="#333">hypothetical protein</text>
-<text x="60" y="114" font-size="9" fill="#666">SAMEA120314636:1358606-1375842</text>
-<text x="4" y="176" font-size="11">SAMN51658614 NZ_CM191347.1 (empty site, +)</text>
-<line x1="60" y1="190" x2="1060" y2="190" stroke="#888"/>
-<rect x="400.4" y="185" width="1.0" height="10" fill="#e76f51" opacity="0.45"/><text x="400.4" y="208" font-size="9">site</text>
-<polygon points="60.0,174 337.6,174 343.6,180 337.6,186 60.0,186" fill="#3b6fb6"><title>ATP-binding protein 1378011-1381161 +</title></polygon>
-<text x="60.0" y="172" font-size="8" fill="#333">ATP-binding protein</text>
-<polygon points="351.2,200 357.2,194 390.7,194 390.7,206 357.2,206" fill="#3b6fb6"><title>zinc ribbon domain-containing protein Yj 1381228-1381576 -</title></polygon>
-<text x="351.2" y="216" font-size="8" fill="#333">zinc ribbon domain-conta</text>
-<polygon points="400.8,200 406.8,194 468.2,194 468.2,206 406.8,206" fill="#3b6fb6"><title>hypothetical protein 1381665-1382259 -</title></polygon>
-<text x="400.8" y="216" font-size="8" fill="#333">hypothetical protein</text>
-<polygon points="473.8,200 479.8,194 669.3,194 669.3,206 479.8,206" fill="#3b6fb6"><title>single-stranded-DNA-specific exonuclease 1382308-1384030 -</title></polygon>
-<text x="473.8" y="216" font-size="8" fill="#333">single-stranded-DNA-spec</text>
-<polygon points="668.8,200 674.8,194 779.8,194 779.8,206 674.8,206" fill="#3b6fb6"><title>hypothetical protein 1384026-1385004 -</title></polygon>
-<text x="668.8" y="216" font-size="8" fill="#333">hypothetical protein</text>
-<polygon points="793.8,174 930.5,174 936.5,180 930.5,186 793.8,186" fill="#3b6fb6"><title>lipoprotein-releasing ABC transporter pe 1385127-1386384 +</title></polygon>
-<text x="793.8" y="172" font-size="8" fill="#333">lipoprotein-releasing AB</text>
-<polygon points="935.6,174 1006.5,174 1012.5,180 1006.5,186 935.6,186" fill="#3b6fb6"><title>lipoprotein-releasing ABC transporter AT 1386376-1387054 +</title></polygon>
-<text x="935.6" y="172" font-size="8" fill="#333">lipoprotein-releasing AB</text>
-<polygon points="1039.2,174 1054.0,174 1060.0,180 1054.0,186 1039.2,186" fill="#3b6fb6"><title>TonB-dependent outer membrane receptor 1387289-1388048 +</title></polygon>
-<text x="60" y="224" font-size="9" fill="#666">SAMN51658614:1378663-1387472</text>
+<text x="4" y="16" font-size="12">L_1e497dd44600  SAMEA120314636  core 11236 bp  two_flank_anchored  support all_calls_anchored  boundary exact  tandem False  core copies carrier/partner 1/0</text>
+<line x1="234.1" y1="30" x2="234.1" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<line x1="885.9" y1="30" x2="885.9" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<text x="4" y="64" font-size="11" font-weight="bold">SAMEA120314636 NZ_OZ344929.1 (carrier)</text>
+<line x1="60" y1="100" x2="1060" y2="100" stroke="#888"/>
+<rect x="176.0" y="132" width="58.0" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="205.0" y="152" font-size="9" text-anchor="middle">U</text>
+<rect x="234.1" y="132" width="651.9" height="8" fill="#e76f51" opacity="0.55"/>
+<text x="560.0" y="152" font-size="9" text-anchor="middle">core 11236</text>
+<rect x="885.9" y="132" width="58.0" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="915.0" y="152" font-size="9" text-anchor="middle">D</text>
+<polygon points="60.0,85 194.7,85 200.7,91 194.7,97 60.0,97" fill="#3b6fb6"><title>ATP-binding protein 1357881-1361031 +</title></polygon>
+<text x="60.0" y="81" font-size="8" fill="#333">ATP-binding protein</text>
+<polygon points="208.9,109 214.9,103 229.1,103 229.1,115 214.9,115" fill="#3b6fb6"><title>zinc ribbon domain-containing protein Yj 1361172-1361520 -</title></polygon>
+<polygon points="228.8,109 234.8,103 253.2,103 253.2,115 234.8,115" fill="#3b6fb6"><title>hypothetical protein 1361516-1361936 -</title></polygon>
+<polygon points="257.0,109 263.0,103 272.2,103 272.2,115 263.0,115" fill="#3b6fb6"><title>hypothetical protein 1362002-1362263 -</title></polygon>
+<polygon points="289.2,85 302.0,85 308.0,91 302.0,97 289.2,97" fill="#3b6fb6"><title>ArsR/SmtB family transcription factor 1362557-1362881 +</title></polygon>
+<polygon points="308.7,85 330.5,85 336.5,91 330.5,97 308.7,97" fill="#3b6fb6"><title>ArsI/CadI family heavy metal resistance  1362892-1363372 +</title></polygon>
+<polygon points="337.1,85 360.3,85 366.3,91 360.3,97 337.1,97" fill="#3b6fb6"><title>arsenic resistance N-acetyltransferase A 1363382-1363886 +</title></polygon>
+<polygon points="365.9,85 389.5,85 395.5,91 389.5,97 365.9,97" fill="#3b6fb6"><title>arsenate reductase ArsC 1363878-1364388 +</title></polygon>
+<polygon points="395.2,85 417.6,85 423.6,91 417.6,97 395.2,97" fill="#3b6fb6"><title>arsenate reductase ArsC 1364384-1364873 +</title></polygon>
+<polygon points="423.8,85 479.3,85 485.3,91 479.3,97 423.8,97" fill="#3b6fb6"><title>ACR3 family arsenite efflux transporter 1364877-1365936 +</title></polygon>
+<text x="423.8" y="81" font-size="8" fill="#333">ACR3 family a</text>
+<polygon points="494.7,85 508.7,85 514.7,91 508.7,97 494.7,97" fill="#999"><title>MFS transporter 1366098-1366444 +</title></polygon>
+<polygon points="518.2,109 524.2,103 529.7,103 529.7,115 524.2,115" fill="#3b6fb6"><title>ribbon-helix-helix protein%2C CopG famil 1366504-1366702 -</title></polygon>
+<polygon points="593.2,85 607.9,85 613.9,91 607.9,97 593.2,97" fill="#3b6fb6"><title>hypothetical protein 1367796-1368153 +</title></polygon>
+<polygon points="616.6,85 654.4,85 660.4,91 654.4,97 616.6,97" fill="#3b6fb6"><title>spermine/spermidine synthase domain-cont 1368199-1368955 +</title></polygon>
+<text x="616.6" y="81" font-size="8" fill="#333">spermine/</text>
+<polygon points="670.5,85 709.2,85 715.2,91 709.2,97 670.5,97" fill="#3b6fb6"><title>fused MFS/spermidine synthase 1369128-1369899 +</title></polygon>
+<text x="670.5" y="81" font-size="8" fill="#333">fused MFS</text>
+<polygon points="718.3,85 730.1,85 736.1,91 730.1,97 718.3,97" fill="#3b6fb6"><title>hypothetical protein 1369953-1370259 +</title></polygon>
+<polygon points="756.4,109 762.4,103 796.8,103 796.8,115 762.4,115" fill="#999"><title>putative Na+/H+ antiporter 1370610-1371306 -</title></polygon>
+<text x="756.4" y="125" font-size="8" fill="#333">putative</text>
+<polygon points="815.6,109 821.6,103 830.9,103 830.9,115 821.6,115" fill="#3b6fb6"><title>glycosyltransferase 1371630-1371894 -</title></polygon>
+<polygon points="861.2,109 867.2,103 880.3,103 880.3,115 867.2,115" fill="#3b6fb6"><title>NrsF family protein 1372415-1372745 -</title></polygon>
+<polygon points="885.4,109 891.4,103 919.8,103 919.8,115 891.4,115" fill="#3b6fb6"><title>hypothetical protein 1372832-1373426 -</title></polygon>
+<text x="885.4" y="125" font-size="8" fill="#333">hypothe</text>
+<polygon points="922.7,109 928.7,103 1022.6,103 1022.6,115 928.7,115" fill="#3b6fb6"><title>single-stranded-DNA-specific exonuclease 1373475-1375197 -</title></polygon>
+<polygon points="1022.3,109 1028.3,103 1060.0,103 1060.0,115 1028.3,115" fill="#3b6fb6"><title>hypothetical protein 1375193-1376171 -</title></polygon>
+<text x="1022.3" y="125" font-size="8" fill="#333">hypothet</text>
+<text x="60" y="166" font-size="9" fill="#666">NZ_OZ344929.1:1358606-1375842  core 1361606-1372842</text>
+<text x="4" y="184" font-size="11" font-weight="bold">SAMN51658614 NZ_CM191347.1 (partner, + strand, two_flank_anchored, pair P00351)</text>
+<line x1="60" y1="220" x2="1060" y2="220" stroke="#888"/>
+<rect x="176.0" y="252" width="58.0" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="205.0" y="272" font-size="9" text-anchor="middle">U'</text>
+<rect x="885.9" y="252" width="58.0" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="915.0" y="272" font-size="9" text-anchor="middle">D'</text>
+<rect x="234.1" y="252" width="651.9" height="8" fill="#9b5de5" opacity="0.55"/>
+<text x="560.0" y="272" font-size="9" text-anchor="middle">other side 12</text>
+<polygon points="60.0,205 198.9,205 204.9,211 198.9,217 60.0,217" fill="#3b6fb6"><title>ATP-binding protein 1378011-1381161 +</title></polygon>
+<text x="60.0" y="201" font-size="8" fill="#333">ATP-binding protein</text>
+<polygon points="208.8,229 214.8,223 229.0,223 229.0,235 214.8,235" fill="#3b6fb6"><title>zinc ribbon domain-containing protein Yj 1381228-1381576 -</title></polygon>
+<polygon points="342.7,229 348.7,223 919.8,223 919.8,235 348.7,235" fill="#3b6fb6"><title>hypothetical protein 1381665-1382259 -</title></polygon>
+<text x="342.7" y="245" font-size="8" fill="#333">hypothetical protein</text>
+<polygon points="922.7,229 928.7,223 1022.6,223 1022.6,235 928.7,235" fill="#3b6fb6"><title>single-stranded-DNA-specific exonuclease 1382308-1384030 -</title></polygon>
+<text x="922.7" y="245" font-size="8" fill="#333">single-stranded-DNA-s</text>
+<polygon points="1022.3,229 1028.3,223 1060.0,223 1060.0,235 1028.3,235" fill="#3b6fb6"><title>hypothetical protein 1384026-1385004 -</title></polygon>
+<text x="60" y="286" font-size="9" fill="#666">NZ_CM191347.1 site 1381663  other-side gap 12 bp  this call's core 1361606-1372842</text>
 </svg>
