@@ -175,11 +175,13 @@ reads（S5）不在本步下载。linked 样本的可用 FASTQ 共约 213 GB（O
 ### 复核后补充（2026-10-25）
 
 - **锚定不等于每个 call 都锚定**：`status` 取最好的 call。704 个锚定 locus 中 all_calls_anchored 634，direction_mixed 56，partner_mixed 14；<2500 bp 的 525 个中分别为 479 / 42 / 4。
-- **10% replacement 容许**：锚定 call 的另一侧 gap，<2500 bp 中 0–10 bp 352，11–50 bp 144，51–250 bp 29；全部锚定中 >250 bp 的 36 个都是长 core（如 91 kb 岛带 4,673 bp 另一侧序列仍算锚定）。阈值未改，只把数值写进 loci.tsv。
+- **10% replacement 容许**（v0.2 起另有 difference_class，见下）：锚定 call 的另一侧 gap，<2500 bp 中 0–10 bp 352，11–50 bp 144，51–250 bp 29；全部锚定中 >250 bp 的 36 个都是长 core（如 91 kb 岛带 4,673 bp 另一侧序列仍算锚定）。阈值未改，只把数值写进 loci.tsv。
 - **实际渲染检查**（rsvg-convert 转 PNG 逐张看）发现并修正：轨道标题压住基因名；负链伙伴未翻转、与 carrier 基因顺序相反；短 core 的 U/core/D 标签重叠；横跨空位点的伙伴基因被拉伸成整段 core 长（如 44 kb 噬菌体位点的 tRNA-Leu）；GFF3 产物名未 URL 解码。现在伙伴轨道按 carrier 方向画，U'/D' 对齐 U/D，每个伙伴/边界组合一条轨道。
 - 新图：`plots_boundary/`（7 个 partner_dependent ＋ 15 个 <2500 bp direction_dependent），`plots_readcheck/`（下面 7 个 mixed/contradicted）。
 
-### 长读段等位检查（[s3_readcheck.py](s3_readcheck.py)，job 27263902，3 h 37 min，大部分是下载）
+### 长读段等位检查 v0.1（job 27263902；**已被下面 v0.2 取代**，结果保留在 `readcheck/` 供对照）
+
+v0.1 只看比对起止坐标、不看 CIGAR，也不让重复位点在全基因组竞争，所以下面的 spanning 数不能当作完整结构支持数（见 v0.2）。
 
 每个锚定 locus 的每条原始 call 一个检验：在**各样本自己的组装**上构建 present（U+core+D）和 absent（U+另一侧+D）两个局部等位（各 2 kb flank），用该 BioSample 关联的 run 比对（ONT map-ont，HiFi map-hifi，其余 PacBio map-pb），只数**跨过两个连接点各 300 bp（加滑动窗口）**的读段；两个等位都跨过时按 AS 差 ≥20 判定。判定规则预先固定（≥3 条跨越读段；另一等位 ≤10% 为 consistent），没有按试跑调。
 
@@ -195,7 +197,40 @@ reads（S5）不在本步下载。linked 样本的可用 FASTQ 共约 213 GB（O
 
 - <2500 bp 的 525 个锚定 locus：两侧 consistent 220，一侧 consistent 301，mixed 3，contradicted 1；有读段的一侧没有一个是读段不足（跨越读段中位数 carrier 110、伙伴 111）。15 个 direction_dependent 都只有一侧有读段，读段支持 carrier 的 core，但区分不了两个方向的边界。
 - contradicted：L_dc88a873e166，216 bp tandem 样 core，在 beta-strand repeat 蛋白基因内；伙伴 SAMD00407106 的 240 条跨越读段全部支持“有 core”，伙伴组装很可能塌缩了一个重复单元——这是组装假象，不是真实差异。
-- mixed：L_02729f48424a（318 bp，carrier 有 6 个拷贝，carrier 读段 51 present / 29 absent）和 L_43ea79084943（1,301 bp，33/17）可能是样本内亚群或重复相关；L_128138f94820（54 bp）有 54 条 ambiguous；另外 3 个是 4–39 kb 长 core，跨越 present 等位需要更长读段，计数天然偏向 absent，不能直接解读。
+- mixed：L_02729f48424a（318 bp，carrier 有 6 个拷贝，carrier 读段 51 present / 29 absent）和 L_43ea79084943（1,301 bp，33/17）可能是样本内亚群或重复相关；L_128138f94820（54 bp）carrier 209 present / 193 absent / 54 ambiguous（**更正**：之前只报了 54 条 ambiguous）；另外 3 个是 4–39 kb 长 core，跨越 present 等位需要更长读段，计数天然偏向 absent，不能直接解读。
 - PacBio 计数单位：SRA 规范化的 subread 同一 spot 同名，按一条计；DRR396223 名字里没有 ZMW 信息，可能把同一分子的多个 subread 重复计数。
+
+### 长读段等位检查 v0.2（复核 0ed1ca4 后；job 27272478，commit 830efde，10 min，读段已在本地）
+
+复核指出并确认的问题：(1) 只看比对起止，CIGAR 中整个 core 被删除仍算 present；(2) 读段只和候选局部等位比，重复位点之间不竞争，一条读段可同时支持强、弱两个位点；(3) “一侧 consistent”混了两种不同证据；(4) 长等位需要更长读段，计数偏向短等位；无分子身份的数据只能算 read record。另外本轮发现：ONT duplex run（ERR15680828、ERR15686901）里 duplex 读段（`id1;id2`）和它的两条 simplex 亲本同时存在（约 6,000 组），同一分子最多被计 3 次。
+
+v0.2 改动（判定阈值 ≥3、≤10% 不变）：
+- **CIGAR**：检验区间内合并后的 indel 事件、以及扣除该读段区间外自身 indel 偏差后的净 indel，都必须小于两个等位长度差的一半（至少 10 bp）。在 v0.1 的比对上预检：支持组装所示等位的跨越读段因此丢掉 0–4%（CLR 最高），而支持另一等位的跨越比对有 22–100% 不通过。
+- **全基因组竞争**：命中等位的读段再比对到该样本整个组装（保留 secondary）；只有基因组位置覆盖该位点 ±300 bp、且别处没有覆盖同一读段区段（≥50%）、得分差 <20 的比对时才计（否则 off_locus / locus_ambiguous）。一条读段只有基因组位置同时覆盖几个位点时才同时支持它们（相邻真实位点）。
+- **分子计数**：PacBio 按 ZMW 或 SRA spot，ONT 按 read id 并把 duplex 与亲本合并；DRR396223 无分子信息，标为 `read_records`。
+- **长度匹配**：判定只用读长 ≥ 两个检验区间中较长者的分子（原始数也列出）；读长接近该长度的读段仍更容易跨过短等位。
+- **类别名**：检验分 both_samples_consistent / carrier_only_consistent / partner_only_consistent / mixed / contradicted / not_tested；locus 证据等级 E2（所有检验两侧）/ E2s（部分检验两侧）/ E1c（只有 carrier 读段）/ E1p（只有伙伴读段；carrier 组装未被检查）/ E0 / X（mixed 或 contradicted）。
+- **difference_class**（`merge --fasta`，status 不变）：边界规范化后（另一侧序列若正好等于 core 两端则吸收）分 presence_absence、complex_small_other（另一侧 <50 bp，即 MIN_CORE）、replacement（≥50 bp，本身就够一个事件）。规范化实际一个 call 也没吸收：锚定 call 1,369 条中 0 bp 453，1–2 bp 104，3–10 bp 296，11–49 bp 324，≥50 bp 192。locus 取锚定 call 中最复杂的一类：704 个锚定 locus 中 presence_absence 214，complex_small_other 386，replacement 104（<2500 bp：168 / 327 / 30）。
+
+| locus（704 / <2500 bp 525） | 全部 | <2500 bp |
+|---|---:|---:|
+| E2 所有检验两侧 consistent | 267 | 218 |
+| E2s 部分检验两侧 consistent | 7 | 3 |
+| E1c 只有 carrier 读段 consistent | 171 | 139 |
+| E1p 只有伙伴读段 consistent | 222 | 163 |
+| E0 未检验（无读段或长度匹配后不足） | 33 | 0 |
+| X mixed / contradicted | 4 | 2 |
+
+<2500 bp 按 difference_class：presence_absence E2 87 / E1c 30 / E1p 46 / X 1；complex_small_other E2 118 / E2s 3 / E1c 101 / E1p 109；replacement E2 13 / E1c 8 / E1p 8 / X 1。carrier 计数单位为 read_records（DRR396223）的 <2500 bp locus 有 35 个（E2 17，E2s 3，E1c 15）。
+
+和 v0.1 比：
+- L_128138f94820（54 bp）：v0.1 carrier 209/193/54 是 mixed；v0.2 中 220 条 carrier 读段 off_locus——它们只在连接点附近约 600 bp 有比对（AS 500–700），基因组位置在下游 4–10 kb 的另一个重复拷贝，其中 199 条原先被算作 absent。剩下 204 present / 9 absent，两侧 consistent（E2）。v0.1 的 mixed 是近旁重复造成的错分配。
+- L_02729f48424a（318 bp，6 拷贝）：29 条 absent 全部 off_locus（其他拷贝），剩 51 present → E1c。
+- L_dc88a873e166（216 bp tandem 样）：CIGAR 和全基因组竞争后仍是 carrier 54 present、伙伴 240 present（0 absent）→ contradicted；**疑似**伙伴组装塌缩一个重复单元，仍未独立证实。
+- 仍 mixed：L_43ea79084943（1,301 bp，replacement 类，carrier 匹配后 33/12），L_e4aff037c528（4.2 kb，17/21），L_647ba3ad9f35（11.6 kb，16/16）。L_d704e2a166a1（38.7 kb）长度匹配后 carrier 不足 → E1p。
+- 22 个 24–97 kb core 从“一侧 consistent”变为 E0：伙伴的 absent 读段都短于 present 等位的检验区间，长度匹配后不再计数——这正是长度偏倚。
+- 有等位命中的分子中 16,292 个同时支持 ≥2 个位点；按规则它们的基因组位置覆盖每个位点（相邻位点，或不同 carrier 的 locus 落在同一个伙伴空位点）。排除的分子-检验对：cigar_fail 1,832，off_locus 538，locus_ambiguous 195，分子内记录不一致 3。
+
+仍是组装一致性检查，不是独立验证。E1p 只说明伙伴空位点有读段支持，不能排除 carrier 组装假象。
 
 尚未做：全部 1,221 对；S4 的正式注释/边界复核；core 蛋白合并。
