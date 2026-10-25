@@ -6,10 +6,12 @@ select   From s2/pairs.tsv: one pair per distance tier (same genus, different Bi
 plotlist Loci to draw: per pair up to 2 anchored cores < 2500 bp, 1 anchored >= 2500 bp, 1 replacement, 1 unresolved.
 summary  Per-pair and overall counts from calls/loci/one-flank tables.
 allpairs Every pair of s2/pairs.tsv in the pilot_pairs.tsv format (pilot_reason = "all"), for the full S3 run.
-crosstab Short anchored loci (< SHORT bp): CDS content of the core from the carrier GFF3 (1-2 complete CDS with no
-         CDS/rRNA/tRNA crossing either boundary, 0 complete CDS, > 2, or boundary_cuts_feature), joined with
-         difference_class, boundary consistency and (optional) read-check evidence level. Writes short_loci_review.tsv.
-         This is a review table, not S4: candidate cores still need boundary/repeat review.
+crosstab Short anchored loci (< SHORT bp): coding content of the core from the carrier GFF3 (gff_units: CDS segments
+         grouped by ID). cds_class: boundary_cuts_feature (a CDS unit, rRNA or tRNA crosses a core boundary), else
+         contains_pseudo, contains_partial (partial=true / start_range / end_range), 0_CDS, 1-2_complete_CDS or
+         >2_complete_CDS ("complete" = annotated as neither partial nor pseudo and inside the core; not a check of
+         start/stop codons). Joined with difference_class, boundary consistency and (optional) read-check evidence
+         level. Writes short_loci_review.tsv. A review table, not S4: cores still need boundary/repeat review.
 """
 
 import argparse
@@ -58,9 +60,31 @@ def allpairs(a):
     print(len(out), "pairs;", len({r["sample_a"] for r in out} | {r["sample_b"] for r in out}), "samples")
 
 
+def gff_units(path):
+    """Coding units per contig from a GFF3: CDS lines grouped by ID (multi-segment CDS, e.g. programmed frameshift,
+    are one unit spanning all segments), plus rRNA/tRNA. Each unit keeps partial (partial=true or start_range /
+    end_range) and pseudo flags, protein id (Name/protein_id) and product."""
+    from urllib.parse import unquote
+    units = defaultdict(dict)
+    for line in open(str(path)):
+        if line.startswith("#"):
+            continue
+        f = line.rstrip("\n").split("\t")
+        if len(f) < 9 or f[2] not in ("CDS", "rRNA", "tRNA"):
+            continue
+        at = {k: unquote(v) for k, v in (kv.split("=", 1) for kv in f[8].split(";") if "=" in kv)}
+        key = at.get("ID") or "%s:%s:%s" % (f[2], f[3], f[4])
+        u = units[f[0]].setdefault(key, dict(type=f[2], s=int(f[3]) - 1, e=int(f[4]), segments=0, partial=False, pseudo=False,
+                                             protein=at.get("protein_id") or (at.get("Name", "") if f[2] == "CDS" and "pseudo" not in at else ""),
+                                             product=at.get("product", ""), note=at.get("Note", "")))
+        u["s"], u["e"] = min(u["s"], int(f[3]) - 1), max(u["e"], int(f[4]))
+        u["segments"] += 1
+        u["partial"] |= at.get("partial") == "true" or "start_range" in at or "end_range" in at
+        u["pseudo"] |= at.get("pseudo") == "true"
+    return {c: list(us.values()) for c, us in units.items()}
+
+
 def crosstab(a):
-    sys.path.insert(0, str(Path(__file__).resolve().parent))
-    from s3_pair_calls import read_gff_cds
     gff = {}
     for p in read(a.pilot):
         gff[p["sample_a"]], gff[p["sample_b"]] = p["gff_a"], p["gff_b"]
@@ -70,19 +94,28 @@ def crosstab(a):
         if l["status"] != "two_flank_anchored" or int(l["core_len"]) >= SHORT:
             continue
         if l["carrier"] not in feats:
-            feats[l["carrier"]] = read_gff_cds(gff[l["carrier"]])
+            feats[l["carrier"]] = gff_units(gff[l["carrier"]])
         s, e = int(l["core_start"]), int(l["core_end"])
-        fs = feats[l["carrier"]][l["contig"]]
-        full = [f for f in fs if f[3] == "CDS" and s <= f[0] and f[1] <= e]
-        cut = [f for f in fs if f[0] < s < f[1] or f[0] < e < f[1]]
-        cds = ("boundary_cuts_feature" if cut else "0_complete_CDS" if not full else
-               "1-2_complete_CDS" if len(full) <= 2 else ">2_complete_CDS")
+        us = feats[l["carrier"]].get(l["contig"], [])
+        cut = [u for u in us if u["s"] < s < u["e"] or u["s"] < e < u["e"]]
+        inside = [u for u in us if u["type"] == "CDS" and s <= u["s"] and u["e"] <= e]
+        if cut:
+            cds = "boundary_cuts_feature"
+        elif any(u["pseudo"] for u in inside):
+            cds = "contains_pseudo"
+        elif any(u["partial"] for u in inside):
+            cds = "contains_partial"
+        else:
+            cds = "0_CDS" if not inside else "1-2_complete_CDS" if len(inside) <= 2 else ">2_complete_CDS"
         r = ev.get(l["locus_id"], {})
         rows.append(dict(locus_id=l["locus_id"], carrier=l["carrier"], contig=l["contig"], core_start=s, core_end=e,
                          core_len=l["core_len"], difference_class=l["difference_class"], boundary_consistency=l["boundary_consistency"],
                          anchored_support=l["anchored_support"], tandem_like=l["tandem_like"], cds_class=cds,
-                         complete_cds=len(full), pseudo_cds=sum(1 for f in full if f[5]),
-                         cut_features=";".join("%s:%s" % (f[3], f[4]) for f in cut), products=";".join(f[4] for f in full),
+                         cds_units=len(inside), multi_segment_units=sum(1 for u in inside if u["segments"] > 1),
+                         partial_units=sum(1 for u in inside if u["partial"]), pseudo_units=sum(1 for u in inside if u["pseudo"]),
+                         protein_ids=";".join(u["protein"] for u in inside), products=";".join(u["product"] for u in inside),
+                         notes=";".join(u["note"] for u in inside if u["note"]),
+                         cut_features=";".join("%s:%s" % (u["type"], u["product"]) for u in cut),
                          evidence_level=r.get("evidence_level", ""), carrier_count_unit=r.get("carrier_count_unit", "")))
     write(a.out / "short_loci_review.tsv", rows)
     tab = Counter((r["evidence_level"], r["difference_class"], r["cds_class"]) for r in rows)

@@ -250,15 +250,17 @@ v0.2 改动（判定阈值 ≥3、≤10% 不变）：
 
 计数比例的限制不变：长度匹配只去掉“根本跨不过去”的读段，接近门槛时短等位仍更容易被完整跨越，所以 mixed 的生物学解释和“另一等位 ≤10%”都带着这个偏倚。
 
-**E2 不等于目标 insertion。** `s3_pilot.py crosstab` 写出 `short_loci_review.tsv`（<2500 bp 锚定 locus：carrier GFF3 中 core 含几个完整 CDS、边界是否切断 CDS/rRNA/tRNA，加 difference_class、边界一致性、证据等级）。525 个短 locus：边界切断特征 287，0 个完整 CDS 164，1–2 个完整 CDS 且不切断 72，>2 个 2（之前预览说 68，是未入库的临时计算，以此表为准）。218 个短 E2：
+**E2 不等于目标 insertion。** `s3_pilot.py crosstab` 写出 `short_loci_review.tsv`（<2500 bp 锚定 locus）。CDS 按 GFF3 的 ID 归并为编码单元（多段 CDS，如程序性移码的 IS3 transposase，算一个单元），每个单元带 partial（`partial=true`/`start_range`/`end_range`）和 pseudo 标记、protein id。cds_class：边界切断 CDS/rRNA/tRNA → boundary_cuts_feature；否则 core 内有 pseudo → contains_pseudo，有 partial → contains_partial，再按单元数 0 / 1–2 / >2。“complete”只表示注释既非 partial 也非 pseudo 且整体落在 core 内，**没有检查起止密码子**。
 
-| 短 E2 | 1–2 完整 CDS 不切断 | 0 完整 CDS | 切断特征 | >2 CDS |
-|---|---:|---:|---:|---:|
-| presence_absence（87） | 14 | 36 | 37 | 0 |
-| complex_small_other（118） | 21 | 33 | 63 | 1 |
-| replacement（13） | 3 | 0 | 10 | 0 |
+525 个短 locus：boundary_cuts_feature 287，0_CDS 164，1–2_complete_CDS 67，contains_pseudo 5，>2 2（**更正**：上一版按坐标数完整 CDS、不看 pseudo/partial、不归并分段，得到 72；更早的预览 68 是未入库的临时计算）。218 个短 E2：
 
-同时满足 E2、presence_absence、1–2 个完整 CDS 不切断、边界 exact、非 tandem、按分子计数的有 14 个（10 个 IS3/IS30/IS481/ISL3/ISNCY transposase，另有 Fic、HD domain、AbiEii/AbiGii、hypothetical；1 个含 pseudo CDS）。这是复核清单，不是 S4 结论：仍要看边界、重复结构和注释。17 个短 E2 的 carrier（DRR396223）只能按 read record 计数。
+| 短 E2 | 1–2 complete CDS | contains_pseudo | 0 CDS | 切断特征 | >2 |
+|---|---:|---:|---:|---:|---:|
+| presence_absence（87） | 13 | 1 | 36 | 37 | 0 |
+| complex_small_other（118） | 21 | 0 | 33 | 63 | 1 |
+| replacement（13） | 3 | 0 | 0 | 10 | 0 |
+
+严格复核清单（E2、presence_absence、1–2_complete_CDS、边界 exact、非 tandem、carrier 按分子计数）：**13 个 locus，15 个编码单元，12 个不同 protein id**；其中 8 个 locus 含 transposase（IS30 1、IS481 1、ISNCY 1、ISL3 2、IS3 3——3 个 IS3 都是同一 WP_503779473.1 的两段移码单元，2 个 ISL3 是同一 protein），其余为 Fic family 2、HD domain 1、AbiEii/AbiGii 毒素-抗毒素 1、hypothetical 1。另列 1 个 contains_pseudo（L_13321b5da82e，IS3 transposase，frameshifted）。**更正**：上一版说 14 个、其中 10 个 transposase；按 locus 计 transposase 应为 9（含 pseudo 那个），现排除 pseudo 后为 8。locus 数、编码单元数和以后的蛋白家族数分开统计。这是复核清单，不是 S4 结论。17 个短 E2 的 carrier（DRR396223）只能按 read record 计数。
 
 ## S3 全量候选发现（1,221 对）
 
