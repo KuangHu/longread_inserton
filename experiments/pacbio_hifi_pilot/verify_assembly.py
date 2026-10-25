@@ -1,6 +1,6 @@
 """Check the assembly chosen by prepare_assembly.py against its NCBI reports.
 
-Downloads the sequence report (seq-report) of the GCA and, if used, the GCF; reads the
+Downloads the sequence report (seq-report) of the GCA and, if used, the GCF (datasets JSON keys are camelCase); reads the
 assembly data report written with the genome download. Checks: BioSample, assembly level,
 expected total length, that every FASTA record equals a report record (length, accession),
 that chromosome and plasmid records are all kept, and CDS features in the chosen GenBank file.
@@ -40,17 +40,17 @@ def main():
     seq, data = reports(used, a.asm_dir)
     gca_seq, gca_data = reports(c["gca"], a.asm_dir) if used != c["gca"] else (seq, data)
     fasta = {r.id: len(r.seq) for r in SeqIO.parse(c["fasta"], "fasta")}
-    acc_key = "refseq_accession" if used.startswith("GCF") else "genbank_accession"
+    acc_key = "refseqAccession" if used.startswith("GCF") else "genbankAccession"
     rep = {s[acc_key]: s for s in seq}
     rows = [dict(fasta_id=k, length=n, report_length=rep.get(k, {}).get("length"), role=rep.get(k, {}).get("role"),
-                 location=rep.get(k, {}).get("assigned_molecule_location_type"),
-                 molecule=rep.get(k, {}).get("assigned_molecule") or rep.get(k, {}).get("sequence_name"),
-                 genbank_accession=rep.get(k, {}).get("genbank_accession")) for k, n in fasta.items()]
+                 location=rep.get(k, {}).get("assignedMoleculeLocationType"),
+                 molecule=rep.get(k, {}).get("chrName"),
+                 genbank_accession=rep.get(k, {}).get("genbankAccession")) for k, n in fasta.items()]
     kinds = sorted({r["location"] for r in rows if r["location"]})
     checks = dict(
-        biosample_match=data["assembly_info"]["biosample"]["accession"] == a.biosample
-        and gca_data["assembly_info"]["biosample"]["accession"] == a.biosample,
-        total_length_match=sum(fasta.values()) == a.total_bp == int(data["assembly_stats"]["total_sequence_length"]),
+        biosample_match=data["assemblyInfo"]["biosample"]["accession"] == a.biosample
+        and gca_data["assemblyInfo"]["biosample"]["accession"] == a.biosample,
+        total_length_match=sum(fasta.values()) == a.total_bp == int(data["assemblyStats"]["totalSequenceLength"]),
         fasta_records_equal_report=len(fasta) == len(seq) and all(r["length"] == r["report_length"] for r in rows),
         all_report_records_kept=set(rep) == set(fasta),
         gca_gcf_same_record_count=len(gca_seq) == len(seq),
@@ -58,12 +58,12 @@ def main():
     )
     out = dict(used_accession=used, choice=c["choice"], fasta=c["fasta"], fasta_sha256=c["fasta_sha256"],
                gbff=c["gbff"], gbff_sha256=c["gbff_sha256"], cds_features=c["cds_features"],
-               assembly_level=data["assembly_info"]["assembly_level"],
-               assembly_method=data["assembly_info"].get("assembly_method"),
-               sequencing_tech=data["assembly_info"].get("sequencing_tech"),
-               biosample=data["assembly_info"]["biosample"]["accession"],
+               assembly_level=data["assemblyInfo"]["assemblyLevel"],
+               assembly_method=data["assemblyInfo"].get("assemblyMethod"),
+               sequencing_tech=data["assemblyInfo"].get("sequencingTech"),
+               biosample=data["assemblyInfo"]["biosample"]["accession"],
                organism=data["organism"], total_bp=sum(fasta.values()), records=rows, molecule_types=kinds,
-               annotation_info=data.get("annotation_info", {}), checks=checks,
+               annotation_info=data.get("annotationInfo", {}), checks=checks,
                status="pass" if all(checks.values()) else "fail")
     (a.asm_dir / "assembly_verify.json").write_text(json.dumps(out, indent=2) + "\n")
     print(json.dumps({k: v for k, v in out.items() if k != "annotation_info"}, indent=2))
