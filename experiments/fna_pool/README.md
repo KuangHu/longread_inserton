@@ -266,4 +266,31 @@ v0.2 改动（判定阈值 ≥3、≤10% 不变）：
 
 `s3_pilot.py allpairs` 把 s2/pairs.tsv 全部 1,221 对（489 个样本）写成同样格式；`s3_full_calls.sbatch`（25 个 array 任务，每对调用后删除可重建的整基因组 PAF）→ `s3_full_merge.sbatch`（合并、difference_class、逐对汇总、短 locus 复核表；大表留在 scratch，repo 只放汇总、短锚定 locus 表和 sha256）。距离分层对照照常调用，汇总按 reasons 分开报告。发现阶段不要求有读段。为全量合并，merge 只和仍可能匹配的 cluster 比较（结果与 pilot 合并逐列相同）；summary 改为按 pair 索引（pilot 输出逐字相同）。
 
-尚未做：全量 read check；S4 的正式注释/边界复核；core 蛋白合并。
+结果（array 27273167，4 个任务因节点 n0053/n0028 看不到 scratch 失败，改排除这两个节点重跑 27273425；合并 27273426，10 min；commit 2c28856）。1,221 对全部调用（caller s3_pair_calls_v0.1，minimap2 2.30），单对最长 5.5 min。完整表留在 scratch（`s3_full/merged/`），sha256 见 `comamonadaceae_20261024/s3_full/full_tables.sha256`；repo 中有 `pair_summary.tsv`（逐对，含 reasons）、`summary.json`、`short_loci_review.tsv`、`pairs.tsv`、`call_runs.json`。
+
+| 全量 | 数 |
+|---|---:|
+| 原始 call | 1,241,911 |
+| locus（按 carrier 合并） | 438,331 |
+| two_flank_anchored | 51,422（<2500 bp 40,265；2.5–10 kb 7,168；≥10 kb 3,989） |
+| replacement | 55,727 |
+| unresolved | 331,182（flank identity/覆盖不足 325,826） |
+| 被多个 pair 看到的 locus | 95,486 |
+| one-flank 记录 | 44,809 |
+
+按选择理由（locus 按 pair 计，同一 locus 可在多个 pair 中出现，故各行之和大于合计）：
+
+| 理由 | pair | 有锚定的 pair | 锚定 locus | 其中 <2500 bp | unresolved |
+|---|---:|---:|---:|---:|---:|
+| 同 species 邻居 | 551 | 549 | 59,389 | 45,368 | 68,561 |
+| 最近其他 species | 425 | 416 | 52,558 | 39,660 | 356,305 |
+| 跨项目审计全对全 | 171 | 171 | 17,778 | 11,384 | 27,854 |
+| clone 伙伴 | 71 | 27 | 87 | 57 | 94 |
+| 单项目审计全对全 | 45 | 21 | 1,683 | 1,182 | 1,672 |
+| 距离分层（7 层 × 5 对，对照） | 35 | 29 | 3,396 | 2,637 | 13,076 |
+
+距离分层对照：99.99–100% 8 个锚定，99–99.99% 263，97–99% 658，95–97% 1,113，90–95% 1,010，<90% 341，无 skani 输出 3——中等距离锚定最多，最远两层 unresolved 占大多数，与 pilot 一致。
+
+40,265 个 <2500 bp 锚定 locus（452 个 carrier）：difference_class presence_absence 13,401，complex_small_other 24,647，replacement 2,217；cds_class boundary_cuts_feature 23,990，0_CDS 11,278，1–2_complete_CDS 4,583，contains_pseudo 242，>2 172。contains_partial 为 0：这些 RefSeq PGAP 注释中 partial CDS 几乎都同时标 pseudo（pilot 一个基因组 53 个 partial 单元中 52 个是 pseudo），而 pseudo 先判；有 partial 单元的短 locus 共 230 个，都归在 pseudo 或切断特征中。presence_absence、1–2_complete_CDS、边界 exact、非 tandem 的有 515 个 locus（227 个 carrier，599 个编码单元，414 个不同 protein id；288 个 locus 含 transposase；all_calls_anchored 464，partner_mixed 51）。这些都还没有读段证据（全量 read check 未做），也没有做家族合并，**不能据此判断灵敏度或新颖性**。
+
+尚未做：全量（或目标候选）read check；S4 的正式注释/边界/重复结构复核（presence_absence 与 complex_small_other 分开报告）；core 蛋白家族合并（分别报告家族数、位点数、样本数）。
