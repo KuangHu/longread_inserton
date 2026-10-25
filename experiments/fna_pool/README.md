@@ -126,3 +126,50 @@ reads（S5）不在本步下载。linked 样本的可用 FASTQ 共约 213 GB（O
 - 审计 cluster 是 10 株 Variovorax sp. OK*（全部 linked），但都来自同一 BioProject PRJNA1327437，作为漏检审计代表性有限。
 - 只有其他 species 伙伴的样本，跨 FNA 比较的局部共线性可能不足；没有 pair 的 12 个样本（5 个 linked）无法进入 pairwise 路线，留给单株发现或多 FNA 图方法。
 - unclear 主要是 BioSample 无 host/来源字段；clinical/animal 的 27 个仍在池中，报告时分层。
+
+## S2 复核修正（2026-10-24）
+
+- 无 pair 的样本记为 `no_pair_selected_pending_review`：skani 无输出（约 80% ANI k-mer 预筛、只报 AF ≥15）不等于没有可用的局部同源区域。现 10 个（linked 3 个）。
+- species cluster 是单链接计算分组；每个 pair 另记 `pair_meets_species_threshold`。同组但本身不满足 ANI ≥95、双向 AF ≥50 的 pair 有 60 个（如 P00570，94.92%）。S3 只按该 pair 的实际比对判断。
+- 来源规则 v2：plant 关键词加词边界（原 `stem` 会命中 system），“<设施> plant”（污水处理厂、炼油厂等）不算植物；原始 host/isolation_source/env_medium 保留。7 个标签改变（plant→environmental 6，plant→unclear 1）。batch50 冻结面板的 plant 标签都不来自这些词，不受影响。
+- 审计集：原单项目 Variovorax 组（一致性检查）之外，加跨项目组（19 株 Comamonas thiooxydans/testosteroni，19 个 BioProject，171 对），以及同属、不同项目的距离分层对照（ANI 99.99–100、99–99.99、97–99、95–97、90–95、<90、无 skani 输出，各 5 对）。pair 共 1,221，77 对有多个理由。
+
+## S3 原型：[s3_pair_calls.py](s3_pair_calls.py)
+
+- `call`：两个基因组互相比对（minimap2 2.30 `-x asm20 -c --eqx --secondary=yes -N 20 -p 0.5`），记录 ≥50 bp 的差异：同一比对内的 I/D 段，或同一 contig 对、同链的两个共线 block 之间的 gap。
+  每条原始 call 保存两侧坐标、比对方向和链、两侧 200 bp flank 的 identity/覆盖、contig 末端、tandem 样、边界滑动窗口、另一侧 gap（replacement）。只写“carrier 有 X、空位点无 X”，不推断插入/删除方向。
+- probe：每条 call 的左右 flank 和 core 作为短序列分别比对两个基因组（`map-pb`；asm/HiFi 预设会隐藏短序列的等分次级比对）。任一 flank 在任一基因组有 >1 个位置 → `flank_not_unique`，不锚定；记录 core 在两侧的拷贝数。
+- 一侧 flank：两个基因组在比对末端之外都还有未比对序列（如紧邻 contig 末端）→ `one_flank.tsv`，unresolved，不进 locus 表。
+- `merge`：同 carrier contig 上，相互重叠 ≥0.8 或两端都在滑动窗口+20 bp 内才合并；相邻但不重叠的 core 不合并。`boundary_consistency`：exact / within_shift / partner_dependent（不同伙伴给出不同边界，原始 call 全部保留）。
+- 阈值（MIN_CORE 50、FLANK 200、identity/覆盖 0.9、EDGE 1 kb 等）是原型设置，不是校准值。
+
+挑战测试 [test_s3.py](test_s3.py)：13/13 通过——单一插入（两个方向）、反向互补、相距 300 bp 的两个插入、tandem 复制、重复 flank、contig 末端、replacement、同一 core 在不同位置、两个 pair 的同一位点合并、60 bp 调用而 30 bp 不调用、20 kb、60 kb、两 block PAF（split-block 路径；minimap2 把 60 kb 也放在一个 CIGAR 里）。
+
+### 12 对小规模试跑（[s3_pilot/](comamonadaceae_20261024/s3_pilot/)，job 27262435，6 分钟，每对 19–34 s、<1 GB）
+
+| pair | 选取理由 | ANI | loci | 锚定 | 其中 <2500 bp | replacement | unresolved | one-flank |
+|---|---|---:|---:|---:|---:|---:|---:|---:|
+| P00595 | 距离层 99.99–100 | 100.0 | 1 | 0 | 0 | 0 | 1 | 0 |
+| P00351 | 99–99.99 | 99.47 | 65 | 21 | 15 | 15 | 29 | 12 |
+| P00290 | 97–99 | 97.69 | 541 | 157 | 113 | 115 | 269 | 9 |
+| P00034 | 95–97 | 95.49 | 761 | 140 | 111 | 151 | 470 | 10 |
+| P00111 | 90–95 | 90.64 | 1,057 | 129 | 105 | 131 | 797 | 107 |
+| P00384 | <90 | 88.68 | 1,905 | 53 | 40 | 201 | 1,651 | 127 |
+| P00063 | 同属无 skani 输出 | – | 34 | 0 | 0 | 1 | 33 | 102 |
+| P00136 | clone 伙伴 | 100.0 | 3 | 3 | 1 | 0 | 0 | 0 |
+| P00033 | 跨项目同 species 邻居 | 98.88 | 250 | 74 | 57 | 70 | 106 | 10 |
+| P00022 | 最近其他 species | 93.28 | 569 | 88 | 54 | 121 | 360 | 17 |
+| P00007 | 跨项目审计组 | 95.53 | 437 | 74 | 48 | 113 | 250 | 37 |
+| P01143 | 单项目审计组 | 100.0 | 0 | 0 | 0 | 0 | 0 | 0 |
+
+合计 10,198 条 call → 5,521 个 locus：锚定 704（<2500 bp 525），replacement 881，unresolved 3,936，另有 one-flank 431。
+（loci 按 carrier 分；同一 carrier 位点被多对看到会合并，所以各行之和大于合计。）
+
+- 距离越远，差异越多但能锚定的越少：<90% ANI 的 pair 有 1,905 个 locus，只有 53 个锚定；unresolved 主要是 flank identity/覆盖不足（3,842 个，flank identity 中位 0.81）。
+- 同一 pair 的两个比对方向给出相同边界；锚定 locus 中 644 个两个方向都调用，25 个只有一个方向。
+- 锚定 locus 的边界：exact 453，within_shift 211，partner_dependent 40。partner_dependent 多是 10–70 kb 的岛，不同伙伴一个是干净空位点、另一个是 replacement；<2500 bp 中只有 18 个。
+- flank 不唯一而不锚定的有 233 个，tandem 样锚定 9 个。
+- 预览（不是 S4）：525 个锚定 <2500 bp core 中，68 个恰含 1–2 个完整 CDS 且边界不切断任何注释特征，产物多为 IS3/IS481/ISL3/IS5 transposase、type II toxin-antitoxin、hypothetical protein；其余多数是 0 个完整 CDS 或边界切断基因。
+- 图：`plots/`（每对按状态各取几个）和 `plots_short_cds/`（上面 8 个 1–2 CDS 示例），SVG，carrier 窗口（GFF3 CDS/rRNA/tRNA，U/core/D）＋伙伴空位点窗口。
+
+尚未做：全部 1,221 对；S4 的正式注释/边界复核；与长读段的关联。

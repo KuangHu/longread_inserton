@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="250" font-family="sans-serif">
+<rect width="100%" height="100%" fill="white"/>
+<text x="4" y="14" font-size="12">L_2095388bc875  SAMD00407106  core 636 bp  status two_flank_anchored  pairs 1  tandem False  core copies carrier/empty 1/0</text>
+<text x="4" y="66" font-size="11">SAMD00407106 NZ_AP025556.1 (carrier)</text>
+<line x1="60" y1="80" x2="1060" y2="80" stroke="#888"/>
+<rect x="275.7" y="75" width="215.7" height="10" fill="#2a9d8f" opacity="0.45"/><text x="275.7" y="98" font-size="9">U</text>
+<rect x="491.4" y="75" width="137.2" height="10" fill="#e76f51" opacity="0.45"/><text x="491.4" y="98" font-size="9">core</text>
+<rect x="628.6" y="75" width="215.7" height="10" fill="#2a9d8f" opacity="0.45"/><text x="628.6" y="98" font-size="9">D</text>
+<polygon points="60.0,64 72.1,64 78.1,70 72.1,76 60.0,76" fill="#3b6fb6"><title>ABC transporter permease 3797726-3798494 +</title></polygon>
+<polygon points="75.7,64 298.8,64 304.8,70 298.8,76 75.7,76" fill="#3b6fb6"><title>ABC transporter ATP-binding protein 3798483-3799545 +</title></polygon>
+<text x="75.7" y="62" font-size="8" fill="#333">ABC transporter ATP-bind</text>
+<polygon points="301.8,64 481.5,64 487.5,70 481.5,76 301.8,76" fill="#3b6fb6"><title>phosphodiesterase 3799531-3800392 +</title></polygon>
+<text x="301.8" y="62" font-size="8" fill="#333">phosphodiesterase</text>
+<polygon points="497.4,64 618.9,64 624.9,70 618.9,76 497.4,76" fill="#3b6fb6"><title>HD domain-containing protein 3800438-3801029 +</title></polygon>
+<text x="497.4" y="62" font-size="8" fill="#333">HD domain-containing pro</text>
+<polygon points="630.3,90 636.3,84 792.7,84 792.7,96 636.3,96" fill="#3b6fb6"><title>IPTL-CTERM sorting domain-containing pro 3801054-3801807 -</title></polygon>
+<text x="630.3" y="106" font-size="8" fill="#333">IPTL-CTERM sorting domai</text>
+<polygon points="967.2,90 973.2,84 1060.0,84 1060.0,96 973.2,96" fill="#3b6fb6"><title>winged helix-turn-helix transcriptional  3802616-3803102 -</title></polygon>
+<text x="967.2" y="106" font-size="8" fill="#333">winged helix-turn-helix </text>
+<text x="60" y="114" font-size="9" fill="#666">SAMD00407106:3798410-3803046</text>
+<text x="4" y="176" font-size="11">SAMEA120308855 NZ_CDRKIR010000001.1 (empty site, +)</text>
+<line x1="60" y1="190" x2="1060" y2="190" stroke="#888"/>
+<rect x="540.6" y="185" width="1.0" height="10" fill="#e76f51" opacity="0.45"/><text x="540.6" y="208" font-size="9">site</text>
+<polygon points="60.0,174 74.2,174 80.2,180 74.2,186 60.0,186" fill="#3b6fb6"><title>ABC transporter permease 3831608-3832406 +</title></polygon>
+<polygon points="77.6,174 326.9,174 332.9,180 326.9,186 77.6,186" fill="#3b6fb6"><title>ABC transporter ATP-binding protein 3832395-3833457 +</title></polygon>
+<text x="77.6" y="172" font-size="8" fill="#333">ABC transporter ATP-bind</text>
+<polygon points="329.5,174 530.6,174 536.6,180 530.6,186 329.5,186" fill="#3b6fb6"><title>phosphodiesterase 3833443-3834304 +</title></polygon>
+<text x="329.5" y="172" font-size="8" fill="#333">phosphodiesterase</text>
+<polygon points="542.8,200 548.8,194 838.6,194 838.6,206 548.8,206" fill="#3b6fb6"><title>IPTL-CTERM sorting domain-containing pro 3834330-3835560 -</title></polygon>
+<text x="542.8" y="216" font-size="8" fill="#333">IPTL-CTERM sorting domai</text>
+<polygon points="918.4,200 924.4,194 1035.2,194 1035.2,206 924.4,206" fill="#3b6fb6"><title>winged helix-turn-helix transcriptional  3835892-3836378 -</title></polygon>
+<text x="918.4" y="216" font-size="8" fill="#333">winged helix-turn-helix </text>
+<text x="60" y="224" font-size="9" fill="#666">SAMEA120308855:3832322-3836481</text>
+</svg>

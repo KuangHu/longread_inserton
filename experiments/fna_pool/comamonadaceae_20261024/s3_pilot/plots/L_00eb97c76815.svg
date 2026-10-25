@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="250" font-family="sans-serif">
+<rect width="100%" height="100%" fill="white"/>
+<text x="4" y="14" font-size="12">L_00eb97c76815  SAMD00623152  core 109 bp  status two_flank_anchored  pairs 1  tandem False  core copies carrier/empty 1/1</text>
+<text x="4" y="66" font-size="11">SAMD00623152 NZ_AP028664.1 (carrier)</text>
+<line x1="60" y1="80" x2="1060" y2="80" stroke="#888"/>
+<rect x="387.4" y="75" width="163.7" height="10" fill="#2a9d8f" opacity="0.45"/><text x="387.4" y="98" font-size="9">U</text>
+<rect x="551.1" y="75" width="17.8" height="10" fill="#e76f51" opacity="0.45"/><text x="551.1" y="98" font-size="9">core</text>
+<rect x="568.9" y="75" width="163.7" height="10" fill="#2a9d8f" opacity="0.45"/><text x="568.9" y="98" font-size="9">D</text>
+<polygon points="60.0,64 61.5,64 67.5,70 61.5,76 60.0,76" fill="#3b6fb6"><title>DMT family transporter 116326-117346 +</title></polygon>
+<polygon points="66.2,64 179.6,64 185.6,70 179.6,76 66.2,76" fill="#3b6fb6"><title>tRNA (adenosine(37)-N6)-threonylcarbamoy 117338-118067 +</title></polygon>
+<text x="66.2" y="62" font-size="8" fill="#333">tRNA (adenosine(37)-N6)-</text>
+<polygon points="195.5,64 278.4,64 284.4,70 278.4,76 195.5,76" fill="#3b6fb6"><title>ribosomal protein S18-alanine N-acetyltr 118128-118671 +</title></polygon>
+<text x="195.5" y="62" font-size="8" fill="#333">ribosomal protein S18-al</text>
+<polygon points="283.8,64 404.5,64 410.5,70 404.5,76 283.8,76" fill="#3b6fb6"><title>uracil-DNA glycosylase family protein 118667-119441 +</title></polygon>
+<text x="283.8" y="62" font-size="8" fill="#333">uracil-DNA glycosylase f</text>
+<polygon points="415.9,64 544.9,64 550.9,70 544.9,76 415.9,76" fill="#3b6fb6"><title>orotidine-5'-phosphate decarboxylase 119474-120299 +</title></polygon>
+<text x="415.9" y="62" font-size="8" fill="#333">orotidine-5'-phosphate d</text>
+<polygon points="569.2,90 575.2,84 689.6,84 689.6,96 575.2,96" fill="#3b6fb6"><title>helix-turn-helix domain-containing prote 120411-121146 -</title></polygon>
+<text x="569.2" y="106" font-size="8" fill="#333">helix-turn-helix domain-</text>
+<polygon points="712.5,64 846.9,64 852.9,70 846.9,76 712.5,76" fill="#3b6fb6"><title>hypothetical protein 121286-122144 +</title></polygon>
+<text x="712.5" y="62" font-size="8" fill="#333">hypothetical protein</text>
+<polygon points="877.0,64 1054.0,64 1060.0,70 1054.0,76 877.0,76" fill="#3b6fb6"><title>MFS transporter 122291-124247 +</title></polygon>
+<text x="877.0" y="62" font-size="8" fill="#333">MFS transporter</text>
+<text x="60" y="114" font-size="9" fill="#666">SAMD00623152:117300-123409</text>
+<text x="4" y="176" font-size="11">SAMN51281027 NZ_CM191384.1 (empty site, -)</text>
+<line x1="60" y1="190" x2="1060" y2="190" stroke="#888"/>
+<rect x="557.6" y="185" width="1.0" height="10" fill="#e76f51" opacity="0.45"/><text x="557.6" y="208" font-size="9">site</text>
+<polygon points="60.0,200 66.0,194 267.7,194 267.7,206 66.0,206" fill="#3b6fb6"><title>MFS transporter 687233-689186 -</title></polygon>
+<text x="60.0" y="216" font-size="8" fill="#333">MFS transporter</text>
+<polygon points="270.1,200 276.1,194 412.4,194 412.4,206 276.1,206" fill="#3b6fb6"><title>hypothetical protein 689200-690058 -</title></polygon>
+<text x="270.1" y="216" font-size="8" fill="#333">hypothetical protein</text>
+<polygon points="435.8,174 551.8,174 557.8,180 551.8,186 435.8,186" fill="#3b6fb6"><title>helix-turn-helix domain-containing prote 690199-690934 +</title></polygon>
+<text x="435.8" y="172" font-size="8" fill="#333">helix-turn-helix domain-</text>
+<polygon points="558.3,200 564.3,194 695.1,194 695.1,206 564.3,206" fill="#3b6fb6"><title>orotidine-5'-phosphate decarboxylase 690937-691762 -</title></polygon>
+<text x="558.3" y="216" font-size="8" fill="#333">orotidine-5'-phosphate d</text>
+<polygon points="700.6,200 706.6,194 833.0,194 833.0,206 706.6,206" fill="#3b6fb6"><title>uracil-DNA glycosylase 691795-692593 -</title></polygon>
+<text x="700.6" y="216" font-size="8" fill="#333">uracil-DNA glycosylase</text>
+<polygon points="832.4,200 838.4,194 922.5,194 922.5,206 838.4,206" fill="#3b6fb6"><title>ribosomal protein S18-alanine N-acetyltr 692589-693132 -</title></polygon>
+<text x="832.4" y="216" font-size="8" fill="#333">ribosomal protein S18-al</text>
+<polygon points="921.8,200 927.8,194 1040.8,194 1040.8,206 927.8,206" fill="#3b6fb6"><title>tRNA (adenosine(37)-N6)-threonylcarbamoy 693128-693845 -</title></polygon>
+<text x="921.8" y="216" font-size="8" fill="#333">tRNA (adenosine(37)-N6)-</text>
+<polygon points="1039.4,200 1045.4,194 1060.0,194 1060.0,206 1045.4,206" fill="#3b6fb6"><title>DMT family transporter 693837-694857 -</title></polygon>
+<text x="60" y="224" font-size="9" fill="#666">SAMN51281027:687934-693961</text>
+</svg>

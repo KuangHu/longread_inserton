@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="250" font-family="sans-serif">
+<rect width="100%" height="100%" fill="white"/>
+<text x="4" y="14" font-size="12">L_abf0349a2616  SAMD00407106  core 567 bp  status two_flank_anchored  pairs 2  tandem False  core copies carrier/empty 1/0</text>
+<text x="4" y="66" font-size="11">SAMD00407106 NZ_AP025556.1 (carrier)</text>
+<line x1="60" y1="80" x2="1060" y2="80" stroke="#888"/>
+<rect x="279.0" y="75" width="219.0" height="10" fill="#2a9d8f" opacity="0.45"/><text x="279.0" y="98" font-size="9">U</text>
+<rect x="497.9" y="75" width="124.2" height="10" fill="#e76f51" opacity="0.45"/><text x="497.9" y="98" font-size="9">core</text>
+<rect x="622.1" y="75" width="219.0" height="10" fill="#2a9d8f" opacity="0.45"/><text x="622.1" y="98" font-size="9">D</text>
+<polygon points="60.0,64 60.0,64 65.5,70 60.0,76 60.0,76" fill="#3b6fb6"><title>glycosyltransferase 390147-391269 +</title></polygon>
+<polygon points="64.6,64 283.9,64 289.9,70 283.9,76 64.6,76" fill="#3b6fb6"><title>glycosyltransferase family 2 protein 391265-392294 +</title></polygon>
+<text x="64.6" y="62" font-size="8" fill="#333">glycosyltransferase fami</text>
+<polygon points="289.0,64 491.9,64 497.9,70 491.9,76 289.0,76" fill="#3b6fb6"><title>glycosyltransferase family 32 protein 392290-393244 +</title></polygon>
+<text x="289.0" y="62" font-size="8" fill="#333">glycosyltransferase fami</text>
+<polygon points="520.7,64 606.0,64 612.0,70 606.0,76 520.7,76" fill="#3b6fb6"><title>GNAT family N-acetyltransferase 393348-393765 +</title></polygon>
+<text x="520.7" y="62" font-size="8" fill="#333">GNAT family N-acetyltran</text>
+<polygon points="622.7,90 628.7,84 714.7,84 714.7,96 628.7,96" fill="#3b6fb6"><title>hypothetical protein 393814-394234 -</title></polygon>
+<text x="622.7" y="106" font-size="8" fill="#333">hypothetical protein</text>
+<polygon points="708.3,90 714.3,84 1011.8,84 1011.8,96 714.3,96" fill="#3b6fb6"><title>MFS transporter 394205-395591 -</title></polygon>
+<text x="708.3" y="106" font-size="8" fill="#333">MFS transporter</text>
+<polygon points="1031.3,64 1054.0,64 1060.0,70 1054.0,76 1031.3,76" fill="#3b6fb6"><title>LysR family transcriptional regulator 395680-396592 +</title></polygon>
+<text x="60" y="114" font-size="9" fill="#666">SAMD00407106:391244-395811</text>
+<text x="4" y="176" font-size="11">SAMD00571185 NZ_AP027205.1 (empty site, +)</text>
+<line x1="60" y1="190" x2="1060" y2="190" stroke="#888"/>
+<rect x="542.7" y="185" width="1.0" height="10" fill="#e76f51" opacity="0.45"/><text x="542.7" y="208" font-size="9">site</text>
+<polygon points="60.0,174 60.0,174 63.9,180 60.0,186 60.0,186" fill="#3b6fb6"><title>glycosyltransferase 346486-347608 +</title></polygon>
+<polygon points="62.9,174 307.6,174 313.6,180 307.6,186 62.9,186" fill="#3b6fb6"><title>glycosyltransferase family 2 protein 347604-348642 +</title></polygon>
+<text x="62.9" y="172" font-size="8" fill="#333">glycosyltransferase fami</text>
+<polygon points="312.6,174 537.0,174 543.0,180 537.0,186 312.6,186" fill="#3b6fb6"><title>glycosyltransferase family 32 protein 348638-349592 +</title></polygon>
+<text x="312.6" y="172" font-size="8" fill="#333">glycosyltransferase fami</text>
+<polygon points="548.3,200 554.3,194 649.7,194 649.7,206 554.3,206" fill="#3b6fb6"><title>hypothetical protein 349614-350034 -</title></polygon>
+<text x="548.3" y="216" font-size="8" fill="#333">hypothetical protein</text>
+<polygon points="642.7,200 648.7,194 978.1,194 978.1,206 648.7,206" fill="#3b6fb6"><title>MFS transporter 350005-351394 -</title></polygon>
+<text x="642.7" y="216" font-size="8" fill="#333">MFS transporter</text>
+<polygon points="999.6,174 1054.0,174 1060.0,180 1054.0,186 999.6,186" fill="#3b6fb6"><title>LysR family transcriptional regulator 351483-352395 +</title></polygon>
+<text x="999.6" y="172" font-size="8" fill="#333">LysR family transcriptio</text>
+<text x="60" y="224" font-size="9" fill="#666">SAMD00571185:347592-351733</text>
+</svg>

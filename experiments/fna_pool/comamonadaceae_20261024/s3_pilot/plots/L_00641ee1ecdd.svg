@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="250" font-family="sans-serif">
+<rect width="100%" height="100%" fill="white"/>
+<text x="4" y="14" font-size="12">L_00641ee1ecdd  SAMEA118088312  core 2089 bp  status two_flank_anchored  pairs 1  tandem False  core copies carrier/empty 1/0</text>
+<text x="4" y="66" font-size="11">SAMEA118088312 NZ_OZ253481.1 (carrier)</text>
+<line x1="60" y1="80" x2="1060" y2="80" stroke="#888"/>
+<rect x="307.2" y="75" width="123.6" height="10" fill="#2a9d8f" opacity="0.45"/><text x="307.2" y="98" font-size="9">U</text>
+<rect x="430.9" y="75" width="258.3" height="10" fill="#e76f51" opacity="0.45"/><text x="430.9" y="98" font-size="9">core</text>
+<rect x="689.1" y="75" width="123.6" height="10" fill="#2a9d8f" opacity="0.45"/><text x="689.1" y="98" font-size="9">D</text>
+<polygon points="60.0,64 91.2,64 97.2,70 91.2,76 60.0,76" fill="#3b6fb6"><title>ABC transporter permease 304926-306132 +</title></polygon>
+<text x="60.0" y="62" font-size="8" fill="#333">ABC transporter permease</text>
+<polygon points="97.3,64 179.2,64 185.2,70 179.2,76 97.3,76" fill="#3b6fb6"><title>ABC transporter ATP-binding protein 306133-306844 +</title></polygon>
+<polygon points="188.7,64 241.3,64 247.3,70 241.3,76 188.7,76" fill="#3b6fb6"><title>cytochrome c 306872-307346 +</title></polygon>
+<text x="188.7" y="62" font-size="8" fill="#333">cytochrome c</text>
+<polygon points="245.6,64 423.5,64 429.5,70 423.5,76 245.6,76" fill="#3b6fb6"><title>efflux transporter outer membrane subuni 307332-308820 +</title></polygon>
+<text x="245.6" y="62" font-size="8" fill="#333">efflux transporter outer</text>
+<polygon points="453.0,90 459.0,84 519.4,84 519.4,96 459.0,96" fill="#3b6fb6"><title>hypothetical protein 309010-309547 -</title></polygon>
+<text x="453.0" y="106" font-size="8" fill="#333">hypothetical protein</text>
+<polygon points="521.0,90 527.0,84 561.4,84 561.4,96 527.0,96" fill="#3b6fb6"><title>type II toxin-antitoxin system PemK/MazF 309560-309887 -</title></polygon>
+<text x="521.0" y="106" font-size="8" fill="#333">type II toxin-antitoxin </text>
+<polygon points="560.9,90 566.9,84 592.8,84 592.8,96 566.9,96" fill="#3b6fb6"><title>AbrB/MazE/SpoVT family DNA-binding domai 309883-310141 -</title></polygon>
+<text x="560.9" y="106" font-size="8" fill="#333">AbrB/MazE/SpoVT family D</text>
+<polygon points="615.2,64 679.3,64 685.3,70 679.3,76 615.2,76" fill="#3b6fb6"><title>recombinase family protein 310322-310889 +</title></polygon>
+<text x="615.2" y="62" font-size="8" fill="#333">recombinase family prote</text>
+<polygon points="703.8,64 766.8,64 772.8,70 766.8,76 703.8,76" fill="#3b6fb6"><title>recombinase family protein 311039-311597 +</title></polygon>
+<text x="703.8" y="62" font-size="8" fill="#333">recombinase family prote</text>
+<polygon points="773.1,64 1054.0,64 1060.0,70 1054.0,76 773.1,76" fill="#3b6fb6"><title>Tn3 family transposase 311599-314572 +</title></polygon>
+<text x="773.1" y="62" font-size="8" fill="#333">Tn3 family transposase</text>
+<text x="60" y="114" font-size="9" fill="#666">SAMEA118088312:305831-313920</text>
+<text x="4" y="176" font-size="11">SAMN13450421 NZ_CP065695.1 (empty site, +)</text>
+<line x1="60" y1="190" x2="1060" y2="190" stroke="#888"/>
+<rect x="519.8" y="185" width="1.0" height="10" fill="#e76f51" opacity="0.45"/><text x="519.8" y="208" font-size="9">site</text>
+<polygon points="60.0,174 102.0,174 108.0,180 102.0,186 60.0,186" fill="#3b6fb6"><title>ABC transporter permease 443807-445013 +</title></polygon>
+<text x="60.0" y="172" font-size="8" fill="#333">ABC transporter permease</text>
+<polygon points="108.1,174 211.2,174 217.2,180 211.2,186 108.1,186" fill="#3b6fb6"><title>ABC transporter ATP-binding protein 445014-445725 +</title></polygon>
+<text x="108.1" y="172" font-size="8" fill="#333">ABC transporter ATP-bind</text>
+<polygon points="221.5,174 288.1,174 294.1,180 288.1,186 221.5,186" fill="#3b6fb6"><title>cytochrome c 445753-446227 +</title></polygon>
+<text x="221.5" y="172" font-size="8" fill="#333">cytochrome c</text>
+<polygon points="292.0,174 512.3,174 518.3,180 512.3,186 292.0,186" fill="#3b6fb6"><title>efflux transporter outer membrane subuni 446213-447689 +</title></polygon>
+<text x="292.0" y="172" font-size="8" fill="#333">efflux transporter outer</text>
+<polygon points="538.2,174 617.8,174 623.8,180 617.8,186 538.2,186" fill="#3b6fb6"><title>recombinase family protein 447819-448377 +</title></polygon>
+<text x="538.2" y="172" font-size="8" fill="#333">recombinase family prote</text>
+<polygon points="624.1,174 1054.0,174 1060.0,180 1054.0,186 624.1,186" fill="#3b6fb6"><title>Tn3 family transposase 448379-451352 +</title></polygon>
+<text x="624.1" y="172" font-size="8" fill="#333">Tn3 family transposase</text>
+<text x="60" y="224" font-size="9" fill="#666">SAMN13450421:444700-451222</text>
+</svg>

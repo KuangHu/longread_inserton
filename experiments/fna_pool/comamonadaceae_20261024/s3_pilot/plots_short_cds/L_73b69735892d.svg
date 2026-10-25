@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="250" font-family="sans-serif">
+<rect width="100%" height="100%" fill="white"/>
+<text x="4" y="14" font-size="12">L_73b69735892d  SAMD00076718  core 778 bp  status two_flank_anchored  pairs 1  tandem False  core copies carrier/empty 1/0</text>
+<text x="4" y="66" font-size="11">SAMD00076718 NZ_AP026738.1 (carrier)</text>
+<line x1="60" y1="80" x2="1060" y2="80" stroke="#888"/>
+<rect x="269.3" y="75" width="209.3" height="10" fill="#2a9d8f" opacity="0.45"/><text x="269.3" y="98" font-size="9">U</text>
+<rect x="478.6" y="75" width="162.8" height="10" fill="#e76f51" opacity="0.45"/><text x="478.6" y="98" font-size="9">core</text>
+<rect x="641.4" y="75" width="209.3" height="10" fill="#2a9d8f" opacity="0.45"/><text x="641.4" y="98" font-size="9">D</text>
+<polygon points="60.0,64 60.0,64 65.4,70 60.0,76 60.0,76" fill="#3b6fb6"><title>tol-pal system protein YbgF 1904619-1905381 +</title></polygon>
+<polygon points="65.2,64 231.9,64 237.9,70 231.9,76 65.2,76" fill="#3b6fb6"><title>tRNA threonylcarbamoyladenosine dehydrat 1905380-1906205 +</title></polygon>
+<text x="65.2" y="62" font-size="8" fill="#333">tRNA threonylcarbamoylad</text>
+<polygon points="258.0,64 267.9,64 273.9,70 267.9,76 258.0,76" fill="#b68a3b"><title>tRNA-Lys 1906301-1906377 +</title></polygon>
+<polygon points="371.4,90 377.4,84 410.4,84 410.4,96 377.4,96" fill="#3b6fb6"><title>hypothetical protein 1906843-1907029 -</title></polygon>
+<text x="371.4" y="106" font-size="8" fill="#333">hypothetical protein</text>
+<polygon points="509.6,64 594.6,64 600.6,70 594.6,76 509.6,76" fill="#3b6fb6"><title>lipocalin family protein 1907503-1907938 +</title></polygon>
+<text x="509.6" y="62" font-size="8" fill="#333">lipocalin family protein</text>
+<polygon points="690.2,90 696.2,84 773.7,84 773.7,96 696.2,96" fill="#3b6fb6"><title>c-type cytochrome 1908366-1908765 -</title></polygon>
+<text x="690.2" y="106" font-size="8" fill="#333">c-type cytochrome</text>
+<polygon points="772.9,90 778.9,84 892.1,84 892.1,96 778.9,96" fill="#3b6fb6"><title>ferritin-like domain-containing protein 1908761-1909331 -</title></polygon>
+<text x="772.9" y="106" font-size="8" fill="#333">ferritin-like domain-con</text>
+<polygon points="931.9,64 1054.0,64 1060.0,70 1054.0,76 931.9,76" fill="#3b6fb6"><title>RNA polymerase sigma factor 1909521-1910217 +</title></polygon>
+<text x="931.9" y="62" font-size="8" fill="#333">RNA polymerase sigma fac</text>
+<text x="60" y="114" font-size="9" fill="#666">SAMD00076718:1905355-1910133</text>
+<text x="4" y="176" font-size="11">SAMD00411011 NZ_AP025193.1 (empty site, +)</text>
+<line x1="60" y1="190" x2="1060" y2="190" stroke="#888"/>
+<rect x="536.6" y="185" width="1.0" height="10" fill="#e76f51" opacity="0.45"/><text x="536.6" y="208" font-size="9">site</text>
+<polygon points="60.0,174 60.0,174 64.8,180 60.0,186 60.0,186" fill="#3b6fb6"><title>tol-pal system protein YbgF 1851563-1852325 +</title></polygon>
+<polygon points="64.5,174 255.2,174 261.2,180 255.2,186 64.5,186" fill="#3b6fb6"><title>tRNA threonylcarbamoyladenosine dehydrat 1852324-1853149 +</title></polygon>
+<text x="64.5" y="172" font-size="8" fill="#333">tRNA threonylcarbamoylad</text>
+<polygon points="284.1,174 296.3,174 302.3,180 296.3,186 284.1,186" fill="#b68a3b"><title>tRNA-Lys 1853245-1853321 +</title></polygon>
+<polygon points="414.6,200 420.6,194 458.9,194 458.9,206 420.6,206" fill="#3b6fb6"><title>hypothetical protein 1853792-1853978 -</title></polygon>
+<text x="414.6" y="216" font-size="8" fill="#333">hypothetical protein</text>
+<polygon points="592.4,200 598.4,194 687.6,194 687.6,206 598.4,206" fill="#3b6fb6"><title>c-type cytochrome 1854538-1854937 -</title></polygon>
+<text x="592.4" y="216" font-size="8" fill="#333">c-type cytochrome</text>
+<polygon points="686.6,200 692.6,194 822.5,194 822.5,206 692.6,206" fill="#3b6fb6"><title>ferritin-like domain-containing protein 1854933-1855503 -</title></polygon>
+<text x="686.6" y="216" font-size="8" fill="#333">ferritin-like domain-con</text>
+<polygon points="867.8,174 1027.8,174 1033.8,180 1027.8,186 867.8,186" fill="#3b6fb6"><title>RNA polymerase sigma factor 1855693-1856389 +</title></polygon>
+<text x="867.8" y="172" font-size="8" fill="#333">RNA polymerase sigma fac</text>
+<text x="60" y="224" font-size="9" fill="#666">SAMD00411011:1852305-1856499</text>
+</svg>

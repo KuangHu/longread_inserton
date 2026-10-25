@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="250" font-family="sans-serif">
+<rect width="100%" height="100%" fill="white"/>
+<text x="4" y="14" font-size="12">L_0fcb84b79701  SAMN38562701  core 90 bp  status two_flank_anchored  pairs 1  tandem False  core copies carrier/empty 1/0</text>
+<text x="4" y="66" font-size="11">SAMN38562701 NZ_CP139994.1 (carrier)</text>
+<line x1="60" y1="80" x2="1060" y2="80" stroke="#888"/>
+<rect x="388.4" y="75" width="164.2" height="10" fill="#2a9d8f" opacity="0.45"/><text x="388.4" y="98" font-size="9">U</text>
+<rect x="552.6" y="75" width="14.8" height="10" fill="#e76f51" opacity="0.45"/><text x="552.6" y="98" font-size="9">core</text>
+<rect x="567.4" y="75" width="164.2" height="10" fill="#2a9d8f" opacity="0.45"/><text x="567.4" y="98" font-size="9">D</text>
+<polygon points="61.6,64 356.1,64 362.1,70 356.1,76 61.6,76" fill="#3b6fb6"><title>gamma-glutamyltransferase 4454384-4456214 +</title></polygon>
+<text x="61.6" y="62" font-size="8" fill="#333">gamma-glutamyltransferas</text>
+<polygon points="398.9,90 404.9,84 548.7,84 548.7,96 404.9,96" fill="#3b6fb6"><title>2-hydroxy-3-oxopropionate reductase 4456438-4457350 -</title></polygon>
+<text x="398.9" y="106" font-size="8" fill="#333">2-hydroxy-3-oxopropionat</text>
+<polygon points="577.2,90 583.2,84 709.3,84 709.3,96 583.2,96" fill="#3b6fb6"><title>hydroxypyruvate isomerase 4457524-4458328 -</title></polygon>
+<text x="577.2" y="106" font-size="8" fill="#333">hydroxypyruvate isomeras</text>
+<polygon points="733.7,90 739.7,84 1027.8,84 1027.8,96 739.7,96" fill="#3b6fb6"><title>glyoxylate carboligase 4458477-4460268 -</title></polygon>
+<text x="733.7" y="106" font-size="8" fill="#333">glyoxylate carboligase</text>
+<polygon points="1045.7,64 1054.0,64 1060.0,70 1054.0,76 1045.7,76" fill="#3b6fb6"><title>LysR family transcriptional regulator 4460377-4461295 +</title></polygon>
+<text x="60" y="114" font-size="9" fill="#666">SAMN38562701:4454374-4460464</text>
+<text x="4" y="176" font-size="11">SAMD00076718 NZ_AP026738.1 (empty site, +)</text>
+<line x1="60" y1="190" x2="1060" y2="190" stroke="#888"/>
+<rect x="558.0" y="185" width="1.0" height="10" fill="#e76f51" opacity="0.45"/><text x="558.0" y="208" font-size="9">site</text>
+<polygon points="82.9,174 380.8,174 386.8,180 380.8,186 82.9,186" fill="#3b6fb6"><title>gamma-glutamyltransferase 4601311-4603141 +</title></polygon>
+<text x="82.9" y="172" font-size="8" fill="#333">gamma-glutamyltransferas</text>
+<polygon points="402.7,200 408.7,194 554.2,194 554.2,206 408.7,206" fill="#3b6fb6"><title>2-hydroxy-3-oxopropionate reductase 4603237-4604149 -</title></polygon>
+<text x="402.7" y="216" font-size="8" fill="#333">2-hydroxy-3-oxopropionat</text>
+<polygon points="568.1,200 574.1,194 701.6,194 701.6,206 574.1,206" fill="#3b6fb6"><title>hydroxypyruvate isomerase 4604233-4605037 -</title></polygon>
+<text x="568.1" y="216" font-size="8" fill="#333">hydroxypyruvate isomeras</text>
+<polygon points="726.1,200 732.1,194 1023.5,194 1023.5,206 732.1,206" fill="#3b6fb6"><title>glyoxylate carboligase 4605184-4606975 -</title></polygon>
+<text x="726.1" y="216" font-size="8" fill="#333">glyoxylate carboligase</text>
+<polygon points="1041.6,174 1054.0,174 1060.0,180 1054.0,186 1041.6,186" fill="#3b6fb6"><title>LysR family transcriptional regulator 4607084-4608002 +</title></polygon>
+<text x="60" y="224" font-size="9" fill="#666">SAMD00076718:4601173-4607195</text>
+</svg>

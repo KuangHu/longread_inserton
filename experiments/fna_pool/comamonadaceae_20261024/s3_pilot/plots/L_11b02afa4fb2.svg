@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="250" font-family="sans-serif">
+<rect width="100%" height="100%" fill="white"/>
+<text x="4" y="14" font-size="12">L_11b02afa4fb2  SAMN38562701  core 77 bp  status two_flank_anchored  pairs 1  tandem False  core copies carrier/empty 1/0</text>
+<text x="4" y="66" font-size="11">SAMN38562701 NZ_CP139994.1 (carrier)</text>
+<line x1="60" y1="80" x2="1060" y2="80" stroke="#888"/>
+<rect x="389.1" y="75" width="164.6" height="10" fill="#2a9d8f" opacity="0.45"/><text x="389.1" y="98" font-size="9">U</text>
+<rect x="553.7" y="75" width="12.7" height="10" fill="#e76f51" opacity="0.45"/><text x="553.7" y="98" font-size="9">core</text>
+<rect x="566.3" y="75" width="164.6" height="10" fill="#2a9d8f" opacity="0.45"/><text x="566.3" y="98" font-size="9">D</text>
+<polygon points="60.0,64 214.9,64 220.9,70 214.9,76 60.0,76" fill="#3b6fb6"><title>ABC transporter ATP-binding protein 5570680-5571658 +</title></polygon>
+<text x="60.0" y="62" font-size="8" fill="#333">ABC transporter ATP-bind</text>
+<polygon points="220.3,64 446.8,64 452.8,70 446.8,76 220.3,76" fill="#3b6fb6"><title>hypothetical protein 5571654-5573067 +</title></polygon>
+<text x="220.3" y="62" font-size="8" fill="#333">hypothetical protein</text>
+<polygon points="469.2,64 544.7,64 550.7,70 544.7,76 469.2,76" fill="#3b6fb6"><title>5-(carboxyamino)imidazole ribonucleotide 5573167-5573662 +</title></polygon>
+<text x="469.2" y="62" font-size="8" fill="#333">5-(carboxyamino)imidazol</text>
+<polygon points="550.0,64 748.9,64 754.9,70 748.9,76 550.0,76" fill="#3b6fb6"><title>5-(carboxyamino)imidazole ribonucleotide 5573658-5574903 +</title></polygon>
+<text x="550.0" y="62" font-size="8" fill="#333">5-(carboxyamino)imidazol</text>
+<polygon points="781.7,64 940.1,64 946.1,70 940.1,76 781.7,76" fill="#3b6fb6"><title>L-threonylcarbamoyladenylate synthase 5575066-5576065 +</title></polygon>
+<text x="781.7" y="62" font-size="8" fill="#333">L-threonylcarbamoyladeny</text>
+<polygon points="962.9,90 968.9,84 1060.0,84 1060.0,96 968.9,96" fill="#3b6fb6"><title>OmpW/AlkL family protein 5576167-5576839 -</title></polygon>
+<text x="962.9" y="106" font-size="8" fill="#333">OmpW/AlkL family protein</text>
+<text x="60" y="114" font-size="9" fill="#666">SAMN38562701:5570680-5576757</text>
+<text x="4" y="176" font-size="11">SAMD00076718 NZ_AP026738.1 (empty site, +)</text>
+<line x1="60" y1="190" x2="1060" y2="190" stroke="#888"/>
+<rect x="558.3" y="185" width="1.0" height="10" fill="#e76f51" opacity="0.45"/><text x="558.3" y="208" font-size="9">site</text>
+<polygon points="60.0,174 216.5,174 222.5,180 216.5,186 60.0,186" fill="#3b6fb6"><title>ABC transporter ATP-binding protein 5672604-5673582 +</title></polygon>
+<text x="60.0" y="172" font-size="8" fill="#333">ABC transporter ATP-bind</text>
+<polygon points="221.8,174 450.6,174 456.6,180 450.6,186 221.8,186" fill="#3b6fb6"><title>hypothetical protein 5673578-5674991 +</title></polygon>
+<text x="221.8" y="172" font-size="8" fill="#333">hypothetical protein</text>
+<polygon points="473.2,174 549.4,174 555.4,180 549.4,186 473.2,186" fill="#3b6fb6"><title>5-(carboxyamino)imidazole ribonucleotide 5675091-5675586 +</title></polygon>
+<text x="473.2" y="172" font-size="8" fill="#333">5-(carboxyamino)imidazol</text>
+<polygon points="554.8,174 743.6,174 749.6,180 743.6,186 554.8,186" fill="#3b6fb6"><title>5-(carboxyamino)imidazole ribonucleotide 5675582-5676755 +</title></polygon>
+<text x="554.8" y="172" font-size="8" fill="#333">5-(carboxyamino)imidazol</text>
+<polygon points="779.1,174 939.0,174 945.0,180 939.0,186 779.1,186" fill="#3b6fb6"><title>L-threonylcarbamoyladenylate synthase 5676932-5677931 +</title></polygon>
+<text x="779.1" y="172" font-size="8" fill="#333">L-threonylcarbamoyladeny</text>
+<polygon points="946.7,200 952.7,194 1060.0,194 1060.0,206 952.7,206" fill="#3b6fb6"><title>Bug family tripartite tricarboxylate tra 5677941-5678907 -</title></polygon>
+<text x="946.7" y="216" font-size="8" fill="#333">Bug family tripartite tr</text>
+<text x="60" y="224" font-size="9" fill="#666">SAMD00076718:5672604-5678623</text>
+</svg>

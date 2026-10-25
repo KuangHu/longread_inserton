@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="250" font-family="sans-serif">
+<rect width="100%" height="100%" fill="white"/>
+<text x="4" y="14" font-size="12">L_060ac28cb09f  SAMD00411011  core 88 bp  status two_flank_anchored  pairs 1  tandem False  core copies carrier/empty 1/0</text>
+<text x="4" y="66" font-size="11">SAMD00411011 NZ_AP025193.1 (carrier)</text>
+<line x1="60" y1="80" x2="1060" y2="80" stroke="#888"/>
+<rect x="388.5" y="75" width="164.3" height="10" fill="#2a9d8f" opacity="0.45"/><text x="388.5" y="98" font-size="9">U</text>
+<rect x="552.8" y="75" width="14.5" height="10" fill="#e76f51" opacity="0.45"/><text x="552.8" y="98" font-size="9">core</text>
+<rect x="567.2" y="75" width="164.3" height="10" fill="#2a9d8f" opacity="0.45"/><text x="567.2" y="98" font-size="9">D</text>
+<polygon points="60.0,64 190.7,64 196.7,70 190.7,76 60.0,76" fill="#3b6fb6"><title>glutamate synthase-related protein 815100-819837 +</title></polygon>
+<text x="60.0" y="62" font-size="8" fill="#333">glutamate synthase-relat</text>
+<polygon points="208.7,64 445.1,64 451.1,70 445.1,76 208.7,76" fill="#3b6fb6"><title>glutamate synthase subunit beta 819910-821386 +</title></polygon>
+<text x="208.7" y="62" font-size="8" fill="#333">glutamate synthase subun</text>
+<polygon points="474.8,90 480.8,84 514.7,84 514.7,96 480.8,96" fill="#3b6fb6"><title>DUF3293 domain-containing protein 821530-821773 -</title></polygon>
+<text x="474.8" y="106" font-size="8" fill="#333">DUF3293 domain-containin</text>
+<polygon points="515.7,90 521.7,84 548.7,84 548.7,96 521.7,96" fill="#3b6fb6"><title>hypothetical protein 821779-821980 -</title></polygon>
+<text x="515.7" y="106" font-size="8" fill="#333">hypothetical protein</text>
+<polygon points="592.4,64 719.4,64 725.4,70 719.4,76 592.4,76" fill="#3b6fb6"><title>amino acid ABC transporter substrate-bin 822246-823056 +</title></polygon>
+<text x="592.4" y="62" font-size="8" fill="#333">amino acid ABC transport</text>
+<polygon points="748.9,64 850.3,64 856.3,70 850.3,76 748.9,76" fill="#3b6fb6"><title>amino acid ABC transporter permease 823199-823853 +</title></polygon>
+<text x="748.9" y="62" font-size="8" fill="#333">amino acid ABC transport</text>
+<polygon points="853.0,64 974.7,64 980.7,70 974.7,76 853.0,76" fill="#3b6fb6"><title>amino acid ABC transporter ATP-binding p 823833-824610 +</title></polygon>
+<text x="853.0" y="62" font-size="8" fill="#333">amino acid ABC transport</text>
+<polygon points="1017.0,64 1054.0,64 1060.0,70 1054.0,76 1017.0,76" fill="#3b6fb6"><title>ABC transporter ATP-binding protein 824831-825644 +</title></polygon>
+<text x="1017.0" y="62" font-size="8" fill="#333">ABC transporter ATP-bind</text>
+<text x="60" y="114" font-size="9" fill="#666">SAMD00411011:819005-825093</text>
+<text x="4" y="176" font-size="11">SAMD00076718 NZ_AP026738.1 (empty site, +)</text>
+<line x1="60" y1="190" x2="1060" y2="190" stroke="#888"/>
+<rect x="558.0" y="185" width="1.0" height="10" fill="#e76f51" opacity="0.45"/><text x="558.0" y="208" font-size="9">site</text>
+<polygon points="60.0,174 192.0,174 198.0,180 192.0,186 60.0,186" fill="#3b6fb6"><title>glutamate synthase-related protein 801211-805948 +</title></polygon>
+<text x="60.0" y="172" font-size="8" fill="#333">glutamate synthase-relat</text>
+<polygon points="210.1,174 449.2,174 455.2,180 449.2,186 210.1,186" fill="#3b6fb6"><title>glutamate synthase subunit beta 806021-807497 +</title></polygon>
+<text x="210.1" y="172" font-size="8" fill="#333">glutamate synthase subun</text>
+<polygon points="479.3,200 485.3,194 554.0,194 554.0,206 485.3,206" fill="#3b6fb6"><title>DUF3293 domain-containing protein 807642-808092 -</title></polygon>
+<text x="479.3" y="216" font-size="8" fill="#333">DUF3293 domain-containin</text>
+<polygon points="583.6,174 712.1,174 718.1,180 712.1,186 583.6,186" fill="#3b6fb6"><title>amino acid ABC transporter substrate-bin 808270-809080 +</title></polygon>
+<text x="583.6" y="172" font-size="8" fill="#333">amino acid ABC transport</text>
+<polygon points="741.8,174 844.4,174 850.4,180 844.4,186 741.8,186" fill="#3b6fb6"><title>amino acid ABC transporter permease 809223-809877 +</title></polygon>
+<text x="741.8" y="172" font-size="8" fill="#333">amino acid ABC transport</text>
+<polygon points="847.1,174 970.1,174 976.1,180 970.1,186 847.1,186" fill="#3b6fb6"><title>amino acid ABC transporter ATP-binding p 809857-810634 +</title></polygon>
+<text x="847.1" y="172" font-size="8" fill="#333">amino acid ABC transport</text>
+<polygon points="1012.8,174 1054.0,174 1060.0,180 1054.0,186 1012.8,186" fill="#3b6fb6"><title>ABC transporter ATP-binding protein 810855-811668 +</title></polygon>
+<text x="1012.8" y="172" font-size="8" fill="#333">ABC transporter ATP-bind</text>
+<text x="60" y="224" font-size="9" fill="#666">SAMD00076718:805117-811139</text>
+</svg>

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="250" font-family="sans-serif">
+<rect width="100%" height="100%" fill="white"/>
+<text x="4" y="14" font-size="12">L_06a4a2bf28d2  SAMD00571185  core 55 bp  status unresolved  pairs 1  tandem False  core copies carrier/empty 1/0</text>
+<text x="4" y="66" font-size="11">SAMD00571185 NZ_AP027205.1 (carrier)</text>
+<line x1="60" y1="80" x2="1060" y2="80" stroke="#888"/>
+<rect x="390.3" y="75" width="165.2" height="10" fill="#2a9d8f" opacity="0.45"/><text x="390.3" y="98" font-size="9">U</text>
+<rect x="555.5" y="75" width="9.1" height="10" fill="#e76f51" opacity="0.45"/><text x="555.5" y="98" font-size="9">core</text>
+<rect x="564.5" y="75" width="165.2" height="10" fill="#2a9d8f" opacity="0.45"/><text x="564.5" y="98" font-size="9">D</text>
+<polygon points="60.0,64 349.1,64 355.1,70 349.1,76 60.0,76" fill="#3b6fb6"><title>methyl-accepting chemotaxis protein 3046616-3048413 +</title></polygon>
+<text x="60.0" y="62" font-size="8" fill="#333">methyl-accepting chemota</text>
+<polygon points="360.4,90 366.4,84 522.4,84 522.4,96 366.4,96" fill="#3b6fb6"><title>DNA-binding protein 3048445-3049426 -</title></polygon>
+<text x="360.4" y="106" font-size="8" fill="#333">DNA-binding protein</text>
+<polygon points="567.3,64 751.6,64 757.6,70 751.6,76 567.3,76" fill="#3b6fb6"><title>site-specific integrase 3049698-3050850 +</title></polygon>
+<text x="567.3" y="62" font-size="8" fill="#333">site-specific integrase</text>
+<polygon points="763.6,90 769.6,84 938.9,84 938.9,96 769.6,96" fill="#3b6fb6"><title>biotin synthase BioB 3050886-3051948 -</title></polygon>
+<text x="763.6" y="106" font-size="8" fill="#333">biotin synthase BioB</text>
+<polygon points="1007.3,64 1054.0,64 1060.0,70 1054.0,76 1007.3,76" fill="#3b6fb6"><title>UvrD-helicase domain-containing protein 3052362-3054342 +</title></polygon>
+<text x="1007.3" y="62" font-size="8" fill="#333">UvrD-helicase domain-con</text>
+<text x="60" y="114" font-size="9" fill="#666">SAMD00571185:3046626-3052681</text>
+<text x="4" y="176" font-size="11">SAMD00407106 NZ_AP025556.1 (empty site, +)</text>
+<line x1="60" y1="190" x2="1060" y2="190" stroke="#888"/>
+<rect x="558.8" y="185" width="1.0" height="10" fill="#e76f51" opacity="0.45"/><text x="558.8" y="208" font-size="9">site</text>
+<polygon points="60.0,174 352.9,174 358.9,180 352.9,186 60.0,186" fill="#3b6fb6"><title>methyl-accepting chemotaxis protein 3236619-3238416 +</title></polygon>
+<text x="60.0" y="172" font-size="8" fill="#333">methyl-accepting chemota</text>
+<polygon points="364.2,200 370.2,194 527.3,194 527.3,206 370.2,206" fill="#3b6fb6"><title>DNA-binding protein 3238448-3239429 -</title></polygon>
+<text x="364.2" y="216" font-size="8" fill="#333">DNA-binding protein</text>
+<polygon points="569.4,174 755.0,174 761.0,180 755.0,186 569.4,186" fill="#3b6fb6"><title>site-specific integrase 3239682-3240834 +</title></polygon>
+<text x="569.4" y="172" font-size="8" fill="#333">site-specific integrase</text>
+<polygon points="767.0,200 773.0,194 943.6,194 943.6,206 773.0,206" fill="#3b6fb6"><title>biotin synthase BioB 3240870-3241932 -</title></polygon>
+<text x="767.0" y="216" font-size="8" fill="#333">biotin synthase BioB</text>
+<polygon points="1012.4,174 1054.0,174 1060.0,180 1054.0,186 1012.4,186" fill="#3b6fb6"><title>UvrD-helicase domain-containing protein 3242346-3244326 +</title></polygon>
+<text x="1012.4" y="172" font-size="8" fill="#333">UvrD-helicase domain-con</text>
+<text x="60" y="224" font-size="9" fill="#666">SAMD00407106:3236619-3242632</text>
+</svg>

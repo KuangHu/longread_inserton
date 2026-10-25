@@ -408,6 +408,7 @@ def merge_calls(calls):
                 mappings=len({(c["pair_id"], c["mapping"]) for c in cl["calls"]}), call_status=json.dumps(dict(st)),
                 start_spread=max(int(c["core_start"]) for c in cl["calls"]) - min(int(c["core_start"]) for c in cl["calls"]),
                 end_spread=max(int(c["core_end"]) for c in cl["calls"]) - min(int(c["core_end"]) for c in cl["calls"]),
+                boundary_consistency=boundary_consistency(cl["calls"]),
                 tandem_like=any(c["tandem_like"] in (True, "True") for c in cl["calls"]),
                 core_copies_carrier=max(int(c.get("core_copies_carrier") or 0) for c in cl["calls"]),
                 core_copies_empty=max(int(c.get("core_copies_empty") or 0) for c in cl["calls"]),
@@ -416,6 +417,19 @@ def merge_calls(calls):
             for c in cl["calls"]:
                 c["locus_id"] = lid
     return loci
+
+
+def boundary_consistency(calls):
+    """exact: all calls give the same core; within_shift: differences fit the indel shift window + BOUNDARY_TOL;
+    partner_dependent: calls against different partners give different boundaries (raw calls are kept)."""
+    ss = {int(c["core_start"]) for c in calls}
+    ee = {int(c["core_end"]) for c in calls}
+    if len(ss) == 1 and len(ee) == 1:
+        return "exact"
+    tol = BOUNDARY_TOL + max(max(int(c["shift_left"]), int(c["shift_right"])) for c in calls)
+    if max(ss) - min(ss) <= tol and max(ee) - min(ee) <= tol:
+        return "within_shift"
+    return "partner_dependent"
 
 
 def cmd_merge(a):
@@ -468,11 +482,14 @@ def svg_track(y, label, contig_len, ws, we, feats, marks, width=1000):
         x1, x2 = x(max(s, ws)), x(min(e, we))
         yy = y - 16 if strand == "+" else y + 4
         col = {"CDS": "#3b6fb6", "rRNA": "#b63b3b", "tRNA": "#b68a3b"}[typ] if not pseudo else "#999"
-        tip = x2 if strand == "+" else x1
-        base = min(x2, max(x1, tip - 6)) if strand == "+" else max(x1, min(x2, tip + 6))
-        out.append('<polygon points="%.1f,%d %.1f,%d %.1f,%d %.1f,%d %.1f,%d" fill="%s"><title>%s %d-%d %s</title></polygon>'
-                   % (x1 if strand == "+" else base, yy, base if strand == "+" else x2, yy, tip, yy + 6,
-                      base if strand == "+" else x2, yy + 12, x1 if strand == "+" else base, yy + 12, col, prod, s, e, strand))
+        if strand == "+":
+            base = max(x1, x2 - 6)
+            pts = [(x1, yy), (base, yy), (x2, yy + 6), (base, yy + 12), (x1, yy + 12)]
+        else:
+            base = min(x2, x1 + 6)
+            pts = [(x1, yy + 6), (base, yy), (x2, yy), (x2, yy + 12), (base, yy + 12)]
+        out.append('<polygon points="%s" fill="%s"><title>%s %d-%d %s</title></polygon>'
+                   % (" ".join("%.1f,%d" % p for p in pts), col, prod, s, e, strand))
         key = (round(x1 / 40), strand)
         if prod and key not in seen and x2 - x1 > 30:
             seen.add(key)

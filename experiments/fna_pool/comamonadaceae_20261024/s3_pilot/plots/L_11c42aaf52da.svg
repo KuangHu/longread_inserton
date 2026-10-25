@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="250" font-family="sans-serif">
+<rect width="100%" height="100%" fill="white"/>
+<text x="4" y="14" font-size="12">L_11c42aaf52da  SAMEA120314636  core 747 bp  status two_flank_anchored  pairs 1  tandem False  core copies carrier/empty 1/0</text>
+<text x="4" y="66" font-size="11">SAMEA120314636 NZ_OZ344929.1 (carrier)</text>
+<line x1="60" y1="80" x2="1060" y2="80" stroke="#888"/>
+<rect x="356.4" y="75" width="148.2" height="10" fill="#2a9d8f" opacity="0.45"/><text x="356.4" y="98" font-size="9">U</text>
+<rect x="504.6" y="75" width="110.7" height="10" fill="#e76f51" opacity="0.45"/><text x="504.6" y="98" font-size="9">core</text>
+<rect x="615.4" y="75" width="148.2" height="10" fill="#2a9d8f" opacity="0.45"/><text x="615.4" y="98" font-size="9">D</text>
+<polygon points="60.0,64 146.3,64 152.3,70 146.3,76 60.0,76" fill="#3b6fb6"><title>fimbria/pilus chaperone family protein 3453158-3453875 +</title></polygon>
+<text x="60.0" y="62" font-size="8" fill="#333">fimbria/pilus chaperone </text>
+<polygon points="152.6,64 522.8,64 528.8,70 522.8,76 152.6,76" fill="#3b6fb6"><title>fimbria/pilus outer membrane usher prote 3453877-3456415 +</title></polygon>
+<text x="152.6" y="62" font-size="8" fill="#333">fimbria/pilus outer memb</text>
+<polygon points="528.2,64 607.1,64 613.1,70 607.1,76 528.2,76" fill="#3b6fb6"><title>hypothetical protein 3456411-3456984 +</title></polygon>
+<text x="528.2" y="62" font-size="8" fill="#333">hypothetical protein</text>
+<polygon points="626.2,64 749.6,64 755.6,70 749.6,76 626.2,76" fill="#3b6fb6"><title>response regulator transcription factor 3457072-3457945 +</title></polygon>
+<text x="626.2" y="62" font-size="8" fill="#333">response regulator trans</text>
+<polygon points="757.9,90 763.9,84 900.7,84 900.7,96 763.9,96" fill="#3b6fb6"><title>LysR family transcriptional regulator 3457961-3458924 -</title></polygon>
+<text x="757.9" y="106" font-size="8" fill="#333">LysR family transcriptio</text>
+<polygon points="930.0,64 1054.0,64 1060.0,70 1054.0,76 930.0,76" fill="#3b6fb6"><title>MFS transporter 3459122-3460454 +</title></polygon>
+<text x="930.0" y="62" font-size="8" fill="#333">MFS transporter</text>
+<text x="60" y="114" font-size="9" fill="#666">SAMEA120314636:3453252-3459999</text>
+<text x="4" y="176" font-size="11">SAMN51658614 NZ_CM191347.1 (empty site, +)</text>
+<line x1="60" y1="190" x2="1060" y2="190" stroke="#888"/>
+<rect x="544.8" y="185" width="1.0" height="10" fill="#e76f51" opacity="0.45"/><text x="544.8" y="208" font-size="9">site</text>
+<polygon points="60.0,174 154.7,174 160.7,180 154.7,186 60.0,186" fill="#3b6fb6"><title>fimbria/pilus chaperone family protein 3590493-3591210 +</title></polygon>
+<text x="60.0" y="172" font-size="8" fill="#333">fimbria/pilus chaperone </text>
+<polygon points="165.4,174 550.3,174 556.3,180 550.3,186 165.4,186" fill="#3b6fb6"><title>fimbria/pilus outer membrane usher prote 3591239-3593657 +</title></polygon>
+<text x="165.4" y="172" font-size="8" fill="#333">fimbria/pilus outer memb</text>
+<polygon points="556.8,174 691.9,174 697.9,180 691.9,186 556.8,186" fill="#3b6fb6"><title>response regulator transcription factor 3593660-3594533 +</title></polygon>
+<text x="556.8" y="172" font-size="8" fill="#333">response regulator trans</text>
+<polygon points="700.5,200 706.5,194 856.2,194 856.2,206 706.5,206" fill="#3b6fb6"><title>LysR family transcriptional regulator 3594549-3595512 -</title></polygon>
+<text x="700.5" y="216" font-size="8" fill="#333">LysR family transcriptio</text>
+<polygon points="888.2,174 1054.0,174 1060.0,180 1054.0,186 888.2,186" fill="#3b6fb6"><title>MFS transporter 3595710-3597042 +</title></polygon>
+<text x="888.2" y="172" font-size="8" fill="#333">MFS transporter</text>
+<text x="60" y="224" font-size="9" fill="#666">SAMN51658614:3590587-3596773</text>
+</svg>

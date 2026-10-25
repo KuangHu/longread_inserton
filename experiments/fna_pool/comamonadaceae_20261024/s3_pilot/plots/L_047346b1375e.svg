@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="250" font-family="sans-serif">
+<rect width="100%" height="100%" fill="white"/>
+<text x="4" y="14" font-size="12">L_047346b1375e  SAMD00076718  core 54 bp  status unresolved  pairs 1  tandem False  core copies carrier/empty 0/0</text>
+<text x="4" y="66" font-size="11">SAMD00076718 NZ_AP026738.1 (carrier)</text>
+<line x1="60" y1="80" x2="1060" y2="80" stroke="#888"/>
+<rect x="390.4" y="75" width="165.2" height="10" fill="#2a9d8f" opacity="0.45"/><text x="390.4" y="98" font-size="9">U</text>
+<rect x="555.5" y="75" width="8.9" height="10" fill="#e76f51" opacity="0.45"/><text x="555.5" y="98" font-size="9">core</text>
+<rect x="564.5" y="75" width="165.2" height="10" fill="#2a9d8f" opacity="0.45"/><text x="564.5" y="98" font-size="9">D</text>
+<polygon points="60.0,64 190.4,64 196.4,70 190.4,76 60.0,76" fill="#3b6fb6"><title>SEL1-like repeat protein 888221-889850 +</title></polygon>
+<text x="60.0" y="62" font-size="8" fill="#333">SEL1-like repeat protein</text>
+<polygon points="226.3,64 382.9,64 388.9,70 382.9,76 226.3,76" fill="#3b6fb6"><title>Bug family tripartite tricarboxylate tra 890031-891015 +</title></polygon>
+<text x="226.3" y="62" font-size="8" fill="#333">Bug family tripartite tr</text>
+<polygon points="422.1,90 428.1,84 550.4,84 550.4,96 428.1,96" fill="#3b6fb6"><title>glycerophosphodiester phosphodiesterase 891216-891993 -</title></polygon>
+<text x="422.1" y="106" font-size="8" fill="#333">glycerophosphodiester ph</text>
+<polygon points="580.0,90 586.0,84 746.5,84 746.5,96 586.0,96" fill="#3b6fb6"><title>sn-glycerol-3-phosphate import ATP-bindi 892172-893180 -</title></polygon>
+<text x="580.0" y="106" font-size="8" fill="#333">sn-glycerol-3-phosphate </text>
+<polygon points="756.4,90 762.4,84 897.1,84 897.1,96 762.4,96" fill="#3b6fb6"><title>sn-glycerol-3-phosphate ABC transporter  893240-894092 -</title></polygon>
+<text x="756.4" y="106" font-size="8" fill="#333">sn-glycerol-3-phosphate </text>
+<polygon points="897.5,90 903.5,84 1043.2,84 1043.2,96 903.5,96" fill="#3b6fb6"><title>sn-glycerol-3-phosphate ABC transporter  894094-894976 -</title></polygon>
+<text x="897.5" y="106" font-size="8" fill="#333">sn-glycerol-3-phosphate </text>
+<text x="60" y="114" font-size="9" fill="#666">SAMD00076718:889024-895078</text>
+<text x="4" y="176" font-size="11">SAMD00411011 NZ_AP025193.1 (empty site, +)</text>
+<line x1="60" y1="190" x2="1060" y2="190" stroke="#888"/>
+<rect x="558.8" y="185" width="1.0" height="10" fill="#e76f51" opacity="0.45"/><text x="558.8" y="208" font-size="9">site</text>
+<polygon points="60.0,174 191.0,174 197.0,180 191.0,186 60.0,186" fill="#3b6fb6"><title>SEL1-like repeat protein 899454-901083 +</title></polygon>
+<text x="60.0" y="172" font-size="8" fill="#333">SEL1-like repeat protein</text>
+<polygon points="227.3,174 384.9,174 390.9,180 384.9,186 227.3,186" fill="#3b6fb6"><title>Bug family tripartite tricarboxylate tra 901265-902249 +</title></polygon>
+<text x="227.3" y="172" font-size="8" fill="#333">Bug family tripartite tr</text>
+<polygon points="424.4,200 430.4,194 553.6,194 553.6,206 430.4,206" fill="#3b6fb6"><title>glycerophosphodiester phosphodiesterase 902450-903227 -</title></polygon>
+<text x="424.4" y="216" font-size="8" fill="#333">glycerophosphodiester ph</text>
+<polygon points="586.4,200 592.4,194 754.0,194 754.0,206 592.4,206" fill="#3b6fb6"><title>sn-glycerol-3-phosphate import ATP-bindi 903424-904432 -</title></polygon>
+<text x="586.4" y="216" font-size="8" fill="#333">sn-glycerol-3-phosphate </text>
+<polygon points="764.8,200 770.8,194 906.0,194 906.0,206 770.8,206" fill="#3b6fb6"><title>sn-glycerol-3-phosphate ABC transporter  904497-905346 -</title></polygon>
+<text x="764.8" y="216" font-size="8" fill="#333">sn-glycerol-3-phosphate </text>
+<polygon points="906.3,200 912.3,194 1053.0,194 1053.0,206 912.3,206" fill="#3b6fb6"><title>sn-glycerol-3-phosphate ABC transporter  905348-906230 -</title></polygon>
+<text x="906.3" y="216" font-size="8" fill="#333">sn-glycerol-3-phosphate </text>
+<text x="60" y="224" font-size="9" fill="#666">SAMD00411011:900259-906272</text>
+</svg>

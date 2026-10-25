@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="250" font-family="sans-serif">
+<rect width="100%" height="100%" fill="white"/>
+<text x="4" y="14" font-size="12">L_688bbf1268fd  SAMD00407106  core 741 bp  status two_flank_anchored  pairs 2  tandem False  core copies carrier/empty 1/0</text>
+<text x="4" y="66" font-size="11">SAMD00407106 NZ_AP025556.1 (carrier)</text>
+<line x1="60" y1="80" x2="1060" y2="80" stroke="#888"/>
+<rect x="270.9" y="75" width="210.9" height="10" fill="#2a9d8f" opacity="0.45"/><text x="270.9" y="98" font-size="9">U</text>
+<rect x="481.9" y="75" width="156.3" height="10" fill="#e76f51" opacity="0.45"/><text x="481.9" y="98" font-size="9">core</text>
+<rect x="638.1" y="75" width="210.9" height="10" fill="#2a9d8f" opacity="0.45"/><text x="638.1" y="98" font-size="9">D</text>
+<polygon points="72.7,64 145.8,64 151.8,70 145.8,76 72.7,76" fill="#3b6fb6"><title>iron-sulfur cluster insertion protein Er 811772-812147 +</title></polygon>
+<text x="72.7" y="62" font-size="8" fill="#333">iron-sulfur cluster inse</text>
+<polygon points="176.2,64 474.6,64 480.6,70 474.6,76 176.2,76" fill="#3b6fb6"><title>multidrug transporter subunit MdtD 812263-813706 +</title></polygon>
+<text x="176.2" y="62" font-size="8" fill="#333">multidrug transporter su</text>
+<polygon points="484.0,90 490.0,84 563.7,84 563.7,96 490.0,96" fill="#3b6fb6"><title>type II toxin-antitoxin system VapC fami 813722-814100 -</title></polygon>
+<text x="484.0" y="106" font-size="8" fill="#333">type II toxin-antitoxin </text>
+<polygon points="566.6,90 572.6,84 611.6,84 611.6,96 572.6,96" fill="#3b6fb6"><title>AbrB/MazE/SpoVT family DNA-binding domai 814114-814327 -</title></polygon>
+<text x="566.6" y="106" font-size="8" fill="#333">AbrB/MazE/SpoVT family D</text>
+<polygon points="694.0,64 1028.5,64 1034.5,70 1028.5,76 694.0,76" fill="#3b6fb6"><title>xanthine dehydrogenase small subunit 814718-816332 +</title></polygon>
+<text x="694.0" y="62" font-size="8" fill="#333">xanthine dehydrogenase s</text>
+<polygon points="1034.7,64 1054.0,64 1060.0,70 1054.0,76 1034.7,76" fill="#3b6fb6"><title>xanthine dehydrogenase molybdopterin bin 816333-818760 +</title></polygon>
+<text x="60" y="114" font-size="9" fill="#666">SAMD00407106:811712-816453</text>
+<text x="4" y="176" font-size="11">SAMD00571185 NZ_AP027205.1 (empty site, +)</text>
+<line x1="60" y1="190" x2="1060" y2="190" stroke="#888"/>
+<rect x="537.7" y="185" width="1.0" height="10" fill="#e76f51" opacity="0.45"/><text x="537.7" y="208" font-size="9">site</text>
+<polygon points="74.6,174 158.2,174 164.2,180 158.2,186 74.6,186" fill="#3b6fb6"><title>iron-sulfur cluster insertion protein Er 757503-757878 +</title></polygon>
+<text x="74.6" y="172" font-size="8" fill="#333">iron-sulfur cluster inse</text>
+<polygon points="191.7,174 530.5,174 536.5,180 530.5,186 191.7,186" fill="#3b6fb6"><title>multidrug transporter subunit MdtD 757993-759436 +</title></polygon>
+<text x="191.7" y="172" font-size="8" fill="#333">multidrug transporter su</text>
+<polygon points="603.1,174 982.8,174 988.8,180 982.8,186 603.1,186" fill="#3b6fb6"><title>xanthine dehydrogenase small subunit 759715-761329 +</title></polygon>
+<text x="603.1" y="172" font-size="8" fill="#333">xanthine dehydrogenase s</text>
+<polygon points="989.0,174 1054.0,174 1060.0,180 1054.0,186 989.0,186" fill="#3b6fb6"><title>xanthine dehydrogenase molybdopterin bin 761330-763757 +</title></polygon>
+<text x="989.0" y="172" font-size="8" fill="#333">xanthine dehydrogenase m</text>
+<text x="60" y="224" font-size="9" fill="#666">SAMD00571185:757442-761627</text>
+</svg>
