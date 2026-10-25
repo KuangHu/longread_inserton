@@ -139,9 +139,13 @@ def verify(acc, row, pkg, md5ok):
         recs = read_fasta(fna[0])
         key = "refseqAccession" if acc.startswith("GCF_") else "genbankAccession"
         sr = [json.loads(l) for l in open(str(d / PART["seq-report"]))] if (d / PART["seq-report"]).exists() else []
-        srmap = {s.get(key): int(s["length"]) for s in sr}
+        # Some NCBI sequence-report rows omit length; those records are matched by accession only
+        # (total length and GFF3 sequence-region lengths are still checked below).
+        srmap = {s.get(key): int(s["length"]) if "length" in s else None for s in sr}
         checks["seq_report_present"] = bool(sr)
-        checks["fna_records_equal_seq_report"] = set(recs) == set(srmap) and all(recs[k][0] == srmap[k] for k in recs)
+        checks["fna_records_equal_seq_report"] = set(recs) == set(srmap) and all(
+            srmap[k] is None or recs[k][0] == srmap[k] for k in recs)
+        info["seq_report_rows_without_length"] = sum(1 for v in srmap.values() if v is None)
         checks["fna_total_equals_assembly_report"] = bool(rep) and sum(v[0] for v in recs.values()) == info["total_bp"]
         info.update(records=len(recs), fna_bp=sum(v[0] for v in recs.values()),
                     record_sha256={k: v[1] for k, v in recs.items()},
