@@ -294,3 +294,37 @@ v0.2 改动（判定阈值 ≥3、≤10% 不变）：
 40,265 个 <2500 bp 锚定 locus（452 个 carrier）：difference_class presence_absence 13,401，complex_small_other 24,647，replacement 2,217；cds_class boundary_cuts_feature 23,990，0_CDS 11,278，1–2_complete_CDS 4,583，contains_pseudo 242，>2 172。contains_partial 为 0：这些 RefSeq PGAP 注释中 partial CDS 几乎都同时标 pseudo（pilot 一个基因组 53 个 partial 单元中 52 个是 pseudo），而 pseudo 先判；有 partial 单元的短 locus 共 230 个，都归在 pseudo 或切断特征中。presence_absence、1–2_complete_CDS、边界 exact、非 tandem 的有 515 个 locus（227 个 carrier，599 个编码单元，414 个不同 protein id；288 个 locus 含 transposase；all_calls_anchored 464，partner_mixed 51）。这些都还没有读段证据（全量 read check 未做），也没有做家族合并，**不能据此判断灵敏度或新颖性**。
 
 尚未做：全量（或目标候选）read check；S4 的正式注释/边界/重复结构复核（presence_absence 与 complex_small_other 分开报告）；core 蛋白家族合并（分别报告家族数、位点数、样本数）。
+
+## S4：注释复核、候选清单、初步蛋白家族（[s4_annotate.py](s4_annotate.py) v0.1，[s4.sbatch](s4.sbatch)）
+
+按计划第 5 节：GFF3 按 ID 归并为单元（多段 CDS、Parent、phase、partial、pseudo、exception、transl_except、跨原点），每个 carrier 绑定 GFF3/FAA 的 sha256（`annotation_files.tsv`）。core 内每个非 pseudo CDS 从 FNA 翻译（table 11），与 FAA 比较，并查起始/终止/内部终止密码子。“complete” = 在 core 内、非 partial/pseudo、翻译等于 FAA、起止密码子有效、无内部终止。边界关系只作标记，不移动 DNA 边界：host_gene_interrupted（一个特征覆盖整个 core）、gene_mostly_inside（≥一半在 core 内，core 可能被截短）、gene_mostly_outside（core 端点进入侧翼基因）、rna_crossed。挑战测试 `test_s4.py` 9/9（正/负链、−1 移码两段、5′ partial phase 1、跨原点、pseudo、硒代半胱氨酸 transl_except、多 Parent、FAA 不一致、三类边界关系）。pilot（job 27274357）主清单 16 个，与 crosstab 规则相同，232 个非 pseudo CDS 全部与 FAA 一致。
+
+全量（job 27274365，commit 54386bb，5 min；结果在 `comamonadaceae_20261024/s4_s3_full/`，seed FASTA 和蛋白 FASTA 在 scratch，sha256 见 `files.sha256`）：40,265 个短锚定 locus，452 个 carrier。core 内 14,900 个非 pseudo CDS 单元的翻译**全部**与 FAA 一致；起止/内部终止问题只出现在 520 个 pseudo 单元上。边界关系（一个 locus 可有多种）：gene_mostly_outside 16,446，host_gene_interrupted 5,268，gene_mostly_inside 4,031，rna_crossed 27。
+
+| 类别 | locus | carrier | 编码单元 | 不同 protein ID |
+|---|---:|---:|---:|---:|
+| **main**（presence_absence、所有 call 锚定、1–2 complete CDS、边界无相交、exact、非 tandem） | 464 | 221 | 545 | 389 |
+| partner_mixed（同上，但有伙伴不一致） | 51 | 33 | 54 | 32 |
+| direction_mixed | 0 | | | |
+| short_other_segment（complex_small_other，其余同 main） | 1,070 | 307 | 1,322 | 984 |
+| replacement（≥50 bp 另一侧序列，其余同 main） | 163 | 126 | 226 | 155 |
+| boundary_intersection | 23,990 | | | |
+| gene_integrity_anomaly（含 pseudo） | 242 | | | |
+| boundary_or_repeat_review（注释合格，但边界非 exact 或 tandem 样） | 2,835 | | | |
+| other_structure（0 个或 >2 个 CDS） | 11,450 | | | |
+
+- **partner_mixed 51 个**：`partner_breakdown` 列出每个伙伴的 call 数、状态、差异类别和另一侧长度。51 个全部是“部分伙伴锚定、其余伙伴 unresolved”，**没有一个是另一伙伴给出 replacement**；每个 locus 有 2–14 个伙伴。
+- **初步蛋白家族**（MMseqs2 17.b804f easy-cluster，冻结参数：family = min-seq-id 0.9、双向覆盖 0.8〔cov-mode 0〕、cluster-mode 0；homology_group = min-seq-id 0.5，只作远缘候选同源）。按清单分别统计：
+
+| | locus | carrier | 编码单元 | 不同蛋白序列 | family | homology_group | family 结构 |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| main | 464 | 221 | 545 | 384 | 294 | 234 | 251 |
+| partner_mixed | 51 | 33 | 54 | 31 | 28 | 27 | 25 |
+| short_other_segment | 1,070 | 307 | 1,322 | 979 | 638 | 596 | 525 |
+| replacement | 163 | 126 | 226 | 153 | 118 | 116 | 90 |
+| 合计 | 1,748 | 352 | 2,147 | 1,527 | 1,018 | 887 | 844 |
+
+  （`families_summary.json` 的 species 字段是 organism 名称数，菌株级名称如 “Variovorax sp. YR752” 各算一个，不是物种数。）main 的 294 个 family 中 204 个只有 1 个 locus，80 个出现在 ≥2 个 carrier；243 个 main locus 含 transposase（141 个 family）。main 中最大的：AbiEi 抗毒素 F_0069（24 locus / 24 carrier）与 AbiEii/AbiGii 毒素 F_0002（22/22），IS110 F_0027（19 locus / 10 carrier），IS3 F_0035（15/11），Fic F_0020（13/13）与 F_0141（10/10），hypothetical F_0010（10/10），IS5 F_0175（7/7）。
+- **DNA seed 目录**：五个清单 1,748 条记录（每个 locus 一条实际观察的 core，不是共识），1,417 种不同 core 序列；`seed_catalog.tsv` 带 U/D 各 300 bp 和 family。
+
+仍不是结论：家族是初步的（只做了 0.9/0.8 保守聚类），没有读段证据，同一 family 的不同 locus 也可能是同一插入在近缘株中的重复观察（需按位点上下文归并后再谈“独立事件”），不能据此判断灵敏度或新颖性。下一步：对 main（及 partner_mixed、short_other_segment 分开）做 v0.3 read check，然后 S6 归并。
