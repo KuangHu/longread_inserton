@@ -81,4 +81,19 @@ P=/global/scratch/users/kh36969/longread_callout/fna_pool/comamonadaceae_2026102
     --data $P/data --out comamonadaceae_20261024/s1
 ```
 
+### Comamonadaceae 下载结果（2026-10-24，lrc-xfer，[s1/](comamonadaceae_20261024/s1/)）
+
+| 项 | 结果 |
+|---|---|
+| 清单 | 984/984 verified，0 failed（`s1_report.json`） |
+| 主包 | 499，全部有注释：RefSeq PGAP 485，提交者注释 14 |
+| GCF/GCA 序列核对 | 485/485 记录序列 SHA256 完全一致（`pair_checks.tsv`） |
+| 记录 | 1,320 条（每个 assembly 中位 1 条，最多 168 条）；153 个 assembly 含质粒，共 268 条质粒记录 |
+| 体积 | 2,966 个文件，8.6 GB（`files.tsv` 记录每个文件的 bytes、MD5、SHA256） |
+| 用时 | 两次运行共约 19 分钟（20:01–20:11，20:24–20:31） |
+
+- 第 1 次运行在第 9 块中断：GCF_049860745.1、GCF_050310035.1 的 sequence report 有一条记录缺 `length` 字段，脚本报 KeyError。
+  修正（9fb95a2）后这类记录只按 accession 对应，并记录缺失数；总长度与 GFF3 sequence-region 长度仍核对。已通过的 422 个保留，其余重跑。
+- sequence report 的 `assignedMoleculeLocationType` 对 draft 的未定位 contig 也写 Chromosome，所以 “Chromosome” 记录数不等于染色体数。
+
 reads（S5）不在本步下载。linked 样本的可用 FASTQ 共约 213 GB（ONT 151，PacBio CLR 25，HiFi 12，类型未定 25），等候选和优先级明确后再分批下载。
