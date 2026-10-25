@@ -152,6 +152,77 @@ def cases():
     ok.append(check("split-block path (two-block PAF)", len(c) == 1 and c[0]["source"] == "split_blocks" and c[0]["carrier"] == "A"
                     and (c[0]["core_start"], c[0]["core_end"]) == (100000, 160000) and c[0]["status"] == "two_flank_anchored",
                     [(x["source"], x["carrier"], x["core_start"], x["core_end"], x["status"], x["reasons"]) for x in c]))
+    ok += readcheck_cases(tmp)
+    return ok
+
+
+def readcheck_cases(tmp):
+    """Read classification on hand-written PAF records (no minimap2), incl. the 0ed1ca4 review counterexamples."""
+    import s3_readcheck as rcheck
+    ok = []
+
+    def test(tid, locus, cs, core):
+        return {"test_id": tid, "locus_id": locus, "CP_len": 4000 + core, "CP_j": "2000,%d,0,0" % (2000 + core),
+                "CA_len": 4000, "CA_j": "2000,2000,0,0", "EP_len": 4000 + core, "EP_j": "2000,%d,0,0" % (2000 + core),
+                "EA_len": 4000, "EA_j": "2000,2000,0,0", "C_site": "c:%d-%d" % (cs, cs + core), "E_site": "e:%d-%d" % (cs, cs)}
+
+    def paf(name, lines):
+        p = tmp / name
+        p.write_text("".join("%s\t%d\t%d\t%d\t+\t%s\t%d\t%d\t%d\t1\t1\t60\ttp:A:%s\tAS:i:%d\tcg:Z:%s\n" % l for l in lines))
+        return p
+
+    tests = [test("T1", "L1", 10000, 54), test("T2", "L2", 50000, 54), test("T3", "L3", 20000, 54),
+             test("T4", "L4", 20400, 54), test("T5", "L5", 30000, 5000)]
+    al = paf("al.paf", [
+        # r1: alignment to the present allele deletes the whole 54 bp core; no absent-allele record (review case 1)
+        ("r1", 4000, 0, 4000, "T1|C|P", 4054, 0, 4054, "P", 7800, "2000M54D2000M"),
+        # r2: strong on T1, weak on T2 (review case 2)
+        ("r2", 4054, 0, 4054, "T1|C|P", 4054, 0, 4054, "P", 8000, "4054M"),
+        ("r2", 4054, 0, 4054, "T2|C|P", 4054, 0, 4054, "S", 3000, "4054M"),
+        # r3: one molecule across two neighbouring loci, both truly present
+        ("r3", 7000, 0, 4054, "T3|C|P", 4054, 0, 4054, "P", 8000, "4054M"),
+        ("r3", 7000, 2900, 6954, "T4|C|P", 4054, 0, 4054, "P", 8000, "4054M"),
+        # r4: absent at T5 (5 kb core) but too short to have spanned the present allele
+        ("r4", 3000, 0, 3000, "T5|C|A", 4000, 500, 3500, "P", 6000, "3000M"),
+        # r5a/r5b: two records of one molecule, both present at T1
+        ("r5a", 4054, 0, 4054, "T1|C|P", 4054, 0, 4054, "P", 8000, "4054M"),
+        ("r5b", 4054, 0, 4054, "T1|C|P", 4054, 0, 4054, "P", 8000, "4054M")])
+    ge = paf("ge.paf", [
+        ("r1", 4000, 0, 4000, "c", 10 ** 6, 8000, 12054, "P", 7800, "4000M"),
+        ("r2", 4054, 0, 4054, "c", 10 ** 6, 8000, 12054, "P", 8000, "4054M"),
+        ("r2", 4054, 0, 4054, "c", 10 ** 6, 48000, 52054, "S", 3000, "4054M"),
+        ("r3", 7000, 0, 7000, "c", 10 ** 6, 18000, 24454, "P", 14000, "7000M"),
+        ("r4", 3000, 0, 3000, "c", 10 ** 6, 28500, 31500, "P", 6000, "3000M"),
+        ("r5a", 4054, 0, 4054, "c", 10 ** 6, 8000, 12054, "P", 8000, "4054M"),
+        ("r5b", 4054, 0, 4054, "c", 10 ** 6, 8000, 12054, "P", 8000, "4054M")])
+    mol = {"r1": "r1", "r2": "r2", "r3": "r3", "r4": "r4", "r5a": "m5", "r5b": "m5"}
+    counts, multi = rcheck.classify(tests, [(al, ge, mol)])
+    c = {t: counts[(t, "C")] for t in ("T1", "T2", "T3", "T4", "T5")}
+    ok.append(check("readcheck: deleted core in CIGAR is not present", c["T1"]["cigar_fail"] == 1 and c["T1"]["P"] == 2,
+                    dict(c["T1"])))
+    ok.append(check("readcheck: weak second locus loses to genome-wide placement", c["T2"]["P"] == 0 and c["T2"]["locus_ambiguous"] == 1,
+                    dict(c["T2"])))
+    ok.append(check("readcheck: one read across two neighbouring loci supports both", c["T3"]["P"] == c["T4"]["P"] == 1 and multi[2] == 1,
+                    (dict(c["T3"]), dict(c["T4"]), dict(multi))))
+    ok.append(check("readcheck: short absent read is raw but not length-matched", c["T5"]["A"] == 1 and c["T5"]["A_matched"] == 0,
+                    dict(c["T5"])))
+    v01 = Counter()
+    for b in rcheck.parse_paf(al):  # the v0.1 rule (span only) would have counted r1 present and r2 at T2
+        tid, role, a_ = b["t"].split("|")
+        lo, hi, _ = rcheck.test_geometry([t for t in tests if t["test_id"] == tid][0])[role]["iv"][a_]
+        v01[tid] += b["ts"] <= lo and b["te"] >= hi and a_ == "P"
+    ok.append(check("readcheck: the same records pass the v0.1 span-only rule", v01["T1"] == 4 and v01["T2"] == 1, dict(v01)))
+    dup = rcheck.molecules([("a", rcheck.record_ids("a 0f1e2d3c-0000-4000-8000-000000000001 st:Z:x", "one_record_per_molecule")),
+                            ("b", rcheck.record_ids("b 0f1e2d3c-0000-4000-8000-000000000002 st:Z:x", "one_record_per_molecule")),
+                            ("d", rcheck.record_ids("d 0f1e2d3c-0000-4000-8000-000000000001;0f1e2d3c-0000-4000-8000-000000000002 st", "one_record_per_molecule")),
+                            ("z", rcheck.record_ids("z m64_1/77/ccs/1", "zmw_from_read_name"))])
+    ok.append(check("readcheck: ONT duplex record and both simplex parents are one molecule",
+                    dup["a"] == dup["b"] == dup["d"] and dup["z"] == "m64_1/77", dup))
+    core = rand(300)
+    dc = [s3.difference_class(core, ""), s3.difference_class(core, core[:3] + core[-2:]), s3.difference_class(core, rand(8)),
+          s3.difference_class(core, rand(60))]
+    ok.append(check("difference_class: absorbed ends, small other, replacement",
+                    [d[0] for d in dc] == ["presence_absence", "presence_absence", "complex_small_other", "replacement"], dc))
     return ok
 
 

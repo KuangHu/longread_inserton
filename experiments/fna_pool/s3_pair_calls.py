@@ -16,6 +16,9 @@ merge   Merges raw calls of all pairs into per-genome loci (same carrier contig;
         anchored_support says whether every call agrees (max_other_side_gap shows how much replacement the
         10%-of-core allowance admitted): all_calls_anchored, partner_mixed (another partner's
         call is replacement/unresolved), direction_mixed (same partners, one mapping direction not anchored).
+        With --fasta each call also gets difference_class after boundary normalisation (difference_class()):
+        presence_absence, complex_small_other (< MIN_CORE bp of other sequence) or replacement; the locus takes the
+        most complex class of its anchored calls. This is reported beside the status, which is unchanged.
 plot    SVG per locus: carrier window with GFF3 CDS/rRNA/tRNA arrows and U/core/D, then one track per partner and
         boundary set, drawn in carrier orientation with U'/D' under U/D (minus-strand partners flipped).
 
@@ -431,6 +434,8 @@ def merge_calls(calls):
                 tandem_like=any(c["tandem_like"] in (True, "True") for c in cl["calls"]),
                 max_other_side_gap=max(int(c["other_side_gap"]) for c in cl["calls"]),
                 max_other_side_gap_anchored=max([int(c["other_side_gap"]) for c in cl["calls"] if c["status"] == "two_flank_anchored"] or [0]),
+                difference_class=max((c["difference_class"] for c in good), key=DIFF_ORDER.index) if "difference_class" in good[0] else "",
+                difference_classes=json.dumps(dict(Counter(c["difference_class"] for c in good))) if "difference_class" in good[0] else "",
                 core_copies_carrier=max(int(c.get("core_copies_carrier") or 0) for c in cl["calls"]),
                 core_copies_empty=max(int(c.get("core_copies_empty") or 0) for c in cl["calls"]),
                 near_contig_end=any(c["near_contig_end"] in (True, "True") for c in cl["calls"]),
@@ -467,17 +472,45 @@ def boundary_consistency(calls):
     return "direction_dependent" if within else "partner_dependent"
 
 
+DIFF_ORDER = ["presence_absence", "complex_small_other", "replacement"]
+
+
+def difference_class(core, other):
+    """Class of the difference at a call after boundary normalisation. other (the partner's other-side segment, in
+    carrier orientation) is absorbed when it equals core[:a] + core[len - b:] with a + b = len(other): then the
+    partner keeps those core ends and the rest of the core is a pure presence/absence (exact match only). Otherwise
+    other < MIN_CORE bp is complex_small_other and >= MIN_CORE bp (an event the caller would call on its own) is
+    replacement. Returns (class, unabsorbed other length)."""
+    g = len(other)
+    if g == 0:
+        return "presence_absence", 0
+    if g < len(core) and any(core.startswith(other[:k]) and core.endswith(other[k:]) for k in range(g + 1)):
+        return "presence_absence", 0
+    return ("complex_small_other" if g < MIN_CORE else "replacement"), g
+
+
+def annotate_difference(calls, seqs):
+    for c in calls:
+        core = seqs[c["carrier"]][c["carrier_contig"]][int(c["core_start"]):int(c["core_end"])]
+        ep = int(c["empty_pos"])
+        other = seqs[c["empty"]][c["empty_contig"]][ep:ep + int(c["other_side_gap"])]
+        c["difference_class"], c["other_norm_gap"] = difference_class(core, rc(other) if c["aln_strand"] == "-" else other)
+
+
 def cmd_merge(a):
     calls = []
     for p in a.calls:
         calls += list(csv.DictReader(open(str(p)), delimiter="\t"))
+    seqs = None
+    if a.fasta:
+        fa = dict(x.split("=", 1) for x in a.fasta)
+        seqs = {k: read_fasta(v) for k, v in fa.items()}
+        annotate_difference(calls, seqs)
     loci = merge_calls(calls)
     a.out.mkdir(parents=True, exist_ok=True)
     write(a.out / "calls_merged.tsv", calls)
     write(a.out / "loci.tsv", loci)
-    if a.fasta:
-        fa = dict(x.split("=", 1) for x in a.fasta)
-        seqs = {k: read_fasta(v) for k, v in fa.items()}
+    if seqs:
         with open(str(a.out / "ucd.fasta"), "w") as h:
             for l in loci:
                 seq = seqs[l["carrier"]][l["contig"]]
