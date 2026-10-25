@@ -1,0 +1,32 @@
+{
+  "sample": "Sam8H1",
+  "gca": "GCA_016904925.1",
+  "gcf": "GCF_016904925.1",
+  "identical_sequence_sets": true,
+  "choice": "gcf_sequence_and_annotation",
+  "gca_records": {
+    "CP069391.1": [
+      3983519,
+      "73fb1a9c9b7f67f1ec5476c3109ccffd1bdc313567f7899eec85b4cf9f6ab728"
+    ],
+    "CP069392.1": [
+      148194,
+      "2632a882f70aeca720e54c3b5d05e548df90ceddbe007708fe6cfdd09221904a"
+    ]
+  },
+  "gcf_records": {
+    "NZ_CP069391.1": [
+      3983519,
+      "73fb1a9c9b7f67f1ec5476c3109ccffd1bdc313567f7899eec85b4cf9f6ab728"
+    ],
+    "NZ_CP069392.1": [
+      148194,
+      "2632a882f70aeca720e54c3b5d05e548df90ceddbe007708fe6cfdd09221904a"
+    ]
+  },
+  "cds_features": 4026,
+  "fasta": "/global/scratch/users/kh36969/longread_callout/data/assemblies_pacbio_pilot/Sam8H1/GCF_016904925.1/ncbi_dataset/data/GCF_016904925.1/GCF_016904925.1_ASM1690492v1_genomic.fna",
+  "fasta_sha256": "725026a3d9f42a1a46403e7da8673dbeb7c36505dbcffb8a02575c68bb126869",
+  "gbff": "/global/scratch/users/kh36969/longread_callout/data/assemblies_pacbio_pilot/Sam8H1/GCF_016904925.1/ncbi_dataset/data/GCF_016904925.1/genomic.gbff",
+  "gbff_sha256": "8fb677dbefbad4cad15cd6772cfc4cb661c4d90e85da60f7d6fa256f7e90a756"
+}
