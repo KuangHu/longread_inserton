@@ -12,10 +12,14 @@ with FLANK bp of U/D. A read record supports an allele only when all of these ho
             between the two alleles (at least MIN_INDEL): a read of the other allele forced onto this one shows that
             difference as a deletion or insertion, so an alignment that deletes the core cannot count as present;
   allele    if it passes on both alleles, the higher alignment score wins by >= MIN_DELTA_AS, else ambiguous;
-  locus     the read's whole-genome alignment to the sample's own assembly overlaps the tested site (+-ANCHOR), and
-            no alignment elsewhere covering >= QUERY_OVERLAP of the same read part scores within MIN_DELTA_AS of it
-            (off_locus / locus_ambiguous otherwise). Repeat copies thus compete genome-wide; a read counts for several
-            loci only when its genome placement covers each of them (true neighbouring sites).
+  locus     the read is also mapped to the sample's whole assembly. The two read positions that the supporting
+            local alignment puts at the outer ends of the tested interval (U side and D side anchors) must each be
+            placed by a genome alignment of the same strand within LOCUS_TOL bp of where that allele position sits in
+            the assembly, and no genome alignment placing the same read position elsewhere may score within
+            MIN_DELTA_AS of it (off_locus / locus_ambiguous otherwise). Repeat copies thus compete genome-wide on the
+            read segment that actually supports the allele; touching the site window is not enough. A read counts for
+            several loci only when its own anchors sit at each of them (true neighbouring sites). The anchors are
+            outside the core, so a read of the other allele is not penalised for not matching the assembly's core.
 Read records are then grouped into molecules: PacBio ZMW (movie/zmw) or SRA spot name; ONT read ids, with duplex
 records ("id1;id2") joined to their simplex parents. Records of one molecule that disagree make it ambiguous. Runs
 whose names carry no molecule information (molecule_grouping_unavailable) are counted in read records and labelled
@@ -57,14 +61,14 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "scripts"))
 from s3_pair_calls import CIGAR, DIFF_ORDER, MERGE_MATCH, difference_class, read_fasta, rc  # noqa: E402
 
-VERSION = "s3_readcheck_v0.2"
+VERSION = "s3_readcheck_v0.3"
 FLANK = 2000
 ANCHOR = 300
 MIN_DELTA_AS = 20
 MIN_SPAN = 3
 MAX_OTHER_FRACTION = 0.1
 MIN_INDEL = 10  # floor of the CIGAR limit when the two alleles differ little in length
-QUERY_OVERLAP = 0.5
+LOCUS_TOL = 50  # bp between expected and observed genome position of an anchor (< ANCHOR)
 PRESET = {"ont": "map-ont", "pacbio_hifi_ccs": "map-hifi", "pacbio_clr_subreads": "map-pb", "pacbio_unresolved": "map-pb"}
 MM = ["-c", "--secondary=yes", "-N", "100", "-p", "0.3"]
 MM_GENOME = ["-c", "--secondary=yes", "-N", "50", "-p", "0.5"]
@@ -276,7 +280,7 @@ def parse_paf(path):
     for line in open(str(path)):
         f = line.rstrip("\n").split("\t")
         tags = dict(x.split(":", 2)[::2] for x in f[12:])
-        yield dict(q=f[0], qlen=int(f[1]), qs=int(f[2]), qe=int(f[3]), t=f[5], ts=int(f[7]), te=int(f[8]),
+        yield dict(q=f[0], qlen=int(f[1]), qs=int(f[2]), qe=int(f[3]), strand=f[4], t=f[5], ts=int(f[7]), te=int(f[8]),
                    score=int(tags.get("AS", 0)), tp=tags.get("tp", "P"), cg=tags.get("cg", ""))
 
 
@@ -317,44 +321,83 @@ def overlap(a0, a1, b0, b1):
     return max(0, min(a1, b1) - max(a0, b0))
 
 
-def locus_check(alns, site):
-    """ok / off_locus / locus_ambiguous for one read's genome alignments against site (contig, lo, hi)."""
-    contig, lo, hi = site
-    here = [g for g in alns if g["t"] == contig and overlap(g["ts"], g["te"], lo, hi)]
-    if not here:
-        return "off_locus"
-    h = max(here, key=lambda g: g["score"])
-    for g in alns:
-        if g["t"] == contig and overlap(g["ts"], g["te"], lo, hi):
-            continue
-        ov = overlap(g["qs"], g["qe"], h["qs"], h["qe"])
-        if ov >= QUERY_OVERLAP * min(g["qe"] - g["qs"], h["qe"] - h["qs"]) and g["score"] >= h["score"] - MIN_DELTA_AS:
+def q_at(b, rpos):
+    """Forward read coordinate of the base aligned at reference position rpos (deletion: next read base)."""
+    r, o = b["ts"], 0
+    for n, op in CIGAR.findall(b["cg"]):
+        n = int(n)
+        if op in "M=X":
+            if r <= rpos < r + n:
+                o += rpos - r
+                break
+            r, o = r + n, o + n
+        elif op == "D":
+            if r <= rpos < r + n:
+                break
+            r += n
+        elif op == "I":
+            o += n
+    return b["qs"] + o if b["strand"] == "+" else b["qe"] - 1 - o
+
+
+def r_at(g, q):
+    """Reference position of forward read coordinate q in alignment g (insertion: the following reference base)."""
+    o = q - g["qs"] if g["strand"] == "+" else g["qe"] - 1 - q
+    r, qo = g["ts"], 0
+    for n, op in CIGAR.findall(g["cg"]):
+        n = int(n)
+        if op in "M=X":
+            if qo <= o < qo + n:
+                return r + o - qo
+            r, qo = r + n, qo + n
+        elif op == "I":
+            if qo <= o < qo + n:
+                return r
+            qo += n
+        elif op == "D":
+            r += n
+    return None
+
+
+def locus_check(alns, contig, strand, anchors):
+    """ok / off_locus / locus_ambiguous for one read: anchors = [(read position, expected assembly position)]."""
+    for q, exp in anchors:
+        place = [(g, r_at(g, q)) for g in alns if g["qs"] <= q < g["qe"]]
+        good = [g for g, r in place if g["t"] == contig and g["strand"] == strand and r is not None and abs(r - exp) <= LOCUS_TOL]
+        if not good:
+            return "off_locus"
+        h = max(g["score"] for g in good)
+        if any(all(g is not x for x in good) and g["score"] >= h - MIN_DELTA_AS for g, _ in place):
             return "locus_ambiguous"
     return "ok"
 
 
 def test_geometry(t):
     """Per role: tested interval (lo, hi, middle length) per allele, CIGAR limit, read length needed for a
-    length-matched count, and the genome site (contig, lo, hi) for the locus check."""
+    length-matched count, and per allele the contig and expected assembly positions of the two anchors (lo, hi - 1):
+    U side s - j1 + lo, D side e + (hi - 1 - j2), with (s, e) the site in the sample's own assembly."""
     geo = {}
     for role in "CE":
-        iv = {}
-        for al in "PA":
-            j1, j2, sl, sr = map(int, t["%s%s_j" % (role, al)].split(","))
-            iv[al] = (max(0, j1 - ANCHOR - sl), min(int(t["%s%s_len" % (role, al)]), j2 + ANCHOR + sr), j2 - j1)
         contig, se = t["%s_site" % role].rsplit(":", 1)
         s, e = map(int, se.split("-"))
+        iv, expect = {}, {}
+        for al in "PA":
+            j1, j2, sl, sr = map(int, t["%s%s_j" % (role, al)].split(","))
+            lo, hi = max(0, j1 - ANCHOR - sl), min(int(t["%s%s_len" % (role, al)]), j2 + ANCHOR + sr)
+            iv[al] = (lo, hi, j2 - j1)
+            expect[al] = (s - j1 + lo, e + (hi - 1 - j2))
         geo[role] = dict(iv=iv, limit=max(MIN_INDEL, abs(iv["P"][2] - iv["A"][2]) / 2.0),
-                         need=max(iv["P"][1] - iv["P"][0], iv["A"][1] - iv["A"][0]), site=(contig, s - ANCHOR, e + ANCHOR))
+                         need=max(iv["P"][1] - iv["P"][0], iv["A"][1] - iv["A"][0]), contig=contig, expect=expect)
     return geo
 
 
 def read_calls(best, galns, geo, qlen):
     """One read record -> {(test_id, role): call}; call is P/A (+ '_matched'), ambiguous, cigar_fail, off_locus or
-    locus_ambiguous. best[(tid, role, allele)] = (2 spans and CIGAR ok / 1 spans, CIGAR fails / 0 partial, score)."""
+    locus_ambiguous. best[(tid, role, allele)] = (2 spans and CIGAR ok / 1 spans, CIGAR fails / 0 partial, score,
+    (strand, read position of anchor lo, of anchor hi - 1) when 2)."""
     out = {}
     for tid, role in {(k[0], k[1]) for k in best}:
-        sp, sa = best.get((tid, role, "P"), (0, 0)), best.get((tid, role, "A"), (0, 0))
+        sp, sa = best.get((tid, role, "P"), (0, 0, None)), best.get((tid, role, "A"), (0, 0, None))
         if sp[0] < 2 and sa[0] < 2:
             if max(sp[0], sa[0]) == 1:
                 out[(tid, role)] = "cigar_fail"
@@ -366,7 +409,10 @@ def read_calls(best, galns, geo, qlen):
         else:
             c = "A"
         if galns is not None:
-            lc = locus_check(galns, geo[tid][role]["site"])
+            al = "P" if sp[0] == 2 and (sa[0] < 2 or sp[1] >= sa[1]) else "A"  # anchors of the better-scoring allele
+            strand, ql, qr = (sp if al == "P" else sa)[2]
+            el, er = geo[tid][role]["expect"][al]
+            lc = locus_check(galns, geo[tid][role]["contig"], strand, [(ql, el), (qr, er)])
             c = c if lc == "ok" else lc
         if c in ("P", "A") and qlen >= geo[tid][role]["need"]:
             c += "_matched"
@@ -389,8 +435,8 @@ def classify(tests, runs):
             st = (2 if cigar_ok(b, lo, hi, geo[tid][role]["limit"]) else 1) if b["ts"] <= lo and b["te"] >= hi else 0
             qlen[b["q"]] = b["qlen"]
             cur = best[b["q"]].get((tid, role, al))
-            if cur is None or (st, b["score"]) > cur:
-                best[b["q"]][(tid, role, al)] = (st, b["score"])
+            if cur is None or (st, b["score"]) > cur[:2]:
+                best[b["q"]][(tid, role, al)] = (st, b["score"], (b["strand"], q_at(b, lo), q_at(b, hi - 1)) if st == 2 else None)
         galns = defaultdict(list)
         if genome_paf:
             for g in parse_paf(genome_paf):
@@ -503,7 +549,7 @@ def cmd_summarize(a):
     for c in counts.values():
         excluded.update({k: v for k, v in c.items() if k in ("ambiguous", "locus_ambiguous", "off_locus", "cigar_fail")})
     summ = dict(caller=VERSION, flank=FLANK, anchor=ANCHOR, min_delta_as=MIN_DELTA_AS, min_span=MIN_SPAN,
-                max_other_fraction=MAX_OTHER_FRACTION, min_indel=MIN_INDEL, query_overlap=QUERY_OVERLAP,
+                max_other_fraction=MAX_OTHER_FRACTION, min_indel=MIN_INDEL, locus_tol=LOCUS_TOL,
                 tests=len(rows), test_verdicts=dict(Counter(r["test_verdict"] for r in rows)),
                 side_verdicts=dict(Counter("%s/%s" % (r["C_verdict"], r["E_verdict"]) for r in rows)),
                 loci=len(loci), evidence_levels=dict(Counter(l["evidence_level"] for l in loci)),

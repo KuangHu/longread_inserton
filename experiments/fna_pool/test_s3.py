@@ -3,7 +3,7 @@
 import random
 import sys
 import tempfile
-from collections import Counter
+from collections import Counter, defaultdict
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -167,12 +167,17 @@ def readcheck_cases(tmp):
                 "EA_len": 4000, "EA_j": "2000,2000,0,0", "C_site": "c:%d-%d" % (cs, cs + core), "E_site": "e:%d-%d" % (cs, cs)}
 
     def paf(name, lines):
+        """lines: (read, qlen, qs, qe, target, tlen, ts, te, tp, AS, cigar[, strand]); strand defaults to +."""
         p = tmp / name
-        p.write_text("".join("%s\t%d\t%d\t%d\t+\t%s\t%d\t%d\t%d\t1\t1\t60\ttp:A:%s\tAS:i:%d\tcg:Z:%s\n" % l for l in lines))
+        with open(str(p), "w") as h:
+            for l in lines:
+                q, ql, qs, qe, t, tl, ts, te, tp, sc, cg = l[:11]
+                h.write("%s\t%d\t%d\t%d\t%s\t%s\t%d\t%d\t%d\t1\t1\t60\ttp:A:%s\tAS:i:%d\tcg:Z:%s\n"
+                        % (q, ql, qs, qe, l[11] if len(l) > 11 else "+", t, tl, ts, te, tp, sc, cg))
         return p
 
     tests = [test("T1", "L1", 10000, 54), test("T2", "L2", 50000, 54), test("T3", "L3", 20000, 54),
-             test("T4", "L4", 20400, 54), test("T5", "L5", 30000, 5000)]
+             test("T4", "L4", 22900, 54), test("T5", "L5", 30000, 5000), test("T6", "L6", 70000, 54), test("T7", "L7", 90000, 54)]
     al = paf("al.paf", [
         # r1: alignment to the present allele deletes the whole 54 bp core; no absent-allele record (review case 1)
         ("r1", 4000, 0, 4000, "T1|C|P", 4054, 0, 4054, "P", 7800, "2000M54D2000M"),
@@ -186,32 +191,64 @@ def readcheck_cases(tmp):
         ("r4", 3000, 0, 3000, "T5|C|A", 4000, 500, 3500, "P", 6000, "3000M"),
         # r5a/r5b: two records of one molecule, both present at T1
         ("r5a", 4054, 0, 4054, "T1|C|P", 4054, 0, 4054, "P", 8000, "4054M"),
-        ("r5b", 4054, 0, 4054, "T1|C|P", 4054, 0, 4054, "P", 8000, "4054M")])
+        ("r5b", 4054, 0, 4054, "T1|C|P", 4054, 0, 4054, "P", 8000, "4054M"),
+        # r6: present at T6 locally, but that read segment sits at 500,000; another part of the read touches the
+        # T6 window by 1 bp (review v0.2 case 1)
+        ("r6", 4500, 0, 4054, "T6|C|P", 4054, 0, 4054, "P", 8000, "4054M"),
+        # r7: weak placement at T7, stronger repeat copy ending 1 bp inside the T7 window (review v0.2 case 2)
+        ("r7", 4054, 0, 4054, "T7|C|P", 4054, 0, 4054, "P", 8000, "4054M"),
+        # r8: genuine present read at T1 on the minus strand
+        ("r8", 4054, 0, 4054, "T1|C|P", 4054, 0, 4054, "P", 8000, "4054M", "-")])
     ge = paf("ge.paf", [
         ("r1", 4000, 0, 4000, "c", 10 ** 6, 8000, 12054, "P", 7800, "4000M"),
         ("r2", 4054, 0, 4054, "c", 10 ** 6, 8000, 12054, "P", 8000, "4054M"),
         ("r2", 4054, 0, 4054, "c", 10 ** 6, 48000, 52054, "S", 3000, "4054M"),
-        ("r3", 7000, 0, 7000, "c", 10 ** 6, 18000, 24454, "P", 14000, "7000M"),
-        ("r4", 3000, 0, 3000, "c", 10 ** 6, 28500, 31500, "P", 6000, "3000M"),
+        ("r3", 7000, 0, 7000, "c", 10 ** 6, 18000, 25000, "P", 14000, "7000M"),
+        ("r4", 3000, 0, 1500, "c", 10 ** 6, 28500, 30000, "P", 3000, "1500M"),
+        ("r4", 3000, 1500, 3000, "c", 10 ** 6, 35000, 36500, "P", 3000, "1500M"),
         ("r5a", 4054, 0, 4054, "c", 10 ** 6, 8000, 12054, "P", 8000, "4054M"),
-        ("r5b", 4054, 0, 4054, "c", 10 ** 6, 8000, 12054, "P", 8000, "4054M")])
-    mol = {"r1": "r1", "r2": "r2", "r3": "r3", "r4": "r4", "r5a": "m5", "r5b": "m5"}
+        ("r5b", 4054, 0, 4054, "c", 10 ** 6, 8000, 12054, "P", 8000, "4054M"),
+        ("r6", 4500, 0, 4054, "c", 10 ** 6, 500000, 504054, "P", 8000, "4054M"),
+        ("r6", 4500, 4054, 4500, "c", 10 ** 6, 69255, 69701, "S", 800, "446M"),
+        ("r7", 4054, 0, 4054, "c", 10 ** 6, 88000, 92054, "S", 3000, "4054M"),
+        ("r7", 4054, 0, 4054, "c", 10 ** 6, 85647, 89701, "P", 8000, "4054M"),
+        ("r8", 4054, 0, 4054, "c", 10 ** 6, 8000, 12054, "P", 8000, "4054M", "-")])
+    mol = {"r1": "r1", "r2": "r2", "r3": "r3", "r4": "r4", "r5a": "m5", "r5b": "m5", "r6": "r6", "r7": "r7", "r8": "r8"}
     counts, multi = rcheck.classify(tests, [(al, ge, mol)])
-    c = {t: counts[(t, "C")] for t in ("T1", "T2", "T3", "T4", "T5")}
-    ok.append(check("readcheck: deleted core in CIGAR is not present", c["T1"]["cigar_fail"] == 1 and c["T1"]["P"] == 2,
+    c = {t: counts[(t, "C")] for t in ("T1", "T2", "T3", "T4", "T5", "T6", "T7")}
+    ok.append(check("readcheck: deleted core in CIGAR is not present; minus-strand read kept", c["T1"]["cigar_fail"] == 1 and c["T1"]["P"] == 3,
                     dict(c["T1"])))
     ok.append(check("readcheck: weak second locus loses to genome-wide placement", c["T2"]["P"] == 0 and c["T2"]["locus_ambiguous"] == 1,
                     dict(c["T2"])))
     ok.append(check("readcheck: one read across two neighbouring loci supports both", c["T3"]["P"] == c["T4"]["P"] == 1 and multi[2] == 1,
                     (dict(c["T3"]), dict(c["T4"]), dict(multi))))
-    ok.append(check("readcheck: short absent read is raw but not length-matched", c["T5"]["A"] == 1 and c["T5"]["A_matched"] == 0,
-                    dict(c["T5"])))
+    ok.append(check("readcheck: short absent read (split genome placement) is raw but not length-matched",
+                    c["T5"]["A"] == 1 and c["T5"]["A_matched"] == 0, dict(c["T5"])))
+    ok.append(check("readcheck: read touching the site with another segment is off locus", c["T6"]["P"] == 0 and c["T6"]["off_locus"] == 1,
+                    dict(c["T6"])))
+    ok.append(check("readcheck: stronger repeat copy at the window edge competes", c["T7"]["P"] == 0 and c["T7"]["locus_ambiguous"] == 1,
+                    dict(c["T7"])))
     v01 = Counter()
     for b in rcheck.parse_paf(al):  # the v0.1 rule (span only) would have counted r1 present and r2 at T2
         tid, role, a_ = b["t"].split("|")
         lo, hi, _ = rcheck.test_geometry([t for t in tests if t["test_id"] == tid][0])[role]["iv"][a_]
         v01[tid] += b["ts"] <= lo and b["te"] >= hi and a_ == "P"
-    ok.append(check("readcheck: the same records pass the v0.1 span-only rule", v01["T1"] == 4 and v01["T2"] == 1, dict(v01)))
+    ok.append(check("readcheck: the same records pass the v0.1 span-only rule", v01["T1"] == 5 and v01["T2"] == 1, dict(v01)))
+
+    def v02_locus(alns, contig, lo, hi):  # the v0.2 rule: any genome alignment touching the site window, 50% query overlap
+        here = [g for g in alns if g["t"] == contig and rcheck.overlap(g["ts"], g["te"], lo, hi)]
+        if not here:
+            return "off_locus"
+        h = max(here, key=lambda g: g["score"])
+        return "locus_ambiguous" if any(all(g is not x for x in here) and rcheck.overlap(g["qs"], g["qe"], h["qs"], h["qe"])
+                                        >= 0.5 * min(g["qe"] - g["qs"], h["qe"] - h["qs"]) and g["score"] >= h["score"] - 20
+                                        for g in alns) else "ok"
+
+    galns = defaultdict(list)
+    for g in rcheck.parse_paf(ge):
+        galns[g["q"]].append(g)
+    old = [v02_locus(galns[r], "c", cs - 300, cs + 54 + 300) for r, cs in (("r6", 70000), ("r7", 90000))]
+    ok.append(check("readcheck: the v0.2 site-overlap rule accepted both review v0.2 cases", old == ["ok", "ok"], old))
     dup = rcheck.molecules([("a", rcheck.record_ids("a 0f1e2d3c-0000-4000-8000-000000000001 st:Z:x", "one_record_per_molecule")),
                             ("b", rcheck.record_ids("b 0f1e2d3c-0000-4000-8000-000000000002 st:Z:x", "one_record_per_molecule")),
                             ("d", rcheck.record_ids("d 0f1e2d3c-0000-4000-8000-000000000001;0f1e2d3c-0000-4000-8000-000000000002 st", "one_record_per_molecule")),
