@@ -8,6 +8,7 @@ catalog  One row per BioSample from pool.tsv + S1 verify.json + the BioSample at
          joint_index.json records its path and SHA256). Pool rows whose primary download is not verified are left out
          of the catalog and listed in catalog_excluded.tsv with their S1 status and reason.
 sources  Recompute the source flags in catalog.tsv only (no joint FNA rewrite).
+gffcheck Recompute the GFF coordinate columns in catalog.tsv only (no joint FNA rewrite).
 ani      skani triangle -E --slow over every FNA (same command as batch50); edge list kept on scratch.
 pairs    Clone groups (ANI >= 99.99 and AF >= 95 both ways), species clusters (single linkage, ANI >= 95 and
          AF >= 50 both ways), genus from the organism name. Pair table for S3: per assembly up to 1 clone partner,
@@ -92,18 +93,31 @@ def read_tsv(path):
         return list(csv.DictReader(h, delimiter="\t"))
 
 
-def gff_out_of_range(path, lengths):
-    """GFF3 feature rows whose seqid is not an FNA record or whose coordinates fall outside it."""
-    n = 0
+def gff_ranges(path, lengths):
+    """GFF3 feature rows (origin-spanning on a circular record, outside their FNA record). GFF3 writes a feature
+    across the origin of a circular sequence (region Is_circular=true) with end > length; those are counted
+    separately and are not errors. Any other row whose seqid is not an FNA record or whose coordinates fall
+    outside it is out of range."""
+    rows = []
+    circular = set()
     with open(str(path)) as f:
         for line in f:
             if line.startswith("#") or not line.strip():
                 continue
-            c = line.split("\t", 5)
-            L = lengths.get(c[0])
-            if L is None or not 1 <= int(c[3]) <= int(c[4]) <= L:
-                n += 1
-    return n
+            c = line.split("\t")
+            if c[2] == "region" and "Is_circular=true" in c[8]:
+                circular.add(c[0])
+            rows.append((c[0], int(c[3]), int(c[4])))
+    wrap = bad = 0
+    for seqid, start, end in rows:
+        L = lengths.get(seqid)
+        if L is not None and 1 <= start <= end <= L:
+            continue
+        if L is not None and seqid in circular and 1 <= start <= L < end < start + L:
+            wrap += 1
+        else:
+            bad += 1
+    return wrap, bad
 
 
 def catalog(a):
@@ -151,13 +165,14 @@ def catalog(a):
             mol = v.get("molecule_types", {})
             lengths = {c["contig"]: c["length"] for c in contigs[first:]}
             gff = data / "genomes" / acc / "genomic.gff"
-            oor = gff_out_of_range(gff, lengths) if gff.exists() else ""
+            wrap, oor = gff_ranges(gff, lengths) if gff.exists() else ("", "")
             rows.append(dict(
                 sample_id=sample, assembly=acc, genbank_accession=p["genbank_accession"], role=p["role"],
                 organism=p["organism"], genus=p["organism"].split()[0].strip("[]"), tax_id=p["tax_id"], strain=p["strain"],
                 bioproject=p["bioproject"], assembly_level=p["assembly_level"], records=v["records"], total_bp=v["fna_bp"],
                 plasmid_records=mol.get("Plasmid", 0), annotation=v.get("annotation", ""),
-                annotation_status=v.get("annotation_status", ""), gff_features_out_of_range=oor, linked_read_types=p["linked_read_types"],
+                annotation_status=v.get("annotation_status", ""), gff_features_origin_spanning=wrap,
+                gff_features_out_of_range=oor, linked_read_types=p["linked_read_types"],
                 n_usable_runs=p["n_usable_runs"], atypical=p["atypical"], source_class=cls, source_note=note, source_rules=SOURCE_RULES,
                 host=at.get("host", ""), isolation_source=at.get("isolation_source", ""), env_medium=at.get("env_medium", ""),
                 geo_loc_name=at.get("geo_loc_name", ""), collection_date=at.get("collection_date", ""),
@@ -182,6 +197,7 @@ def catalog(a):
                 check="every joint record SHA256 equals the S1 record SHA256 of its source FNA",
                 pool_rows=len(pool), excluded_not_verified=len(excluded),
                 annotation_status=dict(Counter(r["annotation_status"] for r in rows)),
+                gff_features_origin_spanning=sum(r["gff_features_origin_spanning"] or 0 for r in rows),
                 gff_features_out_of_range=sum(r["gff_features_out_of_range"] or 0 for r in rows))
     if a.index_dir:
         meta.update(contig_index=str(index), contig_index_sha256=sha256(index))
@@ -207,6 +223,28 @@ def sources(a):
     cols.insert(cols.index("source_note") + 1, "source_rules")
     write_tsv(a.out / "catalog.tsv", [{c: r[c] for c in cols} for r in cat])
     print(dict(Counter(r["source_class"] for r in cat)), "changed:", dict(changed))
+
+
+def gffcheck(a):
+    """Recompute the GFF coordinate columns of catalog.tsv (and joint_index.json totals) from the contig index."""
+    cat = read_tsv(a.out / "catalog.tsv")
+    meta = json.loads((a.out / "joint_index.json").read_text())
+    lengths = defaultdict(dict)
+    for c in read_tsv(meta.get("contig_index") or a.out / "contig_index.tsv.gz"):
+        lengths[c["assembly"]][c["contig"]] = int(c["length"])
+    for r in cat:
+        gff = a.work / "data" / "genomes" / r["assembly"] / "genomic.gff"
+        wrap, oor = gff_ranges(gff, lengths[r["assembly"]]) if gff.exists() else ("", "")
+        r.pop("gff_features_origin_spanning", None)
+        r.update(gff_features_origin_spanning=wrap, gff_features_out_of_range=oor)
+    cols = [c for c in cat[0] if c != "gff_features_origin_spanning"]
+    cols.insert(cols.index("gff_features_out_of_range"), "gff_features_origin_spanning")
+    write_tsv(a.out / "catalog.tsv", [{c: r[c] for c in cols} for r in cat])
+    for k in ("gff_features_origin_spanning", "gff_features_out_of_range"):
+        meta[k] = sum(int(r[k] or 0) for r in cat)
+    (a.out / "joint_index.json").write_text(json.dumps(meta, indent=2) + "\n")
+    print({k: meta[k] for k in ("gff_features_origin_spanning", "gff_features_out_of_range")},
+          [(r["assembly"], r["gff_features_out_of_range"]) for r in cat if int(r["gff_features_out_of_range"] or 0)][:20])
 
 
 def ani(a, threads):
@@ -362,7 +400,7 @@ def pairs(a):
 
 def main():
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    p.add_argument("mode", choices=["catalog", "sources", "ani", "pairs"])
+    p.add_argument("mode", choices=["catalog", "sources", "gffcheck", "ani", "pairs"])
     p.add_argument("--work", type=Path, required=True, help="pool work dir on scratch (raw/, data/, s2/)")
     p.add_argument("--pool-dir", type=Path, required=True, help="repo dir with pool.tsv")
     p.add_argument("--out", type=Path, required=True, help="repo dir for S2 tables")
@@ -370,7 +408,7 @@ def main():
     p.add_argument("--index-dir", type=Path, help="catalog: write contig_index.tsv.gz here (scratch) instead of --out")
     a = p.parse_args()
     a.out.mkdir(parents=True, exist_ok=True)
-    dict(catalog=catalog, sources=sources, pairs=pairs)[a.mode](a) if a.mode != "ani" else ani(a, a.threads)
+    dict(catalog=catalog, sources=sources, gffcheck=gffcheck, pairs=pairs)[a.mode](a) if a.mode != "ani" else ani(a, a.threads)
 
 
 if __name__ == "__main__":
