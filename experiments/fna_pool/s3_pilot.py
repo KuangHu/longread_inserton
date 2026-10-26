@@ -94,12 +94,15 @@ def crosstab(a):
         if l["status"] != "two_flank_anchored" or int(l["core_len"]) >= SHORT:
             continue
         if l["carrier"] not in feats:
-            feats[l["carrier"]] = gff_units(gff[l["carrier"]])
+            # No GFF3 (assembly without annotation): the locus stays in the table as annotation_pending.
+            feats[l["carrier"]] = gff_units(gff[l["carrier"]]) if Path(gff[l["carrier"]]).exists() else None
         s, e = int(l["core_start"]), int(l["core_end"])
-        us = feats[l["carrier"]].get(l["contig"], [])
+        us = (feats[l["carrier"]] or {}).get(l["contig"], [])
         cut = [u for u in us if u["s"] < s < u["e"] or u["s"] < e < u["e"]]
         inside = [u for u in us if u["type"] == "CDS" and s <= u["s"] and u["e"] <= e]
-        if cut:
+        if feats[l["carrier"]] is None:
+            cds = "annotation_pending"
+        elif cut:
             cds = "boundary_cuts_feature"
         elif any(u["pseudo"] for u in inside):
             cds = "contains_pseudo"
