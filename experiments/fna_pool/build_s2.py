@@ -1,9 +1,12 @@
 """S2: catalog, joint FNA index, measured distances and the S3 pair table for one verified pool.
 
 catalog  One row per BioSample from pool.tsv + S1 verify.json + the BioSample attributes in the S0 NCBI snapshot:
-         FNA path/SHA256, records, plasmids, taxon, linked read types, and the batch50 source rule
-         with two fixes (SOURCE_RULES; source_class is a flag, nothing is removed from discovery). Writes the joint FASTA
-         (headers sample|assembly|contig, each contig kept separate, bases unchanged) and contig_index.tsv.
+         FNA path/SHA256, records, plasmids, taxon, linked read types, annotation status, GFF feature coordinates
+         outside their contig, and the batch50 source rule with two fixes (SOURCE_RULES; source_class is a flag,
+         nothing is removed from discovery). Writes the joint FASTA (headers sample|assembly|contig, each contig kept
+         separate, bases unchanged) and contig_index.tsv.gz (to --index-dir when given: large pools keep it on scratch,
+         joint_index.json records its path and SHA256). Pool rows whose primary download is not verified are left out
+         of the catalog and listed in catalog_excluded.tsv with their S1 status and reason.
 sources  Recompute the source flags in catalog.tsv only (no joint FNA rewrite).
 ani      skani triangle -E --slow over every FNA (same command as batch50); edge list kept on scratch.
 pairs    Clone groups (ANI >= 99.99 and AF >= 95 both ways), species clusters (single linkage, ANI >= 95 and
@@ -89,22 +92,47 @@ def read_tsv(path):
         return list(csv.DictReader(h, delimiter="\t"))
 
 
+def gff_out_of_range(path, lengths):
+    """GFF3 feature rows whose seqid is not an FNA record or whose coordinates fall outside it."""
+    n = 0
+    with open(str(path)) as f:
+        for line in f:
+            if line.startswith("#") or not line.strip():
+                continue
+            c = line.split("\t", 5)
+            L = lengths.get(c[0])
+            if L is None or not 1 <= int(c[3]) <= int(c[4]) <= L:
+                n += 1
+    return n
+
+
 def catalog(a):
     data, s2 = a.work / "data", a.work / "s2"
     s2.mkdir(exist_ok=True)
     pool = read_tsv(a.pool_dir / "pool.tsv")
     reports = load_reports(a.work)
-    rows, contigs = [], []
+    state = {}
+    for line in open(str(data / "state.jsonl")):
+        d = json.loads(line)
+        state[d["accession"]] = d
+    rows, contigs, excluded = [], [], []
     joint = s2 / "joint.fna.gz"
     with gzip.open(str(joint), "wt", compresslevel=6) as out:
         for p in pool:
             acc = p["download_accession"]
-            v = json.loads((data / "genomes" / acc / "verify.json").read_text())
+            vp = data / "genomes" / acc / "verify.json"
+            v = json.loads(vp.read_text()) if vp.exists() else {}
+            if state.get(acc, {}).get("status") != "verified" or v.get("status") != "verified":
+                excluded.append(dict(sample_id=p["biosample"], assembly=acc, s1_status=state.get(acc, {}).get("status", "pending"),
+                                     reason=state.get(acc, {}).get("reason", "") or v.get("reason", ""),
+                                     note="primary download not verified; not used by any caller"))
+                continue
             fna = [f["file"] for f in v["files"] if f["file"].endswith("_genomic.fna")][0]
             rep = reports.get(acc) or reports.get(p["genbank_accession"])
             at = attrs(rep)
             cls, note = source_class(rep)
             sample = p["biosample"]
+            first = len(contigs)
             with open(str(data / "genomes" / acc / fna)) as f:
                 name, seq = None, []
                 for line in itertools.chain(f, [">"]):
@@ -121,11 +149,15 @@ def catalog(a):
                     else:
                         seq.append(line.strip())
             mol = v.get("molecule_types", {})
+            lengths = {c["contig"]: c["length"] for c in contigs[first:]}
+            gff = data / "genomes" / acc / "genomic.gff"
+            oor = gff_out_of_range(gff, lengths) if gff.exists() else ""
             rows.append(dict(
                 sample_id=sample, assembly=acc, genbank_accession=p["genbank_accession"], role=p["role"],
                 organism=p["organism"], genus=p["organism"].split()[0].strip("[]"), tax_id=p["tax_id"], strain=p["strain"],
                 bioproject=p["bioproject"], assembly_level=p["assembly_level"], records=v["records"], total_bp=v["fna_bp"],
-                plasmid_records=mol.get("Plasmid", 0), annotation=v.get("annotation", ""), linked_read_types=p["linked_read_types"],
+                plasmid_records=mol.get("Plasmid", 0), annotation=v.get("annotation", ""),
+                annotation_status=v.get("annotation_status", ""), gff_features_out_of_range=oor, linked_read_types=p["linked_read_types"],
                 n_usable_runs=p["n_usable_runs"], atypical=p["atypical"], source_class=cls, source_note=note, source_rules=SOURCE_RULES,
                 host=at.get("host", ""), isolation_source=at.get("isolation_source", ""), env_medium=at.get("env_medium", ""),
                 geo_loc_name=at.get("geo_loc_name", ""), collection_date=at.get("collection_date", ""),
@@ -139,11 +171,20 @@ def catalog(a):
         for k, h in v["record_sha256"].items():
             assert by[(r["assembly"], k)]["sha256"] == h, (r["assembly"], k)
     write_tsv(a.out / "catalog.tsv", rows)
-    write_tsv(a.out / "contig_index.tsv.gz", contigs)
+    index = (a.index_dir or a.out) / "contig_index.tsv.gz"
+    index.parent.mkdir(parents=True, exist_ok=True)
+    write_tsv(index, contigs)
+    if excluded:
+        write_tsv(a.out / "catalog_excluded.tsv", excluded)
     (s2 / "genomes.list").write_text("".join(str(data / r["fna_path"]) + "\n" for r in rows))
     meta = dict(joint_fna=str(joint), joint_fna_sha256=sha256(joint), samples=len(rows), contigs=len(contigs),
                 contig_bp=sum(c["length"] for c in contigs), header="sample_id|assembly|contig",
-                check="every joint record SHA256 equals the S1 record SHA256 of its source FNA")
+                check="every joint record SHA256 equals the S1 record SHA256 of its source FNA",
+                pool_rows=len(pool), excluded_not_verified=len(excluded),
+                annotation_status=dict(Counter(r["annotation_status"] for r in rows)),
+                gff_features_out_of_range=sum(r["gff_features_out_of_range"] or 0 for r in rows))
+    if a.index_dir:
+        meta.update(contig_index=str(index), contig_index_sha256=sha256(index))
     (a.out / "joint_index.json").write_text(json.dumps(meta, indent=2) + "\n")
     print(json.dumps(meta, indent=2), dict(Counter(r["source_class"] for r in rows)))
 
@@ -178,6 +219,11 @@ def ani(a, threads):
                 edges_sha256=sha256(edges), rows=sum(1 for _ in open(str(edges))) - 1)
     (a.out / "skani_run.json").write_text(json.dumps(meta, indent=2) + "\n")
     print(json.dumps(meta, indent=2))
+
+
+def is_linked(r):
+    """Has existing ONT/PacBio run links (the baseline role "linked" is exactly this; assembly-first pools have one role)."""
+    return bool(r["linked_read_types"])
 
 
 def stable(key):
@@ -229,7 +275,7 @@ def pairs(a):
     for i in ids:
         members[species[i]].append(i)
     nproj = {c: len({info[i]["bioproject"] for i in m}) for c, m in members.items()}
-    linked = {c: sum(info[i]["role"] == "linked" for i in m) for c, m in members.items()}
+    linked = {c: sum(is_linked(info[i]) for i in m) for c, m in members.items()}
     eligible = [c for c, n in sizes.items() if AUDIT_MIN <= n <= AUDIT_MAX]
     single = sorted((c for c in eligible if nproj[c] == 1), key=lambda c: (-linked[c], -sizes[c], c))
     multi = sorted((c for c in eligible if nproj[c] > 1), key=lambda c: (-nproj[c], -linked[c], c))
@@ -253,7 +299,7 @@ def pairs(a):
                 tier = [t for t, lo, hi in DISTANCE_TIERS if lo <= e["ani"] < hi][0]
             tier_pool[tier].append((x, y))
     for tier, ps in tier_pool.items():
-        ps.sort(key=lambda p: ("linked" not in (info[p[0]]["role"], info[p[1]]["role"]), stable("|".join(p))))
+        ps.sort(key=lambda p: (not (is_linked(info[p[0]]) or is_linked(info[p[1]])), stable("|".join(p))))
         for x, y in ps[:PER_TIER]:
             add(x, y, "distance_tier_" + tier)
 
@@ -268,8 +314,8 @@ def pairs(a):
             same_species_cluster=species[x] == species[y],
             pair_meets_species_threshold=meets(e, SPECIES_ANI, SPECIES_AF),
             same_genus_name=info[x]["genus"] == info[y]["genus"], same_bioproject=info[x]["bioproject"] == info[y]["bioproject"],
-            both_linked=info[x]["role"] == info[y]["role"] == "linked",
-            either_linked="linked" in (info[x]["role"], info[y]["role"])))
+            both_linked=is_linked(info[x]) and is_linked(info[y]),
+            either_linked=is_linked(info[x]) or is_linked(info[y])))
     in_pair = Counter(s for r in rows for s in (r["sample_a"], r["sample_b"]))
     for r in cat:
         sid = r["sample_id"]
@@ -287,12 +333,12 @@ def pairs(a):
         samples_without_skani_output_note=("no skani output under its default screen (~80% ANI k-mer screen) and AF >= 15 reporting; "
                                            "not evidence that no local homology exists"),
         pair_status=dict(Counter(r["pair_status"] for r in cat)),
-        pair_status_linked=dict(Counter(r["pair_status"] for r in cat if r["role"] == "linked")),
+        pair_status_linked=dict(Counter(r["pair_status"] for r in cat if is_linked(r))),
         clone_groups=len(set(clone.values())), clone_groups_size_gt1=sum(1 for n in Counter(clone.values()).values() if n > 1),
         species_clusters=len(sizes), species_cluster_sizes=dict(sorted(Counter(sizes.values()).items())),
         species_clusters_ge_10=sum(1 for n in sizes.values() if n >= 10), genera=len(by_genus),
         source_rules=SOURCE_RULES, source_class=dict(Counter(r["source_class"] for r in cat)),
-        source_class_linked=dict(Counter(r["source_class"] for r in cat if r["role"] == "linked")),
+        source_class_linked=dict(Counter(r["source_class"] for r in cat if is_linked(r))),
         pairs=len(rows), pairs_with_multiple_reasons=sum(";" in r["reasons"] for r in rows),
         pairs_by_reason=dict(sorted(Counter(x for r in rows for x in r["reasons"].split(";")).items())),
         pairs_same_cluster_below_species_threshold=same_cluster_below,
@@ -321,6 +367,7 @@ def main():
     p.add_argument("--pool-dir", type=Path, required=True, help="repo dir with pool.tsv")
     p.add_argument("--out", type=Path, required=True, help="repo dir for S2 tables")
     p.add_argument("--threads", type=int, default=16)
+    p.add_argument("--index-dir", type=Path, help="catalog: write contig_index.tsv.gz here (scratch) instead of --out")
     a = p.parse_args()
     a.out.mkdir(parents=True, exist_ok=True)
     dict(catalog=catalog, sources=sources, pairs=pairs)[a.mode](a) if a.mode != "ani" else ani(a, a.threads)

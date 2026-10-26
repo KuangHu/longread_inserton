@@ -8,7 +8,8 @@
 #SBATCH --mem=64G
 #SBATCH --time=4:00:00
 #SBATCH --output=/global/home/users/kh36969/logs/fna_pool/%x_%j.out
-# S2 for one pool: catalog + joint FNA, skani triangle, pair table. Usage: sbatch s2.sbatch <pool name>
+# S2 for one pool: catalog + joint FNA, skani triangle, pair table. Usage: sbatch s2.sbatch <pool name> [scratch-index]
+# scratch-index: write contig_index.tsv.gz to the pool's scratch s2/ (large pools); joint_index.json records path and SHA256
 set -euo pipefail
 POOL=${1:?pool name, e.g. comamonadaceae_20261024}
 PROJ=/global/scratch/users/kh36969/longread_callout
@@ -19,6 +20,7 @@ echo "[$(date -Is)] host=$(hostname) pool=$POOL commit=$(git -C $CODE rev-parse 
 source ~/miniconda3/etc/profile.d/conda.sh
 conda activate $PROJ/env/msi
 ARGS="--work $W --pool-dir $HERE/$POOL --out $HERE/$POOL/s2"
+[ "${2:-}" = scratch-index ] && ARGS="$ARGS --index-dir $W/s2"
 for step in catalog ani pairs; do
     echo "[$(date -Is)] $step"
     /usr/bin/time -v -o $W/s2_time_$step.txt python $HERE/build_s2.py $step $ARGS --threads $SLURM_CPUS_PER_TASK
