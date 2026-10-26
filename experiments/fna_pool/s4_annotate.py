@@ -32,6 +32,9 @@ review    One row per anchored locus with core < SHORT bp (s4_loci.tsv.gz) plus 
             gene_integrity_anomaly  an inside CDS is pseudo/partial/translation or codon problem
             boundary_or_repeat_review  annotation passes but boundaries are not exact or the core is tandem-like
             other_structure      0 CDS or > 2 complete CDS
+            annotation_pending   the carrier assembly has no GFF3/FAA (S1 annotation_missing): no boundary or coding
+                                 check is possible, so the locus cannot enter main; written to
+                                 list_annotation_pending.tsv, outside the candidate lists used by families/seeds
 families  Proteins of complete CDS in main / partner_mixed / direction_mixed / short_other_segment / replacement,
           deduplicated by sequence, clustered with MMseqs2 easy-cluster at two frozen settings: family (min-seq-id
           0.9, coverage 0.8 of both sequences, cov-mode 0, cluster-mode 0 = set cover, every member aligned to the
@@ -65,6 +68,7 @@ VERSION = "s4_annotate_v0.2"
 SHORT = 2500
 CONTEXT = 300
 LISTS = ["main", "partner_mixed", "direction_mixed", "short_other_segment", "replacement"]
+PENDING = "annotation_pending"
 MMSEQS_SETTINGS = {"family": ["--min-seq-id", "0.9", "-c", "0.8", "--cov-mode", "0", "--cluster-mode", "0", "--cluster-reassign", "1"],
                    "homology_group": ["--min-seq-id", "0.5", "-c", "0.8", "--cov-mode", "0", "--cluster-mode", "0", "--cluster-reassign", "1"]}
 MEMBER_MIN = {"family": (0.9, 0.8), "homology_group": (0.5, 0.8)}  # identity, coverage of both sequences
@@ -329,11 +333,15 @@ def cmd_review(a):
         seqs = read_fasta(f["fna"])
         gff = Path(f["gff"])
         faa_path = gff.parent / "protein.faa"
-        faa = read_faa(faa_path)
-        units = parse_gff(gff, {k: len(v) for k, v in seqs.items()})
         v = json.load(open(str(gff.parent / "verify.json")))
+        annotated = gff.exists() and faa_path.exists()
+        faa = read_faa(faa_path) if annotated else {}
+        units = parse_gff(gff, {k: len(v) for k, v in seqs.items()}) if annotated else {}
         ann.append(dict(sample=carrier, organism=f["organism"], accession=v.get("accession", ""), annotation=v.get("annotation", ""),
-                        gff=str(gff), gff_sha256=sha256(gff), faa_sha256=sha256(faa_path), loci=len(ls)))
+                        gff=str(gff) if gff.exists() else "", gff_sha256=sha256(gff) if gff.exists() else "",
+                        faa_sha256=sha256(faa_path) if faa_path.exists() else "", loci=len(ls)))
+        if not annotated:
+            ann[-1]["annotation_status"] = v.get("annotation_status", "")  # S1 status, e.g. annotation_missing
         for l in ls:
             s, e = int(l["core_start"]), int(l["core_end"])
             seq, us = seqs[l["contig"]], units.get(l["contig"], [])
@@ -351,6 +359,8 @@ def cmd_review(a):
                 cds_class = "integrity_anomaly"
             else:
                 cds_class = "0_CDS" if not inside else "1-2_complete_CDS" if len(inside) <= 2 else ">2_complete_CDS"
+            if not annotated:
+                cds_class = PENDING
             orient = ["+" if u["strand"] == "+" else "-" for u in inside]
             rows.append(dict(
                 locus_id=l["locus_id"], carrier=carrier, organism=f["organism"], contig=l["contig"], core_start=s, core_end=e,
@@ -358,7 +368,7 @@ def cmd_review(a):
                 partners_anchored=l["partners_anchored"], partners_not_anchored=l["partners_not_anchored"],
                 boundary_consistency=l["boundary_consistency"], tandem_like=l["tandem_like"], n_pairs=l["n_pairs"],
                 core_copies_carrier=l["core_copies_carrier"], core_copies_empty=l["core_copies_empty"],
-                cds_class=cds_class, category=categorise(l, cds_class, rel),
+                cds_class=cds_class, category=categorise(l, cds_class, rel) if annotated else PENDING,
                 boundary_relations=";".join(sorted({r for r, _ in rel})),
                 crossing_features=";".join("%s:%s:%s" % (r, u["type"], u["product"]) for r, u in rel),
                 cds_units=len(inside), unit_ids=";".join(u["id"] for u in inside), protein_ids=";".join(u["protein"] for u in inside),
@@ -371,7 +381,11 @@ def cmd_review(a):
         print(carrier, len(ls), file=sys.stderr)
     a.out.mkdir(parents=True, exist_ok=True)
     write(a.out / "s4_loci.tsv.gz", rows)
-    write(a.out / "annotation_files.tsv", ann)
+    # annotation_status column only when some carrier has no annotation (baseline table unchanged)
+    cols = list(ann[0]) + (["annotation_status"] if any("annotation_status" in x for x in ann) and "annotation_status" not in ann[0] else [])
+    write(a.out / "annotation_files.tsv", [dict({c: "" for c in cols}, **x) for x in ann], cols)
+    if any(r["category"] == PENDING for r in rows):
+        write(a.out / ("list_%s.tsv" % PENDING), [r for r in rows if r["category"] == PENDING], list(rows[0]))
     for cat in LISTS:
         write(a.out / ("list_%s.tsv" % cat), [r for r in rows if r["category"] == cat], list(rows[0]))
     summ = dict(version=VERSION, short=SHORT, loci=len(rows), carriers=len(ann), categories=dict(Counter(r["category"] for r in rows)),
@@ -383,7 +397,7 @@ def cmd_review(a):
                                carriers=len({r["carrier"] for r in rows if r["category"] == c}),
                                cds_units=sum(int(r["cds_units"]) for r in rows if r["category"] == c),
                                protein_ids=len({p for r in rows if r["category"] == c for p in r["protein_ids"].split(";") if p}))
-                       for c in LISTS})
+                       for c in LISTS + [PENDING]})
     (a.out / "s4_summary.json").write_text(json.dumps(summ, indent=1) + "\n")
     print(json.dumps(summ, indent=1))
 
