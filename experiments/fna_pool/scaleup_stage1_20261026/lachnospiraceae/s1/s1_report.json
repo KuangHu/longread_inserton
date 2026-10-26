@@ -1,0 +1,39 @@
+{
+  "manifest": "scaleup_stage1_20261026/lachnospiraceae/download_manifest.tsv",
+  "rows": 5993,
+  "status": {
+    "verified": 5991,
+    "failed": 2
+  },
+  "by_purpose": {
+    "gca_identity_check": {
+      "verified": 2739
+    },
+    "primary": {
+      "verified": 3252,
+      "failed": 2
+    }
+  },
+  "annotation": {
+    "annotation_missing": 284,
+    "present": 2968
+  },
+  "pair_checks": {
+    "identical_sequences": 2737,
+    "not_checked_download_incomplete": 2
+  },
+  "bytes": 34908205015,
+  "files": 17918,
+  "failed": [
+    {
+      "accession": "GCF_902652075.1",
+      "attempts": 3,
+      "reason": "package_md5_all_ok"
+    },
+    {
+      "accession": "GCF_902652265.1",
+      "attempts": 3,
+      "reason": "package_md5_all_ok"
+    }
+  ]
+}

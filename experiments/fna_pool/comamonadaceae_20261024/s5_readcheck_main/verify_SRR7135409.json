@@ -1,0 +1,48 @@
+{
+  "run": {
+    "run": "SRR7135409",
+    "sample_id": "SAMN08775346",
+    "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR713/009/SRR7135409/SRR7135409_subreads.fastq.gz",
+    "fastq_bytes": 378726752,
+    "fastq_md5": "1092a79ca61b2c1929c63cbd695c6b6d",
+    "platform": "PACBIO_SMRT",
+    "archive_base_count": 437372462,
+    "archive_read_count": 93549
+  },
+  "download_started": "2026-10-25T20:36:31-0700",
+  "local_file": "/global/scratch/users/kh36969/longread_callout/data/reads/SRR7135409/SRR7135409_subreads.fastq.gz",
+  "bytes": 378726752,
+  "md5": "1092a79ca61b2c1929c63cbd695c6b6d",
+  "sha256": "05711ede2f32cbad58b7a1923bc726c327e9c96d4a325770e54bf93482bad163",
+  "rejected_downloads": [],
+  "spots_absent_from_fastq": 0,
+  "summary": {
+    "records": 93549,
+    "bases": 437372462,
+    "read_unit_counts": {
+      "name_stripped": 93549
+    },
+    "distinct_zmws": null,
+    "distinct_sra_spots": 93549,
+    "max_records_per_spot": 1,
+    "placeholder_quality_records": 0,
+    "example_headers": [
+      "@SRR7135409.1 1/1",
+      "@SRR7135409.2 2/1",
+      "@SRR7135409.3 3/1",
+      "@SRR7135409.4 4/1"
+    ],
+    "mean_length": 4675.3,
+    "median_length": 3674,
+    "max_length": 20005,
+    "n50": 7021,
+    "molecule_grouping": "molecule_grouping_unavailable"
+  },
+  "checks": {
+    "bytes_match": true,
+    "md5_match": true,
+    "spot_count_match": true,
+    "base_count_match": true
+  },
+  "status": "verified"
+}

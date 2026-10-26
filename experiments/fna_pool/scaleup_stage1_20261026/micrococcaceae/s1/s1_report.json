@@ -1,0 +1,33 @@
+{
+  "manifest": "scaleup_stage1_20261026/micrococcaceae/download_manifest.tsv",
+  "rows": 5708,
+  "status": {
+    "verified": 5707,
+    "failed": 1
+  },
+  "by_purpose": {
+    "gca_identity_check": {
+      "verified": 2733
+    },
+    "primary": {
+      "verified": 2974,
+      "failed": 1
+    }
+  },
+  "annotation": {
+    "present": 2958,
+    "annotation_missing": 16
+  },
+  "pair_checks": {
+    "identical_sequences": 2733
+  },
+  "bytes": 30473499956,
+  "files": 17330,
+  "failed": [
+    {
+      "accession": "GCA_977014115.1",
+      "attempts": 3,
+      "reason": "annotation_files_complete"
+    }
+  ]
+}

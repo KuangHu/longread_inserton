@@ -1,0 +1,48 @@
+{
+  "run": {
+    "run": "ERR15741489",
+    "sample_id": "SAMEA120399599",
+    "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR157/089/ERR15741489/ERR15741489.fastq.gz",
+    "fastq_bytes": 778884721,
+    "fastq_md5": "ebab213885f6acb3f3112a4fd8b278af",
+    "platform": "OXFORD_NANOPORE",
+    "archive_base_count": 981984478,
+    "archive_read_count": 383624
+  },
+  "download_started": "2026-10-25T18:23:19-0700",
+  "local_file": "/global/scratch/users/kh36969/longread_callout/data/reads/ERR15741489/ERR15741489.fastq.gz",
+  "bytes": 778884721,
+  "md5": "ebab213885f6acb3f3112a4fd8b278af",
+  "sha256": "9dac2bbb7615cb0cc43bb96e033b36fb9b77cbadb803d909b6fbcd14d42540b5",
+  "rejected_downloads": [],
+  "spots_absent_from_fastq": 0,
+  "summary": {
+    "records": 383624,
+    "bases": 981984478,
+    "read_unit_counts": {
+      "other_name": 383624
+    },
+    "distinct_zmws": null,
+    "distinct_sra_spots": 383624,
+    "max_records_per_spot": 1,
+    "placeholder_quality_records": 1,
+    "example_headers": [
+      "@ERR15741489.1 f496687b-7aba-4499-9074-fa0630a11347 qs:f:29.801 st:Z:2025-10-14T09:05:29.533+00:00 RG:Z:27ef4dce-dc22-4956-9f2f-125817e9444e_dna_r10.4.1_e8.2_400bps_sup@v5.0.0",
+      "@ERR15741489.2 e4709d54-7c04-4210-8f36-34f698a5d693 qs:f:27.4919 st:Z:2025-10-14T09:11:49.430+00:00 RG:Z:27ef4dce-dc22-4956-9f2f-125817e9444e_dna_r10.4.1_e8.2_400bps_sup@v5.0.0",
+      "@ERR15741489.3 4aad90d9-dca5-43e3-acc1-9ae9eadfe566 qs:f:29.999 st:Z:2025-10-14T09:13:14.298+00:00 RG:Z:27ef4dce-dc22-4956-9f2f-125817e9444e_dna_r10.4.1_e8.2_400bps_sup@v5.0.0",
+      "@ERR15741489.4 6f7665d3-1650-4007-84ba-2c35a3a602a7 qs:f:23.8027 st:Z:2025-10-14T09:15:35.217+00:00 RG:Z:27ef4dce-dc22-4956-9f2f-125817e9444e_dna_r10.4.1_e8.2_400bps_sup@v5.0.0"
+    ],
+    "mean_length": 2559.8,
+    "median_length": 451.0,
+    "max_length": 461657,
+    "n50": 6762,
+    "molecule_grouping": "one_record_per_molecule"
+  },
+  "checks": {
+    "bytes_match": true,
+    "md5_match": true,
+    "spot_count_match": true,
+    "base_count_match": true
+  },
+  "status": "verified"
+}
