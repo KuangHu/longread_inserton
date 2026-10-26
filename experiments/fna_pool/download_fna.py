@@ -4,6 +4,9 @@ run     Takes manifest rows not yet verified (failed rows are retried up to --ma
         dehydrated package -> rehydrate -> per-accession checks -> move into <data>/genomes/<accession>/.
         A file only becomes usable after its accession passes; every attempt is appended to <data>/state.jsonl.
         Re-running continues where it stopped. One instance at a time (<data>/.lock).
+reuse   Before run: for manifest rows already verified under another data root (--reuse-from), with the same include and
+        BioSample, hard-link genomes/<accession>/ into --data after re-hashing every file against its verify.json, and
+        append a verified state entry with reused_from. Anything that does not match is left for run.
 report  Pair check (GCF vs GCA record sequences) and summary: <data>/report.json, plus small tables for git
         (--out): files.tsv (bytes, MD5, SHA256 per file), accessions.tsv (checks per accession), pair_checks.tsv.
 
@@ -320,9 +323,42 @@ def report(a):
     print(json.dumps({k: v for k, v in out.items() if k != "failed"}, indent=2), "\nfailed:", len(out["failed"]))
 
 
+def reuse(a):
+    data = a.data
+    (data / "genomes").mkdir(parents=True, exist_ok=True)
+    rows = list(csv.DictReader(open(str(a.manifest)), delimiter="\t"))
+    state, old = load_state(data), load_state(a.reuse_from)
+    n = Counter()
+    for r in rows:
+        acc = r["accession"]
+        src = a.reuse_from / "genomes" / acc
+        if state.get(acc, {}).get("status") == "verified":
+            n["already_verified_here"] += 1
+            continue
+        if old.get(acc, {}).get("status") != "verified" or not (src / "verify.json").exists():
+            n["not_verified_in_source"] += 1
+            continue
+        v = json.loads((src / "verify.json").read_text())
+        if v.get("status") != "verified" or v.get("include") != r["include"] or v.get("biosample_manifest") != r["biosample"]:
+            n["source_differs(include/biosample/status)"] += 1
+            continue
+        if any(hashes(src / f["file"])[1] != f["sha256"] for f in v["files"]):
+            n["source_file_changed"] += 1
+            continue
+        dest = data / "genomes" / acc
+        if dest.exists():
+            n["destination_exists_unverified"] += 1
+            continue
+        shutil.copytree(str(src), str(dest), copy_function=os.link)
+        append_state(data, accession=acc, status="verified", chunk="reuse", reason="", reused_from=str(src),
+                     source_verified=old[acc]["last"].get("time", ""))
+        n["reused"] += 1
+    log("reuse from %s: %s" % (a.reuse_from, json.dumps(dict(n))))
+
+
 def main():
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    p.add_argument("mode", choices=["run", "report"])
+    p.add_argument("mode", choices=["run", "reuse", "report"])
     p.add_argument("--manifest", type=Path, required=True)
     p.add_argument("--data", type=Path, required=True, help="data root on scratch")
     p.add_argument("--out", type=Path, help="report: repo directory for small tables")
@@ -331,8 +367,9 @@ def main():
     p.add_argument("--max-attempts", type=int, default=3)
     p.add_argument("--limit", type=int, default=0, help="stop after this many accessions (pilot)")
     p.add_argument("--keep-failed", action="store_true", help="keep tmp chunk dirs that had failures")
+    p.add_argument("--reuse-from", type=Path, help="reuse: another data root with verified accessions")
     a = p.parse_args()
-    run(a) if a.mode == "run" else report(a)
+    dict(run=run, reuse=reuse, report=report)[a.mode](a)
 
 
 if __name__ == "__main__":

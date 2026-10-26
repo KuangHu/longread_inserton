@@ -7,8 +7,14 @@ fetch  NCBI Datasets genome summaries (RefSeq and GenBank, current assemblies) f
        file names, used as read-type evidence). Raw responses go to <work>/raw with SHA256 in provenance.json.
 build  Joins run sample_accession to assembly BioSample exactly (link_basis biosample_matched; source-run
        evidence is not checked here). One assembly per BioSample: the GenBank assembly, its RefSeq pair as the
-       download target when NCBI does not flag them as different. Pool = every BioSample with a usable
-       genomic run (role linked) + every other RefSeq Complete Genome (role context_refseq_complete).
+       download target when NCBI does not flag them as different. --selection picks the pool:
+         reads_linked_v1 (default, the Comamonadaceae baseline): every BioSample with a usable genomic run
+           (role linked) + every other RefSeq Complete Genome (role context_refseq_complete).
+         assembly_first_v1 (scale-up stage 1): every BioSample with a current isolate assembly at any level
+           (role assembly_first); reads links are metadata columns only. Not in the pool, listed in excluded.tsv.gz
+           with the reason: metagenome- or single-cell-derived assemblies (genome_notes, BioSample
+           metagenome_source), BioSamples whose current isolate assemblies all carry NCBI atypical warnings,
+           BioSamples without a current assembly, assemblies without a BioSample.
        Writes the tables below into --out. GCA/GCF identity is only checked after download (S1).
 
 Python 3.6+, standard library only (plus the datasets CLI and curl for fetch).
@@ -73,7 +79,15 @@ def fetch(a):
     for i in range(0, len(pb), 100):
         out = raw / ("sra_pacbio_%03d.xml" % (i // 100))
         url = EUTILS + "?" + urllib.parse.urlencode(dict(db="sra", id=",".join(pb[i:i + 100]), rettype="xml"))
-        curl(url, out)
+        for attempt in range(3):  # a truncated, not well-formed response was seen once (Actinomycetaceae, 2026-10-25)
+            curl(url, out)
+            try:
+                ET.parse(str(out))
+                break
+            except ET.ParseError:
+                time.sleep(10)
+        else:
+            raise SystemExit("SRA XML not well-formed after 3 attempts: " + url)
         prov["files"][out.name] = dict(url=url, runs=len(pb[i:i + 100]), sha256=sha256(out))
         time.sleep(1)
     (raw / "provenance.json").write_text(json.dumps(prov, indent=2) + "\n")
@@ -136,6 +150,7 @@ def load_assemblies(raw):
             d = json.loads(line)
             ai, st = d["assembly_info"], d.get("assembly_stats", {})
             pair = ai.get("paired_assembly", {})
+            notes = ai.get("genome_notes", [])
             ann = d.get("annotation_info", {})
             rows[d["accession"]] = dict(
                 accession=d["accession"], source=src, paired_accession=pair.get("accession", ""),
@@ -147,6 +162,7 @@ def load_assemblies(raw):
                 release_date=ai.get("release_date", ""), sequencing_tech=ai.get("sequencing_tech", ""),
                 assembly_method=ai.get("assembly_method", ""),
                 atypical=";".join(ai.get("atypical", {}).get("warnings", [])),
+                genome_notes=";".join(notes), origin=origin(notes, ai.get("biosample", {})),
                 total_bp=st.get("total_sequence_length", ""), records=st.get("number_of_component_sequences", ""),
                 annotation_provider=ann.get("provider", ""), annotation_name=ann.get("name", ""),
                 annotation_date=ann.get("release_date", ""),
@@ -154,6 +170,42 @@ def load_assemblies(raw):
                 checkm_completeness=d.get("checkm_info", {}).get("completeness", ""),
                 checkm_contamination=d.get("checkm_info", {}).get("contamination", ""))
     return rows
+
+
+def origin(notes, biosample):
+    """isolate, metagenome or single_cell, from NCBI genome_notes and the BioSample metagenome_source attribute."""
+    text = " ".join(notes).lower()
+    if "derived from metagenome" in text or any(x.get("name") == "metagenome_source" for x in biosample.get("attributes", [])):
+        return "metagenome"
+    if "derived from single cell" in text:
+        return "single_cell"
+    return "isolate"
+
+
+def assembly_first(by_bs, asm, linked_bs):
+    """assembly_first_v1 pool and exclusions (see module docstring)."""
+    pool, excluded = [], []
+    for bs in sorted(by_bs):
+        rows = by_bs[bs]
+        cur = [r for r in rows if r["assembly_status"] == "current"]
+        iso = [r for r in cur if r["origin"] == "isolate"]
+        ok = [r for r in iso if not r["atypical"]]
+        if ok:
+            best, gcf = choose(ok, asm)
+            pool.append((bs, best, gcf, "assembly_first"))
+            continue
+        reason = ("no_current_assembly" if not cur else
+                  "origin_" + "+".join(sorted({r["origin"] for r in cur})) if not iso else
+                  "ncbi_atypical")
+        excluded.append(dict(biosample=bs, reason=reason, accessions=";".join(sorted(r["accession"] for r in rows)),
+                             assembly_level=";".join(sorted({r["assembly_level"] for r in rows})),
+                             atypical=";".join(sorted({r["atypical"] for r in iso if r["atypical"]})),
+                             organism=rows[0]["organism"], linked_read_types=";".join(sorted(linked_bs.get(bs, [])))))
+    for r in sorted(asm.values(), key=lambda r: r["accession"]):
+        if not r["biosample"] and r["source"] == "genbank":
+            excluded.append(dict(biosample="", reason="no_biosample", accessions=r["accession"], assembly_level=r["assembly_level"],
+                                 atypical=r["atypical"], organism=r["organism"], linked_read_types=""))
+    return pool, excluded
 
 
 def choose(gca_rows, asm):
@@ -211,6 +263,17 @@ def build(a):
         if l["run_usable"]:
             linked_bs[l["biosample"]].add(l["read_type"])
 
+    excluded = []
+    if a.selection == "assembly_first_v1":
+        pool, excluded = assembly_first(by_bs, asm, linked_bs)
+    else:
+        pool = reads_linked(by_bs, asm, linked_bs)
+    pool_rows, manifest = pool_tables(pool, by_bs, linked_bs, links)
+    write_outputs(a, asm, run_rows, links, pool_rows, manifest, by_bs, excluded, raw)
+
+
+def reads_linked(by_bs, asm, linked_bs):
+    """reads_linked_v1 pool (see module docstring)."""
     pool, seen = [], set()
     for bs in sorted(linked_bs):
         best, gcf = choose(by_bs[bs], asm)
@@ -222,7 +285,10 @@ def build(a):
             best, gcf = choose(by_bs.get(r["biosample"]) or [r], asm)
             pool.append((r["biosample"], best, gcf, "context_refseq_complete"))
             seen.add(r["biosample"])
+    return pool
 
+
+def pool_tables(pool, by_bs, linked_bs, links):
     pool_rows, manifest = [], []
     for bs, best, gcf, role in pool:
         target = gcf or best
@@ -246,16 +312,21 @@ def build(a):
         if gcf:
             manifest.append(dict(accession=best["accession"], biosample=bs, purpose="gca_identity_check",
                                  include="genome,seq-report"))
+    return pool_rows, manifest
 
+
+def write_outputs(a, asm, run_rows, links, pool_rows, manifest, by_bs, excluded, raw):
     write_tsv(a.out / "assemblies.tsv.gz", sorted(asm.values(), key=lambda r: r["accession"]))
     write_tsv(a.out / "runs.tsv", run_rows)
     write_tsv(a.out / "assembly_run_links.tsv", links)
     write_tsv(a.out / "pool.tsv", pool_rows)
     write_tsv(a.out / "download_manifest.tsv", manifest)
+    if excluded:
+        write_tsv(a.out / "excluded.tsv.gz", excluded)
 
-    lk = [p for p in pool_rows if p["role"] == "linked"]
+    lk = [p for p in pool_rows if p["linked_read_types"]]  # = role linked under reads_linked_v1
     summary = dict(
-        schema="fna_pool_s0_v1", taxon=a.taxon, provenance=json.loads((raw / "provenance.json").read_text()),
+        schema="fna_pool_s0_v1", taxon=a.taxon, selection=a.selection, provenance=json.loads((raw / "provenance.json").read_text()),
         catalog=dict(refseq=sum(r["source"] == "refseq" for r in asm.values()),
                      genbank=sum(r["source"] == "genbank" for r in asm.values()),
                      genbank_biosamples=len(by_bs)),
@@ -278,6 +349,7 @@ def build(a):
                   linked_assembly_level=dict(Counter(p["assembly_level"] for p in lk)),
                   atypical=sum(1 for p in pool_rows if p["atypical"])),
         download_manifest=dict(entries=len(manifest), by_purpose=dict(Counter(m["purpose"] for m in manifest))),
+        excluded=dict(Counter(e["reason"] for e in excluded)),
         caveats=["link_basis is exact BioSample only; whether the run was used for the assembly is not checked",
                  "GCA/GCF identity is checked by sequence after download, not inferred from NCBI pairing",
                  "no clinical/host screen, species exclusion or clone collapse at this stage"])
@@ -291,6 +363,8 @@ def main():
     p.add_argument("--taxon", type=int, required=True)
     p.add_argument("--work", type=Path, required=True, help="cluster work dir; raw responses in <work>/raw")
     p.add_argument("--out", type=Path, help="repo dir for tables (build)")
+    p.add_argument("--selection", choices=["reads_linked_v1", "assembly_first_v1"], default="reads_linked_v1",
+                   help="build: pool rule (module docstring)")
     a = p.parse_args()
     fetch(a) if a.mode == "fetch" else build(a)
 

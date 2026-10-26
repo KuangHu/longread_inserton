@@ -23,15 +23,16 @@ def check(name, cond, detail):
 
 
 def cases():
-    L = 20000
+    L = 26000
     g = list("".join(R.choice("ACGT") for _ in range(L)))
     gff, faa = [], {}
 
     def put(pos, s):
         g[pos:pos + len(s)] = list(s)
 
-    def line(uid, start, end, strand, phase=0, extra=""):
-        gff.append("c\tRefSeq\tCDS\t%d\t%d\t.\t%s\t%d\tID=%s;%s" % (start + 1, end, strand, phase, uid, extra))
+    def line(uid, start, end, strand, phase=0, extra="", tt="11"):
+        tt = ";transl_table=" + tt if tt else ""
+        gff.append("c\tRefSeq\tCDS\t%d\t%d\t.\t%s\t%d\tID=%s;%s%s" % (start + 1, end, strand, phase, uid, extra, tt))
 
     a = orf(100)  # plus strand
     put(1000, a)
@@ -86,6 +87,28 @@ def cases():
     put(15000, m)
     line("cds-M", 15000, 15210, "+", 0, "protein_id=PM;product=faa differs")
     faa["PM"] = "M" + "W" * 68
+    t4 = list(orf(80))  # Mycoplasma-style table 4: TTA start, internal TGA = Trp
+    t4[0:3] = list("TTA")
+    t4[60:63] = list("TGA")
+    t4[150:153] = list("TGA")
+    t4 = "".join(t4)
+    p4 = "M" + "".join(s4.CODES[4]["codon"][t4[i:i + 3]] for i in range(3, len(t4) - 3, 3))
+    put(20000, t4)
+    line("cds-T4", 20000, 20240, "+", 0, "protein_id=P4;product=table 4", tt="4")
+    faa["P4"] = p4
+    put(20500, t4)
+    line("cds-T4as11", 20500, 20740, "+", 0, "protein_id=P4b;product=table 4 gene labelled 11", tt="11")
+    faa["P4b"] = p4
+    put(21000, orf(60))
+    line("cds-NOTT", 21000, 21180, "+", 0, "protein_id=PN;product=no table", tt="")
+    faa["PN"] = s4.translate("".join(g[21000:21180]))[:-1]
+    put(21500, orf(60))
+    line("cds-T25", 21500, 21680, "+", 0, "protein_id=P25;product=unsupported table", tt="25")
+    faa["P25"] = s4.translate("".join(g[21500:21680]))[:-1]
+    put(22000, orf(60))
+    line("cds-CONF", 22000, 22090, "+", 0, "protein_id=PX;product=conflict", tt="11")
+    line("cds-CONF", 22090, 22180, "+", 0, "protein_id=PX;product=conflict", tt="4")
+    faa["PX"] = s4.translate("".join(g[22000:22180]))[:-1]
     seq = "".join(g)
     tmp = Path(tempfile.mkdtemp(prefix="s4test_"))
     (tmp / "g.gff").write_text("##gff-version 3\n" + "\n".join(gff) + "\n")
@@ -108,6 +131,14 @@ def cases():
     ok.append(check("minus-strand transl_except placed on its codon", res["cds-G3"] == ("match_with_transl_except", []), res["cds-G3"]))
     ok.append(check("multi-Parent kept", units["cds-H"]["parent"] == "gene-x,gene-y" and res["cds-H"][0] == "match", units["cds-H"]["parent"]))
     ok.append(check("FAA differs -> mismatch", res["cds-M"][0] == "mismatch" and "translation_mismatch" in res["cds-M"][1], res["cds-M"]))
+    ok.append(check("table 4 (TTA start, TGA=Trp) translates under its own transl_table", res["cds-T4"] == ("match", []), res["cds-T4"]))
+    ok.append(check("table 4 gene labelled 11 is not accepted", res["cds-T4as11"][0] == "mismatch"
+                    and "internal_stop" in res["cds-T4as11"][1] and "no_start" in res["cds-T4as11"][1], res["cds-T4as11"]))
+    ok.append(check("missing, unsupported or conflicting transl_table -> review, not translated",
+                    res["cds-NOTT"] == ("transl_table_review", ["transl_table_missing"])
+                    and res["cds-T25"] == ("transl_table_review", ["unsupported_transl_table=25"])
+                    and res["cds-CONF"] == ("transl_table_review", ["transl_table_conflict=11/4"]),
+                    (res["cds-NOTT"], res["cds-T25"], res["cds-CONF"])))
     us = list(units.values())
     rel = {k: sorted(r for r, _ in s4.boundary_relations(us, s, e)) for k, (s, e) in
            dict(inside_gene=(1100, 1200), most_of_gene=(1050, 1400), edge_of_gene=(1250, 1600), clear=(1400, 1600),

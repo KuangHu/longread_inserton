@@ -71,10 +71,18 @@ MEMBER_MIN = {"family": (0.9, 0.8), "homology_group": (0.5, 0.8)}  # identity, c
 MMSEQS_CHECK = ["--exhaustive-search", "1", "--alignment-mode", "3", "-e", "10", "--max-seqs", "100000",
                 "--format-output", "query,target,fident,qcov,tcov,alnlen"]
 BASES = "TCAG"
-CODE11 = "FFLLSSSSYY**CC*WLLLLPPPPHHQQRRRRIIIMTTTTNNKKSSRRVVVVAAAADDEEGGGG"
-CODON = {a + b + c: CODE11[16 * i + 4 * j + k] for i, a in enumerate(BASES) for j, b in enumerate(BASES) for k, c in enumerate(BASES)}
-STARTS = {"ATG", "GTG", "TTG", "CTG", "ATT", "ATC", "ATA"}
-STOPS = {"TAA", "TAG", "TGA"}
+# NCBI genetic codes (amino acids, starts) in TCAG order; a CDS uses the transl_table of its GFF3 line. A CDS
+# without transl_table, with conflicting values or with a table not listed here is reviewed, not translated.
+GENETIC_CODES = {
+    11: ("FFLLSSSSYY**CC*WLLLLPPPPHHQQRRRRIIIMTTTTNNKKSSRRVVVVAAAADDEEGGGG",
+         "---M------**--*----M------------MMMM---------------M------------"),
+    4: ("FFLLSSSSYY**CCWWLLLLPPPPHHQQRRRRIIIMTTTTNNKKSSRRVVVVAAAADDEEGGGG",
+        "--MM------**-------M------------MMMM---------------M------------"),
+}
+TRIPLETS = [a + b + c for a in BASES for b in BASES for c in BASES]
+CODES = {t: dict(codon=dict(zip(TRIPLETS, aa)), starts={x for x, m in zip(TRIPLETS, st) if m == "M"},
+                 stops={x for x, m in zip(TRIPLETS, aa) if m == "*"}) for t, (aa, st) in GENETIC_CODES.items()}
+CODON, STARTS, STOPS = CODES[11]["codon"], CODES[11]["starts"], CODES[11]["stops"]
 RNA = {"rRNA", "tRNA", "tmRNA", "ncRNA", "RNase_P_RNA", "SRP_RNA", "antisense_RNA"}
 
 
@@ -131,8 +139,10 @@ def parse_gff(path, lengths):
         if u is None:
             u = units[f[0]][key] = dict(id=key, type=f[2], strand=f[6], segments=[], parent=at.get("Parent", ""), partial=False,
                                         pseudo=False, exception=at.get("exception", ""), transl_except=at.get("transl_except", ""),
-                                        protein=at.get("protein_id", ""), product=at.get("product", ""), note=at.get("Note", ""))
+                                        protein=at.get("protein_id", ""), product=at.get("product", ""), note=at.get("Note", ""),
+                                        transl_tables=set())
         u["segments"].append((int(f[3]) - 1, int(f[4]), int(f[7]) if f[7] in "012" else 0))
+        u["transl_tables"].add(at.get("transl_table", ""))
         u["partial"] |= at.get("partial") == "true" or "start_range" in at or "end_range" in at
         u["pseudo"] |= at.get("pseudo") == "true"
     out = {}
@@ -187,24 +197,42 @@ def transl_exceptions(u, n):
     return out
 
 
-def translate(nt):
-    return "".join(CODON.get(nt[i:i + 3], "X") for i in range(0, len(nt) - 2, 3))
+def translate(nt, table=11):
+    codon = CODES[table]["codon"]
+    return "".join(codon.get(nt[i:i + 3], "X") for i in range(0, len(nt) - 2, 3))
+
+
+def unit_table(u):
+    """(table, flag): the unit's single supported transl_table, else (None, reason)."""
+    tt = u.get("transl_tables", {"11"})
+    if tt == {""}:
+        return None, "transl_table_missing"
+    if len(tt) > 1:
+        return None, "transl_table_conflict=" + "/".join(sorted(x or "none" for x in tt))
+    t = next(iter(tt))
+    if not t.isdigit() or int(t) not in CODES:
+        return None, "unsupported_transl_table=" + t
+    return int(t), ""
 
 
 def coding_check(u, seq, faa):
-    """Flags for one CDS unit: translation vs FAA, start, stop, internal stops."""
+    """Flags for one CDS unit: translation vs FAA, start, stop, internal stops, under the unit's transl_table."""
+    table, why = unit_table(u)
+    if table is None:
+        return ("pseudo" if u["pseudo"] else "transl_table_review"), [why]
+    code = CODES[table]
     nt, phase = unit_nt(u, seq)
     nt = nt[phase:].upper()
-    aa = translate(nt)
+    aa = translate(nt, table)
     flags = []
     if not u["partial"]:
-        if nt[:3] not in STARTS:
+        if nt[:3] not in code["starts"]:
             flags.append("no_start")
-        if nt[-3:] not in STOPS:
+        if nt[-3:] not in code["stops"]:
             flags.append("no_stop")
         if len(nt) % 3:
             flags.append("length_not_codon_multiple")
-        if aa[:1] and nt[:3] in STARTS:
+        if aa[:1] and nt[:3] in code["starts"]:
             aa = "M" + aa[1:]
     exc = transl_exceptions(u, len(seq)) if u["transl_except"] else {}
     if None in exc:
