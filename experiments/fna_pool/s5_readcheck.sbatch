@@ -11,10 +11,11 @@
 # v0.3 read check (s3_readcheck.py) on one S4 candidate list of the full S3 set, in three stages:
 #   prep       alleles for the list's loci (all calls), then download the linked runs (--jobs concurrent, MD5 checked);
 #              writes samples.txt (one sample per line, those with alleles)
+#   fetch      download only, after a failed prep fetch (.part files resume, verified runs are skipped)
 #   map        array task i maps sample i of samples.txt to its alleles and to its whole assembly (skips a sample
 #              whose genome_<sample>.json exists, so failed tasks can be resubmitted)
 #   summarize  verdicts, evidence levels -> repo
-# Usage: sbatch s5_readcheck.sbatch <pool> <list: main|partner_mixed|short_other_segment|replacement> <s4 dir> <stage>
+# Usage: sbatch s5_readcheck.sbatch <pool> <list: main|partner_mixed|short_other_segment|replacement> <s4 dir> <stage: prep|fetch|map|summarize>
 #        (for map: sbatch --array=0-<n-1> ...)
 set -euo pipefail
 POOL=${1:?pool}; LIST=${2:?list}; S4=${3:?s4 dir name}; STAGE=${4:?stage}
@@ -39,6 +40,9 @@ prep)
         --fasta $FASTA --out $W
     ls $W/alleles_*.fa | sed 's/.*alleles_//; s/\.fa$//' > $W/samples.txt
     echo "[$(date -Is)] fetch, $(wc -l < $W/samples.txt) samples"
+    python $HERE/s3_readcheck.py fetch --pool-dir $HERE/$POOL --work $W --reads $READS --jobs 6
+    ;;
+fetch)
     python $HERE/s3_readcheck.py fetch --pool-dir $HERE/$POOL --work $W --reads $READS --jobs 6
     ;;
 map)

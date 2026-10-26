@@ -170,7 +170,7 @@ def sample_runs(pool_dir, samples):
 
 def cmd_fetch(a):
     import fetch_long_reads as flr  # noqa: E402  (curl download, MD5 check, verify.json; refuses to overwrite)
-    from concurrent.futures import ThreadPoolExecutor
+    from concurrent.futures import ThreadPoolExecutor, as_completed
     tests = read(a.work / "tests.tsv")
     samples = {t["carrier"] for t in tests} | {t["empty"] for t in tests}
     todo = []
@@ -190,12 +190,17 @@ def cmd_fetch(a):
                    archive_read_count=int(r["read_count"]))
         try:
             return s, r["run_accession"], flr.fetch(run, a.reads)["status"]
-        except Exception as e:  # reported, not fatal: map uses only verified runs
+        except (Exception, SystemExit) as e:  # flr.fetch gives up with SystemExit; reported per run, the others go on
             return s, r["run_accession"], "error: %r" % e
 
+    bad = 0
     with ThreadPoolExecutor(max_workers=a.jobs) as ex:
-        for s, run, st in ex.map(one, todo):
+        for f in as_completed([ex.submit(one, t) for t in todo]):
+            s, run, st = f.result()
             print(s, run, st, flush=True)
+            bad += st != "verified"
+    print("%d of %d runs not verified" % (bad, len(todo)), flush=True)
+    sys.exit(1 if bad else 0)  # a later fetch resumes the partial files; map waits for a clean fetch
 
 
 def verified_runs(a):
