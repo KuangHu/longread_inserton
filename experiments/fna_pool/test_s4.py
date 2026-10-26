@@ -143,6 +143,25 @@ def cases():
     rel = {k: sorted(r for r, _ in s4.boundary_relations(us, s, e)) for k, (s, e) in
            dict(inside_gene=(1100, 1200), most_of_gene=(1050, 1400), edge_of_gene=(1250, 1600), clear=(1400, 1600),
                 origin_piece=(100, 400)).items()}
+    # Frameshift CDS across the origin whose second segment lies wholly past the end of the circular contig
+    # (as GCF_019890975.1 pAHKW2b.1: 223739..224604 on a 223,682 bp record).
+    L2 = 2000
+    g2 = list("".join(R.choice("ACGT") for _ in range(L2)))
+    w = list(orf(100))
+    w[150:153] = list(w[149] + "CC")
+    w = "".join(w)
+    w = w[:150] + w[151:]
+    g2[L2 - 120:] = list(w[:120])
+    g2[0:179] = list(w[120:])
+    gff2 = "".join("c2\tRefSeq\tCDS\t%d\t%d\t.\t+\t0\tID=cds-W;protein_id=PW;exception=ribosomal slippage;transl_table=11\n"
+                   % (a + 1, b) for a, b in ((L2 - 120, L2 + 30), (L2 + 29, L2 + 179)))
+    (tmp / "g2.gff").write_text("##gff-version 3\n" + gff2)
+    wu = s4.parse_gff(tmp / "g2.gff", {"c2": L2})["c2"][0]
+    full = w[:150] + w[149] + w[150:]
+    wres = s4.coding_check(wu, "".join(g2), {"PW": s4.translate(full)[:-1]})
+    ok.append(check("frameshift segment wholly past the origin: wrapped interval, translates",
+                    wu["crosses_origin"] and wu["intervals"] == [(L2 - 120, L2), (0, 30), (29, 179)] and wres == ("match", []),
+                    (wu["intervals"], wres)))
     ok.append(check("boundary relations", rel == dict(inside_gene=["host_gene_interrupted"], most_of_gene=["gene_mostly_inside"],
                                                       edge_of_gene=["gene_mostly_outside"], clear=[], origin_piece=["gene_mostly_outside"]), rel))
     return ok

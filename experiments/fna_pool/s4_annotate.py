@@ -125,7 +125,7 @@ def read_faa(path):
 
 def parse_gff(path, lengths):
     """{contig: [unit]}; unit segments are (start, end, phase) 0-based half-open, end may exceed the contig length
-    for an origin-crossing feature."""
+    for an origin-crossing feature (a segment of a multi-segment CDS can lie wholly past the end)."""
     units = defaultdict(dict)
     for line in open(str(path)):
         if line.startswith("#"):
@@ -153,7 +153,9 @@ def parse_gff(path, lengths):
             u["crosses_origin"] = bool(n) and any(e > n for _, e, _ in u["segments"])
             iv = []
             for s, e, _ in u["segments"]:
-                if n and e > n:
+                if n and s >= n:
+                    iv.append((s - n, e - n))
+                elif n and e > n:
                     iv += [(s, n)] + ([(0, e - n)] if e - n > 0 else [])
                 else:
                     iv.append((s, e))
@@ -168,7 +170,7 @@ def unit_nt(u, seq):
     n = len(seq)
     parts = []
     for s, e, _ in u["segments"]:
-        parts.append(seq[s:n] + seq[0:e - n] if e > n else seq[s:e])
+        parts.append(seq[s - n:e - n] if s >= n else seq[s:n] + seq[0:e - n] if e > n else seq[s:e])
     if u["strand"] == "-":
         return "".join(rc(p) for p in reversed(parts)), u["segments"][-1][2]
     return "".join(parts), u["segments"][0][2]
