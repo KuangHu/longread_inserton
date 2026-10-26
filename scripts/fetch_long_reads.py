@@ -175,7 +175,9 @@ def summarize_file(path, platform):
     return summary.report()
 
 
-def fetch(run, out):
+def fetch(run, out, content=True):
+    """Download one run and check it. content=False stops after bytes and MD5 (status md5_verified), for a
+    transfer node; check_content then completes it on a compute node. Only a full check gives status verified."""
     work = out / run["run"]
     work.mkdir(parents=True, exist_ok=True)
     report_path = work / "verify.json"
@@ -203,20 +205,46 @@ def fetch(run, out):
     )
     result = dict(run=run, download_started=started, local_file=str(target), bytes=size, md5=md5, sha256=sha256,
                   rejected_downloads=rejected)
-    if all(checks.values()):
-        stats = summarize_file(target, run["platform"])
-        # ENA read_count counts SRA spots; for PacBio RS a spot can hold several subreads.
-        # Spots absent from the FASTQ are accepted only if they carry no bases,
-        # i.e. the base count still matches exactly (empty ZMWs are not exported).
-        bases_match = stats["bases"] == run["archive_base_count"]
-        missing = run["archive_read_count"] - stats["distinct_sra_spots"]
-        checks.update(
-            spot_count_match=missing == 0 or (missing > 0 and bases_match),
-            base_count_match=bases_match,
-        )
-        result["spots_absent_from_fastq"] = missing
-        result["summary"] = stats
+    if all(checks.values()) and content:
+        content_checks(result, target, run, checks)
     result["checks"] = checks
+    if not all(checks.values()):
+        result["status"] = "mismatch"
+    else:
+        result["status"] = "verified" if content else "md5_verified"
+    report_path.write_text(json.dumps(result, indent=2) + "\n")
+    return result
+
+
+def content_checks(result, target, run, checks):
+    stats = summarize_file(target, run["platform"])
+    # ENA read_count counts SRA spots; for PacBio RS a spot can hold several subreads.
+    # Spots absent from the FASTQ are accepted only if they carry no bases,
+    # i.e. the base count still matches exactly (empty ZMWs are not exported).
+    bases_match = stats["bases"] == run["archive_base_count"]
+    missing = run["archive_read_count"] - stats["distinct_sra_spots"]
+    checks.update(
+        spot_count_match=missing == 0 or (missing > 0 and bases_match),
+        base_count_match=bases_match,
+    )
+    result["spots_absent_from_fastq"] = missing
+    result["summary"] = stats
+
+
+def check_content(work):
+    """Complete an md5_verified download in place: the file must still hash as recorded, then the FASTQ
+    content checks run as in fetch. Any other status is returned unchanged."""
+    report_path = work / "verify.json"
+    result = json.loads(report_path.read_text())
+    if result["status"] != "md5_verified":
+        return result
+    target = Path(result["local_file"])
+    checks = result["checks"]
+    md5, sha256 = file_hashes(target)
+    checks["unchanged_since_download"] = md5 == result["md5"] and sha256 == result["sha256"]
+    if all(checks.values()):
+        content_checks(result, target, result["run"], checks)
+    result["content_checked"] = time.strftime("%Y-%m-%dT%H:%M:%S%z")
     result["status"] = "verified" if all(checks.values()) else "mismatch"
     report_path.write_text(json.dumps(result, indent=2) + "\n")
     return result

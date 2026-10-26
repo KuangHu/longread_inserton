@@ -1,0 +1,10 @@
+2026/10/25 08:52:56 PM INFO: Kingfisher v0.5.0
+2026/10/25 08:52:56 PM INFO: Attempting download method ena-ascp for run ERR4184112 ..
+2026/10/25 08:52:56 PM INFO: Using aspera ssh key file: /global/scratch/users/kh36969/longread_callout/env/ena_transport_pilot/lib/python3.15/site-packages/kingfisher/data/asperaweb_id_dsa.openssh
+2026/10/25 08:52:56 PM INFO: Querying ENA for FTP paths for ERR4184112..
+2026/10/25 08:52:57 PM INFO: Downloading 1 FTP read set(s): ftp.sra.ebi.ac.uk/vol1/fastq/ERR418/002/ERR4184112/ERR4184112_1.fastq.gz
+2026/10/25 08:52:57 PM INFO: Running command: ascp -T -l 300m -P33001 -k 2 -i /global/scratch/users/kh36969/longread_callout/env/ena_transport_pilot/lib/python3.15/site-packages/kingfisher/data/asperaweb_id_dsa.openssh era-fasp@fasp.sra.ebi.ac.uk:/vol1/fastq/ERR418/002/ERR4184112/ERR4184112_1.fastq.gz /global/scratch/users/kh36969/longread_callout/fna_pool/ena_transport_pilot/ena-ascp/ERR4184112
+2026/10/25 08:52:57 PM WARNING: Error downloading from ENA with ASCP: Command ascp -T -l 300m -P33001 -k 2 -i /global/scratch/users/kh36969/longread_callout/env/ena_transport_pilot/lib/python3.15/site-packages/kingfisher/data/asperaweb_id_dsa.openssh era-fasp@fasp.sra.ebi.ac.uk:/vol1/fastq/ERR418/002/ERR4184112/ERR4184112_1.fastq.gz /global/scratch/users/kh36969/longread_callout/fna_pool/ena_transport_pilot/ena-ascp/ERR4184112 returned non-zero exit status 1.
+STDERR was: b'ascp: failed to authenticate, exiting.\n'STDOUT was: b'\r\nSession Stop  (Error: failed to authenticate)\n'
+2026/10/25 08:52:57 PM WARNING: Method ena-ascp failed
+2026/10/25 08:52:57 PM ERROR: No more specified download methods, cannot continue

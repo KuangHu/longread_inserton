@@ -41,6 +41,10 @@ sequencing validation.
 
 alleles   tests.tsv + alleles_<sample>.fa from loci/calls (loci with status two_flank_anchored; all their calls).
 fetch     Download the usable runs of the tested samples (scripts/fetch_long_reads.py fetch logic, MD5 checked).
+          The first fetch freezes the run list in runs_needed.tsv. --transfer-only (transfer node) stops at bytes
+          and MD5 (status md5_verified).
+content   Compute node: complete md5_verified runs (file unchanged, FASTQ content checks), then require status
+          verified for every run in runs_needed.tsv; exits 1 otherwise.
 map       minimap2 (preset by read type) of one sample's runs against its allele FASTA.
 genome    For one sample: subset the reads that hit its alleles, record their molecule keys, map them to the
           sample's whole assembly (secondaries kept) for the locus check.
@@ -173,15 +177,22 @@ def cmd_fetch(a):
     from concurrent.futures import ThreadPoolExecutor, as_completed
     tests = read(a.work / "tests.tsv")
     samples = {t["carrier"] for t in tests} | {t["empty"] for t in tests}
+    needed = [(s, r) for s, rs in sorted(sample_runs(a.pool_dir, samples).items()) for r in rs]
+    frozen = a.work / "runs_needed.tsv"
+    rows = "sample\trun\tfastq_ftp\tfastq_bytes\tfastq_md5\n" + "".join(
+        "%s\t%s\t%s\t%s\t%s\n" % (s, r["run_accession"], r["fastq_ftp"], r["fastq_bytes"], r["fastq_md5"]) for s, r in needed)
+    if not frozen.exists():
+        frozen.write_text(rows)
+    elif frozen.read_text() != rows:
+        raise SystemExit("Run list differs from the frozen " + str(frozen))
     todo = []
-    for s, rs in sorted(sample_runs(a.pool_dir, samples).items()):
-        for r in rs:
-            if (a.reads / r["run_accession"] / "verify.json").exists():
-                print(s, r["run_accession"], "already fetched")
-            elif ";" in r["fastq_ftp"]:
-                print(s, r["run_accession"], "skipped: more than one FASTQ file", file=sys.stderr)
-            else:
-                todo.append((s, r))
+    for s, r in needed:
+        if (a.reads / r["run_accession"] / "verify.json").exists():
+            print(s, r["run_accession"], "already fetched")
+        elif ";" in r["fastq_ftp"]:
+            print(s, r["run_accession"], "skipped: more than one FASTQ file", file=sys.stderr)
+        else:
+            todo.append((s, r))
 
     def one(item):  # runs go to separate directories, so several can download at once
         s, r = item
@@ -189,7 +200,7 @@ def cmd_fetch(a):
                    fastq_md5=r["fastq_md5"], platform=r["instrument_platform"], archive_base_count=int(r["base_count"]),
                    archive_read_count=int(r["read_count"]))
         try:
-            return s, r["run_accession"], flr.fetch(run, a.reads)["status"]
+            return s, r["run_accession"], flr.fetch(run, a.reads, content=not a.transfer_only)["status"]
         except (Exception, SystemExit) as e:  # flr.fetch gives up with SystemExit; reported per run, the others go on
             return s, r["run_accession"], "error: %r" % e
 
@@ -198,9 +209,35 @@ def cmd_fetch(a):
         for f in as_completed([ex.submit(one, t) for t in todo]):
             s, run, st = f.result()
             print(s, run, st, flush=True)
-            bad += st != "verified"
+            bad += st != ("md5_verified" if a.transfer_only else "verified")
     print("%d of %d runs not verified" % (bad, len(todo)), flush=True)
     sys.exit(1 if bad else 0)  # a later fetch resumes the partial files; map waits for a clean fetch
+
+
+def cmd_content(a):
+    import fetch_long_reads as flr  # noqa: E402
+    from concurrent.futures import ThreadPoolExecutor
+    needed = read(a.work / "runs_needed.tsv")
+
+    def one(r):
+        v = a.reads / r["run"] / "verify.json"
+        if ";" in r["fastq_ftp"]:
+            return r, "skipped: more than one FASTQ file"
+        if not v.exists():
+            return r, "not fetched"
+        try:
+            return r, flr.check_content(v.parent)["status"]
+        except (Exception, SystemExit) as e:
+            return r, "error: %r" % e
+
+    with ThreadPoolExecutor(max_workers=a.jobs) as ex:
+        res = list(ex.map(one, needed))
+    for r, st in res:
+        print(r["sample"], r["run"], st, flush=True)
+    c = Counter(st if not st.startswith("error") else "error" for _, st in res)
+    print("runs_needed %d: %s" % (len(res), json.dumps(dict(c))))
+    bad = [r["run"] for r, st in res if st not in ("verified", "skipped: more than one FASTQ file")]
+    sys.exit(1 if bad else 0)
 
 
 def verified_runs(a):
@@ -583,7 +620,7 @@ def cmd_summarize(a):
 
 def main():
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    p.add_argument("mode", choices=["alleles", "fetch", "map", "genome", "summarize"])
+    p.add_argument("mode", choices=["alleles", "fetch", "content", "map", "genome", "summarize"])
     p.add_argument("--loci", type=Path)
     p.add_argument("--calls", type=Path)
     p.add_argument("--fasta", nargs="*")
@@ -592,11 +629,12 @@ def main():
     p.add_argument("--work", type=Path)
     p.add_argument("--sample")
     p.add_argument("--threads", type=int, default=8)
-    p.add_argument("--jobs", type=int, default=1, help="fetch: concurrent run downloads")
+    p.add_argument("--jobs", type=int, default=1, help="fetch: concurrent run downloads; content: concurrent runs checked")
+    p.add_argument("--transfer-only", action="store_true", help="fetch: bytes and MD5 only, content checks left to 'content'")
     p.add_argument("--loci-ids", type=Path, help="alleles: TSV whose first column (after a header) lists the loci to test")
     p.add_argument("--out", type=Path)
     a = p.parse_args()
-    dict(alleles=cmd_alleles, fetch=cmd_fetch, map=cmd_map, genome=cmd_genome, summarize=cmd_summarize)[a.mode](a)
+    dict(alleles=cmd_alleles, fetch=cmd_fetch, content=cmd_content, map=cmd_map, genome=cmd_genome, summarize=cmd_summarize)[a.mode](a)
 
 
 if __name__ == "__main__":

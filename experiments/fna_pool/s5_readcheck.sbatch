@@ -12,10 +12,12 @@
 #   prep       alleles for the list's loci (all calls), then download the linked runs (--jobs concurrent, MD5 checked);
 #              writes samples.txt (one sample per line, those with alleles)
 #   fetch      download only, after a failed prep fetch (.part files resume, verified runs are skipped)
+#              (on the transfer node lrc-xfer the same fetch runs outside SLURM with --transfer-only, see README)
+#   content    complete transfer-only downloads (FASTQ content checks) and require every frozen run verified
 #   map        array task i maps sample i of samples.txt to its alleles and to its whole assembly (skips a sample
 #              whose genome_<sample>.json exists, so failed tasks can be resubmitted)
 #   summarize  verdicts, evidence levels -> repo
-# Usage: sbatch s5_readcheck.sbatch <pool> <list: main|partner_mixed|short_other_segment|replacement> <s4 dir> <stage: prep|fetch|map|summarize>
+# Usage: sbatch s5_readcheck.sbatch <pool> <list: main|partner_mixed|short_other_segment|replacement> <s4 dir> <stage: prep|fetch|content|map|summarize>
 #        (for map: sbatch --array=0-<n-1> ...)
 set -euo pipefail
 POOL=${1:?pool}; LIST=${2:?list}; S4=${3:?s4 dir name}; STAGE=${4:?stage}
@@ -44,6 +46,9 @@ prep)
     ;;
 fetch)
     python $HERE/s3_readcheck.py fetch --pool-dir $HERE/$POOL --work $W --reads $READS --jobs 6
+    ;;
+content)
+    python $HERE/s3_readcheck.py content --work $W --reads $READS --jobs $SLURM_CPUS_PER_TASK
     ;;
 map)
     S=$(sed -n "$((SLURM_ARRAY_TASK_ID + 1))p" $W/samples.txt)

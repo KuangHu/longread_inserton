@@ -1,0 +1,10 @@
+2026/10/25 09:25:08 PM INFO: Kingfisher v0.5.0
+2026/10/25 09:25:08 PM INFO: Attempting download method ena-ascp for run SRR21808314 ..
+2026/10/25 09:25:08 PM INFO: Using aspera ssh key file: /global/home/users/kh36969/.aspera/sdk/aspera_bypass_rsa.pem
+2026/10/25 09:25:08 PM INFO: Querying ENA for FTP paths for SRR21808314..
+2026/10/25 09:25:09 PM INFO: Downloading 1 FTP read set(s): ftp.sra.ebi.ac.uk/vol1/fastq/SRR218/014/SRR21808314/SRR21808314_1.fastq.gz
+2026/10/25 09:25:09 PM INFO: Running command: ascp -T -l 300m -P33001 -k 2 -i /global/home/users/kh36969/.aspera/sdk/aspera_bypass_rsa.pem era-fasp@fasp.sra.ebi.ac.uk:/vol1/fastq/SRR218/014/SRR21808314/SRR21808314_1.fastq.gz /global/scratch/users/kh36969/longread_callout/fna_pool/ena_transport_pilot/ena-ascp/SRR21808314
+2026/10/25 09:35:52 PM WARNING: Error downloading from ENA with ASCP: Command ascp -T -l 300m -P33001 -k 2 -i /global/home/users/kh36969/.aspera/sdk/aspera_bypass_rsa.pem era-fasp@fasp.sra.ebi.ac.uk:/vol1/fastq/SRR218/014/SRR21808314/SRR21808314_1.fastq.gz /global/scratch/users/kh36969/longread_callout/fna_pool/ena_transport_pilot/ena-ascp/SRR21808314 returned non-zero exit status 1.
+STDERR was: b''STDOUT was: b'Partial Completion: 1052799K bytes transferred in 636 seconds\n (13556K bits/sec), in 1 file.\n\r\nSession Stop  (Error: Session data transfer timeout)\n'
+2026/10/25 09:35:52 PM WARNING: Method ena-ascp failed
+2026/10/25 09:35:52 PM ERROR: No more specified download methods, cannot continue
