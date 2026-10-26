@@ -397,7 +397,7 @@ def cmd_review(a):
                                carriers=len({r["carrier"] for r in rows if r["category"] == c}),
                                cds_units=sum(int(r["cds_units"]) for r in rows if r["category"] == c),
                                protein_ids=len({p for r in rows if r["category"] == c for p in r["protein_ids"].split(";") if p}))
-                       for c in LISTS + [PENDING]})
+                       for c in LISTS + [PENDING] if c in LISTS or any(r["category"] == c for r in rows)})
     (a.out / "s4_summary.json").write_text(json.dumps(summ, indent=1) + "\n")
     print(json.dumps(summ, indent=1))
 
