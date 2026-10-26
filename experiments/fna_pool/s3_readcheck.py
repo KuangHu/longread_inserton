@@ -108,12 +108,15 @@ def build_alleles(c, cseq, eseq):
 
 
 def cmd_alleles(a):
-    loci = {l["locus_id"]: l for l in read(a.loci)}
+    keep = {x.split("\t")[0] for x in open(str(a.loci_ids)).read().split("\n")[1:] if x} if a.loci_ids else None
+    loci = {l["locus_id"]: l for l in read(a.loci) if keep is None or l["locus_id"] in keep}
     fa = dict(x.split("=", 1) for x in a.fasta)
     seqs = {}
     tests, alleles = {}, defaultdict(list)
     for c in read(a.calls):
-        l = loci[c["locus_id"]]
+        l = loci.get(c["locus_id"])
+        if l is None:
+            continue
         if l["status"] != "two_flank_anchored":
             continue
         key = "|".join(c[k] for k in ("carrier", "carrier_contig", "core_start", "core_end", "empty", "empty_contig",
@@ -167,21 +170,32 @@ def sample_runs(pool_dir, samples):
 
 def cmd_fetch(a):
     import fetch_long_reads as flr  # noqa: E402  (curl download, MD5 check, verify.json; refuses to overwrite)
+    from concurrent.futures import ThreadPoolExecutor
     tests = read(a.work / "tests.tsv")
     samples = {t["carrier"] for t in tests} | {t["empty"] for t in tests}
+    todo = []
     for s, rs in sorted(sample_runs(a.pool_dir, samples).items()):
         for r in rs:
             if (a.reads / r["run_accession"] / "verify.json").exists():
                 print(s, r["run_accession"], "already fetched")
-                continue
-            if ";" in r["fastq_ftp"]:
+            elif ";" in r["fastq_ftp"]:
                 print(s, r["run_accession"], "skipped: more than one FASTQ file", file=sys.stderr)
-                continue
-            run = dict(run=r["run_accession"], sample_id=s, url="https://" + r["fastq_ftp"], fastq_bytes=int(r["fastq_bytes"]),
-                       fastq_md5=r["fastq_md5"], platform=r["instrument_platform"], archive_base_count=int(r["base_count"]),
-                       archive_read_count=int(r["read_count"]))
-            res = flr.fetch(run, a.reads)
-            print(s, r["run_accession"], res["status"])
+            else:
+                todo.append((s, r))
+
+    def one(item):  # runs go to separate directories, so several can download at once
+        s, r = item
+        run = dict(run=r["run_accession"], sample_id=s, url="https://" + r["fastq_ftp"], fastq_bytes=int(r["fastq_bytes"]),
+                   fastq_md5=r["fastq_md5"], platform=r["instrument_platform"], archive_base_count=int(r["base_count"]),
+                   archive_read_count=int(r["read_count"]))
+        try:
+            return s, r["run_accession"], flr.fetch(run, a.reads)["status"]
+        except Exception as e:  # reported, not fatal: map uses only verified runs
+            return s, r["run_accession"], "error: %r" % e
+
+    with ThreadPoolExecutor(max_workers=a.jobs) as ex:
+        for s, run, st in ex.map(one, todo):
+            print(s, run, st, flush=True)
 
 
 def verified_runs(a):
@@ -573,6 +587,8 @@ def main():
     p.add_argument("--work", type=Path)
     p.add_argument("--sample")
     p.add_argument("--threads", type=int, default=8)
+    p.add_argument("--jobs", type=int, default=1, help="fetch: concurrent run downloads")
+    p.add_argument("--loci-ids", type=Path, help="alleles: TSV whose first column (after a header) lists the loci to test")
     p.add_argument("--out", type=Path)
     a = p.parse_args()
     dict(alleles=cmd_alleles, fetch=cmd_fetch, map=cmd_map, genome=cmd_genome, summarize=cmd_summarize)[a.mode](a)

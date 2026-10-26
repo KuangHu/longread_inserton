@@ -327,4 +327,10 @@ v0.2 改动（判定阈值 ≥3、≤10% 不变）：
   （`families_summary.json` 的 species 字段是 organism 名称数，菌株级名称如 “Variovorax sp. YR752” 各算一个，不是物种数。）main 的 294 个 family 中 204 个只有 1 个 locus，80 个出现在 ≥2 个 carrier；243 个 main locus 含 transposase（141 个 family）。main 中最大的：AbiEi 抗毒素 F_0069（24 locus / 24 carrier）与 AbiEii/AbiGii 毒素 F_0002（22/22），IS110 F_0027（19 locus / 10 carrier），IS3 F_0035（15/11），Fic F_0020（13/13）与 F_0141（10/10），hypothetical F_0010（10/10），IS5 F_0175（7/7）。
 - **DNA seed 目录**：五个清单 1,748 条记录（每个 locus 一条实际观察的 core，不是共识），1,417 种不同 core 序列；`seed_catalog.tsv` 带 U/D 各 300 bp 和 family。
 
-仍不是结论：家族是初步的（只做了 0.9/0.8 保守聚类），没有读段证据，同一 family 的不同 locus 也可能是同一插入在近缘株中的重复观察（需按位点上下文归并后再谈“独立事件”），不能据此判断灵敏度或新颖性。下一步：对 main（及 partner_mixed、short_other_segment 分开）做 v0.3 read check，然后 S6 归并。
+**S4 v0.2（复核 9f149c7 后，commit c633885，job 27274566，结果在 `s4_s3_full_v02/`）**：(1) `transl_except` 原先只要存在就放过所有内部终止（复核构造反例复现）；现在按位置（经各段、链和 phase 定位）只替换所述密码子，其它内部终止仍失败；测试加入该反例和负链例外，11/11。全量 14,900 个都是普通 match，没有 match_with_transl_except，类别 0 个变化。(2) easy-cluster 的级联聚类可能让成员对最终代表低于阈值：加 `--cluster-reassign 1`，并用穷举全对全比对（alignment-mode 3）把每个成员对其最终代表的 identity、双侧覆盖和通过与否写进 `protein_members.tsv`。结果：family 和 homology_group 两级 1,527 个蛋白**全部通过**；main 仍是 294 个 family，其中只有 1 个 locus 204，多个 locus 但只有 1 个 carrier 10，≥2 个 carrier 80（后两组要靠上下游背景区分同一位点的重复观察和不同位点）。
+
+仍不是结论：家族是初步的（只做了 0.9/0.8 保守聚类），没有读段证据，同一 family 的不同 locus 也可能是同一插入在近缘株中的重复观察（需按位点上下文归并后再谈“独立事件”），不能据此判断灵敏度或新颖性。下一步：对 main（及 partner_mixed、short_other_segment 分开）做 v0.3 read check，然后 S6 归并；S6 合并后的数量称“位点组数”，不称独立插入事件数。
+
+### main 清单 read check（[s5_readcheck.sbatch](s5_readcheck.sbatch)：prep → 按样本 array 的 map → summarize）
+
+464 个 main locus：carrier 有关联 run 的 266 个，carrier 和至少一个伙伴都有的 201 个；涉及 287 个样本（147 个有 run），162 个 run，需下载 154 个（约 139 GB）。fetch 现在可并发（`--jobs`，每个 run 独立目录，单个失败只报告）；alleles 可用 `--loci-ids` 限定清单。其它清单单独跑、单独报告。
