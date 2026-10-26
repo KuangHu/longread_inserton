@@ -12,7 +12,8 @@
     "annotation_missing": 23,
     "present": 2476
   },
-  "gff_features_out_of_range": 1111,
+  "gff_features_out_of_range": 0,
   "contig_index": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/erwiniaceae/s2/contig_index.tsv.gz",
-  "contig_index_sha256": "893b68c4b1b99dba6a4279fa907a7d9785369b3db7f9217eb2521c87c06902d8"
+  "contig_index_sha256": "893b68c4b1b99dba6a4279fa907a7d9785369b3db7f9217eb2521c87c06902d8",
+  "gff_features_origin_spanning": 1111
 }

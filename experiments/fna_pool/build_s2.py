@@ -95,8 +95,9 @@ def read_tsv(path):
 
 def gff_ranges(path, lengths):
     """GFF3 feature rows (origin-spanning on a circular record, outside their FNA record). GFF3 writes a feature
-    across the origin of a circular sequence (region Is_circular=true) with end > length; those are counted
-    separately and are not errors. Any other row whose seqid is not an FNA record or whose coordinates fall
+    across the origin of a circular sequence (region Is_circular=true) with end > length (a segment of a
+    multi-segment CDS can lie wholly past the end, e.g. length+57..length+922); those are counted separately and
+    are not errors. Any other row whose seqid is not an FNA record or whose coordinates fall
     outside it is out of range."""
     rows = []
     circular = set()
@@ -113,7 +114,7 @@ def gff_ranges(path, lengths):
         L = lengths.get(seqid)
         if L is not None and 1 <= start <= end <= L:
             continue
-        if L is not None and seqid in circular and 1 <= start <= L < end < start + L:
+        if L is not None and seqid in circular and 1 <= start <= end <= 2 * L and end > L and end - start < L:
             wrap += 1
         else:
             bad += 1
