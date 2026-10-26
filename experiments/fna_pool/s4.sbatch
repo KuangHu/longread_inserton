@@ -9,7 +9,7 @@
 #SBATCH --time=6:00:00
 #SBATCH --output=/global/home/users/kh36969/logs/fna_pool/%x_%j.out
 # S4 on one S3 result set: review (annotation, translation vs FAA, boundary relations, lists) -> families (MMseqs2)
-# -> seeds. Usage: sbatch s4.sbatch <pool name> <s3 set: s3_pilot | s3_full>
+# -> seeds. Usage: sbatch s4.sbatch <pool name> <s3 set: s3_pilot | s3_full> [output name, default s4_<set>]
 set -euo pipefail
 POOL=${1:?pool name}
 SET=${2:?s3_pilot or s3_full}
@@ -21,8 +21,9 @@ if [ $SET = s3_pilot ]; then
 else
     S3=$PROJ/fna_pool/$POOL/s3_full; PAIRS=$S3/pairs.tsv; LOCI=$S3/merged/loci.tsv; CALLS=$S3/merged/calls_merged.tsv
 fi
-W=$PROJ/fna_pool/$POOL/s4_$SET
-REPO=$HERE/$POOL/s4_$SET
+NAME=${3:-s4_$SET}
+W=$PROJ/fna_pool/$POOL/$NAME
+REPO=$HERE/$POOL/$NAME
 echo "[$(date -Is)] host=$(hostname) commit=$(git -C $CODE rev-parse HEAD)"
 source ~/miniconda3/etc/profile.d/conda.sh
 conda activate $PROJ/env/msi

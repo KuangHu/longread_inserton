@@ -13,8 +13,9 @@ review    One row per anchored locus with core < SHORT bp (s4_loci.tsv.gz) plus 
   Coding  Every non-pseudo CDS unit inside a core is translated from the FNA (table 11; segments in transcript order,
           phase of the 5' segment; an alternative start codon reads as M) and compared with its protein in the FAA;
           start codon, terminal stop and internal stops are checked. "complete" = inside the core, not partial or
-          pseudo, translation equals the FAA protein, valid start and stop, no internal stop. Exceptions (e.g.
-          ribosomal slippage, selenocysteine) are kept as flags.
+          pseudo, translation equals the FAA protein, valid start and stop, no internal stop. transl_except entries
+          (e.g. selenocysteine) replace exactly the codon they name, located through the unit's segments; any other
+          internal stop still fails. Exceptions such as ribosomal slippage are kept as flags.
   Bounds  Features crossing a core boundary: host_gene_interrupted (one feature spans the whole core),
           gene_mostly_inside (the core may be truncated: >= half of the feature is in the core), gene_mostly_outside
           (the core end overlaps a flank gene), rna_crossed (rRNA/tRNA/other RNA).
@@ -34,7 +35,10 @@ review    One row per anchored locus with core < SHORT bp (s4_loci.tsv.gz) plus 
 families  Proteins of complete CDS in main / partner_mixed / direction_mixed / short_other_segment / replacement,
           deduplicated by sequence, clustered with MMseqs2 easy-cluster at two frozen settings: family (min-seq-id
           0.9, coverage 0.8 of both sequences, cov-mode 0, cluster-mode 0 = set cover, every member aligned to the
-          representative) and homology_group (min-seq-id 0.5, same coverage) as candidate distant homology only.
+          representative, --cluster-reassign 1) and homology_group (min-seq-id 0.5, same coverage) as candidate
+          distant homology only. Cascaded clustering can leave a member below the threshold against its final
+          representative, so every member is aligned to its representative (exhaustive all-vs-all MMseqs2 search,
+          alignment-mode 3) and its identity, both coverages and pass/fail are kept (protein_members.tsv).
           Architecture = family ids in core order with orientation relative to the core, canonicalised over the two
           strands. Family table reports proteins, loci, carrier samples, species and architectures separately, per
           list. These are preliminary families, not final S6 families.
@@ -47,6 +51,7 @@ import csv
 import gzip
 import hashlib
 import json
+import re
 import subprocess
 import sys
 from collections import Counter, defaultdict
@@ -56,12 +61,15 @@ from urllib.parse import unquote
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from s3_pair_calls import rc, read_fasta  # noqa: E402
 
-VERSION = "s4_annotate_v0.1"
+VERSION = "s4_annotate_v0.2"
 SHORT = 2500
 CONTEXT = 300
 LISTS = ["main", "partner_mixed", "direction_mixed", "short_other_segment", "replacement"]
-MMSEQS_SETTINGS = {"family": ["--min-seq-id", "0.9", "-c", "0.8", "--cov-mode", "0", "--cluster-mode", "0"],
-                   "homology_group": ["--min-seq-id", "0.5", "-c", "0.8", "--cov-mode", "0", "--cluster-mode", "0"]}
+MMSEQS_SETTINGS = {"family": ["--min-seq-id", "0.9", "-c", "0.8", "--cov-mode", "0", "--cluster-mode", "0", "--cluster-reassign", "1"],
+                   "homology_group": ["--min-seq-id", "0.5", "-c", "0.8", "--cov-mode", "0", "--cluster-mode", "0", "--cluster-reassign", "1"]}
+MEMBER_MIN = {"family": (0.9, 0.8), "homology_group": (0.5, 0.8)}  # identity, coverage of both sequences
+MMSEQS_CHECK = ["--exhaustive-search", "1", "--alignment-mode", "3", "-e", "10", "--max-seqs", "100000",
+                "--format-output", "query,target,fident,qcov,tcov,alnlen"]
 BASES = "TCAG"
 CODE11 = "FFLLSSSSYY**CC*WLLLLPPPPHHQQRRRRIIIMTTTTNNKKSSRRVVVVAAAADDEEGGGG"
 CODON = {a + b + c: CODE11[16 * i + 4 * j + k] for i, a in enumerate(BASES) for j, b in enumerate(BASES) for k, c in enumerate(BASES)}
@@ -156,6 +164,29 @@ def unit_nt(u, seq):
     return "".join(parts), u["segments"][0][2]
 
 
+AA3 = {"Ala": "A", "Arg": "R", "Asn": "N", "Asp": "D", "Cys": "C", "Gln": "Q", "Glu": "E", "Gly": "G", "His": "H", "Ile": "I",
+       "Leu": "L", "Lys": "K", "Met": "M", "Phe": "F", "Pro": "P", "Ser": "S", "Thr": "T", "Trp": "W", "Tyr": "Y", "Val": "V",
+       "Sec": "U", "Pyl": "O", "TERM": "*", "OTHER": "X"}
+TRANSL_EXCEPT = re.compile(r"\(pos:(complement\()?(\d+)\.\.(\d+)\)?,aa:(\w+)\)")
+
+
+def transl_exceptions(u, n):
+    """{codon index: amino acid} from transl_except: the codon whose 5' base is at the stated position (the high end
+    for complement), located through the unit's own segments in transcript order; unplaceable entries map to None."""
+    pos = []
+    for s, e, _ in u["segments"]:
+        pos += [x % n for x in range(s, e)]
+    if u["strand"] == "-":
+        pos.reverse()
+    phase = u["segments"][-1][2] if u["strand"] == "-" else u["segments"][0][2]
+    out = {}
+    for comp, a, b, aa in TRANSL_EXCEPT.findall(u["transl_except"]):
+        five = int(b) - 1 if comp else int(a) - 1
+        k = pos.index(five) - phase if five in pos else -1
+        out[k // 3 if k >= 0 and k % 3 == 0 else None] = AA3.get(aa, AA3.get(aa.capitalize(), "X"))
+    return out
+
+
 def translate(nt):
     return "".join(CODON.get(nt[i:i + 3], "X") for i in range(0, len(nt) - 2, 3))
 
@@ -175,6 +206,13 @@ def coding_check(u, seq, faa):
             flags.append("length_not_codon_multiple")
         if aa[:1] and nt[:3] in STARTS:
             aa = "M" + aa[1:]
+    exc = transl_exceptions(u, len(seq)) if u["transl_except"] else {}
+    if None in exc:
+        flags.append("transl_except_unplaced")
+    raw = aa
+    for k, x in exc.items():
+        if k is not None and k < len(aa):
+            aa = aa[:k] + x + aa[k + 1:]
     body = aa[:-1] if aa.endswith("*") else aa
     if "*" in body:
         flags.append("internal_stop")
@@ -186,9 +224,7 @@ def coding_check(u, seq, faa):
     if p is None:
         return "protein_not_in_faa", flags + ["protein_not_in_faa"]
     if body == p:
-        return "match", flags
-    if len(body) == len(p) and u["transl_except"] and all(a == b or a == "*" for a, b in zip(body, p)):
-        return "match_with_transl_except", [f for f in flags if f != "internal_stop"]
+        return ("match_with_transl_except" if aa != raw else "match"), flags
     return "mismatch", flags + ["translation_mismatch"]
 
 
@@ -342,7 +378,7 @@ def cmd_families(a):
     with open(str(fa), "w") as h:
         for k, s in sorted(seqs.items()):
             h.write(">%s\n%s\n" % (k, s))
-    assign = {}
+    assign, reps_by = {}, {}
     for level, opts in MMSEQS_SETTINGS.items():
         prefix = a.work / level
         subprocess.run([a.mmseqs, "easy-cluster", str(fa), str(prefix), str(a.work / ("tmp_" + level)), "--threads", str(a.threads)] + opts,
@@ -354,6 +390,20 @@ def cmd_families(a):
         names = {rep: "%s_%04d" % ("F" if level == "family" else "H", i + 1) for i, rep in enumerate(sorted(set(reps.values()),
                  key=lambda x: (-sum(1 for v in reps.values() if v == x), x)))}
         assign[level] = {m: names[r] for m, r in reps.items()}
+        reps_by[level] = reps
+    aln = {}
+    res = a.work / "allvsall.m8"
+    subprocess.run([a.mmseqs, "easy-search", str(fa), str(fa), str(res), str(a.work / "tmp_check"), "--threads", str(a.threads)]
+                   + MMSEQS_CHECK, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    for line in open(str(res)):
+        q, t, fid, qc, tc, _ = line.split("\t")
+        if (q, t) not in aln or float(fid) > aln[(q, t)][0]:
+            aln[(q, t)] = (float(fid), float(qc), float(tc))
+    check = {}
+    for level, (mid, mc) in MEMBER_MIN.items():
+        for m, rep_ in reps_by[level].items():
+            fid, qc, tc = (1.0, 1.0, 1.0) if m == rep_ else aln.get((m, rep_), (0.0, 0.0, 0.0))
+            check[(level, m)] = (rep_, fid, qc, tc, fid >= mid and qc >= mc and tc >= mc)
     ver = subprocess.run([a.mmseqs, "version"], stdout=subprocess.PIPE, universal_newlines=True).stdout.strip()
     species = {r["carrier"]: r["organism"] for r in rows}
     out_loci, fam = [], defaultdict(lambda: defaultdict(set))
@@ -383,7 +433,8 @@ def cmd_families(a):
                     d["carriers_" + c].add(r["carrier"])
     ftab = []
     for f, d in sorted(fam.items()):
-        row = dict(family_id=f, homology_groups=";".join(sorted(d["homology_group"])), proteins=len(d["proteins"]), loci=len(d["loci"]),
+        row = dict(family_id=f, homology_groups=";".join(sorted(d["homology_group"])), proteins=len(d["proteins"]),
+                   members_failing_check=sum(1 for h in d["proteins"] if not check[("family", h)][4]), loci=len(d["loci"]),
                    carriers=len(d["carriers"]), species=len(d["species"]), architectures=len(d["architectures"]),
                    products=" | ".join(sorted(d["products"]))[:300])
         for c in LISTS:
@@ -393,10 +444,20 @@ def cmd_families(a):
     ftab.sort(key=lambda x: (-x["loci"], x["family_id"]))
     write(a.out / "families.tsv", ftab)
     write(a.out / "candidate_loci_families.tsv", out_loci)
-    write(a.out / "protein_members.tsv", [dict(protein_hash=h, family_id=assign["family"][h], homology_group=assign["homology_group"][h],
-                                               length=len(seqs[h]), loci=len(m), members=";".join("%s:%s:%s" % x for x in m))
-                                          for h, m in sorted(members.items())])
-    summ = dict(version=VERSION, mmseqs=ver, settings=MMSEQS_SETTINGS, distinct_proteins=len(seqs))
+    pm = []
+    for h, m in sorted(members.items()):
+        row = dict(protein_hash=h, length=len(seqs[h]), loci=len(m), members=";".join("%s:%s:%s" % x for x in m))
+        for level, name in (("family", "family"), ("homology_group", "homology")):
+            rep_, fid, qc, tc, ok = check[(level, h)]
+            row.update({name + "_id": assign[level][h], name + "_rep": rep_, name + "_identity": round(fid, 3),
+                        name + "_member_cov": round(qc, 3), name + "_rep_cov": round(tc, 3), name + "_member_pass": ok})
+        pm.append(row)
+    write(a.out / "protein_members.tsv", pm)
+    summ = dict(version=VERSION, mmseqs=ver, settings=MMSEQS_SETTINGS, member_min=MEMBER_MIN, check_search=MMSEQS_CHECK,
+                distinct_proteins=len(seqs),
+                member_check={lv: dict(members=sum(1 for r in pm), passed=sum(1 for r in pm if r[n + "_member_pass"]),
+                                       fail=sorted(r["protein_hash"] for r in pm if not r[n + "_member_pass"]))
+                              for lv, n in (("family", "family"), ("homology_group", "homology"))})
     for c in LISTS + ["all"]:
         rs = [r for r in out_loci if c == "all" or r["category"] == c]
         summ[c] = dict(loci=len(rs), carriers=len({r["carrier"] for r in rs}), species=len({species[r["carrier"]] for r in rs}),
