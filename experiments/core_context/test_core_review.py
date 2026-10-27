@@ -31,33 +31,53 @@ class ChainTests(unittest.TestCase):
     def test_extension_beyond_core_and_chaining(self):
         # A: core at [100, 400) of 700 bp; B: core at [300, 600) of 900 bp; shared from A 60..460 in two HSPs
         hsps = [(61, 250, 261, 450), (261, 460, 461, 660)]
-        blk = cr.chain(hsps, 100, 400, 300, 600)
-        self.assertEqual(blk, (60, 460, 260, 660))
-        e = cr.extensions(blk, 100, 400, 700, 300, 600, 900)
+        pieces = cr.chain(hsps, 100, 400, 300, 600)
+        self.assertEqual(pieces, [(60, 250, 260, 450), (260, 460, 460, 660)])
+        e = cr.extensions(pieces, 100, 400, 700, 300, 600, 900)
         self.assertEqual((e['a_up'], e['a_down'], e['b_up'], e['b_down']), (40, 60, 40, 60))
+        self.assertEqual((e['up_cover'], e['down_cover']), ('covered', 'covered'))
         self.assertFalse(e['up_reaches_end'] or e['down_reaches_end'])
 
     def test_off_diagonal_far_hsp_not_chained_and_end_flag(self):
         hsps = [(101, 400, 301, 600), (600, 690, 50, 140)]      # second HSP: elsewhere in B (e.g. a nested element)
-        blk = cr.chain(hsps, 100, 400, 300, 600)
-        self.assertEqual(blk, (100, 400, 300, 600))
-        e = cr.extensions(blk, 100, 400, 700, 300, 600, 900)
-        self.assertEqual((e['a_up'], e['a_down']), (0, 0))      # covers both ends and stops there: a measured 0
-        e = cr.extensions((2, 400, 202, 600), 100, 400, 700, 300, 600, 900)
+        pieces = cr.chain(hsps, 100, 400, 300, 600)
+        self.assertEqual(pieces, [(100, 400, 300, 600)])
+        e = cr.extensions(pieces, 100, 400, 700, 300, 600, 900)
+        self.assertEqual((e['a_up'], e['a_down']), (0, 0))      # outermost piece stops exactly at both ends: measured 0
+        self.assertEqual(e['up_cover'], 'covered_at_chain_end')
+        e = cr.extensions([(2, 400, 202, 600)], 100, 400, 700, 300, 600, 900)
         self.assertTrue(e['up_reaches_end'])
         self.assertIsNone(cr.chain([(500, 690, 50, 240)], 100, 400, 300, 600))
 
     def test_local_hit_inside_core_is_unknown_not_zero(self):
-        # review counterexample: 1,000 bp core, a 100 bp local alignment in its middle
-        blk = cr.chain([(501, 600, 501, 600)], 100, 1100, 100, 1100)
-        e = cr.extensions(blk, 100, 1100, 1300, 100, 1100, 1300)
+        # review counterexample 1: 1,000 bp core, a 100 bp local alignment in its middle
+        pieces = cr.chain([(501, 600, 501, 600)], 100, 1100, 100, 1100)
+        e = cr.extensions(pieces, 100, 1100, 1300, 100, 1100, 1300)
         self.assertEqual((e['a_up'], e['a_down'], e['b_up'], e['b_down']), (None, None, None, None))
+        self.assertEqual((e['up_cover'], e['down_cover']), ('not_reached', 'not_reached'))
         self.assertFalse(e['up_reaches_end'] or e['down_reaches_end'])
         self.assertEqual(cr.side_boundary([e['a_up']], False), (None, 'end_not_covered', 1))
         # covered in A but not in B is still unknown
-        e = cr.extensions((50, 1150, 120, 1150), 100, 1100, 1300, 100, 1100, 1300)
+        e = cr.extensions([(50, 1150, 120, 1150)], 100, 1100, 1300, 100, 1100, 1300)
         self.assertIsNone(e['a_up'])
         self.assertEqual(e['a_down'], 50)
+
+    def test_core_end_in_chain_gap_is_unknown(self):
+        # review counterexample 2: two chained pieces, the core start (200) lies in the 20 bp unaligned gap between them
+        pieces = cr.chain([(101, 190, 101, 190), (211, 600, 211, 600)], 200, 500, 200, 500)
+        self.assertEqual(len(pieces), 2)
+        e = cr.extensions(pieces, 200, 500, 800, 200, 500, 800)
+        self.assertEqual(e['up_cover'], 'end_in_chain_gap')
+        self.assertIsNone(e['a_up'])
+        self.assertEqual((e['down_cover'], e['a_down']), ('covered', 100))
+        # the core start exactly where an inner piece begins also borders the gap: unknown, not 100 bp
+        pieces = cr.chain([(81, 180, 81, 180), (201, 600, 201, 600)], 200, 500, 200, 500)
+        e = cr.extensions(pieces, 200, 500, 800, 200, 500, 800)
+        self.assertEqual((e['up_cover'], e['a_up']), ('end_in_chain_gap', None))
+        # an end inside one piece with a gap further out is measured, and the gap is counted
+        pieces = cr.chain([(61, 120, 61, 120), (141, 600, 141, 600)], 200, 500, 200, 500)
+        e = cr.extensions(pieces, 200, 500, 800, 200, 500, 800)
+        self.assertEqual((e['up_cover'], e['a_up'], e['up_gaps_beyond_end']), ('covered', 140, 1))
 
     def test_side_boundary(self):
         self.assertEqual(cr.side_boundary([40, 45, 50], False), (45, 'resolved', 0))
@@ -66,6 +86,13 @@ class ChainTests(unittest.TestCase):
         self.assertEqual(cr.side_boundary([], False), (None, 'end_not_covered', 0))
         # agreeing known partners do not resolve a side while another partner does not cover the end
         self.assertEqual(cr.side_boundary([40, 41, None], False), (40, 'end_not_covered_by_some_partners', 1))
+
+
+class CopyPatternTests(unittest.TestCase):
+    def test_patterns_are_descriptive(self):
+        self.assertEqual(cr.copy_pattern([2, 2, 2]), 'same_count_in_all_assemblies')
+        self.assertEqual(cr.copy_pattern([2, 0, 2]), 'same_count_where_present')
+        self.assertEqual(cr.copy_pattern([4, 2, 0]), 'count_varies')
 
 
 class EndHintTests(unittest.TestCase):

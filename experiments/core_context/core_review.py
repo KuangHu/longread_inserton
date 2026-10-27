@@ -11,8 +11,10 @@ here is an insertion call or a site group.
                  identical sequence; the minimum over the two genes is reported for two-gene cores.
 3 boundary       per pair: the oriented coding span +/- W bp of both copies aligned (blastn, plus strand). The HSP with the
                  largest overlap of both coding spans is the seed; colinear HSPs within CHAIN_GAP bp are chained to it.
-                 A side's extension (shared sequence beyond the coding span) is measured only if the chained block
-                 covers that core end in both copies; otherwise it is unknown, never 0. Per occurrence and side:
+                 The chained HSPs are kept: a side's extension (shared sequence beyond the coding span) is measured
+                 only if that core end lies inside one aligned piece in both copies, or the outermost piece stops
+                 exactly at it (a measured 0). An end not reached, or in / at an unaligned gap between chained pieces,
+                 is unknown, never 0; gap ends are counted separately. Per occurrence and side:
                  resolved only if every different-context partner gives a known extension, none reaches the window /
                  contig end, and they spread <= SPREAD bp; partners not covering the end are counted. Estimated span
                  = coding span + median extension of each side, only when both sides are resolved. The <2500 bp target
@@ -22,6 +24,9 @@ here is an insertion call or a site group.
                  Cross-assembly pairs also carry the genome ANI of the two assemblies (skani edges, frozen in S2) and
                  core DNA identity minus ANI: a copy that moved recently is more similar than its genomes, a vertically
                  inherited gene in a rearranged neighbourhood is about as similar as its genomes (diagnostic, no cutoff).
+5 copy number    complete-CDS target-scope copies of the core per subset assembly (0 where absent) and a pattern:
+                 same_count_in_all_assemblies / same_count_where_present / count_varies. Reported only: a constant count
+                 does not prove ordinary paralogy and a varying count does not prove movement; nothing is excluded.
 4 nesting        a neighbour gene is mobile-like if its product matches a mobile keyword (review_protein.hint:
                  transposase / IS, integrase / recombinase / resolvase, phage) or its protein family is itself a reviewed
                  single-gene core. Host context = the first K neighbours per side after skipping mobile-like genes
@@ -40,7 +45,7 @@ from pathlib import Path
 import protein_context as pc
 from review_protein import colour, esc, hint
 
-VERSION = 'core_context_review_v0.3'
+VERSION = 'core_context_review_v0.4'
 W = 3000
 CHAIN_GAP = 50
 EDGE = 5
@@ -79,7 +84,8 @@ def window(seq, s, e, forward, w, circular):
 def chain(hsps, a0, a1, b0, b1, gap=CHAIN_GAP):
     """Shared block around the core from plus/plus HSPs (1-based inclusive qs, qe, ss, se) of A vs B, cores at [a0, a1)
     and [b0, b1) (0-based). Seed = HSP with the largest overlap of both cores; colinear HSPs within gap bp (small
-    overlaps allowed) are added on each side. Returns (qs0, qe, ss0, se) 0-based half-open, or None."""
+    overlaps allowed) are added on each side. Returns the chained HSPs (qs0, qe, ss0, se), 0-based half-open and
+    ordered along A, or None; the block is their outer extent, the gaps between them are not aligned."""
     def ov(x0, x1, y0, y1):
         return max(0, min(x1, y1) - max(x0, y0))
     hs = [(qs - 1, qe, ss - 1, se) for qs, qe, ss, se in hsps if qe > qs and se > ss]
@@ -87,29 +93,51 @@ def chain(hsps, a0, a1, b0, b1, gap=CHAIN_GAP):
     seeds = [x for x in seeds if x[0] > 0]
     if not seeds:
         return None
-    cur = list(max(seeds)[1])
+    pieces = [max(seeds)[1]]
     while True:
-        left = [h for h in hs if h[0] < cur[0] and h[2] < cur[2] and -gap <= cur[0] - h[1] <= gap and -gap <= cur[2] - h[3] <= gap]
+        c = pieces[0]
+        left = [h for h in hs if h[0] < c[0] and h[2] < c[2] and -gap <= c[0] - h[1] <= gap and -gap <= c[2] - h[3] <= gap]
         if not left:
             break
-        h = min(left, key=lambda h: (h[0], h[2]))
-        cur[0], cur[2] = h[0], h[2]
+        pieces.insert(0, min(left, key=lambda h: (h[0], h[2])))
     while True:
-        right = [h for h in hs if h[1] > cur[1] and h[3] > cur[3] and -gap <= h[0] - cur[1] <= gap and -gap <= h[2] - cur[3] <= gap]
+        c = pieces[-1]
+        right = [h for h in hs if h[1] > c[1] and h[3] > c[3] and -gap <= h[0] - c[1] <= gap and -gap <= h[2] - c[3] <= gap]
         if not right:
             break
-        h = max(right, key=lambda h: (h[1], h[3]))
-        cur[1], cur[3] = h[1], h[3]
-    return tuple(cur)
+        pieces.append(max(right, key=lambda h: (h[1], h[3])))
+    return pieces
 
 
-def extensions(block, a0, a1, alen, b0, b1, blen, edge=EDGE):
-    """Shared bp beyond the core on each side for A and B, and whether each side reached a sequence end. A side is
-    measured only when the block covers that core end in both A and B; otherwise its extensions are None (unknown)."""
-    qs, qe, ss, se = block
-    up, down = qs <= a0 and ss <= b0, qe >= a1 and se >= b1
-    return dict(a_up=a0 - qs if up else None, b_up=b0 - ss if up else None,
+def end_cover(pieces, pos_a, pos_b, upstream):
+    """How a chain covers one core end (A position pos_a, B position pos_b; the first core base for upstream, one past
+    the last for downstream): 'covered' (inside one aligned piece in both copies), 'covered_at_chain_end' (the
+    outermost piece stops exactly at the end: a measured 0), 'end_in_chain_gap' (the end is not inside an aligned piece,
+    or sits where an inner piece starts / stops, so it borders an unaligned gap) or 'not_reached'."""
+    q0, s0 = (0, 2) if upstream else (1, 3)
+    if (pieces[0][0] > pos_a or pieces[0][2] > pos_b) if upstream else (pieces[-1][1] < pos_a or pieces[-1][3] < pos_b):
+        return 'not_reached'
+    for k, h in enumerate(pieces):
+        if h[0] < pos_a < h[1] and h[2] < pos_b < h[3]:
+            return 'covered'
+        if h[q0] == pos_a and h[s0] == pos_b and k == (0 if upstream else len(pieces) - 1):
+            return 'covered_at_chain_end'
+    return 'end_in_chain_gap'
+
+
+def extensions(pieces, a0, a1, alen, b0, b1, blen, edge=EDGE):
+    """Shared bp beyond the core on each side for A and B, how each core end is covered (end_cover), whether a side's
+    shared stretch reaches a sequence end, and how many unaligned chain gaps lie beyond the end. Extensions are None
+    (unknown) unless the end is covered in both copies; an end in a chain gap or not reached is never a 0."""
+    qs, qe, ss, se = pieces[0][0], pieces[-1][1], pieces[0][2], pieces[-1][3]
+    cu = end_cover(pieces, a0, b0, True)
+    cd = end_cover(pieces, a1, b1, False)
+    up, down = cu.startswith('covered'), cd.startswith('covered')
+    return dict(up_cover=cu, down_cover=cd,
+                a_up=a0 - qs if up else None, b_up=b0 - ss if up else None,
                 a_down=qe - a1 if down else None, b_down=se - b1 if down else None,
+                up_gaps_beyond_end=sum(h[1] <= a0 for h in pieces[:-1]) if up else '',
+                down_gaps_beyond_end=sum(h[0] >= a1 for h in pieces[1:]) if down else '',
                 up_reaches_end=up and (qs <= edge or ss <= edge), down_reaches_end=down and (qe >= alen - edge or se >= blen - edge))
 
 
@@ -194,6 +222,14 @@ def best(hits):
     return h['pident'], h['length'] / h['qlen'], h['length'] / h['slen']
 
 
+def copy_pattern(copies):
+    """Descriptive copy-number pattern over the subset assemblies (0 = absent); not a paralogy or mobility call."""
+    present = {c for c in copies if c}
+    if len(present) > 1:
+        return 'count_varies'
+    return 'same_count_in_all_assemblies' if all(copies) else 'same_count_where_present'
+
+
 def load_ani(path, fasta):
     """{frozenset(sample pair): ANI} for the manifest samples from skani edges keyed by FASTA path."""
     smp = {v: k for k, v in fasta.items()}
@@ -273,7 +309,9 @@ def main():
         o['near'] = dict(up=[x[:3] for x in su[:pc.K]], down=[x[:3] for x in sd[:pc.K]])
         o['near_mobile'] = Counter(x[3] for s in ('up', 'down') for x in o['scan'][s][:pc.K] if x[3])
 
-    fasta = {r['sample']: r['fasta'] for r in pc.read_tsv(a.manifest)}
+    manifest = pc.read_tsv(a.manifest)
+    fasta = {r['sample']: r['fasta'] for r in manifest}
+    samples = [r['sample'] for r in manifest]
     ani = load_ani(a.skani, fasta)
     seqs = {}
     for smp in sorted({o['sample'] for o in occs.values()}):
@@ -304,7 +342,9 @@ def main():
             pb = [best(php[i][(ia + '_%d' % i, ib + '_%d' % i)]) for i in range(npos)]
             db = best(dcore[(ia, ib)])
             blk = chain([(h['qs'], h['qe'], h['ss'], h['se']) for h in dext[(ia, ib)]], A['c0'], A['c1'], B['c0'], B['c1'])
-            ext = extensions(blk, A['c0'], A['c1'], len(A['ext']), B['c0'], B['c1'], len(B['ext'])) if blk else {}
+            ext = extensions(blk, A['c0'], A['c1'], len(A['ext']), B['c0'], B['c1'], len(B['ext'])) if blk else \
+                dict(up_cover='no_core_alignment', down_cover='no_core_alignment', a_up=None, b_up=None, a_down=None,
+                     b_down=None, up_gaps_beyond_end='', down_gaps_beyond_end='', up_reaches_end=False, down_reaches_end=False)
             hrel = pc.relation(A['host'], B['host'])
             row = dict(structure=key[0], core_key=key[1], occurrence_a=A['occurrence_id'], occurrence_b=B['occurrence_id'],
                 sample_a=A['sample'], sample_b=B['sample'], same_sample=r['same_sample'],
@@ -320,8 +360,8 @@ def main():
                 if row['pair_ani'] != '' and row['core_dna_identity'] != '' else ''
             pair_rows.append(row)
             for o, pre in ((A, 'a'), (B, 'b')):
-                o.setdefault('partners', []).append((ext.get(pre + '_up'), ext.get('up_reaches_end'),
-                                                     ext.get(pre + '_down'), ext.get('down_reaches_end')))
+                o.setdefault('partners', []).append((ext[pre + '_up'], ext['up_reaches_end'], ext[pre + '_down'],
+                                                     ext['down_reaches_end'], ext['up_cover'], ext['down_cover']))
 
     occ_rows = []
     for oid, o in sorted(occs.items()):
@@ -335,6 +375,8 @@ def main():
         occ_rows.append(dict(occurrence_id=oid, structure=o['structure'], core_key=o['core_key'], sample=o['sample'],
             contig=o['contig'], start0=o['start0'], end0=o['end0'], strand=o['strand'], coding_span=span,
             different_partners=len(ps), up_partners_end_not_covered=up[2], down_partners_end_not_covered=down[2],
+            up_partners_end_in_chain_gap=sum(x[4] == 'end_in_chain_gap' for x in ps),
+            down_partners_end_in_chain_gap=sum(x[5] == 'end_in_chain_gap' for x in ps),
             ext_up=up[0] if up[0] is not None else '', up_status=up[1],
             ext_down=down[0] if down[0] is not None else '', down_status=down[1],
             estimated_span=est if est is not None else '', boundary_resolved=resolved,
@@ -369,7 +411,10 @@ def main():
         did = [r['core_dna_identity'] for r in ps if r['core_dna_identity'] != '']
         est = [r['estimated_span'] for r in os_ if r['boundary_resolved']]
         dani = [r['core_dna_minus_ani'] for r in cross if r['core_dna_minus_ani'] != '']
+        per = Counter(o['sample'] for o in occs.values() if (o['structure'], o['core_key']) == key)
+        copies = [per[x] for x in samples]
         core_rows.append(dict(structure=key[0], core_key=key[1], products=c['products'], occurrences=c['occurrences'],
+            copies_per_assembly=','.join(map(str, copies)), copy_pattern=copy_pattern(copies),
             samples=c['samples'], occurrences_in_different_pairs=len(os_),
             samples_in_different_pairs=len({r['sample'] for r in os_}),
             different_pairs_within_assembly=len(within), different_pairs_cross_assembly=len(cross),
@@ -416,6 +461,10 @@ def main():
             cross_pairs_without_ani=sum(r['same_sample'] != 'True' and r['pair_ani'] == '' for r in ps),
             cores_by_cross_median_core_dna_minus_ani=dict(Counter(ani_bin(c['cross_median_core_dna_minus_ani']) for c in cs)),
             occurrences=len(os_), occurrences_boundary_resolved=len(res),
+            occurrences_with_partner_end_in_chain_gap=sum(bool(r['up_partners_end_in_chain_gap'] or
+                                                               r['down_partners_end_in_chain_gap']) for r in os_),
+            pair_end_cover={side: dict(Counter(r[side + '_cover'] for r in ps)) for side in ('up', 'down')},
+            cores_by_copy_pattern=dict(Counter(c['copy_pattern'] for c in cs)),
             occurrences_with_partner_not_covering_an_end=sum(bool(r['up_partners_end_not_covered'] or
                                                                    r['down_partners_end_not_covered']) for r in os_),
             occurrences_side_status={s: dict(Counter(r[s + '_status'] for r in os_)) for s in ('up', 'down')},
@@ -436,8 +485,8 @@ def main():
         for o in os_:
             if o['context_class_target_lt2500'] not in seen and len(xs) < 4:
                 seen.add(o['context_class_target_lt2500']); xs.append(o)
-        head = '%s %s: %s | %s occ / %s samples; different pairs within %s, cross %s; host-different within %s, cross %s; ' \
-               'protein id %s, core DNA id %s' % (tag, c['core_key'], c['products'][:50], c['occurrences'], c['samples'],
+        head = '%s %s: %s | %s occ / %s samples, copies %s; different pairs within %s, cross %s; host-different within %s, cross %s; ' \
+               'protein id %s, core DNA id %s' % (tag, c['core_key'], c['products'][:50], c['occurrences'], c['samples'], c['copies_per_assembly'],
                c['different_pairs_within_assembly'], c['different_pairs_cross_assembly'], c['host_different_within'],
                c['host_different_cross'], c['protein_identity_range'], c['core_dna_identity_range'])
         rows_svg.append((head, [(o, orow[o['occurrence_id']]) for o in xs]))
