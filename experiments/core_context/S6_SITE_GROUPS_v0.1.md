@@ -103,3 +103,58 @@ fields only.
 - A strict clique rule: one unresolved pair blocks a whole component. Some real groups are left unresolved by design.
 - Different-position evidence between distant assemblies can also come from rearrangement around a conserved site.
 - Mobile skipping is by product keyword, so unannotated mobile DNA stays in the host window.
+
+## Review layer (`s6_review.py`, tests `test_s6_review.py`)
+
+This layer reads the outputs above and never changes them. It writes to `<subset>/protein_entry/s6/review/`.
+
+**Boundary denominators.** Every occurrence is in exactly one class:
+- `both_sides_resolved`;
+- `reviewed_side_unknown`;
+- `not_reviewed_no_different_partner`: core_review never measured its ends.
+
+Stable ends are split into:
+- one valid partner;
+- ≥ 2 partners in one assembly;
+- partners from ≥ 2 assemblies;
+- partners in ≥ 2 position units.
+
+One valid partner means one comparison supports that end.
+
+**Coordinates vs host context.** A non-overlapping pair in one assembly is always at different coordinates. Its
+host context is classified separately from the side relations:
+
+| class | sides |
+|---|---|
+| `context_different_both_sides` | both `different`: the target U–core–D pattern |
+| `context_repeated_both_sides` | both `same` (`repeated_flank`) |
+| `context_repeated_one_side` | one `same`, one `different` |
+| `context_unknown` | any side `unknown` |
+
+Flank DNA cross-check, reported only and never used to change a class:
+- blastn between the two copies' outer flanks, 500–3,000 bp beyond each core end in core orientation;
+- the inner 500 bp is left out because element ends can extend past the CDS;
+- coverage is the smaller of the two copies' covered fractions;
+- classes: `shared` ≥ 0.5, `not_shared` ≤ 0.1, otherwise `partial`, and `short_flank` if the outer flank is < 1,000 bp.
+
+**Position units and their relations.** A unit is a site group or a single-observation site. Unresolved occurrences
+are not units. Two units of one core are compared over every cross pair of their members:
+- `ambiguous`: some cross pair is `same_position_candidate`. This can only be a multiple-correspondence link.
+- `conflicting`: some cross pair has `conflicting_sides`.
+- `different`: every cross pair is a different-position verdict. The relation also carries a context: context
+  different on both sides in every pair, repeated context in some pair, or unknown context in some pair.
+- `unknown`: anything else. In particular, two accepted groups are **not** different by default.
+
+Per core the report gives:
+- the largest set of units that are pairwise `different`;
+- the same with context different on both sides (exact maximum clique);
+- never the plain unit count as a number of positions.
+
+**Representative cases.** Fixed rules, single-gene only:
+- context different: a same-assembly pair of supported positions;
+- repeated context: a same-assembly pair with `repeated_flank`;
+- conserved paralog positions: two non-mobile site groups, related `different` with context different, that share
+  assemblies;
+- multiple correspondence.
+
+If no core meets a rule in a subset, that case is reported as missing.

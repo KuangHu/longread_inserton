@@ -449,8 +449,11 @@ How to read it:
   context", but the site groups of IS cores are mostly clone-shared observations, not independent events.
 - **Non-mobile cores: most groups span distant assemblies.** These are conserved positions of genes that also have
   a second, differently placed copy or homolog. For example, EF-Tu (tufA / tufB) and the ETF FixA/FixB pair give two
-  site groups each, one per position, each seen in every assembly. That is the paralog pattern, now resolved into
-  positions rather than counted as different contexts.
+  site groups each, each seen in every assembly. **Correction (S6 review below):** two groups are not by themselves
+  two confirmed positions. For EF-Tu and ETF in comamonas and delftia, and ETF in paracidovorax, the relation between
+  the two groups is `unknown` under the all-cross-pairs rule. Some cross-assembly pairs are unresolved, even though
+  the two copies sit at different coordinates with different context in every assembly that holds both. Only
+  paracidovorax EF-Tu has a fully `different` group–group relation.
 - **Unresolved is not a site.** Most unresolved occurrences have pairs with unknown sides: unlabelled neighbours,
   mobile neighbours filling the host window, short contigs, or shared labels out of order. They are not counted as
   sites. The 41 Delftia `conflict_in_component` occurrences (8 cores) are components where `A≈B, B≈C` but `A` and
@@ -503,3 +506,110 @@ some real groups unresolved; different-position evidence between distant assembl
 rearrangement around a conserved site; mobile skipping is by product keyword only.
 
 Evidence stays `assembly_only`, `production_ready=false`. Stopped here for review.
+
+## S6 v0.1 review: denominators, coordinates vs context, group relations (`s6_review.py`, job 27334364)
+
+Rules: the review section of [`../S6_SITE_GROUPS_v0.1.md`](../S6_SITE_GROUPS_v0.1.md). Tests: `test_s6_review.py`.
+The S6 v0.1 outputs above are read, never changed; the new outputs are in `<subset>/protein_entry/s6/review/`. Cost
+1.5–6 min per subset, mostly the flank blastn. Evidence stays `assembly_only`, `production_ready=false`. Site
+groups and position units are not independent insertion events.
+
+**1. Boundary denominators (single-gene).** Every S6 occurrence is counted once. "Not reviewed" means the
+occurrence has no different-context partner in core_review, so its ends were never measured. It is not the same as
+"reviewed, unknown".
+
+| | comamonas | delftia | paracidovorax |
+|---|---:|---:|---:|
+| S6 occurrences | 283 | 492 | 256 |
+| both sides resolved (candidate conserved ends) | 123 | 214 | 122 |
+| reviewed, a side unknown | 119 | 160 | 78 |
+| not reviewed (`not_reviewed_no_different_partner`) | 41 | 118 | 56 |
+| candidate conserved ends: one valid partner only | 48 | 116 | 9 |
+| … ≥ 2 valid partners, all in one assembly | 26 | 24 | 8 |
+| … valid partners from ≥ 2 assemblies | 49 | 74 | 105 |
+| … valid partners in ≥ 2 position units | 25 | 45 | 103 |
+
+Two-gene (resolved / reviewed unknown / not reviewed): 16 / 26 / 6, 40 / 57 / 30, 3 / 17 / 5. A single valid
+partner means one comparison supports that end, not that several independent contexts agree.
+
+**2. Different coordinates vs different host context.** Every non-overlapping pair in one assembly is at different
+coordinates. Its host context (N = 5 per side) is classified separately. Single-gene, all such pairs (pairs where
+both copies are supported positions in brackets):
+
+| | comamonas | delftia | paracidovorax |
+|---|---:|---:|---:|
+| context different on both sides | 191 (63) | 273 (199) | 664 (231) |
+| context repeated on both sides (`repeated_flank`) | 3 (1) | 7 (3) | 3 (0) |
+| repeated on one side, different on the other | 2 (0) | 1 (1) | 0 |
+| context unknown (a side unknown) | 66 (21) | 125 (105) | 579 (93) |
+
+The 16 / 21 / 14 cores "with an assembly holding ≥ 2 supported positions" split as follows (first match):
+
+| | comamonas | delftia | paracidovorax |
+|---|---:|---:|---:|
+| some assembly has two supported positions with context different on both sides | 14 | 18 | 13 |
+| … otherwise repeated context | 0 | 1 | 0 |
+| … otherwise context unknown | 2 | 2 | 1 |
+
+Flank DNA cross-check: blastn of the outer flank (500–3,000 bp beyond each core end) between the two copies. It
+agrees with the gene-order class:
+- Of 1,128 single-gene pairs with context different on both sides, 1,125 have DNA `not_shared/not_shared`.
+- Context-repeated pairs are mostly DNA `shared/shared`: 2 of 3, 4 of 7 and 2 of 3. The rest are `partial` or
+  `not_shared`, where neighbour genes are homologous but the flank DNA is diverged.
+- Most context-unknown pairs are DNA `not_shared` (60 / 120 / 562). The DNA is reported only and does not move
+  them into the "different" class.
+
+**3. Relations between position units.** A unit is a site group or a single-observation site. Unresolved
+occurrences are not units. Two units are `different` only if every cross pair of members is a different-position
+verdict.
+
+| single-gene | comamonas | delftia | paracidovorax |
+|---|---:|---:|---:|
+| position units | 99 | 163 | 73 |
+| unit pairs: different / unknown / conflicting / ambiguous | 93 / 2 / 0 / 0 | 254 / 24 / 4 / 0 | 179 / 54 / 0 / 0 |
+| … group–group pairs only | 3 / 2 / 0 / 0 | 22 / 24 / 4 / 0 | 53 / 54 / 0 / 0 |
+| different pairs with context different on both sides in every cross pair | 72 | 167 | 176 |
+| Σ per core: largest pairwise-different unit set | 97 | 142 | 62 |
+| Σ per core: largest pairwise-different set with context different | 89 | 129 | 59 |
+| cores with ≥ 2 units pairwise different with context different | 27 | 24 | 13 |
+
+How to read it:
+- **Group–group relations are often unknown.** In delftia, 24 of 50 group–group pairs are unknown and 4 are
+  conflicting. In paracidovorax, 54 of 107 are unknown, mostly IS3 / ISAav5 groups whose cross pairs have unknown
+  sides.
+- **Counting units overstates distinct positions.** Single-observation sites differ from everything by definition,
+  so unit counts look larger than the evidence supports. The pairwise-different set sizes (97 / 142 / 62) are the
+  numbers backed by the current rule. They are still not independent events.
+- **EF-Tu and ETF are unknown, not different.** See the correction above. The `same_assembly_cross_context` column of
+  `s6_unit_relations.tsv.gz` shows that, inside each assembly, the two copies are at different coordinates with
+  context different on both sides (4 of 5 and 6 of 7 assemblies; one unknown).
+
+**4. Representative cases** (`review_cases.tsv`, `cases_s6_review.svg`; fixed rule in `s6_review_summary.json`):
+
+| subset | case | core | what the existing assemblies show |
+|---|---|---|---|
+| comamonas | context different | ISAav2 (IS5-like), 7 copies in one assembly | two copies, host context different on both sides, flank DNA not shared |
+| comamonas | repeated context | IS256, 5 copies in one assembly | two copies inside an identical prophage-like segment: same 5 + 5 host genes, flank DNA shared (1.0 / 1.0) |
+| comamonas | conserved paralog positions | aldehyde dehydrogenase, 2,2,2,1,2 | two groups, relation `different`; in two assemblies each copy matches its own group (5 / 2–5 host genes) and differs from the other |
+| comamonas | multiple correspondence | RdgC, 2,2,4,0,4 | one copy matches two copies of another assembly by gene order; those two share their flanks (DNA 1.0), a segmental duplicate; kept unresolved |
+| delftia | context different | IS5 (`PF_4b70bb8e2b9d`) | two copies in one assembly, context and flank DNA different |
+| delftia | repeated context | same IS5 core | two copies with the same 5 + 5 host genes, flank DNA partly shared (0.65) |
+| delftia | conserved paralog positions | none | no non-mobile group pair met `different` with context different; EF-Tu and ETF are `unknown` |
+| delftia | multiple correspondence | IS481 | one copy matches two copies of another assembly by gene order; the flank DNA matches only one (1.0 vs 0.0); kept ambiguous, DNA is auxiliary only |
+| paracidovorax | context different | IS3 (`PF_2bf098df0d79`) | two copies in one assembly, context and flank DNA different |
+| paracidovorax | repeated context | IS5 (`PF_61e54a119449`) | two copies with the same host genes, flank DNA partly shared (0.65) |
+| paracidovorax | conserved paralog positions | EF-Tu | two groups `different`; each copy matches its own group across assemblies (DNA ≥ 0.999) and differs from the other |
+| paracidovorax | multiple correspondence | none | no ambiguous pair in this subset |
+
+Outputs per subset in `<subset>/protein_entry/s6/review/`: `s6_same_assembly_pairs.tsv.gz`,
+`s6_position_units.tsv`, `s6_unit_relations.tsv.gz`, `s6_core_positions.tsv`, `review_cases.tsv`,
+`s6_review_summary.json`, `cases_s6_review.svg`.
+
+Limits:
+- Context classes come from gene order. The flank DNA is a cross-check only and does not change a class.
+- Context different between distant assemblies can also come from rearrangement around a conserved site; pairs
+  inside one assembly avoid that.
+- Unknown and unresolved occurrences are kept and not counted.
+
+Evidence stays `assembly_only`, `production_ready=false`. No scale-up and no FASTQ downloads. Stopped here for
+review.
