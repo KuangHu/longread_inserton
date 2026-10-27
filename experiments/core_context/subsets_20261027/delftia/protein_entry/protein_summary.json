@@ -1,5 +1,5 @@
 {
-  "version": "core_context_protein_v0.1",
+  "version": "core_context_protein_v0.2",
   "discovery_entry": "all_faa_gff3_proteins",
   "gap_inputs": [],
   "reads_inputs": [],
@@ -13,7 +13,10 @@
     "rna": 696,
     "match_with_transl_except": 6
   },
-  "complete_cds": 39797,
+  "complete_cds": 39793,
+  "cds_excluded_by_coding_flags": 0,
+  "cds_excluded_crossing_origin": 5,
+  "target_max_span_exclusive": 2500,
   "member_check": {
     "family_pass": 26523,
     "homology_group_pass": 26523
@@ -49,38 +52,76 @@
   "families": 13101,
   "homology_groups": 9689,
   "structures": {
-    "single_gene": {
-      "occurrences_considered": 39797,
+    "all:single_gene": {
+      "occurrences_considered": 39793,
       "core_keys_with_2plus": 6659,
-      "occurrences_kept": 33355,
+      "occurrences_kept": 33352,
       "core_keys_multicopy": 195,
-      "core_keys_with_different_context_candidate": 142,
+      "core_keys_with_different_context_candidate": 85,
       "core_keys_2plus_context_classes": 980,
-      "pairs": 77016,
+      "pairs": 77004,
       "relations": {
-        "similar_context": 69763,
-        "different_context_candidate": 1383,
-        "one_side_shared_unresolved": 5870,
+        "similar_context": 69751,
+        "different_context_candidate": 777,
+        "one_side_shared_unresolved": 3771,
+        "insufficient_context_labels": 2705,
         "edge_or_missing_context": 0
       },
-      "different_candidate_pairs_same_sample": 404,
+      "different_candidate_pairs_same_sample": 219,
       "truncated_pair_reviews": 0
     },
-    "two_gene": {
-      "occurrences_considered": 38296,
+    "all:two_gene": {
+      "occurrences_considered": 38292,
       "core_keys_with_2plus": 6739,
-      "occurrences_kept": 29966,
+      "occurrences_kept": 29963,
       "core_keys_multicopy": 117,
-      "core_keys_with_different_context_candidate": 58,
+      "core_keys_with_different_context_candidate": 30,
       "core_keys_2plus_context_classes": 693,
-      "pairs": 60076,
+      "pairs": 60068,
       "relations": {
-        "similar_context": 56271,
-        "different_context_candidate": 220,
-        "one_side_shared_unresolved": 3585,
+        "similar_context": 56263,
+        "different_context_candidate": 110,
+        "one_side_shared_unresolved": 2245,
+        "insufficient_context_labels": 1450,
         "edge_or_missing_context": 0
       },
-      "different_candidate_pairs_same_sample": 11,
+      "different_candidate_pairs_same_sample": 7,
+      "truncated_pair_reviews": 0
+    },
+    "target_lt2500:single_gene": {
+      "occurrences_considered": 38553,
+      "core_keys_with_2plus": 6449,
+      "occurrences_kept": 32353,
+      "core_keys_multicopy": 182,
+      "core_keys_with_different_context_candidate": 79,
+      "core_keys_2plus_context_classes": 948,
+      "pairs": 74828,
+      "relations": {
+        "similar_context": 67786,
+        "different_context_candidate": 756,
+        "one_side_shared_unresolved": 3644,
+        "insufficient_context_labels": 2642,
+        "edge_or_missing_context": 0
+      },
+      "different_candidate_pairs_same_sample": 215,
+      "truncated_pair_reviews": 0
+    },
+    "target_lt2500:two_gene": {
+      "occurrences_considered": 28757,
+      "core_keys_with_2plus": 5022,
+      "occurrences_kept": 22327,
+      "core_keys_multicopy": 102,
+      "core_keys_with_different_context_candidate": 27,
+      "core_keys_2plus_context_classes": 531,
+      "pairs": 44881,
+      "relations": {
+        "similar_context": 41982,
+        "different_context_candidate": 99,
+        "one_side_shared_unresolved": 1662,
+        "insufficient_context_labels": 1138,
+        "edge_or_missing_context": 0
+      },
+      "different_candidate_pairs_same_sample": 7,
       "truncated_pair_reviews": 0
     }
   },

@@ -77,7 +77,9 @@ def esc(s):
 def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--subset-dir', type=Path, required=True, help='committed subset dir with protein_entry/ and graph outputs')
+    p.add_argument('--genes', type=Path, required=True, help='genes.tsv.gz of the protein work dir (neighbour products)')
     a = p.parse_args()
+    genes = {g['gene_uid']: g for g in read_tsv(a.genes)}
     d, pe = a.subset_dir, a.subset_dir / 'protein_entry'
     cores = read_tsv(pe / 'protein_cores.tsv')
     occs = read_tsv(pe / 'protein_occurrences.tsv.gz')
@@ -141,6 +143,17 @@ def main():
         cases.append(('similar-context reference %s: %s' % (r['core_key'], r['products'][:60]),
                       sorted(by_core[('target_lt2500', 'single_gene', r['core_key'])], key=lambda o: o['sample'])[:3]))
     name = d.name
+    case_rows = []
+    for heading, xs in cases:
+        for o in xs:
+            case_rows.append(dict(case=heading.split(':')[0], occurrence_id=o['occurrence_id'], sample=o['sample'], contig=o['contig'],
+                start0=o['start0'], end0=o['end0'], span=o['span'], strand=o['strand'], context_class=o['context_class_target_lt2500'],
+                core_products=o['products'], graph_state=graph_state(o),
+                upstream_products_far_to_near=' / '.join(genes[g]['product'] for g in reversed(o['up_genes'].split(','))),
+                downstream_products_near_to_far=' / '.join(genes[g]['product'] for g in o['down_genes'].split(','))))
+    with open(pe / 'case_occurrences.tsv', 'w', newline='') as f:
+        w = csv.DictWriter(f, list(case_rows[0]), delimiter='\t', lineterminator='\n')
+        w.writeheader(); w.writerows(case_rows)
     (pe / 'cases_protein.svg').write_text(draw(cases, '%s: protein entry, target <2500 bp, oriented neighbour genes (K=3)' % name,
         'Assembly only. Arrows = genes in core orientation, coloured by homology group (same colour = homologous); '
         'grey = no protein label. Not a boundary or orthology call.'))

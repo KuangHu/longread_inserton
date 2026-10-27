@@ -75,4 +75,4 @@ python experiments/core_context/reproduce_local_smoke.py --pilot /path/to/cross_
 `select_subsets.py` 按 skani 实测 ANI 从已验证 Comamonadaceae FNA/GFF3/FAA 冻结 3 个子集（5/7/4 genomes），
 `core_context_subsets.sbatch` 运行 build --verify / call，`review_subsets.py` 写审查表、边界问题和 `cases.svg`。
 结果与成本见 [subsets_20261027/README.md](subsets_20261027/README.md)。主要问题：>90% 实例紧邻另一个重复 block，
-graph block 边界不是元件边界；按固定规则选出的“不同上下文”示例包括 rRNA operon 与 tuf 旁系同源。仍 `production_ready=false`。
+graph block 边界不是元件边界；按固定规则选出的“不同上下文”示例包括 rRNA operon 与 tuf 旁系同源。全 FAA 蛋白入口 v0.2（`protein_context.py`）分别报告宽范围与 <2500 bp 目标子集。仍 `production_ready=false`。

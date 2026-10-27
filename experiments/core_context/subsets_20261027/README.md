@@ -116,74 +116,129 @@ These are GFF3 overlap previews, not the S4 coding check:
   partly reflects how graph fragmentation varies between copies.
 - **Length range.** Repeated blocks ≥ 2500 bp are not called at all (554 / 931 / 629). Larger elements
   appear only as fragments or not at all.
-- **Next step for boundaries.** Merge runs of adjacent blocks with co-occurring copy number into candidate cores
-  before comparing contexts, then use CDS boundaries (S4 checks). The protein entry is independent of graph
-  boundaries and is the next step.
+- **Next step for boundaries.** Equal copy number is not enough to merge adjacent blocks. A run of blocks becomes
+  one candidate core only if the corresponding instances keep the same adjacency, order and orientation across
+  every copy. CDS boundaries (S4 checks) test whether the coding units inside are complete; they are not insertion
+  boundaries. Whether a context also occurs without the core is auxiliary evidence only, never an admission
+  criterion (no empty site is required).
 
-## Protein entry (all FAA/GFF3; `protein_context.py`, job 27328469)
+## Protein entry v0.2 (all FAA/GFF3; `protein_context.py`, job 27328730, commit 18d2d69)
 
-Starts from every GFF3 CDS and RNA of each subset, not from graph blocks or gap lists.
-- **Coding check:** the S4 coding check on every CDS against its FAA.
-- **Clustering:** MMseqs2 17.b804f at the frozen S4 settings (family 0.9/0.8, homology group 0.5/0.8), with every member
-  aligned to its final representative.
-- **Cores:**
-  - single-gene: one complete CDS; key = protein family;
-  - two-gene: two consecutive complete CDS; key = families in order with relative orientation, canonical over strands,
-    spacing kept per occurrence.
-- **Context:** K=3 neighbour genes on each side in core orientation, labelled by homology group. Windows wrap only on
-  GFF3 `Is_circular=true` contigs.
-- **Relations:** similar = shared label on both sides; different candidate = none shared on either side; one side
-  shared = unresolved.
+v0.1 (job 27328469, `c772861`) had three faults, reproduced with counterexamples in review. They are fixed in
+`9a57f44`, each with a test; its counts are superseded:
+1. **Complete CDS ignored coding flags.** A CDS whose translation matched the FAA still counted as complete with
+   `no_start`. Now the S4 rule applies: not partial, not pseudo, not origin-crossing, translation matches, and no
+   coding flag. In these RefSeq subsets the flag rule excludes 0 CDS; the origin rule excludes 2 / 5 / 1.
+2. **Unknown neighbours counted as different.** A side whose neighbours had no homology label could still yield
+   `different_context_candidate`. Now a side without a shared label must be fully labelled in both occurrences;
+   otherwise the pair is `insufficient_context_labels`.
+3. **No length target.** Cores of 3,000 bp stayed in. Each occurrence now has a span (first start to last end; a
+   two-gene span includes the spacing). Everything is computed twice: scope `all` (wide protein search) and scope
+   `target_lt2500` (span < 2500 bp; the 1–2 complete coding unit target).
 
-Each step took < 30 s and < 1.1 GB. The job ran with `protein_context.py` not yet committed (log `dirty=3`); that code
-is committed unchanged here.
+How the entry works:
+- **Start:** every GFF3 CDS and RNA, with no graph blocks, gap list or reads.
+- **Coding check:** the S4 coding check on every CDS.
+- **Clustering:** MMseqs2 17.b804f at the frozen S4 settings (family 0.9/0.8, homology group 0.5/0.8), with every
+  member aligned to its final representative. 0 failures, so no repairs.
+- **Cores:** single-gene = one complete CDS, key = protein family; two-gene = two consecutive complete CDS, key =
+  families in order with relative orientation (canonical over strands), spacing per occurrence.
+- **Context:** K=3 neighbours per side in core orientation, labelled by homology group. Windows wrap only on
+  `Is_circular=true` contigs.
+- **Cost:** < 40 s per subset.
 
 | | comamonas | delftia | paracidovorax |
 |---|---:|---:|---:|
-| genes (CDS + RNA) / complete CDS | 26,338 / 25,287 | 41,878 / 39,797 | 18,892 / 18,320 |
-| coding status match / pseudo / transl_except match | 25,282 / 468 / 5 | 39,791 / 1,385 / 6 | 18,320 / 315 / 0 |
+| genes (CDS + RNA) / complete CDS (S4 rule) | 26,338 / 25,285 | 41,878 / 39,793 | 18,892 / 18,319 |
 | distinct proteins / families / homology groups | 19,420 / 11,177 / 8,005 | 26,523 / 13,101 / 9,689 | 11,533 / 6,593 / 5,892 |
-| member check failures (before repair) | 0 | 0 | 0 |
-| single-gene cores with ≥ 2 occurrences (multi-copy) | 4,939 (231) | 6,659 (195) | 4,334 (86) |
-| single-gene pairs: similar / different candidate / one side / edge | 26,910 / 922 / 1,761 / 2 | 69,763 / 1,383 / 5,870 / 0 | 20,970 / 3,676 / 1,040 / 0 |
-| single-gene cores with ≥ 1 different-context candidate | 84 | 142 | 29 |
-| two-gene cores with ≥ 2 occurrences (multi-copy) | 4,708 (130) | 6,739 (117) | 4,244 (52) |
-| two-gene pairs: similar / different candidate / one side | 22,972 / 142 / 906 | 56,271 / 220 / 3,585 | 18,388 / 42 / 675 |
-| two-gene cores with ≥ 1 different-context candidate | 26 | 58 | 10 |
 
-Product keywords for single-gene cores with a different-context candidate are a reading aid, not a
-classification:
+Single-gene cores (wide search `all` → target `<2500 bp`):
 
-| | transposase/IS | integrase etc. | hypothetical | other (incl. intron RT, translation/ribosomal; see protein_review.json) |
+| | comamonas | delftia | paracidovorax |
+|---|---:|---:|---:|
+| core keys with ≥ 2 occurrences | 4,939 → 4,816 | 6,659 → 6,449 | 4,334 → 4,189 |
+| occurrences | 19,048 → 18,560 | 33,352 → 32,353 | 16,060 → 15,512 |
+| multi-copy in some assembly | 231 → 224 | 195 → 182 | 86 → 79 |
+| pairs similar | 26,910 → 26,207 | 69,751 → 67,786 | 20,968 → 20,256 |
+| pairs different-context candidate | 600 → 599 | 777 → 756 | 1,967 → 1,956 |
+| pairs one side shared | 1,258 → 1,215 | 3,771 → 3,644 | 718 → 678 |
+| pairs insufficient labels | 825 → 803 | 2,705 → 2,642 | 2,031 → 2,007 |
+| **core keys with ≥ 1 different-context candidate** | **52 → 51** | **85 → 79** | **24 → 21** |
+
+Two-gene cores (`all` → `<2500 bp`):
+
+| | comamonas | delftia | paracidovorax |
+|---|---:|---:|---:|
+| core keys with ≥ 2 occurrences | 4,708 → 3,503 | 6,739 → 5,022 | 4,244 → 3,087 |
+| pairs different-context candidate | 65 → 58 | 110 → 99 | 27 → 17 |
+| pairs insufficient labels | 372 → 322 | 1,450 → 1,138 | 237 → 136 |
+| **core keys with ≥ 1 different-context candidate** | **13 → 10** | **30 → 27** | **9 → 6** |
+
+There were no edge-limited or truncated pair reviews. Compared with v0.1, the single-gene cores with a
+different-context candidate in scope `all` fell from 84 / 142 / 29 to 52 / 85 / 24, mostly because of rule 2.
+
+Product keywords for target-scope single-gene cores with a different-context candidate are a reading aid only. "Other"
+includes the intron-RT and translation/ribosomal hints; see `protein_review.json`:
+
+| | transposase/IS | integrase etc. | hypothetical | other |
 |---|---:|---:|---:|---:|
-| comamonas | 17 | 3 | 10 | 54 |
-| delftia | 14 | 1 | 26 | 101 |
-| paracidovorax | 8 | 1 | 4 | 16 |
+| comamonas | 13 | 3 | 4 | 31 |
+| delftia | 10 | 0 | 13 | 56 |
+| paracidovorax | 8 | 1 | 3 | 9 |
 
-Ranked by context classes linked by different-candidate pairs, the top cores are IS transposases in all three
-subsets: ISL3, IS3, IS5, IS481, IS110 and IS30 families, IstB, and a group II intron RT in Delftia. Most other
-different-context cores are not mobile-like by product and need paralog / rearrangement review.
-
-Overlap with the graph entry (single-gene cores with a different-context candidate; does any occurrence lie in a
-graph block group that has a graph different-context pair?):
+Overlap with the graph entry (target-scope single-gene cores with a different-context candidate; does any
+occurrence lie in a graph group with a graph different-context pair?):
 
 | | IS hint: yes / no | other: yes / no |
 |---|---:|---:|
-| comamonas | 15 / 2 | 23 / 44 |
-| delftia | 12 / 2 | 47 / 81 |
-| paracidovorax | 8 / 0 | 13 / 8 |
+| comamonas | 11 / 2 | 13 / 25 |
+| delftia | 9 / 1 | 31 / 38 |
+| paracidovorax | 8 / 0 | 9 / 4 |
 
-The two entries agree on most IS-like cores. Most non-IS protein candidates have no graph counterpart.
+### U–core–D case review (target scope; `case_occurrences.tsv`, `cases_protein.svg`)
+
+The fixed rule takes the top three single-gene cores by number of context classes linked by different-context
+pairs, then one occurrence per class.
+
+| subset | core | span | occurrences / samples / classes |
+|---|---|---:|---|
+| comamonas | PF_147add17340c ISL3 transposase | 1,161–1,221 | 29 / 3 / 29 |
+| comamonas | PF_4a2352cf6318 IS481 transposase | 966–987 | 6 / 2 / 6 |
+| comamonas | PF_2d92c93a9d2c hypothetical protein | 255 | 8 / 4 / 7 |
+| delftia | PF_3070024975f6 IS481 transposase | 1,188 | 21 / 5 / 13 |
+| delftia | PF_4b70bb8e2b9d IS5 transposase | 809–811 | 30 / 4 / 18 |
+| delftia | PF_ad056eba1256 IS5 transposase | 793 | 15 / 1 / 14 |
+| paracidovorax | PF_34809b3c6b4f ISAav5 (IS481-like) | 948 | 54 / 3 / 36 |
+| paracidovorax | PF_2bf098df0d79 IS3 transposase | 1,565 | 55 / 3 / 43 |
+| paracidovorax | PF_f094f2564f99 IS5 transposase | 813 | 30 / 4 / 22 |
+
+Reading of the cases:
+- **The intended pattern.** Eight of nine are IS transposase CDS: the same protein core (identical span within a
+  family) between unrelated chromosomal genes. Examples are flagellar genes vs nitrogen regulation vs UvrA
+  neighbours (ISL3, Comamonas), and IclR / penicillin-binding protein / tryptophan synthase neighbours (IS481, Delftia).
+- **Not all are cross-strain.** Many different-context pairs are copies inside one assembly. PF_ad056eba1256 has
+  15 copies, all in SAMN15905291. That is "same core, different context", but not evidence of polymorphism between
+  strains.
+- **Mobile neighbours.** In Paracidovorax, IS3 / IS5 copies often sit next to other mobile genes (IS5, ISAav4, Tn3,
+  relaxase / mobilisation, RHS), and one IS5 copy sits next to CRISPR-cas genes. Such a context may be another mobile
+  element or a nested insertion, not a host site.
+- **Core is only the CDS.** The core is the transposase CDS only; IS inverted repeats and flanking non-coding parts
+  are outside it. A 1,565 bp IS3 CDS suggests a fused orfA/orfB annotation; this is not checked here.
+- **Unresolved hypothetical.** The 255 bp hypothetical protein (Comamonas) sits next to an AlpA phage regulator,
+  arsenic-resistance genes and an IS5 copy. It is not identifiable as a mobile element from annotation and stays
+  unresolved.
 
 Outputs per subset in `<subset>/protein_entry/`:
-- `protein_summary.json`, `protein_cores.tsv`, `protein_occurrences.tsv.gz` (oriented neighbour labels and gene ids);
-- `protein_pairs.tsv.gz` (all relations), `member_check_repairs.tsv` (empty);
-- `different_context_cores.tsv`, `protein_review.json`;
-- `cases_protein.svg`: the top three different-context cores by the fixed rule, one occurrence per context class,
-  plus a similar-context reference.
+- `protein_summary.json`, `protein_cores.tsv` (both scopes), `protein_occurrences.tsv.gz` (span, target flag,
+  oriented neighbour labels / gene ids, context class per scope), `protein_pairs.tsv.gz` (all relations, both scopes);
+- `member_check_repairs.tsv` (empty);
+- `different_context_cores.tsv`, `protein_review.json`, `case_occurrences.tsv`, `cases_protein.svg`.
 
-Not done yet:
-- complete-CDS boundaries of multi-gene elements;
-- the paralog / rearrangement filter;
+Still open:
+- boundary review beyond the CDS (adjacent-block merging under consistent adjacency, order and orientation);
+- paralog / rearrangement / nested-element interpretation;
+- separating same-assembly copies from cross-strain contexts in the counts;
 - site groups (S6);
 - read checks.
+
+Evidence stays `assembly_only`, `production_ready=false`.

@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1180" height="642">
 <rect width="100%" height="100%" fill="white"/>
-<text x="20" y="26" font-size="18">comamonas: protein entry, oriented neighbour genes (K=3)</text>
+<text x="20" y="26" font-size="18">comamonas: protein entry, target &lt;2500 bp, oriented neighbour genes (K=3)</text>
 <text x="20" y="46" font-size="12">Assembly only. Arrows = genes in core orientation, coloured by homology group (same colour = homologous); grey = no protein label. Not a boundary or orthology call.</text>
 <text x="20" y="70" font-size="13" font-weight="bold">different-context candidate PF_147add17340c: ISL3 family transposase (29 occ, 3 samples, 29 classes)</text>
 <text x="20" y="100" font-size="11">SAMN12671326 NZ_CP043568.1:21823-22983 (-) class 0</text>
@@ -63,128 +63,128 @@
 <text x="862" y="190" font-size="8">b40b5d95a</text>
 <polygon points="958,178 1040,178 1040,196 958,196 948,187" fill="#dddddd" stroke="#666" stroke-width="0.5"><title>nolabel</title></polygon>
 <text x="960" y="190" font-size="8">nolabel</text>
-<text x="20" y="218" font-size="13" font-weight="bold">different-context candidate PF_7148aa16e472: IS21-like element helper ATPase IstB (14 occ, 2 samples, 13 classes)</text>
-<text x="20" y="248" font-size="11">SAMN02603356 NC_013446.2:1751059-1751844 (+) class 0</text>
-<polygon points="360,236 442,236 452,245 442,254 360,254" fill="hsl(219,55%,57%)" stroke="#666" stroke-width="0.5"><title>PH_de0fdd83dcea</title></polygon>
-<text x="372" y="248" font-size="8">fdd83dcea</text>
-<polygon points="468,236 550,236 550,254 468,254 458,245" fill="hsl(220,55%,61%)" stroke="#666" stroke-width="0.5"><title>PH_b592760b2866</title></polygon>
-<text x="470" y="248" font-size="8">2760b2866</text>
-<polygon points="556,236 638,236 648,245 638,254 556,254" fill="#dddddd" stroke="#666" stroke-width="0.5"><title>nolabel</title></polygon>
-<text x="568" y="248" font-size="8">nolabel</text>
+<text x="20" y="218" font-size="13" font-weight="bold">different-context candidate PF_4a2352cf6318: IS481 family transposase (6 occ, 2 samples, 6 classes)</text>
+<text x="20" y="248" font-size="11">SAMN24624792 NZ_CP090445.1:2306546-2307511 (-) class 0</text>
+<polygon points="370,236 452,236 452,254 370,254 360,245" fill="hsl(75,55%,58%)" stroke="#666" stroke-width="0.5"><title>PH_ce2ffb27fcf9</title></polygon>
+<text x="372" y="248" font-size="8">ffb27fcf9</text>
+<polygon points="458,236 540,236 550,245 540,254 458,254" fill="hsl(75,55%,64%)" stroke="#666" stroke-width="0.5"><title>PH_e5eac6cde667</title></polygon>
+<text x="470" y="248" font-size="8">ac6cde667</text>
+<polygon points="556,236 638,236 648,245 638,254 556,254" fill="hsl(255,55%,60%)" stroke="#666" stroke-width="0.5"><title>PH_aef908d5e9df</title></polygon>
+<text x="568" y="248" font-size="8">908d5e9df</text>
 <polygon points="654,236 736,236 746,245 736,254 654,254" fill="#edc06f" stroke="#666" stroke-width="0.5"><title>CORE</title></polygon>
 <text x="666" y="248" font-size="8">core</text>
-<polygon points="762,236 844,236 844,254 762,254 752,245" fill="hsl(180,55%,68%)" stroke="#666" stroke-width="0.5"><title>tRNA:tRNA-Pro</title></polygon>
-<text x="764" y="248" font-size="8">:tRNA-Pro</text>
-<polygon points="850,236 932,236 942,245 932,254 850,254" fill="hsl(278,55%,61%)" stroke="#666" stroke-width="0.5"><title>tRNA:tRNA-Arg</title></polygon>
-<text x="862" y="248" font-size="8">:tRNA-Arg</text>
-<polygon points="958,236 1040,236 1040,254 958,254 948,245" fill="hsl(52,55%,62%)" stroke="#666" stroke-width="0.5"><title>PH_0d3376e179c3</title></polygon>
-<text x="960" y="248" font-size="8">376e179c3</text>
-<text x="20" y="278" font-size="11">SAMN02603356 NC_013446.2:2190802-2191587 (-) class 1</text>
-<polygon points="370,266 452,266 452,284 370,284 360,275" fill="hsl(306,55%,63%)" stroke="#666" stroke-width="0.5"><title>PH_8d120c52f90e</title></polygon>
-<text x="372" y="278" font-size="8">20c52f90e</text>
-<polygon points="458,266 540,266 550,275 540,284 458,284" fill="hsl(285,55%,61%)" stroke="#666" stroke-width="0.5"><title>PH_ed6f45eb8473</title></polygon>
-<text x="470" y="278" font-size="8">f45eb8473</text>
-<polygon points="556,266 638,266 648,275 638,284 556,284" fill="hsl(204,55%,63%)" stroke="#666" stroke-width="0.5"><title>PH_01148e136989</title></polygon>
-<text x="568" y="278" font-size="8">48e136989</text>
+<polygon points="752,236 834,236 844,245 834,254 752,254" fill="hsl(247,55%,73%)" stroke="#666" stroke-width="0.5"><title>PH_dbfc4a0a1a87</title></polygon>
+<text x="764" y="248" font-size="8">c4a0a1a87</text>
+<polygon points="850,236 932,236 942,245 932,254 850,254" fill="hsl(5,55%,58%)" stroke="#666" stroke-width="0.5"><title>PH_0e65b77b19c4</title></polygon>
+<text x="862" y="248" font-size="8">5b77b19c4</text>
+<polygon points="948,236 1030,236 1040,245 1030,254 948,254" fill="hsl(76,55%,61%)" stroke="#666" stroke-width="0.5"><title>PH_ffd08b5c37dd</title></polygon>
+<text x="960" y="248" font-size="8">08b5c37dd</text>
+<text x="20" y="278" font-size="11">SAMN24624792 NZ_CP090445.1:4558807-4559793 (+) class 1</text>
+<polygon points="360,266 442,266 452,275 442,284 360,284" fill="hsl(353,55%,70%)" stroke="#666" stroke-width="0.5"><title>PH_041b2b45f9ac</title></polygon>
+<text x="372" y="278" font-size="8">b2b45f9ac</text>
+<polygon points="458,266 540,266 550,275 540,284 458,284" fill="hsl(200,55%,66%)" stroke="#666" stroke-width="0.5"><title>PH_b6d3e5adb5d6</title></polygon>
+<text x="470" y="278" font-size="8">3e5adb5d6</text>
+<polygon points="566,266 648,266 648,284 566,284 556,275" fill="hsl(86,55%,70%)" stroke="#666" stroke-width="0.5"><title>PH_faf3104daf59</title></polygon>
+<text x="568" y="278" font-size="8">3104daf59</text>
 <polygon points="654,266 736,266 746,275 736,284 654,284" fill="#edc06f" stroke="#666" stroke-width="0.5"><title>CORE</title></polygon>
 <text x="666" y="278" font-size="8">core</text>
-<polygon points="762,266 844,266 844,284 762,284 752,275" fill="#dddddd" stroke="#666" stroke-width="0.5"><title>nolabel</title></polygon>
-<text x="764" y="278" font-size="8">nolabel</text>
-<polygon points="850,266 932,266 942,275 932,284 850,284" fill="hsl(327,55%,69%)" stroke="#666" stroke-width="0.5"><title>PH_e0b3a7a52d3d</title></polygon>
-<text x="862" y="278" font-size="8">3a7a52d3d</text>
-<polygon points="958,266 1040,266 1040,284 958,284 948,275" fill="hsl(353,55%,72%)" stroke="#666" stroke-width="0.5"><title>PH_bfcc0600ab02</title></polygon>
-<text x="960" y="278" font-size="8">c0600ab02</text>
-<text x="20" y="308" font-size="11">SAMN29863000 NZ_CP101743.1:2899304-2900089 (-) class 10</text>
-<polygon points="360,296 442,296 452,305 442,314 360,314" fill="hsl(288,55%,55%)" stroke="#666" stroke-width="0.5"><title>PH_295cc3c990cd</title></polygon>
-<text x="372" y="308" font-size="8">cc3c990cd</text>
-<polygon points="458,296 540,296 550,305 540,314 458,314" fill="hsl(194,55%,61%)" stroke="#666" stroke-width="0.5"><title>PH_de1c144f3796</title></polygon>
-<text x="470" y="308" font-size="8">c144f3796</text>
-<polygon points="556,296 638,296 648,305 638,314 556,314" fill="hsl(204,55%,63%)" stroke="#666" stroke-width="0.5"><title>PH_01148e136989</title></polygon>
-<text x="568" y="308" font-size="8">48e136989</text>
+<polygon points="762,266 844,266 844,284 762,284 752,275" fill="hsl(74,55%,57%)" stroke="#666" stroke-width="0.5"><title>PH_e219195d1845</title></polygon>
+<text x="764" y="278" font-size="8">9195d1845</text>
+<polygon points="850,266 932,266 942,275 932,284 850,284" fill="hsl(93,55%,62%)" stroke="#666" stroke-width="0.5"><title>PH_f57136da9f29</title></polygon>
+<text x="862" y="278" font-size="8">136da9f29</text>
+<polygon points="948,266 1030,266 1040,275 1030,284 948,284" fill="hsl(17,55%,67%)" stroke="#666" stroke-width="0.5"><title>PH_e67a321a6261</title></polygon>
+<text x="960" y="278" font-size="8">a321a6261</text>
+<text x="20" y="308" font-size="11">SAMN24624792 NZ_CP090445.1:5026204-5027169 (+) class 2</text>
+<polygon points="370,296 452,296 452,314 370,314 360,305" fill="hsl(53,55%,57%)" stroke="#666" stroke-width="0.5"><title>PH_2afb2c1b85b1</title></polygon>
+<text x="372" y="308" font-size="8">b2c1b85b1</text>
+<polygon points="458,296 540,296 550,305 540,314 458,314" fill="hsl(26,55%,74%)" stroke="#666" stroke-width="0.5"><title>PH_5d1c71487733</title></polygon>
+<text x="470" y="308" font-size="8">c71487733</text>
+<polygon points="556,296 638,296 648,305 638,314 556,314" fill="hsl(155,55%,57%)" stroke="#666" stroke-width="0.5"><title>PH_70ca91176ddd</title></polygon>
+<text x="568" y="308" font-size="8">a91176ddd</text>
 <polygon points="654,296 736,296 746,305 736,314 654,314" fill="#edc06f" stroke="#666" stroke-width="0.5"><title>CORE</title></polygon>
 <text x="666" y="308" font-size="8">core</text>
-<polygon points="762,296 844,296 844,314 762,314 752,305" fill="hsl(50,55%,64%)" stroke="#666" stroke-width="0.5"><title>PH_e0a44b511efb</title></polygon>
-<text x="764" y="308" font-size="8">44b511efb</text>
-<polygon points="860,296 942,296 942,314 860,314 850,305" fill="hsl(130,55%,57%)" stroke="#666" stroke-width="0.5"><title>PH_8996afaf9008</title></polygon>
-<text x="862" y="308" font-size="8">6afaf9008</text>
-<polygon points="948,296 1030,296 1040,305 1030,314 948,314" fill="hsl(332,55%,56%)" stroke="#666" stroke-width="0.5"><title>PH_54ae56e6b1bc</title></polygon>
-<text x="960" y="308" font-size="8">e56e6b1bc</text>
-<text x="20" y="338" font-size="11">SAMN29863000 NZ_CP101743.1:3113477-3114262 (+) class 12</text>
-<polygon points="360,326 442,326 452,335 442,344 360,344" fill="hsl(210,55%,62%)" stroke="#666" stroke-width="0.5"><title>PH_8f5effe87a95</title></polygon>
-<text x="372" y="338" font-size="8">effe87a95</text>
-<polygon points="458,326 540,326 550,335 540,344 458,344" fill="hsl(325,55%,70%)" stroke="#666" stroke-width="0.5"><title>PH_917af35f5443</title></polygon>
-<text x="470" y="338" font-size="8">af35f5443</text>
-<polygon points="556,326 638,326 648,335 638,344 556,344" fill="hsl(204,55%,63%)" stroke="#666" stroke-width="0.5"><title>PH_01148e136989</title></polygon>
-<text x="568" y="338" font-size="8">48e136989</text>
+<polygon points="752,296 834,296 844,305 834,314 752,314" fill="hsl(25,55%,74%)" stroke="#666" stroke-width="0.5"><title>PH_d9a9c49b2686</title></polygon>
+<text x="764" y="308" font-size="8">9c49b2686</text>
+<polygon points="850,296 932,296 942,305 932,314 850,314" fill="hsl(207,55%,73%)" stroke="#666" stroke-width="0.5"><title>PH_324987428a88</title></polygon>
+<text x="862" y="308" font-size="8">987428a88</text>
+<polygon points="958,296 1040,296 1040,314 958,314 948,305" fill="hsl(169,55%,61%)" stroke="#666" stroke-width="0.5"><title>PH_1c277bb9bcde</title></polygon>
+<text x="960" y="308" font-size="8">77bb9bcde</text>
+<text x="20" y="338" font-size="11">SAMN24624792 NZ_CP090445.1:5639425-5640390 (+) class 3</text>
+<polygon points="360,326 442,326 452,335 442,344 360,344" fill="hsl(329,55%,66%)" stroke="#666" stroke-width="0.5"><title>PH_b1f7e83be6d2</title></polygon>
+<text x="372" y="338" font-size="8">7e83be6d2</text>
+<polygon points="458,326 540,326 550,335 540,344 458,344" fill="hsl(290,55%,66%)" stroke="#666" stroke-width="0.5"><title>PH_39fa7976ccc0</title></polygon>
+<text x="470" y="338" font-size="8">a7976ccc0</text>
+<polygon points="556,326 638,326 648,335 638,344 556,344" fill="hsl(275,55%,68%)" stroke="#666" stroke-width="0.5"><title>PH_fb1b457a0d6e</title></polygon>
+<text x="568" y="338" font-size="8">b457a0d6e</text>
 <polygon points="654,326 736,326 746,335 736,344 654,344" fill="#edc06f" stroke="#666" stroke-width="0.5"><title>CORE</title></polygon>
 <text x="666" y="338" font-size="8">core</text>
-<polygon points="752,326 834,326 844,335 834,344 752,344" fill="hsl(347,55%,71%)" stroke="#666" stroke-width="0.5"><title>PH_ede165c6d6c0</title></polygon>
-<text x="764" y="338" font-size="8">165c6d6c0</text>
-<polygon points="860,326 942,326 942,344 860,344 850,335" fill="#dddddd" stroke="#666" stroke-width="0.5"><title>nolabel</title></polygon>
-<text x="862" y="338" font-size="8">nolabel</text>
-<polygon points="958,326 1040,326 1040,344 958,344 948,335" fill="hsl(206,55%,56%)" stroke="#666" stroke-width="0.5"><title>PH_a9f217913bee</title></polygon>
-<text x="960" y="338" font-size="8">217913bee</text>
-<text x="20" y="366" font-size="13" font-weight="bold">different-context candidate PF_eed8648a18cd: IS3 family transposase (9 occ, 4 samples, 8 classes)</text>
-<text x="20" y="396" font-size="11">SAMN02603356 NC_013446.2:1684363-1685901 (-) class 0</text>
-<polygon points="370,384 452,384 452,402 370,402 360,393" fill="hsl(69,55%,57%)" stroke="#666" stroke-width="0.5"><title>PH_d25710f86eb7</title></polygon>
-<text x="372" y="396" font-size="8">710f86eb7</text>
-<polygon points="458,384 540,384 550,393 540,402 458,402" fill="hsl(304,55%,63%)" stroke="#666" stroke-width="0.5"><title>PH_8c2e469962bb</title></polygon>
-<text x="470" y="396" font-size="8">e469962bb</text>
-<polygon points="556,384 638,384 648,393 638,402 556,402" fill="hsl(8,55%,59%)" stroke="#666" stroke-width="0.5"><title>PH_22359fb227a4</title></polygon>
-<text x="568" y="396" font-size="8">59fb227a4</text>
+<polygon points="762,326 844,326 844,344 762,344 752,335" fill="hsl(176,55%,65%)" stroke="#666" stroke-width="0.5"><title>PH_e6f5f28c41f7</title></polygon>
+<text x="764" y="338" font-size="8">5f28c41f7</text>
+<polygon points="860,326 942,326 942,344 860,344 850,335" fill="hsl(267,55%,70%)" stroke="#666" stroke-width="0.5"><title>PH_c44c57b2c116</title></polygon>
+<text x="862" y="338" font-size="8">c57b2c116</text>
+<polygon points="958,326 1040,326 1040,344 958,344 948,335" fill="hsl(211,55%,66%)" stroke="#666" stroke-width="0.5"><title>PH_dab1b50c86c9</title></polygon>
+<text x="960" y="338" font-size="8">1b50c86c9</text>
+<text x="20" y="366" font-size="13" font-weight="bold">different-context candidate PF_2d92c93a9d2c: hypothetical protein (8 occ, 4 samples, 7 classes)</text>
+<text x="20" y="396" font-size="11">SAMN02603356 NC_013446.2:1660929-1661183 (-) class 0</text>
+<polygon points="360,384 442,384 452,393 442,402 360,402" fill="hsl(162,55%,57%)" stroke="#666" stroke-width="0.5"><title>PH_756a4ad83851</title></polygon>
+<text x="372" y="396" font-size="8">a4ad83851</text>
+<polygon points="458,384 540,384 550,393 540,402 458,402" fill="hsl(281,55%,67%)" stroke="#666" stroke-width="0.5"><title>PH_fad276bd1802</title></polygon>
+<text x="470" y="396" font-size="8">276bd1802</text>
+<polygon points="566,384 648,384 648,402 566,402 556,393" fill="hsl(184,55%,71%)" stroke="#666" stroke-width="0.5"><title>PH_b31cbe34cb8d</title></polygon>
+<text x="568" y="396" font-size="8">cbe34cb8d</text>
 <polygon points="654,384 736,384 746,393 736,402 654,402" fill="#edc06f" stroke="#666" stroke-width="0.5"><title>CORE</title></polygon>
 <text x="666" y="396" font-size="8">core</text>
-<polygon points="762,384 844,384 844,402 762,402 752,393" fill="hsl(29,55%,73%)" stroke="#666" stroke-width="0.5"><title>PH_634850eaf1fe</title></polygon>
-<text x="764" y="396" font-size="8">850eaf1fe</text>
-<polygon points="850,384 932,384 942,393 932,402 850,402" fill="hsl(314,55%,56%)" stroke="#666" stroke-width="0.5"><title>PH_7d5acd6acb76</title></polygon>
-<text x="862" y="396" font-size="8">acd6acb76</text>
-<polygon points="948,384 1030,384 1040,393 1030,402 948,402" fill="hsl(102,55%,63%)" stroke="#666" stroke-width="0.5"><title>PH_c804f3d5a4c7</title></polygon>
-<text x="960" y="396" font-size="8">4f3d5a4c7</text>
-<text x="20" y="426" font-size="11">SAMN02603356 NC_013446.2:2839464-2841003 (+) class 1</text>
-<polygon points="370,414 452,414 452,432 370,432 360,423" fill="hsl(48,55%,55%)" stroke="#666" stroke-width="0.5"><title>PH_e49145621539</title></polygon>
-<text x="372" y="426" font-size="8">145621539</text>
-<polygon points="458,414 540,414 550,423 540,432 458,432" fill="hsl(202,55%,70%)" stroke="#666" stroke-width="0.5"><title>PH_d4aac503cb15</title></polygon>
-<text x="470" y="426" font-size="8">ac503cb15</text>
-<polygon points="556,414 638,414 648,423 638,432 556,432" fill="hsl(354,55%,58%)" stroke="#666" stroke-width="0.5"><title>PH_b31ff7cee8fd</title></polygon>
-<text x="568" y="426" font-size="8">ff7cee8fd</text>
+<polygon points="762,384 844,384 844,402 762,402 752,393" fill="hsl(197,55%,74%)" stroke="#666" stroke-width="0.5"><title>PH_96e3d9f88a23</title></polygon>
+<text x="764" y="396" font-size="8">3d9f88a23</text>
+<polygon points="860,384 942,384 942,402 860,402 850,393" fill="hsl(92,55%,71%)" stroke="#666" stroke-width="0.5"><title>PH_690136b1673b</title></polygon>
+<text x="862" y="396" font-size="8">136b1673b</text>
+<polygon points="958,384 1040,384 1040,402 958,402 948,393" fill="hsl(153,55%,68%)" stroke="#666" stroke-width="0.5"><title>PH_3580703eae9e</title></polygon>
+<text x="960" y="396" font-size="8">0703eae9e</text>
+<text x="20" y="426" font-size="11">SAMN02603356 NC_013446.2:2154890-2155144 (-) class 1</text>
+<polygon points="360,414 442,414 452,423 442,432 360,432" fill="hsl(105,55%,64%)" stroke="#666" stroke-width="0.5"><title>PH_4b48ed3af5c1</title></polygon>
+<text x="372" y="426" font-size="8">8ed3af5c1</text>
+<polygon points="458,414 540,414 550,423 540,432 458,432" fill="hsl(191,55%,64%)" stroke="#666" stroke-width="0.5"><title>PH_9a90b84e8cb0</title></polygon>
+<text x="470" y="426" font-size="8">0b84e8cb0</text>
+<polygon points="566,414 648,414 648,432 566,432 556,423" fill="hsl(27,55%,67%)" stroke="#666" stroke-width="0.5"><title>PH_6d522b2abb19</title></polygon>
+<text x="568" y="426" font-size="8">22b2abb19</text>
 <polygon points="654,414 736,414 746,423 736,432 654,432" fill="#edc06f" stroke="#666" stroke-width="0.5"><title>CORE</title></polygon>
 <text x="666" y="426" font-size="8">core</text>
-<polygon points="752,414 834,414 844,423 834,432 752,432" fill="#dddddd" stroke="#666" stroke-width="0.5"><title>nolabel</title></polygon>
-<text x="764" y="426" font-size="8">nolabel</text>
-<polygon points="860,414 942,414 942,432 860,432 850,423" fill="hsl(141,55%,59%)" stroke="#666" stroke-width="0.5"><title>PH_a1864ca1606d</title></polygon>
-<text x="862" y="426" font-size="8">64ca1606d</text>
-<polygon points="958,414 1040,414 1040,432 958,432 948,423" fill="hsl(300,55%,70%)" stroke="#666" stroke-width="0.5"><title>PH_d277838d4b8c</title></polygon>
-<text x="960" y="426" font-size="8">7838d4b8c</text>
-<text x="20" y="456" font-size="11">SAMN12671326 NZ_CP043568.1:1009943-1011478 (-) class 2</text>
-<polygon points="370,444 452,444 452,462 370,462 360,453" fill="hsl(118,55%,60%)" stroke="#666" stroke-width="0.5"><title>PH_3afa9d9a186b</title></polygon>
-<text x="372" y="456" font-size="8">a9d9a186b</text>
-<polygon points="468,444 550,444 550,462 468,462 458,453" fill="hsl(202,55%,65%)" stroke="#666" stroke-width="0.5"><title>PH_3b8b323fb028</title></polygon>
-<text x="470" y="456" font-size="8">b323fb028</text>
-<polygon points="556,444 638,444 648,453 638,462 556,462" fill="hsl(276,55%,66%)" stroke="#666" stroke-width="0.5"><title>PH_3c9a17d1675b</title></polygon>
-<text x="568" y="456" font-size="8">a17d1675b</text>
+<polygon points="752,414 834,414 844,423 834,432 752,432" fill="hsl(154,55%,57%)" stroke="#666" stroke-width="0.5"><title>PH_d064a1af089b</title></polygon>
+<text x="764" y="426" font-size="8">4a1af089b</text>
+<polygon points="850,414 932,414 942,423 932,432 850,432" fill="hsl(254,55%,68%)" stroke="#666" stroke-width="0.5"><title>PH_42c2a26790a9</title></polygon>
+<text x="862" y="426" font-size="8">2a26790a9</text>
+<polygon points="948,414 1030,414 1040,423 1030,432 948,432" fill="hsl(206,55%,66%)" stroke="#666" stroke-width="0.5"><title>PH_ab3d50cece0a</title></polygon>
+<text x="960" y="426" font-size="8">d50cece0a</text>
+<text x="20" y="456" font-size="11">SAMN02603356 NC_013446.2:2157970-2158224 (-) class 2</text>
+<polygon points="360,444 442,444 452,453 442,462 360,462" fill="hsl(7,55%,73%)" stroke="#666" stroke-width="0.5"><title>PH_71cd4668281d</title></polygon>
+<text x="372" y="456" font-size="8">d4668281d</text>
+<polygon points="468,444 550,444 550,462 468,462 458,453" fill="hsl(36,55%,59%)" stroke="#666" stroke-width="0.5"><title>PH_7286126fdf1f</title></polygon>
+<text x="470" y="456" font-size="8">6126fdf1f</text>
+<polygon points="556,444 638,444 648,453 638,462 556,462" fill="hsl(340,55%,72%)" stroke="#666" stroke-width="0.5"><title>PH_c2745bf11e81</title></polygon>
+<text x="568" y="456" font-size="8">45bf11e81</text>
 <polygon points="654,444 736,444 746,453 736,462 654,462" fill="#edc06f" stroke="#666" stroke-width="0.5"><title>CORE</title></polygon>
 <text x="666" y="456" font-size="8">core</text>
-<polygon points="762,444 844,444 844,462 762,462 752,453" fill="hsl(327,55%,69%)" stroke="#666" stroke-width="0.5"><title>PH_e0b3a7a52d3d</title></polygon>
-<text x="764" y="456" font-size="8">3a7a52d3d</text>
-<polygon points="860,444 942,444 942,462 860,462 850,453" fill="hsl(223,55%,70%)" stroke="#666" stroke-width="0.5"><title>PH_22e3436e6f24</title></polygon>
-<text x="862" y="456" font-size="8">3436e6f24</text>
-<polygon points="958,444 1040,444 1040,462 958,462 948,453" fill="hsl(238,55%,71%)" stroke="#666" stroke-width="0.5"><title>tRNA:tRNA-Ile</title></polygon>
-<text x="960" y="456" font-size="8">:tRNA-Ile</text>
-<text x="20" y="486" font-size="11">SAMN12671326 NZ_CP043568.1:1976598-1978136 (-) class 4</text>
-<polygon points="360,474 442,474 452,483 442,492 360,492" fill="hsl(16,55%,65%)" stroke="#666" stroke-width="0.5"><title>PH_a7a3c631fb56</title></polygon>
-<text x="372" y="486" font-size="8">3c631fb56</text>
-<polygon points="458,474 540,474 550,483 540,492 458,492" fill="hsl(39,55%,69%)" stroke="#666" stroke-width="0.5"><title>PH_991b3beae505</title></polygon>
-<text x="470" y="486" font-size="8">b3beae505</text>
-<polygon points="556,474 638,474 648,483 638,492 556,492" fill="hsl(72,55%,60%)" stroke="#666" stroke-width="0.5"><title>PH_b3ea17198b9f</title></polygon>
-<text x="568" y="486" font-size="8">a17198b9f</text>
+<polygon points="752,444 834,444 844,453 834,462 752,462" fill="hsl(105,55%,64%)" stroke="#666" stroke-width="0.5"><title>PH_4b48ed3af5c1</title></polygon>
+<text x="764" y="456" font-size="8">8ed3af5c1</text>
+<polygon points="850,444 932,444 942,453 932,462 850,462" fill="hsl(191,55%,64%)" stroke="#666" stroke-width="0.5"><title>PH_9a90b84e8cb0</title></polygon>
+<text x="862" y="456" font-size="8">0b84e8cb0</text>
+<polygon points="958,444 1040,444 1040,462 958,462 948,453" fill="hsl(27,55%,67%)" stroke="#666" stroke-width="0.5"><title>PH_6d522b2abb19</title></polygon>
+<text x="960" y="456" font-size="8">22b2abb19</text>
+<text x="20" y="486" font-size="11">SAMN02603356 NC_013446.2:2999941-3000195 (+) class 3</text>
+<polygon points="360,474 442,474 452,483 442,492 360,492" fill="hsl(356,55%,56%)" stroke="#666" stroke-width="0.5"><title>PH_99cef1e6049e</title></polygon>
+<text x="372" y="486" font-size="8">ef1e6049e</text>
+<polygon points="458,474 540,474 550,483 540,492 458,492" fill="hsl(233,55%,60%)" stroke="#666" stroke-width="0.5"><title>PH_dd70d584b9a5</title></polygon>
+<text x="470" y="486" font-size="8">0d584b9a5</text>
+<polygon points="566,474 648,474 648,492 566,492 556,483" fill="hsl(309,55%,74%)" stroke="#666" stroke-width="0.5"><title>PH_9f1d7ce18547</title></polygon>
+<text x="568" y="486" font-size="8">d7ce18547</text>
 <polygon points="654,474 736,474 746,483 736,492 654,492" fill="#edc06f" stroke="#666" stroke-width="0.5"><title>CORE</title></polygon>
 <text x="666" y="486" font-size="8">core</text>
-<polygon points="752,474 834,474 844,483 834,492 752,492" fill="#dddddd" stroke="#666" stroke-width="0.5"><title>nolabel</title></polygon>
-<text x="764" y="486" font-size="8">nolabel</text>
-<polygon points="850,474 932,474 942,483 932,492 850,492" fill="hsl(185,55%,67%)" stroke="#666" stroke-width="0.5"><title>PH_4f06204161f3</title></polygon>
-<text x="862" y="486" font-size="8">6204161f3</text>
-<polygon points="948,474 1030,474 1040,483 1030,492 948,492" fill="hsl(138,55%,68%)" stroke="#666" stroke-width="0.5"><title>PH_dabe2a7ef674</title></polygon>
-<text x="960" y="486" font-size="8">e2a7ef674</text>
+<polygon points="762,474 844,474 844,492 762,492 752,483" fill="hsl(277,55%,55%)" stroke="#666" stroke-width="0.5"><title>PH_4f3dd738f05b</title></polygon>
+<text x="764" y="486" font-size="8">dd738f05b</text>
+<polygon points="850,474 932,474 942,483 932,492 850,492" fill="hsl(337,55%,74%)" stroke="#666" stroke-width="0.5"><title>PH_43a50c747001</title></polygon>
+<text x="862" y="486" font-size="8">50c747001</text>
+<polygon points="958,474 1040,474 1040,492 958,492 948,483" fill="hsl(92,55%,71%)" stroke="#666" stroke-width="0.5"><title>PH_690136b1673b</title></polygon>
+<text x="960" y="486" font-size="8">136b1673b</text>
 <text x="20" y="514" font-size="13" font-weight="bold">similar-context reference PF_001876298b8c: argininosuccinate lyase</text>
 <text x="20" y="544" font-size="11">SAMN02603356 NC_013446.2:1041563-1043011 (+) class 4</text>
 <polygon points="370,532 452,532 452,550 370,550 360,541" fill="hsl(182,55%,71%)" stroke="#666" stroke-width="0.5"><title>PH_397a3a0b9207</title></polygon>
