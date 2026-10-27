@@ -21,6 +21,10 @@
 保留为附加分析；已有 round-1 集群结果汇报，其结果/脚本尚待归档核查。
 跨株 empty-site 验证不阻塞本株 `[up][X][down]` call-out。
 
+**扩量第一阶段（assembly 比较发现，10 个 P1 科）已完成到 `assembly_catalog_ready_for_long_reads`**：
+85,123 个 assembly-derived candidate loci（`assembly_only`，long-read evidence pending），见
+[SCALE_UP_STAGE1_REPORT.md](docs/SCALE_UP_STAGE1_REPORT.md)；尚未做 reads 检查，也不是独立插入事件数。
+
 真正的 pooled FNA 发现和长读段从头重复发现保留为后续对照，见
 [跨物种与长读段评估计划](docs/PLAN_CROSS_SPECIES_LONG_READS.md)。
 下面描述的是当前 package 已实现流程；实验脚本与计划不表示 package 已有 reads/pool 模式。

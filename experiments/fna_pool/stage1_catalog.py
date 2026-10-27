@@ -781,6 +781,13 @@ def cmd_catalog(a):
     print("done %.0fs" % (time.time() - t0))
 
 
+def csum(ds):
+    t = Counter()
+    for d in ds:
+        t.update(d)
+    return dict(t)
+
+
 def cmd_report(a):
     """Per-batch and global stage-1 counts from S1 / S2 / S3 / S4 / catalog outputs (no recomputation)."""
     out = a.out
@@ -814,7 +821,10 @@ def cmd_report(a):
     for k in ("pool_assemblies", "pool_biosamples", "pool_projects", "pool_annotated", "pool_samples_with_usable_long_reads"):
         g[k + "_sum"] = sum(int(v[k]) for v in rep["per_batch"].values())
     pb = rep["per_batch"].values()
-    g["downloads"] = dict(Counter({k: c for v in pb for k, c in v["downloads"]["status"].items()}))
+    g["downloads"] = csum(v["downloads"]["status"] for v in pb)
+    g["downloads_failed"] = [dict(f, batch=b) for b, v in rep["per_batch"].items() for f in v["downloads"]["failed"]]
+    g["annotation"] = csum(v["downloads"]["annotation"] for v in pb)
+    g["s2_excluded_not_verified"] = sum(v["s2"]["excluded_not_verified"] for v in pb)
     g["s2_samples"] = sum(v["s2"]["samples"] for v in pb)
     g["s2_pairs"] = sum(v["s2"]["pairs"] for v in pb)
     g["s2_no_pair_selected"] = sum(v["s2"]["pair_status"].get("no_pair_selected_pending_review", 0) for v in pb)
@@ -822,9 +832,9 @@ def cmd_report(a):
     g["s3_loci"] = sum(v["s3"]["loci"] for v in pb)
     g["s3_anchored_lt2500"] = sum(v["s3"]["anchored_lt2500"] for v in pb)
     g["s4_short_anchored_loci"] = sum(v["s4"]["short_anchored_loci"] for v in pb)
-    g["s4_categories"] = dict(Counter({k: c for v in pb for k, c in v["s4"]["categories"].items()}))
+    g["s4_categories"] = csum(v["s4"]["categories"] for v in pb)
     g["s4_categories_close"] = sum(g["s4_categories"].values()) == g["s4_short_anchored_loci"]
-    g["s4_translation"] = dict(Counter({k: c for v in pb for k, c in v["s4"]["translation"].items()}))
+    g["s4_translation"] = csum(v["s4"]["translation"] for v in pb)
     g["sum_local_families"] = sum(v["s4"]["local_families"] for v in pb)
     g["sum_local_distinct_proteins"] = sum(v["s4"]["local_distinct_proteins"] for v in pb)
     g["catalog"] = cs["global"]

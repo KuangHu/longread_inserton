@@ -334,3 +334,14 @@ v0.2 改动（判定阈值 ≥3、≤10% 不变）：
 ### main 清单 read check（[s5_readcheck.sbatch](s5_readcheck.sbatch)：prep → 按样本 array 的 map → summarize）
 
 464 个 main locus：carrier 有关联 run 的 266 个，carrier 和至少一个伙伴都有的 201 个；涉及 287 个样本（147 个有 run），162 个 run，需下载 154 个（约 139 GB）。fetch 现在可并发（`--jobs`，每个 run 独立目录，单个失败只报告）；alleles 可用 `--loci-ids` 限定清单。其它清单单独跑、单独报告。
+
+## 扩量第一阶段（`scaleup_stage1_20261026/`，10 个 P1 科）
+
+入口：[scaleup_stage1.py](scaleup_stage1.py)（baseline、targets），然后对每个 batch 沿用 S0–S4
+（build_pool → download_fna → build_s2 → s3 → s4_annotate），最后运行
+[stage1_catalog.py](stage1_catalog.py)（[stage1_catalog.sbatch](stage1_catalog.sbatch)：proteins → cluster → catalog，再执行 report）。
+结果在 [scaleup_stage1_20261026/stage1_catalog/](scaleup_stage1_20261026/stage1_catalog/)，报告见
+[docs/SCALE_UP_STAGE1_REPORT.md](../../docs/SCALE_UP_STAGE1_REPORT.md)。
+
+证据来源全部为 `assembly_only`。ID 带 batch 命名空间（`<batch>:<id>`）；全局家族、同源分组和架构 ID 绑定目录版本与代表序列哈希
+（`F1_` / `H1_` / `A1_`）。大型序列文件在 scratch，路径、哈希和重建方法见 `frozen_manifest.json`。
