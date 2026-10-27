@@ -13,8 +13,10 @@
 #   prep       select targets from the stage-1 catalog, build alleles for all calls of those loci, re-check local runs
 #   map        array task i: sample i of samples.txt -> alleles and whole assembly (skips samples already done)
 #   summarize  v0.3 verdicts with per-molecule support records, then the read-evidence layer, comparison and next batch
+#   diagnose   <sample>: whole run mapped to the sample's own assembly, facts on why no read spans its sites
+#   followup   open items of this batch, read types behind each side, priority-1 download chunks (metadata only)
 #   regress    summarize the baseline pilot work dir again with this code; outputs must equal the committed pilot
-# Usage: sbatch stage2_readcheck.sbatch <stage>   (map: sbatch --array=0-<n-1> ...)
+# Usage: sbatch stage2_readcheck.sbatch <stage> [sample]   (map: sbatch --array=0-<n-1> ...)
 set -euo pipefail
 STAGE=${1:?stage}
 B=comamonadaceae
@@ -56,6 +58,12 @@ summarize)
     python $HERE/stage2_readcheck.py layer --work $W --out $REPO --batch $B
     cp $W/targets.tsv $W/targets.json $W/tests.tsv $W/runs_checked.tsv $W/runs_checked.json $W/runs_allowed.tsv $REPO/
     mkdir -p $REPO/paf_json && cp $W/paf/*.json $REPO/paf_json/
+    ;;
+diagnose)
+    python $HERE/stage2_readcheck.py diagnose --work $W --out $REPO --reads $READS --sample ${2:?sample} --jobs $SLURM_CPUS_PER_TASK
+    ;;
+followup)
+    python $HERE/stage2_readcheck.py followup --work $W --out $REPO
     ;;
 regress)
     BW=$PROJ/fna_pool/comamonadaceae_20261024/s5_readcheck/main

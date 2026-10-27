@@ -10,6 +10,10 @@ localcheck  For every sample of the tests (carriers and partners): its usable li
             (verify.json says verified, same BioSample and platform, file present, size and SHA256 recomputed equal to
             the record). Runs that pass go to runs_allowed.tsv (the only runs mapped); missing, failed or remote runs
             are listed with their reason and never count as evidence against a candidate.
+diagnose    One sample whose reads gave no spanning molecule: its whole run mapped to its own assembly, with mapped
+            fraction, identity, genome and contig depth, and reads reaching / spanning each tested site (facts only).
+followup    batch1_followup.tsv (open items of this batch), side_read_types.tsv (runs and read types behind each side;
+            sides supported only by unresolved PacBio runs flagged), and the priority-1 download plan in per-family chunks.
 layer       After s3_readcheck summarize: read_evidence.tsv (stage-1 schema, one row per test x role), per-category
             report counts, comparison with the baseline pilot tests, anomalies, and the next batch's deduplicated
             download list (metadata only).
@@ -327,9 +331,189 @@ def cmd_layer(a):
     print(json.dumps(summ, indent=1))
 
 
+def cmd_diagnose(a):
+    """Why a sample with local reads has no spanning molecule: map the whole run to the sample's own assembly
+    (primary alignments only) and report facts - mapped reads and bases, identity, genome-wide and per-contig depth,
+    and per tested site the reads that reach the U window, the D window and that span site +- ANCHOR in one alignment.
+    Descriptive only: no verdict changes and no new thresholds."""
+    tests = read(a.work / "tests.tsv")
+    allowed = [r for r in read(a.work / "runs_checked.tsv") if r["sample"] == a.sample and r["status"] == "local_verified_ok"]
+    genome = json.loads((a.work / "paf" / ("genome_%s.json" % a.sample)).read_text())["assembly"]
+    lens = {}
+    name = None
+    for line in open(genome):
+        if line.startswith(">"):
+            name = line[1:].split()[0]
+            lens[name] = 0
+        else:
+            lens[name] += len(line.strip())
+    sites = []
+    for t in tests:
+        for role, s in (("C", t["carrier"]), ("E", t["empty"])):
+            if s == a.sample:
+                contig, se = t["%s_site" % role].rsplit(":", 1)
+                b, e = map(int, se.split("-"))
+                sites.append(dict(test_id=t["test_id"], role=role, contig=contig, start=b, end=e, verdict=t["%s_verdict" % role]))
+    out = a.out / ("diagnose_%s" % a.sample)
+    out.mkdir(parents=True, exist_ok=True)
+    runs = []
+    for r in allowed:
+        paf = a.work / ("diag_%s_%s.paf" % (a.sample, r["run"]))
+        v = json.loads((a.reads / r["run"] / "verify.json").read_text())
+        subprocess.run(["minimap2", "-x", r["preset"], "-c", "--secondary=no", "-t", str(a.jobs), genome, v["local_file"]],
+                       stdout=open(str(paf), "w"), stderr=subprocess.DEVNULL, check=True)
+        reads_mapped, aln_bases, match, alen, cov = set(), 0, 0, 0, Counter()
+        win = defaultdict(lambda: dict(U=0, D=0, span=0, span_lengths=[]))
+        for line in open(str(paf)):
+            f = line.split("\t")
+            if "tp:A:P" not in line:
+                continue
+            q, t, ts, te = f[0], f[5], int(f[7]), int(f[8])
+            reads_mapped.add(q)
+            aln_bases += te - ts
+            match += int(f[9])
+            alen += int(f[10])
+            cov[t] += te - ts
+            for s in sites:
+                if t != s["contig"]:
+                    continue
+                k = (s["test_id"], s["role"])
+                if ts < s["start"] and te > max(0, s["start"] - FLANK_DIAG):
+                    win[k]["U"] += 1
+                if ts < s["end"] + FLANK_DIAG and te > s["end"]:
+                    win[k]["D"] += 1
+                if ts <= s["start"] - 300 and te >= s["end"] + 300:
+                    win[k]["span"] += 1
+        g = sum(lens.values())
+        row = dict(sample=a.sample, run=r["run"], read_type=r["read_type"], preset=r["preset"], archive_reads=v["run"]["archive_read_count"],
+                   archive_bases=v["run"]["archive_base_count"], mean_read_length=v["summary"].get("mean_length"),
+                   n50=v["summary"].get("n50"), reads_with_primary_alignment=len(reads_mapped),
+                   fraction_reads_mapped=round(len(reads_mapped) / float(v["run"]["archive_read_count"]), 4),
+                   aligned_bases=aln_bases, assembly_bp=g, mean_depth_genome=round(aln_bases / float(g), 2),
+                   identity_matches_over_alignment=round(match / float(alen), 4) if alen else 0)
+        runs.append(row)
+        srows = []
+        for s in sites:
+            k = (s["test_id"], s["role"])
+            srows.append(dict(s, run=r["run"], contig_length=lens.get(s["contig"], ""), contig_depth=round(cov[s["contig"]] / float(lens[s["contig"]]), 2)
+                              if s["contig"] in lens else "", reads_U_window=win[k]["U"], reads_D_window=win[k]["D"],
+                              reads_spanning_site_pm300=win[k]["span"]))
+        write(out / ("sites_%s.tsv" % r["run"]), srows)
+        top = sorted(cov.items(), key=lambda x: -x[1] / float(lens[x[0]]))
+        write(out / ("contigs_%s.tsv" % r["run"]), [dict(contig=c, length=lens[c], aligned_bases=cov.get(c, 0),
+                                                        depth=round(cov.get(c, 0) / float(lens[c]), 2)) for c in sorted(lens, key=lambda c: -lens[c])])
+        paf.unlink()
+    write(out / "runs.tsv", runs)
+    print(json.dumps(runs, indent=1))
+
+
+FLANK_DIAG = 2000
+
+
+def cmd_followup(a):
+    """batch1_followup (what batch 1 left open), per-side read-type flags, and the priority-1 download plan cut into
+    resumable per-family chunks. Metadata only."""
+    out = a.out
+    tests = read(out / "readcheck_tests.tsv")
+    loci = {l["locus_id"]: l for l in read(out / "readcheck_loci.tsv")}
+    targets = {r["locus_id"]: r for r in read(a.work / "targets.tsv")}
+    rc_ = read(a.work / "runs_checked.tsv")
+    used = {}
+    for p in (a.work / "paf").glob("genome_*.json"):
+        used[json.loads(p.read_text())["sample"]] = [r["run"] for r in json.loads(p.read_text())["runs"]]
+    rtype = {r["run"]: r["read_type"] for r in rc_}
+    remote = defaultdict(list)
+    for r in rc_:
+        if r["status"] == "not_local":
+            remote[r["sample"]].append(r)
+    # ---- per-side read types
+    side = []
+    for t in tests:
+        for role, s in (("C", t["carrier"]), ("E", t["empty"])):
+            types = sorted({rtype[x] for x in used.get(s, [])})
+            side.append(dict(test_id=t["test_id"], locus_id=t["locus_id"], role=role, sample=s, runs=";".join(used.get(s, [])),
+                             read_types=";".join(types), verdict=t["%s_verdict" % role],
+                             only_pacbio_unresolved=bool(types) and types == ["pacbio_unresolved"]))
+    write(out / "side_read_types.tsv", side)
+    pu = [x for x in side if x["only_pacbio_unresolved"]]
+    pu_cons = [x for x in pu if x["verdict"] == "consistent"]
+    loci_c_only_pu = set()
+    for lid in loci:
+        cs = [x for x in side if x["locus_id"] == lid and x["role"] == "C" and x["verdict"] == "consistent"]
+        if cs and all(x["only_pacbio_unresolved"] for x in cs):
+            loci_c_only_pu.add(lid)
+    both_pu = {t["test_id"] for t in tests if t["test_verdict"] == "both_samples_consistent"
+               and any(x["only_pacbio_unresolved"] for x in side if x["test_id"] == t["test_id"])}
+    # ---- follow-up list
+    fu = []
+    for t in tests:
+        g = targets[t["locus_id"]]["global_locus_id"]
+        lev = loci[t["locus_id"]]["evidence_level"]
+        base = dict(global_locus_id=g, locus_id=t["locus_id"], test_id=t["test_id"], carrier=t["carrier"], partner=t["empty"],
+                    evidence_level=lev, test_verdict=t["test_verdict"], C_verdict=t["C_verdict"], E_verdict=t["E_verdict"])
+        if "insufficient" in (t["C_verdict"], t["E_verdict"]):
+            fu.append(dict(base, item="test_side_with_reads_insufficient", action="diagnose before any new download (diagnose_<sample>/)"))
+        if t["E_verdict"] == "no_reads" and remote.get(t["empty"]):
+            fu.append(dict(base, item="partner_runs_not_local", runs=";".join(r["run"] for r in remote[t["empty"]]),
+                           bytes=sum(int(v) for r in remote[t["empty"]] for v in r["fastq_bytes"].split(";") if v.isdigit()),
+                           action="download in batch1_followup, then re-run this test"))
+        if lev == "E2s" and t["test_verdict"] != "both_samples_consistent":
+            fu.append(dict(base, item="E2s_test_without_two_sided_result",
+                           runs=";".join(r["run"] for r in remote.get(t["empty"], [])),
+                           action="partner reads: " + ("remote runs listed" if remote.get(t["empty"]) else "none linked or local only")))
+        if lev in ("E1p", "E0") and not any(x["item"] == "test_side_with_reads_insufficient" and x["test_id"] == t["test_id"] for x in fu):
+            fu.append(dict(base, item="locus_without_carrier_support", action="see diagnosis / partner evidence"))
+    for x in side:
+        if x["only_pacbio_unresolved"] and x["verdict"] == "consistent":
+            t = next(t for t in tests if t["test_id"] == x["test_id"])
+            fu.append(dict(global_locus_id=targets[t["locus_id"]]["global_locus_id"], locus_id=t["locus_id"], test_id=t["test_id"],
+                           carrier=t["carrier"], partner=t["empty"], evidence_level=loci[t["locus_id"]]["evidence_level"],
+                           test_verdict=t["test_verdict"], C_verdict=t["C_verdict"], E_verdict=t["E_verdict"],
+                           item="side_supported_only_by_pacbio_unresolved_%s" % ("carrier" if x["role"] == "C" else "partner"),
+                           action="keep read type unresolved in cross-platform summaries; not counted as CLR or HiFi"))
+    cols = ["item", "global_locus_id", "locus_id", "test_id", "carrier", "partner", "evidence_level", "test_verdict", "C_verdict",
+            "E_verdict", "runs", "bytes", "action"]
+    write(out / "batch1_followup.tsv", fu, cols)
+    frun = sorted({r for x in fu for r in split(x.get("runs", ""))})
+    # ---- priority-1 chunks
+    nxt = [r for r in read(out / "next_batch_download_list.tsv") if r["priority_tier"] == "main_carrier_and_partner_usable"]
+    chunks, rows = [], []
+    for b in sorted({r["batch"] for r in nxt}):
+        cur, size, k = [], 0, 1
+        for r in sorted((r for r in nxt if r["batch"] == b), key=lambda r: (r["biosample"], r["run"])):
+            nb = sum(int(v) for v in r["fastq_bytes"].split(";") if v.isdigit())
+            if cur and (size + nb > a.chunk_bytes or len(cur) >= a.chunk_runs):
+                chunks.append((b, k, cur, size))
+                cur, size, k = [], 0, k + 1
+            cur.append(r)
+            size += nb
+        if cur:
+            chunks.append((b, k, cur, size))
+    for b, k, cur, size in chunks:
+        cid = "p1_%s_%02d" % (b, k)
+        for r in cur:
+            rows.append(dict(chunk_id=cid, **r))
+    write(out / "next_batch_p1_chunks.tsv", rows)
+    summ = json.loads((out / "batch1_summary.json").read_text())
+    summ["batch1_followup"] = dict(items=dict(Counter(x["item"] for x in fu)), loci=len({x["global_locus_id"] for x in fu}),
+                                   runs_to_download=frun,
+                                   bytes_to_download=sum(int(v) for r in rc_ if r["run"] in frun for v in r["fastq_bytes"].split(";") if v.isdigit()))
+    summ["pacbio_unresolved"] = dict(runs_used=sum(1 for r in {x for v in used.values() for x in v} if rtype[r] == "pacbio_unresolved"),
+                                     test_sides_only_unresolved=len(pu), consistent_sides_only_unresolved=len(pu_cons),
+                                     loci_carrier_support_only_unresolved=len(loci_c_only_pu),
+                                     both_consistent_tests_with_an_unresolved_only_side=len(both_pu),
+                                     note="mapped with map-pb as in v0.3; kept as unresolved, not counted as CLR or HiFi")
+    summ["next_batch_p1_chunks"] = dict(rule="per family, sorted by BioSample and run, <= %d bytes and <= %d runs per chunk" % (a.chunk_bytes, a.chunk_runs),
+                                        chunks=[dict(chunk_id="p1_%s_%02d" % (b, k), batch=b, runs=len(cur), bytes=size) for b, k, cur, size in chunks],
+                                        resume="a chunk is fetched with s3_readcheck fetch logic; runs with verify.json are skipped, .part files resume")
+    (out / "batch1_summary.json").write_text(json.dumps(summ, indent=1) + "\n")
+    print(json.dumps({k: summ[k] for k in ("batch1_followup", "pacbio_unresolved")}, indent=1))
+    print(len(chunks), "chunks", Counter(c[0] for c in chunks))
+
+
 def main():
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    p.add_argument("mode", choices=["select", "localcheck", "layer"])
+    p.add_argument("mode", choices=["select", "localcheck", "layer", "diagnose", "followup"])
     p.add_argument("--work", type=Path, required=True)
     p.add_argument("--out", type=Path)
     p.add_argument("--pool-dir", type=Path)
@@ -338,8 +522,11 @@ def main():
     p.add_argument("--category", default="main")
     p.add_argument("--catalog-commit", default="")
     p.add_argument("--jobs", type=int, default=8)
+    p.add_argument("--sample", help="diagnose: sample to diagnose")
+    p.add_argument("--chunk-bytes", type=int, default=50 * 10 ** 9)
+    p.add_argument("--chunk-runs", type=int, default=40)
     a = p.parse_args()
-    dict(select=cmd_select, localcheck=cmd_localcheck, layer=cmd_layer)[a.mode](a)
+    dict(select=cmd_select, localcheck=cmd_localcheck, layer=cmd_layer, diagnose=cmd_diagnose, followup=cmd_followup)[a.mode](a)
 
 
 if __name__ == "__main__":
