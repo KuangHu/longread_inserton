@@ -76,3 +76,6 @@ python experiments/core_context/reproduce_local_smoke.py --pilot /path/to/cross_
 `core_context_subsets.sbatch` 运行 build --verify / call，`review_subsets.py` 写审查表、边界问题和 `cases.svg`。
 结果与成本见 [subsets_20261027/README.md](subsets_20261027/README.md)。主要问题：>90% 实例紧邻另一个重复 block，
 graph block 边界不是元件边界；按固定规则选出的“不同上下文”示例包括 rRNA operon 与 tuf 旁系同源。全 FAA 蛋白入口 v0.2（`protein_context.py`）分别报告宽范围与 <2500 bp 目标子集。仍 `production_ready=false`。
+候选审查 v0.4（`core_review.py`）：同/跨 assembly 拆分、真实蛋白/DNA 相似度、CDS 外共享序列（端点须被比对片段实际覆盖，未知不记为 0）。
+S6 v0.1 原型（`site_groups.py`，规则见 [S6_SITE_GROUPS_v0.1.md](S6_SITE_GROUPS_v0.1.md)）：site group 为同一 core 架构在可对应位置上的重复观察，
+仅团（clique）合并、不传递归并，未归组实例保持 unresolved；site group 不是独立插入事件。

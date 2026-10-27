@@ -328,7 +328,8 @@ How to read it:
   beyond the CDS with every partner, and ISAav5 (Paracidovorax) shares +90–91 / +0 bp (end covered, measured 0). That
   fits the non-coding end of an element, but the boundary itself is not established. The IR hint is weak because
   BLAST ends drift a few bp, and 2–4 bp direct repeats are expected by chance.
-- **Copy number per assembly** (complete-CDS target-scope copies, 0 = absent; `review_cores.tsv`
+- **Copy number per assembly** (complete-CDS target-scope copies; 0 = no instance meeting the current complete-CDS criteria was detected, which is
+  not biological absence: pseudogenes, partial CDS or versions outside the homology thresholds are not counted; `review_cores.tsv`
   `copies_per_assembly`, `copy_pattern`). This is reported only; nothing is excluded. A constant count does not prove
   ordinary paralogy, and a varying count does not prove movement. "Same count where present" is mostly one copy in
   each carrying assembly. Single-gene cores:
@@ -341,7 +342,7 @@ How to read it:
 
   Examples:
   - The ETF FixA/FixB case cores have 2 copies in every assembly of each subset.
-  - RdgC (Comamonas) has 2, 2, 4, 0, 4. The v0.2 text called these single-copy, and v0.3 called RdgC a "stable"
+  - RdgC (Comamonas) has 2, 2, 4, 0, 4 (0 = none detected under the current criteria). The v0.2 text called these single-copy, and v0.3 called RdgC a "stable"
     paralog; both are corrected. Its copies share 85–92% DNA, and most of its ends are unknown.
   - The IS case cores mostly vary: ISL3 8, 10, 11, 0, 0; Delftia IS5 5, 8, 9, 0, 8, 0, 0; ISAav5 19, 17, 18, 0.
     Delftia IS5 PF_ad056eba1256 has 15 copies in one assembly only.
@@ -394,3 +395,111 @@ Next, in this order (none is a discovery admission rule):
 - read checks.
 
 Evidence stays `assembly_only`, `production_ready=false`.
+
+## Stable-end list and S6 site groups v0.1 (`site_groups.py`, job 27331930, commit f7452c5)
+
+Rules: [`../S6_SITE_GROUPS_v0.1.md`](../S6_SITE_GROUPS_v0.1.md). Tests: `test_site_groups.py`. They cover the same
+position across samples, two positions in one strain, a reversed instance, repeated flanks, multiple
+correspondence, missing labels and `A≈B, B≈C, A≠C`. Inputs are the core review v0.4 outputs plus gene order.
+Cost < 2 s per subset. **Site groups are repeated observations of a position, not independent insertion events.**
+Evidence stays `assembly_only`, `production_ready=false`; no gap or empty-site evidence is used. The first run (job
+27331912, `f921fef`) differs only in the case rule.
+
+The occurrences are every target-scope occurrence of the reviewed cores (so more than the core review, which only
+kept occurrences with a different-context partner).
+
+Single-gene cores:
+
+| | comamonas | delftia | paracidovorax |
+|---|---:|---:|---:|
+| cores / occurrences / assemblies | 51 / 283 / 5 | 79 / 492 / 7 | 21 / 256 / 4 |
+| multi-observation site groups (occurrences in them) | 35 (122) | 82 (269) | 42 (119) |
+| group sizes | 2:4, 3:12, 4:17, 5:2 | 2:27, 3:33, 4:5, 5:8, 6:7, 7:2 | 2:15, 3:19, 4:8 |
+| single-observation sites | 64 | 81 | 31 |
+| unresolved occurrences | 97 | 142 | 106 |
+| unresolved: unresolved pairs / conflicting sides / conflict in component / multiple correspondence | 83 / 8 / 3 / 3 | 69 / 26 / 41 / 6 | 98 / 8 / 0 / 0 |
+| cores with ≥ 1 site group | 30 | 52 | 15 |
+| cores with an assembly holding ≥ 2 supported positions | 16 | 21 | 14 |
+| pairs: same position / different position (across) / different (same assembly) / conflicting / unresolved | 174 / 396 / 262 / 11 / 182 | 464 / 513 / 406 / 105 / 459 | 120 / 1,326 / 1,246 / 11 / 1,118 |
+| pairs ambiguous (multiple correspondence) / repeated flank in one assembly | 10 / 3 | 14 / 7 | 0 / 3 |
+
+Two-gene cores:
+
+| | comamonas | delftia | paracidovorax |
+|---|---:|---:|---:|
+| cores / occurrences | 10 / 48 | 27 / 127 | 6 / 25 |
+| site groups (occurrences) / single-observation / unresolved | 6 (24) / 11 / 13 | 27 (84) / 9 / 34 | 6 (17) / 2 / 6 |
+
+How the site groups split by product keyword and by the genome ANI inside each group (lowest pairwise skani
+ANI among the group's assemblies; from `s6_site_groups.tsv` and the frozen S2 edges). Single-gene groups:
+
+| | mobile keyword: all ≥ 99 / min 95–99 / min < 95 | other: all ≥ 99 / min 95–99 / min < 95 |
+|---|---:|---:|
+| comamonas | 1 / 0 / 0 | 1 / 9 / 24 |
+| delftia | 14 / 0 / 0 | 30 / 21 / 17 |
+| paracidovorax | 26 / 0 / 2 | 6 / 0 / 8 |
+
+Single-gene occurrences of mobile-keyword cores: site group / single-observation / unresolved = 2 / 46 / 51
+(comamonas), 34 / 47 / 27 (delftia), 71 / 28 / 98 (paracidovorax).
+
+How to read it:
+- **Mobile cores: the same position is seen mostly between near-identical assemblies.** IS copies shared at one
+  position are almost only found between assemblies at ANI ≥ 99 (clone-level genomes). Between more distant
+  assemblies the copies sit at supported different positions or stay unresolved. This fits "same core, different
+  context", but the site groups of IS cores are mostly clone-shared observations, not independent events.
+- **Non-mobile cores: most groups span distant assemblies.** These are conserved positions of genes that also have
+  a second, differently placed copy or homolog. For example, EF-Tu (tufA / tufB) and the ETF FixA/FixB pair give two
+  site groups each, one per position, each seen in every assembly. That is the paralog pattern, now resolved into
+  positions rather than counted as different contexts.
+- **Unresolved is not a site.** Most unresolved occurrences have pairs with unknown sides: unlabelled neighbours,
+  mobile neighbours filling the host window, short contigs, or shared labels out of order. They are not counted as
+  sites. The 41 Delftia `conflict_in_component` occurrences (8 cores) are components where `A≈B, B≈C` but `A` and
+  `C` are not same-position; the clique rule kept them apart.
+- **Same-assembly positions** are separated by assembly (`different_position_same_assembly`) and never merged
+  through other samples. Repeated flanks inside one assembly (3 / 7 / 3 pairs) are flagged.
+
+Stable-end list (`s6/stable_end_candidates.tsv`; occurrences with any unknown side are in
+`s6/boundary_review_unknown.tsv`):
+
+| | comamonas | delftia | paracidovorax |
+|---|---:|---:|---:|
+| single-gene: candidate conserved ends (both sides resolved) / boundary unknown | 123 / 119 | 214 / 160 | 122 / 78 |
+| … shared estimate strictly < 2500 bp | 123 | 214 | 122 |
+| … only one valid partner | 48 | 116 | 9 |
+| … in a multi-observation site group | 39 | 115 | 43 |
+| two-gene: candidate conserved ends / unknown / strictly < 2500 | 16 / 26 / 13 | 40 / 57 / 40 | 3 / 17 / 3 |
+
+Each row gives the coding span, the shared estimate, per-side status, valid partners per side, their assemblies
+and site groups (unresolved partners counted separately) and the single-partner flag. A candidate conserved end
+is not a confirmed insertion boundary.
+
+Representative cases (fixed rule in `s6_summary.json`: the core with the most site groups per structure, the
+mobile-keyword core with the most site groups, the core with the most assemblies holding ≥ 2 supported
+positions; figure `s6/cases_s6.svg`):
+
+| subset | core | occ / assemblies | copies per assembly | site groups (occ) | single-observation | unresolved (reasons) |
+|---|---|---|---|---|---|---|
+| comamonas | PF_feb6068c84b1 EF-Tu | 10 / 5 | 2,2,2,2,2 | 2 (10) | 0 | 0 |
+| comamonas | ETF alpha/FixB + partner | 10 / 5 | 2,2,2,2,2 | 2 (10) | 0 | 0 |
+| comamonas | PF_eed8648a18cd IS3 | 9 / 4 | 1,2,4,0,2 | 1 (2) | 0 | 7 (unresolved pairs) |
+| comamonas | PF_13ebd7f3de8d aldehyde dehydrogenase | 9 / 5 | 2,2,2,1,2 | 2 (7) | 0 | 2 (conflicting sides 1, unresolved pairs 1) |
+| delftia | PF_4b70bb8e2b9d IS5 | 30 / 4 | 5,8,9,0,8,0,0 | 7 (18) | 0 | 12 (unresolved pairs) |
+| delftia | ETF alpha/FixB + partner | 14 / 7 | 2 in each | 2 (14) | 0 | 0 |
+| delftia | PF_3070024975f6 IS481 | 21 / 5 | 2,6,6,1,6,0,0 | 4 (9) | 0 | 12 (multiple correspondence 5, unresolved pairs 7) |
+| delftia | PF_093d47562e00 EF-Tu | 14 / 7 | 2 in each | 2 (14) | 0 | 0 |
+| paracidovorax | PF_34809b3c6b4f ISAav5 | 54 / 3 | 19,17,18,0 | 12 (30) | 0 | 24 (conflicting sides 3, unresolved pairs 21) |
+| paracidovorax | ETF alpha/FixB + partner | 8 / 4 | 2,2,2,2 | 2 (7) | 0 | 1 (unresolved pairs) |
+| paracidovorax | PF_2bf098df0d79 IS3 | 55 / 3 | 16,17,22,0 | 8 (20) | 0 | 35 (conflicting sides 4, unresolved pairs 31) |
+| paracidovorax | PF_1a133c9f7afe EF-Tu | 8 / 4 | 2,2,2,2 | 2 (8) | 0 | 0 |
+
+Copy-number 0 means no instance meeting the current complete-CDS criteria was detected, not biological absence.
+
+Outputs per subset in `<subset>/protein_entry/s6/`: `s6_occurrences.tsv.gz`, `s6_pairs.tsv.gz`,
+`s6_site_groups.tsv`, `s6_group_evidence.tsv`, `s6_cores.tsv`, `stable_end_candidates.tsv`,
+`boundary_review_unknown.tsv`, `s6_summary.json`, `cases_s6.svg`.
+
+Limits of v0.1: gene-order evidence only (no flank DNA alignment, no empty sites); the strict clique rule leaves
+some real groups unresolved; different-position evidence between distant assemblies can also come from
+rearrangement around a conserved site; mobile skipping is by product keyword only.
+
+Evidence stays `assembly_only`, `production_ready=false`. Stopped here for review.

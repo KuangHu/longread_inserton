@@ -24,7 +24,8 @@ here is an insertion call or a site group.
                  Cross-assembly pairs also carry the genome ANI of the two assemblies (skani edges, frozen in S2) and
                  core DNA identity minus ANI: a copy that moved recently is more similar than its genomes, a vertically
                  inherited gene in a rearranged neighbourhood is about as similar as its genomes (diagnostic, no cutoff).
-5 copy number    complete-CDS target-scope copies of the core per subset assembly (0 where absent) and a pattern:
+5 copy number    complete-CDS target-scope copies of the core per subset assembly (0 = no instance meeting the
+                 current complete-CDS criteria detected, not biological absence) and a pattern:
                  same_count_in_all_assemblies / same_count_where_present / count_varies. Reported only: a constant count
                  does not prove ordinary paralogy and a varying count does not prove movement; nothing is excluded.
 4 nesting        a neighbour gene is mobile-like if its product matches a mobile keyword (review_protein.hint:
@@ -223,7 +224,8 @@ def best(hits):
 
 
 def copy_pattern(copies):
-    """Descriptive copy-number pattern over the subset assemblies (0 = absent); not a paralogy or mobility call."""
+    """Descriptive copy-number pattern over the subset assemblies (0 = no qualifying complete-CDS instance detected);
+    not a paralogy or mobility call."""
     present = {c for c in copies if c}
     if len(present) > 1:
         return 'count_varies'
