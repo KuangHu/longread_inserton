@@ -44,9 +44,66 @@ class RelationTests(unittest.TestCase):
         self.assertEqual(pc.relation(a, self.occ(['A', 'Y', 'Z'], ['P', 'Q', 'R'])), 'one_side_shared_unresolved')
         self.assertEqual(pc.relation(a, self.occ(['A', 'B'], ['D', 'E', 'F'])), 'edge_or_missing_context')
 
-    def test_unlabelled_neighbours_never_shared(self):
+    def test_unknown_labels_are_not_different(self):
+        # one side entirely unlabelled: unknown, not evidence of a different context
         a = self.occ([None, None, None], ['D', 'E', 'F'])
-        self.assertEqual(pc.relation(a, self.occ([None, None, None], ['D', 'E', 'F'])), 'one_side_shared_unresolved')
+        self.assertEqual(pc.relation(a, self.occ(['X', 'Y', 'Z'], ['P', 'Q', 'R'])), 'insufficient_context_labels')
+        self.assertEqual(pc.relation(a, self.occ([None, None, None], ['D', 'E', 'F'])), 'insufficient_context_labels')
+        # a single unlabelled neighbour on an unshared side also blocks the different call
+        b = self.occ(['A', None, 'C'], ['D', 'E', 'F'])
+        self.assertEqual(pc.relation(b, self.occ(['X', 'Y', 'Z'], ['P', 'Q', 'R'])), 'insufficient_context_labels')
+        # a shared label still counts on a partly unlabelled side
+        self.assertEqual(pc.relation(b, self.occ(['A', 'Y', 'Z'], ['D', 'Q', 'R'])), 'similar_context')
+
+    def test_one_side_shared_needs_labelled_other_side(self):
+        a = self.occ(['A', 'B', 'C'], ['D', 'E', None])
+        self.assertEqual(pc.relation(a, self.occ(['A', 'Y', 'Z'], ['P', 'Q', 'R'])), 'insufficient_context_labels')
+        a = self.occ(['A', 'B', 'C'], ['D', 'E', 'F'])
+        self.assertEqual(pc.relation(a, self.occ(['A', 'Y', 'Z'], ['P', 'Q', 'R'])), 'one_side_shared_unresolved')
+
+
+class CompleteCdsTests(unittest.TestCase):
+    def unit(self, **kw):
+        u = dict(type='CDS', partial=False, pseudo=False, crosses_origin=False)
+        u.update(kw)
+        return u
+
+    def test_s4_strict_rule(self):
+        self.assertTrue(pc.is_complete(self.unit(), 'match', [], True))
+        self.assertTrue(pc.is_complete(self.unit(), 'match_with_transl_except', [], True))
+        self.assertFalse(pc.is_complete(self.unit(), 'match', ['no_start'], True))      # translation matches, bad start
+        self.assertFalse(pc.is_complete(self.unit(), 'match', ['internal_stop'], True))
+        self.assertFalse(pc.is_complete(self.unit(partial=True), 'match', [], True))
+        self.assertFalse(pc.is_complete(self.unit(crosses_origin=True), 'match', [], True))
+        self.assertFalse(pc.is_complete(self.unit(), 'mismatch', ['translation_mismatch'], True))
+        self.assertFalse(pc.is_complete(self.unit(), 'match', [], False))
+
+
+class SpanTests(unittest.TestCase):
+    def test_two_gene_span_includes_spacing(self):
+        g, h = dict(start0='100', end0='1300'), dict(start0='1500', end0='2550')
+        self.assertEqual(pc.pair_span(g, h), 2450)                      # 1200 + 200 spacing + 1050
+        self.assertTrue(pc.pair_span(g, h) < pc.TARGET_MAX)
+        self.assertFalse(pc.pair_span(g, dict(start0='1700', end0='2650')) < pc.TARGET_MAX)   # spacing pushes it over
+
+
+class ScopeTests(unittest.TestCase):
+    def occ(self, oid, span, up, down):
+        return dict(occurrence_id=oid, sample='s' + oid, span=span, in_target_length=span < pc.TARGET_MAX, spacing='',
+                    products='p', up=[(x, True, x) for x in up], down=[(x, True, x) for x in down])
+
+    def test_target_scope_drops_long_instances(self):
+        xs = [self.occ('1', 900, 'ABC', 'DEF'), self.occ('2', 3000, 'XYZ', 'PQR'), self.occ('3', 950, 'ABC', 'DEF')]
+        groups = {('single_gene', 'PF_x'): xs}
+        pairs, cores = pc.compare(groups, 'all', lambda o: True)
+        self.assertEqual(cores[0]['different_context_candidate'], 2)
+        pairs, cores = pc.compare(groups, 'target_lt2500', lambda o: o['in_target_length'])
+        self.assertEqual(cores[0]['occurrences'], 2)
+        self.assertEqual(cores[0]['different_context_candidate'], 0)
+        self.assertEqual(cores[0]['span_range'], '900..950')
+        pairs, cores = pc.compare({('single_gene', 'PF_y'): xs[1:2] + [self.occ('4', 2600, 'ABC', 'DEF')]},
+                                  'target_lt2500', lambda o: o['in_target_length'])
+        self.assertEqual(cores, [])
 
 
 class PairKeyTests(unittest.TestCase):

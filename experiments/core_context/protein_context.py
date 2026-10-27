@@ -9,17 +9,23 @@ cluster  MMseqs2 at the frozen S4 settings (family 0.9/0.8, homology group 0.5/0
          them, then every member aligned to its final representative; failing members are reassigned to a passing
          representative or become singletons, with the failing values kept (stage1_catalog.reassign_failed).
 call     Core occurrences:
-           single_gene  one complete CDS (not partial / pseudo, translation matches FAA); core key = protein family
+           single_gene  one complete CDS, S4 rule: not partial / pseudo / origin-crossing, translation matches FAA
+                        (match or match_with_transl_except) and no coding flag (no_start, no_stop, internal_stop, ...);
+                        core key = protein family
            two_gene     two consecutive complete CDS on one contig; core key = both families in order with relative
                         orientation, canonical over the two strands; spacing kept per occurrence, not in the key
-         All core keys with >= 2 occurrences are kept, including several copies in one assembly. Context = the K genes
+         Core span = first start to last end (two-gene includes the spacing). Two scopes are compared separately:
+           all             every occurrence (wide protein search, no length limit)
+           target_lt2500   only occurrences with span < 2500 bp (the 1-2 complete coding unit target subset)
+         All core keys with >= 2 occurrences in a scope are kept, including several copies in one assembly. Context = the K genes
          on each side in core orientation (wrapping only on circular contigs), labelled by homology group (CDS with
          protein) or RNA type + product; CDS without a protein carry no label and never count as shared.
          Pair relation (prototype diagnostic, not orthology):
-           similar_context             a shared neighbour label on both sides
-           different_context_candidate no shared label on either side, both sides complete
-           one_side_shared_unresolved  shared on exactly one side
-           edge_or_missing_context     fewer than K neighbours on a side of either occurrence
+           similar_context              a shared neighbour label on both sides
+           different_context_candidate  no shared label on either side, every neighbour of both occurrences labelled
+           one_side_shared_unresolved   shared on one side; the other side fully labelled and not shared
+           insufficient_context_labels  a side without a shared label has an unlabelled neighbour (unknown != different)
+           edge_or_missing_context      fewer than K neighbours on a side of either occurrence
          Context classes: occurrences joined by similar_context links (provisional, not S6 site groups).
 """
 import argparse
@@ -38,10 +44,12 @@ sys.path.insert(0, str(HERE.parent / 'fna_pool'))
 from s4_annotate import MEMBER_MIN, MMSEQS_SETTINGS, coding_check, parse_gff, read_faa  # noqa: E402
 from stage1_catalog import cmd_cluster, reassign_failed  # noqa: E402
 
-VERSION = 'core_context_protein_v0.1'
+VERSION = 'core_context_protein_v0.2'
 K = 3
 CODING_OK = {'match', 'match_with_transl_except'}
-RELATIONS = ['similar_context', 'different_context_candidate', 'one_side_shared_unresolved', 'edge_or_missing_context']
+RELATIONS = ['similar_context', 'different_context_candidate', 'one_side_shared_unresolved', 'insufficient_context_labels',
+             'edge_or_missing_context']
+TARGET_MAX = 2500  # exclusive, bp of core span
 MAX_PAIRS = 20000
 GENE_COLS = ['gene_uid', 'sample', 'contig', 'index', 'start0', 'end0', 'strand', 'type', 'unit_id', 'protein_id', 'protein_sha256',
              'product', 'partial', 'pseudo', 'crosses_origin', 'coding_status', 'coding_flags', 'complete_cds']
@@ -82,6 +90,12 @@ def read_fna(path):
     return out
 
 
+def is_complete(u, status, flags, has_protein):
+    """S4 rule for a complete CDS; any coding flag (e.g. no_start) or an origin-crossing unit disqualifies it."""
+    return (u['type'] == 'CDS' and has_protein and not u['partial'] and not u['pseudo'] and not u['crosses_origin']
+            and status in CODING_OK and not flags)
+
+
 def cmd_genes(a):
     a.work.mkdir(parents=True, exist_ok=False)
     rows, proteins, inputs = [], {}, []
@@ -108,7 +122,7 @@ def cmd_genes(a):
                     start0=u['segments'][0][0], end0=u['segments'][-1][1], strand=u['strand'], type=u['type'], unit_id=u['id'],
                     protein_id=u['protein'], protein_sha256=h, product=u['product'], partial=u['partial'], pseudo=u['pseudo'],
                     crosses_origin=u['crosses_origin'], coding_status=status, coding_flags=','.join(flags),
-                    complete_cds=u['type'] == 'CDS' and bool(h) and not u['partial'] and not u['pseudo'] and status in CODING_OK,
+                    complete_cds=is_complete(u, status, flags, bool(h)),
                     circular_contig=contig in circular, contig_length=len(seqs[contig])))
     write_tsv(a.work / 'genes.tsv.gz', rows, GENE_COLS + ['circular_contig', 'contig_length'])
     with open(a.work / 'proteins.faa', 'w') as f:
@@ -186,15 +200,61 @@ def pair_key(f1, s1, f2, s2):
     return min(fwd, rev), fwd <= rev
 
 
+def pair_span(g, h):
+    """Span of two consecutive genes from the first start to the last end, so the spacing between them counts."""
+    return max(int(g['end0']), int(h['end0'])) - min(int(g['start0']), int(h['start0']))
+
+
 def relation(a, b):
     if min(len(a['up']), len(a['down']), len(b['up']), len(b['down'])) < K:
         return 'edge_or_missing_context'
     shared = [bool({x[0] for x in a[s] if x[0]} & {x[0] for x in b[s] if x[0]}) for s in ('up', 'down')]
     if all(shared):
         return 'similar_context'
+    labelled = [all(x[0] for x in a[s] + b[s]) for s in ('up', 'down')]
+    if any(not sh and not lb for sh, lb in zip(shared, labelled)):
+        return 'insufficient_context_labels'
     if not any(shared):
         return 'different_context_candidate'
     return 'one_side_shared_unresolved'
+
+
+def compare(groups, scope, keep):
+    """Pair relations and provisional context classes of every core key with >= 2 kept occurrences in this scope."""
+    pairs, cores = [], []
+    for (structure, key), xs in sorted(groups.items()):
+        xs = [o for o in xs if keep(o)]
+        if len(xs) < 2:
+            continue
+        parent = {o['occurrence_id']: o['occurrence_id'] for o in xs}
+
+        def root(x):
+            while parent[x] != x:
+                parent[x] = parent[parent[x]]; x = parent[x]
+            return x
+        total = len(xs) * (len(xs) - 1) // 2
+        st, diff_links = Counter(), []
+        for p, q in itertools.islice(itertools.combinations(xs, 2), MAX_PAIRS):
+            r = relation(p, q)
+            st[r] += 1
+            pairs.append(dict(scope=scope, structure=structure, core_key=key, occurrence_a=p['occurrence_id'],
+                              occurrence_b=q['occurrence_id'], same_sample=p['sample'] == q['sample'], relation=r))
+            if r == 'similar_context':
+                parent[root(p['occurrence_id'])] = root(q['occurrence_id'])
+            elif r == 'different_context_candidate':
+                diff_links.append((p['occurrence_id'], q['occurrence_id']))
+        for o in xs:
+            o['context_class_' + scope] = root(o['occurrence_id'])
+        per_sample = Counter(o['sample'] for o in xs)
+        spans = [o['span'] for o in xs]
+        cores.append(dict(scope=scope, structure=structure, core_key=key, occurrences=len(xs), samples=len(per_sample),
+            max_copies_in_one_sample=max(per_sample.values()), span_range='%d..%d' % (min(spans), max(spans)),
+            context_classes_provisional=len({root(o['occurrence_id']) for o in xs}),
+            context_classes_linked_by_different_candidate=len({root(x) for l in diff_links for x in l}),
+            pairs_total=total, pairs_checked=sum(st.values()), pair_review_complete=total <= MAX_PAIRS,
+            **{r: st[r] for r in RELATIONS}, products=Counter(o['products'] for o in xs).most_common(1)[0][0][:200],
+            spacing_range='' if structure == 'single_gene' else '%d..%d' % (min(o['spacing'] for o in xs), max(o['spacing'] for o in xs))))
+    return pairs, cores
 
 
 def cmd_call(a):
@@ -215,83 +275,70 @@ def cmd_call(a):
             f = fam[g['protein_sha256']]
             up, down = context(gs, i, i, g['strand'] == '+', labels)
             occ.append(dict(structure='single_gene', core_key=f, sample=sample, contig=contig, genes=g['gene_uid'],
-                start0=g['start0'], end0=g['end0'], strand=g['strand'], spacing='', homology_groups=hg[g['protein_sha256']],
+                start0=g['start0'], end0=g['end0'], span=int(g['end0']) - int(g['start0']), strand=g['strand'], spacing='', homology_groups=hg[g['protein_sha256']],
                 products=g['product'], up=up, down=down))
             if i + 1 < len(gs) and gs[i + 1]['complete_cds'] == 'True':
                 h = gs[i + 1]
                 key, forward = pair_key(f, g['strand'], fam[h['protein_sha256']], h['strand'])
                 up2, down2 = context(gs, i, i + 1, forward, labels)
                 occ.append(dict(structure='two_gene', core_key=key, sample=sample, contig=contig,
-                    genes=g['gene_uid'] + ';' + h['gene_uid'], start0=g['start0'], end0=h['end0'],
+                    genes=g['gene_uid'] + ';' + h['gene_uid'], start0=g['start0'], end0=max(int(g['end0']), int(h['end0'])),
+                    span=pair_span(g, h),
                     strand='+' if forward else '-', spacing=int(h['start0']) - int(g['end0']),
                     homology_groups=hg[g['protein_sha256']] + ';' + hg[h['protein_sha256']],
                     products=g['product'] + ' | ' + h['product'], up=up2, down=down2))
+    for o in occ:
+        o['in_target_length'] = o['span'] < TARGET_MAX
     groups = defaultdict(list)
     for o in occ:
         groups[(o['structure'], o['core_key'])].append(o)
     groups = {k: v for k, v in groups.items() if len(v) >= 2}
-    pairs, cores, kept = [], [], []
-    for (structure, key), xs in sorted(groups.items()):
+    for (structure, key), xs in groups.items():
         for n, o in enumerate(xs):
             o['occurrence_id'] = '%s|%s|%d' % (structure[0], key, n)
-        parent = {o['occurrence_id']: o['occurrence_id'] for o in xs}
-
-        def root(x):
-            while parent[x] != x:
-                parent[x] = parent[parent[x]]; x = parent[x]
-            return x
-        total = len(xs) * (len(xs) - 1) // 2
-        st, diff_links = Counter(), []
-        for p, q in itertools.islice(itertools.combinations(xs, 2), MAX_PAIRS):
-            r = relation(p, q)
-            st[r] += 1
-            pairs.append(dict(structure=structure, core_key=key, occurrence_a=p['occurrence_id'], occurrence_b=q['occurrence_id'],
-                              same_sample=p['sample'] == q['sample'], relation=r))
-            if r == 'similar_context':
-                parent[root(p['occurrence_id'])] = root(q['occurrence_id'])
-            elif r == 'different_context_candidate':
-                diff_links.append((p['occurrence_id'], q['occurrence_id']))
-        for o in xs:
-            o['context_class'] = root(o['occurrence_id'])
-        classes = {o['context_class'] for o in xs}
-        per_sample = Counter(o['sample'] for o in xs)
-        cores.append(dict(structure=structure, core_key=key, occurrences=len(xs), samples=len(per_sample),
-            max_copies_in_one_sample=max(per_sample.values()), context_classes_provisional=len(classes),
-            context_classes_linked_by_different_candidate=len({root(x) for l in diff_links for x in l}),
-            pairs_total=total, pairs_checked=sum(st.values()), pair_review_complete=total <= MAX_PAIRS,
-            **{r: st[r] for r in RELATIONS}, products=Counter(o['products'] for o in xs).most_common(1)[0][0][:200],
-            spacing_range='' if structure == 'single_gene' else '%d..%d' % (min(o['spacing'] for o in xs), max(o['spacing'] for o in xs))))
-        kept.extend(xs)
+    kept = [o for _, xs in sorted(groups.items()) for o in xs]
+    pairs, cores = [], []
+    for scope, keep in (('all', lambda o: True), ('target_lt2500', lambda o: o['in_target_length'])):
+        p, c = compare(groups, scope, keep)
+        pairs += p; cores += c
     for o in kept:
         for s in ('up', 'down'):
             o[s + '_labels'] = ','.join('%s%s' % (x[0] or 'nolabel', '' if x[1] else '(rev)') for x in o[s])
             o[s + '_genes'] = ','.join(x[2] for x in o[s])
-    occ_cols = ['occurrence_id', 'structure', 'core_key', 'sample', 'contig', 'genes', 'start0', 'end0', 'strand', 'spacing',
-                'homology_groups', 'products', 'up_labels', 'down_labels', 'up_genes', 'down_genes', 'context_class']
+    occ_cols = ['occurrence_id', 'structure', 'core_key', 'sample', 'contig', 'genes', 'start0', 'end0', 'span', 'in_target_length',
+                'strand', 'spacing', 'homology_groups', 'products', 'up_labels', 'down_labels', 'up_genes', 'down_genes',
+                'context_class_all', 'context_class_target_lt2500']
     write_tsv(a.out / 'protein_occurrences.tsv.gz', kept, occ_cols)
-    write_tsv(a.out / 'protein_pairs.tsv.gz', pairs, ['structure', 'core_key', 'occurrence_a', 'occurrence_b', 'same_sample', 'relation'])
-    core_cols = ['structure', 'core_key', 'occurrences', 'samples', 'max_copies_in_one_sample', 'context_classes_provisional',
+    write_tsv(a.out / 'protein_pairs.tsv.gz', pairs, ['scope', 'structure', 'core_key', 'occurrence_a', 'occurrence_b', 'same_sample', 'relation'])
+    core_cols = ['scope', 'structure', 'core_key', 'occurrences', 'samples', 'max_copies_in_one_sample', 'span_range',
+                 'context_classes_provisional',
                  'context_classes_linked_by_different_candidate', 'pairs_total', 'pairs_checked', 'pair_review_complete'] + RELATIONS + \
                 ['spacing_range', 'products']
     write_tsv(a.out / 'protein_cores.tsv', cores, core_cols)
     write_tsv(a.out / 'member_check_repairs.tsv', fixes, list(fixes[0]) if fixes else ['level', 'member'])
     stat = {}
-    for structure in ('single_gene', 'two_gene'):
-        cs = [c for c in cores if c['structure'] == structure]
-        ps = [p for p in pairs if p['structure'] == structure]
-        stat[structure] = dict(occurrences_considered=sum(o['structure'] == structure for o in occ),
-            core_keys_with_2plus=len(cs), occurrences_kept=sum(c['occurrences'] for c in cs),
-            core_keys_multicopy=sum(c['max_copies_in_one_sample'] >= 2 for c in cs),
-            core_keys_with_different_context_candidate=sum(c['different_context_candidate'] > 0 for c in cs),
-            core_keys_2plus_context_classes=sum(c['context_classes_provisional'] >= 2 for c in cs),
-            pairs=len(ps), relations={r: sum(p['relation'] == r for p in ps) for r in RELATIONS},
-            different_candidate_pairs_same_sample=sum(p['relation'] == RELATIONS[1] and p['same_sample'] for p in ps),
-            truncated_pair_reviews=sum(not c['pair_review_complete'] for c in cs))
+    for scope in ('all', 'target_lt2500'):
+        for structure in ('single_gene', 'two_gene'):
+            cs = [c for c in cores if c['structure'] == structure and c['scope'] == scope]
+            ps = [p for p in pairs if p['structure'] == structure and p['scope'] == scope]
+            os_ = [o for o in occ if o['structure'] == structure and (scope == 'all' or o['in_target_length'])]
+            stat['%s:%s' % (scope, structure)] = dict(occurrences_considered=len(os_),
+                core_keys_with_2plus=len(cs), occurrences_kept=sum(c['occurrences'] for c in cs),
+                core_keys_multicopy=sum(c['max_copies_in_one_sample'] >= 2 for c in cs),
+                core_keys_with_different_context_candidate=sum(c['different_context_candidate'] > 0 for c in cs),
+                core_keys_2plus_context_classes=sum(c['context_classes_provisional'] >= 2 for c in cs),
+                pairs=len(ps), relations={r: sum(p['relation'] == r for p in ps) for r in RELATIONS},
+                different_candidate_pairs_same_sample=sum(p['relation'] == RELATIONS[1] and p['same_sample'] for p in ps),
+                truncated_pair_reviews=sum(not c['pair_review_complete'] for c in cs))
     run = json.loads((a.work / 'mmseqs' / 'cluster_run.json').read_text())
     gr = json.loads((a.work / 'genes_run.json').read_text())
     summary = dict(version=VERSION, discovery_entry='all_faa_gff3_proteins', gap_inputs=[], reads_inputs=[],
         evidence_source='assembly_only', K_neighbours=K, genes=gr['genes'], proteins_distinct=gr['proteins'],
         coding_status=gr['coding_status'], complete_cds=sum(g['complete_cds'] == 'True' for g in genes),
+        cds_excluded_by_coding_flags=sum(g['type'] == 'CDS' and g['coding_status'] in CODING_OK and g['coding_flags'] != ''
+                                         for g in genes),
+        cds_excluded_crossing_origin=sum(g['type'] == 'CDS' and g['crosses_origin'] == 'True' for g in genes),
+        target_max_span_exclusive=TARGET_MAX,
         member_check=checks, member_repairs=len(fixes), mmseqs_version=run['mmseqs_version'], mmseqs_settings=run['settings'],
         families=len(set(fam.values())), homology_groups=len(set(hg.values())), structures=stat,
         annotation_complete=False, site_groups_computed=False, production_ready=False,
