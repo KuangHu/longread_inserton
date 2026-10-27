@@ -1,0 +1,123 @@
+{
+  "version": "core_context_review_v0.2",
+  "subset": "paracidovorax",
+  "evidence_source": "assembly_only",
+  "scope": "target_lt2500",
+  "parameters": {
+    "window_bp": 3000,
+    "chain_gap_bp": 50,
+    "end_margin_bp": 5,
+    "spread_bp": 20,
+    "max_scan": 10,
+    "K": 3,
+    "mobile_hints": [
+      "integrase_recombinase_resolvase",
+      "phage_like",
+      "transposase_or_IS"
+    ],
+    "blastn_task": "blastn",
+    "evalue": 1e-05
+  },
+  "blast_version": "blastn: 2.17.0+",
+  "site_groups_computed": false,
+  "production_ready": false,
+  "structures": {
+    "single_gene": {
+      "cores": 21,
+      "cores_by_status": {
+        "cross_assembly_host_different": 16,
+        "within_assembly_host_different_only": 3,
+        "host_context_unresolved": 2
+      },
+      "cores_with_cross_assembly_different_pair": 17,
+      "cores_with_within_assembly_different_pair": 16,
+      "cores_within_assembly_only": 4,
+      "different_pairs": {
+        "within_assembly": 669,
+        "cross_assembly": 1287
+      },
+      "host_relation_of_different_pairs": {
+        "cross:different_context_candidate": 1255,
+        "cross:insufficient_context_labels": 29,
+        "cross:one_side_shared_unresolved": 3,
+        "within:different_context_candidate": 644,
+        "within:insufficient_context_labels": 24,
+        "within:one_side_shared_unresolved": 1
+      },
+      "pairs_identical_protein": 790,
+      "pairs_protein_identity_lt95": 130,
+      "pairs_identical_core_dna": 710,
+      "pairs_without_core_dna_hit": 0,
+      "cross_pairs_without_ani": 0,
+      "cores_by_cross_median_core_dna_minus_ani": {
+        "gt_5": 1,
+        "le_1": 12,
+        "1_to_5": 4,
+        "no_cross_pair_with_ani": 4
+      },
+      "occurrences": 200,
+      "occurrences_boundary_resolved": 169,
+      "occurrences_side_status": {
+        "up": {
+          "resolved": 182,
+          "inconsistent_between_partners": 18
+        },
+        "down": {
+          "resolved": 184,
+          "inconsistent_between_partners": 16
+        }
+      },
+      "resolved_estimated_lt2500": 169,
+      "resolved_estimated_ge2500": 0,
+      "resolved_extension_total_range": "0..287",
+      "occurrences_near_mobile_neighbour": 63
+    },
+    "two_gene": {
+      "cores": 6,
+      "cores_by_status": {
+        "cross_assembly_host_different": 6
+      },
+      "cores_with_cross_assembly_different_pair": 6,
+      "cores_with_within_assembly_different_pair": 1,
+      "cores_within_assembly_only": 0,
+      "different_pairs": {
+        "within_assembly": 2,
+        "cross_assembly": 15
+      },
+      "host_relation_of_different_pairs": {
+        "cross:different_context_candidate": 15,
+        "within:different_context_candidate": 2
+      },
+      "pairs_identical_protein": 0,
+      "pairs_protein_identity_lt95": 5,
+      "pairs_identical_core_dna": 0,
+      "pairs_without_core_dna_hit": 0,
+      "cross_pairs_without_ani": 0,
+      "cores_by_cross_median_core_dna_minus_ani": {
+        "le_1": 4,
+        "1_to_5": 2
+      },
+      "occurrences": 20,
+      "occurrences_boundary_resolved": 20,
+      "occurrences_side_status": {
+        "up": {
+          "resolved": 20
+        },
+        "down": {
+          "resolved": 20
+        }
+      },
+      "resolved_estimated_lt2500": 20,
+      "resolved_estimated_ge2500": 0,
+      "resolved_extension_total_range": "0..310",
+      "occurrences_near_mobile_neighbour": 2
+    }
+  },
+  "cases": [
+    "A1 PF_34809b3c6b4f: IS481-like element ISAav5 family transposase | 54 occ / 3 samples; different pairs within 350, cross 701; host-different within 350, cross 701; protein id 99.4..100.0, core DNA id 99.7..100.0",
+    "A2 PF_f094f2564f99: IS5 family transposase | 30 occ / 4 samples; different pairs within 75, cross 212; host-different within 67, cross 197; protein id 92.2..100.0, core DNA id 86.7..100.0",
+    "B PF_282ac9979b1c: IS5 family transposase | 8 occ / 2 samples; different pairs within 20, cross 0; host-different within 15, cross 0; protein id 100.0..100.0, core DNA id 100.0..100.0",
+    "D PF_4ad8f14f7497+,PF_9608eadad31c+: electron transfer flavoprotein subunit alpha/FixB  | 8 occ / 4 samples; different pairs within 2, cross 6; host-different within 2, cross 6; protein id 95.8..98.4, core DNA id 94.1..98.7"
+  ],
+  "case_rule": "Fixed rule: A1/A2 = single-gene cores with the most cross-assembly host-different pairs; B = single-gene core\n    with the most within-assembly host-different pairs and none across; C = core with the most near-different /\n    host-similar (nested) pairs; D = two-gene core with the most host-different pairs. Ties: samples, then key; a core\n    already picked is skipped for the next rank."
+}

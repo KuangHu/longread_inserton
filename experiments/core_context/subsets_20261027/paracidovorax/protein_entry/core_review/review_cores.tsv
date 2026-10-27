@@ -1,0 +1,28 @@
+structure	core_key	products	occurrences	samples	occurrences_in_different_pairs	samples_in_different_pairs	different_pairs_within_assembly	different_pairs_cross_assembly	host_different_within	host_different_cross	host_similar_nested	pairs_identical_protein	protein_identity_range	pairs_identical_core_dna	core_dna_identity_range	cross_median_core_dna_minus_ani	coding_span_range	occurrences_boundary_resolved	estimated_span_range	resolved_estimated_lt2500	occurrences_near_mobile	status	product_hint
+single_gene	PF_036484edd177	IS110 family transposase	18	4	18	4	59	88	59	88	0	64	98.4..100.0	36	99.2..100.0	6.06	951..951	14	1202..1215	14	1	cross_assembly_host_different	transposase_or_IS
+single_gene	PF_159d26168a59	IS3-like element ISAav4 family transposase	12	2	7	2	14	6	14	6	0	14	94.8..100.0	14	95.1..100.0	-4.51	1214..1214	7	1308..1308	7	7	cross_assembly_host_different	transposase_or_IS
+single_gene	PF_1a133c9f7afe	elongation factor Tu	8	4	8	4	4	12	4	12	0	16	100.0..100.0	0	99.1..100.0	2.87	1191..1191	8	1208..1209	8	0	cross_assembly_host_different	translation_or_ribosomal
+single_gene	PF_282ac9979b1c	IS5 family transposase	8	2	7	1	20	0	15	0	0	20	100.0..100.0	20	100.0..100.0		1086..1086	7	1286..1288	7	3	within_assembly_host_different_only	transposase_or_IS
+single_gene	PF_2bf098df0d79	IS3 family transposase	55	3	26	3	114	203	103	189	0	131	99.6..100.0	131	99.9..100.0	0.42	1565..1565	23	1835..1837	23	9	cross_assembly_host_different	transposase_or_IS
+single_gene	PF_2e54c2b700ce	NAD-dependent succinate-semialdehyde dehydrogenase	8	4	8	4	4	12	4	12	0	0	90.4..95.9	0	88.9..95.3	-7.53	1497..1506	8	1497..1506	8	5	cross_assembly_host_different	other
+single_gene	PF_324b6101b432	peptidoglycan-binding domain-containing protein	8	4	8	4	4	12	4	12	0	0	93.0..98.5	0	89.5..98.9	-1.8	1041..1071	8	1044..1074	8	0	cross_assembly_host_different	other
+single_gene	PF_34809b3c6b4f	IS481-like element ISAav5 family transposase	54	3	47	3	350	701	350	701	0	350	99.4..100.0	350	99.7..100.0	0.24	948..948	32	1038..1041	32	7	cross_assembly_host_different	transposase_or_IS
+single_gene	PF_385cfa7e1be1	CYTH and CHAD domain-containing protein	4	4	2	2	0	1	0	1	0	0	91.9..91.9	0	91.9..91.9	-1.48	1524..1557	2	1584..1610	2	0	cross_assembly_host_different	other
+single_gene	PF_46b8bec3c462	SfnB family sulfur acquisition oxidoreductase	3	3	3	3	0	2	0	2	0	0	96.3..96.7	0	95.2..95.4	1.76	1290..1290	3	1314..1315	3	0	cross_assembly_host_different	other
+single_gene	PF_47707861c399	tartrate dehydrogenase	8	4	8	4	4	12	4	12	0	0	95.1..99.7	0	93.0..99.7	-0.17	1092..1098	8	1092..1098	8	4	cross_assembly_host_different	other
+single_gene	PF_4c6408b25ca1	hypothetical protein	4	4	4	4	0	3	0	0	0	0	93.7..93.7	0	96.6..96.6	2.94	621..621	4	908..908	4	3	host_context_unresolved	hypothetical
+single_gene	PF_61e54a119449	IS5 family transposase	11	2	8	2	15	12	15	12	0	11	91.8..100.0	11	88.4..100.0	-1.81	806..809	8	875..881	8	5	cross_assembly_host_different	transposase_or_IS
+single_gene	PF_74d9b3a73a4e	chloride channel protein	4	4	4	4	0	3	0	3	0	0	97.1..98.0	0	95.8..96.7	3.03	1332..1344	4	1523..1536	4	2	cross_assembly_host_different	other
+single_gene	PF_7dd3f7e54a3d	IS5 family transposase	7	4	4	2	2	4	2	4	0	1	96.6..100.0	1	93.2..100.0	-0.1	963..964	1	1056..1056	1	0	cross_assembly_host_different	transposase_or_IS
+single_gene	PF_b50e82efc9b8	hypothetical protein	2	1	2	1	1	0	0	0	0	0	93.8..93.8	0	95.4..95.4		639..648	2	828..828	2	2	host_context_unresolved	hypothetical
+single_gene	PF_b86727df30a3	aminopeptidase P N-terminal domain-containing protein	4	4	4	4	0	3	0	3	0	0	97.4..97.4	0	94.2..94.2	0.53	1392..1392	4	1392..1392	4	0	cross_assembly_host_different	other
+single_gene	PF_b9458396d99c	recombinase family protein	2	1	2	1	1	0	1	0	0	0	94.4..94.4	0	81.9..81.9		594..594	2	606..606	2	1	within_assembly_host_different_only	integrase_recombinase_resolvase
+single_gene	PF_bfadc79880e4	hypothetical protein	3	2	2	1	1	0	1	0	0	0	97.3..97.3	0	96.0..96.0		225..225	2	299..302	2	0	within_assembly_host_different_only	hypothetical
+single_gene	PF_f094f2564f99	IS5 family transposase	30	4	25	4	75	212	67	197	0	183	92.2..100.0	147	86.7..100.0	0.22	813..813	19	878..881	19	13	cross_assembly_host_different	transposase_or_IS
+single_gene	PF_f9df8baacc20	methyl-accepting chemotaxis protein	3	2	3	2	1	1	1	1	0	0	98.3..98.3	0	99.1..99.2	-0.35	1818..1818	3	1819..1819	3	1	cross_assembly_host_different	other
+two_gene	PF_404e83c63551-,PF_87b01b4a4ab6-	replication initiation factor domain-containing protein | hypothetical protein	3	3	2	2	0	1	0	1	0	0	93.8..93.8	0	94.1..94.1	-5.6	1328..1331	2	1587..1638	2	1	cross_assembly_host_different	hypothetical
+two_gene	PF_4ad8f14f7497+,PF_9608eadad31c+	electron transfer flavoprotein subunit alpha/FixB family protein | electron transfer flavoprotein subunit beta/FixA family protein	8	4	6	4	2	6	2	6	0	0	95.8..98.4	0	94.1..98.7	0.43	1709..1834	6	1709..1834	6	0	cross_assembly_host_different	other
+two_gene	PF_bd45e31b8f27-,PF_dec8f266343e+	LexA family protein | transcriptional regulator	2	2	2	2	0	1	0	1	0	0	90.8..90.8	0	91.4..91.4	-8.14	984..987	2	1000..1003	2	1	cross_assembly_host_different	other
+two_gene	PF_c4ab41fe61f6-,PF_ec925dcb5f87-	amino acid ABC transporter substrate-binding protein | DUF2905 domain-containing protein	4	4	3	3	0	2	0	2	0	0	95.3..95.3	0	96.3..96.4	2.64	1222..1222	3	1316..1316	3	0	cross_assembly_host_different	other
+two_gene	PF_dead2b62191c-,PF_e732a7b7e2d5-	MATE family efflux transporter | MarC family protein	4	4	4	4	0	3	0	3	0	0	94.0..94.2	0	90.9..91.6	-2.16	2323..2415	4	2323..2428	4	0	cross_assembly_host_different	other
+two_gene	PF_e2bb3e43436e+,PF_f5416f08af4e+	chaperonin GroEL | co-chaperone GroES	4	4	3	3	0	2	0	2	0	0	97.9..97.9	0	98.3..98.3	4.74	1987..1987	3	2162..2163	3	0	cross_assembly_host_different	other

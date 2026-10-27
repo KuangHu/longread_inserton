@@ -234,11 +234,113 @@ Outputs per subset in `<subset>/protein_entry/`:
 - `member_check_repairs.tsv` (empty);
 - `different_context_cores.tsv`, `protein_review.json`, `case_occurrences.tsv`, `cases_protein.svg`.
 
+## Core review v0.2 (`core_review.py`, job 27330567, commit 6b8e005)
+
+Scope: every `target_lt2500` core key with ≥ 1 different-context pair, its target-scope occurrences and its
+different-context pairs. Cost < 1 min per subset. Evidence stays `assembly_only`; nothing here is an insertion
+call or a site group. The first run (job 27330529, `6a7b5d6`) gave the same counts without the ANI columns.
+
+What it adds, per different-context pair and occurrence:
+- **Sample split.** Pairs within one assembly (multi-copy) and across assemblies are both kept and counted
+  separately. Within-assembly copies fit "same core, different context" but say nothing about strain variation.
+- **Real similarity.** A family (MMseqs 0.9/0.8) is not an identical sequence. Each pair carries exact protein
+  identity (sha256), blastp identity / coverage per core gene in core order (minimum for two-gene cores), and blastn
+  identity / coverage of the oriented coding span.
+- **Boundary beyond the CDS.** Each pair's coding span ± 3 kb is aligned (blastn, plus strand); HSPs on the core
+  diagonal are chained (gaps ≤ 50 bp). Shared sequence beyond the CDS is that pair's extension. A side of an
+  occurrence is resolved when no partner reaches the window or contig end and the partners' extensions differ by
+  ≤ 20 bp. The estimated span = coding span + median extension of each side, and the < 2500 bp target is re-checked
+  on it. End hints (20 bp inverted-repeat identity, longest exact direct repeat ≤ 12 bp outside the ends) are hints
+  only.
+- **Nested / adjacent mobile neighbours.** A neighbour is mobile-like by product keyword (transposase / IS,
+  integrase / recombinase / resolvase, phage) or because its family is itself a reviewed single-gene core. Host
+  context = first K=3 neighbours per side after skipping mobile-like genes (scan ≤ 10 genes). Pairs are re-related
+  on host context with the unchanged rule.
+- **Genome ANI.** Cross-assembly pairs carry the skani ANI of the two assemblies (frozen S2 edges) and core DNA
+  identity minus ANI (diagnostic, no cutoff).
+
+Single-gene cores (target scope):
+
+| | comamonas | delftia | paracidovorax |
+|---|---:|---:|---:|
+| cores reviewed | 51 | 79 | 21 |
+| with a cross-assembly different pair | 44 | 67 | 17 |
+| within-assembly different pairs only | 7 | 12 | 4 |
+| different pairs within / across assemblies | 188 / 411 | 215 / 541 | 669 / 1,287 |
+| pairs with identical protein / identity < 95% | 93 / 135 | 272 / 202 | 790 / 130 |
+| pairs with identical core DNA | 58 | 167 | 710 |
+| occurrences / boundary resolved on both sides | 242 / 219 | 374 / 314 | 200 / 169 |
+| resolved: estimated span < 2500 / ≥ 2500 | 219 / 0 | 314 / 0 | 169 / 0 |
+| resolved: total extension beyond the CDS (bp) | 0–635 | 0–1,804 | 0–287 |
+| occurrences with a mobile-like near neighbour | 36 | 94 | 63 |
+
+Two-gene cores (target scope):
+
+| | comamonas | delftia | paracidovorax |
+|---|---:|---:|---:|
+| cores reviewed | 10 | 27 | 6 |
+| with a cross-assembly different pair / within only | 8 / 2 | 26 / 1 | 6 / 0 |
+| different pairs within / across assemblies | 14 / 44 | 7 / 92 | 2 / 15 |
+| pairs with identical protein / identity < 95% | 4 / 22 | 2 / 50 | 0 / 5 |
+| occurrences / boundary resolved | 42 / 42 | 97 / 92 | 20 / 20 |
+| resolved: estimated span < 2500 / ≥ 2500 | 39 / 3 | 89 / 3 | 20 / 0 |
+
+How to read it:
+- **Coding span vs estimated element span.** No resolved single-gene occurrence goes over 2500 bp once its shared
+  flanks are added; 3 + 3 two-gene occurrences do. Unresolved sides (inconsistent between partners, or reaching the
+  window / contig end) are 23 / 60 / 31 single-gene occurrences; their spans are not settled. The estimate is the
+  sequence shared with different-context copies, not a mapped insertion boundary. The IR hint is weak because
+  BLAST ends drift a few bp from the true terminus, and short direct repeats (2–4 bp) are expected by chance.
+- **IS families have a consistent non-coding extension.** For example, IS5 PF_4b70bb8e2b9d (Delftia) is +62/+9 bp
+  in every case copy (estimated 880–884 bp), and ISAav5 (Paracidovorax) is +90/+0 bp. This is the expected
+  non-coding end of an element.
+- **Many non-mobile cores look like inherited genes in a rearranged neighbourhood.** They have one copy per
+  assembly, no within-assembly pair, and core DNA identity of 85–92%, close to the ANI of the medium-distance
+  (80–95%) assemblies in the subsets. Examples: RdgC (Comamonas, extension ≈ 0), and the ETF FixA/FixB two-gene
+  core (extension 0 in all three subsets). Their extension is either 0 or shared promoter / intergenic sequence,
+  not an element end.
+- **The ANI comparison does not separate them yet.** For assemblies with ANI ≥ 99 every copy is ~100% identical, so
+  identity minus ANI says nothing. For more distant assemblies, many single-copy non-mobile cores score 1–5 points
+  or more above ANI, but conserved genes routinely exceed the genome-average ANI. A per-pair baseline is needed (for
+  example, the identity of similar-context single-copy genes between the same two assemblies).
+- **No nested case found by this rule.** Mobile-like near neighbours are common (36 / 94 / 63 single-gene
+  occurrences), but no different-context pair became host-similar after skipping them. Re-relating on host context
+  only moved pairs to insufficient labels or one side shared (single-gene: 3 / 8 / 57 pairs; two-gene: 0 / 1 / 0). So the fixed rule has no case C. The "reviewed core family" criterion also flags ordinary paralogs (SGNH
+  hydrolase, ATP-dependent proteins); 5 / 42 / 16 occurrences (single- and two-gene) are flagged by it alone. It is a broad flag, not a
+  mobile-element call.
+
+Representative cases (fixed rule in `review_summary.json`: A = most cross-assembly host-different pairs, B = most
+within-assembly pairs with none across, D = two-gene; figure `core_review/cases_review.svg`, rows in
+`core_review/case_occurrences.tsv`):
+
+| subset | case | core | occ / samples | different pairs within / across | protein id % | core DNA id % | estimated span |
+|---|---|---|---|---|---|---|---|
+| comamonas | A1 | PF_147add17340c ISL3 | 29 / 3 | 102 / 221 | 98.3–100 | 98.9–100 | 1,308–1,313 (+83–148 / +3–4) |
+| comamonas | A2 | PF_e2e705caf61f RdgC | 12 / 4 | 8 / 24 | 89.6–91.9 | 85.0–89.3 | ≈ coding (+1 / +0); paralog-like |
+| comamonas | B | PF_8e9360ea03b6 IS5 | 5 / 1 | 10 / 0 | 100 | 99.9–100 | 824–825 (+57 / +18) |
+| comamonas | D | ETF alpha/FixB + partner | 10 / 5 | 5 / 20 | 90.9–99.4 | 86.5–99.4 | = coding (+0 / +0) |
+| delftia | A1 | PF_4b70bb8e2b9d IS5 | 30 / 4 | 44 / 134 | 99.3–100 | 97.8–100 | 880–884 (+62–64 / +9–10) |
+| delftia | A2 | PF_3070024975f6 IS481 | 21 / 5 | 45 / 112 | 98.2–100 | 98.4–100 | ~1,590–1,620, mostly inconsistent |
+| delftia | B | PF_ad056eba1256 IS5 | 15 / 1 | 44 / 0 | 100 | 100 | 850–852 (+46–48 / +9–12) |
+| delftia | D | ETF alpha/FixB + partner | 14 / 7 | 6 / 30 | 94.2–99.6 | 87.6–98.8 | = coding (+0–1 / +0) |
+| paracidovorax | A1 | PF_34809b3c6b4f ISAav5 | 54 / 3 | 350 / 701 | 99.4–100 | 99.7–100 | 1,038–1,039 (+90 / +0–1) |
+| paracidovorax | A2 | PF_f094f2564f99 IS5 | 30 / 4 | 75 / 212 | 92.2–100 | 86.7–100 | 878–880 (+56–57 / +9–10) |
+| paracidovorax | B | PF_282ac9979b1c IS5 | 8 / 2 | 20 / 0 | 100 | 100 | 1,286–1,288 (+67 / +133) |
+| paracidovorax | D | ETF alpha/FixB + partner | 8 / 4 | 2 / 6 | 95.8–98.4 | 94.1–98.7 | = coding (+0 / +0) |
+
+Ranges are over the case's different-context pairs (identity) or the drawn occurrences (span). The IS cases show
+the intended pattern with a consistent element end; RdgC and ETF show that "same family, different neighbours"
+also catches paralogs and rearranged inherited genes.
+
+Outputs per subset in `<subset>/protein_entry/core_review/`: `review_summary.json`, `review_cores.tsv`,
+`review_occurrences.tsv.gz`, `review_pairs.tsv.gz`, `case_occurrences.tsv`, `cases_review.svg`.
+
 Still open:
-- boundary review beyond the CDS (adjacent-block merging under consistent adjacency, order and orientation);
-- paralog / rearrangement / nested-element interpretation;
-- separating same-assembly copies from cross-strain contexts in the counts;
-- site groups (S6);
-- read checks.
+- a per-pair baseline (similar-context single-copy genes between the same two assemblies) to tell a moved copy from
+  an inherited gene;
+- boundaries of the unresolved sides; checking IRs / target-site duplications on aligned ends rather than fixed
+  20 bp windows; graph-block merging only under consistent adjacency, order and orientation;
+- a narrower mobile-neighbour rule (the core-family criterion over-flags paralogs);
+- site groups (S6) and read checks.
 
 Evidence stays `assembly_only`, `production_ready=false`.
