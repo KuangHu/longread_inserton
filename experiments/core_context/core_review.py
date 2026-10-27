@@ -170,14 +170,14 @@ def end_hints(seq, e0, e1, n=20, tsd_max=12):
     return tir, tsd
 
 
-def scan(genes, lo, hi, forward, labels, mobile, max_scan=MAX_SCAN):
-    """Neighbours per side in core orientation until K non-mobile genes or max_scan genes are seen:
+def scan(genes, lo, hi, forward, labels, mobile, max_scan=MAX_SCAN, keep=None):
+    """Neighbours per side in core orientation until keep (default K) non-mobile genes or max_scan genes are seen:
     lists of (label, same direction as core, gene_uid, mobile-like). Wraps only on circular contigs."""
     n, circ = len(genes), genes[0]['circular_contig'] == 'True'
 
     def side(step, start):
         out, j = [], start
-        while sum(not x[3] for x in out) < pc.K and len(out) < max_scan:
+        while sum(not x[3] for x in out) < (keep or pc.K) and len(out) < max_scan:
             j += step
             if not 0 <= j < n:
                 if not circ:
