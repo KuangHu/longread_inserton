@@ -154,7 +154,7 @@ is committed unchanged here.
 Product keywords for single-gene cores with a different-context candidate are a reading aid, not a
 classification:
 
-| | transposase/IS | integrase etc. | hypothetical | other |
+| | transposase/IS | integrase etc. | hypothetical | other (incl. intron RT, translation/ribosomal; see protein_review.json) |
 |---|---:|---:|---:|---:|
 | comamonas | 17 | 3 | 10 | 54 |
 | delftia | 14 | 1 | 26 | 101 |
