@@ -24,7 +24,8 @@ catalog   Global family / homology-group IDs bound to the catalog version and th
           match/pseudo, transl_table problems) per unit. Stage-2 manifests: assembly_run_links, read_run_manifest,
           read_batch_manifest (metadata only, nothing is downloaded), empty read_evidence / new_read_contexts with
           their schema. Pilot read evidence (Comamonadaceae baseline read check) linked by exact carrier/contig/core
-          coordinates only; it is not propagated to families or other loci.
+          coordinates (overlapping but not identical stage-1 cores are listed separately, without transferring the
+          evidence); it is not propagated to families or other loci.
 report    stage1_report.json: per-batch and global counts gathered from the S1 / S2 / S3 / S4 / catalog outputs.
 """
 
@@ -461,17 +462,24 @@ def cmd_catalog(a):
     for c in LISTS:
         for r in read(BASELINE / "s4_s3_full_v02" / ("list_%s.tsv" % c)):
             base[r["locus_id"]] = r
-    key = {("comamonadaceae", x["biosample"], x["contig"], x["core_start"], x["core_end"]): x for x in core_rows if x["batch"] == "comamonadaceae"}
+    cm = [x for x in core_rows if x["batch"] == "comamonadaceae"]
+    key = {(x["biosample"], x["contig"], int(x["core_start"]), int(x["core_end"])): x for x in cm}
+    on_contig = defaultdict(list)
+    for x in cm:
+        on_contig[(x["biosample"], x["contig"])].append(x)
     plinks = []
     for r in read(BASELINE / "s5_readcheck_main" / "readcheck_loci.tsv"):
         bl = base.get(r["locus_id"], {})
-        k = ("comamonadaceae", r["carrier"], bl.get("contig"), str(bl.get("core_start")), str(bl.get("core_end")))
-        x = key.get(k)
+        s, e = (int(bl["core_start"]), int(bl["core_end"])) if bl else (-1, -1)
+        x = key.get((r["carrier"], bl.get("contig"), s, e))
+        ov = [] if x else [y["global_locus_id"] for y in on_contig.get((r["carrier"], bl.get("contig")), [])
+                           if int(y["core_start"]) < e and s < int(y["core_end"])]
         plinks.append(dict(pilot_locus_id=r["locus_id"], pilot_set="comamonadaceae_20261024/s5_readcheck_main", carrier=r["carrier"],
                            contig=bl.get("contig", ""), core_start=bl.get("core_start", ""), core_end=bl.get("core_end", ""),
                            pilot_category=bl.get("category", ""), evidence_level=r["evidence_level"], test_verdicts=r["test_verdicts"],
                            global_locus_id=x["global_locus_id"] if x else "", stage1_category=x["category"] if x else "",
-                           link_basis="exact_carrier_contig_core" if x else "no_exact_match_in_stage1_catalog",
+                           overlapping_stage1_loci=";".join(ov),
+                           link_basis="exact_carrier_contig_core" if x else "overlapping_core_not_identical" if ov else "no_match_in_stage1_catalog",
                            scope="this locus only; not propagated to families, architectures or other loci"))
     write(out / "pilot_read_evidence_links.tsv", plinks)
     # ---- summary
