@@ -149,6 +149,229 @@ def canonical(ids, strands):
     return min(fwd, rev)
 
 
+REPAIR_COLS = ["level", "member", "original_rep", "original_identity", "original_member_cov", "original_rep_cov", "action",
+               "new_rep", "new_identity", "new_member_cov", "new_rep_cov", "candidates_passing"]
+
+
+def reassign_failed(a, level, reps, check):
+    """Members below the frozen threshold against their final representative: drop that link, align each to every
+    representative of the level (exhaustive, same alignment settings as the S4 check) and move it to the best
+    representative that passes (identity, then the lower coverage); none passes -> its own singleton group.
+    Thresholds unchanged; the original failing values are kept in the returned records."""
+    mid, mc = MEMBER_MIN[level]
+    failed = sorted(m for m, r in reps.items() if not check[(level, m)][4])
+    if not failed:
+        return {}
+    w = a.work / "mmseqs" / ("repair_" + level)
+    w.mkdir(parents=True, exist_ok=True)
+    seqs, name = {}, None
+    for line in open(str(a.work / "proteins.faa")):
+        if line.startswith(">"):
+            name = line[1:].strip()
+        else:
+            seqs[name] = line.strip()
+    with open(str(w / "failed.faa"), "w") as h:
+        for m in failed:
+            h.write(">%s\n%s\n" % (m, seqs[m]))
+    with open(str(w / "reps.faa"), "w") as h:
+        for r in sorted(set(reps.values())):
+            h.write(">%s\n%s\n" % (r, seqs[r]))
+    subprocess.run([a.mmseqs, "easy-search", str(w / "failed.faa"), str(w / "reps.faa"), str(w / "hits.m8"), str(w / "tmp"),
+                    "--threads", str(a.threads), "--exhaustive-search", "1", "--alignment-mode", "3", "-e", "10", "--max-seqs", "100000",
+                    "--format-output", "query,target,fident,qcov,tcov,alnlen"], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    ok = defaultdict(list)
+    for line in open(str(w / "hits.m8")):
+        q, t, fid, qc, tc, _ = line.rstrip("\n").split("\t")
+        fid, qc, tc = float(fid), float(qc), float(tc)
+        if fid >= mid and qc >= mc and tc >= mc and t != reps[q]:
+            ok[q].append((fid, min(qc, tc), t, qc, tc))
+    out = {}
+    for m in failed:
+        r0, f0, m0, c0, _ = check[(level, m)]
+        rec = dict(level=level, member=m, original_rep=r0, original_identity=round(f0, 3), original_member_cov=round(m0, 3),
+                   original_rep_cov=round(c0, 3), candidates_passing=len(ok[m]))
+        if ok[m]:
+            fid, _, t, qc, tc = sorted(ok[m], key=lambda x: (-x[0], -x[1], x[2]))[0]
+            rec.update(action="reassigned_to_passing_representative", new_rep=t, new_identity=fid, new_member_cov=qc, new_rep_cov=tc)
+        else:
+            rec.update(action="singleton_no_passing_representative", new_rep=m, new_identity=1.0, new_member_cov=1.0, new_rep_cov=1.0)
+        out[m] = rec
+    return out
+
+
+def pilot_audit(a, core_rows, cat):
+    """Baseline (comamonadaceae_20261024) read-check loci against the stage-1 Comamonadaceae batch. An exact link needs
+    the same BioSample, the same assembly (accession.version or FNA SHA256), contig, core coordinates and core SHA256.
+    Unmatched loci get only reasons established from the files; anything else is unresolved, with overlapping stage-1
+    loci listed. Tests are linked separately: a carrier-partner test applies only where that partner is a partner of
+    the stage-1 locus. No evidence moves to overlapping loci, other partners, families or architectures."""
+    b = "comamonadaceae"
+    base, bseed = {}, {r["locus_id"]: r for r in read(BASELINE / "s4_s3_full_v02" / "seed_catalog.tsv")}
+    for c in LISTS:
+        for r in read(BASELINE / "s4_s3_full_v02" / ("list_%s.tsv" % c)):
+            base[r["locus_id"]] = r
+    bcat = {r["sample_id"]: r for r in read(BASELINE / "s2" / "catalog.tsv")}
+    rl = read(BASELINE / "s5_readcheck_main" / "readcheck_loci.tsv")
+    carriers = {r["carrier"] for r in rl}
+    cm = [x for x in core_rows if x["batch"] == b]
+    exact = {(x["biosample"], x["contig"], int(x["core_start"]), int(x["core_end"])): x for x in cm}
+    contigs = set()
+    with gzip.open(str(a.scratch / b / "s2" / "contig_index.tsv.gz"), "rt") as h:
+        for line in h:
+            f = line.split("\t")
+            if f[0] in carriers:
+                contigs.add((f[0], f[2]))
+    s4 = defaultdict(list)
+    with gzip.open(str(s4dir(a, b) / "s4_loci.tsv.gz"), "rt") as h:
+        for r in csv.DictReader(h, delimiter="\t"):
+            if r["carrier"] in carriers:
+                s4[(r["carrier"], r["contig"])].append(r)
+    s3 = defaultdict(list)
+    with open(str(a.scratch / b / "s3_full" / "merged" / "loci.tsv")) as h:
+        for r in csv.DictReader(h, delimiter="\t"):
+            if r["carrier"] in carriers:
+                s3[(r["carrier"], r["contig"])].append(r)
+    pairs = {frozenset((p["sample_a"], p["sample_b"])) for p in read(a.scratch / b / "s3_full" / "pairs.tsv")}
+    tests = defaultdict(list)
+    for t in read(BASELINE / "s5_readcheck_main" / "readcheck_tests.tsv"):
+        tests[t["locus_id"]].append(t)
+    links, tlinks = [], []
+    for r in rl:
+        bl, c = base[r["locus_id"]], r["carrier"]
+        s, e, contig = int(bl["core_start"]), int(bl["core_end"]), bl["contig"]
+        bsha = bseed[r["locus_id"]]["core_sha256"]
+        sc = cat.get(gl(b, c))
+        same_asm = bool(sc) and (sc["assembly"] == bcat[c]["assembly"] or sc["fna_sha256"] == bcat[c]["fna_sha256"])
+        x = exact.get((c, contig, s, e))
+        ok = x is not None and same_asm and x["core_sha256"] == bsha
+        reason, ov4, ov3 = "-", [], []
+        if not ok:
+            ov4 = [y for y in s4.get((c, contig), []) if int(y["core_start"]) < e and s < int(y["core_end"])]
+            ov3 = [y for y in s3.get((c, contig), []) if int(y["core_start"]) < e and s < int(y["core_end"])]
+            same4 = [y for y in ov4 if (int(y["core_start"]), int(y["core_end"])) == (s, e)]
+            same3 = [y for y in ov3 if (int(y["core_start"]), int(y["core_end"])) == (s, e)]
+            if not sc:
+                reason = "carrier_not_in_stage1_pool"
+            elif not same_asm:
+                reason = "carrier_assembly_differs:%s->%s" % (bcat[c]["assembly"], sc["assembly"])
+            elif (c, contig) not in contigs:
+                reason = "contig_not_in_stage1_assembly"
+            elif x is not None:
+                reason = "coordinates_match_core_sha256_differs"
+            elif same4:
+                reason = "identical_core_coordinates_in_stage1_s4_category:" + same4[0]["category"]
+            elif same3:
+                reason = "identical_core_coordinates_in_stage1_s3:status=%s,core_len=%s" % (same3[0]["status"], same3[0]["core_len"])
+            elif ov3:
+                reason = "unresolved_overlapping_stage1_loci"
+            else:
+                reason = "unresolved_no_overlapping_stage1_locus"
+        partners = set(split(x["partners_anchored"]) + split(x["partners_not_anchored"])) if ok else set()
+        pt = tests[r["locus_id"]]
+        links.append(dict(
+            pilot_locus_id=r["locus_id"], pilot_set="comamonadaceae_20261024/s5_readcheck_main", biosample=c,
+            pilot_assembly=bcat[c]["assembly"], pilot_fna_sha256=bcat[c]["fna_sha256"], stage1_assembly=sc["assembly"] if sc else "",
+            stage1_fna_sha256=sc["fna_sha256"] if sc else "", contig=contig, core_start=s, core_end=e, pilot_core_sha256=bsha,
+            pilot_category=bl["category"], evidence_level=r["evidence_level"], test_verdicts=r["test_verdicts"],
+            link_basis="exact_biosample_assembly_contig_coordinates_core" if ok else "not_linked",
+            global_locus_id=x["global_locus_id"] if ok else "", stage1_category=x["category"] if ok else "",
+            unmatched_reason=reason,
+            overlapping_stage1_candidates=";".join(gl(b, y["locus_id"]) for y in ov4 if y["category"] in LISTS + [PENDING]),
+            overlapping_stage1_s4_loci=";".join("%s:%s:%s-%s" % (gl(b, y["locus_id"]), y["category"], y["core_start"], y["core_end"]) for y in ov4),
+            overlapping_stage1_s3_loci=";".join("%s:%s:%s-%s" % (gl(b, y["locus_id"]), y["status"], y["core_start"], y["core_end"]) for y in ov3),
+            pilot_partners=";".join(sorted({t["empty"] for t in pt})),
+            pilot_partners_in_stage1_locus=";".join(sorted({t["empty"] for t in pt} & partners)),
+            pilot_pairs_in_stage1_pairs=sum(1 for t in pt if frozenset((c, t["empty"])) in pairs),
+            scope="this carrier locus only; evidence stays with its pilot tests and is not propagated to overlapping loci, "
+                  "other partners, families or architectures"))
+        for t in pt:
+            same_p = ok and t["empty"] in partners
+            tlinks.append(dict(test_id=t["test_id"], pilot_locus_id=r["locus_id"], pair_id=t["pair_id"], carrier=c, partner=t["empty"],
+                               test_verdict=t["test_verdict"], carrier_verdict=t["C_verdict"], partner_verdict=t["E_verdict"],
+                               global_locus_id=x["global_locus_id"] if ok else "",
+                               partner_in_stage1_locus=same_p, pair_in_stage1_pairs=frozenset((c, t["empty"])) in pairs,
+                               link_scope="same_carrier_partner_test" if same_p else
+                               "same_carrier_locus_partner_not_in_stage1_locus" if ok else "not_linked"))
+    return links, tlinks
+
+
+def read_coverage(core_rows, mrows, rinfo):
+    """Per candidate category: loci by carrier / partner usable-read availability and carrier read state; distinct runs
+    and estimated bytes still to download (each run once; runs without a size listed apart). Metadata only."""
+    by = defaultdict(lambda: dict(carrier=[], partner=[]))
+    for m in mrows:
+        by[m["global_locus_id"]]["carrier" if m["role"] == "carrier" else "partner"].append(m)
+
+    def state(ms):
+        if any(split(m["local_verified_runs"]) for m in ms):
+            return "local_verified"
+        if any(split(m["usable_runs"]) for m in ms):
+            return "remote_downloadable"
+        if any(split(m["linked_runs"]) for m in ms):
+            return "linked_not_usable"
+        return "no_linked_runs"
+
+    def runs_needed(ms):
+        return {r for m in ms for r in split(m["usable_runs"]) if r not in split(m["local_verified_runs"])}
+
+    out = {}
+    for c in LISTS + [PENDING, "all"]:
+        xs = [x["global_locus_id"] for x in core_rows if c == "all" or x["category"] == c]
+        d = Counter()
+        need_c, need_p, local = set(), set(), set()
+        for g in xs:
+            cs, ps = state(by[g]["carrier"]), state(by[g]["partner"])
+            cu, pu = cs in ("local_verified", "remote_downloadable"), ps in ("local_verified", "remote_downloadable")
+            d["loci"] += 1
+            d["carrier_usable"] += cu
+            d["carrier_and_partner_usable"] += cu and pu
+            d["carrier_usable_no_partner_usable"] += cu and not pu
+            d["partner_only_usable"] += pu and not cu
+            d["no_usable_reads"] += not cu and not pu
+            d["carrier_" + cs] += 1
+            d["best_partner_" + ps] += 1
+            need_c |= runs_needed(by[g]["carrier"])
+            need_p |= runs_needed(by[g]["partner"])
+            local |= {r for m in by[g]["carrier"] + by[g]["partner"] for r in split(m["local_verified_runs"])}
+        allr = need_c | need_p
+        unknown = sorted(r for r in allr if not any(v.isdigit() for v in rinfo[r]["fastq_bytes"].split(";")))
+        out[c] = dict(d, distinct_runs_to_download=len(allr), carrier_runs_to_download=len(need_c),
+                      partner_runs_to_download=len(need_p - need_c), est_bytes_known=sum(nbytes(rinfo[r]["fastq_bytes"]) for r in allr),
+                      runs_unknown_size=len(unknown), runs_unknown_size_ids=unknown[:50], local_verified_runs_used=len(local))
+    return out
+
+
+def traceability(core_rows, inst, prow, maps, cat, check, assign, fa):
+    """ID uniqueness across batches and back-references from every mapping; each entry is (ok, detail)."""
+    t = {}
+    ids = [x["global_locus_id"] for x in core_rows]
+    t["global_locus_id_unique"] = (len(ids) == len(set(ids)), len(ids))
+    bios = defaultdict(set)
+    asms = defaultdict(set)
+    for sk, r in cat.items():
+        bios[r["sample_id"]].add(sk.split(":")[0])
+        asms[r["assembly"]].add(sk)
+    multi_b = sorted(k for k, v in bios.items() if len(v) > 1)
+    multi_a = sorted(k for k, v in asms.items() if len(v) > 1)
+    t["biosample_in_one_batch"] = (not multi_b, multi_b[:20])
+    t["assembly_in_one_sample_key"] = (not multi_a, multi_a[:20])
+    t["core_rows_sample_key_in_catalog"] = (all(x["sample_key"] in cat and cat[x["sample_key"]]["assembly"] == x["assembly"] for x in core_rows), "")
+    pc = {p["protein_sha256"] for p in prow}
+    t["instances_in_protein_catalog"] = (all(i["protein_sha256"] in pc for i in inst), len(inst))
+    t["locus_protein_hashes_in_catalog"] = (all(h in pc for x in core_rows for h in split(x["protein_sha256s"])), "")
+    t["instance_locus_in_core_catalog"] = (set(i["global_locus_id"] for i in inst) <= set(ids), "")
+    mapped = {m["local_id"] for m in maps}
+    t["local_ids_namespaced_and_mapped"] = (all(":" in i["local_family_id"] and i["local_family_id"] in mapped and i["local_homology_id"] in mapped
+                                                for i in inst), len(mapped))
+    for lv in MMSEQS_SETTINGS:
+        fails = [m for m in assign[lv] if not check[(lv, m)][4]]
+        t["members_pass_final_check_" + lv] = (not fails, fails[:20])
+        t["representatives_are_members_" + lv] = (all(check[(lv, m)][0] in assign[lv] for m in assign[lv]), "")
+    n = sum(1 for line in open(str(fa)) if line.startswith(">"))
+    t["core_fasta_one_record_per_locus"] = (n == len(core_rows), n)
+    return dict(ok=all(v[0] for v in t.values()), checks={k: dict(ok=v[0], detail=v[1]) for k, v in t.items()})
+
+
 def circular_contigs(gff):
     if not gff or not Path(gff).exists():
         return None
@@ -162,7 +385,7 @@ def cmd_catalog(a):
     out.mkdir(parents=True, exist_ok=True)
     bs = batches(a)
     # ---- global clusters and member checks
-    assign, check = {}, {}
+    assign, check, fixes = {}, {}, []
     for level in MMSEQS_SETTINGS:
         reps = {}
         for line in open(str(w / "mmseqs" / (level + "_cluster.tsv"))):
@@ -180,7 +403,15 @@ def cmd_catalog(a):
         for m, r in reps.items():
             fid, mcov, rcov = (1.0, 1.0, 1.0) if m == r else aln.get((m, r), (0.0, 0.0, 0.0))
             check[(level, m)] = (r, fid, mcov, rcov, fid >= mid and mcov >= mc and rcov >= mc)
+        for m, rec in reassign_failed(a, level, reps, check).items():
+            fixes.append(rec)
+            reps[m] = rec["new_rep"]
+            check[(level, m)] = (rec["new_rep"], rec["new_identity"], rec["new_member_cov"], rec["new_rep_cov"], True)
+            names.setdefault(rec["new_rep"], "%s%s_%s" % (PREFIX[level], CATALOG, rec["new_rep"][:12]))
+        if len(set(names.values())) != len(names):
+            sys.exit("representative hash prefix collision at " + level)
         assign[level] = {m: names[r] for m, r in reps.items()}
+    write(out / "member_check_repairs.tsv", fixes, REPAIR_COLS)
     seqlen = {}
     name = None
     for line in open(str(w / "proteins.faa")):
@@ -308,13 +539,15 @@ def cmd_catalog(a):
     for i in inst:
         pinst[i["protein_sha256"]].append(i)
     prow = []
+    repaired = {(f["level"], f["member"]): f["action"] for f in fixes}
     for h, ii in sorted(pinst.items()):
         row = dict(protein_sha256=h, length=seqlen[h], instances=len(ii), loci=len({i["global_locus_id"] for i in ii}),
                    batches=";".join(sorted({i["batch"] for i in ii})), protein_ids=";".join(sorted({i["protein_id"] for i in ii})))
         for level, nm in (("family", "family"), ("homology_group", "homology")):
             r, fid, mcov, rcov, ok = check[(level, h)]
             row.update({nm + "_id": assign[level][h], nm + "_rep": r, nm + "_identity": round(fid, 3), nm + "_member_cov": round(mcov, 3),
-                        nm + "_rep_cov": round(rcov, 3), nm + "_member_pass": ok})
+                        nm + "_rep_cov": round(rcov, 3), nm + "_member_pass": ok,
+                        nm + "_repair": repaired.get((level, h), "-")})
         prow.append(row)
     write(out / "protein_catalog.tsv.gz", prow)
     loc = {x["global_locus_id"]: x for x in core_rows}
@@ -446,7 +679,8 @@ def cmd_catalog(a):
                 mrows.append(dict(global_locus_id=x["global_locus_id"], batch=b, category=x["category"], role=role, sample_key=sk, biosample=s,
                                   assembly=cat[sk]["assembly"], linked_runs=";".join(rs), read_types=";".join(sorted({rinfo[r]["read_type"] for r in known})),
                                   usable_runs=";".join(use), local_verified_runs=";".join(loc_ok), runs_missing_metadata=";".join(r for r in rs if r not in rinfo),
-                                  status=status, est_download_bytes=est))
+                                  status=status, est_download_bytes=est,
+                                  remote_runs_unknown_size=";".join(r for r in remote if not any(v.isdigit() for v in rinfo[r]["fastq_bytes"].split(";")))))
     write(out / "read_batch_manifest.tsv.gz", mrows)
     schema = dict(
         read_evidence=["evidence_id", "global_locus_id", "test_id", "run", "sample_key", "role", "caller_version", "count_unit",
@@ -457,31 +691,10 @@ def cmd_catalog(a):
                            "assembly_placement", "placement_status", "review_status", "created"])
     for k, cols in schema.items():
         write(out / ("%s.tsv" % k), [], cols)
-    # ---- pilot read evidence links (baseline Comamonadaceae read check)
-    base = {}
-    for c in LISTS:
-        for r in read(BASELINE / "s4_s3_full_v02" / ("list_%s.tsv" % c)):
-            base[r["locus_id"]] = r
-    cm = [x for x in core_rows if x["batch"] == "comamonadaceae"]
-    key = {(x["biosample"], x["contig"], int(x["core_start"]), int(x["core_end"])): x for x in cm}
-    on_contig = defaultdict(list)
-    for x in cm:
-        on_contig[(x["biosample"], x["contig"])].append(x)
-    plinks = []
-    for r in read(BASELINE / "s5_readcheck_main" / "readcheck_loci.tsv"):
-        bl = base.get(r["locus_id"], {})
-        s, e = (int(bl["core_start"]), int(bl["core_end"])) if bl else (-1, -1)
-        x = key.get((r["carrier"], bl.get("contig"), s, e))
-        ov = [] if x else [y["global_locus_id"] for y in on_contig.get((r["carrier"], bl.get("contig")), [])
-                           if int(y["core_start"]) < e and s < int(y["core_end"])]
-        plinks.append(dict(pilot_locus_id=r["locus_id"], pilot_set="comamonadaceae_20261024/s5_readcheck_main", carrier=r["carrier"],
-                           contig=bl.get("contig", ""), core_start=bl.get("core_start", ""), core_end=bl.get("core_end", ""),
-                           pilot_category=bl.get("category", ""), evidence_level=r["evidence_level"], test_verdicts=r["test_verdicts"],
-                           global_locus_id=x["global_locus_id"] if x else "", stage1_category=x["category"] if x else "",
-                           overlapping_stage1_loci=";".join(ov),
-                           link_basis="exact_carrier_contig_core" if x else "overlapping_core_not_identical" if ov else "no_match_in_stage1_catalog",
-                           scope="this locus only; not propagated to families, architectures or other loci"))
+    # ---- pilot read evidence audit (baseline Comamonadaceae read check)
+    plinks, ptests = pilot_audit(a, core_rows, cat)
     write(out / "pilot_read_evidence_links.tsv", plinks)
+    write(out / "pilot_read_test_links.tsv", ptests)
     # ---- summary
     def stats(xs, ii):
         fams = {i["family_id"] for i in ii}
@@ -528,16 +741,42 @@ def cmd_catalog(a):
         est_download_bytes_distinct_runs=sum(nbytes(rinfo[r]["fastq_bytes"]) for r in
                                              {r for m in mrows for r in split(m["usable_runs"]) if r not in split(m["local_verified_runs"])}),
         manifest_rows=len(mrows), downloads_started=0)
-    summ["pilot_read_evidence_links"] = dict(Counter(p["link_basis"] for p in plinks))
+    summ["pilot_read_evidence_links"] = dict(loci=len(plinks), link_basis=dict(Counter(p["link_basis"] for p in plinks)),
+                                             unmatched_reason=dict(Counter(p["unmatched_reason"] for p in plinks if p["unmatched_reason"] != "-")),
+                                             tests=len(ptests), test_link_scope=dict(Counter(t["link_scope"] for t in ptests)))
+    summ["member_check_repairs"] = fixes
+    summ["stage2_read_coverage"] = read_coverage(core_rows, mrows, rinfo)
+    summ["traceability"] = traceability(core_rows, inst, prow, maps, cat, check, assign, fa)
     summ["problems"] = dict(problems)
     (out / "catalog_summary.json").write_text(json.dumps(summ, indent=1) + "\n")
-    big = [w / "proteins.faa", w / "candidate_cores.fa"] + [w / "mmseqs" / (lv + x) for lv in MMSEQS_SETTINGS for x in ("_cluster.tsv", "_members.m8")]
-    idx = dict(version=VERSION, created=time.strftime("%Y-%m-%dT%H:%M:%S%z"), commit=a.commit,
-               command="sbatch experiments/fna_pool/stage1_catalog.sbatch (proteins -> cluster -> catalog)",
-               files={str(p): sha256(p) for p in big},
-               inputs={b: {f: sha256(s4dir(a, b) / f) for f in ("candidate_loci_families.tsv", "seed_catalog.fa", "seed_catalog.tsv",
-                                                                  "list_annotation_pending.tsv", "protein_members.tsv")} for b in bs})
-    (out / "scratch_files.json").write_text(json.dumps(idx, indent=1) + "\n")
+    rebuild = "git checkout %s; sbatch experiments/fna_pool/stage1_catalog.sbatch (proteins -> cluster -> catalog), or the single mode named" % a.commit
+    big = [(w / "proteins.faa", "proteins"), (w / "protein_instances.tsv.gz", "proteins"), (fa, "catalog")] + \
+          [(w / "mmseqs" / (lv + x), "cluster") for lv in MMSEQS_SETTINGS for x in ("_cluster.tsv", "_members.m8")] + \
+          [(w / "mmseqs" / ("repair_" + lv) / "hits.m8", "catalog") for lv in MMSEQS_SETTINGS if (w / "mmseqs" / ("repair_" + lv) / "hits.m8").exists()]
+    inputs = {}
+    for b in bs:
+        f = {"s4/" + n: s4dir(a, b) / n for n in ("candidate_loci_families.tsv", "seed_catalog.fa", "seed_catalog.tsv", "list_annotation_pending.tsv",
+                                                    "protein_members.tsv", "families_summary.json", "s4_summary.json", "s4_loci.tsv.gz")}
+        f.update({"s3_full/pairs.tsv": a.scratch / b / "s3_full" / "pairs.tsv", "s2/contig_index.tsv.gz": a.scratch / b / "s2" / "contig_index.tsv.gz",
+                  "repo/s2/catalog.tsv": HERE / POOL / b / "s2" / "catalog.tsv", "repo/runs.tsv": HERE / POOL / b / "runs.tsv",
+                  "repo/assembly_run_links.tsv": HERE / POOL / b / "assembly_run_links.tsv"})
+        if b == "comamonadaceae":
+            f["s3_full/merged/loci.tsv"] = a.scratch / b / "s3_full" / "merged" / "loci.tsv"
+        inputs[b] = {k: dict(path=str(v), sha256=sha256(v)) for k, v in f.items()}
+    inputs["baseline_pilot"] = {str(p.relative_to(HERE)): sha256(p) for p in
+                                [BASELINE / "s5_readcheck_main" / "readcheck_loci.tsv", BASELINE / "s5_readcheck_main" / "readcheck_tests.tsv",
+                                 BASELINE / "s4_s3_full_v02" / "seed_catalog.tsv", BASELINE / "s2" / "catalog.tsv"] +
+                                [BASELINE / "s4_s3_full_v02" / ("list_%s.tsv" % c) for c in LISTS]}
+    cr = summ["cluster_run"]
+    idx = dict(version=VERSION, created=time.strftime("%Y-%m-%dT%H:%M:%S%z"), commit=a.commit, evidence_source=EVIDENCE,
+               parameters=dict(context=CONTEXT, lists=LISTS, pending=PENDING, mmseqs_settings=MMSEQS_SETTINGS, member_min=MEMBER_MIN,
+                               member_align=ALIGN, id_scheme="F%s_/H%s_/A%s_ + sha256[:12]; <batch>:<id> for loci, samples, local families" % (CATALOG, CATALOG, CATALOG)),
+               software=dict(python=sys.version.split()[0], mmseqs=cr["mmseqs"], mmseqs_version=cr["mmseqs_version"], mmseqs_sha256=sha256(cr["mmseqs"])),
+               scratch_files={str(p): dict(sha256=sha256(p), bytes=p.stat().st_size, produced_by_mode=m, rebuild=rebuild) for p, m in big},
+               inputs=inputs)
+    (out / "frozen_manifest.json").write_text(json.dumps(idx, indent=1) + "\n")
+    if (out / "scratch_files.json").exists():
+        (out / "scratch_files.json").unlink()
     print(json.dumps(summ["global"], indent=1)[:4000])
     print("done %.0fs" % (time.time() - t0))
 
@@ -592,8 +831,16 @@ def cmd_report(a):
     g["coding_anomalies"] = cs["coding_anomalies"]
     g["read_metadata"] = cs["read_metadata"]
     g["pilot_read_evidence_links"] = cs["pilot_read_evidence_links"]
+    g["member_check_repairs"] = cs.get("member_check_repairs")
+    g["stage2_read_coverage"] = cs.get("stage2_read_coverage")
+    g["traceability"] = cs.get("traceability")
+    g["site_groups"] = "not computed in stage 1 (S6 merging runs after read evidence); counts here are loci, not site groups"
     rep["global"] = g
     (out / "stage1_report.json").write_text(json.dumps(rep, indent=1) + "\n")
+    with open(str(out / "outputs.sha256"), "w") as h:
+        for p in sorted(out.iterdir()):
+            if p.name != "outputs.sha256":
+                h.write("%s  %s\n" % (sha256(p), p.name))
     print(json.dumps(g, indent=1))
 
 
