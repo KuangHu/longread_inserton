@@ -1,0 +1,89 @@
+import unittest
+
+import core_review as cr
+
+
+def contig(strands, circular=False):
+    return [dict(gene_uid='g%d' % i, strand=s, circular_contig=str(circular)) for i, s in enumerate(strands)]
+
+
+class WindowTests(unittest.TestCase):
+    def test_circular_slice_wraps(self):
+        self.assertEqual(cr.cslice('ABCDEFGH', -2, 3), 'GHABC')
+        self.assertEqual(cr.cslice('ABCDEFGH', 6, 10), 'GHAB')
+
+    def test_window_orientation_and_core_offsets(self):
+        seq = 'AAAACCGGTTTT'
+        sub, c0, c1 = cr.window(seq, 4, 8, True, 2, False)
+        self.assertEqual((sub, sub[c0:c1]), ('AACCGGTT', 'CCGG'))
+        sub, c0, c1 = cr.window(seq, 4, 8, False, 2, False)
+        self.assertEqual(sub[c0:c1], cr.revcomp('CCGG'))
+        self.assertEqual(sub, cr.revcomp('AACCGGTT'))
+        sub, c0, c1 = cr.window(seq, 1, 3, True, 3, False)      # linear: clipped at the contig start
+        self.assertEqual((sub, c0, c1), ('AAAACC', 1, 3))
+        sub, c0, c1 = cr.window('AAAACCGG', 1, 3, True, 3, True)   # circular, 8 bp: not longer than core + 2w, clipped
+        self.assertEqual((sub, c0), ('AAAACC', 1))
+        sub, c0, c1 = cr.window('ACGT' * 10, 1, 3, True, 3, True)
+        self.assertEqual((len(sub), c0, c1), (8, 3, 5))
+
+
+class ChainTests(unittest.TestCase):
+    def test_extension_beyond_core_and_chaining(self):
+        # A: core at [100, 400) of 700 bp; B: core at [300, 600) of 900 bp; shared from A 60..460 in two HSPs
+        hsps = [(61, 250, 261, 450), (261, 460, 461, 660)]
+        blk = cr.chain(hsps, 100, 400, 300, 600)
+        self.assertEqual(blk, (60, 460, 260, 660))
+        e = cr.extensions(blk, 100, 400, 700, 300, 600, 900)
+        self.assertEqual((e['a_up'], e['a_down'], e['b_up'], e['b_down']), (40, 60, 40, 60))
+        self.assertFalse(e['up_reaches_end'] or e['down_reaches_end'])
+
+    def test_off_diagonal_far_hsp_not_chained_and_end_flag(self):
+        hsps = [(101, 400, 301, 600), (600, 690, 50, 140)]      # second HSP: elsewhere in B (e.g. a nested element)
+        blk = cr.chain(hsps, 100, 400, 300, 600)
+        self.assertEqual(blk, (100, 400, 300, 600))
+        e = cr.extensions((2, 400, 202, 600), 100, 400, 700, 300, 600, 900)
+        self.assertTrue(e['up_reaches_end'])
+        self.assertIsNone(cr.chain([(500, 690, 50, 240)], 100, 400, 300, 600))
+
+    def test_side_boundary(self):
+        self.assertEqual(cr.side_boundary([40, 45, 50], False), (45, 'resolved'))
+        self.assertEqual(cr.side_boundary([40, 400], False)[1], 'inconsistent_between_partners')
+        self.assertEqual(cr.side_boundary([40], True)[1], 'reaches_window_or_contig_end')
+        self.assertEqual(cr.side_boundary([], False), (None, 'no_alignment'))
+
+
+class EndHintTests(unittest.TestCase):
+    def test_inverted_repeat_and_direct_repeat(self):
+        ir = 'GGTCTGACGCATTACGGATC'
+        element = ir + 'A' * 50 + cr.revcomp(ir)
+        seq = 'TTTTT' + 'CATGG' + element + 'CATGG' + 'AAAAA'
+        tir, tsd = cr.end_hints(seq, 10, 10 + len(element))
+        self.assertEqual(tir, 1.0)
+        self.assertEqual(tsd, 5)
+
+
+class ScanTests(unittest.TestCase):
+    def test_mobile_neighbours_skipped_for_host_context(self):
+        gs = contig('+++++++++')
+        for g in gs:
+            g['product'] = 'IS3 family transposase' if g['gene_uid'] in ('g5', 'g6') else 'host'
+        labels = {g['gene_uid']: g['gene_uid'] for g in gs}
+        mobile = lambda g: 'keyword' if 'transposase' in g['product'] else ''
+        up, down = cr.scan(gs, 4, 4, True, labels, mobile, max_scan=10)
+        self.assertEqual([x[2] for x in down], ['g5', 'g6', 'g7', 'g8'])
+        self.assertEqual([x[2] for x in cr.host(down)], ['g7', 'g8'])        # only two host genes before the contig end
+        self.assertEqual([x[2] for x in cr.host(up)], ['g3', 'g2', 'g1'])
+        _, down = cr.scan(gs, 4, 4, True, labels, mobile, max_scan=2)        # scan cap reached before any host gene
+        self.assertEqual(cr.host(down), [])
+
+    def test_near_different_host_similar_is_nested(self):
+        a = dict(up=[('X1', True, 'a1'), ('H1', True, 'a2'), ('H2', True, 'a3')], down=[('D1', True, 'a4')] * 3)
+        b = dict(up=[('Y1', True, 'b1'), ('Y2', True, 'b2'), ('Y3', True, 'b3')], down=[('E1', True, 'b4')] * 3)
+        self.assertEqual(cr.pc.relation(a, b), 'different_context_candidate')
+        ha = dict(up=[('H1', True, 'a2'), ('H2', True, 'a3'), ('H3', True, 'a5')], down=[('D1', True, 'a4')] * 3)
+        hb = dict(up=[('H1', True, 'b5'), ('H9', True, 'b6'), ('H8', True, 'b7')], down=[('D1', True, 'b8')] * 3)
+        self.assertEqual(cr.pc.relation(ha, hb), 'similar_context')
+
+
+if __name__ == '__main__':
+    unittest.main()
