@@ -336,7 +336,7 @@ def cmd_diagnose(a):
     (primary alignments only) and report facts - mapped reads and bases, identity, genome-wide and per-contig depth,
     and per tested site the reads that reach the U window, the D window and that span site +- ANCHOR in one alignment.
     Descriptive only: no verdict changes and no new thresholds."""
-    tests = read(a.work / "tests.tsv")
+    tests = read(a.out / "readcheck_tests.tsv")
     allowed = [r for r in read(a.work / "runs_checked.tsv") if r["sample"] == a.sample and r["status"] == "local_verified_ok"]
     genome = json.loads((a.work / "paf" / ("genome_%s.json" % a.sample)).read_text())["assembly"]
     lens = {}

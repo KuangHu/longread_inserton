@@ -114,5 +114,167 @@
    "runs_unknown_size": 0
   }
  },
- "next_batch_note": "metadata only, nothing downloaded; each run counted once, in its highest tier"
+ "next_batch_note": "metadata only, nothing downloaded; each run counted once, in its highest tier",
+ "batch1_followup": {
+  "items": {
+   "E2s_test_without_two_sided_result": 45,
+   "test_side_with_reads_insufficient": 5,
+   "partner_runs_not_local": 3,
+   "side_supported_only_by_pacbio_unresolved_carrier": 51,
+   "side_supported_only_by_pacbio_unresolved_partner": 17
+  },
+  "loci": 58,
+  "runs_to_download": [
+   "SRR40356274",
+   "SRR40356277",
+   "SRR40356297"
+  ],
+  "bytes_to_download": 1458612936
+ },
+ "pacbio_unresolved": {
+  "runs_used": 22,
+  "test_sides_only_unresolved": 68,
+  "consistent_sides_only_unresolved": 68,
+  "loci_carrier_support_only_unresolved": 30,
+  "both_consistent_tests_with_an_unresolved_only_side": 22,
+  "note": "mapped with map-pb as in v0.3; kept as unresolved, not counted as CLR or HiFi"
+ },
+ "next_batch_p1_chunks": {
+  "rule": "per family, sorted by BioSample and run, <= 50000000000 bytes and <= 40 runs per chunk",
+  "chunks": [
+   {
+    "chunk_id": "p1_actinomycetaceae_01",
+    "batch": "actinomycetaceae",
+    "runs": 9,
+    "bytes": 5608423973
+   },
+   {
+    "chunk_id": "p1_comamonadaceae_01",
+    "batch": "comamonadaceae",
+    "runs": 6,
+    "bytes": 2210496836
+   },
+   {
+    "chunk_id": "p1_eggerthellaceae_01",
+    "batch": "eggerthellaceae",
+    "runs": 2,
+    "bytes": 132269012
+   },
+   {
+    "chunk_id": "p1_erwiniaceae_01",
+    "batch": "erwiniaceae",
+    "runs": 40,
+    "bytes": 30817041097
+   },
+   {
+    "chunk_id": "p1_erwiniaceae_02",
+    "batch": "erwiniaceae",
+    "runs": 27,
+    "bytes": 19354635650
+   },
+   {
+    "chunk_id": "p1_flavobacteriaceae_01",
+    "batch": "flavobacteriaceae",
+    "runs": 40,
+    "bytes": 19458928567
+   },
+   {
+    "chunk_id": "p1_flavobacteriaceae_02",
+    "batch": "flavobacteriaceae",
+    "runs": 24,
+    "bytes": 19370086730
+   },
+   {
+    "chunk_id": "p1_lachnospiraceae_01",
+    "batch": "lachnospiraceae",
+    "runs": 40,
+    "bytes": 13817894252
+   },
+   {
+    "chunk_id": "p1_lachnospiraceae_02",
+    "batch": "lachnospiraceae",
+    "runs": 25,
+    "bytes": 29687200100
+   },
+   {
+    "chunk_id": "p1_metamycoplasmataceae_01",
+    "batch": "metamycoplasmataceae",
+    "runs": 40,
+    "bytes": 19281041274
+   },
+   {
+    "chunk_id": "p1_metamycoplasmataceae_02",
+    "batch": "metamycoplasmataceae",
+    "runs": 23,
+    "bytes": 14245172231
+   },
+   {
+    "chunk_id": "p1_microbacteriaceae_01",
+    "batch": "microbacteriaceae",
+    "runs": 40,
+    "bytes": 24064563174
+   },
+   {
+    "chunk_id": "p1_microbacteriaceae_02",
+    "batch": "microbacteriaceae",
+    "runs": 27,
+    "bytes": 13082074419
+   },
+   {
+    "chunk_id": "p1_micrococcaceae_01",
+    "batch": "micrococcaceae",
+    "runs": 40,
+    "bytes": 23991995030
+   },
+   {
+    "chunk_id": "p1_micrococcaceae_02",
+    "batch": "micrococcaceae",
+    "runs": 3,
+    "bytes": 232680407
+   },
+   {
+    "chunk_id": "p1_nitrobacteraceae_01",
+    "batch": "nitrobacteraceae",
+    "runs": 32,
+    "bytes": 42391756636
+   },
+   {
+    "chunk_id": "p1_nitrobacteraceae_02",
+    "batch": "nitrobacteraceae",
+    "runs": 35,
+    "bytes": 49972099599
+   },
+   {
+    "chunk_id": "p1_nitrobacteraceae_03",
+    "batch": "nitrobacteraceae",
+    "runs": 25,
+    "bytes": 49671417557
+   },
+   {
+    "chunk_id": "p1_nitrobacteraceae_04",
+    "batch": "nitrobacteraceae",
+    "runs": 40,
+    "bytes": 27510718206
+   },
+   {
+    "chunk_id": "p1_nitrobacteraceae_05",
+    "batch": "nitrobacteraceae",
+    "runs": 31,
+    "bytes": 48884759183
+   },
+   {
+    "chunk_id": "p1_nitrobacteraceae_06",
+    "batch": "nitrobacteraceae",
+    "runs": 40,
+    "bytes": 38506843890
+   },
+   {
+    "chunk_id": "p1_nitrobacteraceae_07",
+    "batch": "nitrobacteraceae",
+    "runs": 11,
+    "bytes": 8108162209
+   }
+  ],
+  "resume": "a chunk is fetched with s3_readcheck fetch logic; runs with verify.json are skipped, .part files resume"
+ }
 }
