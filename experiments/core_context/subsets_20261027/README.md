@@ -234,7 +234,7 @@ Outputs per subset in `<subset>/protein_entry/`:
 - `member_check_repairs.tsv` (empty);
 - `different_context_cores.tsv`, `protein_review.json`, `case_occurrences.tsv`, `cases_protein.svg`.
 
-## Core review v0.3 (`core_review.py`, job 27330635, commit 06b11ea)
+## Core review v0.4 (`core_review.py`, job 27331022, commit d34f5e5)
 
 Scope: every `target_lt2500` core key with ≥ 1 different-context pair, its target-scope occurrences and its
 different-context pairs. Cost < 1.5 min per subset. Evidence stays `assembly_only`; nothing here is an insertion
@@ -251,6 +251,25 @@ v0.3 (`06b11ea`):
 
 Occurrences resolved on both sides went from 219 / 314 / 169 to **123 / 214 / 122** (single-gene) and from
 42 / 92 / 20 to **16 / 40 / 3** (two-gene). The sample split, identities and host context are unchanged.
+
+**v0.4 closes a second gap** (`d34f5e5`; review counterexample, now a test). Chained HSPs may be up to 50 bp
+apart, but v0.3 only checked the chain's outer extent. A core end in the unaligned gap between two pieces
+(e.g. 20 bp uncovered at the start) was still reported as a 100 bp extension, resolved. v0.4:
+- keeps the chain pieces;
+- measures a side only if the core end lies inside one aligned piece in both copies, or the outermost piece stops
+  exactly at it (a measured 0);
+- records an end in or bordering a gap as `end_in_chain_gap` (unknown) and counts it per occurrence.
+
+On these subsets no pair had a core end in a chain gap (0 / 0 / 0 occurrences). Multi-piece chains are rare (4
+Delftia pairs have a gap beyond an end, which is counted, not hidden), so the v0.3 boundary counts are unchanged.
+Pair-level end cover (`review_summary.json` `pair_end_cover`) for single-gene pairs:
+
+| | comamonas | delftia | paracidovorax |
+|---|---:|---:|---:|
+| up: inside a piece / outermost piece stops at the end / not reached | 528 / 34 / 37 | 624 / 45 / 87 | 1,903 / 3 / 50 |
+| down: same order | 478 / 21 / 100 | 623 / 31 / 102 | 1,409 / 505 / 42 |
+
+The 505 Paracidovorax down-side zeros are ISAav5 copies whose shared sequence stops exactly at the stop codon.
 
 What the review adds, per different-context pair and occurrence:
 - **Sample split.** Pairs within one assembly (multi-copy) and across assemblies are both kept and counted
@@ -303,16 +322,29 @@ Two-gene cores (target scope):
 How to read it:
 - **A resolved side is a candidate conserved end, not an insertion boundary.** Most unresolved sides have no
   partner alignment that covers the end. Their span is unknown, and neither a zero nor a fixed extension should be
-  read into it.
+  read into it. Unknown sides are allowed: they may reflect real structural differences or simply no comparable
+  sequence, and candidates with them stay in the review.
 - **IS families give consistent candidate ends.** For example, IS5 PF_4b70bb8e2b9d (Delftia) shares +62–64 / +9–10 bp
   beyond the CDS with every partner, and ISAav5 (Paracidovorax) shares +90–91 / +0 bp (end covered, measured 0). That
   fits the non-coding end of an element, but the boundary itself is not established. The IR hint is weak because
   BLAST ends drift a few bp, and 2–4 bp direct repeats are expected by chance.
-- **RdgC and the ETF FixA/FixB cores are stable multi-copy paralogs, not single-copy genes.** The v0.2 text said
-  "one copy per assembly"; that was wrong. RdgC (Comamonas) has 2–4 copies in each of 4 assemblies. The ETF case
-  cores have exactly 2 copies in every assembly of each subset. Copies share 85–92% DNA (RdgC), and most of their
-  ends are not covered by partner alignments (v0.3: unknown). "Same family, different neighbours" therefore also
-  picks up paralogs that are present in every assembly at a constant copy number.
+- **Copy number per assembly** (complete-CDS target-scope copies, 0 = absent; `review_cores.tsv`
+  `copies_per_assembly`, `copy_pattern`). This is reported only; nothing is excluded. A constant count does not prove
+  ordinary paralogy, and a varying count does not prove movement. "Same count where present" is mostly one copy in
+  each carrying assembly. Single-gene cores:
+
+  | | same count in all assemblies | same count where present | count varies |
+  |---|---:|---:|---:|
+  | comamonas (mobile keyword / other) | 0 / 18 | 10 / 7 | 6 / 10 |
+  | delftia | 0 / 20 | 7 / 42 | 3 / 7 |
+  | paracidovorax | 0 / 8 | 1 / 2 | 8 / 2 |
+
+  Examples:
+  - The ETF FixA/FixB case cores have 2 copies in every assembly of each subset.
+  - RdgC (Comamonas) has 2, 2, 4, 0, 4. The v0.2 text called these single-copy, and v0.3 called RdgC a "stable"
+    paralog; both are corrected. Its copies share 85–92% DNA, and most of its ends are unknown.
+  - The IS case cores mostly vary: ISL3 8, 10, 11, 0, 0; Delftia IS5 5, 8, 9, 0, 8, 0, 0; ISAav5 19, 17, 18, 0.
+    Delftia IS5 PF_ad056eba1256 has 15 copies in one assembly only.
 - **Other non-mobile cores** with one copy per assembly and 85–92% DNA identity (for example H-NS, LysR, permeases
   in Delftia) fit a gene in a rearranged neighbourhood between medium-distance assemblies, but this is not tested.
 - **ANI comparison.** For assemblies at ANI ≥ 99 every copy is about 100% identical, so identity minus ANI says
@@ -332,7 +364,7 @@ within-assembly pairs with none across, D = two-gene; no case C because the curr
 | subset | case | core | occ / samples | different pairs within / across | protein id % | core DNA id % | shared beyond CDS, drawn copies (up / down) |
 |---|---|---|---|---|---|---|---|
 | comamonas | A1 | PF_147add17340c ISL3 | 29 / 3 | 102 / 221 | 98.3–100 | 98.9–100 | +83–148 / +3–4; one down side inconsistent |
-| comamonas | A2 | PF_e2e705caf61f RdgC (2–4 copies per assembly) | 12 / 4 | 8 / 24 | 89.6–91.9 | 85.0–89.3 | +1 / unknown (no partner covers the end) |
+| comamonas | A2 | PF_e2e705caf61f RdgC (2, 2, 4, 0, 4 copies) | 12 / 4 | 8 / 24 | 89.6–91.9 | 85.0–89.3 | +1 / unknown (no partner covers the end) |
 | comamonas | B | PF_8e9360ea03b6 IS5 | 5 / 1 | 10 / 0 | 100 | 99.9–100 | +57–58 / +18 |
 | comamonas | D | ETF alpha/FixB + partner (2 per assembly) | 10 / 5 | 5 / 20 | 90.9–99.4 | 86.5–99.4 | unknown / not covered by some partners |
 | delftia | A1 | PF_4b70bb8e2b9d IS5 | 30 / 4 | 44 / 134 | 99.3–100 | 97.8–100 | +62–64 / +9–10 |
@@ -347,16 +379,18 @@ within-assembly pairs with none across, D = two-gene; no case C because the curr
 Identity ranges are over the case's different-context pairs; extensions are over the drawn occurrences.
 
 Outputs per subset in `<subset>/protein_entry/core_review/`: `review_summary.json`, `review_cores.tsv`,
-`review_occurrences.tsv.gz` (with partners not covering each end), `review_pairs.tsv.gz`, `case_occurrences.tsv`,
+`review_occurrences.tsv.gz` (partners not covering each end, partners with the end in a chain gap),
+`review_pairs.tsv.gz` (end cover per side, gaps beyond the end), `case_occurrences.tsv`,
 `cases_review.svg`.
 
-Still open:
-- complete core boundaries: the unknown sides, IR / target-site checks on aligned ends rather than fixed 20 bp
-  windows, and graph-block merging only under consistent adjacency, order and orientation;
+Next, in this order (none is a discovery admission rule):
+- collect the candidates with stable candidate ends into a case list, keeping cores with unknown sides;
+- conservative site groups (S6) over these candidates;
 - a per-pair background baseline (similar-context single-copy genes between the same two assemblies), for ranking
   only;
-- separating paralogs present in every assembly at a constant copy number from copies whose number varies;
+- IR / target-site checks on aligned ends and empty-site evidence, as auxiliary evidence only;
+- graph-block merging only under consistent adjacency, order and orientation;
 - a narrower mobile-neighbour rule (the core-family criterion over-flags paralogs);
-- site groups (S6) and read checks.
+- read checks.
 
 Evidence stays `assembly_only`, `production_ready=false`.

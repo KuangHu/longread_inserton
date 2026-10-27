@@ -3,7 +3,7 @@
 <text x="14" y="24" font-size="16">comamonas: reviewed U-core-D cases (target scope)</text>
 <text x="14" y="42" font-size="10">Assembly only. Up to 6 scanned neighbour genes per side in core orientation, coloured by homology group; red dashed outline = mobile-like neighbour skipped for host context. Conserved-end candidate = coding span + flank shared with all different-context copies (not an insertion boundary).</text>
 <text x="14" y="56" font-size="10">A = cross-assembly host-different, B = within-assembly only, C = nested / adjacent mobile under the current rule (near different, host similar), D = two-gene core. Hover a gene for its product.</text>
-<text x="14" y="74" font-size="11" font-weight="bold">A1 PF_147add17340c: ISL3 family transposase | 29 occ / 3 samples; different pairs within 102, cross 221; host-different within 102, cross 221; protein id 98.3..100.0, core DNA id 98.9..100.0</text>
+<text x="14" y="74" font-size="11" font-weight="bold">A1 PF_147add17340c: ISL3 family transposase | 29 occ / 3 samples, copies 8,10,11,0,0; different pairs within 102, cross 221; host-different within 102, cross 221; protein id 98.3..100.0, core DNA id 98.9..100.0</text>
 <text x="14" y="98" font-size="10">SAMN12671326 NZ_CP043568.1:21823-22983 (-)</text>
 <text x="14" y="109" font-size="9" fill="#555">conserved-end candidate 1313 bp (coding 1161, +148/+4, resolved/resolved)</text>
 <polygon points="564,90 629,90 638,99 629,108 564,108" fill="hsl(69,55%,58%)" stroke="#666" stroke-width="0.5"><title>PH_b5a87fa3274e | 3-oxoacyl-ACP reductase</title></polygon>
@@ -68,7 +68,7 @@
 <text x="964" y="198" font-size="7">homoserine ki</text>
 <polygon points="1041,186 1106,186 1106,204 1041,204 1032,195" fill="hsl(81,55%,69%)" stroke="#666" stroke-width="0.5"><title>PH_b56d3fdbae23 | hypothetical protein</title></polygon>
 <text x="1042" y="198" font-size="7">hypothetical </text>
-<text x="14" y="226" font-size="11" font-weight="bold">A2 PF_e2e705caf61f: recombination-associated protein RdgC | 12 occ / 4 samples; different pairs within 8, cross 24; host-different within 8, cross 24; protein id 89.6..91.9, core DNA id 85.0..89.3</text>
+<text x="14" y="226" font-size="11" font-weight="bold">A2 PF_e2e705caf61f: recombination-associated protein RdgC | 12 occ / 4 samples, copies 2,2,4,0,4; different pairs within 8, cross 24; host-different within 8, cross 24; protein id 89.6..91.9, core DNA id 85.0..89.3</text>
 <text x="14" y="250" font-size="10">SAMN02603356 NC_013446.2:1634475-1635434 (-)</text>
 <text x="14" y="261" font-size="9" fill="#555">conserved-end candidate ? bp (coding 960, +1/+?, resolved/end_not_cove)</text>
 <polygon points="564,242 629,242 638,251 629,260 564,260" fill="hsl(259,55%,70%)" stroke="#666" stroke-width="0.5"><title>PH_102942b65e9b | hypothetical protein</title></polygon>
@@ -101,7 +101,7 @@
 <text x="964" y="286" font-size="7">Cu(I)-respons</text>
 <polygon points="1041,274 1106,274 1106,292 1041,292 1032,283" fill="hsl(243,55%,74%)" stroke="#666" stroke-width="0.5"><title>PH_0bbcc40c6767 | heavy-metal-associated domain-containing protein</title></polygon>
 <text x="1042" y="286" font-size="7">heavy-metal-a</text>
-<text x="14" y="314" font-size="11" font-weight="bold">B PF_8e9360ea03b6: IS5 family transposase | 5 occ / 1 samples; different pairs within 10, cross 0; host-different within 10, cross 0; protein id 100.0..100.0, core DNA id 99.9..100.0</text>
+<text x="14" y="314" font-size="11" font-weight="bold">B PF_8e9360ea03b6: IS5 family transposase | 5 occ / 1 samples, copies 0,5,0,0,0; different pairs within 10, cross 0; host-different within 10, cross 0; protein id 100.0..100.0, core DNA id 99.9..100.0</text>
 <text x="14" y="338" font-size="10">SAMN12671326 NZ_CP043568.1:1316612-1317360 (-)</text>
 <text x="14" y="349" font-size="9" fill="#555">conserved-end candidate 824 bp (coding 749, +57/+18, resolved/resolved)</text>
 <polygon points="573,330 638,330 638,348 573,348 564,339" fill="hsl(155,55%,55%)" stroke="#666" stroke-width="0.5"><title>PH_174edce90581 | ABC transporter substrate-binding protein</title></polygon>
@@ -166,7 +166,7 @@
 <text x="964" y="438" font-size="7">sensor domain</text>
 <polygon points="1032,426 1097,426 1106,435 1097,444 1032,444" fill="hsl(283,55%,58%)" stroke="#666" stroke-width="0.5"><title>PH_888ea1e6bc3b | MliC family protein</title></polygon>
 <text x="1042" y="438" font-size="7">MliC family p</text>
-<text x="14" y="466" font-size="11" font-weight="bold">D PF_56dbb4083369+,PF_c0d69e123985+: electron transfer flavoprotein subunit alpha/FixB  | 10 occ / 5 samples; different pairs within 5, cross 20; host-different within 5, cross 20; protein id 90.9..99.4, core DNA id 86.5..99.4</text>
+<text x="14" y="466" font-size="11" font-weight="bold">D PF_56dbb4083369+,PF_c0d69e123985+: electron transfer flavoprotein subunit alpha/FixB  | 10 occ / 5 samples, copies 2,2,2,2,2; different pairs within 5, cross 20; host-different within 5, cross 20; protein id 90.9..99.4, core DNA id 86.5..99.4</text>
 <text x="14" y="490" font-size="10">SAMN02603356 NC_013446.2:4220861-4222709 (-)</text>
 <text x="14" y="501" font-size="9" fill="#555">conserved-end candidate ? bp (coding 1849, +?/+0, end_not_cove/end_not_cove)</text>
 <polygon points="564,482 629,482 638,491 629,500 564,500" fill="hsl(123,55%,63%)" stroke="#666" stroke-width="0.5"><title>PH_0582d7471818 | Bug family tripartite tricarboxylate transporter substrate binding protein</title></polygon>

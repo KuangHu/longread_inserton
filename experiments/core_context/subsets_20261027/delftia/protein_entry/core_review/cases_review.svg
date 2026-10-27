@@ -3,7 +3,7 @@
 <text x="14" y="24" font-size="16">delftia: reviewed U-core-D cases (target scope)</text>
 <text x="14" y="42" font-size="10">Assembly only. Up to 6 scanned neighbour genes per side in core orientation, coloured by homology group; red dashed outline = mobile-like neighbour skipped for host context. Conserved-end candidate = coding span + flank shared with all different-context copies (not an insertion boundary).</text>
 <text x="14" y="56" font-size="10">A = cross-assembly host-different, B = within-assembly only, C = nested / adjacent mobile under the current rule (near different, host similar), D = two-gene core. Hover a gene for its product.</text>
-<text x="14" y="74" font-size="11" font-weight="bold">A1 PF_4b70bb8e2b9d: IS5 family transposase | 30 occ / 4 samples; different pairs within 44, cross 134; host-different within 44, cross 134; protein id 99.3..100.0, core DNA id 97.8..100.0</text>
+<text x="14" y="74" font-size="11" font-weight="bold">A1 PF_4b70bb8e2b9d: IS5 family transposase | 30 occ / 4 samples, copies 5,8,9,0,8,0,0; different pairs within 44, cross 134; host-different within 44, cross 134; protein id 99.3..100.0, core DNA id 97.8..100.0</text>
 <text x="14" y="98" font-size="10">SAMN00623041 NC_010002.1:2240343-2241151 (-)</text>
 <text x="14" y="109" font-size="9" fill="#555">conserved-end candidate 880 bp (coding 809, +62/+9, resolved/resolved)</text>
 <polygon points="564,90 629,90 638,99 629,108 564,108" fill="hsl(35,55%,57%)" stroke="#666" stroke-width="0.5"><title>PH_cecba9a7addc | hypothetical protein</title></polygon>
@@ -72,7 +72,7 @@
 <text x="964" y="198" font-size="7">helix-turn-he</text>
 <polygon points="1032,186 1097,186 1106,195 1097,204 1032,204" fill="hsl(65,55%,70%)" stroke="#666" stroke-width="0.5"><title>PH_38d6cc968b1c | TniQ family protein</title></polygon>
 <text x="1042" y="198" font-size="7">TniQ family p</text>
-<text x="14" y="226" font-size="11" font-weight="bold">A2 PF_3070024975f6: IS481 family transposase | 21 occ / 5 samples; different pairs within 45, cross 112; host-different within 45, cross 112; protein id 98.2..100.0, core DNA id 98.4..100.0</text>
+<text x="14" y="226" font-size="11" font-weight="bold">A2 PF_3070024975f6: IS481 family transposase | 21 occ / 5 samples, copies 2,6,6,1,6,0,0; different pairs within 45, cross 112; host-different within 45, cross 112; protein id 98.2..100.0, core DNA id 98.4..100.0</text>
 <text x="14" y="250" font-size="10">SAMN00623041 NC_010002.1:995110-996297 (+)</text>
 <text x="14" y="261" font-size="9" fill="#555">conserved-end candidate ? bp (coding 1188, +171/+233, resolved/inconsistent)</text>
 <polygon points="573,242 638,242 638,260 573,260 564,251" fill="hsl(297,55%,61%)" stroke="#666" stroke-width="0.5"><title>PH_74834d387c93 | SET domain-containing protein</title></polygon>
@@ -137,7 +137,7 @@
 <text x="964" y="350" font-size="7">DUF488 domain</text>
 <polygon points="1041,338 1106,338 1106,356 1041,356 1032,347" fill="hsl(174,55%,60%)" stroke="#666" stroke-width="0.5"><title>PH_35cfccabee78 | TfoX/Sxy family protein</title></polygon>
 <text x="1042" y="350" font-size="7">TfoX/Sxy fami</text>
-<text x="14" y="378" font-size="11" font-weight="bold">B PF_ad056eba1256: IS5 family transposase | 15 occ / 1 samples; different pairs within 44, cross 0; host-different within 44, cross 0; protein id 100.0..100.0, core DNA id 100.0..100.0</text>
+<text x="14" y="378" font-size="11" font-weight="bold">B PF_ad056eba1256: IS5 family transposase | 15 occ / 1 samples, copies 0,0,0,0,0,0,15; different pairs within 44, cross 0; host-different within 44, cross 0; protein id 100.0..100.0, core DNA id 100.0..100.0</text>
 <text x="14" y="402" font-size="10">SAMN15905291 NZ_CP181346.1:87248-88040 (-)</text>
 <text x="14" y="413" font-size="9" fill="#555">conserved-end candidate 851 bp (coding 793, +46/+12, resolved/resolved)</text>
 <polygon points="573,394 638,394 638,412 573,412 564,403" fill="hsl(168,55%,56%)" stroke="#666" stroke-width="0.5"><title>PH_18dd6d39915d | aspartate/glutamate racemase family protein</title></polygon>
@@ -206,7 +206,7 @@
 <text x="964" y="502" font-size="7">IclR family t</text>
 <polygon points="1032,490 1097,490 1106,499 1097,508 1032,508" fill="hsl(207,55%,66%)" stroke="#666" stroke-width="0.5"><title>PH_c23798775b66 | SDR family oxidoreductase</title></polygon>
 <text x="1042" y="502" font-size="7">SDR family ox</text>
-<text x="14" y="530" font-size="11" font-weight="bold">D PF_10b9be14a143-,PF_1180b16eba28-: electron transfer flavoprotein subunit alpha/FixB  | 14 occ / 7 samples; different pairs within 6, cross 30; host-different within 6, cross 30; protein id 94.2..99.6, core DNA id 87.6..98.8</text>
+<text x="14" y="530" font-size="11" font-weight="bold">D PF_10b9be14a143-,PF_1180b16eba28-: electron transfer flavoprotein subunit alpha/FixB  | 14 occ / 7 samples, copies 2,2,2,2,2,2,2; different pairs within 6, cross 30; host-different within 6, cross 30; protein id 94.2..99.6, core DNA id 87.6..98.8</text>
 <text x="14" y="554" font-size="10">SAMN00623041 NC_010002.1:1559861-1561556 (-)</text>
 <text x="14" y="565" font-size="9" fill="#555">conserved-end candidate ? bp (coding 1696, +?/+?, end_not_cove/end_not_cove)</text>
 <polygon points="573,546 638,546 638,564 573,564 564,555" fill="hsl(57,55%,67%)" stroke="#666" stroke-width="0.5"><title>PH_f079bd3c1a2f | class II aldolase/adducin family protein</title></polygon>

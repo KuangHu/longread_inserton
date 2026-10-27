@@ -1,5 +1,5 @@
 {
-  "version": "core_context_review_v0.3",
+  "version": "core_context_review_v0.4",
   "subset": "delftia",
   "evidence_source": "assembly_only",
   "scope": "target_lt2500",
@@ -53,6 +53,24 @@
       },
       "occurrences": 374,
       "occurrences_boundary_resolved": 214,
+      "occurrences_with_partner_end_in_chain_gap": 0,
+      "pair_end_cover": {
+        "up": {
+          "covered": 624,
+          "covered_at_chain_end": 45,
+          "not_reached": 87
+        },
+        "down": {
+          "covered": 623,
+          "not_reached": 102,
+          "covered_at_chain_end": 31
+        }
+      },
+      "cores_by_copy_pattern": {
+        "same_count_where_present": 49,
+        "same_count_in_all_assemblies": 20,
+        "count_varies": 10
+      },
       "occurrences_with_partner_not_covering_an_end": 121,
       "occurrences_side_status": {
         "up": {
@@ -104,6 +122,23 @@
       },
       "occurrences": 97,
       "occurrences_boundary_resolved": 40,
+      "occurrences_with_partner_end_in_chain_gap": 0,
+      "pair_end_cover": {
+        "up": {
+          "covered": 82,
+          "not_reached": 17
+        },
+        "down": {
+          "covered_at_chain_end": 9,
+          "not_reached": 57,
+          "covered": 33
+        }
+      },
+      "cores_by_copy_pattern": {
+        "same_count_where_present": 24,
+        "same_count_in_all_assemblies": 2,
+        "count_varies": 1
+      },
       "occurrences_with_partner_not_covering_an_end": 52,
       "occurrences_side_status": {
         "up": {
@@ -127,10 +162,10 @@
     }
   },
   "cases": [
-    "A1 PF_4b70bb8e2b9d: IS5 family transposase | 30 occ / 4 samples; different pairs within 44, cross 134; host-different within 44, cross 134; protein id 99.3..100.0, core DNA id 97.8..100.0",
-    "A2 PF_3070024975f6: IS481 family transposase | 21 occ / 5 samples; different pairs within 45, cross 112; host-different within 45, cross 112; protein id 98.2..100.0, core DNA id 98.4..100.0",
-    "B PF_ad056eba1256: IS5 family transposase | 15 occ / 1 samples; different pairs within 44, cross 0; host-different within 44, cross 0; protein id 100.0..100.0, core DNA id 100.0..100.0",
-    "D PF_10b9be14a143-,PF_1180b16eba28-: electron transfer flavoprotein subunit alpha/FixB  | 14 occ / 7 samples; different pairs within 6, cross 30; host-different within 6, cross 30; protein id 94.2..99.6, core DNA id 87.6..98.8"
+    "A1 PF_4b70bb8e2b9d: IS5 family transposase | 30 occ / 4 samples, copies 5,8,9,0,8,0,0; different pairs within 44, cross 134; host-different within 44, cross 134; protein id 99.3..100.0, core DNA id 97.8..100.0",
+    "A2 PF_3070024975f6: IS481 family transposase | 21 occ / 5 samples, copies 2,6,6,1,6,0,0; different pairs within 45, cross 112; host-different within 45, cross 112; protein id 98.2..100.0, core DNA id 98.4..100.0",
+    "B PF_ad056eba1256: IS5 family transposase | 15 occ / 1 samples, copies 0,0,0,0,0,0,15; different pairs within 44, cross 0; host-different within 44, cross 0; protein id 100.0..100.0, core DNA id 100.0..100.0",
+    "D PF_10b9be14a143-,PF_1180b16eba28-: electron transfer flavoprotein subunit alpha/FixB  | 14 occ / 7 samples, copies 2,2,2,2,2,2,2; different pairs within 6, cross 30; host-different within 6, cross 30; protein id 94.2..99.6, core DNA id 87.6..98.8"
   ],
   "case_rule": "Fixed rule: A1/A2 = single-gene cores with the most cross-assembly host-different pairs; B = single-gene core\n    with the most within-assembly host-different pairs and none across; C = core with the most near-different /\n    host-similar (nested) pairs; D = two-gene core with the most host-different pairs. Ties: samples, then key; a core\n    already picked is skipped for the next rank."
 }

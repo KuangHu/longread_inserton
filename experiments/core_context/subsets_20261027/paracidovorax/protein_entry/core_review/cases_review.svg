@@ -3,7 +3,7 @@
 <text x="14" y="24" font-size="16">paracidovorax: reviewed U-core-D cases (target scope)</text>
 <text x="14" y="42" font-size="10">Assembly only. Up to 6 scanned neighbour genes per side in core orientation, coloured by homology group; red dashed outline = mobile-like neighbour skipped for host context. Conserved-end candidate = coding span + flank shared with all different-context copies (not an insertion boundary).</text>
 <text x="14" y="56" font-size="10">A = cross-assembly host-different, B = within-assembly only, C = nested / adjacent mobile under the current rule (near different, host similar), D = two-gene core. Hover a gene for its product.</text>
-<text x="14" y="74" font-size="11" font-weight="bold">A1 PF_34809b3c6b4f: IS481-like element ISAav5 family transposase | 54 occ / 3 samples; different pairs within 350, cross 701; host-different within 350, cross 701; protein id 99.4..100.0, core DNA id 99.7..100.0</text>
+<text x="14" y="74" font-size="11" font-weight="bold">A1 PF_34809b3c6b4f: IS481-like element ISAav5 family transposase | 54 occ / 3 samples, copies 19,17,18,0; different pairs within 350, cross 701; host-different within 350, cross 701; protein id 99.4..100.0, core DNA id 99.7..100.0</text>
 <text x="14" y="98" font-size="10">SAMN02598334 NC_008752.1:199321-200268 (-)</text>
 <text x="14" y="109" font-size="9" fill="#555">conserved-end candidate 1039 bp (coding 948, +91/+0, resolved/resolved)</text>
 <polygon points="564,90 629,90 638,99 629,108 564,108" fill="hsl(217,55%,60%)" stroke="#666" stroke-width="0.5"><title>PH_6bd45d89a523 | serine hydrolase</title></polygon>
@@ -72,7 +72,7 @@
 <text x="964" y="198" font-size="7">histidine pho</text>
 <polygon points="1032,186 1097,186 1106,195 1097,204 1032,204" fill="hsl(41,55%,64%)" stroke="#666" stroke-width="0.5"><title>PH_fc77748f1c8c | hypothetical protein</title></polygon>
 <text x="1042" y="198" font-size="7">hypothetical </text>
-<text x="14" y="226" font-size="11" font-weight="bold">A2 PF_f094f2564f99: IS5 family transposase | 30 occ / 4 samples; different pairs within 75, cross 212; host-different within 67, cross 197; protein id 92.2..100.0, core DNA id 86.7..100.0</text>
+<text x="14" y="226" font-size="11" font-weight="bold">A2 PF_f094f2564f99: IS5 family transposase | 30 occ / 4 samples, copies 11,5,8,6; different pairs within 75, cross 212; host-different within 67, cross 197; protein id 92.2..100.0, core DNA id 86.7..100.0</text>
 <text x="14" y="250" font-size="10">SAMN00006197 NC_015138.1:303524-304336 (-)</text>
 <text x="14" y="261" font-size="9" fill="#555">conserved-end candidate 879 bp (coding 813, +57/+9, resolved/resolved)</text>
 <polygon points="486,242 551,242 560,251 551,260 486,260" fill="hsl(143,55%,68%)" stroke="#666" stroke-width="0.5"><title>PH_f8f7da54e14a | GGDEF domain-containing protein</title></polygon>
@@ -145,7 +145,7 @@
 <text x="1042" y="350" font-size="7">IS3 family tr</text>
 <polygon points="1110,338 1175,338 1184,347 1175,356 1110,356" fill="hsl(22,55%,66%)" stroke="#666" stroke-width="0.5"><title>PH_652ab94c5988 | hypothetical protein</title></polygon>
 <text x="1120" y="350" font-size="7">hypothetical </text>
-<text x="14" y="378" font-size="11" font-weight="bold">B PF_282ac9979b1c: IS5 family transposase | 8 occ / 2 samples; different pairs within 20, cross 0; host-different within 15, cross 0; protein id 100.0..100.0, core DNA id 100.0..100.0</text>
+<text x="14" y="378" font-size="11" font-weight="bold">B PF_282ac9979b1c: IS5 family transposase | 8 occ / 2 samples, copies 0,0,1,7; different pairs within 20, cross 0; host-different within 15, cross 0; protein id 100.0..100.0, core DNA id 100.0..100.0</text>
 <text x="14" y="402" font-size="10">SAMN00006197 NC_015138.1:713869-714954 (+)</text>
 <text x="14" y="413" font-size="9" fill="#555">conserved-end candidate 1288 bp (coding 1086, +68/+134, resolved/resolved)</text>
 <polygon points="408,394 473,394 482,403 473,412 408,412" fill="#dddddd" stroke="#666" stroke-width="0.5"><title>nolabel | type 1 glutamine amidotransferase domain-containing protein</title></polygon>
@@ -218,7 +218,7 @@
 <text x="1042" y="502" font-size="7">hypothetical </text>
 <polygon points="1110,490 1175,490 1184,499 1175,508 1110,508" fill="hsl(45,55%,74%)" stroke="#666" stroke-width="0.5"><title>PH_f5e6888bddfc | SPM autocatalytic domain-containing protein</title></polygon>
 <text x="1120" y="502" font-size="7">SPM autocatal</text>
-<text x="14" y="530" font-size="11" font-weight="bold">D PF_4ad8f14f7497+,PF_9608eadad31c+: electron transfer flavoprotein subunit alpha/FixB  | 8 occ / 4 samples; different pairs within 2, cross 6; host-different within 2, cross 6; protein id 95.8..98.4, core DNA id 94.1..98.7</text>
+<text x="14" y="530" font-size="11" font-weight="bold">D PF_4ad8f14f7497+,PF_9608eadad31c+: electron transfer flavoprotein subunit alpha/FixB  | 8 occ / 4 samples, copies 2,2,2,2; different pairs within 2, cross 6; host-different within 2, cross 6; protein id 95.8..98.4, core DNA id 94.1..98.7</text>
 <text x="14" y="554" font-size="10">SAMN00006197 NC_015138.1:3363183-3364891 (-)</text>
 <text x="14" y="565" font-size="9" fill="#555">conserved-end candidate ? bp (coding 1709, +0/+?, end_not_cove/end_not_cove)</text>
 <polygon points="564,546 629,546 638,555 629,564 564,564" fill="hsl(140,55%,56%)" stroke="#666" stroke-width="0.5"><title>PH_f3fbcf994c3a | enoyl-CoA hydratase</title></polygon>
