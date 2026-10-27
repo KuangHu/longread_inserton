@@ -11,10 +11,12 @@ here is an insertion call or a site group.
                  identical sequence; the minimum over the two genes is reported for two-gene cores.
 3 boundary       per pair: the oriented coding span +/- W bp of both copies aligned (blastn, plus strand). The HSP with the
                  largest overlap of both coding spans is the seed; colinear HSPs within CHAIN_GAP bp are chained to it.
-                 Shared sequence beyond the coding span on a side is that pair's extension. Per occurrence and side:
-                 resolved if no partner reaches the window / contig end and the extensions over its different-context
-                 partners spread <= SPREAD bp; estimated span = coding span + median extension of each side. The
-                 <2500 bp target is re-checked on the estimated span. End hints, not calls: identity of the outer 20 bp
+                 A side's extension (shared sequence beyond the coding span) is measured only if the chained block
+                 covers that core end in both copies; otherwise it is unknown, never 0. Per occurrence and side:
+                 resolved only if every different-context partner gives a known extension, none reaches the window /
+                 contig end, and they spread <= SPREAD bp; partners not covering the end are counted. Estimated span
+                 = coding span + median extension of each side, only when both sides are resolved. The <2500 bp target
+                 is re-checked on it. A resolved side is a candidate conserved end, not a mapped insertion boundary. End hints, not calls: identity of the outer 20 bp
                  with the reverse complement of the other end (inverted repeat), longest exact direct repeat (2-12 bp)
                  just outside both ends (target-site duplication; 2-3 bp matches are expected by chance).
                  Cross-assembly pairs also carry the genome ANI of the two assemblies (skani edges, frozen in S2) and
@@ -38,7 +40,7 @@ from pathlib import Path
 import protein_context as pc
 from review_protein import colour, esc, hint
 
-VERSION = 'core_context_review_v0.2'
+VERSION = 'core_context_review_v0.3'
 W = 3000
 CHAIN_GAP = 50
 EDGE = 5
@@ -102,21 +104,30 @@ def chain(hsps, a0, a1, b0, b1, gap=CHAIN_GAP):
 
 
 def extensions(block, a0, a1, alen, b0, b1, blen, edge=EDGE):
-    """Shared bp beyond the core on each side for A and B, and whether each side reached a sequence end."""
+    """Shared bp beyond the core on each side for A and B, and whether each side reached a sequence end. A side is
+    measured only when the block covers that core end in both A and B; otherwise its extensions are None (unknown)."""
     qs, qe, ss, se = block
-    return dict(a_up=max(0, a0 - qs), a_down=max(0, qe - a1), b_up=max(0, b0 - ss), b_down=max(0, se - b1),
-                up_reaches_end=qs <= edge or ss <= edge, down_reaches_end=qe >= alen - edge or se >= blen - edge)
+    up, down = qs <= a0 and ss <= b0, qe >= a1 and se >= b1
+    return dict(a_up=a0 - qs if up else None, b_up=b0 - ss if up else None,
+                a_down=qe - a1 if down else None, b_down=se - b1 if down else None,
+                up_reaches_end=up and (qs <= edge or ss <= edge), down_reaches_end=down and (qe >= alen - edge or se >= blen - edge))
 
 
 def side_boundary(values, reached, spread=SPREAD):
-    """Per occurrence side: (median extension or None, status)."""
-    if not values:
-        return None, 'no_alignment'
+    """Per occurrence side from one extension per different-context partner (None = end not covered):
+    (median of known extensions or None, status, partners with unknown extension)."""
+    known = [v for v in values if v is not None]
+    unknown = len(values) - len(known)
+    if not known:
+        return None, 'end_not_covered', unknown
+    med = int(statistics.median(known))
     if reached:
-        return int(statistics.median(values)), 'reaches_window_or_contig_end'
-    if max(values) - min(values) > spread:
-        return int(statistics.median(values)), 'inconsistent_between_partners'
-    return int(statistics.median(values)), 'resolved'
+        return med, 'reaches_window_or_contig_end', unknown
+    if unknown:
+        return med, 'end_not_covered_by_some_partners', unknown
+    if max(known) - min(known) > spread:
+        return med, 'inconsistent_between_partners', unknown
+    return med, 'resolved', unknown
 
 
 def end_hints(seq, e0, e1, n=20, tsd_max=12):
@@ -315,15 +326,16 @@ def main():
     occ_rows = []
     for oid, o in sorted(occs.items()):
         ps = o.get('partners', [])
-        up = side_boundary([x[0] for x in ps if x[0] is not None], any(x[1] for x in ps if x[0] is not None))
-        down = side_boundary([x[2] for x in ps if x[2] is not None], any(x[3] for x in ps if x[2] is not None))
+        up = side_boundary([x[0] for x in ps], any(x[1] for x in ps))
+        down = side_boundary([x[2] for x in ps], any(x[3] for x in ps))
         span = int(o['span'])
-        est = span + up[0] + down[0] if up[0] is not None and down[0] is not None else None
         resolved = up[1] == down[1] == 'resolved'
+        est = span + up[0] + down[0] if resolved else None
         tir, tsd = end_hints(o['ext'], o['c0'] - up[0], o['c1'] + down[0]) if resolved else (None, None)
         occ_rows.append(dict(occurrence_id=oid, structure=o['structure'], core_key=o['core_key'], sample=o['sample'],
             contig=o['contig'], start0=o['start0'], end0=o['end0'], strand=o['strand'], coding_span=span,
-            different_partners=len(ps), ext_up=up[0] if up[0] is not None else '', up_status=up[1],
+            different_partners=len(ps), up_partners_end_not_covered=up[2], down_partners_end_not_covered=down[2],
+            ext_up=up[0] if up[0] is not None else '', up_status=up[1],
             ext_down=down[0] if down[0] is not None else '', down_status=down[1],
             estimated_span=est if est is not None else '', boundary_resolved=resolved,
             estimated_lt2500='' if est is None else est < pc.TARGET_MAX,
@@ -404,6 +416,8 @@ def main():
             cross_pairs_without_ani=sum(r['same_sample'] != 'True' and r['pair_ani'] == '' for r in ps),
             cores_by_cross_median_core_dna_minus_ani=dict(Counter(ani_bin(c['cross_median_core_dna_minus_ani']) for c in cs)),
             occurrences=len(os_), occurrences_boundary_resolved=len(res),
+            occurrences_with_partner_not_covering_an_end=sum(bool(r['up_partners_end_not_covered'] or
+                                                                   r['down_partners_end_not_covered']) for r in os_),
             occurrences_side_status={s: dict(Counter(r[s + '_status'] for r in os_)) for s in ('up', 'down')},
             resolved_estimated_lt2500=sum(r['estimated_lt2500'] is True for r in res),
             resolved_estimated_ge2500=sum(r['estimated_lt2500'] is False for r in res),
@@ -430,6 +444,8 @@ def main():
     (out / 'cases_review.svg').write_text(draw(rows_svg, gene, '%s: reviewed U-core-D cases (target scope)' % a.subset_dir.name))
     case_rows = [dict(case=h.split(' ')[0], core_key=r['core_key'], occurrence_id=r['occurrence_id'], sample=r['sample'],
                       contig=r['contig'], start0=r['start0'], end0=r['end0'], strand=r['strand'], coding_span=r['coding_span'],
+                      up_partners_end_not_covered=r['up_partners_end_not_covered'],
+                      down_partners_end_not_covered=r['down_partners_end_not_covered'],
                       ext_up=r['ext_up'], up_status=r['up_status'], ext_down=r['ext_down'], down_status=r['down_status'],
                       estimated_span=r['estimated_span'], tir_identity_20bp=r['tir_identity_20bp'],
                       direct_repeat_outside_bp=r['direct_repeat_outside_bp'],
@@ -471,8 +487,8 @@ def draw(cases, gene, title):
         parts.append('<text x="14" y="%d" font-size="11" font-weight="bold">%s</text>' % (y, esc(heading)))
         y += 10
         for o, r in rows:
-            bnd = 'element est. %s bp (coding %s, +%s/+%s, %s/%s)' % (r['estimated_span'] or '?', r['coding_span'], r['ext_up'],
-                  r['ext_down'], r['up_status'][:8], r['down_status'][:8])
+            bnd = 'conserved-end candidate %s bp (coding %s, +%s/+%s, %s/%s)' % (r['estimated_span'] or '?', r['coding_span'],
+                  r['ext_up'] if r['ext_up'] != '' else '?', r['ext_down'] if r['ext_down'] != '' else '?', r['up_status'][:12], r['down_status'][:12])
             parts.append('<text x="14" y="%d" font-size="10">%s %s:%s-%s (%s)</text>' % (y + 14, o['sample'], o['contig'],
                          int(o['start0']) + 1, o['end0'], o['strand']))
             parts.append('<text x="14" y="%d" font-size="9" fill="#555">%s</text>' % (y + 25, esc(bnd)))
@@ -496,10 +512,10 @@ def draw(cases, gene, title):
             '<rect width="100%" height="100%" fill="white"/>',
             '<text x="14" y="24" font-size="16">%s</text>' % esc(title),
             '<text x="14" y="42" font-size="10">Assembly only. Up to 6 scanned neighbour genes per side in core orientation, '
-            'coloured by homology group; red dashed outline = mobile-like neighbour skipped for host context. Element estimate '
-            '= coding span + shared flank with different-context copies (not an insertion call).</text>',
+            'coloured by homology group; red dashed outline = mobile-like neighbour skipped for host context. Conserved-end candidate '
+            '= coding span + flank shared with all different-context copies (not an insertion boundary).</text>',
             '<text x="14" y="56" font-size="10">A = cross-assembly host-different, B = within-assembly only, C = nested / '
-            'adjacent mobile (near different, host similar), D = two-gene core. Hover a gene for its product.</text>']
+            'adjacent mobile under the current rule (near different, host similar), D = two-gene core. Hover a gene for its product.</text>']
     return '\n'.join(head + parts + ['</svg>']) + '\n'
 
 

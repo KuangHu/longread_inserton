@@ -41,15 +41,31 @@ class ChainTests(unittest.TestCase):
         hsps = [(101, 400, 301, 600), (600, 690, 50, 140)]      # second HSP: elsewhere in B (e.g. a nested element)
         blk = cr.chain(hsps, 100, 400, 300, 600)
         self.assertEqual(blk, (100, 400, 300, 600))
+        e = cr.extensions(blk, 100, 400, 700, 300, 600, 900)
+        self.assertEqual((e['a_up'], e['a_down']), (0, 0))      # covers both ends and stops there: a measured 0
         e = cr.extensions((2, 400, 202, 600), 100, 400, 700, 300, 600, 900)
         self.assertTrue(e['up_reaches_end'])
         self.assertIsNone(cr.chain([(500, 690, 50, 240)], 100, 400, 300, 600))
 
+    def test_local_hit_inside_core_is_unknown_not_zero(self):
+        # review counterexample: 1,000 bp core, a 100 bp local alignment in its middle
+        blk = cr.chain([(501, 600, 501, 600)], 100, 1100, 100, 1100)
+        e = cr.extensions(blk, 100, 1100, 1300, 100, 1100, 1300)
+        self.assertEqual((e['a_up'], e['a_down'], e['b_up'], e['b_down']), (None, None, None, None))
+        self.assertFalse(e['up_reaches_end'] or e['down_reaches_end'])
+        self.assertEqual(cr.side_boundary([e['a_up']], False), (None, 'end_not_covered', 1))
+        # covered in A but not in B is still unknown
+        e = cr.extensions((50, 1150, 120, 1150), 100, 1100, 1300, 100, 1100, 1300)
+        self.assertIsNone(e['a_up'])
+        self.assertEqual(e['a_down'], 50)
+
     def test_side_boundary(self):
-        self.assertEqual(cr.side_boundary([40, 45, 50], False), (45, 'resolved'))
+        self.assertEqual(cr.side_boundary([40, 45, 50], False), (45, 'resolved', 0))
         self.assertEqual(cr.side_boundary([40, 400], False)[1], 'inconsistent_between_partners')
         self.assertEqual(cr.side_boundary([40], True)[1], 'reaches_window_or_contig_end')
-        self.assertEqual(cr.side_boundary([], False), (None, 'no_alignment'))
+        self.assertEqual(cr.side_boundary([], False), (None, 'end_not_covered', 0))
+        # agreeing known partners do not resolve a side while another partner does not cover the end
+        self.assertEqual(cr.side_boundary([40, 41, None], False), (40, 'end_not_covered_by_some_partners', 1))
 
 
 class EndHintTests(unittest.TestCase):
