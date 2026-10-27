@@ -62,6 +62,12 @@ class EndHintTests(unittest.TestCase):
         self.assertEqual(tsd, 5)
 
 
+class AniTests(unittest.TestCase):
+    def test_bins_are_descriptive(self):
+        self.assertEqual([cr.ani_bin(x) for x in ('', 0.4, 1.0, 3.0, 12.5)],
+                         ['no_cross_pair_with_ani', 'le_1', 'le_1', '1_to_5', 'gt_5'])
+
+
 class ScanTests(unittest.TestCase):
     def test_mobile_neighbours_skipped_for_host_context(self):
         gs = contig('+++++++++')

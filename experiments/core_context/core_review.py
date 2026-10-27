@@ -17,6 +17,9 @@ here is an insertion call or a site group.
                  <2500 bp target is re-checked on the estimated span. End hints, not calls: identity of the outer 20 bp
                  with the reverse complement of the other end (inverted repeat), longest exact direct repeat (2-12 bp)
                  just outside both ends (target-site duplication; 2-3 bp matches are expected by chance).
+                 Cross-assembly pairs also carry the genome ANI of the two assemblies (skani edges, frozen in S2) and
+                 core DNA identity minus ANI: a copy that moved recently is more similar than its genomes, a vertically
+                 inherited gene in a rearranged neighbourhood is about as similar as its genomes (diagnostic, no cutoff).
 4 nesting        a neighbour gene is mobile-like if its product matches a mobile keyword (review_protein.hint:
                  transposase / IS, integrase / recombinase / resolvase, phage) or its protein family is itself a reviewed
                  single-gene core. Host context = the first K neighbours per side after skipping mobile-like genes
@@ -35,7 +38,7 @@ from pathlib import Path
 import protein_context as pc
 from review_protein import colour, esc, hint
 
-VERSION = 'core_context_review_v0.1'
+VERSION = 'core_context_review_v0.2'
 W = 3000
 CHAIN_GAP = 50
 EDGE = 5
@@ -180,6 +183,24 @@ def best(hits):
     return h['pident'], h['length'] / h['qlen'], h['length'] / h['slen']
 
 
+def load_ani(path, fasta):
+    """{frozenset(sample pair): ANI} for the manifest samples from skani edges keyed by FASTA path."""
+    smp = {v: k for k, v in fasta.items()}
+    out = {}
+    for r in pc.read_tsv(path):
+        x, y = smp.get(r['Ref_file']), smp.get(r['Query_file'])
+        if x and y and x != y:
+            out[frozenset((x, y))] = float(r['ANI'])
+    return out
+
+
+def ani_bin(d):
+    """Descriptive bins of core DNA identity minus genome ANI (percentage points); not an admission cutoff."""
+    if d == '':
+        return 'no_cross_pair_with_ani'
+    return 'le_1' if d <= 1 else ('1_to_5' if d <= 5 else 'gt_5')
+
+
 def core_genes(o):
     gs = o['genes'].split(';')
     return gs if o['strand'] == '+' else gs[::-1]
@@ -192,6 +213,8 @@ def main():
     p.add_argument('--manifest', type=Path, required=True)
     p.add_argument('--mmseqs', default='/global/scratch/users/kh36969/longread_callout/env/s4/bin/mmseqs')
     p.add_argument('--threads', type=int, default=8)
+    p.add_argument('--skani', type=Path, default=Path('/global/scratch/users/kh36969/longread_callout/fna_pool/'
+                   'scaleup_stage1_20261026/comamonadaceae/s2/skani_edges.tsv'))
     a = p.parse_args()
     pe = a.subset_dir / 'protein_entry'
     out = pe / 'core_review'
@@ -240,6 +263,7 @@ def main():
         o['near_mobile'] = Counter(x[3] for s in ('up', 'down') for x in o['scan'][s][:pc.K] if x[3])
 
     fasta = {r['sample']: r['fasta'] for r in pc.read_tsv(a.manifest)}
+    ani = load_ani(a.skani, fasta)
     seqs = {}
     for smp in sorted({o['sample'] for o in occs.values()}):
         seqs[smp] = pc.read_fna(fasta[smp])
@@ -278,8 +302,11 @@ def main():
                 protein_coverage_min=round(min(min(x[1], x[2]) for x in pb), 3) if all(pb) else '',
                 identical_core_dna=A['core_dna'].upper() == B['core_dna'].upper(),
                 core_dna_identity=db[0] if db else '', core_dna_coverage=round(min(db[1], db[2]), 3) if db else '',
+                pair_ani=ani.get(frozenset((A['sample'], B['sample'])), ''),
                 near_relation=r['relation'], host_relation=hrel,
                 near_mobile_neighbours=sum(A['near_mobile'].values()) + sum(B['near_mobile'].values()), **ext)
+            row['core_dna_minus_ani'] = round(row['core_dna_identity'] - row['pair_ani'], 2) \
+                if row['pair_ani'] != '' and row['core_dna_identity'] != '' else ''
             pair_rows.append(row)
             for o, pre in ((A, 'a'), (B, 'b')):
                 o.setdefault('partners', []).append((ext.get(pre + '_up'), ext.get('up_reaches_end'),
@@ -329,6 +356,7 @@ def main():
         pid = [r['protein_identity_min'] for r in ps if r['protein_identity_min'] != '']
         did = [r['core_dna_identity'] for r in ps if r['core_dna_identity'] != '']
         est = [r['estimated_span'] for r in os_ if r['boundary_resolved']]
+        dani = [r['core_dna_minus_ani'] for r in cross if r['core_dna_minus_ani'] != '']
         core_rows.append(dict(structure=key[0], core_key=key[1], products=c['products'], occurrences=c['occurrences'],
             samples=c['samples'], occurrences_in_different_pairs=len(os_),
             samples_in_different_pairs=len({r['sample'] for r in os_}),
@@ -338,6 +366,7 @@ def main():
             protein_identity_range='%.1f..%.1f' % (min(pid), max(pid)) if pid else '',
             pairs_identical_core_dna=sum(r['identical_core_dna'] for r in ps),
             core_dna_identity_range='%.1f..%.1f' % (min(did), max(did)) if did else '',
+            cross_median_core_dna_minus_ani=round(statistics.median(dani), 2) if dani else '',
             coding_span_range=c['span_range'], occurrences_boundary_resolved=len(est),
             estimated_span_range='%d..%d' % (min(est), max(est)) if est else '',
             resolved_estimated_lt2500=sum(x < pc.TARGET_MAX for x in est),
@@ -372,6 +401,8 @@ def main():
             pairs_protein_identity_lt95=sum(r['protein_identity_min'] != '' and r['protein_identity_min'] < 95 for r in ps),
             pairs_identical_core_dna=sum(r['identical_core_dna'] for r in ps),
             pairs_without_core_dna_hit=sum(r['core_dna_identity'] == '' for r in ps),
+            cross_pairs_without_ani=sum(r['same_sample'] != 'True' and r['pair_ani'] == '' for r in ps),
+            cores_by_cross_median_core_dna_minus_ani=dict(Counter(ani_bin(c['cross_median_core_dna_minus_ani']) for c in cs)),
             occurrences=len(os_), occurrences_boundary_resolved=len(res),
             occurrences_side_status={s: dict(Counter(r[s + '_status'] for r in os_)) for s in ('up', 'down')},
             resolved_estimated_lt2500=sum(r['estimated_lt2500'] is True for r in res),
