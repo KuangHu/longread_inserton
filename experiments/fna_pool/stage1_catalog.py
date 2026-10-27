@@ -25,6 +25,7 @@ catalog   Global family / homology-group IDs bound to the catalog version and th
           read_batch_manifest (metadata only, nothing is downloaded), empty read_evidence / new_read_contexts with
           their schema. Pilot read evidence (Comamonadaceae baseline read check) linked by exact carrier/contig/core
           coordinates only; it is not propagated to families or other loci.
+report    stage1_report.json: per-batch and global counts gathered from the S1 / S2 / S3 / S4 / catalog outputs.
 """
 
 import argparse
@@ -533,9 +534,64 @@ def cmd_catalog(a):
     print("done %.0fs" % (time.time() - t0))
 
 
+def cmd_report(a):
+    """Per-batch and global stage-1 counts from S1 / S2 / S3 / S4 / catalog outputs (no recomputation)."""
+    out = a.out
+    tb = {r["family"].lower(): r for r in read(HERE / POOL / "target_batches.tsv")}
+    cs = json.loads((out / "catalog_summary.json").read_text())
+    overlap = read(HERE / POOL / "cross_batch_overlap.tsv")
+    rep = dict(version=VERSION, evidence_source=EVIDENCE, read_evidence_status=READ_STATUS, per_batch={},
+               cross_batch_overlap_rows=len([r for r in overlap if r.get("id")]))
+    keys = ["pool_assemblies", "pool_biosamples", "pool_projects", "pool_annotated", "pool_annotation_coverage",
+            "pool_samples_with_usable_long_reads", "reads_meta_eligible_wgs_fastq_samples"]
+    for b in cs["batches"]:
+        s1 = json.loads((HERE / POOL / b / "s1" / "s1_report.json").read_text())
+        s2 = json.loads((HERE / POOL / b / "s2" / "s2_summary.json").read_text())
+        s3 = json.loads((HERE / POOL / b / "s3_full" / "summary.json").read_text())
+        s4 = json.loads((s4dir(a, b) / "s4_summary.json").read_text())
+        fs = json.loads((s4dir(a, b) / "families_summary.json").read_text())
+        excl = HERE / POOL / b / "s2" / "catalog_excluded.tsv"
+        cb = cs["per_batch"][b]
+        rep["per_batch"][b] = dict(
+            batch_id=tb[b]["batch_id"], taxon_id=tb[b]["taxon_id"], **{k: tb[b][k] for k in keys},
+            downloads=dict(rows=s1["rows"], status=s1["status"], failed=s1["failed"], annotation=s1["annotation"],
+                           gca_gcf_pair_checks=s1["pair_checks"]),
+            s2=dict(samples=s2["samples"], excluded_not_verified=len(read(excl)) if excl.exists() else 0, pair_status=s2["pair_status"],
+                    pairs=s2["pairs"], species_clusters=s2["species_clusters"], clone_groups=s2["clone_groups"]),
+            s3=dict(pairs=s3["pairs"], raw_calls=s3["calls"], loci=s3["loci"], status=s3["status"], anchored_lt2500=s3["anchored_lt2500"]),
+            s4=dict(short_anchored_loci=s4["loci"], carriers=s4["carriers"], categories=s4["categories"], translation=s4["translation"],
+                    local_distinct_proteins=fs["distinct_proteins"], local_families=fs["all"]["families"],
+                    local_architectures=fs["all"]["family_architectures"]),
+            catalog=cb)
+    g = {}
+    for k in ("pool_assemblies", "pool_biosamples", "pool_projects", "pool_annotated", "pool_samples_with_usable_long_reads"):
+        g[k + "_sum"] = sum(int(v[k]) for v in rep["per_batch"].values())
+    pb = rep["per_batch"].values()
+    g["downloads"] = dict(Counter({k: c for v in pb for k, c in v["downloads"]["status"].items()}))
+    g["s2_samples"] = sum(v["s2"]["samples"] for v in pb)
+    g["s2_pairs"] = sum(v["s2"]["pairs"] for v in pb)
+    g["s2_no_pair_selected"] = sum(v["s2"]["pair_status"].get("no_pair_selected_pending_review", 0) for v in pb)
+    g["s3_raw_calls"] = sum(v["s3"]["raw_calls"] for v in pb)
+    g["s3_loci"] = sum(v["s3"]["loci"] for v in pb)
+    g["s3_anchored_lt2500"] = sum(v["s3"]["anchored_lt2500"] for v in pb)
+    g["s4_short_anchored_loci"] = sum(v["s4"]["short_anchored_loci"] for v in pb)
+    g["s4_categories"] = dict(Counter({k: c for v in pb for k, c in v["s4"]["categories"].items()}))
+    g["s4_categories_close"] = sum(g["s4_categories"].values()) == g["s4_short_anchored_loci"]
+    g["s4_translation"] = dict(Counter({k: c for v in pb for k, c in v["s4"]["translation"].items()}))
+    g["sum_local_families"] = sum(v["s4"]["local_families"] for v in pb)
+    g["sum_local_distinct_proteins"] = sum(v["s4"]["local_distinct_proteins"] for v in pb)
+    g["catalog"] = cs["global"]
+    g["coding_anomalies"] = cs["coding_anomalies"]
+    g["read_metadata"] = cs["read_metadata"]
+    g["pilot_read_evidence_links"] = cs["pilot_read_evidence_links"]
+    rep["global"] = g
+    (out / "stage1_report.json").write_text(json.dumps(rep, indent=1) + "\n")
+    print(json.dumps(g, indent=1))
+
+
 def main():
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    p.add_argument("mode", choices=["proteins", "cluster", "catalog"])
+    p.add_argument("mode", choices=["proteins", "cluster", "catalog", "report"])
     p.add_argument("--scratch", type=Path, default=PROJ / "fna_pool" / POOL)
     p.add_argument("--work", type=Path, default=PROJ / "fna_pool" / POOL / "stage1_catalog")
     p.add_argument("--out", type=Path, default=HERE / POOL / "stage1_catalog")
@@ -544,7 +600,7 @@ def main():
     p.add_argument("--commit", default="")
     p.add_argument("--batches", nargs="*", help="restrict to these batches (tests)")
     a = p.parse_args()
-    dict(proteins=cmd_proteins, cluster=cmd_cluster, catalog=cmd_catalog)[a.mode](a)
+    dict(proteins=cmd_proteins, cluster=cmd_cluster, catalog=cmd_catalog, report=cmd_report)[a.mode](a)
 
 
 if __name__ == "__main__":
