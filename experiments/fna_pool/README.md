@@ -345,3 +345,9 @@ v0.2 改动（判定阈值 ≥3、≤10% 不变）：
 
 证据来源全部为 `assembly_only`。ID 带 batch 命名空间（`<batch>:<id>`）；全局家族、同源分组和架构 ID 绑定目录版本与代表序列哈希
 （`F1_` / `H1_` / `A1_`）。大型序列文件在 scratch，路径、哈希和重建方法见 `frozen_manifest.json`。
+
+### 第二阶段第一批：本地 reads 的已知位点检查（`scaleup_stage1_20261026/stage2_readcheck_batch1/`）
+
+[stage2_readcheck.sbatch](stage2_readcheck.sbatch)：`prep`（select → alleles → localcheck，重新核对本地 run 并生成 runs_allowed）
+→ `map`（array，每个样本一个任务）→ `summarize`（v0.3 判定 + `--records` 支持记录 + layer）；`regress` 用于检查旧 pilot 是否逐字节一致。
+没有 fetch 阶段，不下载 reads。报告见 [docs/SCALE_UP_STAGE2_BATCH1_REPORT.md](../../docs/SCALE_UP_STAGE2_BATCH1_REPORT.md)。

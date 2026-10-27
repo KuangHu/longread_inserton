@@ -23,7 +23,9 @@
 
 **扩量第一阶段（assembly 比较发现，10 个 P1 科）已完成到 `assembly_catalog_ready_for_long_reads`**：
 85,123 个 assembly-derived candidate loci（`assembly_only`，long-read evidence pending），见
-[SCALE_UP_STAGE1_REPORT.md](docs/SCALE_UP_STAGE1_REPORT.md)；尚未做 reads 检查，也不是独立插入事件数。
+[SCALE_UP_STAGE1_REPORT.md](docs/SCALE_UP_STAGE1_REPORT.md)；它们不是独立插入事件数。
+第二阶段第一批只用本地已核验的 reads，检查了 204 个 main loci 的已知位点（v0.3，没有下载）：
+E2 85、E2s 26、E1c 90、E1p 1、E0 2，没有 mixed 或 contradicted。见 [SCALE_UP_STAGE2_BATCH1_REPORT.md](docs/SCALE_UP_STAGE2_BATCH1_REPORT.md)。
 
 真正的 pooled FNA 发现和长读段从头重复发现保留为后续对照，见
 [跨物种与长读段评估计划](docs/PLAN_CROSS_SPECIES_LONG_READS.md)。

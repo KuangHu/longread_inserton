@@ -1,0 +1,19 @@
+{
+ "sample": "SAMN35085406",
+ "runs": [
+  {
+   "run": "SRR35247416",
+   "read_type": "pacbio_hifi_ccs",
+   "preset": "map-hifi",
+   "sha256": "2bd8afd6dc8fadae7a83cf5e20366c875e6ab4811a360e363616f263ec457d7a"
+  }
+ ],
+ "minimap2_args": [
+  "-c",
+  "--secondary=yes",
+  "-N",
+  "100",
+  "-p",
+  "0.3"
+ ]
+}

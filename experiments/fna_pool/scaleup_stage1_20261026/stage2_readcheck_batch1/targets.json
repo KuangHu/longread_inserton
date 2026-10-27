@@ -1,0 +1,14 @@
+{
+ "version": "stage2_readcheck_v1",
+ "created": "2026-10-26T23:19:02-0700",
+ "catalog_commit": "23f195b338128f0dd4a39a26b4c75e0f93a1c658",
+ "batch": "comamonadaceae",
+ "category": "main",
+ "rule": "carrier has >= 1 usable run verified on local disk (stage-1 read_batch_manifest)",
+ "targets": 204,
+ "same_rule_other_batches": {},
+ "inputs": {
+  "candidate_core_catalog.tsv.gz": "88f4c368dcd1739033925977399c04fab5e3f525169be3d42746fea99eba7628",
+  "read_batch_manifest.tsv.gz": "774791c83b1fe18865a62f81d682d9797f3d9e8fb62e0b6273a103a1145edb5a"
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "sample": "SAMEA120314584",
+ "assembly": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/comamonadaceae/data/genomes/GCF_976997465.1/GCF_976997465.1_Variovorax_sp._R-92678_assembly_genomic.fna",
+ "runs": [
+  {
+   "run": "ERR15686824",
+   "molecule_grouping": "one_record_per_molecule",
+   "read_records": 568,
+   "read_names": 568,
+   "molecules": 512,
+   "count_unit": "molecules"
+  }
+ ],
+ "minimap2_args": [
+  "-c",
+  "--secondary=yes",
+  "-N",
+  "50",
+  "-p",
+  "0.5"
+ ]
+}

@@ -214,7 +214,9 @@ def cmd_layer(a):
     anom = []
     for t in tests:
         k = report_class(t)
-        if k in ("mixed", "contradicted", "insufficient_with_repeat_placement_unclear"):
+        side_insufficient = "insufficient" in (t["C_verdict"], t["E_verdict"])
+        if k in ("mixed", "contradicted", "insufficient_with_repeat_placement_unclear") or side_insufficient:
+            k = k if k in ("mixed", "contradicted", "insufficient_with_repeat_placement_unclear") else "side_with_reads_insufficient"
             anom.append(dict(kind=k, test_id=t["test_id"], locus_id=t["locus_id"], global_locus_id=targets[t["locus_id"]]["global_locus_id"],
                              carrier=t["carrier"], partner=t["empty"], C_verdict=t["C_verdict"], E_verdict=t["E_verdict"],
                              C_counts="P%s/A%s matched P%s/A%s amb%s lamb%s off%s" % tuple(t["C_" + x] for x in (
@@ -223,7 +225,7 @@ def cmd_layer(a):
                                  "present", "absent", "present_matched", "absent_matched", "ambiguous", "locus_ambiguous", "off_locus")),
                              difference_class=t["difference_class"], core_len=t["core_len"]))
     for r in runs_checked:
-        if r["status"] not in ("local_verified_ok", "not_local", "linked_not_usable"):
+        if r["status"] != "local_verified_ok":
             anom.append(dict(kind="run_" + r["status"], carrier=r["sample"], test_id="", locus_id="", global_locus_id="",
                              partner="", C_verdict="", E_verdict="", C_counts=r["run"], E_counts="", difference_class="", core_len=""))
     write(out / "anomalies.tsv", anom, ["kind", "test_id", "locus_id", "global_locus_id", "carrier", "partner", "C_verdict", "E_verdict",
@@ -241,12 +243,17 @@ def cmd_layer(a):
     cnt = [r + x for r in "CE" for x in ("_present", "_absent", "_present_matched", "_absent_matched", "_ambiguous", "_locus_ambiguous",
                                          "_off_locus", "_cigar_fail")]
     comp = []
+    tested = {r["global_locus_id"] for r in targets.values()}
+    s1cat = {r["global_locus_id"]: r["stage1_category"] for r in read(CATALOG / "pilot_read_evidence_links.tsv") if r["global_locus_id"]}
     for tid, l in sorted(links.items()):
         p, n = pilot[tid], new.get(tid)
         row = dict(test_id=tid, link_scope=l["link_scope"], pilot_locus_id=l["pilot_locus_id"], global_locus_id=l["global_locus_id"],
                    carrier=p["carrier"], partner=p["empty"], pilot_test_verdict=p["test_verdict"], pilot_C=p["C_verdict"], pilot_E=p["E_verdict"])
         if n is None:
-            row.update(status="test_not_in_batch1", change="")
+            g = l["global_locus_id"]
+            why = ("locus_tested_partner_call_not_in_stage1_locus" if g in tested else
+                   "locus_not_target:stage1_category=%s" % s1cat[g] if s1cat[g] != a.category else "locus_not_target:carrier_without_local_reads")
+            row.update(status="test_not_in_batch1", change=why)
             comp.append(row)
             continue
         row.update(new_test_verdict=n["test_verdict"], new_C=n["C_verdict"], new_E=n["E_verdict"])
@@ -266,7 +273,8 @@ def cmd_layer(a):
     summ["pilot_comparison"] = dict(linked_tests=len(comp), status=dict(Counter(c["status"] for c in comp)),
                                     by_scope={s: dict(Counter(c["status"] for c in comp if c["link_scope"] == s)) for s in sorted({c["link_scope"] for c in comp})},
                                     counts_identical=sum(1 for c in comp if c.get("counts_identical") is True),
-                                    changes=dict(Counter(c["change"] for c in comp if c["status"] == "verdict_changed")))
+                                    changes=dict(Counter(c["change"] for c in comp if c["status"] == "verdict_changed")),
+                                    not_in_batch1_reasons=dict(Counter(c["change"] for c in comp if c["status"] == "test_not_in_batch1")))
     # ---- next batch download list (metadata only)
     rinfo = {r["run"]: r for r in read(CATALOG / "read_run_manifest.tsv.gz")}
     per = defaultdict(lambda: dict(carrier=[], partner=[]))
