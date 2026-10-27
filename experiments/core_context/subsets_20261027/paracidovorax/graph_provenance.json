@@ -1,0 +1,42 @@
+{
+  "tool_version": "pangraph 1.4.0",
+  "command": [
+    "/global/scratch/users/kh36969/longread_callout/env/pangraph-1.4.0/pangraph-x86_64-unknown-linux-gnu",
+    "build",
+    "-j",
+    "16",
+    "--verify",
+    "--no-progress-bar",
+    "/global/scratch/users/kh36969/longread_callout/core_context/subsets_20261027/paracidovorax/bundle/assemblies.fna",
+    "-o",
+    "/global/scratch/users/kh36969/longread_callout/core_context/subsets_20261027/paracidovorax/bundle/graph.json"
+  ],
+  "binary_sha256": "462949f3bd0988054942287ffb820c1cc60731ac0cf99179fbea6189ea518e1a",
+  "build_seconds": 49.845,
+  "inputs": [
+    {
+      "sample": "SAMN02598334",
+      "fasta": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/comamonadaceae/data/genomes/GCF_000015325.1/GCF_000015325.1_ASM1532v1_genomic.fna",
+      "sha256": "b76fb63d20bd27d19e407ebcd814ba5e91ca32708061a2b46dfca8847e0be162"
+    },
+    {
+      "sample": "SAMN04157986",
+      "fasta": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/comamonadaceae/data/genomes/GCF_001593665.2/GCF_001593665.2_ASM159366v2_genomic.fna",
+      "sha256": "54a4718f1ff4582c6d1131f6f0f7b115cb5ccbb6b6611dfcb9cc6325880e5dcf"
+    },
+    {
+      "sample": "SAMN12418563",
+      "fasta": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/comamonadaceae/data/genomes/GCF_022494965.1/GCF_022494965.1_ASM2249496v1_genomic.fna",
+      "sha256": "fffc86ac6ceef7cfd9ff135b7b6517f161b7d5f00b5f70c8a2687438062b3305"
+    },
+    {
+      "sample": "SAMN00006197",
+      "fasta": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/comamonadaceae/data/genomes/GCF_000176855.2/GCF_000176855.2_ASM17685v2_genomic.fna",
+      "sha256": "bae1704e796c0cb4748899f303ca651cae7c91c5033822980714ffb017b28e50"
+    }
+  ],
+  "graph_sha256": "7b2915df503f36de73b6c3e2ad5c78d204a9b1b84e6b0bab909d973d3a8d4784",
+  "joint_fasta_sha256": "b7bd09366fa5092f919eec465fce999d8b474b1773d6fce989dfdd59421a117a",
+  "contigs_sha256": "c93f4498a415ef8a81bc06ef26195662eba452c0ed91e2be02d9bb8414e8eda0",
+  "graph_verify_passed": true
+}

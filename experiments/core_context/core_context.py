@@ -10,7 +10,9 @@ import csv
 import hashlib
 import itertools
 import json
+import shutil
 import subprocess
+import time
 from collections import Counter, defaultdict
 from pathlib import Path
 
@@ -118,9 +120,12 @@ def build(manifest, out, pangraph, threads):
     version = subprocess.run([pangraph, '--version'], capture_output=True, text=True, check=True).stdout.strip()
     command = [pangraph, 'build', '-j', str(threads), '--verify', '--no-progress-bar',
                str(out / 'assemblies.fna'), '-o', str(out / 'graph.json')]
+    started = time.monotonic()
     with open(out / 'build.stderr.txt', 'w') as err:
         subprocess.run(command, check=True, stderr=err)
+    seconds = round(time.monotonic() - started, 3)
     write_json(out / 'graph_provenance.json', dict(tool_version=version, command=command,
+               binary_sha256=digest(shutil.which(pangraph) or pangraph), build_seconds=seconds,
                inputs=inputs, graph_sha256=digest(out / 'graph.json'),
                joint_fasta_sha256=digest(out / 'assemblies.fna'),
                contigs_sha256=digest(out / 'contigs.tsv'), graph_verify_passed=True))
