@@ -348,12 +348,17 @@ def main():
 
 def pick(core_rows):
     """Fixed rule: per structure, the core with the most multi-observation site groups (ties: occurrences in groups,
-    then key); plus the single-gene core with the most assemblies holding >= 2 supported positions, if different."""
+    then key); the mobile-keyword single-gene core with the most site groups; the single-gene core with the most
+    assemblies holding >= 2 supported positions. A core already picked is skipped for the next slot."""
     out = []
     for st in ('single_gene', 'two_gene'):
         xs = [c for c in core_rows if c['structure'] == st and c['multi_observation_site_groups'] > 0]
         if xs:
             out.append(min(xs, key=lambda c: (-c['multi_observation_site_groups'], -c['occurrences_in_site_groups'], c['core_key'])))
+    xs = [c for c in core_rows if c['structure'] == 'single_gene' and c['product_hint'] in MOBILE_HINTS
+          and c['multi_observation_site_groups'] > 0 and all(c is not o for o in out)]
+    if xs:
+        out.append(min(xs, key=lambda c: (-c['multi_observation_site_groups'], -c['occurrences_in_site_groups'], c['core_key'])))
     xs = [c for c in core_rows if c['structure'] == 'single_gene' and c['assemblies_with_2plus_supported_positions'] > 0
           and all(c is not o for o in out)]
     if xs:
