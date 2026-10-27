@@ -1,5 +1,5 @@
 {
-  "version": "core_context_review_v0.2",
+  "version": "core_context_review_v0.3",
   "subset": "comamonas",
   "evidence_source": "assembly_only",
   "scope": "target_lt2500",
@@ -52,20 +52,25 @@
         "le_1": 17
       },
       "occurrences": 242,
-      "occurrences_boundary_resolved": 219,
+      "occurrences_boundary_resolved": 123,
+      "occurrences_with_partner_not_covering_an_end": 105,
       "occurrences_side_status": {
         "up": {
-          "resolved": 225,
-          "inconsistent_between_partners": 17
+          "resolved": 203,
+          "end_not_covered": 15,
+          "end_not_covered_by_some_partners": 10,
+          "inconsistent_between_partners": 14
         },
         "down": {
-          "resolved": 228,
-          "inconsistent_between_partners": 14
+          "resolved": 142,
+          "end_not_covered": 77,
+          "inconsistent_between_partners": 14,
+          "end_not_covered_by_some_partners": 9
         }
       },
-      "resolved_estimated_lt2500": 219,
+      "resolved_estimated_lt2500": 123,
       "resolved_estimated_ge2500": 0,
-      "resolved_extension_total_range": "0..635",
+      "resolved_extension_total_range": "1..635",
       "occurrences_near_mobile_neighbour": 36
     },
     "two_gene": {
@@ -97,18 +102,23 @@
         "gt_5": 1
       },
       "occurrences": 42,
-      "occurrences_boundary_resolved": 42,
+      "occurrences_boundary_resolved": 16,
+      "occurrences_with_partner_not_covering_an_end": 26,
       "occurrences_side_status": {
         "up": {
-          "resolved": 42
+          "resolved": 21,
+          "end_not_covered": 19,
+          "end_not_covered_by_some_partners": 2
         },
         "down": {
-          "resolved": 42
+          "resolved": 22,
+          "end_not_covered_by_some_partners": 8,
+          "end_not_covered": 12
         }
       },
-      "resolved_estimated_lt2500": 39,
+      "resolved_estimated_lt2500": 13,
       "resolved_estimated_ge2500": 3,
-      "resolved_extension_total_range": "0..519",
+      "resolved_extension_total_range": "112..519",
       "occurrences_near_mobile_neighbour": 8
     }
   },

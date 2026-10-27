@@ -1,31 +1,31 @@
 structure	core_key	products	occurrences	samples	occurrences_in_different_pairs	samples_in_different_pairs	different_pairs_within_assembly	different_pairs_cross_assembly	host_different_within	host_different_cross	host_similar_nested	pairs_identical_protein	protein_identity_range	pairs_identical_core_dna	core_dna_identity_range	cross_median_core_dna_minus_ani	coding_span_range	occurrences_boundary_resolved	estimated_span_range	resolved_estimated_lt2500	occurrences_near_mobile	status	product_hint
 single_gene	PF_01fddc14c19a	sigma-70 family RNA polymerase sigma factor	6	6	3	3	0	2	0	2	0	0	99.3..99.3	0	98.9..98.9	3.04	441..513	0		0	0	cross_assembly_host_different	other
 single_gene	PF_0706cfdd30af	OsmC family protein	6	6	4	4	0	3	0	3	0	0	97.9..97.9	0	97.3..97.3	2.51	438..438	4	563..566	4	3	cross_assembly_host_different	other
-single_gene	PF_093d47562e00	elongation factor Tu	14	7	13	7	6	36	6	36	0	10	97.2..100.0	0	94.9..99.4	1.98	1191..1191	13	1191..1193	13	0	cross_assembly_host_different	translation_or_ribosomal
+single_gene	PF_093d47562e00	elongation factor Tu	14	7	13	7	6	36	6	36	0	10	97.2..100.0	0	94.9..99.4	1.98	1191..1191	5	1193..1193	5	0	cross_assembly_host_different	translation_or_ribosomal
 single_gene	PF_0986c31d126b	3-hydroxybutyryl-CoA dehydrogenase	6	6	3	3	0	2	0	2	0	0	94.0..94.0	0	93.5..93.5	6.25	849..849	3	872..872	3	0	cross_assembly_host_different	other
 single_gene	PF_0ee80b5caacb	IPTL-CTERM sorting domain-containing protein	6	4	3	3	0	2	0	2	0	0	95.6..95.6	0	92.5..92.5	-3.37	642..690	3	1522..1522	3	1	cross_assembly_host_different	other
 single_gene	PF_0f2243aa1c72	H-NS histone family protein	6	6	5	5	0	6	0	6	0	0	92.6..93.7	0	85.4..85.4	-10.28	288..288	5	376..382	5	1	cross_assembly_host_different	other
 single_gene	PF_0f72883da08f	polyhydroxyalkanoate synthesis repressor PhaR	7	7	3	3	0	2	0	2	0	0	92.7..98.9	0	92.6..98.9	3.82	540..540	2	798..831	2	0	cross_assembly_host_different	other
 single_gene	PF_155be031282b	H-NS histone family protein	3	3	3	3	0	2	0	2	0	0	98.3..99.1	0	98.3..99.1	-1.09	351..351	2	1139..1917	2	0	cross_assembly_host_different	other
-single_gene	PF_1845d4b37840	hypothetical protein	5	5	5	5	0	4	0	4	0	0	88.0..90.2	0	86.8..88.2	-8.0	279..279	5	397..416	5	0	cross_assembly_host_different	hypothetical
-single_gene	PF_19beb8334344	chloride channel protein	7	7	4	4	0	3	0	3	0	0	93.2..93.6	0	90.7..91.0	3.69	1347..1458	4	1347..1458	4	0	cross_assembly_host_different	other
+single_gene	PF_1845d4b37840	hypothetical protein	5	5	5	5	0	4	0	4	0	0	88.0..90.2	0	86.8..88.2	-8.0	279..279	1	416..416	1	0	cross_assembly_host_different	hypothetical
+single_gene	PF_19beb8334344	chloride channel protein	7	7	4	4	0	3	0	3	0	0	93.2..93.6	0	90.7..91.0	3.69	1347..1458	0		0	0	cross_assembly_host_different	other
 single_gene	PF_1a77463c4687	amino acid permease	7	7	7	7	0	6	0	1	0	0	91.7..92.1	0	86.8..87.5	-0.21	1482..1482	6	1699..1767	6	1	cross_assembly_host_different	other
-single_gene	PF_1c0870c76ded	hypothetical protein	11	6	10	6	4	21	4	21	0	0	84.7..90.4	0	91.2..93.4	-3.61	384..411	10	384..411	10	4	cross_assembly_host_different	hypothetical
+single_gene	PF_1c0870c76ded	hypothetical protein	11	6	10	6	4	21	4	21	0	0	84.7..90.4	0	91.2..93.4	-3.61	384..411	0		0	4	cross_assembly_host_different	hypothetical
 single_gene	PF_1ddd711a5bf2	OmpW/AlkL family protein	7	7	4	4	0	3	0	3	0	0	93.6..93.6	0	92.8..92.8	5.62	615..615	4	883..886	4	1	cross_assembly_host_different	other
-single_gene	PF_213e1fe4036d	hypothetical protein	2	1	2	1	1	0	1	0	0	0	91.8..91.8	0	86.7..86.7		372..375	2	419..424	2	2	within_assembly_host_different_only	hypothetical
+single_gene	PF_213e1fe4036d	hypothetical protein	2	1	2	1	1	0	1	0	0	0	91.8..91.8	0	86.7..86.7		372..375	0		0	2	within_assembly_host_different_only	hypothetical
 single_gene	PF_27aade44a958	winged helix-turn-helix transcriptional regulator	8	6	2	2	0	1	0	1	0	0	99.1..99.1	0	98.7..98.7	2.91	318..324	2	407..407	2	1	cross_assembly_host_different	other
-single_gene	PF_287b7798e81b	DUF2721 domain-containing protein	7	7	7	7	0	6	0	6	0	0	93.8..95.0	0	88.7..89.9	2.33	495..549	7	585..637	7	0	cross_assembly_host_different	other
-single_gene	PF_2dceae43e454	LysR family transcriptional regulator	7	7	5	5	0	4	0	4	0	0	91.6..92.3	0	87.9..89.2	1.14	933..933	4	1049..1116	4	0	cross_assembly_host_different	other
+single_gene	PF_287b7798e81b	DUF2721 domain-containing protein	7	7	7	7	0	6	0	6	0	0	93.8..95.0	0	88.7..89.9	2.33	495..549	0		0	0	cross_assembly_host_different	other
+single_gene	PF_2dceae43e454	LysR family transcriptional regulator	7	7	5	5	0	4	0	4	0	0	91.6..92.3	0	87.9..89.2	1.14	933..933	1	1116..1116	1	0	cross_assembly_host_different	other
 single_gene	PF_302f2721eddf	tRNA 2-thiouridine(34) synthase MnmA	7	7	6	6	0	5	0	5	0	0	94.9..95.4	0	93.1..93.2	5.98	1119..1119	6	1186..1187	6	0	cross_assembly_host_different	other
 single_gene	PF_3070024975f6	IS481 family transposase	21	5	19	4	45	112	45	112	0	33	98.2..100.0	7	98.4..100.0	3.32	1164..1188	0		0	7	cross_assembly_host_different	transposase_or_IS
 single_gene	PF_3309915bbea2	LysE family translocator	7	7	4	4	0	3	0	3	0	0	89.6..89.6	0	88.4..88.4	1.21	594..639	4	736..739	4	1	cross_assembly_host_different	other
 single_gene	PF_37867f8d51e0	group II truncated hemoglobin	7	7	5	5	0	4	0	1	0	0	94.7..94.7	0	91.5..91.8	4.33	402..402	5	450..451	5	3	cross_assembly_host_different	other
-single_gene	PF_3c183465e22f	phenylacetate--CoA ligase PaaK	11	6	10	5	5	20	5	20	0	0	88.7..90.3	0	89.6..91.8	-5.04	1305..1320	10	1305..1320	10	0	cross_assembly_host_different	other
+single_gene	PF_3c183465e22f	phenylacetate--CoA ligase PaaK	11	6	10	5	5	20	5	20	0	0	88.7..90.3	0	89.6..91.8	-5.04	1305..1320	0		0	0	cross_assembly_host_different	other
 single_gene	PF_3eb30cb1f5dc	isocitrate lyase/PEP mutase family protein	6	6	4	4	0	3	0	3	0	0	95.6..95.6	0	94.2..94.2	-1.3	828..861	4	1025..1026	4	0	cross_assembly_host_different	other
-single_gene	PF_3f8be2a432a1	YitT family protein	7	7	6	6	0	5	0	5	0	0	93.1..96.9	0	89.8..90.3	2.88	639..651	6	651..667	6	0	cross_assembly_host_different	other
+single_gene	PF_3f8be2a432a1	YitT family protein	7	7	6	6	0	5	0	5	0	0	93.1..96.9	0	89.8..90.3	2.88	639..651	0		0	0	cross_assembly_host_different	other
 single_gene	PF_3fb0178972fc	UDP-N-acetylglucosamine 1-carboxyvinyltransferase	7	7	7	7	0	6	0	6	0	0	92.8..93.1	0	82.6..83.6	-4.3	1302..1302	7	1304..1307	7	1	cross_assembly_host_different	other
 single_gene	PF_488082a167d2	hypothetical protein	8	5	7	4	3	12	3	12	0	3	95.2..100.0	0	94.0..99.4	-3.38	315..315	7	1021..1027	7	0	cross_assembly_host_different	hypothetical
-single_gene	PF_49ba5fbdf5dd	helix-turn-helix domain-containing protein	2	2	2	2	0	1	0	1	0	0	93.7..93.7	0	93.7..93.7	-2.87	573..624	2	819..886	2	0	cross_assembly_host_different	other
+single_gene	PF_49ba5fbdf5dd	helix-turn-helix domain-containing protein	2	2	2	2	0	1	0	1	0	0	93.7..93.7	0	93.7..93.7	-2.87	573..624	0		0	0	cross_assembly_host_different	other
 single_gene	PF_4b70bb8e2b9d	IS5 family transposase	30	4	20	4	44	134	44	134	0	146	99.3..100.0	85	97.8..100.0	0.23	782..811	20	877..884	20	8	cross_assembly_host_different	transposase_or_IS
 single_gene	PF_504ff69a3eba	IS3 family transposase	5	1	2	1	1	0	1	0	0	1	100.0..100.0	1	100.0..100.0		1235..1235	2	1322..1322	2	2	within_assembly_host_different_only	transposase_or_IS
 single_gene	PF_53da0dc40e01	ATP-dependent RNA helicase DbpA	6	6	3	3	0	2	0	2	0	0	96.1..96.4	0	92.2..92.2	4.99	1401..1401	3	1456..1458	3	1	cross_assembly_host_different	other
@@ -34,13 +34,13 @@ single_gene	PF_548ebcc5514f	TonB-dependent siderophore receptor	6	6	5	5	0	4	0	4	
 single_gene	PF_554d0124ac2c	glutathione-disulfide reductase	7	7	2	2	0	1	0	1	0	0	97.8..97.8	0	96.1..96.1	-0.21	1350..1350	2	1497..1499	2	0	cross_assembly_host_different	other
 single_gene	PF_596309165a05	IS5 family transposase	2	1	2	1	1	0	1	0	0	1	100.0..100.0	1	100.0..100.0		1356..1356	2	1505..1505	2	2	within_assembly_host_different_only	transposase_or_IS
 single_gene	PF_5cd22bca3972	hypothetical protein	7	5	6	4	2	4	2	4	0	0	90.9..93.9	0	92.7..95.0	-3.59	330..399	3	411..912	3	5	cross_assembly_host_different	hypothetical
-single_gene	PF_623a7fcb9f04	SprT-like domain-containing protein	6	6	3	3	0	2	0	2	0	0	98.1..98.5	0	97.3..97.4	0.91	801..831	3	801..831	3	2	cross_assembly_host_different	other
+single_gene	PF_623a7fcb9f04	SprT-like domain-containing protein	6	6	3	3	0	2	0	2	0	0	98.1..98.5	0	97.3..97.4	0.91	801..831	0		0	2	cross_assembly_host_different	other
 single_gene	PF_661da79e8b1b	group II intron reverse transcriptase/maturase	7	1	7	1	21	0	21	0	0	9	99.8..100.0	9	99.9..100.0		1386..1386	5	1886..1890	5	0	within_assembly_host_different_only	intron_rt
 single_gene	PF_6cd26d7d4348	hypothetical protein	4	4	3	3	0	2	0	2	0	0	97.7..97.7	0	95.8..95.8	-0.02	669..711	3	1011..1012	3	3	cross_assembly_host_different	hypothetical
 single_gene	PF_6e6c9b40b631	LysR substrate-binding domain-containing protein	7	7	6	6	0	6	0	6	0	0	91.9..98.6	0	87.8..96.5	0.81	891..891	3	895..895	3	4	cross_assembly_host_different	other
 single_gene	PF_702d6ce8c735	sulfite exporter TauE/SafE family protein	6	6	6	6	0	8	0	8	0	1	91.7..100.0	0	89.0..97.4	2.09	759..759	0		0	0	cross_assembly_host_different	other
 single_gene	PF_721e32addfeb	ogr/Delta-like zinc finger family protein	4	4	4	4	0	3	0	3	0	0	93.4..93.4	0	93.1..93.1	-2.35	321..321	4	340..340	4	1	cross_assembly_host_different	other
-single_gene	PF_7236020d2fcc	peroxiredoxin	6	6	6	6	0	5	0	5	0	0	90.7..91.6	0	86.0..86.4	-1.24	531..588	5	588..636	5	0	cross_assembly_host_different	other
+single_gene	PF_7236020d2fcc	peroxiredoxin	6	6	6	6	0	5	0	5	0	0	90.7..91.6	0	86.0..86.4	-1.24	531..588	0		0	0	cross_assembly_host_different	other
 single_gene	PF_76500a758702	hypothetical protein	2	2	2	2	0	1	0	1	0	0	90.7..90.7	0	92.0..92.0	-4.39	675..678	2	838..839	2	1	cross_assembly_host_different	hypothetical
 single_gene	PF_7ce7fe7dcc32	hypothetical protein	5	5	5	5	0	6	0	6	0	0	96.2..98.1	0	98.1..98.1	2.8	159..159	2	684..1836	2	0	cross_assembly_host_different	hypothetical
 single_gene	PF_8218a1c3d97b	IS3 family transposase	5	1	3	1	3	0	3	0	0	3	100.0..100.0	3	100.0..100.0		1202..1202	3	1307..1308	3	1	within_assembly_host_different_only	transposase_or_IS
@@ -50,58 +50,58 @@ single_gene	PF_89117ba41d0e	glutathione S-transferase family protein	7	7	4	4	0	3
 single_gene	PF_8e0bb7804a8c	hypothetical protein	2	2	2	2	0	1	0	1	0	0	93.0..93.0	0	88.9..88.9	1.68	519..531	2	639..640	2	0	cross_assembly_host_different	hypothetical
 single_gene	PF_93861fdcabf4	undecaprenyl-diphosphate phosphatase	7	7	2	2	0	1	0	1	0	0	94.2..94.2	0	90.5..90.5	3.21	828..828	2	872..874	2	0	cross_assembly_host_different	other
 single_gene	PF_93cae76b0644	fasciclin domain-containing protein	6	6	4	4	0	3	0	3	0	0	98.4..98.4	0	98.4..98.4	3.65	564..564	4	750..750	4	0	cross_assembly_host_different	other
-single_gene	PF_a1badc608c61	transporter	6	6	5	5	0	4	0	4	0	0	90.8..91.1	0	87.4..87.5	0.19	1044..1044	4	1091..1148	4	1	cross_assembly_host_different	other
+single_gene	PF_a1badc608c61	transporter	6	6	5	5	0	4	0	4	0	0	90.8..91.1	0	87.4..87.5	0.19	1044..1044	0		0	1	cross_assembly_host_different	other
 single_gene	PF_a4b39ee6aea3	M16 family metallopeptidase	5	5	5	5	0	4	0	4	0	0	96.6..96.8	0	94.7..94.9	0.16	1239..1287	5	1364..1364	5	0	cross_assembly_host_different	other
 single_gene	PF_a9b031ceb8f5	helix-turn-helix domain-containing protein	4	4	4	4	0	3	0	3	0	0	90.7..90.7	0	89.4..89.4	-6.43	453..543	4	1329..1329	4	0	cross_assembly_host_different	other
 single_gene	PF_ac056db7bb31	IS30 family transposase	10	5	8	5	2	15	2	15	0	4	94.6..100.0	4	91.6..100.0	-3.05	1161..1161	6	1238..1258	6	4	cross_assembly_host_different	transposase_or_IS
 single_gene	PF_ad056eba1256	IS5 family transposase	15	1	10	1	44	0	44	0	0	44	100.0..100.0	44	100.0..100.0		793..793	8	849..853	8	4	within_assembly_host_different_only	transposase_or_IS
-single_gene	PF_adc4ad803994	IS5 family transposase	9	1	6	1	15	0	15	0	0	10	100.0..100.0	6	99.9..100.0		761..779	1	796..796	1	2	within_assembly_host_different_only	transposase_or_IS
-single_gene	PF_aee840e08b6d	LysR family transcriptional regulator	3	3	2	2	0	1	0	1	0	0	89.7..89.7	0	87.6..87.6	0.35	912..915	2	912..915	2	0	cross_assembly_host_different	other
+single_gene	PF_adc4ad803994	IS5 family transposase	9	1	6	1	15	0	15	0	0	10	100.0..100.0	6	99.9..100.0		761..779	0		0	2	within_assembly_host_different_only	transposase_or_IS
+single_gene	PF_aee840e08b6d	LysR family transcriptional regulator	3	3	2	2	0	1	0	1	0	0	89.7..89.7	0	87.6..87.6	0.35	912..915	0		0	0	cross_assembly_host_different	other
 single_gene	PF_b60e0e925c6d	DUF4337 domain-containing protein	7	7	5	5	0	4	0	4	0	0	91.6..92.1	0	90.9..90.9	3.73	609..609	5	669..671	5	0	cross_assembly_host_different	other
 single_gene	PF_b70e264b24a2	hypothetical protein	3	3	3	3	0	2	0	2	0	0	94.9..94.9	0	87.8..87.8	-8.01	354..399	3	468..469	3	0	cross_assembly_host_different	hypothetical
-single_gene	PF_b70f42f77aef	aldo/keto reductase	7	7	6	6	0	5	0	5	0	0	91.1..91.7	0	89.0..89.6	1.8	1017..1026	6	1031..1040	6	1	cross_assembly_host_different	other
+single_gene	PF_b70f42f77aef	aldo/keto reductase	7	7	6	6	0	5	0	5	0	0	91.1..91.7	0	89.0..89.6	1.8	1017..1026	0		0	1	cross_assembly_host_different	other
 single_gene	PF_bd73a80fa0dd	Imm58 family immunity protein	4	4	3	3	0	2	0	2	0	0	95.4..95.7	0	94.8..95.2	-0.86	327..354	3	1195..1196	3	0	cross_assembly_host_different	other
 single_gene	PF_c05792c6c80e	DUF6616 family protein	5	5	4	4	0	3	0	3	0	0	93.7..93.7	0	95.0..95.0	0.23	339..339	4	495..523	4	0	cross_assembly_host_different	other
 single_gene	PF_c1a8ea4fe94b	ArnT family glycosyltransferase	6	6	5	5	0	6	0	6	0	0	92.2..92.7	0	91.7..92.8	-2.79	1473..1533	5	1711..1713	5	2	cross_assembly_host_different	other
-single_gene	PF_c4f89ecc618b	helix-turn-helix transcriptional regulator	7	6	7	6	0	6	0	6	0	0	89.7..92.1	0	85.6..86.9	-9.0	195..207	7	195..210	7	7	cross_assembly_host_different	other
-single_gene	PF_c641e753ac2c	tryptophan 2,3-dioxygenase	7	7	6	6	0	5	0	5	0	0	94.8..94.8	0	90.8..91.9	3.64	876..888	6	885..898	6	0	cross_assembly_host_different	other
+single_gene	PF_c4f89ecc618b	helix-turn-helix transcriptional regulator	7	6	7	6	0	6	0	6	0	0	89.7..92.1	0	85.6..86.9	-9.0	195..207	0		0	7	cross_assembly_host_different	other
+single_gene	PF_c641e753ac2c	tryptophan 2,3-dioxygenase	7	7	6	6	0	5	0	5	0	0	94.8..94.8	0	90.8..91.9	3.64	876..888	0		0	0	cross_assembly_host_different	other
 single_gene	PF_cb2a3c4e35b3	IS630 family transposase	3	1	3	1	3	0	3	0	0	1	99.7..100.0	1	99.9..100.0		1089..1089	3	1168..1170	3	1	within_assembly_host_different_only	transposase_or_IS
 single_gene	PF_cc2bba7f988e	hypothetical protein	2	2	2	2	0	1	0	1	0	0	95.0..95.0	0	94.0..94.0	-5.85	183..183	2	398..400	2	1	cross_assembly_host_different	hypothetical
-single_gene	PF_ccc1461b9d44	SOS response-associated peptidase	2	1	2	1	1	0	1	0	0	0	90.0..90.0	0	83.5..83.5		699..699	2	715..715	2	1	within_assembly_host_different_only	other
-single_gene	PF_ce0cce1973e1	tripartite tricarboxylate transporter substrate binding protein	7	7	5	5	0	6	0	6	0	0	90.2..98.2	0	90.0..97.9	2.98	987..999	2	987..1148	2	0	cross_assembly_host_different	other
-single_gene	PF_d796f492fa26	methyl-accepting chemotaxis protein	3	1	3	1	3	0	3	0	0	0	91.7..95.7	0	92.9..95.0		1896..2019	1	2007..2007	1	0	within_assembly_host_different_only	other
+single_gene	PF_ccc1461b9d44	SOS response-associated peptidase	2	1	2	1	1	0	1	0	0	0	90.0..90.0	0	83.5..83.5		699..699	0		0	1	within_assembly_host_different_only	other
+single_gene	PF_ce0cce1973e1	tripartite tricarboxylate transporter substrate binding protein	7	7	5	5	0	6	0	6	0	0	90.2..98.2	0	90.0..97.9	2.98	987..999	1	1148..1148	1	0	cross_assembly_host_different	other
+single_gene	PF_d796f492fa26	methyl-accepting chemotaxis protein	3	1	3	1	3	0	3	0	0	0	91.7..95.7	0	92.9..95.0		1896..2019	0		0	0	within_assembly_host_different_only	other
 single_gene	PF_ea7c22e3fd99	IS5 family transposase	8	1	5	1	10	0	10	0	0	6	97.0..100.0	6	94.3..100.0		813..831	5	879..880	5	1	within_assembly_host_different_only	transposase_or_IS
 single_gene	PF_ec17db5f6c3a	energy-coupling factor ABC transporter permease	6	6	2	2	0	1	0	1	0	0	95.1..95.1	0	89.3..89.3	2.08	684..684	2	803..808	2	2	cross_assembly_host_different	other
-single_gene	PF_ef29af2d030f	flavin-dependent oxidoreductase	6	6	5	5	0	4	0	4	0	0	91.0..92.6	0	88.4..89.2	1.82	1308..1311	4	1340..1369	4	0	cross_assembly_host_different	other
+single_gene	PF_ef29af2d030f	flavin-dependent oxidoreductase	6	6	5	5	0	4	0	4	0	0	91.0..92.6	0	88.4..89.2	1.82	1308..1311	2	1344..1344	2	0	cross_assembly_host_different	other
 single_gene	PF_eff861f11550	hypothetical protein	3	1	2	1	1	0	1	0	0	0	95.6..95.6	0	97.4..97.4		342..342	2	483..483	2	0	within_assembly_host_different_only	hypothetical
-single_gene	PF_f3f544fcb335	BRO-N domain-containing protein	2	2	2	2	0	1	0	1	0	0	91.7..91.7	0	86.3..86.3	-10.01	813..816	2	825..828	2	2	cross_assembly_host_different	other
+single_gene	PF_f3f544fcb335	BRO-N domain-containing protein	2	2	2	2	0	1	0	1	0	0	91.7..91.7	0	86.3..86.3	-10.01	813..816	0		0	2	cross_assembly_host_different	other
 single_gene	PF_f53ad98f728e	HNH endonuclease	2	2	2	2	0	1	0	1	0	0	99.4..99.4	0	97.5..97.5	2.02	525..525	2	560..560	2	1	cross_assembly_host_different	other
 single_gene	PF_f73808909245	metallophosphoesterase family protein	3	3	2	2	0	1	0	1	0	0	91.9..91.9	0	88.9..88.9	1.66	2115..2118	2	2195..2198	2	2	cross_assembly_host_different	other
-single_gene	PF_fc49068bda90	HNH endonuclease	2	2	2	2	0	1	0	1	0	0	93.2..93.2	0	94.4..94.4	-1.17	408..411	2	436..439	2	1	cross_assembly_host_different	other
+single_gene	PF_fc49068bda90	HNH endonuclease	2	2	2	2	0	1	0	1	0	0	93.2..93.2	0	94.4..94.4	-1.17	408..411	0		0	1	cross_assembly_host_different	other
 two_gene	PF_0009c278bd55-,PF_0edf6a811ea2+	DUF445 domain-containing protein | DUF3297 family protein	6	6	5	5	0	6	0	6	0	0	93.1..93.3	0	93.1..93.2	-1.93	1683..1684	5	1685..1686	5	0	cross_assembly_host_different	other
-two_gene	PF_0368e9ee9685-,PF_649217a327d9-	metallophosphoesterase | dihydrofolate reductase	6	6	4	4	0	3	0	3	0	0	90.3..90.9	0	86.1..86.6	-0.76	1679..1835	4	1679..1835	4	0	cross_assembly_host_different	other
-two_gene	PF_0706cfdd30af+,PF_623a7fcb9f04-	OsmC family protein | SprT-like domain-containing protein	5	5	5	5	0	6	0	6	0	0	96.9..97.3	0	95.7..96.1	0.2	1305..1340	5	1409..1444	5	3	cross_assembly_host_different	other
+two_gene	PF_0368e9ee9685-,PF_649217a327d9-	metallophosphoesterase | dihydrofolate reductase	6	6	4	4	0	3	0	3	0	0	90.3..90.9	0	86.1..86.6	-0.76	1679..1835	0		0	0	cross_assembly_host_different	other
+two_gene	PF_0706cfdd30af+,PF_623a7fcb9f04-	OsmC family protein | SprT-like domain-containing protein	5	5	5	5	0	6	0	6	0	0	96.9..97.3	0	95.7..96.1	0.2	1305..1340	0		0	3	cross_assembly_host_different	other
 two_gene	PF_0b66421b38e4-,PF_bb5c9b78d9c7-	GNAT family N-acetyltransferase | acetyltransferase	3	3	3	3	0	2	0	2	0	0	93.7..95.0	0	92.9..93.1	-3.46	1073..1111	2	1252..1308	2	0	cross_assembly_host_different	other
 two_gene	PF_0fe2af4edbea-,PF_27aade44a958+	glutathione transferase GstA | winged helix-turn-helix transcriptional regulator	6	6	2	2	0	1	0	1	0	0	97.1..97.1	0	95.4..95.4	-1.23	1101..1107	2	1146..1146	2	0	cross_assembly_host_different	other
-two_gene	PF_10b9be14a143-,PF_1180b16eba28-	electron transfer flavoprotein subunit alpha/FixB family protein | electron transfer flavoprotein subunit beta/FixA family protein	14	7	12	6	6	30	6	30	0	0	94.2..99.6	0	87.6..98.8	0.84	1696..1798	12	1696..1801	12	0	cross_assembly_host_different	other
-two_gene	PF_11a0e2f41609+,PF_5ed5672f467e+	NAD(P)/FAD-dependent oxidoreductase | VUT family protein	6	6	2	2	0	1	0	1	0	0	91.1..91.1	0	89.2..89.2	2.02	2351..2357	2	2448..2454	2	0	cross_assembly_host_different	other
-two_gene	PF_180745c985d5-,PF_6b5eb7d16b15+	winged helix-turn-helix transcriptional regulator | D-amino acid dehydrogenase	6	6	6	6	0	5	0	5	0	0	90.7..91.4	0	88.4..88.8	1.29	1899..1899	6	1900..1903	6	0	cross_assembly_host_different	other
-two_gene	PF_18e8934cbf0b-,PF_4d5357431930-	glutathione transferase | hypothetical protein	6	6	4	4	0	3	0	3	0	0	87.8..87.8	0	92.4..92.4	-2.35	870..872	4	924..926	4	0	cross_assembly_host_different	hypothetical
+two_gene	PF_10b9be14a143-,PF_1180b16eba28-	electron transfer flavoprotein subunit alpha/FixB family protein | electron transfer flavoprotein subunit beta/FixA family protein	14	7	12	6	6	30	6	30	0	0	94.2..99.6	0	87.6..98.8	0.84	1696..1798	0		0	0	cross_assembly_host_different	other
+two_gene	PF_11a0e2f41609+,PF_5ed5672f467e+	NAD(P)/FAD-dependent oxidoreductase | VUT family protein	6	6	2	2	0	1	0	1	0	0	91.1..91.1	0	89.2..89.2	2.02	2351..2357	0		0	0	cross_assembly_host_different	other
+two_gene	PF_180745c985d5-,PF_6b5eb7d16b15+	winged helix-turn-helix transcriptional regulator | D-amino acid dehydrogenase	6	6	6	6	0	5	0	5	0	0	90.7..91.4	0	88.4..88.8	1.29	1899..1899	4	1903..1903	4	0	cross_assembly_host_different	other
+two_gene	PF_18e8934cbf0b-,PF_4d5357431930-	glutathione transferase | hypothetical protein	6	6	4	4	0	3	0	3	0	0	87.8..87.8	0	92.4..92.4	-2.35	870..872	0		0	0	cross_assembly_host_different	hypothetical
 two_gene	PF_19beb8334344+,PF_c52c0fddf6ce+	chloride channel protein | MgtC/SapB family protein	6	6	4	4	0	3	0	3	0	0	93.0..93.0	0	93.0..93.0	-2.55	2025..2086	4	2135..2247	4	0	cross_assembly_host_different	other
-two_gene	PF_1ddd711a5bf2-,PF_89117ba41d0e+	glutathione S-transferase family protein | OmpW/AlkL family protein	3	3	3	3	0	2	0	2	0	0	89.7..90.3	0	90.0..90.5	3.02	1566..1760	3	1680..1873	3	0	cross_assembly_host_different	other
-two_gene	PF_22c84af82ef4-,PF_2c743d400be4+	LysR family transcriptional regulator | NAD(P)H-quinone oxidoreductase	7	7	4	4	0	3	0	3	0	0	93.7..93.7	0	92.1..92.1	-3.39	1996..2034	4	2016..2037	4	1	cross_assembly_host_different	other
+two_gene	PF_1ddd711a5bf2-,PF_89117ba41d0e+	glutathione S-transferase family protein | OmpW/AlkL family protein	3	3	3	3	0	2	0	2	0	0	89.7..90.3	0	90.0..90.5	3.02	1566..1760	0		0	0	cross_assembly_host_different	other
+two_gene	PF_22c84af82ef4-,PF_2c743d400be4+	LysR family transcriptional regulator | NAD(P)H-quinone oxidoreductase	7	7	4	4	0	3	0	3	0	0	93.7..93.7	0	92.1..92.1	-3.39	1996..2034	0		0	1	cross_assembly_host_different	other
 two_gene	PF_27aade44a958+,PF_c58792f6b8d0+	winged helix-turn-helix transcriptional regulator | AraC family transcriptional regulator	4	4	3	3	0	2	0	2	0	0	95.7..97.5	0	95.4..96.9	1.14	1396..1398	3	1556..1560	3	1	cross_assembly_host_different	other
-two_gene	PF_3070024975f6+,PF_5cd22bca3972+	hypothetical protein | IS481 family transposase	3	3	3	3	0	2	0	2	0	0	95.4..95.4	0	94.3..94.3	-1.08	2006..2132	3	2216..2343	3	2	cross_assembly_host_different	transposase_or_IS
+two_gene	PF_3070024975f6+,PF_5cd22bca3972+	hypothetical protein | IS481 family transposase	3	3	3	3	0	2	0	2	0	0	95.4..95.4	0	94.3..94.3	-1.08	2006..2132	0		0	2	cross_assembly_host_different	transposase_or_IS
 two_gene	PF_54163d779c24+,PF_e653c39dbf45+	tyrosine-type recombinase/integrase | DUF4224 domain-containing protein	3	3	2	2	0	1	0	1	0	0	97.4..97.4	0	94.4..94.4	-0.92	1256..1256	2	1505..1505	2	1	cross_assembly_host_different	integrase_recombinase_resolvase
 two_gene	PF_59f02ec91a35+,PF_ebabcd779403+	hypothetical protein | RNA polymerase sigma factor	3	3	2	2	0	1	0	1	0	0	96.6..96.6	0	98.1..98.1	0.32	912..915	0		0	1	cross_assembly_host_different	hypothetical
 two_gene	PF_5cd22bca3972+,PF_6e6c9b40b631+	LysR substrate-binding domain-containing protein | hypothetical protein	5	5	4	4	0	3	0	3	0	0	95.4..97.0	0	96.8..96.9	0.94	1285..1354	3	1872..1982	3	2	cross_assembly_host_different	hypothetical
 two_gene	PF_69967150422e+,PF_6b0914474380+	MFS transporter | single-stranded DNA-binding protein	4	4	4	4	0	3	0	3	0	0	90.0..90.0	0	87.2..87.2	-0.03	1874..1902	4	1992..2022	4	0	cross_assembly_host_different	other
 two_gene	PF_6d7668b57079+,PF_c6d8d18b81e4+	hypothetical protein | lysozyme	3	3	3	3	0	2	0	2	0	0	92.1..92.1	0	89.4..89.4	-6.08	911..911	3	1656..1656	3	0	cross_assembly_host_different	hypothetical
-two_gene	PF_746ce8b59335-,PF_c88a4184cf9c+	LysR family transcriptional regulator | SDR family NAD(P)-dependent oxidoreductase	5	5	2	2	0	1	0	1	0	0	97.3..97.3	0	97.0..97.0	0.67	1785..1809	2	1921..1974	2	1	cross_assembly_host_different	other
+two_gene	PF_746ce8b59335-,PF_c88a4184cf9c+	LysR family transcriptional regulator | SDR family NAD(P)-dependent oxidoreductase	5	5	2	2	0	1	0	1	0	0	97.3..97.3	0	97.0..97.0	0.67	1785..1809	0		0	1	cross_assembly_host_different	other
 two_gene	PF_83145752a16b-,PF_a27193128b2e-	phage protein NinX family protein | hypothetical protein	2	1	2	1	1	0	0	0	0	1	100.0..100.0	1	100.0..100.0		884..884	2	921..924	2	2	host_context_unresolved	phage_like
-two_gene	PF_95c9b3b4d0b1+,PF_a15ccfb95ad8+	HNH endonuclease signature motif containing protein | hypothetical protein	2	2	2	2	0	1	0	1	0	0	92.2..92.2	0	91.2..91.2	-8.65	983..986	2	1376..1381	2	1	cross_assembly_host_different	hypothetical
+two_gene	PF_95c9b3b4d0b1+,PF_a15ccfb95ad8+	HNH endonuclease signature motif containing protein | hypothetical protein	2	2	2	2	0	1	0	1	0	0	92.2..92.2	0	91.2..91.2	-8.65	983..986	0		0	1	cross_assembly_host_different	hypothetical
 two_gene	PF_a386eb61434b-,PF_c588098e50aa-	hypothetical protein | hypothetical protein	4	4	4	4	0	3	0	3	0	0	92.3..92.3	0	97.7..97.7	2.15	1235..1235	4	1785..1786	4	1	cross_assembly_host_different	hypothetical
-two_gene	PF_ad7500c0a851-,PF_c3390e92a768+	N-acetyl-gamma-glutamyl-phosphate reductase | LysR family transcriptional regulator	5	5	4	4	0	3	0	3	0	0	95.0..95.0	0	95.9..95.9	1.18	1973..1991	4	1973..1991	4	0	cross_assembly_host_different	other
+two_gene	PF_ad7500c0a851-,PF_c3390e92a768+	N-acetyl-gamma-glutamyl-phosphate reductase | LysR family transcriptional regulator	5	5	4	4	0	3	0	3	0	0	95.0..95.0	0	95.9..95.9	1.18	1973..1991	0		0	0	cross_assembly_host_different	other
 two_gene	PF_bbf57b65e145+,PF_d1d00aa2d48a+	low molecular weight protein-tyrosine-phosphatase | hypothetical protein	4	4	3	3	0	2	0	2	0	0	92.9..94.8	0	94.2..95.5	-1.07	1255..1318	2	1453..1854	2	1	cross_assembly_host_different	hypothetical
-two_gene	PF_e215c5b412c2-,PF_e88f34983cba-	hypothetical protein | hypothetical protein	3	2	2	2	0	1	0	1	0	1	100.0..100.0	0	98.7..98.7	3.15	668..668	2	856..865	2	1	cross_assembly_host_different	hypothetical
-two_gene	PF_e21b29e5d43b+,PF_e499bcabd34c+	PDDEXK nuclease domain-containing protein | tyrosine-type recombinase/integrase	3	3	3	3	0	2	0	2	0	0	91.0..91.0	0	92.6..92.6	-2.86	2333..2333	3	2529..2532	0	0	cross_assembly_host_different	integrase_recombinase_resolvase
+two_gene	PF_e215c5b412c2-,PF_e88f34983cba-	hypothetical protein | hypothetical protein	3	2	2	2	0	1	0	1	0	1	100.0..100.0	0	98.7..98.7	3.15	668..668	0		0	1	cross_assembly_host_different	hypothetical
+two_gene	PF_e21b29e5d43b+,PF_e499bcabd34c+	PDDEXK nuclease domain-containing protein | tyrosine-type recombinase/integrase	3	3	3	3	0	2	0	2	0	0	91.0..91.0	0	92.6..92.6	-2.86	2333..2333	0		0	0	cross_assembly_host_different	integrase_recombinase_resolvase

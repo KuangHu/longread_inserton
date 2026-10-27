@@ -1,5 +1,5 @@
 {
-  "version": "core_context_review_v0.2",
+  "version": "core_context_review_v0.3",
   "subset": "paracidovorax",
   "evidence_source": "assembly_only",
   "scope": "target_lt2500",
@@ -56,20 +56,25 @@
         "no_cross_pair_with_ani": 4
       },
       "occurrences": 200,
-      "occurrences_boundary_resolved": 169,
+      "occurrences_boundary_resolved": 122,
+      "occurrences_with_partner_not_covering_an_end": 47,
       "occurrences_side_status": {
         "up": {
-          "resolved": 182,
-          "inconsistent_between_partners": 18
+          "resolved": 151,
+          "inconsistent_between_partners": 18,
+          "end_not_covered": 27,
+          "end_not_covered_by_some_partners": 4
         },
         "down": {
-          "resolved": 184,
-          "inconsistent_between_partners": 16
+          "resolved": 154,
+          "end_not_covered": 25,
+          "inconsistent_between_partners": 16,
+          "end_not_covered_by_some_partners": 5
         }
       },
-      "resolved_estimated_lt2500": 169,
+      "resolved_estimated_lt2500": 122,
       "resolved_estimated_ge2500": 0,
-      "resolved_extension_total_range": "0..287",
+      "resolved_extension_total_range": "12..272",
       "occurrences_near_mobile_neighbour": 63
     },
     "two_gene": {
@@ -98,18 +103,23 @@
         "1_to_5": 2
       },
       "occurrences": 20,
-      "occurrences_boundary_resolved": 20,
+      "occurrences_boundary_resolved": 3,
+      "occurrences_with_partner_not_covering_an_end": 17,
       "occurrences_side_status": {
         "up": {
-          "resolved": 20
+          "end_not_covered": 9,
+          "end_not_covered_by_some_partners": 6,
+          "resolved": 5
         },
         "down": {
-          "resolved": 20
+          "resolved": 9,
+          "end_not_covered": 10,
+          "end_not_covered_by_some_partners": 1
         }
       },
-      "resolved_estimated_lt2500": 20,
+      "resolved_estimated_lt2500": 3,
       "resolved_estimated_ge2500": 0,
-      "resolved_extension_total_range": "0..310",
+      "resolved_extension_total_range": "175..176",
       "occurrences_near_mobile_neighbour": 2
     }
   },

@@ -1,5 +1,5 @@
 {
-  "version": "core_context_review_v0.2",
+  "version": "core_context_review_v0.3",
   "subset": "delftia",
   "evidence_source": "assembly_only",
   "scope": "target_lt2500",
@@ -52,21 +52,26 @@
         "no_cross_pair_with_ani": 12
       },
       "occurrences": 374,
-      "occurrences_boundary_resolved": 314,
+      "occurrences_boundary_resolved": 214,
+      "occurrences_with_partner_not_covering_an_end": 121,
       "occurrences_side_status": {
         "up": {
-          "resolved": 328,
-          "inconsistent_between_partners": 46
+          "resolved": 270,
+          "inconsistent_between_partners": 35,
+          "end_not_covered": 56,
+          "end_not_covered_by_some_partners": 13
         },
         "down": {
           "reaches_window_or_contig_end": 3,
-          "resolved": 342,
-          "inconsistent_between_partners": 29
+          "resolved": 257,
+          "end_not_covered_by_some_partners": 22,
+          "end_not_covered": 69,
+          "inconsistent_between_partners": 23
         }
       },
-      "resolved_estimated_lt2500": 314,
+      "resolved_estimated_lt2500": 214,
       "resolved_estimated_ge2500": 0,
-      "resolved_extension_total_range": "0..1804",
+      "resolved_extension_total_range": "2..1804",
       "occurrences_near_mobile_neighbour": 94
     },
     "two_gene": {
@@ -98,21 +103,26 @@
         "no_cross_pair_with_ani": 1
       },
       "occurrences": 97,
-      "occurrences_boundary_resolved": 92,
+      "occurrences_boundary_resolved": 40,
+      "occurrences_with_partner_not_covering_an_end": 52,
       "occurrences_side_status": {
         "up": {
-          "resolved": 95,
+          "resolved": 72,
+          "end_not_covered": 17,
+          "end_not_covered_by_some_partners": 6,
           "inconsistent_between_partners": 2
         },
         "down": {
-          "resolved": 94,
+          "resolved": 54,
+          "end_not_covered": 39,
           "inconsistent_between_partners": 1,
+          "end_not_covered_by_some_partners": 1,
           "reaches_window_or_contig_end": 2
         }
       },
-      "resolved_estimated_lt2500": 89,
-      "resolved_estimated_ge2500": 3,
-      "resolved_extension_total_range": "0..745",
+      "resolved_estimated_lt2500": 40,
+      "resolved_estimated_ge2500": 0,
+      "resolved_extension_total_range": "2..745",
       "occurrences_near_mobile_neighbour": 18
     }
   },
