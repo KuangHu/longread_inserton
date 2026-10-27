@@ -1,0 +1,551 @@
+"""Scale-up stage 1, section G: cross-batch candidate catalog, unified protein families, stage-2 interface manifests.
+
+Evidence source of everything here is assembly_only: assembly-derived candidate loci, long-read evidence pending. A
+main locus is not an independent insertion event and a family is a preliminary protein family, not an insertion family.
+
+Namespaces: batch = the family directory name under the pool (e.g. nitrobacteraceae). Locus, sample and local family
+IDs from one batch are written as <batch>:<id> (global_locus_id, sample_key, local_family_id) so equal IDs from
+different batches never overwrite each other. BioSample accessions are kept as is next to the namespaced key.
+
+proteins  Proteins of complete CDS in the candidate lists (main, partner_mixed, direction_mixed, short_other_segment,
+          replacement) of every batch, read from each carrier's FAA, deduplicated by the SHA256 of the full sequence
+          (protein accessions != distinct sequences). Writes <work>/proteins.faa (named by sha256) and
+          protein_instances.tsv.gz (one row per locus x coding unit, with the local hash and local family/homology IDs).
+          Checks that each local 16-hex protein hash is the prefix of the global sha256.
+cluster   MMseqs2 on the frozen global protein set at the two frozen S4 settings (s4_annotate.MMSEQS_SETTINGS, with
+          createdb --shuffle 1 --createdb-mode 1 and --alignment-mode 3 exactly as easy-cluster runs them), then every
+          member aligned to its final representative (mmseqs align on the cluster DB, alignment-mode 3, -e 10). This
+          gives the same clusters and member values as the per-batch all-vs-all check (tested on Eggerthellaceae).
+catalog   Global family / homology-group IDs bound to the catalog version and the representative's sequence hash
+          (F1_<rep sha256[:12]>, H1_<...>); architecture = global family IDs in core order with orientation, canonical
+          over both strands, ID A1_<sha256(architecture)[:12]>. Local-to-global family map per batch. Candidate core
+          catalog (lists + annotation_pending) with U/core/D, coordinates, hashes, contig length/circularity, repeat
+          and contig-end flags; core sequences in a FASTA on scratch. Coding anomalies (translation records other than
+          match/pseudo, transl_table problems) per unit. Stage-2 manifests: assembly_run_links, read_run_manifest,
+          read_batch_manifest (metadata only, nothing is downloaded), empty read_evidence / new_read_contexts with
+          their schema. Pilot read evidence (Comamonadaceae baseline read check) linked by exact carrier/contig/core
+          coordinates only; it is not propagated to families or other loci.
+"""
+
+import argparse
+import csv
+import gzip
+import hashlib
+import json
+import os
+import subprocess
+import sys
+import time
+from collections import Counter, defaultdict
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from s3_pair_calls import read_fasta  # noqa: E402
+from s4_annotate import CONTEXT, LISTS, MEMBER_MIN, MMSEQS_SETTINGS, PENDING, read, read_faa, sha256, write  # noqa: E402
+
+VERSION = "stage1_catalog_v1"
+CATALOG = "1"  # catalog version digit in family / homology / architecture IDs
+EVIDENCE = "assembly_only"
+READ_STATUS = "long_read_evidence_pending"
+HERE = Path(__file__).resolve().parent
+PROJ = Path("/global/scratch/users/kh36969/longread_callout")
+POOL = "scaleup_stage1_20261026"
+BASELINE = HERE / "comamonadaceae_20261024"
+ALIGN = ["--alignment-mode", "3", "-e", "10", "-a"]
+CODING_OK = {"match", "match_with_transl_except", "pseudo"}
+PREFIX = {"family": "F", "homology_group": "H"}
+
+
+def batches(a):
+    return a.batches or sorted(p.name for p in (HERE / POOL).iterdir() if (p / "s2" / "catalog.tsv").exists())
+
+
+def nbytes(x):
+    return sum(int(v) for v in x.split(";") if v.isdigit())
+
+
+def s4dir(a, b):
+    return a.scratch / b / "s4_s3_full"
+
+
+def sha(s):
+    return hashlib.sha256(s.encode()).hexdigest()
+
+
+def gl(b, x):
+    return "%s:%s" % (b, x)
+
+
+def split(x):
+    return [v for v in x.split(";") if v] if x else []
+
+
+def cmd_proteins(a):
+    a.work.mkdir(parents=True, exist_ok=True)
+    seqs, inst = {}, []
+    for b in batches(a):
+        s4 = s4dir(a, b)
+        files = {}
+        for p in read(a.scratch / b / "s3_full" / "pairs.tsv"):
+            for k in "ab":
+                files[p["sample_" + k]] = p["gff_" + k]
+        lfam = {r["protein_hash"]: r for r in read(s4 / "protein_members.tsv")}
+        faas = {}
+        for r in read(s4 / "candidate_loci_families.tsv"):
+            if r["carrier"] not in faas:
+                faas[r["carrier"]] = read_faa(Path(files[r["carrier"]]).parent / "protein.faa")
+            for i, (pid, strand, fid, hid) in enumerate(zip(split(r["protein_ids"]), r["strands"].split(";"),
+                                                             r["family_ids"].split(";"), r["homology_group_ids"].split(";"))):
+                s = faas[r["carrier"]][pid]
+                h = sha(s)
+                lh = h[:16]
+                if lh not in lfam or lfam[lh]["family_id"] != fid:
+                    sys.exit("local protein hash/family mismatch %s %s %s" % (b, r["locus_id"], pid))
+                seqs[h] = s
+                inst.append(dict(batch=b, global_locus_id=gl(b, r["locus_id"]), locus_id=r["locus_id"], sample_key=gl(b, r["carrier"]),
+                                 biosample=r["carrier"], category=r["category"], unit_order=i + 1, strand=strand, protein_id=pid,
+                                 protein_sha256=h, length=len(s), local_protein_hash=lh, local_family_id=gl(b, fid),
+                                 local_homology_id=gl(b, hid)))
+        local = json.loads((s4 / "families_summary.json").read_text())["distinct_proteins"]
+        got = len({i["protein_sha256"] for i in inst if i["batch"] == b})
+        if got != local:
+            sys.exit("%s: %d distinct proteins, S4 families_summary says %d" % (b, got, local))
+        print(b, len(faas), "carriers", got, "distinct proteins", flush=True)
+    with open(str(a.work / "proteins.faa"), "w") as h:
+        for k, s in sorted(seqs.items()):
+            h.write(">%s\n%s\n" % (k, s))
+    write(a.work / "protein_instances.tsv.gz", inst)
+    print(len(inst), "protein instances;", len(seqs), "distinct sequences;", len({i["protein_id"] for i in inst}), "protein accessions")
+
+
+def cmd_cluster(a):
+    w = a.work / "mmseqs"
+    w.mkdir(parents=True, exist_ok=True)
+    log = open(str(w / "mmseqs.log"), "w")
+    cmds = []
+
+    def mm(*args):
+        cmd = [a.mmseqs] + [str(x) for x in args]
+        cmds.append(" ".join(cmd))
+        subprocess.run(cmd, check=True, stdout=log, stderr=subprocess.STDOUT)
+
+    mm("createdb", a.work / "proteins.faa", w / "db", "--shuffle", "1", "--createdb-mode", "1")
+    for level, opts in MMSEQS_SETTINGS.items():
+        mm("cluster", w / "db", w / (level + "_clu"), w / ("tmp_" + level), "--threads", a.threads, "--alignment-mode", "3", *opts)
+        mm("createtsv", w / "db", w / "db", w / (level + "_clu"), w / (level + "_cluster.tsv"))
+        mm("align", w / "db", w / "db", w / (level + "_clu"), w / (level + "_aln"), "--threads", a.threads, *ALIGN)
+        mm("convertalis", w / "db", w / "db", w / (level + "_aln"), w / (level + "_members.m8"),
+           "--format-output", "query,target,fident,qcov,tcov,alnlen")
+    ver = subprocess.run([a.mmseqs, "version"], stdout=subprocess.PIPE, universal_newlines=True).stdout.strip()
+    (w / "cluster_run.json").write_text(json.dumps(dict(version=VERSION, mmseqs=a.mmseqs, mmseqs_version=ver, settings=MMSEQS_SETTINGS,
+                                                        align=ALIGN, commands=cmds, input_sha256=sha256(a.work / "proteins.faa")), indent=1) + "\n")
+
+
+def canonical(ids, strands):
+    fwd = ",".join("%s%s" % (i, s) for i, s in zip(ids, strands))
+    rev = ",".join("%s%s" % (i, "+" if s == "-" else "-") for i, s in reversed(list(zip(ids, strands))))
+    return min(fwd, rev)
+
+
+def circular_contigs(gff):
+    if not gff or not Path(gff).exists():
+        return None
+    out = subprocess.run(["grep", "-F", "Is_circular=true", gff], stdout=subprocess.PIPE, universal_newlines=True).stdout
+    return {l.split("\t")[0] for l in out.splitlines() if "\tregion\t" in l}
+
+
+def cmd_catalog(a):
+    t0 = time.time()
+    out, w = a.out, a.work
+    out.mkdir(parents=True, exist_ok=True)
+    bs = batches(a)
+    # ---- global clusters and member checks
+    assign, check = {}, {}
+    for level in MMSEQS_SETTINGS:
+        reps = {}
+        for line in open(str(w / "mmseqs" / (level + "_cluster.tsv"))):
+            rep, mem = line.split()
+            reps[mem] = rep
+        names = {r: "%s%s_%s" % (PREFIX[level], CATALOG, r[:12]) for r in set(reps.values())}
+        if len(set(names.values())) != len(names):
+            sys.exit("representative hash prefix collision at " + level)
+        aln = {}
+        for line in open(str(w / "mmseqs" / (level + "_members.m8"))):
+            q, t, fid, qc, tc, _ = line.rstrip("\n").split("\t")
+            if (t, q) not in aln or float(fid) > aln[(t, q)][0]:
+                aln[(t, q)] = (float(fid), float(tc), float(qc))  # query = representative, target = member
+        mid, mc = MEMBER_MIN[level]
+        for m, r in reps.items():
+            fid, mcov, rcov = (1.0, 1.0, 1.0) if m == r else aln.get((m, r), (0.0, 0.0, 0.0))
+            check[(level, m)] = (r, fid, mcov, rcov, fid >= mid and mcov >= mc and rcov >= mc)
+        assign[level] = {m: names[r] for m, r in reps.items()}
+    seqlen = {}
+    name = None
+    for line in open(str(w / "proteins.faa")):
+        if line.startswith(">"):
+            name = line[1:].strip()
+        else:
+            seqlen[name] = len(line.strip())
+    inst = read(w / "protein_instances.tsv.gz")
+    for i in inst:
+        i["family_id"] = assign["family"][i["protein_sha256"]]
+        i["homology_id"] = assign["homology_group"][i["protein_sha256"]]
+    write(out / "protein_instances.tsv.gz", inst)
+    by_locus = defaultdict(list)
+    for i in inst:
+        by_locus[i["global_locus_id"]].append(i)
+    # ---- per-batch metadata
+    cat, contigs, runs, links, files, organism, bioproject = {}, {}, {}, [], {}, {}, {}
+    for b in bs:
+        for r in read(HERE / POOL / b / "s2" / "catalog.tsv"):
+            cat[gl(b, r["sample_id"])] = r
+        for p in read(a.scratch / b / "s3_full" / "pairs.tsv"):
+            for k in "ab":
+                files[gl(b, p["sample_" + k])] = dict(fna=p["fna_" + k], gff=p["gff_" + k])
+        for r in read(HERE / POOL / b / "runs.tsv"):
+            r["batch"] = b
+            runs[r["run_accession"]] = r
+        for r in read(HERE / POOL / b / "assembly_run_links.tsv"):
+            links.append(dict(batch=b, **r))
+    # ---- core catalog
+    lists = {}
+    for b in bs:
+        s4 = s4dir(a, b)
+        for r in read(s4 / "candidate_loci_families.tsv") + read(s4 / ("list_%s.tsv" % PENDING)):
+            lists[gl(b, r["locus_id"])] = (b, r)
+    seeds = {}
+    for b in bs:
+        for r in read(s4dir(a, b) / "seed_catalog.tsv"):
+            seeds[gl(b, r["locus_id"])] = r
+    cores = {}
+    for b in bs:
+        name = None
+        for line in open(str(s4dir(a, b) / "seed_catalog.fa")):
+            if line.startswith(">"):
+                name = gl(b, line[1:].split("|")[0])
+            else:
+                cores[name] = line.strip()
+    by_carrier = defaultdict(list)
+    for g, (b, r) in lists.items():
+        by_carrier[gl(b, r["carrier"])].append(g)
+    cidx = {}
+    for b in bs:
+        with gzip.open(str(a.scratch / b / "s2" / "contig_index.tsv.gz"), "rt") as h:
+            next(h)
+            for line in h:
+                s, asm, c, n, csha = line.rstrip("\n").split("\t")[:5]
+                cidx[(gl(b, s), c)] = (int(n), csha)
+    core_rows, problems = [], Counter()
+    fa = w / "candidate_cores.fa"
+    with open(str(fa), "w") as fh:
+        for sk in sorted(by_carrier):
+            gff = files[sk]["gff"]
+            circ = circular_contigs(gff)
+            seqs = None
+            for g in sorted(by_carrier[sk]):
+                b, r = lists[g]
+                s, e = int(r["core_start"]), int(r["core_end"])
+                n, csha = cidx[(sk, r["contig"])]
+                if g in seeds:
+                    core, U, D = cores[g], seeds[g]["U"], seeds[g]["D"]
+                    if sha(core) != seeds[g]["core_sha256"]:
+                        sys.exit("seed core hash mismatch " + g)
+                else:
+                    if seqs is None:
+                        seqs = read_fasta(files[sk]["fna"])
+                    q = seqs[r["contig"]]
+                    if len(q) != n:
+                        sys.exit("contig length differs from the contig index " + g)
+                    core, U, D = q[s:e], q[max(0, s - CONTEXT):s], q[e:e + CONTEXT]
+                if len(core) != e - s:
+                    problems["core_length_mismatch"] += 1
+                c = cat[sk]
+                pi = sorted(by_locus.get(g, []), key=lambda x: int(x["unit_order"]))
+                fids, hids, strands = [x["family_id"] for x in pi], [x["homology_id"] for x in pi], [x["strand"] for x in pi]
+                arch = canonical(fids, strands) if pi else ""
+                harch = canonical(hids, strands) if pi else ""
+                flags = []
+                if r["tandem_like"] == "True":
+                    flags.append("tandem_like")
+                if int(r["core_copies_carrier"] or 0) > 1:
+                    flags.append("core_multicopy_in_carrier")
+                if int(r["core_copies_empty"] or 0) > 0:
+                    flags.append("core_copy_in_empty")
+                if r["boundary_consistency"] != "exact":
+                    flags.append("boundary_" + r["boundary_consistency"])
+                ends = []
+                if len(U) < CONTEXT:
+                    ends.append("U_short_contig_start")
+                if len(D) < CONTEXT:
+                    ends.append("D_short_contig_end")
+                partners = split(r["partners_anchored"]) + split(r["partners_not_anchored"])
+                fh.write(">%s|%s|%s:%d-%d|%s|%s\n%s\n" % (g, c["assembly"], r["contig"], s, e, r["category"], sha(core), core))
+                core_rows.append(dict(
+                    catalog_version=VERSION, evidence_source=EVIDENCE, read_evidence_status=READ_STATUS, global_locus_id=g, batch=b,
+                    locus_id=r["locus_id"], category=r["category"], sample_key=sk, biosample=r["carrier"], assembly=c["assembly"],
+                    paired_accession=c["genbank_accession"], bioproject=c["bioproject"], organism_label=r["organism"],
+                    assembly_level=c["assembly_level"], annotation=c["annotation"], annotation_status=c["annotation_status"],
+                    fna_sha256=c["fna_sha256"], contig=r["contig"], contig_length=n, contig_sha256=csha,
+                    contig_circular="unknown_no_gff" if circ is None else "circular" if r["contig"] in circ else "not_flagged_circular",
+                    core_start=s, core_end=e, core_len=e - s, core_strand="carrier_forward", core_sha256=sha(core),
+                    context=CONTEXT, U_len=len(U), D_len=len(D), context_end_flags=";".join(ends) or "-",
+                    U_start=max(0, s - CONTEXT), D_end=min(n, e + CONTEXT), U_sha256=sha(U), D_sha256=sha(D),
+                    repeat_flags=";".join(flags) or "-", difference_class=r["difference_class"], anchored_support=r["anchored_support"],
+                    n_pairs=r["n_pairs"], partners_anchored=r["partners_anchored"], partners_not_anchored=r["partners_not_anchored"],
+                    partner_assemblies=";".join(cat.get(gl(b, p), {}).get("assembly", "not_in_catalog") for p in partners),
+                    cds_class=r["cds_class"], cds_units=r["cds_units"], protein_ids=r["protein_ids"], products=r["products"],
+                    strands=r["strands"], protein_sha256s=";".join(x["protein_sha256"] for x in pi), family_ids=";".join(fids),
+                    family_architecture=arch, architecture_id=("A%s_%s" % (CATALOG, sha(arch)[:12])) if arch else "",
+                    homology_ids=";".join(hids), homology_architecture=harch,
+                    local_family_ids=";".join(x["local_family_id"] for x in pi), translation=r["translation"],
+                    coding_flags=r["coding_flags"], partner_breakdown=r["partner_breakdown"], U=U, D=D))
+    write(out / "candidate_core_catalog.tsv.gz", core_rows)
+    print("core catalog", len(core_rows), "%.0fs" % (time.time() - t0), flush=True)
+    # ---- protein catalog, families, architectures, local-global map
+    pinst = defaultdict(list)
+    for i in inst:
+        pinst[i["protein_sha256"]].append(i)
+    prow = []
+    for h, ii in sorted(pinst.items()):
+        row = dict(protein_sha256=h, length=seqlen[h], instances=len(ii), loci=len({i["global_locus_id"] for i in ii}),
+                   batches=";".join(sorted({i["batch"] for i in ii})), protein_ids=";".join(sorted({i["protein_id"] for i in ii})))
+        for level, nm in (("family", "family"), ("homology_group", "homology")):
+            r, fid, mcov, rcov, ok = check[(level, h)]
+            row.update({nm + "_id": assign[level][h], nm + "_rep": r, nm + "_identity": round(fid, 3), nm + "_member_cov": round(mcov, 3),
+                        nm + "_rep_cov": round(rcov, 3), nm + "_member_pass": ok})
+        prow.append(row)
+    write(out / "protein_catalog.tsv.gz", prow)
+    loc = {x["global_locus_id"]: x for x in core_rows}
+    fam = defaultdict(lambda: defaultdict(set))
+    for i in inst:
+        d = fam[i["family_id"]]
+        x = loc[i["global_locus_id"]]
+        d["proteins"].add(i["protein_sha256"])
+        d["accessions"].add(i["protein_id"])
+        d["instances"].add((i["global_locus_id"], i["unit_order"]))
+        d["loci"].add(i["global_locus_id"])
+        d["samples"].add(i["sample_key"])
+        d["biosamples"].add(i["biosample"])
+        d["batches"].add(i["batch"])
+        d["organisms"].add(x["organism_label"])
+        d["architectures"].add(x["architecture_id"])
+        d["homology"].add(i["homology_id"])
+        d["local"].add(i["local_family_id"])
+        d["products"].add(x["products"].split(";")[int(i["unit_order"]) - 1] if x["products"] else "")
+        d["loci_" + i["category"]].add(i["global_locus_id"])
+    ftab = []
+    for f, d in fam.items():
+        rep = check[("family", next(iter(d["proteins"])))][0]
+        row = dict(family_id=f, catalog_version=VERSION, rep_sha256=rep, rep_length=seqlen[rep], homology_ids=";".join(sorted(d["homology"])),
+                   distinct_proteins=len(d["proteins"]), protein_accessions=len(d["accessions"]), instances=len(d["instances"]),
+                   loci=len(d["loci"]), samples=len(d["samples"]), biosamples=len(d["biosamples"]), batches=len(d["batches"]),
+                   batch_names=";".join(sorted(d["batches"])), organism_labels=len(d["organisms"]), architectures=len(d["architectures"]),
+                   members_failing_check=sum(1 for h in d["proteins"] if not check[("family", h)][4]),
+                   local_family_ids=";".join(sorted(d["local"])), products=" | ".join(sorted(d["products"]))[:300])
+        for c in LISTS:
+            row["loci_" + c] = len(d["loci_" + c])
+        ftab.append(row)
+    ftab.sort(key=lambda x: (-x["loci"], x["family_id"]))
+    write(out / "families.tsv", ftab)
+    arch = defaultdict(lambda: defaultdict(set))
+    for x in core_rows:
+        if x["architecture_id"]:
+            d = arch[x["architecture_id"]]
+            d["arch"].add(x["family_architecture"])
+            d["harch"].add(x["homology_architecture"])
+            d["loci"].add(x["global_locus_id"])
+            d["samples"].add(x["sample_key"])
+            d["batches"].add(x["batch"])
+            d["loci_" + x["category"]].add(x["global_locus_id"])
+    atab = []
+    for k, d in arch.items():
+        row = dict(architecture_id=k, family_architecture=next(iter(d["arch"])), units=next(iter(d["arch"])).count(",") + 1,
+                   homology_architectures=";".join(sorted(d["harch"])), loci=len(d["loci"]), samples=len(d["samples"]),
+                   batches=len(d["batches"]), batch_names=";".join(sorted(d["batches"])))
+        for c in LISTS:
+            row["loci_" + c] = len(d["loci_" + c])
+        atab.append(row)
+    atab.sort(key=lambda x: (-x["loci"], x["architecture_id"]))
+    write(out / "architectures.tsv", atab)
+    maps = []
+    for level, lk, gk in (("family", "local_family_id", "family_id"), ("homology_group", "local_homology_id", "homology_id")):
+        l2g, g2l = defaultdict(set), defaultdict(set)
+        lprot = defaultdict(set)
+        for i in inst:
+            l2g[i[lk]].add(i[gk])
+            g2l[i[gk]].add(i[lk])
+            lprot[i[lk]].add(i["protein_sha256"])
+        for l, gs in sorted(l2g.items()):
+            others = {x for g in gs for x in g2l[g]} - {l}
+            rel = []
+            if len(gs) > 1:
+                rel.append("split")
+            if any(x.split(":")[0] == l.split(":")[0] for x in others):
+                rel.append("merged_within_batch")
+            if any(x.split(":")[0] != l.split(":")[0] for x in others):
+                rel.append("merged_across_batches")
+            maps.append(dict(level=level, batch=l.split(":")[0], local_id=l, distinct_proteins=len(lprot[l]), global_ids=";".join(sorted(gs)),
+                             other_local_ids=";".join(sorted(others)), relation=";".join(rel) or "one_to_one"))
+    write(out / "local_global_family_map.tsv", maps)
+    # ---- coding anomalies
+    anom = []
+    for b in bs:
+        with gzip.open(str(s4dir(a, b) / "s4_loci.tsv.gz"), "rt") as h:
+            for r in csv.DictReader(h, delimiter="\t"):
+                if not r["translation"]:
+                    continue
+                us, ps, ts, fl = r["unit_ids"].split(";"), r["protein_ids"].split(";"), r["translation"].split(";"), r["coding_flags"].split(";")
+                for u, p, t, f in zip(us, ps, ts, fl):
+                    if t not in CODING_OK or "transl_table" in f:
+                        anom.append(dict(batch=b, global_locus_id=gl(b, r["locus_id"]), sample_key=gl(b, r["carrier"]), contig=r["contig"],
+                                         core_start=r["core_start"], core_end=r["core_end"], category=r["category"], cds_class=r["cds_class"],
+                                         unit_id=u, protein_id=p, translation=t, coding_flags=f, partial_units=r["partial_units"],
+                                         pseudo_units=r["pseudo_units"], notes=r["notes"][:300]))
+    write(out / "coding_anomalies.tsv", anom)
+    # ---- stage-2 manifests (metadata only)
+    write(out / "assembly_run_links.tsv.gz", links)
+    verified = {}
+    for p in (BASELINE / "s5_readcheck_main").glob("verify_*.json"):
+        v = json.loads(p.read_text())
+        verified[v["run"]["run"]] = v
+    rrows = []
+    for run, r in sorted(runs.items()):
+        v = verified.get(run)
+        lf = v["local_file"] if v else ""
+        rrows.append(dict(batch=r["batch"], run=run, biosample=r["sample_accession"], study=r["study_accession"],
+                          platform=r["instrument_platform"], instrument_model=r["instrument_model"], read_type=r["read_type"],
+                          read_type_evidence=r["read_type_evidence"], usable=r["usable"], unusable_reasons=r["unusable_reasons"],
+                          base_count=r["base_count"], fastq_ftp=r["fastq_ftp"], fastq_bytes=r["fastq_bytes"], fastq_md5=r["fastq_md5"],
+                          local_status=("verified_local" if lf and os.path.exists(lf) else "verified_record_file_missing") if v else "not_downloaded",
+                          local_file=lf, local_sha256=v["sha256"] if v else "", verify_record=("comamonadaceae_20261024/s5_readcheck_main/verify_%s.json" % run) if v else "",
+                          repair=json.dumps(v["repair"]) if v and v.get("repair") else ""))
+    write(out / "read_run_manifest.tsv.gz", rrows)
+    rinfo = {r["run"]: r for r in rrows}
+    runs_by = defaultdict(set)
+    for l in links:
+        runs_by[gl(l["batch"], l["biosample"])].add(l["run"])
+    for r in rrows:
+        runs_by[gl(r["batch"], r["biosample"])].add(r["run"])
+    mrows = []
+    for x in core_rows:
+        b = x["batch"]
+        for role, ss in (("carrier", [x["biosample"]]), ("partner_anchored", split(x["partners_anchored"])),
+                         ("partner_not_anchored", split(x["partners_not_anchored"]))):
+            for s in ss:
+                sk = gl(b, s)
+                rs = sorted(runs_by.get(sk, ()))
+                known = [r for r in rs if r in rinfo]
+                use = [r for r in known if rinfo[r]["usable"] == "True"]
+                loc_ok = [r for r in use if rinfo[r]["local_status"] == "verified_local"]
+                remote = [r for r in use if r not in loc_ok]
+                est = sum(nbytes(rinfo[r]["fastq_bytes"]) for r in remote)
+                status = ("no_linked_runs" if not rs else "runs_without_metadata" if not known else "no_usable_runs" if not use
+                          else "usable_runs_local_verified" if not remote else "usable_runs_partly_local" if loc_ok else "usable_runs_remote_only")
+                mrows.append(dict(global_locus_id=x["global_locus_id"], batch=b, category=x["category"], role=role, sample_key=sk, biosample=s,
+                                  assembly=cat[sk]["assembly"], linked_runs=";".join(rs), read_types=";".join(sorted({rinfo[r]["read_type"] for r in known})),
+                                  usable_runs=";".join(use), local_verified_runs=";".join(loc_ok), runs_missing_metadata=";".join(r for r in rs if r not in rinfo),
+                                  status=status, est_download_bytes=est))
+    write(out / "read_batch_manifest.tsv.gz", mrows)
+    schema = dict(
+        read_evidence=["evidence_id", "global_locus_id", "test_id", "run", "sample_key", "role", "caller_version", "count_unit",
+                       "present", "absent", "present_matched", "absent_matched", "ambiguous", "locus_ambiguous", "off_locus",
+                       "verdict", "evidence_level", "conflict", "created"],
+        new_read_contexts=["context_id", "query_global_locus_id", "query_core_sha256", "run", "sample_key", "core_match_identity",
+                           "core_match_cov", "U_context", "D_context", "U_sha256", "D_sha256", "molecules", "count_unit",
+                           "assembly_placement", "placement_status", "review_status", "created"])
+    for k, cols in schema.items():
+        write(out / ("%s.tsv" % k), [], cols)
+    # ---- pilot read evidence links (baseline Comamonadaceae read check)
+    base = {}
+    for c in LISTS:
+        for r in read(BASELINE / "s4_s3_full_v02" / ("list_%s.tsv" % c)):
+            base[r["locus_id"]] = r
+    key = {("comamonadaceae", x["biosample"], x["contig"], x["core_start"], x["core_end"]): x for x in core_rows if x["batch"] == "comamonadaceae"}
+    plinks = []
+    for r in read(BASELINE / "s5_readcheck_main" / "readcheck_loci.tsv"):
+        bl = base.get(r["locus_id"], {})
+        k = ("comamonadaceae", r["carrier"], bl.get("contig"), str(bl.get("core_start")), str(bl.get("core_end")))
+        x = key.get(k)
+        plinks.append(dict(pilot_locus_id=r["locus_id"], pilot_set="comamonadaceae_20261024/s5_readcheck_main", carrier=r["carrier"],
+                           contig=bl.get("contig", ""), core_start=bl.get("core_start", ""), core_end=bl.get("core_end", ""),
+                           pilot_category=bl.get("category", ""), evidence_level=r["evidence_level"], test_verdicts=r["test_verdicts"],
+                           global_locus_id=x["global_locus_id"] if x else "", stage1_category=x["category"] if x else "",
+                           link_basis="exact_carrier_contig_core" if x else "no_exact_match_in_stage1_catalog",
+                           scope="this locus only; not propagated to families, architectures or other loci"))
+    write(out / "pilot_read_evidence_links.tsv", plinks)
+    # ---- summary
+    def stats(xs, ii):
+        fams = {i["family_id"] for i in ii}
+        return dict(loci=len(xs), samples=len({x["sample_key"] for x in xs}), assemblies=len({x["assembly"] for x in xs}),
+                    bioprojects=len({x["bioproject"] for x in xs}), organism_labels=len({x["organism_label"] for x in xs}),
+                    categories=dict(Counter(x["category"] for x in xs)), protein_instances=len(ii),
+                    protein_accessions=len({i["protein_id"] for i in ii}), distinct_proteins=len({i["protein_sha256"] for i in ii}),
+                    families=len(fams), homology_groups=len({i["homology_id"] for i in ii}),
+                    architectures=len({x["architecture_id"] for x in xs if x["architecture_id"]}),
+                    distinct_core_sequences=len({x["core_sha256"] for x in xs}))
+    summ = dict(version=VERSION, evidence_source=EVIDENCE, read_evidence_status=READ_STATUS, batches=bs,
+                member_min=MEMBER_MIN, settings=MMSEQS_SETTINGS, cluster_run=json.loads((w / "mmseqs" / "cluster_run.json").read_text()))
+    summ["global"] = stats(core_rows, inst)
+    summ["global"]["member_check"] = {lv: dict(members=len(assign[lv]), passed=sum(1 for m in assign[lv] if check[(lv, m)][4]),
+                                               fail=sorted(m for m in assign[lv] if not check[(lv, m)][4])) for lv in MMSEQS_SETTINGS}
+    pb = defaultdict(set)
+    for i in inst:
+        pb[i["protein_sha256"]].add(i["batch"])
+    fb = {f["family_id"]: f["batches"] for f in ftab}
+    summ["global"]["proteins_in_more_than_one_batch"] = sum(1 for v in pb.values() if len(v) > 1)
+    summ["global"]["families_in_more_than_one_batch"] = sum(1 for v in fb.values() if v > 1)
+    summ["global"]["sum_of_local_families"] = len({i["local_family_id"] for i in inst})
+    summ["global"]["sum_of_local_distinct_proteins"] = len({(i["batch"], i["protein_sha256"]) for i in inst})
+    summ["global"]["local_family_relations"] = dict(Counter(m["relation"] for m in maps if m["level"] == "family"))
+    summ["per_batch"] = {}
+    for b in bs:
+        xs = [x for x in core_rows if x["batch"] == b]
+        ii = [i for i in inst if i["batch"] == b]
+        st = stats(xs, ii)
+        st["local_families"] = len({i["local_family_id"] for i in ii})
+        st["coding_anomaly_records"] = dict(Counter(r["translation"] for r in anom if r["batch"] == b))
+        mm = [m for m in mrows if m["batch"] == b and m["role"] == "carrier"]
+        st["carrier_read_status_loci"] = dict(Counter(m["status"] for m in mm))
+        summ["per_batch"][b] = st
+    summ["coding_anomalies"] = dict(records=len(anom), by_translation=dict(Counter(r["translation"] for r in anom)),
+                                    loci=len({r["global_locus_id"] for r in anom}),
+                                    by_category=dict(Counter(r["category"] for r in anom)))
+    mm = [m for m in mrows if m["role"] == "carrier"]
+    summ["read_metadata"] = dict(
+        carrier_loci_status=dict(Counter(m["status"] for m in mm)),
+        runs=len(rrows), runs_usable=sum(1 for r in rrows if r["usable"] == "True"),
+        runs_verified_local=sum(1 for r in rrows if r["local_status"] == "verified_local"),
+        distinct_usable_remote_runs_for_candidate_loci=len({r for m in mrows for r in split(m["usable_runs"]) if r not in split(m["local_verified_runs"])}),
+        est_download_bytes_distinct_runs=sum(nbytes(rinfo[r]["fastq_bytes"]) for r in
+                                             {r for m in mrows for r in split(m["usable_runs"]) if r not in split(m["local_verified_runs"])}),
+        manifest_rows=len(mrows), downloads_started=0)
+    summ["pilot_read_evidence_links"] = dict(Counter(p["link_basis"] for p in plinks))
+    summ["problems"] = dict(problems)
+    (out / "catalog_summary.json").write_text(json.dumps(summ, indent=1) + "\n")
+    big = [w / "proteins.faa", w / "candidate_cores.fa"] + [w / "mmseqs" / (lv + x) for lv in MMSEQS_SETTINGS for x in ("_cluster.tsv", "_members.m8")]
+    idx = dict(version=VERSION, created=time.strftime("%Y-%m-%dT%H:%M:%S%z"), commit=a.commit,
+               command="sbatch experiments/fna_pool/stage1_catalog.sbatch (proteins -> cluster -> catalog)",
+               files={str(p): sha256(p) for p in big},
+               inputs={b: {f: sha256(s4dir(a, b) / f) for f in ("candidate_loci_families.tsv", "seed_catalog.fa", "seed_catalog.tsv",
+                                                                  "list_annotation_pending.tsv", "protein_members.tsv")} for b in bs})
+    (out / "scratch_files.json").write_text(json.dumps(idx, indent=1) + "\n")
+    print(json.dumps(summ["global"], indent=1)[:4000])
+    print("done %.0fs" % (time.time() - t0))
+
+
+def main():
+    p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    p.add_argument("mode", choices=["proteins", "cluster", "catalog"])
+    p.add_argument("--scratch", type=Path, default=PROJ / "fna_pool" / POOL)
+    p.add_argument("--work", type=Path, default=PROJ / "fna_pool" / POOL / "stage1_catalog")
+    p.add_argument("--out", type=Path, default=HERE / POOL / "stage1_catalog")
+    p.add_argument("--mmseqs", default=str(PROJ / "env/s4/bin/mmseqs"))
+    p.add_argument("--threads", type=int, default=8)
+    p.add_argument("--commit", default="")
+    p.add_argument("--batches", nargs="*", help="restrict to these batches (tests)")
+    a = p.parse_args()
+    dict(proteins=cmd_proteins, cluster=cmd_cluster, catalog=cmd_catalog)[a.mode](a)
+
+
+if __name__ == "__main__":
+    main()
