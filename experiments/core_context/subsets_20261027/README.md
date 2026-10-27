@@ -205,16 +205,16 @@ pairs, then one occurrence per class.
 | comamonas | PF_147add17340c ISL3 transposase | 1,161–1,221 | 29 / 3 / 29 |
 | comamonas | PF_4a2352cf6318 IS481 transposase | 966–987 | 6 / 2 / 6 |
 | comamonas | PF_2d92c93a9d2c hypothetical protein | 255 | 8 / 4 / 7 |
-| delftia | PF_3070024975f6 IS481 transposase | 1,188 | 21 / 5 / 13 |
-| delftia | PF_4b70bb8e2b9d IS5 transposase | 809–811 | 30 / 4 / 18 |
+| delftia | PF_3070024975f6 IS481 transposase | 1,164–1,188 | 21 / 5 / 13 |
+| delftia | PF_4b70bb8e2b9d IS5 transposase | 782–811 | 30 / 4 / 18 |
 | delftia | PF_ad056eba1256 IS5 transposase | 793 | 15 / 1 / 14 |
 | paracidovorax | PF_34809b3c6b4f ISAav5 (IS481-like) | 948 | 54 / 3 / 36 |
 | paracidovorax | PF_2bf098df0d79 IS3 transposase | 1,565 | 55 / 3 / 43 |
 | paracidovorax | PF_f094f2564f99 IS5 transposase | 813 | 30 / 4 / 22 |
 
 Reading of the cases:
-- **The intended pattern.** Eight of nine are IS transposase CDS: the same protein core (identical span within a
-  family) between unrelated chromosomal genes. Examples are flagellar genes vs nitrogen regulation vs UvrA
+- **The intended pattern.** Eight of nine are IS transposase CDS: the same protein core (one protein family; spans
+  differ by at most 60 bp within a family) between unrelated chromosomal genes. Examples are flagellar genes vs nitrogen regulation vs UvrA
   neighbours (ISL3, Comamonas), and IclR / penicillin-binding protein / tryptophan synthase neighbours (IS481, Delftia).
 - **Not all are cross-strain.** Many different-context pairs are copies inside one assembly. PF_ad056eba1256 has
   15 copies, all in SAMN15905291. That is "same core, different context", but not evidence of polymorphism between
