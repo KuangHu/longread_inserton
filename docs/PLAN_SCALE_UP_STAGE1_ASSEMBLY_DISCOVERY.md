@@ -1,5 +1,11 @@
 # 跨 assembly 短插入发现的两阶段扩量计划
 
+> **2026-10-27 主线纠偏：** 发现目标是“相似 core、不同上下文”，不要求空位点。Gap 搜索仅作辅助。
+> 当前主线见 [纠偏计划](PLAN_CORE_CONTEXT_DISCOVERY.md) 和 [可运行的 core-context 原型](../experiments/core_context/README.md)。
+> 下文已完成的 fna_pool Stage 1/2 是 **gap-derived 辅助目录与已知位点验证**，不是新主线完成。
+> 新入口已通过 H16/H850 真实 smoke（旧 R33 六位置找回），但 GFF3 完整性、独立蛋白入口和精细上下文分组仍待接入。
+
+
 执行对象：负责 `KuangHu/longread_inserton` 的 agent。
 
 本轮任务是完成第一步：冻结目标 assembly 池，下载并核验全部入选 FNA 及配套注释，完成跨 FNA callout，交付可供后续长读段检索的候选目录。请实施并验收第一步，不要只返回另一份计划。第二步仅定义接口，本轮不新增 long-read 下载、比对或新位点搜索任务。

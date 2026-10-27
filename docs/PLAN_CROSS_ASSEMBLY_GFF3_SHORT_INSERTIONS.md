@@ -1,5 +1,11 @@
 # Download → 合并 → 跨 FNA callout → Nanopore/PacBio 关联计划
 
+> **2026-10-27 主线纠偏：** 发现目标是“相似 core、不同上下文”，不要求空位点。Gap 搜索仅作辅助。
+> 当前主线见 [纠偏计划](PLAN_CORE_CONTEXT_DISCOVERY.md) 和 [可运行的 core-context 原型](../experiments/core_context/README.md)。
+> 下文已完成的 fna_pool Stage 1/2 是 **gap-derived 辅助目录与已知位点验证**，不是新主线完成。
+> 新入口已通过 H16/H850 真实 smoke（旧 R33 六位置找回），但 GFF3 完整性、独立蛋白入口和精细上下文分组仍待接入。
+
+
 版本：v2，2026-10-24（America/Los_Angeles）。状态：端到端执行计划，待分阶段实现。
 GFF3 小试验置于附录，计划主体覆盖完整数据流程。
 

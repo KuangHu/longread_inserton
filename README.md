@@ -1,5 +1,11 @@
 # multisite-insertion
 
+> **2026-10-27 主线纠偏：** 发现目标是“相似 core、不同上下文”，不要求空位点。Gap 搜索仅作辅助。
+> 当前主线见 [纠偏计划](docs/PLAN_CORE_CONTEXT_DISCOVERY.md) 和 [可运行的 core-context 原型](experiments/core_context/README.md)。
+> 下文已完成的 fna_pool Stage 1/2 是 **gap-derived 辅助目录与已知位点验证**，不是新主线完成。
+> 新入口已通过 H16/H850 真实 smoke（旧 R33 六位置找回），但 GFF3 完整性、独立蛋白入口和精细上下文分组仍待接入。
+
+
 从**组装 FASTA** 中寻找“内部相似、外部不同”的多位点重复区段，并导出候选
 `upstream + insertion + downstream`。无需 perfect empty site。
 
