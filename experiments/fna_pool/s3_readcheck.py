@@ -242,7 +242,11 @@ def cmd_content(a):
 
 def verified_runs(a):
     out = []
+    allowed = {r["run"] for r in read(a.runs_allowed)} if getattr(a, "runs_allowed", None) else None
     for r in sample_runs(a.pool_dir, {a.sample})[a.sample]:
+        if allowed is not None and r["run_accession"] not in allowed:
+            print(a.sample, r["run_accession"], "not in the allowed run list", file=sys.stderr)
+            continue
         v = a.reads / r["run_accession"] / "verify.json"
         if not v.exists():
             print(a.sample, r["run_accession"], "not fetched", file=sys.stderr)
@@ -476,14 +480,17 @@ def read_calls(best, galns, geo, qlen):
     return out
 
 
-def classify(tests, runs):
-    """runs: [(allele PAF, genome PAF or None, {read: molecule} or None)]. Returns (counts[(test_id, role)], number
-    of molecules supporting 0 / 1 / >= 2 loci)."""
+def classify(tests, runs, records=None):
+    """runs: [(allele PAF, genome PAF or None, {read: molecule} or None[, run id])]. Returns (counts[(test_id, role)],
+    number of molecules supporting 0 / 1 / >= 2 loci). records (a list) receives one entry per molecule x (test, role)
+    with the run, the molecule, its read records and the call counted; counting is the same with or without it."""
     geo = {t["test_id"]: test_geometry(t) for t in tests}
     test_locus = {t["test_id"]: t["locus_id"] for t in tests}
     counts = defaultdict(Counter)
     multi = Counter()
-    for allele_paf, genome_paf, mol in runs:
+    for item in runs:
+        allele_paf, genome_paf, mol = item[:3]
+        run = item[3] if len(item) > 3 else ""
         best, qlen = defaultdict(dict), {}
         for b in parse_paf(allele_paf):
             tid, role, al = b["t"].split("|")
@@ -498,23 +505,30 @@ def classify(tests, runs):
             for g in parse_paf(genome_paf):
                 galns[g["q"]].append(g)
         per_mol = defaultdict(lambda: defaultdict(set))  # molecule -> (tid, role) -> read-level calls
+        reads_of = defaultdict(lambda: defaultdict(list))
         for name, hits in best.items():
             m = mol.get(name, name) if mol else name
             for k, c in read_calls(hits, galns[name] if genome_paf else None, geo, qlen[name]).items():
                 per_mol[m][k].add(c)
-        for per in per_mol.values():
+                reads_of[m][k].append("%s:%s" % (name, c))
+        for m, per in per_mol.items():
             loci = set()
             for k, cs in per.items():
                 base = {c.split("_matched")[0] for c in cs}
                 if len(base & {"P", "A", "ambiguous"}) > 1:
                     counts[k]["ambiguous"] += 1  # records of one molecule disagree
+                    if records is not None:
+                        records.append((k[0], k[1], run, m, "ambiguous_molecule_disagrees", ";".join(sorted(reads_of[m][k]))))
                     continue
                 c = next(x for x in ("P", "A", "ambiguous", "locus_ambiguous", "off_locus", "cigar_fail") if x in base)
                 counts[k][c] += 1
+                matched = c in ("P", "A") and c + "_matched" in cs
                 if c in ("P", "A"):
                     loci.add(test_locus[k[0]])
-                    if c + "_matched" in cs:
+                    if matched:
                         counts[k][c + "_matched"] += 1
+                if records is not None:
+                    records.append((k[0], k[1], run, m, c + ("_matched" if matched else ""), ";".join(sorted(reads_of[m][k]))))
             multi[min(len(loci), 2)] += 1
     return counts, multi
 
@@ -566,8 +580,16 @@ def cmd_summarize(a):
         unit[d["sample"]] = "read_records" if any(r["count_unit"] == "read_records" for r in d["runs"]) else "molecules"
         for r in d["runs"]:
             mol = {x["read"]: x["molecule"] for x in read(paf_dir / ("molecules_%s_%s.tsv" % (d["sample"], r["run"])))}
-            runs.append((paf_dir / ("%s_%s.paf" % (d["sample"], r["run"])), paf_dir / ("genome_%s_%s.paf" % (d["sample"], r["run"])), mol))
-    counts, multi = classify(tests, runs)
+            runs.append((paf_dir / ("%s_%s.paf" % (d["sample"], r["run"])), paf_dir / ("genome_%s_%s.paf" % (d["sample"], r["run"])), mol,
+                         r["run"]))
+    recs = [] if a.records else None
+    counts, multi = classify(tests, runs, recs)
+    if a.records:
+        role_sample = {(t["test_id"], role): t["carrier" if role == "C" else "empty"] for t in tests for role in "CE"}
+        with gzip.open(str(a.out / "support_records.tsv.gz"), "wt") as h:
+            h.write("test_id\trole\tsample\trun\tmolecule\tcall\tread_calls\n")
+            for x in sorted(recs):
+                h.write("%s\t%s\t%s\t%s\t%s\t%s\t%s\n" % (x[0], x[1], role_sample[(x[0], x[1])], x[2], x[3], x[4], x[5]))
     rows = []
     for t in tests:
         r = dict(t)
@@ -633,6 +655,8 @@ def main():
     p.add_argument("--transfer-only", action="store_true", help="fetch: bytes and MD5 only, content checks left to 'content'")
     p.add_argument("--loci-ids", type=Path, help="alleles: TSV whose first column (after a header) lists the loci to test")
     p.add_argument("--out", type=Path)
+    p.add_argument("--records", action="store_true", help="summarize: also write support_records.tsv.gz (one row per molecule x test x role x run)")
+    p.add_argument("--runs-allowed", type=Path, help="map/genome: TSV with a 'run' column; only these runs are used")
     a = p.parse_args()
     dict(alleles=cmd_alleles, fetch=cmd_fetch, content=cmd_content, map=cmd_map, genome=cmd_genome, summarize=cmd_summarize)[a.mode](a)
 
