@@ -14,6 +14,7 @@
 #   map        array task i: sample i of samples.txt -> alleles and whole assembly (skips samples already done)
 #   summarize  v0.3 verdicts with per-molecule support records, then the read-evidence layer, comparison and next batch
 #   diagnose   <sample>: whole run mapped to the sample's own assembly, facts on why no read spans its sites
+#   diagnose_all  array over diag_samples.txt (every sample with allowed runs): the same facts as run-to-assembly QC
 #   followup   open items of this batch, read types behind each side, priority-1 download chunks (metadata only)
 #   regress    summarize the baseline pilot work dir again with this code; outputs must equal the committed pilot
 # Usage: sbatch stage2_readcheck.sbatch <stage> [sample]   (map: sbatch --array=0-<n-1> ...)
@@ -61,6 +62,11 @@ summarize)
     ;;
 diagnose)
     python $HERE/stage2_readcheck.py diagnose --work $W --out $REPO --reads $READS --sample ${2:?sample} --jobs $SLURM_CPUS_PER_TASK
+    ;;
+diagnose_all)
+    S=$(sed -n "$((SLURM_ARRAY_TASK_ID + 1))p" $W/diag_samples.txt)
+    [ -e $REPO/diagnose_$S/runs.tsv ] && { echo "$S done before"; exit 0; }
+    python $HERE/stage2_readcheck.py diagnose --work $W --out $REPO --reads $READS --sample $S --jobs $SLURM_CPUS_PER_TASK
     ;;
 followup)
     python $HERE/stage2_readcheck.py followup --work $W --out $REPO
