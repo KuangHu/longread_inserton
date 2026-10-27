@@ -1,0 +1,24 @@
+{
+  "subset": "paracidovorax",
+  "product_hint_by_structure": {
+    "single_gene:hypothetical": 4,
+    "single_gene:integrase_recombinase_resolvase": 1,
+    "single_gene:other": 15,
+    "single_gene:translation_or_ribosomal": 1,
+    "single_gene:transposase_or_IS": 8,
+    "two_gene:hypothetical": 1,
+    "two_gene:other": 9
+  },
+  "single_gene_graph_overlap": {
+    "any_occurrence_in_graph_diff_group:non_IS_hint": 13,
+    "any_occurrence_in_graph_diff_group:IS_hint": 8,
+    "none_in_graph_diff_group:non_IS_hint": 8
+  },
+  "case_rule": "are fixed by rule:\nsingle-gene cores with >= 1 different_context_candidate pair, ranked by context classes linked by those pairs, then\nsamples, then core key; the top three are drawn with one occurrence per context class (up to four), plus the\nsimilar-context core with the most samples as a reference. Neighbour genes are coloured by homology group.",
+  "cases": [
+    "different-context candidate PF_2bf098df0d79: IS3 family transposase (55 occ, 3 samples, 43 classes)",
+    "different-context candidate PF_34809b3c6b4f: IS481-like element ISAav5 family transposase (54 occ, 3 samples, 36 classes)",
+    "different-context candidate PF_f094f2564f99: IS5 family transposase (30 occ, 4 samples, 22 classes)",
+    "similar-context reference PF_002499b6f380: leucine--tRNA ligase"
+  ]
+}

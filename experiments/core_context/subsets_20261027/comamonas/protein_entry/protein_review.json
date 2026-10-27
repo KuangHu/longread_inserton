@@ -1,0 +1,27 @@
+{
+  "subset": "comamonas",
+  "product_hint_by_structure": {
+    "single_gene:hypothetical": 10,
+    "single_gene:integrase_recombinase_resolvase": 3,
+    "single_gene:other": 52,
+    "single_gene:translation_or_ribosomal": 2,
+    "single_gene:transposase_or_IS": 17,
+    "two_gene:hypothetical": 1,
+    "two_gene:integrase_recombinase_resolvase": 2,
+    "two_gene:other": 21,
+    "two_gene:transposase_or_IS": 2
+  },
+  "single_gene_graph_overlap": {
+    "any_occurrence_in_graph_diff_group:non_IS_hint": 23,
+    "any_occurrence_in_graph_diff_group:IS_hint": 15,
+    "none_in_graph_diff_group:non_IS_hint": 44,
+    "none_in_graph_diff_group:IS_hint": 2
+  },
+  "case_rule": "are fixed by rule:\nsingle-gene cores with >= 1 different_context_candidate pair, ranked by context classes linked by those pairs, then\nsamples, then core key; the top three are drawn with one occurrence per context class (up to four), plus the\nsimilar-context core with the most samples as a reference. Neighbour genes are coloured by homology group.",
+  "cases": [
+    "different-context candidate PF_147add17340c: ISL3 family transposase (29 occ, 3 samples, 29 classes)",
+    "different-context candidate PF_7148aa16e472: IS21-like element helper ATPase IstB (14 occ, 2 samples, 13 classes)",
+    "different-context candidate PF_eed8648a18cd: IS3 family transposase (9 occ, 4 samples, 8 classes)",
+    "similar-context reference PF_001876298b8c: argininosuccinate lyase"
+  ]
+}

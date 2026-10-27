@@ -119,3 +119,71 @@ These are GFF3 overlap previews, not the S4 coding check:
 - **Next step for boundaries.** Merge runs of adjacent blocks with co-occurring copy number into candidate cores
   before comparing contexts, then use CDS boundaries (S4 checks). The protein entry is independent of graph
   boundaries and is the next step.
+
+## Protein entry (all FAA/GFF3; `protein_context.py`, job 27328469)
+
+Starts from every GFF3 CDS and RNA of each subset, not from graph blocks or gap lists.
+- **Coding check:** the S4 coding check on every CDS against its FAA.
+- **Clustering:** MMseqs2 17.b804f at the frozen S4 settings (family 0.9/0.8, homology group 0.5/0.8), with every member
+  aligned to its final representative.
+- **Cores:**
+  - single-gene: one complete CDS; key = protein family;
+  - two-gene: two consecutive complete CDS; key = families in order with relative orientation, canonical over strands,
+    spacing kept per occurrence.
+- **Context:** K=3 neighbour genes on each side in core orientation, labelled by homology group. Windows wrap only on
+  GFF3 `Is_circular=true` contigs.
+- **Relations:** similar = shared label on both sides; different candidate = none shared on either side; one side
+  shared = unresolved.
+
+Each step took < 30 s and < 1.1 GB. The job ran with `protein_context.py` not yet committed (log `dirty=3`); that code
+is committed unchanged here.
+
+| | comamonas | delftia | paracidovorax |
+|---|---:|---:|---:|
+| genes (CDS + RNA) / complete CDS | 26,338 / 25,287 | 41,878 / 39,797 | 18,892 / 18,320 |
+| coding status match / pseudo / transl_except match | 25,282 / 468 / 5 | 39,791 / 1,385 / 6 | 18,320 / 315 / 0 |
+| distinct proteins / families / homology groups | 19,420 / 11,177 / 8,005 | 26,523 / 13,101 / 9,689 | 11,533 / 6,593 / 5,892 |
+| member check failures (before repair) | 0 | 0 | 0 |
+| single-gene cores with ≥ 2 occurrences (multi-copy) | 4,939 (231) | 6,659 (195) | 4,334 (86) |
+| single-gene pairs: similar / different candidate / one side / edge | 26,910 / 922 / 1,761 / 2 | 69,763 / 1,383 / 5,870 / 0 | 20,970 / 3,676 / 1,040 / 0 |
+| single-gene cores with ≥ 1 different-context candidate | 84 | 142 | 29 |
+| two-gene cores with ≥ 2 occurrences (multi-copy) | 4,708 (130) | 6,739 (117) | 4,244 (52) |
+| two-gene pairs: similar / different candidate / one side | 22,972 / 142 / 906 | 56,271 / 220 / 3,585 | 18,388 / 42 / 675 |
+| two-gene cores with ≥ 1 different-context candidate | 26 | 58 | 10 |
+
+Product keywords for single-gene cores with a different-context candidate are a reading aid, not a
+classification:
+
+| | transposase/IS | integrase etc. | hypothetical | other |
+|---|---:|---:|---:|---:|
+| comamonas | 17 | 3 | 10 | 54 |
+| delftia | 14 | 1 | 26 | 101 |
+| paracidovorax | 8 | 1 | 4 | 16 |
+
+Ranked by context classes linked by different-candidate pairs, the top cores are IS transposases in all three
+subsets: ISL3, IS3, IS5, IS481, IS110 and IS30 families, IstB, and a group II intron RT in Delftia. Most other
+different-context cores are not mobile-like by product and need paralog / rearrangement review.
+
+Overlap with the graph entry (single-gene cores with a different-context candidate; does any occurrence lie in a
+graph block group that has a graph different-context pair?):
+
+| | IS hint: yes / no | other: yes / no |
+|---|---:|---:|
+| comamonas | 15 / 2 | 23 / 44 |
+| delftia | 12 / 2 | 47 / 81 |
+| paracidovorax | 8 / 0 | 13 / 8 |
+
+The two entries agree on most IS-like cores. Most non-IS protein candidates have no graph counterpart.
+
+Outputs per subset in `<subset>/protein_entry/`:
+- `protein_summary.json`, `protein_cores.tsv`, `protein_occurrences.tsv.gz` (oriented neighbour labels and gene ids);
+- `protein_pairs.tsv.gz` (all relations), `member_check_repairs.tsv` (empty);
+- `different_context_cores.tsv`, `protein_review.json`;
+- `cases_protein.svg`: the top three different-context cores by the fixed rule, one occurrence per context class,
+  plus a similar-context reference.
+
+Not done yet:
+- complete-CDS boundaries of multi-gene elements;
+- the paralog / rearrangement filter;
+- site groups (S6);
+- read checks.

@@ -1,0 +1,95 @@
+{
+  "version": "core_context_protein_v0.1",
+  "discovery_entry": "all_faa_gff3_proteins",
+  "gap_inputs": [],
+  "reads_inputs": [],
+  "evidence_source": "assembly_only",
+  "K_neighbours": 3,
+  "genes": 18892,
+  "proteins_distinct": 11533,
+  "coding_status": {
+    "match": 18320,
+    "pseudo": 315,
+    "rna": 257
+  },
+  "complete_cds": 18320,
+  "member_check": {
+    "family_pass": 11533,
+    "homology_group_pass": 11533
+  },
+  "member_repairs": 0,
+  "mmseqs_version": "17.b804f",
+  "mmseqs_settings": {
+    "family": [
+      "--min-seq-id",
+      "0.9",
+      "-c",
+      "0.8",
+      "--cov-mode",
+      "0",
+      "--cluster-mode",
+      "0",
+      "--cluster-reassign",
+      "1"
+    ],
+    "homology_group": [
+      "--min-seq-id",
+      "0.5",
+      "-c",
+      "0.8",
+      "--cov-mode",
+      "0",
+      "--cluster-mode",
+      "0",
+      "--cluster-reassign",
+      "1"
+    ]
+  },
+  "families": 6593,
+  "homology_groups": 5892,
+  "structures": {
+    "single_gene": {
+      "occurrences_considered": 18320,
+      "core_keys_with_2plus": 4334,
+      "occurrences_kept": 16061,
+      "core_keys_multicopy": 86,
+      "core_keys_with_different_context_candidate": 29,
+      "core_keys_2plus_context_classes": 332,
+      "pairs": 25686,
+      "relations": {
+        "similar_context": 20970,
+        "different_context_candidate": 3676,
+        "one_side_shared_unresolved": 1040,
+        "edge_or_missing_context": 0
+      },
+      "different_candidate_pairs_same_sample": 1224,
+      "truncated_pair_reviews": 0
+    },
+    "two_gene": {
+      "occurrences_considered": 17867,
+      "core_keys_with_2plus": 4244,
+      "occurrences_kept": 14710,
+      "core_keys_multicopy": 52,
+      "core_keys_with_different_context_candidate": 10,
+      "core_keys_2plus_context_classes": 244,
+      "pairs": 19105,
+      "relations": {
+        "similar_context": 18388,
+        "different_context_candidate": 42,
+        "one_side_shared_unresolved": 675,
+        "edge_or_missing_context": 0
+      },
+      "different_candidate_pairs_same_sample": 8,
+      "truncated_pair_reviews": 0
+    }
+  },
+  "annotation_complete": false,
+  "site_groups_computed": false,
+  "production_ready": false,
+  "limitations": [
+    "Neighbour homology-group overlap is a context diagnostic, not an orthology or site test.",
+    "Paralogs (e.g. tuf, rRNA-adjacent genes) and rearrangements also give different contexts.",
+    "Single-gene and two-gene cores are not complete insertion boundaries.",
+    "Context classes are provisional and are not S6 site groups."
+  ]
+}

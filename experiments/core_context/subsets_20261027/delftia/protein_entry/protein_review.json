@@ -1,0 +1,29 @@
+{
+  "subset": "delftia",
+  "product_hint_by_structure": {
+    "single_gene:hypothetical": 26,
+    "single_gene:integrase_recombinase_resolvase": 1,
+    "single_gene:intron_rt": 1,
+    "single_gene:other": 99,
+    "single_gene:translation_or_ribosomal": 1,
+    "single_gene:transposase_or_IS": 14,
+    "two_gene:hypothetical": 13,
+    "two_gene:integrase_recombinase_resolvase": 2,
+    "two_gene:other": 40,
+    "two_gene:phage_like": 1,
+    "two_gene:transposase_or_IS": 2
+  },
+  "single_gene_graph_overlap": {
+    "any_occurrence_in_graph_diff_group:non_IS_hint": 47,
+    "any_occurrence_in_graph_diff_group:IS_hint": 12,
+    "none_in_graph_diff_group:non_IS_hint": 81,
+    "none_in_graph_diff_group:IS_hint": 2
+  },
+  "case_rule": "are fixed by rule:\nsingle-gene cores with >= 1 different_context_candidate pair, ranked by context classes linked by those pairs, then\nsamples, then core key; the top three are drawn with one occurrence per context class (up to four), plus the\nsimilar-context core with the most samples as a reference. Neighbour genes are coloured by homology group.",
+  "cases": [
+    "different-context candidate PF_4b70bb8e2b9d: IS5 family transposase (30 occ, 4 samples, 18 classes)",
+    "different-context candidate PF_ad056eba1256: IS5 family transposase (15 occ, 1 samples, 14 classes)",
+    "different-context candidate PF_3070024975f6: IS481 family transposase (21 occ, 5 samples, 13 classes)",
+    "similar-context reference PF_002440e45d00: branched-chain amino acid transaminase"
+  ]
+}
