@@ -96,34 +96,42 @@ def is_complete(u, status, flags, has_protein):
             and status in CODING_OK and not flags)
 
 
+def genes_one(m):
+    """Gene rows, {sha256: protein} and input hashes of one manifest row (hashes checked against the manifest)."""
+    rows, proteins, inputs = [], {}, []
+    files = {k: m[k] for k in ('fasta', 'gff3', 'faa')}
+    for k, p in files.items():
+        want = m.get({'fasta': 'fna_sha256', 'gff3': 'gff3_sha256', 'faa': 'faa_sha256'}[k])
+        got = digest(p)
+        if want and want != got:
+            raise ValueError('input hash differs from manifest: ' + p)
+        inputs.append(dict(sample=m['sample'], kind=k, path=p, sha256=got))
+    seqs, faa = read_fna(m['fasta']), read_faa(m['faa'])
+    circular = {l.split('\t')[0] for l in open(m['gff3']) if '\tregion\t' in l and 'Is_circular=true' in l}
+    units = parse_gff(m['gff3'], {c: len(s) for c, s in seqs.items()})
+    for contig in sorted(units):
+        us = sorted(units[contig], key=lambda u: (u['segments'][0][0], u['segments'][-1][1], u['id']))
+        for i, u in enumerate(us):
+            status, flags = ('rna', []) if u['type'] != 'CDS' else coding_check(u, seqs[contig], faa)
+            p = faa.get(u['protein']) if u['type'] == 'CDS' else None
+            h = hashlib.sha256(p.encode()).hexdigest() if p else ''
+            if p:
+                proteins[h] = p
+            rows.append(dict(gene_uid='%s|%s|%d' % (m['sample'], contig, i), sample=m['sample'], contig=contig, index=i,
+                start0=u['segments'][0][0], end0=u['segments'][-1][1], strand=u['strand'], type=u['type'], unit_id=u['id'],
+                protein_id=u['protein'], protein_sha256=h, product=u['product'], partial=u['partial'], pseudo=u['pseudo'],
+                crosses_origin=u['crosses_origin'], coding_status=status, coding_flags=','.join(flags),
+                complete_cds=is_complete(u, status, flags, bool(h)),
+                circular_contig=contig in circular, contig_length=len(seqs[contig])))
+    return rows, proteins, inputs
+
+
 def cmd_genes(a):
     a.work.mkdir(parents=True, exist_ok=False)
     rows, proteins, inputs = [], {}, []
     for m in read_tsv(a.manifest):
-        files = {k: m[k] for k in ('fasta', 'gff3', 'faa')}
-        for k, p in files.items():
-            want = m.get({'fasta': 'fna_sha256', 'gff3': 'gff3_sha256', 'faa': 'faa_sha256'}[k])
-            got = digest(p)
-            if want and want != got:
-                raise ValueError('input hash differs from manifest: ' + p)
-            inputs.append(dict(sample=m['sample'], kind=k, path=p, sha256=got))
-        seqs, faa = read_fna(m['fasta']), read_faa(m['faa'])
-        circular = {l.split('\t')[0] for l in open(m['gff3']) if '\tregion\t' in l and 'Is_circular=true' in l}
-        units = parse_gff(m['gff3'], {c: len(s) for c, s in seqs.items()})
-        for contig in sorted(units):
-            us = sorted(units[contig], key=lambda u: (u['segments'][0][0], u['segments'][-1][1], u['id']))
-            for i, u in enumerate(us):
-                status, flags = ('rna', []) if u['type'] != 'CDS' else coding_check(u, seqs[contig], faa)
-                p = faa.get(u['protein']) if u['type'] == 'CDS' else None
-                h = hashlib.sha256(p.encode()).hexdigest() if p else ''
-                if p:
-                    proteins[h] = p
-                rows.append(dict(gene_uid='%s|%s|%d' % (m['sample'], contig, i), sample=m['sample'], contig=contig, index=i,
-                    start0=u['segments'][0][0], end0=u['segments'][-1][1], strand=u['strand'], type=u['type'], unit_id=u['id'],
-                    protein_id=u['protein'], protein_sha256=h, product=u['product'], partial=u['partial'], pseudo=u['pseudo'],
-                    crosses_origin=u['crosses_origin'], coding_status=status, coding_flags=','.join(flags),
-                    complete_cds=is_complete(u, status, flags, bool(h)),
-                    circular_contig=contig in circular, contig_length=len(seqs[contig])))
+        r, p, i = genes_one(m)
+        rows += r; proteins.update(p); inputs += i
     write_tsv(a.work / 'genes.tsv.gz', rows, GENE_COLS + ['circular_contig', 'contig_length'])
     with open(a.work / 'proteins.faa', 'w') as f:
         for h in sorted(proteins):
@@ -257,15 +265,8 @@ def compare(groups, scope, keep):
     return pairs, cores
 
 
-def cmd_call(a):
-    a.out.mkdir(parents=True, exist_ok=True)
-    genes = read_tsv(a.work / 'genes.tsv.gz')
-    assign, fixes, checks = assignments(a)
-    fam, hg = assign['family'], assign['homology_group']
-    labels = {g['gene_uid']: label(g, hg) for g in genes}
-    by_contig = defaultdict(list)
-    for g in genes:
-        by_contig[(g['sample'], g['contig'])].append(g)
+def build_occurrences(by_contig, fam, hg, labels):
+    """Single- and two-gene core occurrences with K-neighbour contexts, contig by contig (sorted)."""
     occ = []
     for (sample, contig), gs in sorted(by_contig.items()):
         gs.sort(key=lambda g: int(g['index']))
@@ -289,6 +290,19 @@ def cmd_call(a):
                     products=g['product'] + ' | ' + h['product'], up=up2, down=down2))
     for o in occ:
         o['in_target_length'] = o['span'] < TARGET_MAX
+    return occ
+
+
+def cmd_call(a):
+    a.out.mkdir(parents=True, exist_ok=True)
+    genes = read_tsv(a.work / 'genes.tsv.gz')
+    assign, fixes, checks = assignments(a)
+    fam, hg = assign['family'], assign['homology_group']
+    labels = {g['gene_uid']: label(g, hg) for g in genes}
+    by_contig = defaultdict(list)
+    for g in genes:
+        by_contig[(g['sample'], g['contig'])].append(g)
+    occ = build_occurrences(by_contig, fam, hg, labels)
     groups = defaultdict(list)
     for o in occ:
         groups[(o['structure'], o['core_key'])].append(o)

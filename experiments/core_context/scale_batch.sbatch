@@ -1,0 +1,39 @@
+#!/bin/bash
+#SBATCH --job-name=core_ctx_scale
+#SBATCH --account=pc_rubinlab
+#SBATCH --partition=lr6
+#SBATCH --qos=lr_normal
+#SBATCH --nodes=1
+#SBATCH --cpus-per-task=4
+#SBATCH --mem=24G
+#SBATCH --time=12:00:00
+#SBATCH --output=/global/home/users/kh36969/logs/core_context/%x_%A_%a.out
+# Assembly-only scale-up of the protein entry (scale_entry.py), one stage per submission:
+#   genes        --array=0-<n-1>   per-assembly genes, n tasks over the batch (resumable)
+#   pool_proteins one task: distinct proteins of every manifest assembly (read-only)
+#   families     one task, more CPUs / memory (--cpus-per-task=40 --mem=180G): the pool mapping, clustered once
+#   occurrences  one task
+#   compare      --array=0-63      one shard per task over every batch in BATCHES (resumable)
+#   summarize    one task
+# Usage: sbatch [--array=..] [--cpus-per-task=.. --mem=..] scale_batch.sbatch <work> <manifest> <batch> <batches> <stage> [repo_out]
+set -euo pipefail
+WORK=${1:?work}; MAN=${2:?manifest}; B=${3:?batch}; BS=${4:?batches}; STAGE=${5:?stage}; OUT=${6:-}
+CODE=/global/home/users/kh36969/middle_insertion_callout/longread_inserton
+HERE=$CODE/experiments/core_context
+T=${SLURM_ARRAY_TASK_ID:-0}
+mkdir -p $WORK/time
+echo "[$(date -Is)] host=$(hostname) stage=$STAGE task=$T commit=$(git -C $CODE rev-parse HEAD) dirty=$(git -C $CODE status --porcelain experiments/core_context | wc -l)"
+source ~/miniconda3/etc/profile.d/conda.sh
+conda activate /global/scratch/users/kh36969/longread_callout/env/msi
+cd $HERE
+TIME="/usr/bin/time -v -o $WORK/time/${STAGE}_b${B}_${BS//,/-}_$T.time"
+case $STAGE in
+genes)       $TIME python scale_entry.py genes --manifest $MAN --work $WORK --batch $B --task $T --ntasks ${SLURM_ARRAY_TASK_COUNT:-1} ;;
+pool_proteins) $TIME python scale_entry.py pool_proteins --manifest $MAN --work $WORK ;;
+families)    $TIME python scale_entry.py families --pool --manifest $MAN --work $WORK --batch $B --threads $SLURM_CPUS_PER_TASK ;;
+occurrences) $TIME python scale_entry.py occurrences --manifest $MAN --work $WORK --batch $B ;;
+compare)     $TIME python scale_entry.py compare --work $WORK --batches $BS --shard $T ${MAX_SIG_PAIRS:+--max-sig-pairs $MAX_SIG_PAIRS} ;;
+summarize)   $TIME python scale_entry.py summarize --work $WORK --batches $BS --repo-out $OUT --regression $HERE/subsets_20261027/ucd_candidates_v0.1/candidates.tsv ;;
+esac
+grep -E "Elapsed|Maximum resident" $WORK/time/${STAGE}_b${B}_${BS//,/-}_$T.time
+echo "[$(date -Is)] done"
