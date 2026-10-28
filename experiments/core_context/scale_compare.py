@@ -14,10 +14,18 @@ and recomputes cores whose inputs changed (e.g. a new batch). --max-sig-pairs bo
 records pairs_total, pairs_accounted and pairs_not_compared; a pair in an unfinished block is never counted as
 similar, different or absent.
 
-Per signature (not per occurrence pair) the output keeps: different_context_candidate occurrence pairs, the
-same-assembly part, and the first partner signature (lowest index) with a cross-assembly and with a same-assembly
-different pair, so every occurrence with a different-context partner has a named partner. Context classes are unions
-of similar_context links (provisional, as in protein entry; not S6 site groups).
+Per signature (not per occurrence pair) the output keeps what is needed to name partners per occurrence, because one
+signature can hold occurrences of several assemblies:
+  partner_occ        different_context_candidate partner occurrences of any member (sum over partner signatures)
+  partner_by_sample  {assembly of a member: partner occurrences in that assembly}, so each occurrence gets its own
+                     same-assembly count (partner_by_sample[own]) and cross-assembly count (partner_occ - that)
+  witnesses          up to two (partner signature, assembly) with distinct assemblies, smallest first: whatever the
+                     member's assembly, one of them is in another assembly whenever a cross partner exists
+  same_first         {assembly of a member: smallest partner signature holding that assembly}
+All three merge exactly across blocks (sums, per-key minima, the two smallest distinct-assembly witnesses).
+(v1 kept one cross and one same partner signature per signature; a member whose assembly did not fit that partner
+got no named partner although it had one. Pair counts were not affected.) Context classes are unions of
+similar_context links (provisional, as in protein entry; not S6 site groups).
 """
 import hashlib
 import json
@@ -27,6 +35,7 @@ RELATIONS = ['similar_context', 'different_context_candidate', 'one_side_shared_
              'edge_or_missing_context']
 K = 3
 BLOCK_PAIRS = 2_000_000
+RECORD_VERSION = 2
 
 
 def side_sig(labels):
@@ -114,14 +123,74 @@ def run_block(sigs, mult, i0, i1):
                     parent[ri] = rj; unions.append((i, j))
             elif r == 'different_context_candidate':
                 for x, y in ((i, j), (j, i)) if i != j else ((i, i),):
-                    d = diff.setdefault(x, [0, 0, None, None])
-                    d[0] += n; d[1] += ss
-                    if n > ss and (d[2] is None or y < d[2]):
-                        d[2] = y
-                    if ss and (d[3] is None or y < d[3]):
-                        d[3] = y
-    return dict(i0=i0, i1=i1, total=dict(total), same=dict(same), unions=unions,
+                    d = diff.setdefault(x, new_partner())
+                    add_partner(d, x, y, mult)
+    return dict(v=RECORD_VERSION, i0=i0, i1=i1, total=dict(total), same=dict(same), unions=unions,
                 diff={str(k): v for k, v in diff.items()}, pairs=sum(total.values()))
+
+
+def new_partner():
+    return dict(n=0, ss=0, partner_occ=0, partner_by_sample={}, witnesses=[], same_first={})
+
+
+def keep_witnesses(ws):
+    """The two smallest (signature, assembly) entries with distinct assemblies."""
+    out, seen = [], set()
+    for j, smp in sorted(ws):
+        if smp not in seen:
+            out.append([j, smp]); seen.add(smp)
+        if len(out) == 2:
+            break
+    return out
+
+
+def add_partner(d, x, y, mult):
+    """Signature y is a different-context partner signature of x (x == y: pairs inside one signature)."""
+    n, ss = pairs_of(mult, x, y)
+    d['n'] += n; d['ss'] += ss
+    d['partner_occ'] += sum(mult[y].values())
+    for smp, m in mult[x].items():
+        k = mult[y].get(smp, 0) - (1 if x == y else 0)
+        if k > 0:
+            d['partner_by_sample'][smp] = d['partner_by_sample'].get(smp, 0) + k
+            if smp not in d['same_first'] or y < d['same_first'][smp]:
+                d['same_first'][smp] = y
+    d['witnesses'] = keep_witnesses(d['witnesses'] + [[y, smp] for smp in sorted(mult[y])[:2]])
+
+
+def merge_partner(d, e):
+    d['n'] += e['n']; d['ss'] += e['ss']; d['partner_occ'] += e['partner_occ']
+    for smp, k in e['partner_by_sample'].items():
+        d['partner_by_sample'][smp] = d['partner_by_sample'].get(smp, 0) + k
+    for smp, j in e['same_first'].items():
+        if smp not in d['same_first'] or j < d['same_first'][smp]:
+            d['same_first'][smp] = j
+    d['witnesses'] = keep_witnesses(d['witnesses'] + e['witnesses'])
+
+
+def occurrence_partners(row, smp):
+    """Per occurrence of assembly smp in a signature: (cross partners, same-assembly partners, cross witness
+    (signature, assembly) or None, same-assembly partner signature or None)."""
+    same_n = row['partner_by_sample'].get(smp, 0)
+    cross_n = row['partner_occ'] - same_n
+    wit = next(((j, s) for j, s in row['witnesses'] if s != smp), None) if cross_n > 0 else None
+    return cross_n, same_n, wit, row['same_first'].get(smp) if same_n > 0 else None
+
+
+def name_partners(occs, index, rows):
+    """occs: [(occurrence_id, assembly)] of one core; index: occurrence -> signature; rows: finalize() rows.
+    Returns {occurrence: dict(cross partners, same-assembly partners, a named partner of each kind or '')}."""
+    members = defaultdict(list)
+    for oid, smp in sorted(occs):
+        members[index[oid]].append((oid, smp))
+    out = {}
+    for oid, smp in occs:
+        cross_n, same_n, wit, same_sig = occurrence_partners(rows[index[oid]], smp)
+        cross = next(x for x, s in members[wit[0]] if s == wit[1]) if wit else ''
+        same = next(x for x, s in members[same_sig] if s == smp and x != oid) if same_sig is not None else ''
+        out[oid] = dict(diff_partners_cross=cross_n, diff_partners_same_assembly=same_n,
+                        diff_partner_cross=cross, diff_partner_same=same)
+    return out
 
 
 def finalize(sigs, mult, records):
@@ -135,18 +204,15 @@ def finalize(sigs, mult, records):
         while parent[x] != x:
             parent[x] = parent[parent[x]]; x = parent[x]
         return x
-    diff = defaultdict(lambda: [0, 0, None, None])
+    diff = defaultdict(new_partner)
     for rec in records:
         total.update(rec['total']); same.update(rec['same'])
         for i, j in rec['unions']:
             ri, rj = root(i), root(j)
             if ri != rj:
                 parent[ri] = rj
-        for k, (n, ss, pc_, ps) in rec['diff'].items():
-            d = diff[int(k)]
-            d[0] += n; d[1] += ss
-            d[2] = pc_ if d[2] is None or (pc_ is not None and pc_ < d[2]) else d[2]
-            d[3] = ps if d[3] is None or (ps is not None and ps < d[3]) else d[3]
+        for k, e in rec['diff'].items():
+            merge_partner(diff[int(k)], e)
     accounted = sum(total.values())
     done_rows = sum(r['i1'] - r['i0'] for r in records)
     summary = dict(occurrences=n_occ, assemblies=len(set().union(*[set(m) for m in mult])) if mult else 0,
@@ -154,8 +220,10 @@ def finalize(sigs, mult, records):
                    pairs_not_compared=total_pairs - accounted, complete=done_rows == len(sigs) and accounted == total_pairs,
                    **{r: total[r] for r in RELATIONS}, **{r + '_same_assembly': same[r] for r in RELATIONS},
                    context_classes_provisional=len({root(i) for i in range(len(sigs))}) if done_rows == len(sigs) else '')
-    rows = [dict(sig=i, context_class=root(i), diff_pairs=diff[i][0] if i in diff else 0,
-                 diff_pairs_same_assembly=diff[i][1] if i in diff else 0,
-                 first_diff_partner_cross=diff[i][2] if i in diff else None,
-                 first_diff_partner_same=diff[i][3] if i in diff else None) for i in range(len(sigs))]
+    rows = []
+    for i in range(len(sigs)):
+        d = diff[i] if i in diff else new_partner()
+        rows.append(dict(sig=i, context_class=root(i), diff_pairs=d['n'], diff_pairs_same_assembly=d['ss'],
+                         partner_occ=d['partner_occ'], partner_by_sample=d['partner_by_sample'],
+                         witnesses=d['witnesses'], same_first=d['same_first']))
     return summary, rows

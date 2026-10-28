@@ -15,6 +15,10 @@
 #   occurrences  one task
 #   compare      --array=0-63      one shard per task over every batch in BATCHES (resumable)
 #   summarize    one task
+#   windows      one task per batch: S6 near / host windows of target-scope occurrences (scale_review.py)
+#   s6           --array=0-63      S6 review per shard over BATCHES (needs compare + windows)
+#   boundary     --array=0-63      boundary review of the U-core-D pair candidates per shard (needs s6)
+#   s6_summarize one task
 # Usage: sbatch [--array=..] [--cpus-per-task=.. --mem=..] scale_batch.sbatch <work> <manifest> <batch> <batches> <stage> [repo_out]
 set -euo pipefail
 WORK=${1:?work}; MAN=${2:?manifest}; B=${3:?batch}; BS=${4:?batches}; STAGE=${5:?stage}; OUT=${6:-}
@@ -34,6 +38,10 @@ families)    $TIME python scale_entry.py families --pool --manifest $MAN --work 
 occurrences) $TIME python scale_entry.py occurrences --manifest $MAN --work $WORK --batch $B ;;
 compare)     $TIME python scale_entry.py compare --work $WORK --batches $BS --shard $T ${MAX_SIG_PAIRS:+--max-sig-pairs $MAX_SIG_PAIRS} ;;
 summarize)   $TIME python scale_entry.py summarize --work $WORK --batches $BS --repo-out $OUT --regression $HERE/subsets_20261027/ucd_candidates_v0.1/candidates.tsv ;;
+windows)     $TIME python scale_review.py windows --work $WORK --batch $B ;;
+s6)          $TIME python scale_review.py s6 --work $WORK --batches $BS --shard $T ;;
+boundary)    $TIME python scale_review.py boundary --work $WORK --batches $BS --shard $T --manifest $MAN ;;
+s6_summarize) $TIME python scale_review.py summarize --work $WORK --batches $BS --repo-out $OUT --regression $HERE/subsets_20261027/ucd_candidates_v0.1/candidates.tsv ;;
 esac
 grep -E "Elapsed|Maximum resident" $WORK/time/${STAGE}_b${B}_${BS//,/-}_$T.time
 echo "[$(date -Is)] done"

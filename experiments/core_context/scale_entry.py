@@ -297,7 +297,8 @@ def cmd_compare(a):
                 r = json.loads(line)
             except ValueError:
                 continue      # a record cut by a kill is not a finished block
-            done[(r['scope'], r['structure'], r['core_key'], r['digest'])].append(r)
+            if r.get('v') == sc.RECORD_VERSION:      # older record formats are recomputed
+                done[(r['scope'], r['structure'], r['core_key'], r['digest'])].append(r)
     occs = read_shard(a.work, batches, a.shard)
     groups = defaultdict(list)
     for o in occs:
@@ -331,21 +332,12 @@ def cmd_compare(a):
                                       max_copies_in_one_assembly=max(per.values()),
                                       products=Counter(o['products'] for o in ys).most_common(1)[0][0][:200],
                                       span_range='%s..%s' % (min(int(o['span']) for o in ys), max(int(o['span']) for o in ys))))
-                members = defaultdict(list)
-                for o in ys:
-                    members[index[o['occurrence_id']]].append(o)
+                named = sc.name_partners([(o['occurrence_id'], o['sample']) for o in ys], index, srows)
                 for o in ys:
                     s = srows[index[o['occurrence_id']]]
-                    pc_ = s['first_diff_partner_cross']
-                    ps = s['first_diff_partner_same']
-                    cross = next((x['occurrence_id'] for x in members.get(pc_, []) if x['sample'] != o['sample']), '') \
-                        if pc_ is not None else ''
-                    same = next((x['occurrence_id'] for x in members.get(ps, []) if x['sample'] == o['sample']
-                                 and x['occurrence_id'] != o['occurrence_id']), '') if ps is not None else ''
                     sig_rows.append(dict(scope=scope, structure=structure, core_key=key, occurrence_id=o['occurrence_id'],
                                          sample=o['sample'], sig=s['sig'], context_class=s['context_class'],
-                                         sig_diff_pairs=s['diff_pairs'], sig_diff_pairs_same_assembly=s['diff_pairs_same_assembly'],
-                                         diff_partner_cross=cross, diff_partner_same=same))
+                                         **named[o['occurrence_id']]))
     pc.write_tsv(cdir / 'cores.tsv.gz', core_rows, list(core_rows[0]) if core_rows else ['scope'])
     pc.write_tsv(cdir / 'occurrence_sigs.tsv.gz', sig_rows, list(sig_rows[0]) if sig_rows else ['scope'])
     (cdir / 'run.json').write_text(json.dumps(dict(shard=a.shard, batches=batches, cores=len(core_rows),
@@ -427,12 +419,13 @@ def regression(a, batches, tag):
         sa, sb = sig[k].get(('target_lt2500', A['occurrence_id'])), sig[k].get(('target_lt2500', B['occurrence_id']))
         res.update(new_core_key_a=A['core_key'], new_core_key_b=B['core_key'], same_core=A['core_key'] == B['core_key'],
                    relation_k3=rel, occurrence_a=A['occurrence_id'], occurrence_b=B['occurrence_id'],
-                   a_has_different_partner=bool(sa and int(sa['sig_diff_pairs'])),
-                   b_has_different_partner=bool(sb and int(sb['sig_diff_pairs'])),
+                   a_different_partners_cross_same='%s/%s' % (sa['diff_partners_cross'], sa['diff_partners_same_assembly']) if sa else '',
+                   b_different_partners_cross_same='%s/%s' % (sb['diff_partners_cross'], sb['diff_partners_same_assembly']) if sb else '',
                    status='reproduced' if A['core_key'] == B['core_key'] and rel == 'different_context_candidate' else 'changed')
         rows.append(res)
     cols = ['candidate', 'batch', 'subset', 'old_core_key', 'sample', 'status', 'new_core_key_a', 'new_core_key_b',
-            'same_core', 'relation_k3', 'occurrence_a', 'occurrence_b', 'a_has_different_partner', 'b_has_different_partner']
+            'same_core', 'relation_k3', 'occurrence_a', 'occurrence_b', 'a_different_partners_cross_same',
+            'b_different_partners_cross_same']
     pc.write_tsv(a.repo_out / ('regression_%s.tsv' % tag), rows, cols)
     return dict(Counter(r['status'] for r in rows))
 

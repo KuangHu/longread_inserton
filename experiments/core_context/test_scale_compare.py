@@ -69,9 +69,8 @@ class DiscoveryTests(unittest.TestCase):
         (summary, rows), index = run(occs)
         self.assertEqual(summary['different_context_candidate'], 1)
         self.assertEqual(summary['different_context_candidate_same_assembly'], 0)
-        ra = rows[index['a']]
-        self.assertEqual((ra['diff_pairs'], ra['first_diff_partner_cross'], ra['first_diff_partner_same']),
-                         (1, index['b'], None))
+        got = sc.name_partners([('a', 'S1'), ('b', 'S2')], index, rows)['a']
+        self.assertEqual((got['diff_partners_cross'], got['diff_partner_cross'], got['diff_partner_same']), (1, 'b', ''))
 
     def test_two_gene_core_contexts_are_compared_the_same_way(self):
         # two-gene occurrences carry their own up/down contexts; the comparator is structure-agnostic
@@ -87,6 +86,53 @@ class DiscoveryTests(unittest.TestCase):
         (summary, _), _ = run(occs)
         self.assertEqual(summary['signatures'], 1)
         self.assertEqual((summary['similar_context'], summary['similar_context_same_assembly']), (36, 9))
+
+
+def brute_partners(occs):
+    """Per occurrence: the sets of cross-assembly and same-assembly different_context_candidate partners."""
+    out = {o[0]: (set(), set()) for o in occs}
+    for (a, sa, ua, da), (b, sb, ub, db) in itertools.combinations(occs, 2):
+        r = pc.relation(dict(up=[(l, True, '') for l in ua], down=[(l, True, '') for l in da]),
+                        dict(up=[(l, True, '') for l in ub], down=[(l, True, '') for l in db]))
+        if r == 'different_context_candidate':
+            out[a][sa == sb].add(b); out[b][sa == sb].add(a)
+    return out
+
+
+def named(occs, limit=sc.BLOCK_PAIRS):
+    (summary, rows), index = run(occs, limit=limit)
+    return sc.name_partners([(o[0], o[1]) for o in occs], index, rows)
+
+
+class PartnerTests(unittest.TestCase):
+    def test_review_counterexample(self):
+        # x1 (S1) and x2 (S2) share one signature X; Y holds only S2, Z only S1; both differ from X. v1 kept a single
+        # cross and a single same-assembly partner signature for all of X (the smallest one, here Z), so x1 got no
+        # cross partner (Z holds only its own assembly) and x2 no same-assembly partner, although both exist.
+        X = (['A', 'B', 'C'], ['D', 'E', 'F'])
+        occs = [('x1', 'S1') + X, ('x2', 'S2') + X,
+                ('y', 'S2', ['P', 'Q', 'R'], ['U', 'V', 'W']), ('z', 'S1', ['K', 'L', 'M'], ['N', 'O', 'T'])]
+        got = named(occs)
+        self.assertEqual((got['x2']['diff_partners_cross'], got['x2']['diff_partners_same_assembly']), (1, 1))
+        self.assertEqual((got['x2']['diff_partner_cross'], got['x2']['diff_partner_same']), ('z', 'y'))
+        self.assertEqual((got['x1']['diff_partner_cross'], got['x1']['diff_partner_same']), ('y', 'z'))
+
+    def test_every_occurrence_matches_brute_force(self):
+        rnd = random.Random(21)
+        for _ in range(40):
+            occs = random_occs(rnd.randint(2, 50), ['L%d' % i for i in range(rnd.randint(2, 9))],
+                               ['S%d' % i for i in range(rnd.randint(1, 5))], rnd, missing=0.02, short=0.02)
+            want = brute_partners(occs)
+            got = named(occs, limit=rnd.randint(1, 30))
+            for oid, (cross, same) in want.items():
+                g = got[oid]
+                self.assertEqual((g['diff_partners_cross'], g['diff_partners_same_assembly']), (len(cross), len(same)))
+                self.assertEqual(g['diff_partner_cross'] != '', bool(cross))
+                self.assertEqual(g['diff_partner_same'] != '', bool(same))
+                if cross:
+                    self.assertIn(g['diff_partner_cross'], cross)
+                if same:
+                    self.assertIn(g['diff_partner_same'], same)
 
 
 class ResumeTests(unittest.TestCase):
