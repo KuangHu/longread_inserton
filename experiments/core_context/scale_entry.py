@@ -424,7 +424,7 @@ def regression(a, batches, tag):
                       pc.read_tsv(a.work / 'compare' / tag / ('shard_%03d' % k) / 'occurrence_sigs.tsv.gz')}
         rel = sc.relation_sig((sc.side_sig(labels_of(A['up'])), sc.side_sig(labels_of(A['down']))),
                               (sc.side_sig(labels_of(B['up'])), sc.side_sig(labels_of(B['down']))))
-        sa, sb = sig.get(('target_lt2500', A['occurrence_id'])), sig.get(('target_lt2500', B['occurrence_id']))
+        sa, sb = sig[k].get(('target_lt2500', A['occurrence_id'])), sig[k].get(('target_lt2500', B['occurrence_id']))
         res.update(new_core_key_a=A['core_key'], new_core_key_b=B['core_key'], same_core=A['core_key'] == B['core_key'],
                    relation_k3=rel, occurrence_a=A['occurrence_id'], occurrence_b=B['occurrence_id'],
                    a_has_different_partner=bool(sa and int(sa['sig_diff_pairs'])),
