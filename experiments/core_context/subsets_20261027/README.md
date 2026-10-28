@@ -459,7 +459,9 @@ How to read it:
   sites. The 41 Delftia `conflict_in_component` occurrences (8 cores) are components where `A≈B, B≈C` but `A` and
   `C` are not same-position; the clique rule kept them apart.
 - **Same-assembly positions** are separated by assembly (`different_position_same_assembly`) and never merged
-  through other samples. Repeated flanks inside one assembly (3 / 7 / 3 pairs) are flagged.
+  through other samples. Repeated flanks inside one assembly (3 / 7 / 3 pairs) are flagged. **Correction (flank DNA
+  v2 below):** 0 / 5 / 2 of these are neighbouring copies (< 4 kb apart) whose host windows hold the same physical
+  genes, not a duplicated segment.
 
 Stable-end list (`s6/stable_end_candidates.tsv`; occurrences with any unknown side are in
 `s6/boundary_review_unknown.tsv`):
@@ -551,13 +553,16 @@ The 16 / 21 / 14 cores "with an assembly holding ≥ 2 supported positions" spli
 | … otherwise repeated context | 0 | 1 | 0 |
 | … otherwise context unknown | 2 | 2 | 1 |
 
-Flank DNA cross-check: blastn of the outer flank (500–3,000 bp beyond each core end) between the two copies. It
-agrees with the gene-order class:
-- Of 1,128 single-gene pairs with context different on both sides, 1,125 have DNA `not_shared/not_shared`.
-- Context-repeated pairs are mostly DNA `shared/shared`: 2 of 3, 4 of 7 and 2 of 3. The rest are `partial` or
-  `not_shared`, where neighbour genes are homologous but the flank DNA is diverged.
-- Most context-unknown pairs are DNA `not_shared` (60 / 120 / 562). The DNA is reported only and does not move
-  them into the "different" class.
+Flank DNA cross-check (v0.1 numbers; superseded by flank DNA v2 below, which changed no class): blastn of the outer
+flank (500–3,000 bp beyond each core end) between the two copies.
+- Of 1,128 single-gene pairs with context different on both sides, 1,125 are `not_shared/not_shared`. That means
+  no outer-flank alignment was detected by this check (blastn, e ≤ 1e-5, these windows only). It does not show that
+  the two copies share no DNA.
+- Context-repeated pairs are mostly `shared/shared`: 2 of 3, 4 of 7 and 2 of 3. The rest are `partial` or
+  `not_shared`. As v2 shows, several of these are neighbouring copies with overlapping windows, not separate
+  duplicates.
+- Most context-unknown pairs are `not_shared` (60 / 120 / 562). The DNA is reported only and does not move them
+  into the "different" class.
 
 **3. Relations between position units.** A unit is a site group or a single-observation site. Unresolved
 occurrences are not units. Two units are `different` only if every cross pair of members is a different-position
@@ -593,11 +598,11 @@ How to read it:
 | comamonas | conserved paralog positions | aldehyde dehydrogenase, 2,2,2,1,2 | two groups, relation `different`; in two assemblies each copy matches its own group (5 / 2–5 host genes) and differs from the other |
 | comamonas | multiple correspondence | RdgC, 2,2,4,0,4 | one copy matches two copies of another assembly by gene order; those two share their flanks (DNA 1.0), a segmental duplicate; kept unresolved |
 | delftia | context different | IS5 (`PF_4b70bb8e2b9d`) | two copies in one assembly, context and flank DNA different |
-| delftia | repeated context | same IS5 core | two copies with the same 5 + 5 host genes, flank DNA partly shared (0.65) |
+| delftia | repeated context | same IS5 core | **corrected:** the two copies are 67 bp apart and their host windows hold the same 10 physical genes. This is one locus with two adjacent copies, not a repeated segment; the case rule did not exclude neighbouring copies |
 | delftia | conserved paralog positions | none | no non-mobile group pair met `different` with context different; EF-Tu and ETF are `unknown` |
 | delftia | multiple correspondence | IS481 | one copy matches two copies of another assembly by gene order; the flank DNA matches only one (1.0 vs 0.0); kept ambiguous, DNA is auxiliary only |
 | paracidovorax | context different | IS3 (`PF_2bf098df0d79`) | two copies in one assembly, context and flank DNA different |
-| paracidovorax | repeated context | IS5 (`PF_61e54a119449`) | two copies with the same host genes, flank DNA partly shared (0.65) |
+| paracidovorax | repeated context | IS5 (`PF_61e54a119449`) | **corrected:** as in delftia, two copies 67 bp apart with the same 10 physical host genes; one locus, not a repeated segment |
 | paracidovorax | conserved paralog positions | EF-Tu | two groups `different`; each copy matches its own group across assemblies (DNA ≥ 0.999) and differs from the other |
 | paracidovorax | multiple correspondence | none | no ambiguous pair in this subset |
 
@@ -607,9 +612,133 @@ Outputs per subset in `<subset>/protein_entry/s6/review/`: `s6_same_assembly_pai
 
 Limits:
 - Context classes come from gene order. The flank DNA is a cross-check only and does not change a class.
-- Context different between distant assemblies can also come from rearrangement around a conserved site; pairs
-  inside one assembly avoid that.
+- Context different between distant assemblies can also come from rearrangement around a conserved site.
+  **Corrected wording:** pairs inside one assembly avoid comparing different strains, but they do not rule out
+  rearrangement. A rearrangement, inversion or segmental duplication inside that genome after the copies arose
+  gives the same pattern, and so do mis-assemblies.
 - Unknown and unresolved occurrences are kept and not counted.
 
 Evidence stays `assembly_only`, `production_ready=false`. No scale-up and no FASTQ downloads. Stopped here for
 review.
+
+## Flank DNA re-check v2 (`flank_dna.py`, job 27338596)
+
+The S6 groups, the context classes and every candidate are unchanged; only the auxiliary DNA check was rerun.
+
+**What changed in the method.**
+- v0.1 aligned the whole 3 kb flanks and measured coverage only on the outer part (500–3,000 bp) of each query.
+  An outer window could therefore count as "shared" while it matched only the other copy's excluded inner 500 bp.
+  Test `test_flank_dna.CounterexampleTests` reproduces this: v0.1 says `shared`, v2 says `not_shared`.
+- v2 is a separate function, `outer_flank_check`. Both copies' outer windows are cut first, and only outer windows
+  are aligned (blastn, both strands).
+- It records four comparisons separately: same side forward (the class), same side reverse, and cross side (x up
+  vs y down, x down vs y up) on each strand.
+- The shared `core_review.blast` used by the boundary analysis is not touched. The old function is kept and marked
+  superseded, so the committed v0.1 columns stay reproducible.
+- `not_shared` now explicitly means "no outer-flank alignment detected by this check". It is not proof that the
+  copies share no DNA.
+
+**Result.**
+- The fix changed 0 of 302 / 415 / 1,250 same-assembly pairs and 0 case pairs.
+- No v0.1 coverage moved by more than 0.05 (largest change 0.014 / 0.047 / 0.044).
+- The counterexample pattern does not occur in these subsets.
+
+**What the new columns show instead.**
+- **Matches in another orientation:** 2 / 7 / 13 single-gene pairs have a ≥ 0.5 match across sides or on the
+  reverse strand.
+- **Most of those are neighbouring copies:** 1 / 6 / 9 of them are copies less than 6 kb apart on one contig.
+  There, one copy's downstream window is physically the other copy's upstream region, so the match is the same DNA,
+  not a duplicate.
+- **The same overlap affects gene order (`host_genes_shared_physically`).** Of the `context_repeated_both_sides`
+  pairs, 0 / 5 / 2 share the same physical host genes (copies 54 bp – 3.8 kb apart). That includes the delftia and
+  paracidovorax "repeated context" cases (67 bp apart; corrected above) and the delftia IS481 pairs 9/10 and 16/17.
+- **Genuine repeated-segment pairs** (far apart, flank DNA shared) are 3 / 2 / 1:
+  - comamonas: IS256 inside a prophage-like segment 39.5 kb apart, and RdgC 39.8 kb apart (plus an RdgC pair 109 kb
+    apart whose flank DNA is only `partial`);
+  - delftia: 26.8 kb and 992 kb apart;
+  - paracidovorax: 254 kb apart.
+- **A few "context different" pairs also share physical genes across sides** (2 / 0 / 1): the copies are close
+  enough that their windows interlock.
+
+Outputs: `<subset>/protein_entry/s6/review/flank_dna_v2.tsv.gz` (v0.1 and v2 columns side by side, `changed` flag,
+copy gap, physically shared host genes) and `flank_dna_v2_summary.json`.
+
+## Frozen U–core–D candidates v0.1 (`freeze_candidates.py`, `ucd_candidates_v0.1/`)
+
+**Rule** (admission by gene order and coordinates only):
+- one single-gene core;
+- two copies in one assembly, at different coordinates;
+- both copies are supported positions (a site group or a single-observation site);
+- host context (N = 5 per side) is different on both sides;
+- no physical gene is shared between the two copies' host windows.
+
+Not used for admission: unknown boundaries (allowed), empty sites, gaps, copy number, product, and the flank DNA.
+
+**Ranking:**
+1. copies with both boundary sides resolved;
+2. flank DNA v2 `not_shared` on both sides (ranking only);
+3. copies of the core in that assembly;
+4. identifiers.
+
+One pair per core.
+
+**Batches:**
+- Main batch: top 4 cores per subset.
+- Read-available supplement (`UCDR..`): the same rule and ranking, restricted to assemblies with a usable linked
+  long-read run, top 2 cores per assembly not already in the main batch. Read availability only chooses this
+  supplement; it is not evidence.
+
+**Eligible pool:** 62 / 199 / 230 pairs in 13 / 18 / 13 cores. Candidates are `assembly_only`, are not independent
+insertion events, and their ends are candidate conserved ends at most.
+
+| id | subset | core | assembly (copies) | copy A | copy B | boundaries | host groups |
+|---|---|---|---|---|---|---|---|
+| UCD01 | comamonas | ISAav2 (IS5-like) | SAMN02603356 (7) | NC_013446.2:123862-124794(-) | :1735515-1736447(-) | resolved both copies | single-observation ×2 |
+| UCD02 | comamonas | IS5 | SAMN12671326 (5) | NZ_CP043568.1:1316612-1317360(-) | :2751360-2752108(-) | resolved | single ×2 |
+| UCD03 | comamonas | IS256 | SAMN29863000 (5) | NZ_CP101743.1:2919022-2920248(-) | :3777668-3778894(+) | resolved | single ×2 |
+| UCD04 | comamonas | IS3 | SAMN12671326 (5) | NZ_CP043568.1:4269351-4270729(-) | :5125850-5127228(+) | resolved | single ×2 |
+| UCD05 | delftia | IS5 | SAMN15905291 (15) | NZ_CP181346.1:87248-88040(-) | :2935314-2936106(-) | resolved | single ×2 |
+| UCD06 | delftia | IS5 (`PF_4b70bb8e2b9d`) | SAMN31258398 (9) | NZ_CP109906.1:247367-248175(+) | :4301974-4302782(+) | resolved | site groups 2 and 5 |
+| UCD07 | delftia | IS5 | SAMN15905291 (8) | NZ_CP181346.1:2482650-2483462(-) | :3128788-3129600(+) | resolved | single ×2 |
+| UCD08 | delftia | group II intron RT | SAMN15905291 (7) | NZ_CP181346.1:1685313-1686698(+) | :1872177-1873562(+) | resolved | single ×2 |
+| UCD09 | paracidovorax | IS3 | SAMN12418563 (22) | NZ_CP042303.1:3394406-3395970(-) | :4195401-4196965(-) | resolved | site groups 1 and 2 |
+| UCD10 | paracidovorax | ISAav5 (IS481-like) | SAMN02598334 (19) | NC_008752.1:3705780-3706727(+) | :3751675-3752622(-) | resolved | site groups 0 and 1 |
+| UCD11 | paracidovorax | ISAav4 (IS3-like) | SAMN02598334 (11) | NC_008752.1:4574248-4575461(+) | :752223-753436(+) | resolved | single ×2 |
+| UCD12 | paracidovorax | IS110 | SAMN02598334 (10) | NC_008752.1:2108313-2109263(+) | :2197322-2198272(+) | resolved | site group 1 + single |
+| UCDR01 | delftia | EF-Tu | SAMN13450439 (2) | NZ_CP065668.1:4741670-4742860(+) | :4778665-4779855(+) | one copy has an unknown side | site groups 0 and 1 |
+| UCDR02 | delftia | PaaK | SAMN13450439 (2) | NZ_CP065668.1:4013455-4014774(-) | :4861649-4862953(+) | both unknown | site groups 1 and 0 |
+| UCDR03 | delftia | IS30 | SAMN31258398 | NZ_CP109906.1:4568141-4569301(-) | :6375248-6376408(+) | one resolved, one not reviewed | site groups 1 and 2 |
+| UCDR04 | delftia | EF-Tu | SAMN31258398 (2) | NZ_CP109906.1:1710426-1711616(+) | :1747390-1748580(+) | one copy has an unknown side | site groups 0 and 1 |
+| UCDR05 | paracidovorax | IS5 | SAMN04157986 | NZ_CP029373.1:1833463-1834275(-) | :3426742-3427554(-) | one copy inconsistent between partners | site groups 1 and 3 |
+| UCDR06 | paracidovorax | EF-Tu | SAMN04157986 (2) | NZ_CP029373.1:1744065-1745255(-) | :2424287-2425477(+) | both have an unknown side | site groups 1 and 0 |
+
+Notes:
+- The main batch is all mobile-element cores with both ends resolved. Unknown-boundary pairs stay in the pool
+  (ranked lower) and appear in the supplement.
+- The EF-Tu and PaaK supplement pairs fit "same core, different context" by gene order, but they are conserved
+  paralog positions, not movement evidence.
+
+## Existing long-read data for the subset assemblies (`ucd_candidates_v0.1/long_read_availability.tsv`)
+
+Sources: the frozen pool metadata (`fna_pool/scaleup_stage1_20261026/comamonadaceae/runs.tsv`, BioSample-linked
+runs) and the local read store. No query was re-run and nothing was downloaded.
+
+| assembly | candidates | linked long-read run | usable | bases / assembly length | FASTQ local (MD5 verified) |
+|---|---|---|---|---|---|
+| delftia SAMN31258398 (GCF_033096485.1) | UCD06, UCDR03, UCDR04 | SRR22007585, PacBio Sequel subreads | yes | 641× (subreads) | yes |
+| delftia SAMN13450439 (GCF_016027075.1) | UCDR01, UCDR02 | SRR12045673, PacBio RS CLR subreads | yes | 318× (subreads) | yes |
+| paracidovorax SAMN04157986 (GCF_001593665.2) | UCDR05, UCDR06 | SRR7524637, PacBio RS II CLR subreads | yes | 736× (subreads) | yes |
+| delftia SAMN15905291 (GCF_029870285.2) | UCD05, UCD07, UCD08 | SRR31943989, ONT MinION | **no**: single-cell genomic, random-PCR library | – | no |
+| the other 12 assemblies | UCD01–04, UCD09–12 | none linked in the frozen metadata | – | – | – |
+
+Notes:
+- Bases / length counts every subread, so it overstates molecule depth (several passes per ZMW).
+- "None linked" means no run was linked to that BioSample in the frozen metadata. It does not show that no reads
+  exist.
+- **No alignment covers the candidates yet.** The genome PAFs from the earlier gap-line read check hold only reads
+  preselected at gap alleles (596 / 10,099 / 24,971 records), so they are not coverage of these loci.
+- The 7 candidates with usable reads (UCD06, UCDR01–06) could be checked against the three local FASTQs without any
+  download. That has not been started.
+
+Evidence stays `assembly_only`, `production_ready=false`. Unknown boundaries are kept; empty sites are not admission
+criteria. No downloads were started. Stopped here for review.

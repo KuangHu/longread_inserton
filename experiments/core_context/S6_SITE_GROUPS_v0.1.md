@@ -158,3 +158,14 @@ Per core the report gives:
 - multiple correspondence.
 
 If no core meets a rule in a subset, that case is reported as missing.
+
+## Flank DNA re-check v2 (`flank_dna.py`, tests `test_flank_dna.py`)
+
+It replaces the v0.1 DNA cross-check of the review layer. It is auxiliary only.
+- Both copies' outer windows (500–3,000 bp beyond each core end, in core orientation) are cut **before** alignment.
+- Same side forward, same side reverse and cross side on each strand are recorded separately. The class comes from
+  same side forward.
+- It does not use or change the shared `core_review.blast`.
+- `copy_gap_bp`, `windows_can_overlap` (gap < 6 kb) and `host_genes_shared_physically` flag neighbouring copies whose
+  windows are the same DNA.
+- `not_shared` = no outer-flank alignment detected by this check.
