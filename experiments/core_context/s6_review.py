@@ -115,7 +115,10 @@ def flank_class(cov, length):
 
 def flank_check(fx, fy):
     """fx, fy: {'up': seq, 'down': seq} in core orientation. Per side: the smaller outer-flank fraction covered by
-    blastn HSPs to the other copy's flank on the same side, the shorter outer length, and a descriptive class."""
+    blastn HSPs to the other copy's flank on the same side, the shorter outer length, and a descriptive class.
+    SUPERSEDED by flank_dna.outer_flank_check (v2): this v0.1 check aligns the whole flanks, so an outer window can
+    count as shared while it matches only the other copy's excluded inner window. Kept unchanged so the committed
+    dna_* columns of the S6 review outputs stay reproducible; read flank_dna_v2.tsv.gz instead."""
     out = {}
     for side in ('up', 'down'):
         x, y = fx[side], fy[side]
