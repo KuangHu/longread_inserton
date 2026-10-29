@@ -17,7 +17,8 @@
 #   summarize    one task
 #   windows      one task per batch: S6 near / host windows of target-scope occurrences (scale_review.py)
 #   s6           --array=0-63      S6 review per shard over BATCHES (needs compare + windows)
-#   boundary     --array=0-63      boundary review of the U-core-D pair candidates per shard (needs s6)
+#   boundary     --array=0-63      boundary review of the structural and cross-assembly pairs per shard (needs s6);
+#                                  REUSE=<tags> reuses pair rows of earlier boundary runs (e.g. REUSE=b1_v1)
 #   s6_summarize one task
 # Usage: sbatch [--array=..] [--cpus-per-task=.. --mem=..] scale_batch.sbatch <work> <manifest> <batch> <batches> <stage> [repo_out]
 set -euo pipefail
@@ -40,7 +41,7 @@ compare)     $TIME python scale_entry.py compare --work $WORK --batches $BS --sh
 summarize)   $TIME python scale_entry.py summarize --work $WORK --batches $BS --repo-out $OUT --regression $HERE/subsets_20261027/ucd_candidates_v0.1/candidates.tsv ;;
 windows)     $TIME python scale_review.py windows --work $WORK --batch $B ;;
 s6)          $TIME python scale_review.py s6 --work $WORK --batches $BS --shard $T ;;
-boundary)    $TIME python scale_review.py boundary --work $WORK --batches $BS --shard $T --manifest $MAN ;;
+boundary)    $TIME python scale_review.py boundary --work $WORK --batches $BS --shard $T --manifest $MAN ${REUSE:+--reuse $REUSE} ;;
 s6_summarize) $TIME python scale_review.py summarize --work $WORK --batches $BS --repo-out $OUT --regression $HERE/subsets_20261027/ucd_candidates_v0.1/candidates.tsv ;;
 esac
 grep -E "Elapsed|Maximum resident" $WORK/time/${STAGE}_b${B}_${BS//,/-}_$T.time

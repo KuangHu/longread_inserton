@@ -1,4 +1,7 @@
+import random
 import unittest
+
+import core_review as cr
 
 import scale_review as sr
 
@@ -74,18 +77,69 @@ class ReviewCoreTests(unittest.TestCase):
             self.assertEqual((p0[k]['ucd_pair_candidate_strict_v0'], p1[k]['ucd_pair_candidate_strict_v0']), (True, False))
         self.assertEqual(p1[('a1', 'a2')]['s6_status_a'], 'unresolved:conflict_in_component')
 
-    def test_cross_assembly_single_copy_pairs_are_kept(self):
-        # one copy in each of S1, S2, S3, with a different host context on both sides: no same-assembly pair exists, the
-        # cross-assembly pairs carry the candidate. S4 holds two copies, so its pairs are left to the same-assembly scope.
+    def test_cross_assembly_pairs_are_kept_with_copy_class(self):
+        # one copy in each of S1, S2, S3 and two in S4, every pair with a different host context on both sides except
+        # a ~ c: all cross-assembly pairs are kept, classed by copy number, never filtered by it
         ys = [occ('a', 'S1', 'ABCDE', 'FGHIJ', 1000), occ('b', 'S2', 'PQRST', 'UVWXY', 1000),
               occ('c', 'S3', 'ABCDE', 'FGHIJ', 1000), occ('d1', 'S4', 'KLMNO', 'klmno', 1000),
               occ('d2', 'S4', 'abcde', 'fghij', 500000)]
         occ_rows, groups, sa, cross, rel, summary = sr.review_core(ys)
-        self.assertEqual({(r['occurrence_a'], r['occurrence_b']) for r in cross}, {('a', 'b'), ('b', 'c')})
-        self.assertEqual({r['s6_grouping'] for r in cross}, {'supported_positions'})
-        self.assertEqual(summary['cross_single_copy_pairs'], 2)
-        self.assertGreater(summary['cross_different_position_pairs'], 2)
+        cls = {(r['occurrence_a'], r['occurrence_b']): r['copy_class'] for r in cross}
+        self.assertEqual(cls, {('a', 'b'): 'single_x_single', ('b', 'c'): 'single_x_single',
+                               ('a', 'd1'): 'single_x_multi', ('a', 'd2'): 'single_x_multi',
+                               ('b', 'd1'): 'single_x_multi', ('b', 'd2'): 'single_x_multi',
+                               ('c', 'd1'): 'single_x_multi', ('c', 'd2'): 'single_x_multi'})
+        self.assertEqual((summary['cross_different_position_pairs'], summary['cross_single_x_single'],
+                          summary['cross_single_x_multi'], summary['cross_multi_x_multi']), (8, 2, 6, 0))
         self.assertEqual([(r['occurrence_a'], r['occurrence_b']) for r in sa if r['ucd_structural_pair']], [('d1', 'd2')])
+
+
+    def test_two_similar_copies_in_one_assembly_differ_from_a_single_copy_elsewhere(self):
+        # assembly A: two copies with similar contexts (no same-assembly U-core-D pair); assembly B: one copy with a
+        # different context. Both A-B pairs must be kept as cross-assembly pairs (single_x_multi).
+        ys = [occ('a1', 'A', 'ABCDE', 'FGHIJ', 1000), occ('a2', 'A', 'ABCDE', 'FGHIJ', 800000),
+              occ('b', 'B', 'PQRST', 'UVWXY', 1000)]
+        occ_rows, groups, sa, cross, rel, summary = sr.review_core(ys)
+        self.assertEqual([r['ucd_structural_pair'] for r in sa], [False])
+        self.assertEqual(sa[0]['context_class'], 'context_repeated_both_sides')
+        self.assertEqual({(r['occurrence_a'], r['occurrence_b'], r['copy_class'], r['copies_a'], r['copies_b'])
+                          for r in cross}, {('a1', 'b', 'single_x_multi', 2, 1), ('a2', 'b', 'single_x_multi', 2, 1)})
+
+    def test_multi_copy_on_both_sides(self):
+        ys = [occ('a1', 'A', 'ABCDE', 'FGHIJ', 1000), occ('a2', 'A', 'ABCDE', 'FGHIJ', 800000),
+              occ('b1', 'B', 'PQRST', 'UVWXY', 1000), occ('b2', 'B', 'PQRST', 'UVWXY', 600000)]
+        occ_rows, groups, sa, cross, rel, summary = sr.review_core(ys)
+        self.assertEqual(len(cross), 4)
+        self.assertEqual({r['copy_class'] for r in cross}, {'multi_x_multi'})
+        self.assertFalse(any(r['ucd_structural_pair'] for r in sa))
+
+
+class BoundaryReuseTests(unittest.TestCase):
+    def test_reaches_end_recovered_from_cached_extensions(self):
+        rnd = random.Random(4)
+        for _ in range(500):
+            alen, blen = rnd.randint(3000, 7000), rnd.randint(3000, 7000)
+            a0, b0 = rnd.randint(0, 3000), rnd.randint(0, 3000)
+            a1, b1 = min(alen, a0 + rnd.randint(300, 1500)), min(blen, b0 + rnd.randint(300, 1500))
+            qs, ss = rnd.randint(0, a0), rnd.randint(0, b0)
+            qe, se_ = rnd.randint(a1, alen), rnd.randint(b1, blen)
+            pieces = [(qs, qe, ss, se_)] if rnd.random() < 0.7 else [(qs, a1, ss, b1)]
+            ext = cr.extensions(pieces, a0, a1, alen, b0, b1, blen)
+            written = {k: '' if ext[k] is None else str(ext[k]) for k in ('a_up', 'b_up', 'a_down', 'b_down')}
+            row = dict(identical_protein='False', protein_identity_min='', protein_coverage_min='',
+                       identical_core_dna='False', core_dna_identity='', core_dna_coverage_min='',
+                       up_cover=ext['up_cover'], down_cover=ext['down_cover'], **written)
+            v = sr.from_cache(row)
+            A, B = dict(c0=a0, c1=a1, ext='N' * alen), dict(c0=b0, c1=b1, ext='N' * blen)
+            self.assertEqual(sr.reaches_end(v, A, B), (ext['up_reaches_end'], ext['down_reaches_end']))
+            self.assertEqual([v[k] for k in ('a_up', 'b_up', 'a_down', 'b_down')],
+                             [ext[k] for k in ('a_up', 'b_up', 'a_down', 'b_down')])
+
+    def test_core_match_class(self):
+        self.assertEqual(sr.core_match_class(True, 100.0, 1.0), 'identical_core_dna')
+        self.assertEqual(sr.core_match_class(False, 99.0, 0.95), 'homolog_full_coverage')
+        self.assertEqual(sr.core_match_class(False, 99.0, 0.5), 'partial_core_match')
+        self.assertEqual(sr.core_match_class(False, '', 0), 'no_core_dna_hit')
 
 
 if __name__ == '__main__':

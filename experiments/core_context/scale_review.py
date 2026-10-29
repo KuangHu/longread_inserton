@@ -20,16 +20,21 @@ s6        per compare shard. Reviewed cores: every target-scope core with at lea
                              it can be counted once; it never vetoes the local structure. Grouping-unresolved copies are
                              not used for site or event counts.
           The strict rule v0 (structure and supported positions) is kept as ucd_pair_candidate_strict_v0.
-          Cross-assembly single-copy pairs: two assemblies holding one copy each of the core, host context different
-          on both sides (different_position_candidate), with the same S6 grouping field.
-boundary  per shard, on the structural pairs (both S6 grouping tiers) and the cross-assembly single-copy pairs: core
+          Cross-assembly pairs: every pair of copies in two assemblies with host context different on both sides
+          (different_position_candidate), whatever the copy numbers, with the same S6 grouping field. The copy class
+          (single_x_single, single_x_multi, multi_x_multi) is a classification only: two copies with similar contexts
+          in one assembly carry no same-assembly pair, yet each can differ from a copy in another assembly.
+boundary  per shard, on the structural pairs (both S6 grouping tiers) and all cross-assembly pairs: core
           protein identity (blastp) and core DNA identity / coverage, and the coding span +/- W bp of both copies
           aligned (core_review.blast / chain / extensions, unchanged), one all-vs-all per core: a side is measured only
           if the core end is covered in both copies, unknown otherwise (never 0). Per occurrence and pair scope,
           core_review.side_boundary over all its partners in that scope; estimated span only when both sides are
-          resolved, then classed < 2500 or >= 2500 bp; unknown boundaries are kept as unknown.
+          resolved, then classed < 2500 or >= 2500 bp; unknown boundaries are kept as unknown. Core match class
+          (identical_core_dna, homolog_full_coverage: DNA coverage >= 0.9 in both copies, partial_core_match,
+          no_core_dna_hit) is for reporting only. --reuse takes pair rows of earlier runs of the same shard.
 summarize per structure: reviewed cores, occurrence status, unit relations, same-assembly context classes with the
-          physical flags, U-core-D pair candidates, the frozen regression set.
+          physical flags, U-core-D structural pairs by S6 grouping, cross-assembly pairs by copy class, boundary
+          statistics, pairs pending review (boundary shards not finished), the frozen regression set.
 """
 import argparse
 import gzip
@@ -47,6 +52,12 @@ from review_protein import hint
 VERSION = 'scale_review_v0.1'
 WIN_COLS = ['occurrence_id', 'near', 'host', 'skipped_mobile_up', 'skipped_mobile_down', 'near_mobile_keyword']
 SUPPORTED = {'site_group', 'single_observation_site'}
+COPY_CLASSES = ('single_x_single', 'single_x_multi', 'multi_x_multi')
+
+
+def copy_class(na, nb):
+    """Copies of the core in each of the two assemblies; a classification only, never an admission criterion."""
+    return COPY_CLASSES[(na > 1) + (nb > 1)]
 
 
 def mobile(g):
@@ -148,9 +159,12 @@ def review_core(ys):
                                 up_support=v['up_support'], down_support=v['down_support'], copy_gap_bp=gap,
                                 host_genes_shared_physically=phys, ucd_structural_pair=structural, **pos,
                                 ucd_pair_candidate_strict_v0=structural and both))
-        elif v['verdict'] == 'different_position_candidate' and copies[X['sample']] == copies[Y['sample']] == 1:
-            # one copy in each assembly: host context different on both sides (no same-assembly pair can carry it)
+        elif v['verdict'] == 'different_position_candidate':
+            # every cross-assembly pair with host context different on both sides; the copy numbers only classify it
+            # (two copies with similar contexts in one assembly carry no same-assembly pair, but each differs from B)
             cross_rows.append(dict(occurrence_a=x, occurrence_b=y, sample_a=X['sample'], sample_b=Y['sample'],
+                                   copies_a=copies[X['sample']], copies_b=copies[Y['sample']],
+                                   copy_class=copy_class(copies[X['sample']], copies[Y['sample']]),
                                    up_support=v['up_support'], down_support=v['down_support'], **pos))
     occ_rows = []
     for x in ids:
@@ -182,9 +196,9 @@ def review_core(ys):
                    ucd_structural_pairs=sum(r['ucd_structural_pair'] for r in sa_rows),
                    ucd_structural_pairs_s6_supported=sum(r['ucd_pair_candidate_strict_v0'] for r in sa_rows),
                    ucd_assemblies=len({r['sample'] for r in sa_rows if r['ucd_structural_pair']}),
-                   cross_different_position_pairs=sum(v['verdict'] == 'different_position_candidate' for v in verdicts.values()),
-                   cross_single_copy_pairs=len(cross_rows),
-                   cross_single_copy_pairs_s6_supported=sum(r['both_supported_positions'] for r in cross_rows))
+                   cross_different_position_pairs=len(cross_rows),
+                   cross_pairs_s6_supported=sum(r['both_supported_positions'] for r in cross_rows),
+                   **{'cross_' + c: sum(r['copy_class'] == c for r in cross_rows) for c in COPY_CLASSES})
     return occ_rows, groups, sa_rows, cross_rows, rel_rows, summary
 
 
@@ -226,19 +240,18 @@ def cmd_s6(a):
                       k3_insufficient_pairs=c['insufficient_context_labels'], k3_edge_pairs=c['edge_or_missing_context'],
                       max_copies_in_one_assembly=c['max_copies_in_one_assembly'], **summary))
     for name, rows in (('occurrences', O), ('site_groups', G), ('same_assembly_pairs', P),
-                       ('cross_assembly_single_copy_pairs', X), ('group_relations', R), ('cores', C)):
+                       ('cross_assembly_pairs', X), ('group_relations', R), ('cores', C)):
         pc.write_tsv(out / (name + '.tsv.gz'), rows, list(rows[0]) if rows else ['structure'])
     (out / 'run.json').write_text(json.dumps(dict(shard=a.shard, batches=batches, reviewed_cores=len(C),
                                                   occurrences=len(O)), indent=1) + '\n')
 
 
 def structural_pairs(d):
-    """Pairs that enter the structural review, both S6 grouping tiers: same-assembly U-core-D structural pairs and
-    cross-assembly single-copy pairs."""
-    same = [dict(r, pair_scope='same_assembly', sample_a=r['sample'], sample_b=r['sample'])
+    """Pairs that enter the structural review, both S6 grouping tiers: same-assembly U-core-D structural pairs and every
+    cross-assembly pair with host context different on both sides (all copy classes)."""
+    same = [dict(r, pair_scope='same_assembly', sample_a=r['sample'], sample_b=r['sample'], copy_class='')
             for r in pc.read_tsv(d / 'same_assembly_pairs.tsv.gz') if r['ucd_structural_pair'] == 'True']
-    cross = [dict(r, pair_scope='cross_assembly_single_copy')
-             for r in pc.read_tsv(d / 'cross_assembly_single_copy_pairs.tsv.gz')]
+    cross = [dict(r, pair_scope='cross_assembly') for r in pc.read_tsv(d / 'cross_assembly_pairs.tsv.gz')]
     return same + cross
 
 
@@ -248,10 +261,71 @@ def span_class(est):
     return 'lt2500' if est < pc.TARGET_MAX else 'ge2500'
 
 
+def core_match_class(identical, identity, coverage):
+    """Evidence class of the direct core comparison, for reporting and ranking only (never an admission rule)."""
+    if identical:
+        return 'identical_core_dna'
+    if identity == '':
+        return 'no_core_dna_hit'
+    return 'homolog_full_coverage' if coverage >= 0.9 else 'partial_core_match'
+
+
+PAIR_VALUES = ['identical_protein', 'protein_identity_min', 'protein_coverage_min', 'identical_core_dna',
+               'core_dna_identity', 'core_dna_coverage_min', 'up_cover', 'a_up', 'b_up', 'down_cover', 'a_down', 'b_down']
+
+
+def pair_values(A, B, php, dcore, dext, ia, ib, npos):
+    pb = [cr.best(php[i][(ia + '_%d' % i, ib + '_%d' % i)]) for i in range(npos)]
+    db = cr.best(dcore[(ia, ib)])
+    blk = cr.chain([(h['qs'], h['qe'], h['ss'], h['se']) for h in dext[(ia, ib)]], A['c0'], A['c1'], B['c0'], B['c1'])
+    ext = cr.extensions(blk, A['c0'], A['c1'], len(A['ext']), B['c0'], B['c1'], len(B['ext'])) if blk else \
+        dict(up_cover='no_core_alignment', down_cover='no_core_alignment', a_up=None, b_up=None, a_down=None, b_down=None)
+    return dict(identical_protein=A['prots'] == B['prots'],
+                protein_identity_min=min(x[0] for x in pb) if all(pb) else '',
+                protein_coverage_min=round(min(min(x[1], x[2]) for x in pb), 4) if all(pb) else '',
+                identical_core_dna=A['core_dna'].upper() == B['core_dna'].upper(),
+                core_dna_identity=db[0] if db else '', core_dna_coverage_min=round(min(db[1], db[2]), 4) if db else '',
+                **{k: ext[k] for k in ('up_cover', 'a_up', 'b_up', 'down_cover', 'a_down', 'b_down')})
+
+
+def from_cache(r):
+    """A pair row read back from an earlier boundary output: types restored, None for unknown extensions."""
+    v = {k: r[k] for k in PAIR_VALUES}
+    for k in ('identical_protein', 'identical_core_dna'):
+        v[k] = v[k] == 'True'
+    for k in ('protein_identity_min', 'protein_coverage_min', 'core_dna_identity', 'core_dna_coverage_min'):
+        v[k] = float(v[k]) if v[k] != '' else ''
+    for k in ('a_up', 'b_up', 'a_down', 'b_down'):
+        v[k] = int(v[k]) if v[k] != '' else None
+    return v
+
+
+def reaches_end(v, A, B, edge=cr.EDGE):
+    """core_review.extensions' up/down_reaches_end, recovered from the measured extensions and the two windows (the
+    shared block starts at c0 - ext_up and ends at c1 + ext_down)."""
+    up = v['up_cover'].startswith('covered') and (A['c0'] - v['a_up'] <= edge or B['c0'] - v['b_up'] <= edge)
+    down = v['down_cover'].startswith('covered') and (A['c1'] + v['a_down'] >= len(A['ext']) - edge or
+                                                       B['c1'] + v['b_down'] >= len(B['ext']) - edge)
+    return up, down
+
+
+def load_cache(work, tags, shard):
+    """Pair rows of earlier boundary runs of the same shard (shards are keyed by core): a pair's values depend only on
+    its two windows, since blast scores every query-subject pair on its own."""
+    cache = {}
+    for t in tags:
+        f = work / 'review' / 'boundary' / t / ('shard_%03d' % shard) / 'pairs.tsv.gz'
+        if f.exists():
+            for r in pc.read_tsv(f):
+                cache[(r['structure'], r['core_key'], r['occurrence_a'], r['occurrence_b'])] = r
+    return cache
+
+
 def cmd_boundary(a):
     batches = [int(x) for x in a.batches.split(',')]
     tag = 'b' + '-'.join(map(str, batches))
     pairs = structural_pairs(a.work / 'review' / 's6' / tag / ('shard_%03d' % a.shard))
+    cache = load_cache(a.work, [t for t in (a.reuse or '').split(',') if t], a.shard)
     need = {x for r in pairs for x in (r['occurrence_a'], r['occurrence_b'])}
     occ = {o['occurrence_id']: o for o in se.read_shard(a.work, batches, a.shard) if o['occurrence_id'] in need}
     fasta = {m['sample']: m['fasta'] for m in pc.read_tsv(a.manifest)}
@@ -274,36 +348,33 @@ def cmd_boundary(a):
     for r in pairs:
         rows_of[(r['structure'], r['core_key'])].append(r)
     P, partners = [], defaultdict(list)
+    reused = 0
     for key in sorted(rows_of):
-        # one all-vs-all per core; blast runs with -subject, so each pair is scored on its own
-        ids = sorted({x for r in rows_of[key] for x in (r['occurrence_a'], r['occurrence_b'])})
+        todo = [r for r in rows_of[key] if key + (r['occurrence_a'], r['occurrence_b']) not in cache]
+        # one all-vs-all per core over the pairs not computed before; blast runs with -subject, so each pair is
+        # scored on its own
+        ids = sorted({x for r in todo for x in (r['occurrence_a'], r['occurrence_b'])})
         num = {x: str(i) for i, x in enumerate(ids)}
         npos = 1 if key[0] == 'single_gene' else 2
-        php = [cr.blast('blastp', {num[x] + '_%d' % i: occ[x]['prots'][i] for x in ids}, None) for i in range(npos)]
-        dcore = cr.blast('blastn', {num[x]: occ[x]['core_dna'] for x in ids}, 'blastn')
-        dext = cr.blast('blastn', {num[x]: occ[x]['ext'] for x in ids}, 'blastn')
+        if ids:
+            php = [cr.blast('blastp', {num[x] + '_%d' % i: occ[x]['prots'][i] for x in ids}, None) for i in range(npos)]
+            dcore = cr.blast('blastn', {num[x]: occ[x]['core_dna'] for x in ids}, 'blastn')
+            dext = cr.blast('blastn', {num[x]: occ[x]['ext'] for x in ids}, 'blastn')
         for r in rows_of[key]:
             A, B = occ[r['occurrence_a']], occ[r['occurrence_b']]
-            ia, ib = num[A['occurrence_id']], num[B['occurrence_id']]
-            pb = [cr.best(php[i][(ia + '_%d' % i, ib + '_%d' % i)]) for i in range(npos)]
-            db = cr.best(dcore[(ia, ib)])
-            blk = cr.chain([(h['qs'], h['qe'], h['ss'], h['se']) for h in dext[(ia, ib)]], A['c0'], A['c1'], B['c0'], B['c1'])
-            ext = cr.extensions(blk, A['c0'], A['c1'], len(A['ext']), B['c0'], B['c1'], len(B['ext'])) if blk else \
-                dict(up_cover='no_core_alignment', down_cover='no_core_alignment', a_up=None, b_up=None, a_down=None,
-                     b_down=None, up_reaches_end=False, down_reaches_end=False)
-            P.append(dict(structure=key[0], core_key=key[1], pair_scope=r['pair_scope'], s6_grouping=r['s6_grouping'],
-                sample_a=r['sample_a'], sample_b=r['sample_b'], occurrence_a=A['occurrence_id'],
-                occurrence_b=B['occurrence_id'], identical_protein=A['prots'] == B['prots'],
-                protein_identity_min=min(x[0] for x in pb) if all(pb) else '',
-                protein_coverage_min=round(min(min(x[1], x[2]) for x in pb), 4) if all(pb) else '',
-                identical_core_dna=A['core_dna'].upper() == B['core_dna'].upper(),
-                core_dna_identity=db[0] if db else '', core_dna_coverage_min=round(min(db[1], db[2]), 4) if db else '',
-                up_cover=ext['up_cover'], a_up=ext['a_up'], b_up=ext['b_up'],
-                down_cover=ext['down_cover'], a_down=ext['a_down'], b_down=ext['b_down']))
+            c = cache.get(key + (r['occurrence_a'], r['occurrence_b']))
+            v = from_cache(c) if c else pair_values(A, B, php, dcore, dext, num[A['occurrence_id']], num[B['occurrence_id']], npos)
+            reused += bool(c)
+            up_end, down_end = reaches_end(v, A, B)
+            P.append(dict(structure=key[0], core_key=key[1], pair_scope=r['pair_scope'], copy_class=r['copy_class'],
+                          s6_grouping=r['s6_grouping'], sample_a=r['sample_a'], sample_b=r['sample_b'],
+                          occurrence_a=A['occurrence_id'], occurrence_b=B['occurrence_id'], **v,
+                          core_match_class=core_match_class(v['identical_core_dna'], v['core_dna_identity'],
+                                                            v['core_dna_coverage_min'] or 0),
+                          up_reaches_end=up_end, down_reaches_end=down_end, reused=bool(c)))
             for o, pre in ((A, 'a'), (B, 'b')):
                 partners[(o['occurrence_id'], r['pair_scope'])].append(
-                    (ext[pre + '_up'], ext['up_reaches_end'], ext[pre + '_down'], ext['down_reaches_end'],
-                     r['s6_grouping'] == 'supported_positions'))
+                    (v[pre + '_up'], up_end, v[pre + '_down'], down_end, r['s6_grouping'] == 'supported_positions'))
     O = []
     for x, scope in sorted(partners):
         o, ps = occ[x], partners[(x, scope)]
@@ -322,7 +393,12 @@ def cmd_boundary(a):
     out.mkdir(parents=True, exist_ok=True)
     pc.write_tsv(out / 'pairs.tsv.gz', P, list(P[0]) if P else ['structure'])
     pc.write_tsv(out / 'occurrences.tsv.gz', O, list(O[0]) if O else ['structure'])
-    (out / 'run.json').write_text(json.dumps(dict(shard=a.shard, pairs=len(P), occurrences=len(O)), indent=1) + '\n')
+    (out / 'run.json').write_text(json.dumps(dict(shard=a.shard, pairs=len(P), pairs_reused=reused,
+                                                  occurrences=len(O)), indent=1) + '\n')
+
+
+SUMMARY_FIELDS = ['structure', 'pair_scope', 'copy_class', 's6_grouping', 'identical_core_dna', 'core_dna_identity',
+                  'protein_identity_min', 'core_dna_coverage_min', 'up_cover', 'down_cover', 'core_match_class', 'reused']
 
 
 def boundary_stats(bp, bo):
@@ -333,10 +409,15 @@ def boundary_stats(bp, bo):
         protein_identity_min=min(num(r['protein_identity_min'] for r in rs), default=''),
         core_dna_coverage_lt_0_9=sum(r['core_dna_coverage_min'] != '' and float(r['core_dna_coverage_min']) < 0.9 for r in rs),
         no_core_dna_hit=sum(r['core_dna_identity'] == '' for r in rs),
+        core_match_class=dict(Counter(r['core_match_class'] for r in rs)),
+        both_core_ends_covered=sum(r['up_cover'].startswith('covered') and r['down_cover'].startswith('covered') for r in rs),
         pair_side_cover=dict(Counter('%s/%s' % (r['up_cover'], r['down_cover']) for r in rs).most_common(6)))
     return dict(
         pairs=pairs(bp), pairs_by_s6_grouping={g: pairs([r for r in bp if r['s6_grouping'] == g])
                                                for g in ('supported_positions', 'grouping_unresolved')},
+        pairs_by_copy_class={c: pairs([r for r in bp if r['copy_class'] == c]) for c in COPY_CLASSES
+                             if any(r['copy_class'] == c for r in bp)},
+        pairs_reused=sum(r['reused'] == 'True' for r in bp),
         occurrences=len(bo), both_sides_resolved=sum(r['boundary_resolved'] == 'True' for r in bo),
         span_class=dict(Counter(r['span_class'] for r in bo)),
         occurrences_with_s6_supported_partner=sum(r['partners_s6_supported'] != '0' for r in bo),
@@ -357,8 +438,8 @@ def cmd_summarize(a):
             missing.append(k); continue
         C += pc.read_tsv(d / 'cores.tsv.gz')
         P += pc.read_tsv(d / 'same_assembly_pairs.tsv.gz')
-        X += [dict(structure=r['structure'], core_key=r['core_key'], s6_grouping=r['s6_grouping'])
-              for r in pc.read_tsv(d / 'cross_assembly_single_copy_pairs.tsv.gz')]
+        X += [dict(structure=r['structure'], core_key=r['core_key'], s6_grouping=r['s6_grouping'], copy_class=r['copy_class'],
+                   shard=k) for r in pc.read_tsv(d / 'cross_assembly_pairs.tsv.gz')]
         O += [dict(structure=r['structure'], s6_status=r['s6_status'], unresolved_reason=r['unresolved_reason'])
               for r in pc.read_tsv(d / 'occurrences.tsv.gz')]
     out = dict(version=VERSION, batches=batches, evidence_source='assembly_only', production_ready=False,
@@ -399,22 +480,32 @@ def cmd_summarize(a):
             ucd_structural_pairs_by_s6_grouping=dict(Counter(p['s6_grouping'] for p in ucd)),
             ucd_structural_pairs_s6_status=dict(Counter(s for p in ucd for s in (p['s6_status_a'], p['s6_status_b']))),
             ucd_structural=cores(ucd),
-            cross_different_position_pairs=sum(int(c['cross_different_position_pairs']) for c in cs),
-            cross_single_copy_pairs=len(xs),
-            cross_single_copy_pairs_by_s6_grouping=dict(Counter(x['s6_grouping'] for x in xs)),
-            cross_single_copy=cores(xs))
+            cross_pairs=len(xs),
+            cross_pairs_by_copy_class=dict(Counter(x['copy_class'] for x in xs)),
+            cross_pairs_by_copy_class_and_s6_grouping=dict(Counter('%s:%s' % (x['copy_class'], x['s6_grouping']) for x in xs)),
+            cross=cores(xs), cross_by_copy_class={c: cores([x for x in xs if x['copy_class'] == c]) for c in COPY_CLASSES})
     broot = a.work / 'review' / 'boundary' / tag
     BP, BO, bmissing = [], [], []
     for k in range(se.SHARDS):
         d = broot / ('shard_%03d' % k)
         if not (d / 'run.json').exists():
             bmissing.append(k); continue
-        BP += pc.read_tsv(d / 'pairs.tsv.gz'); BO += pc.read_tsv(d / 'occurrences.tsv.gz')
-    out['boundary'] = dict(shards_missing=bmissing)
+        for r in pc.read_tsv(d / 'pairs.tsv.gz'):
+            # full rows for the same-assembly pairs (written out); only the summary fields for the cross-assembly ones
+            BP.append(r if r['pair_scope'] == 'same_assembly' else {f: r[f] for f in SUMMARY_FIELDS})
+        BO += pc.read_tsv(d / 'occurrences.tsv.gz')
+    # pairs of shards whose boundary review has not finished: recorded as pending, never as reviewed or absent
+    sa_shard = Counter()
+    for k in bmissing:
+        d = root / ('shard_%03d' % k)
+        if (d / 'run.json').exists():
+            sa_shard['same_assembly'] += sum(r['ucd_structural_pair'] == 'True' for r in pc.read_tsv(d / 'same_assembly_pairs.tsv.gz'))
+    sa_shard['cross_assembly'] = sum(x['shard'] in bmissing for x in X)
+    out['boundary'] = dict(shards_missing=bmissing, pairs_pending_review=dict(sa_shard))
     for st in ('single_gene', 'two_gene'):
         out['boundary'][st] = {sc: boundary_stats([r for r in BP if r['structure'] == st and r['pair_scope'] == sc],
                                                   [r for r in BO if r['structure'] == st and r['pair_scope'] == sc])
-                               for sc in ('same_assembly', 'cross_assembly_single_copy')}
+                               for sc in ('same_assembly', 'cross_assembly')}
     a.repo_out.mkdir(parents=True, exist_ok=True)
     if a.regression:
         cands = pc.read_tsv(a.regression)
@@ -451,7 +542,7 @@ def cmd_summarize(a):
     pc.write_tsv(a.repo_out / ('s6_cores_%s.tsv.gz' % tag), C, list(C[0]))
     pc.write_tsv(a.repo_out / ('s6_ucd_structural_pairs_%s.tsv.gz' % tag),
                  [p for p in P if p['ucd_structural_pair'] == 'True'], list(P[0]))
-    for sc, name in (('same_assembly', 'same_assembly'), ('cross_assembly_single_copy', 'cross_single_copy')):
+    for sc, name in (('same_assembly', 'same_assembly'), ('cross_assembly', 'cross_assembly')):
         bp = [r for r in BP if r['pair_scope'] == sc]
         bo = [r for r in BO if r['pair_scope'] == sc]
         if bo:
@@ -476,6 +567,7 @@ def main():
             s.add_argument('--shard', type=int, required=True)
         if name == 'boundary':
             s.add_argument('--manifest', type=Path, required=True)
+            s.add_argument('--reuse', help='comma-separated earlier boundary tags (e.g. b1_v1) whose pair rows are reused')
         if name == 'summarize':
             s.add_argument('--repo-out', type=Path, required=True)
             s.add_argument('--regression', type=Path)
