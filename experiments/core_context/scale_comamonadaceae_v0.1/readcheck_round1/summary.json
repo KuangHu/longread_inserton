@@ -1,0 +1,53 @@
+{
+ "version": "ucd_readcheck_v0.1",
+ "caller": "s3_readcheck_v0.3",
+ "evidence_added": "long_read_position_check",
+ "evidence_source_of_pairs": "assembly_only",
+ "production_ready": false,
+ "note": "reads are the assembly's own; this checks the assembled U-core-D structure, not mobility or independent insertion events",
+ "positions": 2556,
+ "position_class": {
+  "supported": 2556
+ },
+ "position_verdict": {
+  "consistent": 2556
+ },
+ "pairs": 5834,
+ "pair_class": {
+  "A|single_gene|candidate": {
+   "both_positions_supported": 606
+  },
+  "A|single_gene|conserved_paralog_control": {
+   "both_positions_supported": 5
+  },
+  "A|two_gene|candidate": {
+   "both_positions_supported": 17
+  },
+  "B|single_gene|candidate": {
+   "both_positions_supported": 98,
+   "single_side_supported": 614
+  },
+  "B|two_gene|candidate": {
+   "single_side_supported": 38,
+   "both_positions_supported": 6
+  },
+  "C|single_gene|candidate": {
+   "single_side_supported": 4109
+  },
+  "C|two_gene|candidate": {
+   "single_side_supported": 105
+  },
+  "C|two_gene|conserved_paralog_control": {
+   "single_side_supported": 3
+  },
+  "control|single_gene|repeated_context_control": {
+   "both_positions_supported": 171
+  },
+  "control|two_gene|repeated_context_control": {
+   "both_positions_supported": 62
+  }
+ },
+ "runs": {
+  "checked": 12
+ }
+}

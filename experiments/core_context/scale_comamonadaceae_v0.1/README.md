@@ -578,8 +578,126 @@ grouping, not the pair.
 | candidates | 1 | 2 min 3 s |
 
 Not done yet:
-- long-read checks on validation batch 1 (needs review of the core list and the tier order first);
 - `match_boundary_unknown_pending` and `partial_core_match_pending` pairs stay pending;
 - no FASTQ downloaded.
+
+## Formal validation list (`validation_pairs_b1-2-3.tsv.gz`, `ucd_readcheck.py pairs`)
+
+**What is in it:** one row per `match_both_lt2500` pair with at least one side in an assembly that has verified local
+reads (usable run, `verify.json` verified, MD5 equal to the archive). Each row fixes:
+- both occurrences and their coordinates;
+- the element interval per side: coding span plus that pair's own shared extensions (`a_up`/`a_down`), in genome
+  coordinates;
+- core match class, core DNA identity and coverage;
+- both sides' boundary status in the pair's scope;
+- the runs.
+
+**Tiers** are per pair, not per core family:
+- **A:** same assembly, so one read set covers both positions.
+- **B:** cross assembly, with reads on both sides.
+- **C:** cross assembly, with reads on one side only, so at most single-side support.
+
+**Ranking within a tier:** identical core first, then core DNA identity, then coverage.
+
+| pairs | A | B | C |
+|---|---:|---:|---:|
+| single-gene | 3,151 | 2,732 | 19,240 |
+| two-gene | 137 | 247 | 1,837 |
+| assemblies with reads | 142 | 138 | 149 |
+
+**Cross-check:** the occurrences with reads in this list are exactly the 6,756 of `validation_batch1_b1-2-3.tsv.gz`.
+
+**Controls** stay in the list as labels, not exclusions:
+- **`control_class=conserved_paralog_control`:** product hint `translation_or_ribosomal`, for example elongation factor
+  Tu and GreA/GreB. Pairs: A 123, B 2, C 22.
+- **`validation_controls_b1-2-3.tsv.gz`:** same-assembly pairs with `context_repeated_both_sides` in assemblies with
+  reads (1,499 single-gene, 588 two-gene). These are not U-core-D pairs and are tested on the coding span.
+
+## Long-read check, round 1 (`readcheck_round1/`)
+
+**Question:** do the assembly's own long reads support the U-core-D structure it shows at each position? A pass at
+both positions does not show mobility or independent insertion events.
+
+**Method (`ucd_readcheck.py`, s3_readcheck v0.3 counting unchanged):**
+- `genome`: all reads of every verified run are mapped once to the whole assembly (secondaries kept; SHA256 rechecked
+  against `verify.json`). The PAF is kept on scratch (`core_context/readmap/<sample>/`) for later rounds.
+- `check`: reads with a genome alignment within 2 kb of a tested position are taken from that full-genome PAF, never
+  from a gap-pipeline subset. Two alleles are built from the same assembly:
+  - P = U + element + D, as assembled;
+  - A = U + D, element removed.
+
+  No empty site in another assembly is needed.
+- **Counting:**
+  - a read must span the element plus 300 bp anchors and pass the CIGAR limit;
+  - the allele score margin is 20;
+  - both anchors must be placed at this position genome-wide; otherwise the read is `off_locus` or
+    `locus_ambiguous`;
+  - molecule grouping (ZMW / ONT id / SRA spot) and length-matched counts apply;
+  - role verdict: insufficient if fewer than 3, consistent if the other allele is at most 10%, otherwise mixed or
+    contradicted.
+- **Position class:** supported, conflict, locus_ambiguous (insufficient, with molecules that also place elsewhere),
+  insufficient_coverage or not_tested.
+
+**Selection:** 9 assemblies, chosen by specific pairs, not by family pair count. The round tests every list pair with a
+read side in these assemblies.
+- **A pairs in both structures:** SAMN51658617, SAMN38562701 (HiFi), SAMN18676188 (CLR).
+- **B pairs with both sides in the round:**
+  - SAMEA115676931 + SAMEA115676967 (Variovorax);
+  - SAMN08775333 + SAMN08775340 (Paracidovorax citrulli);
+  - SAMN13450421 + SAMN31258398 (Delftia; SAMN31258398 also holds UCD06, UCDR03, UCDR04).
+
+**Run:** 12 runs, nothing downloaded. Mapping took ≤ 2 min 40 s per assembly and check ≤ 11 min 31 s.
+
+| round 1 | pairs | result |
+|---|---:|---|
+| A single-gene | 606 | both positions supported 606 |
+| A two-gene | 17 | both positions supported 17 |
+| B single-gene, both sides in round | 98 | both positions supported 98 |
+| B two-gene, both sides in round | 6 | both positions supported 6 |
+| B, other side not in round | 614 + 38 | single side supported |
+| C single-gene / two-gene | 4,109 / 105 | single side supported |
+| conserved paralog control (A / C) | 5 / 3 | supported |
+| repeated-context control, single / two-gene | 171 / 62 | both positions supported |
+
+**Per position:** 2,556 positions, all `consistent`.
+- **No conflict:** reads for allele A (element absent) occur at 11 positions, one molecule each, below the 10% limit.
+- **Locus competition removed molecules at many positions:**
+  - `locus_ambiguous` > 0 at 576 positions;
+  - `off_locus` > 0 at 557;
+  - in the repeated-context controls, medians 9 and 16 per position.
+
+  Every position still kept at least 9 uniquely placed, length-matched supporting units.
+- **Count unit:**
+  - 1,388 positions in 6 assemblies are counted in molecules (min 9, median 96);
+  - 1,168 positions in SAMN08775333, SAMN08775340 and SAMN31258398 are counted in read records (min 41, median 96).
+    Their PacBio runs carry no molecule information (`molecule_grouping_unavailable`).
+
+**What this round shows and does not show:**
+- The assembled structure at every tested position, element plus its own U and D, is supported by the sample's own
+  reads with unique placement. There was no within-sample element-absent allele and no collapsed-repeat signal.
+- These reads usually built the assembly, so this is an assembly-consistency check, not independent validation.
+- Candidates and controls behave the same: conserved paralogs and repeated-context pairs are supported too. The check
+  therefore does not tell a mobile element from a conserved paralog or a segmental duplicate; it only removes
+  misassembly as an explanation.
+- B pairs show that both assemblies' own reads support their different contexts. It does not follow that one is
+  derived from the other.
+
+**Figures (`readcheck_round1/figures/`, SVG):** one panel per position, showing U / element / D and the genome
+alignments of reads with a call there, colored by call: blue P, red A, orange locus_ambiguous, light grey off_locus,
+purple cigar_fail. Pairs shown:
+- UCD06 `VP_80c3de3bb257`, UCDR03 `VP_d69542349125`, UCDR04 `VP_cbb7fe69d4b5` (EF-Tu);
+- A single-gene `VP_000086f80190`, A two-gene `VP_8c6421b64450`;
+- B single-gene `VP_023b5b6ef0fb`, B two-gene `VP_4204ef205cc5`;
+- C `VP_0025bbc754af`;
+- repeated-context controls `VC_02e5dfdac4fd`, `VC_0081429ee7c1`.
+
+**Files:**
+- `positions.tsv.gz`: per position, all counts, verdict, class;
+- `pairs.tsv.gz`: per pair, with the fixed list fields, both position classes and the pair class;
+- `runs.tsv`, `selection.json`, `summary.json`.
+
+Not done yet:
+- larger rounds over the other assemblies with reads (mapping is per assembly and reusable);
+- no new downloads.
 
 Stopped here for review.
