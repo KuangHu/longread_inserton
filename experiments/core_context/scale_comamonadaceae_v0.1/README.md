@@ -384,8 +384,202 @@ supported positions (protein 99.741%, DNA 99.828%).
 
 The first s6 submission failed on an argument-parser bug (`--repo-out` required for s6), fixed in `4175584`.
 
+## Batch 1+2+3 joint review (`s6_summary_b1-2-3.json`, `candidates_summary_b1-2-3.json`)
+
+The rules, thresholds and definitions are the same as for batch 1 (see "Definitions used in the evidence tables"). The
+results are `assembly_only`, `production_ready=false`. Pairs, occurrences and cores are not sites or insertion events.
+
+**Completeness:**
+- S6, boundary and candidates ran over all 64 shards; `shards_missing` is empty.
+- `pairs_pending_review` is 0: every same-assembly structural pair and every cross-assembly different-context pair was
+  reviewed directly (core and boundary).
+- Batch-1 rows were reused (`REUSE=b1`): 20,488 + 441,805 single-gene and 2,049 + 33,323 two-gene pairs.
+
+### S6 status and pair tiers
+
+| | single-gene | two-gene |
+|---|---:|---:|
+| reviewed cores | 203,268 | 139,616 |
+| occurrences: site group / single observation / unresolved | 1,653,640 / 9,756 / 2,927,983 | 1,168,654 / 2,788 / 1,372,537 |
+| same-assembly structural pairs | 37,898 | 4,865 |
+| … S6 supported / grouping unresolved | 18,189 / 19,709 | 2,187 / 2,678 |
+| … cores (with an S6-supported pair) | 2,188 (1,160) | 455 (260) |
+| cross-assembly different-context pairs | 3,579,311 | 272,843 |
+| … S6 supported / grouping unresolved | 490,152 / 3,089,159 | 56,605 / 216,238 |
+| … cores (with an S6-supported pair) | 13,149 (6,226) | 3,128 (1,393) |
+
+### Cross-assembly pairs by copy class
+
+| single-gene | single×single | single×multi | multi×multi | all |
+|---|---:|---:|---:|---:|
+| pairs | 2,358,681 | 440,031 | 780,599 | 3,579,311 |
+| … S6 supported / grouping unresolved | 278,088 / 2,080,593 | 55,933 / 384,098 | 156,131 / 624,468 | 490,152 / 3,089,159 |
+| cores (a core can be in several classes) | 12,012 | 2,269 | 1,165 | 13,149 |
+| identical core DNA | 677 | 4,201 | 55,469 | 60,347 |
+| full-coverage homolog | 2,307,285 | 426,237 | 708,591 | 3,442,113 |
+| partial core match | 50,609 | 9,593 | 16,539 | 76,741 |
+| no core DNA hit | 110 | 0 | 0 | 110 |
+| both core ends covered | 1,193,837 | 269,854 | 497,679 | 1,961,370 |
+| core DNA identity min | 70.068 | 73.734 | 75.653 | 70.068 |
+
+| two-gene | single×single | single×multi | multi×multi | all |
+|---|---:|---:|---:|---:|
+| pairs | 183,483 | 39,625 | 49,735 | 272,843 |
+| … S6 supported / grouping unresolved | 41,585 / 141,898 | 5,613 / 34,012 | 9,407 / 40,328 | 56,605 / 216,238 |
+| cores | 2,889 | 413 | 218 | 3,128 |
+| identical core DNA | 312 | 171 | 7,524 | 8,007 |
+| full-coverage homolog | 157,081 | 34,884 | 34,723 | 226,688 |
+| partial core match | 26,090 | 4,570 | 7,488 | 38,148 |
+| both core ends covered | 104,877 | 11,457 | 18,414 | 134,748 |
+| core DNA identity min | 74.597 | 75.163 | 78.649 | 74.597 |
+
+**Same-assembly core match classes** (structural pairs):
+
+| | identical | full-coverage homolog | partial | both core ends covered |
+|---|---:|---:|---:|---:|
+| single-gene, S6 supported | 6,735 | 10,666 | 788 | 16,647 |
+| single-gene, grouping unresolved | 10,454 | 8,857 | 398 | 17,831 |
+| two-gene, S6 supported | 1,539 | 620 | 28 | 2,009 |
+| two-gene, grouping unresolved | 1,748 | 882 | 48 | 2,238 |
+
+Full-coverage homologs go down to 70–76% core DNA identity. Coverage, not identity, is the criterion, so the identity
+column must be read alongside the class.
+
+### Per-occurrence boundaries and distinct counts
+
+"Both core ends covered" counts pairs. "Both sides resolved" counts occurrences, per scope, over all partners in that
+scope.
+
+| | single-gene same | single-gene cross | two-gene same | two-gene cross |
+|---|---:|---:|---:|---:|
+| occurrences | 18,486 | 259,174 | 3,041 | 37,956 |
+| both sides resolved | 12,237 | 65,904 | 1,813 | 14,298 |
+| span < 2,500 / ≥ 2,500 / unknown | 10,745 / 1,492 / 6,249 | 61,759 / 4,145 / 193,270 | 938 / 875 / 1,228 | 11,172 / 3,126 / 23,658 |
+| with an S6-supported partner | 7,637 | 63,149 | 1,352 | 11,737 |
+
+| distinct across scopes | single-gene | two-gene |
+|---|---:|---:|
+| occurrences: same / cross / in both / distinct | 18,486 / 259,174 / 16,286 / 261,374 | 3,041 / 37,956 / 2,563 / 38,434 |
+| cores: same / cross / in both / distinct | 2,188 / 13,149 / 1,581 / 13,756 | 455 / 3,128 / 295 / 3,288 |
+
+### Candidate cores: matched core, different context, both spans < 2,500 bp
+
+**Script:** `scale_candidates.py` (stage `candidates`).
+
+**Pair evidence state:** each structural or cross-assembly pair gets one state, in the scope of that pair:
+
+| state | meaning |
+|---|---|
+| `match_both_lt2500` | core match is `identical_core_dna` or `homolog_full_coverage`, and both copies have span class `lt2500` |
+| `match_span_ge2500` | sufficient core match, at least one copy `ge2500` |
+| `match_boundary_unknown_pending` | sufficient core match, at least one copy `unknown`, none `ge2500` |
+| `partial_core_match_pending` | best core HSP covers < 90% of a copy |
+| `no_core_dna_hit` | no core-vs-core HSP |
+
+Pending pairs are kept and counted per core. They are not dropped and not promoted.
+
+| pairs | single-gene same | single-gene cross | two-gene same | two-gene cross |
+|---|---:|---:|---:|---:|
+| `match_both_lt2500` | 16,177 | 70,400 | 1,069 | 7,682 |
+| `match_span_ge2500` | 4,747 | 12,280 | 2,446 | 13,317 |
+| `match_boundary_unknown_pending` | 15,788 | 3,419,780 | 1,274 | 213,696 |
+| `partial_core_match_pending` | 1,186 | 76,741 | 76 | 38,148 |
+| `no_core_dna_hit` | 0 | 110 | 0 | 0 |
+
+**Core list** (`core_candidates_b1-2-3.tsv.gz`): one row per core with at least one `match_both_lt2500` pair, listing:
+- its pair counts by scope and copy class;
+- S6-supported pairs, identical pairs and identity min;
+- occurrence S6 status;
+- pending counts;
+- best pair;
+- local-read assemblies.
+
+The pairs themselves are in `match_both_lt2500_pairs_b1-2-3.tsv.gz`.
+
+| | single-gene | two-gene |
+|---|---:|---:|
+| cores | 5,416 | 1,245 |
+| … with a same-assembly pair / cross-assembly only | 1,346 / 4,070 | 221 / 1,024 |
+| … with an S6-supported qualifying pair | 2,588 | 590 |
+| … K=3 had no different pair for this core | 591 | 172 |
+| … transposase/IS, integrase/recombinase/resolvase | 830, 88 | 91, 11 |
+| … hypothetical, other | 1,472, 2,969 | 302, 831 |
+| distinct occurrences in a qualifying pair | 32,629 | 6,118 |
+| distinct occurrences only in pending pairs | 227,141 | 30,743 |
+
+**Housekeeping paralogs rank high.** The sort is: identical core first, then local reads, then pair count. This puts
+duplicated housekeeping genes near the top:
+- elongation factor Tu (`tufA`/`tufB`, 570 same-assembly pairs);
+- Hcp (T6SS).
+
+They have the same core and different flanks by construction. Product is for reporting and ranking only, so they stay
+in the list; reviewers should read `product_hint`.
+
+### Validation batch 1 (`validation_batch1_b1-2-3.tsv.gz`)
+
+**What it contains:** occurrences in `match_both_lt2500` pairs whose assembly has verified local long reads. Verified
+means `data/reads/<run>/verify.json` has status verified and an md5 match. Runs are linked through `runs.tsv`; 151
+assemblies have them.
+
+**Columns:** coordinates, estimated span per scope, partner counts, whether a partner assembly also has reads, and runs
+with their platforms.
+
+Nothing was downloaded and no reads were mapped.
+
+| | single-gene | two-gene |
+|---|---:|---:|
+| occurrences | 5,756 | 1,000 |
+| cores | 1,759 | 437 |
+| assemblies | 149 | 141 |
+
+**Suggested order:** ad hoc tiers, not written to the file.
+- **A:** the occurrence has a qualifying same-assembly partner, so one read set covers both copies.
+- **B:** cross-assembly only, and a partner assembly also has reads.
+- **C:** cross-assembly only, and only this side has reads.
+
+"Identical" below means the core has at least one identical-core pair.
+
+| tier | single-gene occ. / cores / assemblies | two-gene occ. / cores / assemblies |
+|---|---|---|
+| A, identical | 1,661 / 226 / 141 | 63 / 20 / 15 |
+| A, homolog only | 707 / 166 / 113 | 88 / 38 / 30 |
+| B, identical | 162 / 72 / 75 | 24 / 9 / 17 |
+| B, homolog only | 1,122 / 274 / 131 | 260 / 86 / 102 |
+| C, identical | 57 / 44 / 34 | 10 / 6 / 10 |
+| C, homolog only | 2,047 / 1,068 / 149 | 555 / 294 / 127 |
+
+**Platforms** (occurrence × run, single-gene):
+- ONT: 4,502;
+- PacBio CLR subreads: 391;
+- PacBio HiFi/CCS: 257;
+- PacBio with read type unresolved: 1,243.
+
+### Frozen regression set (`s6_regression_b1-2-3.tsv`)
+
+**Structural pairs:** all 12 main candidates and UCDR01, 03, 04, 05, 06 are still structural pairs. UCDR02 is still not a
+core pair.
+
+**S6 grouping:**
+- UCD02, 04, 05, 06, 08, 09, UCDR03 and UCDR05: `supported_positions`.
+- UCD01, 03, 07, UCDR01, 04 and 06: `grouping_unresolved`, as in batch 1.
+- UCD10, 11 and 12 moved from `supported_positions` (batch 1) to `grouping_unresolved`. One copy of each is now
+  `conflict_in_component`.
+
+This is the case covered by `test_other_occurrences_change_s6_grouping_but_not_structure`: more assemblies change the
+grouping, not the pair.
+
+### Resources (joint review)
+
+| step | tasks | wall time max |
+|---|---:|---|
+| s6 | 64 | 5 min 56 s |
+| boundary (reuses batch-1 rows) | 64 | 3 h 42 min |
+| summarize | 1 | 5 min 36 s |
+| candidates | 1 | 2 min 3 s |
+
 Not done yet:
-- S6 and boundary review on the batch 1+2+3 joint set (running);
-- long-read checks, batch by batch after candidate review; no FASTQ downloaded.
+- long-read checks on validation batch 1 (needs review of the core list and the tier order first);
+- `match_boundary_unknown_pending` and `partial_core_match_pending` pairs stay pending;
+- no FASTQ downloaded.
 
 Stopped here for review.
