@@ -1,0 +1,493 @@
+{
+ "version": "scale_review_v0.1",
+ "batches": [
+  1
+ ],
+ "evidence_source": "assembly_only",
+ "production_ready": false,
+ "site_groups_are_independent_insertion_events": false,
+ "counts_are_pairs_not_sites_or_events": true,
+ "s6_grouping_unresolved_not_used_for_site_or_event_counts": true,
+ "shards_missing": [],
+ "structures": {
+  "single_gene": {
+   "reviewed_cores": 40870,
+   "reviewed_cores_k3_different": 5537,
+   "reviewed_cores_k3_without_different": 35333,
+   "occurrences": 563787,
+   "occurrence_status": {
+    "unresolved": 330105,
+    "site_group": 227048,
+    "single_observation_site": 6634
+   },
+   "unresolved_reasons": {
+    "conflict_in_component": 269980,
+    "unresolved_pairs": 33272,
+    "conflicting_sides": 25227,
+    "ambiguous_multiple_correspondence": 1626
+   },
+   "site_groups": 34738,
+   "single_observation_sites": 6634,
+   "unit_pairs": {
+    "different": 17634,
+    "unknown": 11363,
+    "conflicting": 8313,
+    "ambiguous": 3
+   },
+   "cores_with_2plus_pairwise_context_different_units": 2420,
+   "same_assembly_pairs": 46408,
+   "same_assembly_context": {
+    "context_unknown": 23100,
+    "context_different_both_sides": 20616,
+    "context_repeated_one_side": 1227,
+    "context_repeated_both_sides": 1465
+   },
+   "same_assembly_physically_shared_host_genes": {
+    "context_unknown": 682,
+    "context_repeated_both_sides": 306,
+    "context_different_both_sides": 128,
+    "context_repeated_one_side": 24
+   },
+   "ucd_structural_pairs": 20488,
+   "ucd_structural_pairs_by_s6_grouping": {
+    "grouping_unresolved": 8222,
+    "supported_positions": 12266
+   },
+   "ucd_structural_pairs_s6_status": {
+    "unresolved:unresolved_pairs": 12638,
+    "single_observation_site": 15130,
+    "site_group": 11338,
+    "unresolved:conflicting_sides": 587,
+    "unresolved:conflict_in_component": 1069,
+    "unresolved:ambiguous_multiple_correspondence": 214
+   },
+   "ucd_structural": {
+    "cores": 1259,
+    "cores_with_s6_supported_pair": 890,
+    "cores_only_grouping_unresolved": 369,
+    "cores_by_hint": {
+     "other": 406,
+     "hypothetical": 163,
+     "transposase_or_IS": 642,
+     "integrase_recombinase_resolvase": 29,
+     "intron_rt": 12,
+     "translation_or_ribosomal": 6,
+     "phage_like": 1
+    },
+    "cores_where_k3_had_no_different_pair": 257
+   },
+   "cross_different_position_pairs": 441805,
+   "cross_single_copy_pairs": 187956,
+   "cross_single_copy_pairs_by_s6_grouping": {
+    "grouping_unresolved": 144478,
+    "supported_positions": 43478
+   },
+   "cross_single_copy": {
+    "cores": 3451,
+    "cores_with_s6_supported_pair": 1796,
+    "cores_only_grouping_unresolved": 1655,
+    "cores_by_hint": {
+     "hypothetical": 660,
+     "other": 2470,
+     "transposase_or_IS": 184,
+     "integrase_recombinase_resolvase": 91,
+     "phage_like": 16,
+     "translation_or_ribosomal": 28,
+     "intron_rt": 2
+    },
+    "cores_where_k3_had_no_different_pair": 305
+   }
+  },
+  "two_gene": {
+   "reviewed_cores": 21225,
+   "reviewed_cores_k3_different": 1373,
+   "reviewed_cores_k3_without_different": 19852,
+   "occurrences": 229372,
+   "occurrence_status": {
+    "unresolved": 114501,
+    "site_group": 113236,
+    "single_observation_site": 1635
+   },
+   "unresolved_reasons": {
+    "conflict_in_component": 89474,
+    "unresolved_pairs": 12680,
+    "conflicting_sides": 11899,
+    "ambiguous_multiple_correspondence": 448
+   },
+   "site_groups": 17186,
+   "single_observation_sites": 1635,
+   "unit_pairs": {
+    "different": 1975,
+    "unknown": 2860,
+    "conflicting": 3439,
+    "ambiguous": 0
+   },
+   "cores_with_2plus_pairwise_context_different_units": 522,
+   "same_assembly_pairs": 6851,
+   "same_assembly_context": {
+    "context_unknown": 3925,
+    "context_repeated_both_sides": 362,
+    "context_different_both_sides": 2068,
+    "context_repeated_one_side": 496
+   },
+   "same_assembly_physically_shared_host_genes": {
+    "context_unknown": 91,
+    "context_repeated_both_sides": 24,
+    "context_repeated_one_side": 13,
+    "context_different_both_sides": 19
+   },
+   "ucd_structural_pairs": 2049,
+   "ucd_structural_pairs_by_s6_grouping": {
+    "supported_positions": 825,
+    "grouping_unresolved": 1224
+   },
+   "ucd_structural_pairs_s6_status": {
+    "single_observation_site": 1000,
+    "site_group": 825,
+    "unresolved:unresolved_pairs": 2025,
+    "unresolved:conflicting_sides": 108,
+    "unresolved:conflict_in_component": 131,
+    "unresolved:ambiguous_multiple_correspondence": 9
+   },
+   "ucd_structural": {
+    "cores": 290,
+    "cores_with_s6_supported_pair": 209,
+    "cores_only_grouping_unresolved": 81,
+    "cores_by_hint": {
+     "hypothetical": 40,
+     "other": 114,
+     "transposase_or_IS": 126,
+     "integrase_recombinase_resolvase": 8,
+     "phage_like": 2
+    },
+    "cores_where_k3_had_no_different_pair": 94
+   },
+   "cross_different_position_pairs": 33323,
+   "cross_single_copy_pairs": 18118,
+   "cross_single_copy_pairs_by_s6_grouping": {
+    "supported_positions": 6809,
+    "grouping_unresolved": 11309
+   },
+   "cross_single_copy": {
+    "cores": 753,
+    "cores_with_s6_supported_pair": 371,
+    "cores_only_grouping_unresolved": 382,
+    "cores_by_hint": {
+     "translation_or_ribosomal": 8,
+     "other": 591,
+     "hypothetical": 110,
+     "transposase_or_IS": 28,
+     "phage_like": 4,
+     "integrase_recombinase_resolvase": 12
+    },
+    "cores_where_k3_had_no_different_pair": 86
+   }
+  }
+ },
+ "boundary": {
+  "shards_missing": [],
+  "single_gene": {
+   "same_assembly": {
+    "pairs": {
+     "pairs": 20488,
+     "identical_core_dna": 10839,
+     "core_dna_identity_min": 75.373,
+     "protein_identity_min": 77.931,
+     "core_dna_coverage_lt_0_9": 306,
+     "no_core_dna_hit": 0,
+     "pair_side_cover": {
+      "covered/covered": 17160,
+      "covered/covered_at_chain_end": 1912,
+      "covered/not_reached": 869,
+      "covered_at_chain_end/covered": 154,
+      "not_reached/covered": 151,
+      "not_reached/not_reached": 121
+     }
+    },
+    "pairs_by_s6_grouping": {
+     "supported_positions": {
+      "pairs": 12266,
+      "identical_core_dna": 5447,
+      "core_dna_identity_min": 75.373,
+      "protein_identity_min": 78.125,
+      "core_dna_coverage_lt_0_9": 251,
+      "no_core_dna_hit": 0,
+      "pair_side_cover": {
+       "covered/covered": 10099,
+       "covered/covered_at_chain_end": 1477,
+       "covered/not_reached": 409,
+       "not_reached/covered": 99,
+       "not_reached/not_reached": 79,
+       "covered_at_chain_end/covered": 66
+      }
+     },
+     "grouping_unresolved": {
+      "pairs": 8222,
+      "identical_core_dna": 5392,
+      "core_dna_identity_min": 78.553,
+      "protein_identity_min": 77.931,
+      "core_dna_coverage_lt_0_9": 55,
+      "no_core_dna_hit": 0,
+      "pair_side_cover": {
+       "covered/covered": 7061,
+       "covered/not_reached": 460,
+       "covered/covered_at_chain_end": 435,
+       "covered_at_chain_end/covered": 88,
+       "not_reached/covered": 52,
+       "not_reached/not_reached": 42
+      }
+     }
+    },
+    "occurrences": 9328,
+    "both_sides_resolved": 6600,
+    "span_class": {
+     "ge2500": 870,
+     "unknown": 2728,
+     "lt2500": 5730
+    },
+    "occurrences_with_s6_supported_partner": 5009,
+    "span_class_with_s6_supported_partner": {
+     "ge2500": 422,
+     "unknown": 1541,
+     "lt2500": 3046
+    },
+    "side_status": {
+     "resolved": 15351,
+     "end_not_covered": 1588,
+     "inconsistent_between_partners": 1348,
+     "end_not_covered_by_some_partners": 349,
+     "reaches_window_or_contig_end": 20
+    },
+    "single_partner": 4268
+   },
+   "cross_assembly_single_copy": {
+    "pairs": {
+     "pairs": 187956,
+     "identical_core_dna": 142,
+     "core_dna_identity_min": 73.063,
+     "protein_identity_min": 75.824,
+     "core_dna_coverage_lt_0_9": 4078,
+     "no_core_dna_hit": 2,
+     "pair_side_cover": {
+      "covered/covered": 68339,
+      "covered/not_reached": 57599,
+      "covered/covered_at_chain_end": 25949,
+      "not_reached/not_reached": 11890,
+      "covered_at_chain_end/not_reached": 8200,
+      "not_reached/covered": 5870
+     }
+    },
+    "pairs_by_s6_grouping": {
+     "supported_positions": {
+      "pairs": 43478,
+      "identical_core_dna": 72,
+      "core_dna_identity_min": 74.853,
+      "protein_identity_min": 79.412,
+      "core_dna_coverage_lt_0_9": 1628,
+      "no_core_dna_hit": 0,
+      "pair_side_cover": {
+       "covered/covered": 17504,
+       "covered/not_reached": 12561,
+       "covered/covered_at_chain_end": 5022,
+       "not_reached/not_reached": 3338,
+       "not_reached/covered": 1636,
+       "not_reached/covered_at_chain_end": 1129
+      }
+     },
+     "grouping_unresolved": {
+      "pairs": 144478,
+      "identical_core_dna": 70,
+      "core_dna_identity_min": 73.063,
+      "protein_identity_min": 75.824,
+      "core_dna_coverage_lt_0_9": 2450,
+      "no_core_dna_hit": 2,
+      "pair_side_cover": {
+       "covered/covered": 50835,
+       "covered/not_reached": 45038,
+       "covered/covered_at_chain_end": 20927,
+       "not_reached/not_reached": 8552,
+       "covered_at_chain_end/not_reached": 7148,
+       "not_reached/covered": 4234
+      }
+     }
+    },
+    "occurrences": 38200,
+    "both_sides_resolved": 11684,
+    "span_class": {
+     "unknown": 26516,
+     "lt2500": 11069,
+     "ge2500": 615
+    },
+    "occurrences_with_s6_supported_partner": 12437,
+    "span_class_with_s6_supported_partner": {
+     "unknown": 8456,
+     "lt2500": 3802,
+     "ge2500": 179
+    },
+    "side_status": {
+     "resolved": 38583,
+     "end_not_covered": 17320,
+     "inconsistent_between_partners": 8666,
+     "end_not_covered_by_some_partners": 11697,
+     "reaches_window_or_contig_end": 134
+    },
+    "single_partner": 13576
+   }
+  },
+  "two_gene": {
+   "same_assembly": {
+    "pairs": {
+     "pairs": 2049,
+     "identical_core_dna": 1267,
+     "core_dna_identity_min": 84.345,
+     "protein_identity_min": 86.517,
+     "core_dna_coverage_lt_0_9": 32,
+     "no_core_dna_hit": 0,
+     "pair_side_cover": {
+      "covered/covered": 1710,
+      "not_reached/covered_at_chain_end": 99,
+      "not_reached/covered": 95,
+      "not_reached/not_reached": 54,
+      "covered/covered_at_chain_end": 34,
+      "covered_at_chain_end/not_reached": 19
+     }
+    },
+    "pairs_by_s6_grouping": {
+     "supported_positions": {
+      "pairs": 825,
+      "identical_core_dna": 444,
+      "core_dna_identity_min": 84.345,
+      "protein_identity_min": 86.984,
+      "core_dna_coverage_lt_0_9": 16,
+      "no_core_dna_hit": 0,
+      "pair_side_cover": {
+       "covered/covered": 654,
+       "not_reached/covered_at_chain_end": 53,
+       "not_reached/covered": 44,
+       "not_reached/not_reached": 23,
+       "covered/covered_at_chain_end": 23,
+       "covered/not_reached": 11
+      }
+     },
+     "grouping_unresolved": {
+      "pairs": 1224,
+      "identical_core_dna": 823,
+      "core_dna_identity_min": 86.278,
+      "protein_identity_min": 86.517,
+      "core_dna_coverage_lt_0_9": 16,
+      "no_core_dna_hit": 0,
+      "pair_side_cover": {
+       "covered/covered": 1056,
+       "not_reached/covered": 51,
+       "not_reached/covered_at_chain_end": 46,
+       "not_reached/not_reached": 31,
+       "covered_at_chain_end/not_reached": 14,
+       "covered/covered_at_chain_end": 11
+      }
+     }
+    },
+    "occurrences": 1531,
+    "both_sides_resolved": 1002,
+    "span_class": {
+     "lt2500": 501,
+     "unknown": 529,
+     "ge2500": 501
+    },
+    "occurrences_with_s6_supported_partner": 808,
+    "span_class_with_s6_supported_partner": {
+     "lt2500": 317,
+     "unknown": 233,
+     "ge2500": 258
+    },
+    "side_status": {
+     "resolved": 2430,
+     "end_not_covered": 485,
+     "end_not_covered_by_some_partners": 64,
+     "inconsistent_between_partners": 81,
+     "reaches_window_or_contig_end": 2
+    },
+    "single_partner": 813
+   },
+   "cross_assembly_single_copy": {
+    "pairs": {
+     "pairs": 18118,
+     "identical_core_dna": 59,
+     "core_dna_identity_min": 77.893,
+     "protein_identity_min": 75.459,
+     "core_dna_coverage_lt_0_9": 2197,
+     "no_core_dna_hit": 0,
+     "pair_side_cover": {
+      "covered/covered": 7996,
+      "not_reached/covered": 3785,
+      "covered/not_reached": 2678,
+      "not_reached/not_reached": 971,
+      "covered/covered_at_chain_end": 886,
+      "covered_at_chain_end/covered": 691
+     }
+    },
+    "pairs_by_s6_grouping": {
+     "supported_positions": {
+      "pairs": 6809,
+      "identical_core_dna": 13,
+      "core_dna_identity_min": 80.421,
+      "protein_identity_min": 84.036,
+      "core_dna_coverage_lt_0_9": 414,
+      "no_core_dna_hit": 0,
+      "pair_side_cover": {
+       "covered/covered": 2933,
+       "covered/not_reached": 1441,
+       "not_reached/covered": 826,
+       "not_reached/not_reached": 550,
+       "covered/covered_at_chain_end": 458,
+       "not_reached/covered_at_chain_end": 269
+      }
+     },
+     "grouping_unresolved": {
+      "pairs": 11309,
+      "identical_core_dna": 46,
+      "core_dna_identity_min": 77.893,
+      "protein_identity_min": 75.459,
+      "core_dna_coverage_lt_0_9": 1783,
+      "no_core_dna_hit": 0,
+      "pair_side_cover": {
+       "covered/covered": 5063,
+       "not_reached/covered": 2959,
+       "covered/not_reached": 1237,
+       "covered_at_chain_end/covered": 525,
+       "covered/covered_at_chain_end": 428,
+       "not_reached/not_reached": 421
+      }
+     }
+    },
+    "occurrences": 6030,
+    "both_sides_resolved": 2490,
+    "span_class": {
+     "unknown": 3540,
+     "lt2500": 2077,
+     "ge2500": 413
+    },
+    "occurrences_with_s6_supported_partner": 2470,
+    "span_class_with_s6_supported_partner": {
+     "unknown": 1471,
+     "lt2500": 774,
+     "ge2500": 225
+    },
+    "side_status": {
+     "resolved": 7379,
+     "end_not_covered": 2504,
+     "inconsistent_between_partners": 929,
+     "end_not_covered_by_some_partners": 1221,
+     "reaches_window_or_contig_end": 27
+    },
+    "single_partner": 2508
+   }
+  }
+ },
+ "regression": {
+  "main:grouping_unresolved": 3,
+  "main:supported_positions": 9,
+  "read_available_supplement:grouping_unresolved": 3,
+  "read_available_supplement:not_a_same_assembly_pair": 1,
+  "read_available_supplement:supported_positions": 2
+ }
+}
