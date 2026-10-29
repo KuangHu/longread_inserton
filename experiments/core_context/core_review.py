@@ -203,7 +203,9 @@ def blast(prog, records, task):
         for k, s in records.items():
             f.write('>%s\n%s\n' % (k, s))
         f.flush()
-        cmd = [prog, '-query', f.name, '-subject', f.name, '-outfmt', OUTFMT, '-evalue', '1e-5']
+        # the default max_target_seqs (500) would drop subjects of larger cores; unchanged up to 500 records
+        cmd = [prog, '-query', f.name, '-subject', f.name, '-outfmt', OUTFMT, '-evalue', '1e-5',
+               '-max_target_seqs', str(max(500, len(records)))]
         if prog == 'blastn':
             cmd += ['-task', task, '-strand', 'plus', '-dust', 'no']
         out = subprocess.run(cmd, check=True, capture_output=True, text=True).stdout
