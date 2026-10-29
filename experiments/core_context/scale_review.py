@@ -398,7 +398,7 @@ def main():
             s.add_argument('--shard', type=int, required=True)
         if name == 'boundary':
             s.add_argument('--manifest', type=Path, required=True)
-        else:
+        if name == 'summarize':
             s.add_argument('--repo-out', type=Path, required=True)
             s.add_argument('--regression', type=Path)
     a = p.parse_args()
