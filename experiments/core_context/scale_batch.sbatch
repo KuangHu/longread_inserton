@@ -20,6 +20,7 @@
 #   boundary     --array=0-63      boundary review of the structural and cross-assembly pairs per shard (needs s6);
 #                                  REUSE=<tags> reuses pair rows of earlier boundary runs (e.g. REUSE=b1_v1)
 #   s6_summarize one task
+#   candidates   one task: evidence tiers, core list, validation batch from local reads (scale_candidates.py)
 # Usage: sbatch [--array=..] [--cpus-per-task=.. --mem=..] scale_batch.sbatch <work> <manifest> <batch> <batches> <stage> [repo_out]
 set -euo pipefail
 WORK=${1:?work}; MAN=${2:?manifest}; B=${3:?batch}; BS=${4:?batches}; STAGE=${5:?stage}; OUT=${6:-}
@@ -43,6 +44,7 @@ windows)     $TIME python scale_review.py windows --work $WORK --batch $B ;;
 s6)          $TIME python scale_review.py s6 --work $WORK --batches $BS --shard $T ;;
 boundary)    $TIME python scale_review.py boundary --work $WORK --batches $BS --shard $T --manifest $MAN ${REUSE:+--reuse $REUSE} ;;
 s6_summarize) $TIME python scale_review.py summarize --work $WORK --batches $BS --repo-out $OUT --regression $HERE/subsets_20261027/ucd_candidates_v0.1/candidates.tsv ;;
+candidates)  $TIME python scale_candidates.py --work $WORK --batches $BS --repo-out $OUT ;;
 esac
 grep -E "Elapsed|Maximum resident" $WORK/time/${STAGE}_b${B}_${BS//,/-}_$T.time
 echo "[$(date -Is)] done"
