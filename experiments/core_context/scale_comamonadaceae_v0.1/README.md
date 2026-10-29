@@ -248,36 +248,101 @@ Pair columns are in `boundary_pairs_same_assembly_b1.tsv.gz`; occurrence columns
 | boundary unknown (kept) | 2,728 | 529 |
 | … of which with an S6-supported partner: < 2,500 / ≥ 2,500 / unknown | 3,046 / 422 / 1,541 | 317 / 258 / 233 |
 
-### Cross-assembly single-copy pairs
+### Definitions used in the evidence tables
 
-- **Which pairs:** two assemblies, each holding one copy of the core, with host context different on both sides
-  (`different_position_candidate`). Neither multi-copy assemblies nor empty sites are required.
-- **Same review:** these pairs get the same direct core comparison and boundary review, and the same S6 grouping field.
+Three layers are reported separately, never merged into one "candidate" label:
+1. **Context different:** the pair entered structural review.
+2. **Core match:** how well the two cores align.
+3. **Length target:** the whole element is resolved on both sides with an estimated span under 2,500 bp. A short coding
+   core does not stand in for this.
+
+**Core match class** (`core_match_class`; reporting and ranking only, not an admission rule):
+
+| class | definition |
+|---|---|
+| `identical_core_dna` | the two coding spans (core-oriented DNA) are identical strings |
+| `homolog_full_coverage` | not identical. Best blastn HSP of core vs core (`-task blastn`, e-value 1e-5) covers ≥ 90% of each copy's core DNA; `core_dna_coverage_min` = min(HSP length / core length) over the two copies. No identity threshold beyond family membership (protein 0.9 identity / 0.8 coverage); `core_dna_identity` (pident of that HSP) is reported as a separate column |
+| `partial_core_match` | best HSP covers < 90% of at least one copy: a local match, kept for review |
+| `no_core_dna_hit` | no core-vs-core blastn HSP |
+
+**Both core ends covered vs boundary resolved:**
+- **Both core ends covered** is a pair property: the chained ±3 kb flank alignment of the two copies covers the upstream
+  and the downstream core end in both copies (`covered` or `covered_at_chain_end`). Only then is the shared extension
+  past each end measurable for that pair; otherwise it is unknown, never 0.
+- **Boundary resolved** is an occurrence property within one pair scope:
+  - every partner of that scope gives a measured extension on that side;
+  - the extensions agree within 20 bp;
+  - the shared stretch does not reach the window or contig end.
+
+  When both sides are resolved, estimated span = coding span + median upstream + median downstream extension, then
+  classed `lt2500` or `ge2500`. Anything else is `unknown`.
+
+**Counting scopes:**
+- Pairs, distinct occurrences, cores and S6 status are counted separately.
+- An occurrence can be in both the same-assembly and the cross-assembly scope. Its boundary is computed per scope, so
+  occurrence counts of the two scopes are not added.
+
+### Cross-assembly pairs (every copy class)
+
+- **Which pairs:** every pair of copies from two assemblies with host context different on both sides
+  (`different_position_candidate`), whatever the copy numbers.
+- **Copy class** (single×single, single×multi, multi×multi) is a classification only.
+- **Why multi-copy pairs are needed:** two copies with similar contexts in one assembly give no same-assembly pair,
+  yet each can differ from a copy elsewhere (`test_two_similar_copies_in_one_assembly_differ_from_a_single_copy_elsewhere`).
+  Commit `d662ad7` reviewed only single×single; `b7d40ef` adds the rest.
+- **Reuse:** single×single rows were reused from that run (`--reuse`). Reuse is exact: a recomputed shard matched row
+  for row, because blast scores each pair on its own.
 - **Physical overlap** does not apply across assemblies.
-- **Files:** pair rows are on scratch (`review/s6/b1/*/cross_assembly_single_copy_pairs.tsv.gz`,
-  `review/boundary/b1/*/pairs.tsv.gz`); per-occurrence boundaries are in
-  `boundary_occurrences_cross_single_copy_b1.tsv.gz`.
+- **Files:**
+  - pair rows are on scratch (`review/boundary/b1/*/pairs.tsv.gz`);
+  - per-occurrence boundaries: `boundary_occurrences_cross_assembly_b1.tsv.gz`.
+
+| single-gene | single×single | single×multi | multi×multi | all |
+|---|---:|---:|---:|---:|
+| pairs | 187,956 | 54,358 | 199,491 | 441,805 |
+| … S6 supported / grouping unresolved | 43,478 / 144,478 | 13,523 / 40,835 | 54,692 / 144,799 | 111,693 / 330,112 |
+| cores (a core can be in several classes) | 3,451 | 797 | 526 | 4,047 |
+| identical core DNA | 142 | 813 | 23,007 | 23,962 |
+| full-coverage homolog | 183,734 | 52,599 | 175,596 | 411,929 |
+| partial core match | 4,078 | 946 | 888 | 5,912 |
+| no core DNA hit | 2 | 0 | 0 | 2 |
+| both core ends covered | 100,387 | 33,693 | 137,513 | 271,593 |
+| core DNA identity min | 73.063 | 74.71 | 75.653 | 73.063 |
+
+| two-gene | single×single | single×multi | multi×multi | all |
+|---|---:|---:|---:|---:|
+| pairs | 18,118 | 4,315 | 10,890 | 33,323 |
+| … S6 supported / grouping unresolved | 6,809 / 11,309 | 1,137 / 3,178 | 1,686 / 9,204 | 9,632 / 23,691 |
+| cores | 753 | 165 | 114 | 912 |
+| identical core DNA | 59 | 51 | 437 | 547 |
+| full-coverage homolog | 15,862 | 3,784 | 8,689 | 28,335 |
+| partial core match | 2,197 | 480 | 1,764 | 4,441 |
+| both core ends covered | 9,680 | 1,512 | 4,710 | 15,902 |
+
+How to read the cross-assembly results:
+- **Multi-copy pairs carry most identical cores.** Identical core DNA rises from 142 (single×single) to 23,962
+  single-gene pairs. A multi-copy core gives many pairs, so this is not the number of new sites or families.
+- **Different context is ambiguous across assemblies.** It also fits inherited genes in rearranged or divergent
+  genomes.
+
+**Per-occurrence boundaries** (cross-assembly scope, over all cross-assembly partners of the occurrence):
 
 | | single-gene | two-gene |
 |---|---:|---:|
-| cross-assembly different-position pairs (all) | 441,805 | 33,323 |
-| … both assemblies single-copy | 187,956 | 18,118 |
-| … S6 supported / grouping unresolved | 43,478 / 144,478 | 6,809 / 11,309 |
-| cores | 3,451 | 753 |
-| … only grouping-unresolved pairs | 1,655 | 382 |
-| … K=3 had no different pair | 305 | 86 |
-| cores by product: other · hypothetical · transposase/IS · integrase/recombinase · translation · phage · intron RT | 2,470 · 660 · 184 · 91 · 28 · 16 · 2 | 591 · 110 · 28 · 12 · 8 · 4 · 0 |
-| identical core DNA | 142 | 59 |
-| core DNA coverage < 0.9 | 4,078 | 2,197 |
-| occurrences: < 2,500 / ≥ 2,500 / unknown | 11,069 / 615 / 26,516 | 2,077 / 413 / 3,540 |
+| occurrences | 50,562 | 7,774 |
+| both sides resolved | 15,719 | 3,110 |
+| estimated span < 2,500 / ≥ 2,500 / unknown | 14,544 / 1,175 / 34,843 | 2,350 / 760 / 4,664 |
 
-How to read the cross-assembly results:
-- **Not a mobile-element set.** Unlike the same-assembly set, few of these pairs have identical core DNA, and most
-  cores are not mobile-keyword cores.
-- **Different context is ambiguous here.** Across assemblies it also fits inherited genes in rearranged or divergent
-  genomes, so the same caution as for the K=3 counts applies.
-- **Many boundaries are unknown.** One core end is often `not_reached`, meaning the chain of aligned blocks stops
-  before that end in one of the two copies.
+**Distinct counts across the two scopes** (batch 1):
+
+| | single-gene | two-gene |
+|---|---:|---:|
+| occurrences: same-assembly / cross-assembly / in both / distinct | 9,328 / 50,562 / 7,275 / 52,615 | 1,531 / 7,774 / 1,131 / 8,174 |
+| cores: same-assembly / cross-assembly / distinct | 1,259 / 4,047 / 4,573 | 290 / 912 / 1,045 |
+
+Same-assembly core match classes (all structural pairs):
+- single-gene: 10,839 identical, 9,343 full-coverage homolog, 306 partial;
+- two-gene: 1,267 identical, 750 full-coverage homolog, 32 partial.
 
 ### Frozen regression set (`s6_regression_b1.tsv`)
 
@@ -312,13 +377,15 @@ supported positions (protein 99.741%, DNA 99.828%).
 |---|---:|---|
 | windows | 1 | 28 min |
 | s6 | 64 | 2 min 40 s |
-| boundary (structural + cross pairs) | 64 | 42 min 40 s |
+| boundary (structural + single×single cross pairs) | 64 | 42 min 40 s |
+| s6 rerun (all cross-assembly pairs) | 64 | 25 s |
+| boundary rerun (adds single×multi and multi×multi, reuses the rest) | 64 | 24 min 37 s |
 | summarize | 1 | 1 min 34 s |
 
 The first s6 submission failed on an argument-parser bug (`--repo-out` required for s6), fixed in `4175584`.
 
 Not done yet:
-- S6 and boundary review on the batch 1+2+3 joint set (windows for batches 2 and 3 are built);
+- S6 and boundary review on the batch 1+2+3 joint set (running);
 - long-read checks, batch by batch after candidate review; no FASTQ downloaded.
 
 Stopped here for review.

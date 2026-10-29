@@ -66,36 +66,90 @@
     "cores_with_s6_supported_pair": 890,
     "cores_only_grouping_unresolved": 369,
     "cores_by_hint": {
+     "transposase_or_IS": 642,
      "other": 406,
      "hypothetical": 163,
-     "transposase_or_IS": 642,
      "integrase_recombinase_resolvase": 29,
      "intron_rt": 12,
-     "translation_or_ribosomal": 6,
-     "phage_like": 1
+     "phage_like": 1,
+     "translation_or_ribosomal": 6
     },
     "cores_where_k3_had_no_different_pair": 257
    },
-   "cross_different_position_pairs": 441805,
-   "cross_single_copy_pairs": 187956,
-   "cross_single_copy_pairs_by_s6_grouping": {
-    "grouping_unresolved": 144478,
-    "supported_positions": 43478
+   "cross_pairs": 441805,
+   "cross_pairs_by_copy_class": {
+    "single_x_single": 187956,
+    "single_x_multi": 54358,
+    "multi_x_multi": 199491
    },
-   "cross_single_copy": {
-    "cores": 3451,
-    "cores_with_s6_supported_pair": 1796,
-    "cores_only_grouping_unresolved": 1655,
+   "cross_pairs_by_copy_class_and_s6_grouping": {
+    "single_x_single:grouping_unresolved": 144478,
+    "single_x_multi:grouping_unresolved": 40835,
+    "single_x_single:supported_positions": 43478,
+    "single_x_multi:supported_positions": 13523,
+    "multi_x_multi:supported_positions": 54692,
+    "multi_x_multi:grouping_unresolved": 144799
+   },
+   "cross": {
+    "cores": 4047,
+    "cores_with_s6_supported_pair": 2170,
+    "cores_only_grouping_unresolved": 1877,
     "cores_by_hint": {
-     "hypothetical": 660,
-     "other": 2470,
-     "transposase_or_IS": 184,
-     "integrase_recombinase_resolvase": 91,
-     "phage_like": 16,
-     "translation_or_ribosomal": 28,
-     "intron_rt": 2
+     "other": 2705,
+     "transposase_or_IS": 442,
+     "hypothetical": 736,
+     "translation_or_ribosomal": 32,
+     "integrase_recombinase_resolvase": 109,
+     "phage_like": 19,
+     "intron_rt": 4
     },
-    "cores_where_k3_had_no_different_pair": 305
+    "cores_where_k3_had_no_different_pair": 425
+   },
+   "cross_by_copy_class": {
+    "single_x_single": {
+     "cores": 3451,
+     "cores_with_s6_supported_pair": 1796,
+     "cores_only_grouping_unresolved": 1655,
+     "cores_by_hint": {
+      "other": 2470,
+      "hypothetical": 660,
+      "translation_or_ribosomal": 28,
+      "transposase_or_IS": 184,
+      "integrase_recombinase_resolvase": 91,
+      "phage_like": 16,
+      "intron_rt": 2
+     },
+     "cores_where_k3_had_no_different_pair": 305
+    },
+    "single_x_multi": {
+     "cores": 797,
+     "cores_with_s6_supported_pair": 324,
+     "cores_only_grouping_unresolved": 473,
+     "cores_by_hint": {
+      "other": 352,
+      "transposase_or_IS": 268,
+      "hypothetical": 137,
+      "integrase_recombinase_resolvase": 29,
+      "phage_like": 6,
+      "translation_or_ribosomal": 3,
+      "intron_rt": 2
+     },
+     "cores_where_k3_had_no_different_pair": 119
+    },
+    "multi_x_multi": {
+     "cores": 526,
+     "cores_with_s6_supported_pair": 281,
+     "cores_only_grouping_unresolved": 245,
+     "cores_by_hint": {
+      "other": 180,
+      "transposase_or_IS": 271,
+      "integrase_recombinase_resolvase": 16,
+      "hypothetical": 51,
+      "translation_or_ribosomal": 5,
+      "intron_rt": 3
+     },
+     "cores_where_k3_had_no_different_pair": 104
+    }
    }
   },
   "two_gene": {
@@ -154,38 +208,91 @@
     "cores_with_s6_supported_pair": 209,
     "cores_only_grouping_unresolved": 81,
     "cores_by_hint": {
+     "transposase_or_IS": 126,
      "hypothetical": 40,
      "other": 114,
-     "transposase_or_IS": 126,
-     "integrase_recombinase_resolvase": 8,
-     "phage_like": 2
+     "phage_like": 2,
+     "integrase_recombinase_resolvase": 8
     },
     "cores_where_k3_had_no_different_pair": 94
    },
-   "cross_different_position_pairs": 33323,
-   "cross_single_copy_pairs": 18118,
-   "cross_single_copy_pairs_by_s6_grouping": {
-    "supported_positions": 6809,
-    "grouping_unresolved": 11309
+   "cross_pairs": 33323,
+   "cross_pairs_by_copy_class": {
+    "single_x_single": 18118,
+    "single_x_multi": 4315,
+    "multi_x_multi": 10890
    },
-   "cross_single_copy": {
-    "cores": 753,
-    "cores_with_s6_supported_pair": 371,
-    "cores_only_grouping_unresolved": 382,
+   "cross_pairs_by_copy_class_and_s6_grouping": {
+    "single_x_single:supported_positions": 6809,
+    "single_x_single:grouping_unresolved": 11309,
+    "single_x_multi:grouping_unresolved": 3178,
+    "multi_x_multi:supported_positions": 1686,
+    "single_x_multi:supported_positions": 1137,
+    "multi_x_multi:grouping_unresolved": 9204
+   },
+   "cross": {
+    "cores": 912,
+    "cores_with_s6_supported_pair": 456,
+    "cores_only_grouping_unresolved": 456,
     "cores_by_hint": {
+     "other": 660,
+     "hypothetical": 139,
+     "integrase_recombinase_resolvase": 19,
+     "transposase_or_IS": 80,
      "translation_or_ribosomal": 8,
-     "other": 591,
-     "hypothetical": 110,
-     "transposase_or_IS": 28,
-     "phage_like": 4,
-     "integrase_recombinase_resolvase": 12
+     "phage_like": 6
     },
-    "cores_where_k3_had_no_different_pair": 86
+    "cores_where_k3_had_no_different_pair": 134
+   },
+   "cross_by_copy_class": {
+    "single_x_single": {
+     "cores": 753,
+     "cores_with_s6_supported_pair": 371,
+     "cores_only_grouping_unresolved": 382,
+     "cores_by_hint": {
+      "other": 591,
+      "hypothetical": 110,
+      "transposase_or_IS": 28,
+      "integrase_recombinase_resolvase": 12,
+      "translation_or_ribosomal": 8,
+      "phage_like": 4
+     },
+     "cores_where_k3_had_no_different_pair": 86
+    },
+    "single_x_multi": {
+     "cores": 165,
+     "cores_with_s6_supported_pair": 66,
+     "cores_only_grouping_unresolved": 99,
+     "cores_by_hint": {
+      "other": 88,
+      "hypothetical": 27,
+      "transposase_or_IS": 45,
+      "integrase_recombinase_resolvase": 4,
+      "phage_like": 1
+     },
+     "cores_where_k3_had_no_different_pair": 35
+    },
+    "multi_x_multi": {
+     "cores": 114,
+     "cores_with_s6_supported_pair": 57,
+     "cores_only_grouping_unresolved": 57,
+     "cores_by_hint": {
+      "hypothetical": 15,
+      "other": 43,
+      "integrase_recombinase_resolvase": 4,
+      "transposase_or_IS": 51,
+      "phage_like": 1
+     },
+     "cores_where_k3_had_no_different_pair": 31
+    }
    }
   }
  },
  "boundary": {
   "shards_missing": [],
+  "pairs_pending_review": {
+   "cross_assembly": 0
+  },
   "single_gene": {
    "same_assembly": {
     "pairs": {
@@ -195,6 +302,12 @@
      "protein_identity_min": 77.931,
      "core_dna_coverage_lt_0_9": 306,
      "no_core_dna_hit": 0,
+     "core_match_class": {
+      "identical_core_dna": 10839,
+      "partial_core_match": 306,
+      "homolog_full_coverage": 9343
+     },
+     "both_core_ends_covered": 19262,
      "pair_side_cover": {
       "covered/covered": 17160,
       "covered/covered_at_chain_end": 1912,
@@ -212,6 +325,12 @@
       "protein_identity_min": 78.125,
       "core_dna_coverage_lt_0_9": 251,
       "no_core_dna_hit": 0,
+      "core_match_class": {
+       "homolog_full_coverage": 6568,
+       "identical_core_dna": 5447,
+       "partial_core_match": 251
+      },
+      "both_core_ends_covered": 11649,
       "pair_side_cover": {
        "covered/covered": 10099,
        "covered/covered_at_chain_end": 1477,
@@ -228,6 +347,12 @@
       "protein_identity_min": 77.931,
       "core_dna_coverage_lt_0_9": 55,
       "no_core_dna_hit": 0,
+      "core_match_class": {
+       "identical_core_dna": 5392,
+       "partial_core_match": 55,
+       "homolog_full_coverage": 2775
+      },
+      "both_core_ends_covered": 7613,
       "pair_side_cover": {
        "covered/covered": 7061,
        "covered/not_reached": 460,
@@ -238,6 +363,8 @@
       }
      }
     },
+    "pairs_by_copy_class": {},
+    "pairs_reused": 20488,
     "occurrences": 9328,
     "both_sides_resolved": 6600,
     "span_class": {
@@ -260,78 +387,168 @@
     },
     "single_partner": 4268
    },
-   "cross_assembly_single_copy": {
+   "cross_assembly": {
     "pairs": {
-     "pairs": 187956,
-     "identical_core_dna": 142,
+     "pairs": 441805,
+     "identical_core_dna": 23962,
      "core_dna_identity_min": 73.063,
      "protein_identity_min": 75.824,
-     "core_dna_coverage_lt_0_9": 4078,
+     "core_dna_coverage_lt_0_9": 5912,
      "no_core_dna_hit": 2,
+     "core_match_class": {
+      "partial_core_match": 5912,
+      "homolog_full_coverage": 411929,
+      "identical_core_dna": 23962,
+      "no_core_dna_hit": 2
+     },
+     "both_core_ends_covered": 271593,
      "pair_side_cover": {
-      "covered/covered": 68339,
-      "covered/not_reached": 57599,
-      "covered/covered_at_chain_end": 25949,
-      "not_reached/not_reached": 11890,
-      "covered_at_chain_end/not_reached": 8200,
-      "not_reached/covered": 5870
+      "covered/covered": 187326,
+      "covered/not_reached": 119970,
+      "covered/covered_at_chain_end": 60765,
+      "covered_at_chain_end/not_reached": 17425,
+      "not_reached/not_reached": 16684,
+      "covered_at_chain_end/covered": 15738
      }
     },
     "pairs_by_s6_grouping": {
      "supported_positions": {
-      "pairs": 43478,
-      "identical_core_dna": 72,
+      "pairs": 111693,
+      "identical_core_dna": 18412,
       "core_dna_identity_min": 74.853,
       "protein_identity_min": 79.412,
-      "core_dna_coverage_lt_0_9": 1628,
+      "core_dna_coverage_lt_0_9": 2209,
       "no_core_dna_hit": 0,
+      "core_match_class": {
+       "homolog_full_coverage": 91072,
+       "identical_core_dna": 18412,
+       "partial_core_match": 2209
+      },
+      "both_core_ends_covered": 86456,
       "pair_side_cover": {
-       "covered/covered": 17504,
-       "covered/not_reached": 12561,
-       "covered/covered_at_chain_end": 5022,
-       "not_reached/not_reached": 3338,
-       "not_reached/covered": 1636,
-       "not_reached/covered_at_chain_end": 1129
+       "covered/covered": 64052,
+       "covered/covered_at_chain_end": 19215,
+       "covered/not_reached": 14866,
+       "not_reached/not_reached": 4777,
+       "not_reached/covered": 2586,
+       "covered_at_chain_end/covered": 1796
       }
      },
      "grouping_unresolved": {
-      "pairs": 144478,
-      "identical_core_dna": 70,
+      "pairs": 330112,
+      "identical_core_dna": 5550,
       "core_dna_identity_min": 73.063,
       "protein_identity_min": 75.824,
-      "core_dna_coverage_lt_0_9": 2450,
+      "core_dna_coverage_lt_0_9": 3703,
       "no_core_dna_hit": 2,
+      "core_match_class": {
+       "partial_core_match": 3703,
+       "homolog_full_coverage": 320857,
+       "identical_core_dna": 5550,
+       "no_core_dna_hit": 2
+      },
+      "both_core_ends_covered": 185137,
       "pair_side_cover": {
-       "covered/covered": 50835,
-       "covered/not_reached": 45038,
-       "covered/covered_at_chain_end": 20927,
-       "not_reached/not_reached": 8552,
-       "covered_at_chain_end/not_reached": 7148,
-       "not_reached/covered": 4234
+       "covered/covered": 123274,
+       "covered/not_reached": 105104,
+       "covered/covered_at_chain_end": 41550,
+       "covered_at_chain_end/not_reached": 16070,
+       "covered_at_chain_end/covered": 13942,
+       "not_reached/not_reached": 11907
       }
      }
     },
-    "occurrences": 38200,
-    "both_sides_resolved": 11684,
-    "span_class": {
-     "unknown": 26516,
-     "lt2500": 11069,
-     "ge2500": 615
+    "pairs_by_copy_class": {
+     "single_x_single": {
+      "pairs": 187956,
+      "identical_core_dna": 142,
+      "core_dna_identity_min": 73.063,
+      "protein_identity_min": 75.824,
+      "core_dna_coverage_lt_0_9": 4078,
+      "no_core_dna_hit": 2,
+      "core_match_class": {
+       "partial_core_match": 4078,
+       "homolog_full_coverage": 183734,
+       "identical_core_dna": 142,
+       "no_core_dna_hit": 2
+      },
+      "both_core_ends_covered": 100387,
+      "pair_side_cover": {
+       "covered/covered": 68339,
+       "covered/not_reached": 57599,
+       "covered/covered_at_chain_end": 25949,
+       "not_reached/not_reached": 11890,
+       "covered_at_chain_end/not_reached": 8200,
+       "not_reached/covered": 5870
+      }
+     },
+     "single_x_multi": {
+      "pairs": 54358,
+      "identical_core_dna": 813,
+      "core_dna_identity_min": 74.71,
+      "protein_identity_min": 76.552,
+      "core_dna_coverage_lt_0_9": 946,
+      "no_core_dna_hit": 0,
+      "core_match_class": {
+       "homolog_full_coverage": 52599,
+       "partial_core_match": 946,
+       "identical_core_dna": 813
+      },
+      "both_core_ends_covered": 33693,
+      "pair_side_cover": {
+       "covered/covered": 22163,
+       "covered/not_reached": 9776,
+       "covered/covered_at_chain_end": 7744,
+       "not_reached/not_reached": 3824,
+       "covered_at_chain_end/not_reached": 2665,
+       "not_reached/covered": 2231
+      }
+     },
+     "multi_x_multi": {
+      "pairs": 199491,
+      "identical_core_dna": 23007,
+      "core_dna_identity_min": 75.653,
+      "protein_identity_min": 77.586,
+      "core_dna_coverage_lt_0_9": 888,
+      "no_core_dna_hit": 0,
+      "core_match_class": {
+       "homolog_full_coverage": 175596,
+       "identical_core_dna": 23007,
+       "partial_core_match": 888
+      },
+      "both_core_ends_covered": 137513,
+      "pair_side_cover": {
+       "covered/covered": 96824,
+       "covered/not_reached": 52595,
+       "covered/covered_at_chain_end": 27072,
+       "covered_at_chain_end/covered": 10176,
+       "covered_at_chain_end/not_reached": 6560,
+       "covered_at_chain_end/covered_at_chain_end": 3441
+      }
+     }
     },
-    "occurrences_with_s6_supported_partner": 12437,
+    "pairs_reused": 187956,
+    "occurrences": 50562,
+    "both_sides_resolved": 15719,
+    "span_class": {
+     "unknown": 34843,
+     "lt2500": 14544,
+     "ge2500": 1175
+    },
+    "occurrences_with_s6_supported_partner": 17453,
     "span_class_with_s6_supported_partner": {
-     "unknown": 8456,
-     "lt2500": 3802,
-     "ge2500": 179
+     "unknown": 11617,
+     "lt2500": 5419,
+     "ge2500": 417
     },
     "side_status": {
-     "resolved": 38583,
-     "end_not_covered": 17320,
-     "inconsistent_between_partners": 8666,
-     "end_not_covered_by_some_partners": 11697,
-     "reaches_window_or_contig_end": 134
+     "resolved": 51199,
+     "end_not_covered": 20246,
+     "inconsistent_between_partners": 13219,
+     "end_not_covered_by_some_partners": 16310,
+     "reaches_window_or_contig_end": 150
     },
-    "single_partner": 13576
+    "single_partner": 14995
    }
   },
   "two_gene": {
@@ -343,6 +560,12 @@
      "protein_identity_min": 86.517,
      "core_dna_coverage_lt_0_9": 32,
      "no_core_dna_hit": 0,
+     "core_match_class": {
+      "identical_core_dna": 1267,
+      "partial_core_match": 32,
+      "homolog_full_coverage": 750
+     },
+     "both_core_ends_covered": 1765,
      "pair_side_cover": {
       "covered/covered": 1710,
       "not_reached/covered_at_chain_end": 99,
@@ -360,6 +583,12 @@
       "protein_identity_min": 86.984,
       "core_dna_coverage_lt_0_9": 16,
       "no_core_dna_hit": 0,
+      "core_match_class": {
+       "identical_core_dna": 444,
+       "partial_core_match": 16,
+       "homolog_full_coverage": 365
+      },
+      "both_core_ends_covered": 689,
       "pair_side_cover": {
        "covered/covered": 654,
        "not_reached/covered_at_chain_end": 53,
@@ -376,6 +605,12 @@
       "protein_identity_min": 86.517,
       "core_dna_coverage_lt_0_9": 16,
       "no_core_dna_hit": 0,
+      "core_match_class": {
+       "homolog_full_coverage": 385,
+       "identical_core_dna": 823,
+       "partial_core_match": 16
+      },
+      "both_core_ends_covered": 1076,
       "pair_side_cover": {
        "covered/covered": 1056,
        "not_reached/covered": 51,
@@ -386,6 +621,8 @@
       }
      }
     },
+    "pairs_by_copy_class": {},
+    "pairs_reused": 2049,
     "occurrences": 1531,
     "both_sides_resolved": 1002,
     "span_class": {
@@ -408,78 +645,165 @@
     },
     "single_partner": 813
    },
-   "cross_assembly_single_copy": {
+   "cross_assembly": {
     "pairs": {
-     "pairs": 18118,
-     "identical_core_dna": 59,
+     "pairs": 33323,
+     "identical_core_dna": 547,
      "core_dna_identity_min": 77.893,
      "protein_identity_min": 75.459,
-     "core_dna_coverage_lt_0_9": 2197,
+     "core_dna_coverage_lt_0_9": 4441,
      "no_core_dna_hit": 0,
+     "core_match_class": {
+      "homolog_full_coverage": 28335,
+      "partial_core_match": 4441,
+      "identical_core_dna": 547
+     },
+     "both_core_ends_covered": 15902,
      "pair_side_cover": {
-      "covered/covered": 7996,
-      "not_reached/covered": 3785,
-      "covered/not_reached": 2678,
-      "not_reached/not_reached": 971,
-      "covered/covered_at_chain_end": 886,
-      "covered_at_chain_end/covered": 691
+      "covered/covered": 13489,
+      "not_reached/covered": 6959,
+      "not_reached/covered_at_chain_end": 4272,
+      "covered/not_reached": 3164,
+      "not_reached/not_reached": 2263,
+      "covered/covered_at_chain_end": 1280
      }
     },
     "pairs_by_s6_grouping": {
      "supported_positions": {
-      "pairs": 6809,
-      "identical_core_dna": 13,
-      "core_dna_identity_min": 80.421,
+      "pairs": 9632,
+      "identical_core_dna": 299,
+      "core_dna_identity_min": 79.562,
       "protein_identity_min": 84.036,
-      "core_dna_coverage_lt_0_9": 414,
+      "core_dna_coverage_lt_0_9": 558,
       "no_core_dna_hit": 0,
+      "core_match_class": {
+       "homolog_full_coverage": 8775,
+       "partial_core_match": 558,
+       "identical_core_dna": 299
+      },
+      "both_core_ends_covered": 4857,
       "pair_side_cover": {
-       "covered/covered": 2933,
-       "covered/not_reached": 1441,
-       "not_reached/covered": 826,
-       "not_reached/not_reached": 550,
-       "covered/covered_at_chain_end": 458,
-       "not_reached/covered_at_chain_end": 269
+       "covered/covered": 3787,
+       "covered/not_reached": 1527,
+       "not_reached/covered": 1188,
+       "not_reached/covered_at_chain_end": 1158,
+       "not_reached/not_reached": 772,
+       "covered/covered_at_chain_end": 769
       }
      },
      "grouping_unresolved": {
-      "pairs": 11309,
-      "identical_core_dna": 46,
+      "pairs": 23691,
+      "identical_core_dna": 248,
       "core_dna_identity_min": 77.893,
       "protein_identity_min": 75.459,
-      "core_dna_coverage_lt_0_9": 1783,
+      "core_dna_coverage_lt_0_9": 3883,
       "no_core_dna_hit": 0,
+      "core_match_class": {
+       "homolog_full_coverage": 19560,
+       "partial_core_match": 3883,
+       "identical_core_dna": 248
+      },
+      "both_core_ends_covered": 11045,
       "pair_side_cover": {
-       "covered/covered": 5063,
-       "not_reached/covered": 2959,
-       "covered/not_reached": 1237,
-       "covered_at_chain_end/covered": 525,
-       "covered/covered_at_chain_end": 428,
-       "not_reached/not_reached": 421
+       "covered/covered": 9702,
+       "not_reached/covered": 5771,
+       "not_reached/covered_at_chain_end": 3114,
+       "covered/not_reached": 1637,
+       "not_reached/not_reached": 1491,
+       "covered_at_chain_end/not_reached": 624
       }
      }
     },
-    "occurrences": 6030,
-    "both_sides_resolved": 2490,
-    "span_class": {
-     "unknown": 3540,
-     "lt2500": 2077,
-     "ge2500": 413
+    "pairs_by_copy_class": {
+     "single_x_single": {
+      "pairs": 18118,
+      "identical_core_dna": 59,
+      "core_dna_identity_min": 77.893,
+      "protein_identity_min": 75.459,
+      "core_dna_coverage_lt_0_9": 2197,
+      "no_core_dna_hit": 0,
+      "core_match_class": {
+       "homolog_full_coverage": 15862,
+       "partial_core_match": 2197,
+       "identical_core_dna": 59
+      },
+      "both_core_ends_covered": 9680,
+      "pair_side_cover": {
+       "covered/covered": 7996,
+       "not_reached/covered": 3785,
+       "covered/not_reached": 2678,
+       "not_reached/not_reached": 971,
+       "covered/covered_at_chain_end": 886,
+       "covered_at_chain_end/covered": 691
+      }
+     },
+     "single_x_multi": {
+      "pairs": 4315,
+      "identical_core_dna": 51,
+      "core_dna_identity_min": 79.562,
+      "protein_identity_min": 86.061,
+      "core_dna_coverage_lt_0_9": 480,
+      "no_core_dna_hit": 0,
+      "core_match_class": {
+       "homolog_full_coverage": 3784,
+       "partial_core_match": 480,
+       "identical_core_dna": 51
+      },
+      "both_core_ends_covered": 1512,
+      "pair_side_cover": {
+       "not_reached/covered_at_chain_end": 1248,
+       "covered/covered": 1123,
+       "not_reached/covered": 735,
+       "not_reached/not_reached": 488,
+       "covered/not_reached": 238,
+       "covered_at_chain_end/covered_at_chain_end": 160
+      }
+     },
+     "multi_x_multi": {
+      "pairs": 10890,
+      "identical_core_dna": 437,
+      "core_dna_identity_min": 81.59,
+      "protein_identity_min": 86.349,
+      "core_dna_coverage_lt_0_9": 1764,
+      "no_core_dna_hit": 0,
+      "core_match_class": {
+       "partial_core_match": 1764,
+       "homolog_full_coverage": 8689,
+       "identical_core_dna": 437
+      },
+      "both_core_ends_covered": 4710,
+      "pair_side_cover": {
+       "covered/covered": 4370,
+       "not_reached/covered_at_chain_end": 2498,
+       "not_reached/covered": 2439,
+       "not_reached/not_reached": 804,
+       "covered/covered_at_chain_end": 258,
+       "covered/not_reached": 248
+      }
+     }
     },
-    "occurrences_with_s6_supported_partner": 2470,
+    "pairs_reused": 18118,
+    "occurrences": 7774,
+    "both_sides_resolved": 3110,
+    "span_class": {
+     "unknown": 4664,
+     "lt2500": 2350,
+     "ge2500": 760
+    },
+    "occurrences_with_s6_supported_partner": 3135,
     "span_class_with_s6_supported_partner": {
-     "unknown": 1471,
-     "lt2500": 774,
-     "ge2500": 225
+     "unknown": 1886,
+     "lt2500": 887,
+     "ge2500": 362
     },
     "side_status": {
-     "resolved": 7379,
-     "end_not_covered": 2504,
-     "inconsistent_between_partners": 929,
-     "end_not_covered_by_some_partners": 1221,
-     "reaches_window_or_contig_end": 27
+     "end_not_covered_by_some_partners": 2119,
+     "resolved": 9088,
+     "end_not_covered": 3045,
+     "inconsistent_between_partners": 1255,
+     "reaches_window_or_contig_end": 41
     },
-    "single_partner": 2508
+    "single_partner": 2833
    }
   }
  },
