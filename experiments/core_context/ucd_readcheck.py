@@ -19,9 +19,16 @@ check     One assembly, one round: reads with a genome alignment near a tested p
           the same assembly: P = U + element + D (as assembled), A = U + D (element removed; no empty site needed).
           Counting is s3_readcheck v0.3 unchanged (span + ANCHOR, CIGAR limit, allele score margin, genome-wide anchor
           competition, molecule grouping, length-matched counts, role verdict).
-summarize Per position and per pair evidence; representative SVG figures.
+status    Completeness per assembly of a round: expected intervals vs results on disk, genome mapping status per run,
+          and every SLURM attempt (--jobs) with state, node and the error line of failed attempts. One row per
+          assembly; a failed attempt is never read as missing support.
+summarize Per tested interval, per occurrence and per pair evidence; representative SVG figures. Three units are kept
+          apart: pairs, occurrences and tested intervals. One occurrence gets one interval per distinct element
+          boundary its partners give, and one interval can belong to several occurrence ids; interval_map keeps every
+          (interval, occurrence, pair, side) link. Support is reported per count mode (molecules, assumed_molecules
+          for SRA spots taken as ZMWs, read_records where no molecule grouping exists, or mixed), never as one depth.
 
-Position classes: supported (consistent), conflict (contradicted or mixed), locus_ambiguous (insufficient, with
+Position (interval) classes: supported (consistent), conflict (contradicted or mixed), locus_ambiguous (insufficient, with
 molecules whose anchors also place elsewhere), insufficient_coverage (insufficient otherwise), not_tested (no reads or
 element interval at a contig end).
 """
@@ -43,6 +50,9 @@ from scale_candidates import POOL, READS
 VERSION = 'ucd_readcheck_v0.1'
 PROJ = Path('/global/scratch/users/kh36969/longread_callout')
 CONTROL_HINTS = {'translation_or_ribosomal': 'conserved_paralog_control'}
+COUNT_UNIT = {'one_record_per_molecule': 'molecules', 'zmw_from_read_name': 'molecules',
+              'sra_spot_as_zmw_assumed': 'assumed_molecules', 'molecule_grouping_unavailable': 'read_records'}
+UNITS = ('molecules', 'assumed_molecules', 'read_records')
 TIERS = {'A': 'same_assembly', 'B': 'cross_assembly_both_sides_reads', 'C': 'cross_assembly_one_side_reads'}
 PAIR_COLS = ['pair_id', 'tier', 'structure', 'core_key', 'product', 'product_hint', 'control_class', 'pair_scope',
              'copy_class', 's6_grouping', 'core_match_class', 'core_dna_identity', 'core_dna_coverage_min',
@@ -182,22 +192,28 @@ def cmd_select(a):
     pick += [r for r in ctrl if r['a_sample'] in want]
     cols = list(rows[0])
     pc.write_tsv(rd / 'pairs.tsv', pick, cols)
-    pos = {}
+    pos, links = {}, []
     for r in pick:
         for s in 'ab':
             if r[s + '_sample'] in want:
                 lo, hi = int(r[s + '_elem_lo']), int(r[s + '_elem_hi'])
                 t = test_id(r[s + '_sample'], r[s + '_contig'], lo, hi)
                 p = pos.setdefault(t, dict(test_id=t, sample=r[s + '_sample'], contig=r[s + '_contig'], lo=lo, hi=hi,
-                                           occurrence=r[s + '_occurrence'], pairs=set()))
+                                           occurrences=set(), pairs=set()))
+                p['occurrences'].add(r[s + '_occurrence'])
                 p['pairs'].add(r['pair_id'])
+                links.append(dict(test_id=t, occurrence=r[s + '_occurrence'], pair_id=r['pair_id'], side=s,
+                                  tier=r['tier'], structure=r['structure'], core_key=r['core_key'],
+                                  control_class=r['control_class']))
     for p in pos.values():
-        p['pairs'] = ';'.join(sorted(p['pairs']))
+        p['n_occurrences'], p['n_pairs'] = len(p['occurrences']), len(p['pairs'])
+        p['occurrences'], p['pairs'] = ';'.join(sorted(p['occurrences'])), ';'.join(sorted(p['pairs']))
     pc.write_tsv(rd / 'positions.tsv', sorted(pos.values(), key=lambda x: (x['sample'], x['contig'], x['lo'])),
-                 ['test_id', 'sample', 'contig', 'lo', 'hi', 'occurrence', 'pairs'])
+                 ['test_id', 'sample', 'contig', 'lo', 'hi', 'n_occurrences', 'occurrences', 'n_pairs', 'pairs'])
+    pc.write_tsv(rd / 'interval_map.tsv', links, list(links[0]))
     (rd / 'samples.txt').write_text('\n'.join(sorted(want)) + '\n')
     summ = dict(assemblies=len(want), pairs=dict(Counter('%s:%s' % (r['tier'], r['structure']) for r in pick)),
-                positions=len(pos), pairs_with_control_class=dict(Counter(r['control_class'] for r in pick if r['control_class'])))
+                intervals=len(pos), occurrences=len({x['occurrence'] for x in links}), pairs_with_control_class=dict(Counter(r['control_class'] for r in pick if r['control_class'])))
     (rd / 'selection.json').write_text(json.dumps(summ, indent=1) + '\n')
     print(json.dumps(summ, indent=1))
 
@@ -257,6 +273,18 @@ def make_tests(positions, seqs):
     return tests, fa, skipped
 
 
+RESULT_COLS = ['test_id', 'sample', 'verdict', 'count_mode', 'P', 'A', 'P_matched', 'A_matched', 'ambiguous',
+               'locus_ambiguous', 'off_locus', 'cigar_fail'] + ['%s_%s' % (k, u) for u in UNITS
+                                                                for k in ('P_matched', 'A_matched')]
+
+
+def count_mode(bu, unit_of):
+    """Unit of the matched counts at one interval: the units that contributed P/A matched calls (all checked runs'
+    units when none did); 'mixed' when more than one."""
+    got = {u for (u, call), n in bu.items() if n and call in ('P_matched', 'A_matched')} or set(unit_of.values())
+    return got.pop() if len(got) == 1 else 'mixed' if got else ''
+
+
 def cmd_check(a):
     rd = a.round_dir
     positions = [p for p in pc.read_tsv(rd / 'positions.tsv') if p['sample'] == a.sample]
@@ -312,7 +340,7 @@ def cmd_check(a):
         used.append(dict(run=r['run'], status='checked', read_type=r['read_type'], grouping=r['grouping'],
                          reads_mapped_to_assembly=len(total), reads_near_positions=len(names),
                          molecules_near_positions=len(set(mol.values())),
-                         count_unit='read_records' if r['grouping'] == 'molecule_grouping_unavailable' else 'molecules'))
+                         count_unit=COUNT_UNIT[r['grouping']]))
     records = []
     counts, multi = rc3.classify(tests, items, records) if items else ({}, Counter())
     call_of = defaultdict(dict)
@@ -320,6 +348,10 @@ def cmd_check(a):
         for x in reads.split(';'):
             call_of[(run, x.rsplit(':', 1)[0])][tid] = call
     # figure data: genome alignments of the reads that got a call at a position, on that position's contig
+    unit_of = {u['run']: u['count_unit'] for u in used if u['status'] == 'checked'}
+    by_unit = defaultdict(Counter)
+    for tid, role, run, m, call, reads in records:
+        by_unit[tid][(unit_of[run], call)] += 1
     pos_of = {p['test_id']: p for p in positions}
     for apaf, sub_g, mol, run in items:
         for g in rc3.parse_paf(sub_g):
@@ -331,12 +363,16 @@ def cmd_check(a):
     for t in tests:
         c = counts.get((t['test_id'], 'C'), Counter())
         v = rc3.verdict(c['P_matched'], c['A_matched']) if items else 'no_reads'
-        rows.append(dict(test_id=t['test_id'], sample=a.sample, verdict=v, **{k: c[k] for k in (
-            'P', 'A', 'P_matched', 'A_matched', 'ambiguous', 'locus_ambiguous', 'off_locus', 'cigar_fail')}))
+        bu = by_unit[t['test_id']]
+        per = {'%s_%s' % (k, u): bu[(u, k)] for u in UNITS for k in ('P_matched', 'A_matched')}
+        for k in ('P_matched', 'A_matched'):
+            assert sum(per['%s_%s' % (k, u)] for u in UNITS) == c[k], (t['test_id'], k)
+        rows.append(dict(test_id=t['test_id'], sample=a.sample, verdict=v, count_mode=count_mode(bu, unit_of), **{
+            k: c[k] for k in ('P', 'A', 'P_matched', 'A_matched', 'ambiguous', 'locus_ambiguous', 'off_locus',
+                              'cigar_fail')}, **per))
     for p in skipped:
         rows.append(dict(test_id=p['test_id'], sample=a.sample, verdict='not_tested:' + p['reason']))
-    pc.write_tsv(od / 'positions_result.tsv', rows, ['test_id', 'sample', 'verdict', 'P', 'A', 'P_matched', 'A_matched',
-                                                     'ambiguous', 'locus_ambiguous', 'off_locus', 'cigar_fail'])
+    pc.write_tsv(od / 'positions_result.tsv', rows, RESULT_COLS)
     (od / 'plot.json').write_text(json.dumps(plot) + '\n')
     (od / 'run.json').write_text(json.dumps(dict(version=VERSION, caller=rc3.VERSION, sample=a.sample, runs=used,
                                                  molecules_supporting_loci=dict(multi)), indent=1) + '\n')
@@ -392,10 +428,24 @@ def svg_position(p, segs, title, w=760, row=6):
     return '\n'.join(out)
 
 
+def support_stats(rows, key='P_matched'):
+    v = sorted(int(r[key]) for r in rows)
+    return dict(intervals=len(v), min=v[0], median=v[len(v) // 2], max=v[-1]) if v else dict(intervals=0)
+
+
+def occurrence_class(classes):
+    if 'conflict' in classes:
+        return 'conflict_at_an_interval'
+    if all(c == 'supported' for c in classes):
+        return 'all_intervals_supported'
+    return 'some_intervals_supported' if 'supported' in classes else 'no_interval_supported'
+
+
 def cmd_summarize(a):
     rd = a.round_dir
     pairs = pc.read_tsv(rd / 'pairs.tsv')
     positions = {p['test_id']: p for p in pc.read_tsv(rd / 'positions.tsv')}
+    links = pc.read_tsv(rd / 'interval_map.tsv')
     res, runs_used, plot = {}, [], {}
     for s in sorted({p['sample'] for p in positions.values()}):
         od = rd / 'check' / s
@@ -408,32 +458,78 @@ def cmd_summarize(a):
     out_pos = []
     for t, p in sorted(positions.items(), key=lambda x: (x[1]['sample'], x[1]['contig'], int(x[1]['lo']))):
         r = res.get(t, dict(verdict='not_checked'))
-        out_pos.append(dict(p, **{k: r.get(k, '') for k in ('verdict', 'P', 'A', 'P_matched', 'A_matched', 'ambiguous',
-                                                             'locus_ambiguous', 'off_locus', 'cigar_fail')},
-                            position_class=position_class(r) if r['verdict'] not in ('not_checked',) else 'not_tested'))
+        out_pos.append(dict(p, **{k: r.get(k, '') for k in RESULT_COLS[2:]},
+                            position_class=position_class(r) if r['verdict'] != 'not_checked' else 'not_checked'))
+    missing = sorted({p['sample'] for p in out_pos if p['position_class'] == 'not_checked'})
+    if missing and not a.allow_incomplete:
+        sys.exit('incomplete round, no result for intervals of %d assemblies: %s (run status)' % (
+            len(missing), ','.join(missing)))
     pcls = {p['test_id']: p['position_class'] for p in out_pos}
+    pos_row = {p['test_id']: p for p in out_pos}
     want = {p['sample'] for p in positions.values()}
     out_pairs = []
     for r in pairs:
-        cl = {}
+        cl, tid = {}, {}
         for s in 'ab':
             if r[s + '_sample'] in want:
-                cl[s] = pcls[test_id(r[s + '_sample'], r[s + '_contig'], int(r[s + '_elem_lo']), int(r[s + '_elem_hi']))]
-        out_pairs.append(dict(r, a_position_class=cl.get('a', ''), b_position_class=cl.get('b', ''),
+                tid[s] = test_id(r[s + '_sample'], r[s + '_contig'], int(r[s + '_elem_lo']), int(r[s + '_elem_hi']))
+                cl[s] = pcls[tid[s]]
+        out_pairs.append(dict(r, a_test_id=tid.get('a', ''), b_test_id=tid.get('b', ''),
+                              a_position_class=cl.get('a', ''), b_position_class=cl.get('b', ''),
                               pair_class=pair_class(r['tier'], cl.get('a'), cl.get('b'))))
+    # occurrences: every occurrence id with a tested side, with all of its intervals
+    occ = defaultdict(lambda: dict(test_ids=set(), pairs=set()))
+    for x in links:
+        o = occ[x['occurrence']]
+        o['test_ids'].add(x['test_id'])
+        o['pairs'].add(x['pair_id'])
+    out_occ = []
+    for oid, o in sorted(occ.items()):
+        ts = sorted(o['test_ids'])
+        cls = [pcls[t] for t in ts]
+        modes = sorted({pos_row[t]['count_mode'] for t in ts})
+        out_occ.append(dict(occurrence=oid, sample=positions[ts[0]]['sample'], n_intervals=len(ts),
+                            test_ids=';'.join(ts), n_pairs=len(o['pairs']),
+                            interval_classes=';'.join('%s:%d' % kv for kv in sorted(Counter(cls).items())),
+                            occurrence_class=occurrence_class(cls), count_mode=modes[0] if len(modes) == 1 else 'mixed',
+                            P_matched_min=min(int(pos_row[t]['P_matched'] or 0) for t in ts)))
+    map_rows = [dict(x, position_class=pcls[x['test_id']]) for x in links]
     pc.write_tsv(a.out / 'positions.tsv.gz', out_pos, list(out_pos[0]))
+    pc.write_tsv(a.out / 'occurrences.tsv.gz', out_occ, list(out_occ[0]))
+    pc.write_tsv(a.out / 'interval_map.tsv.gz', map_rows, list(map_rows[0]))
     pc.write_tsv(a.out / 'pairs.tsv.gz', out_pairs, list(out_pairs[0]))
     pc.write_tsv(a.out / 'runs.tsv', runs_used, sorted({k for x in runs_used for k in x}))
     groups = defaultdict(Counter)
     for r in out_pairs:
         groups['%s|%s|%s' % (r['tier'], r['structure'], r['control_class'] or 'candidate')][r['pair_class']] += 1
+    cores = defaultdict(lambda: defaultdict(set))
+    for r in out_pairs:
+        if not r['control_class'].startswith('repeated'):
+            cores['%s|%s' % (r['tier'], r['structure'])][r['pair_class']].add(r['core_key'])
+    ipo = Counter(len(o['test_ids']) for o in occ.values())
+    tested = [p for p in out_pos if p['count_mode']]
     summ = dict(version=VERSION, caller=rc3.VERSION, evidence_added='long_read_position_check',
                 evidence_source_of_pairs='assembly_only', production_ready=False,
-                note='reads are the assembly\'s own; this checks the assembled U-core-D structure, not mobility or '
-                     'independent insertion events',
-                positions=len(out_pos), position_class=dict(Counter(p['position_class'] for p in out_pos)),
-                position_verdict=dict(Counter(p['verdict'] for p in out_pos)),
-                pairs=len(out_pairs), pair_class={k: dict(v) for k, v in sorted(groups.items())},
+                note='reads are mostly the ones the assembly was built from: a self-consistency check of the local '
+                     'U-core-D assembly structure under the current alignment, locus-competition and counting rules; '
+                     'not a proof that every misassembly is excluded, not exact biological insertion boundaries, not '
+                     'mobility or independent insertion events',
+                units=dict(pairs=len(out_pairs), occurrences=len(occ), intervals=len(out_pos),
+                           assemblies=len(want), occurrences_with_multiple_intervals=sum(
+                               n > 1 for n in (len(o['test_ids']) for o in occ.values())),
+                           max_intervals_per_occurrence=max(ipo), intervals_with_multiple_occurrences=sum(
+                               int(p['n_occurrences']) > 1 for p in out_pos)),
+                complete=not missing, assemblies_without_results=missing,
+                interval_class=dict(Counter(p['position_class'] for p in out_pos)),
+                interval_verdict=dict(Counter(p['verdict'] for p in out_pos)),
+                occurrence_class=dict(Counter(o['occurrence_class'] for o in out_occ)),
+                support_by_count_mode={m: dict(support_stats([p for p in tested if p['count_mode'] == m]),
+                                               assemblies=len({p['sample'] for p in tested if p['count_mode'] == m}),
+                                               intervals_with_A_matched=sum(int(p['A_matched']) > 0 for p in tested
+                                                                            if p['count_mode'] == m))
+                                       for m in sorted({p['count_mode'] for p in tested})},
+                pair_class={k: dict(v) for k, v in sorted(groups.items())},
+                distinct_cores={k: {c: len(v) for c, v in sorted(d.items())} for k, d in sorted(cores.items())},
                 runs=dict(Counter(r['status'] for r in runs_used)))
     (a.out / 'summary.json').write_text(json.dumps(summ, indent=1) + '\n')
     for f in ('selection.json', 'samples.txt'):
@@ -454,9 +550,62 @@ def cmd_summarize(a):
     print(json.dumps(summ, indent=1))
 
 
+def attempts(jobs):
+    """{(stage, array index): [attempt rows]} from sacct for the given job ids."""
+    out = defaultdict(list)
+    if not jobs:
+        return out
+    txt = subprocess.run(['sacct', '-X', '-n', '-P', '-j', jobs, '--format=JobID,JobName,State,Elapsed,NodeList,Start'],
+                         capture_output=True, text=True, check=True).stdout
+    for line in txt.splitlines():
+        jid, name, state, el, node, start = line.split('|')
+        if '_' not in jid or '[' in jid:
+            continue
+        log = Path.home() / 'logs' / 'core_context' / ('%s_%s.out' % (name, jid))
+        head = log.read_text(errors='replace').splitlines() if log.exists() else []
+        stage = next((w.split('=')[1] for w in (head[0].split() if head else []) if w.startswith('stage=')), '')
+        err = next((x.strip() for x in reversed(head) if 'Error' in x or 'error' in x), '') if state != 'COMPLETED' else ''
+        out[(stage, int(jid.split('_')[1]))].append(dict(job=jid, state=state.split()[0], elapsed=el, node=node,
+                                                          start=start, error=err[:160]))
+    return out
+
+
+def cmd_status(a):
+    rd = a.round_dir
+    samples = (rd / 'samples.txt').read_text().split()
+    expect = defaultdict(set)
+    for p in pc.read_tsv(rd / 'positions.tsv'):
+        expect[p['sample']].add(p['test_id'])
+    att = attempts(a.jobs)
+    rows = []
+    for i, s in enumerate(samples):
+        g = PROJ / 'core_context' / 'readmap' / s / 'genome.json'
+        gs = Counter(r['status'] for r in json.loads(g.read_text())['runs']) if g.exists() else Counter()
+        res = rd / 'check' / s / 'positions_result.tsv'
+        got = {r['test_id']: r for r in pc.read_tsv(res)} if res.exists() else {}
+        miss = expect[s] - set(got)
+        tries = att.get(('genome', i), []) + att.get(('check', i), [])
+        state = ('complete' if not miss and 'count_mode' in next(iter(got.values()), {}) else
+                 'complete_old_format' if not miss else 'running' if any(t['state'] in ('RUNNING', 'PENDING') for t in tries)
+                 else 'missing_results')
+        rows.append(dict(index=i, sample=s, state=state, intervals_expected=len(expect[s]),
+                         intervals_with_result=len(expect[s] & set(got)),
+                         not_tested=sum(got[t]['verdict'].startswith('not_tested') for t in expect[s] & set(got)),
+                         genome_runs=';'.join('%s:%d' % kv for kv in sorted(gs.items())),
+                         check_from=('linked:' + str(res.resolve().parent.parent.parent.name)) if (rd / 'check' / s).is_symlink() else 'this_round',
+                         attempts=len(tries), failed_attempts=sum(t['state'] not in ('COMPLETED', 'RUNNING', 'PENDING') for t in tries),
+                         attempt_log=' | '.join('%s %s %s %s%s' % (t['job'], t['state'], t['node'], t['elapsed'],
+                                                                   (' [' + t['error'] + ']') if t['error'] else '') for t in tries)))
+    pc.write_tsv(rd / 'status.tsv', rows, list(rows[0]))
+    print(json.dumps(dict(assemblies=len(rows), state=dict(Counter(r['state'] for r in rows)),
+                          intervals_expected=sum(r['intervals_expected'] for r in rows),
+                          intervals_with_result=sum(r['intervals_with_result'] for r in rows),
+                          assemblies_with_failed_attempts=sum(r['failed_attempts'] > 0 for r in rows)), indent=1))
+
+
 def main():
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    p.add_argument('mode', choices=['pairs', 'select', 'genome', 'check', 'summarize'])
+    p.add_argument('mode', choices=['pairs', 'select', 'genome', 'check', 'status', 'summarize'])
     p.add_argument('--work', type=Path, default=PROJ / 'core_context' / 'scale_comamonadaceae_v0.1')
     p.add_argument('--repo-out', type=Path, default=Path(__file__).resolve().parent / 'scale_comamonadaceae_v0.1')
     p.add_argument('--batches', default='1,2,3')
@@ -466,8 +615,12 @@ def main():
     p.add_argument('--threads', type=int, default=16)
     p.add_argument('--out', type=Path)
     p.add_argument('--figure-pairs', default='')
+    p.add_argument('--jobs', default='', help='status: comma-separated SLURM job ids of the round')
+    p.add_argument('--allow-incomplete', action='store_true', help='summarize: write results although assemblies '
+                   'lack results (they stay not_checked, outside every support count)')
     a = p.parse_args()
-    dict(pairs=cmd_pairs, select=cmd_select, genome=cmd_genome, check=cmd_check, summarize=cmd_summarize)[a.mode](a)
+    dict(pairs=cmd_pairs, select=cmd_select, genome=cmd_genome, check=cmd_check, status=cmd_status,
+         summarize=cmd_summarize)[a.mode](a)
 
 
 if __name__ == '__main__':

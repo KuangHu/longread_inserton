@@ -4,15 +4,51 @@
  "evidence_added": "long_read_position_check",
  "evidence_source_of_pairs": "assembly_only",
  "production_ready": false,
- "note": "reads are the assembly's own; this checks the assembled U-core-D structure, not mobility or independent insertion events",
- "positions": 2556,
- "position_class": {
+ "note": "reads are mostly the ones the assembly was built from: a self-consistency check of the local U-core-D assembly structure under the current alignment, locus-competition and counting rules; not a proof that every misassembly is excluded, not exact biological insertion boundaries, not mobility or independent insertion events",
+ "units": {
+  "pairs": 5834,
+  "occurrences": 1109,
+  "intervals": 2556,
+  "assemblies": 9,
+  "occurrences_with_multiple_intervals": 293,
+  "max_intervals_per_occurrence": 26,
+  "intervals_with_multiple_occurrences": 32
+ },
+ "interval_class": {
   "supported": 2556
  },
- "position_verdict": {
+ "interval_verdict": {
   "consistent": 2556
  },
- "pairs": 5834,
+ "occurrence_class": {
+  "all_intervals_supported": 1109
+ },
+ "support_by_count_mode": {
+  "assumed_molecules": {
+   "intervals": 340,
+   "min": 16,
+   "median": 120,
+   "max": 287,
+   "assemblies": 2,
+   "intervals_with_A_matched": 11
+  },
+  "molecules": {
+   "intervals": 1048,
+   "min": 9,
+   "median": 30,
+   "max": 156,
+   "assemblies": 4,
+   "intervals_with_A_matched": 0
+  },
+  "read_records": {
+   "intervals": 1168,
+   "min": 41,
+   "median": 96,
+   "max": 775,
+   "assemblies": 3,
+   "intervals_with_A_matched": 0
+  }
+ },
  "pair_class": {
   "A|single_gene|candidate": {
    "both_positions_supported": 606
@@ -45,6 +81,28 @@
   },
   "control|two_gene|repeated_context_control": {
    "both_positions_supported": 62
+  }
+ },
+ "distinct_cores": {
+  "A|single_gene": {
+   "both_positions_supported": 76
+  },
+  "A|two_gene": {
+   "both_positions_supported": 16
+  },
+  "B|single_gene": {
+   "both_positions_supported": 20,
+   "single_side_supported": 92
+  },
+  "B|two_gene": {
+   "both_positions_supported": 6,
+   "single_side_supported": 20
+  },
+  "C|single_gene": {
+   "single_side_supported": 220
+  },
+  "C|two_gene": {
+   "single_side_supported": 42
   }
  },
  "runs": {

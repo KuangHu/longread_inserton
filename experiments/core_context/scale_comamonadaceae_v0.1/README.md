@@ -613,16 +613,20 @@ reads (usable run, `verify.json` verified, MD5 equal to the archive). Each row f
 - **`validation_controls_b1-2-3.tsv.gz`:** same-assembly pairs with `context_repeated_both_sides` in assemblies with
   reads (1,499 single-gene, 588 two-gene). These are not U-core-D pairs and are tested on the coding span.
 
-## Long-read check, round 1 (`readcheck_round1/`)
+## Long-read check (`readcheck_round1/`, `readcheck_round2/`)
 
-**Question:** do the assembly's own long reads support the U-core-D structure it shows at each position? A pass at
-both positions does not show mobility or independent insertion events.
+**Question:** do the assembly's own long reads support the local U-core-D structure it shows at each tested
+interval?
+- The reads are mostly the ones the assembly was built from, so this is a self-consistency check under the current
+  alignment, locus-competition and counting rules.
+- It does not exclude every misassembly and does not fix exact biological insertion boundaries.
+- It says nothing about mobility or independent insertion events.
 
 **Method (`ucd_readcheck.py`, s3_readcheck v0.3 counting unchanged):**
 - `genome`: all reads of every verified run are mapped once to the whole assembly (secondaries kept; SHA256 rechecked
-  against `verify.json`). The PAF is kept on scratch (`core_context/readmap/<sample>/`) for later rounds.
-- `check`: reads with a genome alignment within 2 kb of a tested position are taken from that full-genome PAF, never
-  from a gap-pipeline subset. Two alleles are built from the same assembly:
+  against `verify.json`). The PAF is kept on scratch (`core_context/readmap/<sample>/`) and reused by every round.
+- `check`: reads with a genome alignment within 2 kb of a tested interval are taken from that full-genome PAF. Two
+  alleles are built from the same assembly:
   - P = U + element + D, as assembled;
   - A = U + D, element removed.
 
@@ -632,57 +636,137 @@ both positions does not show mobility or independent insertion events.
   - the allele score margin is 20;
   - both anchors must be placed at this position genome-wide; otherwise the read is `off_locus` or
     `locus_ambiguous`;
-  - molecule grouping (ZMW / ONT id / SRA spot) and length-matched counts apply;
-  - role verdict: insufficient if fewer than 3, consistent if the other allele is at most 10%, otherwise mixed or
+  - molecule grouping and length-matched counts apply;
+  - verdict: insufficient if fewer than 3, consistent if the other allele is at most 10%, otherwise mixed or
     contradicted.
-- **Position class:** supported, conflict, locus_ambiguous (insufficient, with molecules that also place elsewhere),
-  insufficient_coverage or not_tested.
+- **Interval class:** supported, conflict, locus_ambiguous, insufficient_coverage, not_tested (interval at a contig
+  end) or not_checked (no result).
+- **Completeness:**
+  - `status` checks every assembly of a round against its expected intervals. `status.tsv` keeps every SLURM attempt
+    with its node and error.
+  - `summarize` refuses a round with missing results; with `--allow-incomplete`, missing intervals stay `not_checked`
+    and outside every count.
+  - A failed task is never read as missing support.
+- **No downloads:** this check has no fetch stage. It reads only local FASTQ whose `verify.json` and archive MD5
+  match.
 
-**Selection:** 9 assemblies, chosen by specific pairs, not by family pair count. The round tests every list pair with a
-read side in these assemblies.
-- **A pairs in both structures:** SAMN51658617, SAMN38562701 (HiFi), SAMN18676188 (CLR).
-- **B pairs with both sides in the round:**
-  - SAMEA115676931 + SAMEA115676967 (Variovorax);
-  - SAMN08775333 + SAMN08775340 (Paracidovorax citrulli);
-  - SAMN13450421 + SAMN31258398 (Delftia; SAMN31258398 also holds UCD06, UCDR03, UCDR04).
+**Three units, kept apart:**
+- **Pair:** a row of the validation list.
+- **Occurrence:** an occurrence id.
+- **Tested interval:** sample, contig and element interval.
+- **How they relate:** one occurrence gets one interval per distinct element boundary its partners give, and one
+  interval can carry several occurrence ids. `interval_map.tsv.gz` keeps every (interval, occurrence, pair, side)
+  link. `occurrences.tsv.gz` gives each occurrence's intervals and class; `pairs.tsv.gz` gives both sides' interval
+  ids and classes.
 
-**Run:** 12 runs, nothing downloaded. Mapping took ≤ 2 min 40 s per assembly and check ≤ 11 min 31 s.
+**Count mode, per interval:**
+- `molecules`: one record per molecule, or ZMW from the read name;
+- `assumed_molecules`: SRA spot taken as a ZMW;
+- `read_records`: no molecule grouping available;
+- `mixed`: more than one of these.
 
-| round 1 | pairs | result |
-|---|---:|---|
-| A single-gene | 606 | both positions supported 606 |
-| A two-gene | 17 | both positions supported 17 |
-| B single-gene, both sides in round | 98 | both positions supported 98 |
-| B two-gene, both sides in round | 6 | both positions supported 6 |
-| B, other side not in round | 614 + 38 | single side supported |
-| C single-gene / two-gene | 4,109 / 105 | single side supported |
-| conserved paralog control (A / C) | 5 / 3 | supported |
-| repeated-context control, single / two-gene | 171 / 62 | both positions supported |
+Support is reported per mode, never as one depth, and `P_matched_<mode>` / `A_matched_<mode>` are kept per interval.
 
-**Per position:** 2,556 positions, all `consistent`.
-- **No conflict:** reads for allele A (element absent) occur at 11 positions, one molecule each, below the 10% limit.
-- **Locus competition removed molecules at many positions:**
-  - `locus_ambiguous` > 0 at 576 positions;
-  - `off_locus` > 0 at 557;
-  - in the repeated-context controls, medians 9 and 16 per position.
+### Round 1: 9 assemblies, 12 runs
 
-  Every position still kept at least 9 uniquely placed, length-matched supporting units.
-- **Count unit:**
-  - 1,388 positions in 6 assemblies are counted in molecules (min 9, median 96);
-  - 1,168 positions in SAMN08775333, SAMN08775340 and SAMN31258398 are counted in read records (min 41, median 96).
-    Their PacBio runs carry no molecule information (`molecule_grouping_unavailable`).
+The assemblies were chosen for specific A pairs in both structures and for 3 B assembly pairs. After the unit fix, the
+check was rerun from the kept mappings: every count and verdict of the 2,556 intervals is identical to the first run.
 
-**What this round shows and does not show:**
-- The assembled structure at every tested position, element plus its own U and D, is supported by the sample's own
-  reads with unique placement. There was no within-sample element-absent allele and no collapsed-repeat signal.
-- These reads usually built the assembly, so this is an assembly-consistency check, not independent validation.
-- Candidates and controls behave the same: conserved paralogs and repeated-context pairs are supported too. The check
-  therefore does not tell a mobile element from a conserved paralog or a segmental duplicate; it only removes
-  misassembly as an explanation.
-- B pairs show that both assemblies' own reads support their different contexts. It does not follow that one is
-  derived from the other.
+| unit | count |
+|---|---:|
+| pairs | 5,834 |
+| occurrences | 1,109 (293 with more than one interval, max 26) |
+| tested intervals | 2,556 (32 carry more than one occurrence id) |
 
-**Figures (`readcheck_round1/figures/`, SVG):** one panel per position, showing U / element / D and the genome
+All 2,556 intervals are `consistent` and all 1,109 occurrences have every interval supported.
+
+| count mode | intervals | assemblies | P_matched min / median | intervals with any A_matched |
+|---|---:|---:|---:|---:|
+| molecules | 1,048 | 4 | 9 / 30 | 0 |
+| assumed_molecules | 340 | 2 | 16 / 120 | 11 |
+| read_records | 1,168 | 3 | 41 / 96 | 0 |
+
+### Round 2: cumulative, all 149 assemblies with local reads and listed intervals, 164 runs
+
+**Selection:** round 1 plus the remaining 140 assemblies. A greedy order by new distinct cores, not pair counts, kept
+gaining cores up to about 114 assemblies, and each assembly costs minutes. So all were run, which brings every B pair
+to both sides. Round 1's per-assembly results are linked in, after checking that the interval sets are identical.
+
+**Completeness:** 149 / 149 assemblies, 16,641 / 16,641 intervals with results. Four attempts failed with
+shared-storage I/O errors and all four were rerun to full results. Whether the cause is the nodes or a short storage
+event is open: n0382 failed three times, but the three round-2 failures fell within 20 s and n0334 completed another
+task.
+
+| assembly | failed attempt | rerun | state |
+|---|---|---|---|
+| SAMN08775340 (round 1) | 27441044_3, n0382, `OSError` I/O | 27441820_3 | 435 / 435 |
+| SAMN51281044 | 27441725_133, n0334, `OSError` I/O | 27442220_133 | 91 / 91 |
+| SAMN51281056 | 27441725_138, n0382, `BrokenPipeError` | 27442220_138 | 61 / 61 |
+| SAMN56368954 | 27441725_147, n0382, gzip write | 27442220_147 | 119 / 119 |
+
+| unit | count |
+|---|---:|
+| pairs | 29,431 |
+| occurrences | 9,809 (2,256 with more than one interval, max 26) |
+| tested intervals | 16,641 (252 carry more than one occurrence id) |
+
+| interval class | intervals |
+|---|---:|
+| supported | 16,413 |
+| insufficient_coverage | 159 |
+| locus_ambiguous | 54 |
+| conflict | 2 |
+| not_tested (contig end) | 13 |
+
+- **Occurrences:**
+  - 9,629 have every interval supported;
+  - 178 have no interval supported;
+  - 2 have a conflict.
+- **Conflict:** both conflicts are the two sides of one repeated-context control, `VC_aa36fecdda17`, in
+  SAMEA120399594. It is a 2.4 kb two-gene repeat:
+  - one side has 92 P / 34 A (mixed), the other 0 P / 21 A (contradicted);
+  - each side has 268–306 `locus_ambiguous` molecules.
+
+  This is consistent with a repeat that the assembly or the reads do not resolve there.
+- **Insufficient intervals:**
+  - 145 of the 159 `insufficient_coverage` intervals come from two ONT runs with only 1,066 and 1,616 reads mapped to
+    the whole assembly (SAMEA115676864, SAMEA115676832): too little coverage, not a failure;
+  - `locus_ambiguous` intervals are mainly in SAMEA120399595 / SAMEA120399592, where molecules near the interval
+    also place elsewhere.
+
+| count mode, supported intervals | intervals | assemblies | P_matched min / median |
+|---|---:|---:|---:|
+| molecules | 12,028 | 119 | 3 / 61 |
+| assumed_molecules | 1,097 | 11 | 10 / 112 |
+| read_records | 3,288 | 19 | 4 / 89 |
+
+Intervals with any A_matched read: 149 molecules, 13 assumed_molecules, 7 read_records.
+
+| pairs | both supported | one supported | none supported | single side supported | single side not supported |
+|---|---:|---:|---:|---:|---:|
+| A single-gene | 2,996 | 21 | 11 | | |
+| A two-gene | 137 | | | | |
+| B single-gene | 2,702 | 30 | | | |
+| B two-gene | 236 | 9 | | | |
+| C single-gene | | | | 19,057 | 165 |
+| C two-gene | | | | 1,821 | 12 |
+| conserved paralog control | A 122 / B 2 | | A 1 | C 22 | |
+| repeated-context control | 1,950 | 130 | 6 | | |
+
+The repeated-context controls also include 1 conflict pair.
+
+**Distinct cores (candidates, controls excluded):** 2,184 cores have a side with reads, and 780 of them (642
+single-gene, 138 two-gene) have at least one A or B pair with both intervals supported. The pair totals above are not
+counts of independent families.
+
+**Reading:**
+- The local assembled structure is supported at 16,413 of 16,641 tested intervals under the current rules.
+- Candidates and controls behave alike, apart from the one repeated-context control in conflict. The check therefore
+  does not separate a mobile element from a conserved paralog or a segmental duplicate.
+- Interpreting the candidates (conserved paralog position, large duplication, different host context, unexplained)
+  is a separate layer and has not been done.
+
+**Figures (`readcheck_round*/figures/`, SVG):** one panel per interval, showing U / element / D and the genome
 alignments of reads with a call there, colored by call: blue P, red A, orange locus_ambiguous, light grey off_locus,
 purple cigar_fail. Pairs shown:
 - UCD06 `VP_80c3de3bb257`, UCDR03 `VP_d69542349125`, UCDR04 `VP_cbb7fe69d4b5` (EF-Tu);
@@ -691,13 +775,15 @@ purple cigar_fail. Pairs shown:
 - C `VP_0025bbc754af`;
 - repeated-context controls `VC_02e5dfdac4fd`, `VC_0081429ee7c1`.
 
-**Files:**
-- `positions.tsv.gz`: per position, all counts, verdict, class;
-- `pairs.tsv.gz`: per pair, with the fixed list fields, both position classes and the pair class;
-- `runs.tsv`, `selection.json`, `summary.json`.
+**Files per round:**
+- `positions.tsv.gz`: per interval;
+- `occurrences.tsv.gz`, `interval_map.tsv.gz`, `pairs.tsv.gz`;
+- `runs.tsv`, `status.tsv`, `selection.json`, `samples.txt`, `summary.json`.
 
 Not done yet:
-- larger rounds over the other assemblies with reads (mapping is per assembly and reusable);
+- candidate interpretation layer;
+- old pipelines that still fetch inside lr6 compute jobs (`batch_sample.sbatch`, `s3_readcheck.sbatch`,
+  `read_callout/01_fetch.sbatch`, `pacbio_hifi_pilot/pilot.sbatch`) are not changed;
 - no new downloads.
 
 Stopped here for review.

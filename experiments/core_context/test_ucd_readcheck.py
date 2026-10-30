@@ -57,6 +57,20 @@ class ClassTests(unittest.TestCase):
         self.assertEqual(u.pair_class('C', 'supported', None), 'single_side_supported')
         self.assertEqual(u.pair_class('C', None, 'insufficient_coverage'), 'single_side_not_supported')
 
+    def test_count_mode(self):
+        from collections import Counter
+        unit_of = {'r1': 'molecules', 'r2': 'read_records'}
+        self.assertEqual(u.count_mode(Counter({('molecules', 'P_matched'): 5, ('read_records', 'off_locus'): 2}), unit_of),
+                         'molecules')
+        self.assertEqual(u.count_mode(Counter({('molecules', 'P_matched'): 5, ('read_records', 'A_matched'): 1}), unit_of),
+                         'mixed')
+        self.assertEqual(u.count_mode(Counter(), {'r1': 'assumed_molecules'}), 'assumed_molecules')
+
+    def test_occurrence_class(self):
+        self.assertEqual(u.occurrence_class(['supported', 'supported']), 'all_intervals_supported')
+        self.assertEqual(u.occurrence_class(['supported', 'locus_ambiguous']), 'some_intervals_supported')
+        self.assertEqual(u.occurrence_class(['supported', 'conflict']), 'conflict_at_an_interval')
+
 
 if __name__ == '__main__':
     unittest.main()
