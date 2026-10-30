@@ -7,7 +7,10 @@ prepare  Transfer node (lrc-xfer, outside SLURM; refuses to run inside a SLURM j
          download gets its content check. Runs come from the registry (--runs: run or sample ids) or from an ENA run
          table (--runs-tsv: run_accession, sample_accession, fastq_ftp, fastq_bytes, fastq_md5,
          instrument_platform, base_count, read_count; --only limits it to some runs). Ends by rewriting the ready
-         manifest.
+         manifest. Storage is checked per batch: before anything is downloaded, prepare prints the reads directory
+         usage, the bytes this batch still needs (runs not yet verified, minus any .part/.unverified already on
+         disk) and the free space of the filesystem, and refuses the batch (exit 4) if less than --min-free-gb would
+         remain afterwards (--dry-run stops after this check). Usage is printed again at the end.
 index    Rewrite the ready manifest from the verify.json files under --reads (no network).
 check    Compute side. Every requested run must be in the ready manifest with status verified, its file must exist
          with the recorded size (and SHA256 with --rehash), and its verify.json must still be verified with that
@@ -30,6 +33,7 @@ READS = Path("/global/scratch/users/kh36969/longread_callout/data/reads")
 MANIFEST = "ready_manifest.tsv"
 COLS = ["run", "sample", "local_file", "bytes", "md5", "sha256", "status", "verified_at", "verify_json"]
 NOT_READY = 3
+NO_SPACE = 4
 
 
 class InputNotReady(SystemExit):
@@ -130,6 +134,45 @@ def require(runs, reads=READS, manifest=None, rehash=False):
     return {r: m[r]["local_file"] for r in runs}
 
 
+def storage(reads):
+    """(bytes of all files, of verified files, of .part/.unverified files, free bytes on the filesystem) of the
+    reads dir; all files include rejected copies (md5_mismatch_attempt*) and logs."""
+    reads = Path(reads)
+    total = sum(f.stat().st_size for f in reads.rglob("*") if f.is_file())
+    done = partial = 0
+    for v in reads.glob("*/verify.json"):
+        f = Path(json.loads(v.read_text()).get("local_file", ""))
+        done += f.stat().st_size if f.is_file() else 0
+    for f in list(reads.glob("*/*.part")) + list(reads.glob("*/*.unverified")):
+        partial += f.stat().st_size
+    s = os.statvfs(str(reads))
+    return total, done, partial, s.f_bavail * s.f_frsize
+
+
+def report_storage(reads, label):
+    total, done, partial, free = storage(reads)
+    print("storage %s: reads dir %.1f GB in all (%.1f GB verified, %.1f GB partial); filesystem free %.1f TB"
+          % (label, total / 1e9, done / 1e9, partial / 1e9, free / 1e12), flush=True)
+    return total, done, partial, free
+
+
+def check_space(runs, reads, min_free_gb):
+    """Refuse (exit 4) when this batch would leave less than min_free_gb free."""
+    need = 0
+    for run in runs:
+        d = Path(reads) / run["run"]
+        if (d / "verify.json").exists():
+            continue
+        have = sum(f.stat().st_size for f in list(d.glob("*.part")) + list(d.glob("*.unverified")))
+        need += max(int(run["fastq_bytes"]) - have, 0)
+    free = report_storage(reads, "before")[-1]
+    print("batch: %d runs, %.2f GB still to download; free after %.1f GB (minimum %.0f GB)"
+          % (len(runs), need / 1e9, (free - need) / 1e9, min_free_gb), flush=True)
+    if free - need < min_free_gb * 1e9:
+        print("prepare refused: not enough free space for this batch", file=sys.stderr)
+        sys.exit(NO_SPACE)
+
+
 def cmd_prepare(a):
     refuse_in_slurm("prepare")
     sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -149,6 +192,9 @@ def cmd_prepare(a):
     else:
         runs = flr.select_runs(a.runs)
     a.reads.mkdir(parents=True, exist_ok=True)
+    check_space(runs, a.reads, a.min_free_gb)
+    if a.dry_run:
+        return
     bad = []
     for run in runs:
         work = a.reads / run["run"]
@@ -166,6 +212,7 @@ def cmd_prepare(a):
         if st != "verified":
             bad.append(run["run"])
     rows = index(a.reads)
+    report_storage(a.reads, "after")
     print("ready manifest: %d runs, %d verified; %d of %d requested runs not verified%s" % (
         len(rows), sum(r["status"] == "verified" for r in rows), len(bad), len(runs),
         (": " + " ".join(bad)) if bad else ""))
@@ -198,6 +245,9 @@ def main():
     p.add_argument("--runs", nargs="*", help="prepare: registry run or sample ids; check: run ids")
     p.add_argument("--runs-tsv", type=Path, help="prepare: ENA run table instead of the registry")
     p.add_argument("--only", nargs="*", help="prepare with --runs-tsv: only these run accessions")
+    p.add_argument("--min-free-gb", type=float, default=500,
+                   help="prepare: refuse the batch if less than this would stay free on the filesystem")
+    p.add_argument("--dry-run", action="store_true", help="prepare: only the storage check, no download")
     p.add_argument("--runs-file", type=Path, help="check: TSV with a run column")
     p.add_argument("--run-column", default="run")
     p.add_argument("--skip-multi-file", action="store_true",

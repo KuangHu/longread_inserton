@@ -1,6 +1,8 @@
 """Download / compute separation: scripts/reads_ready.py, scripts/fetch_long_reads.py and the compute entry points."""
 
+import contextlib
 import hashlib
+import io
 import json
 import os
 import re
@@ -131,6 +133,25 @@ class DownloadGuardTests(unittest.TestCase):
             if rel.endswith(("02_callout.sbatch", "stage2_readcheck.sbatch", "ucd_readcheck.sbatch")):
                 continue  # no read input / inputs checked in Python (verified_runs, run_info + require)
             self.assertRegex(text, r"reads_ready\.py check|input_not_ready", rel)
+
+
+class StorageTests(unittest.TestCase):
+    def test_batch_refused_without_space_and_partial_counts_as_done(self):
+        with tempfile.TemporaryDirectory() as t:
+            reads = Path(t)
+            write_run(reads, "DONE")
+            (reads / "R2").mkdir()
+            (reads / "R2" / "R2.fastq.gz.unverified.part").write_bytes(b"x" * 40)
+            runs = [dict(run="DONE", fastq_bytes=10 ** 12), dict(run="R2", fastq_bytes=100)]
+            free = os.statvfs(t).f_bavail * os.statvfs(t).f_frsize
+            out = io.StringIO()
+            with contextlib.redirect_stdout(out):
+                rr.check_space(runs, reads, 0)
+            self.assertIn("0.00 GB still to download", out.getvalue())
+            with mock.patch("sys.stdout"), mock.patch("sys.stderr"):
+                with self.assertRaises(SystemExit) as cm:
+                    rr.check_space(runs, reads, free / 1e9 + 1)
+            self.assertEqual(cm.exception.code, rr.NO_SPACE)
 
 
 class TempFileTests(unittest.TestCase):

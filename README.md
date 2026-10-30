@@ -151,6 +151,8 @@ python scripts/reads_ready.py prepare --runs-tsv <pool>/runs.tsv --only <run>   
 python scripts/reads_ready.py index                                             # 只按 verify.json 重写清单
 ```
 
+存储按批次检查：`prepare` 下载前打印 reads 目录用量、本批还需下载的 GB 和文件系统剩余空间，剩余不足 `--min-free-gb`（默认 500）时拒绝本批（退出码 4），结束时再打印一次用量；`--dry-run` 只做这一检查。core_context 的分批计划见 `experiments/core_context/scale_comamonadaceae_v0.1/download_batches/README.md`。
+
 计算节点上的检查（各入口已内置，也可单独运行）：
 
 ```sh
