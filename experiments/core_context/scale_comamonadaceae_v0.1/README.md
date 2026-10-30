@@ -644,11 +644,16 @@ interval?
 - **Completeness:**
   - `status` checks every assembly of a round against its expected intervals. `status.tsv` keeps every SLURM attempt
     with its node and error.
-  - `summarize` refuses a round with missing results; with `--allow-incomplete`, missing intervals stay `not_checked`
-    and outside every count.
+  - **Formal result (`summarize`):** written only when the round is complete by id. Every expected interval id has a
+    result, no result id is unexpected, and every ready run of every assembly was checked; row counts are not
+    compared. `summary.json` keeps a `completeness` block (expected / done assemblies, runs, intervals).
+  - **`--allow-incomplete`:** on an incomplete round it writes only `progress_snapshot.json`, with `complete=false`,
+    checked / expected assemblies, runs and intervals, the number not checked, and classes over checked intervals.
+    Unchecked intervals are not failures, and the snapshot gives no support rate for the whole round.
   - A failed task is never read as missing support.
-- **No downloads:** this check has no fetch stage. It reads only local FASTQ whose `verify.json` and archive MD5
-  match.
+- **No downloads:** this check has no fetch stage. It reads only runs in the ready manifest
+  (`scripts/reads_ready.py`; see the repository README) whose archive MD5 matches. A run missing, unverified or
+  changed stops `genome` / `check` with `input_not_ready` (exit 3).
 
 **Three units, kept apart:**
 - **Pair:** a row of the validation list.
@@ -692,7 +697,7 @@ All 2,556 intervals are `consistent` and all 1,109 occurrences have every interv
 gaining cores up to about 114 assemblies, and each assembly costs minutes. So all were run, which brings every B pair
 to both sides. Round 1's per-assembly results are linked in, after checking that the interval sets are identical.
 
-**Completeness:** 149 / 149 assemblies, 16,641 / 16,641 intervals with results. Four attempts failed with
+**Completeness (by id):** 149 / 149 assemblies, 164 / 164 runs, 16,641 / 16,641 intervals with results. Four attempts failed with
 shared-storage I/O errors and all four were rerun to full results. Whether the cause is the nodes or a short storage
 event is open: n0382 failed three times, but the three round-2 failures fell within 20 s and n0334 completed another
 task.
@@ -782,8 +787,6 @@ purple cigar_fail. Pairs shown:
 
 Not done yet:
 - candidate interpretation layer;
-- old pipelines that still fetch inside lr6 compute jobs (`batch_sample.sbatch`, `s3_readcheck.sbatch`,
-  `read_callout/01_fetch.sbatch`, `pacbio_hifi_pilot/pilot.sbatch`) are not changed;
 - no new downloads.
 
 Stopped here for review.

@@ -8,12 +8,17 @@
 #SBATCH --mem=64G
 #SBATCH --time=12:00:00
 #SBATCH --output=/global/home/users/kh36969/logs/fna_pool/%x_%j.out
-# S3 pilot long-read allele check on the anchored loci: build alleles, fetch the linked runs, map each sample to its
-# alleles and (reads hitting them) to its whole assembly, summarise.
-# Usage: sbatch s3_readcheck.sbatch <pool name> <output name, e.g. readcheck_v02>
+# S3 pilot long-read allele check on the anchored loci, in two SLURM stages around a transfer-node download:
+#   alleles  build alleles and tests.tsv (no network)
+#   (lrc-xfer, outside SLURM)  python s3_readcheck.py fetch --pool-dir $HERE/<pool> --work <W> --reads <reads>
+#            downloads and verifies the linked runs and freezes runs_needed.tsv (see README)
+#   run      input check (every run of runs_needed.tsv in the ready manifest, else input_not_ready, exit 3), then map
+#            each sample to its alleles and (reads hitting them) to its whole assembly, summarise. Never downloads.
+# Usage: sbatch s3_readcheck.sbatch <pool name> <output name, e.g. readcheck_v02> <alleles|run>
 set -euo pipefail
 POOL=${1:?pool name}
 NAME=${2:?output name}
+STAGE=${3:?alleles|run}
 PROJ=/global/scratch/users/kh36969/longread_callout
 CODE=/global/home/users/kh36969/middle_insertion_callout/longread_inserton
 HERE=$CODE/experiments/fna_pool
@@ -23,13 +28,18 @@ READS=$PROJ/data/reads
 echo "[$(date -Is)] host=$(hostname) commit=$(git -C $CODE rev-parse HEAD)"
 source ~/miniconda3/etc/profile.d/conda.sh
 conda activate $PROJ/env/msi
-[ ! -e $W/tests.tsv ] || { echo "Refusing to reuse existing $W" >&2; exit 2; }
-mkdir -p $W $REPO/$NAME
 col() { python -c "import csv,sys; print('\n'.join(r['$1'] for r in csv.DictReader(open('$REPO/pilot_pairs.tsv'), delimiter='\t')))"; }
 FASTA=$( (paste -d= <(col sample_a) <(col fna_a); paste -d= <(col sample_b) <(col fna_b)) | sort -u | tr '\n' ' ')
-python $HERE/s3_readcheck.py alleles --loci $REPO/loci.tsv --calls $REPO/calls_merged.tsv --fasta $FASTA --out $W
-echo "[$(date -Is)] fetch"
-python $HERE/s3_readcheck.py fetch --pool-dir $HERE/$POOL --work $W --reads $READS
+if [ $STAGE = alleles ]; then
+    [ ! -e $W/tests.tsv ] || { echo "Refusing to reuse existing $W" >&2; exit 2; }
+    mkdir -p $W $REPO/$NAME
+    python $HERE/s3_readcheck.py alleles --loci $REPO/loci.tsv --calls $REPO/calls_merged.tsv --fasta $FASTA --out $W
+    echo "[$(date -Is)] alleles done; download on lrc-xfer next: python $HERE/s3_readcheck.py fetch --pool-dir $HERE/$POOL --work $W --reads $READS"
+    exit 0
+fi
+[ $STAGE = run ] || { echo "unknown stage $STAGE" >&2; exit 2; }
+[ -f $W/runs_needed.tsv ] || { echo "input_not_ready $W/runs_needed.tsv missing: run s3_readcheck.py fetch on lrc-xfer" >&2; exit 3; }
+python $CODE/scripts/reads_ready.py check --runs-file $W/runs_needed.tsv --skip-multi-file
 for FA in $W/alleles_*.fa; do
     S=$(basename $FA .fa); S=${S#alleles_}
     echo "[$(date -Is)] map $S"

@@ -9,15 +9,17 @@
 #SBATCH --time=24:00:00
 #SBATCH --output=/global/home/users/kh36969/logs/fna_pool/%x_%A_%a.out
 # v0.3 read check (s3_readcheck.py) on one S4 candidate list of the full S3 set, in three stages:
-#   prep       alleles for the list's loci (all calls), then download the linked runs (--jobs concurrent, MD5 checked);
-#              writes samples.txt (one sample per line, those with alleles)
-#   fetch      download only, after a failed prep fetch (.part files resume, verified runs are skipped)
-#              (on the transfer node lrc-xfer the same fetch runs outside SLURM with --transfer-only, see README)
-#   content    complete transfer-only downloads (FASTQ content checks) and require every frozen run verified
-#   map        array task i maps sample i of samples.txt to its alleles and to its whole assembly (skips a sample
-#              whose genome_<sample>.json exists, so failed tasks can be resubmitted)
+#   prep       alleles for the list's loci (all calls); writes samples.txt (one sample per line, those with alleles).
+#              No download.
+#   (lrc-xfer, outside SLURM)  python s3_readcheck.py fetch --pool-dir $HERE/<pool> --work <W> --reads <reads> --jobs 6
+#              downloads and verifies the linked runs (.part resume, verified runs kept) and freezes runs_needed.tsv
+#   content    complete runs left md5_verified by a --transfer-only fetch (FASTQ content checks, no network) and
+#              require every frozen run verified
+#   map        input check first (the sample's runs in the ready manifest, else input_not_ready, exit 3); array task
+#              i maps sample i of samples.txt to its alleles and to its whole assembly (skips a sample whose
+#              genome_<sample>.json exists, so failed tasks can be resubmitted). Never downloads.
 #   summarize  verdicts, evidence levels -> repo
-# Usage: sbatch s5_readcheck.sbatch <pool> <list: main|partner_mixed|short_other_segment|replacement> <s4 dir> <stage: prep|fetch|content|map|summarize>
+# Usage: sbatch s5_readcheck.sbatch <pool> <list: main|partner_mixed|short_other_segment|replacement> <s4 dir> <stage: prep|content|map|summarize>
 #        (for map: sbatch --array=0-<n-1> ...)
 set -euo pipefail
 POOL=${1:?pool}; LIST=${2:?list}; S4=${3:?s4 dir name}; STAGE=${4:?stage}
@@ -41,11 +43,8 @@ prep)
     python $HERE/s3_readcheck.py alleles --loci $S3/merged/loci.tsv --calls $S3/merged/calls_merged.tsv --loci-ids $W/loci_ids.tsv \
         --fasta $FASTA --out $W
     ls $W/alleles_*.fa | sed 's/.*alleles_//; s/\.fa$//' > $W/samples.txt
-    echo "[$(date -Is)] fetch, $(wc -l < $W/samples.txt) samples"
-    python $HERE/s3_readcheck.py fetch --pool-dir $HERE/$POOL --work $W --reads $READS --jobs 6
-    ;;
-fetch)
-    python $HERE/s3_readcheck.py fetch --pool-dir $HERE/$POOL --work $W --reads $READS --jobs 6
+    echo "[$(date -Is)] $(wc -l < $W/samples.txt) samples; download on lrc-xfer next:"
+    echo "python $HERE/s3_readcheck.py fetch --pool-dir $HERE/$POOL --work $W --reads $READS --jobs 6"
     ;;
 content)
     python $HERE/s3_readcheck.py content --work $W --reads $READS --jobs $SLURM_CPUS_PER_TASK

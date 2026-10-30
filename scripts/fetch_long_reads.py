@@ -3,6 +3,12 @@
 `probe` reads only the first bytes of each archive FASTQ to classify read names,
 read unit and quality encoding. `fetch` downloads, checks archive size/MD5,
 records SHA256 and summarizes the full file. Neither mode filters reads.
+
+Both modes use the network and refuse to run inside a SLURM job: downloads belong
+to the transfer node (scripts/reads_ready.py prepare), compute jobs only check
+(scripts/reads_ready.py check). A download stays <file>.part while it transfers
+and <file>.unverified while it is checked; only a run whose checks all pass gets
+its final file name and verify.json status verified.
 """
 
 import argparse
@@ -17,6 +23,8 @@ import time
 import urllib.request
 import zlib
 from pathlib import Path
+
+from reads_ready import refuse_in_slurm
 
 REGISTRY = Path(__file__).with_name("long_read_runs.json")
 CHUNK = 1 << 20
@@ -117,6 +125,7 @@ def parse_fastq(lines, summary):
 
 
 def probe(run, nbytes):
+    refuse_in_slurm("probe")
     request = urllib.request.Request(run["url"], headers={"Range": "bytes=0-%d" % (nbytes - 1)})
     with urllib.request.urlopen(request, timeout=120) as response:
         data = response.read()
@@ -133,6 +142,7 @@ def probe(run, nbytes):
 def download(url, target, expected_bytes, attempts=8):
     # curl, not urllib: urllib downloads of full length repeatedly carried a
     # short corrupted stretch, while curl copies of the same files were clean.
+    refuse_in_slurm()
     part = target.with_name(target.name + ".part")
     for attempt in range(attempts):
         offset = part.stat().st_size if part.exists() else 0
@@ -177,43 +187,56 @@ def summarize_file(path, platform):
 
 def fetch(run, out, content=True):
     """Download one run and check it. content=False stops after bytes and MD5 (status md5_verified), for a
-    transfer node; check_content then completes it on a compute node. Only a full check gives status verified."""
+    transfer node; check_content then completes it (no network). Only a full check gives status verified."""
     work = out / run["run"]
     work.mkdir(parents=True, exist_ok=True)
     report_path = work / "verify.json"
     if report_path.exists():
         raise SystemExit("Refusing to overwrite existing " + str(report_path))
     target = work / run["url"].rsplit("/", 1)[1]
+    pending = unverified(target)
+    if target.exists() and not pending.exists():
+        target.rename(pending)  # final name without verify.json (interrupted older fetch): check it again
+    old_part, part = target.with_name(target.name + ".part"), pending.with_name(pending.name + ".part")
+    if old_part.exists() and not part.exists():
+        old_part.rename(part)  # resume a partial download made before the .unverified naming
     started = time.strftime("%Y-%m-%dT%H:%M:%S%z")
     # Full-length files with a short corrupted stretch have been seen; keep each
     # bad copy for the record and download again.
     rejected = []
     for attempt in range(MD5_ATTEMPTS):
-        if not target.exists():
-            download(run["url"], target, run["fastq_bytes"])
-        size = target.stat().st_size
-        md5, sha256 = file_hashes(target)
+        if not pending.exists():
+            download(run["url"], pending, run["fastq_bytes"])
+        size = pending.stat().st_size
+        md5, sha256 = file_hashes(pending)
         if md5 == run["fastq_md5"] or attempt == MD5_ATTEMPTS - 1:
             break
         bad = work / ("md5_mismatch_attempt%d" % (attempt + 1))
         bad.mkdir(exist_ok=True)
-        target.rename(bad / target.name)
+        pending.rename(bad / target.name)
         rejected.append(dict(attempt=attempt + 1, md5=md5, bytes=size, kept_as=str(bad / target.name)))
     checks = dict(
         bytes_match=size == run["fastq_bytes"],
         md5_match=md5 == run["fastq_md5"],
     )
-    result = dict(run=run, download_started=started, local_file=str(target), bytes=size, md5=md5, sha256=sha256,
+    result = dict(run=run, download_started=started, local_file=str(pending), bytes=size, md5=md5, sha256=sha256,
                   rejected_downloads=rejected)
     if all(checks.values()) and content:
-        content_checks(result, target, run, checks)
+        content_checks(result, pending, run, checks)
     result["checks"] = checks
     if not all(checks.values()):
         result["status"] = "mismatch"
     else:
         result["status"] = "verified" if content else "md5_verified"
+    if result["status"] == "verified":
+        pending.rename(target)
+        result["local_file"] = str(target)
     report_path.write_text(json.dumps(result, indent=2) + "\n")
     return result
+
+
+def unverified(target):
+    return target.with_name(target.name + ".unverified")
 
 
 def content_checks(result, target, run, checks):
@@ -240,14 +263,30 @@ def check_content(work):
         return result
     target = Path(result["local_file"])
     checks = result["checks"]
+    final = target.with_name(target.name[: -len(".unverified")]) if target.name.endswith(".unverified") else target
     md5, sha256 = file_hashes(target)
     checks["unchanged_since_download"] = md5 == result["md5"] and sha256 == result["sha256"]
     if all(checks.values()):
         content_checks(result, target, result["run"], checks)
     result["content_checked"] = time.strftime("%Y-%m-%dT%H:%M:%S%z")
     result["status"] = "verified" if all(checks.values()) else "mismatch"
+    if result["status"] == "verified" and final != target:
+        target.rename(final)
+        result["local_file"] = str(final)
     report_path.write_text(json.dumps(result, indent=2) + "\n")
     return result
+
+
+def select_runs(ids):
+    """Registry runs by run or sample id (all registered runs when ids is empty)."""
+    runs = json.loads(REGISTRY.read_text())["runs"]
+    if ids:
+        wanted = set(ids)
+        runs = [r for r in runs if r["run"] in wanted or r["sample_id"] in wanted]
+        missing = wanted - {r["run"] for r in runs} - {r["sample_id"] for r in runs}
+        if missing:
+            raise SystemExit("Unknown runs: " + ", ".join(sorted(missing)))
+    return runs
 
 
 def main():
@@ -257,13 +296,8 @@ def main():
     parser.add_argument("--runs", nargs="*", help="Run or sample IDs; default all registered runs")
     parser.add_argument("--probe-bytes", type=int, default=4 << 20)
     args = parser.parse_args()
-    runs = json.loads(REGISTRY.read_text())["runs"]
-    if args.runs:
-        wanted = set(args.runs)
-        runs = [r for r in runs if r["run"] in wanted or r["sample_id"] in wanted]
-        missing = wanted - {r["run"] for r in runs} - {r["sample_id"] for r in runs}
-        if missing:
-            raise SystemExit("Unknown runs: " + ", ".join(sorted(missing)))
+    refuse_in_slurm(args.mode)
+    runs = select_runs(args.runs)
     args.out.mkdir(parents=True, exist_ok=True)
     failed = False
     for run in runs:

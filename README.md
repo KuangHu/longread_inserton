@@ -119,6 +119,59 @@ multisite-insertion discover --manifest samples.json --out runs/native_only
 PILER 目录需含 `families.gff` 和 `library.fasta`；RS 目录需含 `ranges.tsv` 和
 `families.fasta`。完整目录原样复制到新运行的 `native/`。继续使用同一 `run` 命令。
 
+## 长读长输入：下载与计算分离（实验脚本）
+
+`experiments/` 中用到公共 reads 的流程，下载和计算是两个独立步骤：
+
+1. **准备（仅 lrc-xfer 传输节点，SLURM 之外）。**
+   - **断点续传：** 下载写入 `<file>.part`，中断后重跑同一命令即可续传。
+   - **校验：** 下载完成后改名为 `<file>.unverified`，再核对大小、MD5 和 FASTQ 内容（碱基数、spot 数）。
+   - **标记可用：** 全部通过后才改为最终文件名，`verify.json` 记为 `verified`。
+   - **准备清单：** 最后重写 `<reads>/ready_manifest.tsv`，每个 run 一行：run、最终文件路径、大小、MD5、SHA256、
+     状态、验证时间。
+   - **已有数据：** 已验证的 run 保持原样，不重新下载。
+2. **计算（SLURM 作业）。**
+   - 只读取准备清单中状态为 `verified` 的本地文件，并核对文件仍在、大小一致、`verify.json` 未改变。
+   - 不满足时输出 `input_not_ready <run> <原因>` 并以退出码 3 停止该任务，不会联网下载。
+   - 补齐输入后直接重新提交即可：检查在创建输出目录之前完成。
+
+下载程序（`fetch_long_reads.py`、`reads_ready.py prepare`、`s3_readcheck.py fetch`、`download_fna.py run`、
+`ena_transport_pilot.py`）在 SLURM 作业内（存在 `SLURM_JOB_ID`）一律拒绝运行。
+
+lrc-xfer 需要 OTP 交互登录，只能由用户启动；它与集群共享 home 和 `/global/scratch`：
+
+```sh
+ssh lrc-xfer.lbl.gov
+tmux new -s reads                       # 断线后 tmux attach -t reads
+cd ~/middle_insertion_callout/longread_inserton
+source ~/miniconda3/etc/profile.d/conda.sh
+conda activate /global/scratch/users/kh36969/longread_callout/env/msi
+python scripts/reads_ready.py prepare --runs SRR13837247                        # 登记表中的 run 或 sample
+python scripts/reads_ready.py prepare --runs-tsv <pool>/runs.tsv --only <run>   # ENA run 表
+python scripts/reads_ready.py index                                             # 只按 verify.json 重写清单
+```
+
+计算节点上的检查（各入口已内置，也可单独运行）：
+
+```sh
+python scripts/reads_ready.py check --runs SRR13837247 [--rehash]   # 就绪：ready <run> <file>；否则退出码 3
+```
+
+| 流程 | 准备（lrc-xfer） | 计算（SLURM，只检查输入） |
+|---|---|---|
+| callout_scale_v1 batch10 / batch50 | `bash experiments/callout_scale_v1/prepare_inputs.sh <batch10\|batch50> [order ...]`（reads + assembly） | `batch_sample.sbatch` |
+| PacBio HiFi pilot | `bash experiments/pacbio_hifi_pilot/prepare_inputs.sh` | `pilot.sbatch` |
+| read_callout | `bash experiments/read_callout/00_prepare.sh` | `01_inputs.sbatch` → `02_callout.sbatch` → `03_reads.sbatch` |
+| S3 readcheck | `python experiments/fna_pool/s3_readcheck.py fetch --pool-dir … --work … --reads …` | `s3_readcheck.sbatch <pool> <name> alleles`，然后 `… run` |
+| S5 readcheck | 同上（`--jobs 6`） | `s5_readcheck.sbatch … prep` → `content` → `map` → `summarize` |
+| stage2 readcheck、core_context `ucd_readcheck` | 不下载 | 只用准备清单中的 run |
+
+测试：`python -m unittest tests.test_reads_ready`。它检查以下几点：
+- 缺文件、未验证、大小或 SHA256 不符时报 `input_not_ready`，且不加载下载模块；
+- SLURM 内拒绝下载；
+- 校验通过前文件不使用最终名；
+- 计算入口中没有下载命令。
+
 ## 主要输出
 
 | 路径 | 内容 |

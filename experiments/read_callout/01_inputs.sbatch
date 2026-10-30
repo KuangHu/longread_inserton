@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=rc01_fetch
+#SBATCH --job-name=rc01_inputs
 #SBATCH --account=pc_rubinlab
 #SBATCH --partition=lr6
 #SBATCH --qos=lr_normal
@@ -8,27 +8,17 @@
 #SBATCH --cpus-per-task=4
 #SBATCH --time=8:00:00
 #SBATCH --output=/global/scratch/users/kh36969/longread_callout/logs/%x_%A_%a.out
-# Download and verify reads (ENA) and the GCA/GCF assemblies (NCBI) for one sample.
+# Input check for one sample: reads and GCA/GCF packages were downloaded and verified on lrc-xfer by 00_prepare.sh.
+# Nothing is downloaded here; a missing or unverified input stops the task with input_not_ready (exit 3).
 source /global/home/users/kh36969/middle_insertion_callout/longread_inserton/experiments/read_callout/common.sh
-mkdir -p $ASM_DIR $OUT
-
-# Reads: archive size/MD5, spot and base counts against ENA metadata.
-if [ -f $READ_DIR/$RUN/verify.json ]; then
-    echo "reads already verified: $READ_DIR/$RUN/verify.json"
-else
-    python $CODE/scripts/fetch_long_reads.py fetch --out $READ_DIR --runs $RUN
-fi
-FASTQ=$(ls $READ_DIR/$RUN/*.fastq.gz)
+FASTQ=$(python $CODE/scripts/reads_ready.py check --runs $RUN | cut -f3 -d' ') || exit 3
+for acc in $GCA $GCF; do
+    [ -d $ASM_DIR/$acc ] || { echo "input_not_ready assembly $acc missing in $ASM_DIR: run 00_prepare.sh on lrc-xfer" >&2; exit 3; }
+done
+mkdir -p $OUT
 python $HERE/molecule_reads.py diagnose $FASTQ --limit 20000 > $OUT/read_unit.json
 
 # Assemblies: GCA (submitted) and GCF (RefSeq, PGAP annotation used for the callout).
-$DATASETS --version > $ASM_DIR/datasets_version.txt
-for acc in $GCA $GCF; do
-    if [ ! -d $ASM_DIR/$acc ]; then
-        $DATASETS download genome accession $acc --include genome,gbff --filename $ASM_DIR/$acc.zip --no-progressbar
-        unzip -q -o $ASM_DIR/$acc.zip -d $ASM_DIR/$acc
-    fi
-done
 FNA=$(ls $ASM_DIR/$GCF/ncbi_dataset/data/$GCF/*_genomic.fna)
 GBFF=$ASM_DIR/$GCF/ncbi_dataset/data/$GCF/genomic.gbff
 

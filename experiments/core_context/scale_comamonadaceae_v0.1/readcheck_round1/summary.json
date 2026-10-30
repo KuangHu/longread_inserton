@@ -14,6 +14,16 @@
   "max_intervals_per_occurrence": 26,
   "intervals_with_multiple_occurrences": 32
  },
+ "complete": true,
+ "completeness": {
+  "complete": true,
+  "assemblies_expected": 9,
+  "assemblies_complete": 9,
+  "runs_expected": 12,
+  "runs_checked": 12,
+  "intervals_expected": 2556,
+  "intervals_with_result": 2556
+ },
  "interval_class": {
   "supported": 2556
  },

@@ -68,6 +68,7 @@ def one(r, method, out, key=None):
 
 
 def main():
+    flr.refuse_in_slurm("ena_transport_pilot")  # downloads: transfer node only
     p = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     p.add_argument("--pool-dir", type=Path, required=True)
     p.add_argument("--out", type=Path, required=True)

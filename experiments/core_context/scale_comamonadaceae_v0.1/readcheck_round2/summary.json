@@ -15,7 +15,15 @@
   "intervals_with_multiple_occurrences": 252
  },
  "complete": true,
- "assemblies_without_results": [],
+ "completeness": {
+  "complete": true,
+  "assemblies_expected": 149,
+  "assemblies_complete": 149,
+  "runs_expected": 164,
+  "runs_checked": 164,
+  "intervals_expected": 16641,
+  "intervals_with_result": 16641
+ },
  "interval_class": {
   "supported": 16413,
   "insufficient_coverage": 159,

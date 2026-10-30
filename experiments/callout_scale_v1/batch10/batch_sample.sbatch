@@ -10,7 +10,7 @@
 #SBATCH --time=8:00:00
 #SBATCH --output=/global/home/users/kh36969/logs/callout_scale_v1/%x_%A_%a.out
 # Controlled 10-sample batch (protocol T2): one sample per task, at most 2 concurrent.
-# fetch/verify reads -> GCA/GCF assembly choice -> callout (--methods PILER RS --subset all)
+# input check (reads + assembly prepared on lrc-xfer by prepare_inputs.sh) -> GCA/GCF assembly choice -> callout (--methods PILER RS --subset all)
 # -> validate -> map (fixed ONT command) -> audited filled-site check (nearby_competition_v2) -> checker.
 set -euo pipefail
 PROJ=/global/scratch/users/kh36969/longread_callout
@@ -28,6 +28,9 @@ export PATH=$PROJ/env/bin:$PATH
 
 row=$(awk -F'\t' -v n="$SLURM_ARRAY_TASK_ID" '$1==n' $HERE/batch10/samples.tsv)
 IFS=$'\t' read -r ORDER SAMPLE RUN BIOSAMPLE GCA GCF PRESET <<< "$row"
+# Input check before any output exists, so a task stopped with input_not_ready (exit 3) can simply be resubmitted.
+python $CODE/scripts/reads_ready.py check --runs $RUN > /dev/null || exit 3
+[ -f $PROJ/data/assemblies_batch10/$SAMPLE/manifest.json ] || { echo "input_not_ready assembly $SAMPLE not prepared" >&2; exit 3; }
 OUT=$PROJ/batch10/$SAMPLE
 [ ! -e "$OUT" ] || { echo "Refusing to reuse existing $OUT" >&2; exit 2; }
 mkdir -p $OUT/mapping $OUT/qc
@@ -36,19 +39,14 @@ source $HERE/stage.sh
 git -C $CODE rev-parse HEAD > $OUT/source_commit.txt
 echo "sample=$SAMPLE run=$RUN gca=$GCA gcf=$GCF"
 
-if [ -f $PROJ/data/reads/$RUN/verify.json ]; then
-    stage reads_verified python -c "import json,sys; d=json.load(open('$PROJ/data/reads/$RUN/verify.json')); sys.exit(d['status']!='verified')"
-else
-    stage fetch_reads python $CODE/scripts/fetch_long_reads.py fetch --out $PROJ/data/reads --runs $RUN
-fi
-READS=$(python -c "import json;print(json.load(open('$PROJ/data/reads/$RUN/verify.json'))['local_file'])")
+# Inputs are prepared on the transfer node (prepare_inputs.sh); this job never downloads. A run that is not in the
+# ready manifest as verified, or whose file is missing or changed, stops the job with input_not_ready (exit 3).
+stage reads_ready python $CODE/scripts/reads_ready.py check --runs $RUN
+READS=$(python $CODE/scripts/reads_ready.py check --runs $RUN | cut -f3 -d' ')
 ASM=$PROJ/data/assemblies_batch10/$SAMPLE
-if [ -f $ASM/manifest.json ]; then
-    # Prepared by an earlier attempt: reuse only if the chosen FASTA still has the recorded hash.
-    stage assembly_reused python -c "import hashlib,json,sys; c=json.load(open('$ASM/assembly_check.json')); sys.exit(hashlib.sha256(open(c['fasta'],'rb').read()).hexdigest()!=c['fasta_sha256'])"
-else
-    stage prepare_assembly python $HERE/batch10/prepare_assembly.py --sample $SAMPLE --gca $GCA --gcf $GCF --out $ASM
-fi
+# Prepared with prepare_inputs.sh; reuse only if the chosen FASTA still has the recorded hash.
+[ -f $ASM/manifest.json ] || { echo "input_not_ready assembly $ASM/manifest.json missing: run prepare_inputs.sh batch10 on lrc-xfer" >&2; exit 3; }
+stage assembly_ready python -c "import hashlib,json,sys; c=json.load(open('$ASM/assembly_check.json')); sys.exit(3 * (hashlib.sha256(open(c['fasta'],'rb').read()).hexdigest()!=c['fasta_sha256']))"
 FASTA=$(python -c "import json;print(json.load(open('$ASM/manifest.json'))['samples'][0]['fasta'])")
 
 # Discovery budget per protocol: BLASTX threads 2; native tools use their own defaults.

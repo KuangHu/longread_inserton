@@ -11,6 +11,7 @@
 # PacBio HiFi single-sample compatibility pilot (Sam8H1, SRR13837247, GCA_016904925.1).
 # Same route as callout_scale_v1/batch50 except: minimap2 -x map-hifi for the main mapping and the
 # cap recheck; read QV statistics and an assembly/report check added; full reads, no downsampling.
+# Inputs first, on lrc-xfer: bash experiments/pacbio_hifi_pilot/prepare_inputs.sh
 # Submit: sbatch --exclude=<bad nodes> experiments/pacbio_hifi_pilot/pilot.sbatch
 set -euo pipefail
 PROJ=/global/scratch/users/kh36969/longread_callout
@@ -28,6 +29,9 @@ source ~/miniconda3/etc/profile.d/conda.sh
 conda activate $PROJ/env/msi
 export PATH=$PROJ/env/bin:$PATH
 
+# Input check before any output exists, so a task stopped with input_not_ready (exit 3) can simply be resubmitted.
+python $CODE/scripts/reads_ready.py check --runs $RUN > /dev/null || exit 3
+[ -f $PROJ/data/assemblies_pacbio_pilot/$SAMPLE/manifest.json ] || { echo "input_not_ready assembly $SAMPLE not prepared" >&2; exit 3; }
 OUT=$PROJ/pacbio_hifi_pilot/$SAMPLE
 [ ! -e "$OUT" ] || { echo "Refusing to reuse existing $OUT" >&2; exit 2; }
 mkdir -p $OUT/mapping $OUT/qc
@@ -38,18 +42,17 @@ git -C $CODE rev-parse HEAD > $OUT/source_commit.txt
   pals 2>&1 | head -2 || true; piler2 --version 2>&1 | head -1 || true; RepeatScout 2>&1 | head -1 || true
   blastn -version | head -1; ~/.conda/envs/claude-env/bin/datasets --version; } > $OUT/qc/tool_versions.txt 2>&1 || true
 
-if [ -f $PROJ/data/reads/$RUN/verify.json ]; then
-    stage reads_verified python -c "import json,sys; d=json.load(open('$PROJ/data/reads/$RUN/verify.json')); sys.exit(d['status']!='verified')"
-else
-    stage fetch_reads python $CODE/scripts/fetch_long_reads.py fetch --out $PROJ/data/reads --runs $RUN
-fi
+# Inputs are prepared on the transfer node (prepare_inputs.sh); this job never downloads. A run that is not in the
+# ready manifest as verified, or whose file is missing or changed, stops the job with input_not_ready (exit 3).
+stage reads_ready python $CODE/scripts/reads_ready.py check --runs $RUN
 cp $PROJ/data/reads/$RUN/verify.json $OUT/qc/reads_verify.json
-READS=$(python -c "import json;print(json.load(open('$PROJ/data/reads/$RUN/verify.json'))['local_file'])")
+READS=$(python $CODE/scripts/reads_ready.py check --runs $RUN | cut -f3 -d' ')
 stage read_stats python $HERE/read_stats.py --verify $PROJ/data/reads/$RUN/verify.json --out $OUT/qc/read_stats.json
 
 ASM=$PROJ/data/assemblies_pacbio_pilot/$SAMPLE
-stage prepare_assembly python $CODE/experiments/callout_scale_v1/batch10/prepare_assembly.py --sample $SAMPLE --gca $GCA --gcf $GCF --out $ASM
-stage verify_assembly python $HERE/verify_assembly.py --asm-dir $ASM --biosample $BIOSAMPLE --total-bp $TOTAL_BP
+# Prepared and verified on lrc-xfer (prepare_inputs.sh): only the recorded hash is checked here.
+[ -f $ASM/manifest.json ] && [ -f $ASM/assembly_verify.json ] || { echo "input_not_ready assembly $ASM not prepared: run prepare_inputs.sh on lrc-xfer" >&2; exit 3; }
+stage assembly_ready python -c "import hashlib,json,sys; c=json.load(open('$ASM/assembly_check.json')); sys.exit(3 * (hashlib.sha256(open(c['fasta'],'rb').read()).hexdigest()!=c['fasta_sha256']))"
 cp $ASM/assembly_check.json $ASM/assembly_verify.json $OUT/qc/
 FASTA=$(python -c "import json;print(json.load(open('$ASM/manifest.json'))['samples'][0]['fasta'])")
 

@@ -11,7 +11,7 @@
 # Frozen 50-sample panel, one sample per array task (task id = samples.tsv order).
 # Submit in groups of ten, at most 2 concurrent, e.g.
 #   sbatch --array=1-10%2 --exclude=<bad nodes> batch_sample.sbatch
-# fetch/verify reads -> GCA/GCF choice + expected SHA256 -> callout (--methods PILER RS --subset all)
+# input check (reads + assembly prepared on lrc-xfer by prepare_inputs.sh) -> GCA/GCF choice + expected SHA256 -> callout (--methods PILER RS --subset all)
 # -> validate -> [fixed-seed 80x downsample if read_policy=downsample] -> map (fixed ONT command)
 # -> audited filled-site check (nearby_competition_v2) -> checker.
 set -euo pipefail
@@ -33,6 +33,9 @@ col() { python -c "import csv,sys; r=[x for x in csv.DictReader(open('$HERE/batc
 SAMPLE=$(col sample_id); RUN=$(col run); GCA=$(col gca); GCF=$(col gcf); PRESET=$(col preset)
 EXPECT_SHA=$(col expected_fasta_sha256); EXPECT_SRC=$(col selected_fasta_source); POLICY=$(col read_policy)
 ASM_BP=$(col assembly_bp); DS_DEPTH=$(col downsample_depth); DS_SEED=$(col downsample_seed)
+# Input check before any output exists, so a task stopped with input_not_ready (exit 3) can simply be resubmitted.
+python $CODE/scripts/reads_ready.py check --runs $RUN > /dev/null || exit 3
+[ -f $PROJ/data/assemblies_batch50/$SAMPLE/manifest.json ] || { echo "input_not_ready assembly $SAMPLE not prepared" >&2; exit 3; }
 OUT=$PROJ/batch50/$SAMPLE
 # Package manifest IDs allow only [A-Za-z0-9_-]; the panel sample_id is kept for directories and tables.
 LABEL=$(echo "$SAMPLE" | sed 's/[^A-Za-z0-9_-]/_/g')
@@ -43,18 +46,14 @@ source $HERE/stage.sh
 git -C $CODE rev-parse HEAD > $OUT/source_commit.txt
 echo "sample=$SAMPLE label=$LABEL run=$RUN gca=$GCA gcf=$GCF policy=$POLICY"
 
-if [ -f $PROJ/data/reads/$RUN/verify.json ]; then
-    stage reads_verified python -c "import json,sys; d=json.load(open('$PROJ/data/reads/$RUN/verify.json')); sys.exit(d['status']!='verified')"
-else
-    stage fetch_reads python $CODE/scripts/fetch_long_reads.py fetch --out $PROJ/data/reads --runs $RUN
-fi
-READS=$(python -c "import json;print(json.load(open('$PROJ/data/reads/$RUN/verify.json'))['local_file'])")
+# Inputs are prepared on the transfer node (prepare_inputs.sh); this job never downloads. A run that is not in the
+# ready manifest as verified, or whose file is missing or changed, stops the job with input_not_ready (exit 3).
+stage reads_ready python $CODE/scripts/reads_ready.py check --runs $RUN
+READS=$(python $CODE/scripts/reads_ready.py check --runs $RUN | cut -f3 -d' ')
 ASM=$PROJ/data/assemblies_batch50/$SAMPLE
-if [ -f $ASM/manifest.json ]; then
-    stage assembly_reused python -c "import hashlib,json,sys; c=json.load(open('$ASM/assembly_check.json')); sys.exit(hashlib.sha256(open(c['fasta'],'rb').read()).hexdigest()!=c['fasta_sha256'])"
-else
-    stage prepare_assembly python $HERE/batch10/prepare_assembly.py --sample $LABEL --gca $GCA --gcf $GCF --out $ASM
-fi
+# Prepared with prepare_inputs.sh; reuse only if the chosen FASTA still has the recorded hash.
+[ -f $ASM/manifest.json ] || { echo "input_not_ready assembly $ASM/manifest.json missing: run prepare_inputs.sh batch50 on lrc-xfer" >&2; exit 3; }
+stage assembly_ready python -c "import hashlib,json,sys; c=json.load(open('$ASM/assembly_check.json')); sys.exit(3 * (hashlib.sha256(open(c['fasta'],'rb').read()).hexdigest()!=c['fasta_sha256']))"
 # The FASTA chosen on the cluster must be the one frozen in samples.tsv.
 stage assembly_expected python -c "import json,sys; c=json.load(open('$ASM/assembly_check.json')); src='gcf_sequence_and_annotation' if '$EXPECT_SRC'.startswith('gcf') else 'gca_sequence'; ok=c['fasta_sha256']=='$EXPECT_SHA' and c['choice'].startswith(src[:3]); print(c['choice'], c['fasta_sha256']); sys.exit(not ok)"
 FASTA=$(python -c "import json;print(json.load(open('$ASM/manifest.json'))['samples'][0]['fasta'])")

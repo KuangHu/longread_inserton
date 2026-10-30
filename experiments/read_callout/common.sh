@@ -1,4 +1,4 @@
-# Shared settings for the read_callout SLURM steps; sourced by each sbatch script.
+# Shared settings for the read_callout SLURM steps; sourced by each sbatch script (inputs come from 00_prepare.sh).
 set -euo pipefail
 PROJ=/global/scratch/users/kh36969/longread_callout
 CODE=/global/home/users/kh36969/middle_insertion_callout/longread_inserton

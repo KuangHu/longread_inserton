@@ -40,12 +40,15 @@ assembly-consistency check (misassembly, collapsed repeats, within-sample allele
 sequencing validation.
 
 alleles   tests.tsv + alleles_<sample>.fa from loci/calls (loci with status two_flank_anchored; all their calls).
-fetch     Download the usable runs of the tested samples (scripts/fetch_long_reads.py fetch logic, MD5 checked).
-          The first fetch freezes the run list in runs_needed.tsv. --transfer-only (transfer node) stops at bytes
-          and MD5 (status md5_verified).
-content   Compute node: complete md5_verified runs (file unchanged, FASTQ content checks), then require status
-          verified for every run in runs_needed.tsv; exits 1 otherwise.
-map       minimap2 (preset by read type) of one sample's runs against its allele FASTA.
+fetch     Preparation, transfer node only (lrc-xfer, outside SLURM; refused inside a SLURM job): download the
+          usable runs of the tested samples (scripts/fetch_long_reads.py, size / MD5 / FASTQ content checked, final
+          file name only after every check) and rewrite the ready manifest. The first fetch freezes the run list in
+          runs_needed.tsv. --transfer-only stops at bytes and MD5 (status md5_verified, not ready).
+content   Preparation without network: complete md5_verified runs (file unchanged, FASTQ content checks), rewrite
+          the ready manifest, then require status verified for every run in runs_needed.tsv; exits 1 otherwise.
+map       minimap2 (preset by read type) of one sample's runs against its allele FASTA. Every usable run of the
+          sample (minus --runs-allowed exclusions and multi-file runs, which are never fetched) must be in the ready
+          manifest (scripts/reads_ready.py); otherwise input_not_ready, exit 3. Nothing is downloaded.
 genome    For one sample: subset the reads that hit its alleles, record their molecule keys, map them to the
           sample's whole assembly (secondaries kept) for the locus check.
 summarize Per test and per locus counts and verdicts.
@@ -63,6 +66,7 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "scripts"))
+import reads_ready  # noqa: E402  (ready manifest; the downloader is imported only by fetch / content)
 from s3_pair_calls import CIGAR, DIFF_ORDER, MERGE_MATCH, difference_class, read_fasta, rc  # noqa: E402
 
 VERSION = "s3_readcheck_v0.3"
@@ -173,6 +177,7 @@ def sample_runs(pool_dir, samples):
 
 
 def cmd_fetch(a):
+    reads_ready.refuse_in_slurm("fetch")
     import fetch_long_reads as flr  # noqa: E402  (curl download, MD5 check, verify.json; refuses to overwrite)
     from concurrent.futures import ThreadPoolExecutor, as_completed
     tests = read(a.work / "tests.tsv")
@@ -211,6 +216,7 @@ def cmd_fetch(a):
             print(s, run, st, flush=True)
             bad += st != ("md5_verified" if a.transfer_only else "verified")
     print("%d of %d runs not verified" % (bad, len(todo)), flush=True)
+    reads_ready.index(a.reads)
     sys.exit(1 if bad else 0)  # a later fetch resumes the partial files; map waits for a clean fetch
 
 
@@ -236,6 +242,7 @@ def cmd_content(a):
         print(r["sample"], r["run"], st, flush=True)
     c = Counter(st if not st.startswith("error") else "error" for _, st in res)
     print("runs_needed %d: %s" % (len(res), json.dumps(dict(c))))
+    reads_ready.index(a.reads)
     bad = [r["run"] for r, st in res if st not in ("verified", "skipped: more than one FASTQ file")]
     sys.exit(1 if bad else 0)
 
@@ -247,16 +254,13 @@ def verified_runs(a):
         if allowed is not None and r["run_accession"] not in allowed:
             print(a.sample, r["run_accession"], "not in the allowed run list", file=sys.stderr)
             continue
-        v = a.reads / r["run_accession"] / "verify.json"
-        if not v.exists():
-            print(a.sample, r["run_accession"], "not fetched", file=sys.stderr)
+        if ";" in r["fastq_ftp"]:
+            print(a.sample, r["run_accession"], "not used: more than one FASTQ file (never fetched)", file=sys.stderr)
             continue
-        v = json.load(open(str(v)))
-        if v["status"] != "verified":
-            print(a.sample, r["run_accession"], "not verified:", v["checks"], file=sys.stderr)
-            continue
-        out.append((r, v))
-    return out
+        out.append(r)
+    # a run missing, unverified or changed since its check stops the task (exit 3); it is never fetched from here
+    reads_ready.require([r["run_accession"] for r in out], a.reads)
+    return [(r, json.load(open(str(a.reads / r["run_accession"] / "verify.json")))) for r in out]
 
 
 def cmd_map(a):

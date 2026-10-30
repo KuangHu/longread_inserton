@@ -22,7 +22,12 @@ check     One assembly, one round: reads with a genome alignment near a tested p
 status    Completeness per assembly of a round: expected intervals vs results on disk, genome mapping status per run,
           and every SLURM attempt (--jobs) with state, node and the error line of failed attempts. One row per
           assembly; a failed attempt is never read as missing support.
-summarize Per tested interval, per occurrence and per pair evidence; representative SVG figures. Three units are kept
+summarize Formal result, only for a complete round: every expected interval id has a result (and no result is
+          unexpected) and every ready run of every assembly was checked, compared by id, not by row counts.
+          Per tested interval, per occurrence and per pair evidence; representative SVG figures.
+          --allow-incomplete on an incomplete round writes only progress_snapshot.json: complete=false, checked /
+          expected assemblies, runs and intervals, the unchecked count (not failures), classes over checked
+          intervals; never a support rate of the whole round. Three units are kept
           apart: pairs, occurrences and tested intervals. One occurrence gets one interval per distinct element
           boundary its partners give, and one interval can belong to several occurrence ids; interval_map keeps every
           (interval, occurrence, pair, side) link. Support is reported per count mode (molecules, assumed_molecules
@@ -47,6 +52,9 @@ import scale_entry as se  # noqa: F401  (puts fna_pool on sys.path)
 import s3_readcheck as rc3
 from scale_candidates import POOL, READS
 
+sys.path.insert(0, str(Path(__file__).resolve().parents[2] / 'scripts'))
+import reads_ready  # noqa: E402  (ready manifest check; never downloads)
+
 VERSION = 'ucd_readcheck_v0.1'
 PROJ = Path('/global/scratch/users/kh36969/longread_callout')
 CONTROL_HINTS = {'translation_or_ribosomal': 'conserved_paralog_control'}
@@ -62,14 +70,17 @@ SIDE_COLS = ['occurrence', 'sample', 'contig', 'start0', 'end0', 'strand', 's6_s
 
 
 def run_info(runs_tsv=POOL / 'runs.tsv', reads=READS):
-    """{sample: [run rows]} usable runs with a verified local FASTQ whose MD5 equals the archive (scale_candidates)."""
+    """{sample: [run rows]} usable runs that are ready (reads_ready manifest: verified, file present with its size,
+    verify.json unchanged) and whose MD5 equals the archive (scale_candidates). No run is ever downloaded here."""
     out = defaultdict(list)
-    for r in pc.read_tsv(runs_tsv):
-        v = reads / r['run_accession'] / 'verify.json'
-        if r['usable'] != 'True' or not v.exists():
+    ready = {k: v for k, v in reads_ready.load(reads / reads_ready.MANIFEST).items() if v['status'] == 'verified'}
+    usable = [r for r in pc.read_tsv(runs_tsv) if r['usable'] == 'True' and r['run_accession'] in ready]
+    bad = reads_ready.not_ready([r['run_accession'] for r in usable], reads)
+    for r in usable:
+        if r['run_accession'] in bad:
             continue
-        j = json.loads(v.read_text())
-        if j.get('status') == 'verified' and j.get('md5') == r['fastq_md5']:
+        j = json.loads(Path(ready[r['run_accession']]['verify_json']).read_text())
+        if j['md5'] == r['fastq_md5']:
             out[r['sample_accession']].append(dict(run=r['run_accession'], read_type=r['read_type'],
                                                    model=r['instrument_model'], local_file=j['local_file'],
                                                    bytes=j['bytes'], sha256=j['sha256'],
@@ -225,6 +236,8 @@ def fasta_of(repo_out, sample):
 def cmd_genome(a):
     """Map every read of every verified run of one assembly to the whole assembly, once."""
     runs = run_info()[a.sample]
+    if not runs:
+        raise reads_ready.InputNotReady({a.sample: 'no_ready_run'})
     fa = fasta_of(a.repo_out, a.sample)
     od = PROJ / 'core_context' / 'readmap' / a.sample
     od.mkdir(parents=True, exist_ok=True)
@@ -298,6 +311,7 @@ def cmd_check(a):
     for p in positions:
         near[p['contig']].append((int(p['lo']) - rc3.FLANK, int(p['hi']) + rc3.FLANK))
     gmeta = json.loads((PROJ / 'core_context' / 'readmap' / a.sample / 'genome.json').read_text())
+    reads_ready.require([m['run'] for m in gmeta['runs'] if m['status'] == 'mapped'])
     runs = {r['run']: r for r in run_info()[a.sample]}
     items, used, plot = [], [], defaultdict(list)
     for m in gmeta['runs']:
@@ -441,6 +455,48 @@ def occurrence_class(classes):
     return 'some_intervals_supported' if 'supported' in classes else 'no_interval_supported'
 
 
+def completeness(positions, res, runs_used, ready_runs):
+    """ID-level completeness of a round: every expected interval id has a result and no result id is unexpected,
+    and every run the sample has ready was checked (by run id, not by row counts)."""
+    exp_iv, got_iv = defaultdict(set), defaultdict(set)
+    for t, p in positions.items():
+        exp_iv[p['sample']].add(t)
+    for t, r in res.items():
+        got_iv[r['sample']].add(t)
+    exp_runs = {(s, r) for s in exp_iv for r in ready_runs.get(s, [])}
+    got_runs = {(x['sample'], x['run']) for x in runs_used if x['status'] == 'checked'}
+    miss_iv = {s: sorted(exp_iv[s] - got_iv[s]) for s in exp_iv if exp_iv[s] - got_iv[s]}
+    extra_iv = {s: sorted(got_iv[s] - exp_iv[s]) for s in got_iv if got_iv[s] - exp_iv[s]}
+    miss_runs = sorted('%s:%s' % x for x in exp_runs - got_runs)
+    extra_runs = sorted('%s:%s' % x for x in got_runs - exp_runs)
+    done = {s for s in exp_iv if s not in miss_iv and not any(x.startswith(s + ':') for x in miss_runs)}
+    return dict(complete=not (miss_iv or extra_iv or miss_runs or extra_runs),
+                assemblies_expected=len(exp_iv), assemblies_complete=len(done),
+                runs_expected=len(exp_runs), runs_checked=len(exp_runs & got_runs),
+                intervals_expected=len(positions), intervals_with_result=sum(len(exp_iv[s] & got_iv[s]) for s in exp_iv),
+                missing_intervals_by_assembly={s: len(v) for s, v in miss_iv.items()},
+                missing_interval_ids=miss_iv, missing_runs=miss_runs,
+                missing_unexpected_interval_ids=extra_iv, missing_unexpected_runs=extra_runs)
+
+
+def progress_snapshot(comp, positions, res):
+    """--allow-incomplete: progress only. Unchecked intervals are not failures, and classes are over checked
+    intervals, never a support rate of the whole round."""
+    checked = [res[t] for t in positions if t in res]
+    return dict(version=VERSION, complete=False, kind='progress_snapshot',
+                note='incomplete round: counts below are over checked intervals only and are not a support rate of '
+                     'the whole round; unchecked intervals are not failures',
+                checked_of_expected=dict(
+                    assemblies='%d/%d' % (comp['assemblies_complete'], comp['assemblies_expected']),
+                    runs='%d/%d' % (comp['runs_checked'], comp['runs_expected']),
+                    intervals='%d/%d' % (comp['intervals_with_result'], comp['intervals_expected'])),
+                intervals_not_checked=comp['intervals_expected'] - comp['intervals_with_result'],
+                missing_intervals_by_assembly=comp['missing_intervals_by_assembly'], missing_runs=comp['missing_runs'],
+                unexpected=dict(interval_ids=comp['missing_unexpected_interval_ids'],
+                                runs=comp['missing_unexpected_runs']),
+                interval_class_among_checked=dict(Counter(position_class(r) for r in checked)))
+
+
 def cmd_summarize(a):
     rd = a.round_dir
     pairs = pc.read_tsv(rd / 'pairs.tsv')
@@ -455,15 +511,20 @@ def cmd_summarize(a):
             res[r['test_id']] = r
         runs_used += [dict(x, sample=s) for x in json.loads((od / 'run.json').read_text())['runs']]
         plot.update(json.loads((od / 'plot.json').read_text()))
+    comp = completeness(positions, res, runs_used, {s: [r['run'] for r in v] for s, v in run_info().items()})
+    if not comp['complete']:
+        if not a.allow_incomplete:
+            sys.exit('incomplete round, no formal summary: %s (run status; --allow-incomplete writes a progress '
+                     'snapshot only)' % json.dumps({k: v for k, v in comp.items() if k.startswith('missing')}))
+        snap = progress_snapshot(comp, positions, res)
+        (a.out / 'progress_snapshot.json').write_text(json.dumps(snap, indent=1) + '\n')
+        print(json.dumps(snap, indent=1))
+        return
     out_pos = []
     for t, p in sorted(positions.items(), key=lambda x: (x[1]['sample'], x[1]['contig'], int(x[1]['lo']))):
         r = res.get(t, dict(verdict='not_checked'))
         out_pos.append(dict(p, **{k: r.get(k, '') for k in RESULT_COLS[2:]},
                             position_class=position_class(r) if r['verdict'] != 'not_checked' else 'not_checked'))
-    missing = sorted({p['sample'] for p in out_pos if p['position_class'] == 'not_checked'})
-    if missing and not a.allow_incomplete:
-        sys.exit('incomplete round, no result for intervals of %d assemblies: %s (run status)' % (
-            len(missing), ','.join(missing)))
     pcls = {p['test_id']: p['position_class'] for p in out_pos}
     pos_row = {p['test_id']: p for p in out_pos}
     want = {p['sample'] for p in positions.values()}
@@ -519,7 +580,7 @@ def cmd_summarize(a):
                                n > 1 for n in (len(o['test_ids']) for o in occ.values())),
                            max_intervals_per_occurrence=max(ipo), intervals_with_multiple_occurrences=sum(
                                int(p['n_occurrences']) > 1 for p in out_pos)),
-                complete=not missing, assemblies_without_results=missing,
+                complete=True, completeness={k: v for k, v in comp.items() if not k.startswith('missing')},
                 interval_class=dict(Counter(p['position_class'] for p in out_pos)),
                 interval_verdict=dict(Counter(p['verdict'] for p in out_pos)),
                 occurrence_class=dict(Counter(o['occurrence_class'] for o in out_occ)),
@@ -616,8 +677,9 @@ def main():
     p.add_argument('--out', type=Path)
     p.add_argument('--figure-pairs', default='')
     p.add_argument('--jobs', default='', help='status: comma-separated SLURM job ids of the round')
-    p.add_argument('--allow-incomplete', action='store_true', help='summarize: write results although assemblies '
-                   'lack results (they stay not_checked, outside every support count)')
+    p.add_argument('--allow-incomplete', action='store_true', help='summarize: when the round is incomplete, write '
+                   'only progress_snapshot.json (complete=false, checked / expected counts, classes over checked '
+                   'intervals); the formal summary needs every expected interval and run id')
     a = p.parse_args()
     dict(pairs=cmd_pairs, select=cmd_select, genome=cmd_genome, check=cmd_check, status=cmd_status,
          summarize=cmd_summarize)[a.mode](a)

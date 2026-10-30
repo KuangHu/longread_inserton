@@ -174,6 +174,8 @@ def verify(acc, row, pkg, md5ok):
 
 
 def run(a):
+    if os.environ.get("SLURM_JOB_ID"):  # downloads: transfer node (lrc-xfer) only, never inside a compute job
+        raise SystemExit("download_fna.py run refused inside SLURM job %s: run it on lrc-xfer" % os.environ["SLURM_JOB_ID"])
     data = a.data
     (data / "genomes").mkdir(parents=True, exist_ok=True)
     (data / "tmp").mkdir(exist_ok=True)

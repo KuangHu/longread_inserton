@@ -8,7 +8,8 @@ This is an experiment, not part of the `multisite-insertion` package.
 |---|---|
 | `samples.tsv` | sample, ENA run, GCA/GCF assembly, platform, minimap2 preset, adapter splitting |
 | `common.sh` | paths, conda env and per-task sample row (edit `PROJ`/`CODE` for another cluster) |
-| `01_fetch.sbatch` | reads via `scripts/fetch_long_reads.py fetch`; GCA+GCF via NCBI `datasets`; sequence identity check; package manifest |
+| `00_prepare.sh` | **transfer node (lrc-xfer) only:** reads via `scripts/reads_ready.py prepare`; GCA+GCF packages via NCBI `datasets` |
+| `01_inputs.sbatch` | input check (ready manifest, assembly packages present; `input_not_ready`, exit 3, otherwise); read-unit diagnosis; sequence identity check; package manifest |
 | `02_callout.sbatch` | `multisite-insertion run --subset all` on the GCF assembly |
 | `03_reads.sbatch` | molecule-named reads → minimap2 (`-c --secondary=yes -N 50 -p 0.8`) → `classify_reads.py` |
 | `molecule_reads.py` | rename reads to `<molecule>/<n>`; split PacBio records at internal SMRTbell adapters; adapter diagnostics |
@@ -19,7 +20,10 @@ This is an experiment, not part of the `multisite-insertion` package.
 Run order (LBL Lawrencium, account `pc_rubinlab`, partition `lr6`):
 
 ```bash
-J1=$(sbatch --parsable 01_fetch.sbatch)
+# on lrc-xfer (OTP login, in tmux; rerun to resume), never inside SLURM:
+bash 00_prepare.sh
+# then on the cluster; no step downloads anything:
+J1=$(sbatch --parsable 01_inputs.sbatch)
 J2=$(sbatch --parsable --dependency=aftercorr:$J1 02_callout.sbatch)
 sbatch --dependency=aftercorr:$J2 03_reads.sbatch
 python summarize.py

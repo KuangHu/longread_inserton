@@ -72,5 +72,41 @@ class ClassTests(unittest.TestCase):
         self.assertEqual(u.occurrence_class(['supported', 'conflict']), 'conflict_at_an_interval')
 
 
+class CompletenessTests(unittest.TestCase):
+    positions = {'P_1': dict(sample='S1'), 'P_2': dict(sample='S1'), 'P_3': dict(sample='S2')}
+    runs_used = [dict(sample='S1', run='R1', status='checked'), dict(sample='S2', run='R2', status='checked')]
+    ready = {'S1': ['R1'], 'S2': ['R2']}
+
+    def res(self, *ids):
+        return {t: dict(test_id=t, sample=self.positions.get(t, dict(sample='S1'))['sample'], verdict='consistent')
+                for t in ids}
+
+    def test_complete_by_ids(self):
+        c = u.completeness(self.positions, self.res('P_1', 'P_2', 'P_3'), self.runs_used, self.ready)
+        self.assertTrue(c['complete'])
+        self.assertEqual((c['assemblies_complete'], c['runs_checked'], c['intervals_with_result']), (2, 2, 3))
+
+    def test_same_row_count_with_other_ids_is_not_complete(self):
+        c = u.completeness(self.positions, self.res('P_1', 'P_9', 'P_3'), self.runs_used, self.ready)
+        self.assertFalse(c['complete'])
+        self.assertEqual(c['missing_interval_ids'], {'S1': ['P_2']})
+        self.assertEqual(c['missing_unexpected_interval_ids'], {'S1': ['P_9']})
+
+    def test_unchecked_ready_run_is_not_complete(self):
+        c = u.completeness(self.positions, self.res('P_1', 'P_2', 'P_3'), self.runs_used, dict(self.ready, S2=['R2', 'R3']))
+        self.assertFalse(c['complete'])
+        self.assertEqual(c['missing_runs'], ['S2:R3'])
+        self.assertEqual(c['assemblies_complete'], 1)
+
+    def test_progress_snapshot_counts_checked_only(self):
+        res = self.res('P_1', 'P_3')
+        snap = u.progress_snapshot(u.completeness(self.positions, res, self.runs_used[:1], self.ready), self.positions, res)
+        self.assertIs(snap['complete'], False)
+        self.assertEqual(snap['checked_of_expected'], dict(assemblies='0/2', runs='1/2', intervals='2/3'))
+        self.assertEqual(snap['intervals_not_checked'], 1)
+        self.assertEqual(snap['interval_class_among_checked'], {'supported': 2})
+        self.assertNotIn('interval_class', snap)
+
+
 if __name__ == '__main__':
     unittest.main()

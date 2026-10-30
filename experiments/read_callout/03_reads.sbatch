@@ -12,7 +12,7 @@
 source /global/home/users/kh36969/middle_insertion_callout/longread_inserton/experiments/read_callout/common.sh
 R=$OUT/reads
 mkdir -p $R
-FASTQ=$(ls $READ_DIR/$RUN/*.fastq.gz)
+FASTQ=$(python $CODE/scripts/reads_ready.py check --runs $RUN | cut -f3 -d' ') || exit 3  # ready manifest only; never downloads
 REF=$(python -c "import json;print(json.load(open('$ASM_DIR/manifest.json'))['samples'][0]['fasta'])")
 minimap2 --version > $R/minimap2_version.txt
 
