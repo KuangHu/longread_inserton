@@ -1,0 +1,19 @@
+{
+  "joint_fna": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/eggerthellaceae/s2/joint.fna.gz",
+  "joint_fna_sha256": "96852e4f1f5f0927b1a41effb3a3599f8468f28093ecd31ee5920b2f3d0545f4",
+  "samples": 329,
+  "contigs": 22050,
+  "contig_bp": 1026870045,
+  "header": "sample_id|assembly|contig",
+  "check": "every joint record SHA256 equals the S1 record SHA256 of its source FNA",
+  "pool_rows": 329,
+  "excluded_not_verified": 0,
+  "annotation_status": {
+    "present": 315,
+    "annotation_missing": 14
+  },
+  "gff_features_out_of_range": 0,
+  "contig_index": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/eggerthellaceae/s2/contig_index.tsv.gz",
+  "contig_index_sha256": "4497ace2f42ad790b03f437254e8dacbcfae61579ea833402302cc2dbe231d0c",
+  "gff_features_origin_spanning": 34
+}

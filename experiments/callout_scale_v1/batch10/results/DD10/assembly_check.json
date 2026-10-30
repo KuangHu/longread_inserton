@@ -1,0 +1,40 @@
+{
+  "sample": "DD10",
+  "gca": "GCA_049177125.1",
+  "gcf": "GCF_049177125.1",
+  "identical_sequence_sets": true,
+  "choice": "gcf_sequence_and_annotation",
+  "gca_records": {
+    "CP185393.1": [
+      4077509,
+      "9f8f41e8a8a8ce6b8dc6830f992a2633a7130579ad508010bb1005bc52eda5e8"
+    ],
+    "CP185392.1": [
+      3394556,
+      "2816ac48f34fd1d8c57ad45f521f5bb1bd474d38921f90a2a8f3e2d8b83d84a3"
+    ],
+    "CP185394.1": [
+      212850,
+      "eab823d81c6ff1d9f65c1de094a93d281d6827167edc9fed196630b318bb18d8"
+    ]
+  },
+  "gcf_records": {
+    "NZ_CP185393.1": [
+      4077509,
+      "9f8f41e8a8a8ce6b8dc6830f992a2633a7130579ad508010bb1005bc52eda5e8"
+    ],
+    "NZ_CP185392.1": [
+      3394556,
+      "2816ac48f34fd1d8c57ad45f521f5bb1bd474d38921f90a2a8f3e2d8b83d84a3"
+    ],
+    "NZ_CP185394.1": [
+      212850,
+      "eab823d81c6ff1d9f65c1de094a93d281d6827167edc9fed196630b318bb18d8"
+    ]
+  },
+  "cds_features": 6860,
+  "fasta": "$PROJ/data/assemblies_batch10/DD10/GCF_049177125.1/ncbi_dataset/data/GCF_049177125.1/GCF_049177125.1_DD10_assembly_genomic.fna",
+  "fasta_sha256": "d36c9dbfdf804d862f2fa588cc0333d3f23c710c32c00bef1657ef8ca863c1ae",
+  "gbff": "$PROJ/data/assemblies_batch10/DD10/GCF_049177125.1/ncbi_dataset/data/GCF_049177125.1/genomic.gbff",
+  "gbff_sha256": "560faf984389ed36dd8ac97bdcb3908361b313d66095b8a9ee6cf06f07a9c3c9"
+}

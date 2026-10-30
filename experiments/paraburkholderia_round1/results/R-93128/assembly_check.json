@@ -1,0 +1,47 @@
+{
+  "sample": "R-93128",
+  "gca": "GCA_977008015.1",
+  "gcf": "GCF_977008015.1",
+  "gca_records": {
+    "CDRMWU010000001.1": [
+      5329989,
+      "907cfdc3776495798fc12ceb31f441d46807bc1027cacbe092f8d25ee61494b2"
+    ],
+    "CDRMWU010000002.1": [
+      3589672,
+      "98cc7b4d1c068445819fd180662b5d45c6661e7ef99df23793485524db9bbd26"
+    ],
+    "CDRMWU010000003.1": [
+      20518,
+      "540761b5fb3149239bc5e7b0f50ae39d906c9460b402b0604b24455007eab892"
+    ],
+    "CDRMWU010000004.1": [
+      19106,
+      "99b813f41a570b9188ff6316eb85748af9d7ed226e687366b2c1ae38bc2afa9f"
+    ]
+  },
+  "gcf_records": {
+    "NZ_CDRMWU010000001.1": [
+      5329989,
+      "907cfdc3776495798fc12ceb31f441d46807bc1027cacbe092f8d25ee61494b2"
+    ],
+    "NZ_CDRMWU010000002.1": [
+      3589672,
+      "98cc7b4d1c068445819fd180662b5d45c6661e7ef99df23793485524db9bbd26"
+    ],
+    "NZ_CDRMWU010000003.1": [
+      20518,
+      "540761b5fb3149239bc5e7b0f50ae39d906c9460b402b0604b24455007eab892"
+    ],
+    "NZ_CDRMWU010000004.1": [
+      19106,
+      "99b813f41a570b9188ff6316eb85748af9d7ed226e687366b2c1ae38bc2afa9f"
+    ]
+  },
+  "identical_sequence_sets": true,
+  "gcf_cds_features": 7919,
+  "fasta": "$PROJ/data/assemblies/R-93128/GCF_977008015.1/ncbi_dataset/data/GCF_977008015.1/GCF_977008015.1_ASM97700801v1_genomic.fna",
+  "fasta_sha256": "16c13152b4e17bf3369d7b6b47de8624989f48940441f5d8d96d1e5f33c8ebc1",
+  "gbff": "$PROJ/data/assemblies/R-93128/GCF_977008015.1/ncbi_dataset/data/GCF_977008015.1/genomic.gbff",
+  "gbff_sha256": "bb9b0ef5564536900e60249c5a13b63710ac81f6e672f6eebbd201109d5f0848"
+}

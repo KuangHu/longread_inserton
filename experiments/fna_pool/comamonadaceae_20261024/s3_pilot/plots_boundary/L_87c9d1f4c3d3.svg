@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="420" font-family="sans-serif">
+<rect width="100%" height="100%" fill="white"/>
+<text x="4" y="16" font-size="12">L_87c9d1f4c3d3  SAMD00407106  core 36259 bp  two_flank_anchored  support partner_mixed  boundary partner_dependent  tandem False  core copies carrier/partner 1/0</text>
+<line x1="131.0" y1="30" x2="131.0" y2="412" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<line x1="989.0" y1="30" x2="989.0" y2="412" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<text x="4" y="64" font-size="11" font-weight="bold">SAMD00407106 NZ_AP025556.1 (carrier)</text>
+<line x1="60" y1="100" x2="1060" y2="100" stroke="#888"/>
+<rect x="107.3" y="132" width="23.7" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="119.2" y="152" font-size="9" text-anchor="middle">U</text>
+<rect x="131.0" y="132" width="858.0" height="8" fill="#e76f51" opacity="0.55"/>
+<text x="560.0" y="152" font-size="9" text-anchor="middle">core 36259</text>
+<rect x="989.0" y="132" width="23.7" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="1000.8" y="152" font-size="9" text-anchor="middle">D</text>
+<polygon points="60.0,85 122.0,85 128.0,91 122.0,97 60.0,97" fill="#3b6fb6"><title>translocation/assembly module TamB domai 5724161-5728478 +</title></polygon>
+<text x="60.0" y="81" font-size="8" fill="#333">translocation/</text>
+<polygon points="129.9,85 129.9,85 131.6,91 129.9,97 129.9,97" fill="#b68a3b"><title>tRNA-Arg 5728555-5728630 +</title></polygon>
+<polygon points="143.9,85 151.7,85 157.7,91 151.7,97 143.9,97" fill="#3b6fb6"><title>hypothetical protein 5729150-5729732 +</title></polygon>
+<polygon points="158.6,85 171.9,85 177.9,91 171.9,97 158.6,97" fill="#3b6fb6"><title>dCTP deaminase domain-containing protein 5729768-5730587 +</title></polygon>
+<polygon points="177.0,85 183.0,85 189.0,91 183.0,97 177.0,97" fill="#3b6fb6"><title>DUF1643 domain-containing protein 5730546-5731053 +</title></polygon>
+<polygon points="190.0,85 192.1,85 198.1,91 192.1,97 190.0,97" fill="#3b6fb6"><title>hypothetical protein 5731097-5731439 +</title></polygon>
+<polygon points="206.1,109 212.1,103 355.4,103 355.4,115 212.1,115" fill="#3b6fb6"><title>PLxRFG domain-containing protein 5731779-5738088 -</title></polygon>
+<text x="206.1" y="125" font-size="8" fill="#333">PLxRFG domain-containing protein</text>
+<polygon points="355.5,109 361.5,103 403.4,103 403.4,115 361.5,115" fill="#3b6fb6"><title>hypothetical protein 5738091-5740113 -</title></polygon>
+<polygon points="405.1,109 411.1,103 421.0,103 421.0,115 411.1,115" fill="#3b6fb6"><title>phage adaptor protein 5740186-5740858 -</title></polygon>
+<polygon points="421.1,109 427.1,103 429.9,103 429.9,115 427.1,115" fill="#3b6fb6"><title>hypothetical protein 5740864-5741233 -</title></polygon>
+<polygon points="431.8,109 437.8,103 441.4,103 441.4,115 437.8,115" fill="#3b6fb6"><title>hypothetical protein 5741317-5741719 -</title></polygon>
+<polygon points="442.9,109 448.9,103 469.1,103 469.1,115 448.9,115" fill="#3b6fb6"><title>N4-gp56 family major capsid protein 5741784-5742891 -</title></polygon>
+<polygon points="473.2,109 479.2,103 497.3,103 497.3,115 479.2,115" fill="#3b6fb6"><title>hypothetical protein 5743063-5744083 -</title></polygon>
+<polygon points="498.0,109 502.4,103 502.4,103 502.4,115 502.4,115" fill="#3b6fb6"><title>hypothetical protein 5744114-5744297 -</title></polygon>
+<polygon points="503.0,109 509.0,103 552.8,103 552.8,115 509.0,115" fill="#3b6fb6"><title>portal protein 5744324-5746427 -</title></polygon>
+<text x="503.0" y="125" font-size="8" fill="#333">portal pro</text>
+<polygon points="552.8,109 558.8,103 590.6,103 590.6,115 558.8,115" fill="#3b6fb6"><title>terminase 5746429-5748025 -</title></polygon>
+<polygon points="590.5,109 596.5,103 613.7,103 613.7,115 596.5,115" fill="#3b6fb6"><title>terminase small subunit 5748021-5749002 -</title></polygon>
+<polygon points="615.8,85 634.5,85 640.5,91 634.5,97 615.8,97" fill="#3b6fb6"><title>hypothetical protein 5749092-5750133 +</title></polygon>
+<polygon points="642.7,109 648.7,103 660.9,103 660.9,115 648.7,115" fill="#3b6fb6"><title>hypothetical protein 5750227-5750998 -</title></polygon>
+<polygon points="661.7,109 667.7,103 673.0,103 673.0,115 667.7,115" fill="#3b6fb6"><title>DUF977 family protein 5751030-5751507 -</title></polygon>
+<polygon points="672.9,109 678.9,103 706.8,103 706.8,115 678.9,115" fill="#3b6fb6"><title>replicative DNA helicase 5751503-5752937 -</title></polygon>
+<text x="672.9" y="125" font-size="8" fill="#333">replica</text>
+<polygon points="706.8,109 712.8,103 723.1,103 723.1,115 712.8,115" fill="#3b6fb6"><title>ATP-binding protein 5752936-5753626 -</title></polygon>
+<polygon points="722.6,109 728.6,103 746.7,103 746.7,115 728.6,115" fill="#3b6fb6"><title>DUF1376 domain-containing protein 5753603-5754623 -</title></polygon>
+<polygon points="748.0,109 754.0,103 757.4,103 757.4,115 754.0,115" fill="#3b6fb6"><title>hypothetical protein 5754679-5755075 -</title></polygon>
+<polygon points="760.8,85 760.8,85 766.1,91 760.8,97 760.8,97" fill="#3b6fb6"><title>hypothetical protein 5755218-5755440 +</title></polygon>
+<polygon points="766.5,109 772.5,103 773.0,103 773.0,115 772.5,115" fill="#3b6fb6"><title>transcriptional regulator 5755461-5755734 -</title></polygon>
+<polygon points="774.2,85 784.4,85 790.4,91 784.4,97 774.2,97" fill="#3b6fb6"><title>LexA family protein 5755786-5756467 +</title></polygon>
+<polygon points="794.0,85 799.1,85 805.1,91 799.1,97 794.0,97" fill="#3b6fb6"><title>hypothetical protein 5756621-5757092 +</title></polygon>
+<polygon points="805.0,85 805.0,85 809.4,91 805.0,97 805.0,97" fill="#3b6fb6"><title>hypothetical protein 5757088-5757274 +</title></polygon>
+<polygon points="809.8,85 815.4,85 821.4,91 815.4,97 809.8,97" fill="#3b6fb6"><title>pneumococcal-type histidine triad protei 5757289-5757778 +</title></polygon>
+<polygon points="821.3,85 830.5,85 836.5,91 830.5,97 821.3,97" fill="#3b6fb6"><title>hypothetical protein 5757774-5758419 +</title></polygon>
+<polygon points="836.7,85 849.4,85 855.4,91 849.4,97 836.7,97" fill="#3b6fb6"><title>hypothetical protein 5758427-5759216 +</title></polygon>
+<polygon points="855.3,85 855.3,85 860.6,91 855.3,97 855.3,97" fill="#3b6fb6"><title>hypothetical protein 5759212-5759434 +</title></polygon>
+<polygon points="865.7,109 871.7,103 882.5,103 882.5,115 871.7,115" fill="#3b6fb6"><title>Arc family DNA-binding protein 5759652-5760363 -</title></polygon>
+<polygon points="885.0,85 891.1,85 897.1,91 891.1,97 885.0,97" fill="#3b6fb6"><title>hypothetical protein 5760468-5760978 +</title></polygon>
+<polygon points="897.0,85 909.7,85 915.7,91 909.7,97 897.0,97" fill="#3b6fb6"><title>hypothetical protein 5760974-5761766 +</title></polygon>
+<polygon points="915.7,85 926.5,85 932.5,91 926.5,97 915.7,97" fill="#3b6fb6"><title>hypothetical protein 5761762-5762473 +</title></polygon>
+<polygon points="932.3,85 943.0,85 949.0,91 943.0,97 932.3,97" fill="#3b6fb6"><title>hypothetical protein 5762465-5763173 +</title></polygon>
+<polygon points="948.9,85 949.2,85 955.2,91 949.2,97 948.9,97" fill="#3b6fb6"><title>hypothetical protein 5763169-5763433 +</title></polygon>
+<polygon points="955.4,85 955.4,85 960.6,91 955.4,97 955.4,97" fill="#3b6fb6"><title>hypothetical protein 5763441-5763660 +</title></polygon>
+<polygon points="960.3,85 981.4,85 987.4,91 981.4,97 960.3,97" fill="#3b6fb6"><title>tyrosine-type recombinase/integrase 5763647-5764793 +</title></polygon>
+<polygon points="1003.8,85 1046.9,85 1052.9,91 1046.9,97 1003.8,97" fill="#3b6fb6"><title>IPTL-CTERM sorting domain-containing pro 5765487-5767560 +</title></polygon>
+<text x="1003.8" y="81" font-size="8" fill="#333">IPTL-CTERM</text>
+<polygon points="1059.6,85 1059.6,85 1060.0,91 1059.6,97 1059.6,97" fill="#3b6fb6"><title>tyrosinase family protein 5767843-5769385 +</title></polygon>
+<text x="60" y="166" font-size="9" fill="#666">NZ_AP025556.1:5725603-5767862  core 5728603-5764862</text>
+<text x="4" y="184" font-size="11" font-weight="bold">SAMD00571185 NZ_AP027205.1 (partner, + strand, two_flank_anchored, pair P00033)</text>
+<line x1="60" y1="220" x2="1060" y2="220" stroke="#888"/>
+<rect x="107.3" y="252" width="23.7" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="119.2" y="272" font-size="9" text-anchor="middle">U'</text>
+<rect x="989.0" y="252" width="23.7" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="1000.8" y="272" font-size="9" text-anchor="middle">D'</text>
+<rect x="131.0" y="252" width="858.0" height="8" fill="#ffffff" opacity="0.55"/>
+<polygon points="60.0,205 122.0,205 128.0,211 122.0,217 60.0,217" fill="#3b6fb6"><title>translocation/assembly module TamB domai 5077632-5081961 +</title></polygon>
+<text x="60.0" y="201" font-size="8" fill="#333">translocation/</text>
+<line x1="131.0" y1="211" x2="989.0" y2="211" stroke="#555" stroke-dasharray="2,2"/>
+<polygon points="129.9,205 129.9,205 131.0,211 129.9,217 129.9,217" fill="#b68a3b"><title>tRNA-Arg 5082038-5082086 +</title></polygon>
+<polygon points="989.0,205 989.0,205 989.6,211 989.0,217 989.0,217" fill="#b68a3b"><title>tRNA-Arg 5082086-5082113 +</title></polygon>
+<polygon points="1003.8,205 1046.8,205 1052.8,211 1046.8,217 1003.8,217" fill="#3b6fb6"><title>IPTL-CTERM sorting domain-containing pro 5082711-5084781 +</title></polygon>
+<text x="1003.8" y="201" font-size="8" fill="#333">IPTL-CTERM</text>
+<text x="60" y="286" font-size="9" fill="#666">NZ_AP027205.1 site 5082086  other-side gap 0 bp  this call's core 5728603-5764862</text>
+<rect x="131.0" y="218" width="858.0" height="4" fill="#f4f4f4"/><text x="560.0" y="272" font-size="9" text-anchor="middle" fill="#a5372f">empty site</text>
+<text x="4" y="304" font-size="11" font-weight="bold">SAMEA120308855 NZ_CDRKIR010000001.1 (partner, + strand, replacement, pair P00034)</text>
+<line x1="60" y1="340" x2="1060" y2="340" stroke="#888"/>
+<rect x="103.0" y="372" width="23.7" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="114.9" y="392" font-size="9" text-anchor="middle">U'</text>
+<rect x="1060.0" y="372" width="1.5" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="1060.0" y="392" font-size="9" text-anchor="middle">D'</text>
+<rect x="126.7" y="372" width="933.3" height="8" fill="#9b5de5" opacity="0.55"/>
+<text x="593.3" y="392" font-size="9" text-anchor="middle">other side 5241</text>
+<polygon points="60.0,325 131.7,325 137.7,331 131.7,337 60.0,337" fill="#3b6fb6"><title>translocation/assembly module TamB domai 5378586-5382933 +</title></polygon>
+<text x="60.0" y="321" font-size="8" fill="#333">translocation/as</text>
+<polygon points="153.2,325 161.7,325 167.7,331 161.7,337 153.2,337" fill="#b68a3b"><title>tRNA-Arg 5383011-5383086 +</title></polygon>
+<polygon points="224.8,349 230.8,343 303.5,343 303.5,355 230.8,355" fill="#3b6fb6"><title>type II toxin-antitoxin system tRNA(fMet 5383376-5383778 -</title></polygon>
+<text x="224.8" y="365" font-size="8" fill="#333">type II toxin-ant</text>
+<polygon points="302.9,349 308.9,343 348.6,343 348.6,355 308.9,355" fill="#3b6fb6"><title>antitoxin 5383774-5384008 -</title></polygon>
+<polygon points="379.4,349 385.4,343 491.6,343 491.6,355 385.4,355" fill="#3b6fb6"><title>helix-turn-helix domain-containing prote 5384164-5384737 -</title></polygon>
+<text x="379.4" y="365" font-size="8" fill="#333">helix-turn-helix domain-</text>
+<polygon points="512.8,325 636.1,325 642.1,331 636.1,337 512.8,337" fill="#3b6fb6"><title>hypothetical protein 5384844-5385504 +</title></polygon>
+<text x="512.8" y="321" font-size="8" fill="#333">hypothetical protein</text>
+<polygon points="644.7,349 650.7,343 907.0,343 907.0,355 650.7,355" fill="#3b6fb6"><title>methyl-accepting chemotaxis protein 5385516-5386854 -</title></polygon>
+<text x="644.7" y="365" font-size="8" fill="#333">methyl-accepting chemotaxis protein</text>
+<text x="60" y="406" font-size="9" fill="#666">NZ_CDRKIR010000001.1 site 5382876  other-side gap 5241 bp  this call's core 5728421-5771876</text>
+</svg>

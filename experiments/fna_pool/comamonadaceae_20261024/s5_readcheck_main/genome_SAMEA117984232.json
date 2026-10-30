@@ -1,0 +1,13 @@
+{
+ "sample": "SAMEA117984232",
+ "assembly": "/global/scratch/users/kh36969/longread_callout/fna_pool/comamonadaceae_20261024/data/genomes/GCF_965279555.1/GCF_965279555.1_piParDeut1.Variovorax_sp_1.1_genomic.fna",
+ "runs": [],
+ "minimap2_args": [
+  "-c",
+  "--secondary=yes",
+  "-N",
+  "50",
+  "-p",
+  "0.5"
+ ]
+}

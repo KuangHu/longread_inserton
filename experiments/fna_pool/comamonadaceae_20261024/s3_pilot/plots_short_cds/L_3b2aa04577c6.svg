@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="300" font-family="sans-serif">
+<rect width="100%" height="100%" fill="white"/>
+<text x="4" y="16" font-size="12">L_3b2aa04577c6  SAMD00407106  core 1987 bp  two_flank_anchored  support all_calls_anchored  boundary exact  tandem False  core copies carrier/partner 1/0</text>
+<line x1="435.6" y1="30" x2="435.6" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<line x1="684.4" y1="30" x2="684.4" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<text x="4" y="64" font-size="11" font-weight="bold">SAMD00407106 NZ_AP025556.1 (carrier)</text>
+<line x1="60" y1="100" x2="1060" y2="100" stroke="#888"/>
+<rect x="310.4" y="132" width="125.2" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="373.0" y="152" font-size="9" text-anchor="middle">U</text>
+<rect x="435.6" y="132" width="248.8" height="8" fill="#e76f51" opacity="0.55"/>
+<text x="560.0" y="152" font-size="9" text-anchor="middle">core 1987</text>
+<rect x="684.4" y="132" width="125.2" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="747.0" y="152" font-size="9" text-anchor="middle">D</text>
+<polygon points="60.0,85 127.7,85 133.7,91 127.7,97 60.0,97" fill="#3b6fb6"><title>transcription-repair coupling factor 4135724-4139219 +</title></polygon>
+<text x="60.0" y="81" font-size="8" fill="#333">transcription-re</text>
+<polygon points="135.9,85 213.3,85 219.3,91 213.3,97 135.9,97" fill="#3b6fb6"><title>hypothetical protein 4139236-4139902 +</title></polygon>
+<polygon points="236.2,85 319.6,85 325.6,91 319.6,97 236.2,97" fill="#3b6fb6"><title>phosphoserine phosphatase SerB 4140037-4140751 +</title></polygon>
+<text x="236.2" y="81" font-size="8" fill="#333">phosphoserine phosp</text>
+<polygon points="363.9,85 424.4,85 430.4,91 424.4,97 363.9,97" fill="#3b6fb6"><title>hypothetical protein 4141057-4141588 +</title></polygon>
+<text x="363.9" y="81" font-size="8" fill="#333">hypothetical p</text>
+<polygon points="438.2,109 444.2,103 499.1,103 499.1,115 444.2,115" fill="#3b6fb6"><title>PaaI family thioesterase 4141651-4142137 -</title></polygon>
+<text x="438.2" y="125" font-size="8" fill="#333">PaaI family t</text>
+<polygon points="511.9,85 673.8,85 679.8,91 673.8,97 511.9,97" fill="#3b6fb6"><title>aminotransferase-like domain-containing  4142239-4143580 +</title></polygon>
+<text x="511.9" y="81" font-size="8" fill="#333">aminotransferase-like domain-contain</text>
+<polygon points="684.8,109 690.8,103 712.2,103 712.2,115 690.8,115" fill="#3b6fb6"><title>DUF3820 family protein 4143620-4143839 -</title></polygon>
+<polygon points="737.0,85 829.4,85 835.4,91 829.4,97 737.0,97" fill="#3b6fb6"><title>MetQ/NlpA family ABC transporter substra 4144037-4144823 +</title></polygon>
+<text x="737.0" y="81" font-size="8" fill="#333">MetQ/NlpA family ABC </text>
+<polygon points="847.0,109 853.0,103 960.1,103 960.1,115 853.0,115" fill="#3b6fb6"><title>EamA family transporter 4144916-4145819 -</title></polygon>
+<text x="847.0" y="125" font-size="8" fill="#333">EamA family transporter</text>
+<polygon points="972.2,85 1027.5,85 1033.5,91 1027.5,97 972.2,97" fill="#3b6fb6"><title>Lrp/AsnC family transcriptional regulato 4145916-4146405 +</title></polygon>
+<text x="972.2" y="81" font-size="8" fill="#333">Lrp/AsnC fami</text>
+<polygon points="1040.5,85 1054.0,85 1060.0,91 1054.0,97 1040.5,97" fill="#3b6fb6"><title>hypothetical protein 4146461-4146770 +</title></polygon>
+<text x="60" y="166" font-size="9" fill="#666">NZ_AP025556.1:4138630-4146617  core 4141630-4143617</text>
+<text x="4" y="184" font-size="11" font-weight="bold">SAMEA120308855 NZ_CDRKIR010000001.1 (partner, + strand, two_flank_anchored, pair P00034)</text>
+<line x1="60" y1="220" x2="1060" y2="220" stroke="#888"/>
+<rect x="310.4" y="252" width="125.2" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="373.0" y="272" font-size="9" text-anchor="middle">U'</text>
+<rect x="684.4" y="252" width="125.2" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="747.0" y="272" font-size="9" text-anchor="middle">D'</text>
+<rect x="435.6" y="252" width="248.8" height="8" fill="#9b5de5" opacity="0.55"/>
+<text x="560.0" y="272" font-size="9" text-anchor="middle">other side 17</text>
+<polygon points="60.0,205 130.1,205 136.1,211 130.1,217 60.0,217" fill="#3b6fb6"><title>transcription-repair coupling factor 4279198-4282693 +</title></polygon>
+<text x="60.0" y="201" font-size="8" fill="#333">transcription-re</text>
+<polygon points="138.3,205 215.6,205 221.6,211 215.6,217 138.3,217" fill="#3b6fb6"><title>hypothetical protein 4282710-4283376 +</title></polygon>
+<polygon points="231.5,205 314.9,205 320.9,211 314.9,217 231.5,217" fill="#3b6fb6"><title>phosphoserine phosphatase SerB 4283455-4284169 +</title></polygon>
+<text x="231.5" y="201" font-size="8" fill="#333">phosphoserine phosp</text>
+<polygon points="359.2,205 423.9,205 429.9,211 423.9,217 359.2,217" fill="#3b6fb6"><title>hypothetical protein 4284475-4285039 +</title></polygon>
+<text x="359.2" y="201" font-size="8" fill="#333">hypothetical pr</text>
+<polygon points="684.8,229 690.8,223 712.2,223 712.2,235 690.8,235" fill="#3b6fb6"><title>DUF3820 family protein 4285105-4285324 -</title></polygon>
+<polygon points="736.7,205 829.1,205 835.1,211 829.1,217 736.7,217" fill="#3b6fb6"><title>MetQ/NlpA family ABC transporter substra 4285520-4286306 +</title></polygon>
+<text x="736.7" y="201" font-size="8" fill="#333">MetQ/NlpA family ABC </text>
+<polygon points="847.3,229 853.3,223 960.3,223 960.3,235 853.3,235" fill="#3b6fb6"><title>EamA family transporter 4286403-4287306 -</title></polygon>
+<text x="847.3" y="245" font-size="8" fill="#333">EamA family transporter</text>
+<polygon points="973.9,205 1030.2,205 1036.2,211 1030.2,217 973.9,217" fill="#3b6fb6"><title>Lrp/AsnC family transcriptional regulato 4287414-4287912 +</title></polygon>
+<text x="973.9" y="201" font-size="8" fill="#333">Lrp/AsnC fami</text>
+<polygon points="1040.0,205 1054.0,205 1060.0,211 1054.0,217 1040.0,217" fill="#3b6fb6"><title>hypothetical protein 4287942-4288254 +</title></polygon>
+<text x="60" y="286" font-size="9" fill="#666">NZ_CDRKIR010000001.1 site 4285085  other-side gap 17 bp  this call's core 4141630-4143617</text>
+</svg>

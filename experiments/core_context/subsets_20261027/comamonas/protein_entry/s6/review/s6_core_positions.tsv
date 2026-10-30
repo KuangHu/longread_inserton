@@ -1,0 +1,62 @@
+structure	core_key	products	product_hint	occurrences	assemblies	copies_per_assembly	site_groups	single_observation_sites	unresolved	position_units	unit_pairs_different	unit_pairs_ambiguous	unit_pairs_conflicting	unit_pairs_unknown	max_pairwise_different_units	max_pairwise_context_different_units	same_assembly_pairs	sa_context_different_both_sides	sa_context_repeated_both_sides	sa_context_repeated_one_side	sa_context_unknown	assemblies_2plus_supported_positions	assemblies_2plus_supported_split	core_2plus_supported_class
+single_gene	PF_02ae4ce34ab8	DUF4337 domain-containing protein	other	4	4	1,1,1,1,0	1	1	0	2	1	0	0	0	2	2	0	0	0	0	0	0		
+single_gene	PF_03926f5d30bd	group II truncated hemoglobin	other	5	5	1,1,1,1,1	1	0	1	1	0	0	0	0	1	1	0	0	0	0	0	0		
+single_gene	PF_03a494a7c6c2	IS3 family transposase	transposase_or_IS	4	1	0,0,0,4,0	0	4	0	4	6	0	0	0	4	3	6	3	0	0	3	1	SAMN63279483:context_different_both_sides+context_unknown	context_different_both_sides
+single_gene	PF_08d1b4d728e3	GNAT family N-acetyltransferase	other	4	3	0,1,1,0,2	1	0	2	1	0	0	0	0	1	1	1	0	0	0	1	0		
+single_gene	PF_0e240dc00acb	S-(hydroxymethyl)glutathione dehydrogenase/class III alcohol dehydrogenase	other	5	5	1,1,1,1,1	1	0	1	1	0	0	0	0	1	1	0	0	0	0	0	0		
+single_gene	PF_1025c2929911	PAS domain-containing methyl-accepting chemotaxis protein	other	6	4	1,2,2,0,1	2	0	0	2	0	0	0	1	1	1	2	2	0	0	0	2	SAMN12671326:context_different_both_sides;SAMN29863000:context_different_both_sides	context_different_both_sides
+single_gene	PF_1195cb1b5d40	peptidase U32 family protein	other	5	5	1,1,1,1,1	1	1	0	2	1	0	0	0	2	2	0	0	0	0	0	0		
+single_gene	PF_13ebd7f3de8d	aldehyde dehydrogenase family protein	other	9	5	2,2,2,1,2	2	0	2	2	1	0	0	0	2	2	4	3	0	0	1	3	SAMN02603356:context_different_both_sides;SAMN12671326:context_different_both_sides;SAMN24624792:context_different_both_sides	context_different_both_sides
+single_gene	PF_147add17340c	ISL3 family transposase	transposase_or_IS	29	3	8,10,11,0,0	0	0	29	0	0	0	0	0	0	0	128	111	0	0	17	0		
+single_gene	PF_1659e130c333	Lrp/AsnC family transcriptional regulator	other	5	5	1,1,1,1,1	1	1	0	2	1	0	0	0	2	2	0	0	0	0	0	0		
+single_gene	PF_1d67a41614c1	malate synthase G	other	5	5	1,1,1,1,1	1	0	1	1	0	0	0	0	1	1	0	0	0	0	0	0		
+single_gene	PF_22359fb227a4	IS110 family RNA-guided transposase	transposase_or_IS	2	2	0,0,1,0,1	0	2	0	2	1	0	0	0	2	2	0	0	0	0	0	0		
+single_gene	PF_2c485cf73dad	exodeoxyribonuclease I	other	5	5	1,1,1,1,1	1	0	2	1	0	0	0	0	1	1	0	0	0	0	0	0		
+single_gene	PF_2d92c93a9d2c	hypothetical protein	hypothetical	8	4	2,1,1,0,4	1	0	5	1	0	0	0	0	1	1	7	4	0	1	2	0		
+single_gene	PF_384fb1b6b909	porin	other	8	5	1,2,2,1,2	2	1	1	3	3	0	0	0	3	3	3	3	0	0	0	2	SAMN12671326:context_different_both_sides;SAMN29863000:context_different_both_sides	context_different_both_sides
+single_gene	PF_4a2352cf6318	IS481 family transposase	transposase_or_IS	6	2	4,0,2,0,0	0	3	3	3	3	0	0	0	3	3	7	4	0	0	3	1	SAMN24624792:context_different_both_sides	context_different_both_sides
+single_gene	PF_50316357292f	NAD-dependent succinate-semialdehyde dehydrogenase	other	5	5	1,1,1,1,1	1	0	1	1	0	0	0	0	1	1	0	0	0	0	0	0		
+single_gene	PF_51bb7d35e10d	FKBP-type peptidyl-prolyl cis-trans isomerase	other	5	5	1,1,1,1,1	1	0	1	1	0	0	0	0	1	1	0	0	0	0	0	0		
+single_gene	PF_54619673b5e6	NADP-dependent malic enzyme	other	5	5	1,1,1,1,1	1	0	1	1	0	0	0	0	1	1	0	0	0	0	0	0		
+single_gene	PF_5e5e5f7369b5	LysE family translocator	other	2	2	0,1,1,0,0	0	2	0	2	1	0	0	0	2	2	0	0	0	0	0	0		
+single_gene	PF_638667407a1b	GntP family permease	other	4	4	1,1,0,1,1	1	1	0	2	1	0	0	0	2	2	0	0	0	0	0	0		
+single_gene	PF_645a49ceb0cc	tyrosine-type recombinase/integrase	integrase_recombinase_resolvase	7	4	1,2,3,0,1	0	0	7	0	0	0	0	0	0	0	4	1	0	0	3	0		
+single_gene	PF_6ea7376c689e	hypothetical protein	hypothetical	5	5	1,1,1,1,1	1	1	0	2	1	0	0	0	2	2	0	0	0	0	0	0		
+single_gene	PF_70de8d132dee	hypothetical protein	hypothetical	3	3	0,1,1,0,1	0	0	3	0	0	0	0	0	0	0	0	0	0	0	0	0		
+single_gene	PF_7b460066e9f8	amino acid permease	other	5	5	1,1,1,1,1	1	0	3	1	0	0	0	0	1	1	0	0	0	0	0	0		
+single_gene	PF_85dd2f8c7584	nucleoside deaminase	other	6	5	1,1,2,1,1	2	0	0	2	1	0	0	0	2	2	1	1	0	0	0	1	SAMN29863000:context_different_both_sides	context_different_both_sides
+single_gene	PF_88fe58d1b2ba	tyrosine-type recombinase/integrase	integrase_recombinase_resolvase	2	2	0,0,1,0,1	0	2	0	2	1	0	0	0	2	2	0	0	0	0	0	0		
+single_gene	PF_8e9360ea03b6	IS5 family transposase	transposase_or_IS	5	1	0,5,0,0,0	0	5	0	5	10	0	0	0	5	4	10	6	0	0	4	1	SAMN12671326:context_different_both_sides+context_unknown	context_different_both_sides
+single_gene	PF_8fa26f1a7993	class D beta-lactamase	other	5	5	1,1,1,1,1	1	0	1	1	0	0	0	0	1	1	0	0	0	0	0	0		
+single_gene	PF_91668f223a7c	IS481 family transposase	transposase_or_IS	4	2	0,3,1,0,0	0	2	2	2	1	0	0	0	2	2	3	1	0	0	2	1	SAMN12671326:context_different_both_sides	context_different_both_sides
+single_gene	PF_99b55ca42871	IS256 family transposase	transposase_or_IS	5	1	0,0,5,0,0	0	5	0	5	10	0	0	0	5	4	10	9	1	0	0	1	SAMN29863000:context_different_both_sides+context_repeated_both_sides	context_different_both_sides
+single_gene	PF_9ddfcd1128db	AsmA family protein	other	4	4	1,1,1,0,1	1	0	0	1	0	0	0	0	1	1	0	0	0	0	0	0		
+single_gene	PF_a2bde094529f	NADP-dependent isocitrate dehydrogenase	other	5	5	1,1,1,1,1	0	0	5	0	0	0	0	0	0	0	0	0	0	0	0	0		
+single_gene	PF_a48c4c09c8c3	IS5-like element ISAav2 family transposase	transposase_or_IS	7	1	0,0,0,0,7	0	7	0	7	21	0	0	0	7	6	21	15	0	0	6	1	SAMN02603356:context_different_both_sides+context_unknown	context_different_both_sides
+single_gene	PF_aada76694ccc	aldehyde dehydrogenase	other	5	5	1,1,1,1,1	1	1	0	2	1	0	0	0	2	2	0	0	0	0	0	0		
+single_gene	PF_b024bc88aa80	IS3 family transposase	transposase_or_IS	4	1	0,0,4,0,0	0	4	0	4	6	0	0	0	4	3	6	3	0	0	3	1	SAMN29863000:context_different_both_sides+context_unknown	context_different_both_sides
+single_gene	PF_b7e31f186694	lactoylglutathione lyase	other	4	4	1,1,1,0,1	1	0	1	1	0	0	0	0	1	1	0	0	0	0	0	0		
+single_gene	PF_b8730567e0b5	redox-regulated ATPase YchF	other	5	5	1,1,1,1,1	1	0	2	1	0	0	0	0	1	1	0	0	0	0	0	0		
+single_gene	PF_bf588374787a	DUF2958 domain-containing protein	other	4	3	2,1,0,1,0	0	1	3	1	0	0	0	0	1	1	1	0	0	1	0	0		
+single_gene	PF_c0f4e1cdb21e	porin	other	6	5	1,1,1,2,1	1	1	2	2	1	0	0	0	2	2	1	1	0	0	0	0		
+single_gene	PF_c6f21ee61fbc	magnesium/cobalt transporter CorA	other	2	2	0,0,1,0,1	0	2	0	2	1	0	0	0	2	2	0	0	0	0	0	0		
+single_gene	PF_d0a01e3116b8	IS3 family transposase	transposase_or_IS	5	1	0,5,0,0,0	0	5	0	5	10	0	0	0	5	5	10	10	0	0	0	1	SAMN12671326:context_different_both_sides	context_different_both_sides
+single_gene	PF_d4c43788b157	3-keto-5-aminohexanoate cleavage protein	other	5	5	1,1,1,1,1	1	1	0	2	1	0	0	0	2	2	0	0	0	0	0	0		
+single_gene	PF_d5b138e8d939	IS5 family transposase	transposase_or_IS	3	1	0,0,0,3,0	0	3	0	3	3	0	0	0	3	2	3	1	0	0	2	1	SAMN63279483:context_different_both_sides+context_unknown	context_different_both_sides
+single_gene	PF_e2e705caf61f	recombination-associated protein RdgC	other	12	4	2,2,4,0,4	1	0	8	1	0	0	0	0	1	1	14	6	2	0	6	0		
+single_gene	PF_e96498f6ce6d	tyrosine-type recombinase/integrase	integrase_recombinase_resolvase	2	2	1,0,0,0,1	0	2	0	2	1	0	0	0	2	2	0	0	0	0	0	0		
+single_gene	PF_eed8648a18cd	IS3 family transposase	transposase_or_IS	9	4	1,2,4,0,2	1	0	7	1	0	0	0	0	1	1	8	3	0	0	5	0		
+single_gene	PF_f0f0133870d5	30S ribosomal protein S12 methylthiotransferase RimO	translation_or_ribosomal	5	5	1,1,1,1,1	1	1	0	2	1	0	0	0	2	2	0	0	0	0	0	0		
+single_gene	PF_f611ee382c85	hypothetical protein	hypothetical	3	2	2,0,0,1,0	0	3	0	3	3	0	0	0	3	2	1	0	0	0	1	1	SAMN24624792:context_unknown	context_unknown
+single_gene	PF_fc88a28fe790	IS3 family transposase	transposase_or_IS	5	2	0,0,1,0,4	0	2	3	2	1	0	0	0	2	1	6	0	0	0	6	1	SAMN02603356:context_unknown	context_unknown
+single_gene	PF_feb6068c84b1	elongation factor Tu	translation_or_ribosomal	10	5	2,2,2,2,2	2	0	0	2	0	0	0	1	1	1	5	4	0	0	1	5	SAMN02603356:context_unknown;SAMN12671326:context_different_both_sides;SAMN24624792:context_different_both_sides;SAMN29863000:context_different_both_sides;SAMN63279483:context_different_both_sides	context_different_both_sides
+two_gene	PF_01148e136989+,PF_7148aa16e472+	IS21 family transposase | IS21-like element helper ATPase IstB	transposase_or_IS	12	2	0,0,7,0,5	0	0	12	0	0	0	0	0	0	0	31	16	0	0	15	0		
+two_gene	PF_335e43825459-,PF_f7c4e1b32fe0+	FAD-dependent monooxygenase | AraC family transcriptional regulator	other	4	4	1,1,1,1,0	1	1	0	2	1	0	0	0	2	2	0	0	0	0	0	0		
+two_gene	PF_3b8b323fb028-,PF_3c9a17d1675b+	putative quinol monooxygenase | GlxA family transcriptional regulator	other	2	2	0,1,1,0,0	0	2	0	2	1	0	0	0	2	2	0	0	0	0	0	0		
+two_gene	PF_3e282dc7cc06+,PF_4cb2c0d8fd4d-	helix-turn-helix transcriptional regulator | tyrosine-type recombinase/integrase	integrase_recombinase_resolvase	2	2	1,0,0,1,0	0	2	0	2	1	0	0	0	2	2	0	0	0	0	0	0		
+two_gene	PF_56dbb4083369+,PF_c0d69e123985+	electron transfer flavoprotein subunit alpha/FixB family protein | electron transfer flavoprotein subunit beta/FixA family protein	other	10	5	2,2,2,2,2	2	0	0	2	0	0	0	1	1	1	5	4	0	0	1	5	SAMN02603356:context_unknown;SAMN12671326:context_different_both_sides;SAMN24624792:context_different_both_sides;SAMN29863000:context_different_both_sides;SAMN63279483:context_different_both_sides	context_different_both_sides
+two_gene	PF_5db6a6291249+,PF_8de6b72273c4+	DsrE family protein | carboxymuconolactone decarboxylase family protein	other	2	1	2,0,0,0,0	0	2	0	2	1	0	0	0	2	1	1	0	0	0	1	1	SAMN24624792:context_unknown	context_unknown
+two_gene	PF_65ce1b071091+,PF_b9d6cea8f11a+	acetaldehyde dehydrogenase (acetylating) | 4-hydroxy-2-oxovalerate aldolase	other	5	3	1,2,2,0,0	1	1	1	2	1	0	0	0	2	2	2	1	0	0	1	1	SAMN12671326:context_different_both_sides	context_different_both_sides
+two_gene	PF_8c3dcd35712e-,PF_da684dcef666-	chaperonin GroEL | co-chaperone GroES	other	5	5	1,1,1,1,1	1	0	0	1	0	0	0	0	1	1	0	0	0	0	0	0		
+two_gene	PF_ab592b9905d2-,PF_d21e44b2a2c4+	MerR family transcriptional regulator | SDR family oxidoreductase	other	4	4	1,1,1,0,1	1	1	0	2	1	0	0	0	2	2	0	0	0	0	0	0		
+two_gene	PF_edc60a4ca429-,PF_f85a5ac04ba0-	site-specific integrase | hypothetical protein	integrase_recombinase_resolvase	2	1	0,0,0,0,2	0	2	0	2	1	0	0	0	2	2	1	1	0	0	0	1	SAMN02603356:context_different_both_sides	context_different_both_sides

@@ -1,0 +1,147 @@
+{
+  "schema": "fna_pool_s2_v2",
+  "samples": 1139,
+  "skani_pairs_reported": 110280,
+  "possible_pairs": 648091,
+  "samples_without_skani_output": [
+    "SAMEA103924393",
+    "SAMEA104129612",
+    "SAMEA4548673",
+    "SAMEA4983371",
+    "SAMEA5040198",
+    "SAMN00001853",
+    "SAMN02436889",
+    "SAMN02440611",
+    "SAMN02441246",
+    "SAMN02850927",
+    "SAMN04600420",
+    "SAMN05226836",
+    "SAMN05938308",
+    "SAMN06006700",
+    "SAMN08995089",
+    "SAMN12619112",
+    "SAMN12619151",
+    "SAMN18242878",
+    "SAMN19742048",
+    "SAMN20060347",
+    "SAMN30428198",
+    "SAMN38080669",
+    "SAMN38879875",
+    "SAMN39413344"
+  ],
+  "samples_without_skani_output_note": "no skani output under its default screen (~80% ANI k-mer screen) and AF >= 15 reporting; not evidence that no local homology exists",
+  "pair_status": {
+    "in_pair_table": 1116,
+    "no_pair_selected_pending_review": 23
+  },
+  "pair_status_linked": {
+    "in_pair_table": 54,
+    "no_pair_selected_pending_review": 1
+  },
+  "clone_groups": 816,
+  "clone_groups_size_gt1": 190,
+  "species_clusters": 161,
+  "species_cluster_sizes": {
+    "1": 65,
+    "2": 37,
+    "3": 23,
+    "4": 7,
+    "5": 6,
+    "6": 4,
+    "7": 1,
+    "8": 3,
+    "9": 1,
+    "10": 3,
+    "12": 1,
+    "14": 1,
+    "16": 1,
+    "22": 1,
+    "30": 1,
+    "33": 1,
+    "34": 1,
+    "35": 1,
+    "43": 1,
+    "215": 1,
+    "325": 1
+  },
+  "species_clusters_ge_10": 14,
+  "genera": 23,
+  "source_rules": "batch50_source_class+v2(word-bounded plant keywords; '<facility> plant' -> facility)",
+  "source_class": {
+    "unclear": 397,
+    "clinical/animal": 725,
+    "environmental": 11,
+    "plant": 6
+  },
+  "source_class_linked": {
+    "unclear": 30,
+    "clinical/animal": 25
+  },
+  "pairs": 3611,
+  "pairs_with_multiple_reasons": 70,
+  "pairs_by_reason": {
+    "audit_multi_project_all_vs_all": 120,
+    "audit_single_project_all_vs_all": 66,
+    "clone_partner": 292,
+    "distance_tier_ani_90_95": 5,
+    "distance_tier_ani_95_97": 5,
+    "distance_tier_ani_97_99": 5,
+    "distance_tier_ani_99.99_100": 5,
+    "distance_tier_ani_99_99.99": 5,
+    "distance_tier_ani_lt90": 5,
+    "distance_tier_no_skani_output_same_genus": 5,
+    "nearest_other_species": 954,
+    "species_neighbour": 2214
+  },
+  "pairs_same_cluster_below_species_threshold": [
+    "P02755",
+    "P03310"
+  ],
+  "pairs_both_linked": 24,
+  "pairs_either_linked": 348,
+  "audit_clusters": {
+    "single_project": {
+      "id": "SAMN50518536",
+      "size": 12,
+      "linked": 0,
+      "bioprojects": 1,
+      "organisms": {
+        "Arcanobacterium sp. (ex Cirak et al. 2026)": 12
+      }
+    },
+    "multi_project": {
+      "id": "SAMN02463884",
+      "size": 16,
+      "linked": 1,
+      "bioprojects": 12,
+      "organisms": {
+        "Schaalia turicensis ACS-279-V-Col4": 1,
+        "Schaalia turicensis": 8,
+        "Pauljensenia sp. OF14-1SRA": 1,
+        "Pauljensenia sp. UMB0895": 1,
+        "Pauljensenia sp. UMB1177": 1,
+        "Pauljensenia sp. UMB1235": 1,
+        "Pauljensenia sp. UMB6358": 1,
+        "Pauljensenia sp. UMB9872": 1,
+        "Actinotignum sp. usb-actsch-rep-73": 1
+      }
+    }
+  },
+  "distance_tier_candidates": {
+    "ani_90_95": 11356,
+    "ani_95_97": 7731,
+    "ani_97_99": 21836,
+    "ani_99.99_100": 156,
+    "ani_99_99.99": 3574,
+    "ani_lt90": 16319,
+    "no_skani_output_same_genus": 16887
+  },
+  "settings": {
+    "clone": "ANI >= 99.99 and AF >= 95 both",
+    "species": "single linkage over pairs with ANI >= 95 and AF >= 50 both; a cluster label does not mean every member pair meets it (pair_meets_species_threshold)",
+    "neighbours": "1 clone partner, 3 nearest same-cluster non-clone, 1 nearest other-cluster (skani output)",
+    "audit": "all pairs of one single-project and one multi-project cluster with 10-20 members",
+    "distance_tiers": "same genus, different BioProject; up to 5 pairs per tier ['ani_99.99_100', 'ani_99_99.99', 'ani_97_99', 'ani_95_97', 'ani_90_95', 'ani_lt90'] + no skani output; linked first, then SHA256 order",
+    "note": "initial settings for this pool, not calibrated thresholds; S3 must judge each pair from its own alignment"
+  }
+}

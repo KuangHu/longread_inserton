@@ -1,0 +1,1 @@
+minimap2 -x map-ont -c --secondary=yes -N 50 -p 0.8 -I 8G -t 16 $PROJ/data/assemblies_batch10/LjRoot267/GCF_964252875.1/ncbi_dataset/data/GCF_964252875.1/GCF_964252875.1_LjRoot267v2_genomic.fna $PROJ/data/reads/ERR13194333/ERR13194333.fastq.gz

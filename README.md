@@ -1,5 +1,11 @@
 # multisite-insertion
 
+> **2026-10-27 主线纠偏：** 发现目标是“相似 core、不同上下文”，不要求空位点。Gap 搜索仅作辅助。
+> 当前主线见 [纠偏计划](docs/PLAN_CORE_CONTEXT_DISCOVERY.md) 和 [可运行的 core-context 原型](experiments/core_context/README.md)。
+> 下文已完成的 fna_pool Stage 1/2 是 **gap-derived 辅助目录与已知位点验证**，不是新主线完成。
+> 新入口已通过 H16/H850 真实 smoke（旧 R33 六位置找回），但 GFF3 完整性、独立蛋白入口和精细上下文分组仍待接入。
+
+
 从**组装 FASTA** 中寻找“内部相似、外部不同”的多位点重复区段，并导出候选
 `upstream + insertion + downstream`。无需 perfect empty site。
 
@@ -8,9 +14,28 @@
 [旧版本 5ad842b](https://github.com/KuangHu/longread_inserton/tree/5ad842b0c8261485c27fa685de9fc538ff49cd23)。
 仓库名称沿用，但本 package **不读取 FASTQ/BAM、不执行长读段 SV calling**。
 
-跨物种联合 FNA 发现、长读段从头重复发现和 reads 连接核查的后续实验，见
+四株 assembly＋长读段连接证据的首轮结果见
+[READ_CALLOUT_RESULTS.md](docs/READ_CALLOUT_RESULTS.md)。
+**当前优先：固定单株 insertion call-out 并完成扩容验收。**
+见 [CALLOUT_SCALE_PROTOCOL.md](docs/CALLOUT_SCALE_PROTOCOL.md)：
+输入固定为单株高连续性 assembly＋同 BioSample 的 genomic Nanopore；
+原生发现不改，固定五株测试和结果检查，先验收再扩大到 10/50 株。
+新增 `scripts/check_callout_bundle.py` 检查 exports 与 v1 read 表的一致性；
+本地测试/小表核对不等于集群完整重跑或审核版 read 验收。
+
+[Paraburkholderia 属级跨株汇总计划](docs/PLAN_PARABURKHOLDERIA_MULTI_ISOLATE.md)
+保留为附加分析；已有 round-1 集群结果汇报，其结果/脚本尚待归档核查。
+跨株 empty-site 验证不阻塞本株 `[up][X][down]` call-out。
+
+**扩量第一阶段（assembly 比较发现，10 个 P1 科）已完成到 `assembly_catalog_ready_for_long_reads`**：
+85,123 个 assembly-derived candidate loci（`assembly_only`，long-read evidence pending），见
+[SCALE_UP_STAGE1_REPORT.md](docs/SCALE_UP_STAGE1_REPORT.md)；它们不是独立插入事件数。
+第二阶段第一批只用本地已核验的 reads，检查了 204 个 main loci 的已知位点（v0.3，没有下载）：
+E2 85、E2s 26、E1c 90、E1p 1、E0 2，没有 mixed 或 contradicted。见 [SCALE_UP_STAGE2_BATCH1_REPORT.md](docs/SCALE_UP_STAGE2_BATCH1_REPORT.md)。
+
+真正的 pooled FNA 发现和长读段从头重复发现保留为后续对照，见
 [跨物种与长读段评估计划](docs/PLAN_CROSS_SPECIES_LONG_READS.md)。
-该文档是待执行计划，下面描述的仍是当前已实现流程。
+下面描述的是当前 package 已实现流程；实验脚本与计划不表示 package 已有 reads/pool 模式。
 
 ## 固定流程
 
@@ -93,6 +118,61 @@ multisite-insertion discover --manifest samples.json --out runs/native_only
 
 PILER 目录需含 `families.gff` 和 `library.fasta`；RS 目录需含 `ranges.tsv` 和
 `families.fasta`。完整目录原样复制到新运行的 `native/`。继续使用同一 `run` 命令。
+
+## 长读长输入：下载与计算分离（实验脚本）
+
+`experiments/` 中用到公共 reads 的流程，下载和计算是两个独立步骤：
+
+1. **准备（仅 lrc-xfer 传输节点，SLURM 之外）。**
+   - **断点续传：** 下载写入 `<file>.part`，中断后重跑同一命令即可续传。
+   - **校验：** 下载完成后改名为 `<file>.unverified`，再核对大小、MD5 和 FASTQ 内容（碱基数、spot 数）。
+   - **标记可用：** 全部通过后才改为最终文件名，`verify.json` 记为 `verified`。
+   - **准备清单：** 最后重写 `<reads>/ready_manifest.tsv`，每个 run 一行：run、最终文件路径、大小、MD5、SHA256、
+     状态、验证时间。
+   - **已有数据：** 已验证的 run 保持原样，不重新下载。
+2. **计算（SLURM 作业）。**
+   - 只读取准备清单中状态为 `verified` 的本地文件，并核对文件仍在、大小一致、`verify.json` 未改变。
+   - 不满足时输出 `input_not_ready <run> <原因>` 并以退出码 3 停止该任务，不会联网下载。
+   - 补齐输入后直接重新提交即可：检查在创建输出目录之前完成。
+
+下载程序（`fetch_long_reads.py`、`reads_ready.py prepare`、`s3_readcheck.py fetch`、`download_fna.py run`、
+`ena_transport_pilot.py`）在 SLURM 作业内（存在 `SLURM_JOB_ID`）一律拒绝运行。
+
+lrc-xfer 需要 OTP 交互登录，只能由用户启动；它与集群共享 home 和 `/global/scratch`：
+
+```sh
+ssh lrc-xfer.lbl.gov
+tmux new -s reads                       # 断线后 tmux attach -t reads
+cd ~/middle_insertion_callout/longread_inserton
+source ~/miniconda3/etc/profile.d/conda.sh
+conda activate /global/scratch/users/kh36969/longread_callout/env/msi
+python scripts/reads_ready.py prepare --runs SRR13837247                        # 登记表中的 run 或 sample
+python scripts/reads_ready.py prepare --runs-tsv <pool>/runs.tsv --only <run>   # ENA run 表
+python scripts/reads_ready.py index                                             # 只按 verify.json 重写清单
+```
+
+存储按批次检查：`prepare` 下载前打印 reads 目录用量、本批还需下载的 GB 和文件系统剩余空间，剩余不足 `--min-free-gb`（默认 500）时拒绝本批（退出码 4），结束时再打印一次用量；`--dry-run` 只做这一检查。core_context 的分批计划见 `experiments/core_context/scale_comamonadaceae_v0.1/download_batches/README.md`。
+
+计算节点上的检查（各入口已内置，也可单独运行）：
+
+```sh
+python scripts/reads_ready.py check --runs SRR13837247 [--rehash]   # 就绪：ready <run> <file>；否则退出码 3
+```
+
+| 流程 | 准备（lrc-xfer） | 计算（SLURM，只检查输入） |
+|---|---|---|
+| callout_scale_v1 batch10 / batch50 | `bash experiments/callout_scale_v1/prepare_inputs.sh <batch10\|batch50> [order ...]`（reads + assembly） | `batch_sample.sbatch` |
+| PacBio HiFi pilot | `bash experiments/pacbio_hifi_pilot/prepare_inputs.sh` | `pilot.sbatch` |
+| read_callout | `bash experiments/read_callout/00_prepare.sh` | `01_inputs.sbatch` → `02_callout.sbatch` → `03_reads.sbatch` |
+| S3 readcheck | `python experiments/fna_pool/s3_readcheck.py fetch --pool-dir … --work … --reads …` | `s3_readcheck.sbatch <pool> <name> alleles`，然后 `… run` |
+| S5 readcheck | 同上（`--jobs 6`） | `s5_readcheck.sbatch … prep` → `content` → `map` → `summarize` |
+| stage2 readcheck、core_context `ucd_readcheck` | 不下载 | 只用准备清单中的 run |
+
+测试：`python -m unittest tests.test_reads_ready`。它检查以下几点：
+- 缺文件、未验证、大小或 SHA256 不符时报 `input_not_ready`，且不加载下载模块；
+- SLURM 内拒绝下载；
+- 校验通过前文件不使用最终名；
+- 计算入口中没有下载命令。
 
 ## 主要输出
 

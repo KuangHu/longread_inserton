@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="300" font-family="sans-serif">
+<rect width="100%" height="100%" fill="white"/>
+<text x="4" y="16" font-size="12">L_002372da5850  SAMD00623152  core 2233 bp  replacement  support not_anchored  boundary exact  tandem False  core copies carrier/partner 1/0</text>
+<line x1="424.4" y1="30" x2="424.4" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<line x1="695.6" y1="30" x2="695.6" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<text x="4" y="64" font-size="11" font-weight="bold">SAMD00623152 NZ_AP028664.1 (carrier)</text>
+<line x1="60" y1="100" x2="1060" y2="100" stroke="#888"/>
+<rect x="302.9" y="132" width="121.5" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="363.7" y="152" font-size="9" text-anchor="middle">U</text>
+<rect x="424.4" y="132" width="271.2" height="8" fill="#e76f51" opacity="0.55"/>
+<text x="560.0" y="152" font-size="9" text-anchor="middle">core 2233</text>
+<rect x="695.6" y="132" width="121.5" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="756.3" y="152" font-size="9" text-anchor="middle">D</text>
+<polygon points="60.0,85 511.8,85 517.8,91 511.8,97 60.0,97" fill="#3b6fb6"><title>RHS repeat-associated core domain-contai 1742039-1746770 +</title></polygon>
+<text x="60.0" y="81" font-size="8" fill="#333">RHS repeat-associated core domain-contai</text>
+<polygon points="517.3,85 559.4,85 565.4,91 559.4,97 517.3,97" fill="#3b6fb6"><title>hypothetical protein 1746766-1747162 +</title></polygon>
+<text x="517.3" y="81" font-size="8" fill="#333">hypothetic</text>
+<polygon points="574.0,85 599.0,85 605.0,91 599.0,97 574.0,97" fill="#3b6fb6"><title>RHS repeat domain-containing protein 1747233-1747488 +</title></polygon>
+<text x="574.0" y="81" font-size="8" fill="#333">RHS re</text>
+<polygon points="713.2,85 829.3,85 835.3,91 829.3,97 713.2,97" fill="#3b6fb6"><title>sugar ABC transporter substrate-binding  1748379-1749384 +</title></polygon>
+<text x="713.2" y="81" font-size="8" fill="#333">sugar ABC transporter subs</text>
+<polygon points="837.7,85 948.3,85 954.3,91 948.3,97 837.7,97" fill="#3b6fb6"><title>ABC transporter permease 1749404-1750364 +</title></polygon>
+<polygon points="954.2,85 1045.0,85 1051.0,91 1045.0,97 954.2,97" fill="#999"><title>ATP-binding cassette domain-containing p 1750363-1751160 +</title></polygon>
+<text x="954.2" y="81" font-size="8" fill="#333">ATP-binding cassette </text>
+<polygon points="1050.0,85 1054.0,85 1060.0,91 1054.0,97 1050.0,97" fill="#3b6fb6"><title>ROK family protein 1751152-1752376 +</title></polygon>
+<text x="60" y="166" font-size="9" fill="#666">NZ_AP028664.1:1743001-1751234  core 1746001-1748234</text>
+<text x="4" y="184" font-size="11" font-weight="bold">SAMN51281027 NZ_CM191384.1 (partner, - strand, replacement, pair P00111)</text>
+<line x1="60" y1="220" x2="1060" y2="220" stroke="#888"/>
+<rect x="302.9" y="252" width="121.5" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="363.7" y="272" font-size="9" text-anchor="middle">U'</text>
+<rect x="695.6" y="252" width="121.5" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="756.3" y="272" font-size="9" text-anchor="middle">D'</text>
+<rect x="424.4" y="252" width="271.2" height="8" fill="#9b5de5" opacity="0.55"/>
+<text x="560.0" y="272" font-size="9" text-anchor="middle">other side 1440</text>
+<polygon points="1051.0,205 1054.0,205 1060.0,211 1054.0,217 1051.0,217" fill="#3b6fb6"><title>ROK family transcriptional regulator 4978157-4979381 +</title></polygon>
+<polygon points="954.0,205 1046.0,205 1052.0,211 1046.0,217 954.0,217" fill="#3b6fb6"><title>ATP-binding cassette domain-containing p 4979373-4980180 +</title></polygon>
+<text x="954.0" y="201" font-size="8" fill="#333">ATP-binding cassette </text>
+<polygon points="837.5,205 948.1,205 954.1,211 948.1,217 837.5,217" fill="#3b6fb6"><title>ABC transporter permease 4980179-4981139 +</title></polygon>
+<polygon points="713.1,205 829.2,205 835.2,211 829.2,217 713.1,217" fill="#3b6fb6"><title>sugar ABC transporter substrate-binding  4981158-4982163 +</title></polygon>
+<polygon points="560.2,205 679.6,205 685.6,211 679.6,217 560.2,217" fill="#3b6fb6"><title>hypothetical protein 4982361-4983027 +</title></polygon>
+<polygon points="60.0,205 554.9,205 560.9,211 554.9,217 60.0,217" fill="#3b6fb6"><title>RHS repeat-associated core domain-contai 4983023-4987709 +</title></polygon>
+<text x="60" y="286" font-size="9" fill="#666">NZ_CM191384.1 site 4982307  other-side gap 1440 bp  this call's core 1746001-1748234</text>
+</svg>

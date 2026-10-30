@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="480">
+<rect width="100%" height="100%" fill="white"/>
+<text x="20" y="26" font-size="18">paracidovorax: repeated graph blocks, U/core/D review cases</text>
+<text x="20" y="46" font-size="12">Assembly only; graph block boundaries provisional; GFF3 features drawn for review (blue CDS, red RNA, grey pseudo/partial), not a coding check. 500 bp flanks coloured; core in orange.</text>
+<text x="20" y="70" font-size="14" font-weight="bold">similar_flanks_candidate_same_context</text>
+<text x="20" y="88" font-size="12">core 1.000  up 1.000  down 1.000  group PG_18439644425669535978</text>
+<text x="20" y="114" font-size="11">SAMN04157986 NZ_CP029373.1:3426859-3427611 (+)</text>
+<text x="20" y="128" font-size="10" fill="#555">PGN_1172808979267465333 len 753</text>
+<rect x="661.9" y="102" width="47.4" height="12" fill="#b6d1df"/>
+<rect x="709.3" y="102" width="71.4" height="12" fill="#edc06f"/>
+<rect x="780.7" y="102" width="47.4" height="12" fill="#b4d4b9"/>
+<polygon points="330.0,118 334.6,118 334.6,124 334.6,130 330.0,130" fill="#4f6d8f" opacity="0.85"><title>APS58_RS15505</title></polygon>
+<polygon points="339.8,118 445.7,118 450.7,124 445.7,130 339.8,130" fill="#4f6d8f" opacity="0.85"><title>APS58_RS15510</title></polygon>
+<polygon points="475.5,118 644.3,118 644.3,130 475.5,130 470.5,124" fill="#4f6d8f" opacity="0.85"><title>APS58_RS15515</title></polygon>
+<polygon points="703.2,118 775.3,118 775.3,130 703.2,130 698.2,124" fill="#4f6d8f" opacity="0.85"><title>APS58_RS15520</title></polygon>
+<polygon points="776.7,118 801.6,118 801.6,130 776.7,130 771.7,124" fill="#4f6d8f" opacity="0.85"><title>APS58_RS15525</title></polygon>
+<polygon points="810.0,118 903.4,118 903.4,130 810.0,130 805.0,124" fill="#4f6d8f" opacity="0.85"><title>APS58_RS15530</title></polygon>
+<polygon points="930.8,118 1015.7,118 1020.7,124 1015.7,130 930.8,130" fill="#4f6d8f" opacity="0.85"><title>APS58_RS15535</title></polygon>
+<polygon points="1023.0,118 1065.2,118 1070.2,124 1065.2,130 1023.0,130" fill="#4f6d8f" opacity="0.85"><title>APS58_RS15540</title></polygon>
+<polygon points="1079.1,118 1121.3,118 1126.3,124 1121.3,130 1079.1,130" fill="#4f6d8f" opacity="0.85"><title>APS58_RS15545</title></polygon>
+<polygon points="1134.2,118 1155.0,118 1160.0,124 1155.0,130 1134.2,130" fill="#4f6d8f" opacity="0.85"><title>APS58_RS15550</title></polygon>
+<text x="20" y="154" font-size="11">SAMN02598334 NC_008752.1:1534490-1535242 (+)</text>
+<text x="20" y="168" font-size="10" fill="#555">PGN_5807989499156709440 len 753</text>
+<rect x="661.9" y="142" width="47.4" height="12" fill="#b6d1df"/>
+<rect x="709.3" y="142" width="71.4" height="12" fill="#edc06f"/>
+<rect x="780.7" y="142" width="47.4" height="12" fill="#b4d4b9"/>
+<polygon points="330.0,158 334.6,158 334.6,164 334.6,170 330.0,170" fill="#4f6d8f" opacity="0.85"><title>AAVE_RS06890</title></polygon>
+<polygon points="339.8,158 445.7,158 450.7,164 445.7,170 339.8,170" fill="#4f6d8f" opacity="0.85"><title>AAVE_RS06895</title></polygon>
+<polygon points="475.5,158 642.6,158 642.6,170 475.5,170 470.5,164" fill="#4f6d8f" opacity="0.85"><title>AAVE_RS06900</title></polygon>
+<polygon points="703.2,158 775.3,158 775.3,170 703.2,170 698.2,164" fill="#4f6d8f" opacity="0.85"><title>AAVE_RS06905</title></polygon>
+<polygon points="776.7,158 801.6,158 801.6,170 776.7,170 771.7,164" fill="#4f6d8f" opacity="0.85"><title>AAVE_RS25330</title></polygon>
+<polygon points="810.0,158 903.4,158 903.4,170 810.0,170 805.0,164" fill="#4f6d8f" opacity="0.85"><title>AAVE_RS06910</title></polygon>
+<polygon points="931.0,158 1015.9,158 1020.9,164 1015.9,170 931.0,170" fill="#4f6d8f" opacity="0.85"><title>AAVE_RS06915</title></polygon>
+<polygon points="1023.2,158 1065.4,158 1070.4,164 1065.4,170 1023.2,170" fill="#4f6d8f" opacity="0.85"><title>AAVE_RS06920</title></polygon>
+<polygon points="1079.3,158 1121.5,158 1126.5,164 1121.5,170 1079.3,170" fill="#4f6d8f" opacity="0.85"><title>AAVE_RS06925</title></polygon>
+<polygon points="1134.4,158 1155.0,158 1160.0,164 1155.0,170 1134.4,170" fill="#4f6d8f" opacity="0.85"><title>AAVE_RS06930</title></polygon>
+<text x="20" y="200" font-size="14" font-weight="bold">different_adjacency_low_flank_similarity_candidate</text>
+<text x="20" y="218" font-size="12">core 0.999  up 0.513  down 0.509  group PG_18439644425669535978</text>
+<text x="20" y="244" font-size="11">SAMN12418563 NZ_CP042303.1:3111529-3112280 (+)</text>
+<text x="20" y="258" font-size="10" fill="#555">PGN_10691752855011508776 len 752</text>
+<rect x="661.9" y="232" width="47.4" height="12" fill="#b6d1df"/>
+<rect x="709.3" y="232" width="71.3" height="12" fill="#edc06f"/>
+<rect x="780.7" y="232" width="47.4" height="12" fill="#b4d4b9"/>
+<polygon points="330.0,248 339.7,248 344.7,254 339.7,260 330.0,260" fill="#4f6d8f" opacity="0.85"><title>FRC90_RS14255</title></polygon>
+<polygon points="353.7,248 420.1,248 425.1,254 420.1,260 353.7,260" fill="#4f6d8f" opacity="0.85"><title>FRC90_RS14260</title></polygon>
+<polygon points="446.6,248 534.3,248 539.3,254 534.3,260 446.6,260" fill="#4f6d8f" opacity="0.85"><title>FRC90_RS14265</title></polygon>
+<polygon points="549.0,248 556.2,248 556.2,254 556.2,260 549.0,260" fill="#c0504d" opacity="0.85"><title>FRC90_RS14270</title></polygon>
+<polygon points="609.6,248 703.3,248 708.3,254 703.3,260 609.6,260" fill="#4f6d8f" opacity="0.85"><title>FRC90_RS14275</title></polygon>
+<polygon points="703.2,248 775.3,248 775.3,260 703.2,260 698.2,254" fill="#4f6d8f" opacity="0.85"><title>FRC90_RS14280</title></polygon>
+<polygon points="787.7,248 808.6,248 813.6,254 808.6,260 787.7,260" fill="#4f6d8f" opacity="0.85"><title>FRC90_RS14285</title></polygon>
+<polygon points="812.8,248 912.5,248 917.5,254 912.5,260 812.8,260" fill="#4f6d8f" opacity="0.85"><title>FRC90_RS14290</title></polygon>
+<polygon points="927.2,248 971.1,248 971.1,260 927.2,260 922.2,254" fill="#999" opacity="0.85"><title>FRC90_RS14295</title></polygon>
+<polygon points="978.8,248 1081.6,248 1081.6,260 978.8,260 973.8,254" fill="#4f6d8f" opacity="0.85"><title>FRC90_RS14300</title></polygon>
+<polygon points="1086.5,248 1122.3,248 1122.3,260 1086.5,260 1081.5,254" fill="#4f6d8f" opacity="0.85"><title>FRC90_RS14300</title></polygon>
+<polygon points="1151.9,248 1160.0,248 1160.0,260 1151.9,260 1146.9,254" fill="#999" opacity="0.85"><title>FRC90_RS14305</title></polygon>
+<text x="20" y="284" font-size="11">SAMN04157986 NZ_CP029373.1:3044924-3045675 (-)</text>
+<text x="20" y="298" font-size="10" fill="#555">PGN_12170198633189643025 len 752</text>
+<rect x="780.7" y="272" width="47.4" height="12" fill="#b4d4b9"/>
+<rect x="709.3" y="272" width="71.3" height="12" fill="#edc06f"/>
+<rect x="661.9" y="272" width="47.4" height="12" fill="#b6d1df"/>
+<polygon points="1139.6,288 1160.0,288 1160.0,300 1139.6,300 1134.6,294" fill="#4f6d8f" opacity="0.85"><title>APS58_RS13695</title></polygon>
+<polygon points="1041.9,288 1135.3,288 1135.3,300 1041.9,300 1036.9,294" fill="#4f6d8f" opacity="0.85"><title>APS58_RS13700</title></polygon>
+<polygon points="1004.9,288 1033.8,288 1033.8,300 1004.9,300 999.9,294" fill="#4f6d8f" opacity="0.85"><title>APS58_RS13705</title></polygon>
+<polygon points="971.8,288 991.9,288 991.9,300 971.8,300 966.8,294" fill="#4f6d8f" opacity="0.85"><title>tatA</title></polygon>
+<polygon points="919.8,288 961.7,288 961.7,300 919.8,300 914.8,294" fill="#4f6d8f" opacity="0.85"><title>tatB</title></polygon>
+<polygon points="839.0,288 909.6,288 909.6,300 839.0,300 834.0,294" fill="#4f6d8f" opacity="0.85"><title>tatC</title></polygon>
+<polygon points="714.1,288 775.3,288 775.3,300 714.1,300 709.1,294" fill="#999" opacity="0.85"><title>APS58_RS13725</title></polygon>
+<polygon points="598.6,288 701.3,288 706.3,294 701.3,300 598.6,300" fill="#4f6d8f" opacity="0.85"><title>APS58_RS13730</title></polygon>
+<polygon points="557.9,288 593.7,288 598.7,294 593.7,300 557.9,300" fill="#4f6d8f" opacity="0.85"><title>APS58_RS13730</title></polygon>
+<polygon points="528.8,288 534.9,288 534.9,300 528.8,300 523.8,294" fill="#999" opacity="0.85"><title>APS58_RS13735</title></polygon>
+<polygon points="477.4,288 519.7,288 519.7,300 477.4,300 472.4,294" fill="#4f6d8f" opacity="0.85"><title>APS58_RS13740</title></polygon>
+<polygon points="359.5,288 463.2,288 468.2,294 463.2,300 359.5,300" fill="#4f6d8f" opacity="0.85"><title>APS58_RS13745</title></polygon>
+<text x="20" y="330" font-size="14" font-weight="bold">context_unresolved</text>
+<text x="20" y="348" font-size="12">core 0.997  up 0.640  down 0.491  group PG_18439644425669535978</text>
+<text x="20" y="374" font-size="11">SAMN12418563 NZ_CP042303.1:3111529-3112280 (+)</text>
+<text x="20" y="388" font-size="10" fill="#555">PGN_10691752855011508776 len 752</text>
+<rect x="661.9" y="362" width="47.4" height="12" fill="#b6d1df"/>
+<rect x="709.3" y="362" width="71.3" height="12" fill="#edc06f"/>
+<rect x="780.7" y="362" width="47.4" height="12" fill="#b4d4b9"/>
+<polygon points="330.0,378 339.7,378 344.7,384 339.7,390 330.0,390" fill="#4f6d8f" opacity="0.85"><title>FRC90_RS14255</title></polygon>
+<polygon points="353.7,378 420.1,378 425.1,384 420.1,390 353.7,390" fill="#4f6d8f" opacity="0.85"><title>FRC90_RS14260</title></polygon>
+<polygon points="446.6,378 534.3,378 539.3,384 534.3,390 446.6,390" fill="#4f6d8f" opacity="0.85"><title>FRC90_RS14265</title></polygon>
+<polygon points="549.0,378 556.2,378 556.2,384 556.2,390 549.0,390" fill="#c0504d" opacity="0.85"><title>FRC90_RS14270</title></polygon>
+<polygon points="609.6,378 703.3,378 708.3,384 703.3,390 609.6,390" fill="#4f6d8f" opacity="0.85"><title>FRC90_RS14275</title></polygon>
+<polygon points="703.2,378 775.3,378 775.3,390 703.2,390 698.2,384" fill="#4f6d8f" opacity="0.85"><title>FRC90_RS14280</title></polygon>
+<polygon points="787.7,378 808.6,378 813.6,384 808.6,390 787.7,390" fill="#4f6d8f" opacity="0.85"><title>FRC90_RS14285</title></polygon>
+<polygon points="812.8,378 912.5,378 917.5,384 912.5,390 812.8,390" fill="#4f6d8f" opacity="0.85"><title>FRC90_RS14290</title></polygon>
+<polygon points="927.2,378 971.1,378 971.1,390 927.2,390 922.2,384" fill="#999" opacity="0.85"><title>FRC90_RS14295</title></polygon>
+<polygon points="978.8,378 1081.6,378 1081.6,390 978.8,390 973.8,384" fill="#4f6d8f" opacity="0.85"><title>FRC90_RS14300</title></polygon>
+<polygon points="1086.5,378 1122.3,378 1122.3,390 1086.5,390 1081.5,384" fill="#4f6d8f" opacity="0.85"><title>FRC90_RS14300</title></polygon>
+<polygon points="1151.9,378 1160.0,378 1160.0,390 1151.9,390 1146.9,384" fill="#999" opacity="0.85"><title>FRC90_RS14305</title></polygon>
+<text x="20" y="414" font-size="11">SAMN04157986 NZ_CP029373.1:3426859-3427611 (+)</text>
+<text x="20" y="428" font-size="10" fill="#555">PGN_1172808979267465333 len 753</text>
+<rect x="661.9" y="402" width="47.4" height="12" fill="#b6d1df"/>
+<rect x="709.3" y="402" width="71.4" height="12" fill="#edc06f"/>
+<rect x="780.7" y="402" width="47.4" height="12" fill="#b4d4b9"/>
+<polygon points="330.0,418 334.6,418 334.6,424 334.6,430 330.0,430" fill="#4f6d8f" opacity="0.85"><title>APS58_RS15505</title></polygon>
+<polygon points="339.8,418 445.7,418 450.7,424 445.7,430 339.8,430" fill="#4f6d8f" opacity="0.85"><title>APS58_RS15510</title></polygon>
+<polygon points="475.5,418 644.3,418 644.3,430 475.5,430 470.5,424" fill="#4f6d8f" opacity="0.85"><title>APS58_RS15515</title></polygon>
+<polygon points="703.2,418 775.3,418 775.3,430 703.2,430 698.2,424" fill="#4f6d8f" opacity="0.85"><title>APS58_RS15520</title></polygon>
+<polygon points="776.7,418 801.6,418 801.6,430 776.7,430 771.7,424" fill="#4f6d8f" opacity="0.85"><title>APS58_RS15525</title></polygon>
+<polygon points="810.0,418 903.4,418 903.4,430 810.0,430 805.0,424" fill="#4f6d8f" opacity="0.85"><title>APS58_RS15530</title></polygon>
+<polygon points="930.8,418 1015.7,418 1020.7,424 1015.7,430 930.8,430" fill="#4f6d8f" opacity="0.85"><title>APS58_RS15535</title></polygon>
+<polygon points="1023.0,418 1065.2,418 1070.2,424 1065.2,430 1023.0,430" fill="#4f6d8f" opacity="0.85"><title>APS58_RS15540</title></polygon>
+<polygon points="1079.1,418 1121.3,418 1126.3,424 1121.3,430 1079.1,430" fill="#4f6d8f" opacity="0.85"><title>APS58_RS15545</title></polygon>
+<polygon points="1134.2,418 1155.0,418 1160.0,424 1155.0,430 1134.2,430" fill="#4f6d8f" opacity="0.85"><title>APS58_RS15550</title></polygon>
+</svg>

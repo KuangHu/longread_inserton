@@ -1,0 +1,39 @@
+{
+  "started_utc": "2026-10-24T19:16:28.847164+00:00",
+  "completed_utc": "2026-10-24T19:16:53.250849+00:00",
+  "query": "tax_tree(2) AND instrument_platform=\"OXFORD_NANOPORE\"",
+  "source_url": "https://www.ebi.ac.uk/ena/portal/api/search?result=read_run&query=tax_tree%282%29+AND+instrument_platform%3D%22OXFORD_NANOPORE%22&format=json&fields=run_accession%2Cexperiment_accession%2Csample_accession%2Csecondary_sample_accession%2Cstudy_accession%2Csecondary_study_accession%2Ctax_id%2Cscientific_name%2Cinstrument_platform%2Cinstrument_model%2Clibrary_strategy%2Clibrary_source%2Clibrary_selection%2Clibrary_layout%2Cread_count%2Cbase_count%2Cfirst_public%2Clast_updated%2Cfastq_ftp%2Cfastq_bytes%2Cfastq_md5%2Csubmitted_ftp%2Csubmitted_bytes%2Csubmitted_md5%2Csubmitted_format&limit=0",
+  "count_urls": [
+    "https://www.ebi.ac.uk/ena/portal/api/count?result=read_run&query=tax_tree%282%29+AND+instrument_platform%3D%22OXFORD_NANOPORE%22&format=json",
+    "https://www.ebi.ac.uk/ena/portal/api/count?result=read_run&query=tax_tree%282%29+AND+instrument_platform%3D%22OXFORD_NANOPORE%22&format=json"
+  ],
+  "fields": [
+    "run_accession",
+    "experiment_accession",
+    "sample_accession",
+    "secondary_sample_accession",
+    "study_accession",
+    "secondary_study_accession",
+    "tax_id",
+    "scientific_name",
+    "instrument_platform",
+    "instrument_model",
+    "library_strategy",
+    "library_source",
+    "library_selection",
+    "library_layout",
+    "read_count",
+    "base_count",
+    "first_public",
+    "last_updated",
+    "fastq_ftp",
+    "fastq_bytes",
+    "fastq_md5",
+    "submitted_ftp",
+    "submitted_bytes",
+    "submitted_md5",
+    "submitted_format"
+  ],
+  "sequence_files_downloaded": 0,
+  "scope": "Public ENA read_run records under Bacteria taxonomy, all ONT library types; excludes records classified outside tax_tree(2)."
+}

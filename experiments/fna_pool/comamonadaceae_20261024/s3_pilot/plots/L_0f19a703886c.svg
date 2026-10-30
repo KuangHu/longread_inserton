@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="300" font-family="sans-serif">
+<rect width="100%" height="100%" fill="white"/>
+<text x="4" y="16" font-size="12">L_0f19a703886c  SAMEA120308855  core 5165 bp  two_flank_anchored  support all_calls_anchored  boundary exact  tandem False  core copies carrier/partner 1/0</text>
+<line x1="328.7" y1="30" x2="328.7" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<line x1="791.3" y1="30" x2="791.3" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<text x="4" y="64" font-size="11" font-weight="bold">SAMEA120308855 NZ_CDRKIR010000001.1 (carrier)</text>
+<line x1="60" y1="100" x2="1060" y2="100" stroke="#888"/>
+<rect x="239.1" y="132" width="89.6" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="283.9" y="152" font-size="9" text-anchor="middle">U</text>
+<rect x="328.7" y="132" width="462.6" height="8" fill="#e76f51" opacity="0.55"/>
+<text x="560.0" y="152" font-size="9" text-anchor="middle">core 5165</text>
+<rect x="791.3" y="132" width="89.6" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="836.1" y="152" font-size="9" text-anchor="middle">D</text>
+<polygon points="60.0,109 66.0,103 69.9,103 69.9,115 66.0,115" fill="#3b6fb6"><title>protease HtpX 5611883-5612762 -</title></polygon>
+<polygon points="77.2,109 83.2,103 149.7,103 149.7,115 83.2,115" fill="#3b6fb6"><title>DUF3025 domain-containing protein 5612844-5613654 -</title></polygon>
+<text x="77.2" y="125" font-size="8" fill="#333">DUF3025 domain-</text>
+<polygon points="149.4,109 155.4,103 230.8,103 230.8,115 155.4,115" fill="#3b6fb6"><title>NYN domain-containing protein 5613650-5614559 -</title></polygon>
+<polygon points="233.8,109 239.8,103 327.0,103 327.0,115 239.8,115" fill="#3b6fb6"><title>dihydroorotase 5614592-5615633 -</title></polygon>
+<text x="233.8" y="125" font-size="8" fill="#333">dihydroorotase</text>
+<polygon points="333.4,109 339.4,103 446.3,103 446.3,115 339.4,115" fill="#3b6fb6"><title>alpha-hydroxy acid oxidase 5615705-5616965 -</title></polygon>
+<text x="333.4" y="125" font-size="8" fill="#333">alpha-hydroxy acid oxida</text>
+<polygon points="446.5,109 452.5,103 534.6,103 534.6,115 452.5,115" fill="#3b6fb6"><title>Bug family tripartite tricarboxylate tra 5616967-5617951 -</title></polygon>
+<polygon points="540.0,109 546.0,103 602.3,103 602.3,115 546.0,115" fill="#3b6fb6"><title>RraA family protein 5618011-5618707 -</title></polygon>
+<text x="540.0" y="125" font-size="8" fill="#333">RraA family p</text>
+<polygon points="604.4,109 610.4,103 694.1,103 694.1,115 610.4,115" fill="#3b6fb6"><title>hydroxyacid dehydrogenase 5618730-5619732 -</title></polygon>
+<polygon points="703.1,85 780.4,85 786.4,91 780.4,97 703.1,97" fill="#3b6fb6"><title>LysR family transcriptional regulator 5619832-5620762 +</title></polygon>
+<text x="703.1" y="81" font-size="8" fill="#333">LysR family transc</text>
+<polygon points="787.8,109 793.8,103 853.9,103 853.9,115 793.8,115" fill="#3b6fb6"><title>Crp/Fnr family transcriptional regulator 5620778-5621516 -</title></polygon>
+<text x="787.8" y="125" font-size="8" fill="#333">Crp/Fnr family</text>
+<polygon points="867.6,85 957.0,85 963.0,91 957.0,97 867.6,97" fill="#3b6fb6"><title>porin 5621669-5622734 +</title></polygon>
+<text x="867.6" y="81" font-size="8" fill="#333">porin</text>
+<polygon points="963.8,85 1054.0,85 1060.0,91 1054.0,97 963.8,97" fill="#3b6fb6"><title>acetate--CoA ligase family protein 5622743-5624861 +</title></polygon>
+<text x="963.8" y="81" font-size="8" fill="#333">acetate--CoA ligase </text>
+<text x="60" y="166" font-size="9" fill="#666">NZ_CDRKIR010000001.1:5612652-5623817  core 5615652-5620817</text>
+<text x="4" y="184" font-size="11" font-weight="bold">SAMD00407106 NZ_AP025556.1 (partner, + strand, two_flank_anchored, pair P00034)</text>
+<line x1="60" y1="220" x2="1060" y2="220" stroke="#888"/>
+<rect x="239.1" y="252" width="89.6" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="283.9" y="272" font-size="9" text-anchor="middle">U'</text>
+<rect x="791.3" y="252" width="89.6" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="836.1" y="272" font-size="9" text-anchor="middle">D'</text>
+<rect x="328.7" y="252" width="462.6" height="8" fill="#9b5de5" opacity="0.55"/>
+<text x="560.0" y="272" font-size="9" text-anchor="middle">other side 24</text>
+<polygon points="60.0,229 66.0,223 69.7,223 69.7,235 66.0,235" fill="#3b6fb6"><title>protease HtpX 6001021-6001900 -</title></polygon>
+<polygon points="77.0,229 83.0,223 149.6,223 149.6,235 83.0,235" fill="#3b6fb6"><title>DUF3025 domain-containing protein 6001982-6002792 -</title></polygon>
+<text x="77.0" y="245" font-size="8" fill="#333">DUF3025 domain-</text>
+<polygon points="149.2,229 155.2,223 230.6,223 230.6,235 155.2,235" fill="#3b6fb6"><title>NYN domain-containing protein 6002788-6003697 -</title></polygon>
+<polygon points="233.6,229 239.6,223 326.8,223 326.8,235 239.6,235" fill="#3b6fb6"><title>dihydroorotase 6003730-6004771 -</title></polygon>
+<text x="233.6" y="245" font-size="8" fill="#333">dihydroorotase</text>
+<polygon points="327.4,229 333.4,223 853.9,223 853.9,235 333.4,235" fill="#3b6fb6"><title>Crp/Fnr family transcriptional regulator 6004777-6005515 -</title></polygon>
+<text x="327.4" y="245" font-size="8" fill="#333">Crp/Fnr family transcriptional regulator</text>
+<polygon points="867.6,205 957.0,205 963.0,211 957.0,217 867.6,217" fill="#3b6fb6"><title>porin 6005668-6006733 +</title></polygon>
+<text x="867.6" y="201" font-size="8" fill="#333">porin</text>
+<polygon points="963.8,205 1054.0,205 1060.0,211 1054.0,217 963.8,217" fill="#3b6fb6"><title>acetate--CoA ligase family protein 6006742-6008860 +</title></polygon>
+<text x="963.8" y="201" font-size="8" fill="#333">acetate--CoA ligase </text>
+<text x="60" y="286" font-size="9" fill="#666">NZ_AP025556.1 site 6004792  other-side gap 24 bp  this call's core 5615652-5620817</text>
+</svg>

@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="420" font-family="sans-serif">
+<rect width="100%" height="100%" fill="white"/>
+<text x="4" y="16" font-size="12">L_01273a518a36  SAMN51281027  core 4788 bp  two_flank_anchored  support all_calls_anchored  boundary within_shift  tandem False  core copies carrier/partner 1/0</text>
+<line x1="338.1" y1="30" x2="338.1" y2="412" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<line x1="781.9" y1="30" x2="781.9" y2="412" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<text x="4" y="64" font-size="11" font-weight="bold">SAMN51281027 NZ_CM191384.1 (carrier)</text>
+<line x1="60" y1="100" x2="1060" y2="100" stroke="#888"/>
+<rect x="245.4" y="132" width="92.7" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="291.7" y="152" font-size="9" text-anchor="middle">U</text>
+<rect x="338.1" y="132" width="443.8" height="8" fill="#e76f51" opacity="0.55"/>
+<text x="560.0" y="152" font-size="9" text-anchor="middle">core 4788</text>
+<rect x="781.9" y="132" width="92.7" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="828.3" y="152" font-size="9" text-anchor="middle">D</text>
+<polygon points="60.0,109 64.8,103 64.8,103 64.8,115 64.8,115" fill="#3b6fb6"><title>MFS transporter 274262-275957 -</title></polygon>
+<polygon points="80.2,109 86.2,103 140.0,103 140.0,115 86.2,115" fill="#3b6fb6"><title>2-hydroxychromene-2-carboxylate isomeras 276123-276768 -</title></polygon>
+<text x="80.2" y="125" font-size="8" fill="#333">2-hydroxychr</text>
+<polygon points="139.6,109 145.6,103 164.4,103 164.4,115 145.6,115" fill="#3b6fb6"><title>DUF1289 domain-containing protein 276764-277031 -</title></polygon>
+<polygon points="164.0,109 170.0,103 209.3,103 209.3,115 170.0,115" fill="#3b6fb6"><title>YbaK/EbsC family protein 277027-277516 -</title></polygon>
+<text x="164.0" y="125" font-size="8" fill="#333">YbaK/EbsC</text>
+<polygon points="209.5,109 215.5,103 294.9,103 294.9,115 215.5,115" fill="#3b6fb6"><title>hydroxymethylglutaryl-CoA lyase 277518-278439 -</title></polygon>
+<polygon points="308.0,109 314.0,103 335.2,103 335.2,115 314.0,115" fill="#3b6fb6"><title>acylphosphatase 278580-278874 -</title></polygon>
+<polygon points="336.4,109 342.4,103 444.9,103 444.9,115 342.4,115" fill="#3b6fb6"><title>acyl-CoA dehydrogenase family protein 278887-280057 -</title></polygon>
+<text x="336.4" y="125" font-size="8" fill="#333">acyl-CoA dehydrogenase </text>
+<polygon points="444.5,109 450.5,103 559.4,103 559.4,115 450.5,115" fill="#3b6fb6"><title>CaiB/BaiF CoA transferase family protein 280053-281292 -</title></polygon>
+<polygon points="572.0,109 578.0,103 665.7,103 665.7,115 578.0,115" fill="#3b6fb6"><title>Bug family tripartite tricarboxylate tra 281428-282439 -</title></polygon>
+<text x="572.0" y="125" font-size="8" fill="#333">Bug family tripartit</text>
+<polygon points="668.1,109 674.1,103 703.7,103 703.7,115 674.1,115" fill="#3b6fb6"><title>cupin domain-containing protein 282465-282849 -</title></polygon>
+<polygon points="704.5,109 710.5,103 772.9,103 772.9,115 710.5,115" fill="#3b6fb6"><title>IclR family transcriptional regulator 282858-283596 -</title></polygon>
+<text x="704.5" y="125" font-size="8" fill="#333">IclR family tr</text>
+<polygon points="782.0,109 788.0,103 867.4,103 867.4,115 788.0,115" fill="#3b6fb6"><title>2-hydroxyacid dehydrogenase 283694-284615 -</title></polygon>
+<text x="782.0" y="125" font-size="8" fill="#333">2-hydroxyacid dehy</text>
+<polygon points="876.8,85 900.0,85 906.0,91 900.0,97 876.8,97" fill="#3b6fb6"><title>EthD family reductase 284717-285032 +</title></polygon>
+<polygon points="907.7,109 913.7,103 995.6,103 995.6,115 913.7,115" fill="#3b6fb6"><title>DUF4349 domain-containing protein 285050-285998 -</title></polygon>
+<text x="907.7" y="125" font-size="8" fill="#333">DUF4349 domain-cont</text>
+<polygon points="1000.9,109 1006.9,103 1060.0,103 1060.0,115 1006.9,115" fill="#3b6fb6"><title>acetyl/propionyl/methylcrotonyl-CoA carb 286055-288062 -</title></polygon>
+<text x="60" y="166" font-size="9" fill="#666">NZ_CM191384.1:275905-286693  core 278905-283693</text>
+<text x="4" y="184" font-size="11" font-weight="bold">SAMD00623152 NZ_AP028664.1 (partner, - strand, two_flank_anchored, pair P00111)</text>
+<line x1="60" y1="220" x2="1060" y2="220" stroke="#888"/>
+<rect x="245.4" y="252" width="92.7" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="291.7" y="272" font-size="9" text-anchor="middle">U'</text>
+<rect x="781.9" y="252" width="92.7" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="828.3" y="272" font-size="9" text-anchor="middle">D'</text>
+<rect x="338.1" y="252" width="443.8" height="8" fill="#9b5de5" opacity="0.55"/>
+<text x="560.0" y="272" font-size="9" text-anchor="middle">other side 12</text>
+<polygon points="907.9,229 913.9,223 1060.0,223 1060.0,235 913.9,235" fill="#3b6fb6"><title>acetyl-CoA carboxylase biotin carboxylas 492475-494476 -</title></polygon>
+<text x="907.9" y="245" font-size="8" fill="#333">acetyl-CoA carboxylase biotin car</text>
+<polygon points="877.5,205 900.7,205 906.7,211 900.7,217 877.5,217" fill="#3b6fb6"><title>EthD family reductase 494489-494804 +</title></polygon>
+<polygon points="782.0,229 788.0,223 867.4,223 867.4,235 788.0,235" fill="#3b6fb6"><title>2-hydroxyacid dehydrogenase 494913-495834 -</title></polygon>
+<polygon points="308.0,229 314.0,223 335.2,223 335.2,235 314.0,235" fill="#3b6fb6"><title>acylphosphatase 495878-496172 -</title></polygon>
+<polygon points="209.6,229 215.6,223 295.0,223 295.0,235 215.6,235" fill="#3b6fb6"><title>hydroxymethylglutaryl-CoA lyase 496312-497233 -</title></polygon>
+<polygon points="161.4,229 167.4,223 206.7,223 206.7,235 167.4,235" fill="#3b6fb6"><title>YbaK/EbsC family protein 497264-497753 -</title></polygon>
+<polygon points="137.0,229 143.0,223 161.8,223 161.8,235 143.0,235" fill="#3b6fb6"><title>DUF1289 domain-containing protein 497749-498016 -</title></polygon>
+<polygon points="77.6,229 83.6,223 137.4,223 137.4,235 83.6,235" fill="#3b6fb6"><title>2-hydroxychromene-2-carboxylate isomeras 498012-498657 -</title></polygon>
+<polygon points="60.0,229 62.2,223 62.2,223 62.2,235 62.2,235" fill="#3b6fb6"><title>MFS transporter 498823-500518 -</title></polygon>
+<text x="60" y="286" font-size="9" fill="#666">NZ_AP028664.1 site 495835  other-side gap 12 bp  this call's core 278905-283693</text>
+<text x="4" y="304" font-size="11" font-weight="bold">SAMD00623152 NZ_AP028664.1 (partner, - strand, two_flank_anchored, pair P00111)</text>
+<line x1="60" y1="340" x2="1060" y2="340" stroke="#888"/>
+<rect x="246.2" y="372" width="92.7" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="292.6" y="392" font-size="9" text-anchor="middle">U'</text>
+<rect x="781.9" y="372" width="92.7" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="828.3" y="392" font-size="9" text-anchor="middle">D'</text>
+<rect x="338.9" y="372" width="443.0" height="8" fill="#9b5de5" opacity="0.55"/>
+<text x="560.4" y="392" font-size="9" text-anchor="middle">other side 3</text>
+<polygon points="907.9,349 913.9,343 1060.0,343 1060.0,355 913.9,355" fill="#3b6fb6"><title>acetyl-CoA carboxylase biotin carboxylas 492475-494476 -</title></polygon>
+<text x="907.9" y="365" font-size="8" fill="#333">acetyl-CoA carboxylase biotin car</text>
+<polygon points="877.5,325 900.7,325 906.7,331 900.7,337 877.5,337" fill="#3b6fb6"><title>EthD family reductase 494489-494804 +</title></polygon>
+<polygon points="782.0,349 788.0,343 867.4,343 867.4,355 788.0,355" fill="#3b6fb6"><title>2-hydroxyacid dehydrogenase 494913-495834 -</title></polygon>
+<polygon points="308.0,349 314.0,343 335.2,343 335.2,355 314.0,355" fill="#3b6fb6"><title>acylphosphatase 495878-496172 -</title></polygon>
+<polygon points="209.6,349 215.6,343 295.0,343 295.0,355 215.6,355" fill="#3b6fb6"><title>hydroxymethylglutaryl-CoA lyase 496312-497233 -</title></polygon>
+<polygon points="161.4,349 167.4,343 206.7,343 206.7,355 167.4,355" fill="#3b6fb6"><title>YbaK/EbsC family protein 497264-497753 -</title></polygon>
+<polygon points="137.0,349 143.0,343 161.8,343 161.8,355 143.0,355" fill="#3b6fb6"><title>DUF1289 domain-containing protein 497749-498016 -</title></polygon>
+<polygon points="77.6,349 83.6,343 137.4,343 137.4,355 83.6,355" fill="#3b6fb6"><title>2-hydroxychromene-2-carboxylate isomeras 498012-498657 -</title></polygon>
+<polygon points="60.0,349 62.2,343 62.2,343 62.2,355 62.2,355" fill="#3b6fb6"><title>MFS transporter 498823-500518 -</title></polygon>
+<text x="60" y="406" font-size="9" fill="#666">NZ_AP028664.1 site 495835  other-side gap 3 bp  this call's core 278914-283693</text>
+</svg>

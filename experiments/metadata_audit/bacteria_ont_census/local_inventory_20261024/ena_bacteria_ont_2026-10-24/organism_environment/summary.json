@@ -1,0 +1,186 @@
+{
+  "frozen_runs": 93682,
+  "context_export_runs": 93682,
+  "missing_run_ids": [],
+  "new_run_ids_not_added": [],
+  "metadata_changes": [],
+  "distinct_taxon_name_pairs": 8605,
+  "distinct_tax_ids": 8605,
+  "counts": {
+    "environment_or_isolation_recorded": 63859,
+    "host_context_recorded": 54320,
+    "geography_recorded": 81019,
+    "host_context_only": 11844,
+    "no_structured_environment_or_host": 17979
+  },
+  "field_coverage": {
+    "sample_accession": {
+      "meaningful_runs": 93682,
+      "placeholder_runs": 0,
+      "blank_runs": 0,
+      "unique_samples": 83074
+    },
+    "secondary_sample_accession": {
+      "meaningful_runs": 93682,
+      "placeholder_runs": 0,
+      "blank_runs": 0,
+      "unique_samples": 83074
+    },
+    "tax_id": {
+      "meaningful_runs": 93682,
+      "placeholder_runs": 0,
+      "blank_runs": 0,
+      "unique_samples": 83074
+    },
+    "scientific_name": {
+      "meaningful_runs": 93681,
+      "placeholder_runs": 0,
+      "blank_runs": 1,
+      "unique_samples": 83073
+    },
+    "strain": {
+      "meaningful_runs": 57043,
+      "placeholder_runs": 2066,
+      "blank_runs": 34573,
+      "unique_samples": 49062
+    },
+    "sample_alias": {
+      "meaningful_runs": 93681,
+      "placeholder_runs": 1,
+      "blank_runs": 0,
+      "unique_samples": 83073
+    },
+    "sample_title": {
+      "meaningful_runs": 90197,
+      "placeholder_runs": 623,
+      "blank_runs": 2862,
+      "unique_samples": 80191
+    },
+    "sample_description": {
+      "meaningful_runs": 90370,
+      "placeholder_runs": 832,
+      "blank_runs": 2480,
+      "unique_samples": 80365
+    },
+    "isolation_source": {
+      "meaningful_runs": 57603,
+      "placeholder_runs": 4293,
+      "blank_runs": 31786,
+      "unique_samples": 52219
+    },
+    "environment_biome": {
+      "meaningful_runs": 9269,
+      "placeholder_runs": 664,
+      "blank_runs": 83749,
+      "unique_samples": 7142
+    },
+    "environment_feature": {
+      "meaningful_runs": 6469,
+      "placeholder_runs": 1550,
+      "blank_runs": 85663,
+      "unique_samples": 4594
+    },
+    "environment_material": {
+      "meaningful_runs": 7920,
+      "placeholder_runs": 1242,
+      "blank_runs": 84520,
+      "unique_samples": 6000
+    },
+    "broad_scale_environmental_context": {
+      "meaningful_runs": 9269,
+      "placeholder_runs": 664,
+      "blank_runs": 83749,
+      "unique_samples": 7142
+    },
+    "local_environmental_context": {
+      "meaningful_runs": 6469,
+      "placeholder_runs": 1550,
+      "blank_runs": 85663,
+      "unique_samples": 4594
+    },
+    "environmental_medium": {
+      "meaningful_runs": 7920,
+      "placeholder_runs": 1242,
+      "blank_runs": 84520,
+      "unique_samples": 6000
+    },
+    "host": {
+      "meaningful_runs": 52133,
+      "placeholder_runs": 2768,
+      "blank_runs": 38781,
+      "unique_samples": 47400
+    },
+    "host_scientific_name": {
+      "meaningful_runs": 51624,
+      "placeholder_runs": 21,
+      "blank_runs": 42037,
+      "unique_samples": 47299
+    },
+    "host_tax_id": {
+      "meaningful_runs": 50007,
+      "placeholder_runs": 0,
+      "blank_runs": 43675,
+      "unique_samples": 45750
+    },
+    "host_body_site": {
+      "meaningful_runs": 5,
+      "placeholder_runs": 0,
+      "blank_runs": 93677,
+      "unique_samples": 4
+    },
+    "country": {
+      "meaningful_runs": 80793,
+      "placeholder_runs": 2855,
+      "blank_runs": 10034,
+      "unique_samples": 72121
+    },
+    "location": {
+      "meaningful_runs": 26828,
+      "placeholder_runs": 0,
+      "blank_runs": 66854,
+      "unique_samples": 23074
+    },
+    "collection_date": {
+      "meaningful_runs": 75864,
+      "placeholder_runs": 12857,
+      "blank_runs": 4961,
+      "unique_samples": 67263
+    }
+  },
+  "raw_sha256": "038289132d595d6de13fbda57b1b8bb2bb232dfdfc9e1a0cd265eddf8c26fd12",
+  "environment_inference": "None: raw source and host fields are preserved. Taxonomic names and geography do not imply habitat.",
+  "placeholder_policy": [
+    "",
+    "-",
+    "?",
+    "missing",
+    "n.a.",
+    "n/a",
+    "na",
+    "nan",
+    "none",
+    "not aplicable",
+    "not applicable",
+    "not available",
+    "not avaliable",
+    "not collect",
+    "not collected",
+    "not colleted",
+    "not determined",
+    "not known",
+    "not provided",
+    "not provided submitted under migs 2.1",
+    "not recorded",
+    "not relevant",
+    "null",
+    "unavailable",
+    "unknown",
+    "unknown source",
+    "unknown2",
+    "unknown4",
+    "unspecified",
+    "prefix missing:",
+    "prefix not applicable:"
+  ],
+  "unique_sample_definition": "sample_accession, or run-specific fallback if blank"
+}

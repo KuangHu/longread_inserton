@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="420" font-family="sans-serif">
+<rect width="100%" height="100%" fill="white"/>
+<text x="4" y="16" font-size="12">L_e28e37714a17  SAMN13450421  core 1100 bp  two_flank_anchored  support direction_mixed  boundary direction_dependent  tandem False  core copies carrier/partner 1/0</text>
+<line x1="482.5" y1="30" x2="482.5" y2="412" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<line x1="637.5" y1="30" x2="637.5" y2="412" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<text x="4" y="64" font-size="11" font-weight="bold">SAMN13450421 NZ_CP065695.1 (carrier)</text>
+<line x1="60" y1="100" x2="1060" y2="100" stroke="#888"/>
+<rect x="341.7" y="132" width="140.8" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="412.1" y="152" font-size="9" text-anchor="middle">U</text>
+<rect x="482.5" y="132" width="154.9" height="8" fill="#e76f51" opacity="0.55"/>
+<text x="560.0" y="152" font-size="9" text-anchor="middle">core 1100</text>
+<rect x="637.5" y="132" width="140.8" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="707.9" y="152" font-size="9" text-anchor="middle">D</text>
+<polygon points="60.0,85 77.2,85 83.2,91 77.2,97 60.0,97" fill="#3b6fb6"><title>tripartite tricarboxylate transporter su 2951387-2952395 +</title></polygon>
+<polygon points="86.5,85 203.4,85 209.4,91 203.4,97 86.5,97" fill="#3b6fb6"><title>HpcH/HpaI aldolase/citrate lyase family  2952418-2953291 +</title></polygon>
+<text x="86.5" y="81" font-size="8" fill="#333">HpcH/HpaI aldolase/citrate</text>
+<polygon points="235.6,85 380.1,85 386.1,91 380.1,97 235.6,97" fill="#3b6fb6"><title>Bug family tripartite tricarboxylate tra 2953477-2954545 +</title></polygon>
+<text x="235.6" y="81" font-size="8" fill="#333">Bug family tripartite tricarboxy</text>
+<polygon points="405.5,85 476.4,85 482.4,91 476.4,97 405.5,97" fill="#3b6fb6"><title>hypothetical protein 2954683-2955229 +</title></polygon>
+<text x="405.5" y="81" font-size="8" fill="#333">hypothetical pro</text>
+<polygon points="493.2,109 499.2,103 569.3,103 569.3,115 499.2,115" fill="#3b6fb6"><title>hypothetical protein 2955306-2955846 -</title></polygon>
+<text x="493.2" y="125" font-size="8" fill="#333">hypothetical pro</text>
+<polygon points="574.2,109 580.2,103 632.1,103 632.1,115 580.2,115" fill="#3b6fb6"><title>Rap1a/Tai family immunity protein 2955881-2956292 -</title></polygon>
+<text x="574.2" y="125" font-size="8" fill="#333">Rap1a/Tai fa</text>
+<polygon points="637.5,109 643.5,103 701.3,103 701.3,115 643.5,115" fill="#3b6fb6"><title>PaaI family thioesterase 2956330-2956783 -</title></polygon>
+<text x="637.5" y="125" font-size="8" fill="#333">PaaI family t</text>
+<polygon points="704.9,109 710.9,103 844.4,103 844.4,115 710.9,115" fill="#3b6fb6"><title>tripartite tricarboxylate transporter su 2956809-2957799 -</title></polygon>
+<text x="704.9" y="125" font-size="8" fill="#333">tripartite tricarboxylate tran</text>
+<polygon points="846.3,109 852.3,103 1060.0,103 1060.0,115 852.3,115" fill="#3b6fb6"><title>class I adenylate-forming enzyme family  2957813-2959394 -</title></polygon>
+<text x="60" y="166" font-size="9" fill="#666">NZ_CP065695.1:2952230-2959330  core 2955230-2956330</text>
+<text x="4" y="184" font-size="11" font-weight="bold">SAMEA118088312 NZ_OZ253481.1 (partner, - strand, two_flank_anchored, pair P00290)</text>
+<line x1="60" y1="220" x2="1060" y2="220" stroke="#888"/>
+<rect x="341.7" y="252" width="140.8" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="412.1" y="272" font-size="9" text-anchor="middle">U'</text>
+<rect x="637.5" y="252" width="140.8" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="707.9" y="272" font-size="9" text-anchor="middle">D'</text>
+<rect x="482.5" y="252" width="154.9" height="8" fill="#9b5de5" opacity="0.55"/>
+<text x="560.0" y="272" font-size="9" text-anchor="middle">other side 57</text>
+<polygon points="847.6,229 853.6,223 1060.0,223 1060.0,235 853.6,235" fill="#3b6fb6"><title>class I adenylate-forming enzyme family  3808229-3809810 -</title></polygon>
+<text x="847.6" y="245" font-size="8" fill="#333">class I adenylate-forming enzyme family </text>
+<polygon points="704.9,229 710.9,223 845.6,223 845.6,235 710.9,235" fill="#3b6fb6"><title>tripartite tricarboxylate transporter su 3809824-3810823 -</title></polygon>
+<polygon points="637.5,229 643.5,223 701.3,223 701.3,235 643.5,235" fill="#3b6fb6"><title>PaaI family thioesterase 3810849-3811302 -</title></polygon>
+<polygon points="448.6,205 476.4,205 482.4,211 476.4,217 448.6,217" fill="#3b6fb6"><title>hypothetical protein 3811360-3811600 +</title></polygon>
+<text x="448.6" y="201" font-size="8" fill="#333">hypothe</text>
+<polygon points="405.2,205 443.2,205 449.2,211 443.2,217 405.2,217" fill="#3b6fb6"><title>hypothetical protein 3811596-3811908 +</title></polygon>
+<polygon points="235.4,205 379.8,205 385.8,211 379.8,217 235.4,217" fill="#3b6fb6"><title>Bug family tripartite tricarboxylate tra 3812046-3813114 +</title></polygon>
+<polygon points="86.1,205 203.0,205 209.0,211 203.0,217 86.1,217" fill="#3b6fb6"><title>HpcH/HpaI aldolase/citrate lyase family  3813301-3814174 +</title></polygon>
+<polygon points="60.0,205 76.8,205 82.8,211 76.8,217 60.0,217" fill="#3b6fb6"><title>tripartite tricarboxylate transporter su 3814197-3815205 +</title></polygon>
+<text x="60" y="286" font-size="9" fill="#666">NZ_OZ253481.1 site 3811302  other-side gap 57 bp  this call's core 2955230-2956330</text>
+<text x="4" y="304" font-size="11" font-weight="bold">SAMEA118088312 NZ_OZ253481.1 (partner, - strand, unresolved, pair P00290)</text>
+<line x1="60" y1="340" x2="1060" y2="340" stroke="#888"/>
+<rect x="346.9" y="372" width="140.8" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="417.3" y="392" font-size="9" text-anchor="middle">U'</text>
+<rect x="637.3" y="372" width="140.8" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="707.7" y="392" font-size="9" text-anchor="middle">D'</text>
+<rect x="487.7" y="372" width="149.6" height="8" fill="#9b5de5" opacity="0.55"/>
+<text x="562.5" y="392" font-size="9" text-anchor="middle">other side 34</text>
+<polygon points="847.6,349 853.6,343 1060.0,343 1060.0,355 853.6,355" fill="#3b6fb6"><title>class I adenylate-forming enzyme family  3808229-3809810 -</title></polygon>
+<text x="847.6" y="365" font-size="8" fill="#333">class I adenylate-forming enzyme family </text>
+<polygon points="704.9,349 710.9,343 845.6,343 845.6,355 710.9,355" fill="#3b6fb6"><title>tripartite tricarboxylate transporter su 3809824-3810823 -</title></polygon>
+<polygon points="637.5,349 643.5,343 701.3,343 701.3,355 643.5,355" fill="#3b6fb6"><title>PaaI family thioesterase 3810849-3811302 -</title></polygon>
+<polygon points="450.7,325 478.5,325 484.5,331 478.5,337 450.7,337" fill="#3b6fb6"><title>hypothetical protein 3811360-3811600 +</title></polygon>
+<text x="450.7" y="321" font-size="8" fill="#333">hypothe</text>
+<polygon points="407.3,325 445.3,325 451.3,331 445.3,337 407.3,337" fill="#3b6fb6"><title>hypothetical protein 3811596-3811908 +</title></polygon>
+<polygon points="237.5,325 381.9,325 387.9,331 381.9,337 237.5,337" fill="#3b6fb6"><title>Bug family tripartite tricarboxylate tra 3812046-3813114 +</title></polygon>
+<polygon points="88.2,325 205.1,325 211.1,331 205.1,337 88.2,337" fill="#3b6fb6"><title>HpcH/HpaI aldolase/citrate lyase family  3813301-3814174 +</title></polygon>
+<polygon points="60.0,325 78.9,325 84.9,331 78.9,337 60.0,337" fill="#3b6fb6"><title>tripartite tricarboxylate transporter su 3814197-3815205 +</title></polygon>
+<text x="60" y="406" font-size="9" fill="#666">NZ_OZ253481.1 site 3811303  other-side gap 34 bp  this call's core 2955267-2956329</text>
+</svg>

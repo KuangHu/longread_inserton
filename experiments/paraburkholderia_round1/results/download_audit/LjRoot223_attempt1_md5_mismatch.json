@@ -1,0 +1,26 @@
+{
+  "run": {
+    "sample_id": "LjRoot223",
+    "run": "ERR13194296",
+    "biosample": "SAMEA115676880",
+    "assembly": "GCA_964253525.2",
+    "platform": "OXFORD_NANOPORE",
+    "instrument_model": "MinION",
+    "role": "paraburkholderia_round1_terricola",
+    "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR131/096/ERR13194296/ERR13194296.fastq.gz",
+    "archive_read_count": 18146,
+    "archive_base_count": 104222747,
+    "fastq_bytes": 99129012,
+    "fastq_md5": "eb034543edb71553616061eb637d8e9b"
+  },
+  "download_started": "2026-10-23T11:03:25-0700",
+  "local_file": "$PROJ/data/reads/ERR13194296/ERR13194296.fastq.gz",
+  "bytes": 99129012,
+  "md5": "eb7626941e32456a65ab4deaaf95aa70",
+  "sha256": "5c76ae7c9aff63355ef523dbbbde201a27f209bd8a5a25d276daea3ac39807c0",
+  "checks": {
+    "bytes_match": true,
+    "md5_match": false
+  },
+  "status": "mismatch"
+}

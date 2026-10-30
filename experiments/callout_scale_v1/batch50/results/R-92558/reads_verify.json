@@ -1,0 +1,52 @@
+{
+  "run": {
+    "sample_id": "R-92558",
+    "run": "ERR15686594",
+    "biosample": "SAMEA120314555",
+    "assembly": "GCA_976997045.1",
+    "platform": "OXFORD_NANOPORE",
+    "instrument_model": "MinION",
+    "role": "callout_scale_v1_batch50",
+    "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR156/094/ERR15686594/ERR15686594.fastq.gz",
+    "archive_read_count": 531979,
+    "archive_base_count": 1061101175,
+    "fastq_bytes": 870357942,
+    "fastq_md5": "5e8caa28d130065e492b6bc3ff1e20b6"
+  },
+  "download_started": "2026-10-24T13:43:20-0700",
+  "local_file": "/global/scratch/users/kh36969/longread_callout/data/reads/ERR15686594/ERR15686594.fastq.gz",
+  "bytes": 870357942,
+  "md5": "5e8caa28d130065e492b6bc3ff1e20b6",
+  "sha256": "d0c82104ae3822b83ab26daa1661ffb6c2058afd73bdb2eda6c0a08f54a2e200",
+  "rejected_downloads": [],
+  "spots_absent_from_fastq": 0,
+  "summary": {
+    "records": 531979,
+    "bases": 1061101175,
+    "read_unit_counts": {
+      "other_name": 531979
+    },
+    "distinct_zmws": null,
+    "distinct_sra_spots": 531979,
+    "max_records_per_spot": 1,
+    "placeholder_quality_records": 3,
+    "example_headers": [
+      "@ERR15686594.1 210efc95-d14c-420f-ad35-fb312cd0e204 qs:f:9.04959 st:Z:2025-05-22T10:10:47.516+00:00 RG:Z:3aae37f9735ba697147d3371420f6407c4034962_dna_r10.4.1_e8.2_400bps_sup@v5.0.0",
+      "@ERR15686594.2 a36a61ad-92ab-4178-8e70-0e229ce10bd6 qs:f:20.7376 st:Z:2025-05-22T15:45:40.193+00:00 RG:Z:3aae37f9735ba697147d3371420f6407c4034962_dna_r10.4.1_e8.2_400bps_sup@v5.0.0",
+      "@ERR15686594.3 a9773899-695e-4650-8e7f-b24cda36d4c2 qs:f:27.9455 st:Z:2025-05-22T15:36:29.694+00:00 RG:Z:3aae37f9735ba697147d3371420f6407c4034962_dna_r10.4.1_e8.2_400bps_sup@v5.0.0",
+      "@ERR15686594.4 df1dcf2b-f9c1-42ae-a9bc-6b2b4c05e651 qs:f:33.5519 st:Z:2025-05-22T15:35:59.065+00:00 RG:Z:3aae37f9735ba697147d3371420f6407c4034962_dna_r10.4.1_e8.2_400bps_sup@v5.0.0"
+    ],
+    "mean_length": 1994.6,
+    "median_length": 442,
+    "max_length": 1058073,
+    "n50": 5070,
+    "molecule_grouping": "one_record_per_molecule"
+  },
+  "checks": {
+    "bytes_match": true,
+    "md5_match": true,
+    "spot_count_match": true,
+    "base_count_match": true
+  },
+  "status": "verified"
+}

@@ -1,0 +1,1222 @@
+pair_id	pilot_reason	reasons	ani	same_bioproject	organism_a	organism_b	calls	loci	anchored	anchored_lt2500	anchored_tandem	replacement	unresolved	one_flank
+P00001	all	nearest_other_species	88.35	False	Serpentinimonas raichei	Serpentinimonas maccroryi	1778	1053	32	23	0	109	912	46
+P00002	all	nearest_other_species	93.25	False	Serpentinimonas maccroryi	Serpentinimonas sp. SMBJO2	1122	669	113	92	1	135	421	49
+P00003	all	species_neighbour	98.03	False	Serpentinimonas maccroryi	Serpentinimonas sp. SSL01	426	215	60	42	2	51	104	3
+P00004	all	nearest_other_species	84.21	False	Comamonas terrigena NBRC 13299	Comamonas aquatica	1327	821	4	1	0	63	754	537
+P00005	all	clone_partner	99.99	False	Comamonas terrigena NBRC 13299	Comamonas terrigena	16	8	1	1	1	0	7	0
+P00006	all	nearest_other_species	84.59	False	Comamonas terrigena NBRC 13299	Comamonas sp. GB3 AK4-5	2171	1195	15	3	0	91	1089	34
+P00007	all	audit_multi_project_all_vs_all	95.53	False	Comamonas thiooxydans	Comamonas thiooxydans	841	437	114	70	2	119	204	37
+P00008	all	audit_multi_project_all_vs_all;species_neighbour	98.48	False	Comamonas thiooxydans	Comamonas testosteroni	251	154	43	25	2	38	73	19
+P00009	all	audit_multi_project_all_vs_all	95.51	False	Comamonas thiooxydans	Comamonas thiooxydans	758	387	94	60	2	109	184	30
+P00010	all	audit_multi_project_all_vs_all;species_neighbour	95.89	False	Comamonas thiooxydans	Comamonas thiooxydans	770	397	112	68	3	94	191	22
+P00011	all	audit_multi_project_all_vs_all	93.95	False	Comamonas thiooxydans	Comamonas testosteroni	1023	530	141	89	1	130	259	23
+P00012	all	audit_multi_project_all_vs_all;species_neighbour	95.94	False	Comamonas thiooxydans	Comamonas thiooxydans	757	390	111	69	3	108	171	24
+P00013	all	audit_multi_project_all_vs_all	95.36	False	Comamonas thiooxydans	Comamonas thiooxydans	753	390	112	65	3	107	171	39
+P00014	all	audit_multi_project_all_vs_all	95.5	False	Comamonas thiooxydans	Comamonas thiooxydans	758	388	92	59	1	109	187	20
+P00015	all	audit_multi_project_all_vs_all	95.57	False	Comamonas thiooxydans	Comamonas thiooxydans	804	414	123	73	3	114	177	30
+P00016	all	audit_multi_project_all_vs_all	94.05	False	Comamonas thiooxydans	Comamonas testosteroni	951	487	127	78	2	124	236	15
+P00017	all	audit_multi_project_all_vs_all	95.56	False	Comamonas thiooxydans	Comamonas thiooxydans	808	418	114	69	4	100	204	32
+P00018	all	audit_multi_project_all_vs_all	95.34	False	Comamonas thiooxydans	Comamonas sp. 7D-2	779	405	104	64	3	114	187	35
+P00019	all	audit_multi_project_all_vs_all	95.48	False	Comamonas thiooxydans	Comamonas sp. 7D-2evo1	765	438	115	71	3	117	206	41
+P00020	all	audit_multi_project_all_vs_all	95.34	False	Comamonas thiooxydans	Comamonas sp. 7D-2evo2	765	440	113	68	3	113	214	41
+P00021	all	audit_multi_project_all_vs_all	93.95	False	Comamonas thiooxydans	Comamonas sp. C11	1015	519	121	75	2	132	266	43
+P00022	all	nearest_other_species	93.28	False	Comamonas thiooxydans	Comamonas testosteroni	1117	570	127	75	3	132	311	17
+P00023	all	audit_multi_project_all_vs_all	95.54	False	Comamonas thiooxydans	Comamonas thiooxydans	769	400	99	65	2	111	190	26
+P00024	all	audit_multi_project_all_vs_all	95.85	False	Comamonas thiooxydans	Comamonas thiooxydans	815	439	123	82	9	123	193	22
+P00025	all	audit_multi_project_all_vs_all	94.8	False	Comamonas thiooxydans	Comamonas testosteroni	947	486	105	70	2	128	253	16
+P00026	all	nearest_other_species	80.97	False	Alicycliphilus denitrificans	Pseudorhodoferax sp. LjRoot39	816	524	7	6	0	14	503	141
+P00027	all	species_neighbour	96.32	False	Alicycliphilus denitrificans	Alicycliphilus denitrificans BC	1007	505	227	174	1	74	204	6
+P00028	all	species_neighbour	95.97	False	Alicycliphilus denitrificans	Alicycliphilus denitrificans	1028	530	224	173	1	74	232	14
+P00029	all	nearest_other_species	86.63	False	Alicycliphilus denitrificans	Diaphorobacter sp. ED-3	2250	1243	58	23	0	75	1110	64
+P00030	all	nearest_other_species	88.4	False	Alicycliphilus denitrificans	Alicycliphilus denitrificans	1649	970	93	58	0	107	770	70
+P00031	all	nearest_other_species	88.17	False	Alicycliphilus denitrificans	Alicycliphilus soli	1895	1183	61	33	0	89	1033	64
+P00032	all	species_neighbour	98.7	False	Alicycliphilus denitrificans	Alicycliphilus denitrificans	473	240	138	94	0	30	72	8
+P00033	all	species_neighbour	98.88	False	Delftia lacustris	Delftia tsuruhatensis	476	249	83	66	2	75	91	10
+P00034	all	distance_tier_ani_95_97	95.49	False	Delftia lacustris	Delftia acidovorans	1484	761	161	123	0	151	449	10
+P00035	all	nearest_other_species	90.26	False	Delftia lacustris	Delftia tsuruhatensis	2659	1381	126	87	0	160	1095	12
+P00036	all	species_neighbour	99.89	False	Delftia lacustris	Delftia lacustris	86	46	20	10	2	10	16	14
+P00037	all	species_neighbour	98.57	False	Delftia lacustris	Delftia sp. DS1230	566	292	101	77	3	71	120	12
+P00038	all	species_neighbour	99.82	False	Delftia lacustris	Delftia sp. 11MD	84	44	18	9	2	10	16	12
+P00039	all	nearest_other_species	84.98	False	Delftia lacustris	Comamonas terrae	2272	1633	24	10	0	115	1494	91
+P00040	all	nearest_other_species	85.06	False	Delftia lacustris	Comamonas terrae	2281	1249	22	7	0	93	1134	92
+P00041	all	audit_multi_project_all_vs_all	95.52	False	Comamonas thiooxydans	Comamonas testosteroni	809	485	136	92	5	125	224	40
+P00042	all	audit_multi_project_all_vs_all	97.31	False	Comamonas thiooxydans	Comamonas thiooxydans	543	283	97	55	5	68	118	30
+P00043	all	audit_multi_project_all_vs_all;species_neighbour	98.37	False	Comamonas thiooxydans	Comamonas thiooxydans	332	173	66	39	3	33	74	22
+P00044	all	nearest_other_species	92.78	False	Comamonas thiooxydans	Comamonas testosteroni TK102	1187	616	114	68	3	128	374	14
+P00045	all	audit_multi_project_all_vs_all	94.64	False	Comamonas thiooxydans	Comamonas testosteroni	997	515	143	91	3	116	256	31
+P00046	all	audit_multi_project_all_vs_all;species_neighbour	98.61	False	Comamonas thiooxydans	Comamonas thiooxydans	387	200	89	64	6	39	72	22
+P00047	all	audit_multi_project_all_vs_all	98.02	False	Comamonas thiooxydans	Comamonas thiooxydans	357	187	75	53	5	41	71	23
+P00048	all	audit_multi_project_all_vs_all	97.38	False	Comamonas thiooxydans	Comamonas thiooxydans	550	286	96	56	6	70	120	26
+P00049	all	audit_multi_project_all_vs_all	96.99	False	Comamonas thiooxydans	Comamonas thiooxydans	604	313	108	67	0	77	128	21
+P00050	all	audit_multi_project_all_vs_all	94.49	False	Comamonas thiooxydans	Comamonas testosteroni	964	497	129	79	3	107	261	29
+P00051	all	audit_multi_project_all_vs_all	98.11	False	Comamonas thiooxydans	Comamonas thiooxydans	372	192	76	52	7	36	80	20
+P00052	all	audit_multi_project_all_vs_all	97.03	False	Comamonas thiooxydans	Comamonas sp. 7D-2	541	286	101	60	1	78	107	21
+P00053	all	audit_multi_project_all_vs_all	97.08	False	Comamonas thiooxydans	Comamonas sp. 7D-2evo1	547	319	108	63	2	83	128	22
+P00054	all	audit_multi_project_all_vs_all;species_neighbour	97.18	False	Comamonas thiooxydans	Comamonas sp. 7D-2evo2	552	327	110	65	2	84	133	22
+P00055	all	audit_multi_project_all_vs_all	94.73	False	Comamonas thiooxydans	Comamonas sp. C11	996	510	126	81	1	120	264	28
+P00056	all	nearest_other_species	93.8	False	Comamonas thiooxydans	Comamonas testosteroni	1033	529	142	86	5	120	267	14
+P00057	all	audit_multi_project_all_vs_all	96.85	False	Comamonas thiooxydans	Comamonas thiooxydans	528	274	87	53	3	75	112	4
+P00058	all	audit_multi_project_all_vs_all;species_neighbour	98.5	False	Comamonas thiooxydans	Comamonas thiooxydans	428	221	92	64	10	59	70	25
+P00059	all	audit_multi_project_all_vs_all	94.83	False	Comamonas thiooxydans	Comamonas testosteroni	925	479	123	83	4	111	245	11
+P00060	all	nearest_other_species	89.03	True	Limnohabitans sp. INBF002	Limnohabitans sp. TEGF004	960	498	18	16	0	36	444	6
+P00061	all	nearest_other_species	84.23	False	Limnohabitans sp. INBF002	Limnohabitans kasalickyi (SeqCode)	1034	660	11	7	0	35	614	64
+P00062	all	nearest_other_species	86.34	True	Limnohabitans sp. TEGF004	Limnohabitans sp. MORI2	1030	642	14	13	0	27	601	14
+P00063	all	distance_tier_no_skani_output_same_genus	no_skani	False	Limnohabitans sp. TEGF004	Limnohabitans rimovensis (SeqCode)	62	34	0	0	0	1	33	102
+P00064	all	nearest_other_species	92.33	False	Comamonadaceae bacterium OS-1	Rhodoferax sp. WC2427	1548	792	115	95	0	110	567	8
+P00065	all	nearest_other_species	85.96	False	Comamonadaceae bacterium OS-4	Rhodoferax mekongensis	1295	897	31	22	0	70	796	13
+P00066	all	nearest_other_species	90.33	False	Delftia tsuruhatensis	Delftia tsuruhatensis	2635	1364	124	87	1	161	1079	6
+P00067	all	species_neighbour	98.67	False	Delftia tsuruhatensis	Delftia tsuruhatensis	499	263	86	62	1	68	109	19
+P00068	all	species_neighbour	98.65	False	Delftia tsuruhatensis	Delftia tsuruhatensis	613	315	101	66	0	64	150	1
+P00069	all	species_neighbour	98.84	False	Delftia tsuruhatensis	Delftia lacustris	484	249	86	56	2	55	108	1
+P00070	all	species_neighbour	98.73	False	Delftia tsuruhatensis	Delftia sp. WY8	572	292	96	65	0	66	130	7
+P00071	all	species_neighbour	98.99	False	Delftia tsuruhatensis	Delftia lacustris	399	205	71	54	1	51	83	9
+P00072	all	species_neighbour	98.92	False	Delftia tsuruhatensis	Delftia tsuruhatensis	439	228	90	69	3	45	93	2
+P00073	all	species_neighbour	98.65	False	Delftia tsuruhatensis	Delftia sp. UGAL515B_04	575	295	94	65	0	68	133	3
+P00074	all	species_neighbour	98.77	False	Delftia tsuruhatensis	Delftia tsuruhatensis	476	242	87	60	3	55	100	2
+P00075	all	species_neighbour	98.82	False	Delftia tsuruhatensis	Delftia tsuruhatensis	432	257	94	68	1	60	103	36
+P00076	all	species_neighbour	98.77	False	Delftia tsuruhatensis	Delftia tsuruhatensis	506	289	96	73	1	79	114	20
+P00077	all	species_neighbour	98.84	False	Delftia tsuruhatensis	Delftia tsuruhatensis	435	224	96	70	2	55	73	8
+P00078	all	species_neighbour	98.82	False	Delftia tsuruhatensis	Delftia lacustris	480	250	82	65	2	72	96	12
+P00079	all	species_neighbour	98.69	False	Delftia tsuruhatensis	Delftia lacustris	543	281	92	73	3	73	116	9
+P00080	all	species_neighbour	98.71	False	Delftia tsuruhatensis	Delftia sp. DS1230	520	265	83	60	1	69	113	0
+P00081	all	species_neighbour	98.47	False	Delftia tsuruhatensis	Delftia lacustris	640	325	92	66	1	75	158	0
+P00082	all	species_neighbour	98.87	False	Delftia tsuruhatensis	Delftia tsuruhatensis	442	231	97	79	2	53	81	18
+P00083	all	species_neighbour	98.91	False	Delftia tsuruhatensis	Delftia sp. PX-1	450	261	83	58	2	66	112	15
+P00084	all	species_neighbour	98.82	False	Delftia tsuruhatensis	Delftia sp. 11MD	476	249	83	66	1	73	93	12
+P00085	all	species_neighbour	98.83	False	Delftia tsuruhatensis	Delftia tsuruhatensis	458	273	108	84	3	62	103	34
+P00086	all	species_neighbour	98.81	False	Delftia tsuruhatensis	Delftia lacustris	498	297	93	63	4	73	131	0
+P00087	all	species_neighbour	98.72	False	Delftia tsuruhatensis	Delftia tsuruhatensis	575	289	98	76	0	61	130	1
+P00088	all	species_neighbour	98.85	False	Delftia tsuruhatensis	Delftia tsuruhatensis	480	244	95	69	3	66	83	4
+P00089	all	clone_partner	100.0	True	Variovorax sp. V11	Variovorax sp. V93	0	0	0	0	0	0	0	0
+P00090	all	nearest_other_species	93.9	False	Variovorax sp. V11	Variovorax beijingensis	1658	846	268	216	0	146	432	43
+P00091	all	species_neighbour	95.69	False	Variovorax sp. V11	Variovorax sp. CF057	1152	581	200	168	3	94	287	50
+P00092	all	species_neighbour	95.7	False	Variovorax sp. V11	Variovorax sp. CF130	1147	602	204	169	3	97	301	48
+P00093	all	species_neighbour	95.7	False	Variovorax sp. V11	Variovorax sp. CF381	1211	617	206	175	1	90	321	48
+P00094	all	species_neighbour	98.28	False	Variovorax sp. V15	Variovorax sp. 278MFTsu5.1	593	322	116	90	4	81	125	15
+P00095	all	species_neighbour	98.45	False	Variovorax sp. V15	Variovorax sp. 350MFTsu5.1	535	290	117	84	4	60	113	6
+P00096	all	species_neighbour	98.27	False	Variovorax sp. V15	Variovorax sp. 375MFSha3.1	616	335	118	89	4	81	136	17
+P00097	all	nearest_other_species	94.31	False	Variovorax sp. V15	Variovorax sp. TLI9-5A	1629	837	189	157	5	208	440	43
+P00098	all	species_neighbour	98.69	False	Variovorax sp. V116	Variovorax paradoxus	402	208	97	82	4	33	78	21
+P00099	all	species_neighbour	98.97	False	Variovorax sp. V116	Variovorax paradoxus	327	170	70	52	1	29	71	25
+P00100	all	species_neighbour	98.77	False	Variovorax sp. V116	Variovorax paradoxus	406	211	100	75	2	32	79	14
+P00101	all	nearest_other_species	93.9	False	Variovorax sp. V116	Variovorax beijingensis	1640	842	272	216	1	137	433	87
+P00102	all	nearest_other_species	88.93	False	Variovorax sp. V116	Variovorax sp. TBS-050B	2643	1540	104	85	1	162	1274	108
+P00103	all	species_neighbour	98.51	False	Variovorax sp. V116	Variovorax paradoxus NBRC 15149	446	237	102	83	3	38	97	12
+P00104	all	species_neighbour	97.61	True	Variovorax sp. V118	Variovorax sp. V35	635	362	141	114	1	66	155	19
+P00105	all	species_neighbour	97.61	True	Variovorax sp. V118	Variovorax sp. V77	635	362	141	114	1	66	155	20
+P00106	all	nearest_other_species	94.88	False	Variovorax sp. V118	Variovorax sp. 54	1549	875	299	241	0	160	416	51
+P00107	all	species_neighbour	97.41	False	Variovorax sp. V118	Variovorax sp. KBS0712	744	384	158	124	3	67	159	42
+P00108	all	species_neighbour	97.48	False	Variovorax sp. V118	Variovorax sp. YB-TT-C68	576	318	136	111	2	62	120	31
+P00109	all	nearest_other_species	94.17	False	Variovorax sp. V213	Variovorax paradoxus NBRC 15149	1301	696	238	212	2	114	344	92
+P00110	all	nearest_other_species	94.47	False	Variovorax sp. V213	Variovorax sp. CF153	1261	734	204	184	2	111	419	74
+P00111	all	distance_tier_ani_90_95	90.64	False	Variovorax sp. V213	Variovorax sp. CF247	1691	1058	162	133	0	134	762	107
+P00112	all	clone_partner	100.0	True	Variovorax sp. V35	Variovorax sp. V77	0	0	0	0	0	0	0	0
+P00113	all	nearest_other_species	94.79	False	Variovorax sp. V35	Variovorax sp. 54	1591	850	273	219	0	152	425	48
+P00114	all	species_neighbour	97.42	False	Variovorax sp. V35	Variovorax boronicumulans	638	364	151	115	0	60	153	30
+P00115	all	species_neighbour	97.44	False	Variovorax sp. V35	Variovorax sp. YB-TT-C68	663	344	137	111	1	68	139	24
+P00116	all	clone_partner	100.0	True	Variovorax sp. V59	Variovorax sp. V93	0	0	0	0	0	0	0	0
+P00117	all	distance_tier_ani_90_95	94.61	False	Variovorax sp. V59	Variovorax paradoxus	1571	803	263	220	2	110	430	24
+P00118	all	nearest_other_species	93.98	False	Variovorax sp. V59	Variovorax beijingensis	1649	866	278	224	0	151	437	43
+P00119	all	species_neighbour	95.69	False	Variovorax sp. V59	Variovorax sp. CF057	1147	604	206	171	3	99	299	50
+P00120	all	species_neighbour	95.7	False	Variovorax sp. V59	Variovorax sp. CF130	1142	574	204	169	3	96	274	48
+P00121	all	species_neighbour	95.7	False	Variovorax sp. V59	Variovorax sp. CF381	1200	639	213	177	1	97	329	46
+P00122	all	nearest_other_species	93.98	False	Variovorax sp. V93	Variovorax beijingensis	1649	866	270	218	0	154	442	43
+P00123	all	species_neighbour	95.69	False	Variovorax sp. V93	Variovorax sp. CF057	1147	604	204	170	3	100	300	50
+P00124	all	species_neighbour	95.7	False	Variovorax sp. V93	Variovorax sp. CF130	1142	574	202	168	3	97	275	48
+P00125	all	species_neighbour	95.7	False	Variovorax sp. V93	Variovorax sp. CF381	1200	639	210	176	1	98	331	46
+P00126	all	nearest_other_species	94.79	False	Variovorax sp. V77	Variovorax sp. 54	1591	850	273	219	0	152	425	48
+P00127	all	species_neighbour	97.42	False	Variovorax sp. V77	Variovorax boronicumulans	638	364	151	115	0	60	153	31
+P00128	all	species_neighbour	97.44	False	Variovorax sp. V77	Variovorax sp. YB-TT-C68	663	344	137	111	1	68	139	25
+P00129	all	nearest_other_species	86.19	False	Acidovorax sp. A79	Acidovorax sp. LjRoot118	3202	2310	46	31	0	210	2054	86
+P00130	all	nearest_other_species	86.16	False	Acidovorax sp. A79	Acidovorax sp. LjRoot66	3233	1768	42	24	0	174	1552	90
+P00131	all	nearest_other_species	89.0	False	Acidovorax sp. A79	Acidovorax radicis N35	3017	1662	57	41	1	233	1372	39
+P00132	all	species_neighbour	98.78	False	Acidovorax sp. A79	Acidovorax sp. GW823-FHT05D11	367	190	51	33	1	58	81	17
+P00133	all	nearest_other_species	85.97	False	Acidovorax sp. DW039	Acidovorax sp. 1608163	2672	1854	44	32	0	177	1633	60
+P00134	all	nearest_other_species	87.09	True	Limnohabitans sp. INBF003	Limnohabitans sp. TEGF003	1587	936	34	21	0	69	833	28
+P00135	all	nearest_other_species	86.89	True	Limnohabitans sp. INBF003	Limnohabitans sp. TEGF005	1358	790	9	6	0	49	732	36
+P00136	all	clone_partner	100.0	True	Limnohabitans sp. INBF004	Limnohabitans sp. TEGF002	6	3	3	1	0	0	0	0
+P00137	all	nearest_other_species	87.48	True	Limnohabitans sp. INBF004	Limnohabitans sp. TEGF003	1431	884	33	24	0	69	782	24
+P00138	all	nearest_other_species	87.16	False	Limnohabitans sp. INBF004	Limnohabitans sp. 63ED37-2	1071	688	15	13	0	43	630	64
+P00139	all	nearest_other_species	87.34	True	Limnohabitans sp. TEGF002	Limnohabitans sp. TEGF003	1432	884	35	25	0	66	783	24
+P00140	all	nearest_other_species	93.26	False	Limnohabitans sp. TEGF003	Limnohabitans sp. YIMB22184	1148	646	74	54	0	100	472	26
+P00141	all	clone_partner	100.0	True	Acidovorax sacchari	Acidovorax sacchari	0	0	0	0	0	0	0	0
+P00142	all	nearest_other_species	94.41	False	Acidovorax sacchari	Paracidovorax avenae	1357	833	173	125	0	180	480	10
+P00143	all	nearest_other_species	94.24	False	Acidovorax sacchari	Paracidovorax avenae ATCC 19860	1372	697	152	113	1	162	383	0
+P00144	all	nearest_other_species	93.84	False	Acidovorax sacchari	Paracidovorax citrulli AAC00-1	1795	982	180	140	2	200	602	30
+P00145	all	nearest_other_species	94.17	False	Acidovorax sacchari	Paracidovorax citrulli	1848	944	165	130	2	190	589	13
+P00146	all	nearest_other_species	93.94	False	Acidovorax sacchari	Paracidovorax avenae	1347	827	204	157	3	184	439	2
+P00147	all	nearest_other_species	94.41	False	Acidovorax sacchari	Paracidovorax avenae	1357	835	186	132	0	183	466	10
+P00148	all	nearest_other_species	94.01	False	Acidovorax sacchari	Paracidovorax citrulli	1796	1071	195	155	2	206	670	23
+P00149	all	nearest_other_species	93.9	False	Acidovorax sacchari	Paracidovorax citrulli	1792	976	178	140	2	199	599	39
+P00150	all	nearest_other_species	93.92	False	Acidovorax sacchari	Paracidovorax citrulli	1806	1098	193	152	1	214	691	39
+P00151	all	nearest_other_species	93.85	False	Acidovorax sacchari	Paracidovorax citrulli	1806	1098	193	152	1	214	691	39
+P00152	all	nearest_other_species	93.82	False	Acidovorax sacchari	Paracidovorax citrulli	1803	1161	202	161	2	227	732	13
+P00153	all	nearest_other_species	94.15	False	Acidovorax sacchari	Paracidovorax citrulli	1841	949	164	128	1	187	598	13
+P00154	all	nearest_other_species	94.13	False	Acidovorax sacchari	Paracidovorax citrulli	1833	1032	175	137	1	213	644	19
+P00155	all	nearest_other_species	94.21	False	Acidovorax sacchari	Paracidovorax citrulli	1836	1169	197	155	1	240	732	12
+P00156	all	nearest_other_species	94.25	False	Acidovorax sacchari	Paracidovorax citrulli	1858	957	165	129	1	194	598	12
+P00157	all	nearest_other_species	93.87	False	Acidovorax sacchari	Acidovorax sp. NCPPB 3859	1401	711	177	142	0	148	386	2
+P00158	all	nearest_other_species	94.13	False	Acidovorax sacchari	Acidovorax sp. GBBC 712	1409	715	174	137	0	145	396	2
+P00159	all	nearest_other_species	94.01	False	Acidovorax sacchari	Paracidovorax citrulli	1831	1165	193	149	1	231	741	12
+P00160	all	nearest_other_species	94.02	False	Acidovorax sacchari	Paracidovorax citrulli	1804	1161	202	160	3	227	732	12
+P00161	all	nearest_other_species	93.7	False	Acidovorax sacchari	Paracidovorax citrulli	1805	919	174	136	2	186	559	13
+P00162	all	nearest_other_species	94.02	False	Acidovorax sacchari	Paracidovorax citrulli	1804	1161	202	161	3	227	732	13
+P00163	all	nearest_other_species	94.1	False	Acidovorax sacchari	Paracidovorax citrulli	1817	925	160	127	2	187	578	12
+P00164	all	nearest_other_species	93.91	False	Acidovorax sacchari	Paracidovorax citrulli	1804	918	173	136	3	187	558	13
+P00165	all	audit_multi_project_all_vs_all	95.46	False	Comamonas testosteroni	Comamonas thiooxydans	777	491	107	76	1	129	255	26
+P00166	all	audit_multi_project_all_vs_all	95.68	False	Comamonas testosteroni	Comamonas thiooxydans	753	458	108	72	1	112	238	29
+P00167	all	audit_multi_project_all_vs_all	94.59	False	Comamonas testosteroni	Comamonas testosteroni	982	596	141	95	0	155	300	31
+P00168	all	audit_multi_project_all_vs_all;species_neighbour	95.98	False	Comamonas testosteroni	Comamonas thiooxydans	763	463	123	83	2	129	211	18
+P00169	all	audit_multi_project_all_vs_all	95.53	False	Comamonas testosteroni	Comamonas thiooxydans	746	453	120	79	2	123	210	24
+P00170	all	audit_multi_project_all_vs_all	95.49	False	Comamonas testosteroni	Comamonas thiooxydans	775	489	105	75	1	129	255	20
+P00171	all	audit_multi_project_all_vs_all	95.38	False	Comamonas testosteroni	Comamonas thiooxydans	785	469	122	79	3	126	221	23
+P00172	all	audit_multi_project_all_vs_all	94.21	False	Comamonas testosteroni	Comamonas testosteroni	946	577	129	86	4	154	294	19
+P00173	all	audit_multi_project_all_vs_all	95.36	False	Comamonas testosteroni	Comamonas thiooxydans	813	495	122	78	5	124	249	25
+P00174	all	audit_multi_project_all_vs_all	95.49	False	Comamonas testosteroni	Comamonas sp. 7D-2	736	446	98	66	3	115	233	35
+P00175	all	audit_multi_project_all_vs_all	95.52	False	Comamonas testosteroni	Comamonas sp. 7D-2evo1	730	389	96	63	0	105	188	40
+P00176	all	audit_multi_project_all_vs_all	95.69	False	Comamonas testosteroni	Comamonas sp. 7D-2evo2	730	389	97	62	0	106	186	40
+P00177	all	audit_multi_project_all_vs_all	94.49	False	Comamonas testosteroni	Comamonas sp. C11	958	583	127	83	3	150	306	33
+P00178	all	nearest_other_species	93.61	False	Comamonas testosteroni	Comamonas testosteroni	1073	654	133	83	4	149	372	8
+P00179	all	audit_multi_project_all_vs_all	95.66	False	Comamonas testosteroni	Comamonas thiooxydans	732	448	98	64	2	118	232	25
+P00180	all	audit_multi_project_all_vs_all;species_neighbour	95.76	False	Comamonas testosteroni	Comamonas thiooxydans	830	489	134	94	7	137	218	32
+P00181	all	audit_multi_project_all_vs_all	94.65	False	Comamonas testosteroni	Comamonas testosteroni	902	543	111	78	3	150	282	18
+P00182	all	species_neighbour	96.28	False	Variovorax endophyticus	Variovorax paradoxus	1869	947	343	273	0	165	439	61
+P00183	all	nearest_other_species	87.95	False	Variovorax endophyticus	Variovorax sp. TBS-050B	3300	2037	101	78	0	197	1739	171
+P00184	all	species_neighbour	97.4	False	Variovorax endophyticus	Variovorax sp. DAIF25	1258	658	287	200	0	111	260	66
+P00185	all	species_neighbour	96.27	False	Variovorax endophyticus	Variovorax sp. Varisp41	1711	1016	326	241	0	164	526	77
+P00186	all	species_neighbour	96.45	False	Variovorax endophyticus	Variovorax sp. UC122_21	1846	1041	390	310	0	180	471	53
+P00187	all	nearest_other_species	83.29	False	Ottowia pentelensis	Ottowia sp. SB7-C50	1465	910	6	2	0	48	856	54
+P00188	all	nearest_other_species	94.88	True	Acidovorax sp. LjRoot117	Acidovorax sp. LjRoot194	1846	1058	108	87	5	260	690	128
+P00189	all	species_neighbour	98.41	False	Acidovorax sp. LjRoot117	Acidovorax sp.	589	317	77	61	9	114	126	101
+P00190	all	species_neighbour	97.31	True	Acidovorax sp. LjRoot118	Acidovorax sp. LjRoot66	1003	597	143	115	0	136	318	58
+P00191	all	species_neighbour	97.48	False	Acidovorax sp. LjRoot118	Acidovorax sp.	1030	526	134	111	0	119	273	13
+P00192	all	nearest_other_species	88.44	True	Acidovorax sp. LjRoot129	Acidovorax sp. LjRoot194	3501	2134	49	37	0	263	1822	45
+P00193	all	species_neighbour	98.1	True	Variovorax sp. LjRoot130	Variovorax sp. LjRoot175	766	412	206	155	2	71	135	96
+P00194	all	species_neighbour	97.95	True	Variovorax sp. LjRoot130	Variovorax sp. LjRoot178	629	351	177	134	1	55	119	285
+P00195	all	species_neighbour	99.27	True	Variovorax sp. LjRoot130	Variovorax sp. LjRoot290	327	175	103	76	1	24	48	24
+P00196	all	species_neighbour	98.08	True	Variovorax sp. LjRoot130	Variovorax sp. LjRoot84	684	366	192	144	1	62	112	102
+P00197	all	nearest_other_species	85.97	False	Variovorax sp. LjRoot130	Variovorax sp. RA8	2332	1402	85	69	1	112	1205	188
+P00198	all	nearest_other_species	87.43	False	Polaromonas sp. LjRoot131	Polaromonas sp. SP1	2602	1721	30	24	0	141	1550	96
+P00199	all	nearest_other_species	87.54	False	Polaromonas sp. LjRoot131	Polaromonas sp. Pch-P	2585	1473	30	24	0	126	1317	97
+P00200	all	nearest_other_species	90.75	False	Polaromonas sp. LjRoot131	Polaromonas sp. Polasp52	2040	1179	65	52	0	166	948	88
+P00201	all	nearest_other_species	86.41	False	Polaromonas sp. LjRoot131	Polaromonas aquatica	2619	1559	29	23	0	98	1432	101
+P00202	all	species_neighbour	98.56	True	Variovorax paradoxus	Variovorax paradoxus	457	239	102	83	3	40	97	12
+P00203	all	species_neighbour	98.9	True	Variovorax paradoxus	Variovorax paradoxus	321	167	80	68	2	24	63	6
+P00204	all	species_neighbour	99.04	True	Variovorax paradoxus	Variovorax paradoxus	296	149	71	57	2	23	55	7
+P00205	all	species_neighbour	98.99	True	Variovorax paradoxus	Variovorax paradoxus	280	140	75	56	2	25	40	3
+P00206	all	distance_tier_ani_90_95;nearest_other_species	93.85	False	Variovorax paradoxus	Variovorax beijingensis	1649	882	295	232	2	139	448	70
+P00207	all	species_neighbour	98.45	False	Variovorax paradoxus	Variovorax paradoxus	430	224	94	67	3	45	85	22
+P00208	all	species_neighbour	98.45	False	Variovorax paradoxus	Variovorax paradoxus	426	222	95	69	3	45	82	22
+P00209	all	species_neighbour	98.45	False	Variovorax paradoxus	Variovorax paradoxus	428	223	94	66	3	45	84	22
+P00210	all	species_neighbour	98.68	False	Variovorax paradoxus	Variovorax paradoxus NBRC 15149	388	195	97	79	3	33	65	6
+P00211	all	species_neighbour	98.42	True	Variovorax paradoxus	Variovorax paradoxus	456	234	100	76	2	41	93	13
+P00212	all	species_neighbour	98.71	True	Variovorax paradoxus	Variovorax paradoxus	378	193	88	70	1	31	74	2
+P00213	all	species_neighbour	98.42	True	Variovorax paradoxus	Variovorax paradoxus	416	224	97	77	3	44	83	6
+P00214	all	nearest_other_species	93.86	False	Variovorax paradoxus	Variovorax beijingensis	1585	816	269	215	0	138	409	76
+P00215	all	species_neighbour	97.61	True	Acidovorax delafieldii	Acidovorax delafieldii	456	248	63	48	0	80	105	48
+P00216	all	species_neighbour	97.43	False	Acidovorax delafieldii	Acidovorax sp. 30	538	288	78	61	0	87	123	51
+P00217	all	species_neighbour	97.36	False	Acidovorax delafieldii	Acidovorax sp. 59	527	284	80	65	0	82	122	49
+P00218	all	species_neighbour	96.69	False	Acidovorax delafieldii	Acidovorax sp. 99	774	436	121	100	1	124	191	39
+P00219	all	nearest_other_species	92.81	False	Acidovorax delafieldii	Acidovorax delafieldii	1425	817	112	93	1	197	508	63
+P00220	all	species_neighbour	97.67	False	Acidovorax delafieldii	Acidovorax delafieldii	500	266	72	57	0	85	109	43
+P00221	all	species_neighbour	98.98	True	Variovorax paradoxus	Variovorax paradoxus	274	139	66	50	3	23	50	11
+P00222	all	species_neighbour	98.83	True	Variovorax paradoxus	Variovorax paradoxus	319	173	77	65	3	28	68	6
+P00223	all	species_neighbour	99.17	True	Variovorax paradoxus	Variovorax paradoxus	284	144	73	56	3	23	48	6
+P00224	all	species_neighbour	99.13	True	Variovorax paradoxus	Variovorax paradoxus	245	127	60	50	1	19	48	15
+P00225	all	nearest_other_species	93.63	False	Variovorax paradoxus	Variovorax beijingensis	1660	890	262	208	1	156	472	77
+P00226	all	species_neighbour	98.41	False	Variovorax paradoxus	Variovorax paradoxus	389	204	95	74	3	29	80	21
+P00227	all	species_neighbour	98.92	True	Variovorax sp. LjRoot175	Variovorax sp. LjRoot178	204	127	36	20	1	9	82	174
+P00228	all	species_neighbour	97.9	True	Variovorax sp. LjRoot175	Variovorax sp. LjRoot290	867	469	192	146	3	83	194	111
+P00229	all	species_neighbour	97.87	True	Variovorax sp. LjRoot175	Variovorax sp. LjRoot84	776	438	203	156	5	76	159	135
+P00230	all	nearest_other_species	85.69	False	Variovorax sp. LjRoot175	Variovorax sp. RA8	2446	1485	85	70	1	111	1289	231
+P00231	all	species_neighbour	97.86	True	Variovorax sp. LjRoot178	Variovorax sp. LjRoot84	681	382	179	135	2	67	136	386
+P00232	all	nearest_other_species	85.7	False	Variovorax sp. LjRoot178	Variovorax sp. RA8	2513	1536	86	72	0	113	1337	500
+P00233	all	species_neighbour	97.51	False	Acidovorax delafieldii	Acidovorax sp. 30	546	286	81	66	0	97	108	25
+P00234	all	species_neighbour	97.64	False	Acidovorax delafieldii	Acidovorax sp. 59	545	324	84	70	0	102	138	25
+P00235	all	nearest_other_species	87.14	False	Acidovorax delafieldii	Acidovorax sp. 69	2829	1839	52	31	0	135	1652	52
+P00236	all	species_neighbour	98.47	False	Acidovorax delafieldii	Acidovorax delafieldii	275	139	38	28	0	41	60	10
+P00237	all	nearest_other_species	92.85	False	Acidovorax delafieldii	Acidovorax sp. M14	1503	895	142	117	1	205	548	8
+P00238	all	nearest_other_species	94.83	False	Acidovorax sp. LjRoot194	Acidovorax sp.	1914	1048	99	75	3	268	681	28
+P00239	all	species_neighbour	98.56	True	Variovorax paradoxus	Variovorax paradoxus	465	243	114	86	1	35	94	19
+P00240	all	nearest_other_species	93.77	False	Variovorax paradoxus	Variovorax paradoxus B4	1652	853	290	224	2	131	432	80
+P00241	all	species_neighbour	98.07	True	Variovorax sp. LjRoot290	Variovorax sp. LjRoot84	730	405	186	140	2	59	160	140
+P00242	all	nearest_other_species	85.58	False	Variovorax sp. LjRoot290	Variovorax sp. RA8	2401	1441	81	64	1	108	1252	233
+P00243	all	species_neighbour	98.89	True	Variovorax paradoxus	Variovorax paradoxus	325	168	73	58	0	27	68	8
+P00244	all	species_neighbour	98.75	True	Variovorax paradoxus	Variovorax paradoxus	403	209	99	79	2	36	74	16
+P00245	all	nearest_other_species	93.87	False	Variovorax paradoxus	Variovorax paradoxus B4	1693	872	305	231	1	134	433	75
+P00246	all	species_neighbour	98.85	True	Variovorax paradoxus	Variovorax paradoxus	315	175	77	62	1	28	70	15
+P00247	all	species_neighbour	99.18	True	Variovorax paradoxus	Variovorax paradoxus	269	136	73	54	2	22	41	10
+P00248	all	species_neighbour	98.96	True	Variovorax paradoxus	Variovorax paradoxus	277	141	74	59	2	23	44	18
+P00249	all	nearest_other_species	93.83	False	Variovorax paradoxus	Variovorax beijingensis	1630	871	276	217	0	154	441	82
+P00250	all	species_neighbour	97.62	False	Acidovorax sp. LjRoot38	Acidovorax sp. 93	692	387	104	88	3	108	175	114
+P00251	all	species_neighbour	97.74	False	Acidovorax sp. LjRoot38	Acidovorax facilis	613	334	104	89	6	87	143	124
+P00252	all	species_neighbour	97.74	False	Acidovorax sp. LjRoot38	Acidovorax facilis	606	340	111	94	8	89	140	125
+P00253	all	species_neighbour	97.8	False	Acidovorax sp. LjRoot38	Acidovorax sp. NN32	696	372	95	78	4	98	179	98
+P00254	all	nearest_other_species	90.16	False	Acidovorax sp. LjRoot38	Acidovorax radicis N35	2569	1458	96	74	1	268	1094	176
+P00255	all	species_neighbour	98.83	True	Variovorax paradoxus	Variovorax paradoxus	310	174	77	66	2	31	66	17
+P00256	all	nearest_other_species	93.88	False	Variovorax paradoxus	Variovorax beijingensis	1631	841	261	212	1	149	431	77
+P00257	all	species_neighbour	98.4	False	Variovorax paradoxus	Variovorax paradoxus	380	192	87	71	3	32	73	22
+P00258	all	species_neighbour	98.4	False	Variovorax paradoxus	Variovorax paradoxus	380	192	87	70	3	32	73	22
+P00259	all	species_neighbour	97.27	False	Acidovorax sp. LjRoot66	Acidovorax sp.	1088	631	145	117	0	159	327	53
+P00260	all	species_neighbour	99.21	True	Variovorax paradoxus	Variovorax paradoxus	227	116	63	51	2	21	32	15
+P00261	all	nearest_other_species	93.88	False	Variovorax paradoxus	Variovorax beijingensis	1652	885	273	218	2	144	468	81
+P00262	all	species_neighbour	98.62	False	Variovorax paradoxus	Variovorax paradoxus NBRC 15149	394	200	94	77	2	42	64	5
+P00263	all	nearest_other_species	92.0	False	Acidovorax sp. LjRoot74	Acidovorax sp. GW101-3H11	2231	1193	107	90	0	240	846	24
+P00264	all	nearest_other_species	86.0	False	Variovorax sp. LjRoot84	Variovorax sp. RA8	2418	1458	91	73	1	107	1260	247
+P00265	all	nearest_other_species	93.77	False	Variovorax paradoxus	Variovorax beijingensis	1653	890	256	199	1	152	482	87
+P00266	all	nearest_other_species	79.4	False	Variovorax paradoxus	Rhodoferax sediminis	807	486	6	3	0	12	468	143
+P00267	all	nearest_other_species	77.52	True	Limnohabitans simekii (SeqCode)	Limnohabitans rimovensis (SeqCode)	251	151	1	1	0	5	145	157
+P00268	all	nearest_other_species	79.12	False	Hydrogenophaga miladensis (SeqCode)	Limnohabitans sp. 63ED37-2	235	156	0	0	0	8	148	68
+P00269	all	species_neighbour	95.77	False	Ottowia oryzae	Ottowia oryzae	1146	600	79	57	1	155	366	20
+P00270	all	nearest_other_species	82.6	False	Ottowia oryzae	Ottowia sp. SB7-C50	1456	888	12	3	0	52	824	70
+P00271	all	nearest_other_species	81.68	False	Polaromonas sp.	Polaromonas sp. UC242_47	1329	796	5	2	0	29	762	99
+P00272	all	clone_partner	100.0	False	Variovorax sp.	Variovorax sp.	0	0	0	0	0	0	0	0
+P00273	all	species_neighbour	98.01	False	Variovorax sp.	Variovorax gossypii	947	483	218	182	1	90	175	40
+P00274	all	species_neighbour	98.01	False	Variovorax sp.	Variovorax durovernensis	951	497	219	184	1	93	185	42
+P00275	all	species_neighbour	98.02	False	Variovorax sp.	Variovorax durovernensis	936	478	216	177	1	89	173	35
+P00276	all	species_neighbour	95.65	False	Variovorax sp.	Variovorax sp. PMC12	1248	631	238	208	0	120	273	19
+P00277	all	species_neighbour	95.6	False	Variovorax sp.	Variovorax sp. PDNC026	1237	699	246	214	0	146	307	19
+P00278	all	nearest_other_species	94.0	False	Variovorax sp.	Variovorax sp. SCN45	1692	973	278	220	2	165	530	20
+P00279	all	nearest_other_species	86.24	False	Acidovorax sp.	Acidovorax sp. GW823-FHT05D11	3319	2340	49	29	0	214	2077	71
+P00280	all	species_neighbour	98.08	False	Variovorax sp.	Variovorax gossypii	959	493	226	189	1	90	177	35
+P00281	all	species_neighbour	98.08	False	Variovorax sp.	Variovorax gossypii	938	492	215	181	1	95	182	47
+P00282	all	species_neighbour	98.08	False	Variovorax sp.	Variovorax durovernensis	936	478	217	178	1	89	172	35
+P00283	all	species_neighbour	95.77	False	Variovorax sp.	Variovorax sp. PMC12	1248	631	238	208	0	120	273	20
+P00284	all	nearest_other_species	89.54	False	Variovorax sp.	Variovorax sp. PAMC26660	2858	1767	130	112	0	173	1464	60
+P00285	all	species_neighbour	95.66	False	Variovorax sp.	Variovorax sp. PDNC026	1237	702	249	217	0	146	307	20
+P00286	all	nearest_other_species	94.0	False	Variovorax sp.	Variovorax sp. SCN45	1692	974	281	222	2	163	530	20
+P00287	all	clone_partner	100.0	False	Delftia acidovorans	Delftia acidovorans	2	1	0	0	0	0	1	0
+P00288	all	species_neighbour	98.3	False	Delftia acidovorans	Delftia acidovorans	715	417	148	114	3	83	186	8
+P00289	all	nearest_other_species	90.42	False	Delftia acidovorans	Delftia tsuruhatensis	2669	1835	145	103	0	199	1491	18
+P00290	all	distance_tier_ani_97_99	97.69	False	Delftia acidovorans	Delftia acidovorans	920	547	176	124	6	113	258	9
+P00291	all	species_neighbour	98.3	False	Delftia acidovorans	Delftia acidovorans	638	325	129	99	3	66	130	2
+P00292	all	species_neighbour	98.26	False	Delftia acidovorans	Delftia acidovorans	678	386	137	107	5	84	165	3
+P00293	all	species_neighbour	98.3	False	Delftia acidovorans	Delftia acidovorans	715	418	148	114	3	82	188	10
+P00294	all	nearest_other_species	90.42	False	Delftia acidovorans	Delftia tsuruhatensis	2698	1835	141	100	0	197	1497	23
+P00295	all	species_neighbour	98.3	False	Delftia acidovorans	Delftia acidovorans	638	325	129	99	3	65	131	4
+P00296	all	species_neighbour	98.26	False	Delftia acidovorans	Delftia acidovorans	678	387	135	107	5	85	167	4
+P00297	all	nearest_other_species	85.57	False	Hydrogenophaga sp.	Hydrogenophaga sp. GW460-11-11-14-LB1	1857	1110	23	16	0	41	1046	90
+P00298	all	clone_partner	100.0	True	Delftia acidovorans	Delftia acidovorans	0	0	0	0	0	0	0	0
+P00299	all	nearest_other_species	90.47	False	Delftia acidovorans	Delftia tsuruhatensis	2772	1452	130	91	0	161	1161	10
+P00300	all	species_neighbour	98.28	False	Delftia acidovorans	Delftia sp. HK171	657	385	136	107	3	90	159	0
+P00301	all	species_neighbour	98.3	False	Delftia acidovorans	Delftia acidovorans	666	335	112	88	3	78	145	0
+P00302	all	species_neighbour	98.29	False	Delftia acidovorans	Delftia acidovorans	682	346	110	84	4	86	150	2
+P00303	all	clone_partner	100.0	True	Delftia acidovorans	Delftia acidovorans	2	1	1	1	0	0	0	0
+P00304	all	nearest_other_species	90.5	False	Delftia acidovorans	Delftia tsuruhatensis	2752	1442	126	84	0	160	1156	26
+P00305	all	species_neighbour	98.29	False	Delftia acidovorans	Delftia sp. HK171	646	364	129	96	4	88	147	4
+P00306	all	species_neighbour	98.26	False	Delftia acidovorans	Delftia sp. 60	658	372	108	80	1	92	172	8
+P00307	all	species_neighbour	98.26	False	Delftia acidovorans	Delftia acidovorans	676	342	106	78	1	85	151	5
+P00308	all	nearest_other_species	90.5	False	Delftia acidovorans	Delftia tsuruhatensis	2752	1442	140	92	0	163	1139	26
+P00309	all	species_neighbour	98.29	False	Delftia acidovorans	Delftia sp. HK171	646	365	131	97	4	88	146	4
+P00310	all	species_neighbour	98.26	False	Delftia acidovorans	Delftia sp. 60	658	372	110	81	1	90	172	8
+P00311	all	distance_tier_ani_95_97	95.59	False	Delftia acidovorans	Delftia lacustris	1512	779	163	116	1	154	462	21
+P00312	all	species_neighbour	98.26	False	Delftia acidovorans	Delftia acidovorans	676	342	109	80	1	83	150	5
+P00313	all	nearest_other_species	85.04	False	Delftia acidovorans	Comamonas terrae	2451	1361	20	6	0	88	1253	93
+P00314	all	nearest_other_species	90.36	False	Delftia acidovorans	Delftia tsuruhatensis	2698	1410	140	99	0	169	1101	14
+P00315	all	species_neighbour	98.14	False	Delftia acidovorans	Delftia acidovorans	646	327	116	90	2	68	143	11
+P00316	all	species_neighbour	96.66	False	Delftia acidovorans	Delftia acidovorans	1363	688	199	146	2	135	354	6
+P00317	all	species_neighbour	98.01	False	Delftia acidovorans	Delftia acidovorans	767	453	155	121	1	86	212	8
+P00318	all	species_neighbour	98.37	False	Delftia acidovorans	Delftia acidovorans	647	325	138	100	3	69	118	6
+P00319	all	species_neighbour	98.01	False	Delftia acidovorans	Delftia acidovorans	756	384	144	111	1	75	165	8
+P00320	all	species_neighbour	98.32	False	Delftia acidovorans	Delftia acidovorans	656	332	128	100	3	76	128	4
+P00321	all	species_neighbour	98.39	False	Delftia acidovorans	Delftia acidovorans	661	333	121	93	5	86	126	2
+P00322	all	species_neighbour	98.01	False	Delftia acidovorans	Delftia acidovorans	756	384	145	111	1	74	165	8
+P00323	all	nearest_other_species	90.47	False	Delftia acidovorans	Delftia tsuruhatensis	2772	1452	130	91	0	161	1161	10
+P00324	all	species_neighbour	98.28	False	Delftia acidovorans	Delftia sp. HK171	657	385	136	107	3	90	159	0
+P00325	all	species_neighbour	98.3	False	Delftia acidovorans	Delftia acidovorans	666	335	112	88	3	78	145	0
+P00326	all	species_neighbour	98.29	False	Delftia acidovorans	Delftia acidovorans	682	346	110	84	4	86	150	2
+P00327	all	nearest_other_species	94.0	True	Variovorax beijingensis	Variovorax beijingensis	1640	842	282	233	0	133	427	55
+P00328	all	species_neighbour	99.64	False	Variovorax beijingensis	Variovorax paradoxus B4	250	127	72	55	1	7	48	8
+P00329	all	nearest_other_species	93.77	False	Variovorax beijingensis	Variovorax paradoxus NBRC 15149	1625	859	276	217	1	144	439	81
+P00330	all	nearest_other_species	94.22	False	Variovorax beijingensis	Variovorax beijingensis	1455	737	242	186	2	122	373	44
+P00331	all	species_neighbour	99.63	True	Variovorax gossypii	Variovorax gossypii	204	113	53	30	0	11	49	63
+P00332	all	species_neighbour	99.63	True	Variovorax gossypii	Variovorax durovernensis	195	108	55	32	0	10	43	62
+P00333	all	species_neighbour	99.58	True	Variovorax gossypii	Variovorax durovernensis	187	97	53	31	0	10	34	27
+P00334	all	nearest_other_species	92.8	False	Variovorax gossypii	Variovorax sp. SCN45	1837	1084	309	232	2	178	597	84
+P00335	all	nearest_other_species	90.27	False	Delftia acidovorans	Delftia tsuruhatensis	2692	1403	120	86	0	152	1131	10
+P00336	all	species_neighbour	98.29	False	Delftia acidovorans	Delftia acidovorans	577	331	115	94	3	74	142	6
+P00337	all	species_neighbour	98.31	False	Delftia acidovorans	Delftia acidovorans	583	327	123	101	5	72	132	5
+P00338	all	species_neighbour	98.29	False	Delftia acidovorans	Delftia acidovorans	574	301	108	87	2	67	126	6
+P00339	all	distance_tier_ani_97_99	97.96	False	Delftia acidovorans	Delftia acidovorans	822	414	137	110	3	92	185	0
+P00340	all	species_neighbour	98.28	False	Delftia acidovorans	Delftia acidovorans	611	310	121	98	3	60	129	1
+P00341	all	species_neighbour	98.29	False	Delftia acidovorans	Delftia acidovorans	574	301	110	88	2	66	125	6
+P00342	all	species_neighbour	95.69	False	Variovorax boronicumulans	Variovorax sp. 54	1400	758	254	193	0	133	371	34
+P00343	all	species_neighbour	95.26	False	Variovorax boronicumulans	Variovorax paradoxus	1368	743	250	196	0	125	368	77
+P00344	all	species_neighbour	96.85	False	Variovorax boronicumulans	Variovorax sp. 38R	852	440	188	160	1	90	162	29
+P00345	all	species_neighbour	95.31	False	Variovorax boronicumulans	Variovorax sp. EBFNA2	1250	680	243	199	0	123	314	78
+P00346	all	nearest_other_species	94.86	False	Variovorax boronicumulans	Variovorax sp. YR282	1320	748	223	175	0	146	379	53
+P00347	all	clone_partner	100.0	True	Variovorax boronicumulans	Variovorax boronicumulans	0	0	0	0	0	0	0	0
+P00348	all	species_neighbour	97.36	False	Variovorax boronicumulans	Variovorax boronicumulans	616	311	138	98	1	63	110	0
+P00349	all	nearest_other_species	94.87	False	Variovorax boronicumulans	Variovorax sp. 54	1568	816	278	219	1	167	371	38
+P00350	all	species_neighbour	97.35	False	Variovorax boronicumulans	Variovorax boronicumulans	666	390	148	116	1	76	166	17
+P00351	all	distance_tier_ani_99_99.99;species_neighbour	99.47	False	Variovorax boronicumulans	Variovorax sp. YR282	127	65	26	17	1	11	28	12
+P00352	all	clone_partner	100.0	True	Variovorax boronicumulans	Variovorax boronicumulans	0	0	0	0	0	0	0	0
+P00353	all	species_neighbour	97.36	False	Variovorax boronicumulans	Variovorax boronicumulans	616	311	139	98	1	62	110	0
+P00354	all	nearest_other_species	94.87	False	Variovorax boronicumulans	Variovorax sp. 54	1562	815	280	221	1	168	367	36
+P00355	all	nearest_other_species	94.78	False	Variovorax boronicumulans	Variovorax sp. 38R	1354	716	203	158	2	146	367	40
+P00356	all	species_neighbour	97.35	False	Variovorax boronicumulans	Variovorax boronicumulans	666	390	150	117	1	74	166	17
+P00357	all	species_neighbour	99.47	False	Variovorax boronicumulans	Variovorax sp. YR282	127	65	26	17	1	11	28	12
+P00358	all	species_neighbour	99.8	True	Variovorax gossypii	Variovorax gossypii	135	76	25	10	0	5	46	67
+P00359	all	species_neighbour	99.68	True	Variovorax gossypii	Variovorax durovernensis	138	79	25	11	0	7	47	80
+P00360	all	species_neighbour	99.98	True	Variovorax gossypii	Variovorax durovernensis	65	35	7	5	0	4	24	26
+P00361	all	species_neighbour	99.98	True	Variovorax gossypii	Variovorax durovernensis	21	11	4	1	0	0	7	16
+P00362	all	nearest_other_species	92.63	False	Variovorax gossypii	Variovorax sp. SCN45	1836	1046	295	224	2	165	586	99
+P00363	all	species_neighbour	96.66	False	Variovorax beijingensis	Variovorax sp. SPNA7	1000	536	196	161	2	101	239	71
+P00364	all	species_neighbour	98.52	False	Variovorax beijingensis	Variovorax paradoxus	430	224	107	82	4	36	81	38
+P00365	all	species_neighbour	95.98	False	Variovorax beijingensis	Variovorax beijingensis	1287	648	240	194	3	124	284	21
+P00366	all	clone_partner	99.99	True	Variovorax gossypii	Variovorax durovernensis	56	28	16	9	0	3	9	18
+P00367	all	species_neighbour	99.78	True	Variovorax gossypii	Variovorax durovernensis	125	67	26	10	0	2	39	24
+P00368	all	species_neighbour	99.77	True	Variovorax gossypii	Variovorax durovernensis	142	80	27	11	0	5	48	62
+P00369	all	nearest_other_species	92.97	False	Variovorax gossypii	Variovorax sp. SCN45	1840	1083	306	230	2	176	601	83
+P00370	all	species_neighbour	99.86	True	Variovorax durovernensis	Variovorax durovernensis	113	64	24	10	0	2	38	49
+P00371	all	species_neighbour	99.67	True	Variovorax durovernensis	Variovorax durovernensis	148	83	29	12	0	7	47	77
+P00372	all	nearest_other_species	93.12	False	Variovorax durovernensis	Variovorax sp. SCN45	1851	1057	304	230	2	168	585	96
+P00373	all	species_neighbour	99.96	True	Variovorax durovernensis	Variovorax durovernensis	66	33	9	6	0	4	20	40
+P00374	all	nearest_other_species	92.57	False	Variovorax durovernensis	Variovorax sp. SCN45	1832	1077	305	226	2	171	601	75
+P00375	all	nearest_other_species	92.9	False	Variovorax durovernensis	Variovorax sp. SCN45	1835	1014	267	205	2	165	582	105
+P00376	all	distance_tier_no_skani_output_same_genus	no_skani	False	Variovorax durovernensis	Variovorax sp. CF391	237	146	0	0	0	4	142	276
+P00377	all	species_neighbour	97.36	False	Variovorax boronicumulans	Variovorax boronicumulans	616	311	138	98	1	63	110	0
+P00378	all	nearest_other_species	94.87	False	Variovorax boronicumulans	Variovorax sp. 54	1568	816	281	222	1	171	364	38
+P00379	all	nearest_other_species	94.35	False	Variovorax boronicumulans	Variovorax sp. EBFNA2	1504	777	242	196	1	146	389	54
+P00380	all	species_neighbour	97.35	False	Variovorax boronicumulans	Variovorax boronicumulans	666	390	149	117	1	75	166	17
+P00381	all	species_neighbour	99.46	False	Variovorax boronicumulans	Variovorax sp. YR282	127	65	26	17	1	10	29	12
+P00382	all	clone_partner	100.0	True	Variovorax sp. AC189	Variovorax sp. AC597	2	1	1	1	1	0	0	0
+P00383	all	nearest_other_species	92.63	False	Variovorax sp. AC189	Variovorax sp. RKNM96	1961	1027	196	157	0	180	651	17
+P00384	all	distance_tier_ani_lt90	88.68	False	Variovorax sp. AC189	Variovorax sp. OK614	3472	1905	123	94	0	249	1533	127
+P00385	all	clone_partner	100.0	True	Variovorax sp. AC194	Variovorax sp. AC597	2	1	1	0	0	0	0	0
+P00386	all	nearest_other_species	92.75	False	Variovorax sp. AC194	Variovorax sp. RKNM96	1974	1150	201	160	0	200	749	17
+P00387	all	clone_partner	100.0	True	Variovorax sp. AC574	Variovorax sp. AC597	2	1	0	0	0	0	1	0
+P00388	all	nearest_other_species	92.75	False	Variovorax sp. AC574	Variovorax sp. RKNM96	1973	1150	203	161	0	200	747	17
+P00389	all	clone_partner	100.0	True	Variovorax sp. AC575	Variovorax sp. AC597	2	1	0	0	0	0	1	0
+P00390	all	nearest_other_species	92.66	False	Variovorax sp. AC575	Variovorax sp. RKNM96	1981	1157	202	160	0	201	754	20
+P00391	all	nearest_other_species	92.69	False	Variovorax sp. AC597	Variovorax sp. RKNM96	1957	1025	191	154	0	178	656	17
+P00392	all	audit_multi_project_all_vs_all;species_neighbour	97.48	False	Comamonas thiooxydans	Comamonas thiooxydans	500	255	86	53	5	67	102	13
+P00393	all	audit_multi_project_all_vs_all	94.81	False	Comamonas thiooxydans	Comamonas testosteroni	966	496	129	81	2	116	251	22
+P00394	all	audit_multi_project_all_vs_all;species_neighbour	97.51	False	Comamonas thiooxydans	Comamonas thiooxydans	496	249	90	56	4	61	98	13
+P00395	all	audit_multi_project_all_vs_all	97.09	False	Comamonas thiooxydans	Comamonas thiooxydans	526	273	90	51	5	61	122	23
+P00396	all	audit_multi_project_all_vs_all;species_neighbour	99.98	False	Comamonas thiooxydans	Comamonas thiooxydans	26	14	6	4	2	0	8	4
+P00397	all	audit_multi_project_all_vs_all	96.63	False	Comamonas thiooxydans	Comamonas thiooxydans	616	312	103	71	2	97	112	14
+P00398	all	audit_multi_project_all_vs_all	94.62	False	Comamonas thiooxydans	Comamonas testosteroni	914	471	114	71	3	109	248	30
+P00399	all	audit_multi_project_all_vs_all	97.14	False	Comamonas thiooxydans	Comamonas thiooxydans	564	289	91	54	5	75	123	11
+P00400	all	audit_multi_project_all_vs_all	96.49	False	Comamonas thiooxydans	Comamonas sp. 7D-2	590	305	93	60	5	86	126	5
+P00401	all	audit_multi_project_all_vs_all	96.58	False	Comamonas thiooxydans	Comamonas sp. 7D-2evo1	593	358	105	65	4	96	157	20
+P00402	all	audit_multi_project_all_vs_all	96.49	False	Comamonas thiooxydans	Comamonas sp. 7D-2evo2	585	354	103	62	4	96	155	20
+P00403	all	audit_multi_project_all_vs_all	94.95	False	Comamonas thiooxydans	Comamonas sp. C11	967	496	120	77	1	123	253	32
+P00404	all	nearest_other_species	93.87	False	Comamonas thiooxydans	Comamonas testosteroni	1023	599	140	87	4	133	326	29
+P00405	all	audit_multi_project_all_vs_all	96.29	False	Comamonas thiooxydans	Comamonas thiooxydans	567	292	80	55	4	86	126	9
+P00406	all	audit_multi_project_all_vs_all	97.36	False	Comamonas thiooxydans	Comamonas thiooxydans	584	301	107	72	9	89	105	29
+P00407	all	audit_multi_project_all_vs_all	95.04	False	Comamonas thiooxydans	Comamonas testosteroni	894	460	105	73	2	113	242	12
+P00408	all	nearest_other_species	89.67	True	Variovorax sp. RA8	Variovorax sp. PBS-H4	1986	1021	159	133	4	140	722	81
+P00409	all	nearest_other_species	92.5	True	Variovorax sp. RA8	Variovorax sp. WDL1	1951	1012	231	193	11	134	647	133
+P00410	all	nearest_other_species	84.93	False	Variovorax sp. RA8	Variovorax sp. KK3	2587	1485	72	64	1	90	1323	148
+P00411	all	nearest_other_species	85.27	True	Variovorax sp. PBL-E5	Variovorax sp. PBL-H6	2160	1328	40	33	0	55	1233	128
+P00412	all	species_neighbour	98.23	True	Variovorax sp. PBL-E5	Variovorax sp. SRS16	682	345	138	103	0	63	144	54
+P00413	all	nearest_other_species	90.76	True	Variovorax sp. PBL-H6	Variovorax sp. WDL1	2062	1072	153	124	6	134	785	77
+P00414	all	nearest_other_species	85.34	True	Variovorax sp. PBL-H6	Variovorax sp. SRS16	2207	1352	36	30	0	52	1264	126
+P00415	all	nearest_other_species	91.45	False	Variovorax paradoxus	Variovorax sp. OK222	3583	1832	160	125	0	318	1354	77
+P00416	all	nearest_other_species	91.45	False	Variovorax paradoxus	Variovorax sp. OK231	3583	1832	160	125	0	318	1354	77
+P00417	all	nearest_other_species	91.45	False	Variovorax paradoxus	Variovorax sp. OK250	3583	1832	160	125	0	318	1354	77
+P00418	all	nearest_other_species	91.42	False	Variovorax paradoxus	Variovorax sp. OK565	3621	1860	164	128	0	323	1373	80
+P00419	all	nearest_other_species	91.42	False	Variovorax paradoxus	Variovorax sp. OK614	3619	1858	163	129	0	328	1367	77
+P00420	all	nearest_other_species	91.42	False	Variovorax paradoxus	Variovorax sp. OK624	3619	1858	160	126	0	321	1377	79
+P00421	all	nearest_other_species	91.41	False	Variovorax paradoxus	Variovorax sp. OK632	3596	1956	164	129	0	343	1449	86
+P00422	all	nearest_other_species	91.42	False	Variovorax paradoxus	Variovorax sp. OK638	3600	1947	162	126	0	338	1447	79
+P00423	all	nearest_other_species	91.42	False	Variovorax paradoxus	Variovorax sp. OK658	3619	1858	160	126	0	322	1376	77
+P00424	all	nearest_other_species	91.42	False	Variovorax paradoxus	Variovorax sp. OK629	3619	1858	160	126	0	322	1376	77
+P00425	all	species_neighbour	99.33	False	Comamonas aquatica	Comamonas aquatica	90	52	19	12	2	8	25	220
+P00426	all	nearest_other_species	84.03	False	Comamonas aquatica	Comamonas terrigena	1352	793	7	2	0	77	709	70
+P00427	all	species_neighbour	97.37	False	Comamonas aquatica	Comamonas aquatica	312	160	61	39	3	41	58	18
+P00428	all	species_neighbour	97.24	False	Comamonas aquatica	Comamonas aquatica	334	168	51	30	4	49	68	4
+P00429	all	nearest_other_species	90.42	False	Delftia tsuruhatensis	Delftia acidovorans SPH-1	2807	1834	127	87	1	199	1508	26
+P00430	all	nearest_other_species	90.34	False	Delftia tsuruhatensis	Delftia sp. Cs1-4	2720	1425	136	98	0	160	1129	12
+P00431	all	nearest_other_species	90.52	False	Delftia tsuruhatensis	Delftia acidovorans	2789	1828	129	89	1	202	1497	22
+P00432	all	nearest_other_species	90.42	False	Delftia tsuruhatensis	Delftia acidovorans	2749	1503	126	94	1	179	1198	26
+P00433	all	nearest_other_species	90.3	False	Delftia tsuruhatensis	Delftia tsuruhatensis	2666	1484	119	77	0	168	1197	30
+P00434	all	nearest_other_species	90.45	False	Delftia tsuruhatensis	Delftia sp. HK171	2743	1874	148	104	0	226	1500	12
+P00435	all	nearest_other_species	90.38	False	Delftia tsuruhatensis	Delftia sp. 60	2785	1855	158	109	0	214	1483	24
+P00436	all	nearest_other_species	90.29	False	Delftia tsuruhatensis	Delftia tsuruhatensis	2639	1372	107	67	0	165	1100	11
+P00437	all	nearest_other_species	90.27	False	Delftia tsuruhatensis	Delftia lacustris	2658	1376	122	78	0	169	1085	14
+P00438	all	nearest_other_species	90.42	False	Delftia tsuruhatensis	Delftia acidovorans	2782	1453	126	88	2	174	1153	18
+P00439	all	nearest_other_species	90.61	False	Delftia tsuruhatensis	Delftia acidovorans	2767	1442	124	92	1	204	1114	16
+P00440	all	nearest_other_species	90.4	False	Delftia tsuruhatensis	Delftia acidovorans	2750	1875	131	96	0	214	1530	14
+P00441	all	nearest_other_species	90.29	False	Delftia tsuruhatensis	Delftia sp. WY8	2686	1406	103	67	0	167	1136	28
+P00442	all	nearest_other_species	90.3	False	Delftia tsuruhatensis	Delftia acidovorans	2744	1866	137	95	0	195	1534	17
+P00443	all	nearest_other_species	90.3	False	Delftia tsuruhatensis	Delftia lacustris	2732	1412	112	81	0	170	1130	20
+P00444	all	nearest_other_species	90.36	False	Delftia tsuruhatensis	Delftia acidovorans	2685	1595	132	95	1	179	1284	40
+P00445	all	nearest_other_species	90.36	False	Delftia tsuruhatensis	Delftia acidovorans	2695	1837	135	94	1	194	1508	22
+P00446	all	nearest_other_species	90.13	False	Delftia tsuruhatensis	Delftia tsuruhatensis	2653	1376	109	73	0	167	1100	8
+P00447	all	nearest_other_species	90.3	False	Delftia tsuruhatensis	Delftia sp. UGAL515B_04	2641	1372	103	65	0	166	1103	8
+P00448	all	nearest_other_species	90.18	False	Delftia tsuruhatensis	Delftia tsuruhatensis	2693	1405	108	70	0	172	1125	20
+P00449	all	nearest_other_species	90.34	False	Delftia tsuruhatensis	Delftia acidovorans	2763	1439	128	84	0	162	1149	14
+P00450	all	nearest_other_species	90.2	False	Delftia tsuruhatensis	Delftia tsuruhatensis	2682	1736	119	78	0	187	1430	43
+P00451	all	nearest_other_species	90.31	False	Delftia tsuruhatensis	Delftia tsuruhatensis	2698	1693	124	83	0	190	1379	38
+P00452	all	nearest_other_species	90.25	False	Delftia tsuruhatensis	Delftia tsuruhatensis	2720	1420	115	77	0	159	1146	18
+P00453	all	nearest_other_species	90.21	False	Delftia tsuruhatensis	Delftia lacustris	2658	1389	118	77	0	151	1120	10
+P00454	all	nearest_other_species	90.2	False	Delftia tsuruhatensis	Delftia lacustris	2778	1441	114	83	0	172	1155	22
+P00455	all	nearest_other_species	90.37	False	Delftia tsuruhatensis	Delftia sp. DS1230	2688	1405	110	78	0	170	1125	12
+P00456	all	nearest_other_species	90.39	False	Delftia tsuruhatensis	Delftia acidovorans	2778	1458	117	88	0	157	1184	14
+P00457	all	nearest_other_species	90.35	False	Delftia tsuruhatensis	Delftia lacustris	2698	1406	114	77	0	162	1130	6
+P00458	all	nearest_other_species	90.21	False	Delftia tsuruhatensis	Delftia tsuruhatensis	2692	1404	112	77	0	168	1124	12
+P00459	all	nearest_other_species	90.26	False	Delftia tsuruhatensis	Delftia sp. PX-1	2699	1760	126	87	0	190	1444	18
+P00460	all	nearest_other_species	90.2	False	Delftia tsuruhatensis	Delftia sp. 11MD	2657	1386	109	70	0	158	1119	10
+P00461	all	nearest_other_species	90.3	False	Delftia tsuruhatensis	Delftia acidovorans	2775	1465	119	82	0	168	1178	16
+P00462	all	nearest_other_species	90.45	False	Delftia tsuruhatensis	Delftia acidovorans	2753	1437	144	99	0	171	1122	14
+P00463	all	nearest_other_species	90.3	False	Delftia tsuruhatensis	Delftia tsuruhatensis	2743	1762	124	84	0	192	1446	45
+P00464	all	nearest_other_species	90.42	False	Delftia tsuruhatensis	Delftia lacustris	2660	1848	139	99	0	229	1480	18
+P00465	all	nearest_other_species	90.38	False	Delftia tsuruhatensis	Delftia tsuruhatensis	2722	1412	117	81	1	175	1120	7
+P00466	all	nearest_other_species	90.4	False	Delftia tsuruhatensis	Delftia acidovorans	2719	1416	130	93	1	168	1118	16
+P00467	all	nearest_other_species	90.36	False	Delftia tsuruhatensis	Delftia acidovorans	2689	1398	117	79	0	151	1130	10
+P00468	all	nearest_other_species	90.27	False	Delftia tsuruhatensis	Delftia tsuruhatensis	2681	1398	116	80	0	172	1110	20
+P00469	all	nearest_other_species	90.3	False	Delftia tsuruhatensis	Delftia acidovorans	2775	1465	123	84	0	167	1175	16
+P00470	all	species_neighbour	97.27	False	Comamonas aquatica	Comamonas aquatica	255	143	46	31	1	40	57	325
+P00471	all	species_neighbour	97.43	False	Comamonas aquatica	Comamonas aquatica	248	140	28	14	1	43	69	313
+P00472	all	species_neighbour	97.24	False	Comamonas aquatica	Comamonas aquatica	299	172	58	39	1	40	74	358
+P00473	all	species_neighbour	97.32	False	Comamonas aquatica	Comamonas aquatica	260	154	44	28	2	35	75	338
+P00474	all	species_neighbour	97.47	False	Comamonas aquatica	Comamonas aquatica	244	139	48	33	1	34	57	357
+P00475	all	species_neighbour	97.88	False	[Acidovorax] ebreus TPSY	Diaphorobacter nitroreducens	214	121	56	40	3	23	42	6
+P00476	all	species_neighbour	97.49	False	[Acidovorax] ebreus TPSY	Diaphorobacter sp. DS2	458	238	120	82	4	30	88	22
+P00477	all	species_neighbour	97.88	False	[Acidovorax] ebreus TPSY	Diaphorobacter sp. LI3	375	200	100	64	3	23	77	36
+P00478	all	species_neighbour	98.04	False	[Acidovorax] ebreus TPSY	Diaphorobacter sp. C33	241	125	50	33	3	18	57	18
+P00479	all	nearest_other_species	86.71	False	[Acidovorax] ebreus TPSY	Alicycliphilus denitrificans	2075	1196	54	20	0	79	1063	46
+P00480	all	species_neighbour	99.04	False	Paracidovorax avenae ATCC 19860	Paracidovorax avenae	350	211	67	53	2	43	101	2
+P00481	all	species_neighbour	97.27	False	Paracidovorax avenae ATCC 19860	Paracidovorax avenae	841	512	137	109	3	107	268	9
+P00482	all	species_neighbour	98.06	False	Paracidovorax avenae ATCC 19860	Acidovorax sp. NCPPB 3859	709	361	135	105	2	80	146	4
+P00483	all	species_neighbour	98.06	False	Paracidovorax avenae ATCC 19860	Acidovorax sp. GBBC 712	716	364	134	103	2	80	150	0
+P00484	all	species_neighbour	98.72	False	Alicycliphilus denitrificans BC	Alicycliphilus denitrificans K601	234	128	62	36	1	18	48	52
+P00485	all	species_neighbour	99.06	False	Alicycliphilus denitrificans BC	Alicycliphilus denitrificans	190	104	48	25	0	18	38	41
+P00486	all	nearest_other_species	86.53	False	Alicycliphilus denitrificans BC	Diaphorobacter sp. JS3051	2087	1367	66	44	0	100	1201	130
+P00487	all	nearest_other_species	86.69	False	Alicycliphilus denitrificans BC	Diaphorobacter sp. MNS-0	2083	1188	50	25	0	89	1049	64
+P00488	all	nearest_other_species	88.45	False	Alicycliphilus denitrificans BC	Alicycliphilus denitrificans	1674	1001	79	47	1	115	807	84
+P00489	all	species_neighbour	96.24	False	Alicycliphilus denitrificans BC	Alicycliphilus denitrificans	1025	532	242	182	1	66	224	25
+P00490	all	species_neighbour	96.04	False	Variovorax paradoxus EPS	Variovorax sp. W2I14	1297	689	272	211	2	107	310	38
+P00491	all	species_neighbour	96.8	False	Variovorax paradoxus EPS	Variovorax sp. W1I1	1258	680	259	219	1	147	274	26
+P00492	all	nearest_other_species	92.75	False	Variovorax paradoxus EPS	Variovorax sp. OV254	1854	973	215	166	1	195	563	45
+P00493	all	species_neighbour	99.99	False	Delftia acidovorans SPH-1	Delftia acidovorans	36	18	14	4	1	0	4	0
+P00494	all	species_neighbour	100.0	False	Delftia acidovorans SPH-1	Delftia acidovorans	13	12	0	0	0	0	12	12
+P00495	all	species_neighbour	97.93	False	Delftia acidovorans SPH-1	Delftia acidovorans	874	446	160	115	4	85	201	8
+P00496	all	species_neighbour	98.34	False	Alicycliphilus denitrificans K601	Alicycliphilus denitrificans	218	120	59	34	1	19	42	31
+P00497	all	nearest_other_species	86.39	False	Alicycliphilus denitrificans K601	Diaphorobacter sp. LI3	2154	1306	53	23	0	83	1170	75
+P00498	all	nearest_other_species	88.54	False	Alicycliphilus denitrificans K601	Alicycliphilus denitrificans	1752	1058	70	41	0	117	871	87
+P00499	all	species_neighbour	96.11	False	Alicycliphilus denitrificans K601	Alicycliphilus denitrificans	1053	589	247	180	0	73	269	31
+P00500	all	species_neighbour	98.0	False	Delftia sp. Cs1-4	Delftia acidovorans	937	549	158	107	2	104	287	10
+P00501	all	species_neighbour	98.35	False	Delftia sp. Cs1-4	Delftia sp. HK171	611	344	127	100	5	86	131	2
+P00502	all	species_neighbour	98.33	False	Delftia sp. Cs1-4	Delftia sp. 60	674	384	123	96	0	104	157	8
+P00503	all	species_neighbour	98.28	False	Delftia sp. Cs1-4	Delftia acidovorans	587	313	123	95	1	71	119	13
+P00504	all	nearest_other_species	89.59	False	Hydrogenophaga sp. PBC	Hydrogenophaga sp. YM1	1995	1093	135	109	1	154	804	38
+P00505	all	nearest_other_species	89.74	False	Hydrogenophaga sp. PBC	Hydrogenophaga sp. SNF1	1871	1046	93	74	0	132	821	37
+P00506	all	nearest_other_species	84.56	False	Polaromonas sp. JS666	Polaromonas sp. P1(28)-13	2472	1408	55	36	1	101	1252	110
+P00507	all	species_neighbour	97.09	False	Polaromonas sp. JS666	Polaromonas sp. P1(28)-8	1174	594	203	170	11	126	265	35
+P00508	all	nearest_other_species	94.34	False	Polaromonas naphthalenivorans CJ2	Polaromonas hydrogenivorans	1168	679	166	138	0	140	373	191
+P00509	all	species_neighbour	98.57	False	Rhodoferax ferrireducens T118	Rhodoferax ferrireducens	245	125	58	42	2	28	39	8
+P00510	all	species_neighbour	99.65	False	Paracidovorax citrulli AAC00-1	Paracidovorax citrulli	250	133	75	66	2	18	40	43
+P00511	all	clone_partner	100.0	False	Paracidovorax citrulli AAC00-1	Paracidovorax citrulli	14	7	1	1	0	3	3	8
+P00512	all	species_neighbour	99.64	False	Paracidovorax citrulli AAC00-1	Paracidovorax citrulli	249	134	78	66	4	18	38	35
+P00513	all	species_neighbour	99.9	False	Paracidovorax citrulli AAC00-1	Paracidovorax citrulli	62	32	15	10	3	2	15	8
+P00514	all	nearest_other_species	80.7	False	Verminephrobacter eiseniae EF01-2	Acidovorax sp. GW823-FHT05D11	1313	779	11	8	0	35	733	63
+P00515	all	nearest_other_species	82.65	False	Ramlibacter tataouinensis TTB310	Ramlibacter tataouinensis	1485	861	4	0	0	37	820	80
+P00516	all	nearest_other_species	80.39	False	Ramlibacter tataouinensis TTB310	Rhodoferax sp. BAB1	751	466	1	0	0	18	447	76
+P00517	all	nearest_other_species	83.94	False	Ramlibacter tataouinensis TTB310	Ramlibacter tataouinensis	1623	1030	6	4	0	58	966	90
+P00518	all	nearest_other_species	93.66	False	Variovorax paradoxus B4	Variovorax paradoxus	1784	994	287	227	1	166	541	73
+P00519	all	nearest_other_species	93.76	False	Variovorax paradoxus B4	Variovorax sp. SPNA7	1561	828	287	227	1	135	406	76
+P00520	all	nearest_other_species	94.04	False	Variovorax paradoxus B4	Variovorax paradoxus	1575	835	275	220	2	136	424	63
+P00521	all	nearest_other_species	93.49	False	Variovorax paradoxus B4	Variovorax paradoxus	1651	868	289	225	0	130	449	83
+P00522	all	nearest_other_species	93.62	False	Variovorax paradoxus B4	Variovorax paradoxus	1674	863	293	228	1	132	438	101
+P00523	all	nearest_other_species	93.61	False	Variovorax paradoxus B4	Variovorax paradoxus	1670	861	297	231	1	132	432	101
+P00524	all	nearest_other_species	93.65	False	Variovorax paradoxus B4	Variovorax paradoxus	1680	866	294	228	1	131	441	99
+P00525	all	nearest_other_species	93.68	False	Variovorax paradoxus B4	Variovorax sp. CF057	1606	823	283	222	1	134	406	82
+P00526	all	nearest_other_species	93.68	False	Variovorax paradoxus B4	Variovorax sp. CF130	1599	847	293	227	1	138	416	85
+P00527	all	nearest_other_species	93.65	False	Variovorax paradoxus B4	Variovorax sp. CF381	1707	878	289	232	0	149	440	80
+P00528	all	nearest_other_species	94.29	False	Variovorax paradoxus B4	Variovorax beijingensis	1481	754	255	196	1	131	368	48
+P00529	all	audit_multi_project_all_vs_all	94.4	False	Comamonas thiooxydans	Comamonas testosteroni	947	487	135	86	2	110	242	16
+P00530	all	audit_multi_project_all_vs_all;species_neighbour	98.44	False	Comamonas thiooxydans	Comamonas thiooxydans	286	147	68	44	2	27	52	13
+P00531	all	audit_multi_project_all_vs_all;species_neighbour	98.3	False	Comamonas thiooxydans	Comamonas thiooxydans	288	154	73	40	4	23	58	29
+P00532	all	audit_multi_project_all_vs_all;species_neighbour	97.48	False	Comamonas thiooxydans	Comamonas thiooxydans	507	259	85	53	5	66	108	12
+P00533	all	audit_multi_project_all_vs_all	96.86	False	Comamonas thiooxydans	Comamonas thiooxydans	544	281	107	71	2	72	102	14
+P00534	all	audit_multi_project_all_vs_all	94.43	False	Comamonas thiooxydans	Comamonas testosteroni	905	463	124	77	4	108	231	12
+P00535	all	audit_multi_project_all_vs_all;species_neighbour	98.24	False	Comamonas thiooxydans	Comamonas thiooxydans	335	174	72	44	4	37	65	18
+P00536	all	audit_multi_project_all_vs_all;species_neighbour	97.18	False	Comamonas thiooxydans	Comamonas sp. 7D-2	477	248	91	62	2	71	86	4
+P00537	all	audit_multi_project_all_vs_all;species_neighbour	97.18	False	Comamonas thiooxydans	Comamonas sp. 7D-2evo1	484	280	101	66	3	73	106	19
+P00538	all	audit_multi_project_all_vs_all	97.17	False	Comamonas thiooxydans	Comamonas sp. 7D-2evo2	492	285	103	67	3	72	110	19
+P00539	all	audit_multi_project_all_vs_all	94.72	False	Comamonas thiooxydans	Comamonas sp. C11	960	494	123	79	0	116	255	16
+P00540	all	nearest_other_species	93.7	False	Comamonas thiooxydans	Comamonas testosteroni	1053	535	143	83	4	113	279	4
+P00541	all	audit_multi_project_all_vs_all	97.08	False	Comamonas thiooxydans	Comamonas thiooxydans	458	234	87	61	2	59	88	0
+P00542	all	audit_multi_project_all_vs_all	98.25	False	Comamonas thiooxydans	Comamonas thiooxydans	359	191	82	56	7	54	55	28
+P00543	all	audit_multi_project_all_vs_all	94.38	False	Comamonas thiooxydans	Comamonas testosteroni	903	459	118	78	3	109	232	0
+P00544	all	nearest_other_species	93.13	False	Acidovorax sp. KKS102	Acidovorax sp. 99	1441	778	165	132	0	175	438	23
+P00545	all	species_neighbour	95.78	False	Acidovorax sp. KKS102	Acidovorax delafieldii	782	432	141	109	1	115	176	28
+P00546	all	species_neighbour	95.94	False	Acidovorax sp. KKS102	Acidovorax sp. M14	793	407	159	125	0	105	143	14
+P00547	all	species_neighbour	98.69	False	Comamonas testosteroni TK102	Comamonas testosteroni	281	153	51	27	3	32	70	31
+P00548	all	species_neighbour	98.53	False	Comamonas testosteroni TK102	Comamonas testosteroni	361	219	65	35	2	52	102	36
+P00549	all	species_neighbour	96.13	False	Comamonas testosteroni TK102	Comamonas testosteroni	646	337	91	63	4	90	156	27
+P00550	all	nearest_other_species	85.82	False	Limnohabitans sp. 63ED37-2	Limnohabitans sp. DCL3	1174	726	12	7	0	43	671	65
+P00551	all	species_neighbour	97.44	True	Acidovorax carolinensis	Acidovorax carolinensis	547	281	97	75	3	74	110	10
+P00552	all	species_neighbour	97.57	True	Acidovorax carolinensis	Acidovorax carolinensis	510	284	89	74	3	66	129	35
+P00553	all	species_neighbour	97.59	True	Acidovorax carolinensis	Acidovorax carolinensis	508	258	84	72	1	62	112	39
+P00554	all	nearest_other_species	91.48	False	Acidovorax carolinensis	Acidovorax sp. T1	1538	932	130	99	2	179	623	48
+P00555	all	nearest_other_species	81.09	False	Acidovorax carolinensis	Simplicispira sp. 125	1116	669	9	8	0	20	640	87
+P00556	all	species_neighbour	97.43	True	Acidovorax carolinensis	Acidovorax carolinensis	471	282	87	64	4	69	126	38
+P00557	all	species_neighbour	97.45	True	Acidovorax carolinensis	Acidovorax carolinensis	472	241	75	55	3	63	103	38
+P00558	all	nearest_other_species	91.56	False	Acidovorax carolinensis	Acidovorax sp. T1	1578	967	121	85	2	184	662	48
+P00559	all	species_neighbour	99.98	True	Acidovorax carolinensis	Acidovorax carolinensis	10	5	4	4	0	0	1	4
+P00560	all	nearest_other_species	91.54	False	Acidovorax carolinensis	Acidovorax sp. T1	1581	864	114	78	3	171	579	67
+P00561	all	nearest_other_species	91.55	False	Acidovorax carolinensis	Acidovorax sp. T1	1593	987	123	86	4	197	667	86
+P00562	all	species_neighbour	99.99	False	Delftia acidovorans	Delftia acidovorans	51	32	15	4	1	1	16	12
+P00563	all	species_neighbour	99.65	False	Paracidovorax citrulli	Paracidovorax citrulli	237	130	69	63	1	18	43	50
+P00564	all	species_neighbour	99.65	False	Paracidovorax citrulli	Paracidovorax citrulli	244	130	73	66	2	18	39	49
+P00565	all	species_neighbour	99.64	False	Paracidovorax citrulli	Paracidovorax citrulli	252	141	75	67	2	21	45	51
+P00566	all	species_neighbour	99.64	False	Paracidovorax citrulli	Paracidovorax citrulli	250	140	75	67	2	21	44	51
+P00567	all	species_neighbour	99.65	False	Paracidovorax citrulli	Paracidovorax citrulli	247	142	76	69	1	17	49	48
+P00568	all	species_neighbour	99.78	False	Paracidovorax citrulli	Paracidovorax citrulli	150	77	40	35	0	13	24	9
+P00569	all	species_neighbour	99.97	False	Paracidovorax citrulli	Paracidovorax citrulli	46	23	17	12	0	0	6	8
+P00570	all	species_neighbour	99.95	False	Paracidovorax citrulli	Paracidovorax citrulli	48	24	17	13	1	0	7	8
+P00571	all	species_neighbour	99.97	False	Paracidovorax citrulli	Paracidovorax citrulli	48	25	17	13	1	0	8	8
+P00572	all	species_neighbour	99.78	False	Paracidovorax citrulli	Paracidovorax citrulli	145	87	39	34	0	17	31	8
+P00573	all	species_neighbour	99.65	False	Paracidovorax citrulli	Paracidovorax citrulli	242	139	74	66	1	17	48	39
+P00574	all	species_neighbour	99.65	False	Paracidovorax citrulli	Paracidovorax citrulli	237	124	72	64	1	16	36	39
+P00575	all	species_neighbour	99.65	False	Paracidovorax citrulli	Paracidovorax citrulli	248	142	76	69	1	17	49	47
+P00576	all	species_neighbour	99.65	False	Paracidovorax citrulli	Paracidovorax citrulli	247	140	76	70	1	17	47	42
+P00577	all	distance_tier_ani_99_99.99;species_neighbour	99.66	False	Paracidovorax citrulli	Paracidovorax citrulli	236	123	72	64	2	16	35	38
+P00578	all	nearest_other_species	83.77	False	Variovorax sp. PAMC 28711	Variovorax sp. RKNM96	1966	1186	15	11	0	47	1124	95
+P00579	all	nearest_other_species	82.35	False	Variovorax sp. PAMC 28711	Variovorax sp. PAMC28562	1783	1256	2	1	0	18	1236	56
+P00580	all	nearest_other_species	86.38	False	Acidovorax sp. RAC01	Acidovorax sp. 30	2454	1557	22	16	0	115	1420	56
+P00581	all	nearest_other_species	88.97	False	Hydrogenophaga sp. RAC07	Hydrogenophaga sp. PBL-H3	1676	1045	40	34	0	100	905	62
+P00582	all	nearest_other_species	88.97	False	Hydrogenophaga sp. RAC07	Hydrogenophaga sp. PBL-H3	1676	1045	40	34	0	100	905	62
+P00583	all	species_neighbour	98.17	False	Delftia acidovorans	Delftia acidovorans	643	334	125	92	4	72	137	10
+P00584	all	species_neighbour	98.16	False	Delftia acidovorans	Delftia acidovorans	675	351	132	105	6	74	145	11
+P00585	all	species_neighbour	97.96	False	Diaphorobacter nitroreducens	Diaphorobacter sp. LI3	350	187	93	56	2	18	76	40
+P00586	all	species_neighbour	97.57	False	Diaphorobacter nitroreducens	Diaphorobacter sp. ED-3	260	143	66	39	2	23	54	34
+P00587	all	species_neighbour	98.28	False	Diaphorobacter nitroreducens	Diaphorobacter sp. C33	172	97	38	23	3	13	46	22
+P00588	all	nearest_other_species	86.46	False	Diaphorobacter nitroreducens	Alicycliphilus denitrificans	2156	1467	69	31	0	108	1290	56
+P00589	all	nearest_other_species	86.61	False	Acidovorax temperans	Acidovorax sp. 1608163	2467	1534	82	56	0	155	1297	41
+P00590	all	species_neighbour	96.27	False	Acidovorax temperans	Acidovorax temperans	950	530	203	169	2	97	230	111
+P00591	all	nearest_other_species	91.62	False	Variovorax sp. YR752	Variovorax sp. Varisp46	2392	1459	226	176	1	232	1001	87
+P00592	all	species_neighbour	98.58	False	Variovorax sp. YR752	Variovorax sp. YR566	348	190	88	60	2	35	67	4
+P00593	all	species_neighbour	98.44	False	Variovorax sp. YR752	Variovorax sp. CF015	389	201	98	79	3	35	68	46
+P00594	all	species_neighbour	98.47	False	Variovorax sp. YR752	Variovorax sp. CF024	393	216	103	83	5	37	76	43
+P00595	all	clone_partner;distance_tier_ani_99.99_100	100.0	False	Variovorax sp. YR752	Variovorax sp. YR747	2	1	0	0	0	0	1	0
+P00596	all	species_neighbour	98.56	False	Variovorax sp. YR752	Variovorax sp. YR572	339	192	81	60	1	44	67	90
+P00597	all	species_neighbour	97.07	True	Paracidovorax avenae	Paracidovorax avenae	824	419	138	105	3	93	188	8
+P00598	all	distance_tier_ani_90_95	93.58	False	Paracidovorax avenae	Paracidovorax citrulli	1790	927	181	150	3	167	579	11
+P00599	all	species_neighbour	98.06	False	Paracidovorax avenae	Acidovorax sp. NCPPB 3859	698	399	139	99	2	79	181	8
+P00600	all	species_neighbour	98.01	False	Paracidovorax avenae	Acidovorax sp. GBBC 712	705	403	137	97	2	80	186	2
+P00601	all	species_neighbour	96.92	False	Paracidovorax avenae	Acidovorax sp. NCPPB 3859	921	549	156	115	1	108	285	10
+P00602	all	nearest_other_species	93.7	False	Paracidovorax avenae	Paracidovorax citrulli	1824	934	158	127	2	159	617	13
+P00603	all	nearest_other_species	80.9	False	Hydrogenophaga crassostreae	Hydrogenophaga sp. PAMC20947	1333	803	1	1	0	21	781	110
+P00604	all	species_neighbour	98.71	False	Delftia tsuruhatensis	Delftia tsuruhatensis	389	229	87	63	0	42	100	10
+P00605	all	species_neighbour	98.74	False	Delftia tsuruhatensis	Delftia tsuruhatensis	429	240	84	59	3	55	101	22
+P00606	all	species_neighbour	96.62	False	Delftia sp. HK171	Delftia acidovorans	1347	812	210	155	3	166	436	2
+P00607	all	species_neighbour	98.39	False	Delftia sp. HK171	Delftia acidovorans	580	322	138	108	1	73	111	0
+P00608	all	species_neighbour	98.36	False	Delftia sp. HK171	Delftia acidovorans	627	351	128	104	6	77	146	0
+P00609	all	nearest_other_species	80.33	False	Rhodoferax koreensis	Variovorax sp. Varisp41	989	618	4	4	0	32	582	142
+P00610	all	nearest_other_species	79.43	False	Rhodoferax koreensis	Hydrophilobacter chitinilyticus	1211	724	0	0	0	9	715	126
+P00611	all	nearest_other_species	78.88	False	Rhodoferax saidenbachensis	Rhodoferax sp. AJA081-3	897	572	1	1	0	7	564	84
+P00612	all	nearest_other_species	77.78	False	Rhodoferax saidenbachensis	Rhodoferax sp. GW822-FHT02A01	710	450	0	0	0	11	439	76
+P00613	all	nearest_other_species	77.78	False	Rhodoferax saidenbachensis	Rhodoferax sp. GW822-FHT02A01	710	450	0	0	0	11	439	76
+P00614	all	species_neighbour	98.75	False	Comamonas kerstersii	Comamonas kerstersii	334	172	55	40	3	33	84	5
+P00615	all	nearest_other_species	83.52	False	Comamonas kerstersii	Comamonas aquatica	1319	842	8	3	0	32	802	73
+P00616	all	nearest_other_species	78.6	False	Comamonas serinivorans	Pulveribacter suum	220	138	0	0	0	3	135	80
+P00617	all	nearest_other_species	84.07	False	Comamonas terrigena	Comamonas aquatica	1269	753	6	1	0	72	675	78
+P00618	all	nearest_other_species	83.78	False	Comamonas terrigena	Comamonas aquatica	1333	793	9	2	0	73	711	78
+P00619	all	nearest_other_species	83.91	False	Comamonas terrigena	Comamonas aquatica	1363	808	8	2	0	75	725	68
+P00620	all	nearest_other_species	84.0	False	Comamonas terrigena	Comamonas aquatica	1334	782	7	2	0	69	706	81
+P00621	all	nearest_other_species	83.96	False	Comamonas terrigena	Comamonas aquatica	1348	791	7	2	0	73	711	80
+P00622	all	nearest_other_species	84.72	False	Comamonas terrigena	Comamonas sp. GB3 AK4-5	2166	1196	15	3	0	92	1089	39
+P00623	all	nearest_other_species	84.05	False	Comamonas terrigena	Comamonas aquatica	1323	782	8	3	0	70	704	73
+P00624	all	nearest_other_species	94.78	False	Variovorax boronicumulans	Variovorax sp. 54	1577	834	280	213	0	160	394	50
+P00625	all	nearest_other_species	94.35	False	Variovorax boronicumulans	Variovorax paradoxus	1576	947	285	215	0	165	497	48
+P00626	all	distance_tier_ani_97_99;species_neighbour	97.39	False	Variovorax boronicumulans	Variovorax sp. YR282	600	305	140	96	0	59	106	8
+P00627	all	species_neighbour	97.39	False	Variovorax boronicumulans	Variovorax sp. YB-TT-C68	628	318	142	103	1	72	104	9
+P00628	all	nearest_other_species	86.2	False	Comamonas sp. 26	Comamonas testosteroni	2391	1571	59	35	0	75	1437	50
+P00629	all	species_neighbour	97.08	False	Acidovorax sp. 56	Acidovorax sp. 62	973	493	161	127	3	136	196	1
+P00630	all	nearest_other_species	93.73	False	Acidovorax sp. 56	Acidovorax sp. 106	1742	889	158	138	3	211	520	3
+P00631	all	species_neighbour	97.3	False	Acidovorax sp. 56	Acidovorax sp. 1608163	821	466	159	132	2	125	182	2
+P00632	all	clone_partner	100.0	False	Acidovorax sp. 30	Acidovorax sp. 59	0	0	0	0	0	0	0	0
+P00633	all	species_neighbour	97.01	False	Acidovorax sp. 30	Acidovorax sp. 100	725	374	101	70	0	109	164	26
+P00634	all	species_neighbour	97.52	False	Acidovorax sp. 30	Acidovorax delafieldii	570	295	96	76	0	89	110	21
+P00635	all	nearest_other_species	92.8	False	Acidovorax sp. 30	Acidovorax sp. M14	1472	868	143	119	1	193	532	12
+P00636	all	species_neighbour	97.05	False	Acidovorax sp. 59	Acidovorax sp. 100	715	409	102	73	0	122	185	25
+P00637	all	species_neighbour	96.75	False	Acidovorax sp. 59	Acidovorax sp. 99	782	435	115	101	1	115	205	11
+P00638	all	species_neighbour	97.52	False	Acidovorax sp. 59	Acidovorax delafieldii	574	329	99	80	0	92	138	20
+P00639	all	nearest_other_species	92.69	False	Acidovorax sp. 59	Acidovorax sp. M14	1486	841	149	125	1	189	503	10
+P00640	all	nearest_other_species	94.72	False	Variovorax sp. 54	Variovorax sp. KBS0712	1625	907	303	247	0	171	433	87
+P00641	all	species_neighbour	95.45	False	Variovorax sp. 54	Variovorax sp. 38R	1411	722	256	201	2	136	330	29
+P00642	all	species_neighbour	94.92	False	Variovorax sp. 54	Variovorax sp. EBFNA2	1553	812	265	208	0	141	406	56
+P00643	all	nearest_other_species	94.85	False	Variovorax sp. 54	Variovorax boronicumulans	1530	872	298	238	0	178	396	46
+P00644	all	nearest_other_species	94.86	False	Variovorax sp. 54	Variovorax sp. YR282	1554	812	274	216	0	169	369	38
+P00645	all	nearest_other_species	94.8	False	Variovorax sp. 54	Variovorax sp. YB-TT-C68	1517	790	275	223	0	149	366	31
+P00646	all	distance_tier_ani_97_99	97.62	False	Delftia sp. 60	Delftia acidovorans	887	506	160	113	3	100	246	6
+P00647	all	species_neighbour	96.64	False	Delftia sp. 60	Delftia acidovorans	1289	748	196	137	1	147	405	4
+P00648	all	species_neighbour	98.38	False	Delftia sp. 60	Delftia acidovorans	662	337	122	96	4	68	147	4
+P00649	all	species_neighbour	98.28	False	Delftia sp. 60	Delftia acidovorans	610	319	118	93	3	73	128	18
+P00650	all	species_neighbour	98.34	False	Delftia sp. 60	Delftia acidovorans	659	364	126	103	0	93	145	4
+P00651	all	species_neighbour	98.36	False	Delftia sp. 60	Delftia acidovorans	605	347	119	91	1	80	148	4
+P00652	all	nearest_other_species	93.91	False	Acidovorax sp. 62	Acidovorax sp. 106	1730	885	157	133	1	233	495	3
+P00653	all	species_neighbour	97.18	False	Acidovorax sp. 62	Acidovorax sp. 1608163	928	534	153	122	3	141	240	3
+P00654	all	species_neighbour	99.64	False	Paracidovorax citrulli	Paracidovorax citrulli	238	132	73	64	2	17	42	34
+P00655	all	clone_partner	100.0	False	Paracidovorax citrulli	Paracidovorax citrulli	4	2	1	1	0	0	1	4
+P00656	all	species_neighbour	99.9	False	Paracidovorax citrulli	Paracidovorax citrulli	55	34	13	10	1	2	19	8
+P00657	all	species_neighbour	99.87	False	Variovorax sp. PMC12	Variovorax sp. PDNC026	28	14	8	0	0	3	3	0
+P00658	all	nearest_other_species	93.26	False	Variovorax sp. PMC12	Variovorax sp. SCN45	1829	1062	264	190	1	168	630	52
+P00659	all	nearest_other_species	87.57	False	Melaminivora suipulveris	Pulveribacter suum	2014	1233	19	14	0	80	1134	45
+P00660	all	nearest_other_species	87.83	False	Melaminivora suipulveris	Melaminivora jejuensis	2419	1522	23	14	0	123	1376	49
+P00661	all	nearest_other_species	82.41	False	Ottowia oryzae	Ottowia sp. SB7-C50	1398	857	10	4	0	49	798	59
+P00662	all	nearest_other_species	81.17	False	Simplicispira suum	Simplicispira sp. 110	969	605	4	2	0	24	577	86
+P00663	all	clone_partner;distance_tier_ani_99.99_100	100.0	False	Paracidovorax citrulli	Paracidovorax citrulli	14	7	1	1	0	4	2	0
+P00664	all	species_neighbour	99.64	False	Paracidovorax citrulli	Paracidovorax citrulli	245	132	76	66	4	18	38	35
+P00665	all	distance_tier_ani_99.99_100	99.99	False	Paracidovorax citrulli	Paracidovorax citrulli	24	12	7	7	1	1	4	16
+P00666	all	species_neighbour	99.9	False	Paracidovorax citrulli	Paracidovorax citrulli	60	31	13	10	3	3	15	20
+P00667	all	clone_partner	100.0	False	Paracidovorax citrulli	Paracidovorax citrulli	2	1	0	0	0	0	1	0
+P00668	all	distance_tier_ani_99_99.99	99.97	False	Paracidovorax citrulli	Paracidovorax citrulli	38	19	12	10	2	3	4	16
+P00669	all	species_neighbour	99.64	False	Paracidovorax citrulli	Paracidovorax citrulli	253	142	76	65	3	21	45	36
+P00670	all	distance_tier_ani_99_99.99	99.48	False	Paracidovorax citrulli	Paracidovorax citrulli	311	163	77	68	2	20	66	35
+P00671	all	species_neighbour	99.89	False	Paracidovorax citrulli	Paracidovorax citrulli	62	35	14	9	2	5	16	18
+P00672	all	distance_tier_ani_99_99.99	99.6	False	Paracidovorax citrulli	Paracidovorax citrulli	261	139	76	65	4	19	44	35
+P00673	all	species_neighbour	99.64	False	Paracidovorax citrulli	Paracidovorax citrulli	252	141	76	65	3	21	44	35
+P00674	all	species_neighbour	99.9	False	Paracidovorax citrulli	Paracidovorax citrulli	62	35	14	9	2	5	16	16
+P00675	all	nearest_other_species	92.5	False	Acidovorax sp. 107	Acidovorax sp. M14	1769	1039	142	117	0	185	712	9
+P00676	all	nearest_other_species	86.2	False	Acidovorax sp. 100	Acidovorax radicis	2527	1519	34	22	0	109	1376	58
+P00677	all	nearest_other_species	92.79	False	Acidovorax sp. 100	Acidovorax delafieldii	1509	952	125	88	3	218	609	22
+P00678	all	species_neighbour	97.09	False	Acidovorax sp. 100	Acidovorax delafieldii	736	377	94	59	0	113	170	6
+P00679	all	species_neighbour	97.47	False	Acidovorax sp. 93	Acidovorax sp. 94	783	459	122	97	1	122	215	24
+P00680	all	distance_tier_ani_lt90	79.55	False	Acidovorax sp. 93	Acidovorax sp. NCPPB 4044	1096	629	8	6	0	23	598	109
+P00681	all	species_neighbour	97.69	False	Acidovorax sp. 93	Acidovorax facilis	619	356	99	82	3	103	154	19
+P00682	all	species_neighbour	97.69	False	Acidovorax sp. 93	Acidovorax facilis	623	317	97	80	2	95	125	19
+P00683	all	distance_tier_ani_90_95;nearest_other_species	90.29	False	Acidovorax sp. 93	Acidovorax radicis N35	2605	1756	109	87	1	337	1310	28
+P00684	all	distance_tier_ani_lt90	80.43	False	Acidovorax sp. 94	Acidovorax sp. BLS4	1534	925	14	5	0	44	867	80
+P00685	all	nearest_other_species	88.92	False	Acidovorax sp. 94	Acidovorax sp. FHTAMBA	2356	1373	62	46	1	136	1175	73
+P00686	all	species_neighbour	97.43	False	Acidovorax sp. 94	Acidovorax facilis	745	429	134	103	3	106	189	26
+P00687	all	species_neighbour	97.5	False	Acidovorax sp. 94	Acidovorax sp. NN32	836	429	122	99	2	115	192	13
+P00688	all	nearest_other_species	90.27	False	Acidovorax sp. 94	Acidovorax radicis N35	2602	1387	111	84	0	251	1025	17
+P00689	all	nearest_other_species	93.43	False	Acidovorax sp. 99	Acidovorax delafieldii	1411	832	120	100	1	205	507	15
+P00690	all	species_neighbour	96.82	False	Acidovorax sp. 99	Acidovorax delafieldii	788	439	120	97	0	128	191	13
+P00691	all	nearest_other_species	93.38	False	Acidovorax sp. 99	Acidovorax sp. M14	1440	737	155	128	1	169	413	7
+P00692	all	nearest_other_species	93.77	False	Acidovorax sp. 106	Acidovorax sp. 1608163	1696	1081	170	139	2	282	629	4
+P00693	all	clone_partner	100.0	False	Simplicispira sp. 110	Simplicispira sp. 125	0	0	0	0	0	0	0	0
+P00694	all	nearest_other_species	81.29	False	Simplicispira sp. 110	Acidovorax sp. GW823-FHT05D11	1212	708	8	4	0	48	652	100
+P00695	all	clone_partner	100.0	False	Polaromonas sp. SP1	Polaromonas sp. Pch-P	0	0	0	0	0	0	0	0
+P00696	all	nearest_other_species	79.59	False	Hylemonella gracilis	Rhodoferax sp. BAB1	853	497	1	0	0	17	479	90
+P00697	all	nearest_other_species	87.0	False	Acidovorax sp. 1608163	Acidovorax temperans	2434	1318	67	50	0	136	1115	23
+P00698	all	nearest_other_species	86.12	False	Hydrogenophaga pseudoflava	Hydrogenophaga sp. SL48	2712	1836	44	39	0	91	1701	47
+P00699	all	nearest_other_species	80.27	False	Hydrogenophaga pseudoflava	Hydrogenophaga bisanensis	923	501	1	0	0	18	482	52
+P00700	all	nearest_other_species	80.27	False	Hydrogenophaga pseudoflava	Hydrogenophaga bisanensis	923	502	1	0	0	18	483	52
+P00701	all	nearest_other_species	86.56	False	Diaphorobacter sp. DS2	Alicycliphilus denitrificans	2135	1233	61	33	0	77	1095	86
+P00702	all	species_neighbour	97.77	False	Diaphorobacter sp. DS2	Diaphorobacter sp. JS3050	480	252	128	87	1	35	89	47
+P00703	all	species_neighbour	97.49	False	Diaphorobacter sp. DS2	Diaphorobacter sp. MNS-0	483	255	130	88	3	24	101	40
+P00704	all	species_neighbour	97.53	False	Variovorax sp. KBS0712	Variovorax boronicumulans	639	349	146	119	1	65	138	55
+P00705	all	species_neighbour	97.51	False	Variovorax sp. KBS0712	Variovorax sp. YB-TT-C68	679	356	142	111	1	75	139	41
+P00706	all	nearest_other_species	92.62	False	Comamonas flocculans	Comamonas sp. NLF-1-9	860	568	53	40	0	75	440	7
+P00707	all	species_neighbour	99.64	False	Paracidovorax citrulli	Paracidovorax citrulli	253	143	77	67	2	19	47	30
+P00708	all	clone_partner	100.0	False	Paracidovorax citrulli	Paracidovorax citrulli	0	0	0	0	0	0	0	0
+P00709	all	species_neighbour	99.93	False	Paracidovorax citrulli	Paracidovorax citrulli	56	32	15	12	1	2	15	0
+P00710	all	species_neighbour	99.76	False	Paracidovorax citrulli	Paracidovorax citrulli	160	93	45	37	1	19	29	1
+P00711	all	species_neighbour	99.79	False	Paracidovorax citrulli	Paracidovorax citrulli	160	81	41	34	0	17	23	1
+P00712	all	clone_partner	99.99	False	Paracidovorax citrulli	Paracidovorax citrulli	12	7	6	3	0	0	1	0
+P00713	all	species_neighbour	99.94	False	Paracidovorax citrulli	Paracidovorax citrulli	56	28	21	17	2	0	7	16
+P00714	all	species_neighbour	99.98	False	Paracidovorax citrulli	Paracidovorax citrulli	54	27	20	16	1	0	7	16
+P00715	all	audit_multi_project_all_vs_all	94.92	False	Comamonas testosteroni	Comamonas thiooxydans	955	489	148	96	17	99	242	4
+P00716	all	audit_multi_project_all_vs_all	94.65	False	Comamonas testosteroni	Comamonas thiooxydans	987	521	162	107	27	103	256	21
+P00717	all	audit_multi_project_all_vs_all	94.94	False	Comamonas testosteroni	Comamonas thiooxydans	969	497	128	81	2	118	251	18
+P00718	all	audit_multi_project_all_vs_all	94.83	False	Comamonas testosteroni	Comamonas thiooxydans	929	475	144	87	2	119	212	3
+P00719	all	audit_multi_project_all_vs_all;species_neighbour	99.12	False	Comamonas testosteroni	Comamonas testosteroni	216	112	68	45	1	14	30	20
+P00720	all	audit_multi_project_all_vs_all	94.65	False	Comamonas testosteroni	Comamonas thiooxydans	1030	531	139	86	5	122	270	12
+P00721	all	audit_multi_project_all_vs_all	94.48	False	Comamonas testosteroni	Comamonas sp. 7D-2	915	477	139	88	2	120	218	15
+P00722	all	audit_multi_project_all_vs_all	94.44	False	Comamonas testosteroni	Comamonas sp. 7D-2evo1	914	549	158	101	4	139	252	24
+P00723	all	audit_multi_project_all_vs_all	94.55	False	Comamonas testosteroni	Comamonas sp. 7D-2evo2	911	551	159	102	4	135	257	25
+P00724	all	audit_multi_project_all_vs_all;species_neighbour	98.79	False	Comamonas testosteroni	Comamonas sp. C11	291	150	79	51	3	23	48	23
+P00725	all	nearest_other_species	93.05	False	Comamonas testosteroni	Comamonas testosteroni	1245	800	123	78	0	178	499	15
+P00726	all	nearest_other_species	94.06	False	Comamonas testosteroni	Comamonas testosteroni	1141	582	163	104	2	106	313	11
+P00727	all	audit_multi_project_all_vs_all	94.61	False	Comamonas testosteroni	Comamonas thiooxydans	911	471	131	82	1	116	224	11
+P00728	all	audit_multi_project_all_vs_all	94.86	False	Comamonas testosteroni	Comamonas thiooxydans	992	528	150	100	4	128	250	22
+P00729	all	audit_multi_project_all_vs_all;species_neighbour	99.2	False	Comamonas testosteroni	Comamonas testosteroni	248	126	63	44	1	21	42	13
+P00730	all	species_neighbour	99.21	False	Comamonas testosteroni	Comamonas testosteroni	183	105	41	26	2	19	45	30
+P00731	all	species_neighbour	96.03	False	Comamonas testosteroni	Comamonas testosteroni	630	322	94	68	6	80	148	16
+P00732	all	nearest_other_species	92.92	False	Comamonas testosteroni	Comamonas thiooxydans	1178	655	111	75	4	147	397	50
+P00733	all	nearest_other_species	91.79	False	Comamonas koreensis	Comamonas sp. B21-038	1487	1000	82	61	0	152	766	9
+P00734	all	species_neighbour	99.12	False	Comamonas koreensis	Comamonas squillarum	315	162	66	50	2	40	56	8
+P00735	all	species_neighbour	99.25	False	Comamonas koreensis	Comamonas sp. 23	213	117	53	43	4	24	40	6
+P00736	all	clone_partner	99.99	True	Hydrogenophaga sp. PBL-H3	Hydrogenophaga sp. PBL-H3	2	1	0	0	0	0	1	0
+P00737	all	nearest_other_species	85.37	False	Hydrogenophaga sp. BPS33	Hydrogenophaga sp. UC242_53	2125	1304	47	34	0	50	1207	119
+P00738	all	species_neighbour	99.84	False	Delftia tsuruhatensis	Delftia sp. WY8	75	38	19	9	0	4	15	5
+P00739	all	species_neighbour	99.77	False	Delftia tsuruhatensis	Delftia sp. UGAL515B_04	48	24	21	8	0	1	2	1
+P00740	all	species_neighbour	95.61	False	Variovorax paradoxus	Variovorax sp. 38R	1308	735	256	206	2	124	355	53
+P00741	all	species_neighbour	97.22	False	Variovorax paradoxus	Variovorax sp. EBFNA2	635	361	129	97	1	67	165	58
+P00742	all	species_neighbour	98.52	False	Delftia lacustris	Delftia tsuruhatensis	562	304	88	64	3	67	149	27
+P00743	all	species_neighbour	98.93	False	Delftia lacustris	Delftia sp. PX-1	390	239	71	51	2	51	117	27
+P00744	all	nearest_other_species	85.11	False	Delftia lacustris	Comamonas terrae	2301	1270	28	9	0	86	1156	101
+P00745	all	species_neighbour	97.93	True	Delftia acidovorans	Delftia acidovorans	841	496	171	121	6	101	224	3
+P00746	all	distance_tier_ani_95_97	96.48	False	Delftia acidovorans	Delftia acidovorans	1279	649	183	133	4	134	332	2
+P00747	all	nearest_other_species	84.9	False	Delftia acidovorans	Comamonas terrae	2346	1285	20	10	0	94	1171	84
+P00748	all	nearest_other_species	84.93	False	Delftia acidovorans	Comamonas terrae	2339	1278	20	10	0	94	1164	88
+P00749	all	nearest_other_species	84.98	False	Delftia acidovorans	Comamonas terrae	2341	1280	20	10	0	94	1166	87
+P00750	all	species_neighbour	98.29	False	Delftia acidovorans	Delftia acidovorans	630	366	137	100	2	73	156	0
+P00751	all	species_neighbour	98.28	False	Delftia acidovorans	Delftia acidovorans	626	352	131	105	2	89	132	0
+P00752	all	species_neighbour	98.31	False	Delftia acidovorans	Delftia acidovorans	636	376	127	95	6	76	173	0
+P00753	all	nearest_other_species	94.39	False	Variovorax paradoxus	Variovorax sp. S12S4	913	466	138	106	0	79	249	15
+P00754	all	species_neighbour	99.85	False	Delftia sp. WY8	Delftia sp. UGAL515B_04	42	21	10	3	0	3	8	4
+P00755	all	nearest_other_species	83.4	False	Acidovorax sp. HDW3	Alicycliphilus denitrificans	913	566	15	11	0	31	520	59
+P00756	all	nearest_other_species	86.27	False	Diaphorobacter sp. HDW4A	Diaphorobacter sp. HDW4B	2571	1538	3	0	0	63	1472	114
+P00757	all	nearest_other_species	84.2	False	Diaphorobacter sp. HDW4B	Diaphorobacter aerolatus	2314	1333	2	2	0	50	1281	90
+P00758	all	nearest_other_species	83.54	False	Diaphorobacter sp. HDW4B	Diaphorobacter ruginosibacter	2160	1413	0	0	0	76	1337	103
+P00759	all	nearest_other_species	87.33	False	Hydrogenophaga crocea	Hydrogenophaga sp. SNF1	1860	1098	46	40	0	84	968	58
+P00760	all	audit_multi_project_all_vs_all;species_neighbour	99.63	False	Comamonas thiooxydans	Comamonas thiooxydans	154	85	45	32	3	10	30	21
+P00761	all	audit_multi_project_all_vs_all;species_neighbour	97.51	False	Comamonas thiooxydans	Comamonas thiooxydans	498	251	88	56	4	64	99	6
+P00762	all	audit_multi_project_all_vs_all	96.94	False	Comamonas thiooxydans	Comamonas thiooxydans	526	268	100	62	1	85	83	0
+P00763	all	audit_multi_project_all_vs_all	94.66	False	Comamonas thiooxydans	Comamonas testosteroni	881	448	123	73	2	111	214	2
+P00764	all	audit_multi_project_all_vs_all;species_neighbour	98.44	False	Comamonas thiooxydans	Comamonas thiooxydans	394	200	83	56	4	51	66	5
+P00765	all	audit_multi_project_all_vs_all	96.83	False	Comamonas thiooxydans	Comamonas sp. 7D-2	487	252	84	57	0	82	86	6
+P00766	all	audit_multi_project_all_vs_all	96.84	False	Comamonas thiooxydans	Comamonas sp. 7D-2evo1	493	280	91	61	0	84	105	12
+P00767	all	audit_multi_project_all_vs_all	97.0	False	Comamonas thiooxydans	Comamonas sp. 7D-2evo2	497	285	92	61	0	85	108	15
+P00768	all	audit_multi_project_all_vs_all	94.81	False	Comamonas thiooxydans	Comamonas sp. C11	938	484	120	75	0	118	246	30
+P00769	all	nearest_other_species	94.21	False	Comamonas thiooxydans	Comamonas testosteroni	999	502	137	84	3	118	247	2
+P00770	all	audit_multi_project_all_vs_all	96.95	False	Comamonas thiooxydans	Comamonas thiooxydans	506	260	89	60	1	73	98	0
+P00771	all	audit_multi_project_all_vs_all;species_neighbour	98.33	False	Comamonas thiooxydans	Comamonas thiooxydans	396	203	90	69	6	60	53	16
+P00772	all	audit_multi_project_all_vs_all	94.74	False	Comamonas thiooxydans	Comamonas testosteroni	867	441	110	71	1	113	218	0
+P00773	all	nearest_other_species	86.9	False	Alicycliphilus denitrificans	Diaphorobacter sp. JS3050	2122	1205	55	35	0	75	1075	72
+P00774	all	nearest_other_species	88.26	False	Alicycliphilus denitrificans	Alicycliphilus denitrificans	1721	995	73	45	1	112	810	85
+P00775	all	species_neighbour	96.14	False	Alicycliphilus denitrificans	Alicycliphilus denitrificans	1028	517	233	178	1	63	221	3
+P00776	all	species_neighbour	97.98	False	Diaphorobacter sp. JS3050	Diaphorobacter sp. JS3051	454	269	113	92	3	32	124	57
+P00777	all	species_neighbour	97.71	False	Diaphorobacter sp. JS3050	Diaphorobacter sp. MNS-0	440	228	123	99	3	30	75	11
+P00778	all	audit_multi_project_all_vs_all	97.1	False	Comamonas thiooxydans	Comamonas thiooxydans	520	270	88	51	5	59	123	20
+P00779	all	audit_multi_project_all_vs_all	96.69	False	Comamonas thiooxydans	Comamonas thiooxydans	534	278	100	58	2	86	92	20
+P00780	all	audit_multi_project_all_vs_all	94.16	False	Comamonas thiooxydans	Comamonas testosteroni	879	453	125	73	3	106	222	34
+P00781	all	audit_multi_project_all_vs_all;species_neighbour	98.19	False	Comamonas thiooxydans	Comamonas thiooxydans	421	220	80	50	5	56	84	16
+P00782	all	audit_multi_project_all_vs_all	96.98	False	Comamonas thiooxydans	Comamonas sp. 7D-2	493	257	92	58	1	78	87	14
+P00783	all	audit_multi_project_all_vs_all	97.0	False	Comamonas thiooxydans	Comamonas sp. 7D-2evo1	500	294	103	64	1	84	107	20
+P00784	all	audit_multi_project_all_vs_all	97.09	False	Comamonas thiooxydans	Comamonas sp. 7D-2evo2	501	299	103	63	1	83	113	20
+P00785	all	audit_multi_project_all_vs_all	94.3	False	Comamonas thiooxydans	Comamonas sp. C11	961	492	123	74	1	118	251	25
+P00786	all	nearest_other_species	93.84	False	Comamonas thiooxydans	Comamonas testosteroni	1007	516	140	81	4	114	262	23
+P00787	all	audit_multi_project_all_vs_all	96.78	False	Comamonas thiooxydans	Comamonas thiooxydans	509	270	89	57	3	72	109	22
+P00788	all	audit_multi_project_all_vs_all;species_neighbour	98.26	False	Comamonas thiooxydans	Comamonas thiooxydans	385	210	83	60	4	63	64	28
+P00789	all	audit_multi_project_all_vs_all	94.75	False	Comamonas thiooxydans	Comamonas testosteroni	905	466	114	71	2	116	236	17
+P00790	all	nearest_other_species	88.32	False	Comamonas antarctica	Comamonas endophytica	2145	1120	16	13	0	90	1014	45
+P00791	all	nearest_other_species	87.67	False	Comamonas antarctica	Comamonas sp. DB36	2335	1624	18	11	0	114	1492	100
+P00792	all	nearest_other_species	84.33	False	Polaromonas sp. CG_23.6	Polaromonas hydrogenivorans	1775	1157	15	11	0	52	1090	220
+P00793	all	nearest_other_species	83.68	False	Comamonas kerstersii	Comamonas aquatica	1271	812	6	3	0	29	777	77
+P00794	all	nearest_other_species	84.54	False	Paenacidovorax monticola	Diaphorobacter sp. C33	1640	1028	12	4	0	55	961	60
+P00795	all	nearest_other_species	87.4	False	Delftia sp. PS-11	Delftia acidovorans	3035	1611	54	37	1	128	1429	36
+P00796	all	species_neighbour	95.33	False	Variovorax sp. 38R	Variovorax sp. EBFNA2	1304	688	245	199	1	114	329	66
+P00797	all	species_neighbour	98.24	False	Delftia acidovorans	Delftia acidovorans	595	302	127	98	3	65	110	10
+P00798	all	distance_tier_ani_99.99_100	100.0	False	Delftia acidovorans	Delftia acidovorans	0	0	0	0	0	0	0	0
+P00799	all	clone_partner;distance_tier_ani_99.99_100	100.0	False	Delftia acidovorans	Delftia acidovorans	0	0	0	0	0	0	0	0
+P00800	all	nearest_other_species	87.96	False	Variovorax paradoxus	Variovorax sp. TBS-050B	3282	2004	85	63	0	208	1711	157
+P00801	all	species_neighbour	96.33	False	Variovorax paradoxus	Variovorax sp. DAIF25	1939	1023	358	271	0	186	479	23
+P00802	all	species_neighbour	98.31	False	Variovorax paradoxus	Variovorax sp. UC122_21	623	340	137	112	2	56	147	13
+P00803	all	nearest_other_species	90.47	False	Hydrogenophaga sp. SL48	Hydrogenophaga sp. A37	2347	1467	143	127	2	224	1100	39
+P00804	all	species_neighbour	98.15	False	Diaphorobacter sp. JS3051	Diaphorobacter sp. MNS-0	491	281	116	84	5	24	141	55
+P00805	all	species_neighbour	97.5	False	Diaphorobacter sp. JS3051	Diaphorobacter sp. ED-3	442	256	107	76	4	25	124	74
+P00806	all	nearest_other_species	86.02	False	Comamonas fluminis	Comamonas resistens	2254	1176	19	10	0	53	1104	20
+P00807	all	species_neighbour	96.45	False	Hydrogenophaga sp. YM1	Hydrogenophaga sp. SNF1	905	455	156	136	2	101	198	8
+P00808	all	species_neighbour	98.68	False	Delftia lacustris	Delftia tsuruhatensis	524	301	91	77	0	55	155	39
+P00809	all	species_neighbour	98.67	False	Delftia lacustris	Delftia sp. PX-1	514	304	92	68	1	63	149	27
+P00810	all	nearest_other_species	93.1	False	Variovorax sp. PDNC026	Variovorax sp. SCN45	1829	945	241	171	1	145	559	55
+P00811	all	nearest_other_species	85.33	False	Ottowia testudinis	Ottowia sp. SB7-C50	2026	1222	9	2	0	100	1113	72
+P00812	all	species_neighbour	97.35	False	Comamonas aquatica	Comamonas aquatica	252	129	44	25	1	45	40	18
+P00813	all	species_neighbour	97.12	False	Comamonas aquatica	Comamonas aquatica	349	181	55	36	5	37	89	14
+P00814	all	species_neighbour	97.16	False	Comamonas aquatica	Comamonas aquatica	349	183	58	36	4	47	78	36
+P00815	all	nearest_other_species	92.67	False	Hydrogenophaga taeniospiralis	Hydrogenophaga taeniospiralis	2130	1233	175	151	1	250	808	38
+P00816	all	nearest_other_species	92.14	False	Hydrogenophaga taeniospiralis	Hydrogenophaga sp. L76	1817	965	128	94	1	153	684	42
+P00817	all	audit_multi_project_all_vs_all	96.63	False	Comamonas thiooxydans	Comamonas thiooxydans	622	317	103	71	3	98	116	2
+P00818	all	audit_multi_project_all_vs_all	94.59	False	Comamonas thiooxydans	Comamonas testosteroni	914	473	114	71	3	110	249	20
+P00819	all	audit_multi_project_all_vs_all	97.15	False	Comamonas thiooxydans	Comamonas thiooxydans	560	287	90	54	5	74	123	7
+P00820	all	audit_multi_project_all_vs_all	96.52	False	Comamonas thiooxydans	Comamonas sp. 7D-2	593	306	92	60	5	85	129	4
+P00821	all	audit_multi_project_all_vs_all	96.59	False	Comamonas thiooxydans	Comamonas sp. 7D-2evo1	601	353	104	65	4	93	156	10
+P00822	all	audit_multi_project_all_vs_all	96.54	False	Comamonas thiooxydans	Comamonas sp. 7D-2evo2	593	349	102	62	4	93	154	10
+P00823	all	audit_multi_project_all_vs_all	94.97	False	Comamonas thiooxydans	Comamonas sp. C11	969	497	119	76	1	123	255	22
+P00824	all	nearest_other_species	93.71	False	Comamonas thiooxydans	Comamonas testosteroni	1024	599	138	86	4	135	326	26
+P00825	all	audit_multi_project_all_vs_all	96.31	False	Comamonas thiooxydans	Comamonas thiooxydans	570	293	80	55	3	86	127	0
+P00826	all	audit_multi_project_all_vs_all	97.37	False	Comamonas thiooxydans	Comamonas thiooxydans	590	303	106	72	9	89	108	24
+P00827	all	audit_multi_project_all_vs_all	95.06	False	Comamonas thiooxydans	Comamonas testosteroni	893	459	104	73	2	113	242	6
+P00828	all	nearest_other_species	87.59	False	Comamonas thiooxydans	Comamonas resistens	2325	1254	56	33	2	101	1097	74
+P00829	all	species_neighbour	97.9	False	Diaphorobacter sp. MNS-0	Diaphorobacter sp. ED-3	377	193	105	75	0	22	66	34
+P00830	all	nearest_other_species	83.15	False	Comamonas odontotermitis	Comamonas sp. 23	1994	1238	5	4	0	36	1197	104
+P00831	all	audit_multi_project_all_vs_all	94.51	False	Comamonas thiooxydans	Comamonas testosteroni	877	450	129	75	3	114	207	13
+P00832	all	audit_multi_project_all_vs_all	96.27	False	Comamonas thiooxydans	Comamonas thiooxydans	614	317	103	65	4	81	133	4
+P00833	all	audit_multi_project_all_vs_all;species_neighbour	98.09	False	Comamonas thiooxydans	Comamonas sp. 7D-2	409	208	82	50	2	57	69	4
+P00834	all	audit_multi_project_all_vs_all;species_neighbour	98.08	False	Comamonas thiooxydans	Comamonas sp. 7D-2evo1	417	249	90	55	3	70	89	10
+P00835	all	audit_multi_project_all_vs_all;species_neighbour	98.13	False	Comamonas thiooxydans	Comamonas sp. 7D-2evo2	415	249	88	54	3	67	94	12
+P00836	all	audit_multi_project_all_vs_all	94.52	False	Comamonas thiooxydans	Comamonas sp. C11	956	491	139	85	2	121	231	20
+P00837	all	nearest_other_species	87.31	False	Comamonas thiooxydans	Comamonas resistens	2285	1235	48	35	1	92	1095	59
+P00838	all	nearest_other_species	94.09	False	Comamonas thiooxydans	Comamonas testosteroni	1081	548	136	84	3	111	301	4
+P00839	all	audit_multi_project_all_vs_all;species_neighbour	98.14	False	Comamonas thiooxydans	Comamonas thiooxydans	396	201	75	46	3	50	76	0
+P00840	all	audit_multi_project_all_vs_all	96.9	False	Comamonas thiooxydans	Comamonas thiooxydans	639	346	126	85	6	100	120	24
+P00841	all	audit_multi_project_all_vs_all	94.7	False	Comamonas thiooxydans	Comamonas testosteroni	895	458	117	74	2	121	220	6
+P00842	all	clone_partner	100.0	False	Paracidovorax citrulli	Paracidovorax citrulli	0	0	0	0	0	0	0	0
+P00843	all	species_neighbour	99.76	False	Paracidovorax citrulli	Paracidovorax citrulli	150	75	44	34	1	11	20	0
+P00844	all	species_neighbour	99.79	False	Paracidovorax citrulli	Paracidovorax citrulli	150	89	43	34	1	18	28	0
+P00845	all	species_neighbour	99.64	False	Paracidovorax citrulli	Paracidovorax citrulli	247	142	77	66	3	19	46	29
+P00846	all	species_neighbour	99.64	False	Paracidovorax citrulli	Paracidovorax citrulli	243	127	76	65	3	17	34	30
+P00847	all	species_neighbour	99.64	False	Paracidovorax citrulli	Paracidovorax citrulli	253	144	78	68	3	19	47	30
+P00848	all	species_neighbour	99.64	False	Paracidovorax citrulli	Paracidovorax citrulli	252	144	79	69	2	19	46	28
+P00849	all	species_neighbour	99.64	False	Paracidovorax citrulli	Paracidovorax citrulli	240	126	75	64	3	17	34	31
+P00850	all	nearest_other_species	84.75	True	Polaromonas sp. P1(28)-13	Polaromonas sp. P1(28)-8	2450	1384	57	43	0	98	1229	104
+P00851	all	species_neighbour	97.52	True	Polaromonas sp. P1(28)-13	Polaromonas sp. P2-4	1016	520	170	136	5	116	234	31
+P00852	all	species_neighbour	97.11	True	Polaromonas sp. P1(28)-13	Polaromonas sp. P1-6	1020	565	199	166	8	132	234	95
+P00853	all	nearest_other_species	84.84	True	Polaromonas sp. P1(28)-8	Polaromonas sp. P2-4	2503	1411	63	46	0	110	1238	83
+P00854	all	nearest_other_species	84.81	True	Polaromonas sp. P1(28)-8	Polaromonas sp. P1-6	2501	1614	57	48	1	102	1455	105
+P00855	all	species_neighbour	97.76	True	Polaromonas sp. P2-4	Polaromonas sp. P1-6	993	549	176	143	5	126	247	65
+P00856	all	species_neighbour	98.32	False	Delftia acidovorans	Delftia acidovorans	606	330	115	90	3	73	142	12
+P00857	all	species_neighbour	98.3	False	Delftia acidovorans	Delftia acidovorans	625	335	122	97	6	74	139	12
+P00858	all	audit_multi_project_all_vs_all	94.53	False	Comamonas testosteroni	Comamonas thiooxydans	959	488	127	74	4	111	250	20
+P00859	all	audit_multi_project_all_vs_all	94.42	False	Comamonas testosteroni	Comamonas sp. 7D-2	853	442	126	77	2	110	206	17
+P00860	all	audit_multi_project_all_vs_all	94.48	False	Comamonas testosteroni	Comamonas sp. 7D-2evo1	838	506	138	85	2	129	239	22
+P00861	all	audit_multi_project_all_vs_all	94.64	False	Comamonas testosteroni	Comamonas sp. 7D-2evo2	836	509	139	87	2	125	245	32
+P00862	all	audit_multi_project_all_vs_all;species_neighbour	99.19	False	Comamonas testosteroni	Comamonas sp. C11	225	117	63	41	6	17	37	32
+P00863	all	nearest_other_species	93.68	False	Comamonas testosteroni	Comamonas testosteroni	1077	550	144	90	3	104	302	11
+P00864	all	audit_multi_project_all_vs_all	94.27	False	Comamonas testosteroni	Comamonas thiooxydans	894	457	118	69	2	108	231	3
+P00865	all	audit_multi_project_all_vs_all	94.65	False	Comamonas testosteroni	Comamonas thiooxydans	936	502	141	92	5	122	239	25
+P00866	all	audit_multi_project_all_vs_all;species_neighbour	99.39	False	Comamonas testosteroni	Comamonas testosteroni	182	93	47	25	2	7	39	0
+P00867	all	species_neighbour	98.24	False	Delftia acidovorans	Delftia acidovorans	588	336	125	96	3	78	133	11
+P00868	all	species_neighbour	98.19	False	Delftia acidovorans	Delftia acidovorans	634	358	122	99	3	69	167	4
+P00869	all	species_neighbour	98.24	False	Delftia acidovorans	Delftia acidovorans	588	336	128	98	3	78	130	11
+P00870	all	nearest_other_species	91.65	False	Comamonas sp. B21-038	Comamonas squillarum	1456	970	79	64	1	145	746	6
+P00871	all	nearest_other_species	91.97	False	Comamonas sp. B21-038	Comamonas sp. 23	1464	762	74	60	0	111	577	2
+P00872	all	species_neighbour	98.22	False	Comamonas sp. B21-038	Comamonas sediminis	379	212	61	47	1	53	98	3
+P00873	all	audit_multi_project_all_vs_all	96.84	False	Comamonas thiooxydans	Comamonas sp. 7D-2	544	283	100	62	5	75	108	8
+P00874	all	audit_multi_project_all_vs_all	96.97	False	Comamonas thiooxydans	Comamonas sp. 7D-2evo1	556	323	111	66	5	79	133	13
+P00875	all	audit_multi_project_all_vs_all	96.96	False	Comamonas thiooxydans	Comamonas sp. 7D-2evo2	561	330	113	67	5	80	137	13
+P00876	all	audit_multi_project_all_vs_all	94.7	False	Comamonas thiooxydans	Comamonas sp. C11	1011	514	124	78	4	122	268	16
+P00877	all	nearest_other_species	93.75	False	Comamonas thiooxydans	Comamonas testosteroni	1075	635	144	83	5	137	354	23
+P00878	all	audit_multi_project_all_vs_all	96.88	False	Comamonas thiooxydans	Comamonas thiooxydans	529	273	95	61	5	71	107	6
+P00879	all	audit_multi_project_all_vs_all	98.1	False	Comamonas thiooxydans	Comamonas thiooxydans	448	234	100	72	8	66	68	15
+P00880	all	audit_multi_project_all_vs_all	94.72	False	Comamonas thiooxydans	Comamonas testosteroni	959	489	114	72	3	121	254	8
+P00881	all	audit_multi_project_all_vs_all;clone_partner	99.99	False	Comamonas sp. 7D-2	Comamonas sp. 7D-2evo1	12	6	5	4	0	0	1	18
+P00882	all	audit_multi_project_all_vs_all	99.98	False	Comamonas sp. 7D-2	Comamonas sp. 7D-2evo2	23	12	7	4	0	1	4	18
+P00883	all	audit_multi_project_all_vs_all	94.81	False	Comamonas sp. 7D-2	Comamonas sp. C11	909	470	127	83	2	124	219	23
+P00884	all	nearest_other_species	93.95	False	Comamonas sp. 7D-2	Comamonas testosteroni	1048	602	126	75	1	131	345	21
+P00885	all	audit_multi_project_all_vs_all;species_neighbour	98.42	False	Comamonas sp. 7D-2	Comamonas thiooxydans	269	138	48	25	2	49	41	0
+P00886	all	audit_multi_project_all_vs_all	96.87	False	Comamonas sp. 7D-2	Comamonas thiooxydans	557	303	99	68	6	99	105	21
+P00887	all	audit_multi_project_all_vs_all	94.67	False	Comamonas sp. 7D-2	Comamonas testosteroni	852	438	113	77	1	115	210	16
+P00888	all	audit_multi_project_all_vs_all;clone_partner	99.99	False	Comamonas sp. 7D-2evo1	Comamonas sp. 7D-2evo2	36	18	12	8	0	1	5	0
+P00889	all	audit_multi_project_all_vs_all	94.8	False	Comamonas sp. 7D-2evo1	Comamonas sp. C11	909	540	145	93	2	142	253	37
+P00890	all	nearest_other_species	93.84	False	Comamonas sp. 7D-2evo1	Comamonas testosteroni	1045	605	138	82	3	132	335	10
+P00891	all	audit_multi_project_all_vs_all;species_neighbour	98.52	False	Comamonas sp. 7D-2evo1	Comamonas thiooxydans	291	162	55	29	3	56	51	8
+P00892	all	audit_multi_project_all_vs_all	96.88	False	Comamonas sp. 7D-2evo1	Comamonas thiooxydans	553	311	107	71	8	95	109	25
+P00893	all	audit_multi_project_all_vs_all	94.53	False	Comamonas sp. 7D-2evo1	Comamonas testosteroni	846	506	126	85	0	137	243	25
+P00894	all	audit_multi_project_all_vs_all	94.85	False	Comamonas sp. 7D-2evo2	Comamonas sp. C11	903	540	145	94	2	140	255	34
+P00895	all	nearest_other_species	94.03	False	Comamonas sp. 7D-2evo2	Comamonas testosteroni	1040	532	128	74	1	111	293	10
+P00896	all	audit_multi_project_all_vs_all;species_neighbour	98.36	False	Comamonas sp. 7D-2evo2	Comamonas thiooxydans	290	160	54	29	3	53	53	10
+P00897	all	audit_multi_project_all_vs_all	96.87	False	Comamonas sp. 7D-2evo2	Comamonas thiooxydans	553	312	108	72	8	95	109	25
+P00898	all	audit_multi_project_all_vs_all	94.68	False	Comamonas sp. 7D-2evo2	Comamonas testosteroni	850	509	127	87	0	133	249	25
+P00899	all	species_neighbour	98.0	False	Diaphorobacter sp. LI3	Diaphorobacter sp. C33	351	188	95	57	3	26	67	31
+P00900	all	species_neighbour	97.02	False	Comamonas aquatica	Comamonas aquatica	367	192	56	37	1	48	88	42
+P00901	all	distance_tier_ani_97_99	97.12	False	Comamonas aquatica	Comamonas aquatica	354	184	45	27	2	44	95	22
+P00902	all	species_neighbour	97.32	False	Comamonas aquatica	Comamonas aquatica	337	179	62	37	6	50	67	26
+P00903	all	nearest_other_species	87.17	True	Acidovorax sp. NCPPB 2350	Acidovorax sp. NCPPB 4044	3061	2145	25	17	0	225	1895	30
+P00904	all	nearest_other_species	93.63	True	Acidovorax sp. NCPPB 3576	Acidovorax sp. GBBC 1281	1742	960	89	65	1	201	670	50
+P00905	all	nearest_other_species	93.63	False	Acidovorax sp. NCPPB 3576	Acidovorax sp. BLS4	1601	981	59	38	1	195	727	37
+P00906	all	species_neighbour	99.92	True	Acidovorax sp. NCPPB 3859	Acidovorax sp. GBBC 712	32	17	6	5	0	1	10	4
+P00907	all	nearest_other_species	84.33	False	Acidovorax sp. GBBC 1281	Paracidovorax wautersii	2189	1381	14	5	0	83	1284	102
+P00908	all	species_neighbour	96.7	False	Acidovorax sp. GBBC 1281	Acidovorax sp. BLS4	663	381	98	73	2	108	175	74
+P00909	all	nearest_other_species	88.06	False	Variovorax sp. TBS-050B	Variovorax sp. DAIF25	3319	2020	107	77	0	205	1708	150
+P00910	all	nearest_other_species	88.29	False	Variovorax sp. TBS-050B	Variovorax sp. Varisp41	3386	2103	91	65	1	195	1817	134
+P00911	all	nearest_other_species	87.97	False	Variovorax sp. TBS-050B	Variovorax sp. UC122_21	3383	2117	93	74	0	199	1825	145
+P00912	all	distance_tier_ani_lt90	87.27	False	Variovorax sp. TBS-050B	Variovorax sp. OK565	3449	1965	75	52	0	181	1709	193
+P00913	all	nearest_other_species	88.86	False	Comamonadaceae bacterium OTU4NAUVB1	Variovorax sp. PEI5	2556	1415	21	20	0	110	1284	190
+P00914	all	nearest_other_species	93.96	False	Comamonas sp. C11	Comamonas testosteroni	1093	554	141	91	5	113	300	18
+P00915	all	audit_multi_project_all_vs_all	94.56	False	Comamonas sp. C11	Comamonas thiooxydans	939	482	116	74	2	120	246	8
+P00916	all	audit_multi_project_all_vs_all	94.87	False	Comamonas sp. C11	Comamonas thiooxydans	971	520	139	93	3	129	252	39
+P00917	all	audit_multi_project_all_vs_all;species_neighbour	99.32	False	Comamonas sp. C11	Comamonas testosteroni	219	111	58	45	8	16	37	14
+P00918	all	nearest_other_species	91.41	False	Variovorax paradoxus	Variovorax sp. Varisp46	2352	1413	210	161	0	244	959	43
+P00919	all	species_neighbour	96.31	False	Variovorax paradoxus	Variovorax sp. R-27	910	506	191	152	0	95	220	8
+P00920	all	species_neighbour	96.26	False	Variovorax paradoxus	Variovorax sp. CF163	890	452	185	141	0	84	183	17
+P00921	all	species_neighbour	96.37	False	Variovorax paradoxus	Variovorax sp. OV006	932	508	190	152	0	93	225	22
+P00922	all	species_neighbour	97.18	False	Comamonas aquatica	Comamonas aquatica	342	184	62	41	0	35	87	43
+P00923	all	species_neighbour	98.05	False	Comamonas aquatica	Comamonas aquatica	259	142	53	37	1	27	62	22
+P00924	all	species_neighbour	99.04	False	Delftia tsuruhatensis	Delftia tsuruhatensis	272	148	57	41	2	33	58	10
+P00925	all	species_neighbour	98.63	False	Delftia tsuruhatensis	Delftia sp. PX-1	446	264	78	60	4	71	115	23
+P00926	all	species_neighbour	97.43	False	Comamonas aquatica	Comamonas aquatica	329	173	54	38	0	37	82	51
+P00927	all	species_neighbour	99.24	False	Comamonas squillarum	Comamonas sp. 23	253	145	55	48	3	35	55	7
+P00928	all	species_neighbour	98.61	False	Delftia tsuruhatensis	Delftia sp. PX-1	491	276	87	59	0	59	130	18
+P00929	all	species_neighbour	98.62	False	Delftia tsuruhatensis	Delftia sp. 11MD	524	272	100	71	1	55	117	17
+P00930	all	species_neighbour	98.41	False	Delftia acidovorans	Delftia acidovorans	584	293	124	93	4	72	97	0
+P00931	all	species_neighbour	97.84	False	Diaphorobacter sp. ED-3	Diaphorobacter sp. C33	266	138	61	37	3	24	53	23
+P00932	all	nearest_other_species	80.54	False	Ramlibacter tataouinensis	Ramlibacter sp. CPT15-335-S7	1016	629	0	0	0	32	597	92
+P00933	all	nearest_other_species	84.83	False	Ramlibacter tataouinensis	Ramlibacter sp. JJN2-2R	1856	1125	10	6	0	59	1056	66
+P00934	all	species_neighbour	99.59	False	Delftia tsuruhatensis	Delftia tsuruhatensis	160	88	46	33	2	9	33	27
+P00935	all	species_neighbour	99.23	False	Delftia tsuruhatensis	Delftia tsuruhatensis	40	20	20	20	1	0	0	0
+P00936	all	species_neighbour	98.68	False	Delftia tsuruhatensis	Delftia lacustris	512	273	98	72	4	42	133	51
+P00937	all	nearest_other_species	87.49	False	Diaphorobacter limosus	Alicycliphilus denitrificans	1733	1128	31	16	0	104	993	82
+P00938	all	nearest_other_species	88.43	False	Alicycliphilus denitrificans	Alicycliphilus denitrificans	1613	961	95	54	0	109	757	73
+P00939	all	species_neighbour	96.27	False	Acidovorax delafieldii	Acidovorax sp. M14	736	412	124	98	1	104	184	10
+P00940	all	species_neighbour	95.66	False	Variovorax sp. W2I14	Variovorax sp. W1I1	1354	783	272	217	0	145	366	14
+P00941	all	nearest_other_species	92.84	False	Variovorax sp. W2I14	Variovorax sp. OV254	1925	1055	250	193	0	183	622	72
+P00942	all	nearest_other_species	93.69	False	Variovorax paradoxus	Variovorax paradoxus NBRC 15149	860	496	124	105	28	83	289	63
+P00943	all	species_neighbour	97.74	False	Comamonas resistens	Comamonas resistens	458	238	78	53	1	55	105	28
+P00944	all	distance_tier_ani_lt90	87.56	False	Variovorax sp. W1I1	Variovorax sp. CF393	2410	1477	121	92	0	108	1248	96
+P00945	all	nearest_other_species	92.97	False	Variovorax sp. W1I1	Variovorax sp. OV254	1788	1031	239	181	0	182	610	64
+P00946	all	clone_partner	100.0	True	Paracidovorax citrulli	Paracidovorax citrulli	6	3	2	2	0	0	1	0
+P00947	all	species_neighbour	99.9	False	Paracidovorax citrulli	Paracidovorax citrulli	56	33	16	12	2	2	15	0
+P00948	all	clone_partner	99.99	True	Paracidovorax citrulli	Paracidovorax citrulli	32	18	9	8	1	0	9	0
+P00949	all	species_neighbour	99.9	False	Paracidovorax citrulli	Paracidovorax citrulli	58	29	12	8	1	2	15	0
+P00950	all	clone_partner	100.0	False	Paracidovorax citrulli	Paracidovorax citrulli	22	11	6	5	1	0	5	2
+P00951	all	species_neighbour	99.93	False	Paracidovorax citrulli	Paracidovorax citrulli	56	33	16	13	2	2	15	1
+P00952	all	species_neighbour	99.87	False	Paracidovorax citrulli	Paracidovorax citrulli	58	35	17	12	2	2	16	2
+P00953	all	species_neighbour	98.34	False	Comamonas testosteroni	Comamonas testosteroni	347	194	92	55	4	34	68	19
+P00954	all	nearest_other_species	93.88	False	Comamonas testosteroni	Comamonas thiooxydans	1050	614	132	77	2	140	342	14
+P00955	all	nearest_other_species	94.19	False	Comamonas testosteroni	Comamonas thiooxydans	1057	595	154	99	5	139	302	32
+P00956	all	nearest_other_species	86.95	False	Diaphorobacter sp. C33	Alicycliphilus denitrificans	2127	1231	66	26	0	80	1085	51
+P00957	all	species_neighbour	99.89	False	Paracidovorax citrulli	Paracidovorax citrulli	52	26	10	7	2	2	14	2
+P00958	all	species_neighbour	96.46	False	Variovorax sp. DAIF25	Variovorax sp. Varisp41	1700	948	344	268	1	181	423	23
+P00959	all	species_neighbour	96.36	False	Variovorax sp. DAIF25	Variovorax sp. UC122_21	1946	1096	373	284	1	197	526	12
+P00960	all	species_neighbour	98.76	False	Delftia tsuruhatensis	Delftia tsuruhatensis	200	109	65	52	1	6	38	27
+P00961	all	species_neighbour	98.69	False	Delftia tsuruhatensis	Delftia tsuruhatensis	535	282	101	75	4	59	122	19
+P00962	all	species_neighbour	97.17	False	Variovorax sp. SPNA7	Variovorax paradoxus	953	487	200	162	4	90	197	36
+P00963	all	species_neighbour	95.99	False	Variovorax sp. SPNA7	Variovorax beijingensis	1317	699	247	200	1	129	323	42
+P00964	all	species_neighbour	95.95	False	Variovorax paradoxus	Variovorax beijingensis	1291	691	251	196	4	122	318	28
+P00965	all	distance_tier_no_skani_output_same_genus	no_skani	False	Variovorax sp. EBFNA2	Variovorax sp. YR389	5	4	0	0	0	0	4	37
+P00966	all	nearest_other_species	78.35	False	Ottowia sp. SB7-C50	Ottowia sp. VDI28	745	430	0	0	0	21	409	111
+P00967	all	species_neighbour	95.64	False	Comamonas testosteroni	Comamonas testosteroni	713	443	102	71	5	100	241	15
+P00968	all	nearest_other_species	94.3	False	Variovorax xiamenensis	Variovorax sp. NFACC26	1547	961	161	134	0	174	626	40
+P00969	all	nearest_other_species	94.3	False	Variovorax xiamenensis	Variovorax sp. NFACC27	1543	793	129	109	0	162	502	36
+P00970	all	nearest_other_species	94.3	False	Variovorax xiamenensis	Variovorax sp. NFACC28	1544	791	130	109	0	161	500	40
+P00971	all	nearest_other_species	94.3	False	Variovorax xiamenensis	Variovorax sp. NFACC29	1546	792	131	110	0	162	499	38
+P00972	all	nearest_other_species	94.18	False	Comamonas testosteroni	Comamonas testosteroni	1052	536	136	89	2	99	301	4
+P00973	all	species_neighbour	98.56	False	Delftia lacustris	Delftia sp. DS1230	564	286	101	76	3	71	114	8
+P00974	all	species_neighbour	99.95	False	Delftia lacustris	Delftia sp. 11MD	32	16	9	5	0	3	4	0
+P00975	all	species_neighbour	98.55	False	Delftia lacustris	Delftia sp. PX-1	612	366	103	77	2	76	187	28
+P00976	all	species_neighbour	98.46	False	Delftia lacustris	Delftia tsuruhatensis	621	316	91	67	1	70	155	6
+P00977	all	nearest_other_species	86.85	False	Acidovorax sp. SDU_ACID1	Alicycliphilus denitrificans	2001	1374	86	48	0	141	1147	56
+P00978	all	nearest_other_species	77.86	False	Ottowia sp. VDI28	Ottowia caeni	867	479	0	0	0	7	472	94
+P00979	all	nearest_other_species	93.41	False	Serpentinimonas sp. SMBJO2	Serpentinimonas sp. SSL01	1152	691	109	90	1	131	451	47
+P00980	all	clone_partner	100.0	False	Rhodoferax sp. GW822-FHT02A01	Rhodoferax sp. GW822-FHT02A01	0	0	0	0	0	0	0	0
+P00981	all	species_neighbour	97.85	False	Vandammella animalimorsus	Vandammella animalimorsus	639	341	96	81	3	72	173	17
+P00982	all	species_neighbour	98.53	False	Delftia sp. DS1230	Delftia tsuruhatensis	565	287	86	68	1	74	127	0
+P00983	all	species_neighbour	98.65	True	Variovorax paradoxus	Variovorax paradoxus	415	210	95	73	1	39	76	12
+P00984	all	species_neighbour	98.65	True	Variovorax paradoxus	Variovorax paradoxus	411	208	96	75	1	39	73	12
+P00985	all	species_neighbour	98.65	True	Variovorax paradoxus	Variovorax paradoxus	413	209	95	72	1	39	75	13
+P00986	all	nearest_other_species	93.15	False	Variovorax atrisoli 110B	Variovorax sp. UC74_104	2240	1171	199	170	1	254	718	86
+P00987	all	clone_partner	100.0	True	Variovorax paradoxus	Variovorax paradoxus	6	3	3	2	0	0	0	0
+P00988	all	clone_partner	100.0	True	Variovorax paradoxus	Variovorax paradoxus	6	3	2	2	0	0	1	0
+P00989	all	species_neighbour	98.26	True	Variovorax sp. 160MFSha2.1	Variovorax sp. 278MFTsu5.1	550	279	108	83	2	68	103	2
+P00990	all	species_neighbour	98.3	True	Variovorax sp. 160MFSha2.1	Variovorax sp. 350MFTsu5.1	617	313	119	96	3	68	126	1
+P00991	all	species_neighbour	98.32	True	Variovorax sp. 160MFSha2.1	Variovorax sp. 375MFSha3.1	566	289	106	79	3	68	115	9
+P00992	all	nearest_other_species	94.19	False	Variovorax sp. 160MFSha2.1	Variovorax sp. TLI9-5A	1632	988	198	162	4	242	548	39
+P00993	all	species_neighbour	98.19	True	Variovorax sp. 278MFTsu5.1	Variovorax sp. 350MFTsu5.1	622	317	124	98	6	73	120	1
+P00994	all	species_neighbour	99.76	True	Variovorax sp. 278MFTsu5.1	Variovorax sp. 375MFSha3.1	104	53	19	13	0	14	20	0
+P00995	all	nearest_other_species	94.21	False	Variovorax sp. 278MFTsu5.1	Variovorax sp. TLI9-5A	1640	997	210	173	4	252	535	33
+P00996	all	nearest_other_species	94.28	False	Variovorax sp. 350MFTsu5.1	Variovorax sp. TLI9-5A	1679	1002	228	179	5	231	543	49
+P00997	all	nearest_other_species	94.24	False	Variovorax sp. 375MFSha3.1	Variovorax sp. TLI9-5A	1632	988	215	174	5	245	528	36
+P00998	all	distance_tier_no_skani_output_same_genus	no_skani	False	Variovorax sp. KK3	Variovorax sp. OV596	207	127	1	0	0	3	123	159
+P00999	all	clone_partner	99.99	True	Variovorax sp. NFACC26	Variovorax sp. NFACC28	35	23	1	1	0	0	22	0
+P01000	all	clone_partner	99.99	True	Variovorax sp. NFACC26	Variovorax sp. NFACC29	12	8	1	1	1	0	7	6
+P01001	all	nearest_other_species	93.21	False	Variovorax sp. NFACC26	Variovorax sp. UC74_104	2052	1245	227	184	1	247	771	79
+P01002	all	distance_tier_no_skani_output_same_genus	no_skani	False	Variovorax sp. NFACC26	Variovorax sp. CF391	285	186	2	2	0	2	182	203
+P01003	all	clone_partner	99.99	True	Variovorax sp. NFACC27	Variovorax sp. NFACC29	18	8	1	1	1	0	7	8
+P01004	all	nearest_other_species	90.85	False	Variovorax sp. OAS795	Variovorax paradoxus NBRC 15149	1500	908	133	108	1	96	679	102
+P01005	all	species_neighbour	97.88	False	Hydrogenophaga sp. ANAO-22	Hydrogenophaga sp. UC242_50	534	273	121	95	0	65	87	17
+P01006	all	species_neighbour	97.98	False	Hydrogenophaga sp. ANAO-22	Hydrogenophaga sp. UC242_53	540	297	127	101	0	65	105	18
+P01007	all	nearest_other_species	92.98	False	Hydrogenophaga sp. ANAO-22	Hydrogenophaga sp. GW460-11-11-14-LB1	1451	740	181	140	0	134	425	26
+P01008	all	nearest_other_species	83.5	False	Rhodoferax sp. WC2427	Variovorax sp. OV596	1803	1177	11	8	0	39	1127	65
+P01009	all	audit_multi_project_all_vs_all	96.98	False	Comamonas thiooxydans	Comamonas thiooxydans	548	289	98	67	6	85	106	13
+P01010	all	audit_multi_project_all_vs_all	94.67	False	Comamonas thiooxydans	Comamonas testosteroni	896	458	105	70	2	114	239	2
+P01011	all	nearest_other_species	84.06	False	Xenophilus aerolatus	Variovorax sp. UC122_21	2536	1575	16	7	0	97	1462	188
+P01012	all	species_neighbour	96.27	True	Variovorax sp. Varisp27	Variovorax sp. Varisp46	1288	682	255	217	4	119	308	37
+P01013	all	species_neighbour	99.89	True	Variovorax sp. Varisp27	Variovorax sp. Varisp53	18	9	4	3	0	2	3	0
+P01014	all	nearest_other_species	91.38	False	Variovorax sp. Varisp27	Variovorax sp. CF163	2229	1437	247	187	0	245	945	39
+P01015	all	distance_tier_ani_95_97;species_neighbour	95.95	False	Variovorax sp. Varisp41	Variovorax sp. UC122_21	1921	972	321	254	0	178	473	28
+P01016	all	species_neighbour	96.25	True	Variovorax sp. Varisp46	Variovorax sp. Varisp53	1297	687	256	218	4	121	310	35
+P01017	all	nearest_other_species	91.59	False	Variovorax sp. Varisp46	Variovorax sp. R-27	2352	1283	229	180	0	224	830	32
+P01018	all	nearest_other_species	91.43	False	Variovorax sp. Varisp46	Variovorax sp. CF015	2363	1436	217	166	1	245	974	72
+P01019	all	nearest_other_species	91.43	False	Variovorax sp. Varisp46	Variovorax sp. CF024	2320	1273	199	151	1	217	857	67
+P01020	all	nearest_other_species	91.63	False	Variovorax sp. Varisp46	Variovorax sp. CF143	2341	1414	244	185	1	247	923	43
+P01021	all	nearest_other_species	91.58	False	Variovorax sp. Varisp46	Variovorax sp. CF163	2377	1435	250	196	1	257	928	46
+P01022	all	nearest_other_species	91.55	False	Variovorax sp. Varisp46	Variovorax sp. CF360	2351	1288	210	161	1	219	859	45
+P01023	all	nearest_other_species	91.51	False	Variovorax sp. Varisp46	Variovorax sp. OV006	2362	1285	227	173	0	225	833	43
+P01024	all	nearest_other_species	91.63	False	Variovorax sp. Varisp46	Variovorax sp. OV017	2346	1283	211	165	4	212	860	57
+P01025	all	nearest_other_species	91.63	False	Variovorax sp. Varisp46	Variovorax sp. OV089	2378	1436	221	170	1	228	987	56
+P01026	all	nearest_other_species	91.63	False	Variovorax sp. Varisp46	Variovorax sp. OV092	2382	1440	222	172	1	227	991	54
+P01027	all	nearest_other_species	91.22	False	Variovorax sp. Varisp46	Variovorax sp. OV418	2273	1391	227	179	1	257	907	42
+P01028	all	nearest_other_species	91.22	False	Variovorax sp. Varisp46	Variovorax sp. OV448	2274	1392	218	170	1	261	913	40
+P01029	all	nearest_other_species	91.67	False	Variovorax sp. Varisp46	Variovorax sp. YR747	2381	1452	227	176	1	231	994	86
+P01030	all	nearest_other_species	91.29	False	Variovorax sp. Varisp46	Variovorax sp. OK220	2293	1195	195	153	1	221	779	56
+P01031	all	nearest_other_species	91.56	False	Variovorax sp. Varisp46	Variovorax sp. YR178	2375	1297	213	161	1	232	852	46
+P01032	all	nearest_other_species	91.54	False	Variovorax sp. Varisp46	Variovorax sp. YR376	2395	1311	213	166	1	216	882	36
+P01033	all	nearest_other_species	91.57	False	Variovorax sp. Varisp46	Variovorax sp. YR572	2413	1326	204	166	0	225	897	93
+P01034	all	nearest_other_species	91.57	False	Variovorax sp. Varisp46	Variovorax sp. YR724	2341	1242	208	166	1	203	831	54
+P01035	all	nearest_other_species	91.39	False	Variovorax sp. Varisp53	Variovorax sp. YR566	2197	1124	187	150	0	177	760	69
+P01036	all	nearest_other_species	91.43	False	Variovorax sp. Varisp53	Variovorax sp. CF163	2227	1435	250	189	0	252	933	39
+P01037	all	species_neighbour	98.39	False	Delftia lacustris	Delftia lacustris	607	358	106	79	3	65	187	3
+P01038	all	species_neighbour	98.43	False	Delftia lacustris	Delftia tsuruhatensis	568	287	98	76	0	65	124	0
+P01039	all	species_neighbour	97.56	False	Variovorax boronicumulans	Variovorax sp. YB-TT-C68	594	345	125	103	2	74	146	18
+P01040	all	nearest_other_species	92.86	False	Acidovorax delafieldii	Acidovorax sp. M14	1493	892	151	127	1	209	532	13
+P01041	all	species_neighbour	99.95	True	Hydrogenophaga sp. UC242_50	Hydrogenophaga sp. UC242_53	0	0	0	0	0	0	0	2
+P01042	all	nearest_other_species	92.54	False	Hydrogenophaga sp. UC242_50	Hydrogenophaga sp. GW460-11-11-14-LB1	1390	713	156	116	0	124	433	25
+P01043	all	nearest_other_species	92.59	False	Hydrogenophaga sp. UC242_53	Hydrogenophaga sp. GW460-11-11-14-LB1	1390	847	185	137	0	139	523	23
+P01044	all	nearest_other_species	83.59	False	Allobrachymonas wangyanguii	Brachymonas sp. KE5	990	598	4	1	0	37	557	48
+P01045	all	nearest_other_species	92.87	False	Comamonas testosteroni	Comamonas thiooxydans	1146	625	95	56	1	128	402	14
+P01046	all	species_neighbour	98.63	False	Delftia tsuruhatensis	Delftia lacustris	567	335	120	91	5	60	155	12
+P01047	all	species_neighbour	98.46	False	Variovorax sp. R-27	Variovorax sp. CF143	373	209	78	52	0	38	93	16
+P01048	all	species_neighbour	98.45	False	Variovorax sp. R-27	Variovorax sp. CF163	396	213	82	58	1	35	96	3
+P01049	all	species_neighbour	98.36	False	Variovorax sp. R-27	Variovorax sp. CF360	424	220	89	54	0	38	93	17
+P01050	all	species_neighbour	98.42	False	Variovorax sp. R-27	Variovorax sp. OV006	400	203	86	62	0	38	79	11
+P01051	all	species_neighbour	98.29	False	Variovorax sp. R-27	Variovorax sp. OV092	447	245	91	66	0	51	103	27
+P01052	all	distance_tier_ani_95_97	95.78	False	Variovorax sp. R-27	Variovorax sp. OV418	1297	745	285	236	0	142	318	10
+P01053	all	species_neighbour	98.42	False	Variovorax sp. R-27	Variovorax sp. YR178	403	204	76	56	0	41	87	22
+P01054	all	species_neighbour	98.37	False	Variovorax sp. R-27	Variovorax sp. YR376	393	199	89	65	1	41	69	8
+P01055	all	species_neighbour	98.37	False	Variovorax sp. R-27	Variovorax sp. YR724	410	213	86	60	0	38	89	33
+P01056	all	species_neighbour	96.08	False	Acidovorax facilis	Acidovorax facilis	1317	677	171	147	3	170	336	27
+P01057	all	species_neighbour	96.08	False	Acidovorax facilis	Acidovorax facilis	1302	760	187	158	4	190	383	29
+P01058	all	species_neighbour	96.13	False	Acidovorax facilis	Acidovorax sp. NN32	1440	741	174	151	2	179	388	20
+P01059	all	nearest_other_species	90.42	False	Acidovorax facilis	Acidovorax radicis N35	2692	1475	134	111	2	265	1076	28
+P01060	all	clone_partner	100.0	True	Acidovorax facilis	Acidovorax facilis	2	1	1	0	0	0	0	0
+P01061	all	species_neighbour	97.8	False	Acidovorax facilis	Acidovorax sp. NN32	711	363	110	91	3	108	145	7
+P01062	all	nearest_other_species	90.02	False	Acidovorax facilis	Acidovorax radicis N35	2585	1384	104	80	1	263	1017	26
+P01063	all	species_neighbour	97.81	False	Acidovorax facilis	Acidovorax sp. NN32	707	404	118	96	4	118	168	8
+P01064	all	nearest_other_species	90.02	False	Acidovorax facilis	Acidovorax radicis N35	2577	1705	114	88	2	320	1271	27
+P01065	all	nearest_other_species	87.06	False	Acidovorax sp. M2(2025)	Acidovorax sp. GW823-FHT05D11	3344	1954	36	22	1	191	1727	50
+P01066	all	audit_multi_project_all_vs_all	94.67	False	Comamonas thiooxydans	Comamonas testosteroni	937	495	128	89	3	130	237	16
+P01067	all	nearest_other_species	91.85	False	Comamonas sp. 23	Comamonas sediminis	1508	1004	80	65	1	151	773	4
+P01068	all	nearest_other_species	85.74	False	Ramlibacter sp. MMS24-I3-19	Ramlibacter sp. JJN2-2R	1971	1277	12	10	0	51	1214	47
+P01069	all	species_neighbour	98.58	False	Variovorax sp. YR566	Variovorax sp. CF015	373	211	90	64	0	30	91	33
+P01070	all	species_neighbour	98.65	False	Variovorax sp. YR566	Variovorax sp. CF024	386	197	88	62	1	27	82	24
+P01071	all	species_neighbour	98.63	False	Variovorax sp. YR566	Variovorax sp. YR747	347	190	89	61	2	34	67	4
+P01072	all	species_neighbour	98.74	False	Variovorax sp. YR566	Variovorax sp. YR572	319	173	77	53	1	29	67	93
+P01073	all	nearest_other_species	85.19	False	Variovorax ureilyticus	Variovorax sp. YR166	2333	1439	17	9	0	49	1373	126
+P01074	all	clone_partner	100.0	False	Delftia acidovorans	Delftia acidovorans	0	0	0	0	0	0	0	0
+P01075	all	species_neighbour	98.3	False	Delftia acidovorans	Delftia acidovorans	659	335	137	105	5	73	125	2
+P01076	all	nearest_other_species	90.2	False	Acidovorax sp. NN32	Acidovorax radicis N35	2614	1401	106	86	1	278	1017	24
+P01077	all	nearest_other_species	89.99	True	Variovorax sp. BK066	Variovorax sp. OV307	1662	1030	46	34	0	86	898	77
+P01078	all	species_neighbour	99.02	True	Variovorax sp. BK066	Variovorax sp. BK047	128	65	36	25	0	12	17	4
+P01079	all	nearest_other_species	82.51	False	Variovorax sp. CF013	Ramlibacter sp. JJN2-2R	1414	954	5	4	0	34	915	76
+P01080	all	clone_partner	100.0	True	Variovorax sp. CF015	Variovorax sp. CF024	0	0	0	0	0	0	0	1
+P01081	all	species_neighbour	98.44	True	Variovorax sp. CF015	Variovorax sp. YR747	386	200	98	79	3	35	67	44
+P01082	all	species_neighbour	99.1	True	Variovorax sp. CF016	Variovorax sp. CF247	261	141	52	38	0	22	67	10
+P01083	all	species_neighbour	99.1	True	Variovorax sp. CF016	Variovorax sp. CF249	261	140	50	37	0	21	69	10
+P01084	all	species_neighbour	99.1	True	Variovorax sp. CF016	Variovorax sp. CF252	258	130	49	36	0	20	61	8
+P01085	all	species_neighbour	99.1	True	Variovorax sp. CF016	Variovorax sp. CF256	261	140	51	37	1	21	68	8
+P01086	all	species_neighbour	99.1	True	Variovorax sp. CF016	Variovorax sp. CF264	259	139	49	37	0	21	69	9
+P01087	all	nearest_other_species	99.1	True	Variovorax sp. CF016	Variovorax sp. CF277	262	142	52	38	1	22	68	10
+P01088	all	species_neighbour	99.16	True	Variovorax sp. CF016	Variovorax sp. CF393	255	143	54	43	1	22	67	1
+P01089	all	species_neighbour	99.16	True	Variovorax sp. CF016	Variovorax sp. CF396	258	131	52	42	0	19	60	3
+P01090	all	species_neighbour	99.1	True	Variovorax sp. CF016	Variovorax sp. CF410	244	135	52	42	0	20	63	0
+P01091	all	species_neighbour	98.47	True	Variovorax sp. CF024	Variovorax sp. YR747	390	215	104	84	5	36	75	39
+P01092	all	species_neighbour	98.43	True	Variovorax sp. CF045	Variovorax sp. CF094	884	474	190	154	3	86	198	27
+P01093	all	species_neighbour	96.24	True	Variovorax sp. CF045	Variovorax sp. OV586	1877	1010	364	304	2	197	449	48
+P01094	all	nearest_other_species	92.05	True	Variovorax sp. CF045	Variovorax sp. YR064	2261	1283	333	263	1	277	673	59
+P01095	all	nearest_other_species	92.01	True	Variovorax sp. CF045	Variovorax sp. YR271	2240	1268	306	241	1	261	701	56
+P01096	all	clone_partner	100.0	True	Variovorax sp. CF057	Variovorax sp. CF130	2	1	0	0	0	0	1	0
+P01097	all	species_neighbour	99.22	True	Variovorax sp. CF057	Variovorax sp. CF381	307	159	57	43	2	27	75	11
+P01098	all	species_neighbour	96.37	True	Variovorax sp. CF094	Variovorax sp. OV586	1886	971	352	296	1	190	429	25
+P01099	all	nearest_other_species	92.05	True	Variovorax sp. CF094	Variovorax sp. YR064	2365	1217	317	259	0	249	651	60
+P01100	all	species_neighbour	99.2	True	Variovorax sp. CF130	Variovorax sp. CF381	314	173	59	44	2	28	86	13
+P01101	all	species_neighbour	98.3	True	Variovorax sp. CF143	Variovorax sp. CF163	432	221	98	67	0	42	81	11
+P01102	all	species_neighbour	95.9	True	Variovorax sp. CF143	Variovorax sp. OV418	1257	634	260	220	0	118	256	8
+P01103	all	species_neighbour	95.89	True	Variovorax sp. CF143	Variovorax sp. OV448	1261	636	254	214	0	122	260	6
+P01104	all	species_neighbour	98.3	True	Variovorax sp. CF143	Variovorax sp. YR376	437	246	104	67	1	48	94	14
+P01105	all	species_neighbour	95.62	True	Variovorax sp. CF153	Variovorax sp. CF277	1875	970	167	139	0	132	671	109
+P01106	all	species_neighbour	98.27	True	Variovorax sp. CF163	Variovorax sp. CF360	411	237	94	60	0	45	98	26
+P01107	all	species_neighbour	98.35	True	Variovorax sp. CF163	Variovorax sp. OV017	417	228	95	64	3	45	88	25
+P01108	all	species_neighbour	98.35	True	Variovorax sp. CF163	Variovorax sp. OV089	404	206	89	60	1	43	74	25
+P01109	all	species_neighbour	98.35	True	Variovorax sp. CF163	Variovorax sp. OV092	404	206	88	59	1	43	75	25
+P01110	all	species_neighbour	95.93	True	Variovorax sp. CF163	Variovorax sp. OV418	1285	651	276	225	0	116	259	11
+P01111	all	species_neighbour	95.95	True	Variovorax sp. CF163	Variovorax sp. OV448	1287	652	268	219	0	121	263	9
+P01112	all	species_neighbour	95.82	True	Variovorax sp. CF163	Variovorax sp. OK220	1309	740	276	223	0	137	327	27
+P01113	all	species_neighbour	98.27	True	Variovorax sp. CF163	Variovorax sp. YR178	463	261	87	63	1	53	121	33
+P01114	all	clone_partner	100.0	True	Variovorax sp. CF247	Variovorax sp. CF264	0	0	0	0	0	0	0	0
+P01115	all	nearest_other_species	100.0	True	Variovorax sp. CF247	Variovorax sp. CF277	2	1	1	1	0	0	0	2
+P01116	all	species_neighbour	99.11	True	Variovorax sp. CF247	Variovorax sp. CF393	237	122	53	37	0	21	48	6
+P01117	all	species_neighbour	99.39	True	Variovorax sp. CF247	Variovorax sp. CF410	149	76	37	21	0	16	23	8
+P01118	all	clone_partner	100.0	True	Variovorax sp. CF249	Variovorax sp. CF264	0	0	0	0	0	0	0	0
+P01119	all	nearest_other_species	100.0	True	Variovorax sp. CF249	Variovorax sp. CF277	2	1	1	1	0	0	0	2
+P01120	all	species_neighbour	99.11	True	Variovorax sp. CF249	Variovorax sp. CF393	238	122	53	37	1	20	49	6
+P01121	all	species_neighbour	99.07	True	Variovorax sp. CF249	Variovorax sp. CF396	233	136	53	37	1	21	62	8
+P01122	all	species_neighbour	99.39	True	Variovorax sp. CF249	Variovorax sp. CF410	148	76	37	21	0	14	25	14
+P01123	all	clone_partner	100.0	True	Variovorax sp. CF252	Variovorax sp. CF264	2	1	0	0	0	0	1	0
+P01124	all	nearest_other_species	99.99	True	Variovorax sp. CF252	Variovorax sp. CF277	3	2	1	0	1	0	1	4
+P01125	all	species_neighbour	99.11	True	Variovorax sp. CF252	Variovorax sp. CF393	233	136	55	38	2	22	59	6
+P01126	all	species_neighbour	99.39	True	Variovorax sp. CF252	Variovorax sp. CF410	147	79	38	22	1	15	26	8
+P01127	all	clone_partner	100.0	True	Variovorax sp. CF256	Variovorax sp. CF264	0	0	0	0	0	0	0	0
+P01128	all	nearest_other_species	100.0	True	Variovorax sp. CF256	Variovorax sp. CF277	2	1	1	1	0	0	0	2
+P01129	all	species_neighbour	99.11	True	Variovorax sp. CF256	Variovorax sp. CF393	237	122	53	37	0	20	49	6
+P01130	all	species_neighbour	99.4	True	Variovorax sp. CF256	Variovorax sp. CF410	149	76	37	21	0	14	25	8
+P01131	all	nearest_other_species	100.0	True	Variovorax sp. CF264	Variovorax sp. CF277	2	1	1	1	0	0	0	2
+P01132	all	species_neighbour	99.11	True	Variovorax sp. CF264	Variovorax sp. CF393	236	120	52	37	0	20	48	7
+P01133	all	species_neighbour	99.39	True	Variovorax sp. CF264	Variovorax sp. CF410	148	75	36	21	0	14	25	9
+P01134	all	nearest_other_species	99.11	True	Variovorax sp. CF277	Variovorax sp. CF393	235	121	52	36	1	20	49	8
+P01135	all	nearest_other_species	99.07	True	Variovorax sp. CF277	Variovorax sp. CF396	235	139	55	38	2	21	63	10
+P01136	all	nearest_other_species	99.39	True	Variovorax sp. CF277	Variovorax sp. CF410	149	76	37	21	0	15	24	8
+P01137	all	species_neighbour	98.31	True	Variovorax sp. CF360	Variovorax sp. OV006	444	240	99	63	1	44	97	36
+P01138	all	clone_partner	100.0	True	Variovorax sp. CF393	Variovorax sp. CF396	2	1	1	0	1	0	0	0
+P01139	all	species_neighbour	99.07	True	Variovorax sp. CF396	Variovorax sp. CF410	260	148	62	48	0	25	61	0
+P01140	all	clone_partner	100.0	True	Variovorax sp. OK113	Variovorax sp. OK115	0	0	0	0	0	0	0	0
+P01141	all	nearest_other_species	86.08	True	Variovorax sp. OK113	Variovorax sp. YR166	2500	1400	69	58	1	77	1254	307
+P01142	all	nearest_other_species	86.03	True	Variovorax sp. OK115	Variovorax sp. YR166	2498	1400	68	57	1	76	1256	308
+P01143	all	audit_single_project_all_vs_all	100.0	True	Variovorax sp. OK222	Variovorax sp. OK231	0	0	0	0	0	0	0	0
+P01144	all	audit_single_project_all_vs_all;clone_partner	100.0	True	Variovorax sp. OK222	Variovorax sp. OK250	0	0	0	0	0	0	0	0
+P01145	all	audit_single_project_all_vs_all;species_neighbour	98.55	True	Variovorax sp. OK222	Variovorax sp. OK565	369	199	80	57	2	36	83	54
+P01146	all	audit_single_project_all_vs_all;species_neighbour	98.68	True	Variovorax sp. OK222	Variovorax sp. OK614	369	192	80	56	2	34	78	54
+P01147	all	audit_single_project_all_vs_all;species_neighbour	98.68	True	Variovorax sp. OK222	Variovorax sp. OK624	369	192	80	56	2	34	78	54
+P01148	all	audit_single_project_all_vs_all;species_neighbour	98.68	True	Variovorax sp. OK222	Variovorax sp. OK632	366	193	81	57	2	35	77	62
+P01149	all	audit_single_project_all_vs_all;species_neighbour	98.49	True	Variovorax sp. OK222	Variovorax sp. OK638	368	198	80	56	2	33	85	54
+P01150	all	audit_single_project_all_vs_all;species_neighbour	98.68	True	Variovorax sp. OK222	Variovorax sp. OK658	369	192	80	56	2	34	78	54
+P01151	all	audit_single_project_all_vs_all;species_neighbour	98.68	True	Variovorax sp. OK222	Variovorax sp. OK629	369	192	80	56	2	34	78	54
+P01152	all	audit_single_project_all_vs_all;clone_partner	100.0	True	Variovorax sp. OK231	Variovorax sp. OK250	0	0	0	0	0	0	0	0
+P01153	all	audit_single_project_all_vs_all;species_neighbour	98.55	True	Variovorax sp. OK231	Variovorax sp. OK565	369	199	80	57	2	36	83	54
+P01154	all	audit_single_project_all_vs_all;species_neighbour	98.68	True	Variovorax sp. OK231	Variovorax sp. OK614	369	192	80	56	2	34	78	54
+P01155	all	audit_single_project_all_vs_all;species_neighbour	98.68	True	Variovorax sp. OK231	Variovorax sp. OK624	369	192	80	56	2	34	78	54
+P01156	all	audit_single_project_all_vs_all;species_neighbour	98.68	True	Variovorax sp. OK231	Variovorax sp. OK632	366	193	81	57	2	35	77	62
+P01157	all	audit_single_project_all_vs_all;species_neighbour	98.49	True	Variovorax sp. OK231	Variovorax sp. OK638	368	198	80	56	2	33	85	54
+P01158	all	audit_single_project_all_vs_all;species_neighbour	98.68	True	Variovorax sp. OK231	Variovorax sp. OK658	369	192	80	56	2	34	78	54
+P01159	all	audit_single_project_all_vs_all;species_neighbour	98.68	True	Variovorax sp. OK231	Variovorax sp. OK629	369	192	80	56	2	34	78	54
+P01160	all	audit_single_project_all_vs_all;species_neighbour	98.55	True	Variovorax sp. OK250	Variovorax sp. OK565	370	200	80	57	2	36	84	54
+P01161	all	audit_single_project_all_vs_all;species_neighbour	98.68	True	Variovorax sp. OK250	Variovorax sp. OK614	369	192	80	56	2	34	78	54
+P01162	all	audit_single_project_all_vs_all;species_neighbour	98.68	True	Variovorax sp. OK250	Variovorax sp. OK624	369	192	80	56	2	34	78	54
+P01163	all	audit_single_project_all_vs_all;species_neighbour	98.68	True	Variovorax sp. OK250	Variovorax sp. OK632	366	193	81	57	2	35	77	62
+P01164	all	audit_single_project_all_vs_all;species_neighbour	98.49	True	Variovorax sp. OK250	Variovorax sp. OK638	368	198	80	56	2	33	85	54
+P01165	all	audit_single_project_all_vs_all;species_neighbour	98.68	True	Variovorax sp. OK250	Variovorax sp. OK658	369	192	80	56	2	34	78	54
+P01166	all	audit_single_project_all_vs_all;species_neighbour	98.68	True	Variovorax sp. OK250	Variovorax sp. OK629	369	192	80	56	2	34	78	54
+P01167	all	audit_single_project_all_vs_all	100.0	True	Variovorax sp. OK565	Variovorax sp. OK614	0	0	0	0	0	0	0	0
+P01168	all	audit_single_project_all_vs_all	100.0	True	Variovorax sp. OK565	Variovorax sp. OK624	0	0	0	0	0	0	0	0
+P01169	all	audit_single_project_all_vs_all	100.0	True	Variovorax sp. OK565	Variovorax sp. OK632	0	0	0	0	0	0	0	4
+P01170	all	audit_single_project_all_vs_all	100.0	True	Variovorax sp. OK565	Variovorax sp. OK638	0	0	0	0	0	0	0	0
+P01171	all	audit_single_project_all_vs_all	100.0	True	Variovorax sp. OK565	Variovorax sp. OK658	0	0	0	0	0	0	0	0
+P01172	all	audit_single_project_all_vs_all;clone_partner	100.0	True	Variovorax sp. OK565	Variovorax sp. OK629	0	0	0	0	0	0	0	0
+P01173	all	audit_single_project_all_vs_all	100.0	True	Variovorax sp. OK614	Variovorax sp. OK624	0	0	0	0	0	0	0	0
+P01174	all	audit_single_project_all_vs_all;clone_partner	100.0	True	Variovorax sp. OK614	Variovorax sp. OK632	0	0	0	0	0	0	0	4
+P01175	all	audit_single_project_all_vs_all	100.0	True	Variovorax sp. OK614	Variovorax sp. OK638	0	0	0	0	0	0	0	0
+P01176	all	audit_single_project_all_vs_all	100.0	True	Variovorax sp. OK614	Variovorax sp. OK658	0	0	0	0	0	0	0	0
+P01177	all	audit_single_project_all_vs_all;clone_partner	100.0	True	Variovorax sp. OK614	Variovorax sp. OK629	0	0	0	0	0	0	0	0
+P01178	all	audit_single_project_all_vs_all	100.0	True	Variovorax sp. OK624	Variovorax sp. OK632	0	0	0	0	0	0	0	4
+P01179	all	audit_single_project_all_vs_all	100.0	True	Variovorax sp. OK624	Variovorax sp. OK638	0	0	0	0	0	0	0	0
+P01180	all	audit_single_project_all_vs_all	100.0	True	Variovorax sp. OK624	Variovorax sp. OK658	0	0	0	0	0	0	0	0
+P01181	all	audit_single_project_all_vs_all;clone_partner	100.0	True	Variovorax sp. OK624	Variovorax sp. OK629	0	0	0	0	0	0	0	0
+P01182	all	audit_single_project_all_vs_all	100.0	True	Variovorax sp. OK632	Variovorax sp. OK638	0	0	0	0	0	0	0	4
+P01183	all	audit_single_project_all_vs_all	99.99	True	Variovorax sp. OK632	Variovorax sp. OK658	0	0	0	0	0	0	0	4
+P01184	all	audit_single_project_all_vs_all	99.99	True	Variovorax sp. OK632	Variovorax sp. OK629	0	0	0	0	0	0	0	4
+P01185	all	audit_single_project_all_vs_all	100.0	True	Variovorax sp. OK638	Variovorax sp. OK658	0	0	0	0	0	0	0	0
+P01186	all	audit_single_project_all_vs_all;clone_partner	100.0	True	Variovorax sp. OK638	Variovorax sp. OK629	0	0	0	0	0	0	0	0
+P01187	all	audit_single_project_all_vs_all;clone_partner	100.0	True	Variovorax sp. OK658	Variovorax sp. OK629	0	0	0	0	0	0	0	0
+P01188	all	species_neighbour	98.35	True	Variovorax sp. OV006	Variovorax sp. OV017	429	219	93	68	4	46	80	29
+P01189	all	species_neighbour	98.34	True	Variovorax sp. OV006	Variovorax sp. OV089	409	226	91	66	3	52	83	29
+P01190	all	species_neighbour	98.34	True	Variovorax sp. OV006	Variovorax sp. OV092	409	227	91	66	3	51	85	29
+P01191	all	clone_partner	100.0	True	Variovorax sp. OV017	Variovorax sp. OV089	14	8	5	4	3	0	3	0
+P01192	all	species_neighbour	98.34	True	Variovorax sp. OV017	Variovorax sp. YR724	440	229	109	80	3	44	76	53
+P01193	all	clone_partner	100.0	True	Variovorax sp. OV089	Variovorax sp. OV092	0	0	0	0	0	0	0	0
+P01194	all	species_neighbour	98.33	True	Variovorax sp. OV089	Variovorax sp. YR724	425	229	109	79	1	45	75	60
+P01195	all	nearest_other_species	89.7	True	Variovorax sp. OV307	Variovorax sp. BK047	1675	1046	51	34	0	96	899	71
+P01196	all	clone_partner	100.0	True	Variovorax sp. OV418	Variovorax sp. OV448	2	1	0	0	0	0	1	1
+P01197	all	species_neighbour	98.79	True	Variovorax sp. OV418	Variovorax sp. OK220	229	125	54	44	0	32	39	18
+P01198	all	species_neighbour	98.83	True	Variovorax sp. OV448	Variovorax sp. OK220	232	125	53	43	0	32	40	20
+P01199	all	species_neighbour	98.57	True	Variovorax sp. YR747	Variovorax sp. YR572	340	196	83	61	1	41	72	102
+P01200	all	nearest_other_species	91.78	True	Variovorax sp. OV560	Variovorax sp. OV586	2069	1108	258	201	0	167	683	74
+P01201	all	species_neighbour	96.26	True	Variovorax sp. OV560	Variovorax sp. YR064	1404	712	295	230	0	114	303	23
+P01202	all	species_neighbour	96.27	True	Variovorax sp. OV560	Variovorax sp. YR271	1398	708	286	223	0	112	310	22
+P01203	all	nearest_other_species	91.95	True	Variovorax sp. OV586	Variovorax sp. YR064	2093	1121	288	231	0	187	646	70
+P01204	all	species_neighbour	98.73	True	Variovorax sp. YR064	Variovorax sp. YR271	321	162	54	33	1	30	78	0
+P01205	all	species_neighbour	98.23	True	Variovorax sp. YR178	Variovorax sp. YR376	416	215	84	58	2	31	100	29
+P01206	all	species_neighbour	98.23	True	Variovorax sp. YR376	Variovorax sp. YR724	405	211	95	71	2	34	82	24
+P01207	all	species_neighbour	98.53	False	Delftia lacustris	Delftia tsuruhatensis	589	343	109	78	5	79	155	4
+P01208	all	nearest_other_species	84.97	False	Delftia tsuruhatensis	Comamonas terrae	2366	1678	23	7	0	112	1543	89
+P01209	all	nearest_other_species	89.08	False	Acidovorax radicis N35	Acidovorax sp. GW823-FHT05D11	3047	1671	55	39	1	241	1375	28
+P01210	all	nearest_other_species	85.01	False	Comamonas resistens	Comamonas terrae	2149	1188	15	7	0	73	1100	63
+P01211	all	species_neighbour	98.0	False	Delftia acidovorans	Delftia acidovorans	654	330	108	83	0	87	135	4
+P01212	all	nearest_other_species	83.78	False	Hydrogenophaga sp. L76	Hydrogenophaga sp. L99	1927	1252	12	8	0	45	1195	70
+P01213	all	clone_partner	100.0	False	Hydrogenophaga bisanensis	Hydrogenophaga bisanensis	0	0	0	0	0	0	0	0
+P01214	all	clone_partner	100.0	True	Comamonas terrae	Comamonas terrae	0	0	0	0	0	0	0	4
+P01215	all	clone_partner	100.0	True	Comamonas terrae	Comamonas terrae	2	1	0	0	0	0	1	2
+P01216	all	clone_partner	100.0	True	Comamonas terrae	Comamonas terrae	0	0	0	0	0	0	0	0
+P01217	all	clone_partner	100.0	True	Comamonas terrae	Comamonas terrae	2	1	1	0	0	0	0	0
+P01218	all	clone_partner	100.0	True	Comamonas terrae	Comamonas terrae	2	1	1	0	0	0	0	0
+P01219	all	clone_partner	100.0	True	Comamonas terrae	Comamonas terrae	6	3	3	0	0	0	0	2
+P01220	all	clone_partner	100.0	True	Comamonas terrae	Comamonas terrae	2	1	1	0	0	0	0	2
+P01221	all	clone_partner	100.0	True	Comamonas terrae	Comamonas terrae	0	0	0	0	0	0	0	0

@@ -1,0 +1,31 @@
+{
+  "sample": "LjRoot223",
+  "gca": "GCA_964253525.2",
+  "gcf": "GCF_964253525.1",
+  "gca_records": {
+    "CAXURG020000001.1": [
+      4136472,
+      "43d054d416b640d106bc963266413da2f00200258f4f5a3a105d0ac67f530ab1"
+    ],
+    "CAXURG020000002.1": [
+      3120683,
+      "6db020c0293b38cddec43109e80a6a525b532b09ee809d51ed571b77df8a7550"
+    ]
+  },
+  "gcf_records": {
+    "NZ_CAXURG020000001.1": [
+      4136472,
+      "43d054d416b640d106bc963266413da2f00200258f4f5a3a105d0ac67f530ab1"
+    ],
+    "NZ_CAXURG020000002.1": [
+      3120683,
+      "6db020c0293b38cddec43109e80a6a525b532b09ee809d51ed571b77df8a7550"
+    ]
+  },
+  "identical_sequence_sets": true,
+  "gcf_cds_features": 6535,
+  "fasta": "$PROJ/data/assemblies/LjRoot223/GCF_964253525.1/ncbi_dataset/data/GCF_964253525.1/GCF_964253525.1_LjRoot223v2_genomic.fna",
+  "fasta_sha256": "4942d3798289523cc162d7b72b85ced686201564904b21113855e59f3f9c2a02",
+  "gbff": "$PROJ/data/assemblies/LjRoot223/GCF_964253525.1/ncbi_dataset/data/GCF_964253525.1/genomic.gbff",
+  "gbff_sha256": "4162094a7d5ab23e21a7de2dba75bd3e36f74f9b6d842fa464fe5ad0102c330e"
+}

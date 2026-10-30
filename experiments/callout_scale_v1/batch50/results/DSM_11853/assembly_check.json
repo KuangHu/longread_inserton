@@ -1,0 +1,80 @@
+{
+  "sample": "DSM_11853",
+  "gca": "GCA_008801925.2",
+  "gcf": "GCF_008801925.2",
+  "identical_sequence_sets": true,
+  "choice": "gcf_sequence_and_annotation",
+  "gca_records": {
+    "CP062803.1": [
+      4566734,
+      "ad507434b464adba37a494c6755d635da5f80216b35d7f1419e2ba3bbec6251d"
+    ],
+    "CP062804.1": [
+      3303026,
+      "b00476779b671ddab088207661208f1f9c953727d8b0f393f067c5ceaf866db3"
+    ],
+    "CP062805.1": [
+      425364,
+      "4d69ff4618e4d107e929a75987c6e59dff03c9bf3b384adde0ef4a7edeaa8588"
+    ],
+    "CP062806.1": [
+      355033,
+      "427b97d33714ec92ec3d5e5d0c139312402bae4610cae96a5ddfc0c619af2de6"
+    ],
+    "CP062807.1": [
+      125309,
+      "004bdfa577f12c466262c21b48d7592c08c474041f3877e9e58d6b86564e4279"
+    ],
+    "CP062808.1": [
+      82842,
+      "4af7856a364a27171505e19af4eebf6c94b4dbd5543a77aa0a9b442458911ce6"
+    ],
+    "CP062809.1": [
+      81787,
+      "eca6cbe0569db0a170ed3a66b75d66f171ec6289caa5244443e68c21da388b1b"
+    ],
+    "CP062810.1": [
+      2515,
+      "104edde26f0cff3b8ca9f9a5db1d09ddd79467b05350338d832a713cc0e441b1"
+    ]
+  },
+  "gcf_records": {
+    "NZ_CP062803.1": [
+      4566734,
+      "ad507434b464adba37a494c6755d635da5f80216b35d7f1419e2ba3bbec6251d"
+    ],
+    "NZ_CP062804.1": [
+      3303026,
+      "b00476779b671ddab088207661208f1f9c953727d8b0f393f067c5ceaf866db3"
+    ],
+    "NZ_CP062805.1": [
+      425364,
+      "4d69ff4618e4d107e929a75987c6e59dff03c9bf3b384adde0ef4a7edeaa8588"
+    ],
+    "NZ_CP062806.1": [
+      355033,
+      "427b97d33714ec92ec3d5e5d0c139312402bae4610cae96a5ddfc0c619af2de6"
+    ],
+    "NZ_CP062807.1": [
+      125309,
+      "004bdfa577f12c466262c21b48d7592c08c474041f3877e9e58d6b86564e4279"
+    ],
+    "NZ_CP062808.1": [
+      82842,
+      "4af7856a364a27171505e19af4eebf6c94b4dbd5543a77aa0a9b442458911ce6"
+    ],
+    "NZ_CP062809.1": [
+      81787,
+      "eca6cbe0569db0a170ed3a66b75d66f171ec6289caa5244443e68c21da388b1b"
+    ],
+    "NZ_CP062810.1": [
+      2515,
+      "104edde26f0cff3b8ca9f9a5db1d09ddd79467b05350338d832a713cc0e441b1"
+    ]
+  },
+  "cds_features": 8125,
+  "fasta": "/global/scratch/users/kh36969/longread_callout/data/assemblies_batch50/DSM_11853/GCF_008801925.2/ncbi_dataset/data/GCF_008801925.2/GCF_008801925.2_ASM880192v2_genomic.fna",
+  "fasta_sha256": "32d08cd1d3e40fff425cd155295be7d583943d9be470b0303469fecfc7a9ad96",
+  "gbff": "/global/scratch/users/kh36969/longread_callout/data/assemblies_batch50/DSM_11853/GCF_008801925.2/ncbi_dataset/data/GCF_008801925.2/genomic.gbff",
+  "gbff_sha256": "ed90d77f92a46621e5d7f460a463c2b05cad11e1888b9e59f4546c7b846c4ab8"
+}

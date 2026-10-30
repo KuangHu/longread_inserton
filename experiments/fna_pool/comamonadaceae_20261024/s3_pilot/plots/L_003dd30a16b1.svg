@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="300" font-family="sans-serif">
+<rect width="100%" height="100%" fill="white"/>
+<text x="4" y="16" font-size="12">L_003dd30a16b1  SAMD00076718  core 1374 bp  unresolved  support not_anchored  boundary exact  tandem False  core copies carrier/partner 1/0</text>
+<line x1="466.8" y1="30" x2="466.8" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<line x1="653.2" y1="30" x2="653.2" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<text x="4" y="64" font-size="11" font-weight="bold">SAMD00076718 NZ_AP026738.1 (carrier)</text>
+<line x1="60" y1="100" x2="1060" y2="100" stroke="#888"/>
+<rect x="331.2" y="132" width="135.6" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="399.0" y="152" font-size="9" text-anchor="middle">U</text>
+<rect x="466.8" y="132" width="186.3" height="8" fill="#e76f51" opacity="0.55"/>
+<text x="560.0" y="152" font-size="9" text-anchor="middle">core 1374</text>
+<rect x="653.2" y="132" width="135.6" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="721.0" y="152" font-size="9" text-anchor="middle">D</text>
+<polygon points="60.0,109 66.0,103 66.5,103 66.5,115 66.0,115" fill="#3b6fb6"><title>FAD-dependent monooxygenase 3066790-3068488 -</title></polygon>
+<polygon points="91.9,109 97.9,103 211.9,103 211.9,115 97.9,115" fill="#3b6fb6"><title>helix-turn-helix transcriptional regulat 3068675-3069560 -</title></polygon>
+<text x="91.9" y="125" font-size="8" fill="#333">helix-turn-helix transcrip</text>
+<polygon points="228.3,109 234.3,103 251.1,103 251.1,115 234.3,115" fill="#3b6fb6"><title>hypothetical protein 3069681-3069849 -</title></polygon>
+<polygon points="274.9,85 349.9,85 355.9,91 349.9,97 274.9,97" fill="#3b6fb6"><title>IMPACT family protein 3070025-3070622 +</title></polygon>
+<text x="274.9" y="81" font-size="8" fill="#333">IMPACT family pro</text>
+<polygon points="362.1,109 368.1,103 382.5,103 382.5,115 368.1,115" fill="#3b6fb6"><title>hypothetical protein 3070668-3070818 -</title></polygon>
+<polygon points="393.5,109 399.5,103 460.2,103 460.2,115 399.5,115" fill="#3b6fb6"><title>DUF6882 domain-containing protein 3070899-3071391 -</title></polygon>
+<text x="393.5" y="125" font-size="8" fill="#333">DUF6882 domain</text>
+<polygon points="481.9,85 644.7,85 650.7,91 644.7,97 481.9,97" fill="#3b6fb6"><title>alpha/beta fold hydrolase 3071551-3072796 +</title></polygon>
+<text x="481.9" y="81" font-size="8" fill="#333">alpha/beta fold hydrolase</text>
+<polygon points="654.0,109 660.0,103 776.0,103 776.0,115 660.0,115" fill="#3b6fb6"><title>LysR substrate-binding domain-containing 3072820-3073720 -</title></polygon>
+<text x="654.0" y="125" font-size="8" fill="#333">LysR substrate-binding dom</text>
+<polygon points="799.8,85 886.1,85 892.1,91 886.1,97 799.8,97" fill="#999"><title>LysE family translocator 3073895-3074576 +</title></polygon>
+<text x="799.8" y="81" font-size="8" fill="#333">LysE family transloc</text>
+<polygon points="910.6,85 983.5,85 989.5,91 983.5,97 910.6,97" fill="#3b6fb6"><title>peroxidase-related enzyme 3074712-3075294 +</title></polygon>
+<text x="910.6" y="81" font-size="8" fill="#333">peroxidase-relate</text>
+<polygon points="1005.2,85 1054.0,85 1060.0,91 1054.0,97 1005.2,97" fill="#3b6fb6"><title>YceI family protein 3075410-3075974 +</title></polygon>
+<text x="1005.2" y="81" font-size="8" fill="#333">YceI family</text>
+<text x="60" y="166" font-size="9" fill="#666">NZ_AP026738.1:3068440-3075814  core 3071440-3072814</text>
+<text x="4" y="184" font-size="11" font-weight="bold">SAMN38562701 NZ_CP139994.1 (partner, + strand, unresolved, pair P00022)</text>
+<line x1="60" y1="220" x2="1060" y2="220" stroke="#888"/>
+<rect x="331.2" y="252" width="135.6" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="399.0" y="272" font-size="9" text-anchor="middle">U'</text>
+<rect x="653.2" y="252" width="135.6" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="721.0" y="272" font-size="9" text-anchor="middle">D'</text>
+<rect x="466.8" y="252" width="186.3" height="8" fill="#9b5de5" opacity="0.55"/>
+<text x="560.0" y="272" font-size="9" text-anchor="middle">other side 33</text>
+<polygon points="60.0,229 61.9,223 61.9,223 61.9,235 61.9,235" fill="#3b6fb6"><title>FAD-dependent monooxygenase 2990621-2992319 -</title></polygon>
+<polygon points="87.3,229 93.3,223 207.3,223 207.3,235 93.3,235" fill="#3b6fb6"><title>helix-turn-helix transcriptional regulat 2992506-2993391 -</title></polygon>
+<text x="87.3" y="245" font-size="8" fill="#333">helix-turn-helix transcrip</text>
+<polygon points="227.2,229 233.2,223 250.0,223 250.0,235 233.2,235" fill="#3b6fb6"><title>hypothetical protein 2993538-2993706 -</title></polygon>
+<polygon points="275.4,205 350.3,205 356.3,211 350.3,217 275.4,217" fill="#3b6fb6"><title>IMPACT family protein 2993893-2994490 +</title></polygon>
+<text x="275.4" y="201" font-size="8" fill="#333">IMPACT family pro</text>
+<polygon points="362.1,229 368.1,223 382.5,223 382.5,235 368.1,235" fill="#3b6fb6"><title>hypothetical protein 2994533-2994683 -</title></polygon>
+<polygon points="393.7,229 399.7,223 460.1,223 460.1,235 399.7,235" fill="#3b6fb6"><title>DUF6882 domain-containing protein 2994766-2995255 -</title></polygon>
+<text x="393.7" y="245" font-size="8" fill="#333">DUF6882 domain</text>
+<polygon points="568.5,229 574.5,223 776.0,223 776.0,235 574.5,235" fill="#3b6fb6"><title>LysR family transcriptional regulator 2995323-2996244 -</title></polygon>
+<text x="568.5" y="245" font-size="8" fill="#333">LysR family transcriptional regulator</text>
+<polygon points="799.8,205 886.5,205 892.5,211 886.5,217 799.8,217" fill="#3b6fb6"><title>LysE family translocator 2996419-2997103 +</title></polygon>
+<text x="799.8" y="201" font-size="8" fill="#333">LysE family transloc</text>
+<polygon points="911.6,205 984.6,205 990.6,211 984.6,217 911.6,217" fill="#3b6fb6"><title>peroxidase-related enzyme 2997244-2997826 +</title></polygon>
+<text x="911.6" y="201" font-size="8" fill="#333">peroxidase-relate</text>
+<polygon points="1006.3,205 1054.0,205 1060.0,211 1054.0,217 1006.3,217" fill="#3b6fb6"><title>YceI family protein 2997942-2998506 +</title></polygon>
+<text x="1006.3" y="201" font-size="8" fill="#333">YceI family</text>
+<text x="60" y="286" font-size="9" fill="#666">NZ_CP139994.1 site 2995305  other-side gap 33 bp  this call's core 3071440-3072814</text>
+</svg>

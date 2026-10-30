@@ -1,0 +1,19 @@
+{
+ "assemblies": 9,
+ "pairs": {
+  "A:single_gene": 611,
+  "A:two_gene": 17,
+  "B:single_gene": 712,
+  "B:two_gene": 44,
+  "C:single_gene": 4109,
+  "C:two_gene": 108,
+  "control:single_gene": 171,
+  "control:two_gene": 62
+ },
+ "intervals": 2556,
+ "occurrences": 1109,
+ "pairs_with_control_class": {
+  "conserved_paralog_control": 8,
+  "repeated_context_control": 233
+ }
+}

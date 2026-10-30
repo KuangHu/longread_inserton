@@ -1,0 +1,31 @@
+{
+  "old": "$PROJ/runs/PaAR2038/callout",
+  "new": "$PROJ/callout_scale_v1/t0/ar2038/callout",
+  "native_families": 149,
+  "members_old": 762,
+  "members_new": 762,
+  "fields_compared": [
+    "family",
+    "method",
+    "accession",
+    "strand",
+    "native_start0",
+    "native_end0",
+    "inferred_start0",
+    "inferred_end0",
+    "candidate_start0",
+    "candidate_end0",
+    "boundary_source",
+    "flanks_complete",
+    "upstream_length",
+    "downstream_length"
+  ],
+  "sequence_files_compared": [
+    "candidate_insertion.fasta",
+    "upstream_500.fasta",
+    "downstream_500.fasta",
+    "triplet.fasta"
+  ],
+  "identical": true,
+  "differences": []
+}

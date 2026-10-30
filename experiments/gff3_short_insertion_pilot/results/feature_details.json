@@ -1,0 +1,6267 @@
+{
+  "ASM_0002": [
+    {
+      "id": "cds-WP_010810129.1",
+      "seqid": "NZ_CP196507.1",
+      "kind": "CDS",
+      "strand": "-",
+      "parts": [
+        [
+          1560210,
+          1560501
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-WP_010810129.1"
+        ],
+        "Parent": [
+          "gene-OOOCML_RS07280"
+        ],
+        "Dbxref": [
+          "GenBank:WP_010810129.1"
+        ],
+        "Name": [
+          "WP_010810129.1"
+        ],
+        "Ontology_term": [
+          "GO:0003677"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "go_function": [
+          "DNA binding|0003677||IEA"
+        ],
+        "inference": [
+          "COORDINATES: similar to AA sequence:RefSeq:WP_018004480.1"
+        ],
+        "locus_tag": [
+          "OOOCML_RS07280"
+        ],
+        "product": [
+          "addiction module antidote protein"
+        ],
+        "protein_id": [
+          "WP_010810129.1"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": false,
+      "flags": []
+    },
+    {
+      "id": "gene-OOOCML_RS07280",
+      "seqid": "NZ_CP196507.1",
+      "kind": "gene",
+      "strand": "-",
+      "parts": [
+        [
+          1560210,
+          1560501
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-OOOCML_RS07280"
+        ],
+        "Name": [
+          "OOOCML_RS07280"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene_biotype": [
+          "protein_coding"
+        ],
+        "locus_tag": [
+          "OOOCML_RS07280"
+        ],
+        "old_locus_tag": [
+          "OOOCML_07260"
+        ]
+      },
+      "contained": false,
+      "flags": []
+    },
+    {
+      "id": "cds-WP_011615086.1",
+      "seqid": "NZ_CP196507.1",
+      "kind": "CDS",
+      "strand": "-",
+      "parts": [
+        [
+          1560504,
+          1560804
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-WP_011615086.1"
+        ],
+        "Parent": [
+          "gene-OOOCML_RS07285"
+        ],
+        "Dbxref": [
+          "GenBank:WP_011615086.1"
+        ],
+        "Name": [
+          "WP_011615086.1"
+        ],
+        "Ontology_term": [
+          "GO:0004540",
+          "GO:0008219"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "go_function": [
+          "RNA nuclease activity|0004540||IEA"
+        ],
+        "go_process": [
+          "cell death|0008219||IEA"
+        ],
+        "inference": [
+          "COORDINATES: similar to AA sequence:RefSeq:WP_011615086.1"
+        ],
+        "locus_tag": [
+          "OOOCML_RS07285"
+        ],
+        "product": [
+          "type II toxin-antitoxin system RelE/ParE family toxin"
+        ],
+        "protein_id": [
+          "WP_011615086.1"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    },
+    {
+      "id": "gene-OOOCML_RS07285",
+      "seqid": "NZ_CP196507.1",
+      "kind": "gene",
+      "strand": "-",
+      "parts": [
+        [
+          1560504,
+          1560804
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-OOOCML_RS07285"
+        ],
+        "Name": [
+          "OOOCML_RS07285"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene_biotype": [
+          "protein_coding"
+        ],
+        "locus_tag": [
+          "OOOCML_RS07285"
+        ],
+        "old_locus_tag": [
+          "OOOCML_07265"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    }
+  ],
+  "ASM_0004": [
+    {
+      "id": "cds-WP_475681389.1-2",
+      "seqid": "NZ_CP196496.1",
+      "kind": "CDS",
+      "strand": "-",
+      "parts": [
+        [
+          3783764,
+          3785081
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-WP_475681389.1-2"
+        ],
+        "Parent": [
+          "gene-NNKAMD_RS18040"
+        ],
+        "Dbxref": [
+          "GenBank:WP_475681389.1"
+        ],
+        "Name": [
+          "WP_475681389.1"
+        ],
+        "Ontology_term": [
+          "GO:0004803"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "go_function": [
+          "transposase activity|0004803||IEA"
+        ],
+        "inference": [
+          "COORDINATES: similar to AA sequence:RefSeq:WP_006756018.1"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS18040"
+        ],
+        "product": [
+          "IS4 family transposase"
+        ],
+        "protein_id": [
+          "WP_475681389.1"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    },
+    {
+      "id": "gene-NNKAMD_RS18040",
+      "seqid": "NZ_CP196496.1",
+      "kind": "gene",
+      "strand": "-",
+      "parts": [
+        [
+          3783764,
+          3785081
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-NNKAMD_RS18040"
+        ],
+        "Name": [
+          "NNKAMD_RS18040"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene_biotype": [
+          "protein_coding"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS18040"
+        ],
+        "old_locus_tag": [
+          "NNKAMD_18080"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    }
+  ],
+  "ASM_0005": [
+    {
+      "id": "cds-WP_475681495.1",
+      "seqid": "NZ_CP196496.1",
+      "kind": "CDS",
+      "strand": "+",
+      "parts": [
+        [
+          1419412,
+          1420729
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-WP_475681495.1"
+        ],
+        "Parent": [
+          "gene-NNKAMD_RS06875"
+        ],
+        "Dbxref": [
+          "GenBank:WP_475681495.1"
+        ],
+        "Name": [
+          "WP_475681495.1"
+        ],
+        "Ontology_term": [
+          "GO:0004803"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "go_function": [
+          "transposase activity|0004803||IEA"
+        ],
+        "inference": [
+          "COORDINATES: similar to AA sequence:RefSeq:WP_006756018.1"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS06875"
+        ],
+        "product": [
+          "IS4 family transposase"
+        ],
+        "protein_id": [
+          "WP_475681495.1"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    },
+    {
+      "id": "gene-NNKAMD_RS06875",
+      "seqid": "NZ_CP196496.1",
+      "kind": "gene",
+      "strand": "+",
+      "parts": [
+        [
+          1419412,
+          1420729
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-NNKAMD_RS06875"
+        ],
+        "Name": [
+          "NNKAMD_RS06875"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene_biotype": [
+          "protein_coding"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS06875"
+        ],
+        "old_locus_tag": [
+          "NNKAMD_06850"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    }
+  ],
+  "ASM_0006": [
+    {
+      "id": "cds-WP_475681434.1",
+      "seqid": "NZ_CP196496.1",
+      "kind": "CDS",
+      "strand": "-",
+      "parts": [
+        [
+          822990,
+          824043
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-WP_475681434.1"
+        ],
+        "Parent": [
+          "gene-NNKAMD_RS03945"
+        ],
+        "Dbxref": [
+          "GenBank:WP_475681434.1"
+        ],
+        "Name": [
+          "WP_475681434.1"
+        ],
+        "Ontology_term": [
+          "GO:0003677",
+          "GO:0004519",
+          "GO:0006310",
+          "GO:0032196",
+          "GO:0046872"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "go_function": [
+          "DNA binding|0003677||IEA",
+          "endonuclease activity|0004519||IEA",
+          "metal ion binding|0046872||IEA"
+        ],
+        "go_process": [
+          "DNA recombination|0006310||IEA",
+          "transposition|0032196||IEA"
+        ],
+        "inference": [
+          "COORDINATES: similar to AA sequence:RefSeq:WP_011661056.1"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS03945"
+        ],
+        "product": [
+          "RNA-guided endonuclease InsQ/TnpB family protein"
+        ],
+        "protein_id": [
+          "WP_475681434.1"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    },
+    {
+      "id": "gene-NNKAMD_RS03945",
+      "seqid": "NZ_CP196496.1",
+      "kind": "gene",
+      "strand": "-",
+      "parts": [
+        [
+          822990,
+          824043
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-NNKAMD_RS03945"
+        ],
+        "Name": [
+          "NNKAMD_RS03945"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene_biotype": [
+          "protein_coding"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS03945"
+        ],
+        "old_locus_tag": [
+          "NNKAMD_03935"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    }
+  ],
+  "ASM_0007": [
+    {
+      "id": "cds-WP_231881386.1",
+      "seqid": "NZ_CP196507.1",
+      "kind": "CDS",
+      "strand": "-",
+      "parts": [
+        [
+          848620,
+          849634
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-WP_231881386.1"
+        ],
+        "Parent": [
+          "gene-OOOCML_RS03930"
+        ],
+        "Dbxref": [
+          "GenBank:WP_231881386.1"
+        ],
+        "Name": [
+          "WP_231881386.1"
+        ],
+        "Ontology_term": [
+          "GO:0007155",
+          "GO:0009289"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "go_component": [
+          "pilus|0009289||IEA"
+        ],
+        "go_process": [
+          "cell adhesion|0007155||IEA"
+        ],
+        "inference": [
+          "COORDINATES: similar to AA sequence:RefSeq:WP_011519522.1"
+        ],
+        "locus_tag": [
+          "OOOCML_RS03930"
+        ],
+        "product": [
+          "fimbrial protein"
+        ],
+        "protein_id": [
+          "WP_231881386.1"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": false,
+      "flags": []
+    },
+    {
+      "id": "gene-OOOCML_RS03930",
+      "seqid": "NZ_CP196507.1",
+      "kind": "gene",
+      "strand": "-",
+      "parts": [
+        [
+          848620,
+          849634
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-OOOCML_RS03930"
+        ],
+        "Name": [
+          "OOOCML_RS03930"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene_biotype": [
+          "protein_coding"
+        ],
+        "locus_tag": [
+          "OOOCML_RS03930"
+        ],
+        "old_locus_tag": [
+          "OOOCML_03920"
+        ]
+      },
+      "contained": false,
+      "flags": []
+    }
+  ],
+  "ASM_0008": [
+    {
+      "id": "cds-WP_013955677.1",
+      "seqid": "NZ_CP196496.1",
+      "kind": "CDS",
+      "strand": "+",
+      "parts": [
+        [
+          661055,
+          661973
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-WP_013955677.1"
+        ],
+        "Parent": [
+          "gene-NNKAMD_RS03205"
+        ],
+        "Dbxref": [
+          "GenBank:WP_013955677.1"
+        ],
+        "Name": [
+          "WP_013955677.1"
+        ],
+        "Ontology_term": [
+          "GO:0003677",
+          "GO:0003700",
+          "GO:0005829"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "go_component": [
+          "cytosol|0005829||IEA"
+        ],
+        "go_function": [
+          "DNA binding|0003677||IEA",
+          "DNA-binding transcription factor activity|0003700||IEA"
+        ],
+        "inference": [
+          "COORDINATES: similar to AA sequence:RefSeq:WP_012351880.1"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS03205"
+        ],
+        "product": [
+          "LysR family transcriptional regulator"
+        ],
+        "protein_id": [
+          "WP_013955677.1"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": false,
+      "flags": []
+    },
+    {
+      "id": "gene-NNKAMD_RS03205",
+      "seqid": "NZ_CP196496.1",
+      "kind": "gene",
+      "strand": "+",
+      "parts": [
+        [
+          661055,
+          661973
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-NNKAMD_RS03205"
+        ],
+        "Name": [
+          "NNKAMD_RS03205"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene_biotype": [
+          "protein_coding"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS03205"
+        ],
+        "old_locus_tag": [
+          "NNKAMD_03200"
+        ]
+      },
+      "contained": false,
+      "flags": []
+    },
+    {
+      "id": "cds-NNKAMD_RS03210",
+      "seqid": "NZ_CP196496.1",
+      "kind": "CDS",
+      "strand": "-",
+      "parts": [
+        [
+          661972,
+          662239
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-NNKAMD_RS03210"
+        ],
+        "Parent": [
+          "gene-NNKAMD_RS03210"
+        ],
+        "Note": [
+          "incomplete; partial in the middle of a contig; missing C-terminus"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "inference": [
+          "COORDINATES: similar to AA sequence:RefSeq:WP_010089710.1"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS03210"
+        ],
+        "partial": [
+          "true"
+        ],
+        "product": [
+          "helix-turn-helix domain-containing protein"
+        ],
+        "pseudo": [
+          "true"
+        ],
+        "start_range": [
+          ".",
+          "661973"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": true,
+      "flags": [
+        "partial",
+        "pseudogene"
+      ]
+    },
+    {
+      "id": "gene-NNKAMD_RS03210",
+      "seqid": "NZ_CP196496.1",
+      "kind": "pseudogene",
+      "strand": "-",
+      "parts": [
+        [
+          661972,
+          662239
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-NNKAMD_RS03210"
+        ],
+        "Name": [
+          "NNKAMD_RS03210"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene_biotype": [
+          "pseudogene"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS03210"
+        ],
+        "old_locus_tag": [
+          "NNKAMD_03205"
+        ],
+        "partial": [
+          "true"
+        ],
+        "pseudo": [
+          "true"
+        ],
+        "start_range": [
+          ".",
+          "661973"
+        ]
+      },
+      "contained": true,
+      "flags": [
+        "partial",
+        "pseudogene"
+      ]
+    }
+  ],
+  "ASM_0010": [
+    {
+      "id": "cds-WP_013956321.1",
+      "seqid": "NZ_CP196496.1",
+      "kind": "CDS",
+      "strand": "+",
+      "parts": [
+        [
+          1370047,
+          1370431
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-WP_013956321.1"
+        ],
+        "Parent": [
+          "gene-NNKAMD_RS06635"
+        ],
+        "Dbxref": [
+          "GenBank:WP_013956321.1"
+        ],
+        "Name": [
+          "WP_013956321.1"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "inference": [
+          "COORDINATES: similar to AA sequence:RefSeq:WP_013956321.1"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS06635"
+        ],
+        "product": [
+          "putative zinc-binding protein"
+        ],
+        "protein_id": [
+          "WP_013956321.1"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    },
+    {
+      "id": "gene-NNKAMD_RS06635",
+      "seqid": "NZ_CP196496.1",
+      "kind": "gene",
+      "strand": "+",
+      "parts": [
+        [
+          1370047,
+          1370431
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-NNKAMD_RS06635"
+        ],
+        "Name": [
+          "NNKAMD_RS06635"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene_biotype": [
+          "protein_coding"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS06635"
+        ],
+        "old_locus_tag": [
+          "NNKAMD_06615"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    }
+  ],
+  "ASM_0012": [
+    {
+      "id": "cds-WP_011615786.1",
+      "seqid": "NZ_CP196507.1",
+      "kind": "CDS",
+      "strand": "+",
+      "parts": [
+        [
+          2909416,
+          2909686
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-WP_011615786.1"
+        ],
+        "Parent": [
+          "gene-OOOCML_RS13795"
+        ],
+        "Dbxref": [
+          "GenBank:WP_011615786.1"
+        ],
+        "Name": [
+          "WP_011615786.1"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "inference": [
+          "COORDINATES: similar to AA sequence:RefSeq:WP_012353426.1"
+        ],
+        "locus_tag": [
+          "OOOCML_RS13795"
+        ],
+        "product": [
+          "hypothetical protein"
+        ],
+        "protein_id": [
+          "WP_011615786.1"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    },
+    {
+      "id": "gene-OOOCML_RS13795",
+      "seqid": "NZ_CP196507.1",
+      "kind": "gene",
+      "strand": "+",
+      "parts": [
+        [
+          2909416,
+          2909686
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-OOOCML_RS13795"
+        ],
+        "Name": [
+          "OOOCML_RS13795"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene_biotype": [
+          "protein_coding"
+        ],
+        "locus_tag": [
+          "OOOCML_RS13795"
+        ],
+        "old_locus_tag": [
+          "OOOCML_13640"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    },
+    {
+      "id": "cds-WP_011615787.1",
+      "seqid": "NZ_CP196507.1",
+      "kind": "CDS",
+      "strand": "+",
+      "parts": [
+        [
+          2909740,
+          2910010
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-WP_011615787.1"
+        ],
+        "Parent": [
+          "gene-OOOCML_RS13800"
+        ],
+        "Dbxref": [
+          "GenBank:WP_011615787.1"
+        ],
+        "Name": [
+          "WP_011615787.1"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "inference": [
+          "COORDINATES: similar to AA sequence:RefSeq:WP_012353426.1"
+        ],
+        "locus_tag": [
+          "OOOCML_RS13800"
+        ],
+        "product": [
+          "hypothetical protein"
+        ],
+        "protein_id": [
+          "WP_011615787.1"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    },
+    {
+      "id": "gene-OOOCML_RS13800",
+      "seqid": "NZ_CP196507.1",
+      "kind": "gene",
+      "strand": "+",
+      "parts": [
+        [
+          2909740,
+          2910010
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-OOOCML_RS13800"
+        ],
+        "Name": [
+          "OOOCML_RS13800"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene_biotype": [
+          "protein_coding"
+        ],
+        "locus_tag": [
+          "OOOCML_RS13800"
+        ],
+        "old_locus_tag": [
+          "OOOCML_13645"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    },
+    {
+      "id": "cds-WP_011615788.1",
+      "seqid": "NZ_CP196507.1",
+      "kind": "CDS",
+      "strand": "+",
+      "parts": [
+        [
+          2910092,
+          2910365
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-WP_011615788.1"
+        ],
+        "Parent": [
+          "gene-OOOCML_RS13805"
+        ],
+        "Dbxref": [
+          "GenBank:WP_011615788.1"
+        ],
+        "Name": [
+          "WP_011615788.1"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "inference": [
+          "COORDINATES: similar to AA sequence:RefSeq:WP_012353428.1"
+        ],
+        "locus_tag": [
+          "OOOCML_RS13805"
+        ],
+        "product": [
+          "hypothetical protein"
+        ],
+        "protein_id": [
+          "WP_011615788.1"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": false,
+      "flags": []
+    },
+    {
+      "id": "gene-OOOCML_RS13805",
+      "seqid": "NZ_CP196507.1",
+      "kind": "gene",
+      "strand": "+",
+      "parts": [
+        [
+          2910092,
+          2910365
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-OOOCML_RS13805"
+        ],
+        "Name": [
+          "OOOCML_RS13805"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene_biotype": [
+          "protein_coding"
+        ],
+        "locus_tag": [
+          "OOOCML_RS13805"
+        ],
+        "old_locus_tag": [
+          "OOOCML_13650"
+        ]
+      },
+      "contained": false,
+      "flags": []
+    }
+  ],
+  "ASM_0013": [
+    {
+      "id": "cds-NNKAMD_RS09470",
+      "seqid": "NZ_CP196496.1",
+      "kind": "CDS",
+      "strand": "+",
+      "parts": [
+        [
+          1981588,
+          1982901
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-NNKAMD_RS09470"
+        ],
+        "Parent": [
+          "gene-NNKAMD_RS09470"
+        ],
+        "Note": [
+          "frameshifted"
+        ],
+        "Ontology_term": [
+          "GO:0004803"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "go_function": [
+          "transposase activity|0004803||IEA"
+        ],
+        "inference": [
+          "COORDINATES: similar to AA sequence:RefSeq:WP_006756018.1"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS09470"
+        ],
+        "product": [
+          "IS4 family transposase"
+        ],
+        "pseudo": [
+          "true"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": true,
+      "flags": [
+        "pseudogene"
+      ]
+    },
+    {
+      "id": "gene-NNKAMD_RS09470",
+      "seqid": "NZ_CP196496.1",
+      "kind": "pseudogene",
+      "strand": "+",
+      "parts": [
+        [
+          1981588,
+          1982901
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-NNKAMD_RS09470"
+        ],
+        "Name": [
+          "NNKAMD_RS09470"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene_biotype": [
+          "pseudogene"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS09470"
+        ],
+        "pseudo": [
+          "true"
+        ]
+      },
+      "contained": true,
+      "flags": [
+        "pseudogene"
+      ]
+    }
+  ],
+  "ASM_0014": [
+    {
+      "id": "cds-WP_011614870.1",
+      "seqid": "NZ_CP196507.1",
+      "kind": "CDS",
+      "strand": "-",
+      "parts": [
+        [
+          1182375,
+          1182816
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-WP_011614870.1"
+        ],
+        "Parent": [
+          "gene-OOOCML_RS05505"
+        ],
+        "Dbxref": [
+          "GenBank:WP_011614870.1"
+        ],
+        "Name": [
+          "WP_011614870.1"
+        ],
+        "Ontology_term": [
+          "GO:0003677"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "go_function": [
+          "DNA binding|0003677||IEA"
+        ],
+        "inference": [
+          "COORDINATES: similar to AA sequence:RefSeq:WP_011614870.1"
+        ],
+        "locus_tag": [
+          "OOOCML_RS05505"
+        ],
+        "product": [
+          "helix-turn-helix domain-containing protein"
+        ],
+        "protein_id": [
+          "WP_011614870.1"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": false,
+      "flags": []
+    },
+    {
+      "id": "gene-OOOCML_RS05505",
+      "seqid": "NZ_CP196507.1",
+      "kind": "gene",
+      "strand": "-",
+      "parts": [
+        [
+          1182375,
+          1182816
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-OOOCML_RS05505"
+        ],
+        "Name": [
+          "OOOCML_RS05505"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene_biotype": [
+          "protein_coding"
+        ],
+        "locus_tag": [
+          "OOOCML_RS05505"
+        ],
+        "old_locus_tag": [
+          "OOOCML_05505"
+        ]
+      },
+      "contained": false,
+      "flags": []
+    },
+    {
+      "id": "cds-WP_011614871.1",
+      "seqid": "NZ_CP196507.1",
+      "kind": "CDS",
+      "strand": "+",
+      "parts": [
+        [
+          1183081,
+          1183924
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-WP_011614871.1"
+        ],
+        "Parent": [
+          "gene-OOOCML_RS05510"
+        ],
+        "Dbxref": [
+          "GenBank:WP_011614871.1"
+        ],
+        "Name": [
+          "WP_011614871.1"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "inference": [
+          "COORDINATES: similar to AA sequence:RefSeq:WP_011614871.1"
+        ],
+        "locus_tag": [
+          "OOOCML_RS05510"
+        ],
+        "product": [
+          "hypothetical protein"
+        ],
+        "protein_id": [
+          "WP_011614871.1"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": false,
+      "flags": []
+    },
+    {
+      "id": "gene-OOOCML_RS05510",
+      "seqid": "NZ_CP196507.1",
+      "kind": "gene",
+      "strand": "+",
+      "parts": [
+        [
+          1183081,
+          1183924
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-OOOCML_RS05510"
+        ],
+        "Name": [
+          "OOOCML_RS05510"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene_biotype": [
+          "protein_coding"
+        ],
+        "locus_tag": [
+          "OOOCML_RS05510"
+        ],
+        "old_locus_tag": [
+          "OOOCML_05510"
+        ]
+      },
+      "contained": false,
+      "flags": []
+    }
+  ],
+  "ASM_0015": [
+    {
+      "id": "cds-WP_010813300.1",
+      "seqid": "NZ_CP196507.1",
+      "kind": "CDS",
+      "strand": "+",
+      "parts": [
+        [
+          224029,
+          224641
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-WP_010813300.1"
+        ],
+        "Parent": [
+          "gene-OOOCML_RS01060"
+        ],
+        "Dbxref": [
+          "GenBank:WP_010813300.1"
+        ],
+        "Name": [
+          "WP_010813300.1"
+        ],
+        "Ontology_term": [
+          "GO:0009086"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "gene": [
+          "metW"
+        ],
+        "go_process": [
+          "methionine biosynthetic process|0009086||IEA"
+        ],
+        "inference": [
+          "COORDINATES: similar to AA sequence:RefSeq:WP_010813300.1"
+        ],
+        "locus_tag": [
+          "OOOCML_RS01060"
+        ],
+        "product": [
+          "methionine biosynthesis protein MetW"
+        ],
+        "protein_id": [
+          "WP_010813300.1"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": false,
+      "flags": []
+    },
+    {
+      "id": "gene-OOOCML_RS01060",
+      "seqid": "NZ_CP196507.1",
+      "kind": "gene",
+      "strand": "+",
+      "parts": [
+        [
+          224029,
+          224641
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-OOOCML_RS01060"
+        ],
+        "Name": [
+          "metW"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene": [
+          "metW"
+        ],
+        "gene_biotype": [
+          "protein_coding"
+        ],
+        "locus_tag": [
+          "OOOCML_RS01060"
+        ],
+        "old_locus_tag": [
+          "OOOCML_01070"
+        ]
+      },
+      "contained": false,
+      "flags": []
+    },
+    {
+      "id": "cds-WP_011614403.1",
+      "seqid": "NZ_CP196507.1",
+      "kind": "CDS",
+      "strand": "-",
+      "parts": [
+        [
+          224651,
+          225080
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-WP_011614403.1"
+        ],
+        "Parent": [
+          "gene-OOOCML_RS01065"
+        ],
+        "Dbxref": [
+          "GenBank:WP_011614403.1"
+        ],
+        "Name": [
+          "WP_011614403.1"
+        ],
+        "Ontology_term": [
+          "GO:0046872"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "go_function": [
+          "metal ion binding|0046872||IEA"
+        ],
+        "inference": [
+          "COORDINATES: similar to AA sequence:RefSeq:WP_011614403.1"
+        ],
+        "locus_tag": [
+          "OOOCML_RS01065"
+        ],
+        "product": [
+          "VOC family protein"
+        ],
+        "protein_id": [
+          "WP_011614403.1"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    },
+    {
+      "id": "gene-OOOCML_RS01065",
+      "seqid": "NZ_CP196507.1",
+      "kind": "gene",
+      "strand": "-",
+      "parts": [
+        [
+          224651,
+          225080
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-OOOCML_RS01065"
+        ],
+        "Name": [
+          "OOOCML_RS01065"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene_biotype": [
+          "protein_coding"
+        ],
+        "locus_tag": [
+          "OOOCML_RS01065"
+        ],
+        "old_locus_tag": [
+          "OOOCML_01075"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    },
+    {
+      "id": "cds-WP_011614404.1",
+      "seqid": "NZ_CP196507.1",
+      "kind": "CDS",
+      "strand": "+",
+      "parts": [
+        [
+          225162,
+          225735
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-WP_011614404.1"
+        ],
+        "Parent": [
+          "gene-OOOCML_RS01070"
+        ],
+        "Dbxref": [
+          "GenBank:WP_011614404.1"
+        ],
+        "Name": [
+          "WP_011614404.1"
+        ],
+        "Ontology_term": [
+          "GO:0003677",
+          "GO:0003700",
+          "GO:0006355"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "go_function": [
+          "DNA binding|0003677||IEA",
+          "DNA-binding transcription factor activity|0003700||IEA"
+        ],
+        "go_process": [
+          "regulation of DNA-templated transcription|0006355||IEA"
+        ],
+        "inference": [
+          "COORDINATES: similar to AA sequence:RefSeq:WP_011614404.1"
+        ],
+        "locus_tag": [
+          "OOOCML_RS01070"
+        ],
+        "product": [
+          "TetR/AcrR family transcriptional regulator"
+        ],
+        "protein_id": [
+          "WP_011614404.1"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": false,
+      "flags": []
+    },
+    {
+      "id": "gene-OOOCML_RS01070",
+      "seqid": "NZ_CP196507.1",
+      "kind": "gene",
+      "strand": "+",
+      "parts": [
+        [
+          225162,
+          225735
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-OOOCML_RS01070"
+        ],
+        "Name": [
+          "OOOCML_RS01070"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene_biotype": [
+          "protein_coding"
+        ],
+        "locus_tag": [
+          "OOOCML_RS01070"
+        ],
+        "old_locus_tag": [
+          "OOOCML_01080"
+        ]
+      },
+      "contained": false,
+      "flags": []
+    }
+  ],
+  "ASM_0016": [
+    {
+      "id": "cds-WP_194946825.1",
+      "seqid": "NZ_CP196496.1",
+      "kind": "CDS",
+      "strand": "-",
+      "parts": [
+        [
+          1295630,
+          1296680
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-WP_194946825.1"
+        ],
+        "Parent": [
+          "gene-NNKAMD_RS06290"
+        ],
+        "Dbxref": [
+          "GenBank:WP_194946825.1"
+        ],
+        "Name": [
+          "WP_194946825.1"
+        ],
+        "Ontology_term": [
+          "GO:0003677",
+          "GO:0004519",
+          "GO:0006310",
+          "GO:0032196",
+          "GO:0046872"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "go_function": [
+          "DNA binding|0003677||IEA",
+          "endonuclease activity|0004519||IEA",
+          "metal ion binding|0046872||IEA"
+        ],
+        "go_process": [
+          "DNA recombination|0006310||IEA",
+          "transposition|0032196||IEA"
+        ],
+        "inference": [
+          "COORDINATES: similar to AA sequence:RefSeq:WP_011661056.1"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS06290"
+        ],
+        "product": [
+          "RNA-guided endonuclease InsQ/TnpB family protein"
+        ],
+        "protein_id": [
+          "WP_194946825.1"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    },
+    {
+      "id": "gene-NNKAMD_RS06290",
+      "seqid": "NZ_CP196496.1",
+      "kind": "gene",
+      "strand": "-",
+      "parts": [
+        [
+          1295630,
+          1296680
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-NNKAMD_RS06290"
+        ],
+        "Name": [
+          "NNKAMD_RS06290"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene_biotype": [
+          "protein_coding"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS06290"
+        ],
+        "old_locus_tag": [
+          "NNKAMD_06275"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    }
+  ],
+  "ASM_0017": [
+    {
+      "id": "cds-NNKAMD_RS01675",
+      "seqid": "NZ_CP196496.1",
+      "kind": "CDS",
+      "strand": "+",
+      "parts": [
+        [
+          345056,
+          345164
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-NNKAMD_RS01675"
+        ],
+        "Parent": [
+          "gene-NNKAMD_RS01675"
+        ],
+        "Note": [
+          "incomplete; partial in the middle of a contig; missing C-terminus"
+        ],
+        "Ontology_term": [
+          "GO:0003677"
+        ],
+        "end_range": [
+          ".",
+          "345164"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "go_function": [
+          "DNA binding|0003677||IEA"
+        ],
+        "inference": [
+          "COORDINATES: protein motif:HMM:NF012354.7"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS01675"
+        ],
+        "partial": [
+          "true"
+        ],
+        "product": [
+          "helix-turn-helix domain-containing protein"
+        ],
+        "pseudo": [
+          "true"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": true,
+      "flags": [
+        "partial",
+        "pseudogene"
+      ]
+    },
+    {
+      "id": "gene-NNKAMD_RS01675",
+      "seqid": "NZ_CP196496.1",
+      "kind": "pseudogene",
+      "strand": "+",
+      "parts": [
+        [
+          345056,
+          345164
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-NNKAMD_RS01675"
+        ],
+        "Name": [
+          "NNKAMD_RS01675"
+        ],
+        "end_range": [
+          ".",
+          "345164"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene_biotype": [
+          "pseudogene"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS01675"
+        ],
+        "partial": [
+          "true"
+        ],
+        "pseudo": [
+          "true"
+        ]
+      },
+      "contained": true,
+      "flags": [
+        "partial",
+        "pseudogene"
+      ]
+    },
+    {
+      "id": "cds-WP_228772304.1",
+      "seqid": "NZ_CP196496.1",
+      "kind": "CDS",
+      "strand": "+",
+      "parts": [
+        [
+          345324,
+          345744
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-WP_228772304.1"
+        ],
+        "Parent": [
+          "gene-NNKAMD_RS01680"
+        ],
+        "Dbxref": [
+          "GenBank:WP_228772304.1"
+        ],
+        "Name": [
+          "WP_228772304.1"
+        ],
+        "Ontology_term": [
+          "GO:0016491"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "go_function": [
+          "oxidoreductase activity|0016491||IEA"
+        ],
+        "inference": [
+          "COORDINATES: protein motif:HMM:NF012398.7"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS01680"
+        ],
+        "product": [
+          "aldehyde dehydrogenase family protein"
+        ],
+        "protein_id": [
+          "WP_228772304.1"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    },
+    {
+      "id": "gene-NNKAMD_RS01680",
+      "seqid": "NZ_CP196496.1",
+      "kind": "gene",
+      "strand": "+",
+      "parts": [
+        [
+          345324,
+          345744
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-NNKAMD_RS01680"
+        ],
+        "Name": [
+          "NNKAMD_RS01680"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene_biotype": [
+          "protein_coding"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS01680"
+        ],
+        "old_locus_tag": [
+          "NNKAMD_01665"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    }
+  ],
+  "ASM_0020": [
+    {
+      "id": "cds-WP_010808972.1",
+      "seqid": "NZ_CP196507.1",
+      "kind": "CDS",
+      "strand": "-",
+      "parts": [
+        [
+          1315772,
+          1316885
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-WP_010808972.1"
+        ],
+        "Parent": [
+          "gene-OOOCML_RS06125"
+        ],
+        "Dbxref": [
+          "GenBank:WP_010808972.1"
+        ],
+        "Name": [
+          "WP_010808972.1"
+        ],
+        "Ontology_term": [
+          "GO:0006793",
+          "GO:0008976"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "gene": [
+          "ppk2"
+        ],
+        "go_function": [
+          "polyphosphate kinase activity|0008976||IEA"
+        ],
+        "go_process": [
+          "phosphorus metabolic process|0006793||IEA"
+        ],
+        "inference": [
+          "COORDINATES: similar to AA sequence:RefSeq:WP_018313343.1"
+        ],
+        "locus_tag": [
+          "OOOCML_RS06125"
+        ],
+        "product": [
+          "polyphosphate kinase 2"
+        ],
+        "protein_id": [
+          "WP_010808972.1"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": false,
+      "flags": []
+    },
+    {
+      "id": "gene-OOOCML_RS06125",
+      "seqid": "NZ_CP196507.1",
+      "kind": "gene",
+      "strand": "-",
+      "parts": [
+        [
+          1315772,
+          1316885
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-OOOCML_RS06125"
+        ],
+        "Name": [
+          "ppk2"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene": [
+          "ppk2"
+        ],
+        "gene_biotype": [
+          "protein_coding"
+        ],
+        "locus_tag": [
+          "OOOCML_RS06125"
+        ],
+        "old_locus_tag": [
+          "OOOCML_06110"
+        ]
+      },
+      "contained": false,
+      "flags": []
+    }
+  ],
+  "ASM_0023": [
+    {
+      "id": "cds-WP_013957016.1",
+      "seqid": "NZ_CP196496.1",
+      "kind": "CDS",
+      "strand": "+",
+      "parts": [
+        [
+          2041369,
+          2041618
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-WP_013957016.1"
+        ],
+        "Parent": [
+          "gene-NNKAMD_RS09740"
+        ],
+        "Dbxref": [
+          "GenBank:WP_013957016.1"
+        ],
+        "Name": [
+          "WP_013957016.1"
+        ],
+        "Ontology_term": [
+          "GO:0003677",
+          "GO:0097351"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "go_function": [
+          "DNA binding|0003677||IEA",
+          "toxin sequestering activity|0097351||IEA"
+        ],
+        "inference": [
+          "COORDINATES: similar to AA sequence:RefSeq:WP_018007637.1"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS09740"
+        ],
+        "product": [
+          "AbrB/MazE/SpoVT family DNA-binding domain-containing protein"
+        ],
+        "protein_id": [
+          "WP_013957016.1"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    },
+    {
+      "id": "gene-NNKAMD_RS09740",
+      "seqid": "NZ_CP196496.1",
+      "kind": "gene",
+      "strand": "+",
+      "parts": [
+        [
+          2041369,
+          2041618
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-NNKAMD_RS09740"
+        ],
+        "Name": [
+          "NNKAMD_RS09740"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene_biotype": [
+          "protein_coding"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS09740"
+        ],
+        "old_locus_tag": [
+          "NNKAMD_09725"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    },
+    {
+      "id": "cds-WP_013957017.1",
+      "seqid": "NZ_CP196496.1",
+      "kind": "CDS",
+      "strand": "+",
+      "parts": [
+        [
+          2041611,
+          2041932
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-WP_013957017.1"
+        ],
+        "Parent": [
+          "gene-NNKAMD_RS09745"
+        ],
+        "Dbxref": [
+          "GenBank:WP_013957017.1"
+        ],
+        "Name": [
+          "WP_013957017.1"
+        ],
+        "Ontology_term": [
+          "GO:0003677",
+          "GO:0003723",
+          "GO:0004521",
+          "GO:0006402",
+          "GO:0016075"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "go_function": [
+          "DNA binding|0003677||IEA",
+          "RNA binding|0003723||IEA",
+          "RNA endonuclease activity|0004521||IEA"
+        ],
+        "go_process": [
+          "mRNA catabolic process|0006402||IEA",
+          "rRNA catabolic process|0016075||IEA"
+        ],
+        "inference": [
+          "COORDINATES: similar to AA sequence:RefSeq:WP_012353008.1"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS09745"
+        ],
+        "product": [
+          "type II toxin-antitoxin system PemK/MazF family toxin"
+        ],
+        "protein_id": [
+          "WP_013957017.1"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": false,
+      "flags": []
+    },
+    {
+      "id": "gene-NNKAMD_RS09745",
+      "seqid": "NZ_CP196496.1",
+      "kind": "gene",
+      "strand": "+",
+      "parts": [
+        [
+          2041611,
+          2041932
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-NNKAMD_RS09745"
+        ],
+        "Name": [
+          "NNKAMD_RS09745"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene_biotype": [
+          "protein_coding"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS09745"
+        ],
+        "old_locus_tag": [
+          "NNKAMD_09730"
+        ]
+      },
+      "contained": false,
+      "flags": []
+    }
+  ],
+  "ASM_0025": [
+    {
+      "id": "cds-WP_011615540.1",
+      "seqid": "NZ_CP196507.1",
+      "kind": "CDS",
+      "strand": "-",
+      "parts": [
+        [
+          2370113,
+          2370608
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-WP_011615540.1"
+        ],
+        "Parent": [
+          "gene-OOOCML_RS11200"
+        ],
+        "Dbxref": [
+          "GenBank:WP_011615540.1"
+        ],
+        "Name": [
+          "WP_011615540.1"
+        ],
+        "Ontology_term": [
+          "GO:0004725",
+          "GO:0030612",
+          "GO:0046685"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "go_function": [
+          "arsenate reductase (thioredoxin) activity|0030612||IEA",
+          "protein tyrosine phosphatase activity|0004725||IEA"
+        ],
+        "go_process": [
+          "response to arsenic-containing substance|0046685||IEA"
+        ],
+        "inference": [
+          "COORDINATES: similar to AA sequence:RefSeq:WP_012435825.1"
+        ],
+        "locus_tag": [
+          "OOOCML_RS11200"
+        ],
+        "product": [
+          "arsenate reductase ArsC"
+        ],
+        "protein_id": [
+          "WP_011615540.1"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    },
+    {
+      "id": "gene-OOOCML_RS11200",
+      "seqid": "NZ_CP196507.1",
+      "kind": "gene",
+      "strand": "-",
+      "parts": [
+        [
+          2370113,
+          2370608
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-OOOCML_RS11200"
+        ],
+        "Name": [
+          "OOOCML_RS11200"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene_biotype": [
+          "protein_coding"
+        ],
+        "locus_tag": [
+          "OOOCML_RS11200"
+        ],
+        "old_locus_tag": [
+          "OOOCML_11050"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    }
+  ],
+  "ASM_0026": [
+    {
+      "id": "cds-WP_041687468.1",
+      "seqid": "NZ_CP196507.1",
+      "kind": "CDS",
+      "strand": "+",
+      "parts": [
+        [
+          2888609,
+          2888912
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-WP_041687468.1"
+        ],
+        "Parent": [
+          "gene-OOOCML_RS13695"
+        ],
+        "Dbxref": [
+          "GenBank:WP_041687468.1"
+        ],
+        "Name": [
+          "WP_041687468.1"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "inference": [
+          "COORDINATES: similar to AA sequence:RefSeq:WP_003269575.1"
+        ],
+        "locus_tag": [
+          "OOOCML_RS13695"
+        ],
+        "product": [
+          "type II toxin-antitoxin system HigB family toxin"
+        ],
+        "protein_id": [
+          "WP_041687468.1"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    },
+    {
+      "id": "gene-OOOCML_RS13695",
+      "seqid": "NZ_CP196507.1",
+      "kind": "gene",
+      "strand": "+",
+      "parts": [
+        [
+          2888609,
+          2888912
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-OOOCML_RS13695"
+        ],
+        "Name": [
+          "OOOCML_RS13695"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene_biotype": [
+          "protein_coding"
+        ],
+        "locus_tag": [
+          "OOOCML_RS13695"
+        ],
+        "old_locus_tag": [
+          "OOOCML_13535"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    },
+    {
+      "id": "cds-WP_011615769.1",
+      "seqid": "NZ_CP196507.1",
+      "kind": "CDS",
+      "strand": "+",
+      "parts": [
+        [
+          2888917,
+          2889289
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-WP_011615769.1"
+        ],
+        "Parent": [
+          "gene-OOOCML_RS13700"
+        ],
+        "Dbxref": [
+          "GenBank:WP_011615769.1"
+        ],
+        "Name": [
+          "WP_011615769.1"
+        ],
+        "Ontology_term": [
+          "GO:0003677"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "go_function": [
+          "DNA binding|0003677||IEA"
+        ],
+        "inference": [
+          "COORDINATES: similar to AA sequence:RefSeq:WP_011615769.1"
+        ],
+        "locus_tag": [
+          "OOOCML_RS13700"
+        ],
+        "product": [
+          "helix-turn-helix domain-containing protein"
+        ],
+        "protein_id": [
+          "WP_011615769.1"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": false,
+      "flags": []
+    },
+    {
+      "id": "gene-OOOCML_RS13700",
+      "seqid": "NZ_CP196507.1",
+      "kind": "gene",
+      "strand": "+",
+      "parts": [
+        [
+          2888917,
+          2889289
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-OOOCML_RS13700"
+        ],
+        "Name": [
+          "OOOCML_RS13700"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene_biotype": [
+          "protein_coding"
+        ],
+        "locus_tag": [
+          "OOOCML_RS13700"
+        ],
+        "old_locus_tag": [
+          "OOOCML_13540"
+        ]
+      },
+      "contained": false,
+      "flags": []
+    }
+  ],
+  "ASM_0028": [
+    {
+      "id": "cds-WP_013957153.1",
+      "seqid": "NZ_CP196496.1",
+      "kind": "CDS",
+      "strand": "+",
+      "parts": [
+        [
+          2189924,
+          2190788
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-WP_013957153.1"
+        ],
+        "Parent": [
+          "gene-NNKAMD_RS10465"
+        ],
+        "Dbxref": [
+          "GenBank:WP_013957153.1"
+        ],
+        "Name": [
+          "WP_013957153.1"
+        ],
+        "Ontology_term": [
+          "GO:0006629",
+          "GO:0008610",
+          "GO:0016491"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "go_function": [
+          "oxidoreductase activity|0016491||IEA"
+        ],
+        "go_process": [
+          "lipid biosynthetic process|0008610||IEA",
+          "lipid metabolic process|0006629||IEA"
+        ],
+        "inference": [
+          "COORDINATES: similar to AA sequence:RefSeq:WP_011615596.1"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS10465"
+        ],
+        "product": [
+          "sterol desaturase family protein"
+        ],
+        "protein_id": [
+          "WP_013957153.1"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": false,
+      "flags": []
+    },
+    {
+      "id": "gene-NNKAMD_RS10465",
+      "seqid": "NZ_CP196496.1",
+      "kind": "gene",
+      "strand": "+",
+      "parts": [
+        [
+          2189924,
+          2190788
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-NNKAMD_RS10465"
+        ],
+        "Name": [
+          "NNKAMD_RS10465"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene_biotype": [
+          "protein_coding"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS10465"
+        ],
+        "old_locus_tag": [
+          "NNKAMD_10485"
+        ]
+      },
+      "contained": false,
+      "flags": []
+    },
+    {
+      "id": "cds-WP_013957154.1",
+      "seqid": "NZ_CP196496.1",
+      "kind": "CDS",
+      "strand": "+",
+      "parts": [
+        [
+          2190958,
+          2191282
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-WP_013957154.1"
+        ],
+        "Parent": [
+          "gene-NNKAMD_RS10470"
+        ],
+        "Dbxref": [
+          "GenBank:WP_013957154.1"
+        ],
+        "Name": [
+          "WP_013957154.1"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "inference": [
+          "COORDINATES: ab initio prediction:GeneMarkS-2+"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS10470"
+        ],
+        "product": [
+          "hypothetical protein"
+        ],
+        "protein_id": [
+          "WP_013957154.1"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    },
+    {
+      "id": "gene-NNKAMD_RS10470",
+      "seqid": "NZ_CP196496.1",
+      "kind": "gene",
+      "strand": "+",
+      "parts": [
+        [
+          2190958,
+          2191282
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-NNKAMD_RS10470"
+        ],
+        "Name": [
+          "NNKAMD_RS10470"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene_biotype": [
+          "protein_coding"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS10470"
+        ],
+        "old_locus_tag": [
+          "NNKAMD_10490"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    },
+    {
+      "id": "cds-WP_228772360.1",
+      "seqid": "NZ_CP196496.1",
+      "kind": "CDS",
+      "strand": "+",
+      "parts": [
+        [
+          2192091,
+          2192514
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-WP_228772360.1"
+        ],
+        "Parent": [
+          "gene-NNKAMD_RS10475"
+        ],
+        "Dbxref": [
+          "GenBank:WP_228772360.1"
+        ],
+        "Name": [
+          "WP_228772360.1"
+        ],
+        "Ontology_term": [
+          "GO:0019867"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "go_component": [
+          "outer membrane|0019867||IEA"
+        ],
+        "inference": [
+          "COORDINATES: protein motif:HMM:NF015737.7"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS10475"
+        ],
+        "product": [
+          "autotransporter outer membrane beta-barrel domain-containing protein"
+        ],
+        "protein_id": [
+          "WP_228772360.1"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    },
+    {
+      "id": "gene-NNKAMD_RS10475",
+      "seqid": "NZ_CP196496.1",
+      "kind": "gene",
+      "strand": "+",
+      "parts": [
+        [
+          2192091,
+          2192514
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-NNKAMD_RS10475"
+        ],
+        "Name": [
+          "NNKAMD_RS10475"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene_biotype": [
+          "protein_coding"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS10475"
+        ],
+        "old_locus_tag": [
+          "NNKAMD_10500"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    }
+  ],
+  "ASM_0029": [
+    {
+      "id": "cds-NNKAMD_RS07510",
+      "seqid": "NZ_CP196496.1",
+      "kind": "CDS",
+      "strand": "-",
+      "parts": [
+        [
+          1560158,
+          1560458
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-NNKAMD_RS07510"
+        ],
+        "Parent": [
+          "gene-NNKAMD_RS07510"
+        ],
+        "Note": [
+          "incomplete; partial in the middle of a contig; missing N-terminus"
+        ],
+        "Ontology_term": [
+          "GO:0004803"
+        ],
+        "end_range": [
+          ".",
+          "1560458"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "gene": [
+          "tnpA"
+        ],
+        "go_function": [
+          "transposase activity|0004803||IEA"
+        ],
+        "inference": [
+          "COORDINATES: similar to AA sequence:RefSeq:WP_001278583.1"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS07510"
+        ],
+        "partial": [
+          "true"
+        ],
+        "product": [
+          "IS200/IS605 family transposase"
+        ],
+        "pseudo": [
+          "true"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": true,
+      "flags": [
+        "partial",
+        "pseudogene"
+      ]
+    },
+    {
+      "id": "gene-NNKAMD_RS07510",
+      "seqid": "NZ_CP196496.1",
+      "kind": "pseudogene",
+      "strand": "-",
+      "parts": [
+        [
+          1560158,
+          1560458
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-NNKAMD_RS07510"
+        ],
+        "Name": [
+          "tnpA"
+        ],
+        "end_range": [
+          ".",
+          "1560458"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene": [
+          "tnpA"
+        ],
+        "gene_biotype": [
+          "pseudogene"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS07510"
+        ],
+        "partial": [
+          "true"
+        ],
+        "pseudo": [
+          "true"
+        ]
+      },
+      "contained": true,
+      "flags": [
+        "partial",
+        "pseudogene"
+      ]
+    },
+    {
+      "id": "cds-WP_049800573.1",
+      "seqid": "NZ_CP196496.1",
+      "kind": "CDS",
+      "strand": "+",
+      "parts": [
+        [
+          1560512,
+          1561673
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-WP_049800573.1"
+        ],
+        "Parent": [
+          "gene-NNKAMD_RS07515"
+        ],
+        "Dbxref": [
+          "GenBank:WP_049800573.1"
+        ],
+        "Name": [
+          "WP_049800573.1"
+        ],
+        "Ontology_term": [
+          "GO:0003677",
+          "GO:0004519",
+          "GO:0006310",
+          "GO:0032196",
+          "GO:0046872"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "go_function": [
+          "DNA binding|0003677||IEA",
+          "endonuclease activity|0004519||IEA",
+          "metal ion binding|0046872||IEA"
+        ],
+        "go_process": [
+          "DNA recombination|0006310||IEA",
+          "transposition|0032196||IEA"
+        ],
+        "inference": [
+          "COORDINATES: similar to AA sequence:RefSeq:WP_010089710.1"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS07515"
+        ],
+        "product": [
+          "RNA-guided endonuclease InsQ/TnpB family protein"
+        ],
+        "protein_id": [
+          "WP_049800573.1"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    },
+    {
+      "id": "gene-NNKAMD_RS07515",
+      "seqid": "NZ_CP196496.1",
+      "kind": "gene",
+      "strand": "+",
+      "parts": [
+        [
+          1560512,
+          1561673
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-NNKAMD_RS07515"
+        ],
+        "Name": [
+          "NNKAMD_RS07515"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene_biotype": [
+          "protein_coding"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS07515"
+        ],
+        "old_locus_tag": [
+          "NNKAMD_07480"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    },
+    {
+      "id": "cds-WP_153957025.1",
+      "seqid": "NZ_CP196496.1",
+      "kind": "CDS",
+      "strand": "-",
+      "parts": [
+        [
+          1561778,
+          1563101
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-WP_153957025.1"
+        ],
+        "Parent": [
+          "gene-NNKAMD_RS07520"
+        ],
+        "Dbxref": [
+          "GenBank:WP_153957025.1"
+        ],
+        "Name": [
+          "WP_153957025.1"
+        ],
+        "Ontology_term": [
+          "GO:0005886",
+          "GO:0008643",
+          "GO:0016020",
+          "GO:0022857",
+          "GO:0031317"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "go_component": [
+          "membrane|0016020||IEA",
+          "plasma membrane|0005886||IEA",
+          "tripartite ATP-independent periplasmic transporter complex|0031317||IEA"
+        ],
+        "go_function": [
+          "transmembrane transporter activity|0022857||IEA"
+        ],
+        "go_process": [
+          "carbohydrate transport|0008643||IEA"
+        ],
+        "inference": [
+          "COORDINATES: similar to AA sequence:RefSeq:WP_011516601.1"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS07520"
+        ],
+        "product": [
+          "TRAP transporter large permease"
+        ],
+        "protein_id": [
+          "WP_153957025.1"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": false,
+      "flags": []
+    },
+    {
+      "id": "gene-NNKAMD_RS07520",
+      "seqid": "NZ_CP196496.1",
+      "kind": "gene",
+      "strand": "-",
+      "parts": [
+        [
+          1561778,
+          1563101
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-NNKAMD_RS07520"
+        ],
+        "Name": [
+          "NNKAMD_RS07520"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene_biotype": [
+          "protein_coding"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS07520"
+        ],
+        "old_locus_tag": [
+          "NNKAMD_07485"
+        ]
+      },
+      "contained": false,
+      "flags": []
+    }
+  ],
+  "ASM_0030": [
+    {
+      "id": "cds-WP_011615795.1",
+      "seqid": "NZ_CP196507.1",
+      "kind": "CDS",
+      "strand": "+",
+      "parts": [
+        [
+          2933765,
+          2934545
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-WP_011615795.1"
+        ],
+        "Parent": [
+          "gene-OOOCML_RS13920"
+        ],
+        "Dbxref": [
+          "GenBank:WP_011615795.1"
+        ],
+        "Name": [
+          "WP_011615795.1"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "inference": [
+          "COORDINATES: similar to AA sequence:RefSeq:WP_012353452.1"
+        ],
+        "locus_tag": [
+          "OOOCML_RS13920"
+        ],
+        "product": [
+          "IclR family transcriptional regulator domain-containing protein"
+        ],
+        "protein_id": [
+          "WP_011615795.1"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": false,
+      "flags": []
+    },
+    {
+      "id": "gene-OOOCML_RS13920",
+      "seqid": "NZ_CP196507.1",
+      "kind": "gene",
+      "strand": "+",
+      "parts": [
+        [
+          2933765,
+          2934545
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-OOOCML_RS13920"
+        ],
+        "Name": [
+          "OOOCML_RS13920"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene_biotype": [
+          "protein_coding"
+        ],
+        "locus_tag": [
+          "OOOCML_RS13920"
+        ],
+        "old_locus_tag": [
+          "OOOCML_13765"
+        ]
+      },
+      "contained": false,
+      "flags": []
+    }
+  ],
+  "ASM_0031": [
+    {
+      "id": "cds-WP_153957119.1",
+      "seqid": "NZ_CP196496.1",
+      "kind": "CDS",
+      "strand": "+",
+      "parts": [
+        [
+          2104373,
+          2104550
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-WP_153957119.1"
+        ],
+        "Parent": [
+          "gene-NNKAMD_RS10035"
+        ],
+        "Dbxref": [
+          "GenBank:WP_153957119.1"
+        ],
+        "Name": [
+          "WP_153957119.1"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "inference": [
+          "COORDINATES: ab initio prediction:GeneMarkS-2+"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS10035"
+        ],
+        "product": [
+          "hypothetical protein"
+        ],
+        "protein_id": [
+          "WP_153957119.1"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": false,
+      "flags": []
+    },
+    {
+      "id": "gene-NNKAMD_RS10035",
+      "seqid": "NZ_CP196496.1",
+      "kind": "gene",
+      "strand": "+",
+      "parts": [
+        [
+          2104373,
+          2104550
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-NNKAMD_RS10035"
+        ],
+        "Name": [
+          "NNKAMD_RS10035"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene_biotype": [
+          "protein_coding"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS10035"
+        ],
+        "old_locus_tag": [
+          "NNKAMD_10025"
+        ]
+      },
+      "contained": false,
+      "flags": []
+    },
+    {
+      "id": "cds-NNKAMD_RS10040",
+      "seqid": "NZ_CP196496.1",
+      "kind": "CDS",
+      "strand": "+",
+      "parts": [
+        [
+          2104594,
+          2105781
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-NNKAMD_RS10040"
+        ],
+        "Parent": [
+          "gene-NNKAMD_RS10040"
+        ],
+        "Note": [
+          "programmed frameshift; incomplete; partial in the middle of a contig; missing C-terminus"
+        ],
+        "Ontology_term": [
+          "GO:0004803"
+        ],
+        "end_range": [
+          ".",
+          "2105781"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "go_function": [
+          "transposase activity|0004803||IEA"
+        ],
+        "inference": [
+          "COORDINATES: similar to AA sequence:RefSeq:WP_076611328.1"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS10040"
+        ],
+        "partial": [
+          "true"
+        ],
+        "product": [
+          "IS3 family transposase"
+        ],
+        "pseudo": [
+          "true"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": true,
+      "flags": [
+        "partial",
+        "pseudogene"
+      ]
+    },
+    {
+      "id": "gene-NNKAMD_RS10040",
+      "seqid": "NZ_CP196496.1",
+      "kind": "pseudogene",
+      "strand": "+",
+      "parts": [
+        [
+          2104594,
+          2105781
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-NNKAMD_RS10040"
+        ],
+        "Name": [
+          "NNKAMD_RS10040"
+        ],
+        "end_range": [
+          ".",
+          "2105781"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene_biotype": [
+          "pseudogene"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS10040"
+        ],
+        "old_locus_tag": [
+          "NNKAMD_10035"
+        ],
+        "partial": [
+          "true"
+        ],
+        "pseudo": [
+          "true"
+        ]
+      },
+      "contained": true,
+      "flags": [
+        "partial",
+        "pseudogene"
+      ]
+    }
+  ],
+  "ASM_0032": [
+    {
+      "id": "cds-WP_011617303.1",
+      "seqid": "NZ_CP196508.1",
+      "kind": "CDS",
+      "strand": "+",
+      "parts": [
+        [
+          1739072,
+          1740452
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-WP_011617303.1"
+        ],
+        "Parent": [
+          "gene-OOOCML_RS27090"
+        ],
+        "Dbxref": [
+          "GenBank:WP_011617303.1"
+        ],
+        "Name": [
+          "WP_011617303.1"
+        ],
+        "Ontology_term": [
+          "GO:0046677"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "go_process": [
+          "response to antibiotic|0046677||IEA"
+        ],
+        "inference": [
+          "COORDINATES: similar to AA sequence:RefSeq:WP_011617303.1"
+        ],
+        "locus_tag": [
+          "OOOCML_RS27090"
+        ],
+        "product": [
+          "erythromycin esterase family protein"
+        ],
+        "protein_id": [
+          "WP_011617303.1"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": false,
+      "flags": []
+    },
+    {
+      "id": "gene-OOOCML_RS27090",
+      "seqid": "NZ_CP196508.1",
+      "kind": "gene",
+      "strand": "+",
+      "parts": [
+        [
+          1739072,
+          1740452
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-OOOCML_RS27090"
+        ],
+        "Name": [
+          "OOOCML_RS27090"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene_biotype": [
+          "protein_coding"
+        ],
+        "locus_tag": [
+          "OOOCML_RS27090"
+        ],
+        "old_locus_tag": [
+          "OOOCML_26930"
+        ]
+      },
+      "contained": false,
+      "flags": []
+    },
+    {
+      "id": "cds-WP_010814538.1",
+      "seqid": "NZ_CP196508.1",
+      "kind": "CDS",
+      "strand": "-",
+      "parts": [
+        [
+          1740481,
+          1740754
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-WP_010814538.1"
+        ],
+        "Parent": [
+          "gene-OOOCML_RS27095"
+        ],
+        "Dbxref": [
+          "GenBank:WP_010814538.1"
+        ],
+        "Name": [
+          "WP_010814538.1"
+        ],
+        "Ontology_term": [
+          "GO:0008289"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "go_function": [
+          "lipid binding|0008289||IEA"
+        ],
+        "inference": [
+          "COORDINATES: similar to AA sequence:RefSeq:WP_010814538.1"
+        ],
+        "locus_tag": [
+          "OOOCML_RS27095"
+        ],
+        "product": [
+          "BON domain-containing protein"
+        ],
+        "protein_id": [
+          "WP_010814538.1"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    },
+    {
+      "id": "gene-OOOCML_RS27095",
+      "seqid": "NZ_CP196508.1",
+      "kind": "gene",
+      "strand": "-",
+      "parts": [
+        [
+          1740481,
+          1740754
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-OOOCML_RS27095"
+        ],
+        "Name": [
+          "OOOCML_RS27095"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene_biotype": [
+          "protein_coding"
+        ],
+        "locus_tag": [
+          "OOOCML_RS27095"
+        ],
+        "old_locus_tag": [
+          "OOOCML_26935"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    }
+  ],
+  "ASM_0033": [
+    {
+      "id": "cds-WP_153953411.1",
+      "seqid": "NZ_CP196497.1",
+      "kind": "CDS",
+      "strand": "+",
+      "parts": [
+        [
+          2001332,
+          2002322
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-WP_153953411.1"
+        ],
+        "Parent": [
+          "gene-NNKAMD_RS27500"
+        ],
+        "Dbxref": [
+          "GenBank:WP_153953411.1"
+        ],
+        "Name": [
+          "WP_153953411.1"
+        ],
+        "Ontology_term": [
+          "GO:0016616",
+          "GO:0051287"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "go_function": [
+          "NAD binding|0051287||IEA",
+          "oxidoreductase activity, acting on the CH-OH group of donors, NAD or NADP as acceptor|0016616||IEA"
+        ],
+        "inference": [
+          "COORDINATES: similar to AA sequence:RefSeq:WP_013953397.1"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS27500"
+        ],
+        "product": [
+          "2-hydroxyacid dehydrogenase"
+        ],
+        "protein_id": [
+          "WP_153953411.1"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": false,
+      "flags": []
+    },
+    {
+      "id": "gene-NNKAMD_RS27500",
+      "seqid": "NZ_CP196497.1",
+      "kind": "gene",
+      "strand": "+",
+      "parts": [
+        [
+          2001332,
+          2002322
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-NNKAMD_RS27500"
+        ],
+        "Name": [
+          "NNKAMD_RS27500"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene_biotype": [
+          "protein_coding"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS27500"
+        ],
+        "old_locus_tag": [
+          "NNKAMD_27435"
+        ]
+      },
+      "contained": false,
+      "flags": []
+    },
+    {
+      "id": "cds-WP_153953410.1",
+      "seqid": "NZ_CP196497.1",
+      "kind": "CDS",
+      "strand": "+",
+      "parts": [
+        [
+          2002346,
+          2003162
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-WP_153953410.1"
+        ],
+        "Parent": [
+          "gene-NNKAMD_RS27505"
+        ],
+        "Dbxref": [
+          "GenBank:WP_153953410.1"
+        ],
+        "Name": [
+          "WP_153953410.1"
+        ],
+        "Ontology_term": [
+          "GO:0016616",
+          "GO:0030554"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "go_function": [
+          "adenyl nucleotide binding|0030554||IEA",
+          "oxidoreductase activity, acting on the CH-OH group of donors, NAD or NADP as acceptor|0016616||IEA"
+        ],
+        "inference": [
+          "COORDINATES: similar to AA sequence:RefSeq:WP_013953398.1"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS27505"
+        ],
+        "product": [
+          "shikimate dehydrogenase family protein"
+        ],
+        "protein_id": [
+          "WP_153953410.1"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    },
+    {
+      "id": "gene-NNKAMD_RS27505",
+      "seqid": "NZ_CP196497.1",
+      "kind": "gene",
+      "strand": "+",
+      "parts": [
+        [
+          2002346,
+          2003162
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-NNKAMD_RS27505"
+        ],
+        "Name": [
+          "NNKAMD_RS27505"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene_biotype": [
+          "protein_coding"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS27505"
+        ],
+        "old_locus_tag": [
+          "NNKAMD_27440"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    }
+  ],
+  "ASM_0035": [
+    {
+      "id": "cds-WP_011616969.1",
+      "seqid": "NZ_CP196508.1",
+      "kind": "CDS",
+      "strand": "-",
+      "parts": [
+        [
+          1170116,
+          1171661
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-WP_011616969.1"
+        ],
+        "Parent": [
+          "gene-OOOCML_RS24470"
+        ],
+        "Dbxref": [
+          "GenBank:WP_011616969.1"
+        ],
+        "Name": [
+          "WP_011616969.1"
+        ],
+        "Ontology_term": [
+          "GO:0004888",
+          "GO:0006935",
+          "GO:0007165",
+          "GO:0016020"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "go_component": [
+          "membrane|0016020||IEA"
+        ],
+        "go_function": [
+          "transmembrane signaling receptor activity|0004888||IEA"
+        ],
+        "go_process": [
+          "chemotaxis|0006935||IEA",
+          "signal transduction|0007165||IEA"
+        ],
+        "inference": [
+          "COORDINATES: similar to AA sequence:RefSeq:WP_011004508.1"
+        ],
+        "locus_tag": [
+          "OOOCML_RS24470"
+        ],
+        "product": [
+          "methyl-accepting chemotaxis protein"
+        ],
+        "protein_id": [
+          "WP_011616969.1"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": false,
+      "flags": []
+    },
+    {
+      "id": "gene-OOOCML_RS24470",
+      "seqid": "NZ_CP196508.1",
+      "kind": "gene",
+      "strand": "-",
+      "parts": [
+        [
+          1170116,
+          1171661
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-OOOCML_RS24470"
+        ],
+        "Name": [
+          "OOOCML_RS24470"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene_biotype": [
+          "protein_coding"
+        ],
+        "locus_tag": [
+          "OOOCML_RS24470"
+        ],
+        "old_locus_tag": [
+          "OOOCML_24315"
+        ]
+      },
+      "contained": false,
+      "flags": []
+    }
+  ],
+  "ASM_0036": [
+    {
+      "id": "cds-WP_013953561.1",
+      "seqid": "NZ_CP196497.1",
+      "kind": "CDS",
+      "strand": "+",
+      "parts": [
+        [
+          2185755,
+          2186094
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-WP_013953561.1"
+        ],
+        "Parent": [
+          "gene-NNKAMD_RS28330"
+        ],
+        "Dbxref": [
+          "GenBank:WP_013953561.1"
+        ],
+        "Name": [
+          "WP_013953561.1"
+        ],
+        "Ontology_term": [
+          "GO:0004497",
+          "GO:0016491",
+          "GO:0017000"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "go_function": [
+          "monooxygenase activity|0004497||IEA",
+          "oxidoreductase activity|0016491||IEA"
+        ],
+        "go_process": [
+          "antibiotic biosynthetic process|0017000||IEA"
+        ],
+        "inference": [
+          "COORDINATES: similar to AA sequence:RefSeq:WP_013953561.1"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS28330"
+        ],
+        "product": [
+          "antibiotic biosynthesis monooxygenase family protein"
+        ],
+        "protein_id": [
+          "WP_013953561.1"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": false,
+      "flags": []
+    },
+    {
+      "id": "gene-NNKAMD_RS28330",
+      "seqid": "NZ_CP196497.1",
+      "kind": "gene",
+      "strand": "+",
+      "parts": [
+        [
+          2185755,
+          2186094
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-NNKAMD_RS28330"
+        ],
+        "Name": [
+          "NNKAMD_RS28330"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene_biotype": [
+          "protein_coding"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS28330"
+        ],
+        "old_locus_tag": [
+          "NNKAMD_28265"
+        ]
+      },
+      "contained": false,
+      "flags": []
+    },
+    {
+      "id": "cds-NNKAMD_RS28335",
+      "seqid": "NZ_CP196497.1",
+      "kind": "CDS",
+      "strand": "+",
+      "parts": [
+        [
+          2186160,
+          2186616
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-NNKAMD_RS28335"
+        ],
+        "Parent": [
+          "gene-NNKAMD_RS28335"
+        ],
+        "Note": [
+          "incomplete; partial in the middle of a contig; missing N-terminus"
+        ],
+        "Ontology_term": [
+          "GO:0009055",
+          "GO:0020037",
+          "GO:0046872"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "go_function": [
+          "electron transfer activity|0009055||IEA",
+          "heme binding|0020037||IEA",
+          "metal ion binding|0046872||IEA"
+        ],
+        "inference": [
+          "COORDINATES: similar to AA sequence:RefSeq:WP_011516171.1"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS28335"
+        ],
+        "partial": [
+          "true"
+        ],
+        "product": [
+          "c-type cytochrome"
+        ],
+        "pseudo": [
+          "true"
+        ],
+        "start_range": [
+          ".",
+          "2186161"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": false,
+      "flags": [
+        "partial",
+        "pseudogene"
+      ]
+    },
+    {
+      "id": "gene-NNKAMD_RS28335",
+      "seqid": "NZ_CP196497.1",
+      "kind": "pseudogene",
+      "strand": "+",
+      "parts": [
+        [
+          2186160,
+          2186616
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-NNKAMD_RS28335"
+        ],
+        "Name": [
+          "NNKAMD_RS28335"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene_biotype": [
+          "pseudogene"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS28335"
+        ],
+        "old_locus_tag": [
+          "NNKAMD_28270"
+        ],
+        "partial": [
+          "true"
+        ],
+        "pseudo": [
+          "true"
+        ],
+        "start_range": [
+          ".",
+          "2186161"
+        ]
+      },
+      "contained": false,
+      "flags": [
+        "partial",
+        "pseudogene"
+      ]
+    }
+  ],
+  "ASM_0037": [
+    {
+      "id": "cds-WP_475681531.1-6",
+      "seqid": "NZ_CP196497.1",
+      "kind": "CDS",
+      "strand": "+",
+      "parts": [
+        [
+          2188944,
+          2190198
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-WP_475681531.1-6"
+        ],
+        "Parent": [
+          "gene-NNKAMD_RS28350"
+        ],
+        "Dbxref": [
+          "GenBank:WP_475681531.1"
+        ],
+        "Name": [
+          "WP_475681531.1"
+        ],
+        "Ontology_term": [
+          "GO:0004803"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "go_function": [
+          "transposase activity|0004803||IEA"
+        ],
+        "inference": [
+          "COORDINATES: similar to AA sequence:RefSeq:WP_013959786.1"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS28350"
+        ],
+        "product": [
+          "IS256 family transposase"
+        ],
+        "protein_id": [
+          "WP_475681531.1"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    },
+    {
+      "id": "gene-NNKAMD_RS28350",
+      "seqid": "NZ_CP196497.1",
+      "kind": "gene",
+      "strand": "+",
+      "parts": [
+        [
+          2188944,
+          2190198
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-NNKAMD_RS28350"
+        ],
+        "Name": [
+          "NNKAMD_RS28350"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene_biotype": [
+          "protein_coding"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS28350"
+        ],
+        "old_locus_tag": [
+          "NNKAMD_28285"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    },
+    {
+      "id": "cds-WP_153956174.1",
+      "seqid": "NZ_CP196497.1",
+      "kind": "CDS",
+      "strand": "-",
+      "parts": [
+        [
+          2190205,
+          2192194
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-WP_153956174.1"
+        ],
+        "Parent": [
+          "gene-NNKAMD_RS28355"
+        ],
+        "Dbxref": [
+          "GenBank:WP_153956174.1"
+        ],
+        "Name": [
+          "WP_153956174.1"
+        ],
+        "Ontology_term": [
+          "GO:0000160",
+          "GO:0005524",
+          "GO:0006355",
+          "GO:0043565"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "go_function": [
+          "ATP binding|0005524||IEA",
+          "sequence-specific DNA binding|0043565||IEA"
+        ],
+        "go_process": [
+          "phosphorelay signal transduction system|0000160||IEA",
+          "regulation of DNA-templated transcription|0006355||IEA"
+        ],
+        "inference": [
+          "COORDINATES: similar to AA sequence:RefSeq:WP_013953565.1"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS28355"
+        ],
+        "product": [
+          "sigma-54-dependent Fis family transcriptional regulator"
+        ],
+        "protein_id": [
+          "WP_153956174.1"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": false,
+      "flags": []
+    },
+    {
+      "id": "gene-NNKAMD_RS28355",
+      "seqid": "NZ_CP196497.1",
+      "kind": "gene",
+      "strand": "-",
+      "parts": [
+        [
+          2190205,
+          2192194
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-NNKAMD_RS28355"
+        ],
+        "Name": [
+          "NNKAMD_RS28355"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene_biotype": [
+          "protein_coding"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS28355"
+        ],
+        "old_locus_tag": [
+          "NNKAMD_28290"
+        ]
+      },
+      "contained": false,
+      "flags": []
+    }
+  ],
+  "ASM_0038": [
+    {
+      "id": "cds-WP_231881489.1",
+      "seqid": "NZ_CP196508.1",
+      "kind": "CDS",
+      "strand": "+",
+      "parts": [
+        [
+          568579,
+          568996
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-WP_231881489.1"
+        ],
+        "Parent": [
+          "gene-OOOCML_RS21725"
+        ],
+        "Dbxref": [
+          "GenBank:WP_231881489.1"
+        ],
+        "Name": [
+          "WP_231881489.1"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "inference": [
+          "COORDINATES: similar to AA sequence:RefSeq:WP_011616643.1"
+        ],
+        "locus_tag": [
+          "OOOCML_RS21725"
+        ],
+        "product": [
+          "PAAR domain-containing protein"
+        ],
+        "protein_id": [
+          "WP_231881489.1"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    },
+    {
+      "id": "gene-OOOCML_RS21725",
+      "seqid": "NZ_CP196508.1",
+      "kind": "gene",
+      "strand": "+",
+      "parts": [
+        [
+          568579,
+          568996
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-OOOCML_RS21725"
+        ],
+        "Name": [
+          "OOOCML_RS21725"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene_biotype": [
+          "protein_coding"
+        ],
+        "locus_tag": [
+          "OOOCML_RS21725"
+        ],
+        "old_locus_tag": [
+          "OOOCML_21565"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    },
+    {
+      "id": "cds-WP_010813250.1",
+      "seqid": "NZ_CP196508.1",
+      "kind": "CDS",
+      "strand": "+",
+      "parts": [
+        [
+          569005,
+          569572
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-WP_010813250.1"
+        ],
+        "Parent": [
+          "gene-OOOCML_RS21730"
+        ],
+        "Dbxref": [
+          "GenBank:WP_010813250.1"
+        ],
+        "Name": [
+          "WP_010813250.1"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "inference": [
+          "COORDINATES: protein motif:HMM:NF017315.6"
+        ],
+        "locus_tag": [
+          "OOOCML_RS21730"
+        ],
+        "product": [
+          "PAAR domain-containing protein"
+        ],
+        "protein_id": [
+          "WP_010813250.1"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    },
+    {
+      "id": "gene-OOOCML_RS21730",
+      "seqid": "NZ_CP196508.1",
+      "kind": "gene",
+      "strand": "+",
+      "parts": [
+        [
+          569005,
+          569572
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-OOOCML_RS21730"
+        ],
+        "Name": [
+          "OOOCML_RS21730"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene_biotype": [
+          "protein_coding"
+        ],
+        "locus_tag": [
+          "OOOCML_RS21730"
+        ],
+        "old_locus_tag": [
+          "OOOCML_21570"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    },
+    {
+      "id": "cds-WP_011616644.1",
+      "seqid": "NZ_CP196508.1",
+      "kind": "CDS",
+      "strand": "+",
+      "parts": [
+        [
+          569575,
+          570169
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-WP_011616644.1"
+        ],
+        "Parent": [
+          "gene-OOOCML_RS21735"
+        ],
+        "Dbxref": [
+          "GenBank:WP_011616644.1"
+        ],
+        "Name": [
+          "WP_011616644.1"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "inference": [
+          "COORDINATES: similar to AA sequence:RefSeq:WP_015003204.1"
+        ],
+        "locus_tag": [
+          "OOOCML_RS21735"
+        ],
+        "product": [
+          "type VI secretion system amidase effector protein Tae4"
+        ],
+        "protein_id": [
+          "WP_011616644.1"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    },
+    {
+      "id": "gene-OOOCML_RS21735",
+      "seqid": "NZ_CP196508.1",
+      "kind": "gene",
+      "strand": "+",
+      "parts": [
+        [
+          569575,
+          570169
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-OOOCML_RS21735"
+        ],
+        "Name": [
+          "OOOCML_RS21735"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene_biotype": [
+          "protein_coding"
+        ],
+        "locus_tag": [
+          "OOOCML_RS21735"
+        ],
+        "old_locus_tag": [
+          "OOOCML_21575"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    }
+  ],
+  "ASM_0042": [
+    {
+      "id": "cds-WP_475681670.1",
+      "seqid": "NZ_CP196497.1",
+      "kind": "CDS",
+      "strand": "-",
+      "parts": [
+        [
+          2505850,
+          2507164
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-WP_475681670.1"
+        ],
+        "Parent": [
+          "gene-NNKAMD_RS29750"
+        ],
+        "Dbxref": [
+          "GenBank:WP_475681670.1"
+        ],
+        "Name": [
+          "WP_475681670.1"
+        ],
+        "Ontology_term": [
+          "GO:0004803"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "go_function": [
+          "transposase activity|0004803||IEA"
+        ],
+        "inference": [
+          "COORDINATES: protein motif:HMM:NF033542.1"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS29750"
+        ],
+        "product": [
+          "IS110 family RNA-guided transposase"
+        ],
+        "protein_id": [
+          "WP_475681670.1"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    },
+    {
+      "id": "gene-NNKAMD_RS29750",
+      "seqid": "NZ_CP196497.1",
+      "kind": "gene",
+      "strand": "-",
+      "parts": [
+        [
+          2505850,
+          2507164
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-NNKAMD_RS29750"
+        ],
+        "Name": [
+          "NNKAMD_RS29750"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene_biotype": [
+          "protein_coding"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS29750"
+        ],
+        "old_locus_tag": [
+          "NNKAMD_29695"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    }
+  ],
+  "ASM_0043": [
+    {
+      "id": "cds-NNKAMD_RS19565",
+      "seqid": "NZ_CP196497.1",
+      "kind": "CDS",
+      "strand": "+",
+      "parts": [
+        [
+          284704,
+          285696
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-NNKAMD_RS19565"
+        ],
+        "Parent": [
+          "gene-NNKAMD_RS19565"
+        ],
+        "Note": [
+          "frameshifted; incomplete; partial in the middle of a contig; missing C-terminus"
+        ],
+        "Ontology_term": [
+          "GO:0004803"
+        ],
+        "end_range": [
+          ".",
+          "285696"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "go_function": [
+          "transposase activity|0004803||IEA"
+        ],
+        "inference": [
+          "COORDINATES: similar to AA sequence:RefSeq:WP_012355561.1"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS19565"
+        ],
+        "partial": [
+          "true"
+        ],
+        "product": [
+          "IS110 family RNA-guided transposase"
+        ],
+        "pseudo": [
+          "true"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": true,
+      "flags": [
+        "partial",
+        "pseudogene"
+      ]
+    },
+    {
+      "id": "gene-NNKAMD_RS19565",
+      "seqid": "NZ_CP196497.1",
+      "kind": "pseudogene",
+      "strand": "+",
+      "parts": [
+        [
+          284704,
+          285696
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-NNKAMD_RS19565"
+        ],
+        "Name": [
+          "NNKAMD_RS19565"
+        ],
+        "end_range": [
+          ".",
+          "285696"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene_biotype": [
+          "pseudogene"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS19565"
+        ],
+        "old_locus_tag": [
+          "NNKAMD_19610"
+        ],
+        "partial": [
+          "true"
+        ],
+        "pseudo": [
+          "true"
+        ]
+      },
+      "contained": true,
+      "flags": [
+        "partial",
+        "pseudogene"
+      ]
+    }
+  ],
+  "ASM_0044": [
+    {
+      "id": "cds-WP_013952576.1",
+      "seqid": "NZ_CP196497.1",
+      "kind": "CDS",
+      "strand": "+",
+      "parts": [
+        [
+          955418,
+          955778
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-WP_013952576.1"
+        ],
+        "Parent": [
+          "gene-NNKAMD_RS22715"
+        ],
+        "Dbxref": [
+          "GenBank:WP_013952576.1"
+        ],
+        "Name": [
+          "WP_013952576.1"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "inference": [
+          "COORDINATES: similar to AA sequence:RefSeq:WP_013952576.1"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS22715"
+        ],
+        "product": [
+          "DUF2880 domain-containing protein"
+        ],
+        "protein_id": [
+          "WP_013952576.1"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": false,
+      "flags": []
+    },
+    {
+      "id": "gene-NNKAMD_RS22715",
+      "seqid": "NZ_CP196497.1",
+      "kind": "gene",
+      "strand": "+",
+      "parts": [
+        [
+          955418,
+          955778
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-NNKAMD_RS22715"
+        ],
+        "Name": [
+          "NNKAMD_RS22715"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene_biotype": [
+          "protein_coding"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS22715"
+        ],
+        "old_locus_tag": [
+          "NNKAMD_22755"
+        ]
+      },
+      "contained": false,
+      "flags": []
+    },
+    {
+      "id": "cds-WP_013952577.1",
+      "seqid": "NZ_CP196497.1",
+      "kind": "CDS",
+      "strand": "-",
+      "parts": [
+        [
+          955783,
+          956200
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-WP_013952577.1"
+        ],
+        "Parent": [
+          "gene-NNKAMD_RS22720"
+        ],
+        "Dbxref": [
+          "GenBank:WP_013952577.1"
+        ],
+        "Name": [
+          "WP_013952577.1"
+        ],
+        "Ontology_term": [
+          "GO:0016846",
+          "GO:0046872"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "go_function": [
+          "carbon-sulfur lyase activity|0016846||IEA",
+          "metal ion binding|0046872||IEA"
+        ],
+        "inference": [
+          "COORDINATES: similar to AA sequence:RefSeq:WP_013952577.1"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS22720"
+        ],
+        "product": [
+          "GFA family protein"
+        ],
+        "protein_id": [
+          "WP_013952577.1"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    },
+    {
+      "id": "gene-NNKAMD_RS22720",
+      "seqid": "NZ_CP196497.1",
+      "kind": "gene",
+      "strand": "-",
+      "parts": [
+        [
+          955783,
+          956200
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-NNKAMD_RS22720"
+        ],
+        "Name": [
+          "NNKAMD_RS22720"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene_biotype": [
+          "protein_coding"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS22720"
+        ],
+        "old_locus_tag": [
+          "NNKAMD_22760"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    },
+    {
+      "id": "cds-WP_013952578.1",
+      "seqid": "NZ_CP196497.1",
+      "kind": "CDS",
+      "strand": "-",
+      "parts": [
+        [
+          956214,
+          956679
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-WP_013952578.1"
+        ],
+        "Parent": [
+          "gene-NNKAMD_RS22725"
+        ],
+        "Dbxref": [
+          "GenBank:WP_013952578.1"
+        ],
+        "Name": [
+          "WP_013952578.1"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "inference": [
+          "COORDINATES: similar to AA sequence:RefSeq:WP_013952578.1"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS22725"
+        ],
+        "product": [
+          "SRPBCC family protein"
+        ],
+        "protein_id": [
+          "WP_013952578.1"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    },
+    {
+      "id": "gene-NNKAMD_RS22725",
+      "seqid": "NZ_CP196497.1",
+      "kind": "gene",
+      "strand": "-",
+      "parts": [
+        [
+          956214,
+          956679
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-NNKAMD_RS22725"
+        ],
+        "Name": [
+          "NNKAMD_RS22725"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene_biotype": [
+          "protein_coding"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS22725"
+        ],
+        "old_locus_tag": [
+          "NNKAMD_22765"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    },
+    {
+      "id": "cds-WP_013952579.1",
+      "seqid": "NZ_CP196497.1",
+      "kind": "CDS",
+      "strand": "-",
+      "parts": [
+        [
+          956675,
+          956996
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-WP_013952579.1"
+        ],
+        "Parent": [
+          "gene-NNKAMD_RS22730"
+        ],
+        "Dbxref": [
+          "GenBank:WP_013952579.1"
+        ],
+        "Name": [
+          "WP_013952579.1"
+        ],
+        "Ontology_term": [
+          "GO:0003677",
+          "GO:0003700",
+          "GO:0006355"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "go_function": [
+          "DNA binding|0003677||IEA",
+          "DNA-binding transcription factor activity|0003700||IEA"
+        ],
+        "go_process": [
+          "regulation of DNA-templated transcription|0006355||IEA"
+        ],
+        "inference": [
+          "COORDINATES: similar to AA sequence:RefSeq:WP_013952579.1"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS22730"
+        ],
+        "product": [
+          "ArsR/SmtB family transcription factor"
+        ],
+        "protein_id": [
+          "WP_013952579.1"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    },
+    {
+      "id": "gene-NNKAMD_RS22730",
+      "seqid": "NZ_CP196497.1",
+      "kind": "gene",
+      "strand": "-",
+      "parts": [
+        [
+          956675,
+          956996
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-NNKAMD_RS22730"
+        ],
+        "Name": [
+          "NNKAMD_RS22730"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene_biotype": [
+          "protein_coding"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS22730"
+        ],
+        "old_locus_tag": [
+          "NNKAMD_22770"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    }
+  ],
+  "ASM_0049": [
+    {
+      "id": "cds-WP_013952732.1",
+      "seqid": "NZ_CP196497.1",
+      "kind": "CDS",
+      "strand": "-",
+      "parts": [
+        [
+          1132598,
+          1132949
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-WP_013952732.1"
+        ],
+        "Parent": [
+          "gene-NNKAMD_RS23530"
+        ],
+        "Dbxref": [
+          "GenBank:WP_013952732.1"
+        ],
+        "Name": [
+          "WP_013952732.1"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "inference": [
+          "COORDINATES: similar to AA sequence:RefSeq:WP_013952732.1"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS23530"
+        ],
+        "product": [
+          "BrnA antitoxin family protein"
+        ],
+        "protein_id": [
+          "WP_013952732.1"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": false,
+      "flags": []
+    },
+    {
+      "id": "gene-NNKAMD_RS23530",
+      "seqid": "NZ_CP196497.1",
+      "kind": "gene",
+      "strand": "-",
+      "parts": [
+        [
+          1132598,
+          1132949
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-NNKAMD_RS23530"
+        ],
+        "Name": [
+          "NNKAMD_RS23530"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene_biotype": [
+          "protein_coding"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS23530"
+        ],
+        "old_locus_tag": [
+          "NNKAMD_23560"
+        ]
+      },
+      "contained": false,
+      "flags": []
+    },
+    {
+      "id": "cds-WP_330995914.1",
+      "seqid": "NZ_CP196497.1",
+      "kind": "CDS",
+      "strand": "-",
+      "parts": [
+        [
+          1132932,
+          1133106
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-WP_330995914.1"
+        ],
+        "Parent": [
+          "gene-NNKAMD_RS23535"
+        ],
+        "Dbxref": [
+          "GenBank:WP_330995914.1"
+        ],
+        "Name": [
+          "WP_330995914.1"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "inference": [
+          "COORDINATES: protein motif:HMM:NF016268.7"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS23535"
+        ],
+        "product": [
+          "BrnT family toxin"
+        ],
+        "protein_id": [
+          "WP_330995914.1"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    },
+    {
+      "id": "gene-NNKAMD_RS23535",
+      "seqid": "NZ_CP196497.1",
+      "kind": "gene",
+      "strand": "-",
+      "parts": [
+        [
+          1132932,
+          1133106
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-NNKAMD_RS23535"
+        ],
+        "Name": [
+          "NNKAMD_RS23535"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene_biotype": [
+          "protein_coding"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS23535"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    }
+  ],
+  "ASM_0050": [
+    {
+      "id": "cds-WP_011616837.1",
+      "seqid": "NZ_CP196508.1",
+      "kind": "CDS",
+      "strand": "-",
+      "parts": [
+        [
+          955796,
+          956822
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-WP_011616837.1"
+        ],
+        "Parent": [
+          "gene-OOOCML_RS23445"
+        ],
+        "Dbxref": [
+          "GenBank:WP_011616837.1"
+        ],
+        "Name": [
+          "WP_011616837.1"
+        ],
+        "Ontology_term": [
+          "GO:0042597"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "go_component": [
+          "periplasmic space|0042597||IEA"
+        ],
+        "inference": [
+          "COORDINATES: similar to AA sequence:RefSeq:WP_011616837.1"
+        ],
+        "locus_tag": [
+          "OOOCML_RS23445"
+        ],
+        "product": [
+          "Bug family tripartite tricarboxylate transporter substrate binding protein"
+        ],
+        "protein_id": [
+          "WP_011616837.1"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": false,
+      "flags": []
+    },
+    {
+      "id": "gene-OOOCML_RS23445",
+      "seqid": "NZ_CP196508.1",
+      "kind": "gene",
+      "strand": "-",
+      "parts": [
+        [
+          955796,
+          956822
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-OOOCML_RS23445"
+        ],
+        "Name": [
+          "OOOCML_RS23445"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene_biotype": [
+          "protein_coding"
+        ],
+        "locus_tag": [
+          "OOOCML_RS23445"
+        ],
+        "old_locus_tag": [
+          "OOOCML_23290"
+        ]
+      },
+      "contained": false,
+      "flags": []
+    }
+  ],
+  "ASM_0051": [
+    {
+      "id": "cds-WP_153956638.1",
+      "seqid": "NZ_CP196497.1",
+      "kind": "CDS",
+      "strand": "-",
+      "parts": [
+        [
+          99372,
+          100686
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-WP_153956638.1"
+        ],
+        "Parent": [
+          "gene-NNKAMD_RS18700"
+        ],
+        "Dbxref": [
+          "GenBank:WP_153956638.1"
+        ],
+        "Name": [
+          "WP_153956638.1"
+        ],
+        "Ontology_term": [
+          "GO:0016740"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "go_function": [
+          "transferase activity|0016740||IEA"
+        ],
+        "inference": [
+          "COORDINATES: similar to AA sequence:RefSeq:WP_013951808.1"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS18700"
+        ],
+        "product": [
+          "MFS family transporter"
+        ],
+        "protein_id": [
+          "WP_153956638.1"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": false,
+      "flags": []
+    },
+    {
+      "id": "gene-NNKAMD_RS18700",
+      "seqid": "NZ_CP196497.1",
+      "kind": "gene",
+      "strand": "-",
+      "parts": [
+        [
+          99372,
+          100686
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-NNKAMD_RS18700"
+        ],
+        "Name": [
+          "NNKAMD_RS18700"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene_biotype": [
+          "protein_coding"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS18700"
+        ],
+        "old_locus_tag": [
+          "NNKAMD_18740"
+        ]
+      },
+      "contained": false,
+      "flags": []
+    }
+  ],
+  "ASM_0052": [
+    {
+      "id": "cds-WP_153957118.1",
+      "seqid": "NZ_CP196497.1",
+      "kind": "CDS",
+      "strand": "-",
+      "parts": [
+        [
+          2746853,
+          2747990
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-WP_153957118.1"
+        ],
+        "Parent": [
+          "gene-NNKAMD_RS30880"
+        ],
+        "Dbxref": [
+          "GenBank:WP_153957118.1"
+        ],
+        "Name": [
+          "WP_153957118.1"
+        ],
+        "Ontology_term": [
+          "GO:0004803"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "go_function": [
+          "transposase activity|0004803||IEA"
+        ],
+        "inference": [
+          "COORDINATES: similar to AA sequence:RefSeq:WP_011487235.1"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS30880"
+        ],
+        "product": [
+          "IS110 family RNA-guided transposase"
+        ],
+        "protein_id": [
+          "WP_153957118.1"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    },
+    {
+      "id": "gene-NNKAMD_RS30880",
+      "seqid": "NZ_CP196497.1",
+      "kind": "gene",
+      "strand": "-",
+      "parts": [
+        [
+          2746853,
+          2747990
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-NNKAMD_RS30880"
+        ],
+        "Name": [
+          "NNKAMD_RS30880"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene_biotype": [
+          "protein_coding"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS30880"
+        ],
+        "old_locus_tag": [
+          "NNKAMD_30820"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    }
+  ],
+  "ASM_0055": [
+    {
+      "id": "cds-WP_011616676.1",
+      "seqid": "NZ_CP196508.1",
+      "kind": "CDS",
+      "strand": "-",
+      "parts": [
+        [
+          625440,
+          626166
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-WP_011616676.1"
+        ],
+        "Parent": [
+          "gene-OOOCML_RS21990"
+        ],
+        "Dbxref": [
+          "GenBank:WP_011616676.1"
+        ],
+        "Name": [
+          "WP_011616676.1"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "inference": [
+          "COORDINATES: ab initio prediction:GeneMarkS-2+"
+        ],
+        "locus_tag": [
+          "OOOCML_RS21990"
+        ],
+        "product": [
+          "hypothetical protein"
+        ],
+        "protein_id": [
+          "WP_011616676.1"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    },
+    {
+      "id": "gene-OOOCML_RS21990",
+      "seqid": "NZ_CP196508.1",
+      "kind": "gene",
+      "strand": "-",
+      "parts": [
+        [
+          625440,
+          626166
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-OOOCML_RS21990"
+        ],
+        "Name": [
+          "OOOCML_RS21990"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene_biotype": [
+          "protein_coding"
+        ],
+        "locus_tag": [
+          "OOOCML_RS21990"
+        ],
+        "old_locus_tag": [
+          "OOOCML_21830"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    }
+  ],
+  "ASM_0060": [
+    {
+      "id": "cds-WP_475681732.1",
+      "seqid": "NZ_CP196497.1",
+      "kind": "CDS",
+      "strand": "-",
+      "parts": [
+        [
+          123469,
+          124819
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-WP_475681732.1"
+        ],
+        "Parent": [
+          "gene-NNKAMD_RS18815"
+        ],
+        "Dbxref": [
+          "GenBank:WP_475681732.1"
+        ],
+        "Name": [
+          "WP_475681732.1"
+        ],
+        "Ontology_term": [
+          "GO:0004803"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "go_function": [
+          "transposase activity|0004803||IEA"
+        ],
+        "inference": [
+          "COORDINATES: protein motif:HMM:NF033542.1"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS18815"
+        ],
+        "product": [
+          "IS110 family RNA-guided transposase"
+        ],
+        "protein_id": [
+          "WP_475681732.1"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    },
+    {
+      "id": "gene-NNKAMD_RS18815",
+      "seqid": "NZ_CP196497.1",
+      "kind": "gene",
+      "strand": "-",
+      "parts": [
+        [
+          123469,
+          124819
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-NNKAMD_RS18815"
+        ],
+        "Name": [
+          "NNKAMD_RS18815"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene_biotype": [
+          "protein_coding"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS18815"
+        ],
+        "old_locus_tag": [
+          "NNKAMD_18860"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    }
+  ],
+  "ASM_0061": [
+    {
+      "id": "cds-WP_041688146.1",
+      "seqid": "NZ_CP196508.1",
+      "kind": "CDS",
+      "strand": "-",
+      "parts": [
+        [
+          1938802,
+          1939120
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-WP_041688146.1"
+        ],
+        "Parent": [
+          "gene-OOOCML_RS27870"
+        ],
+        "Dbxref": [
+          "GenBank:WP_041688146.1"
+        ],
+        "Name": [
+          "WP_041688146.1"
+        ],
+        "Ontology_term": [
+          "GO:0003677"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "go_function": [
+          "DNA binding|0003677||IEA"
+        ],
+        "inference": [
+          "COORDINATES: similar to AA sequence:RefSeq:WP_018315137.1"
+        ],
+        "locus_tag": [
+          "OOOCML_RS27870"
+        ],
+        "product": [
+          "HigA family addiction module antitoxin"
+        ],
+        "protein_id": [
+          "WP_041688146.1"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": false,
+      "flags": []
+    },
+    {
+      "id": "gene-OOOCML_RS27870",
+      "seqid": "NZ_CP196508.1",
+      "kind": "gene",
+      "strand": "-",
+      "parts": [
+        [
+          1938802,
+          1939120
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-OOOCML_RS27870"
+        ],
+        "Name": [
+          "OOOCML_RS27870"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene_biotype": [
+          "protein_coding"
+        ],
+        "locus_tag": [
+          "OOOCML_RS27870"
+        ],
+        "old_locus_tag": [
+          "OOOCML_27720"
+        ]
+      },
+      "contained": false,
+      "flags": []
+    },
+    {
+      "id": "cds-OOOCML_RS27875",
+      "seqid": "NZ_CP196508.1",
+      "kind": "CDS",
+      "strand": "-",
+      "parts": [
+        [
+          1939131,
+          1939409
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-OOOCML_RS27875"
+        ],
+        "Parent": [
+          "gene-OOOCML_RS27875"
+        ],
+        "Note": [
+          "frameshifted"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "inference": [
+          "COORDINATES: similar to AA sequence:RefSeq:WP_018315138.1"
+        ],
+        "locus_tag": [
+          "OOOCML_RS27875"
+        ],
+        "product": [
+          "type II toxin-antitoxin system RelE/ParE family toxin"
+        ],
+        "pseudo": [
+          "true"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": true,
+      "flags": [
+        "pseudogene"
+      ]
+    },
+    {
+      "id": "gene-OOOCML_RS27875",
+      "seqid": "NZ_CP196508.1",
+      "kind": "pseudogene",
+      "strand": "-",
+      "parts": [
+        [
+          1939131,
+          1939409
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-OOOCML_RS27875"
+        ],
+        "Name": [
+          "OOOCML_RS27875"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene_biotype": [
+          "pseudogene"
+        ],
+        "locus_tag": [
+          "OOOCML_RS27875"
+        ],
+        "pseudo": [
+          "true"
+        ]
+      },
+      "contained": true,
+      "flags": [
+        "pseudogene"
+      ]
+    }
+  ],
+  "ASM_0062": [
+    {
+      "id": "cds-NNKAMD_RS28860",
+      "seqid": "NZ_CP196497.1",
+      "kind": "CDS",
+      "strand": "+",
+      "parts": [
+        [
+          2303300,
+          2303663
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-NNKAMD_RS28860"
+        ],
+        "Parent": [
+          "gene-NNKAMD_RS28860"
+        ],
+        "Note": [
+          "incomplete; partial in the middle of a contig; missing C-terminus"
+        ],
+        "end_range": [
+          ".",
+          "2303663"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "inference": [
+          "COORDINATES: similar to AA sequence:RefSeq:WP_076611364.1"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS28860"
+        ],
+        "partial": [
+          "true"
+        ],
+        "product": [
+          "IS3 family transposase"
+        ],
+        "pseudo": [
+          "true"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": true,
+      "flags": [
+        "partial",
+        "pseudogene"
+      ]
+    },
+    {
+      "id": "gene-NNKAMD_RS28860",
+      "seqid": "NZ_CP196497.1",
+      "kind": "pseudogene",
+      "strand": "+",
+      "parts": [
+        [
+          2303300,
+          2303663
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-NNKAMD_RS28860"
+        ],
+        "Name": [
+          "NNKAMD_RS28860"
+        ],
+        "end_range": [
+          ".",
+          "2303663"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene_biotype": [
+          "pseudogene"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS28860"
+        ],
+        "old_locus_tag": [
+          "NNKAMD_28795"
+        ],
+        "partial": [
+          "true"
+        ],
+        "pseudo": [
+          "true"
+        ]
+      },
+      "contained": true,
+      "flags": [
+        "partial",
+        "pseudogene"
+      ]
+    }
+  ],
+  "ASM_0064": [
+    {
+      "id": "cds-WP_011616923.1",
+      "seqid": "NZ_CP196508.1",
+      "kind": "CDS",
+      "strand": "+",
+      "parts": [
+        [
+          1093737,
+          1094805
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-WP_011616923.1"
+        ],
+        "Parent": [
+          "gene-OOOCML_RS24115"
+        ],
+        "Dbxref": [
+          "GenBank:WP_011616923.1"
+        ],
+        "Name": [
+          "WP_011616923.1"
+        ],
+        "Ontology_term": [
+          "GO:0016787"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "go_function": [
+          "hydrolase activity|0016787||IEA"
+        ],
+        "inference": [
+          "COORDINATES: similar to AA sequence:RefSeq:WP_011616923.1"
+        ],
+        "locus_tag": [
+          "OOOCML_RS24115"
+        ],
+        "product": [
+          "alpha/beta hydrolase family protein"
+        ],
+        "protein_id": [
+          "WP_011616923.1"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": false,
+      "flags": []
+    },
+    {
+      "id": "gene-OOOCML_RS24115",
+      "seqid": "NZ_CP196508.1",
+      "kind": "gene",
+      "strand": "+",
+      "parts": [
+        [
+          1093737,
+          1094805
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-OOOCML_RS24115"
+        ],
+        "Name": [
+          "OOOCML_RS24115"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene_biotype": [
+          "protein_coding"
+        ],
+        "locus_tag": [
+          "OOOCML_RS24115"
+        ],
+        "old_locus_tag": [
+          "OOOCML_23970"
+        ]
+      },
+      "contained": false,
+      "flags": []
+    }
+  ],
+  "ASM_0065": [
+    {
+      "id": "cds-WP_153954151.1",
+      "seqid": "NZ_CP196497.1",
+      "kind": "CDS",
+      "strand": "-",
+      "parts": [
+        [
+          2523938,
+          2524991
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-WP_153954151.1"
+        ],
+        "Parent": [
+          "gene-NNKAMD_RS29850"
+        ],
+        "Dbxref": [
+          "GenBank:WP_153954151.1"
+        ],
+        "Name": [
+          "WP_153954151.1"
+        ],
+        "Ontology_term": [
+          "GO:0004803"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "go_function": [
+          "transposase activity|0004803||IEA"
+        ],
+        "inference": [
+          "COORDINATES: similar to AA sequence:RefSeq:WP_011812552.1"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS29850"
+        ],
+        "product": [
+          "IS630 family transposase"
+        ],
+        "protein_id": [
+          "WP_153954151.1"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    },
+    {
+      "id": "gene-NNKAMD_RS29850",
+      "seqid": "NZ_CP196497.1",
+      "kind": "gene",
+      "strand": "-",
+      "parts": [
+        [
+          2523938,
+          2524991
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-NNKAMD_RS29850"
+        ],
+        "Name": [
+          "NNKAMD_RS29850"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene_biotype": [
+          "protein_coding"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS29850"
+        ],
+        "old_locus_tag": [
+          "NNKAMD_29795"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    }
+  ],
+  "ASM_0066": [
+    {
+      "id": "cds-WP_011617552.1",
+      "seqid": "NZ_CP196508.1",
+      "kind": "CDS",
+      "strand": "-",
+      "parts": [
+        [
+          2186331,
+          2187957
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-WP_011617552.1"
+        ],
+        "Parent": [
+          "gene-OOOCML_RS29045"
+        ],
+        "Dbxref": [
+          "GenBank:WP_011617552.1"
+        ],
+        "Name": [
+          "WP_011617552.1"
+        ],
+        "Ontology_term": [
+          "GO:0022857",
+          "GO:0055085"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "go_function": [
+          "transmembrane transporter activity|0022857||IEA"
+        ],
+        "go_process": [
+          "transmembrane transport|0055085||IEA"
+        ],
+        "inference": [
+          "COORDINATES: similar to AA sequence:RefSeq:WP_011617552.1"
+        ],
+        "locus_tag": [
+          "OOOCML_RS29045"
+        ],
+        "product": [
+          "MFS transporter"
+        ],
+        "protein_id": [
+          "WP_011617552.1"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": false,
+      "flags": []
+    },
+    {
+      "id": "gene-OOOCML_RS29045",
+      "seqid": "NZ_CP196508.1",
+      "kind": "gene",
+      "strand": "-",
+      "parts": [
+        [
+          2186331,
+          2187957
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-OOOCML_RS29045"
+        ],
+        "Name": [
+          "OOOCML_RS29045"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene_biotype": [
+          "protein_coding"
+        ],
+        "locus_tag": [
+          "OOOCML_RS29045"
+        ],
+        "old_locus_tag": [
+          "OOOCML_28895"
+        ]
+      },
+      "contained": false,
+      "flags": []
+    }
+  ],
+  "ASM_0067": [
+    {
+      "id": "cds-WP_013953755.1",
+      "seqid": "NZ_CP196497.1",
+      "kind": "CDS",
+      "strand": "-",
+      "parts": [
+        [
+          2417392,
+          2417746
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-WP_013953755.1"
+        ],
+        "Parent": [
+          "gene-NNKAMD_RS29365"
+        ],
+        "Dbxref": [
+          "GenBank:WP_013953755.1"
+        ],
+        "Name": [
+          "WP_013953755.1"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "inference": [
+          "COORDINATES: similar to AA sequence:RefSeq:WP_013953755.1"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS29365"
+        ],
+        "product": [
+          "MoaF-related domain-containing protein"
+        ],
+        "protein_id": [
+          "WP_013953755.1"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    },
+    {
+      "id": "gene-NNKAMD_RS29365",
+      "seqid": "NZ_CP196497.1",
+      "kind": "gene",
+      "strand": "-",
+      "parts": [
+        [
+          2417392,
+          2417746
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-NNKAMD_RS29365"
+        ],
+        "Name": [
+          "NNKAMD_RS29365"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene_biotype": [
+          "protein_coding"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS29365"
+        ],
+        "old_locus_tag": [
+          "NNKAMD_29310"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    }
+  ],
+  "ASM_0069": [
+    {
+      "id": "cds-WP_153954502.1",
+      "seqid": "NZ_CP196498.1",
+      "kind": "CDS",
+      "strand": "+",
+      "parts": [
+        [
+          45561,
+          46932
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-WP_153954502.1"
+        ],
+        "Parent": [
+          "gene-NNKAMD_RS31370"
+        ],
+        "Dbxref": [
+          "GenBank:WP_153954502.1"
+        ],
+        "Name": [
+          "WP_153954502.1"
+        ],
+        "Ontology_term": [
+          "GO:0004514",
+          "GO:0009435"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "go_function": [
+          "nicotinate-nucleotide diphosphorylase (carboxylating) activity|0004514||IEA"
+        ],
+        "go_process": [
+          "NAD+ biosynthetic process|0009435||IEA"
+        ],
+        "inference": [
+          "COORDINATES: similar to AA sequence:RefSeq:WP_006024649.1"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS31370"
+        ],
+        "product": [
+          "nicotinate phosphoribosyltransferase"
+        ],
+        "protein_id": [
+          "WP_153954502.1"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    },
+    {
+      "id": "gene-NNKAMD_RS31370",
+      "seqid": "NZ_CP196498.1",
+      "kind": "gene",
+      "strand": "+",
+      "parts": [
+        [
+          45561,
+          46932
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-NNKAMD_RS31370"
+        ],
+        "Name": [
+          "NNKAMD_RS31370"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene_biotype": [
+          "protein_coding"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS31370"
+        ],
+        "old_locus_tag": [
+          "NNKAMD_31305"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    }
+  ],
+  "ASM_0070": [
+    {
+      "id": "cds-WP_153956562.1",
+      "seqid": "NZ_CP196498.1",
+      "kind": "CDS",
+      "strand": "-",
+      "parts": [
+        [
+          439872,
+          440757
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "cds-WP_153956562.1"
+        ],
+        "Parent": [
+          "gene-NNKAMD_RS33310"
+        ],
+        "Dbxref": [
+          "GenBank:WP_153956562.1"
+        ],
+        "Name": [
+          "WP_153956562.1"
+        ],
+        "gbkey": [
+          "CDS"
+        ],
+        "inference": [
+          "COORDINATES: protein motif:HMM:NF015431.7"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS33310"
+        ],
+        "product": [
+          "LysR substrate-binding domain-containing protein"
+        ],
+        "protein_id": [
+          "WP_153956562.1"
+        ],
+        "transl_table": [
+          "11"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    },
+    {
+      "id": "gene-NNKAMD_RS33310",
+      "seqid": "NZ_CP196498.1",
+      "kind": "gene",
+      "strand": "-",
+      "parts": [
+        [
+          439872,
+          440757
+        ]
+      ],
+      "attrs": {
+        "ID": [
+          "gene-NNKAMD_RS33310"
+        ],
+        "Name": [
+          "NNKAMD_RS33310"
+        ],
+        "gbkey": [
+          "Gene"
+        ],
+        "gene_biotype": [
+          "protein_coding"
+        ],
+        "locus_tag": [
+          "NNKAMD_RS33310"
+        ],
+        "old_locus_tag": [
+          "NNKAMD_33250"
+        ]
+      },
+      "contained": true,
+      "flags": []
+    }
+  ]
+}

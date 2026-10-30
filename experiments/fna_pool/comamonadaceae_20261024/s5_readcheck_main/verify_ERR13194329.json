@@ -1,0 +1,48 @@
+{
+  "run": {
+    "run": "ERR13194329",
+    "sample_id": "SAMEA115676913",
+    "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR131/029/ERR13194329/ERR13194329.fastq.gz",
+    "fastq_bytes": 177971204,
+    "fastq_md5": "945a38b3eaaaccd7480ec395aaab84e6",
+    "platform": "OXFORD_NANOPORE",
+    "archive_base_count": 185005768,
+    "archive_read_count": 27817
+  },
+  "download_started": "2026-10-25T17:30:27-0700",
+  "local_file": "/global/scratch/users/kh36969/longread_callout/data/reads/ERR13194329/ERR13194329.fastq.gz",
+  "bytes": 177971204,
+  "md5": "945a38b3eaaaccd7480ec395aaab84e6",
+  "sha256": "9f042475b24493c3af2ff462048d516821e4b4dc09bf9ed31842620f7db28484",
+  "rejected_downloads": [],
+  "spots_absent_from_fastq": 0,
+  "summary": {
+    "records": 27817,
+    "bases": 185005768,
+    "read_unit_counts": {
+      "other_name": 27817
+    },
+    "distinct_zmws": null,
+    "distinct_sra_spots": 27817,
+    "max_records_per_spot": 1,
+    "placeholder_quality_records": 0,
+    "example_headers": [
+      "@ERR13194329.1 ee1b6437-0171-4baa-9675-c051065eaca3 runid=5f9a39d2d0ca73bd92e1b746ee5bcee1d242e5e8 sampleid=no_sample read=114564 ch=363 start_time=2023-03-12T07:54:13Z model_version_id=2021-05-17_dna_r9.4.1_minion_384_d37a2ab9 barcode=barcode42",
+      "@ERR13194329.2 eab4b5ac-c766-4451-8cc2-30683d44c093 runid=5f9a39d2d0ca73bd92e1b746ee5bcee1d242e5e8 sampleid=no_sample read=112242 ch=111 start_time=2023-03-12T07:57:53Z model_version_id=2021-05-17_dna_r9.4.1_minion_384_d37a2ab9 barcode=barcode42",
+      "@ERR13194329.3 404977eb-b2cd-49f8-b04c-e967a7a5569e runid=5f9a39d2d0ca73bd92e1b746ee5bcee1d242e5e8 sampleid=no_sample read=153870 ch=255 start_time=2023-03-12T07:59:12Z model_version_id=2021-05-17_dna_r9.4.1_minion_384_d37a2ab9 barcode=barcode42",
+      "@ERR13194329.4 92381112-35a0-4e9b-a9e7-61bab1515cf6 runid=5f9a39d2d0ca73bd92e1b746ee5bcee1d242e5e8 sampleid=no_sample read=54719 ch=212 start_time=2023-03-12T07:55:37Z model_version_id=2021-05-17_dna_r9.4.1_minion_384_d37a2ab9 barcode=barcode42"
+    ],
+    "mean_length": 6650.8,
+    "median_length": 3586,
+    "max_length": 86852,
+    "n50": 13952,
+    "molecule_grouping": "one_record_per_molecule"
+  },
+  "checks": {
+    "bytes_match": true,
+    "md5_match": true,
+    "spot_count_match": true,
+    "base_count_match": true
+  },
+  "status": "verified"
+}

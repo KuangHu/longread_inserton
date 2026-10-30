@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="420" font-family="sans-serif">
+<rect width="100%" height="100%" fill="white"/>
+<text x="4" y="16" font-size="12">L_7fafaa15f35f  SAMD00407106  core 41031 bp  two_flank_anchored  support partner_mixed  boundary partner_dependent  tandem False  core copies carrier/partner 1/0</text>
+<line x1="123.8" y1="30" x2="123.8" y2="412" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<line x1="996.2" y1="30" x2="996.2" y2="412" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<text x="4" y="64" font-size="11" font-weight="bold">SAMD00407106 NZ_AP025556.1 (carrier)</text>
+<line x1="60" y1="100" x2="1060" y2="100" stroke="#888"/>
+<rect x="102.5" y="132" width="21.3" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="113.2" y="152" font-size="9" text-anchor="middle">U</text>
+<rect x="123.8" y="132" width="872.4" height="8" fill="#e76f51" opacity="0.55"/>
+<text x="560.0" y="152" font-size="9" text-anchor="middle">core 41031</text>
+<rect x="996.2" y="132" width="21.3" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="1006.8" y="152" font-size="9" text-anchor="middle">D</text>
+<polygon points="60.0,109 66.0,103 77.1,103 77.1,115 66.0,115" fill="#3b6fb6"><title>YbfB/YjiJ family MFS transporter 305108-306311 -</title></polygon>
+<polygon points="79.3,85 92.9,85 98.9,91 92.9,97 79.3,97" fill="#3b6fb6"><title>LysR family transcriptional regulator 306413-307337 +</title></polygon>
+<polygon points="100.8,109 106.8,103 107.2,103 107.2,115 106.8,115" fill="#3b6fb6"><title>helix-turn-helix domain-containing prote 307425-307728 -</title></polygon>
+<polygon points="109.8,109 115.8,103 124.1,103 124.1,115 115.8,115" fill="#999"><title>ATP-binding protein 307850-308522 -</title></polygon>
+<polygon points="127.4,85 135.2,85 141.2,91 135.2,97 127.4,97" fill="#3b6fb6"><title>heteromeric transposase endonuclease sub 308675-309326 +</title></polygon>
+<polygon points="141.0,85 176.5,85 182.5,91 176.5,97 141.0,97" fill="#3b6fb6"><title>Mu transposase C-terminal domain-contain 309315-311265 +</title></polygon>
+<text x="141.0" y="81" font-size="8" fill="#333">Mu transp</text>
+<polygon points="182.6,85 195.6,85 201.6,91 195.6,97 182.6,97" fill="#3b6fb6"><title>TniB family NTP-binding protein 311272-312166 +</title></polygon>
+<polygon points="201.7,85 215.8,85 221.8,91 215.8,97 201.7,97" fill="#3b6fb6"><title>TniQ family protein 312172-313114 +</title></polygon>
+<polygon points="235.5,85 250.5,85 256.5,91 250.5,97 235.5,97" fill="#3b6fb6"><title>hypothetical protein 313761-314748 +</title></polygon>
+<polygon points="256.7,85 259.9,85 265.9,91 259.9,97 256.7,97" fill="#3b6fb6"><title>ASCH domain-containing protein 314755-315190 +</title></polygon>
+<polygon points="266.5,109 272.5,103 274.0,103 274.0,115 272.5,115" fill="#3b6fb6"><title>H-NS histone family protein 315219-315570 -</title></polygon>
+<polygon points="277.1,109 283.1,103 283.4,103 283.4,115 283.1,115" fill="#3b6fb6"><title>helix-turn-helix domain-containing prote 315715-316012 -</title></polygon>
+<polygon points="285.1,85 300.0,85 306.0,91 300.0,97 285.1,97" fill="#3b6fb6"><title>AAA family ATPase 316093-317077 +</title></polygon>
+<polygon points="307.4,85 355.3,85 361.3,91 355.3,97 307.4,97" fill="#3b6fb6"><title>S8 family peptidase 317143-319678 +</title></polygon>
+<text x="307.4" y="81" font-size="8" fill="#333">S8 family p</text>
+<polygon points="363.4,85 394.6,85 400.6,91 394.6,97 363.4,97" fill="#3b6fb6"><title>hypothetical protein 319773-321525 +</title></polygon>
+<polygon points="400.9,109 406.9,103 410.5,103 410.5,115 406.9,115" fill="#3b6fb6"><title>HAD domain-containing protein 321539-321989 -</title></polygon>
+<polygon points="412.5,85 420.0,85 426.0,91 420.0,97 412.5,97" fill="#3b6fb6"><title>hypothetical protein 322084-322717 +</title></polygon>
+<polygon points="430.0,109 436.0,103 442.2,103 442.2,115 436.0,115" fill="#3b6fb6"><title>HAD domain-containing protein 322907-323483 -</title></polygon>
+<polygon points="445.6,85 498.6,85 504.6,91 498.6,97 445.6,97" fill="#3b6fb6"><title>excinuclease ABC subunit UvrA 323643-326418 +</title></polygon>
+<text x="445.6" y="81" font-size="8" fill="#333">excinuclease</text>
+<polygon points="506.5,109 512.5,103 517.6,103 517.6,115 512.5,115" fill="#3b6fb6"><title>low affinity iron permease family protei 326507-327026 -</title></polygon>
+<polygon points="518.9,109 524.9,103 569.9,103 569.9,115 524.9,115" fill="#3b6fb6"><title>catalase 327088-329485 -</title></polygon>
+<text x="518.9" y="125" font-size="8" fill="#333">catalase</text>
+<polygon points="575.7,85 588.5,85 594.5,91 588.5,97 575.7,97" fill="#3b6fb6"><title>transglutaminase-like domain-containing  329758-330646 +</title></polygon>
+<polygon points="615.1,85 642.6,85 648.6,91 642.6,97 615.1,97" fill="#3b6fb6"><title>sensor domain-containing diguanylate cyc 331611-333189 +</title></polygon>
+<text x="615.1" y="81" font-size="8" fill="#333">sensor </text>
+<polygon points="651.6,85 658.6,85 664.6,91 658.6,97 651.6,97" fill="#3b6fb6"><title>hypothetical protein 333330-333939 +</title></polygon>
+<polygon points="664.7,85 671.3,85 677.3,91 671.3,97 664.7,97" fill="#3b6fb6"><title>cysteine hydrolase family protein 333947-334538 +</title></polygon>
+<polygon points="679.9,109 685.9,103 688.9,103 688.9,115 685.9,115" fill="#3b6fb6"><title>hypothetical protein 334660-335083 -</title></polygon>
+<polygon points="690.4,109 696.4,103 699.7,103 699.7,115 696.4,115" fill="#3b6fb6"><title>response regulator 335152-335590 -</title></polygon>
+<polygon points="711.4,85 730.1,85 736.1,91 730.1,97 711.4,97" fill="#3b6fb6"><title>zinc-dependent alcohol dehydrogenase 336141-337305 +</title></polygon>
+<polygon points="742.5,85 778.7,85 784.7,91 778.7,97 742.5,97" fill="#3b6fb6"><title>S9 family peptidase 337603-339589 +</title></polygon>
+<text x="742.5" y="81" font-size="8" fill="#333">S9 family</text>
+<polygon points="792.5,85 793.8,85 799.8,91 793.8,97 792.5,97" fill="#3b6fb6"><title>hypothetical protein 339954-340299 +</title></polygon>
+<polygon points="801.3,85 806.0,85 812.0,91 806.0,97 801.3,97" fill="#3b6fb6"><title>DUF4142 domain-containing protein 340371-340875 +</title></polygon>
+<polygon points="828.9,85 828.9,85 834.6,91 828.9,97 828.9,97" fill="#3b6fb6"><title>helix-turn-helix domain-containing prote 341670-341937 +</title></polygon>
+<polygon points="842.7,85 843.6,85 849.6,91 843.6,97 842.7,97" fill="#3b6fb6"><title>GlcG/HbpS family heme-binding protein 342319-342640 +</title></polygon>
+<polygon points="851.8,109 857.8,103 858.0,103 858.0,115 857.8,115" fill="#3b6fb6"><title>hypothetical protein 342746-343037 -</title></polygon>
+<polygon points="861.9,85 875.3,85 881.3,91 875.3,97 861.9,97" fill="#3b6fb6"><title>non-homologous end joining protein Ku 343218-344133 +</title></polygon>
+<polygon points="881.9,85 881.9,85 885.8,91 881.9,97 881.9,97" fill="#3b6fb6"><title>DUF3606 domain-containing protein 344160-344343 +</title></polygon>
+<polygon points="885.9,85 952.4,85 958.4,91 952.4,97 885.9,97" fill="#3b6fb6"><title>DNA ligase D 344347-347761 +</title></polygon>
+<text x="885.9" y="81" font-size="8" fill="#333">DNA ligase D</text>
+<polygon points="963.5,109 969.5,103 971.1,103 971.1,115 969.5,115" fill="#3b6fb6"><title>hypothetical protein 347998-348355 -</title></polygon>
+<polygon points="970.9,109 976.9,103 982.1,103 982.1,115 976.9,115" fill="#3b6fb6"><title>hypothetical protein 348347-348875 -</title></polygon>
+<polygon points="996.2,109 1002.2,103 1017.1,103 1017.1,115 1002.2,115" fill="#999"><title>YifB family Mg chelatase-like AAA ATPase 349536-350520 -</title></polygon>
+<polygon points="1024.3,109 1030.3,103 1045.9,103 1045.9,115 1030.3,115" fill="#3b6fb6"><title>LysR family transcriptional regulator 350856-351876 -</title></polygon>
+<polygon points="1050.3,85 1054.0,85 1060.0,91 1054.0,97 1050.3,97" fill="#3b6fb6"><title>MFS transporter 352080-353376 +</title></polygon>
+<text x="60" y="166" font-size="9" fill="#666">NZ_AP025556.1:305506-352537  core 308506-349537</text>
+<text x="4" y="184" font-size="11" font-weight="bold">SAMD00571185 NZ_AP027205.1 (partner, + strand, two_flank_anchored, pair P00033)</text>
+<line x1="60" y1="220" x2="1060" y2="220" stroke="#888"/>
+<rect x="102.5" y="252" width="21.3" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="113.2" y="272" font-size="9" text-anchor="middle">U'</text>
+<rect x="996.2" y="252" width="21.3" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="1006.8" y="272" font-size="9" text-anchor="middle">D'</text>
+<rect x="123.8" y="252" width="872.4" height="8" fill="#9b5de5" opacity="0.55"/>
+<text x="560.0" y="272" font-size="9" text-anchor="middle">other side 2</text>
+<polygon points="60.0,229 66.0,223 77.1,223 77.1,235 66.0,235" fill="#3b6fb6"><title>YbfB/YjiJ family MFS transporter 304192-305395 -</title></polygon>
+<polygon points="79.3,205 92.9,205 98.9,211 92.9,217 79.3,217" fill="#3b6fb6"><title>LysR family transcriptional regulator 305497-306421 +</title></polygon>
+<polygon points="100.8,229 106.8,223 107.2,223 107.2,235 106.8,235" fill="#3b6fb6"><title>helix-turn-helix domain-containing prote 306509-306812 -</title></polygon>
+<polygon points="109.8,229 115.8,223 1017.1,223 1017.1,235 115.8,235" fill="#3b6fb6"><title>YifB family Mg chelatase-like AAA ATPase 306934-308575 -</title></polygon>
+<text x="109.8" y="245" font-size="8" fill="#333">YifB family Mg chelatase-like AAA ATPase</text>
+<polygon points="1024.3,229 1030.3,223 1045.9,223 1045.9,235 1030.3,235" fill="#3b6fb6"><title>LysR family transcriptional regulator 308911-309931 -</title></polygon>
+<polygon points="1050.3,205 1054.0,205 1060.0,211 1054.0,217 1050.3,217" fill="#3b6fb6"><title>MFS transporter 310137-311433 +</title></polygon>
+<text x="60" y="286" font-size="9" fill="#666">NZ_AP027205.1 site 307590  other-side gap 2 bp  this call's core 308506-349537</text>
+<text x="4" y="304" font-size="11" font-weight="bold">SAMEA120308855 NZ_CDRKIR010000001.1 (partner, + strand, replacement, pair P00034)</text>
+<line x1="60" y1="340" x2="1060" y2="340" stroke="#888"/>
+<rect x="97.5" y="372" width="21.3" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="108.1" y="392" font-size="9" text-anchor="middle">U'</text>
+<rect x="1024.7" y="372" width="21.3" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="1035.3" y="392" font-size="9" text-anchor="middle">D'</text>
+<rect x="118.8" y="372" width="905.9" height="8" fill="#9b5de5" opacity="0.55"/>
+<text x="571.7" y="392" font-size="9" text-anchor="middle">other side 6073</text>
+<polygon points="60.0,349 62.0,343 62.0,343 62.0,355 62.0,355" fill="#3b6fb6"><title>NAD(P)H-dependent flavin oxidoreductase 313371-314442 -</title></polygon>
+<polygon points="62.7,349 68.7,343 88.3,343 88.3,355 68.7,355" fill="#3b6fb6"><title>YbfB/YjiJ family MFS transporter 314476-315679 -</title></polygon>
+<polygon points="90.4,325 104.0,325 110.0,331 104.0,337 90.4,337" fill="#3b6fb6"><title>LysR family transcriptional regulator 315781-316699 +</title></polygon>
+<polygon points="109.8,349 115.8,343 300.8,343 300.8,355 115.8,355" fill="#3b6fb6"><title>YifB family Mg chelatase-like AAA ATPase 316693-318334 -</title></polygon>
+<text x="109.8" y="365" font-size="8" fill="#333">YifB family Mg chelatase-like AAA ATPase</text>
+<polygon points="327.5,349 333.5,343 533.6,343 533.6,355 333.5,355" fill="#3b6fb6"><title>tripartite tricarboxylate transporter pe 318512-319895 -</title></polygon>
+<text x="327.5" y="365" font-size="8" fill="#333">tripartite tricarboxylate transporter pe</text>
+<polygon points="533.9,349 539.9,343 597.3,343 597.3,355 539.9,355" fill="#3b6fb6"><title>hypothetical protein 319896-320322 -</title></polygon>
+<text x="533.9" y="365" font-size="8" fill="#333">hypothetical </text>
+<polygon points="603.6,349 609.6,343 795.9,343 795.9,355 609.6,355" fill="#3b6fb6"><title>hydroxymethylglutaryl-CoA reductase, deg 320363-321653 -</title></polygon>
+<text x="603.6" y="365" font-size="8" fill="#333">hydroxymethylglutaryl-CoA reductase, deg</text>
+<polygon points="813.6,325 1017.4,325 1023.4,331 1017.4,337 813.6,337" fill="#3b6fb6"><title>aminotransferase-like domain-containing  321771-323178 +</title></polygon>
+<text x="813.6" y="321" font-size="8" fill="#333">aminotransferase-like domain-containing </text>
+<polygon points="1021.6,349 1027.6,343 1045.0,343 1045.0,355 1027.6,355" fill="#3b6fb6"><title>LysR family transcriptional regulator 323165-324140 -</title></polygon>
+<polygon points="1050.3,325 1054.0,325 1060.0,331 1054.0,337 1050.3,337" fill="#3b6fb6"><title>MFS transporter 324391-325687 +</title></polygon>
+<text x="60" y="406" font-size="9" fill="#666">NZ_CDRKIR010000001.1 site 317113  other-side gap 6073 bp  this call's core 308270-350877</text>
+</svg>

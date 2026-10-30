@@ -1,0 +1,117 @@
+{
+  "schema": "fna_pool_s0_v1",
+  "taxon": 2895623,
+  "selection": "assembly_first_v1",
+  "provenance": {
+    "date": "2026-10-25T22:53:48-0700",
+    "taxon": 2895623,
+    "files": {
+      "ncbi_refseq.jsonl": {
+        "command": "summary genome taxon 2895623 --assembly-source refseq --as-json-lines",
+        "rows": 1398,
+        "sha256": "0daee3287900bfeca6c455a72e270a30252c585416ece1fe2e98e0d0ba144dd5"
+      },
+      "ncbi_genbank.jsonl": {
+        "command": "summary genome taxon 2895623 --assembly-source genbank --as-json-lines",
+        "rows": 2011,
+        "sha256": "7185f90fa74554d0968f9876231d7b96f09729e9da62b04d5a5aff78234fb3b7"
+      },
+      "ena_runs.tsv": {
+        "url": "https://www.ebi.ac.uk/ena/portal/api/search?result=read_run&query=tax_tree%282895623%29+AND+%28instrument_platform%3D%22OXFORD_NANOPORE%22+OR+instrument_platform%3D%22PACBIO_SMRT%22%29&fields=run_accession%2Cexperiment_accession%2Csample_accession%2Csecondary_sample_accession%2Cstudy_accession%2Ctax_id%2Cscientific_name%2Cinstrument_platform%2Cinstrument_model%2Clibrary_strategy%2Clibrary_source%2Clibrary_selection%2Clibrary_layout%2Clibrary_name%2Cread_count%2Cbase_count%2Cfastq_ftp%2Cfastq_bytes%2Cfastq_md5%2Csubmitted_ftp%2Csubmitted_bytes%2Csubmitted_md5%2Csubmitted_format%2Cfirst_public&format=tsv&limit=0",
+        "rows": 289,
+        "sha256": "47b5e4e507b0028a5ca66d1e1f68936d0d7d43e73c9de7ae9647b6d57e99b0d9"
+      },
+      "sra_pacbio_000.xml": {
+        "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=sra&id=DRR184752%2CERR1305739%2CERR1802421%2CERR1802422%2CERR1805698%2CERR1805700%2CERR1805702%2CERR1805703%2CERR1813535%2CERR1813541%2CERR1820607%2CERR1820608%2CERR1820609%2CERR1820611%2CERR1820612%2CERR1883065%2CERR1883066%2CERR1883071%2CERR1883072%2CERR1883073%2CERR1883074%2CERR2187907%2CERR2187912%2CERR2195673%2CERR2205692%2CERR2205693%2CERR2205694%2CERR2205696%2CERR2212613%2CERR2225527%2CERR2237807%2CERR2237808%2CERR2237809%2CERR2237810%2CERR2237811%2CERR2237812%2CERR2237826%2CERR2237827%2CERR2237830%2CERR2237831%2CERR2237850%2CERR2246665%2CERR2246666%2CERR2262561%2CERR2262590%2CERR2532147%2CERR2532447%2CERR2532455%2CERR3253084%2CERR3253099%2CSRR10270520%2CSRR10295151%2CSRR10295162%2CSRR10295164%2CSRR10295166%2CSRR10295168%2CSRR10295170%2CSRR10861753%2CSRR11675949%2CSRR11675954%2CSRR11675955%2CSRR11675956%2CSRR11675957%2CSRR11675958%2CSRR11675959%2CSRR11675960%2CSRR11675961%2CSRR11675962%2CSRR11675963%2CSRR11675964%2CSRR11675965%2CSRR11675968%2CSRR11675969%2CSRR11675970%2CSRR11901802%2CSRR13132365%2CSRR13132366%2CSRR13132367%2CSRR13132368%2CSRR14182644%2CSRR14651674%2CSRR14651675%2CSRR14651719%2CSRR14651720%2CSRR14651721%2CSRR14651722%2CSRR14651723%2CSRR14651724%2CSRR14651725%2CSRR14651726%2CSRR14651727%2CSRR14651728%2CSRR2063175%2CSRR22071529%2CSRR22071683%2CSRR24462972%2CSRR27601720%2CSRR36608464%2CSRR5320243%2CSRR5482570&rettype=xml",
+        "runs": 100,
+        "sha256": "ce35493c457366fbecb81974fb069799fcdd1bb7ee8086a6f0e9b79881ec0fbf"
+      },
+      "sra_pacbio_001.xml": {
+        "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=sra&id=SRR8945310&rettype=xml",
+        "runs": 1,
+        "sha256": "055342dd66a10bb828c9dcdf8408dce753c0cdc0be5f5d2f9dec15ad5b7b0d9c"
+      }
+    }
+  },
+  "catalog": {
+    "refseq": 1398,
+    "genbank": 2011,
+    "genbank_biosamples": 1965
+  },
+  "runs": {
+    "total": 289,
+    "by_platform": {
+      "PACBIO_SMRT": 101,
+      "OXFORD_NANOPORE": 188
+    },
+    "usable": 219,
+    "usable_by_read_type": {
+      "pacbio_unresolved": 13,
+      "pacbio_hifi_ccs": 3,
+      "pacbio_clr_subreads": 24,
+      "ont": 179
+    },
+    "usable_with_same_biosample_assembly": 159,
+    "unusable_reasons": {
+      "library_selection=RANDOM PCR": 10,
+      "no_ena_fastq_md5": 53,
+      "mean_read_length<500": 54,
+      "library_selection=PCR": 2,
+      "library_strategy=WGA": 1,
+      "library_source=METAGENOMIC": 1,
+      "library_strategy=WCS": 1,
+      "library_strategy=OTHER": 1
+    }
+  },
+  "links": {
+    "total": 231,
+    "genus_disagrees": 0
+  },
+  "pool": {
+    "n_assemblies": 1738,
+    "n_unique_samples": 1738,
+    "by_role": {
+      "assembly_first": 1738
+    },
+    "n_annotated_samples": 1561,
+    "n_linked_ONT_samples": 123,
+    "n_linked_HiFi_samples": 3,
+    "n_linked_CLR_samples": 22,
+    "n_linked_PacBio_unresolved_samples": 8,
+    "n_projects": 396,
+    "sequence_source": {
+      "refseq": 1361,
+      "genbank": 377
+    },
+    "assembly_level": {
+      "Complete Genome": 449,
+      "Chromosome": 68,
+      "Contig": 951,
+      "Scaffold": 270
+    },
+    "linked_assembly_level": {
+      "Complete Genome": 129,
+      "Scaffold": 1,
+      "Chromosome": 23,
+      "Contig": 3
+    },
+    "atypical": 0
+  },
+  "download_manifest": {
+    "entries": 3099,
+    "by_purpose": {
+      "primary": 1738,
+      "gca_identity_check": 1361
+    }
+  },
+  "excluded": {
+    "ncbi_atypical": 113,
+    "origin_metagenome": 114,
+    "no_biosample": 19
+  },
+  "caveats": [
+    "link_basis is exact BioSample only; whether the run was used for the assembly is not checked",
+    "GCA/GCF identity is checked by sequence after download, not inferred from NCBI pairing",
+    "no clinical/host screen, species exclusion or clone collapse at this stage"
+  ]
+}

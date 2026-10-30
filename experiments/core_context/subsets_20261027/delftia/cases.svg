@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="480">
+<rect width="100%" height="100%" fill="white"/>
+<text x="20" y="26" font-size="18">delftia: repeated graph blocks, U/core/D review cases</text>
+<text x="20" y="46" font-size="12">Assembly only; graph block boundaries provisional; GFF3 features drawn for review (blue CDS, red RNA, grey pseudo/partial), not a coding check. 500 bp flanks coloured; core in orange.</text>
+<text x="20" y="70" font-size="14" font-weight="bold">similar_flanks_candidate_same_context</text>
+<text x="20" y="88" font-size="12">core 1.000  up 1.000  down 1.000  group PG_6526905006190804074</text>
+<text x="20" y="114" font-size="11">SAMN31258398 NZ_CP109906.1:3464757-3464954 (+)</text>
+<text x="20" y="128" font-size="10" fill="#555">PGN_10174712334219964674 len 198</text>
+<rect x="684.4" y="102" width="50.6" height="12" fill="#b6d1df"/>
+<rect x="735.0" y="102" width="20.0" height="12" fill="#edc06f"/>
+<rect x="755.0" y="102" width="50.6" height="12" fill="#b4d4b9"/>
+<polygon points="330.0,118 366.6,118 371.6,124 366.6,130 330.0,130" fill="#4f6d8f" opacity="0.85"><title>purF</title></polygon>
+<polygon points="391.4,118 509.4,118 514.4,124 509.4,130 391.4,130" fill="#4f6d8f" opacity="0.85"><title>OK021_RS15810</title></polygon>
+<polygon points="514.0,118 651.4,118 656.4,124 651.4,130 514.0,130" fill="#4f6d8f" opacity="0.85"><title>gltX</title></polygon>
+<polygon points="663.5,118 671.2,118 671.2,124 671.2,130 663.5,130" fill="#c0504d" opacity="0.85"><title>OK021_RS15820</title></polygon>
+<polygon points="675.0,118 682.7,118 682.7,124 682.7,130 675.0,130" fill="#c0504d" opacity="0.85"><title>OK021_RS15825</title></polygon>
+<polygon points="687.2,118 695.0,118 695.0,124 695.0,130 687.2,130" fill="#c0504d" opacity="0.85"><title>OK021_RS15830</title></polygon>
+<polygon points="702.2,118 709.9,118 709.9,124 709.9,130 702.2,130" fill="#c0504d" opacity="0.85"><title>OK021_RS15835</title></polygon>
+<polygon points="714.3,118 722.1,118 722.1,124 722.1,130 714.3,130" fill="#c0504d" opacity="0.85"><title>OK021_RS15840</title></polygon>
+<polygon points="723.4,118 731.1,118 731.1,124 731.1,130 723.4,130" fill="#c0504d" opacity="0.85"><title>OK021_RS15845</title></polygon>
+<polygon points="735.1,118 742.8,118 742.8,124 742.8,130 735.1,130" fill="#c0504d" opacity="0.85"><title>OK021_RS15850</title></polygon>
+<polygon points="747.2,118 755.0,118 755.0,124 755.0,130 747.2,130" fill="#c0504d" opacity="0.85"><title>OK021_RS15855</title></polygon>
+<polygon points="783.2,118 815.5,118 820.5,124 815.5,130 783.2,130" fill="#4f6d8f" opacity="0.85"><title>OK021_RS15860</title></polygon>
+<polygon points="843.4,118 985.7,118 990.7,124 985.7,130 843.4,130" fill="#4f6d8f" opacity="0.85"><title>OK021_RS15865</title></polygon>
+<polygon points="994.9,118 1113.2,118 1118.2,124 1113.2,130 994.9,130" fill="#4f6d8f" opacity="0.85"><title>OK021_RS15870</title></polygon>
+<polygon points="1118.6,118 1155.0,118 1160.0,124 1155.0,130 1118.6,130" fill="#4f6d8f" opacity="0.85"><title>OK021_RS15875</title></polygon>
+<text x="20" y="154" font-size="11">SAMN13049073 NZ_CP045291.1:2321607-2321804 (+)</text>
+<text x="20" y="168" font-size="10" fill="#555">PGN_2709627241437487283 len 198</text>
+<rect x="684.4" y="142" width="50.6" height="12" fill="#b6d1df"/>
+<rect x="735.0" y="142" width="20.0" height="12" fill="#edc06f"/>
+<rect x="755.0" y="142" width="50.6" height="12" fill="#b4d4b9"/>
+<polygon points="330.0,158 366.6,158 371.6,164 366.6,170 330.0,170" fill="#4f6d8f" opacity="0.85"><title>purF</title></polygon>
+<polygon points="391.4,158 509.4,158 514.4,164 509.4,170 391.4,170" fill="#4f6d8f" opacity="0.85"><title>GCS91_RS10525</title></polygon>
+<polygon points="514.0,158 651.4,158 656.4,164 651.4,170 514.0,170" fill="#4f6d8f" opacity="0.85"><title>gltX</title></polygon>
+<polygon points="663.5,158 671.2,158 671.2,164 671.2,170 663.5,170" fill="#c0504d" opacity="0.85"><title>GCS91_RS10535</title></polygon>
+<polygon points="675.0,158 682.7,158 682.7,164 682.7,170 675.0,170" fill="#c0504d" opacity="0.85"><title>GCS91_RS10540</title></polygon>
+<polygon points="687.2,158 695.0,158 695.0,164 695.0,170 687.2,170" fill="#c0504d" opacity="0.85"><title>GCS91_RS10545</title></polygon>
+<polygon points="702.2,158 709.9,158 709.9,164 709.9,170 702.2,170" fill="#c0504d" opacity="0.85"><title>GCS91_RS10550</title></polygon>
+<polygon points="714.3,158 722.1,158 722.1,164 722.1,170 714.3,170" fill="#c0504d" opacity="0.85"><title>GCS91_RS10555</title></polygon>
+<polygon points="723.4,158 731.1,158 731.1,164 731.1,170 723.4,170" fill="#c0504d" opacity="0.85"><title>GCS91_RS10560</title></polygon>
+<polygon points="735.1,158 742.8,158 742.8,164 742.8,170 735.1,170" fill="#c0504d" opacity="0.85"><title>GCS91_RS10565</title></polygon>
+<polygon points="747.2,158 755.0,158 755.0,164 755.0,170 747.2,170" fill="#c0504d" opacity="0.85"><title>GCS91_RS10570</title></polygon>
+<polygon points="783.2,158 815.5,158 820.5,164 815.5,170 783.2,170" fill="#4f6d8f" opacity="0.85"><title>GCS91_RS10575</title></polygon>
+<polygon points="843.4,158 985.7,158 990.7,164 985.7,170 843.4,170" fill="#4f6d8f" opacity="0.85"><title>GCS91_RS10580</title></polygon>
+<polygon points="994.9,158 1113.2,158 1118.2,164 1113.2,170 994.9,170" fill="#4f6d8f" opacity="0.85"><title>GCS91_RS10585</title></polygon>
+<polygon points="1118.6,158 1155.0,158 1160.0,164 1155.0,170 1118.6,170" fill="#4f6d8f" opacity="0.85"><title>GCS91_RS10590</title></polygon>
+<text x="20" y="200" font-size="14" font-weight="bold">different_adjacency_low_flank_similarity_candidate</text>
+<text x="20" y="218" font-size="12">core 0.961  up 0.528  down 0.521  group PG_14491059182860646189</text>
+<text x="20" y="244" font-size="11">SAMN13049073 NZ_CP045291.1:554501-555678 (+)</text>
+<text x="20" y="258" font-size="10" fill="#555">PGN_10275571694340079357 len 1178</text>
+<rect x="646.5" y="232" width="45.2" height="12" fill="#b6d1df"/>
+<rect x="691.7" y="232" width="106.5" height="12" fill="#edc06f"/>
+<rect x="798.3" y="232" width="45.2" height="12" fill="#b4d4b9"/>
+<polygon points="335.0,248 437.9,248 437.9,260 335.0,260 330.0,254" fill="#4f6d8f" opacity="0.85"><title>GCS91_RS02590</title></polygon>
+<polygon points="444.2,248 556.2,248 556.2,260 444.2,260 439.2,254" fill="#4f6d8f" opacity="0.85"><title>GCS91_RS02595</title></polygon>
+<polygon points="573.5,248 626.3,248 631.3,254 626.3,260 573.5,260" fill="#4f6d8f" opacity="0.85"><title>GCS91_RS02600</title></polygon>
+<polygon points="638.7,248 645.6,248 645.6,254 645.6,260 638.7,260" fill="#c0504d" opacity="0.85"><title>GCS91_RS02605</title></polygon>
+<polygon points="653.8,248 661.5,248 661.5,254 661.5,260 653.8,260" fill="#c0504d" opacity="0.85"><title>GCS91_RS02610</title></polygon>
+<polygon points="666.5,248 673.2,248 673.2,254 673.2,260 666.5,260" fill="#c0504d" opacity="0.85"><title>GCS91_RS02615</title></polygon>
+<polygon points="677.1,248 683.9,248 683.9,254 683.9,260 677.1,260" fill="#c0504d" opacity="0.85"><title>GCS91_RS02620</title></polygon>
+<polygon points="690.9,248 793.6,248 798.6,254 793.6,260 690.9,260" fill="#4f6d8f" opacity="0.85"><title>tuf</title></polygon>
+<polygon points="799.4,248 806.3,248 806.3,254 806.3,260 799.4,260" fill="#c0504d" opacity="0.85"><title>GCS91_RS02630</title></polygon>
+<polygon points="814.1,248 843.8,248 848.8,254 843.8,260 814.1,260" fill="#4f6d8f" opacity="0.85"><title>secE</title></polygon>
+<polygon points="848.7,248 896.6,248 901.6,254 896.6,260 848.7,260" fill="#4f6d8f" opacity="0.85"><title>nusG</title></polygon>
+<polygon points="914.3,248 948.4,248 953.4,254 948.4,260 914.3,260" fill="#4f6d8f" opacity="0.85"><title>rplK</title></polygon>
+<polygon points="953.4,248 1011.3,248 1016.3,254 1011.3,260 953.4,260" fill="#4f6d8f" opacity="0.85"><title>rplA</title></polygon>
+<polygon points="1036.7,248 1079.5,248 1084.5,254 1079.5,260 1036.7,260" fill="#4f6d8f" opacity="0.85"><title>rplJ</title></polygon>
+<polygon points="1087.8,248 1117.0,248 1122.0,254 1117.0,260 1087.8,260" fill="#4f6d8f" opacity="0.85"><title>rplL</title></polygon>
+<polygon points="1147.1,248 1155.0,248 1160.0,254 1155.0,260 1147.1,260" fill="#4f6d8f" opacity="0.85"><title>rpoB</title></polygon>
+<text x="20" y="284" font-size="11">SAMN13450439 NZ_CP065668.1:4741678-4742866 (+)</text>
+<text x="20" y="298" font-size="10" fill="#555">PGN_2376861743277866132 len 1189</text>
+<rect x="646.1" y="272" width="45.2" height="12" fill="#b6d1df"/>
+<rect x="691.3" y="272" width="107.4" height="12" fill="#edc06f"/>
+<rect x="798.7" y="272" width="45.2" height="12" fill="#b4d4b9"/>
+<polygon points="330.0,288 360.3,288 365.3,294 360.3,300 330.0,300" fill="#4f6d8f" opacity="0.85"><title>I6G66_RS22320</title></polygon>
+<polygon points="379.6,288 408.7,288 413.7,294 408.7,300 379.6,300" fill="#4f6d8f" opacity="0.85"><title>rpsL</title></polygon>
+<polygon points="428.2,288 466.0,288 471.0,294 466.0,300 428.2,300" fill="#4f6d8f" opacity="0.85"><title>rpsG</title></polygon>
+<polygon points="484.4,288 669.9,288 674.9,294 669.9,300 484.4,300" fill="#4f6d8f" opacity="0.85"><title>fusA</title></polygon>
+<polygon points="690.6,288 793.2,288 798.2,294 793.2,300 690.6,300" fill="#4f6d8f" opacity="0.85"><title>tuf</title></polygon>
+<polygon points="800.3,288 823.5,288 828.5,294 823.5,300 800.3,300" fill="#4f6d8f" opacity="0.85"><title>rpsJ</title></polygon>
+<polygon points="847.6,288 903.5,288 908.5,294 903.5,300 847.6,300" fill="#4f6d8f" opacity="0.85"><title>rplC</title></polygon>
+<polygon points="908.4,288 959.5,288 964.5,294 959.5,300 908.4,300" fill="#4f6d8f" opacity="0.85"><title>rplD</title></polygon>
+<polygon points="964.2,288 987.6,288 992.6,294 987.6,300 964.2,300" fill="#4f6d8f" opacity="0.85"><title>rplW</title></polygon>
+<polygon points="992.8,288 1062.3,288 1067.3,294 1062.3,300 992.8,300" fill="#4f6d8f" opacity="0.85"><title>rplB</title></polygon>
+<polygon points="1068.2,288 1088.2,288 1093.2,294 1088.2,300 1068.2,300" fill="#4f6d8f" opacity="0.85"><title>rpsS</title></polygon>
+<polygon points="1094.1,288 1119.1,288 1124.1,294 1119.1,300 1094.1,300" fill="#4f6d8f" opacity="0.85"><title>rplV</title></polygon>
+<polygon points="1125.6,288 1155.0,288 1160.0,294 1155.0,300 1125.6,300" fill="#4f6d8f" opacity="0.85"><title>rpsC</title></polygon>
+<text x="20" y="330" font-size="14" font-weight="bold">context_unresolved</text>
+<text x="20" y="348" font-size="12">core 0.985  up 0.603  down 0.520  group PG_6526905006190804074</text>
+<text x="20" y="374" font-size="11">SAMN31258398 NZ_CP109906.1:3464757-3464954 (+)</text>
+<text x="20" y="388" font-size="10" fill="#555">PGN_10174712334219964674 len 198</text>
+<rect x="684.4" y="362" width="50.6" height="12" fill="#b6d1df"/>
+<rect x="735.0" y="362" width="20.0" height="12" fill="#edc06f"/>
+<rect x="755.0" y="362" width="50.6" height="12" fill="#b4d4b9"/>
+<polygon points="330.0,378 366.6,378 371.6,384 366.6,390 330.0,390" fill="#4f6d8f" opacity="0.85"><title>purF</title></polygon>
+<polygon points="391.4,378 509.4,378 514.4,384 509.4,390 391.4,390" fill="#4f6d8f" opacity="0.85"><title>OK021_RS15810</title></polygon>
+<polygon points="514.0,378 651.4,378 656.4,384 651.4,390 514.0,390" fill="#4f6d8f" opacity="0.85"><title>gltX</title></polygon>
+<polygon points="663.5,378 671.2,378 671.2,384 671.2,390 663.5,390" fill="#c0504d" opacity="0.85"><title>OK021_RS15820</title></polygon>
+<polygon points="675.0,378 682.7,378 682.7,384 682.7,390 675.0,390" fill="#c0504d" opacity="0.85"><title>OK021_RS15825</title></polygon>
+<polygon points="687.2,378 695.0,378 695.0,384 695.0,390 687.2,390" fill="#c0504d" opacity="0.85"><title>OK021_RS15830</title></polygon>
+<polygon points="702.2,378 709.9,378 709.9,384 709.9,390 702.2,390" fill="#c0504d" opacity="0.85"><title>OK021_RS15835</title></polygon>
+<polygon points="714.3,378 722.1,378 722.1,384 722.1,390 714.3,390" fill="#c0504d" opacity="0.85"><title>OK021_RS15840</title></polygon>
+<polygon points="723.4,378 731.1,378 731.1,384 731.1,390 723.4,390" fill="#c0504d" opacity="0.85"><title>OK021_RS15845</title></polygon>
+<polygon points="735.1,378 742.8,378 742.8,384 742.8,390 735.1,390" fill="#c0504d" opacity="0.85"><title>OK021_RS15850</title></polygon>
+<polygon points="747.2,378 755.0,378 755.0,384 755.0,390 747.2,390" fill="#c0504d" opacity="0.85"><title>OK021_RS15855</title></polygon>
+<polygon points="783.2,378 815.5,378 820.5,384 815.5,390 783.2,390" fill="#4f6d8f" opacity="0.85"><title>OK021_RS15860</title></polygon>
+<polygon points="843.4,378 985.7,378 990.7,384 985.7,390 843.4,390" fill="#4f6d8f" opacity="0.85"><title>OK021_RS15865</title></polygon>
+<polygon points="994.9,378 1113.2,378 1118.2,384 1113.2,390 994.9,390" fill="#4f6d8f" opacity="0.85"><title>OK021_RS15870</title></polygon>
+<polygon points="1118.6,378 1155.0,378 1160.0,384 1155.0,390 1118.6,390" fill="#4f6d8f" opacity="0.85"><title>OK021_RS15875</title></polygon>
+<text x="20" y="414" font-size="11">SAMN00623041 NC_010002.1:5262244-5262441 (-)</text>
+<text x="20" y="428" font-size="10" fill="#555">PGN_12845063255035483237 len 198</text>
+<rect x="755.0" y="402" width="50.6" height="12" fill="#b4d4b9"/>
+<rect x="735.0" y="402" width="20.0" height="12" fill="#edc06f"/>
+<rect x="684.4" y="402" width="50.6" height="12" fill="#b6d1df"/>
+<polygon points="1055.3,418 1155.0,418 1160.0,424 1155.0,430 1055.3,430" fill="#4f6d8f" opacity="0.85"><title>DACI_RS24020</title></polygon>
+<polygon points="904.5,418 1046.2,418 1051.2,424 1046.2,430 904.5,430" fill="#4f6d8f" opacity="0.85"><title>DACI_RS24025</title></polygon>
+<polygon points="844.2,418 876.6,418 881.6,424 876.6,430 844.2,430" fill="#4f6d8f" opacity="0.85"><title>DACI_RS24030</title></polygon>
+<polygon points="807.2,418 815.0,418 815.0,424 815.0,430 807.2,430" fill="#c0504d" opacity="0.85"><title>DACI_RS24035</title></polygon>
+<polygon points="795.0,418 802.7,418 802.7,424 802.7,430 795.0,430" fill="#c0504d" opacity="0.85"><title>DACI_RS24040</title></polygon>
+<polygon points="783.6,418 791.3,418 791.3,424 791.3,430 783.6,430" fill="#c0504d" opacity="0.85"><title>DACI_RS24045</title></polygon>
+<polygon points="774.5,418 782.3,418 782.3,424 782.3,430 774.5,430" fill="#c0504d" opacity="0.85"><title>DACI_RS24050</title></polygon>
+<polygon points="762.3,418 770.0,418 770.0,424 770.0,430 762.3,430" fill="#c0504d" opacity="0.85"><title>DACI_RS24055</title></polygon>
+<polygon points="747.2,418 755.0,418 755.0,424 755.0,430 747.2,430" fill="#c0504d" opacity="0.85"><title>DACI_RS24060</title></polygon>
+<polygon points="735.1,418 742.8,418 742.8,424 742.8,430 735.1,430" fill="#c0504d" opacity="0.85"><title>DACI_RS24065</title></polygon>
+<polygon points="723.5,418 731.2,418 731.2,424 731.2,430 723.5,430" fill="#c0504d" opacity="0.85"><title>DACI_RS24070</title></polygon>
+<polygon points="574.0,418 711.4,418 716.4,424 711.4,430 574.0,430" fill="#4f6d8f" opacity="0.85"><title>gltX</title></polygon>
+<polygon points="451.4,418 569.4,418 574.4,424 569.4,430 451.4,430" fill="#4f6d8f" opacity="0.85"><title>DACI_RS24080</title></polygon>
+<polygon points="330.0,418 424.2,418 429.2,424 424.2,430 330.0,430" fill="#4f6d8f" opacity="0.85"><title>purF</title></polygon>
+</svg>

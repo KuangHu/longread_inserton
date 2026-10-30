@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="300" font-family="sans-serif">
+<rect width="100%" height="100%" fill="white"/>
+<text x="4" y="16" font-size="12">L_0570551ec9ce  SAMEA120782404  core 89 bp  two_flank_anchored  support all_calls_anchored  boundary exact  tandem False  core copies carrier/partner 1/0</text>
+<line x1="552.7" y1="30" x2="552.7" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<line x1="567.3" y1="30" x2="567.3" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<text x="4" y="64" font-size="11" font-weight="bold">SAMEA120782404 NZ_OZ409863.1 (carrier)</text>
+<line x1="60" y1="100" x2="1060" y2="100" stroke="#888"/>
+<rect x="388.5" y="132" width="164.2" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="470.6" y="152" font-size="9" text-anchor="middle">U</text>
+<rect x="552.7" y="132" width="14.6" height="8" fill="#e76f51" opacity="0.55"/>
+<text x="560.0" y="152" font-size="9" text-anchor="middle">core 89</text>
+<rect x="567.3" y="132" width="164.2" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="649.4" y="152" font-size="9" text-anchor="middle">D</text>
+<polygon points="71.3,109 77.3,103 293.5,103 293.5,115 77.3,115" fill="#3b6fb6"><title>esterase-like activity of phytase family 1962943-1964296 -</title></polygon>
+<text x="71.3" y="125" font-size="8" fill="#333">esterase-like activity of phytase family</text>
+<polygon points="305.4,109 311.4,103 688.7,103 688.7,115 311.4,115" fill="#3b6fb6"><title>penicillin-binding protein 1C 1964368-1966702 -</title></polygon>
+<text x="305.4" y="125" font-size="8" fill="#333">penicillin-binding protein 1C</text>
+<polygon points="720.9,109 726.9,103 1060.0,103 1060.0,115 726.9,115" fill="#3b6fb6"><title>alpha-2-macroglobulin family protein 1966898-1972916 -</title></polygon>
+<text x="720.9" y="125" font-size="8" fill="#333">alpha-2-macroglobulin family protein</text>
+<text x="60" y="166" font-size="9" fill="#666">NZ_OZ409863.1:1962874-1968963  core 1965874-1965963</text>
+<text x="4" y="184" font-size="11" font-weight="bold">SAMN51281044 NZ_CM191372.1 (partner, + strand, two_flank_anchored, pair P00384)</text>
+<line x1="60" y1="220" x2="1060" y2="220" stroke="#888"/>
+<rect x="388.5" y="252" width="164.2" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="470.6" y="272" font-size="9" text-anchor="middle">U'</text>
+<rect x="567.3" y="252" width="164.2" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="649.4" y="272" font-size="9" text-anchor="middle">D'</text>
+<rect x="552.7" y="252" width="14.6" height="8" fill="#9b5de5" opacity="0.55"/>
+<text x="560.0" y="272" font-size="9" text-anchor="middle">other side 5</text>
+<polygon points="60.0,205 60.0,205 63.0,211 60.0,217 60.0,217" fill="#3b6fb6"><title>Mor transcription activator family prote 6118928-6119420 +</title></polygon>
+<polygon points="71.3,229 77.3,223 293.5,223 293.5,235 77.3,235" fill="#3b6fb6"><title>esterase-like activity of phytase family 6119471-6120824 -</title></polygon>
+<text x="71.3" y="245" font-size="8" fill="#333">esterase-like activity of phytase family</text>
+<polygon points="304.9,229 310.9,223 690.2,223 690.2,235 310.9,235" fill="#3b6fb6"><title>penicillin-binding protein 1C 6120893-6123155 -</title></polygon>
+<text x="304.9" y="245" font-size="8" fill="#333">penicillin-binding protein 1C</text>
+<polygon points="721.4,229 727.4,223 1060.0,223 1060.0,235 727.4,235" fill="#3b6fb6"><title>alpha-2-macroglobulin family protein 6123345-6129375 -</title></polygon>
+<text x="721.4" y="245" font-size="8" fill="#333">alpha-2-macroglobulin family protein</text>
+<text x="60" y="286" font-size="9" fill="#666">NZ_CM191372.1 site 6122402  other-side gap 5 bp  this call's core 1965874-1965963</text>
+</svg>

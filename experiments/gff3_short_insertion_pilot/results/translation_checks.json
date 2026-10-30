@@ -1,0 +1,91 @@
+{
+  "status": "pass",
+  "checked_CDS": 14,
+  "checks": [
+    {
+      "seed_id": "ASM_0004",
+      "protein_id": "WP_475681389.1",
+      "amino_acids": 438,
+      "translation_matches_FAA": true
+    },
+    {
+      "seed_id": "ASM_0005",
+      "protein_id": "WP_475681495.1",
+      "amino_acids": 438,
+      "translation_matches_FAA": true
+    },
+    {
+      "seed_id": "ASM_0006",
+      "protein_id": "WP_475681434.1",
+      "amino_acids": 350,
+      "translation_matches_FAA": true
+    },
+    {
+      "seed_id": "ASM_0010",
+      "protein_id": "WP_013956321.1",
+      "amino_acids": 127,
+      "translation_matches_FAA": true
+    },
+    {
+      "seed_id": "ASM_0016",
+      "protein_id": "WP_194946825.1",
+      "amino_acids": 349,
+      "translation_matches_FAA": true
+    },
+    {
+      "seed_id": "ASM_0025",
+      "protein_id": "WP_011615540.1",
+      "amino_acids": 164,
+      "translation_matches_FAA": true
+    },
+    {
+      "seed_id": "ASM_0042",
+      "protein_id": "WP_475681670.1",
+      "amino_acids": 437,
+      "translation_matches_FAA": true
+    },
+    {
+      "seed_id": "ASM_0052",
+      "protein_id": "WP_153957118.1",
+      "amino_acids": 378,
+      "translation_matches_FAA": true
+    },
+    {
+      "seed_id": "ASM_0055",
+      "protein_id": "WP_011616676.1",
+      "amino_acids": 241,
+      "translation_matches_FAA": true
+    },
+    {
+      "seed_id": "ASM_0060",
+      "protein_id": "WP_475681732.1",
+      "amino_acids": 449,
+      "translation_matches_FAA": true
+    },
+    {
+      "seed_id": "ASM_0065",
+      "protein_id": "WP_153954151.1",
+      "amino_acids": 350,
+      "translation_matches_FAA": true
+    },
+    {
+      "seed_id": "ASM_0067",
+      "protein_id": "WP_013953755.1",
+      "amino_acids": 117,
+      "translation_matches_FAA": true
+    },
+    {
+      "seed_id": "ASM_0069",
+      "protein_id": "WP_153954502.1",
+      "amino_acids": 456,
+      "translation_matches_FAA": true
+    },
+    {
+      "seed_id": "ASM_0070",
+      "protein_id": "WP_153956562.1",
+      "amino_acids": 294,
+      "translation_matches_FAA": true
+    }
+  ],
+  "scope": "Eligible CDS only; no functional or insertion-family validation."
+}

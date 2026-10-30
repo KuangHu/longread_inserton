@@ -1,0 +1,9 @@
+{
+  "records_scanned": 20000,
+  "molecules_in_scan": 20000,
+  "records_with_adapter": 1,
+  "fraction_with_adapter": 0.0001,
+  "rule": ">=2 distinct SMRTbell adapter 15-mers (either strand) in the record",
+  "median_length": 2841,
+  "interpretation": "few_internal_adapters: adapter-split subreads or adapter-free reads"
+}

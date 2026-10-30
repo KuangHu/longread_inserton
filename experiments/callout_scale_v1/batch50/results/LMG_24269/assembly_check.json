@@ -1,0 +1,56 @@
+{
+  "sample": "LMG_24269",
+  "gca": "GCA_984667945.1",
+  "gcf": "GCF_984667945.1",
+  "identical_sequence_sets": true,
+  "choice": "gcf_sequence_and_annotation",
+  "gca_records": {
+    "OZ480177.1": [
+      3676711,
+      "fc9157ea8e4381c641ad9e6804a8317ff1dba466a032e4339c70cfa31da22166"
+    ],
+    "OZ480178.1": [
+      3415142,
+      "1e757e3e9dd723bf7660911f6941cd9c0e700d5b34a58f04d9dd17db66c192cb"
+    ],
+    "OZ480179.1": [
+      1232707,
+      "c7b37b442c015cf4a6444fa84818f164c74be772f74b88330e0990c79e2566ce"
+    ],
+    "OZ480180.1": [
+      82948,
+      "96f458feee1a36b9e2831b68f321feb1b7086ba14457f32065c1392c490d2d26"
+    ],
+    "OZ480181.1": [
+      70795,
+      "2ef3c8e3b504e5e5aae0f08f7112f1661af012d3d07a7629399217dc36a73704"
+    ]
+  },
+  "gcf_records": {
+    "NZ_OZ480177.1": [
+      3676711,
+      "fc9157ea8e4381c641ad9e6804a8317ff1dba466a032e4339c70cfa31da22166"
+    ],
+    "NZ_OZ480178.1": [
+      3415142,
+      "1e757e3e9dd723bf7660911f6941cd9c0e700d5b34a58f04d9dd17db66c192cb"
+    ],
+    "NZ_OZ480179.1": [
+      1232707,
+      "c7b37b442c015cf4a6444fa84818f164c74be772f74b88330e0990c79e2566ce"
+    ],
+    "NZ_OZ480180.1": [
+      82948,
+      "96f458feee1a36b9e2831b68f321feb1b7086ba14457f32065c1392c490d2d26"
+    ],
+    "NZ_OZ480181.1": [
+      70795,
+      "2ef3c8e3b504e5e5aae0f08f7112f1661af012d3d07a7629399217dc36a73704"
+    ]
+  },
+  "cds_features": 7660,
+  "fasta": "/global/scratch/users/kh36969/longread_callout/data/assemblies_batch50/LMG_24269/GCF_984667945.1/ncbi_dataset/data/GCF_984667945.1/GCF_984667945.1_LMG_24269_genomic.fna",
+  "fasta_sha256": "8a8e08a8e5e4b92fe59f410b84e720bd102ecf9100d8d3aef5a449b792284f4b",
+  "gbff": "/global/scratch/users/kh36969/longread_callout/data/assemblies_batch50/LMG_24269/GCF_984667945.1/ncbi_dataset/data/GCF_984667945.1/genomic.gbff",
+  "gbff_sha256": "75575437b60fa6296699ab06ad4895caf981500157e00aa430f6b6a9a9c0de40"
+}

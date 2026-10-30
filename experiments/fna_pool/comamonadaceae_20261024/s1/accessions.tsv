@@ -1,0 +1,985 @@
+accession	biosample	purpose	status	attempts	reason	records	fna_bp	molecule_types	annotation_status	annotation	annotation_date	cds_rows	faa_proteins
+GCF_002157685.2	SAMD00076718	primary	verified	1		1	5914097	Chromosome:1	present	GCF_002157685.2-RS_2026_03_26	2026-03-26	5383	5312
+GCA_002157685.2	SAMD00076718	gca_identity_check	verified	1		1	5914097	Chromosome:1		Annotation submitted by shizuoka University	2022-10-26		
+GCF_016592015.1	SAMD00260131	primary	verified	1		1	4955226	Chromosome:1	present	GCF_016592015.1-RS_2026_02_05	2026-02-05	4620	4536
+GCA_016592015.1	SAMD00260131	gca_identity_check	verified	1		1	4955226	Chromosome:1		Annotation submitted by Tokyo University of Agriculture and Technology	2020-11-27		
+GCF_019973615.1	SAMD00265974	primary	verified	1		1	4936681	Chromosome:1	present	GCF_019973615.1-RS_2026_07_10	2026-07-10	4503	4436
+GCA_019973615.1	SAMD00265974	gca_identity_check	verified	1		1	4936681	Chromosome:1		Annotation submitted by RIKEN-BRC	2021-07-14		
+GCF_022846195.1	SAMD00407106	primary	verified	1		2	7019963	Chromosome:1;Plasmid:1	present	GCF_022846195.1-RS_2026_04_20	2026-04-20	6363	6241
+GCA_022846195.1	SAMD00407106	gca_identity_check	verified	1		2	7019963	Chromosome:1;Plasmid:1		Annotation submitted by Department of Applied Chemistry, Graduate School of Engineering, University of Hyogo	2022-02-01		
+GCF_027924905.1	SAMD00549750	primary	verified	1		1	2594181	Chromosome:1	present	GCF_027924905.1-RS_2024_06_06	2024-06-06	2540	2522
+GCA_027924905.1	SAMD00549750	gca_identity_check	verified	1		1	2594181	Chromosome:1		Annotation submitted by Laboratory for Microbiome Sciences, Center for Integrative Medical Sciences, RIKEN	2022-12-01		
+GCF_027924965.1	SAMD00549751	primary	verified	1		2	2773381	Chromosome:1;Plasmid:1	present	GCF_027924965.1-RS_2024_06_06	2024-06-06	2679	2637
+GCA_027924965.1	SAMD00549751	gca_identity_check	verified	1		2	2773381	Chromosome:1;Plasmid:1		Annotation submitted by Laboratory for Microbiome Sciences, Center for Integrative Medical Sciences, RIKEN	2022-12-01		
+GCF_027925025.1	SAMD00549752	primary	verified	1		1	2649037	Chromosome:1	present	GCF_027925025.1-RS_2024_06_06	2024-06-06	2486	2472
+GCA_027925025.1	SAMD00549752	gca_identity_check	verified	1		1	2649037	Chromosome:1		Annotation submitted by Laboratory for Microbiome Sciences, Center for Integrative Medical Sciences, RIKEN	2022-12-01		
+GCA_027923965.1	SAMD00554136	primary	verified	1		1	5121829	Chromosome:1	present	Annotation submitted by National Institute of Advanced Industrial Science and Technology	2022-11-19	4627	4627
+GCA_027924025.1	SAMD00554137	primary	verified	1		2	4068203	Chromosome:1;Plasmid:1	present	Annotation submitted by National Institute of Advanced Industrial Science and Technology	2022-11-19	3843	3843
+GCF_055379645.1	SAMD00571185	primary	verified	1		1	6200520	Chromosome:1	present	GCF_055379645.1-RS_2026_02_24	2026-02-24	5514	5485
+GCA_055379645.1	SAMD00571185	gca_identity_check	verified	1		1	6200520	Chromosome:1		Annotation submitted by Tokyo University of Science	2025-01-11		
+GCF_037101375.1	SAMD00659498	primary	verified	1		2	5219685	Chromosome:1;Plasmid:1	present	GCF_037101375.1-RS_2024_04_05	2024-04-05	4607	4509
+GCA_037101375.1	SAMD00659498	gca_identity_check	verified	1		2	5219685	Chromosome:1;Plasmid:1		Annotation submitted by University of Hyogo	2023-12-09		
+GCF_055396645.1	SAMD00735222	primary	verified	1		1	3381838	Chromosome:1	present	GCF_055396645.1-RS_2026_02_24	2026-02-24	3116	3073
+GCA_055396645.1	SAMD00735222	gca_identity_check	verified	1		1	3381838	Chromosome:1		Annotation submitted by Laboratory for Microbiome Sciences  Center for Integrative Medical Sciences, RIKEN	2025-12-16		
+GCF_055396085.1	SAMD00735223	primary	verified	1		1	3174806	Chromosome:1	present	GCF_055396085.1-RS_2026_02_24	2026-02-24	3113	3073
+GCA_055396085.1	SAMD00735223	gca_identity_check	verified	1		1	3174806	Chromosome:1		Annotation submitted by Laboratory for Microbiome Sciences  Center for Integrative Medical Sciences, RIKEN	2025-12-16		
+GCF_055395845.1	SAMD00735224	primary	verified	1		1	3173178	Chromosome:1	present	GCF_055395845.1-RS_2026_02_24	2026-02-24	3120	3079
+GCA_055395845.1	SAMD00735224	gca_identity_check	verified	1		1	3173178	Chromosome:1		Annotation submitted by Laboratory for Microbiome Sciences  Center for Integrative Medical Sciences, RIKEN	2025-12-16		
+GCF_055395455.1	SAMD00735225	primary	verified	1		1	3400574	Chromosome:1	present	GCF_055395455.1-RS_2026_02_24	2026-02-24	3186	3125
+GCA_055395455.1	SAMD00735225	gca_identity_check	verified	1		1	3400574	Chromosome:1		Annotation submitted by Laboratory for Microbiome Sciences  Center for Integrative Medical Sciences, RIKEN	2025-12-16		
+GCF_055394835.1	SAMD00735226	primary	verified	1		1	3050869	Chromosome:1	present	GCF_055394835.1-RS_2026_02_24	2026-02-24	2956	2925
+GCA_055394835.1	SAMD00735226	gca_identity_check	verified	1		1	3050869	Chromosome:1		Annotation submitted by Laboratory for Microbiome Sciences  Center for Integrative Medical Sciences, RIKEN	2025-12-16		
+GCF_042847045.1	SAMD00797420	primary	verified	1		1	5583543	Chromosome:1	present	GCF_042847045.1-RS_2025_02_16	2025-02-16	4893	4856
+GCA_042847045.1	SAMD00797420	gca_identity_check	verified	1		1	5583543	Chromosome:1		Annotation submitted by Genetic Resources Center, National Agriculture and Food Research Organization	2024-07-17		
+GCF_964252695.1	SAMEA115676832	primary	verified	1		36	6094667	Chromosome:36	present	GCF_964252695.1-RS_2025_08_03	2025-08-03	5520	5460
+GCA_964252695.2	SAMEA115676832	gca_identity_check	verified	1		36	6094667	Chromosome:36		Annotation submitted by Aarhus University	2025-07-10		
+GCF_964253575.1	SAMEA115676833	primary	verified	1		2	7189705	Chromosome:2	present	GCF_964253575.1-RS_2025_08_03	2025-08-03	6681	6626
+GCA_964253575.2	SAMEA115676833	gca_identity_check	verified	1		2	7189705	Chromosome:2		Annotation submitted by Aarhus University	2025-07-10		
+GCF_964253765.1	SAMEA115676837	primary	verified	1		6	5676429	Chromosome:6	present	GCF_964253765.1-RS_2025_08_03	2025-08-03	5183	5133
+GCA_964253765.2	SAMEA115676837	gca_identity_check	verified	1		6	5676429	Chromosome:6		Annotation submitted by Aarhus University	2025-07-10		
+GCF_964253755.1	SAMEA115676839	primary	verified	1		2	7596274	Chromosome:2	present	GCF_964253755.1-RS_2025_08_03	2025-08-03	7443	7258
+GCA_964253755.2	SAMEA115676839	gca_identity_check	verified	1		2	7596274	Chromosome:2		Annotation submitted by Aarhus University	2025-07-10		
+GCF_964252805.1	SAMEA115676840	primary	verified	1		18	5117782	Chromosome:18	present	GCF_964252805.1-RS_2025_08_03	2025-08-03	4793	4761
+GCA_964252805.2	SAMEA115676840	gca_identity_check	verified	1		18	5117782	Chromosome:18		Annotation submitted by Aarhus University	2025-07-10		
+GCF_964253095.1	SAMEA115676843	primary	verified	1		2	6713284	Chromosome:2	present	GCF_964253095.1-RS_2026_08_03	2026-08-03	6340	6293
+GCA_964253095.2	SAMEA115676843	gca_identity_check	verified	1		2	6713284	Chromosome:2		Annotation submitted by Aarhus University	2025-07-10		
+GCF_964253045.1	SAMEA115676855	primary	verified	1		2	6792450	Chromosome:2	present	GCF_964253045.1-RS_2026_08_03	2026-08-03	6355	6318
+GCA_964253045.2	SAMEA115676855	gca_identity_check	verified	1		2	6792450	Chromosome:2		Annotation submitted by Aarhus University	2025-07-10		
+GCF_964252815.1	SAMEA115676858	primary	verified	1		21	5479910	Chromosome:21	present	GCF_964252815.1-RS_2026_08_03	2026-08-03	5057	5027
+GCA_964252815.2	SAMEA115676858	gca_identity_check	verified	1		21	5479910	Chromosome:21		Annotation submitted by Aarhus University	2025-07-10		
+GCF_964253105.1	SAMEA115676862	primary	verified	1		2	6748330	Chromosome:2	present	GCF_964253105.1-RS_2026_08_03	2026-08-03	6427	6363
+GCA_964253105.2	SAMEA115676862	gca_identity_check	verified	1		2	6748330	Chromosome:2		Annotation submitted by Aarhus University	2025-07-10		
+GCF_964253805.1	SAMEA115676863	primary	verified	1		4	8602029	Chromosome:4	present	GCF_964253805.1-RS_2025_08_03	2025-08-03	8540	8283
+GCA_964253805.2	SAMEA115676863	gca_identity_check	verified	1		4	8602029	Chromosome:4		Annotation submitted by Aarhus University	2025-07-10		
+GCF_964252785.1	SAMEA115676864	primary	verified	1		98	8198234	Chromosome:98	present	GCF_964252785.1-RS_2025_08_03	2025-08-03	8153	7955
+GCA_964252785.2	SAMEA115676864	gca_identity_check	verified	1		98	8198234	Chromosome:98		Annotation submitted by Aarhus University	2025-07-10		
+GCF_964254125.1	SAMEA115676868	primary	verified	1		2	5304607	Chromosome:2	present	GCF_964254125.1-RS_2026_08_03	2026-08-03	4811	4788
+GCA_964254125.2	SAMEA115676868	gca_identity_check	verified	1		2	5304607	Chromosome:2		Annotation submitted by Aarhus University	2025-07-10		
+GCF_964253015.1	SAMEA115676870	primary	verified	1		3	6018762	Chromosome:3	present	GCF_964253015.1-RS_2025_08_03	2025-08-03	5403	5350
+GCA_964253015.2	SAMEA115676870	gca_identity_check	verified	1		3	6018762	Chromosome:3		Annotation submitted by Aarhus University	2025-07-10		
+GCF_964254155.1	SAMEA115676913	primary	verified	1		2	6782146	Chromosome:2	present	GCF_964254155.1-RS_2026_08_03	2026-08-03	6385	6338
+GCA_964254155.2	SAMEA115676913	gca_identity_check	verified	1		2	6782146	Chromosome:2		Annotation submitted by Aarhus University	2025-07-10		
+GCF_964253985.1	SAMEA115676931	primary	verified	1		3	8083614	Chromosome:3	present	GCF_964253985.1-RS_2025_08_03	2025-08-03	7950	7759
+GCA_964253985.2	SAMEA115676931	gca_identity_check	verified	1		3	8083614	Chromosome:3		Annotation submitted by Aarhus University	2025-07-10		
+GCF_964253075.1	SAMEA115676933	primary	verified	1		2	6767848	Chromosome:2	present	GCF_964253075.1-RS_2026_08_03	2026-08-03	6418	6378
+GCA_964253075.2	SAMEA115676933	gca_identity_check	verified	1		2	6767848	Chromosome:2		Annotation submitted by Aarhus University	2025-07-10		
+GCF_964253865.1	SAMEA115676939	primary	verified	1		2	6887760	Chromosome:2	present	GCF_964253865.1-RS_2026_08_03	2026-08-03	6536	6474
+GCA_964253865.2	SAMEA115676939	gca_identity_check	verified	1		2	6887760	Chromosome:2		Annotation submitted by Aarhus University	2025-07-10		
+GCF_964252975.1	SAMEA115676945	primary	verified	1		52	5662757	Chromosome:52	present	GCF_964252975.1-RS_2025_08_03	2025-08-03	5219	5166
+GCA_964252975.2	SAMEA115676945	gca_identity_check	verified	1		52	5662757	Chromosome:52		Annotation submitted by Aarhus University	2025-07-10		
+GCF_964253035.1	SAMEA115676946	primary	verified	1		5	8086524	Chromosome:5	present	GCF_964253035.1-RS_2025_08_03	2025-08-03	7551	7409
+GCA_964253035.2	SAMEA115676946	gca_identity_check	verified	1		5	8086524	Chromosome:5		Annotation submitted by Aarhus University	2025-07-10		
+GCF_964253415.1	SAMEA115676956	primary	verified	1		2	6739378	Chromosome:2	present	GCF_964253415.1-RS_2026_08_03	2026-08-03	6338	6297
+GCA_964253415.2	SAMEA115676956	gca_identity_check	verified	1		2	6739378	Chromosome:2		Annotation submitted by Aarhus University	2025-07-10		
+GCF_964253305.1	SAMEA115676957	primary	verified	1		2	7376750	Chromosome:2	present	GCF_964253305.1-RS_2025_08_03	2025-08-03	6833	6709
+GCA_964253305.2	SAMEA115676957	gca_identity_check	verified	1		2	7376750	Chromosome:2		Annotation submitted by Aarhus University	2025-07-10		
+GCF_964253385.1	SAMEA115676958	primary	verified	1		2	6678546	Chromosome:2	present	GCF_964253385.1-RS_2026_08_03	2026-08-03	6329	6283
+GCA_964253385.2	SAMEA115676958	gca_identity_check	verified	1		2	6678546	Chromosome:2		Annotation submitted by Aarhus University	2025-07-10		
+GCF_964254355.1	SAMEA115676961	primary	verified	1		2	5743366	Chromosome:2	present	GCF_964254355.1-RS_2025_08_03	2025-08-03	5362	5270
+GCA_964254355.2	SAMEA115676961	gca_identity_check	verified	1		2	5743366	Chromosome:2		Annotation submitted by Aarhus University	2025-07-10		
+GCF_964254305.1	SAMEA115676967	primary	verified	1		3	8305324	Chromosome:3	present	GCF_964254305.1-RS_2025_08_03	2025-08-03	8122	7928
+GCA_964254305.2	SAMEA115676967	gca_identity_check	verified	1		3	8305324	Chromosome:3		Annotation submitted by Aarhus University	2025-07-10		
+GCF_964254325.2	SAMEA115676974	primary	verified	1		2	6778155	Chromosome:2	present	GCF_964254325.2-RS_2026_08_03	2026-08-03	6429	6380
+GCA_964254325.2	SAMEA115676974	gca_identity_check	verified	1		2	6778155	Chromosome:2		Annotation submitted by Aarhus University	2025-07-10		
+GCF_976987185.1	SAMEA120301455	primary	verified	1		1	6504461	Chromosome:1	present	GCF_976987185.1-RS_2025_11_19	2025-11-19	5797	5763
+GCA_976987185.1	SAMEA120301455	gca_identity_check	verified	1		1	6504461	Chromosome:1		Annotation submitted by LM-UGent	2025-10-21		
+GCF_976989105.1	SAMEA120308851	primary	verified	1		1	6874004	Chromosome:1	present	GCF_976989105.1-RS_2025_11_19	2025-11-19	6151	6068
+GCA_976989105.1	SAMEA120308851	gca_identity_check	verified	1		1	6874004	Chromosome:1		Annotation submitted by LM-UGent	2025-10-21		
+GCF_976989065.1	SAMEA120308854	primary	verified	1		1	6873944	Chromosome:1	present	GCF_976989065.1-RS_2025_11_19	2025-11-19	6153	6071
+GCA_976989065.1	SAMEA120308854	gca_identity_check	verified	1		1	6873944	Chromosome:1		Annotation submitted by LM-UGent	2025-10-21		
+GCF_976988975.1	SAMEA120308855	primary	verified	1		2	6526927	Chromosome:2	present	GCF_976988975.1-RS_2025_11_28	2025-11-28	5780	5737
+GCA_976988975.1	SAMEA120308855	gca_identity_check	verified	1		2	6526927	Chromosome:2		Annotation submitted by LM-UGent	2025-10-21		
+GCF_976989035.1	SAMEA120308864	primary	verified	1		1	6504444	Chromosome:1	present	GCF_976989035.1-RS_2025_11_19	2025-11-19	5797	5764
+GCA_976989035.1	SAMEA120308864	gca_identity_check	verified	1		1	6504444	Chromosome:1		Annotation submitted by LM-UGent	2025-10-21		
+GCF_976989265.1	SAMEA120309484	primary	verified	1		4	7267768	Chromosome:4	present	GCF_976989265.1-RS_2026_07_23	2026-07-23	6901	6776
+GCA_976989265.1	SAMEA120309484	gca_identity_check	verified	1		4	7267768	Chromosome:4		Annotation submitted by LM-UGent	2025-10-21		
+GCF_976989165.1	SAMEA120309485	primary	verified	1		3	7924536	Chromosome:3	present	GCF_976989165.1-RS_2025_11_28	2025-11-28	7442	7165
+GCA_976989165.1	SAMEA120309485	gca_identity_check	verified	1		3	7924536	Chromosome:3		Annotation submitted by LM-UGent	2025-10-21		
+GCF_976995725.1	SAMEA120311175	primary	verified	1		2	6373682	Chromosome:2	present	GCF_976995725.1-RS_2025_11_28	2025-11-28	5667	5631
+GCA_976995725.1	SAMEA120311175	gca_identity_check	verified	1		2	6373682	Chromosome:2		Annotation submitted by LM-UGent	2025-10-21		
+GCF_976997465.1	SAMEA120314584	primary	verified	1		1	7146465	Chromosome:1	present	GCF_976997465.1-RS_2025_11_18	2025-11-18	6631	6550
+GCA_976997465.1	SAMEA120314584	gca_identity_check	verified	1		1	7146465	Chromosome:1		Annotation submitted by LM-UGent	2025-10-21		
+GCF_976997285.1	SAMEA120314636	primary	verified	1		1	6715061	Chromosome:1	present	GCF_976997285.1-RS_2025_11_18	2025-11-18	6180	6100
+GCA_976997285.1	SAMEA120314636	gca_identity_check	verified	1		1	6715061	Chromosome:1		Annotation submitted by LM-UGent	2025-10-21		
+GCF_976997575.1	SAMEA120314645	primary	verified	1		1	6715068	Chromosome:1	present	GCF_976997575.1-RS_2025_11_18	2025-11-18	6178	6099
+GCA_976997575.1	SAMEA120314645	gca_identity_check	verified	1		1	6715068	Chromosome:1		Annotation submitted by LM-UGent	2025-10-21		
+GCF_977004815.1	SAMEA120322934	primary	verified	1		7	8317232	Chromosome:7	present	GCF_977004815.1-RS_2025_11_28	2025-11-28	7846	7481
+GCA_977004815.1	SAMEA120322934	gca_identity_check	verified	1		7	8317232	Chromosome:7		Annotation submitted by LM-UGent	2025-10-21		
+GCF_977007205.1	SAMEA120325695	primary	verified	1		2	7194837	Chromosome:2	present	GCF_977007205.1-RS_2026_07_23	2026-07-23	6733	6640
+GCA_977007205.1	SAMEA120325695	gca_identity_check	verified	1		2	7194837	Chromosome:2		Annotation submitted by LM-UGent	2025-10-21		
+GCF_977007995.1	SAMEA120356367	primary	verified	1		5	8217710	Chromosome:5	present	GCF_977007995.1-RS_2025_11_28	2025-11-28	7725	7477
+GCA_977007995.1	SAMEA120356367	gca_identity_check	verified	1		5	8217710	Chromosome:5		Annotation submitted by LM-UGent	2025-10-21		
+GCF_977012005.1	SAMEA120399592	primary	verified	1		7	8327822	Chromosome:7	present	GCF_977012005.1-RS_2025_11_30	2025-11-30	7869	7532
+GCA_977012005.1	SAMEA120399592	gca_identity_check	verified	1		7	8327822	Chromosome:7		Annotation submitted by LM-UGent	2025-10-22		
+GCF_977011995.1	SAMEA120399594	primary	verified	1		4	8240359	Chromosome:4	present	GCF_977011995.1-RS_2025_11_30	2025-11-30	7744	7455
+GCA_977011995.1	SAMEA120399594	gca_identity_check	verified	1		4	8240359	Chromosome:4		Annotation submitted by LM-UGent	2025-10-22		
+GCF_977011975.1	SAMEA120399595	primary	verified	1		9	8343163	Chromosome:9	present	GCF_977011975.1-RS_2025_11_30	2025-11-30	7878	7532
+GCA_977011975.1	SAMEA120399595	gca_identity_check	verified	1		9	8343163	Chromosome:9		Annotation submitted by LM-UGent	2025-10-22		
+GCF_977012065.1	SAMEA120399599	primary	verified	1		1	6715053	Chromosome:1	present	GCF_977012065.1-RS_2025_11_27	2025-11-27	6172	6090
+GCA_977012065.1	SAMEA120399599	gca_identity_check	verified	1		1	6715053	Chromosome:1		Annotation submitted by LM-UGent	2025-11-23		
+GCF_903815275.1	SAMEA6863324	primary	verified	1		1	4047112	Chromosome:1	present	GCF_903815275.1-RS_2026_03_31	2026-03-31	3729	3591
+GCA_903815275.1	SAMEA6863324	gca_identity_check	verified	1		1	4047112	Chromosome:1		Annotation submitted by UNIVERSIDAD COMPLUTENSE DE MADRID	2022-01-10		
+GCF_903815225.1	SAMEA6863325	primary	verified	1		1	6126880	Chromosome:1	present	GCF_903815225.1-RS_2025_03_09	2025-03-09	5515	5419
+GCA_903815225.1	SAMEA6863325	gca_identity_check	verified	1		1	6126880	Chromosome:1		Annotation submitted by UNIVERSIDAD COMPLUTENSE DE MADRID	2022-01-10		
+GCF_903684545.1	SAMEA6863356	primary	verified	1		168	4010031	Chromosome:168	present	GCF_903684545.1-RS_2026_04_02	2026-04-02	3757	3668
+GCA_903684545.1	SAMEA6863356	gca_identity_check	verified	1		168	4010031	Chromosome:168		Annotation submitted by UNIVERSIDAD COMPLUTENSE DE MADRID	2022-02-17		
+GCF_000263795.2	SAMN02471431	primary	verified	1		1	5232477	Chromosome:1	present	GCF_000263795.2-RS_2025_08_25	2025-08-25	5044	4927
+GCA_000263795.2	SAMN02471431	gca_identity_check	verified	1		1	5232477	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2016-09-22		
+GCF_001593665.2	SAMN04157986	primary	verified	1		2	4899546	Chromosome:1;Plasmid:1	present	GCF_001593665.2-RS_2026_07_01	2026-07-01	4441	4285
+GCA_001593665.2	SAMN04157986	gca_identity_check	verified	1		2	4899546	Chromosome:1;Plasmid:1		Annotation submitted by Faculty of Agriculture, Food and Environment, The Hebrew University of Jerusalem	2019-06-05		
+GCF_001714725.1	SAMN04909706	primary	verified	1		1	4574859	Chromosome:1	present	GCF_001714725.1-RS_2025_08_25	2025-08-25	4119	3964
+GCA_001714725.1	SAMN04909706	gca_identity_check	verified	1		1	4574859	Chromosome:1		Annotation submitted by Los Alamos National Laboratory	2016-08-26		
+GCF_001713375.1	SAMN04909718	primary	verified	1		1	4674684	Chromosome:1	present	GCF_001713375.1-RS_2025_08_25	2025-08-25	4400	4337
+GCA_001713375.1	SAMN04909718	gca_identity_check	verified	1		1	4674684	Chromosome:1		Annotation submitted by Los Alamos National Laboratory	2016-08-25		
+GCF_900215545.1	SAMN05216519	primary	verified	1		2	6440652	Chromosome:2	present	GCF_900215545.1-RS_2026_05_23	2026-05-23	5806	5756
+GCA_900215545.1	SAMN05216519	gca_identity_check	verified	1		2	6440652	Chromosome:2		Annotation submitted by DOE - JOINT GENOME INSTITUTE	2017-10-29		
+GCF_006716905.1	SAMN05443405	primary	verified	1		6	4651394	Chromosome:6	present	GCF_006716905.1-RS_2026_03_31	2026-03-31	4350	4046
+GCA_006716905.1	SAMN05443405	gca_identity_check	verified	1		6	4651394	Chromosome:6		Annotation submitted by DOE Joint Genome Institute	2019-07-08		
+GCF_900215425.1	SAMN05518800	primary	verified	1		2	7549133	Chromosome:2	present	GCF_900215425.1-RS_2024_09_07	2024-09-07	7050	6943
+GCA_900215425.1	SAMN05518800	gca_identity_check	verified	1		2	7549133	Chromosome:2		Annotation submitted by DOE - JOINT GENOME INSTITUTE	2017-10-18		
+GCF_003029685.1	SAMN05714655	primary	verified	1		1	5751886	Chromosome:1	present	GCF_003029685.1-RS_2026_07_01	2026-07-01	5195	4944
+GCA_003029685.1	SAMN05714655	gca_identity_check	verified	1		1	5751886	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2018-03-22		
+GCA_003029725.1	SAMN05714662	primary	verified	1		1	5593946	Chromosome:1	present	NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2018-03-22	4910	4300
+GCF_001753225.1	SAMN05828192	primary	verified	1		1	7195716	Chromosome:1	present	GCF_001753225.1-RS_2025_03_05	2025-03-05	6678	6499
+GCA_001753225.1	SAMN05828192	gca_identity_check	verified	1		1	7195716	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2016-09-28		
+GCF_002056725.1	SAMN06562982	primary	verified	1		1	3547915	Chromosome:1	present	GCF_002056725.1-RS_2026_03_30	2026-03-30	3287	3195
+GCA_002056725.1	SAMN06562982	gca_identity_check	verified	1		1	3547915	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2017-03-14		
+GCF_002554425.1	SAMN07312438	primary	verified	1		1	4710225	Chromosome:1	present	GCF_002554425.1-RS_2026_08_19	2026-08-19	4170	4101
+GCA_002554425.1	SAMN07312438	gca_identity_check	verified	1		1	4710225	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2017-10-11		
+GCF_002754475.1	SAMN07626132	primary	verified	1		3	4706642	Chromosome:3	present	GCF_002754475.1-RS_2024_08_14	2024-08-14	4226	4132
+GCA_002754475.1	SAMN07626132	gca_identity_check	verified	1		3	4706642	Chromosome:3		Annotation submitted by DOE Joint Genome Institute	2017-11-03		
+GCF_002749705.1	SAMN07626133	primary	verified	1		2	5073023	Chromosome:2	present	GCF_002749705.1-RS_2024_08_14	2024-08-14	4485	4422
+GCA_002749705.1	SAMN07626133	gca_identity_check	verified	1		2	5073023	Chromosome:2		Annotation submitted by DOE Joint Genome Institute	2017-11-03		
+GCF_002846435.1	SAMN07626134	primary	verified	1		1	5044331	Chromosome:1	present	GCF_002846435.1-RS_2024_08_14	2024-08-14	4562	4513
+GCA_002846435.1	SAMN07626134	gca_identity_check	verified	1		1	5044331	Chromosome:1		Annotation submitted by DOE Joint Genome Institute	2017-12-21		
+GCF_002754175.1	SAMN07626141	primary	verified	1		1	5044351	Chromosome:1	present	GCF_002754175.1-RS_2024_08_13	2024-08-13	4561	4523
+GCA_002754175.1	SAMN07626141	gca_identity_check	verified	1		1	5044351	Chromosome:1		Annotation submitted by DOE Joint Genome Institute	2017-11-03		
+GCF_002754375.1	SAMN07626145	primary	verified	1		1	6642361	Chromosome:1	present	GCF_002754375.1-RS_2025_08_18	2025-08-18	6075	6041
+GCA_002754375.1	SAMN07626145	gca_identity_check	verified	1		1	6642361	Chromosome:1		Annotation submitted by DOE Joint Genome Institute	2017-11-03		
+GCF_002754395.1	SAMN07626146	primary	verified	1		1	6379696	Chromosome:1	present	GCF_002754395.1-RS_2025_08_18	2025-08-18	5705	5533
+GCA_002754395.1	SAMN07626146	gca_identity_check	verified	1		1	6379696	Chromosome:1		Annotation submitted by DOE Joint Genome Institute	2017-11-03		
+GCF_002754495.1	SAMN07626150	primary	verified	1		1	5014901	Chromosome:1	present	GCF_002754495.1-RS_2024_08_13	2024-08-13	4454	4411
+GCA_002754495.1	SAMN07626150	gca_identity_check	verified	1		1	5014901	Chromosome:1		Annotation submitted by DOE Joint Genome Institute	2017-11-03		
+GCF_002797445.1	SAMN07626151	primary	verified	1		1	4966379	Chromosome:1	present	GCF_002797445.1-RS_2024_08_14	2024-08-14	4516	4394
+GCA_002797445.1	SAMN07626151	gca_identity_check	verified	1		1	4966379	Chromosome:1		Annotation submitted by DOE Joint Genome Institute	2017-11-28		
+GCF_003019815.1	SAMN08473591	primary	verified	1		2	7015237	Chromosome:2	present	GCF_003019815.1-RS_2025_08_24	2025-08-24	6514	6480
+GCA_003019815.1	SAMN08473591	gca_identity_check	verified	1		2	7015237	Chromosome:2		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2018-03-16		
+GCF_003096435.1	SAMN08775333	primary	verified	1		1	5354626	Chromosome:1	present	GCF_003096435.1-RS_2026_07_01	2026-07-01	4976	4759
+GCA_003096435.1	SAMN08775333	gca_identity_check	verified	1		1	5354626	Chromosome:1		Annotation submitted by DOE Joint Genome Institute	2018-05-07		
+GCF_003387255.1	SAMN08775340	primary	verified	1		1	5352726	Chromosome:1	present	GCF_003387255.1-RS_2026_07_01	2026-07-01	4963	4748
+GCA_003387255.1	SAMN08775340	gca_identity_check	verified	1		1	5352726	Chromosome:1		Annotation submitted by DOE Joint Genome Institute	2018-08-14		
+GCF_003664145.1	SAMN08775346	primary	verified	1		1	5349448	Chromosome:1	present	GCF_003664145.1-RS_2026_07_01	2026-07-01	4964	4751
+GCA_003664145.1	SAMN08775346	gca_identity_check	verified	1		1	5349448	Chromosome:1		Annotation submitted by DOE Joint Genome Institute	2018-10-15		
+GCF_003058055.1	SAMN08777389	primary	verified	1		2	5111855	Chromosome:2	present	GCF_003058055.1-RS_2024_08_14	2024-08-14	4702	4654
+GCA_003058055.1	SAMN08777389	gca_identity_check	verified	1		2	5111855	Chromosome:2		Annotation submitted by DOE Joint Genome Institute	2018-04-20		
+GCF_003688355.1	SAMN08777390	primary	verified	1		2	5359997	Chromosome:2	present	GCF_003688355.1-RS_2024_08_14	2024-08-14	4871	4817
+GCA_003688355.1	SAMN08777390	gca_identity_check	verified	1		2	5359997	Chromosome:2		Annotation submitted by DOE Joint Genome Institute	2018-10-25		
+GCF_003633835.1	SAMN08777898	primary	verified	1		1	5415492	Chromosome:1	present	GCF_003633835.1-RS_2024_08_14	2024-08-14	4925	4878
+GCA_003633835.1	SAMN08777898	gca_identity_check	verified	1		1	5415492	Chromosome:1		Annotation submitted by DOE Joint Genome Institute	2018-10-11		
+GCF_003634645.1	SAMN08777899	primary	verified	1		2	5509787	Chromosome:2	present	GCF_003634645.1-RS_2024_08_15	2024-08-15	5020	4962
+GCA_003634645.1	SAMN08777899	gca_identity_check	verified	1		2	5509787	Chromosome:2		Annotation submitted by DOE Joint Genome Institute	2018-10-11		
+GCF_003096455.1	SAMN08777900	primary	verified	1		2	5091440	Chromosome:2	present	GCF_003096455.1-RS_2024_05_29	2024-05-29	4616	4569
+GCA_003096455.1	SAMN08777900	gca_identity_check	verified	1		2	5091440	Chromosome:2		Annotation submitted by DOE Joint Genome Institute	2018-05-07		
+GCF_003663825.1	SAMN08777902	primary	verified	1		1	4884083	Chromosome:1	present	GCF_003663825.1-RS_2024_08_15	2024-08-15	4246	4190
+GCA_003663825.1	SAMN08777902	gca_identity_check	verified	1		1	4884083	Chromosome:1		Annotation submitted by DOE Joint Genome Institute	2018-10-15		
+GCF_003387115.1	SAMN08777904	primary	verified	1		1	3966900	Chromosome:1	present	GCF_003387115.1-RS_2024_08_15	2024-08-15	3654	3576
+GCA_003387115.1	SAMN08777904	gca_identity_check	verified	1		1	3966900	Chromosome:1		Annotation submitted by DOE Joint Genome Institute	2018-08-14		
+GCF_003096555.1	SAMN08777906	primary	verified	1		1	3966897	Chromosome:1	present	GCF_003096555.1-RS_2024_05_29	2024-05-29	3646	3574
+GCA_003096555.1	SAMN08777906	gca_identity_check	verified	1		1	3966897	Chromosome:1		Annotation submitted by DOE Joint Genome Institute	2018-05-07		
+GCF_004328645.1	SAMN09743972	primary	verified	1		1	3822345	Chromosome:1	present	GCF_004328645.1-RS_2025_06_06	2025-06-06	3532	3399
+GCA_004328645.1	SAMN09743972	gca_identity_check	verified	1		1	3822345	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2018-08-01		
+GCF_004563745.2	SAMN11265848	primary	verified	1		2	4431871	Chromosome:1;Plasmid:1	present	GCF_004563745.2-RS_2026_10_13	2026-10-13	4179	3840
+GCA_004563745.2	SAMN11265848	gca_identity_check	verified	1		2	4431871	Chromosome:1;Plasmid:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-08-06		
+GCF_006323185.2	SAMN11620948	primary	verified	1		12	7209490	Chromosome:12	present	GCF_006323185.2-RS_2024_12_27	2024-12-27	6671	6535
+GCA_006323185.2	SAMN11620948	gca_identity_check	verified	1		12	7209490	Chromosome:12		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2019-07-19		
+GCF_016027815.1	SAMN13450420	primary	verified	1		2	7274508	Chromosome:1;Plasmid:1	present	GCF_016027815.1-RS_2026_02_15	2026-02-15	6690	6546
+GCA_016027815.1	SAMN13450420	gca_identity_check	verified	1		2	7274508	Chromosome:1;Plasmid:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2020-12-07		
+GCF_016027775.1	SAMN13450421	primary	verified	1		4	7150486	Chromosome:1;Plasmid:3	present	GCF_016027775.1-RS_2026_02_07	2026-02-07	6546	6393
+GCA_016027775.1	SAMN13450421	gca_identity_check	verified	1		4	7150486	Chromosome:1;Plasmid:3		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2020-12-07		
+GCF_016027075.1	SAMN13450439	primary	verified	1		2	6708547	Chromosome:1;Plasmid:1	present	GCF_016027075.1-RS_2025_03_18	2025-03-18	6084	5952
+GCA_016027075.1	SAMN13450439	gca_identity_check	verified	1		2	6708547	Chromosome:1;Plasmid:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2020-12-07		
+GCF_016026535.1	SAMN13450469	primary	verified	1		1	6351170	Chromosome:1	present	GCF_016026535.1-RS_2026_02_14	2026-02-14	5664	5626
+GCA_016026535.1	SAMN13450469	gca_identity_check	verified	1		1	6351170	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2020-12-07		
+GCF_009755665.1	SAMN13494298	primary	verified	1		1	5574400	Chromosome:1	present	GCF_009755665.1-RS_2025_06_06	2025-06-06	5182	5148
+GCA_009755665.1	SAMN13494298	gca_identity_check	verified	1		1	5574400	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2019-12-10		
+GCF_013334205.1	SAMN15097745	primary	verified	1		1	3820375	Chromosome:1	present	GCF_013334205.1-RS_2024_08_24	2024-08-24	3664	3622
+GCA_013334205.1	SAMN15097745	gca_identity_check	verified	1		1	3820375	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2020-06-05		
+GCF_029892315.1	SAMN15738716	primary	verified	1		4	4511363	Chromosome:4	present	GCF_029892315.1-RS_2024_06_03	2024-06-03	4257	4051
+GCA_029892315.1	SAMN15738716	gca_identity_check	verified	1		4	4511363	Chromosome:4		Annotation submitted by DOE Joint Genome Institute	2023-04-28		
+GCF_017976505.1	SAMN15853741	primary	verified	1		1	3698404	Chromosome:1	present	GCF_017976505.1-RS_2026_03_31	2026-03-31	3423	3344
+GCA_017976505.1	SAMN15853741	gca_identity_check	verified	1		1	3698404	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2020-08-20		
+GCF_014843395.1	SAMN16231215	primary	verified	1		1	6870625	Chromosome:1	present	GCF_014843395.1-RS_2025_01_25	2025-01-25	6356	6289
+GCA_014843395.1	SAMN16231215	gca_identity_check	verified	1		1	6870625	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2020-09-28		
+GCF_016127415.1	SAMN16357166	primary	verified	1		1	6796677	Chromosome:1	present	GCF_016127415.1-RS_2026_02_17	2026-02-17	6100	6058
+GCA_016127415.1	SAMN16357166	gca_identity_check	verified	1		1	6796677	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2020-12-09		
+GCF_016806145.1	SAMN16392950	primary	verified	1		3	9439028	Chromosome:1;Plasmid:2	present	GCF_016806145.1-RS_2026_03_24	2026-03-24	8753	8632
+GCA_016806145.1	SAMN16392950	gca_identity_check	verified	1		3	9439028	Chromosome:1;Plasmid:2		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2020-10-21		
+GCF_018064205.1	SAMN18676188	primary	verified	1		1	3969186	Chromosome:1	present	GCF_018064205.1-RS_2026_03_31	2026-03-31	3626	3484
+GCA_018064205.1	SAMN18676188	gca_identity_check	verified	1		1	3969186	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2021-04-09		
+GCF_020510445.1	SAMN19030610	primary	verified	1		3	5284038	Chromosome:3	present	GCF_020510445.1-RS_2025_01_30	2025-01-30	4994	4947
+GCA_020510445.1	SAMN19030610	gca_identity_check	verified	1		3	5284038	Chromosome:3		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2021-05-11		
+GCA_024703815.1	SAMN23078433	primary	verified	1		1	6412550	Chromosome:1	present	NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2021-11-22	6821	4396
+GCA_024703835.1	SAMN23078434	primary	verified	1		1	5425429	Chromosome:1	present	NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2021-11-22	5627	3623
+GCA_024703855.1	SAMN23078435	primary	verified	1		1	5984015	Chromosome:1	present	NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2021-11-22	6240	4040
+GCA_024703875.1	SAMN23078436	primary	verified	1		2	6771957	Chromosome:1;Plasmid:1	present	NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2021-11-22	7129	4666
+GCF_022117555.1	SAMN23567018	primary	verified	1		5	6502812	Chromosome:5	present	GCF_022117555.1-RS_2026_02_05	2026-02-05	5816	5782
+GCA_022117555.1	SAMN23567018	gca_identity_check	verified	1		5	6502812	Chromosome:5		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2021-12-08		
+GCF_022393415.1	SAMN25942280	primary	verified	1		3	6381306	Chromosome:3	present	GCF_022393415.1-RS_2026_04_07	2026-04-07	5642	5604
+GCA_022393415.1	SAMN25942280	gca_identity_check	verified	1		3	6381306	Chromosome:3		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2022-02-16		
+GCF_022387135.1	SAMN25942281	primary	verified	1		1	5182684	Chromosome:1	present	GCF_022387135.1-RS_2025_09_30	2025-09-30	4624	4568
+GCA_022387135.1	SAMN25942281	gca_identity_check	verified	1		1	5182684	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2022-02-18		
+GCF_023195515.1	SAMN27609613	primary	verified	1		2	5974195	Chromosome:2	present	GCF_023195515.1-RS_2025_09_30	2025-09-30	5722	5373
+GCA_023195515.2	SAMN27609613	gca_identity_check	verified	1		2	5974195	Chromosome:2		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2022-08-18		
+GCA_028473625.1	SAMN28084389	primary	verified	1		1	5271617	Chromosome:1	present	NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2022-05-11	4548	4451
+GCF_028473605.1	SAMN28084390	primary	verified	1		1	5414205	Chromosome:1	present	GCF_028473605.1-RS_2025_08_25	2025-08-25	4891	4796
+GCA_028473605.1	SAMN28084390	gca_identity_check	verified	1		1	5414205	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2022-05-11		
+GCA_028473585.1	SAMN28084391	primary	verified	1		1	5593754	Chromosome:1	present	NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2022-05-11	4965	4901
+GCA_028069655.1	SAMN28084392	primary	verified	1		4	5319379	Chromosome:4	present	NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2022-05-11	4692	4623
+GCA_028473465.1	SAMN28084393	primary	verified	1		1	5586262	Chromosome:1	present	NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2022-05-11	4956	4887
+GCF_028473645.1	SAMN28084394	primary	verified	1		2	5708010	Chromosome:1;Plasmid:1	present	GCF_028473645.1-RS_2025_08_25	2025-08-25	5306	4954
+GCA_028473645.1	SAMN28084394	gca_identity_check	verified	1		2	5708010	Chromosome:1;Plasmid:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2022-05-11		
+GCF_029893635.1	SAMN28094724	primary	verified	1		2	5535784	Chromosome:2	present	GCF_029893635.1-RS_2024_06_03	2024-06-03	5158	5009
+GCA_029893635.1	SAMN28094724	gca_identity_check	verified	1		2	5535784	Chromosome:2		Annotation submitted by DOE Joint Genome Institute	2023-04-28		
+GCA_024372625.1	SAMN29007424	primary	verified	1		5	4655332	Chromosome:1;Plasmid:4	present	NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2022-06-16	4264	4202
+GCF_029843545.1	SAMN30525180	primary	verified	1		2	4104615	Chromosome:2	present	GCF_029843545.1-RS_2026_04_19	2026-04-19	3830	3637
+GCA_029843545.1	SAMN30525180	gca_identity_check	verified	1		2	4104615	Chromosome:2		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2022-09-14		
+GCF_029841605.1	SAMN30525278	primary	verified	1		3	4136754	Chromosome:3	present	GCF_029841605.1-RS_2026_04_19	2026-04-19	3897	3735
+GCA_029841605.1	SAMN30525278	gca_identity_check	verified	1		3	4136754	Chromosome:3		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2022-09-14		
+GCF_029814915.1	SAMN30525383	primary	verified	1		1	6812477	Chromosome:1	present	GCF_029814915.1-RS_2026_04_17	2026-04-17	6154	6082
+GCA_029814915.1	SAMN30525383	gca_identity_check	verified	1		1	6812477	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2022-09-15		
+GCF_025309455.1	SAMN30697778	primary	verified	1		1	5111300	Chromosome:1	present	GCF_025309455.1-RS_2025_12_28	2025-12-28	4558	4506
+GCA_025309455.1	SAMN30697778	gca_identity_check	verified	1		1	5111300	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2022-09-14		
+GCF_033096485.1	SAMN31258398	primary	verified	1		1	6685457	Chromosome:1	present	GCF_033096485.1-RS_2025_01_15	2025-01-15	6061	5982
+GCA_033096485.1	SAMN31258398	gca_identity_check	verified	1		1	6685457	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2022-10-25		
+GCF_028596105.1	SAMN33025486	primary	verified	1		3	4730769	Chromosome:1;Plasmid:2	present	GCF_028596105.1-RS_2026_03_23	2026-03-23	4419	4190
+GCA_028596105.1	SAMN33025486	gca_identity_check	verified	1		3	4730769	Chromosome:1;Plasmid:2		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2023-02-06		
+GCF_031453675.1	SAMN34252313	primary	verified	1		1	4571377	Chromosome:1	present	GCF_031453675.1-RS_2026_03_11	2026-03-11	4091	4024
+GCA_031453675.1	SAMN34252313	gca_identity_check	verified	1		1	4571377	Chromosome:1		Annotation submitted by DOE Joint Genome Institute	2023-09-13		
+GCF_030815975.1	SAMN34299902	primary	verified	1		2	6086495	Chromosome:2	present	GCF_030815975.1-RS_2026_08_21	2026-08-21	5712	5590
+GCA_030815975.1	SAMN34299902	gca_identity_check	verified	1		2	6086495	Chromosome:2		Annotation submitted by DOE Joint Genome Institute	2023-08-18		
+GCF_031453525.1	SAMN34299950	primary	verified	1		1	5002431	Chromosome:1	present	GCF_031453525.1-RS_2026_03_11	2026-03-11	4525	4425
+GCA_031453525.1	SAMN34299950	gca_identity_check	verified	1		1	5002431	Chromosome:1		Annotation submitted by DOE Joint Genome Institute	2023-09-13		
+GCF_050435205.1	SAMN34353142	primary	verified	1		1	7358892	Chromosome:1	present	GCF_050435205.1-RS_2025_05_20	2025-05-20	6778	6643
+GCA_050435205.1	SAMN34353142	gca_identity_check	verified	1		1	7358892	Chromosome:1		Annotation submitted by DOE Joint Genome Institute	2025-05-19		
+GCF_030815625.1	SAMN35085406	primary	verified	1		1	7065066	Chromosome:1	present	GCF_030815625.1-RS_2024_09_06	2024-09-06	6499	6402
+GCA_030815625.1	SAMN35085406	gca_identity_check	verified	1		1	7065066	Chromosome:1		Annotation submitted by DOE Joint Genome Institute	2023-08-18		
+GCF_034554595.1	SAMN37458465	primary	verified	1		1	6922195	Chromosome:1	present	GCF_034554595.1-RS_2025_12_22	2025-12-22	6316	6209
+GCA_034554595.1	SAMN37458465	gca_identity_check	verified	1		1	6922195	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2023-09-25		
+GCF_033807855.1	SAMN37751790	primary	verified	1		2	7079721	Chromosome:1;Plasmid:1	present	GCF_033807855.1-RS_2025_12_04	2025-12-04	6608	6568
+GCA_033807855.1	SAMN37751790	gca_identity_check	verified	1		2	7079721	Chromosome:1;Plasmid:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2023-11-13		
+GCF_033807875.1	SAMN37751820	primary	verified	1		2	6921156	Chromosome:1;Plasmid:1	present	GCF_033807875.1-RS_2025_12_04	2025-12-04	6542	6469
+GCA_033807875.1	SAMN37751820	gca_identity_check	verified	1		2	6921156	Chromosome:1;Plasmid:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2023-11-13		
+GCF_033802765.1	SAMN37752145	primary	verified	1		2	7402177	Chromosome:1;Plasmid:1	present	GCF_033802765.1-RS_2024_09_08	2024-09-08	6901	6833
+GCA_033802765.1	SAMN37752145	gca_identity_check	verified	1		2	7402177	Chromosome:1;Plasmid:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2023-11-13		
+GCF_034424235.1	SAMN38562701	primary	verified	1		2	5852546	Chromosome:1;Plasmid:1	present	GCF_034424235.1-RS_2025_03_10	2025-03-10	5275	5128
+GCA_034424235.1	SAMN38562701	gca_identity_check	verified	1		2	5852546	Chromosome:1;Plasmid:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2023-12-08		
+GCF_039849035.1	SAMN41424278	primary	verified	1		1	3532569	Chromosome:1	present	GCF_039849035.1-RS_2025_05_27	2025-05-27	3087	3005
+GCA_039849035.1	SAMN41424278	gca_identity_check	verified	1		1	3532569	Chromosome:1		Annotation submitted by Saskatchewan Health Authority	2024-05-16		
+GCF_040546685.1	SAMN41513636	primary	verified	1		2	6091857	Chromosome:2	present	GCF_040546685.1-RS_2026_08_20	2026-08-20	5847	5727
+GCA_040546685.1	SAMN41513636	gca_identity_check	verified	1		2	6091857	Chromosome:2		Annotation submitted by DOE Joint Genome Institute	2024-07-08		
+GCF_042466645.1	SAMN41832008	primary	verified	1		3	6007660	Chromosome:1;Plasmid:2	present	GCF_042466645.1-RS_2024_10_02	2024-10-02	5810	5628
+GCA_042466645.1	SAMN41832008	gca_identity_check	verified	1		3	6007660	Chromosome:1;Plasmid:2		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2024-07-05		
+GCF_040822085.1	SAMN42395758	primary	verified	1		1	4778649	Chromosome:1	present	GCF_040822085.1-RS_2024_07_24	2024-07-24	4377	4361
+GCA_040822085.1	SAMN42395758	gca_identity_check	verified	1		1	4778649	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2024-07-17		
+GCF_057418825.1	SAMN42552694	primary	verified	1		1	6511497	Chromosome:1	present	GCF_057418825.1-RS_2026_05_13	2026-05-13	5787	5748
+GCA_057418825.1	SAMN42552694	gca_identity_check	verified	1		1	6511497	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2024-07-22		
+GCF_057457745.1	SAMN42749333	primary	verified	1		1	5508887	Chromosome:1	present	GCF_057457745.1-RS_2026_05_14	2026-05-14	4965	4911
+GCA_057457745.1	SAMN42749333	gca_identity_check	verified	1		1	5508887	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2024-07-24		
+GCA_051414805.1	SAMN43083063	primary	verified	1		1	5602785	Chromosome:1	present	Annotation submitted by Universite de Sherbrooke	2024-07-30	5296	5240
+GCF_059491925.1	SAMN43145729	primary	verified	1		1	6474357	Chromosome:1	present	GCF_059491925.1-RS_2026_07_18	2026-07-18	6036	5940
+GCA_059491925.1	SAMN43145729	gca_identity_check	verified	1		1	6474357	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2024-08-28		
+GCF_047325085.1	SAMN43145737	primary	verified	1		2	8601567	Chromosome:2	present	GCF_047325085.1-RS_2025_01_31	2025-01-31	7939	7871
+GCA_047325085.1	SAMN43145737	gca_identity_check	verified	1		2	8601567	Chromosome:2		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2024-08-28		
+GCF_059491885.1	SAMN43145742	primary	verified	1		1	6127058	Chromosome:1	present	GCF_059491885.1-RS_2026_07_18	2026-07-18	5719	5641
+GCA_059491885.1	SAMN43145742	gca_identity_check	verified	1		1	6127058	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2024-08-28		
+GCF_059491565.1	SAMN43145748	primary	verified	1		1	5215286	Chromosome:1	present	GCF_059491565.1-RS_2026_07_18	2026-07-18	4845	4831
+GCA_059491565.1	SAMN43145748	gca_identity_check	verified	1		1	5215286	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2024-08-28		
+GCF_059491555.1	SAMN43145749	primary	verified	1		1	6417738	Chromosome:1	present	GCF_059491555.1-RS_2026_07_18	2026-07-18	5988	5877
+GCA_059491555.1	SAMN43145749	gca_identity_check	verified	1		1	6417738	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2024-08-28		
+GCF_042698915.1	SAMN43526776	primary	verified	1		1	6938162	Chromosome:1	present	GCF_042698915.1-RS_2024_10_08	2024-10-08	6468	6108
+GCA_042698915.1	SAMN43526776	gca_identity_check	verified	1		1	6938162	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2024-09-26		
+GCF_044056785.1	SAMN43526777	primary	verified	1		3	9069036	Chromosome:2;Plasmid:1	present	GCF_044056785.1-RS_2024_10_30	2024-10-30	8709	7617
+GCA_044056785.1	SAMN43526777	gca_identity_check	verified	1		3	9069036	Chromosome:2;Plasmid:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2024-10-22		
+GCF_044056765.1	SAMN43526780	primary	verified	1		2	5003996	Chromosome:1;Plasmid:1	present	GCF_044056765.1-RS_2024_10_30	2024-10-30	4547	4376
+GCA_044056765.1	SAMN43526780	gca_identity_check	verified	1		2	5003996	Chromosome:1;Plasmid:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2024-10-22		
+GCF_044452385.1	SAMN43526786	primary	verified	1		5	4858718	Chromosome:5	present	GCF_044452385.1-RS_2024_11_05	2024-11-05	4694	4416
+GCA_044452385.1	SAMN43526786	gca_identity_check	verified	1		5	4858718	Chromosome:5		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2024-10-22		
+GCF_042697355.1	SAMN43526787	primary	verified	1		1	5322315	Chromosome:1	present	GCF_042697355.1-RS_2024_10_08	2024-10-08	5382	4472
+GCA_042697355.1	SAMN43526787	gca_identity_check	verified	1		1	5322315	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2024-10-01		
+GCF_042696965.1	SAMN43526788	primary	verified	1		1	5322032	Chromosome:1	present	GCF_042696965.1-RS_2024_10_08	2024-10-08	5303	4568
+GCA_042696965.1	SAMN43526788	gca_identity_check	verified	1		1	5322032	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2024-09-26		
+GCF_044055375.1	SAMN43526803	primary	verified	1		2	7299217	Chromosome:1;Plasmid:1	present	GCF_044055375.1-RS_2024_10_30	2024-10-30	6847	6522
+GCA_044055375.1	SAMN43526803	gca_identity_check	verified	1		2	7299217	Chromosome:1;Plasmid:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2024-10-22		
+GCF_049913215.1	SAMN47200781	primary	verified	1		1	7018904	Chromosome:1	present	GCF_049913215.1-RS_2025_04_26	2025-04-26	6540	6514
+GCA_049913215.1	SAMN47200781	gca_identity_check	verified	1		1	7018904	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-03-10		
+GCF_049913225.1	SAMN47200782	primary	verified	1		1	5486923	Chromosome:1	present	GCF_049913225.1-RS_2025_04_26	2025-04-26	4975	4918
+GCA_049913225.1	SAMN47200782	gca_identity_check	verified	1		1	5486923	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-03-10		
+GCF_050627005.1	SAMN47300670	primary	verified	1		3	5809211	Chromosome:1;Plasmid:2	present	GCF_050627005.1-RS_2025_05_31	2025-05-31	5296	5243
+GCA_050627005.1	SAMN47300670	gca_identity_check	verified	1		3	5809211	Chromosome:1;Plasmid:2					
+GCF_050626995.1	SAMN47300672	primary	verified	1		1	4557853	Chromosome:1	present	GCF_050626995.1-RS_2025_05_31	2025-05-31	4275	4251
+GCA_050626995.1	SAMN47300672	gca_identity_check	verified	1		1	4557853	Chromosome:1					
+GCF_050626955.1	SAMN47300673	primary	verified	1		3	5806590	Chromosome:1;Plasmid:2	present	GCF_050626955.1-RS_2025_05_31	2025-05-31	5292	5238
+GCA_050626955.1	SAMN47300673	gca_identity_check	verified	1		3	5806590	Chromosome:1;Plasmid:2					
+GCF_050626895.1	SAMN47300681	primary	verified	1		2	6299093	Chromosome:2	present	GCF_050626895.1-RS_2025_05_31	2025-05-31	5806	5768
+GCA_050626895.1	SAMN47300681	gca_identity_check	verified	1		2	6299093	Chromosome:2					
+GCF_050627025.1	SAMN47300695	primary	verified	1		2	6043317	Chromosome:2	present	GCF_050627025.1-RS_2025_05_31	2025-05-31	5670	5606
+GCA_050627025.1	SAMN47300695	gca_identity_check	verified	1		2	6043317	Chromosome:2					
+GCF_051992195.1	SAMN48135827	primary	verified	1		2	7705554	Chromosome:1;Plasmid:1	present	GCF_051992195.1-RS_2025_08_14	2025-08-14	7188	7070
+GCA_051992195.1	SAMN48135827	gca_identity_check	verified	1		2	7705554	Chromosome:1;Plasmid:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-08-07		
+GCF_057748255.1	SAMN48330266	primary	verified	1		2	5166323	Chromosome:1;Plasmid:1	present	GCF_057748255.1-RS_2026_05_26	2026-05-26	4616	4584
+GCA_057748255.1	SAMN48330266	gca_identity_check	verified	1		2	5166323	Chromosome:1;Plasmid:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2026-05-20		
+GCF_059084005.1	SAMN49042133	primary	verified	1		1	6796688	Chromosome:1	present	GCF_059084005.1-RS_2026_07_09	2026-07-09	6098	6060
+GCA_059084005.1	SAMN49042133	gca_identity_check	verified	1		1	6796688	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-06-25		
+GCF_060373955.1	SAMN51281014	primary	verified	1		5	6308557	Chromosome:1;Plasmid:4	present	GCF_060373955.1-RS_2026_08_25	2026-08-25	6060	5901
+GCA_060373955.1	SAMN51281014	gca_identity_check	verified	1		5	6308557	Chromosome:1;Plasmid:4		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-09-17		
+GCF_060420765.1	SAMN51281015	primary	verified	1		1	5781929	Chromosome:1	present	GCF_060420765.1-RS_2026_08_26	2026-08-26	5496	5459
+GCA_060420765.1	SAMN51281015	gca_identity_check	verified	1		1	5781929	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-09-18		
+GCF_060373945.1	SAMN51281016	primary	verified	1		4	4816072	Chromosome:1;Plasmid:3	present	GCF_060373945.1-RS_2026_08_25	2026-08-25	4559	4511
+GCA_060373945.1	SAMN51281016	gca_identity_check	verified	1		4	4816072	Chromosome:1;Plasmid:3		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-09-17		
+GCF_060373885.1	SAMN51281017	primary	verified	1		2	7371131	Chromosome:1;Plasmid:1	present	GCF_060373885.1-RS_2026_08_25	2026-08-25	6858	6742
+GCA_060373885.1	SAMN51281017	gca_identity_check	verified	1		2	7371131	Chromosome:1;Plasmid:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-09-17		
+GCF_060373865.1	SAMN51281018	primary	verified	1		2	6063484	Chromosome:1;Plasmid:1	present	GCF_060373865.1-RS_2026_08_25	2026-08-25	5592	5532
+GCA_060373865.1	SAMN51281018	gca_identity_check	verified	1		2	6063484	Chromosome:1;Plasmid:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-09-17		
+GCF_060373785.1	SAMN51281019	primary	verified	1		2	7371159	Chromosome:1;Plasmid:1	present	GCF_060373785.1-RS_2026_08_25	2026-08-25	6853	6774
+GCA_060373785.1	SAMN51281019	gca_identity_check	verified	1		2	7371159	Chromosome:1;Plasmid:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-09-17		
+GCF_060421335.1	SAMN51281020	primary	verified	1		1	7155498	Chromosome:1	present	GCF_060421335.1-RS_2026_08_26	2026-08-26	6615	6519
+GCA_060421335.1	SAMN51281020	gca_identity_check	verified	1		1	7155498	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-09-18		
+GCF_060373725.1	SAMN51281021	primary	verified	1		2	6929830	Chromosome:1;Plasmid:1	present	GCF_060373725.1-RS_2026_08_25	2026-08-25	6506	6453
+GCA_060373725.1	SAMN51281021	gca_identity_check	verified	1		2	6929830	Chromosome:1;Plasmid:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-09-17		
+GCF_060373705.1	SAMN51281022	primary	verified	1		2	7154003	Chromosome:1;Plasmid:1	present	GCF_060373705.1-RS_2026_08_25	2026-08-25	6634	6567
+GCA_060373705.1	SAMN51281022	gca_identity_check	verified	1		2	7154003	Chromosome:1;Plasmid:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-09-17		
+GCF_060373665.1	SAMN51281023	primary	verified	1		3	6939203	Chromosome:1;Plasmid:2	present	GCF_060373665.1-RS_2026_08_25	2026-08-25	6520	6451
+GCA_060373665.1	SAMN51281023	gca_identity_check	verified	1		3	6939203	Chromosome:1;Plasmid:2		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-09-17		
+GCF_060373585.1	SAMN51281024	primary	verified	1		2	7359709	Chromosome:1;Plasmid:1	present	GCF_060373585.1-RS_2026_08_25	2026-08-25	6800	6733
+GCA_060373585.1	SAMN51281024	gca_identity_check	verified	1		2	7359709	Chromosome:1;Plasmid:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-09-17		
+GCF_060373565.1	SAMN51281025	primary	verified	1		5	13599508	Chromosome:1;Plasmid:4	present	GCF_060373565.1-RS_2026_08_26	2026-08-26	12750	12464
+GCA_060373565.1	SAMN51281025	gca_identity_check	verified	1		5	13599508	Chromosome:1;Plasmid:4		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-09-17		
+GCF_060421345.1	SAMN51281026	primary	verified	1		1	7252139	Chromosome:1	present	GCF_060421345.1-RS_2026_08_26	2026-08-26	6813	6748
+GCA_060421345.1	SAMN51281026	gca_identity_check	verified	1		1	7252139	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-09-18		
+GCF_060373485.1	SAMN51281027	primary	verified	1		2	6212027	Chromosome:1;Plasmid:1	present	GCF_060373485.1-RS_2026_08_25	2026-08-25	5807	5728
+GCA_060373485.1	SAMN51281027	gca_identity_check	verified	1		2	6212027	Chromosome:1;Plasmid:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-09-17		
+GCF_060373425.1	SAMN51281028	primary	verified	1		2	6211977	Chromosome:1;Plasmid:1	present	GCF_060373425.1-RS_2026_08_25	2026-08-25	5806	5719
+GCA_060373425.1	SAMN51281028	gca_identity_check	verified	1		2	6211977	Chromosome:1;Plasmid:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-09-17		
+GCF_060373385.1	SAMN51281029	primary	verified	1		2	6217802	Chromosome:1;Plasmid:1	present	GCF_060373385.1-RS_2026_08_25	2026-08-25	5818	5735
+GCA_060373385.1	SAMN51281029	gca_identity_check	verified	1		2	6217802	Chromosome:1;Plasmid:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-09-17		
+GCF_060421535.1	SAMN51281030	primary	verified	1		1	6208465	Chromosome:1	present	GCF_060421535.1-RS_2026_08_26	2026-08-26	5793	5742
+GCA_060421535.1	SAMN51281030	gca_identity_check	verified	1		1	6208465	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-09-18		
+GCF_060421545.1	SAMN51281031	primary	verified	1		1	6208335	Chromosome:1	present	GCF_060421545.1-RS_2026_08_26	2026-08-26	5816	5725
+GCA_060421545.1	SAMN51281031	gca_identity_check	verified	1		1	6208335	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-09-18		
+GCF_060373345.1	SAMN51281032	primary	verified	1		4	13391421	Chromosome:1;Plasmid:3	present	GCF_060373345.1-RS_2026_08_26	2026-08-26	12509	12303
+GCA_060373345.1	SAMN51281032	gca_identity_check	verified	1		4	13391421	Chromosome:1;Plasmid:3		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-09-17		
+GCF_060421895.1	SAMN51281033	primary	verified	1		1	7451878	Chromosome:1	present	GCF_060421895.1-RS_2026_08_26	2026-08-26	6929	6847
+GCA_060421895.1	SAMN51281033	gca_identity_check	verified	1		1	7451878	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-09-18		
+GCF_060373265.1	SAMN51281034	primary	verified	1		2	7081510	Chromosome:1;Plasmid:1	present	GCF_060373265.1-RS_2026_08_25	2026-08-25	6667	6608
+GCA_060373265.1	SAMN51281034	gca_identity_check	verified	1		2	7081510	Chromosome:1;Plasmid:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-09-17		
+GCF_060373275.1	SAMN51281035	primary	verified	1		2	6314046	Chromosome:1;Plasmid:1	present	GCF_060373275.1-RS_2026_08_25	2026-08-25	5724	5656
+GCA_060373275.1	SAMN51281035	gca_identity_check	verified	1		2	6314046	Chromosome:1;Plasmid:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-09-17		
+GCF_060421975.1	SAMN51281036	primary	verified	1		1	6067692	Chromosome:1	present	GCF_060421975.1-RS_2026_08_26	2026-08-26	5618	5572
+GCA_060421975.1	SAMN51281036	gca_identity_check	verified	1		1	6067692	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-09-18		
+GCF_060373185.1	SAMN51281037	primary	verified	1		2	6076964	Chromosome:1;Plasmid:1	present	GCF_060373185.1-RS_2026_08_25	2026-08-25	5627	5514
+GCA_060373185.1	SAMN51281037	gca_identity_check	verified	1		2	6076964	Chromosome:1;Plasmid:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-09-17		
+GCF_060426025.1	SAMN51281038	primary	verified	1		5	8275305	Chromosome:1;Plasmid:4	present	GCF_060426025.1-RS_2026_08_26	2026-08-26	8063	7788
+GCA_060426025.1	SAMN51281038	gca_identity_check	verified	1		5	8275305	Chromosome:1;Plasmid:4		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-09-17		
+GCF_060373095.1	SAMN51281039	primary	verified	1		5	8275170	Chromosome:1;Plasmid:4	present	GCF_060373095.1-RS_2026_08_25	2026-08-25	8078	7773
+GCA_060373095.1	SAMN51281039	gca_identity_check	verified	1		5	8275170	Chromosome:1;Plasmid:4		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-09-17		
+GCF_060373085.1	SAMN51281040	primary	verified	1		3	8847326	Chromosome:1;Plasmid:2	present	GCF_060373085.1-RS_2026_08_25	2026-08-25	8157	8026
+GCA_060373085.1	SAMN51281040	gca_identity_check	verified	1		3	8847326	Chromosome:1;Plasmid:2		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-09-17		
+GCF_060373065.1	SAMN51281041	primary	verified	1		3	8847328	Chromosome:1;Plasmid:2	present	GCF_060373065.1-RS_2026_08_25	2026-08-25	8160	8030
+GCA_060373065.1	SAMN51281041	gca_identity_check	verified	1		3	8847328	Chromosome:1;Plasmid:2		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-09-17		
+GCF_060372945.1	SAMN51281042	primary	verified	1		3	8847327	Chromosome:1;Plasmid:2	present	GCF_060372945.1-RS_2026_08_25	2026-08-25	8162	8032
+GCA_060372945.1	SAMN51281042	gca_identity_check	verified	1		3	8847327	Chromosome:1;Plasmid:2		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-09-17		
+GCF_060372925.1	SAMN51281043	primary	verified	1		4	8755303	Chromosome:1;Plasmid:3	present	GCF_060372925.1-RS_2026_08_25	2026-08-25	8096	7980
+GCA_060372925.1	SAMN51281043	gca_identity_check	verified	1		4	8755303	Chromosome:1;Plasmid:3		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-09-17		
+GCF_060372905.1	SAMN51281044	primary	verified	1		3	8751922	Chromosome:1;Plasmid:2	present	GCF_060372905.1-RS_2026_08_25	2026-08-25	8090	7996
+GCA_060372905.1	SAMN51281044	gca_identity_check	verified	1		3	8751922	Chromosome:1;Plasmid:2		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-09-17		
+GCF_060426045.1	SAMN51281045	primary	verified	1		4	8758991	Chromosome:1;Plasmid:3	present	GCF_060426045.1-RS_2026_08_26	2026-08-26	8094	7994
+GCA_060426045.1	SAMN51281045	gca_identity_check	verified	1		4	8758991	Chromosome:1;Plasmid:3		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-09-17		
+GCF_060372785.1	SAMN51281046	primary	verified	1		4	8740343	Chromosome:1;Plasmid:3	present	GCF_060372785.1-RS_2026_08_25	2026-08-25	8087	7993
+GCA_060372785.1	SAMN51281046	gca_identity_check	verified	1		4	8740343	Chromosome:1;Plasmid:3		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-09-17		
+GCF_060414525.1	SAMN51281047	primary	verified	1		4	8755273	Chromosome:1;Plasmid:3	present	GCF_060414525.1-RS_2026_08_26	2026-08-26	8107	7957
+GCA_060414525.1	SAMN51281047	gca_identity_check	verified	1		4	8755273	Chromosome:1;Plasmid:3		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-09-17		
+GCF_060372735.1	SAMN51281048	primary	verified	1		3	8751923	Chromosome:1;Plasmid:2	present	GCF_060372735.1-RS_2026_08_25	2026-08-25	8090	7995
+GCA_060372735.1	SAMN51281048	gca_identity_check	verified	1		3	8751923	Chromosome:1;Plasmid:2		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-09-17		
+GCF_060372645.1	SAMN51281049	primary	verified	1		2	7425619	Chromosome:1;Plasmid:1	present	GCF_060372645.1-RS_2026_08_25	2026-08-25	6992	6926
+GCA_060372645.1	SAMN51281049	gca_identity_check	verified	1		2	7425619	Chromosome:1;Plasmid:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-09-17		
+GCF_060372635.1	SAMN51281050	primary	verified	1		3	7499542	Chromosome:1;Plasmid:2	present	GCF_060372635.1-RS_2026_08_25	2026-08-25	7044	6971
+GCA_060372635.1	SAMN51281050	gca_identity_check	verified	1		3	7499542	Chromosome:1;Plasmid:2		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-09-17		
+GCF_060372575.1	SAMN51281051	primary	verified	1		2	7432178	Chromosome:1;Plasmid:1	present	GCF_060372575.1-RS_2026_08_25	2026-08-25	6929	6867
+GCA_060372575.1	SAMN51281051	gca_identity_check	verified	1		2	7432178	Chromosome:1;Plasmid:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-09-17		
+GCF_060422815.1	SAMN51281052	primary	verified	1		1	7428619	Chromosome:1	present	GCF_060422815.1-RS_2026_08_26	2026-08-26	6921	6861
+GCA_060422815.1	SAMN51281052	gca_identity_check	verified	1		1	7428619	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-09-18		
+GCF_060372485.1	SAMN51281053	primary	verified	1		2	6460298	Chromosome:1;Plasmid:1	present	GCF_060372485.1-RS_2026_08_25	2026-08-25	5972	5945
+GCA_060372485.1	SAMN51281053	gca_identity_check	verified	1		2	6460298	Chromosome:1;Plasmid:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-09-17		
+GCF_060372445.1	SAMN51281054	primary	verified	1		2	6294531	Chromosome:1;Plasmid:1	present	GCF_060372445.1-RS_2026_08_25	2026-08-25	5913	5831
+GCA_060372445.1	SAMN51281054	gca_identity_check	verified	1		2	6294531	Chromosome:1;Plasmid:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-09-17		
+GCF_060426065.1	SAMN51281055	primary	verified	1		6	7000783	Chromosome:1;Plasmid:5	present	GCF_060426065.1-RS_2026_08_26	2026-08-26	6482	6434
+GCA_060426065.1	SAMN51281055	gca_identity_check	verified	1		6	7000783	Chromosome:1;Plasmid:5		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-09-17		
+GCF_060372385.1	SAMN51281056	primary	verified	1		2	6984213	Chromosome:1;Plasmid:1	present	GCF_060372385.1-RS_2026_08_25	2026-08-25	6473	6439
+GCA_060372385.1	SAMN51281056	gca_identity_check	verified	1		2	6984213	Chromosome:1;Plasmid:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-09-17		
+GCF_060372305.1	SAMN51281057	primary	verified	1		3	5579693	Chromosome:1;Plasmid:2	present	GCF_060372305.1-RS_2026_08_25	2026-08-25	5085	5043
+GCA_060372305.1	SAMN51281057	gca_identity_check	verified	1		3	5579693	Chromosome:1;Plasmid:2		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-09-17		
+GCF_060422895.1	SAMN51281058	primary	verified	1		1	7103749	Chromosome:1	present	GCF_060422895.1-RS_2026_08_26	2026-08-26	6318	6207
+GCA_060422895.1	SAMN51281058	gca_identity_check	verified	1		1	7103749	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-09-18		
+GCF_060372275.1	SAMN51281059	primary	verified	1		2	7534656	Chromosome:1;Plasmid:1	present	GCF_060372275.1-RS_2026_08_25	2026-08-25	7036	6938
+GCA_060372275.1	SAMN51281059	gca_identity_check	verified	1		2	7534656	Chromosome:1;Plasmid:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-09-17		
+GCF_060362225.1	SAMN51658604	primary	verified	1		1	5818640	Chromosome:1	present	GCF_060362225.1-RS_2026_08_25	2026-08-25	5495	5463
+GCA_060362225.1	SAMN51658604	gca_identity_check	verified	1		1	5818640	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-09-25		
+GCF_060362165.1	SAMN51658605	primary	verified	1		1	6164785	Chromosome:1	present	GCF_060362165.1-RS_2026_08_25	2026-08-25	5697	5652
+GCA_060362165.1	SAMN51658605	gca_identity_check	verified	1		1	6164785	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-09-25		
+GCF_060362185.1	SAMN51658606	primary	verified	1		1	7250377	Chromosome:1	present	GCF_060362185.1-RS_2026_08_25	2026-08-25	6719	6674
+GCA_060362185.1	SAMN51658606	gca_identity_check	verified	1		1	7250377	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-09-25		
+GCF_060362105.1	SAMN51658607	primary	verified	1		3	8751917	Chromosome:1;Plasmid:2	present	GCF_060362105.1-RS_2026_08_25	2026-08-25	8088	7994
+GCA_060362105.1	SAMN51658607	gca_identity_check	verified	1		3	8751917	Chromosome:1;Plasmid:2		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-09-25		
+GCF_060362065.1	SAMN51658608	primary	verified	1		1	6865632	Chromosome:1	present	GCF_060362065.1-RS_2026_08_25	2026-08-25	6360	6320
+GCA_060362065.1	SAMN51658608	gca_identity_check	verified	1		1	6865632	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-09-25		
+GCF_060362035.1	SAMN51658609	primary	verified	1		1	7259902	Chromosome:1	present	GCF_060362035.1-RS_2026_08_25	2026-08-25	6594	6534
+GCA_060362035.1	SAMN51658609	gca_identity_check	verified	1		1	7259902	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-09-25		
+GCF_060361885.1	SAMN51658610	primary	verified	1		1	6937449	Chromosome:1	present	GCF_060361885.1-RS_2026_08_25	2026-08-25	6494	6452
+GCA_060361885.1	SAMN51658610	gca_identity_check	verified	1		1	6937449	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-09-25		
+GCF_060361965.1	SAMN51658611	primary	verified	1		4	7487940	Chromosome:1;Plasmid:3	present	GCF_060361965.1-RS_2026_08_25	2026-08-25	7135	7013
+GCA_060361965.1	SAMN51658611	gca_identity_check	verified	1		4	7487940	Chromosome:1;Plasmid:3		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-09-25		
+GCF_060361895.1	SAMN51658612	primary	verified	1		2	7555408	Chromosome:1;Plasmid:1	present	GCF_060361895.1-RS_2026_08_25	2026-08-25	6974	6921
+GCA_060361895.1	SAMN51658612	gca_identity_check	verified	1		2	7555408	Chromosome:1;Plasmid:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-09-25		
+GCF_060361845.1	SAMN51658613	primary	verified	1		1	6931449	Chromosome:1	present	GCF_060361845.1-RS_2026_08_25	2026-08-25	6522	6481
+GCA_060361845.1	SAMN51658613	gca_identity_check	verified	1		1	6931449	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-09-25		
+GCF_060361725.1	SAMN51658614	primary	verified	1		1	6909086	Chromosome:1	present	GCF_060361725.1-RS_2026_08_25	2026-08-25	6357	6300
+GCA_060361725.1	SAMN51658614	gca_identity_check	verified	1		1	6909086	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-09-25		
+GCF_060361765.1	SAMN51658615	primary	verified	1		1	7166359	Chromosome:1	present	GCF_060361765.1-RS_2026_08_25	2026-08-25	6642	6584
+GCA_060361765.1	SAMN51658615	gca_identity_check	verified	1		1	7166359	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-09-25		
+GCF_060361785.1	SAMN51658616	primary	verified	1		2	7717076	Chromosome:1;Plasmid:1	present	GCF_060361785.1-RS_2026_08_25	2026-08-25	7205	7105
+GCA_060361785.1	SAMN51658616	gca_identity_check	verified	1		2	7717076	Chromosome:1;Plasmid:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-09-25		
+GCF_060361635.1	SAMN51658617	primary	verified	1		1	7523149	Chromosome:1	present	GCF_060361635.1-RS_2026_08_25	2026-08-25	7006	6912
+GCA_060361635.1	SAMN51658617	gca_identity_check	verified	1		1	7523149	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-09-25		
+GCA_057839205.1	SAMN51819094	primary	verified	1		1	5112876	Chromosome:1	present	NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2026-05-28	4534	4492
+GCF_053010425.1	SAMN52101483	primary	verified	1		1	5605460	Chromosome:1	present	GCF_053010425.1-RS_2025_11_17	2025-11-17	5298	5178
+GCA_053010425.1	SAMN52101483	gca_identity_check	verified	1		1	5605460	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-10-01		
+GCF_060484195.1	SAMN56368954	primary	verified	1		1	5475592	Chromosome:1	present	GCF_060484195.1-RS_2026_08_27	2026-08-27	5002	4904
+GCA_060484195.1	SAMN56368954	gca_identity_check	verified	1		1	5475592	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2026-08-16		
+GCF_060483935.1	SAMN56368990	primary	verified	1		1	6144169	Chromosome:1	present	GCF_060483935.1-RS_2026_08_27	2026-08-27	5899	5819
+GCA_060483935.1	SAMN56368990	gca_identity_check	verified	1		1	6144169	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2026-08-16		
+GCF_000013605.1	SAMN02598320	primary	verified	1		2	4969784	Chromosome:1;Plasmid:1	present	GCF_000013605.1-RS_2025_04_19	2025-04-19	4608	4539
+GCA_000013605.1	SAMN02598320	gca_identity_check	verified	1		2	4969784	Chromosome:1;Plasmid:1		Annotation submitted by DOE Joint Genome Institute	2020-02-12		
+GCF_000013865.1	SAMN02598293	primary	verified	1		3	5898676	Chromosome:1;Plasmid:2	present	GCF_000013865.1-RS_2024_08_13	2024-08-13	5642	5509
+GCA_000013865.1	SAMN02598293	gca_identity_check	verified	1		3	5898676	Chromosome:1;Plasmid:2		Annotation submitted by DOE Joint Genome Institute	2014-01-28		
+GCF_000015325.1	SAMN02598334	primary	verified	1		1	5352772	Chromosome:1	present	GCF_000015325.1-RS_2026_07_01	2026-07-01	4966	4754
+GCA_000015325.1	SAMN02598334	gca_identity_check	verified	1		1	5352772	Chromosome:1		Annotation submitted by DOE Joint Genome Institute	2014-01-28		
+GCF_000015505.1	SAMN02598302	primary	verified	1		9	5366143	Chromosome:1;Plasmid:8	present	GCF_000015505.1-RS_2025_12_13	2025-12-13	5118	4953
+GCA_000015505.1	SAMN02598302	gca_identity_check	verified	1		9	5366143	Chromosome:1;Plasmid:8		Annotation submitted by DOE Joint Genome Institute	2016-07-14		
+GCF_000015565.1	SAMN02598379	primary	verified	1		2	5597943	Chromosome:1;Plasmid:1	present	GCF_000015565.1-RS_2025_12_13	2025-12-13	5298	5057
+GCA_000015565.1	SAMN02598379	gca_identity_check	verified	1		2	5597943	Chromosome:1;Plasmid:1		Annotation submitted by DOE Joint Genome Institute	2016-07-14		
+GCF_000018665.1	SAMN00623041	primary	verified	1		1	6767514	Chromosome:1	present	GCF_000018665.1-RS_2025_11_23	2025-11-23	6188	6058
+GCA_000018665.1	SAMN00623041	gca_identity_check	verified	1		1	6767514	Chromosome:1		Annotation submitted by US DOE Joint Genome Institute	2013-12-11		
+GCF_000022305.1	SAMN00001444	primary	verified	1		1	3796573	Chromosome:1	present	GCF_000022305.1-RS_2026_06_22	2026-06-22	3568	3494
+GCA_000022305.1	SAMN00001444	gca_identity_check	verified	1		1	3796573	Chromosome:1		Annotation submitted by US DOE Joint Genome Institute (JGI-PGF)	2013-12-24		
+GCF_000093145.3	SAMN02603356	primary	verified	1		1	5373644	Chromosome:1	present	GCF_000093145.3-RS_2026_03_28	2026-03-28	4886	4754
+GCA_000093145.2	SAMN02603356	gca_identity_check	verified	1		1	5373644	Chromosome:1		Annotation submitted by Environmental Microbiology Research Center,Institute of Microbiology,Chinese Academy of Sciences	2019-09-10		
+GCF_000176855.2	SAMN00006197	primary	verified	1		1	5482170	Chromosome:1	present	GCF_000176855.2-RS_2026_07_01	2026-07-01	4820	4761
+GCA_000176855.2	SAMN00006197	gca_identity_check	verified	1		1	5482170	Chromosome:1		Annotation submitted by US DOE Joint Genome Institute (JGI-PGF)	2014-01-09		
+GCF_000179015.2	SAMN00015356	primary	verified	1		3	4835713	Chromosome:1;Plasmid:2	present	GCF_000179015.2-RS_2026_03_27	2026-03-27	4679	4540
+GCA_000179015.2	SAMN00015356	gca_identity_check	verified	1		3	4835713	Chromosome:1;Plasmid:2		Annotation submitted by US DOE Joint Genome Institute (JGI-PGF)	2014-05-14		
+GCF_000184745.1	SAMN00149467	primary	verified	1		1	6550056	Chromosome:1	present	GCF_000184745.1-RS_2025_02_24	2025-02-24	6047	5979
+GCA_000184745.1	SAMN00149467	gca_identity_check	verified	1		1	6550056	Chromosome:1		Annotation submitted by US DOE Joint Genome Institute	2013-12-31		
+GCF_000204645.1	SAMN00713606	primary	verified	1		2	5070751	Chromosome:1;Plasmid:1	present	GCF_000204645.1-RS_2026_03_27	2026-03-27	4854	4691
+GCA_000204645.1	SAMN00713606	gca_identity_check	verified	1		2	5070751	Chromosome:1;Plasmid:1		Annotation submitted by US DOE Joint Genome Institute	2016-07-25		
+GCF_000214395.1	SAMN00713625	primary	verified	1		1	6685842	Chromosome:1	present	GCF_000214395.1-RS_2024_05_08	2024-05-08	5961	5923
+GCA_000214395.1	SAMN00713625	gca_identity_check	verified	1		1	6685842	Chromosome:1		Annotation submitted by US DOE Joint Genome Institute	2021-09-13		
+GCF_000215705.1	SAMN02603053	primary	verified	1		1	4070193	Chromosome:1	present	GCF_000215705.1-RS_2026_08_04	2026-08-04	3964	3921
+GCA_000215705.1	SAMN02603053	gca_identity_check	verified	1		1	4070193	Chromosome:1		Annotation submitted by CEA-CNRS	2014-01-30		
+GCF_000302535.1	SAMN02604069	primary	verified	1		1	5196935	Chromosome:1	present	GCF_000302535.1-RS_2024_08_13	2024-08-13	4830	4717
+GCA_000302535.1	SAMN02604069	gca_identity_check	verified	1		1	5196935	Chromosome:1		Annotation submitted by Tohoku University	2014-01-31		
+GCF_000463015.1	SAMN02603275	primary	verified	1		2	7148516	Chromosome:2	present	GCF_000463015.1-RS_2026_01_30	2026-01-30	6798	6676
+GCA_000463015.1	SAMN02603275	gca_identity_check	verified	1		2	7148516	Chromosome:2		Annotation submitted by Georg-August-University Goettingen, Genomic and Applied Microbiology, Goettingen Genomics Laboratory	2014-01-30		
+GCF_000477435.1	SAMN02603948	primary	verified	1		1	2991840	Chromosome:1	present	GCF_000477435.1-RS_2026_03_28	2026-03-28	2473	2411
+GCA_000477435.1	SAMN02603948	gca_identity_check	verified	1		1	2991840	Chromosome:1		Annotation submitted by The Pennsylvania State University	2014-01-31		
+GCF_000739375.1	SAMN03081477	primary	verified	1		1	6062703	Chromosome:1	present	GCF_000739375.1-RS_2025_03_11	2025-03-11	5484	5371
+GCA_000739375.1	SAMN03081477	gca_identity_check	verified	1		1	6062703	Chromosome:1		Annotation submitted by Shizuoka University	2014-10-01		
+GCF_000828895.1	SAMD00000325	primary	verified	1		1	2574013	Chromosome:1	present	GCF_000828895.1-RS_2026_03_30	2026-03-30	2375	2332
+GCA_000828895.1	SAMD00000325	gca_identity_check	verified	1		1	2574013	Chromosome:1		Annotation submitted by J. Craig Venter Institute	2018-11-26		
+GCF_000828915.1	SAMD00000326	primary	verified	1		2	2623236	Chromosome:1;Plasmid:1	present	GCF_000828915.1-RS_2026_03_30	2026-03-30	2413	2355
+GCA_000828915.1	SAMD00000326	gca_identity_check	verified	1		2	2623236	Chromosome:1;Plasmid:1		Annotation submitted by J. Craig Venter Institute	2018-11-26		
+GCF_001262075.1	SAMN03704033	primary	verified	1		1	2925783	Chromosome:1	present	GCF_001262075.1-RS_2024_08_22	2024-08-22	2732	2676
+GCA_001262075.1	SAMN03704033	gca_identity_check	verified	1		1	2925783	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2015-08-05		
+GCF_001406795.1	SAMEA3493917	primary	verified	1		2	5649348	Chromosome:1;Plasmid:1	present	GCF_001406795.1-RS_2026_02_11	2026-02-11	5149	5091
+GCA_001406795.1	SAMEA3493917	gca_identity_check	verified	1		2	5649348	Chromosome:1;Plasmid:1					
+GCF_001412535.1	SAMN03569611	primary	verified	1		1	3372992	Chromosome:1	present	GCF_001412535.1-RS_2025_08_25	2025-08-25	3204	3178
+GCA_001412535.1	SAMN03569611	gca_identity_check	verified	1		1	3372992	Chromosome:1		Annotation submitted by Chungnam National University	2015-10-26		
+GCF_001412575.1	SAMN03569612	primary	verified	1		1	2948795	Chromosome:1	present	GCF_001412575.1-RS_2025_08_25	2025-08-25	2804	2793
+GCA_001412575.1	SAMN03569612	gca_identity_check	verified	1		1	2948795	Chromosome:1		Annotation submitted by Chungnam National University	2015-10-26		
+GCF_001577265.1	SAMN04457487	primary	verified	1		1	4316152	Chromosome:1	present	GCF_001577265.1-RS_2025_08_25	2025-08-25	4196	4074
+GCA_001577265.1	SAMN04457487	gca_identity_check	verified	1		1	4316152	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2016-02-23		
+GCF_001580455.1	SAMN03342428	primary	verified	1		1	4916630	Chromosome:1	present	GCF_001580455.1-RS_2025_02_14	2025-02-14	4606	4583
+GCA_001580455.1	SAMN03342428	gca_identity_check	verified	1		1	4916630	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2015-02-25		
+GCF_001761385.1	SAMN05726019	primary	verified	1		1	4944132	Chromosome:1	present	GCF_001761385.1-RS_2025_12_11	2025-12-11	4559	4514
+GCA_001761385.1	SAMN05726019	gca_identity_check	verified	1		1	4944132	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2016-10-03		
+GCF_001886655.1	SAMN06027798	primary	verified	1		1	6430384	Chromosome:1	present	GCF_001886655.1-RS_2025_08_25	2025-08-25	5716	5629
+GCA_001886655.1	SAMN06027798	gca_identity_check	verified	1		1	6430384	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2016-11-21		
+GCF_001955695.1	SAMN06118135	primary	verified	1		3	5895641	Chromosome:1;Plasmid:2	present	GCF_001955695.1-RS_2026_04_14	2026-04-14	5470	5366
+GCA_001955695.1	SAMN06118135	gca_identity_check	verified	1		3	5895641	Chromosome:1;Plasmid:2		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2017-01-13		
+GCF_001955715.1	SAMN06130150	primary	verified	1		1	4264855	Chromosome:1	present	GCF_001955715.1-RS_2026_03_30	2026-03-30	4007	3964
+GCA_001955715.1	SAMN06130150	gca_identity_check	verified	1		1	4264855	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2017-01-13		
+GCF_001955735.1	SAMN06118137	primary	verified	1		3	4055436	Chromosome:1;Plasmid:2	present	GCF_001955735.1-RS_2026_04_27	2026-04-27	3936	3704
+GCA_001955735.1	SAMN06118137	gca_identity_check	verified	1		3	4055436	Chromosome:1;Plasmid:2		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2017-01-13		
+GCF_001969245.1	SAMN04116731	primary	verified	1		1	6556728	Chromosome:1	present	GCF_001969245.1-RS_2025_04_15	2025-04-15	5858	5744
+GCA_001969245.1	SAMN04116731	gca_identity_check	verified	1		1	6556728	Chromosome:1					
+GCF_002157125.1	SAMN03755634	primary	verified	1		5	4704737	Chromosome:1;Plasmid:4	present	GCF_002157125.1-RS_2026_03_05	2026-03-05	4423	4257
+GCA_002157125.1	SAMN03755634	gca_identity_check	verified	1		5	4704737	Chromosome:1;Plasmid:4		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2017-05-18		
+GCF_002157145.1	SAMN03755632	primary	verified	1		1	4122625	Chromosome:1	present	GCF_002157145.1-RS_2026_03_05	2026-03-05	3824	3479
+GCA_002157145.1	SAMN03755632	gca_identity_check	verified	1		1	4122625	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2017-05-18		
+GCF_002157165.1	SAMN03755631	primary	verified	1		2	4058023	Chromosome:1;Plasmid:1	present	GCF_002157165.1-RS_2026_03_05	2026-03-05	3762	3678
+GCA_002157165.1	SAMN03755631	gca_identity_check	verified	1		2	4058023	Chromosome:1;Plasmid:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2017-05-18		
+GCF_002157185.1	SAMN03755633	primary	verified	1		4	4565632	Chromosome:1;Plasmid:3	present	GCF_002157185.1-RS_2026_03_05	2026-03-05	4332	3848
+GCA_002157185.1	SAMN03755633	gca_identity_check	verified	1		4	4565632	Chromosome:1;Plasmid:3		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2017-05-18		
+GCF_002158865.1	SAMN07166496	primary	verified	1		1	4522913	Chromosome:1	present	GCF_002158865.1-RS_2025_03_05	2025-03-05	3865	3792
+GCA_002158865.1	SAMN07166496	gca_identity_check	verified	1		1	4522913	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2017-05-25		
+GCF_002176815.1	SAMN07174971	primary	verified	1		4	4416593	Chromosome:1;Plasmid:3	present	GCF_002176815.1-RS_2025_08_25	2025-08-25	4097	3891
+GCA_002176815.1	SAMN07174971	gca_identity_check	verified	1		4	4416593	Chromosome:1;Plasmid:3					
+GCF_002214645.1	SAMN05284426	primary	verified	1		1	4061276	Chromosome:1	present	GCF_002214645.1-RS_2025_03_05	2025-03-05	3769	3699
+GCA_002214645.1	SAMN05284426	gca_identity_check	verified	1		1	4061276	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2016-06-27		
+GCF_002291405.1	SAMN07569770	primary	verified	1		1	7137898	Chromosome:1	present	GCF_002291405.1-RS_2026_04_01	2026-04-01	6686	6468
+GCA_002291405.1	SAMN07569770	gca_identity_check	verified	1		1	7137898	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2017-09-07		
+GCF_002441975.1	SAMN07718226	primary	verified	1		1	5349924	Chromosome:1	present	GCF_002441975.1-RS_2026_07_01	2026-07-01	4985	4679
+GCA_002441975.1	SAMN07718226	gca_identity_check	verified	1		1	5349924	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2017-09-29		
+GCF_003008535.1	SAMN08666936	primary	verified	1		1	3901011	Chromosome:1	present	GCF_003008535.1-RS_2026_05_04	2026-05-04	3553	3484
+GCA_003008535.1	SAMN08666936	gca_identity_check	verified	1		1	3901011	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2018-03-12		
+GCF_003008575.1	SAMN08666934	primary	verified	1		1	3754020	Chromosome:1	present	GCF_003008575.1-RS_2026_03_05	2026-03-05	3494	3442
+GCA_003008575.1	SAMN08666934	gca_identity_check	verified	1		1	3754020	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2018-03-12		
+GCF_003008595.1	SAMN08667344	primary	verified	1		3	4154448	Chromosome:1;Plasmid:2	present	GCF_003008595.1-RS_2026_03_31	2026-03-31	3858	3752
+GCA_003008595.1	SAMN08667344	gca_identity_check	verified	1		3	4154448	Chromosome:1;Plasmid:2		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2018-03-12		
+GCF_003013695.1	SAMN08707401	primary	verified	1		1	3358427	Chromosome:1	present	GCF_003013695.1-RS_2025_11_23	2025-11-23	3052	3032
+GCA_003013695.1	SAMN08707401	gca_identity_check	verified	1		1	3358427	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2018-03-16		
+GCF_003669015.1	SAMN10228555	primary	verified	1		1	5045878	Chromosome:1	present	GCF_003669015.1-RS_2024_08_23	2024-08-23	4514	4267
+GCA_003669015.1	SAMN10228555	gca_identity_check	verified	1		1	5045878	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2018-10-16		
+GCF_003711205.1	SAMN09644607	primary	verified	1		1	4507493	Chromosome:1	present	GCF_003711205.1-RS_2024_08_14	2024-08-14	4186	4158
+GCA_003711205.1	SAMN09644607	gca_identity_check	verified	1		1	4507493	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2018-07-16		
+GCF_004353865.1	SAMN11056680	primary	verified	1		2	4905973	Chromosome:1;Plasmid:1	present	GCF_004353865.1-RS_2026_04_19	2026-04-19	4688	4632
+GCA_004353865.1	SAMN11056680	gca_identity_check	verified	1		2	4905973	Chromosome:1;Plasmid:1		Annotation submitted by Bielefeld University	2019-03-17		
+GCF_004795855.1	SAMN11370210	primary	verified	1		1	4850867	Chromosome:1	present	GCF_004795855.1-RS_2024_06_06	2024-06-06	4419	4359
+GCA_004795855.1	SAMN11370210	gca_identity_check	verified	1		1	4850867	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2019-04-10		
+GCF_006740045.1	SAMD00018640	primary	verified	1		1	4673011	Chromosome:1	present	GCF_006740045.1-RS_2026_05_14	2026-05-14	4140	4083
+GCA_006740045.1	SAMD00018640	gca_identity_check	verified	1		1	4673011	Chromosome:1		Annotation submitted by National Institute of Technology and Evaluation	2019-06-14		
+GCF_006970865.1	SAMN10822632	primary	verified	1		1	4387497	Chromosome:1	present	GCF_006970865.1-RS_2026_03_30	2026-03-30	4213	4097
+GCA_006970865.1	SAMN10822632	gca_identity_check	verified	1		1	4387497	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2019-01-29		
+GCF_006974105.1	SAMN10948632	primary	verified	1		1	4737690	Chromosome:1	present	GCF_006974105.1-RS_2026_04_30	2026-04-30	4338	4284
+GCA_006974105.1	SAMN10948632	gca_identity_check	verified	1		1	4737690	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2019-02-22		
+GCF_007954405.1	SAMN12317495	primary	verified	1		1	3333437	Chromosome:1	present	GCF_007954405.1-RS_2026_06_10	2026-06-10	3147	3101
+GCA_007954405.1	SAMN12317495	gca_identity_check	verified	1		1	3333437	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2019-08-05		
+GCF_009362995.1	SAMN13049073	primary	verified	1		1	6711018	Chromosome:1	present	GCF_009362995.1-RS_2025_02_14	2025-02-14	6084	5929
+GCA_009362995.1	SAMN13049073	gca_identity_check	verified	1		1	6711018	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2019-10-21		
+GCF_009498455.1	SAMN13140870	primary	verified	1		1	7288087	Chromosome:1	present	GCF_009498455.1-RS_2025_02_19	2025-02-19	6767	6658
+GCA_009498455.1	SAMN13140870	gca_identity_check	verified	1		1	7288087	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2019-10-29		
+GCF_009664225.1	SAMN12726554	primary	verified	1		1	4507340	Chromosome:1	present	GCF_009664225.1-RS_2024_08_16	2024-08-16	4208	4099
+GCA_009664225.1	SAMN12726554	gca_identity_check	verified	1		1	4507340	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2019-10-14		
+GCF_009859475.1	SAMN12879172	primary	verified	1		3	6772294	Chromosome:1;Plasmid:2	present	GCF_009859475.1-RS_2025_08_25	2025-08-25	6319	6138
+GCA_009859475.1	SAMN12879172	gca_identity_check	verified	1		3	6772294	Chromosome:1;Plasmid:2		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2019-10-04		
+GCF_009859815.1	SAMN12879170	primary	verified	1		3	4818426	Chromosome:1;Plasmid:2	present	GCF_009859815.1-RS_2025_08_25	2025-08-25	4529	4469
+GCA_009859815.1	SAMN12879170	gca_identity_check	verified	1		3	4818426	Chromosome:1;Plasmid:2		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2019-10-07		
+GCF_010104355.1	SAMN12879171	primary	verified	1		3	4815875	Chromosome:1;Plasmid:2	present	GCF_010104355.1-RS_2025_08_27	2025-08-27	4523	4464
+GCA_010104355.1	SAMN12879171	gca_identity_check	verified	1		3	4815875	Chromosome:1;Plasmid:2		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2019-10-07		
+GCF_011303755.1	SAMN14260602	primary	verified	1		1	3152246	Chromosome:1	present	GCF_011303755.1-RS_2024_08_16	2024-08-16	2869	2832
+GCA_011303755.1	SAMN14260602	gca_identity_check	verified	1		1	3152246	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2020-03-09		
+GCF_011305535.1	SAMN14260604	primary	verified	1		2	6214887	Chromosome:1;Plasmid:1	present	GCF_011305535.1-RS_2024_08_24	2024-08-24	5601	5510
+GCA_011305535.1	SAMN14260604	gca_identity_check	verified	1		2	6214887	Chromosome:1;Plasmid:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2020-03-10		
+GCF_011305995.1	SAMN14260603	primary	verified	1		3	6761832	Chromosome:1;Plasmid:2	present	GCF_011305995.1-RS_2024_08_25	2024-08-25	6124	5894
+GCA_011305995.1	SAMN14260603	gca_identity_check	verified	1		3	6761832	Chromosome:1;Plasmid:2		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2020-03-10		
+GCF_011388215.1	SAMN14330252	primary	verified	1		1	4561131	Chromosome:1	present	GCF_011388215.1-RS_2026_03_30	2026-03-30	4307	4279
+GCA_011388215.1	SAMN14330252	gca_identity_check	verified	1		1	4561131	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2020-03-11		
+GCF_012530715.1	SAMN14566246	primary	verified	1		2	4770033	Chromosome:1;Plasmid:1	present	GCF_012530715.1-RS_2026_04_27	2026-04-27	4464	4294
+GCA_012530715.1	SAMN14566246	gca_identity_check	verified	1		2	4770033	Chromosome:1;Plasmid:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2020-05-22		
+GCF_012584515.1	SAMN14483341	primary	verified	1		1	3837686	Chromosome:1	present	GCF_012584515.1-RS_2026_03_22	2026-03-22	3447	3305
+GCA_012584515.1	SAMN14483341	gca_identity_check	verified	1		1	3837686	Chromosome:1		Annotation submitted by Korea Polar Research Institute	2020-04-22		
+GCF_013154915.1	SAMN14892363	primary	verified	1		2	4032523	Chromosome:1;Plasmid:1	present	GCF_013154915.1-RS_2024_08_25	2024-08-25	3794	3599
+GCA_013154915.1	SAMN14892363	gca_identity_check	verified	1		2	4032523	Chromosome:1;Plasmid:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2020-05-15		
+GCF_013256255.1	SAMN15009848	primary	verified	1		1	5678299	Chromosome:1	present	GCF_013256255.1-RS_2026_07_20	2026-07-20	5191	5080
+GCA_013256255.1	SAMN15009848	gca_identity_check	verified	1		1	5678299	Chromosome:1					
+GCF_013363755.1	SAMN15195941	primary	verified	1		3	5025439	Chromosome:1;Plasmid:2	present	GCF_013363755.1-RS_2026_06_25	2026-06-25	4538	4466
+GCA_013363755.1	SAMN15195941	gca_identity_check	verified	1		3	5025439	Chromosome:1;Plasmid:2		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2020-06-12		
+GCF_014076415.1	SAMN12671326	primary	verified	1		2	5947116	Chromosome:1;Plasmid:1	present	GCF_014076415.1-RS_2025_03_19	2025-03-19	5409	5247
+GCA_014076415.1	SAMN12671326	gca_identity_check	verified	1		2	5947116	Chromosome:1;Plasmid:1					
+GCF_014076475.1	SAMN12671332	primary	verified	1		2	5975089	Chromosome:1;Plasmid:1	present	GCF_014076475.1-RS_2025_03_19	2025-03-19	5409	5280
+GCA_014076475.1	SAMN12671332	gca_identity_check	verified	1		2	5975089	Chromosome:1;Plasmid:1					
+GCF_014076495.1	SAMN12671333	primary	verified	1		1	5217190	Chromosome:1	present	GCF_014076495.1-RS_2025_03_19	2025-03-19	4706	4634
+GCA_014076495.1	SAMN12671333	gca_identity_check	verified	1		1	5217190	Chromosome:1					
+GCF_014302995.1	SAMN15794718	primary	verified	1		1	7388698	Chromosome:1	present	GCF_014302995.1-RS_2024_12_31	2024-12-31	6890	6834
+GCA_014302995.1	SAMN15794718	gca_identity_check	verified	1		1	7388698	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2020-08-17		
+GCF_014303735.1	SAMN15794725	primary	verified	1		1	4693528	Chromosome:1	present	GCF_014303735.1-RS_2024_12_31	2024-12-31	4361	4319
+GCA_014303735.1	SAMN15794725	gca_identity_check	verified	1		1	4693528	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2020-08-17		
+GCF_014395975.1	SAMN15892347	primary	verified	1		1	5167372	Chromosome:1	present	GCF_014395975.1-RS_2026_05_06	2026-05-06	4606	4508
+GCA_014395975.1	SAMN15892347	gca_identity_check	verified	1		1	5167372	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2020-08-27		
+GCF_014489535.1	SAMN15892346	primary	verified	1		1	4948189	Chromosome:1	present	GCF_014489535.1-RS_2025_11_23	2025-11-23	4756	3937
+GCA_014489535.1	SAMN15892346	gca_identity_check	verified	1		1	4948189	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2020-08-27		
+GCF_014489595.1	SAMN15892564	primary	verified	1		1	4679990	Chromosome:1	present	GCF_014489595.1-RS_2026_07_01	2026-07-01	4486	3915
+GCA_014489595.1	SAMN15892564	gca_identity_check	verified	1		1	4679990	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2020-08-27		
+GCF_014931035.1	SAMN14538760	primary	verified	1		4	5290398	Chromosome:1;Plasmid:3	present	GCF_014931035.1-RS_2026_02_13	2026-02-13	4767	4666
+GCA_014931035.1	SAMN14538760	gca_identity_check	verified	1		4	5290398	Chromosome:1;Plasmid:3		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2020-10-20		
+GCF_015832135.1	SAMN16872453	primary	verified	1		4	4613942	Chromosome:1;Plasmid:3	present	GCF_015832135.1-RS_2024_08_17	2024-08-17	4406	4008
+GCA_015832135.1	SAMN16872453	gca_identity_check	verified	1		4	4613942	Chromosome:1;Plasmid:3		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2020-12-02		
+GCF_016845925.1	SAMN17734424	primary	verified	1		1	6901580	Chromosome:1	present	GCF_016845925.1-RS_2026_04_01	2026-04-01	6363	5766
+GCA_016845925.1	SAMN17734424	gca_identity_check	verified	1		1	6901580	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2021-02-02		
+GCF_016903055.1	SAMN17602092	primary	verified	1		1	4728845	Chromosome:1	present	GCF_016903055.1-RS_2024_05_12	2024-05-12	4413	4377
+GCA_016903055.1	SAMN17602092	gca_identity_check	verified	1		1	4728845	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2021-02-11		
+GCF_016919265.1	SAMN17844883	primary	verified	1		2	7110136	Chromosome:1;Plasmid:1	present	GCF_016919265.1-RS_2024_05_14	2024-05-14	6547	6499
+GCA_016919265.1	SAMN17844883	gca_identity_check	verified	1		2	7110136	Chromosome:1;Plasmid:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2021-02-16		
+GCF_017161115.1	SAMN13423526	primary	verified	1		1	7168845	Chromosome:1	present	GCF_017161115.1-RS_2024_05_23	2024-05-23	6640	6608
+GCA_017161115.1	SAMN13423526	gca_identity_check	verified	1		1	7168845	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2019-12-04		
+GCF_017498525.1	SAMN18175754	primary	verified	1		1	4320685	Chromosome:1	present	GCF_017498525.1-RS_2026_05_31	2026-05-31	4070	3964
+GCA_017498525.1	SAMN18175754	gca_identity_check	verified	1		1	4320685	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2021-03-15		
+GCF_017798165.1	SAMN15481058	primary	verified	1		1	5173062	Chromosome:1	present	GCF_017798165.1-RS_2024_08_25	2024-08-25	4822	4726
+GCA_017798165.1	SAMN15481058	gca_identity_check	verified	1		1	5173062	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2020-07-14		
+GCF_017948265.1	SAMN18579863	primary	verified	1		1	4593249	Chromosome:1	present	GCF_017948265.1-RS_2024_08_18	2024-08-18	4254	4083
+GCA_017948265.1	SAMN18579863	gca_identity_check	verified	1		1	4593249	Chromosome:1					
+GCF_018437695.1	SAMN14082653	primary	verified	1		1	6722355	Chromosome:1	present	GCF_018437695.1-RS_2026_08_20	2026-08-20	6075	5984
+GCA_018437695.1	SAMN14082653	gca_identity_check	verified	1		1	6722355	Chromosome:1					
+GCF_019186805.1	SAMN17081982	primary	verified	1		2	4908875	Chromosome:1;Plasmid:1	present	GCF_019186805.1-RS_2026_05_07	2026-05-07	4412	4330
+GCA_019186805.1	SAMN17081982	gca_identity_check	verified	1		2	4908875	Chromosome:1;Plasmid:1					
+GCF_019195435.1	SAMN19901804	primary	verified	1		1	3032465	Chromosome:1	present	GCF_019195435.1-RS_2024_08_18	2024-08-18	2878	2855
+GCA_019195435.1	SAMN19901804	gca_identity_check	verified	1		1	3032465	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2021-07-06		
+GCF_019602835.1	SAMN20595319	primary	verified	1		3	3997592	Chromosome:1;Plasmid:2	present	GCF_019602835.1-RS_2024_08_18	2024-08-18	3757	3570
+GCA_019602835.1	SAMN20595319	gca_identity_check	verified	1		3	3997592	Chromosome:1;Plasmid:2		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2021-08-10		
+GCF_020080045.1	SAMN21401359	primary	verified	1		3	4832451	Chromosome:1;Plasmid:2	present	GCF_020080045.1-RS_2025_11_23	2025-11-23	4382	4294
+GCA_020080045.1	SAMN21401359	gca_identity_check	verified	1		3	4832451	Chromosome:1;Plasmid:2		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2021-09-15		
+GCF_020162215.1	SAMN21540784	primary	verified	1		5	5642591	Chromosome:1;Plasmid:4	present	GCF_020162215.1-RS_2025_12_16	2025-12-16	5138	5003
+GCA_020162215.1	SAMN21540784	gca_identity_check	verified	1		5	5642591	Chromosome:1;Plasmid:4		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2021-09-22		
+GCF_020510545.1	SAMN19030611	primary	verified	1		1	5668326	Chromosome:1	present	GCF_020510545.1-RS_2025_01_30	2025-01-30	5327	5260
+GCA_020510545.1	SAMN19030611	gca_identity_check	verified	1		1	5668326	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2021-05-17		
+GCF_020510705.1	SAMN19030609	primary	verified	1		1	4995154	Chromosome:1	present	GCF_020510705.1-RS_2025_01_30	2025-01-30	4513	4419
+GCA_020510705.1	SAMN19030609	gca_identity_check	verified	1		1	4995154	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2021-05-17		
+GCF_020783275.1	SAMN22599710	primary	verified	1		1	4860896	Chromosome:1	present	GCF_020783275.1-RS_2026_07_01	2026-07-01	4408	4272
+GCA_020783275.1	SAMN22599710	gca_identity_check	verified	1		1	4860896	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2021-11-01		
+GCF_020783295.1	SAMN22599859	primary	verified	1		1	4860888	Chromosome:1	present	GCF_020783295.1-RS_2026_07_01	2026-07-01	4410	4272
+GCA_020783295.1	SAMN22599859	gca_identity_check	verified	1		1	4860888	Chromosome:1					
+GCF_020886175.1	SAMD00411011	primary	verified	1		3	5620102	Chromosome:1;Plasmid:2	present	GCF_020886175.1-RS_2026_03_30	2026-03-30	5088	4958
+GCA_020886175.1	SAMD00411011	gca_identity_check	verified	1		3	5620102	Chromosome:1;Plasmid:2		Annotation submitted by Microbiology and Infectious Diseases, Nara Medical University	2022-07-12		
+GCF_021249385.1	SAMN24045431	primary	verified	1		1	3668757	Chromosome:1	present	GCF_021249385.1-RS_2025_12_13	2025-12-13	3323	3233
+GCA_021249385.1	SAMN24045431	gca_identity_check	verified	1		1	3668757	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2021-12-15		
+GCF_021729865.1	SAMN16451201	primary	verified	1		1	5433040	Chromosome:1	present	GCF_021729865.1-RS_2025_08_25	2025-08-25	5127	5066
+GCA_021729865.1	SAMN16451201	gca_identity_check	verified	1		1	5433040	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2020-10-26		
+GCF_022493915.1	SAMN12418601	primary	verified	1		2	4956056	Chromosome:1;Plasmid:1	present	GCF_022493915.1-RS_2026_07_01	2026-07-01	4518	4377
+GCA_022493915.1	SAMN12418601	gca_identity_check	verified	1		2	4956056	Chromosome:1;Plasmid:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2019-08-01		
+GCF_022494945.1	SAMN12418530	primary	verified	1		1	5293259	Chromosome:1	present	GCF_022494945.1-RS_2026_07_01	2026-07-01	4897	4687
+GCA_022494945.1	SAMN12418530	gca_identity_check	verified	1		1	5293259	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2019-08-01		
+GCF_022494965.1	SAMN12418563	primary	verified	1		1	4932026	Chromosome:1	present	GCF_022494965.1-RS_2026_07_01	2026-07-01	4494	4338
+GCA_022494965.1	SAMN12418563	gca_identity_check	verified	1		1	4932026	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2019-08-01		
+GCF_022749535.1	SAMN26804845	primary	verified	1		1	5504412	Chromosome:1	present	GCF_022749535.1-RS_2024_08_19	2024-08-19	4953	4804
+GCA_022749535.1	SAMN26804845	gca_identity_check	verified	1		1	5504412	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2022-03-23		
+GCF_022749555.1	SAMN26804712	primary	verified	1		1	5459409	Chromosome:1	present	GCF_022749555.1-RS_2024_08_19	2024-08-19	4937	4801
+GCA_022749555.1	SAMN26804712	gca_identity_check	verified	1		1	5459409	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2022-03-23		
+GCF_022749575.1	SAMN26804954	primary	verified	1		1	5494990	Chromosome:1	present	GCF_022749575.1-RS_2024_08_19	2024-08-19	4937	4789
+GCA_022749575.1	SAMN26804954	gca_identity_check	verified	1		1	5494990	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2022-03-23		
+GCF_022807955.1	SAMN26879455	primary	verified	1		2	4251417	Chromosome:1;Plasmid:1	present	GCF_022807955.1-RS_2025_01_12	2025-01-12	3945	3712
+GCA_022807955.1	SAMN26879455	gca_identity_check	verified	1		2	4251417	Chromosome:1;Plasmid:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2022-03-25		
+GCF_023634805.2	SAMN28648202	primary	verified	1		3	4488558	Chromosome:1;Plasmid:2	present	GCF_023634805.2-RS_2026_04_07	2026-04-07	4012	3804
+GCA_023634805.2	SAMN28648202	gca_identity_check	verified	1		3	4488558	Chromosome:1;Plasmid:2		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2022-10-06		
+GCF_024496285.1	SAMN29863000	primary	verified	1		7	6159340	Chromosome:1;Plasmid:6	present	GCF_024496285.1-RS_2024_08_26	2024-08-26	5593	5384
+GCA_024496285.1	SAMN29863000	gca_identity_check	verified	1		7	6159340	Chromosome:1;Plasmid:6		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2022-07-25		
+GCF_024498935.1	SAMN26105102	primary	verified	1		1	5458602	Chromosome:1	present	GCF_024498935.1-RS_2026_08_15	2026-08-15	4942	4815
+GCA_024498935.1	SAMN26105102	gca_identity_check	verified	1		1	5458602	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2022-02-28		
+GCF_024734665.1	SAMN30330645	primary	verified	1		1	7294742	Chromosome:1	present	GCF_024734665.1-RS_2025_09_23	2025-09-23	6770	6737
+GCA_024734665.1	SAMN30330645	gca_identity_check	verified	1		1	7294742	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2022-08-18		
+GCF_025244985.1	SAMN30696466	primary	verified	1		4	4202952	Chromosome:1;Plasmid:3	present	GCF_025244985.1-RS_2025_12_08	2025-12-08	3904	3729
+GCA_025244985.1	SAMN30696466	gca_identity_check	verified	1		4	4202952	Chromosome:1;Plasmid:3					
+GCF_026970895.1	SAMN32161858	primary	verified	1		1	6670817	Chromosome:1	present	GCF_026970895.1-RS_2026_02_07	2026-02-07	5987	5819
+GCA_026970895.1	SAMN32161858	gca_identity_check	verified	1		1	6670817	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2022-12-13		
+GCF_027595065.1	SAMN28016767	primary	verified	1		2	4016904	Chromosome:1;Plasmid:1	present	GCF_027595065.1-RS_2026_02_20	2026-02-20	3684	3555
+GCA_027595065.1	SAMN28016767	gca_identity_check	verified	1		2	4016904	Chromosome:1;Plasmid:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2022-05-02		
+GCF_027625375.1	SAMN32394666	primary	verified	1		1	4114005	Chromosome:1	present	GCF_027625375.1-RS_2025_08_25	2025-08-25	3898	3784
+GCA_027625375.1	SAMN32394666	gca_identity_check	verified	1		1	4114005	Chromosome:1					
+GCF_027941915.1	SAMN32638609	primary	verified	1		1	4466211	Chromosome:1	present	GCF_027941915.1-RS_2025_08_14	2025-08-14	4229	4186
+GCA_027941915.1	SAMN32638609	gca_identity_check	verified	1		1	4466211	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2023-01-17		
+GCF_029026905.1	SAMN24624792	primary	verified	1		1	5894614	Chromosome:1	present	GCF_029026905.1-RS_2025_05_18	2025-05-18	5390	5270
+GCA_029026905.1	SAMN24624792	gca_identity_check	verified	1		1	5894614	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2022-01-06		
+GCF_029215875.1	SAMN33417407	primary	verified	1		1	6944081	Chromosome:1	present	GCF_029215875.1-RS_2025_12_02	2025-12-02	6394	6255
+GCA_029215875.1	SAMN33417407	gca_identity_check	verified	1		1	6944081	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2023-02-28		
+GCF_029590315.1	SAMN33473866	primary	verified	1		2	6684879	Chromosome:1;Plasmid:1	present	GCF_029590315.1-RS_2025_04_04	2025-04-04	5971	5893
+GCA_029590315.1	SAMN33473866	gca_identity_check	verified	1		2	6684879	Chromosome:1;Plasmid:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2023-03-30		
+GCF_029870285.2	SAMN15905291	primary	verified	1		1	5538489	Chromosome:1	present	GCF_029870285.2-RS_2025_03_06	2025-03-06	4940	4818
+GCA_029870285.2	SAMN15905291	gca_identity_check	verified	1		1	5538489	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-02-14		
+GCF_029919115.1	SAMN34365076	primary	verified	1		1	5810675	Chromosome:1	present	GCF_029919115.1-RS_2025_06_11	2025-06-11	5490	5362
+GCA_029919115.1	SAMN34365076	gca_identity_check	verified	1		1	5810675	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2023-04-26		
+GCF_030064165.1	SAMN35084066	primary	verified	1		3	5298694	Chromosome:1;Plasmid:2	present	GCF_030064165.1-RS_2025_12_09	2025-12-09	4840	4753
+GCA_030064165.1	SAMN35084066	gca_identity_check	verified	1		3	5298694	Chromosome:1;Plasmid:2		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2023-05-17		
+GCF_030285805.1	SAMN35553893	primary	verified	1		1	5293235	Chromosome:1	present	GCF_030285805.1-RS_2026_07_01	2026-07-01	4895	4683
+GCA_030285805.1	SAMN35553893	gca_identity_check	verified	1		1	5293235	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2023-06-11		
+GCF_030285825.1	SAMN35553890	primary	verified	1		1	5007742	Chromosome:1	present	GCF_030285825.1-RS_2026_07_01	2026-07-01	4570	4426
+GCA_030285825.1	SAMN35553890	gca_identity_check	verified	1		1	5007742	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2023-06-11		
+GCF_030285845.1	SAMN35553894	primary	verified	1		1	5325930	Chromosome:1	present	GCF_030285845.1-RS_2026_07_01	2026-07-01	4938	4728
+GCA_030285845.1	SAMN35553894	gca_identity_check	verified	1		1	5325930	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2023-06-11		
+GCF_030285865.1	SAMN35553892	primary	verified	1		1	5350208	Chromosome:1	present	GCF_030285865.1-RS_2026_07_01	2026-07-01	4957	4749
+GCA_030285865.1	SAMN35553892	gca_identity_check	verified	1		1	5350208	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2023-06-11		
+GCF_030285885.1	SAMN35553891	primary	verified	1		1	5351555	Chromosome:1	present	GCF_030285885.1-RS_2026_07_01	2026-07-01	4965	4756
+GCA_030285885.1	SAMN35553891	gca_identity_check	verified	1		1	5351555	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2023-06-11		
+GCF_030503915.1	SAMN36368427	primary	verified	1		1	3674978	Chromosome:1	present	GCF_030503915.1-RS_2024_08_11	2024-08-11	3415	3368
+GCA_030503915.1	SAMN36368427	gca_identity_check	verified	1		1	3674978	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2023-07-12		
+GCF_030505195.1	SAMN36295335	primary	verified	1		2	6084127	Chromosome:1;Plasmid:1	present	GCF_030505195.1-RS_2025_07_25	2025-07-25	5555	5392
+GCA_030505195.1	SAMN36295335	gca_identity_check	verified	1		2	6084127	Chromosome:1;Plasmid:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2023-07-14		
+GCF_032191775.1	SAMN36884691	primary	verified	1		1	3889336	Chromosome:1	present	GCF_032191775.1-RS_2026_05_19	2026-05-19	3655	3603
+GCA_032191775.1	SAMN36884691	gca_identity_check	verified	1		1	3889336	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2023-08-11		
+GCF_032929295.1	SAMN37754217	primary	verified	1		1	5384305	Chromosome:1	present	GCF_032929295.1-RS_2024_08_30	2024-08-30	4956	4846
+GCA_032929295.1	SAMN37754217	gca_identity_check	verified	1		1	5384305	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2023-10-17		
+GCF_033100095.1	SAMN33848404	primary	verified	1		1	4099615	Chromosome:1	present	GCF_033100095.1-RS_2026_05_13	2026-05-13	3869	3734
+GCA_033100095.1	SAMN33848404	gca_identity_check	verified	1		1	4099615	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2023-10-20		
+GCF_033110285.1	SAMN37803623	primary	verified	1		1	3611735	Chromosome:1	present	GCF_033110285.1-RS_2025_02_24	2025-02-24	3409	3210
+GCA_033110285.1	SAMN37803623	gca_identity_check	verified	1		1	3611735	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2023-10-24		
+GCF_033550875.1	SAMN38110883	primary	verified	1		1	4541941	Chromosome:1	present	GCF_033550875.1-RS_2025_12_02	2025-12-02	4160	4109
+GCA_033550875.1	SAMN38110883	gca_identity_check	verified	1		1	4541941	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2023-11-07		
+GCF_034421675.1	SAMN38441132	primary	verified	1		1	4672945	Chromosome:1	present	GCF_034421675.1-RS_2025_02_19	2025-02-19	4451	4404
+GCA_034421675.1	SAMN38441132	gca_identity_check	verified	1		1	4672945	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2023-12-08		
+GCF_034479025.1	SAMN38186276	primary	verified	1		1	6012993	Chromosome:1	present	GCF_034479025.1-RS_2025_02_19	2025-02-19	5445	5308
+GCA_034479025.1	SAMN38186276	gca_identity_check	verified	1		1	6012993	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2023-12-01		
+GCF_035578885.1	SAMN38710906	primary	verified	1		1	6740460	Chromosome:1	present	GCF_035578885.1-RS_2026_01_11	2026-01-11	6100	6023
+GCA_035578885.1	SAMN38710906	gca_identity_check	verified	1		1	6740460	Chromosome:1					
+GCF_036828685.1	SAMN31283087	primary	verified	1		1	6759232	Chromosome:1	present	GCF_036828685.1-RS_2025_04_05	2025-04-05	6126	5958
+GCA_036828685.1	SAMN31283087	gca_identity_check	verified	1		1	6759232	Chromosome:1					
+GCF_038784515.1	SAMN41018415	primary	verified	1		1	5486892	Chromosome:1	present	GCF_038784515.1-RS_2024_04_30	2024-04-30	5133	5059
+GCA_038784515.1	SAMN41018415	gca_identity_check	verified	1		1	5486892	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2024-04-24		
+GCF_038958875.1	SAMN40984376	primary	verified	1		1	4752276	Chromosome:1	present	GCF_038958875.1-RS_2024_05_02	2024-05-02	4385	4299
+GCA_038958875.1	SAMN40984376	gca_identity_check	verified	1		1	4752276	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2024-04-25		
+GCF_039511595.1	SAMN41086124	primary	verified	1		1	3331307	Chromosome:1	present	GCF_039511595.1-RS_2025_05_07	2025-05-07	2916	2860
+GCA_039511595.1	SAMN41086124	gca_identity_check	verified	1		1	3331307	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2024-04-30		
+GCF_040105105.1	SAMN41603084	primary	verified	1		6	5365325	Chromosome:1;Plasmid:5	present	GCF_040105105.1-RS_2025_06_09	2025-06-09	5139	4863
+GCA_040105105.1	SAMN41603084	gca_identity_check	verified	1		6	5365325	Chromosome:1;Plasmid:5		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2024-06-03		
+GCF_040112715.1	SAMN41154329	primary	verified	1		1	6275976	Chromosome:1	present	GCF_040112715.1-RS_2024_06_11	2024-06-11	5564	5530
+GCA_040112715.1	SAMN41154329	gca_identity_check	verified	1		1	6275976	Chromosome:1					
+GCF_040267515.1	SAMN38892012	primary	verified	1		2	7267296	Chromosome:1;Plasmid:1	present	GCF_040267515.1-RS_2024_11_20	2024-11-20	6597	6450
+GCA_040267515.1	SAMN38892012	gca_identity_check	verified	1		2	7267296	Chromosome:1;Plasmid:1					
+GCF_040732315.1	SAMN41917982	primary	verified	1		1	3842277	Chromosome:1	present	GCF_040732315.1-RS_2024_07_17	2024-07-17	3547	3484
+GCA_040732315.1	SAMN41917982	gca_identity_check	verified	1		1	3842277	Chromosome:1					
+GCF_041154415.1	SAMD00623148	primary	verified	1		2	6743115	Chromosome:1;Plasmid:1	present	GCF_041154415.1-RS_2024_08_10	2024-08-10	6379	6351
+GCA_041154415.1	SAMD00623148	gca_identity_check	verified	1		2	6743115	Chromosome:1;Plasmid:1		Annotation submitted by Kyoto University	2024-06-08		
+GCF_041154425.1	SAMD00623149	primary	verified	1		2	7418992	Chromosome:1;Plasmid:1	present	GCF_041154425.1-RS_2024_08_10	2024-08-10	6868	6796
+GCA_041154425.1	SAMD00623149	gca_identity_check	verified	1		2	7418992	Chromosome:1;Plasmid:1		Annotation submitted by Kyoto University	2024-06-08		
+GCF_041154435.1	SAMD00623150	primary	verified	1		2	6776293	Chromosome:1;Plasmid:1	present	GCF_041154435.1-RS_2024_08_10	2024-08-10	6446	6360
+GCA_041154435.1	SAMD00623150	gca_identity_check	verified	1		2	6776293	Chromosome:1;Plasmid:1		Annotation submitted by Kyoto University	2024-06-08		
+GCF_041154445.1	SAMD00623151	primary	verified	1		1	7214639	Chromosome:1	present	GCF_041154445.1-RS_2024_08_10	2024-08-10	6685	6566
+GCA_041154445.1	SAMD00623151	gca_identity_check	verified	1		1	7214639	Chromosome:1		Annotation submitted by Kyoto University	2024-06-08		
+GCF_041154455.1	SAMD00623152	primary	verified	1		2	6413929	Chromosome:1;Plasmid:1	present	GCF_041154455.1-RS_2024_08_10	2024-08-10	6039	5907
+GCA_041154455.1	SAMD00623152	gca_identity_check	verified	1		2	6413929	Chromosome:1;Plasmid:1		Annotation submitted by Kyoto University	2024-06-08		
+GCF_041154465.1	SAMD00623153	primary	verified	1		1	7285518	Chromosome:1	present	GCF_041154465.1-RS_2024_08_10	2024-08-10	6690	6602
+GCA_041154465.1	SAMD00623153	gca_identity_check	verified	1		1	7285518	Chromosome:1		Annotation submitted by Kyoto University	2024-06-08		
+GCF_041154475.1	SAMD00623154	primary	verified	1		2	6743117	Chromosome:1;Plasmid:1	present	GCF_041154475.1-RS_2024_08_10	2024-08-10	6376	6346
+GCA_041154475.1	SAMD00623154	gca_identity_check	verified	1		2	6743117	Chromosome:1;Plasmid:1		Annotation submitted by Kyoto University	2024-06-08		
+GCF_041154485.1	SAMD00623155	primary	verified	1		2	6743117	Chromosome:1;Plasmid:1	present	GCF_041154485.1-RS_2024_08_10	2024-08-10	6376	6346
+GCA_041154485.1	SAMD00623155	gca_identity_check	verified	1		2	6743117	Chromosome:1;Plasmid:1		Annotation submitted by Kyoto University	2024-06-08		
+GCF_041154495.1	SAMD00623156	primary	verified	1		1	7285451	Chromosome:1	present	GCF_041154495.1-RS_2024_08_10	2024-08-10	6689	6581
+GCA_041154495.1	SAMD00623156	gca_identity_check	verified	1		1	7285451	Chromosome:1		Annotation submitted by Kyoto University	2024-06-08		
+GCF_041154505.1	SAMD00623157	primary	verified	1		2	5872218	Chromosome:1;Plasmid:1	present	GCF_041154505.1-RS_2024_08_10	2024-08-10	5388	5332
+GCA_041154505.1	SAMD00623157	gca_identity_check	verified	1		2	5872218	Chromosome:1;Plasmid:1		Annotation submitted by Kyoto University	2024-06-08		
+GCF_041320665.1	SAMN42186667	primary	verified	1		1	5054837	Chromosome:1	present	GCF_041320665.1-RS_2024_08_19	2024-08-19	4375	4290
+GCA_041320665.1	SAMN42186667	gca_identity_check	verified	1		1	5054837	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2024-08-12		
+GCF_041879305.1	SAMN20088299	primary	verified	1		2	5677414	Chromosome:1;Plasmid:1	present	GCF_041879305.1-RS_2024_09_10	2024-09-10	5118	5073
+GCA_041879305.1	SAMN20088299	gca_identity_check	verified	1		2	5677414	Chromosome:1;Plasmid:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2021-07-16		
+GCF_041893715.1	SAMN43478800	primary	verified	1		1	6294714	Chromosome:1	present	GCF_041893715.1-RS_2024_09_11	2024-09-11	5589	5536
+GCA_041893715.1	SAMN43478800	gca_identity_check	verified	1		1	6294714	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2024-09-04		
+GCF_042850955.1	SAMD00797421	primary	verified	1		1	5583543	Chromosome:1	present	GCF_042850955.1-RS_2025_02_19	2025-02-19	4890	4853
+GCA_042850955.1	SAMD00797421	gca_identity_check	verified	1		1	5583543	Chromosome:1		Annotation submitted by Genetic Resources Center, National Agriculture and Food Research Organization	2024-07-17		
+GCF_044792555.1	SAMN33984519	primary	verified	1		3	4490037	Chromosome:1;Plasmid:2	present	GCF_044792555.1-RS_2024_11_13	2024-11-13	4239	4084
+GCA_044792555.1	SAMN33984519	gca_identity_check	verified	1		3	4490037	Chromosome:1;Plasmid:2		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2023-05-24		
+GCF_045055315.1	SAMN44671697	primary	verified	1		1	2407891	Chromosome:1	present	GCF_045055315.1-RS_2024_11_21	2024-11-21	2271	2212
+GCA_045055315.1	SAMN44671697	gca_identity_check	verified	1		1	2407891	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2024-11-14		
+GCF_045291395.1	SAMN40232180	primary	verified	1		1	5167195	Chromosome:1	present	GCF_045291405.1-RS_2024_11_26	2024-11-26	4957	4627
+GCA_045291395.1	SAMN40232180	gca_identity_check	verified	1		1	5167195	Chromosome:1					
+GCF_045833575.1	SAMN44848430	primary	verified	1		2	5590961	Chromosome:1;Plasmid:1	present	GCF_045833575.1-RS_2024_12_10	2024-12-10	4959	4919
+GCA_045833575.1	SAMN44848430	gca_identity_check	verified	1		2	5590961	Chromosome:1;Plasmid:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2024-12-03		
+GCF_047414625.1	SAMN46294817	primary	verified	1		3	8090433	Chromosome:2;Plasmid:1	present	GCF_047414625.1-RS_2025_02_05	2025-02-05	7447	7337
+GCA_047414625.1	SAMN46294817	gca_identity_check	verified	1		3	8090433	Chromosome:2;Plasmid:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-01-29		
+GCF_047946895.1	SAMN46161502	primary	verified	1		1	4800129	Chromosome:1	present	GCF_047946895.1-RS_2025_02_25	2025-02-25	4470	4370
+GCA_047946895.1	SAMN46161502	gca_identity_check	verified	1		1	4800129	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-02-14		
+GCF_047947035.1	SAMN37129707	primary	verified	1		1	5276827	Chromosome:1	present	GCF_047947035.1-RS_2025_02_25	2025-02-25	4871	4660
+GCA_047947035.1	SAMN37129707	gca_identity_check	verified	1		1	5276827	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2023-08-24		
+GCF_048019295.1	SAMN44356506	primary	verified	1		1	3391376	Chromosome:1	present	GCF_048019295.1-RS_2025_02_26	2025-02-26	3071	3042
+GCA_048019295.1	SAMN44356506	gca_identity_check	verified	1		1	3391376	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2024-10-22		
+GCF_048020265.1	SAMN44356510	primary	verified	1		1	3077336	Chromosome:1	present	GCF_048020265.1-RS_2025_04_14	2025-04-14	2800	2767
+GCA_048020265.1	SAMN44356510	gca_identity_check	verified	1		1	3077336	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2024-10-22		
+GCF_048163855.1	SAMN46474190	primary	verified	1		1	6542009	Chromosome:1	present	GCF_048163855.1-RS_2025_02_28	2025-02-28	5870	5769
+GCA_048163855.1	SAMN46474190	gca_identity_check	verified	1		1	6542009	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-02-20		
+GCF_048301405.1	SAMN41427638	primary	verified	1		2	8319149	Chromosome:1;Plasmid:1	present	GCF_048301405.1-RS_2025_03_05	2025-03-05	7747	7604
+GCA_048301405.1	SAMN41427638	gca_identity_check	verified	1		2	8319149	Chromosome:1;Plasmid:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2024-05-31		
+GCF_048301535.1	SAMN41427637	primary	verified	1		2	8279564	Chromosome:1;Plasmid:1	present	GCF_048301535.1-RS_2025_03_05	2025-03-05	7716	7599
+GCA_048301535.1	SAMN41427637	gca_identity_check	verified	1		2	8279564	Chromosome:1;Plasmid:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2024-05-31		
+GCF_048301545.1	SAMN41427636	primary	verified	1		1	8320371	Chromosome:1	present	GCF_048301545.1-RS_2025_03_05	2025-03-05	7749	7623
+GCA_048301545.1	SAMN41427636	gca_identity_check	verified	1		1	8320371	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2024-05-31		
+GCF_048301555.1	SAMN41427635	primary	verified	1		2	8300644	Chromosome:1;Plasmid:1	present	GCF_048301555.1-RS_2025_03_05	2025-03-05	7752	7627
+GCA_048301555.1	SAMN41427635	gca_identity_check	verified	1		2	8300644	Chromosome:1;Plasmid:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2024-05-31		
+GCF_048302415.1	SAMN41427634	primary	verified	1		2	7247287	Chromosome:1;Plasmid:1	present	GCF_048302415.1-RS_2025_03_05	2025-03-05	6757	6715
+GCA_048302415.1	SAMN41427634	gca_identity_check	verified	1		2	7247287	Chromosome:1;Plasmid:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2024-05-31		
+GCF_048302465.1	SAMN41427633	primary	verified	1		2	7347343	Chromosome:1;Plasmid:1	present	GCF_048302465.1-RS_2025_03_05	2025-03-05	6741	6692
+GCA_048302465.1	SAMN41427633	gca_identity_check	verified	1		2	7347343	Chromosome:1;Plasmid:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2024-05-31		
+GCF_048302515.1	SAMN41427632	primary	verified	1		2	7426589	Chromosome:1;Plasmid:1	present	GCF_048302515.1-RS_2025_03_05	2025-03-05	6753	6694
+GCA_048302515.1	SAMN41427632	gca_identity_check	verified	1		2	7426589	Chromosome:1;Plasmid:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2024-05-31		
+GCF_048305045.1	SAMN41427631	primary	verified	1		2	7327361	Chromosome:1;Plasmid:1	present	GCF_048305045.1-RS_2025_03_05	2025-03-05	6794	6740
+GCA_048305045.1	SAMN41427631	gca_identity_check	verified	1		2	7327361	Chromosome:1;Plasmid:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2024-05-31		
+GCF_048305075.1	SAMN41427630	primary	verified	1		2	7357228	Chromosome:1;Plasmid:1	present	GCF_048305075.1-RS_2025_03_05	2025-03-05	6762	6714
+GCA_048305075.1	SAMN41427630	gca_identity_check	verified	1		2	7357228	Chromosome:1;Plasmid:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2024-05-31		
+GCF_048305125.1	SAMN41427629	primary	verified	1		2	6677400	Chromosome:2	present	GCF_048305125.1-RS_2025_03_05	2025-03-05	6302	6262
+GCA_048305125.1	SAMN41427629	gca_identity_check	verified	1		2	6677400	Chromosome:2		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2024-05-31		
+GCF_048307575.1	SAMN41427628	primary	verified	1		2	7192447	Chromosome:2	present	GCF_048307575.1-RS_2025_03_05	2025-03-05	6801	6723
+GCA_048307575.1	SAMN41427628	gca_identity_check	verified	1		2	7192447	Chromosome:2		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2024-05-31		
+GCF_048307605.1	SAMN41427627	primary	verified	1		2	7150875	Chromosome:2	present	GCF_048307605.1-RS_2025_03_05	2025-03-05	6744	6667
+GCA_048307605.1	SAMN41427627	gca_identity_check	verified	1		2	7150875	Chromosome:2		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2024-05-31		
+GCF_048307675.1	SAMN41427626	primary	verified	1		2	7191321	Chromosome:2	present	GCF_048307675.1-RS_2025_03_05	2025-03-05	6803	6726
+GCA_048307675.1	SAMN41427626	gca_identity_check	verified	1		2	7191321	Chromosome:2		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2024-05-31		
+GCF_048310285.1	SAMN41427625	primary	verified	1		2	7549180	Chromosome:2	present	GCF_048310285.1-RS_2025_03_05	2025-03-05	7010	6916
+GCA_048310285.1	SAMN41427625	gca_identity_check	verified	1		2	7549180	Chromosome:2		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2024-05-31		
+GCF_048310315.1	SAMN41427624	primary	verified	1		2	7023692	Chromosome:2	present	GCF_048310315.1-RS_2025_03_05	2025-03-05	6583	6468
+GCA_048310315.1	SAMN41427624	gca_identity_check	verified	1		2	7023692	Chromosome:2		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2024-05-31		
+GCF_049330835.1	SAMN47504784	primary	verified	1		1	4871519	Chromosome:1	present	GCF_049330835.1-RS_2025_04_08	2025-04-08	4416	4387
+GCA_049330835.1	SAMN47504784	gca_identity_check	verified	1		1	4871519	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-04-01		
+GCF_049331375.1	SAMN47504791	primary	verified	1		1	4990344	Chromosome:1	present	GCF_049331375.1-RS_2025_04_08	2025-04-08	4582	4550
+GCA_049331375.1	SAMN47504791	gca_identity_check	verified	1		1	4990344	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-04-01		
+GCF_049532675.1	SAMN40551868	primary	verified	1		2	6581705	Chromosome:1;Plasmid:1	present	GCF_049532675.1-RS_2025_04_13	2025-04-13	6190	5837
+GCA_049532675.1	SAMN40551868	gca_identity_check	verified	1		2	6581705	Chromosome:1;Plasmid:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2024-03-25		
+GCF_049601575.1	SAMN47833092	primary	verified	1		2	4988187	Chromosome:1;Plasmid:1	present	GCF_049601575.1-RS_2025_04_17	2025-04-17	4403	4360
+GCA_049601575.1	SAMN47833092	gca_identity_check	verified	1		2	4988187	Chromosome:1;Plasmid:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-04-09		
+GCF_049860745.1	SAMN47998638	primary	verified	1		1	6123163	Chromosome:1	present	GCF_049860745.1-RS_2026_04_26	2026-04-26	5420	5385
+GCA_049860745.1	SAMN47998638	gca_identity_check	verified	1		1	6123163	Chromosome:1					
+GCF_050310035.1	SAMN47537704	primary	verified	1		2	5295905	Chromosome:1;Plasmid:1	present	GCF_050310035.1-RS_2025_05_12	2025-05-12	4800	4606
+GCA_050310035.1	SAMN47537704	gca_identity_check	verified	1		2	5295905	Chromosome:1;Plasmid:1					
+GCF_050320135.1	SAMN48003542	primary	verified	1		1	4583572	Chromosome:1	present	GCF_050320135.1-RS_2025_05_13	2025-05-13	4497	4342
+GCA_050320135.1	SAMN48003542	gca_identity_check	verified	1		1	4583572	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-05-05		
+GCF_050632185.1	SAMN48544574	primary	verified	1		1	4725594	Chromosome:1	present	GCF_050632185.1-RS_2025_06_02	2025-06-02	4632	4176
+GCA_050632185.1	SAMN48544574	gca_identity_check	verified	1		1	4725594	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-05-23		
+GCF_050711835.1	SAMN37223048	primary	verified	1		2	9808827	Chromosome:2	present	GCF_050711835.1-RS_2025_06_04	2025-06-04	9044	8949
+GCA_050711835.1	SAMN37223048	gca_identity_check	verified	1		2	9808827	Chromosome:2		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2023-10-16		
+GCF_050821495.1	SAMN40716017	primary	verified	1		2	4284994	Chromosome:1;Plasmid:1	present	GCF_050821495.1-RS_2025_06_07	2025-06-07	3960	3642
+GCA_050821495.1	SAMN40716017	gca_identity_check	verified	1		2	4284994	Chromosome:1;Plasmid:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2024-04-08		
+GCF_050907895.1	SAMN48903693	primary	verified	1		1	6695534	Chromosome:1	present	GCF_050907895.1-RS_2025_06_12	2025-06-12	6042	5968
+GCA_050907895.1	SAMN48903693	gca_identity_check	verified	1		1	6695534	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-06-06		
+GCF_050916385.1	SAMN38195469	primary	verified	1		1	7201473	Chromosome:1	present	GCF_050916385.1-RS_2025_06_13	2025-06-13	6588	6566
+GCA_050916385.1	SAMN38195469	gca_identity_check	verified	1		1	7201473	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2023-11-27		
+GCF_052605665.1	SAMN50932274	primary	verified	1		1	5435213	Chromosome:1	present	GCF_052605665.1-RS_2025_09_15	2025-09-15	5054	4687
+GCA_052605665.1	SAMN50932274	gca_identity_check	verified	1		1	5435213	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-09-05		
+GCF_054850585.1	SAMN54434494	primary	verified	1		2	6712185	Chromosome:1;Plasmid:1	present	GCF_054850585.1-RS_2026_01_31	2026-01-31	6096	6003
+GCA_054850585.1	SAMN54434494	gca_identity_check	verified	1		2	6712185	Chromosome:1;Plasmid:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2026-01-22		
+GCF_055755135.1	SAMN52829596	primary	verified	1		1	6945445	Chromosome:1	present	GCF_055755135.1-RS_2026_03_10	2026-03-10	6401	6231
+GCA_055755135.1	SAMN52829596	gca_identity_check	verified	1		1	6945445	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2026-03-04		
+GCF_055797465.1	SAMN47219713	primary	verified	1		2	6464092	Chromosome:1;Plasmid:1	present	GCF_055797465.1-RS_2026_03_12	2026-03-12	5821	5770
+GCA_055797465.1	SAMN47219713	gca_identity_check	verified	1		2	6464092	Chromosome:1;Plasmid:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-03-18		
+GCF_056323735.1	SAMN52629794	primary	verified	1		2	2528832	Chromosome:1;Plasmid:1	present	GCF_056323735.1-RS_2026_03_26	2026-03-26	2322	2273
+GCA_056323735.1	SAMN52629794	gca_identity_check	verified	1		2	2528832	Chromosome:1;Plasmid:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2026-01-29		
+GCF_056341105.1	SAMN40572341	primary	verified	1		1	2633465	Chromosome:1	present	GCF_056341105.1-RS_2026_03_27	2026-03-27	2393	2331
+GCA_056341105.1	SAMN40572341	gca_identity_check	verified	1		1	2633465	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2024-04-02		
+GCF_056488365.1	SAMN56682558	primary	verified	1		1	3821750	Chromosome:1	present	GCF_056488365.1-RS_2026_04_01	2026-04-01	3547	3384
+GCA_056488365.1	SAMN56682558	gca_identity_check	verified	1		1	3821750	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2026-03-24		
+GCF_056547405.1	SAMN54596242	primary	verified	1		1	6277843	Chromosome:1	present	GCF_056547405.1-RS_2026_04_15	2026-04-15	5569	5543
+GCA_056547405.1	SAMN54596242	gca_identity_check	verified	1		1	6277843	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2026-01-14		
+GCF_056679935.1	SAMN51757668	primary	verified	1		6	5194827	Chromosome:1;Plasmid:5	present	GCF_056679935.1-RS_2026_04_16	2026-04-16	4739	4661
+GCA_056679935.1	SAMN51757668	gca_identity_check	verified	1		6	5194827	Chromosome:1;Plasmid:5		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2026-04-07		
+GCF_056682315.1	SAMN57136681	primary	verified	1		1	5344208	Chromosome:1	present	GCF_056682315.1-RS_2026_04_16	2026-04-16	4758	4696
+GCA_056682315.1	SAMN57136681	gca_identity_check	verified	1		1	5344208	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2026-04-07		
+GCF_056858255.1	SAMN56360654	primary	verified	1		1	5542670	Chromosome:1	present	GCF_056858255.1-RS_2026_04_23	2026-04-23	5042	5007
+GCA_056858255.1	SAMN56360654	gca_identity_check	verified	1		1	5542670	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2026-04-17		
+GCF_056867935.1	SAMN47941091	primary	verified	1		1	7133974	Chromosome:1	present	GCF_056867935.1-RS_2026_04_24	2026-04-24	6689	6595
+GCA_056867935.1	SAMN47941091	gca_identity_check	verified	1		1	7133974	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2026-04-16		
+GCF_056989755.1	SAMN50023108	primary	verified	1		1	6074442	Chromosome:1	present	GCF_056989755.1-RS_2026_05_04	2026-05-04	5417	5354
+GCA_056989755.1	SAMN50023108	gca_identity_check	verified	1		1	6074442	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2026-04-23		
+GCF_057218865.1	SAMN57441782	primary	verified	1		2	5183392	Chromosome:1;Plasmid:1	present	GCF_057218865.1-RS_2026_05_06	2026-05-06	4755	4620
+GCA_057218865.1	SAMN57441782	gca_identity_check	verified	1		2	5183392	Chromosome:1;Plasmid:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2026-04-30		
+GCF_057443955.1	SAMN58887259	primary	verified	1		1	6557638	Chromosome:1	present	GCF_057443955.1-RS_2026_05_14	2026-05-14	5922	5884
+GCA_057443955.1	SAMN58887259	gca_identity_check	verified	1		1	6557638	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2026-05-07		
+GCF_057597245.1	SAMN50895460	primary	verified	1		1	5313413	Chromosome:1	present	GCF_057597245.1-RS_2026_05_19	2026-05-19	4842	4818
+GCA_057597245.1	SAMN50895460	gca_identity_check	verified	1		1	5313413	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-09-04		
+GCF_057654755.1	SAMN59490824	primary	verified	1		2	4697287	Chromosome:1;Plasmid:1	present	GCF_057654755.1-RS_2026_05_20	2026-05-20	4593	4370
+GCA_057654755.1	SAMN59490824	gca_identity_check	verified	1		2	4697287	Chromosome:1;Plasmid:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2026-05-14		
+GCF_057747835.1	SAMN59910639	primary	verified	1		1	4087847	Chromosome:1	present	GCF_057747835.1-RS_2026_05_26	2026-05-26	3920	3906
+GCA_057747835.1	SAMN59910639	gca_identity_check	verified	1		1	4087847	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2026-05-20		
+GCF_057773645.1	SAMN54450835	primary	verified	1		1	2814929	Chromosome:1	present	GCF_057773645.1-RS_2026_05_27	2026-05-27	2599	2564
+GCA_057773645.1	SAMN54450835	gca_identity_check	verified	1		1	2814929	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2026-05-21		
+GCF_057836925.1	SAMN60399773	primary	verified	1		2	6959983	Chromosome:1;Plasmid:1	present	GCF_057836925.1-RS_2026_06_03	2026-06-03	6498	6445
+GCA_057836925.1	SAMN60399773	gca_identity_check	verified	1		2	6959983	Chromosome:1;Plasmid:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2026-05-28		
+GCF_057914905.1	SAMN50084524	primary	verified	1		3	5837063	Chromosome:1;Plasmid:2	present	GCF_057914905.1-RS_2026_06_05	2026-06-05	5295	5248
+GCA_057914905.1	SAMN50084524	gca_identity_check	verified	1		3	5837063	Chromosome:1;Plasmid:2		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-07-29		
+GCF_058382255.1	SAMN58977391	primary	verified	1		1	6776510	Chromosome:1	present	GCF_058382255.1-RS_2026_06_24	2026-06-24	6212	6176
+GCA_058382255.1	SAMN58977391	gca_identity_check	verified	1		1	6776510	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2026-05-12		
+GCF_058731905.1	SAMN61030981	primary	verified	1		1	4178444	Chromosome:1	present	GCF_058731905.1-RS_2026_07_02	2026-07-02	3931	3802
+GCA_058731905.1	SAMN61030981	gca_identity_check	verified	1		1	4178444	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2026-06-26		
+GCF_058742725.1	SAMN49687912	primary	verified	1		1	6455743	Chromosome:1	present	GCF_058742725.1-RS_2026_07_03	2026-07-03	5701	5666
+GCA_058742725.1	SAMN49687912	gca_identity_check	verified	1		1	6455743	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2025-07-17		
+GCF_058795695.1	SAMN56458692	primary	verified	1		1	5583386	Chromosome:1	present	GCF_058795695.1-RS_2026_07_03	2026-07-03	5078	5030
+GCA_058795695.1	SAMN56458692	gca_identity_check	verified	1		1	5583386	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2026-06-01		
+GCF_058800075.1	SAMN56458580	primary	verified	1		1	6352410	Chromosome:1	present	GCF_058800075.1-RS_2026_07_04	2026-07-04	5706	5680
+GCA_058800075.1	SAMN56458580	gca_identity_check	verified	1		1	6352410	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2026-06-01		
+GCF_058802765.1	SAMN56458511	primary	verified	1		1	5486892	Chromosome:1	present	GCF_058802765.1-RS_2026_07_04	2026-07-04	5151	5073
+GCA_058802765.1	SAMN56458511	gca_identity_check	verified	1		1	5486892	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2026-06-01		
+GCF_059579365.1	SAMN61467010	primary	verified	1		1	6743892	Chromosome:1	present	GCF_059579365.1-RS_2026_07_24	2026-07-24	6082	5967
+GCA_059579365.1	SAMN61467010	gca_identity_check	verified	1		1	6743892	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2026-07-17		
+GCF_059697915.1	SAMD01923685	primary	verified	1		2	10011889	Chromosome:1;Plasmid:1	present	GCF_059697915.1-RS_2026_07_31	2026-07-31	9078	8958
+GCA_059697915.1	SAMD01923685	gca_identity_check	verified	1		2	10011889	Chromosome:1;Plasmid:1		Annotation submitted by Environmental soil science and Biogeochemistry lab, college of agriculture, Ibaraki University	2026-06-23		
+GCF_059705325.1	SAMD01824669	primary	verified	1		1	5828460	Chromosome:1	present	GCF_059705325.1-RS_2026_07_31	2026-07-31	5290	5166
+GCA_059705325.1	SAMD01824669	gca_identity_check	verified	1		1	5828460	Chromosome:1		Annotation submitted by RIKEN	2026-03-07		
+GCF_059821565.1	SAMN61421286	primary	verified	1		1	3841898	Chromosome:1	present	GCF_059821565.1-RS_2026_08_05	2026-08-05	3624	3595
+GCA_059821565.1	SAMN61421286	gca_identity_check	verified	1		1	3841898	Chromosome:1					
+GCF_059941345.1	SAMN51287180	primary	verified	1		1	5338777	Chromosome:1	present	GCF_059941345.1-RS_2026_08_08	2026-08-08	5004	4951
+GCA_059941345.1	SAMN51287180	gca_identity_check	verified	1		1	5338777	Chromosome:1					
+GCF_060345695.1	SAMN60433403	primary	verified	1		1	3841898	Chromosome:1	present	GCF_060345695.1-RS_2026_08_24	2026-08-24	3624	3595
+GCA_060345695.1	SAMN60433403	gca_identity_check	verified	1		1	3841898	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2026-08-18		
+GCF_060482485.1	SAMN56368689	primary	verified	1		1	4801315	Chromosome:1	present	GCF_060482485.1-RS_2026_08_27	2026-08-27	4640	4435
+GCA_060482485.1	SAMN56368689	gca_identity_check	verified	1		1	4801315	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2026-08-16		
+GCF_060658745.1	SAMN62386788	primary	verified	1		1	6796693	Chromosome:1	present	GCF_060658745.1-RS_2026_09_01	2026-09-01	6099	6062
+GCA_060658745.1	SAMN62386788	gca_identity_check	verified	1		1	6796693	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2026-08-27		
+GCF_062042928.1	SAMN63280581	primary	verified	1		1	4894334	Chromosome:1	present	GCF_062042928.1-RS_2026_10_20	2026-10-20	4467	4434
+GCA_062042928.1	SAMN63280581	gca_identity_check	verified	1		1	4894334	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2026-10-09		
+GCF_062042951.1	SAMN63280575	primary	verified	1		1	4894340	Chromosome:1	present	GCF_062042951.1-RS_2026_10_20	2026-10-20	4467	4436
+GCA_062042951.1	SAMN63280575	gca_identity_check	verified	1		1	4894340	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2026-10-09		
+GCF_062042956.1	SAMN63280568	primary	verified	1		1	4799142	Chromosome:1	present	GCF_062042956.1-RS_2026_10_20	2026-10-20	4354	4327
+GCA_062042956.1	SAMN63280568	gca_identity_check	verified	1		1	4799142	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2026-10-09		
+GCF_062042982.1	SAMN63280380	primary	verified	1		1	4903714	Chromosome:1	present	GCF_062042982.1-RS_2026_10_20	2026-10-20	4486	4436
+GCA_062042982.1	SAMN63280380	gca_identity_check	verified	1		1	4903714	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2026-10-09		
+GCF_062043511.1	SAMN63280277	primary	verified	1		2	4894340	Chromosome:1;Plasmid:1	present	GCF_062043511.1-RS_2026_10_20	2026-10-20	4467	4438
+GCA_062043511.1	SAMN63280277	gca_identity_check	verified	1		2	4894340	Chromosome:1;Plasmid:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2026-10-09		
+GCF_062043544.1	SAMN63279861	primary	verified	1		1	4894336	Chromosome:1	present	GCF_062043544.1-RS_2026_10_20	2026-10-20	4473	4442
+GCA_062043544.1	SAMN63279861	gca_identity_check	verified	1		1	4894336	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2026-10-09		
+GCF_062043549.1	SAMN63280216	primary	verified	1		2	4894331	Chromosome:1;Plasmid:1	present	GCF_062043549.1-RS_2026_10_20	2026-10-20	4472	4440
+GCA_062043549.1	SAMN63280216	gca_identity_check	verified	1		2	4894331	Chromosome:1;Plasmid:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2026-10-09		
+GCF_062043591.1	SAMN63280214	primary	verified	1		2	4908879	Chromosome:1;Plasmid:1	present	GCF_062043591.1-RS_2026_10_20	2026-10-20	4488	4438
+GCA_062043591.1	SAMN63280214	gca_identity_check	verified	1		2	4908879	Chromosome:1;Plasmid:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2026-10-09		
+GCF_062045495.1	SAMN63279465	primary	verified	1		1	4883043	Chromosome:1	present	GCF_062045495.1-RS_2026_10_20	2026-10-20	4469	4439
+GCA_062045495.1	SAMN63279465	gca_identity_check	verified	1		1	4883043	Chromosome:1		NCBI Prokaryotic Genome Annotation Pipeline (PGAP)	2026-10-12		
+GCF_901827155.1	SAMEA5159697	primary	verified	1		3	6871554	Chromosome:1;Plasmid:2	present	GCF_901827155.1-RS_2025_08_25	2025-08-25	6512	6407
+GCA_901827155.1	SAMEA5159697	gca_identity_check	verified	1		3	6871554	Chromosome:1;Plasmid:2		Annotation submitted by LEIBNIZ INSTITUTE FOR BALTIC SEA RESEARCH	2020-01-11		
+GCF_901827165.1	SAMEA5159699	primary	verified	1		5	7674934	Chromosome:1;Plasmid:4	present	GCF_901827165.1-RS_2025_08_25	2025-08-25	7452	7319
+GCA_901827165.1	SAMEA5159699	gca_identity_check	verified	1		5	7674934	Chromosome:1;Plasmid:4		Annotation submitted by LEIBNIZ INSTITUTE FOR BALTIC SEA RESEARCH	2020-01-11		
+GCF_901827175.1	SAMEA5159694	primary	verified	1		4	7424241	Chromosome:1;Plasmid:3	present	GCF_901827175.1-RS_2025_08_25	2025-08-25	7113	6926
+GCA_901827175.1	SAMEA5159694	gca_identity_check	verified	1		4	7424241	Chromosome:1;Plasmid:3		Annotation submitted by LEIBNIZ INSTITUTE FOR BALTIC SEA RESEARCH	2020-01-11		
+GCF_901827185.1	SAMEA5159696	primary	verified	1		4	7086410	Chromosome:1;Plasmid:3	present	GCF_901827185.1-RS_2025_08_25	2025-08-25	6921	6823
+GCA_901827185.1	SAMEA5159696	gca_identity_check	verified	1		4	7086410	Chromosome:1;Plasmid:3		Annotation submitted by LEIBNIZ INSTITUTE FOR BALTIC SEA RESEARCH	2020-01-11		
+GCF_901827205.1	SAMEA5159695	primary	verified	1		3	6652076	Chromosome:1;Plasmid:2	present	GCF_901827205.1-RS_2025_08_25	2025-08-25	6277	6194
+GCA_901827205.1	SAMEA5159695	gca_identity_check	verified	1		3	6652076	Chromosome:1;Plasmid:2		Annotation submitted by LEIBNIZ INSTITUTE FOR BALTIC SEA RESEARCH	2020-01-11		
+GCF_901846895.1	SAMEA5159698	primary	verified	1		6	8360137	Chromosome:1;Plasmid:5	present	GCF_901846895.1-RS_2025_08_25	2025-08-25	8088	7789
+GCA_901846895.1	SAMEA5159698	gca_identity_check	verified	1		6	8360137	Chromosome:1;Plasmid:5		Annotation submitted by LEIBNIZ INSTITUTE FOR BALTIC SEA RESEARCH	2020-01-11		
+GCF_902712855.1	SAMEA6414791	primary	verified	1		2	7257405	Chromosome:2	present	GCF_902712855.1-RS_2025_04_28	2025-04-28	6809	6713
+GCA_902712855.1	SAMEA6414791	gca_identity_check	verified	1		2	7257405	Chromosome:2		Annotation submitted by Radboud University Nijmegen	2020-01-25		
+GCF_964341695.1	SAMEA115296988	primary	verified	1		1	4007106	Chromosome:1	present	GCF_964341695.1-RS_2025_11_18	2025-11-18	3859	3756
+GCA_964341695.1	SAMEA115296988	gca_identity_check	verified	1		1	4007106	Chromosome:1		Annotation submitted by Democritus University of Thrace	2025-10-21		
+GCF_965211095.1	SAMEA117659874	primary	verified	1		1	4013516	Chromosome:1	present	GCF_965211095.1-RS_2025_11_19	2025-11-19	3784	3602
+GCA_965211095.1	SAMEA117659874	gca_identity_check	verified	1		1	4013516	Chromosome:1					
+GCF_965227425.1	SAMEA117789388	primary	verified	1		1	5870457	Chromosome:1	present	GCF_965227425.1-RS_2025_04_03	2025-04-03	5458	5409
+GCA_965227425.1	SAMEA117789388	gca_identity_check	verified	1		1	5870457	Chromosome:1					
+GCF_965229125.1	SAMEA117789387	primary	verified	1		1	4798770	Chromosome:1	present	GCF_965229125.1-RS_2025_04_03	2025-04-03	4454	4419
+GCA_965229125.1	SAMEA117789387	gca_identity_check	verified	1		1	4798770	Chromosome:1					
+GCF_965234325.1	SAMEA115832785	primary	verified	1		16	3665426	Chromosome:16	present	GCF_965234325.1-RS_2026_09_05	2026-09-05	3372	3351
+GCA_965234325.1	SAMEA115832785	gca_identity_check	verified	1		16	3665426	Chromosome:16		Annotation submitted by BIOLOGY CENTRE CAS, INSTITUTE OF HYDROBIOLOGY	2025-04-06		
+GCF_965234585.1	SAMEA115832797	primary	verified	1		1	2433530	Chromosome:1	present	GCF_965234585.1-RS_2026_09_05	2026-09-05	2426	2411
+GCA_965234585.1	SAMEA115832797	gca_identity_check	verified	1		1	2433530	Chromosome:1		Annotation submitted by BIOLOGY CENTRE CAS, INSTITUTE OF HYDROBIOLOGY	2025-04-06		
+GCF_965234735.1	SAMEA115832795	primary	verified	1		9	2666863	Chromosome:9	present	GCF_965234735.1-RS_2026_09_05	2026-09-05	2666	2634
+GCA_965234735.1	SAMEA115832795	gca_identity_check	verified	1		9	2666863	Chromosome:9		Annotation submitted by BIOLOGY CENTRE CAS, INSTITUTE OF HYDROBIOLOGY	2025-04-06		
+GCF_965234775.1	SAMEA115832813	primary	verified	1		12	3529270	Chromosome:12	present	GCF_965234775.1-RS_2026_09_05	2026-09-05	3414	3397
+GCA_965234775.1	SAMEA115832813	gca_identity_check	verified	1		12	3529270	Chromosome:12		Annotation submitted by BIOLOGY CENTRE CAS, INSTITUTE OF HYDROBIOLOGY	2025-04-06		
+GCF_965261745.1	SAMEA118088312	primary	verified	1		1	6727590	Chromosome:1	present	GCF_965261745.1-RS_2025_05_14	2025-05-14	6143	6052
+GCA_965261745.1	SAMEA118088312	gca_identity_check	verified	1		1	6727590	Chromosome:1					
+GCF_965262575.1	SAMEA118088415	primary	verified	1		1	6727603	Chromosome:1	present	GCF_965262575.1-RS_2025_05_14	2025-05-14	6142	6058
+GCA_965262575.1	SAMEA118088415	gca_identity_check	verified	1		1	6727603	Chromosome:1					
+GCF_965279215.1	SAMEA117984227	primary	verified	1		1	6927076	Chromosome:1	present	GCF_965279215.1-RS_2025_05_14	2025-05-14	6391	6314
+GCA_965279215.1	SAMEA117984227	gca_identity_check	verified	1		1	6927076	Chromosome:1					
+GCF_965279555.1	SAMEA117984232	primary	verified	1		1	5870464	Chromosome:1	present	GCF_965279555.1-RS_2025_05_14	2025-05-14	5462	5407
+GCA_965279555.1	SAMEA117984232	gca_identity_check	verified	1		1	5870464	Chromosome:1					
+GCF_965284525.1	SAMEA118332225	primary	verified	1		1	4632587	Chromosome:1	present	GCF_965284525.1-RS_2025_05_22	2025-05-22	4516	4318
+GCA_965284525.1	SAMEA118332225	gca_identity_check	verified	1		1	4632587	Chromosome:1					
+GCF_979257995.1	SAMEA120782405	primary	verified	1		1	6819656	Chromosome:1	present	GCF_979257995.1-RS_2026_02_17	2026-02-17	6362	6313
+GCA_979257995.1	SAMEA120782405	gca_identity_check	verified	1		1	6819656	Chromosome:1					
+GCF_979258345.1	SAMEA120782407	primary	verified	1		1	6828652	Chromosome:1	present	GCF_979258345.1-RS_2026_02_18	2026-02-18	6378	6330
+GCA_979258345.1	SAMEA120782407	gca_identity_check	verified	1		1	6828652	Chromosome:1					
+GCF_979258405.1	SAMEA120782408	primary	verified	1		1	6828328	Chromosome:1	present	GCF_979258405.1-RS_2026_02_18	2026-02-18	6382	6334
+GCA_979258405.1	SAMEA120782408	gca_identity_check	verified	1		1	6828328	Chromosome:1					
+GCF_979258565.1	SAMEA120782404	primary	verified	1		1	6828642	Chromosome:1	present	GCF_979258565.1-RS_2026_02_18	2026-02-18	6376	6327
+GCA_979258565.1	SAMEA120782404	gca_identity_check	verified	1		1	6828642	Chromosome:1					
+GCF_979258905.1	SAMEA120782406	primary	verified	1		1	6828633	Chromosome:1	present	GCF_979258905.1-RS_2026_02_18	2026-02-18	6374	6321
+GCA_979258905.1	SAMEA120782406	gca_identity_check	verified	1		1	6828633	Chromosome:1					

@@ -1,0 +1,3639 @@
+[
+  {
+    "query": "Sam8H1_PILER_0.0",
+    "organism": "Sam8H1",
+    "method": "PILER",
+    "native_family": "0.0",
+    "length": 5207,
+    "raw_occurrences": 5,
+    "occurrences": [
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 224596,
+        "end0": 229616,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_494",
+            "type": "rRNA",
+            "overlap_bp": 1550,
+            "feature_length_bp": 1550,
+            "product": [
+              "16S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "JR311_RS01205"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP069391.1_feature_496",
+            "type": "rRNA",
+            "overlap_bp": 2930,
+            "feature_length_bp": 2930,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "JR311_RS01210"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP069391.1_feature_498",
+            "type": "rRNA",
+            "overlap_bp": 116,
+            "feature_length_bp": 116,
+            "product": [
+              "5S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "JR311_RS01215"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP069391.1_feature_500",
+            "type": "tRNA",
+            "overlap_bp": 76,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Val"
+            ],
+            "locus_tag": [
+              "JR311_RS01220"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 294949,
+        "end0": 300001,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_680",
+            "type": "rRNA",
+            "overlap_bp": 1550,
+            "feature_length_bp": 1550,
+            "product": [
+              "16S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "JR311_RS01660"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP069391.1_feature_682",
+            "type": "rRNA",
+            "overlap_bp": 2930,
+            "feature_length_bp": 2930,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "JR311_RS01665"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP069391.1_feature_684",
+            "type": "rRNA",
+            "overlap_bp": 116,
+            "feature_length_bp": 116,
+            "product": [
+              "5S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "JR311_RS01670"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 354615,
+        "end0": 359659,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_852",
+            "type": "rRNA",
+            "overlap_bp": 1550,
+            "feature_length_bp": 1550,
+            "product": [
+              "16S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "JR311_RS02090"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP069391.1_feature_854",
+            "type": "rRNA",
+            "overlap_bp": 2930,
+            "feature_length_bp": 2930,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "JR311_RS02095"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP069391.1_feature_856",
+            "type": "rRNA",
+            "overlap_bp": 116,
+            "feature_length_bp": 116,
+            "product": [
+              "5S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "JR311_RS02100"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 791639,
+        "end0": 796624,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_1668",
+            "type": "rRNA",
+            "overlap_bp": 1550,
+            "feature_length_bp": 1550,
+            "product": [
+              "16S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "JR311_RS04100"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP069391.1_feature_1670",
+            "type": "rRNA",
+            "overlap_bp": 2930,
+            "feature_length_bp": 2930,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "JR311_RS04105"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP069391.1_feature_1672",
+            "type": "rRNA",
+            "overlap_bp": 116,
+            "feature_length_bp": 116,
+            "product": [
+              "5S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "JR311_RS04110"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 3084971,
+        "end0": 3090052,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_6114",
+            "type": "tRNA",
+            "overlap_bp": 76,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Val"
+            ],
+            "locus_tag": [
+              "JR311_RS15070"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP069391.1_feature_6116",
+            "type": "rRNA",
+            "overlap_bp": 116,
+            "feature_length_bp": 116,
+            "product": [
+              "5S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "JR311_RS15075"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP069391.1_feature_6118",
+            "type": "rRNA",
+            "overlap_bp": 2930,
+            "feature_length_bp": 2930,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "JR311_RS15080"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP069391.1_feature_6120",
+            "type": "rRNA",
+            "overlap_bp": 1550,
+            "feature_length_bp": 1550,
+            "product": [
+              "16S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "JR311_RS15085"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "Sam8H1_RS_R0",
+    "organism": "Sam8H1",
+    "method": "RS",
+    "native_family": "R=0",
+    "length": 3179,
+    "raw_occurrences": 18,
+    "occurrences": [
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 3089958,
+        "end0": 3090047,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 3085067,
+        "end0": 3088245,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_6116",
+            "type": "rRNA",
+            "overlap_bp": 116,
+            "feature_length_bp": 116,
+            "product": [
+              "5S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "JR311_RS15075"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP069391.1_feature_6118",
+            "type": "rRNA",
+            "overlap_bp": 2930,
+            "feature_length_bp": 2930,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "JR311_RS15080"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 1058196,
+        "end0": 1061241,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_2172",
+            "type": "rRNA",
+            "overlap_bp": 2930,
+            "feature_length_bp": 2930,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "JR311_RS05345"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 1056336,
+        "end0": 1056425,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 793444,
+        "end0": 796622,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_1670",
+            "type": "rRNA",
+            "overlap_bp": 2930,
+            "feature_length_bp": 2930,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "JR311_RS04105"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP069391.1_feature_1672",
+            "type": "rRNA",
+            "overlap_bp": 116,
+            "feature_length_bp": 116,
+            "product": [
+              "5S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "JR311_RS04110"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 791642,
+        "end0": 791731,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 356482,
+        "end0": 359657,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_854",
+            "type": "rRNA",
+            "overlap_bp": 2930,
+            "feature_length_bp": 2930,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "JR311_RS02095"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP069391.1_feature_856",
+            "type": "rRNA",
+            "overlap_bp": 116,
+            "feature_length_bp": 116,
+            "product": [
+              "5S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "JR311_RS02100"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 354744,
+        "end0": 354833,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 296816,
+        "end0": 299994,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_682",
+            "type": "rRNA",
+            "overlap_bp": 2930,
+            "feature_length_bp": 2930,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "JR311_RS01665"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP069391.1_feature_684",
+            "type": "rRNA",
+            "overlap_bp": 116,
+            "feature_length_bp": 116,
+            "product": [
+              "5S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "JR311_RS01670"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 295078,
+        "end0": 295167,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 232222,
+        "end0": 235400,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_520",
+            "type": "rRNA",
+            "overlap_bp": 2930,
+            "feature_length_bp": 2930,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "JR311_RS01270"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP069391.1_feature_522",
+            "type": "rRNA",
+            "overlap_bp": 116,
+            "feature_length_bp": 116,
+            "product": [
+              "5S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "JR311_RS01275"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 230426,
+        "end0": 230515,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 226340,
+        "end0": 229518,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_496",
+            "type": "rRNA",
+            "overlap_bp": 2930,
+            "feature_length_bp": 2930,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "JR311_RS01210"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP069391.1_feature_498",
+            "type": "rRNA",
+            "overlap_bp": 116,
+            "feature_length_bp": 116,
+            "product": [
+              "5S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "JR311_RS01215"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 224602,
+        "end0": 224691,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 166485,
+        "end0": 169662,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_368",
+            "type": "rRNA",
+            "overlap_bp": 2930,
+            "feature_length_bp": 2930,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "JR311_RS00890"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP069391.1_feature_370",
+            "type": "rRNA",
+            "overlap_bp": 116,
+            "feature_length_bp": 116,
+            "product": [
+              "5S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "JR311_RS00895"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 164510,
+        "end0": 164598,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 144682,
+        "end0": 147860,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_319",
+            "type": "rRNA",
+            "overlap_bp": 2930,
+            "feature_length_bp": 2930,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "JR311_RS00770"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP069391.1_feature_321",
+            "type": "rRNA",
+            "overlap_bp": 116,
+            "feature_length_bp": 116,
+            "product": [
+              "5S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "JR311_RS00775"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 142771,
+        "end0": 142859,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "Sam8H1_RS_R1",
+    "organism": "Sam8H1",
+    "method": "RS",
+    "native_family": "R=1",
+    "length": 728,
+    "raw_occurrences": 14,
+    "occurrences": [
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 2510940,
+        "end0": 2511667,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_4869",
+            "type": "CDS",
+            "overlap_bp": 727,
+            "feature_length_bp": 12594,
+            "product": [
+              "SDR family NAD(P)-dependent oxidoreductase"
+            ],
+            "locus_tag": [
+              "JR311_RS12010"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 2496948,
+        "end0": 2497675,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_4865",
+            "type": "CDS",
+            "overlap_bp": 727,
+            "feature_length_bp": 5727,
+            "product": [
+              "type I polyketide synthase"
+            ],
+            "locus_tag": [
+              "JR311_RS12000"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 2490648,
+        "end0": 2491371,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_4863",
+            "type": "CDS",
+            "overlap_bp": 723,
+            "feature_length_bp": 15612,
+            "product": [
+              "SDR family NAD(P)-dependent oxidoreductase"
+            ],
+            "locus_tag": [
+              "JR311_RS11995"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 2481884,
+        "end0": 2482599,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_4863",
+            "type": "CDS",
+            "overlap_bp": 715,
+            "feature_length_bp": 15612,
+            "product": [
+              "SDR family NAD(P)-dependent oxidoreductase"
+            ],
+            "locus_tag": [
+              "JR311_RS11995"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 2474215,
+        "end0": 2474907,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_4861",
+            "type": "CDS",
+            "overlap_bp": 692,
+            "feature_length_bp": 7719,
+            "product": [
+              "type I polyketide synthase"
+            ],
+            "locus_tag": [
+              "JR311_RS11990"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 2467359,
+        "end0": 2467865,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_4859",
+            "type": "CDS",
+            "overlap_bp": 506,
+            "feature_length_bp": 6156,
+            "product": [
+              "type I polyketide synthase"
+            ],
+            "locus_tag": [
+              "JR311_RS11985"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 1948733,
+        "end0": 1949458,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_3891",
+            "type": "CDS",
+            "overlap_bp": 725,
+            "feature_length_bp": 16302,
+            "product": [
+              "non-ribosomal peptide synthetase"
+            ],
+            "locus_tag": [
+              "JR311_RS09580"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 1941706,
+        "end0": 1942433,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_3889",
+            "type": "CDS",
+            "overlap_bp": 727,
+            "feature_length_bp": 10542,
+            "product": [
+              "SDR family NAD(P)-dependent oxidoreductase"
+            ],
+            "locus_tag": [
+              "JR311_RS09575"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 1927139,
+        "end0": 1927866,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_3887",
+            "type": "CDS",
+            "overlap_bp": 727,
+            "feature_length_bp": 13431,
+            "product": [
+              "type I polyketide synthase"
+            ],
+            "locus_tag": [
+              "JR311_RS09570"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 1630560,
+        "end0": 1631076,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_3365",
+            "type": "CDS",
+            "overlap_bp": 516,
+            "feature_length_bp": 5703,
+            "product": [
+              "type I polyketide synthase"
+            ],
+            "locus_tag": [
+              "JR311_RS08270"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 1626098,
+        "end0": 1626794,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_3363",
+            "type": "CDS",
+            "overlap_bp": 696,
+            "feature_length_bp": 7002,
+            "product": [
+              "SDR family NAD(P)-dependent oxidoreductase"
+            ],
+            "locus_tag": [
+              "JR311_RS08265"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 1613775,
+        "end0": 1614443,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_3361",
+            "type": "CDS",
+            "overlap_bp": 668,
+            "feature_length_bp": 8709,
+            "product": [
+              "type I polyketide synthase"
+            ],
+            "locus_tag": [
+              "JR311_RS08260"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 1604261,
+        "end0": 1604773,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_3357",
+            "type": "CDS",
+            "overlap_bp": 512,
+            "feature_length_bp": 12255,
+            "product": [
+              "SDR family NAD(P)-dependent oxidoreductase"
+            ],
+            "locus_tag": [
+              "JR311_RS08250"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 427436,
+        "end0": 428160,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_958",
+            "type": "CDS",
+            "overlap_bp": 724,
+            "feature_length_bp": 4773,
+            "product": [
+              "type I polyketide synthase"
+            ],
+            "locus_tag": [
+              "JR311_RS02355"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "Sam8H1__NZ_CP069391.1_feature_3359",
+      "identity_pct": 75.62,
+      "alignment_aa": 242,
+      "query_start": 1,
+      "query_end": 726,
+      "evalue": 5.39e-129,
+      "bitscore": 395.0,
+      "subject_length": 1588,
+      "title": "type I polyketide synthase"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "Sam8H1_RS_R2",
+    "organism": "Sam8H1",
+    "method": "RS",
+    "native_family": "R=2",
+    "length": 4915,
+    "raw_occurrences": 9,
+    "occurrences": [
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 3085071,
+        "end0": 3089892,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_6116",
+            "type": "rRNA",
+            "overlap_bp": 115,
+            "feature_length_bp": 116,
+            "product": [
+              "5S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "JR311_RS15075"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP069391.1_feature_6118",
+            "type": "rRNA",
+            "overlap_bp": 2930,
+            "feature_length_bp": 2930,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "JR311_RS15080"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP069391.1_feature_6120",
+            "type": "rRNA",
+            "overlap_bp": 1550,
+            "feature_length_bp": 1550,
+            "product": [
+              "16S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "JR311_RS15085"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 1056491,
+        "end0": 1058122,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_2170",
+            "type": "rRNA",
+            "overlap_bp": 1550,
+            "feature_length_bp": 1550,
+            "product": [
+              "16S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "JR311_RS05340"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 791797,
+        "end0": 796618,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_1668",
+            "type": "rRNA",
+            "overlap_bp": 1550,
+            "feature_length_bp": 1550,
+            "product": [
+              "16S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "JR311_RS04100"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP069391.1_feature_1670",
+            "type": "rRNA",
+            "overlap_bp": 2930,
+            "feature_length_bp": 2930,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "JR311_RS04105"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP069391.1_feature_1672",
+            "type": "rRNA",
+            "overlap_bp": 116,
+            "feature_length_bp": 116,
+            "product": [
+              "5S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "JR311_RS04110"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 354742,
+        "end0": 359656,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_852",
+            "type": "rRNA",
+            "overlap_bp": 1550,
+            "feature_length_bp": 1550,
+            "product": [
+              "16S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "JR311_RS02090"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP069391.1_feature_854",
+            "type": "rRNA",
+            "overlap_bp": 2930,
+            "feature_length_bp": 2930,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "JR311_RS02095"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP069391.1_feature_856",
+            "type": "rRNA",
+            "overlap_bp": 116,
+            "feature_length_bp": 116,
+            "product": [
+              "5S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "JR311_RS02100"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 295076,
+        "end0": 299990,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_680",
+            "type": "rRNA",
+            "overlap_bp": 1550,
+            "feature_length_bp": 1550,
+            "product": [
+              "16S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "JR311_RS01660"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP069391.1_feature_682",
+            "type": "rRNA",
+            "overlap_bp": 2930,
+            "feature_length_bp": 2930,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "JR311_RS01665"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP069391.1_feature_684",
+            "type": "rRNA",
+            "overlap_bp": 116,
+            "feature_length_bp": 116,
+            "product": [
+              "5S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "JR311_RS01670"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 230424,
+        "end0": 232148,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_518",
+            "type": "rRNA",
+            "overlap_bp": 1550,
+            "feature_length_bp": 1550,
+            "product": [
+              "16S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "JR311_RS01265"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 224600,
+        "end0": 229514,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_494",
+            "type": "rRNA",
+            "overlap_bp": 1550,
+            "feature_length_bp": 1550,
+            "product": [
+              "16S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "JR311_RS01205"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP069391.1_feature_496",
+            "type": "rRNA",
+            "overlap_bp": 2930,
+            "feature_length_bp": 2930,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "JR311_RS01210"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP069391.1_feature_498",
+            "type": "rRNA",
+            "overlap_bp": 116,
+            "feature_length_bp": 116,
+            "product": [
+              "5S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "JR311_RS01215"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 164664,
+        "end0": 166308,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_362",
+            "type": "rRNA",
+            "overlap_bp": 1550,
+            "feature_length_bp": 1550,
+            "product": [
+              "16S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "JR311_RS00875"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 142768,
+        "end0": 144505,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_313",
+            "type": "rRNA",
+            "overlap_bp": 1550,
+            "feature_length_bp": 1550,
+            "product": [
+              "16S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "JR311_RS00755"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "Sam8H1_RS_R3",
+    "organism": "Sam8H1",
+    "method": "RS",
+    "native_family": "R=3",
+    "length": 79,
+    "raw_occurrences": 13,
+    "occurrences": [
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 3106707,
+        "end0": 3106779,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_6159",
+            "type": "tRNA",
+            "overlap_bp": 72,
+            "feature_length_bp": 73,
+            "product": [
+              "tRNA-Ala"
+            ],
+            "locus_tag": [
+              "JR311_RS15175"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 3084971,
+        "end0": 3085047,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_6114",
+            "type": "tRNA",
+            "overlap_bp": 76,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Val"
+            ],
+            "locus_tag": [
+              "JR311_RS15070"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 3084117,
+        "end0": 3084195,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_6096",
+            "type": "tRNA",
+            "overlap_bp": 77,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Met"
+            ],
+            "locus_tag": [
+              "JR311_RS15025"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 3083403,
+        "end0": 3083482,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_6080",
+            "type": "tRNA",
+            "overlap_bp": 77,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Ile"
+            ],
+            "locus_tag": [
+              "JR311_RS14985"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 2846032,
+        "end0": 2846086,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_5593",
+            "type": "tRNA",
+            "overlap_bp": 54,
+            "feature_length_bp": 74,
+            "product": [
+              "tRNA-Arg"
+            ],
+            "locus_tag": [
+              "JR311_RS13800"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 1349015,
+        "end0": 1349070,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_2819",
+            "type": "tRNA",
+            "overlap_bp": 55,
+            "feature_length_bp": 73,
+            "product": [
+              "tRNA-Val"
+            ],
+            "locus_tag": [
+              "JR311_RS06945"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 1061717,
+        "end0": 1061795,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_2182",
+            "type": "tRNA",
+            "overlap_bp": 76,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Val"
+            ],
+            "locus_tag": [
+              "JR311_RS05370"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 380987,
+        "end0": 381065,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_896",
+            "type": "tRNA",
+            "overlap_bp": 76,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Val"
+            ],
+            "locus_tag": [
+              "JR311_RS02200"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 230276,
+        "end0": 230352,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_516",
+            "type": "tRNA",
+            "overlap_bp": 75,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Ala"
+            ],
+            "locus_tag": [
+              "JR311_RS01260"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 229538,
+        "end0": 229614,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_500",
+            "type": "tRNA",
+            "overlap_bp": 75,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Val"
+            ],
+            "locus_tag": [
+              "JR311_RS01220"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 204379,
+        "end0": 204458,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_452",
+            "type": "tRNA",
+            "overlap_bp": 77,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Met"
+            ],
+            "locus_tag": [
+              "JR311_RS01100"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 166313,
+        "end0": 166392,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_364",
+            "type": "tRNA",
+            "overlap_bp": 77,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Ile"
+            ],
+            "locus_tag": [
+              "JR311_RS00880"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 144510,
+        "end0": 144589,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_315",
+            "type": "tRNA",
+            "overlap_bp": 77,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Ile"
+            ],
+            "locus_tag": [
+              "JR311_RS00760"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "Sam8H1_RS_R4",
+    "organism": "Sam8H1",
+    "method": "RS",
+    "native_family": "R=4",
+    "length": 308,
+    "raw_occurrences": 7,
+    "occurrences": [
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 2162282,
+        "end0": 2162589,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_4173",
+            "type": "CDS",
+            "overlap_bp": 307,
+            "feature_length_bp": 7659,
+            "product": [
+              "non-ribosomal peptide synthetase"
+            ],
+            "locus_tag": [
+              "JR311_RS10280"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 2154565,
+        "end0": 2154872,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_4171",
+            "type": "CDS",
+            "overlap_bp": 307,
+            "feature_length_bp": 7698,
+            "product": [
+              "non-ribosomal peptide synthetase"
+            ],
+            "locus_tag": [
+              "JR311_RS10275"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 2146870,
+        "end0": 2147177,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_4169",
+            "type": "CDS",
+            "overlap_bp": 307,
+            "feature_length_bp": 7650,
+            "product": [
+              "non-ribosomal peptide synthetase"
+            ],
+            "locus_tag": [
+              "JR311_RS10270"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 2139207,
+        "end0": 2139512,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_4167",
+            "type": "CDS",
+            "overlap_bp": 305,
+            "feature_length_bp": 10776,
+            "product": [
+              "non-ribosomal peptide synthetase"
+            ],
+            "locus_tag": [
+              "JR311_RS10265"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 2136111,
+        "end0": 2136418,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_4167",
+            "type": "CDS",
+            "overlap_bp": 307,
+            "feature_length_bp": 10776,
+            "product": [
+              "non-ribosomal peptide synthetase"
+            ],
+            "locus_tag": [
+              "JR311_RS10265"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 2080002,
+        "end0": 2080307,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_4115",
+            "type": "CDS",
+            "overlap_bp": 305,
+            "feature_length_bp": 16092,
+            "product": [
+              "bacillomycin D non-ribosomal peptide synthetase BamB"
+            ],
+            "locus_tag": [
+              "JR311_RS10135"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 566015,
+        "end0": 566322,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_1195",
+            "type": "CDS",
+            "overlap_bp": 307,
+            "feature_length_bp": 10755,
+            "product": [
+              "surfactin non-ribosomal peptide synthetase SrfAA"
+            ],
+            "locus_tag": [
+              "JR311_RS02940"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "Sam8H1__NZ_CP069391.1_feature_4169",
+      "identity_pct": 94.118,
+      "alignment_aa": 102,
+      "query_start": 1,
+      "query_end": 306,
+      "evalue": 1.91e-62,
+      "bitscore": 201.0,
+      "subject_length": 2549,
+      "title": "non-ribosomal peptide synthetase"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "Sam8H1_RS_R5",
+    "organism": "Sam8H1",
+    "method": "RS",
+    "native_family": "R=5",
+    "length": 107,
+    "raw_occurrences": 8,
+    "occurrences": [
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 2504076,
+        "end0": 2504182,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_4867",
+            "type": "CDS",
+            "overlap_bp": 106,
+            "feature_length_bp": 6297,
+            "product": [
+              "type I polyketide synthase"
+            ],
+            "locus_tag": [
+              "JR311_RS12005"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 2491467,
+        "end0": 2491573,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_4863",
+            "type": "CDS",
+            "overlap_bp": 106,
+            "feature_length_bp": 15612,
+            "product": [
+              "SDR family NAD(P)-dependent oxidoreductase"
+            ],
+            "locus_tag": [
+              "JR311_RS11995"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 2475090,
+        "end0": 2475195,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_4861",
+            "type": "CDS",
+            "overlap_bp": 105,
+            "feature_length_bp": 7719,
+            "product": [
+              "type I polyketide synthase"
+            ],
+            "locus_tag": [
+              "JR311_RS11990"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 2471465,
+        "end0": 2471571,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_4861",
+            "type": "CDS",
+            "overlap_bp": 106,
+            "feature_length_bp": 7719,
+            "product": [
+              "type I polyketide synthase"
+            ],
+            "locus_tag": [
+              "JR311_RS11990"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 2461205,
+        "end0": 2461311,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_4857",
+            "type": "CDS",
+            "overlap_bp": 106,
+            "feature_length_bp": 6216,
+            "product": [
+              "beta-ketoacyl synthase N-terminal-like domain-containing protein"
+            ],
+            "locus_tag": [
+              "JR311_RS11980"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 1941508,
+        "end0": 1941614,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_3889",
+            "type": "CDS",
+            "overlap_bp": 106,
+            "feature_length_bp": 10542,
+            "product": [
+              "SDR family NAD(P)-dependent oxidoreductase"
+            ],
+            "locus_tag": [
+              "JR311_RS09575"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 1929710,
+        "end0": 1929816,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_3887",
+            "type": "CDS",
+            "overlap_bp": 106,
+            "feature_length_bp": 13431,
+            "product": [
+              "type I polyketide synthase"
+            ],
+            "locus_tag": [
+              "JR311_RS09570"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 1926881,
+        "end0": 1926987,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_3887",
+            "type": "CDS",
+            "overlap_bp": 106,
+            "feature_length_bp": 13431,
+            "product": [
+              "type I polyketide synthase"
+            ],
+            "locus_tag": [
+              "JR311_RS09570"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "Sam8H1__NZ_CP069391.1_feature_3363",
+      "identity_pct": 82.857,
+      "alignment_aa": 35,
+      "query_start": 107,
+      "query_end": 3,
+      "evalue": 2.28e-16,
+      "bitscore": 66.2,
+      "subject_length": 2333,
+      "title": "SDR family NAD(P)-dependent oxidoreductase"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "Sam8H1_RS_R6",
+    "organism": "Sam8H1",
+    "method": "RS",
+    "native_family": "R=6",
+    "length": 73,
+    "raw_occurrences": 4,
+    "occurrences": [
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 3084870,
+        "end0": 3084942,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_6112",
+            "type": "tRNA",
+            "overlap_bp": 72,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Thr"
+            ],
+            "locus_tag": [
+              "JR311_RS15065"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 1062052,
+        "end0": 1062124,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_2190",
+            "type": "tRNA",
+            "overlap_bp": 72,
+            "feature_length_bp": 73,
+            "product": [
+              "tRNA-Thr"
+            ],
+            "locus_tag": [
+              "JR311_RS05390"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 381070,
+        "end0": 381142,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_898",
+            "type": "tRNA",
+            "overlap_bp": 72,
+            "feature_length_bp": 73,
+            "product": [
+              "tRNA-Thr"
+            ],
+            "locus_tag": [
+              "JR311_RS02205"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 229619,
+        "end0": 229691,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_502",
+            "type": "tRNA",
+            "overlap_bp": 72,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Thr"
+            ],
+            "locus_tag": [
+              "JR311_RS01225"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "Sam8H1_RS_R7",
+    "organism": "Sam8H1",
+    "method": "RS",
+    "native_family": "R=7",
+    "length": 104,
+    "raw_occurrences": 4,
+    "occurrences": [
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 3980418,
+        "end0": 3980521,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_7958",
+            "type": "CDS",
+            "overlap_bp": 103,
+            "feature_length_bp": 282,
+            "product": [
+              "fructose-bisphosphatase class III"
+            ],
+            "locus_tag": [
+              "JR311_RS19625"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 3973553,
+        "end0": 3973656,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_7944",
+            "type": "CDS",
+            "overlap_bp": 103,
+            "feature_length_bp": 1926,
+            "product": [
+              "fructose-1,6-bisphosphatase"
+            ],
+            "locus_tag": [
+              "JR311_RS19590"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 12403,
+        "end0": 12506,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_25",
+            "type": "CDS",
+            "overlap_bp": 103,
+            "feature_length_bp": 282,
+            "product": [
+              "fructose-bisphosphatase class III"
+            ],
+            "locus_tag": [
+              "JR311_RS00055"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 5538,
+        "end0": 5641,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_11",
+            "type": "CDS",
+            "overlap_bp": 103,
+            "feature_length_bp": 1924,
+            "product": [
+              "fructose-1,6-bisphosphatase"
+            ],
+            "locus_tag": [
+              "JR311_RS00020"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "Sam8H1__NZ_CP069391.1_feature_7944",
+      "identity_pct": 94.118,
+      "alignment_aa": 34,
+      "query_start": 1,
+      "query_end": 102,
+      "evalue": 2.89e-16,
+      "bitscore": 66.2,
+      "subject_length": 641,
+      "title": "fructose-1,6-bisphosphatase"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "Sam8H1_RS_R8",
+    "organism": "Sam8H1",
+    "method": "RS",
+    "native_family": "R=8",
+    "length": 72,
+    "raw_occurrences": 6,
+    "occurrences": [
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 3083150,
+        "end0": 3083221,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_6074",
+            "type": "tRNA",
+            "overlap_bp": 71,
+            "feature_length_bp": 72,
+            "product": [
+              "tRNA-Glu"
+            ],
+            "locus_tag": [
+              "JR311_RS14970"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 1061637,
+        "end0": 1061708,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_2180",
+            "type": "tRNA",
+            "overlap_bp": 71,
+            "feature_length_bp": 72,
+            "product": [
+              "tRNA-Glu"
+            ],
+            "locus_tag": [
+              "JR311_RS05365"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 711769,
+        "end0": 711840,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_1476",
+            "type": "tRNA",
+            "overlap_bp": 71,
+            "feature_length_bp": 75,
+            "product": [
+              "tRNA-Glu"
+            ],
+            "locus_tag": [
+              "JR311_RS03635"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 380914,
+        "end0": 380985,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_894",
+            "type": "tRNA",
+            "overlap_bp": 71,
+            "feature_length_bp": 72,
+            "product": [
+              "tRNA-Glu"
+            ],
+            "locus_tag": [
+              "JR311_RS02195"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 204467,
+        "end0": 204538,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_454",
+            "type": "tRNA",
+            "overlap_bp": 71,
+            "feature_length_bp": 72,
+            "product": [
+              "tRNA-Glu"
+            ],
+            "locus_tag": [
+              "JR311_RS01105"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 51076,
+        "end0": 51147,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_99",
+            "type": "tRNA",
+            "overlap_bp": 71,
+            "feature_length_bp": 72,
+            "product": [
+              "tRNA-Glu"
+            ],
+            "locus_tag": [
+              "JR311_RS00235"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "Sam8H1_RS_R9",
+    "organism": "Sam8H1",
+    "method": "RS",
+    "native_family": "R=9",
+    "length": 1275,
+    "raw_occurrences": 7,
+    "occurrences": [
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 949216,
+        "end0": 950160,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_1958",
+            "type": "CDS",
+            "overlap_bp": 944,
+            "feature_length_bp": 1800,
+            "product": [
+              "exosporium glycoprotein BclB-related protein"
+            ],
+            "locus_tag": [
+              "JR311_RS04810"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 948711,
+        "end0": 949985,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_1958",
+            "type": "CDS",
+            "overlap_bp": 1106,
+            "feature_length_bp": 1800,
+            "product": [
+              "exosporium glycoprotein BclB-related protein"
+            ],
+            "locus_tag": [
+              "JR311_RS04810"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 946617,
+        "end0": 947891,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_1954",
+            "type": "CDS",
+            "overlap_bp": 1274,
+            "feature_length_bp": 6834,
+            "product": [
+              "NTTRR-F1 domain"
+            ],
+            "locus_tag": [
+              "JR311_RS20825"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 945429,
+        "end0": 946703,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_1954",
+            "type": "CDS",
+            "overlap_bp": 1274,
+            "feature_length_bp": 6834,
+            "product": [
+              "NTTRR-F1 domain"
+            ],
+            "locus_tag": [
+              "JR311_RS20825"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 944889,
+        "end0": 946163,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_1954",
+            "type": "CDS",
+            "overlap_bp": 1274,
+            "feature_length_bp": 6834,
+            "product": [
+              "NTTRR-F1 domain"
+            ],
+            "locus_tag": [
+              "JR311_RS20825"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 942387,
+        "end0": 943661,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_1954",
+            "type": "CDS",
+            "overlap_bp": 1274,
+            "feature_length_bp": 6834,
+            "product": [
+              "NTTRR-F1 domain"
+            ],
+            "locus_tag": [
+              "JR311_RS20825"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 941914,
+        "end0": 942887,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_1954",
+            "type": "CDS",
+            "overlap_bp": 973,
+            "feature_length_bp": 6834,
+            "product": [
+              "NTTRR-F1 domain"
+            ],
+            "locus_tag": [
+              "JR311_RS20825"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "Sam8H1_RS_R10",
+    "organism": "Sam8H1",
+    "method": "RS",
+    "native_family": "R=10",
+    "length": 1787,
+    "raw_occurrences": 4,
+    "occurrences": [
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 3088262,
+        "end0": 3090048,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_6120",
+            "type": "rRNA",
+            "overlap_bp": 1550,
+            "feature_length_bp": 1550,
+            "product": [
+              "16S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "JR311_RS15085"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 1056335,
+        "end0": 1058121,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_2170",
+            "type": "rRNA",
+            "overlap_bp": 1550,
+            "feature_length_bp": 1550,
+            "product": [
+              "16S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "JR311_RS05340"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 791641,
+        "end0": 793427,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_1668",
+            "type": "rRNA",
+            "overlap_bp": 1550,
+            "feature_length_bp": 1550,
+            "product": [
+              "16S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "JR311_RS04100"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 164512,
+        "end0": 166294,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_362",
+            "type": "rRNA",
+            "overlap_bp": 1550,
+            "feature_length_bp": 1550,
+            "product": [
+              "16S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "JR311_RS00875"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "Sam8H1_RS_R11",
+    "organism": "Sam8H1",
+    "method": "RS",
+    "native_family": "R=11",
+    "length": 353,
+    "raw_occurrences": 5,
+    "occurrences": [
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 2162660,
+        "end0": 2163012,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_4173",
+            "type": "CDS",
+            "overlap_bp": 352,
+            "feature_length_bp": 7659,
+            "product": [
+              "non-ribosomal peptide synthetase"
+            ],
+            "locus_tag": [
+              "JR311_RS10280"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 2147248,
+        "end0": 2147600,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_4169",
+            "type": "CDS",
+            "overlap_bp": 352,
+            "feature_length_bp": 7650,
+            "product": [
+              "non-ribosomal peptide synthetase"
+            ],
+            "locus_tag": [
+              "JR311_RS10270"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 2139585,
+        "end0": 2139937,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_4167",
+            "type": "CDS",
+            "overlap_bp": 352,
+            "feature_length_bp": 10776,
+            "product": [
+              "non-ribosomal peptide synthetase"
+            ],
+            "locus_tag": [
+              "JR311_RS10265"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 2136489,
+        "end0": 2136841,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_4167",
+            "type": "CDS",
+            "overlap_bp": 352,
+            "feature_length_bp": 10776,
+            "product": [
+              "non-ribosomal peptide synthetase"
+            ],
+            "locus_tag": [
+              "JR311_RS10265"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 576368,
+        "end0": 576706,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_1197",
+            "type": "CDS",
+            "overlap_bp": 338,
+            "feature_length_bp": 10761,
+            "product": [
+              "surfactin non-ribosomal peptide synthetase SrfAB"
+            ],
+            "locus_tag": [
+              "JR311_RS20655"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "Sam8H1__NZ_CP069391.1_feature_4173",
+      "identity_pct": 99.145,
+      "alignment_aa": 117,
+      "query_start": 1,
+      "query_end": 351,
+      "evalue": 3.54e-77,
+      "bitscore": 244.0,
+      "subject_length": 2552,
+      "title": "non-ribosomal peptide synthetase"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "Sam8H1_RS_R12",
+    "organism": "Sam8H1",
+    "method": "RS",
+    "native_family": "R=12",
+    "length": 72,
+    "raw_occurrences": 4,
+    "occurrences": [
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 2614628,
+        "end0": 2614698,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_5086",
+            "type": "tRNA",
+            "overlap_bp": 70,
+            "feature_length_bp": 71,
+            "product": [
+              "tRNA-Gln"
+            ],
+            "locus_tag": [
+              "JR311_RS12550"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 1062419,
+        "end0": 1062490,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_2198",
+            "type": "tRNA",
+            "overlap_bp": 71,
+            "feature_length_bp": 72,
+            "product": [
+              "tRNA-Gln"
+            ],
+            "locus_tag": [
+              "JR311_RS05410"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 711855,
+        "end0": 711926,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_1478",
+            "type": "tRNA",
+            "overlap_bp": 71,
+            "feature_length_bp": 75,
+            "product": [
+              "tRNA-Gln"
+            ],
+            "locus_tag": [
+              "JR311_RS03640"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 381251,
+        "end0": 381322,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_902",
+            "type": "tRNA",
+            "overlap_bp": 71,
+            "feature_length_bp": 72,
+            "product": [
+              "tRNA-Gln"
+            ],
+            "locus_tag": [
+              "JR311_RS02215"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "Sam8H1_RS_R13",
+    "organism": "Sam8H1",
+    "method": "RS",
+    "native_family": "R=13",
+    "length": 75,
+    "raw_occurrences": 4,
+    "occurrences": [
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 3084576,
+        "end0": 3084650,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_6106",
+            "type": "tRNA",
+            "overlap_bp": 74,
+            "feature_length_bp": 75,
+            "product": [
+              "tRNA-Gly"
+            ],
+            "locus_tag": [
+              "JR311_RS15050"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 1062545,
+        "end0": 1062619,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_2200",
+            "type": "tRNA",
+            "overlap_bp": 74,
+            "feature_length_bp": 75,
+            "product": [
+              "tRNA-Gly"
+            ],
+            "locus_tag": [
+              "JR311_RS05415"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 354258,
+        "end0": 354332,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_846",
+            "type": "tRNA",
+            "overlap_bp": 74,
+            "feature_length_bp": 75,
+            "product": [
+              "tRNA-Gly"
+            ],
+            "locus_tag": [
+              "JR311_RS02075"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 229919,
+        "end0": 229993,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_508",
+            "type": "tRNA",
+            "overlap_bp": 74,
+            "feature_length_bp": 75,
+            "product": [
+              "tRNA-Gly"
+            ],
+            "locus_tag": [
+              "JR311_RS01240"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "Sam8H1_RS_R14",
+    "organism": "Sam8H1",
+    "method": "RS",
+    "native_family": "R=14",
+    "length": 76,
+    "raw_occurrences": 4,
+    "occurrences": [
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 3084754,
+        "end0": 3084829,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_6110",
+            "type": "tRNA",
+            "overlap_bp": 75,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Lys"
+            ],
+            "locus_tag": [
+              "JR311_RS15060"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 711963,
+        "end0": 712038,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_1480",
+            "type": "tRNA",
+            "overlap_bp": 75,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Lys"
+            ],
+            "locus_tag": [
+              "JR311_RS03645"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 229731,
+        "end0": 229806,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_504",
+            "type": "tRNA",
+            "overlap_bp": 75,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Lys"
+            ],
+            "locus_tag": [
+              "JR311_RS01230"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 51156,
+        "end0": 51231,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_101",
+            "type": "tRNA",
+            "overlap_bp": 75,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Lys"
+            ],
+            "locus_tag": [
+              "JR311_RS00240"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "Sam8H1_RS_R15",
+    "organism": "Sam8H1",
+    "method": "RS",
+    "native_family": "R=15",
+    "length": 77,
+    "raw_occurrences": 4,
+    "occurrences": [
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 3083318,
+        "end0": 3083394,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_6078",
+            "type": "tRNA",
+            "overlap_bp": 75,
+            "feature_length_bp": 75,
+            "product": [
+              "tRNA-Asn"
+            ],
+            "locus_tag": [
+              "JR311_RS14980"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 1061429,
+        "end0": 1061505,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_2176",
+            "type": "tRNA",
+            "overlap_bp": 75,
+            "feature_length_bp": 75,
+            "product": [
+              "tRNA-Asn"
+            ],
+            "locus_tag": [
+              "JR311_RS05355"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 711580,
+        "end0": 711656,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_1472",
+            "type": "tRNA",
+            "overlap_bp": 75,
+            "feature_length_bp": 75,
+            "product": [
+              "tRNA-Asn"
+            ],
+            "locus_tag": [
+              "JR311_RS03625"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 300035,
+        "end0": 300111,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_686",
+            "type": "tRNA",
+            "overlap_bp": 75,
+            "feature_length_bp": 75,
+            "product": [
+              "tRNA-Asn"
+            ],
+            "locus_tag": [
+              "JR311_RS01675"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "Sam8H1_RS_R16",
+    "organism": "Sam8H1",
+    "method": "RS",
+    "native_family": "R=16",
+    "length": 82,
+    "raw_occurrences": 4,
+    "occurrences": [
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 3083757,
+        "end0": 3083838,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_6088",
+            "type": "tRNA",
+            "overlap_bp": 77,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Asp"
+            ],
+            "locus_tag": [
+              "JR311_RS15005"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 1061884,
+        "end0": 1061965,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_2186",
+            "type": "tRNA",
+            "overlap_bp": 77,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Asp"
+            ],
+            "locus_tag": [
+              "JR311_RS05380"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 796723,
+        "end0": 796804,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_1676",
+            "type": "tRNA",
+            "overlap_bp": 77,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Asp"
+            ],
+            "locus_tag": [
+              "JR311_RS04120"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 50912,
+        "end0": 50991,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_97",
+            "type": "tRNA",
+            "overlap_bp": 77,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Asp"
+            ],
+            "locus_tag": [
+              "JR311_RS00230"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "Sam8H1_RS_R17",
+    "organism": "Sam8H1",
+    "method": "RS",
+    "native_family": "R=17",
+    "length": 88,
+    "raw_occurrences": 3,
+    "occurrences": [
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 3083839,
+        "end0": 3083926,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_6090",
+            "type": "tRNA",
+            "overlap_bp": 77,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Met"
+            ],
+            "locus_tag": [
+              "JR311_RS15010"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 1061795,
+        "end0": 1061882,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_2184",
+            "type": "tRNA",
+            "overlap_bp": 77,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Met"
+            ],
+            "locus_tag": [
+              "JR311_RS05375"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 796631,
+        "end0": 796718,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_1674",
+            "type": "tRNA",
+            "overlap_bp": 77,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Met"
+            ],
+            "locus_tag": [
+              "JR311_RS04115"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "Sam8H1_RS_R18",
+    "organism": "Sam8H1",
+    "method": "RS",
+    "native_family": "R=18",
+    "length": 77,
+    "raw_occurrences": 3,
+    "occurrences": [
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 3084291,
+        "end0": 3084367,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_6100",
+            "type": "tRNA",
+            "overlap_bp": 76,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Pro"
+            ],
+            "locus_tag": [
+              "JR311_RS15035"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 354458,
+        "end0": 354534,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_850",
+            "type": "tRNA",
+            "overlap_bp": 76,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Pro"
+            ],
+            "locus_tag": [
+              "JR311_RS02085"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 230195,
+        "end0": 230271,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_514",
+            "type": "tRNA",
+            "overlap_bp": 76,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Pro"
+            ],
+            "locus_tag": [
+              "JR311_RS01255"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "Sam8H1_RS_R19",
+    "organism": "Sam8H1",
+    "method": "RS",
+    "native_family": "R=19",
+    "length": 86,
+    "raw_occurrences": 3,
+    "occurrences": [
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 3084471,
+        "end0": 3084556,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_6104",
+            "type": "tRNA",
+            "overlap_bp": 85,
+            "feature_length_bp": 86,
+            "product": [
+              "tRNA-Leu"
+            ],
+            "locus_tag": [
+              "JR311_RS15045"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 1062704,
+        "end0": 1062789,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_2204",
+            "type": "tRNA",
+            "overlap_bp": 85,
+            "feature_length_bp": 89,
+            "product": [
+              "tRNA-Leu"
+            ],
+            "locus_tag": [
+              "JR311_RS05425"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 230008,
+        "end0": 230093,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_510",
+            "type": "tRNA",
+            "overlap_bp": 85,
+            "feature_length_bp": 86,
+            "product": [
+              "tRNA-Leu"
+            ],
+            "locus_tag": [
+              "JR311_RS01245"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "Sam8H1_RS_R20",
+    "organism": "Sam8H1",
+    "method": "RS",
+    "native_family": "R=20",
+    "length": 51,
+    "raw_occurrences": 3,
+    "occurrences": [
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 3083521,
+        "end0": 3083572,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_6082",
+            "type": "tRNA",
+            "overlap_bp": 48,
+            "feature_length_bp": 74,
+            "product": [
+              "tRNA-Gly"
+            ],
+            "locus_tag": [
+              "JR311_RS14990"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 1082133,
+        "end0": 1082184,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_2247",
+            "type": "tRNA",
+            "overlap_bp": 49,
+            "feature_length_bp": 74,
+            "product": [
+              "tRNA-Gly"
+            ],
+            "locus_tag": [
+              "JR311_RS05530"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP069391.1",
+        "accession": "NZ_CP069391.1",
+        "start0": 791559,
+        "end0": 791610,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP069391.1_feature_1666",
+            "type": "tRNA",
+            "overlap_bp": 49,
+            "feature_length_bp": 74,
+            "product": [
+              "tRNA-Gly"
+            ],
+            "locus_tag": [
+              "JR311_RS04095"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  }
+]

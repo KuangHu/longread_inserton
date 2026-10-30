@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="300" font-family="sans-serif">
+<rect width="100%" height="100%" fill="white"/>
+<text x="4" y="16" font-size="12">L_647ba3ad9f35  SAMN38562701  core 11613 bp  two_flank_anchored  support all_calls_anchored  boundary exact  tandem True  core copies carrier/partner 0/0</text>
+<line x1="230.3" y1="30" x2="230.3" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<line x1="889.7" y1="30" x2="889.7" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<text x="4" y="64" font-size="11" font-weight="bold">SAMN38562701 NZ_CP139994.1 (carrier)</text>
+<line x1="60" y1="100" x2="1060" y2="100" stroke="#888"/>
+<rect x="173.6" y="132" width="56.8" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="201.9" y="152" font-size="9" text-anchor="middle">U</text>
+<rect x="230.3" y="132" width="659.3" height="8" fill="#e76f51" opacity="0.55"/>
+<text x="560.0" y="152" font-size="9" text-anchor="middle">core 11613</text>
+<rect x="889.7" y="132" width="56.8" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="918.1" y="152" font-size="9" text-anchor="middle">D</text>
+<polygon points="64.5,109 70.5,103 1017.0,103 1017.0,115 70.5,115" fill="#3b6fb6"><title>VCBS domain-containing protein 3715132-3731908 -</title></polygon>
+<text x="64.5" y="125" font-size="8" fill="#333">VCBS domain-containing protein</text>
+<polygon points="1032.1,109 1038.1,103 1060.0,103 1060.0,115 1038.1,115" fill="#3b6fb6"><title>response regulator transcription factor 3732173-3732812 -</title></polygon>
+<text x="60" y="166" font-size="9" fill="#666">NZ_CP139994.1:3715052-3732665  core 3718052-3729665</text>
+<text x="4" y="184" font-size="11" font-weight="bold">SAMD00076718 NZ_AP026738.1 (partner, + strand, two_flank_anchored, pair P00022)</text>
+<line x1="60" y1="220" x2="1060" y2="220" stroke="#888"/>
+<rect x="173.6" y="252" width="56.8" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="201.9" y="272" font-size="9" text-anchor="middle">U'</text>
+<rect x="889.7" y="252" width="56.8" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="918.1" y="272" font-size="9" text-anchor="middle">D'</text>
+<rect x="230.3" y="252" width="659.3" height="8" fill="#ffffff" opacity="0.55"/>
+<line x1="230.3" y1="229" x2="889.7" y2="229" stroke="#555" stroke-dasharray="2,2"/>
+<polygon points="60.0,229 66.0,223 230.3,223 230.3,235 66.0,235" fill="#3b6fb6"><title>retention module-containing protein 3861825-3865459 -</title></polygon>
+<text x="60.0" y="245" font-size="8" fill="#333">retention module-containing protein</text>
+<polygon points="889.7,229 895.7,223 1017.0,223 1017.0,235 895.7,235" fill="#3b6fb6"><title>retention module-containing protein 3865459-3867702 -</title></polygon>
+<text x="889.7" y="245" font-size="8" fill="#333">retention module-containing</text>
+<polygon points="1031.6,229 1037.6,223 1060.0,223 1060.0,235 1037.6,235" fill="#3b6fb6"><title>response regulator transcription factor 3867959-3868598 -</title></polygon>
+<text x="60" y="286" font-size="9" fill="#666">NZ_AP026738.1 site 3865459  other-side gap 0 bp  this call's core 3718052-3729665</text>
+<rect x="230.3" y="218" width="659.3" height="4" fill="#f4f4f4"/><text x="560.0" y="272" font-size="9" text-anchor="middle" fill="#a5372f">empty site</text>
+</svg>

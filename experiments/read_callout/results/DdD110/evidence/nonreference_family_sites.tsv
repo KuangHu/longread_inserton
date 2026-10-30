@@ -1,0 +1,12 @@
+contig	start0	end0	molecules	two_sided	evidence	median_insert_len	families	called
+NZ_CP075185.1	831764	831764	1	False	anchor_left		DdD110_RS_R13,DdD110_RS_R16	False
+NZ_CP075185.1	971272	971272	1	True	cigar_insertion	1675	DdD110_PILER_0.0,DdD110_RS_R17,DdD110_RS_R9	False
+NZ_CP075185.1	1010885	1010895	1	False	anchor_left		DdD110_PILER_0.0,DdD110_RS_R17,DdD110_RS_R9	False
+NZ_CP075185.1	1158201	1158207	1	False	anchor_right		DdD110_RS_R1	False
+NZ_CP075185.1	1240706	1240706	1	True	cigar_insertion	662	DdD110_RS_R1	False
+NZ_CP075185.1	1240886	1240886	1	True	cigar_insertion	613	DdD110_RS_R1	False
+NZ_CP075185.1	1242013	1242078	2	True	cigar_insertion	1340	DdD110_RS_R1	True
+NZ_CP075185.1	1242422	1242422	1	True	cigar_insertion	657	DdD110_RS_R1	False
+NZ_CP075185.1	1242785	1242785	1	True	cigar_insertion	642	DdD110_RS_R1	False
+NZ_CP075185.1	1243729	1243729	1	True	cigar_insertion	616	DdD110_RS_R1	False
+NZ_CP075185.1	4444525	4444525	1	False	anchor_left		DdD110_RS_R3,DdD110_RS_R4	False

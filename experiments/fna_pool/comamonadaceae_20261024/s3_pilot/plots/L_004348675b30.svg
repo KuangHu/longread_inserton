@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="300" font-family="sans-serif">
+<rect width="100%" height="100%" fill="white"/>
+<text x="4" y="16" font-size="12">L_004348675b30  SAMEA120782404  core 4231 bp  unresolved  support not_anchored  boundary exact  tandem False  core copies carrier/partner 1/0</text>
+<line x1="353.2" y1="30" x2="353.2" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<line x1="766.8" y1="30" x2="766.8" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<text x="4" y="64" font-size="11" font-weight="bold">SAMEA120782404 NZ_OZ409863.1 (carrier)</text>
+<line x1="60" y1="100" x2="1060" y2="100" stroke="#888"/>
+<rect x="255.5" y="132" width="97.7" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="304.4" y="152" font-size="9" text-anchor="middle">U</text>
+<rect x="353.2" y="132" width="413.5" height="8" fill="#e76f51" opacity="0.55"/>
+<text x="560.0" y="152" font-size="9" text-anchor="middle">core 4231</text>
+<rect x="766.8" y="132" width="97.7" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="815.6" y="152" font-size="9" text-anchor="middle">D</text>
+<polygon points="60.0,109 66.0,103 91.2,103 91.2,115 66.0,115" fill="#3b6fb6"><title>branched-chain amino acid ABC transporte 5541474-5542716 -</title></polygon>
+<text x="60.0" y="125" font-size="8" fill="#333">branch</text>
+<polygon points="110.9,109 116.9,103 231.1,103 231.1,115 116.9,115" fill="#3b6fb6"><title>branched-chain amino acid ABC transporte 5542918-5544148 -</title></polygon>
+<text x="110.9" y="125" font-size="8" fill="#333">branched-chain amino acid </text>
+<polygon points="245.9,109 251.9,103 406.6,103 406.6,115 251.9,115" fill="#3b6fb6"><title>3-(methylthio)propionyl-CoA ligase 5544299-5545943 -</title></polygon>
+<text x="245.9" y="125" font-size="8" fill="#333">3-(methylthio)propionyl-CoA ligase</text>
+<polygon points="429.5,109 435.5,103 605.1,103 605.1,115 435.5,115" fill="#3b6fb6"><title>carboxylesterase/lipase family protein 5546177-5547974 -</title></polygon>
+<text x="429.5" y="125" font-size="8" fill="#333">carboxylesterase/lipase family protein</text>
+<polygon points="619.8,85 719.0,85 725.0,91 719.0,97 619.8,97" fill="#3b6fb6"><title>AraC family transcriptional regulator 5548124-5549201 +</title></polygon>
+<text x="619.8" y="81" font-size="8" fill="#333">AraC family transcript</text>
+<polygon points="731.2,85 870.0,85 876.0,91 870.0,97 731.2,97" fill="#3b6fb6"><title>protein adenylyltransferase SelO 5549264-5550746 +</title></polygon>
+<text x="731.2" y="81" font-size="8" fill="#333">protein adenylyltransferase Sel</text>
+<polygon points="875.7,85 909.8,85 915.8,91 909.8,97 875.7,97" fill="#3b6fb6"><title>peptide-methionine (R)-S-oxide reductase 5550742-5551153 +</title></polygon>
+<polygon points="915.4,85 962.2,85 968.2,91 962.2,97 915.4,97" fill="#3b6fb6"><title>septation protein A 5551149-5551689 +</title></polygon>
+<text x="915.4" y="81" font-size="8" fill="#333">septation p</text>
+<polygon points="967.8,85 989.1,85 995.1,91 989.1,97 967.8,97" fill="#3b6fb6"><title>BolA family protein 5551685-5551964 +</title></polygon>
+<polygon points="1009.8,85 1054.0,85 1060.0,91 1054.0,97 1009.8,97" fill="#3b6fb6"><title>peptidylprolyl isomerase 5552114-5552900 +</title></polygon>
+<text x="1009.8" y="81" font-size="8" fill="#333">peptidylpr</text>
+<text x="60" y="166" font-size="9" fill="#666">NZ_OZ409863.1:5542397-5552628  core 5545397-5549628</text>
+<text x="4" y="184" font-size="11" font-weight="bold">SAMN51281044 NZ_CM191372.1 (partner, - strand, unresolved, pair P00384)</text>
+<line x1="60" y1="220" x2="1060" y2="220" stroke="#888"/>
+<rect x="255.5" y="252" width="97.7" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="304.4" y="272" font-size="9" text-anchor="middle">U'</text>
+<rect x="766.8" y="252" width="97.7" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="815.6" y="272" font-size="9" text-anchor="middle">D'</text>
+<rect x="353.2" y="252" width="413.5" height="8" fill="#9b5de5" opacity="0.55"/>
+<text x="560.0" y="272" font-size="9" text-anchor="middle">other side 4197</text>
+<polygon points="1009.6,205 1054.0,205 1060.0,211 1054.0,217 1009.6,217" fill="#3b6fb6"><title>peptidylprolyl isomerase 3015917-3016703 +</title></polygon>
+<text x="1009.6" y="201" font-size="8" fill="#333">peptidylpr</text>
+<polygon points="969.0,205 991.2,205 997.2,211 991.2,217 969.0,217" fill="#3b6fb6"><title>BolA family protein 3016830-3017118 +</title></polygon>
+<polygon points="914.9,205 961.9,205 967.9,211 961.9,217 914.9,217" fill="#3b6fb6"><title>septation protein A 3017129-3017672 +</title></polygon>
+<polygon points="875.7,205 909.2,205 915.2,211 909.2,217 875.7,217" fill="#3b6fb6"><title>peptide-methionine (R)-S-oxide reductase 3017668-3018073 +</title></polygon>
+<polygon points="728.6,205 870.0,205 876.0,211 870.0,217 728.6,217" fill="#3b6fb6"><title>protein adenylyltransferase SelO 3018069-3019575 +</title></polygon>
+<polygon points="613.9,205 714.4,205 720.4,211 714.4,217 613.9,217" fill="#3b6fb6"><title>AraC family transcriptional regulator 3019659-3020739 +</title></polygon>
+<polygon points="418.5,229 424.5,223 599.4,223 599.4,235 424.5,235" fill="#3b6fb6"><title>carboxylesterase/lipase family protein 3020887-3022723 -</title></polygon>
+<text x="418.5" y="245" font-size="8" fill="#333">carboxylesterase/lipase family protein</text>
+<polygon points="245.3,229 251.3,223 407.1,223 407.1,235 251.3,235" fill="#3b6fb6"><title>3-(methylthio)propionyl-CoA ligase 3022838-3024488 -</title></polygon>
+<polygon points="111.1,229 117.1,223 231.3,223 231.3,235 117.1,235" fill="#3b6fb6"><title>branched-chain amino acid ABC transporte 3024631-3025861 -</title></polygon>
+<polygon points="60.0,229 66.0,223 86.2,223 86.2,235 66.0,235" fill="#3b6fb6"><title>branched-chain amino acid ABC transporte 3026116-3027349 -</title></polygon>
+<text x="60" y="286" font-size="9" fill="#666">NZ_CM191372.1 site 3019187  other-side gap 4197 bp  this call's core 5545397-5549628</text>
+</svg>

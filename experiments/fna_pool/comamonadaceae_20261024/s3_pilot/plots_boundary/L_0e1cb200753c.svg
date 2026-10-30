@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="420" font-family="sans-serif">
+<rect width="100%" height="100%" fill="white"/>
+<text x="4" y="16" font-size="12">L_0e1cb200753c  SAMEA118088312  core 162 bp  two_flank_anchored  support direction_mixed  boundary direction_dependent  tandem False  core copies carrier/partner 1/1</text>
+<line x1="546.9" y1="30" x2="546.9" y2="412" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<line x1="573.1" y1="30" x2="573.1" y2="412" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<text x="4" y="64" font-size="11" font-weight="bold">SAMEA118088312 NZ_OZ253481.1 (carrier)</text>
+<line x1="60" y1="100" x2="1060" y2="100" stroke="#888"/>
+<rect x="384.6" y="132" width="162.3" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="465.7" y="152" font-size="9" text-anchor="middle">U</text>
+<rect x="546.9" y="132" width="26.3" height="8" fill="#e76f51" opacity="0.55"/>
+<text x="560.0" y="152" font-size="9" text-anchor="middle">core 162</text>
+<rect x="573.1" y="132" width="162.3" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="654.3" y="152" font-size="9" text-anchor="middle">D</text>
+<polygon points="60.0,85 113.7,85 119.7,91 113.7,97 60.0,97" fill="#3b6fb6"><title>hypothetical protein 4690252-4690768 +</title></polygon>
+<text x="60.0" y="81" font-size="8" fill="#333">hypothetical</text>
+<polygon points="137.2,109 143.2,103 297.9,103 297.9,115 143.2,115" fill="#3b6fb6"><title>tripartite tricarboxylate transporter su 4690876-4691866 -</title></polygon>
+<text x="137.2" y="125" font-size="8" fill="#333">tripartite tricarboxylate transpor</text>
+<polygon points="337.0,109 343.0,103 539.6,103 539.6,115 343.0,115" fill="#3b6fb6"><title>phenylacetate--CoA ligase family protein 4692107-4693355 -</title></polygon>
+<text x="337.0" y="125" font-size="8" fill="#333">phenylacetate--CoA ligase family protein</text>
+<polygon points="572.0,109 578.0,103 707.4,103 707.4,115 578.0,115" fill="#3b6fb6"><title>ABC transporter ATP-binding protein 4693555-4694389 -</title></polygon>
+<text x="572.0" y="125" font-size="8" fill="#333">ABC transporter ATP-binding p</text>
+<polygon points="735.4,109 741.4,103 949.2,103 949.2,115 741.4,115" fill="#3b6fb6"><title>ABC transporter substrate-binding protei 4694562-4695879 -</title></polygon>
+<text x="735.4" y="125" font-size="8" fill="#333">ABC transporter substrate-binding protei</text>
+<polygon points="962.0,109 968.0,103 1060.0,103 1060.0,115 968.0,115" fill="#3b6fb6"><title>branched-chain amino acid ABC transporte 4695958-4697023 -</title></polygon>
+<text x="962.0" y="125" font-size="8" fill="#333">branched-chain amino </text>
+<text x="60" y="166" font-size="9" fill="#666">NZ_OZ253481.1:4690400-4696562  core 4693400-4693562</text>
+<text x="4" y="184" font-size="11" font-weight="bold">SAMN13450421 NZ_CP065695.1 (partner, - strand, two_flank_anchored, pair P00290)</text>
+<line x1="60" y1="220" x2="1060" y2="220" stroke="#888"/>
+<rect x="384.6" y="252" width="162.3" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="465.7" y="272" font-size="9" text-anchor="middle">U'</text>
+<rect x="573.1" y="252" width="162.3" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="654.3" y="272" font-size="9" text-anchor="middle">D'</text>
+<rect x="546.9" y="252" width="26.3" height="8" fill="#9b5de5" opacity="0.55"/>
+<text x="560.0" y="272" font-size="9" text-anchor="middle">other side 15</text>
+<polygon points="962.0,229 968.0,223 1060.0,223 1060.0,235 968.0,235" fill="#3b6fb6"><title>branched-chain amino acid ABC transporte 2086121-2087186 -</title></polygon>
+<text x="962.0" y="245" font-size="8" fill="#333">branched-chain amino </text>
+<polygon points="735.4,229 741.4,223 949.2,223 949.2,235 741.4,235" fill="#3b6fb6"><title>ABC transporter substrate-binding protei 2087265-2088582 -</title></polygon>
+<polygon points="562.6,229 568.6,223 707.4,223 707.4,235 568.6,235" fill="#3b6fb6"><title>ABC transporter ATP-binding protein 2088755-2089589 -</title></polygon>
+<polygon points="337.0,229 343.0,223 539.6,223 539.6,235 343.0,235" fill="#3b6fb6"><title>phenylacetate--CoA ligase family protein 2089642-2090890 -</title></polygon>
+<polygon points="137.2,229 143.2,223 297.9,223 297.9,235 143.2,235" fill="#3b6fb6"><title>tripartite tricarboxylate transporter su 2091131-2092121 -</title></polygon>
+<polygon points="60.0,205 113.7,205 119.7,211 113.7,217 60.0,217" fill="#3b6fb6"><title>hypothetical protein 2092229-2092745 +</title></polygon>
+<text x="60.0" y="201" font-size="8" fill="#333">hypothetical</text>
+<text x="60" y="286" font-size="9" fill="#666">NZ_CP065695.1 site 2089582  other-side gap 15 bp  this call's core 4693400-4693562</text>
+<text x="4" y="304" font-size="11" font-weight="bold">SAMN13450421 NZ_CP065695.1 (partner, - strand, replacement, pair P00290)</text>
+<line x1="60" y1="340" x2="1060" y2="340" stroke="#888"/>
+<rect x="379.2" y="372" width="162.3" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="460.4" y="392" font-size="9" text-anchor="middle">U'</text>
+<rect x="572.2" y="372" width="162.3" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="653.3" y="392" font-size="9" text-anchor="middle">D'</text>
+<rect x="541.5" y="372" width="30.7" height="8" fill="#9b5de5" opacity="0.55"/>
+<text x="556.8" y="392" font-size="9" text-anchor="middle">other side 42</text>
+<polygon points="962.0,349 968.0,343 1060.0,343 1060.0,355 968.0,355" fill="#3b6fb6"><title>branched-chain amino acid ABC transporte 2086121-2087186 -</title></polygon>
+<text x="962.0" y="365" font-size="8" fill="#333">branched-chain amino </text>
+<polygon points="735.4,349 741.4,343 949.2,343 949.2,355 741.4,355" fill="#3b6fb6"><title>ABC transporter substrate-binding protei 2087265-2088582 -</title></polygon>
+<polygon points="572.2,349 578.2,343 707.4,343 707.4,355 578.2,355" fill="#3b6fb6"><title>ABC transporter ATP-binding protein 2088755-2089589 -</title></polygon>
+<polygon points="337.0,349 343.0,343 539.6,343 539.6,355 343.0,355" fill="#3b6fb6"><title>phenylacetate--CoA ligase family protein 2089642-2090890 -</title></polygon>
+<polygon points="137.2,349 143.2,343 297.9,343 297.9,355 143.2,355" fill="#3b6fb6"><title>tripartite tricarboxylate transporter su 2091131-2092121 -</title></polygon>
+<polygon points="60.0,325 113.7,325 119.7,331 113.7,337 60.0,337" fill="#3b6fb6"><title>hypothetical protein 2092229-2092745 +</title></polygon>
+<text x="60.0" y="321" font-size="8" fill="#333">hypothetical</text>
+<text x="60" y="406" font-size="9" fill="#666">NZ_CP065695.1 site 2089588  other-side gap 42 bp  this call's core 4693367-4693556</text>
+</svg>

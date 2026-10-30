@@ -1,0 +1,1642 @@
+[
+  {
+    "query": "CS-K2_RS_R0",
+    "organism": "CS-K2",
+    "method": "RS",
+    "native_family": "R=0",
+    "length": 195,
+    "raw_occurrences": 36,
+    "occurrences": [
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 3526889,
+        "end0": 3527052,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 3292935,
+        "end0": 3293094,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 3291528,
+        "end0": 3291722,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 3232919,
+        "end0": 3233109,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 3232619,
+        "end0": 3232790,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 3181706,
+        "end0": 3181870,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 3181356,
+        "end0": 3181544,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 2900832,
+        "end0": 2901006,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 2786252,
+        "end0": 2786416,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_AP028947.1_feature_5082",
+            "type": "CDS",
+            "overlap_bp": 39,
+            "feature_length_bp": 249,
+            "product": [
+              "hypothetical protein"
+            ],
+            "locus_tag": [
+              "RGQ30_RS12685"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 2715481,
+        "end0": 2715645,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 2670627,
+        "end0": 2670794,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 2642423,
+        "end0": 2642594,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 2186090,
+        "end0": 2186276,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 2157552,
+        "end0": 2157699,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 2157235,
+        "end0": 2157420,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_AP028947.1_feature_3953",
+            "type": "CDS",
+            "overlap_bp": 104,
+            "feature_length_bp": 174,
+            "product": [
+              "hypothetical protein"
+            ],
+            "locus_tag": [
+              "RGQ30_RS09870"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 2041468,
+        "end0": 2041637,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 2012822,
+        "end0": 2013001,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 1879606,
+        "end0": 1879663,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 1879185,
+        "end0": 1879375,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_AP028947.1_feature_3465",
+            "type": "CDS",
+            "overlap_bp": 190,
+            "feature_length_bp": 294,
+            "product": [
+              "hypothetical protein"
+            ],
+            "locus_tag": [
+              "RGQ30_RS08655"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 1226385,
+        "end0": 1226577,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 1217011,
+        "end0": 1217204,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 1216726,
+        "end0": 1216884,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 1186313,
+        "end0": 1186506,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 1185943,
+        "end0": 1186105,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 1177780,
+        "end0": 1177938,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 1158576,
+        "end0": 1158665,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 1158148,
+        "end0": 1158336,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_AP028947.1_feature_2127",
+            "type": "CDS",
+            "overlap_bp": 101,
+            "feature_length_bp": 141,
+            "product": [
+              "hypothetical protein"
+            ],
+            "locus_tag": [
+              "RGQ30_RS05310"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 968421,
+        "end0": 968557,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 797755,
+        "end0": 797949,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 561590,
+        "end0": 561781,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_AP028947.1_feature_1024",
+            "type": "CDS",
+            "overlap_bp": 68,
+            "feature_length_bp": 279,
+            "product": [
+              "hypothetical protein"
+            ],
+            "locus_tag": [
+              "RGQ30_RS02550"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 561311,
+        "end0": 561473,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_AP028947.1_feature_1024",
+            "type": "CDS",
+            "overlap_bp": 94,
+            "feature_length_bp": 279,
+            "product": [
+              "hypothetical protein"
+            ],
+            "locus_tag": [
+              "RGQ30_RS02550"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 203233,
+        "end0": 203418,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_AP028947.1_feature_368",
+            "type": "CDS",
+            "overlap_bp": 27,
+            "feature_length_bp": 303,
+            "product": [
+              "hypothetical protein"
+            ],
+            "locus_tag": [
+              "RGQ30_RS00915"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 155035,
+        "end0": 155199,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 135463,
+        "end0": 135600,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 70253,
+        "end0": 70365,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 69776,
+        "end0": 69969,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_AP028947.1_feature_120",
+            "type": "CDS",
+            "overlap_bp": 21,
+            "feature_length_bp": 1410,
+            "product": [
+              "MFS transporter"
+            ],
+            "locus_tag": [
+              "RGQ30_RS00295"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "CS-K2__NZ_AP028947.1_feature_3465",
+      "identity_pct": 68.627,
+      "alignment_aa": 51,
+      "query_start": 8,
+      "query_end": 160,
+      "evalue": 1.33e-14,
+      "bitscore": 59.3,
+      "subject_length": 97,
+      "title": "hypothetical protein"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "CS-K2_RS_R1",
+    "organism": "CS-K2",
+    "method": "RS",
+    "native_family": "R=1",
+    "length": 267,
+    "raw_occurrences": 17,
+    "occurrences": [
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 3527098,
+        "end0": 3527364,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 3386675,
+        "end0": 3386915,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 2715807,
+        "end0": 2716058,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_AP028947.1_feature_4958",
+            "type": "CDS",
+            "overlap_bp": 159,
+            "feature_length_bp": 159,
+            "product": [
+              "hypothetical protein"
+            ],
+            "locus_tag": [
+              "RGQ30_RS12375"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 2670230,
+        "end0": 2670462,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 2642693,
+        "end0": 2642937,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 2058027,
+        "end0": 2058291,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 2013165,
+        "end0": 2013410,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 1848996,
+        "end0": 1849262,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_AP028947.1_feature_3403",
+            "type": "CDS",
+            "overlap_bp": 84,
+            "feature_length_bp": 339,
+            "product": [
+              "hypothetical protein"
+            ],
+            "locus_tag": [
+              "RGQ30_RS08500"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 1724958,
+        "end0": 1725119,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 1460419,
+        "end0": 1460672,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 1293581,
+        "end0": 1293846,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 1088510,
+        "end0": 1088747,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 1043311,
+        "end0": 1043568,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 1018150,
+        "end0": 1018260,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 785376,
+        "end0": 785642,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 741613,
+        "end0": 741734,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_AP028947.1_feature_1338",
+            "type": "CDS",
+            "overlap_bp": 26,
+            "feature_length_bp": 306,
+            "product": [
+              "hypothetical protein"
+            ],
+            "locus_tag": [
+              "RGQ30_RS03340"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 118865,
+        "end0": 119124,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "CS-K2__NZ_AP028947.1_feature_4958",
+      "identity_pct": 89.13,
+      "alignment_aa": 46,
+      "query_start": 94,
+      "query_end": 231,
+      "evalue": 1.83e-23,
+      "bitscore": 81.6,
+      "subject_length": 52,
+      "title": "hypothetical protein"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "CS-K2_RS_R2",
+    "organism": "CS-K2",
+    "method": "RS",
+    "native_family": "R=2",
+    "length": 206,
+    "raw_occurrences": 5,
+    "occurrences": [
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 2556961,
+        "end0": 2557166,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 2105432,
+        "end0": 2105534,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 2099576,
+        "end0": 2099782,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 1243306,
+        "end0": 1243513,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 1202507,
+        "end0": 1202713,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_AP028947.1_feature_2215",
+            "type": "CDS",
+            "overlap_bp": 190,
+            "feature_length_bp": 228,
+            "product": [
+              "hypothetical protein"
+            ],
+            "locus_tag": [
+              "RGQ30_RS05530"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "CS-K2__NZ_AP028947.1_feature_2215",
+      "identity_pct": 79.07,
+      "alignment_aa": 43,
+      "query_start": 2,
+      "query_end": 130,
+      "evalue": 3.4e-19,
+      "bitscore": 64.7,
+      "subject_length": 75,
+      "title": "hypothetical protein"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "CS-K2_RS_R3",
+    "organism": "CS-K2",
+    "method": "RS",
+    "native_family": "R=3",
+    "length": 208,
+    "raw_occurrences": 6,
+    "occurrences": [
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 2999873,
+        "end0": 3000028,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 2557275,
+        "end0": 2557482,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 2105531,
+        "end0": 2105738,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 2099882,
+        "end0": 2100090,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 1241569,
+        "end0": 1241775,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 1202071,
+        "end0": 1202278,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "CS-K2_RS_R4",
+    "organism": "CS-K2",
+    "method": "RS",
+    "native_family": "R=4",
+    "length": 371,
+    "raw_occurrences": 4,
+    "occurrences": [
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 1146467,
+        "end0": 1146838,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_AP028947.1_feature_2103",
+            "type": "CDS",
+            "overlap_bp": 367,
+            "feature_length_bp": 864,
+            "product": [
+              "flagellin N-terminal helical domain-containing protein"
+            ],
+            "locus_tag": [
+              "RGQ30_RS05250"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 1145264,
+        "end0": 1145635,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_AP028947.1_feature_2101",
+            "type": "CDS",
+            "overlap_bp": 367,
+            "feature_length_bp": 867,
+            "product": [
+              "flagellin N-terminal helical domain-containing protein"
+            ],
+            "locus_tag": [
+              "RGQ30_RS05245"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 1144124,
+        "end0": 1144495,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_AP028947.1_feature_2099",
+            "type": "CDS",
+            "overlap_bp": 367,
+            "feature_length_bp": 864,
+            "product": [
+              "flagellin N-terminal helical domain-containing protein"
+            ],
+            "locus_tag": [
+              "RGQ30_RS05240"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 1076539,
+        "end0": 1076910,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_AP028947.1_feature_1961",
+            "type": "CDS",
+            "overlap_bp": 368,
+            "feature_length_bp": 864,
+            "product": [
+              "flagellin N-terminal helical domain-containing protein"
+            ],
+            "locus_tag": [
+              "RGQ30_RS04895"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "CS-K2__NZ_AP028947.1_feature_2103",
+      "identity_pct": 99.18,
+      "alignment_aa": 122,
+      "query_start": 5,
+      "query_end": 370,
+      "evalue": 1.6e-81,
+      "bitscore": 238.0,
+      "subject_length": 287,
+      "title": "flagellin N-terminal helical domain-containing protein"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "CS-K2_RS_R5",
+    "organism": "CS-K2",
+    "method": "RS",
+    "native_family": "R=5",
+    "length": 178,
+    "raw_occurrences": 5,
+    "occurrences": [
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 2715481,
+        "end0": 2715658,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 2642430,
+        "end0": 2642607,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 2057836,
+        "end0": 2058014,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 2041472,
+        "end0": 2041650,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 741216,
+        "end0": 741394,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_AP028947.1_feature_1338",
+            "type": "CDS",
+            "overlap_bp": 61,
+            "feature_length_bp": 306,
+            "product": [
+              "hypothetical protein"
+            ],
+            "locus_tag": [
+              "RGQ30_RS03340"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "CS-K2__NZ_AP028947.1_feature_1835",
+      "identity_pct": 75.0,
+      "alignment_aa": 48,
+      "query_start": 173,
+      "query_end": 30,
+      "evalue": 1.48e-21,
+      "bitscore": 76.3,
+      "subject_length": 81,
+      "title": "hypothetical protein"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "CS-K2_RS_R6",
+    "organism": "CS-K2",
+    "method": "RS",
+    "native_family": "R=6",
+    "length": 55,
+    "raw_occurrences": 6,
+    "occurrences": [
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 2951127,
+        "end0": 2951180,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 1186083,
+        "end0": 1186137,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 968535,
+        "end0": 968589,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 798146,
+        "end0": 798200,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 155177,
+        "end0": 155231,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 70159,
+        "end0": 70211,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "CS-K2_RS_R7",
+    "organism": "CS-K2",
+    "method": "RS",
+    "native_family": "R=7",
+    "length": 286,
+    "raw_occurrences": 5,
+    "occurrences": [
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 1145971,
+        "end0": 1146256,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_AP028947.1_feature_2103",
+            "type": "CDS",
+            "overlap_bp": 285,
+            "feature_length_bp": 864,
+            "product": [
+              "flagellin N-terminal helical domain-containing protein"
+            ],
+            "locus_tag": [
+              "RGQ30_RS05250"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 1144765,
+        "end0": 1145046,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_AP028947.1_feature_2101",
+            "type": "CDS",
+            "overlap_bp": 281,
+            "feature_length_bp": 867,
+            "product": [
+              "flagellin N-terminal helical domain-containing protein"
+            ],
+            "locus_tag": [
+              "RGQ30_RS05245"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 1143628,
+        "end0": 1143913,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_AP028947.1_feature_2099",
+            "type": "CDS",
+            "overlap_bp": 285,
+            "feature_length_bp": 864,
+            "product": [
+              "flagellin N-terminal helical domain-containing protein"
+            ],
+            "locus_tag": [
+              "RGQ30_RS05240"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 1142493,
+        "end0": 1142778,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_AP028947.1_feature_2097",
+            "type": "CDS",
+            "overlap_bp": 285,
+            "feature_length_bp": 867,
+            "product": [
+              "flagellin N-terminal helical domain-containing protein"
+            ],
+            "locus_tag": [
+              "RGQ30_RS05235"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 1077121,
+        "end0": 1077406,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_AP028947.1_feature_1961",
+            "type": "CDS",
+            "overlap_bp": 285,
+            "feature_length_bp": 864,
+            "product": [
+              "flagellin N-terminal helical domain-containing protein"
+            ],
+            "locus_tag": [
+              "RGQ30_RS04895"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "CS-K2__NZ_AP028947.1_feature_2099",
+      "identity_pct": 98.936,
+      "alignment_aa": 94,
+      "query_start": 2,
+      "query_end": 283,
+      "evalue": 1.65e-59,
+      "bitscore": 180.0,
+      "subject_length": 287,
+      "title": "flagellin N-terminal helical domain-containing protein"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "CS-K2_RS_R8",
+    "organism": "CS-K2",
+    "method": "RS",
+    "native_family": "R=8",
+    "length": 54,
+    "raw_occurrences": 6,
+    "occurrences": [
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 2638503,
+        "end0": 2638556,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_AP028947.1_feature_4802",
+            "type": "tRNA",
+            "overlap_bp": 53,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-His"
+            ],
+            "locus_tag": [
+              "RGQ30_RS11985"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 2119371,
+        "end0": 2119422,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_AP028947.1_feature_3867",
+            "type": "tRNA",
+            "overlap_bp": 51,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Gly"
+            ],
+            "locus_tag": [
+              "RGQ30_RS09660"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 2016793,
+        "end0": 2016846,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_AP028947.1_feature_3705",
+            "type": "tRNA",
+            "overlap_bp": 53,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Val"
+            ],
+            "locus_tag": [
+              "RGQ30_RS09255"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 892033,
+        "end0": 892087,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_AP028947.1_feature_1625",
+            "type": "tRNA",
+            "overlap_bp": 54,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Ile"
+            ],
+            "locus_tag": [
+              "RGQ30_RS04055"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 507848,
+        "end0": 507902,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_AP028947.1_feature_922",
+            "type": "tRNA",
+            "overlap_bp": 54,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Ile"
+            ],
+            "locus_tag": [
+              "RGQ30_RS02300"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 401242,
+        "end0": 401292,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_AP028947.1_feature_742",
+            "type": "tRNA",
+            "overlap_bp": 50,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Thr"
+            ],
+            "locus_tag": [
+              "RGQ30_RS01850"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "CS-K2_RS_R9",
+    "organism": "CS-K2",
+    "method": "RS",
+    "native_family": "R=9",
+    "length": 63,
+    "raw_occurrences": 6,
+    "occurrences": [
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 2792272,
+        "end0": 2792330,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_AP028947.1_feature_5096",
+            "type": "tRNA",
+            "overlap_bp": 58,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Lys"
+            ],
+            "locus_tag": [
+              "RGQ30_RS12720"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 1960141,
+        "end0": 1960204,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_AP028947.1_feature_3615",
+            "type": "tRNA",
+            "overlap_bp": 62,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Arg"
+            ],
+            "locus_tag": [
+              "RGQ30_RS09030"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 1830982,
+        "end0": 1831043,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_AP028947.1_feature_3371",
+            "type": "tRNA",
+            "overlap_bp": 61,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Ala"
+            ],
+            "locus_tag": [
+              "RGQ30_RS08420"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 1510824,
+        "end0": 1510885,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_AP028947.1_feature_2755",
+            "type": "tRNA",
+            "overlap_bp": 61,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Val"
+            ],
+            "locus_tag": [
+              "RGQ30_RS06880"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 892132,
+        "end0": 892194,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_AP028947.1_feature_1627",
+            "type": "tRNA",
+            "overlap_bp": 62,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Ala"
+            ],
+            "locus_tag": [
+              "RGQ30_RS04060"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 507947,
+        "end0": 508009,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_AP028947.1_feature_924",
+            "type": "tRNA",
+            "overlap_bp": 62,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Ala"
+            ],
+            "locus_tag": [
+              "RGQ30_RS02305"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "CS-K2_RS_R10",
+    "organism": "CS-K2",
+    "method": "RS",
+    "native_family": "R=10",
+    "length": 311,
+    "raw_occurrences": 4,
+    "occurrences": [
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 2806523,
+        "end0": 2806833,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_AP028947.1_feature_5118",
+            "type": "CDS",
+            "overlap_bp": 310,
+            "feature_length_bp": 2292,
+            "product": [
+              "hypothetical protein"
+            ],
+            "locus_tag": [
+              "RGQ30_RS16165"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 2805977,
+        "end0": 2806287,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_AP028947.1_feature_5118",
+            "type": "CDS",
+            "overlap_bp": 310,
+            "feature_length_bp": 2292,
+            "product": [
+              "hypothetical protein"
+            ],
+            "locus_tag": [
+              "RGQ30_RS16165"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 2805158,
+        "end0": 2805468,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_AP028947.1_feature_5116",
+            "type": "CDS",
+            "overlap_bp": 310,
+            "feature_length_bp": 2589,
+            "product": [
+              "methyl-accepting chemotaxis protein"
+            ],
+            "locus_tag": [
+              "RGQ30_RS16160"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_AP028947.1",
+        "accession": "NZ_AP028947.1",
+        "start0": 2804339,
+        "end0": 2804649,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_AP028947.1_feature_5116",
+            "type": "CDS",
+            "overlap_bp": 310,
+            "feature_length_bp": 2589,
+            "product": [
+              "methyl-accepting chemotaxis protein"
+            ],
+            "locus_tag": [
+              "RGQ30_RS16160"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "CS-K2__NZ_AP028947.1_feature_5116",
+      "identity_pct": 98.058,
+      "alignment_aa": 103,
+      "query_start": 1,
+      "query_end": 309,
+      "evalue": 4.53e-66,
+      "bitscore": 209.0,
+      "subject_length": 862,
+      "title": "methyl-accepting chemotaxis protein"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  }
+]

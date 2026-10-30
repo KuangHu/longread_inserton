@@ -1,0 +1,8 @@
+{
+  "command": "/global/scratch/users/kh36969/longread_callout/paraburkholderia_ani/skani triangle -l /global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/actinomycetaceae/s2/genomes.list -E --slow -t 32 -o /global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/actinomycetaceae/s2/skani_edges.tsv",
+  "version": "skani 0.4.0",
+  "binary_sha256": "1482c7d1cf35210bf73c6d06c1b1fc97659dec18194c5355a31af672b6b03c0b",
+  "edges": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/actinomycetaceae/s2/skani_edges.tsv",
+  "edges_sha256": "ee21e8ecf2f56d34294782cb8ab8764786ac285618c95d0a575eb8899a0583f9",
+  "rows": 110280
+}

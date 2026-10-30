@@ -1,0 +1,2461 @@
+family_id	homology_groups	proteins	members_failing_check	loci	carriers	species	architectures	products	loci_main	carriers_main	loci_partner_mixed	carriers_partner_mixed	loci_direction_mixed	carriers_direction_mixed	loci_short_other_segment	carriers_short_other_segment	loci_replacement	carriers_replacement
+F_0001	H_0001	28	0	64	64	47	1	tripartite tricarboxylate transporter substrate binding protein	61	61	0	0	0	0	3	3	0	0
+F_0039	H_0035	6	0	53	53	22	2	type IV toxin-antitoxin system AbiEi family antitoxin domain-containing protein	52	52	1	1	0	0	0	0	0	0
+F_0018	H_0011	9	0	51	51	38	3	SMR family transporter	2	2	0	0	0	0	49	49	0	0
+F_0002	H_0002	20	0	46	46	36	1	APH(3'') family aminoglycoside O-phosphotransferase	0	0	0	0	0	0	46	46	0	0
+F_0006	H_0005	15	0	45	45	16	1	nucleotidyl transferase AbiEii/AbiGii toxin family protein	44	44	1	1	0	0	0	0	0	0
+F_0068	H_0080	4	0	33	33	19	1	Fic family protein	30	30	0	0	0	0	3	3	0	0
+F_0011	H_0003	12	0	31	31	23	1	hypothetical protein	0	0	0	0	0	0	31	31	0	0
+F_0007	H_0013	13	0	30	30	15	1	hypothetical protein	26	26	0	0	0	0	4	4	0	0
+F_0261	H_0196	2	0	30	30	2	1	hypothetical protein	0	0	0	0	0	0	0	0	30	30
+F_0086	H_0022	4	0	29	13	4	1	IS110 family transposase	23	13	0	0	0	0	5	5	1	1
+F_0556	H_0597	2	0	28	28	2	1	YopJ family acetyltransferase	0	0	0	0	0	0	28	28	0	0
+F_0003	H_0006	17	0	27	27	23	1	class I adenylate-forming enzyme family protein	27	27	0	0	0	0	0	0	0	0
+F_0005	H_0004	16	0	26	26	14	1	alpha/beta hydrolase domain-containing protein	0	0	0	0	0	0	26	26	0	0
+F_0017	H_0027	9	0	26	26	21	1	type VI secretion system protein	0	0	0	0	0	0	26	26	0	0
+F_0108	H_0153	4	0	26	26	2	1	FAD/NAD(P)-binding protein | hypothetical protein	0	0	0	0	0	0	26	26	0	0
+F_0008	H_0009	12	0	25	25	18	1	type IV pili methyl-accepting chemotaxis transducer N-terminal domain-containing protein	0	0	0	0	0	0	25	25	0	0
+F_0013	H_0012	11	0	24	24	18	1	SRPBCC family protein	0	0	0	0	0	0	24	24	0	0
+F_0004	H_0007	16	0	23	23	12	1	M20/M25/M40 family metallo-hydrolase | acetylornithine deacetylase	0	0	0	0	0	0	23	23	0	0
+F_0015	H_0020	9	0	23	23	21	1	Acg family FMN-binding oxidoreductase | twin-arginine translocation pathway signal protein	12	12	0	0	0	0	11	11	0	0
+F_0021	H_0031	9	0	23	23	21	1	LuxR C-terminal-related transcriptional regulator | helix-turn-helix transcriptional regulator	12	12	0	0	0	0	11	11	0	0
+F_0012	H_0018	12	0	22	22	18	1	helix-turn-helix domain-containing protein	0	0	0	0	0	0	22	22	0	0
+F_0029	H_0049	7	0	22	22	18	1	2,4'-dihydroxyacetophenone dioxygenase family protein	0	0	0	0	0	0	22	22	0	0
+F_0183	H_0247	3	0	22	22	1	1	GNAT family N-acetyltransferase	0	0	0	0	0	0	22	22	0	0
+F_0034	H_0060	6	0	19	19	5	1	Fic family protein	19	19	0	0	0	0	0	0	0	0
+F_0010	H_0015	12	0	18	18	7	1	glycosyltransferase | glycosyltransferase family 2 protein | glycosyltransferase family A protein | glycosyltransferase family protein	0	0	0	0	0	0	18	18	0	0
+F_0014	H_0019	11	0	18	18	7	1	radical SAM protein	0	0	0	0	0	0	18	18	0	0
+F_0009	H_0010	12	0	17	6	2	1	hypothetical protein	4	3	0	0	0	0	13	5	0	0
+F_0016	H_0016	9	0	17	17	7	2	GNAT family N-acetyltransferase	0	0	0	0	0	0	17	17	0	0
+F_0023	H_0041	8	0	17	17	14	1	hypothetical protein	0	0	0	0	0	0	17	17	0	0
+F_0030	H_0051	7	0	17	17	5	1	helix-turn-helix domain-containing protein	0	0	0	0	0	0	0	0	17	17
+F_0049	H_0086	5	0	17	17	5	1	helix-turn-helix domain-containing protein	0	0	0	0	0	0	0	0	17	17
+F_0059	H_0097	5	0	17	17	16	1	hypothetical protein	0	0	0	0	0	0	17	17	0	0
+F_0360	H_0432	2	0	17	17	11	2	hypothetical protein	0	0	0	0	0	0	17	17	0	0
+F_0022	H_0037	8	0	15	15	9	1	hypothetical protein	0	0	0	0	0	0	15	15	0	0
+F_0038	H_0066	6	0	15	15	10	1	addiction module toxin RelE | type II toxin-antitoxin system RelE/ParE family toxin	0	0	0	0	0	0	15	15	0	0
+F_0063	H_0084	5	0	15	15	12	2	hypothetical protein	0	0	0	0	0	0	0	0	15	15
+F_0145	H_0142	3	0	15	11	2	1	IS481-like element ISAav5 family transposase	6	5	0	0	0	0	9	9	0	0
+F_0306	H_0378	2	0	15	15	8	1	nuclear transport factor 2 family protein	0	0	0	0	0	0	15	15	0	0
+F_2111	H_1844	1	0	15	15	10	1	XRE family transcriptional regulator | helix-turn-helix domain-containing protein	0	0	0	0	0	0	15	15	0	0
+F_0025	H_0021;H_0780	7	0	14	14	12	2	PDDEXK nuclease domain-containing protein | YhcG family protein	0	0	0	0	0	0	14	14	0	0
+F_0031	H_0025;H_1345	7	0	14	14	12	1	hypothetical protein	0	0	0	0	0	0	0	0	14	14
+F_0211	H_0144	3	0	14	14	9	2	AbrB/MazE/SpoVT family DNA-binding domain-containing protein	0	0	0	0	0	0	0	0	14	14
+F_0796	H_0779	1	0	14	14	1	1	3'-5' exoribonuclease domain-containing protein	14	14	0	0	0	0	0	0	0	0
+F_0033	H_0043	6	0	13	13	9	3	trypsin-like peptidase domain-containing protein	0	0	0	0	0	0	9	9	4	4
+F_0047	H_0044	5	0	13	13	8	1	type II toxin-antitoxin system death-on-curing family toxin	0	0	0	0	0	0	0	0	13	13
+F_0173	H_0230	3	0	13	13	4	1	IS5 family transposase	13	13	0	0	0	0	0	0	0	0
+F_0019	H_0028	9	0	12	12	6	1	DUF4198 domain-containing protein	0	0	0	0	0	0	12	12	0	0
+F_0026	H_0045	7	0	12	12	8	1	class I SAM-dependent methyltransferase | methyltransferase domain-containing protein	0	0	0	0	0	0	12	12	0	0
+F_0020	H_0029	9	0	11	11	11	2	peptide-methionine (R)-S-oxide reductase MsrB	0	0	0	0	0	0	11	11	0	0
+F_0027	H_0046	7	0	11	11	7	2	hypothetical protein	0	0	0	0	0	0	11	11	0	0
+F_0055	H_0065	5	0	11	11	7	1	Fic family protein | Fic/DOC family protein | cell filamentation protein	0	0	0	0	0	0	1	1	10	10
+F_0070	H_0003	4	0	11	11	9	1	hypothetical protein	0	0	0	0	0	0	11	11	0	0
+F_0077	H_0122	4	0	11	11	7	1	hypothetical protein	0	0	0	0	0	0	1	1	10	10
+F_0152	H_0211	3	0	11	11	9	1	hypothetical protein	0	0	0	0	0	0	11	11	0	0
+F_2353	H_0030	1	0	11	11	1	1	XopV/AopV family type III secretion system effector	0	0	0	0	0	0	0	0	11	11
+F_0035	H_0038	6	0	10	10	8	2	hypothetical protein	0	0	0	0	0	0	10	10	0	0
+F_0043	H_0075	6	0	10	10	7	1	GSU2403 family nucleotidyltransferase fold protein | hypothetical protein	2	2	0	0	0	0	8	8	0	0
+F_0060	H_0071	5	0	10	10	7	1	Lrp/AsnC family transcriptional regulator	0	0	0	0	0	0	10	10	0	0
+F_0084	H_0130	4	0	10	10	4	1	type II toxin-antitoxin system YhaV family toxin	0	0	0	0	0	0	0	0	10	10
+F_0129	H_0183	3	0	10	10	4	1	type II toxin-antitoxin system PrlF family antitoxin	0	0	0	0	0	0	0	0	10	10
+F_0270	H_0343	2	0	10	10	10	1	isovaleryl-CoA dehydrogenase	0	0	0	0	0	0	9	9	1	1
+F_0426	H_0024	2	0	10	10	10	1	glycerophosphodiester phosphodiesterase	0	0	0	0	0	0	10	10	0	0
+F_0467	H_0052	2	0	10	10	10	1	RDD family protein	0	0	0	0	0	0	10	10	0	0
+F_0024	H_0030	8	0	9	9	2	1	XopV/AopV family type III secretion system effector	0	0	0	0	0	0	1	1	8	8
+F_0028	H_0048	7	0	9	9	7	1	glycerophosphodiester phosphodiesterase	1	1	0	0	0	0	8	8	0	0
+F_0051	H_0011	5	0	9	9	7	1	SMR family transporter	0	0	0	0	0	0	9	9	0	0
+F_0053	H_0055	5	0	9	9	6	1	DMT family transporter | EamA family transporter	0	0	0	0	0	0	9	9	0	0
+F_0074	H_0062	4	0	9	9	6	1	LysR substrate-binding domain-containing protein	0	0	0	0	0	0	9	9	0	0
+F_0076	H_0118	4	0	9	9	4	1	hypothetical protein	0	0	0	0	0	0	8	8	1	1
+F_0144	H_0056	3	0	9	9	5	1	NirD/YgiW/YdeI family stress tolerance protein | YgiW/YdeI family stress tolerance OB fold protein	0	0	0	0	0	0	9	9	0	0
+F_0157	H_0081	3	0	9	9	6	2	DNA polymerase | nucleotidyltransferase family protein	9	9	0	0	0	0	0	0	0	0
+F_0166	H_0226	3	0	9	9	7	1	SMI1/KNR4 family protein	0	0	0	0	0	0	0	0	9	9
+F_0243	H_0308	3	0	9	9	7	1	CbrC family protein	0	0	0	0	0	0	0	0	9	9
+F_0287	H_0359	2	0	9	9	9	1	hypothetical protein	0	0	0	0	0	0	9	9	0	0
+F_0355	H_0427	2	0	9	9	9	1	NAD(P)H-dependent oxidoreductase	0	0	0	0	0	0	9	9	0	0
+F_0918	H_0876	1	0	9	9	4	1	DUF3237 domain-containing protein	0	0	0	0	0	0	9	9	0	0
+F_0994	H_0344	1	0	9	9	9	1	substrate-binding domain-containing protein	0	0	0	0	0	0	0	0	9	9
+F_2360	H_2029	1	0	9	9	1	1	hypothetical protein	0	0	0	0	0	0	9	9	0	0
+F_0032	H_0053	7	0	8	8	4	1	acyl-CoA dehydrogenase | acyl-CoA dehydrogenase family protein	0	0	0	0	0	0	8	8	0	0
+F_0040	H_0078	6	0	8	8	6	1	ZIP family metal transporter	0	0	0	0	0	0	8	8	0	0
+F_0044	H_0039	6	0	8	4	3	1	ISL3 family transposase	6	4	1	1	0	0	1	1	0	0
+F_0064	H_0089	5	0	8	8	6	1	DUF4377 domain-containing protein | hypothetical protein	4	4	0	0	0	0	4	4	0	0
+F_0079	H_0125	4	0	8	8	5	1	HepT-like ribonuclease domain-containing protein | hypothetical protein	8	8	0	0	0	0	0	0	0	0
+F_0133	H_0188	3	0	8	8	8	1	hypothetical protein	0	0	0	0	0	0	8	8	0	0
+F_0185	H_0248	3	0	8	8	7	1	hypothetical protein	0	0	0	0	0	0	8	8	0	0
+F_0201	H_0176	3	0	8	8	1	1	hypothetical protein	0	0	0	0	0	0	8	8	0	0
+F_0258	H_0332	2	0	8	8	8	1	hypothetical protein	8	8	0	0	0	0	0	0	0	0
+F_0326	H_0192	2	0	8	8	3	1	PKD domain-containing protein	0	0	0	0	0	0	8	8	0	0
+F_0375	H_0040	2	0	8	8	4	1	M20/M25/M40 family metallo-hydrolase	0	0	0	0	0	0	8	8	0	0
+F_0446	H_0505	2	0	8	8	8	1	hypothetical protein	6	6	0	0	0	0	2	2	0	0
+F_0036	H_0017	6	0	7	4	3	1	IS1595 family transposase | IS1595-like element ISCsp2 family transposase	4	4	1	1	0	0	1	1	1	1
+F_0037	H_0047	6	0	7	7	4	1	alpha/beta fold hydrolase | alpha/beta hydrolase	0	0	0	0	0	0	7	7	0	0
+F_0041	H_0077	6	0	7	7	6	2	hypothetical protein	0	0	0	0	0	0	7	7	0	0
+F_0042	H_0058	6	0	7	7	4	1	helix-turn-helix domain-containing protein	0	0	0	0	0	0	7	7	0	0
+F_0080	H_0095	4	0	7	7	5	1	GGDEF domain-containing protein | sensor domain-containing diguanylate cyclase	0	0	0	0	0	0	5	5	2	2
+F_0085	H_0131	4	0	7	7	4	1	hypothetical protein	4	4	0	0	0	0	3	3	0	0
+F_0092	H_0106	4	0	7	7	4	2	hypothetical protein	0	0	0	0	0	0	7	7	0	0
+F_0095	H_0140	4	0	7	7	7	1	GNAT family N-acetyltransferase	0	0	0	0	0	0	7	7	0	0
+F_0212	H_0281	3	0	7	7	6	1	HD domain-containing protein | HD family hydrolase	3	3	0	0	0	0	4	4	0	0
+F_0235	H_0301	3	0	7	7	2	1	transporter substrate-binding domain-containing protein	0	0	0	0	0	0	7	7	0	0
+F_0238	H_0303	3	0	7	7	3	1	hypothetical protein	0	0	0	0	0	0	7	7	0	0
+F_0909	H_0867	1	0	7	7	7	1	hypothetical protein	0	0	0	0	0	0	7	7	0	0
+F_1339	H_1230	1	0	7	7	1	1	PDDEXK-like family protein	0	0	0	0	0	0	7	7	0	0
+F_0045	H_0083	5	0	6	6	6	1	GNAT family N-acetyltransferase	0	0	0	0	0	0	6	6	0	0
+F_0046	H_0034	5	0	6	6	4	1	Bug family tripartite tricarboxylate transporter substrate binding protein	0	0	0	0	0	0	0	0	6	6
+F_0048	H_0085	5	0	6	6	3	1	hypothetical protein	0	0	0	0	0	0	6	6	0	0
+F_0056	H_0032	5	0	6	6	4	1	amidohydrolase family protein	0	0	0	0	0	0	0	0	6	6
+F_0061	H_0074	5	0	6	6	4	1	helix-turn-helix transcriptional regulator | hypothetical protein	0	0	0	0	0	0	6	6	0	0
+F_0065	H_0104	5	0	6	6	6	1	GyrI-like domain-containing protein	0	0	0	0	0	0	6	6	0	0
+F_0071	H_0026	4	0	6	3	1	2	IS5 family transposase	3	2	0	0	0	0	3	2	0	0
+F_0090	H_0096	4	0	6	6	3	1	hypothetical protein	0	0	0	0	0	0	6	6	0	0
+F_0099	H_0132	4	0	6	6	6	1	helix-turn-helix domain-containing protein | helix-turn-helix transcriptional regulator	0	0	0	0	0	0	0	0	6	6
+F_0107	H_0102	4	0	6	6	4	1	hypothetical protein	0	0	0	0	0	0	6	6	0	0
+F_0115	H_0101	4	0	6	6	6	1	shikimate kinase	0	0	0	0	0	0	6	6	0	0
+F_0117	H_0129	4	0	6	6	6	1	histone deacetylase family protein	6	6	0	0	0	0	0	0	0	0
+F_0120	H_0088	4	0	6	6	3	1	ribbon-helix-helix domain-containing protein	0	0	0	0	0	0	6	6	0	0
+F_0123	H_0120	4	0	6	6	6	2	glucose 1-dehydrogenase	0	0	0	0	0	0	6	6	0	0
+F_0126	H_0008	3	0	6	4	4	1	IS5 family transposase	6	4	0	0	0	0	0	0	0	0
+F_0141	H_0057	3	0	6	5	5	1	IS630 family transposase	3	3	1	1	0	0	2	2	0	0
+F_0156	H_0214	3	0	6	6	6	1	GFA family protein	0	0	0	0	0	0	6	6	0	0
+F_0193	H_0252	3	0	6	6	6	1	SRPBCC family protein	0	0	0	0	0	0	6	6	0	0
+F_0196	H_0016	3	0	6	6	4	1	GNAT family N-acetyltransferase	0	0	0	0	0	0	6	6	0	0
+F_0311	H_0022	2	0	6	3	2	1	IS110 family RNA-guided transposase | IS110 family transposase	5	3	1	1	0	0	0	0	0	0
+F_0317	H_0386	2	0	6	6	2	1	hypothetical protein	0	0	0	0	0	0	0	0	6	6
+F_0337	H_0405	2	0	6	6	6	1	VOC family protein	0	0	0	0	0	0	0	0	6	6
+F_0363	H_0436	2	0	6	6	1	1	GGDEF domain-containing protein	0	0	0	0	0	0	0	0	6	6
+F_0373	H_0448	2	0	6	6	6	1	ArsR/SmtB family transcription factor	0	0	0	0	0	0	6	6	0	0
+F_0517	H_0056	2	0	6	6	6	1	YgiW/YdeI family stress tolerance OB fold protein	0	0	0	0	0	0	6	6	0	0
+F_0524	H_0022	2	0	6	2	1	1	IS110 family RNA-guided transposase | IS110 family transposase	6	2	0	0	0	0	0	0	0	0
+F_1263	H_1168	1	0	6	6	3	1	CcdC protein domain-containing protein | hypothetical protein	0	0	0	0	0	0	6	6	0	0
+F_1313	H_0231	1	0	6	6	6	1	hypothetical protein	2	2	0	0	0	0	4	4	0	0
+F_1819	H_0127	1	0	6	6	6	1	VOC family protein	0	0	0	0	0	0	6	6	0	0
+F_0050	H_0094	5	0	5	5	3	1	Bug family tripartite tricarboxylate transporter substrate binding protein | tripartite tricarboxylate transporter substrate binding protein	0	0	0	0	0	0	5	5	0	0
+F_0052	H_0091	5	0	5	5	3	1	DUF169 domain-containing protein	0	0	0	0	0	0	5	5	0	0
+F_0054	H_0092	5	0	5	5	3	1	hypothetical protein	0	0	0	0	0	0	5	5	0	0
+F_0057	H_0098	5	0	5	5	4	1	TonB-dependent receptor | TonB-dependent siderophore receptor	0	0	0	0	0	0	5	5	0	0
+F_0058	H_0070	5	0	5	5	5	1	short chain dehydrogenase	5	5	0	0	0	0	0	0	0	0
+F_0062	H_0076	5	0	5	3	1	1	IS4 family transposase	4	3	1	1	0	0	0	0	0	0
+F_0066	H_0033	5	0	5	5	5	1	hypothetical protein	5	5	0	0	0	0	0	0	0	0
+F_0069	H_0113	4	0	5	5	5	2	type II toxin-antitoxin system HipA family toxin	0	0	0	0	0	0	4	4	1	1
+F_0072	H_0115	4	0	5	5	4	1	phytanoyl-CoA dioxygenase family protein	0	0	0	0	0	0	5	5	0	0
+F_0073	H_0138	4	0	5	5	5	1	Bug family tripartite tricarboxylate transporter substrate binding protein	5	5	0	0	0	0	0	0	0	0
+F_0078	H_0087	4	0	5	5	5	1	LysR family transcriptional regulator	5	5	0	0	0	0	0	0	0	0
+F_0081	H_0126	4	0	5	5	1	1	pirin family protein	5	5	0	0	0	0	0	0	0	0
+F_0087	H_0134	4	0	5	5	2	1	nucleotidyltransferase family protein	2	2	0	0	0	0	3	3	0	0
+F_0093	H_0148	4	0	5	5	4	1	flavodoxin family protein	1	1	0	0	0	0	4	4	0	0
+F_0094	H_0001	4	0	5	5	3	1	tripartite tricarboxylate transporter substrate binding protein	2	2	0	0	0	0	3	3	0	0
+F_0096	H_0141	4	0	5	5	4	1	ABC-F family ATP-binding cassette domain-containing protein	0	0	0	0	0	0	0	0	5	5
+F_0097	H_0025	4	0	5	5	5	1	hypothetical protein	0	0	0	0	0	0	5	5	0	0
+F_0098	H_0143	4	0	5	5	2	1	serine hydrolase domain-containing protein	0	0	0	0	0	0	5	5	0	0
+F_0100	H_0017	4	0	5	5	5	3	IS1595 family transposase	5	5	0	0	0	0	0	0	0	0
+F_0103	H_0166	4	0	5	4	3	1	IS5 family transposase	4	3	1	1	0	0	0	0	0	0
+F_0105	H_0152	4	0	5	5	5	1	TetR/AcrR family transcriptional regulator	0	0	0	0	0	0	5	5	0	0
+F_0109	H_0155	4	0	5	5	5	1	LysR family transcriptional regulator | LysR substrate-binding domain-containing protein	0	0	0	0	0	0	5	5	0	0
+F_0111	H_0103	4	0	5	3	3	1	group II intron reverse transcriptase/maturase	2	2	2	1	0	0	1	1	0	0
+F_0113	H_0163	4	0	5	5	5	1	Bug family tripartite tricarboxylate transporter substrate binding protein	5	5	0	0	0	0	0	0	0	0
+F_0114	H_0105	4	0	5	5	2	1	TIGR03118 family protein	0	0	0	0	0	0	5	5	0	0
+F_0118	H_0149	4	0	5	5	1	2	protein NO VEIN domain-containing protein	0	0	0	0	0	0	5	5	0	0
+F_0121	H_0082	4	0	5	5	4	1	hypothetical protein	0	0	0	0	0	0	5	5	0	0
+F_0130	H_0184	3	0	5	5	4	1	glutaminase A	0	0	0	0	0	0	5	5	0	0
+F_0131	H_0186	3	0	5	5	2	1	RpiR family transcriptional regulator | hypothetical protein	2	2	0	0	0	0	3	3	0	0
+F_0200	H_0042	3	0	5	5	2	1	IS5 family transposase	4	4	0	0	0	0	1	1	0	0
+F_0203	H_0133	3	0	5	2	2	1	ISL3 family transposase	3	1	0	0	0	0	2	2	0	0
+F_0205	H_0116	3	0	5	5	5	1	DUF3592 domain-containing protein	0	0	0	0	0	0	5	5	0	0
+F_0209	H_0274	3	0	5	5	5	1	esterase-like activity of phytase family protein	0	0	0	0	0	0	5	5	0	0
+F_0216	H_0283	3	0	5	5	4	1	GNAT family N-acetyltransferase	0	0	0	0	0	0	0	0	5	5
+F_0240	H_0306	3	0	5	5	1	1	hypothetical protein	0	0	0	0	0	0	5	5	0	0
+F_0264	H_0338	2	0	5	5	2	1	DUF3606 domain-containing protein	5	5	0	0	0	0	0	0	0	0
+F_0275	H_0349	2	0	5	5	4	1	type II toxin-antitoxin system VapC family toxin	0	0	0	0	0	0	5	5	0	0
+F_0282	H_0093	2	0	5	5	5	1	hypothetical protein	0	0	0	0	0	0	5	5	0	0
+F_0303	H_0090	2	0	5	5	4	1	alpha/beta fold hydrolase	0	0	0	0	0	0	0	0	5	5
+F_0319	H_0242	2	0	5	5	5	1	M35 family metalloendopeptidase	0	0	0	0	0	0	0	0	5	5
+F_0341	H_0409	2	0	5	5	4	1	HipA domain-containing protein	0	0	0	0	0	0	0	0	5	5
+F_0361	H_0038	2	0	5	5	5	1	hypothetical protein	0	0	0	0	0	0	5	5	0	0
+F_0441	H_0270	2	0	5	5	5	1	hypothetical protein	0	0	0	0	0	0	5	5	0	0
+F_0495	H_0547	2	0	5	5	4	2	type II toxin-antitoxin system Phd/YefM family antitoxin	0	0	0	0	0	0	5	5	0	0
+F_0515	H_0565	2	0	5	5	1	1	ScoMcrA-related endonuclease | hypothetical protein	0	0	0	0	0	0	5	5	0	0
+F_0533	H_0581	2	0	5	5	4	2	type II toxin-antitoxin system CcdA family antitoxin	0	0	0	0	0	0	5	5	0	0
+F_0536	H_0110	2	0	5	5	5	1	hypothetical protein	0	0	0	0	0	0	0	0	5	5
+F_0551	H_0593	2	0	5	5	4	1	type II toxin-antitoxin system Phd/YefM family antitoxin	0	0	0	0	0	0	5	5	0	0
+F_0558	H_0021	2	0	5	5	1	1	PDDEXK nuclease domain-containing protein	0	0	0	0	0	0	4	4	1	1
+F_1012	H_0345	1	0	5	5	4	1	ORF6N domain-containing protein	0	0	0	0	0	0	5	5	0	0
+F_1810	H_0227	1	0	5	5	5	1	hypothetical protein	0	0	0	0	0	0	5	5	0	0
+F_1821	H_1610	1	0	5	5	4	1	helix-turn-helix domain-containing protein	0	0	0	0	0	0	0	0	5	5
+F_0067	H_0119	4	0	4	4	4	1	hypothetical protein	0	0	0	0	0	0	4	4	0	0
+F_0075	H_0117	4	0	4	4	4	1	LysR family transcriptional regulator	0	0	0	0	0	0	4	4	0	0
+F_0082	H_0128	4	0	4	4	4	1	hypothetical protein	4	4	0	0	0	0	0	0	0	0
+F_0083	H_0079	4	0	4	4	4	1	IS256 family transposase	4	4	0	0	0	0	0	0	0	0
+F_0088	H_0135	4	0	4	4	2	1	TauD/TfdA dioxygenase family protein | TauD/TfdA family dioxygenase	2	2	0	0	0	0	2	2	0	0
+F_0089	H_0161	4	0	4	4	2	1	Bug family tripartite tricarboxylate transporter substrate binding protein | tripartite tricarboxylate transporter substrate binding protein	2	2	0	0	0	0	2	2	0	0
+F_0091	H_0069	4	0	4	4	4	2	RNA ligase (ATP)	0	0	0	0	0	0	4	4	0	0
+F_0101	H_0146	4	0	4	4	3	1	GNAT family N-acetyltransferase	4	4	0	0	0	0	0	0	0	0
+F_0102	H_0147	4	0	4	4	3	1	universal stress protein	0	0	0	0	0	0	4	4	0	0
+F_0104	H_0121	4	0	4	4	3	1	hypothetical protein	3	3	0	0	0	0	1	1	0	0
+F_0106	H_0164	4	0	4	4	1	1	sulfatase-like hydrolase/transferase	0	0	0	0	0	0	4	4	0	0
+F_0110	H_0108	4	0	4	4	3	1	hypothetical protein	4	4	0	0	0	0	0	0	0	0
+F_0112	H_0160	4	0	4	4	3	1	hypothetical protein	0	0	0	0	0	0	4	4	0	0
+F_0116	H_0024	4	0	4	4	4	1	glycerophosphodiester phosphodiesterase	0	0	0	0	0	0	4	4	0	0
+F_0119	H_0168	4	0	4	4	4	1	PaaI family thioesterase	0	0	0	0	0	0	4	4	0	0
+F_0122	H_0171	4	0	4	4	3	3	nuclear transport factor 2 family protein	0	0	0	0	0	0	4	4	0	0
+F_0146	H_0198	3	0	4	4	1	1	orotidine-5'-phosphate decarboxylase	0	0	0	0	0	0	4	4	0	0
+F_0147	H_0200	3	0	4	4	4	1	alpha/beta hydrolase	0	0	0	0	0	0	0	0	4	4
+F_0148	H_0201	3	0	4	4	4	1	ParA family protein	0	0	0	0	0	0	4	4	0	0
+F_0154	H_0287	3	0	4	4	1	1	LysR family transcriptional regulator	0	0	0	0	0	0	4	4	0	0
+F_0159	H_0219	3	0	4	4	3	1	Bug family tripartite tricarboxylate transporter substrate binding protein	0	0	0	0	0	0	4	4	0	0
+F_0161	H_0093	3	0	4	4	4	1	hypothetical protein	0	0	0	0	0	0	4	4	0	0
+F_0169	H_0099	3	0	4	4	4	1	P-loop nucleotide/nucleoside kinase family protein | shikimate kinase	0	0	0	0	0	0	4	4	0	0
+F_0171	H_0199	3	0	4	4	4	1	DUF86 domain-containing protein | HepT-like ribonuclease domain-containing protein	0	0	0	0	0	0	4	4	0	0
+F_0172	H_0236	3	0	4	4	3	1	zinc ribbon domain-containing protein	0	0	0	0	0	0	4	4	0	0
+F_0174	H_0222	3	0	4	4	2	1	gamma-glutamylcyclotransferase family protein	0	0	0	0	0	0	4	4	0	0
+F_0179	H_0061	3	0	4	4	4	1	MFS transporter	1	1	0	0	0	0	3	3	0	0
+F_0182	H_0245	3	0	4	4	4	1	helix-turn-helix transcriptional regulator	2	2	0	0	0	0	2	2	0	0
+F_0187	H_0061	3	0	4	4	4	1	MFS transporter	0	0	0	0	0	0	0	0	4	4
+F_0189	H_0063	3	0	4	4	4	1	LysR family transcriptional regulator	0	0	0	0	0	0	0	0	4	4
+F_0190	H_0224	3	0	4	4	1	1	SDR family oxidoreductase	0	0	0	0	0	0	4	4	0	0
+F_0191	H_0250	3	0	4	4	2	1	hypothetical protein	0	0	0	0	0	0	4	4	0	0
+F_0192	H_0251	3	0	4	4	4	1	low molecular weight protein tyrosine phosphatase family protein | phosphotyrosine protein phosphatase	4	4	0	0	0	0	0	0	0	0
+F_0194	H_0063	3	0	4	4	4	1	LysR family transcriptional regulator	1	1	0	0	0	0	3	3	0	0
+F_0195	H_0254	3	0	4	4	3	1	helix-turn-helix domain-containing protein	0	0	0	0	0	0	4	4	0	0
+F_0198	H_0259	3	0	4	4	3	1	hypothetical protein	0	0	0	0	0	0	4	4	0	0
+F_0202	H_0263	3	0	4	4	4	1	hypothetical protein	0	0	0	0	0	0	0	0	4	4
+F_0206	H_0267	3	0	4	4	2	2	hypothetical protein	0	0	0	0	0	0	4	4	0	0
+F_0213	H_0282	3	0	4	2	2	1	IS1182 family transposase	4	2	0	0	0	0	0	0	0	0
+F_0214	H_0145	3	0	4	4	4	1	SMI1/KNR4 family protein	0	0	0	0	0	0	4	4	0	0
+F_0215	H_0165	3	0	4	4	4	1	dicarboxylate/amino acid:cation symporter	0	0	0	0	0	0	4	4	0	0
+F_0224	H_0268	3	0	4	4	1	1	LpxA family transferase	0	0	0	0	0	0	4	4	0	0
+F_0226	H_0296	3	0	4	4	4	1	PLP-dependent aminotransferase family protein | aminotransferase-like domain-containing protein	0	0	0	0	0	0	4	4	0	0
+F_0227	H_0297	3	0	4	4	2	1	GNAT family acetyltransferase	0	0	0	0	0	0	4	4	0	0
+F_0228	H_0286;H_0613	3	0	4	4	4	1	ABC transporter substrate-binding protein	0	0	0	0	0	0	2	2	2	2
+F_0229	H_0081	3	0	4	4	4	1	nucleotidyltransferase family protein	0	0	0	0	0	0	4	4	0	0
+F_0233	H_0239	3	0	4	4	1	1	serine/threonine protein kinase	0	0	0	0	0	0	0	0	4	4
+F_0234	H_0068	3	0	4	1	1	1	IS110 family transposase	3	1	0	0	0	0	1	1	0	0
+F_0237	H_0302	3	0	4	4	2	1	META domain-containing protein	1	1	0	0	0	0	3	3	0	0
+F_0244	H_0310	3	0	4	4	2	1	hypothetical protein	3	3	0	0	0	0	1	1	0	0
+F_0254	H_0324	2	0	4	4	3	1	hypothetical protein	0	0	0	0	0	0	4	4	0	0
+F_0274	H_0348	2	0	4	4	3	1	nucleotidyltransferase family protein	0	0	0	0	0	0	4	4	0	0
+F_0284	H_0356	2	0	4	4	3	1	MerR family transcriptional regulator	0	0	0	0	0	0	0	0	4	4
+F_0305	H_0377	2	0	4	4	2	1	class I SAM-dependent methyltransferase	0	0	0	0	0	0	4	4	0	0
+F_0308	H_0382	2	0	4	4	3	1	type II toxin-antitoxin system HipA family toxin	0	0	0	0	0	0	4	4	0	0
+F_0328	H_0393	2	0	4	4	4	1	type II toxin-antitoxin system HicA family toxin	0	0	0	0	0	0	4	4	0	0
+F_0365	H_0438	2	0	4	4	4	1	group II truncated hemoglobin	0	0	0	0	0	0	4	4	0	0
+F_0370	H_0444	2	0	4	4	3	1	YlcI/YnfO family protein	1	1	0	0	0	0	3	3	0	0
+F_0376	H_0014	2	0	4	4	3	1	IS30 family transposase	3	3	0	0	0	0	1	1	0	0
+F_0394	H_0466	2	0	4	4	4	1	Kelch repeat-containing protein	0	0	0	0	0	0	0	0	4	4
+F_0397	H_0469	2	0	4	4	1	1	hypothetical protein	4	4	0	0	0	0	0	0	0	0
+F_0407	H_0481	2	0	4	4	4	1	type II toxin-antitoxin system HicB family antitoxin	0	0	0	0	0	0	4	4	0	0
+F_0410	H_0124	2	0	4	4	3	1	CcdB family protein	0	0	0	0	0	0	4	4	0	0
+F_0435	H_0499	2	0	4	4	3	1	hypothetical protein	0	0	0	0	0	0	4	4	0	0
+F_0463	H_0285	2	0	4	4	3	1	MBL fold metallo-hydrolase	0	0	0	0	0	0	4	4	0	0
+F_0473	H_0526	2	0	4	4	3	1	nuclear transport factor 2 family protein	0	0	0	0	0	0	0	0	4	4
+F_0474	H_0527	2	0	4	4	2	1	hypothetical protein	0	0	0	0	0	0	0	0	4	4
+F_0507	H_0557	2	0	4	4	3	1	type II toxin-antitoxin system VapC family toxin	0	0	0	0	0	0	4	4	0	0
+F_0508	H_0558	2	0	4	4	4	2	RNA polymerase sigma factor	0	0	0	0	0	0	4	4	0	0
+F_0509	H_0299	2	0	4	4	4	1	DUF2325 domain-containing protein	0	0	0	0	0	0	4	4	0	0
+F_0513	H_0562	2	0	4	4	3	1	hypothetical protein	0	0	0	0	0	0	4	4	0	0
+F_0528	H_0577	2	0	4	4	2	1	alkaline phosphatase D family protein	0	0	0	0	0	0	0	0	4	4
+F_0540	H_0587	2	0	4	4	2	1	cupin domain-containing protein | hypothetical protein	2	2	0	0	0	0	2	2	0	0
+F_0546	H_0591	2	0	4	4	3	1	hypothetical protein	4	4	0	0	0	0	0	0	0	0
+F_0560	H_0351;H_0381	2	0	4	4	3	1	type II toxin-antitoxin system RelE/ParE family toxin	1	1	0	0	0	0	3	3	0	0
+F_0563	H_0601	2	0	4	4	4	1	hypothetical protein	4	4	0	0	0	0	0	0	0	0
+F_0626	H_0647	1	0	4	4	4	1	bifunctional metallophosphatase/5'-nucleotidase	0	0	0	0	0	0	4	4	0	0
+F_0913	H_0871	1	0	4	4	4	1	sialidase family protein	0	0	0	0	0	0	4	4	0	0
+F_1109	H_1035	1	0	4	2	1	1	IS5-like element ISVei5 family transposase	4	2	0	0	0	0	0	0	0	0
+F_1143	H_1065	1	0	4	2	2	1	hypothetical protein	4	2	0	0	0	0	0	0	0	0
+F_1402	H_1282	1	0	4	4	1	1	LysE family transporter	0	0	0	0	0	0	4	4	0	0
+F_1447	H_1319	1	0	4	4	4	1	Fic family protein	0	0	0	0	0	0	4	4	0	0
+F_1462	H_1331	1	0	4	3	1	1	IS200/IS605 family transposase	3	2	1	1	0	0	0	0	0	0
+F_1517	H_1376	1	0	4	4	1	1	hypothetical protein	0	0	0	0	0	0	4	4	0	0
+F_1519	H_1377	1	0	4	4	2	1	hypothetical protein	0	0	0	0	0	0	0	0	4	4
+F_1590	H_0422	1	0	4	4	4	1	helix-turn-helix domain-containing protein	0	0	0	0	0	0	4	4	0	0
+F_1605	H_1442	1	0	4	4	4	1	hypothetical protein	0	0	0	0	0	0	3	3	1	1
+F_1710	H_0023	1	0	4	4	4	1	IS1182 family transposase	4	4	0	0	0	0	0	0	0	0
+F_1728	H_1535	1	0	4	2	1	1	IS4 family transposase	2	2	2	2	0	0	0	0	0	0
+F_1904	H_0209	1	0	4	4	4	1	gamma-glutamyltransferase family protein	0	0	0	0	0	0	4	4	0	0
+F_2030	H_1785	1	0	4	4	1	1	HAD family hydrolase	0	0	0	0	0	0	4	4	0	0
+F_2036	H_0017	1	0	4	4	1	1	IS1595-like element ISVapa1 family transposase	4	4	0	0	0	0	0	0	0	0
+F_2048	H_0023	1	0	4	2	2	1	IS1182 family transposase	4	2	0	0	0	0	0	0	0	0
+F_2319	H_0023	1	0	4	1	1	1	IS1182 family transposase	3	1	1	1	0	0	0	0	0	0
+F_2376	H_2041	1	0	4	4	2	1	TOBE domain-containing protein	4	4	0	0	0	0	0	0	0	0
+F_2460	H_2111	1	0	4	4	4	1	sulfatase-like hydrolase/transferase	0	0	0	0	0	0	0	0	4	4
+F_0124	H_0174	3	0	3	3	2	1	TetR/AcrR family transcriptional regulator	0	0	0	0	0	0	3	3	0	0
+F_0125	H_0114	3	0	3	3	1	1	SRPBCC family protein	0	0	0	0	0	0	0	0	3	3
+F_0127	H_0278	3	0	3	3	3	1	diguanylate cyclase	0	0	0	0	0	0	3	3	0	0
+F_0128	H_0265	3	0	3	3	1	1	tannase/feruloyl esterase family alpha/beta hydrolase	0	0	0	0	0	0	3	3	0	0
+F_0132	H_0187	3	0	3	3	1	1	NADPH-dependent 2,4-dienoyl-CoA reductase	0	0	0	0	0	0	3	3	0	0
+F_0134	H_0064	3	0	3	2	2	1	IS630 family transposase | IS630-like element IS1471 family transposase	3	2	0	0	0	0	0	0	0	0
+F_0135	H_0191	3	0	3	3	3	1	glutathione-regulated potassium-efflux system protein KefC	1	1	0	0	0	0	2	2	0	0
+F_0136	H_0261	3	0	3	3	1	1	SAM-dependent methyltransferase	3	3	0	0	0	0	0	0	0	0
+F_0137	H_0194	3	0	3	3	3	1	GNAT family N-acetyltransferase	0	0	0	0	0	0	3	3	0	0
+F_0138	H_0255	3	0	3	3	2	1	DUF6348 family protein	0	0	0	0	0	0	3	3	0	0
+F_0139	H_0276	3	0	3	3	3	1	LysR family transcriptional regulator	0	0	0	0	0	0	3	3	0	0
+F_0140	H_0266	3	0	3	3	3	1	hypothetical protein	0	0	0	0	0	0	3	3	0	0
+F_0142	H_0090	3	0	3	3	3	1	alpha/beta fold hydrolase	0	0	0	0	0	0	3	3	0	0
+F_0143	H_0127	3	0	3	3	3	1	VOC family protein	0	0	0	0	0	0	3	3	0	0
+F_0149	H_0202	3	0	3	2	1	1	IS3 family transposase	3	2	0	0	0	0	0	0	0	0
+F_0150	H_0136	3	0	3	3	1	1	ArsR/SmtB family transcription factor	0	0	0	0	0	0	0	0	3	3
+F_0151	H_0208	3	0	3	3	3	2	dihydrofolate reductase family protein	2	2	0	0	0	0	1	1	0	0
+F_0153	H_0212	3	0	3	3	3	2	DJ-1/PfpI family protein	0	0	0	0	0	0	3	3	0	0
+F_0155	H_0213	3	0	3	3	3	1	Bug family tripartite tricarboxylate transporter substrate binding protein | tripartite tricarboxylate transporter substrate binding protein	0	0	0	0	0	0	3	3	0	0
+F_0158	H_0218	3	0	3	3	2	1	tripartite tricarboxylate transporter TctB family protein	0	0	0	0	0	0	0	0	3	3
+F_0160	H_0309	3	0	3	3	3	1	YfbM family protein	3	3	0	0	0	0	0	0	0	0
+F_0162	H_0220	3	0	3	3	3	1	hypothetical protein	3	3	0	0	0	0	0	0	0	0
+F_0163	H_0003	3	0	3	3	2	1	hypothetical protein	0	0	0	0	0	0	3	3	0	0
+F_0164	H_0179	3	0	3	3	3	1	acyl-CoA dehydrogenase family protein	0	0	0	0	0	0	3	3	0	0
+F_0165	H_0225	3	0	3	3	3	1	type VI secretion system protein TssA	0	0	0	0	0	0	3	3	0	0
+F_0167	H_0054	3	0	3	3	3	1	UDP-glucose 4-epimerase GalE	0	0	0	0	0	0	3	3	0	0
+F_0168	H_0008	3	0	3	3	3	2	IS5 family transposase	2	2	0	0	0	0	1	1	0	0
+F_0170	H_0229	3	0	3	3	2	1	hypothetical protein	0	0	0	0	0	0	0	0	3	3
+F_0175	H_0034	3	0	3	3	2	2	Bug family tripartite tricarboxylate transporter substrate binding protein	0	0	0	0	0	0	0	0	3	3
+F_0176	H_0234	3	0	3	3	2	2	IS481 family transposase | integrase core domain-containing protein	1	1	2	2	0	0	0	0	0	0
+F_0177	H_0151	3	0	3	3	3	1	phosphoketolase family protein	0	0	0	0	0	0	3	3	0	0
+F_0178	H_0240	3	0	3	3	3	1	zinc-dependent alcohol dehydrogenase family protein	0	0	0	0	0	0	3	3	0	0
+F_0180	H_0004	3	0	3	3	3	1	alpha/beta hydrolase domain-containing protein	0	0	0	0	0	0	3	3	0	0
+F_0181	H_0244	3	0	3	3	3	1	ABC transporter substrate-binding protein	0	0	0	0	0	0	0	0	3	3
+F_0184	H_0182	3	0	3	3	3	1	IS1595 family transposase | IS1595-like element ISAte2 family transposase	2	2	0	0	0	0	1	1	0	0
+F_0186	H_0249	3	0	3	3	3	1	IS5 family transposase | IS5-like element ISDisp1 family transposase	3	3	0	0	0	0	0	0	0	0
+F_0188	H_0002	3	0	3	3	2	1	APH(3'') family aminoglycoside O-phosphotransferase	2	2	0	0	0	0	1	1	0	0
+F_0197	H_0258	3	0	3	3	3	1	alkene reductase	0	0	0	0	0	0	3	3	0	0
+F_0199	H_0157	3	0	3	3	3	1	GNAT family N-acetyltransferase	0	0	0	0	0	0	3	3	0	0
+F_0204	H_0264	3	0	3	3	3	1	tripartite tricarboxylate transporter substrate binding protein	0	0	0	0	0	0	3	3	0	0
+F_0207	H_0272	3	0	3	3	1	1	type II toxin-antitoxin system PemK/MazF family toxin	2	2	0	0	0	0	1	1	0	0
+F_0208	H_0052	3	0	3	3	3	1	GYF domain-containing protein | RDD family protein	0	0	0	0	0	0	3	3	0	0
+F_0210	H_0275	3	0	3	3	3	1	YiiX family permuted papain-like enzyme	0	0	0	0	0	0	3	3	0	0
+F_0217	H_0040	3	0	3	3	3	1	M20/M25/M40 family metallo-hydrolase	1	1	0	0	0	0	2	2	0	0
+F_0218	H_0162	3	0	3	3	3	2	AraC family transcriptional regulator	0	0	0	0	0	0	3	3	0	0
+F_0219	H_0073	3	0	3	3	1	1	hypothetical protein	0	0	0	0	0	0	3	3	0	0
+F_0220	H_0290	3	0	3	3	3	1	fatty acid oxidation complex subunit alpha FadB	0	0	0	0	0	0	3	3	0	0
+F_0221	H_0292	3	0	3	3	3	2	hypothetical protein	2	2	0	0	0	0	0	0	1	1
+F_0222	H_0293	3	0	3	3	3	1	IS3 family transposase	3	3	0	0	0	0	0	0	0	0
+F_0223	H_0294	3	0	3	3	2	1	thiolase family protein	0	0	0	0	0	0	3	3	0	0
+F_0225	H_0295	3	0	3	3	3	1	hypothetical protein	3	3	0	0	0	0	0	0	0	0
+F_0230	H_0207	3	0	3	3	3	1	N-acyl-D-amino-acid deacylase family protein	0	0	0	0	0	0	3	3	0	0
+F_0231	H_0024	3	0	3	3	3	1	glycerophosphodiester phosphodiesterase	0	0	0	0	0	0	3	3	0	0
+F_0232	H_0298	3	0	3	3	3	1	penicillin acylase family protein	0	0	0	0	0	0	3	3	0	0
+F_0236	H_0253	3	0	3	3	3	1	branched-chain amino acid ABC transporter substrate-binding protein	3	3	0	0	0	0	0	0	0	0
+F_0239	H_0305	3	0	3	1	1	1	IS30 family transposase	1	1	0	0	0	0	2	1	0	0
+F_0241	H_0111	3	0	3	3	3	1	hypothetical protein	3	3	0	0	0	0	0	0	0	0
+F_0242	H_0014	3	0	3	3	2	1	IS30 family transposase	3	3	0	0	0	0	0	0	0	0
+F_0245	H_0204	3	0	3	1	1	1	IS110 family transposase	3	1	0	0	0	0	0	0	0	0
+F_0246	H_0206	3	0	3	3	3	1	D-glucuronyl C5-epimerase family protein	0	0	0	0	0	0	0	0	3	3
+F_0247	H_0312	3	0	3	3	3	1	fimbrial protein	0	0	0	0	0	0	3	3	0	0
+F_0248	H_0315	2	0	3	3	1	1	alkaline phosphatase PhoX	0	0	0	0	0	0	0	0	3	3
+F_0253	H_0323	2	0	3	3	2	2	LysR family transcriptional regulator	0	0	0	0	0	0	1	1	2	2
+F_0255	H_0189	2	0	3	3	3	1	DUF1266 domain-containing protein	0	0	0	0	0	0	3	3	0	0
+F_0256	H_0330	2	0	3	3	2	1	amidohydrolase family protein	3	3	0	0	0	0	0	0	0	0
+F_0260	H_0334	2	0	3	3	3	1	serine hydrolase | serine hydrolase domain-containing protein	0	0	0	0	0	0	3	3	0	0
+F_0263	H_0336	2	0	3	3	3	1	hypothetical protein	0	0	0	0	0	0	3	3	0	0
+F_0266	H_0185	2	0	3	3	2	2	hypothetical protein	0	0	0	0	0	0	3	3	0	0
+F_0268	H_0100	2	0	3	3	3	1	MFS transporter	0	0	0	0	0	0	3	3	0	0
+F_0277	H_0154	2	0	3	3	3	1	VOC family protein	0	0	0	0	0	0	3	3	0	0
+F_0278	H_0352	2	0	3	3	3	1	hypothetical protein	3	3	0	0	0	0	0	0	0	0
+F_0279	H_0353	2	0	3	3	2	1	Bug family tripartite tricarboxylate transporter substrate binding protein	0	0	0	0	0	0	3	3	0	0
+F_0281	H_0280	2	0	3	3	3	1	restriction endonuclease	0	0	0	0	0	0	3	3	0	0
+F_0283	H_0355	2	0	3	3	1	1	class D beta-lactamase	0	0	0	0	0	0	3	3	0	0
+F_0286	H_0358	2	0	3	3	3	1	DUF4189 domain-containing protein	0	0	0	0	0	0	3	3	0	0
+F_0289	H_0361	2	0	3	3	1	1	phytanoyl-CoA dioxygenase family protein	0	0	0	0	0	0	3	3	0	0
+F_0291	H_0365	2	0	3	3	3	1	restriction endonuclease	0	0	0	0	0	0	3	3	0	0
+F_0292	H_0366	2	0	3	3	2	1	flavin reductase family protein	0	0	0	0	0	0	3	3	0	0
+F_0295	H_0368	2	0	3	3	1	1	type II toxin-antitoxin system Phd/YefM family antitoxin	2	2	0	0	0	0	1	1	0	0
+F_0296	H_0370	2	0	3	3	3	1	LysR family transcriptional regulator	1	1	0	0	0	0	2	2	0	0
+F_0297	H_0014	2	0	3	3	3	1	IS30 family transposase	3	3	0	0	0	0	0	0	0	0
+F_0298	H_0371	2	0	3	3	3	1	helix-turn-helix transcriptional regulator	0	0	0	0	0	0	3	3	0	0
+F_0300	H_0373	2	0	3	3	3	3	dienelactone hydrolase family protein	0	0	0	0	0	0	3	3	0	0
+F_0310	H_0383	2	0	3	3	2	1	VOC family protein	0	0	0	0	0	0	0	0	3	3
+F_0313	H_0057	2	0	3	2	2	1	IS630 family transposase	3	2	0	0	0	0	0	0	0	0
+F_0323	H_0391	2	0	3	3	2	1	hypothetical protein	0	0	0	0	0	0	3	3	0	0
+F_0331	H_0397	2	0	3	3	3	1	Hsp20/alpha crystallin family protein	1	1	0	0	0	0	2	2	0	0
+F_0332	H_0399	2	0	3	3	3	1	hypothetical protein	0	0	0	0	0	0	3	3	0	0
+F_0338	H_0407	2	0	3	3	3	1	hypothetical protein	3	3	0	0	0	0	0	0	0	0
+F_0340	H_0059	2	0	3	3	3	1	DUF2846 domain-containing protein	0	0	0	0	0	0	3	3	0	0
+F_0347	H_0023	2	0	3	3	2	1	IS1182 family transposase	3	3	0	0	0	0	0	0	0	0
+F_0357	H_0430	2	0	3	3	3	1	aldo/keto reductase	1	1	0	0	0	0	2	2	0	0
+F_0367	H_0442	2	0	3	3	2	1	MFS transporter	0	0	0	0	0	0	0	0	3	3
+F_0371	H_0446	2	0	3	3	3	1	hypothetical protein	3	3	0	0	0	0	0	0	0	0
+F_0379	H_0054	2	0	3	3	1	1	UDP-glucose 4-epimerase GalE	0	0	0	0	0	0	2	2	1	1
+F_0381	H_0110	2	0	3	3	3	1	hypothetical protein	0	0	0	0	0	0	0	0	3	3
+F_0385	H_0455	2	0	3	3	3	1	hypothetical protein	3	3	0	0	0	0	0	0	0	0
+F_0388	H_0459	2	0	3	3	3	1	alpha/beta fold hydrolase | alpha/beta hydrolase family protein	0	0	0	0	0	0	3	3	0	0
+F_0390	H_0460	2	0	3	3	3	1	fimbrial protein | type 1 fimbrial protein	0	0	0	0	0	0	3	3	0	0
+F_0391	H_0462	2	0	3	3	2	1	alpha/beta fold hydrolase	0	0	0	0	0	0	3	3	0	0
+F_0399	H_0471	2	0	3	3	2	1	DMT family transporter	0	0	0	0	0	0	3	3	0	0
+F_0401	H_0473	2	0	3	3	2	1	LysR family transcriptional regulator	0	0	0	0	0	0	0	0	3	3
+F_0405	H_0477	2	0	3	3	2	1	NUDIX hydrolase | hypothetical protein	0	0	0	0	0	0	3	3	0	0
+F_0409	H_0483	2	0	3	3	3	1	inner membrane protein YiaA	3	3	0	0	0	0	0	0	0	0
+F_0412	H_0484	2	0	3	3	1	1	EF-hand domain-containing protein	0	0	0	0	0	0	3	3	0	0
+F_0415	H_0486	2	0	3	3	2	1	hypothetical protein	0	0	0	0	0	0	3	3	0	0
+F_0424	H_0492	2	0	3	3	2	1	HTD2 family dehydratase | MaoC family dehydratase N-terminal domain-containing protein	3	3	0	0	0	0	0	0	0	0
+F_0425	H_0216	2	0	3	3	3	1	YadA family autotransporter adhesin	0	0	0	0	0	0	0	0	3	3
+F_0427	H_0493	2	0	3	3	2	1	zinc-binding alcohol dehydrogenase family protein	0	0	0	0	0	0	0	0	3	3
+F_0429	H_0008	2	0	3	3	2	2	IS5 family transposase	2	2	1	1	0	0	0	0	0	0
+F_0431	H_0495	2	0	3	3	3	1	DUF4148 domain-containing protein	0	0	0	0	0	0	3	3	0	0
+F_0438	H_0501	2	0	3	3	3	1	glutathione S-transferase family protein	0	0	0	0	0	0	3	3	0	0
+F_0443	H_0504	2	0	3	3	2	1	GNAT family N-acetyltransferase | N-acetyltransferase	0	0	0	0	0	0	0	0	3	3
+F_0447	H_0256	2	0	3	3	2	1	BON domain-containing protein	0	0	0	0	0	0	3	3	0	0
+F_0448	H_0506	2	0	3	3	2	1	putative toxin-antitoxin system toxin component, PIN family	0	0	0	0	0	0	3	3	0	0
+F_0451	H_0509	2	0	3	3	3	1	L-rhamnose mutarotase	1	1	0	0	0	0	2	2	0	0
+F_0456	H_0040	2	0	3	3	3	1	M20/M25/M40 family metallo-hydrolase	0	0	0	0	0	0	3	3	0	0
+F_0457	H_0512	2	0	3	3	3	1	amino acid permease	0	0	0	0	0	0	1	1	2	2
+F_0472	H_0524	2	0	3	3	3	1	AAA family ATPase	0	0	0	0	0	0	3	3	0	0
+F_0481	H_0534	2	0	3	3	1	1	ABC transporter substrate-binding protein	0	0	0	0	0	0	3	3	0	0
+F_0482	H_0107	2	0	3	3	3	2	LysM peptidoglycan-binding domain-containing protein	0	0	0	0	0	0	3	3	0	0
+F_0489	H_0542	2	0	3	3	3	1	DUF2892 domain-containing protein | YgaP family membrane protein	0	0	0	0	0	0	3	3	0	0
+F_0490	H_0543	2	0	3	3	2	1	DUF6036 family nucleotidyltransferase	0	0	0	0	0	0	3	3	0	0
+F_0496	H_0548	2	0	3	3	2	1	helix-turn-helix transcriptional regulator	0	0	0	0	0	0	3	3	0	0
+F_0502	H_0553	2	0	3	3	3	1	ester cyclase	0	0	0	0	0	0	3	3	0	0
+F_0503	H_0554	2	0	3	3	3	1	LysR family transcriptional regulator	0	0	0	0	0	0	3	3	0	0
+F_0511	H_0559	2	0	3	3	2	1	adhesin	3	3	0	0	0	0	0	0	0	0
+F_0512	H_0560	2	0	3	3	1	1	HAF repeat-containing protein	0	0	0	0	0	0	3	3	0	0
+F_0514	H_0563	2	0	3	3	3	1	hypothetical protein	0	0	0	0	0	0	3	3	0	0
+F_0516	H_0109	2	0	3	3	2	1	fasciclin domain-containing protein	0	0	0	0	0	0	3	3	0	0
+F_0525	H_0576	2	0	3	3	3	1	hypothetical protein	0	0	0	0	0	0	3	3	0	0
+F_0537	H_0584	2	0	3	3	1	1	FAD-dependent oxidoreductase	0	0	0	0	0	0	3	3	0	0
+F_0538	H_0585	2	0	3	3	2	1	addiction module toxin RelE	0	0	0	0	0	0	3	3	0	0
+F_0542	H_0589	2	0	3	3	1	1	alpha/beta fold hydrolase	1	1	0	0	0	0	2	2	0	0
+F_0549	H_0082	2	0	3	3	2	1	hypothetical protein	0	0	0	0	0	0	3	3	0	0
+F_0552	H_0594	2	0	3	3	1	1	hypothetical protein	0	0	0	0	0	0	3	3	0	0
+F_0554	H_0595	2	0	3	3	3	1	tautomerase family protein	0	0	0	0	0	0	3	3	0	0
+F_0564	H_0232	2	0	3	3	2	1	tripartite tricarboxylate transporter permease	0	0	0	0	0	0	0	0	3	3
+F_0570	H_0604	2	0	3	3	3	1	DUF3052 domain-containing protein	3	3	0	0	0	0	0	0	0	0
+F_0574	H_0608	2	0	3	3	3	1	LysE family translocator	0	0	0	0	0	0	3	3	0	0
+F_0575	H_0609	2	0	3	3	1	1	citrulline utilization hydrolase CtlX	0	0	0	0	0	0	3	3	0	0
+F_0577	H_0237	1	0	3	3	1	1	VOC family protein	0	0	0	0	0	0	3	3	0	0
+F_0582	H_0615	1	0	3	3	3	1	ATP-binding protein	0	0	0	0	0	0	0	0	3	3
+F_0644	H_0663	1	0	3	3	3	1	MFS transporter	0	0	0	0	0	0	3	3	0	0
+F_0649	H_0668	1	0	3	3	2	1	AAA family ATPase	1	1	0	0	0	0	2	2	0	0
+F_0657	H_0672	1	0	3	3	3	1	hypothetical protein	0	0	0	0	0	0	3	3	0	0
+F_0674	H_0683	1	0	3	3	1	1	hypothetical protein	3	3	0	0	0	0	0	0	0	0
+F_0697	H_0064	1	0	3	2	1	1	IS630 family transposase	3	2	0	0	0	0	0	0	0	0
+F_0724	H_0718	1	0	3	3	3	1	GFA family protein	0	0	0	0	0	0	3	3	0	0
+F_0756	H_0744	1	0	3	3	1	1	XopG/HopH/AvrPtoH family type III secretion system effector	0	0	0	0	0	0	0	0	3	3
+F_0827	H_0806	1	0	3	3	3	1	YajG family lipoprotein	0	0	0	0	0	0	3	3	0	0
+F_0912	H_0870	1	0	3	3	2	1	ABC transporter substrate-binding protein	0	0	0	0	0	0	3	3	0	0
+F_1063	H_0996	1	0	3	3	3	1	DUF4276 family protein	0	0	0	0	0	0	3	3	0	0
+F_1067	H_1000	1	0	3	3	3	1	Pr6Pr family membrane protein	0	0	0	0	0	0	3	3	0	0
+F_1126	H_1050	1	0	3	3	3	1	VOC family protein	0	0	0	0	0	0	3	3	0	0
+F_1152	H_0169	1	0	3	3	3	1	hypothetical protein	0	0	0	0	0	0	3	3	0	0
+F_1293	H_1192	1	0	3	3	3	1	hypothetical protein	0	0	0	0	0	0	3	3	0	0
+F_1315	H_1210	1	0	3	3	2	1	DUF2442 domain-containing protein	0	0	0	0	0	0	3	3	0	0
+F_1352	H_1241	1	0	3	3	3	1	GNAT family N-acetyltransferase	3	3	0	0	0	0	0	0	0	0
+F_1364	H_0228	1	0	3	3	2	1	addiction module antidote protein	0	0	0	0	0	0	3	3	0	0
+F_1373	H_1257	1	0	3	3	1	1	hypothetical protein	0	0	0	0	0	0	0	0	3	3
+F_1437	H_1312	1	0	3	3	3	1	hypothetical protein	0	0	0	0	0	0	3	3	0	0
+F_1467	H_1335	1	0	3	3	1	1	SMP-30/gluconolactonase/LRE family protein	0	0	0	0	0	0	3	3	0	0
+F_1583	H_0420	1	0	3	3	3	1	alkaline phosphatase D family protein	0	0	0	0	0	0	0	0	3	3
+F_1588	H_0233	1	0	3	3	3	1	Bug family tripartite tricarboxylate transporter substrate binding protein	0	0	0	0	0	0	3	3	0	0
+F_1635	H_0434	1	0	3	3	3	1	SMP-30/gluconolactonase/LRE family protein	0	0	0	0	0	0	3	3	0	0
+F_1655	H_1478	1	0	3	3	2	1	lactonase family protein	0	0	0	0	0	0	3	3	0	0
+F_1669	H_0417	1	0	3	3	3	1	O-acetyl-ADP-ribose deacetylase	0	0	0	0	0	0	3	3	0	0
+F_1711	H_1518	1	0	3	3	1	1	hypothetical protein	0	0	0	0	0	0	0	0	3	3
+F_1717	H_1524	1	0	3	3	3	1	glycosyltransferase family 2 protein	0	0	0	0	0	0	3	3	0	0
+F_1766	H_1565	1	0	3	3	3	1	hypothetical protein	0	0	0	0	0	0	3	3	0	0
+F_1891	H_0489	1	0	3	3	2	1	ribbon-helix-helix protein, CopG family	0	0	0	0	0	0	3	3	0	0
+F_1928	H_1700	1	0	3	3	3	1	SgcJ/EcaC family oxidoreductase	0	0	0	0	0	0	3	3	0	0
+F_1985	H_1750	1	0	3	3	3	1	cytochrome b	0	0	0	0	0	0	3	3	0	0
+F_2051	H_1799	1	0	3	3	3	1	nuclear transport factor 2 family protein	1	1	0	0	0	0	2	2	0	0
+F_2055	H_1802	1	0	3	3	3	1	nuclear transport factor 2 family protein	0	0	0	0	0	0	3	3	0	0
+F_2110	H_1843	1	0	3	3	3	1	response regulator	0	0	0	0	0	0	0	0	3	3
+F_2156	H_1869	1	0	3	3	3	1	class I SAM-dependent methyltransferase	0	0	0	0	0	0	3	3	0	0
+F_2168	H_0516	1	0	3	3	2	1	hypothetical protein	0	0	0	0	0	0	3	3	0	0
+F_2185	H_1890	1	0	3	3	3	1	flagellar brake protein	0	0	0	0	0	0	3	3	0	0
+F_2215	H_1911	1	0	3	3	2	1	hypothetical protein	0	0	0	0	0	0	3	3	0	0
+F_2217	H_1912	1	0	3	3	3	1	3'-5' exonuclease	0	0	0	0	0	0	3	3	0	0
+F_2255	H_1945	1	0	3	3	3	1	hypothetical protein	0	0	0	0	0	0	3	3	0	0
+F_2389	H_2052	1	0	3	3	2	1	DUF2281 domain-containing protein	0	0	0	0	0	0	3	3	0	0
+F_2412	H_2072	1	0	3	3	2	1	hypothetical protein	0	0	0	0	0	0	3	3	0	0
+F_2424	H_2082	1	0	3	3	1	1	GbsR/MarR family transcriptional regulator	3	3	0	0	0	0	0	0	0	0
+F_0249	H_0317	2	0	2	2	2	2	IS630 family transposase	2	2	0	0	0	0	0	0	0	0
+F_0250	H_0319	2	0	2	2	2	1	tetratricopeptide repeat protein	0	0	0	0	0	0	1	1	1	1
+F_0251	H_0050	2	0	2	2	2	1	IS3 family transposase	1	1	1	1	0	0	0	0	0	0
+F_0252	H_0123	2	0	2	2	2	1	YkvA family protein	0	0	0	0	0	0	2	2	0	0
+F_0257	H_0331	2	0	2	2	2	2	hypothetical protein	0	0	0	0	0	0	2	2	0	0
+F_0259	H_0333	2	0	2	2	2	1	COG1669 Predicted nucleotidyltransferases | hypothetical protein	0	0	0	0	0	0	0	0	2	2
+F_0262	H_0271	2	0	2	2	1	1	hypothetical protein	0	0	0	0	0	0	2	2	0	0
+F_0265	H_0197	2	0	2	2	2	2	DUF2844 domain-containing protein	1	1	0	0	0	0	1	1	0	0
+F_0267	H_0340	2	0	2	2	2	1	SulP family inorganic anion transporter	0	0	0	0	0	0	2	2	0	0
+F_0269	H_0342	2	0	2	2	1	1	histidine phosphatase family protein	0	0	0	0	0	0	0	0	2	2
+F_0271	H_0012	2	0	2	2	2	1	SRPBCC family protein	0	0	0	0	0	0	2	2	0	0
+F_0272	H_0036	2	0	2	2	2	1	group II intron reverse transcriptase/maturase	1	1	0	0	0	0	1	1	0	0
+F_0273	H_0347	2	0	2	2	1	1	energy transducer TonB	0	0	0	0	0	0	2	2	0	0
+F_0276	H_0350	2	0	2	2	2	1	BON domain-containing protein	0	0	0	0	0	0	2	2	0	0
+F_0280	H_0354	2	0	2	2	2	1	hypothetical protein	0	0	0	0	0	0	0	0	2	2
+F_0285	H_0357	2	0	2	2	2	1	MFS transporter	0	0	0	0	0	0	0	0	2	2
+F_0288	H_0217	2	0	2	2	2	1	IS110 family RNA-guided transposase | IS110 family transposase	2	2	0	0	0	0	0	0	0	0
+F_0290	H_0363	2	0	2	2	2	1	hypothetical protein	0	0	0	0	0	0	2	2	0	0
+F_0293	H_0367	2	0	2	2	2	1	VOC family protein	0	0	0	0	0	0	2	2	0	0
+F_0294	H_0008	2	0	2	2	2	1	IS5 family transposase	2	2	0	0	0	0	0	0	0	0
+F_0299	H_0372	2	0	2	2	2	1	thymidine phosphorylase family protein	0	0	0	0	0	0	2	2	0	0
+F_0301	H_0178	2	0	2	2	2	1	GlxA family transcriptional regulator	0	0	0	0	0	0	2	2	0	0
+F_0302	H_0375	2	0	2	2	1	1	LysE family translocator	0	0	0	0	0	0	2	2	0	0
+F_0304	H_0376	2	0	2	2	2	1	ABC transporter substrate-binding protein	0	0	0	0	0	0	2	2	0	0
+F_0307	H_0379	2	0	2	2	2	1	phospholipase D-like domain-containing protein	0	0	0	0	0	0	2	2	0	0
+F_0309	H_0300	2	0	2	2	2	1	hypothetical protein	0	0	0	0	0	0	2	2	0	0
+F_0312	H_0384	2	0	2	2	2	1	VOC family protein	0	0	0	0	0	0	2	2	0	0
+F_0314	H_0100	2	0	2	2	2	1	MFS transporter	0	0	0	0	0	0	2	2	0	0
+F_0315	H_0385	2	0	2	2	2	1	hypothetical protein	2	2	0	0	0	0	0	0	0	0
+F_0316	H_0020	2	0	2	2	2	1	Acg family FMN-binding oxidoreductase	0	0	0	0	0	0	2	2	0	0
+F_0318	H_0387	2	0	2	2	1	1	threonine/serine dehydratase	0	0	0	0	0	0	0	0	2	2
+F_0320	H_0388	2	0	2	2	2	1	type II toxin-antitoxin system HipA family toxin	0	0	0	0	0	0	2	2	0	0
+F_0321	H_0389	2	0	2	2	2	2	DUF3829 domain-containing protein	0	0	0	0	0	0	2	2	0	0
+F_0322	H_0390	2	0	2	2	1	1	hypothetical protein	0	0	0	0	0	0	2	2	0	0
+F_0324	H_0392	2	0	2	2	2	2	hypothetical protein	0	0	0	0	0	0	2	2	0	0
+F_0325	H_0067	2	0	2	2	2	2	IS3 family transposase	1	1	0	0	0	0	1	1	0	0
+F_0327	H_0032	2	0	2	2	1	1	amidohydrolase family protein	0	0	0	0	0	0	0	0	2	2
+F_0329	H_0395	2	0	2	2	2	1	ABC transporter substrate-binding protein	0	0	0	0	0	0	2	2	0	0
+F_0330	H_0396	2	0	2	2	2	1	GNAT family N-acetyltransferase	0	0	0	0	0	0	2	2	0	0
+F_0333	H_0231	2	1	2	2	2	1	hypothetical protein	0	0	0	0	0	0	2	2	0	0
+F_0334	H_0400	2	0	2	2	2	1	MFS transporter	0	0	0	0	0	0	0	0	2	2
+F_0335	H_0233	2	0	2	2	2	1	Bug family tripartite tricarboxylate transporter substrate binding protein	0	0	0	0	0	0	2	2	0	0
+F_0336	H_0402	2	0	2	2	2	1	N-acetylmuramoyl-L-alanine amidase	0	0	0	0	0	0	2	2	0	0
+F_0339	H_0408	2	0	2	2	2	2	hypothetical protein	0	0	0	0	0	0	2	2	0	0
+F_0342	H_0411	2	0	2	2	2	1	hypothetical protein	0	0	0	0	0	0	0	0	2	2
+F_0343	H_0412	2	0	2	2	2	1	LysR family transcriptional regulator	1	1	0	0	0	0	1	1	0	0
+F_0344	H_0413	2	0	2	2	2	1	COG2361 Uncharacterized conserved protein | hypothetical protein	0	0	0	0	0	0	0	0	2	2
+F_0345	H_0416	2	0	2	2	2	1	sensor histidine kinase	0	0	0	0	0	0	2	2	0	0
+F_0346	H_0235	2	0	2	2	2	1	methyl-accepting chemotaxis protein	0	0	0	0	0	0	0	0	2	2
+F_0348	H_0418	2	0	2	2	2	1	hypothetical protein	0	0	0	0	0	0	2	2	0	0
+F_0349	H_0419	2	0	2	2	2	1	YcxB family protein	0	0	0	0	0	0	2	2	0	0
+F_0350	H_0424	2	0	2	2	2	1	hypothetical protein	0	0	0	0	0	0	2	2	0	0
+F_0351	H_0425	2	0	2	2	2	2	LysR family transcriptional regulator	1	1	0	0	0	0	1	1	0	0
+F_0352	H_0237	2	0	2	2	2	1	VOC family protein	2	2	0	0	0	0	0	0	0	0
+F_0353	H_0069	2	0	2	2	2	2	RNA ligase (ATP)	0	0	0	0	0	0	2	2	0	0
+F_0354	H_0426	2	0	2	2	2	1	MarR family winged helix-turn-helix transcriptional regulator	0	0	0	0	0	0	2	2	0	0
+F_0356	H_0428	2	0	2	2	2	1	sensor histidine kinase	0	0	0	0	0	0	2	2	0	0
+F_0358	H_0431	2	0	2	2	2	1	hypothetical protein	0	0	0	0	0	0	2	2	0	0
+F_0359	H_0241	2	0	2	2	2	1	fasciclin domain-containing protein	0	0	0	0	0	0	2	2	0	0
+F_0362	H_0435	2	0	2	2	2	1	cupin-like domain-containing protein	0	0	0	0	0	0	2	2	0	0
+F_0364	H_0437	2	0	2	2	2	1	hypothetical protein	0	0	0	0	0	0	0	0	2	2
+F_0366	H_0439	2	0	2	2	2	1	glutamate carboxypeptidase	0	0	0	0	0	0	2	2	0	0
+F_0368	H_0443	2	0	2	2	2	1	hypothetical protein	0	0	0	0	0	0	2	2	0	0
+F_0369	H_0246	2	0	2	2	1	1	IS5 family transposase	2	2	0	0	0	0	0	0	0	0
+F_0372	H_0447	2	0	2	2	2	1	TetR/AcrR family transcriptional regulator	0	0	0	0	0	0	2	2	0	0
+F_0374	H_0203	2	0	2	2	2	1	aldo/keto reductase family oxidoreductase	0	0	0	0	0	0	2	2	0	0
+F_0377	H_0449	2	0	2	1	1	1	ribbon-helix-helix domain-containing protein | ribbon-helix-helix protein, CopG family	1	1	0	0	0	0	1	1	0	0
+F_0378	H_0451	2	0	2	2	2	1	alpha/beta hydrolase	0	0	0	0	0	0	2	2	0	0
+F_0380	H_0452	2	0	2	2	2	1	cysteine synthase A	0	0	0	0	0	0	2	2	0	0
+F_0382	H_0050	2	0	2	1	1	1	IS3 family transposase	1	1	1	1	0	0	0	0	0	0
+F_0383	H_0454	2	0	2	2	1	1	outer membrane protein assembly factor BamB family protein	2	2	0	0	0	0	0	0	0	0
+F_0384	H_0177	2	0	2	2	2	1	SDR family NAD(P)-dependent oxidoreductase	0	0	0	0	0	0	2	2	0	0
+F_0386	H_0456	2	0	2	2	1	1	hypothetical protein	0	0	0	0	0	0	2	2	0	0
+F_0387	H_0457	2	0	2	2	2	1	hypothetical protein	2	2	0	0	0	0	0	0	0	0
+F_0389	H_0072	2	0	2	2	2	1	RNA-guided endonuclease InsQ/TnpB family protein | transposase	2	2	0	0	0	0	0	0	0	0
+F_0392	H_0463	2	0	2	2	2	1	peptidoglycan-binding protein	0	0	0	0	0	0	2	2	0	0
+F_0393	H_0464	2	0	2	2	2	1	acyl-CoA dehydrogenase family protein	2	2	0	0	0	0	0	0	0	0
+F_0395	H_0467	2	0	2	2	1	2	DUF2167 domain-containing protein	0	0	0	0	0	0	2	2	0	0
+F_0396	H_0468	2	0	2	2	2	1	methyl-accepting chemotaxis protein	0	0	0	0	0	0	2	2	0	0
+F_0398	H_0470	2	0	2	2	2	1	hypothetical protein	0	0	0	0	0	0	2	2	0	0
+F_0400	H_0472	2	0	2	2	1	1	hypothetical protein	2	2	0	0	0	0	0	0	0	0
+F_0402	H_0474	2	0	2	2	2	1	DUF4189 domain-containing protein	0	0	0	0	0	0	2	2	0	0
+F_0403	H_0475	2	0	2	2	1	1	substrate-binding periplasmic protein	0	0	0	0	0	0	1	1	1	1
+F_0404	H_0476	2	0	2	2	2	1	calcium/sodium antiporter	0	0	0	0	0	0	2	2	0	0
+F_0406	H_0478	2	0	2	2	2	1	PhzF family phenazine biosynthesis protein | PhzF family protein	0	0	0	0	0	0	2	2	0	0
+F_0408	H_0099	2	0	2	2	2	2	DEAD/DEAH box helicase family protein | P-loop nucleotide/nucleoside kinase family protein	0	0	0	0	0	0	1	1	1	1
+F_0411	H_0170	2	0	2	2	1	1	Rossmann-fold NAD(P)-binding domain-containing protein	0	0	0	0	0	0	2	2	0	0
+F_0413	H_0260	2	0	2	2	2	1	acyltransferase family protein	2	2	0	0	0	0	0	0	0	0
+F_0414	H_0064	2	0	2	2	1	1	IS630 family transposase | IS630-like element ISStma10 family transposase	1	1	0	0	0	0	1	1	0	0
+F_0416	H_0159	2	0	2	2	2	1	IS5 family transposase	2	2	0	0	0	0	0	0	0	0
+F_0417	H_0109	2	0	2	2	1	1	fasciclin domain-containing protein	0	0	0	0	0	0	2	2	0	0
+F_0418	H_0487	2	0	2	2	2	1	Fic family protein	2	2	0	0	0	0	0	0	0	0
+F_0419	H_0014	2	0	2	2	2	1	IS30 family transposase	1	1	0	0	0	0	1	1	0	0
+F_0420	H_0488	2	0	2	2	2	1	HD domain-containing protein	0	0	0	0	0	0	2	2	0	0
+F_0421	H_0490	2	0	2	2	2	1	BLUF domain-containing protein	0	0	0	0	0	0	2	2	0	0
+F_0422	H_0158	2	0	2	2	2	1	SDR family oxidoreductase	0	0	0	0	0	0	2	2	0	0
+F_0423	H_0491	2	0	2	2	2	1	cytochrome-c peroxidase	0	0	0	0	0	0	2	2	0	0
+F_0428	H_0494	2	0	2	2	2	1	DUF3053 domain-containing protein	0	0	0	0	0	0	2	2	0	0
+F_0430	H_0210	2	0	2	1	1	1	RNA-guided endonuclease InsQ/TnpB family protein	1	1	0	0	0	0	1	1	0	0
+F_0432	H_0496	2	0	2	2	2	1	alpha/beta fold hydrolase | dienelactone hydrolase family protein	0	0	0	0	0	0	2	2	0	0
+F_0433	H_0498	2	0	2	2	2	1	hypothetical protein	0	0	0	0	0	0	2	2	0	0
+F_0434	H_0159	2	0	2	2	2	1	IS5 family transposase	2	2	0	0	0	0	0	0	0	0
+F_0436	H_0500	2	0	2	2	2	1	cupin domain-containing protein	0	0	0	0	0	0	2	2	0	0
+F_0437	H_0269	2	0	2	2	2	1	FAD-binding oxidoreductase	0	0	0	0	0	0	0	0	2	2
+F_0439	H_0502	2	0	2	2	2	1	class I SAM-dependent methyltransferase	0	0	0	0	0	0	2	2	0	0
+F_0440	H_0042	2	0	2	2	2	1	IS5 family transposase	2	2	0	0	0	0	0	0	0	0
+F_0442	H_0503	2	0	2	2	1	1	zinc-ribbon domain-containing protein	1	1	0	0	0	0	1	1	0	0
+F_0444	H_0156	2	0	2	2	2	1	hypothetical protein	0	0	0	0	0	0	2	2	0	0
+F_0445	H_0215	2	0	2	2	2	1	IS481 family transposase	1	1	0	0	0	0	1	1	0	0
+F_0449	H_0507	2	0	2	2	2	1	MgtC/SapB family protein	0	0	0	0	0	0	1	1	1	1
+F_0450	H_0508	2	0	2	2	2	2	hypothetical protein	0	0	0	0	0	0	2	2	0	0
+F_0452	H_0262	2	0	2	2	2	1	hypothetical protein	0	0	0	0	0	0	2	2	0	0
+F_0453	H_0510	2	0	2	2	2	1	hypothetical protein	0	0	0	0	0	0	2	2	0	0
+F_0454	H_0059	2	0	2	2	2	1	DUF2846 domain-containing protein	0	0	0	0	0	0	2	2	0	0
+F_0455	H_0511	2	0	2	2	2	1	type II toxin-antitoxin system Phd/YefM family antitoxin	0	0	0	0	0	0	2	2	0	0
+F_0458	H_0279	2	0	2	2	2	1	carboxypeptidase-like regulatory domain-containing protein	0	0	0	0	0	0	2	2	0	0
+F_0459	H_0139	2	0	2	2	2	1	IS110 family RNA-guided transposase | IS110 family transposase	1	1	1	1	0	0	0	0	0	0
+F_0460	H_0513	2	0	2	2	1	1	TfoX/Sxy family protein	0	0	0	0	0	0	2	2	0	0
+F_0461	H_0514	2	0	2	2	2	1	nuclear transport factor 2 family protein	0	0	0	0	0	0	2	2	0	0
+F_0462	H_0515	2	0	2	2	2	1	tripartite tricarboxylate transporter substrate binding protein	0	0	0	0	0	0	2	2	0	0
+F_0464	H_0518	2	0	2	2	2	1	kelch repeat-containing protein | putative Ig domain-containing protein	1	1	1	1	0	0	0	0	0	0
+F_0465	H_0519	2	0	2	2	2	1	C4-dicarboxylate ABC transporter substrate-binding protein	0	0	0	0	0	0	0	0	2	2
+F_0466	H_0520	2	0	2	2	2	1	hypothetical protein	0	0	0	0	0	0	2	2	0	0
+F_0468	H_0195	2	0	2	2	1	1	DUF3829 domain-containing protein	0	0	0	0	0	0	2	2	0	0
+F_0469	H_0521	2	0	2	2	2	1	hypothetical protein	0	0	0	0	0	0	0	0	2	2
+F_0470	H_0522	2	0	2	2	2	1	AraC family transcriptional regulator | helix-turn-helix domain-containing protein	0	0	0	0	0	0	2	2	0	0
+F_0471	H_0523	2	0	2	2	1	1	TonB-dependent siderophore receptor	0	0	0	0	0	0	2	2	0	0
+F_0475	H_0528	2	0	2	2	2	1	nucleotidyl transferase AbiEii/AbiGii toxin family protein	0	0	0	0	0	0	1	1	1	1
+F_0476	H_0288	2	0	2	2	2	1	hypothetical protein	0	0	0	0	0	0	2	2	0	0
+F_0477	H_0531	2	0	2	2	2	1	hypothetical protein	0	0	0	0	0	0	2	2	0	0
+F_0478	H_0072	2	0	2	1	1	1	RNA-guided endonuclease InsQ/TnpB family protein	1	1	0	0	0	0	1	1	0	0
+F_0479	H_0533	2	0	2	2	2	1	LuxR C-terminal-related transcriptional regulator	0	0	0	0	0	0	2	2	0	0
+F_0480	H_0052	2	0	2	2	2	1	RDD family protein	0	0	0	0	0	0	2	2	0	0
+F_0483	H_0536	2	0	2	2	2	1	glutathione S-transferase family protein	0	0	0	0	0	0	2	2	0	0
+F_0484	H_0537	2	0	2	2	2	1	tripartite tricarboxylate transporter substrate binding protein	0	0	0	0	0	0	2	2	0	0
+F_0485	H_0538	2	0	2	2	1	1	arginase family protein	0	0	0	0	0	0	2	2	0	0
+F_0486	H_0539	2	0	2	2	2	1	hypothetical protein | transcriptional regulator	0	0	0	0	0	0	2	2	0	0
+F_0487	H_0540	2	0	2	2	2	1	ribbon-helix-helix domain-containing protein	0	0	0	0	0	0	0	0	2	2
+F_0488	H_0541	2	0	2	2	2	1	UDP-N-acetylglucosamine 1-carboxyvinyltransferase	2	2	0	0	0	0	0	0	0	0
+F_0491	H_0033	2	0	2	2	2	1	hypothetical protein	0	0	0	0	0	0	2	2	0	0
+F_0492	H_0273	2	0	2	2	2	1	ribbon-helix-helix domain-containing protein	0	0	0	0	0	0	2	2	0	0
+F_0493	H_0546	2	0	2	2	1	1	hypothetical protein	0	0	0	0	0	0	2	2	0	0
+F_0494	H_0056	2	0	2	2	2	1	YgiW/YdeI family stress tolerance OB fold protein	0	0	0	0	0	0	2	2	0	0
+F_0497	H_0055	2	0	2	2	2	1	DMT family transporter | EamA family transporter	0	0	0	0	0	0	2	2	0	0
+F_0498	H_0156	2	0	2	2	2	1	hypothetical protein	0	0	0	0	0	0	2	2	0	0
+F_0499	H_0550	2	0	2	2	2	1	class I adenylate-forming enzyme family protein	0	0	0	0	0	0	2	2	0	0
+F_0500	H_0552	2	0	2	2	2	2	hypothetical protein	2	2	0	0	0	0	0	0	0	0
+F_0501	H_0167	2	0	2	2	2	1	hypothetical protein	0	0	0	0	0	0	2	2	0	0
+F_0504	H_0555	2	0	2	2	2	1	universal stress protein	0	0	0	0	0	0	2	2	0	0
+F_0505	H_0556	2	0	2	2	2	1	SDR family oxidoreductase	1	1	0	0	0	0	1	1	0	0
+F_0506	H_0112	2	0	2	2	1	1	IS481 family transposase	2	2	0	0	0	0	0	0	0	0
+F_0510	H_0026	2	0	2	2	2	1	IS5 family transposase	2	2	0	0	0	0	0	0	0	0
+F_0518	H_0568	2	0	2	2	2	1	amidohydrolase family protein	0	0	0	0	0	0	2	2	0	0
+F_0519	H_0569	2	0	2	2	2	1	MBL fold metallo-hydrolase	2	2	0	0	0	0	0	0	0	0
+F_0520	H_0570	2	0	2	2	2	1	type II toxin-antitoxin system RelE/ParE family toxin	0	0	0	0	0	0	2	2	0	0
+F_0521	H_0572	2	0	2	2	2	1	MFS transporter	0	0	0	0	0	0	2	2	0	0
+F_0522	H_0573	2	0	2	2	2	1	Crp/Fnr family transcriptional regulator	0	0	0	0	0	0	2	2	0	0
+F_0523	H_0574	2	0	2	1	1	1	IS4 family transposase	0	0	0	0	0	0	2	1	0	0
+F_0526	H_0304	2	0	2	2	2	1	hypothetical protein	0	0	0	0	0	0	2	2	0	0
+F_0527	H_0175	2	0	2	2	2	1	putative quinol monooxygenase	0	0	0	0	0	0	2	2	0	0
+F_0529	H_0005	2	0	2	2	2	1	nucleotidyl transferase AbiEii/AbiGii toxin family protein	0	0	0	0	0	0	2	2	0	0
+F_0530	H_0578	2	0	2	2	1	1	fasciclin domain-containing protein	0	0	0	0	0	0	2	2	0	0
+F_0531	H_0579	2	0	2	2	2	1	ATP-binding protein	0	0	0	0	0	0	2	2	0	0
+F_0532	H_0580	2	0	2	2	2	1	DoxX family protein	2	2	0	0	0	0	0	0	0	0
+F_0534	H_0582	2	0	2	2	2	1	SDR family oxidoreductase	0	0	0	0	0	0	2	2	0	0
+F_0535	H_0583	2	0	2	2	2	1	lipid-binding SYLF domain-containing protein	0	0	0	0	0	0	2	2	0	0
+F_0539	H_0586	2	0	2	2	2	1	Bug family tripartite tricarboxylate transporter substrate binding protein | tripartite tricarboxylate transporter substrate binding protein	1	1	0	0	0	0	1	1	0	0
+F_0541	H_0588	2	0	2	2	2	1	SulP family inorganic anion transporter	0	0	0	0	0	0	1	1	1	1
+F_0543	H_0590	2	0	2	2	2	1	glutathione S-transferase family protein	1	1	0	0	0	0	1	1	0	0
+F_0544	H_0062	2	0	2	2	2	1	LysR substrate-binding domain-containing protein	0	0	0	0	0	0	2	2	0	0
+F_0545	H_0307	2	0	2	2	2	1	LysR family transcriptional regulator | LysR substrate-binding domain-containing protein	0	0	0	0	0	0	2	2	0	0
+F_0547	H_0170	2	0	2	2	2	1	Rossmann-fold NAD(P)-binding domain-containing protein	0	0	0	0	0	0	2	2	0	0
+F_0548	H_0592	2	0	2	2	2	1	hypothetical protein	0	0	0	0	0	0	2	2	0	0
+F_0550	H_0039	2	0	2	1	1	1	ISL3 family transposase	2	1	0	0	0	0	0	0	0	0
+F_0553	H_0059	2	0	2	2	2	1	DUF2846 domain-containing protein	0	0	0	0	0	0	2	2	0	0
+F_0555	H_0023	2	0	2	2	2	1	IS1182 family transposase	2	2	0	0	0	0	0	0	0	0
+F_0557	H_0050	2	0	2	2	2	1	IS3 family transposase	2	2	0	0	0	0	0	0	0	0
+F_0559	H_0599	2	0	2	2	2	1	polysaccharide deacetylase	0	0	0	0	0	0	2	2	0	0
+F_0561	H_0600	2	0	2	2	1	1	HisJ ABC-type amino acid transport/signal transduction systems, periplasmic component/domain	0	0	0	0	0	0	2	2	0	0
+F_0562	H_0112	2	0	2	2	2	2	IS481 family transposase	1	1	1	1	0	0	0	0	0	0
+F_0565	H_0602	2	0	2	2	2	1	M20/M25/M40 family metallo-hydrolase	0	0	0	0	0	0	2	2	0	0
+F_0566	H_0311	2	0	2	2	2	1	hypothetical protein	0	0	0	0	0	0	2	2	0	0
+F_0567	H_0137	2	0	2	2	2	1	IS3 family transposase	2	2	0	0	0	0	0	0	0	0
+F_0568	H_0014	2	0	2	2	2	1	IS30 family transposase	2	2	0	0	0	0	0	0	0	0
+F_0569	H_0603	2	0	2	2	2	1	IS256 family transposase	2	2	0	0	0	0	0	0	0	0
+F_0571	H_0605	2	0	2	2	2	1	Bug family tripartite tricarboxylate transporter substrate binding protein	0	0	0	0	0	0	2	2	0	0
+F_0572	H_0606	2	0	2	2	2	1	fatty acid desaturase family protein	0	0	0	0	0	0	2	2	0	0
+F_0573	H_0227	2	0	2	2	2	1	hypothetical protein	0	0	0	0	0	0	2	2	0	0
+F_0585	H_0617	1	0	2	2	2	1	IS1595 family transposase	2	2	0	0	0	0	0	0	0	0
+F_0588	H_0270	1	0	2	2	2	1	hypothetical protein	0	0	0	0	0	0	2	2	0	0
+F_0624	H_0645	1	0	2	2	2	1	metal-dependent hydrolase	0	0	0	0	0	0	2	2	0	0
+F_0635	H_0655	1	0	2	2	1	1	RES family NAD+ phosphorylase	0	0	0	0	0	0	2	2	0	0
+F_0651	H_0670	1	0	2	2	1	1	IPTL-CTERM sorting domain-containing protein	0	0	0	0	0	0	0	0	2	2
+F_0682	H_0688	1	0	2	2	2	1	methyl-accepting chemotaxis protein	0	0	0	0	0	0	0	0	2	2
+F_0686	H_0692	1	0	2	2	2	1	hypothetical protein	0	0	0	0	0	0	2	2	0	0
+F_0696	H_0697	1	0	2	2	2	1	DUF3455 domain-containing protein	0	0	0	0	0	0	2	2	0	0
+F_0711	H_0327	1	0	2	2	2	1	hypothetical protein	0	0	0	0	0	0	2	2	0	0
+F_0722	H_0479	1	0	2	2	2	1	IS200/IS605 family transposase	2	2	0	0	0	0	0	0	0	0
+F_0729	H_0722	1	0	2	2	2	1	hypothetical protein	0	0	0	0	0	0	2	2	0	0
+F_0732	H_0725	1	0	2	2	1	1	hypothetical protein	2	2	0	0	0	0	0	0	0	0
+F_0736	H_0277	1	0	2	2	2	1	hypothetical protein	0	0	0	0	0	0	0	0	2	2
+F_0755	H_0743	1	0	2	2	2	1	oxalate/formate MFS antiporter	0	0	0	0	0	0	2	2	0	0
+F_0788	H_0772	1	0	2	2	2	1	DUF2059 domain-containing protein	0	0	0	0	0	0	2	2	0	0
+F_0807	H_0788	1	0	2	2	2	1	hypothetical protein	0	0	0	0	0	0	2	2	0	0
+F_0824	H_0803	1	0	2	2	2	1	hypothetical protein	2	2	0	0	0	0	0	0	0	0
+F_0855	H_0827	1	0	2	2	1	1	hypothetical protein	0	0	0	0	0	0	2	2	0	0
+F_0864	H_0835	1	0	2	2	1	1	MocR-like pyridoxine biosynthesis transcription factor PdxR	0	0	0	0	0	0	0	0	2	2
+F_0892	H_0856	1	0	2	2	1	1	SGNH/GDSL hydrolase family protein	0	0	0	0	0	0	2	2	0	0
+F_0901	H_0861	1	0	2	2	2	1	hypothetical protein	0	0	0	0	0	0	2	2	0	0
+F_0938	H_0893	1	0	2	2	1	1	hypothetical protein	0	0	0	0	0	0	2	2	0	0
+F_0945	H_0898	1	0	2	2	1	1	MarR family transcriptional regulator	0	0	0	0	0	0	2	2	0	0
+F_0950	H_0903	1	0	2	2	2	1	HIT family protein	0	0	0	0	0	0	2	2	0	0
+F_0995	H_0940	1	0	2	2	2	1	L-threonine dehydrogenase	2	2	0	0	0	0	0	0	0	0
+F_0996	H_0005	1	0	2	2	2	1	nucleotidyl transferase AbiEii/AbiGii toxin family protein	0	0	0	0	0	0	2	2	0	0
+F_0997	H_0941	1	0	2	2	2	1	YciI family protein	0	0	0	0	0	0	2	2	0	0
+F_1004	H_0945	1	0	2	2	1	1	hypothetical protein	0	0	0	0	0	0	2	2	0	0
+F_1014	H_0953	1	0	2	2	2	1	hypothetical protein	0	0	0	0	0	0	2	2	0	0
+F_1015	H_0954	1	0	2	2	1	1	IS110 family RNA-guided transposase	1	1	0	0	0	0	1	1	0	0
+F_1033	H_0970	1	0	2	2	2	1	hypothetical protein	0	0	0	0	0	0	0	0	2	2
+F_1035	H_0972	1	0	2	2	1	1	hypothetical protein	0	0	0	0	0	0	2	2	0	0
+F_1039	H_0169	1	0	2	2	2	1	hypothetical protein	1	1	0	0	0	0	1	1	0	0
+F_1041	H_0977	1	0	2	2	1	1	dienelactone hydrolase family protein	0	0	0	0	0	0	2	2	0	0
+F_1042	H_0978	1	0	2	2	1	1	NUDIX hydrolase	0	0	0	0	0	0	2	2	0	0
+F_1046	H_0401	1	0	2	2	2	1	M48 family metalloprotease | metalloprotease LoiP	2	2	0	0	0	0	0	0	0	0
+F_1048	H_0982	1	0	2	2	2	1	helix-turn-helix domain-containing protein	0	0	0	0	0	0	2	2	0	0
+F_1058	H_0991	1	0	2	2	1	1	L,D-transpeptidase	0	0	0	0	0	0	2	2	0	0
+F_1086	H_1016	1	0	2	2	1	1	carboxymuconolactone decarboxylase family protein	0	0	0	0	0	0	2	2	0	0
+F_1093	H_1022	1	0	2	2	2	1	hypothetical protein	0	0	0	0	0	0	0	0	2	2
+F_1096	H_1024	1	0	2	2	2	1	hypothetical protein	0	0	0	0	0	0	2	2	0	0
+F_1101	H_1028	1	0	2	2	1	1	ester cyclase	2	2	0	0	0	0	0	0	0	0
+F_1108	H_1034	1	0	2	2	2	1	hypothetical protein	2	2	0	0	0	0	0	0	0	0
+F_1110	H_1036	1	0	2	2	2	1	branched-chain amino acid ABC transporter substrate-binding protein	0	0	0	0	0	0	2	2	0	0
+F_1128	H_1052	1	0	2	2	1	1	antitoxin Xre/MbcA/ParS toxin-binding domain-containing protein	0	0	0	0	0	0	2	2	0	0
+F_1134	H_0023	1	0	2	1	1	1	IS1182 family transposase	1	1	0	0	0	0	1	1	0	0
+F_1149	H_0215	1	0	2	2	2	1	IS481 family transposase	2	2	0	0	0	0	0	0	0	0
+F_1159	H_1077	1	0	2	2	2	1	hypothetical protein	0	0	0	0	0	0	2	2	0	0
+F_1163	H_1080	1	0	2	2	2	1	type II 3-dehydroquinate dehydratase	0	0	0	0	0	0	2	2	0	0
+F_1164	H_1081	1	0	2	2	2	1	RidA family protein	0	0	0	0	0	0	2	2	0	0
+F_1179	H_1094	1	0	2	2	2	1	helicase SNF2	2	2	0	0	0	0	0	0	0	0
+F_1197	H_1112	1	0	2	2	2	1	BrnA antitoxin family protein	0	0	0	0	0	0	2	2	0	0
+F_1205	H_1118	1	0	2	2	2	1	carboxymuconolactone decarboxylase family protein	0	0	0	0	0	0	2	2	0	0
+F_1218	H_0190	1	0	2	2	1	1	IS5 family transposase	2	2	0	0	0	0	0	0	0	0
+F_1238	H_1145	1	0	2	2	2	1	hypothetical protein	0	0	0	0	0	0	0	0	2	2
+F_1261	H_1166	1	0	2	2	1	2	hypothetical protein	0	0	0	0	0	0	2	2	0	0
+F_1287	H_1187	1	0	2	2	2	1	MerR family transcriptional regulator	0	0	0	0	0	0	2	2	0	0
+F_1298	H_1196	1	0	2	2	2	1	delta(1)-pyrroline-2-carboxylate reductase family protein	0	0	0	0	0	0	2	2	0	0
+F_1299	H_1197	1	0	2	2	2	1	hypothetical protein	0	0	0	0	0	0	2	2	0	0
+F_1341	H_1231	1	0	2	2	1	1	helix-turn-helix domain-containing protein	1	1	0	0	0	0	1	1	0	0
+F_1343	H_1233	1	0	2	2	1	1	hypothetical protein	0	0	0	0	0	0	2	2	0	0
+F_1347	H_1236	1	0	2	2	2	1	lactonase family protein	0	0	0	0	0	0	0	0	2	2
+F_1349	H_1238	1	0	2	2	2	1	helix-turn-helix domain-containing protein	0	0	0	0	0	0	2	2	0	0
+F_1361	H_0339	1	0	2	1	1	1	IS1182 family transposase	2	1	0	0	0	0	0	0	0	0
+F_1363	H_1250	1	0	2	2	2	1	carboxymuconolactone decarboxylase family protein	0	0	0	0	0	0	2	2	0	0
+F_1371	H_0209	1	0	2	2	2	1	gamma-glutamyltransferase	2	2	0	0	0	0	0	0	0	0
+F_1378	H_1262	1	0	2	2	2	1	HigA family addiction module antitoxin	0	0	0	0	0	0	2	2	0	0
+F_1380	H_1264	1	0	2	2	2	1	diguanylate cyclase	0	0	0	0	0	0	0	0	2	2
+F_1381	H_1265	1	0	2	2	2	1	peptidase U32 family protein	0	0	0	0	0	0	2	2	0	0
+F_1388	H_1271	1	0	2	2	1	1	hypothetical protein	0	0	0	0	0	0	0	0	2	2
+F_1389	H_1272	1	0	2	2	1	1	RNA-guided endonuclease IscB	0	0	0	0	0	0	2	2	0	0
+F_1393	H_1274	1	0	2	2	1	1	hypothetical protein	0	0	0	0	0	0	2	2	0	0
+F_1404	H_0035	1	0	2	2	2	1	type IV toxin-antitoxin system AbiEi family antitoxin domain-containing protein	0	0	0	0	0	0	2	2	0	0
+F_1407	H_1286	1	0	2	2	1	1	hypothetical protein	0	0	0	0	0	0	2	2	0	0
+F_1410	H_1288	1	0	2	2	2	1	DUF3606 domain-containing protein	2	2	0	0	0	0	0	0	0	0
+F_1432	H_1308	1	0	2	2	1	1	hypothetical protein	0	0	0	0	0	0	2	2	0	0
+F_1450	H_1322	1	0	2	1	1	1	IS1182 family transposase	2	1	0	0	0	0	0	0	0	0
+F_1491	H_1354	1	0	2	2	2	1	FAD-dependent monooxygenase	0	0	0	0	0	0	2	2	0	0
+F_1531	H_1387	1	0	2	2	2	1	RcnB family protein	0	0	0	0	0	0	2	2	0	0
+F_1553	H_1405	1	0	2	2	2	1	antibiotic biosynthesis monooxygenase | antibiotic biosynthesis monooxygenase family protein	2	2	0	0	0	0	0	0	0	0
+F_1574	H_1421	1	0	2	2	2	1	flavodoxin family protein	2	2	0	0	0	0	0	0	0	0
+F_1607	H_1444	1	0	2	2	1	1	type II toxin-antitoxin system RelE/ParE family toxin	0	0	0	0	0	0	2	2	0	0
+F_1609	H_0238	1	0	2	1	1	1	IS5 family transposase	2	1	0	0	0	0	0	0	0	0
+F_1624	H_0429	1	0	2	2	2	1	hypothetical protein	0	0	0	0	0	0	2	2	0	0
+F_1651	H_1475	1	0	2	2	2	1	type II toxin-antitoxin system RelE/ParE family toxin	2	2	0	0	0	0	0	0	0	0
+F_1653	H_1477	1	0	2	2	1	1	3-(methylthio)propionyl-CoA ligase	0	0	0	0	0	0	2	2	0	0
+F_1674	H_0123	1	0	2	2	1	1	YkvA family protein	0	0	0	0	0	0	2	2	0	0
+F_1681	H_1495	1	0	2	2	1	1	nucleotidyl transferase AbiEii/AbiGii toxin family protein	0	0	0	0	0	0	2	2	0	0
+F_1691	H_1504	1	0	2	2	2	1	SMP-30/gluconolactonase/LRE family protein	0	0	0	0	0	0	2	2	0	0
+F_1701	H_1511	1	0	2	2	1	1	WD40/YVTN/BNR-like repeat-containing protein	0	0	0	0	0	0	2	2	0	0
+F_1713	H_1520	1	0	2	1	1	1	IS30 family transposase	2	1	0	0	0	0	0	0	0	0
+F_1714	H_1521	1	0	2	2	1	1	type II toxin-antitoxin system VapB family antitoxin	0	0	0	0	0	0	2	2	0	0
+F_1720	H_1527	1	0	2	2	2	1	hypothetical protein	0	0	0	0	0	0	2	2	0	0
+F_1724	H_1531	1	0	2	2	2	1	metal-sensing transcriptional repressor | metal/formaldehyde-sensitive transcriptional repressor	0	0	0	0	0	0	2	2	0	0
+F_1732	H_1538	1	0	2	2	1	1	hypothetical protein	0	0	0	0	0	0	2	2	0	0
+F_1736	H_0246	1	0	2	1	1	1	IS5 family transposase	2	1	0	0	0	0	0	0	0	0
+F_1737	H_1541	1	0	2	2	1	1	hypothetical protein	0	0	0	0	0	0	2	2	0	0
+F_1771	H_1570	1	0	2	2	1	1	hypothetical protein	0	0	0	0	0	0	2	2	0	0
+F_1777	H_1575	1	0	2	2	1	1	DUF1631 family protein	0	0	0	0	0	0	0	0	2	2
+F_1794	H_1589	1	0	2	2	2	1	type II toxin-antitoxin system ParD family antitoxin	2	2	0	0	0	0	0	0	0	0
+F_1797	H_0073	1	0	2	2	2	1	hypothetical protein	0	0	0	0	0	0	2	2	0	0
+F_1822	H_1611	1	0	2	2	1	1	porin	0	0	0	0	0	0	2	2	0	0
+F_1826	H_1615	1	0	2	2	2	1	alpha-ketoglutarate-dependent dioxygenase AlkB family protein	1	1	1	1	0	0	0	0	0	0
+F_1847	H_1631	1	0	2	2	1	1	DUF1330 domain-containing protein	0	0	0	0	0	0	0	0	2	2
+F_1859	H_1640	1	0	2	2	2	1	helix-turn-helix domain-containing protein	0	0	0	0	0	0	1	1	1	1
+F_1871	H_1650	1	0	2	1	1	1	IS1 family transposase	1	1	0	0	0	0	1	1	0	0
+F_1874	H_1653	1	0	2	2	1	1	MocR-like pyridoxine biosynthesis transcription factor PdxR	0	0	0	0	0	0	2	2	0	0
+F_1879	H_1658	1	0	2	2	2	1	type II toxin-antitoxin system prevent-host-death family antitoxin	0	0	0	0	0	0	2	2	0	0
+F_1880	H_1659	1	0	2	2	2	1	type II toxin-antitoxin system RelE/ParE family toxin	2	2	0	0	0	0	0	0	0	0
+F_1895	H_1670	1	0	2	2	1	1	lipocalin family protein	2	2	0	0	0	0	0	0	0	0
+F_1906	H_1680	1	0	2	2	2	1	threo-3-hydroxy-L-aspartate ammonia-lyase	0	0	0	0	0	0	0	0	2	2
+F_1909	H_1683	1	0	2	2	2	1	GNAT family N-acetyltransferase	0	0	0	0	0	0	2	2	0	0
+F_1922	H_1695	1	0	2	2	2	1	autotransporter domain-containing protein | autotransporter outer membrane beta-barrel domain-containing protein	2	2	0	0	0	0	0	0	0	0
+F_1924	H_1697	1	0	2	2	1	1	FUSC family protein	0	0	0	0	0	0	2	2	0	0
+F_1927	H_1699	1	0	2	2	1	1	IS30 family transposase	0	0	0	0	0	0	2	2	0	0
+F_1929	H_1701	1	0	2	2	1	1	MBL fold metallo-hydrolase	2	2	0	0	0	0	0	0	0	0
+F_1939	H_1709	1	0	2	2	1	1	type IV toxin-antitoxin system AbiEi family antitoxin	0	0	0	0	0	0	2	2	0	0
+F_1944	H_1713	1	0	2	2	1	1	hypothetical protein	0	0	0	0	0	0	2	2	0	0
+F_1959	H_1727	1	0	2	2	2	1	type II toxin-antitoxin system TacA family antitoxin	0	0	0	0	0	0	2	2	0	0
+F_1960	H_1728	1	0	2	2	2	1	TRAP transporter large permease subunit	0	0	0	0	0	0	0	0	2	2
+F_1965	H_1731	1	0	2	2	1	1	HD domain-containing protein | N-methyl-D-aspartate receptor NMDAR2C subunit	0	0	0	0	0	0	0	0	2	2
+F_1970	H_1736	1	0	2	2	2	1	DUF488 domain-containing protein	0	0	0	0	0	0	2	2	0	0
+F_1992	H_0021	1	0	2	2	1	1	PDDEXK nuclease domain-containing protein	0	0	0	0	0	0	2	2	0	0
+F_1994	H_1755	1	0	2	2	2	1	type II toxin-antitoxin system RelE/ParE family toxin	0	0	0	0	0	0	2	2	0	0
+F_2025	H_1781	1	0	2	2	1	1	YgaP family membrane protein	0	0	0	0	0	0	2	2	0	0
+F_2038	H_0035	1	0	2	2	2	1	type IV toxin-antitoxin system AbiEi family antitoxin domain-containing protein	0	0	0	0	0	0	2	2	0	0
+F_2039	H_1790	1	0	2	1	1	1	IS630 family transposase	1	1	1	1	0	0	0	0	0	0
+F_2061	H_1806	1	0	2	2	2	1	hypothetical protein	0	0	0	0	0	0	2	2	0	0
+F_2095	H_0277	1	0	2	2	2	1	hypothetical protein	0	0	0	0	0	0	2	2	0	0
+F_2096	H_1834	1	0	2	2	1	1	virulence RhuM family protein	0	0	0	0	0	0	2	2	0	0
+F_2105	H_1839	1	0	2	2	2	1	DUF2750 domain-containing protein	0	0	0	0	0	0	0	0	2	2
+F_2127	H_1856	1	0	2	2	2	1	type II toxin-antitoxin system HigB family toxin	0	0	0	0	0	0	2	2	0	0
+F_2128	H_0080	1	0	2	2	1	1	Fic family protein	0	0	0	0	0	0	2	2	0	0
+F_2141	H_0008	1	0	2	1	1	1	IS5 family transposase	2	1	0	0	0	0	0	0	0	0
+F_2162	H_0535	1	0	2	2	2	1	hypothetical protein	0	0	0	0	0	0	0	0	2	2
+F_2169	H_0434	1	0	2	2	2	1	SMP-30/gluconolactonase/LRE family protein	0	0	0	0	0	0	2	2	0	0
+F_2173	H_1879	1	0	2	2	2	1	LysR substrate-binding domain-containing protein	0	0	0	0	0	0	2	2	0	0
+F_2196	H_1895	1	0	2	2	1	1	GNAT family N-acetyltransferase	0	0	0	0	0	0	2	2	0	0
+F_2207	H_0217	1	0	2	2	2	1	IS110 family transposase	2	2	0	0	0	0	0	0	0	0
+F_2218	H_1913	1	0	2	2	1	1	hypothetical protein	0	0	0	0	0	0	2	2	0	0
+F_2231	H_1925	1	0	2	2	2	1	type II toxin-antitoxin system HipA family toxin	0	0	0	0	0	0	2	2	0	0
+F_2233	H_1927	1	0	2	2	2	1	LysR family transcriptional regulator	0	0	0	0	0	0	2	2	0	0
+F_2237	H_1931	1	0	2	2	2	1	D-alanyl-D-alanine dipeptidase	0	0	0	0	0	0	0	0	2	2
+F_2246	H_1938	1	0	2	2	1	1	hypothetical protein	0	0	0	0	0	0	2	2	0	0
+F_2251	H_1941	1	0	2	2	2	1	DUF4261 domain-containing protein	0	0	0	0	0	0	2	2	0	0
+F_2280	H_1964	1	0	2	2	1	1	hypothetical protein	0	0	0	0	0	0	2	2	0	0
+F_2282	H_1966	1	0	2	2	1	1	ISNCY family transposase	2	2	0	0	0	0	0	0	0	0
+F_2288	H_1972	1	0	2	2	1	1	hypothetical protein	0	0	0	0	0	0	2	2	0	0
+F_2294	H_1977	1	0	2	2	2	1	hypothetical protein	0	0	0	0	0	0	2	2	0	0
+F_2306	H_1984	1	0	2	2	2	1	IS701 family transposase	2	2	0	0	0	0	0	0	0	0
+F_2307	H_1985	1	0	2	2	2	1	hypothetical protein	0	0	0	0	0	0	2	2	0	0
+F_2308	H_1986	1	0	2	2	2	1	CDF family Co(II)/Ni(II) efflux transporter DmeF	0	0	0	0	0	0	2	2	0	0
+F_2348	H_2018	1	0	2	2	2	1	type II toxin-antitoxin system ParD family antitoxin	2	2	0	0	0	0	0	0	0	0
+F_2352	H_2022	1	0	2	1	1	1	transposase-like zinc-binding domain-containing protein	1	1	0	0	0	0	1	1	0	0
+F_2357	H_2026	1	0	2	2	1	1	RNA-guided endonuclease InsQ/TnpB family protein	2	2	0	0	0	0	0	0	0	0
+F_2358	H_2027	1	0	2	2	2	1	PIN domain-containing protein	0	0	0	0	0	0	2	2	0	0
+F_2369	H_2035	1	0	2	2	2	1	hypothetical protein	0	0	0	0	0	0	2	2	0	0
+F_2385	H_0042	1	0	2	2	1	1	IS5 family transposase	2	2	0	0	0	0	0	0	0	0
+F_2397	H_2060	1	0	2	2	2	1	LysR family transcriptional regulator	0	0	0	0	0	0	2	2	0	0
+F_2416	H_2075	1	0	2	2	1	1	ATP-binding protein | RNA/DNA-binding domain-containing protein	0	0	0	0	0	0	2	2	0	0
+F_2425	H_2083	1	0	2	2	2	1	helix-turn-helix domain-containing protein	0	0	0	0	0	0	2	2	0	0
+F_2431	H_2089	1	0	2	2	2	1	hypothetical protein	0	0	0	0	0	0	2	2	0	0
+F_2432	H_2090	1	0	2	2	1	1	TfpX/TfpZ family type IV pilin accessory protein	0	0	0	0	0	0	0	0	2	2
+F_2437	H_2095	1	0	2	2	2	1	MAPEG family protein	2	2	0	0	0	0	0	0	0	0
+F_0576	H_0610	1	0	1	1	1	1	type II toxin-antitoxin system Phd/YefM family antitoxin	0	0	0	0	0	0	0	0	1	1
+F_0578	H_0611	1	0	1	1	1	1	helix-turn-helix domain-containing protein	1	1	0	0	0	0	0	0	0	0
+F_0579	H_0314	1	0	1	1	1	1	alpha/beta hydrolase	0	0	0	0	0	0	0	0	1	1
+F_0580	H_0612	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_0581	H_0614	1	0	1	1	1	1	type II toxin-antitoxin system VapC family toxin	0	0	0	0	0	0	1	1	0	0
+F_0583	H_0461	1	0	1	1	1	1	GNAT family N-acetyltransferase	0	0	0	0	0	0	0	0	1	1
+F_0584	H_0616	1	0	1	1	1	1	cytochrome P450	0	0	0	0	0	0	0	0	1	1
+F_0586	H_0618	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_0587	H_0619	1	0	1	1	1	1	sensor domain-containing diguanylate cyclase	0	0	0	0	0	0	1	1	0	0
+F_0589	H_0316	1	0	1	1	1	1	DUF2750 domain-containing protein	1	1	0	0	0	0	0	0	0	0
+F_0590	H_0532	1	0	1	1	1	1	DUF4440 domain-containing protein	0	0	0	0	0	0	0	0	1	1
+F_0591	H_0173	1	0	1	1	1	1	GNAT family N-acetyltransferase	0	0	0	0	0	0	1	1	0	0
+F_0592	H_0620	1	0	1	1	1	1	toxin-antitoxin system HicB family antitoxin	0	0	0	0	0	0	1	1	0	0
+F_0593	H_0621	1	0	1	1	1	1	sensor histidine kinase	0	0	0	0	0	0	0	0	1	1
+F_0594	H_0622	1	0	1	1	1	1	fumarylacetoacetate hydrolase family protein	0	0	0	0	0	0	0	0	1	1
+F_0595	H_0623	1	0	1	1	1	1	Txe/YoeB family addiction module toxin	0	0	0	0	0	0	0	0	1	1
+F_0596	H_0260	1	0	1	1	1	1	acyltransferase family protein	1	1	0	0	0	0	0	0	0	0
+F_0597	H_0624	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	0	0	1	1
+F_0598	H_0036	1	0	1	1	1	1	group II intron reverse transcriptase/maturase	1	1	0	0	0	0	0	0	0	0
+F_0599	H_0036	1	0	1	1	1	1	group II intron reverse transcriptase/maturase	1	1	0	0	0	0	0	0	0	0
+F_0600	H_0625	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_0601	H_0626	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_0602	H_0107	1	0	1	1	1	1	LysM peptidoglycan-binding domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_0603	H_0627	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_0604	H_0628	1	0	1	1	1	1	Bug family tripartite tricarboxylate transporter substrate binding protein	1	1	0	0	0	0	0	0	0	0
+F_0605	H_0629	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_0606	H_0630	1	0	1	1	1	1	bestrophin-like domain	0	0	0	0	0	0	1	1	0	0
+F_0607	H_0631	1	0	1	1	1	1	nitroreductase family protein	0	0	0	0	0	0	1	1	0	0
+F_0608	H_0632	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_0609	H_0175	1	0	1	1	1	1	antibiotic biosynthesis monooxygenase	0	0	0	0	0	0	1	1	0	0
+F_0610	H_0633	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_0611	H_0634	1	0	1	1	1	1	chalcone isomerase family protein	0	0	0	0	0	0	0	0	1	1
+F_0612	H_0635	1	0	1	1	1	1	Bug family tripartite tricarboxylate transporter substrate binding protein	0	0	0	0	0	0	1	1	0	0
+F_0613	H_0636	1	0	1	1	1	1	helix-turn-helix domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_0614	H_0637	1	0	1	1	1	1	HipA domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_0615	H_0318	1	0	1	1	1	1	gamma-glutamyltransferase	0	0	0	0	0	0	1	1	0	0
+F_0616	H_0638	1	0	1	1	1	1	PIN domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_0617	H_0639	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_0618	H_0640	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_0619	H_0641	1	0	1	1	1	1	helix-turn-helix domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_0620	H_0642	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	0	0	1	1
+F_0621	H_0643	1	0	1	1	1	1	DUF2645 family protein	0	0	0	0	0	0	1	1	0	0
+F_0622	H_0325	1	0	1	1	1	1	type II toxin-antitoxin system Phd/YefM family antitoxin	0	0	0	0	0	0	1	1	0	0
+F_0623	H_0644	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	0	0	1	1
+F_0625	H_0646	1	0	1	1	1	1	class I SAM-dependent methyltransferase	0	0	0	0	0	0	1	1	0	0
+F_0627	H_0205	1	0	1	1	1	1	DUF2846 domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_0628	H_0648	1	0	1	1	1	1	transposase	0	0	0	0	0	0	1	1	0	0
+F_0629	H_0649	1	0	1	1	1	1	YoaK family protein	1	1	0	0	0	0	0	0	0	0
+F_0630	H_0650	1	0	1	1	1	1	IS110 family transposase	1	1	0	0	0	0	0	0	0	0
+F_0631	H_0651	1	0	1	1	1	1	serine hydrolase domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_0632	H_0652	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	0	0	1	1
+F_0633	H_0653	1	0	1	1	1	1	DUF1090 domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_0634	H_0654	1	0	1	1	1	1	S1C family serine protease	0	0	0	0	0	0	1	1	0	0
+F_0636	H_0656	1	0	1	1	1	1	aminoglycoside phosphotransferase family protein	1	1	0	0	0	0	0	0	0	0
+F_0637	H_0657	1	0	1	1	1	1	dihydrodipicolinate synthase family protein	0	0	0	0	0	0	1	1	0	0
+F_0638	H_0658	1	0	1	1	1	1	histidine kinase	0	0	0	0	0	0	1	1	0	0
+F_0639	H_0659	1	0	1	1	1	1	hypothetical protein	0	0	1	1	0	0	0	0	0	0
+F_0640	H_0660	1	0	1	1	1	1	DUF4261 domain-containing protein	1	1	0	0	0	0	0	0	0	0
+F_0641	H_0320	1	0	1	1	1	1	type II toxin-antitoxin system CcdA family antitoxin	0	0	0	0	0	0	1	1	0	0
+F_0642	H_0661	1	0	1	1	1	1	Bug family tripartite tricarboxylate transporter substrate binding protein	0	0	0	0	0	0	1	1	0	0
+F_0643	H_0662	1	0	1	1	1	1	cytochrome b	0	0	0	0	0	0	1	1	0	0
+F_0645	H_0664	1	0	1	1	1	1	tautomerase family protein	0	0	0	0	0	0	1	1	0	0
+F_0646	H_0665	1	0	1	1	1	1	RNA-guided endonuclease InsQ/TnpB family protein	1	1	0	0	0	0	0	0	0	0
+F_0647	H_0666	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_0648	H_0667	1	0	1	1	1	1	GSU2403 family nucleotidyltransferase fold protein	0	0	0	0	0	0	1	1	0	0
+F_0650	H_0669	1	0	1	1	1	1	AMP-binding protein	0	0	0	0	0	0	0	0	1	1
+F_0652	H_0671	1	0	1	1	1	1	rhodanese-like domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_0653	H_0321	1	0	1	1	1	1	Bug family tripartite tricarboxylate transporter substrate binding protein	0	0	0	0	0	0	0	0	1	1
+F_0654	H_0021	1	0	1	1	1	1	PDDEXK nuclease domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_0655	H_0406	1	0	1	1	1	1	glutamate carboxypeptidase	0	0	0	0	0	0	1	1	0	0
+F_0656	H_0010	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_0658	H_0673	1	0	1	1	1	1	DNA translocase FtsK	0	0	0	0	0	0	1	1	0	0
+F_0659	H_0088	1	0	1	1	1	1	ribbon-helix-helix domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_0660	H_0674	1	0	1	1	1	1	phosphopantetheine adenylyltransferase	0	0	0	0	0	0	1	1	0	0
+F_0661	H_0675	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_0662	H_0676	1	0	1	1	1	1	nuclear transport factor 2 family protein	0	0	0	0	0	0	1	1	0	0
+F_0663	H_0544	1	0	1	1	1	1	IS1182 family transposase	1	1	0	0	0	0	0	0	0	0
+F_0664	H_0677	1	0	1	1	1	1	AbrB/MazE/SpoVT family DNA-binding domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_0665	H_0394	1	0	1	1	1	1	YncE family protein	0	0	0	0	0	0	1	1	0	0
+F_0666	H_0678	1	0	1	1	1	1	type VI secretion system tube protein TssD	0	0	0	0	0	0	1	1	0	0
+F_0667	H_0322	1	0	1	1	1	1	cupin domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_0668	H_0180	1	0	1	1	1	1	DUF3443 family protein	0	0	0	0	0	0	1	1	0	0
+F_0669	H_0679	1	0	1	1	1	1	DUF2971 domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_0670	H_0181	1	0	1	1	1	1	MgtC/SapB family protein	0	0	0	0	0	0	1	1	0	0
+F_0671	H_0680	1	0	1	1	1	1	c-type cytochrome	0	0	0	0	0	0	1	1	0	0
+F_0672	H_0681	1	0	1	1	1	1	type II toxin-antitoxin system RelE/ParE family toxin	0	0	0	0	0	0	1	1	0	0
+F_0673	H_0682	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_0675	H_0145	1	0	1	1	1	1	SMI1/KNR4 family protein	0	0	0	0	0	0	1	1	0	0
+F_0676	H_0684	1	0	1	1	1	1	aspartate aminotransferase type Ic	1	1	0	0	0	0	0	0	0	0
+F_0677	H_0685	1	0	1	1	1	1	amino acid ABC transporter substrate-binding protein	1	1	0	0	0	0	0	0	0	0
+F_0678	H_0686	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_0679	H_0325	1	0	1	1	1	1	type II toxin-antitoxin system Phd/YefM family antitoxin	0	0	0	0	0	0	1	1	0	0
+F_0680	H_0687	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_0681	H_0044	1	0	1	1	1	1	death-on-curing protein	0	0	0	0	0	0	1	1	0	0
+F_0683	H_0689	1	0	1	1	1	1	enoyl-CoA hydratase/isomerase family protein	0	0	0	0	0	0	1	1	0	0
+F_0684	H_0690	1	0	1	1	1	1	isocitrate lyase/PEP mutase family protein	0	0	0	0	0	0	1	1	0	0
+F_0685	H_0691	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_0687	H_0329	1	0	1	1	1	1	tripartite tricarboxylate transporter substrate-binding protein	0	0	0	0	0	0	1	1	0	0
+F_0688	H_0693	1	0	1	1	1	1	IS110 family RNA-guided transposase	1	1	0	0	0	0	0	0	0	0
+F_0689	H_0289	1	0	1	1	1	1	mobile mystery protein B	0	0	0	0	0	0	0	0	1	1
+F_0690	H_0694	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_0691	H_0596	1	0	1	1	1	1	TA system VapC family ribonuclease toxin	0	0	0	0	0	0	0	0	1	1
+F_0692	H_0695	1	0	1	1	1	1	DUF6176 family protein	0	0	0	0	0	0	1	1	0	0
+F_0693	H_0043	1	0	1	1	1	1	trypsin-like peptidase domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_0694	H_0364	1	0	1	1	1	1	3-oxoacyl-ACP reductase family protein	0	0	0	0	0	0	1	1	0	0
+F_0695	H_0696	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_0698	H_0169	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_0699	H_0698	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_0700	H_0699	1	0	1	1	1	1	metallophosphoesterase family protein	0	0	0	0	0	0	0	0	1	1
+F_0701	H_0700	1	0	1	1	1	1	DUF2569 domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_0702	H_0241	1	0	1	1	1	1	fasciclin domain-containing protein	0	0	0	0	0	0	0	0	1	1
+F_0703	H_0701	1	0	1	1	1	1	OsmC family protein	0	0	0	0	0	0	1	1	0	0
+F_0704	H_0702	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_0705	H_0326	1	0	1	1	1	1	helix-turn-helix domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_0706	H_0703	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_0707	H_0704	1	0	1	1	1	1	SGNH/GDSL hydrolase family protein	0	0	0	0	0	0	1	1	0	0
+F_0708	H_0705	1	0	1	1	1	1	restriction endonuclease	0	0	0	0	0	0	1	1	0	0
+F_0709	H_0706	1	0	1	1	1	1	zinc-dependent alcohol dehydrogenase family protein	0	0	0	0	0	0	1	1	0	0
+F_0710	H_0707	1	0	1	1	1	1	prolyl oligopeptidase family serine peptidase	0	0	0	0	0	0	0	0	1	1
+F_0712	H_0708	1	0	1	1	1	1	helix-turn-helix domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_0713	H_0709	1	0	1	1	1	1	DNA adenine methylase	0	0	0	0	0	0	1	1	0	0
+F_0714	H_0710	1	0	1	1	1	1	alpha/beta fold hydrolase	0	0	0	0	0	0	1	1	0	0
+F_0715	H_0711	1	0	1	1	1	1	IQM protein middle domain-containing protein	1	1	0	0	0	0	0	0	0	0
+F_0716	H_0712	1	0	1	1	1	1	N-acetyl-gamma-glutamyl-phosphate reductase	0	0	0	0	0	0	1	1	0	0
+F_0717	H_0713	1	0	1	1	1	1	nuclear transport factor 2 family protein	0	0	0	0	0	0	1	1	0	0
+F_0718	H_0714	1	0	1	1	1	1	LysR family transcriptional regulator	1	1	0	0	0	0	0	0	0	0
+F_0719	H_0715	1	0	1	1	1	1	C40 family peptidase	0	0	0	0	0	0	1	1	0	0
+F_0720	H_0716	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_0721	H_0717	1	0	1	1	1	1	DUF1428 domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_0723	H_0173	1	0	1	1	1	1	N-acetyltransferase family protein	0	0	0	0	0	0	1	1	0	0
+F_0725	H_0328	1	0	1	1	1	1	S1 family peptidase	0	0	0	0	0	0	0	0	1	1
+F_0726	H_0719	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_0727	H_0720	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_0728	H_0721	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_0730	H_0723	1	0	1	1	1	1	BrnA antitoxin family protein	0	0	0	0	0	0	1	1	0	0
+F_0731	H_0724	1	0	1	1	1	1	c-type cytochrome	1	1	0	0	0	0	0	0	0	0
+F_0733	H_0726	1	0	1	1	1	1	helix-turn-helix domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_0734	H_0102	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_0735	H_0727	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_0737	H_0728	1	0	1	1	1	1	IS3-like element ISAav4 family transposase	1	1	0	0	0	0	0	0	0	0
+F_0738	H_0177	1	0	1	1	1	1	SDR family NAD(P)-dependent oxidoreductase	0	0	0	0	0	0	1	1	0	0
+F_0739	H_0729	1	0	1	1	1	1	FAD-dependent oxidoreductase	0	0	0	0	0	0	0	0	1	1
+F_0740	H_0730	1	0	1	1	1	1	enoyl-CoA hydratase-related protein	1	1	0	0	0	0	0	0	0	0
+F_0741	H_0731	1	0	1	1	1	1	SulP family inorganic anion transporter	0	0	0	0	0	0	0	0	1	1
+F_0742	H_0732	1	0	1	1	1	1	Bug family tripartite tricarboxylate transporter substrate binding protein	0	0	0	0	0	0	0	0	1	1
+F_0743	H_0733	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_0744	H_0734	1	0	1	1	1	1	GNAT family N-acetyltransferase	0	0	0	0	0	0	0	0	1	1
+F_0745	H_0735	1	0	1	1	1	1	pirin family protein	0	0	0	0	0	0	1	1	0	0
+F_0746	H_0736	1	0	1	1	1	1	LysR substrate-binding domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_0747	H_0737	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_0748	H_0279	1	0	1	1	1	1	carboxypeptidase regulatory-like domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_0749	H_0311	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_0750	H_0738	1	0	1	1	1	1	HigA family addiction module antitoxin	0	0	0	0	0	0	1	1	0	0
+F_0751	H_0739	1	0	1	1	1	1	putative toxin-antitoxin system toxin component, PIN family	0	0	0	0	0	0	1	1	0	0
+F_0752	H_0740	1	0	1	1	1	1	hypothetical protein	0	0	1	1	0	0	0	0	0	0
+F_0753	H_0741	1	0	1	1	1	1	DUF2788 domain-containing protein	0	0	0	0	0	0	0	0	1	1
+F_0754	H_0742	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_0757	H_0745	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	0	0	1	1
+F_0758	H_0746	1	0	1	1	1	1	IS5 family transposase	1	1	0	0	0	0	0	0	0	0
+F_0759	H_0747	1	0	1	1	1	1	universal stress protein	0	0	0	0	0	0	1	1	0	0
+F_0760	H_0748	1	0	1	1	1	1	type VII toxin-antitoxin system MntA family adenylyltransferase antitoxin	0	0	0	0	0	0	1	1	0	0
+F_0761	H_0749	1	0	1	1	1	1	TetR/AcrR family transcriptional regulator	0	0	0	0	0	0	0	0	1	1
+F_0762	H_0750	1	0	1	1	1	1	type II toxin-antitoxin system RelE/ParE family toxin	0	0	0	0	0	0	1	1	0	0
+F_0763	H_0751	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_0764	H_0316	1	0	1	1	1	1	DUF2750 domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_0765	H_0752	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_0766	H_0753	1	0	1	1	1	1	metal-dependent hydrolase	0	0	0	0	0	0	1	1	0	0
+F_0767	H_0754	1	0	1	1	1	1	MFS transporter	0	0	0	0	0	0	1	1	0	0
+F_0768	H_0223	1	0	1	1	1	1	low affinity iron permease family protein	0	0	0	0	0	0	1	1	0	0
+F_0769	H_0755	1	0	1	1	1	1	SDR family oxidoreductase	0	0	0	0	0	0	1	1	0	0
+F_0770	H_0756	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_0771	H_0757	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_0772	H_0758	1	0	1	1	1	1	metallophosphoesterase family protein	0	0	0	0	0	0	1	1	0	0
+F_0773	H_0759	1	0	1	1	1	1	phytanoyl-CoA dioxygenase family protein	1	1	0	0	0	0	0	0	0	0
+F_0774	H_0269	1	0	1	1	1	1	FAD-binding oxidoreductase	0	0	0	0	0	0	1	1	0	0
+F_0775	H_0760	1	0	1	1	1	1	methylglyoxal synthase	1	1	0	0	0	0	0	0	0	0
+F_0776	H_0761	1	0	1	1	1	1	HipA domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_0777	H_0762	1	0	1	1	1	1	alkyl sulfatase dimerization domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_0778	H_0763	1	0	1	1	1	1	GNAT family N-acetyltransferase	0	0	0	0	0	0	1	1	0	0
+F_0779	H_0238	1	0	1	1	1	1	IS5 family transposase	1	1	0	0	0	0	0	0	0	0
+F_0780	H_0764	1	0	1	1	1	1	IS1634 family transposase	1	1	0	0	0	0	0	0	0	0
+F_0781	H_0765	1	0	1	1	1	1	DUF6891 domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_0782	H_0766	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	0	0	1	1
+F_0783	H_0767	1	0	1	1	1	1	PEP-CTERM sorting domain-containing protein	1	1	0	0	0	0	0	0	0	0
+F_0784	H_0768	1	0	1	1	1	1	Panacea domain-containing protein	1	1	0	0	0	0	0	0	0	0
+F_0785	H_0769	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_0786	H_0770	1	0	1	1	1	1	AraC family ligand binding domain-containing protein	0	0	0	0	0	0	0	0	1	1
+F_0787	H_0771	1	0	1	1	1	1	zeta toxin family protein	0	0	0	0	0	0	1	1	0	0
+F_0789	H_0480	1	0	1	1	1	1	polysaccharide deacetylase	0	0	0	0	0	0	1	1	0	0
+F_0790	H_0773	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_0791	H_0774	1	0	1	1	1	1	LysE/ArgO family amino acid transporter	0	0	0	0	0	0	1	1	0	0
+F_0792	H_0775	1	0	1	1	1	1	ABC transporter substrate-binding protein	0	0	0	0	0	0	1	1	0	0
+F_0793	H_0776	1	0	1	1	1	1	ribbon-helix-helix protein, CopG family	1	1	0	0	0	0	0	0	0	0
+F_0794	H_0777	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_0795	H_0778	1	0	1	1	1	1	putative toxin-antitoxin system toxin component, PIN family	1	1	0	0	0	0	0	0	0	0
+F_0797	H_0781	1	0	1	1	1	1	polysaccharide deacetylase	0	0	0	0	0	0	1	1	0	0
+F_0798	H_0329	1	0	1	1	1	1	tripartite tricarboxylate transporter substrate-binding protein	0	0	0	0	0	0	1	1	0	0
+F_0799	H_0782	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_0800	H_0783	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_0801	H_0257	1	0	1	1	1	1	IS4 family transposase	1	1	0	0	0	0	0	0	0	0
+F_0802	H_0190	1	0	1	1	1	1	IS5 family transposase	1	1	0	0	0	0	0	0	0	0
+F_0803	H_0784	1	0	1	1	1	1	TonB-dependent siderophore receptor	0	0	0	0	0	0	0	0	1	1
+F_0804	H_0785	1	0	1	1	1	1	copper-containing nitrite reductase	0	0	0	0	0	0	0	0	1	1
+F_0805	H_0786	1	0	1	1	1	1	CYTH and CHAD domain-containing protein	0	0	0	0	0	0	0	0	1	1
+F_0806	H_0787	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_0808	H_0789	1	0	1	1	1	1	TetR/AcrR family transcriptional regulator	0	0	0	0	0	0	1	1	0	0
+F_0809	H_0790	1	0	1	1	1	1	GlxA family transcriptional regulator	0	0	0	0	0	0	1	1	0	0
+F_0810	H_0791	1	0	1	1	1	1	DUF1353 domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_0811	H_0123	1	0	1	1	1	1	YkvA family protein	0	0	0	0	0	0	1	1	0	0
+F_0812	H_0792	1	0	1	1	1	1	FAD-dependent monooxygenase	0	0	0	0	0	0	1	1	0	0
+F_0813	H_0124	1	0	1	1	1	1	CcdB family protein	0	0	0	0	0	0	1	1	0	0
+F_0814	H_0793	1	0	1	1	1	1	putative nuclease YhcG	0	0	0	0	0	0	1	1	0	0
+F_0815	H_0794	1	0	1	1	1	1	DUF3455 domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_0816	H_0795	1	0	1	1	1	1	2-hydroxyacid dehydrogenase	0	0	0	0	0	0	1	1	0	0
+F_0817	H_0796	1	0	1	1	1	1	helix-turn-helix domain-containing protein	1	1	0	0	0	0	0	0	0	0
+F_0818	H_0797	1	0	1	1	1	1	CDGSH iron-sulfur domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_0819	H_0798	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_0820	H_0799	1	0	1	1	1	1	pyrroloquinoline quinone precursor peptide PqqA	0	0	0	0	0	0	1	1	0	0
+F_0821	H_0800	1	0	1	1	1	1	IS630 family transposase	1	1	0	0	0	0	0	0	0	0
+F_0822	H_0801	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	0	0	1	1
+F_0823	H_0802	1	0	1	1	1	1	1,4-dihydroxy-2-naphthoyl-CoA hydrolase	0	0	0	0	0	0	1	1	0	0
+F_0825	H_0804	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_0826	H_0805	1	0	1	1	1	1	heme-binding protein	0	0	0	0	0	0	1	1	0	0
+F_0828	H_0807	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_0829	H_0808	1	0	1	1	1	1	IS6-like element IS26 family transposase	1	1	0	0	0	0	0	0	0	0
+F_0830	H_0809	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_0831	H_0810	1	0	1	1	1	1	ABC transporter ATP-binding protein	0	0	0	0	0	0	1	1	0	0
+F_0832	H_0811	1	0	1	1	1	1	extracellular catalytic domain type 2 short-chain-length polyhydroxyalkanoate depolymerase	0	0	0	0	0	0	1	1	0	0
+F_0833	H_0410	1	0	1	1	1	1	JAB domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_0834	H_0812	1	0	1	1	1	1	FitA-like ribbon-helix-helix domain-containing protein	1	1	0	0	0	0	0	0	0	0
+F_0835	H_0192	1	0	1	1	1	1	PKD domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_0836	H_0813	1	0	1	1	1	1	acetoacetate decarboxylase	0	0	0	0	0	0	1	1	0	0
+F_0837	H_0814	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_0838	H_0815	1	0	1	1	1	1	addiction module protein	0	0	0	0	1	1	0	0	0	0
+F_0839	H_0193	1	0	1	1	1	1	S1 family peptidase	0	0	0	0	0	0	1	1	0	0
+F_0840	H_0816	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_0841	H_0109	1	0	1	1	1	1	fasciclin domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_0842	H_0033	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_0843	H_0817	1	0	1	1	1	1	M14 family zinc carboxypeptidase	1	1	0	0	0	0	0	0	0	0
+F_0844	H_0818	1	0	1	1	1	1	FMN-binding negative transcriptional regulator	0	0	0	0	0	0	1	1	0	0
+F_0845	H_0819	1	0	1	1	1	1	BON domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_0846	H_0820	1	0	1	1	1	1	DUF4189 domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_0847	H_0821	1	0	1	1	1	1	SulP family inorganic anion transporter	0	0	0	0	0	0	0	0	1	1
+F_0848	H_0822	1	0	1	1	1	1	TorF family putative porin	1	1	0	0	0	0	0	0	0	0
+F_0849	H_0823	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_0850	H_0824	1	0	1	1	1	1	SH3 domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_0851	H_0314	1	0	1	1	1	1	alpha/beta hydrolase	0	0	0	0	0	0	1	1	0	0
+F_0852	H_0825	1	0	1	1	1	1	TMEM165/GDT1 family protein	0	0	0	0	0	0	1	1	0	0
+F_0853	H_0195	1	0	1	1	1	1	DUF3829 domain-containing protein	0	0	0	0	0	0	0	0	1	1
+F_0854	H_0826	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_0856	H_0828	1	0	1	1	1	1	RNA-directed DNA polymerase	1	1	0	0	0	0	0	0	0	0
+F_0857	H_0829	1	0	1	1	1	1	SEL1-like repeat protein	0	0	0	0	0	0	1	1	0	0
+F_0858	H_0830	1	0	1	1	1	1	methyl-accepting chemotaxis protein	1	1	0	0	0	0	0	0	0	0
+F_0859	H_0831	1	0	1	1	1	1	ATP-binding protein	0	0	0	0	0	0	0	0	1	1
+F_0860	H_0832	1	0	1	1	1	1	hydrolase	0	0	0	0	0	0	1	1	0	0
+F_0861	H_0032	1	0	1	1	1	1	amidohydrolase family protein	0	0	0	0	0	0	0	0	1	1
+F_0862	H_0833	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_0863	H_0834	1	0	1	1	1	1	glycoside hydrolase family 25 protein	0	0	0	0	0	0	1	1	0	0
+F_0865	H_0836	1	0	1	1	1	1	glucose 1-dehydrogenase	0	0	0	0	0	0	1	1	0	0
+F_0866	H_0837	1	0	1	1	1	1	tripartite tricarboxylate transporter substrate binding protein	0	0	0	0	0	0	1	1	0	0
+F_0867	H_0838	1	0	1	1	1	1	DUF7706 family protein	0	0	0	0	0	0	1	1	0	0
+F_0868	H_0023	1	0	1	1	1	1	IS1182 family transposase	1	1	0	0	0	0	0	0	0	0
+F_0869	H_0839	1	0	1	1	1	1	CPBP family intramembrane glutamic endopeptidase	0	0	0	0	0	0	1	1	0	0
+F_0870	H_0840	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_0871	H_0841	1	0	1	1	1	1	glycosyltransferase family 2 protein	0	0	0	0	0	0	0	0	1	1
+F_0872	H_0842	1	0	1	1	1	1	type IV toxin-antitoxin system AbiEi family antitoxin domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_0873	H_0843	1	0	1	1	1	1	Kelch repeat-containing protein	0	0	0	0	0	0	1	1	0	0
+F_0874	H_0844	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_0875	H_0009	1	0	1	1	1	1	type IV pili methyl-accepting chemotaxis transducer N-terminal domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_0876	H_0845	1	0	1	1	1	1	AraC family transcriptional regulator	0	0	0	0	0	0	1	1	0	0
+F_0877	H_0369	1	0	1	1	1	1	1-deoxy-D-xylulose-5-phosphate synthase	0	0	0	0	0	0	1	1	0	0
+F_0878	H_0335	1	0	1	1	1	1	type II toxin-antitoxin system RelE/ParE family toxin	0	0	0	0	0	0	0	0	1	1
+F_0879	H_0243	1	0	1	1	1	1	IS5 family transposase	0	0	0	0	0	0	1	1	0	0
+F_0880	H_0846	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_0881	H_0847	1	0	1	1	1	1	S8 family peptidase	0	0	0	0	0	0	0	0	1	1
+F_0882	H_0398	1	0	1	1	1	1	ATP-binding protein	0	0	0	0	0	0	1	1	0	0
+F_0883	H_0848	1	0	1	1	1	1	DapH/DapD/GlmU-related protein	0	0	0	0	0	0	0	0	1	1
+F_0884	H_0072	1	0	1	1	1	1	RNA-guided endonuclease InsQ/TnpB family protein	1	1	0	0	0	0	0	0	0	0
+F_0885	H_0849	1	0	1	1	1	1	type VII toxin-antitoxin system HepT family RNase toxin	0	0	0	0	0	0	1	1	0	0
+F_0886	H_0850	1	0	1	1	1	1	TA system VapC family ribonuclease toxin	0	0	0	0	0	0	1	1	0	0
+F_0887	H_0851	1	0	1	1	1	1	NYN domain-containing protein	1	1	0	0	0	0	0	0	0	0
+F_0888	H_0852	1	0	1	1	1	1	glutathione S-transferase family protein	0	0	0	0	0	0	1	1	0	0
+F_0889	H_0853	1	0	1	1	1	1	COG3970 Fumarylacetoacetate (FAA) hydrolase family protein	0	0	0	0	0	0	1	1	0	0
+F_0890	H_0854	1	0	1	1	1	1	DUF6364 family protein	0	0	0	0	0	0	1	1	0	0
+F_0891	H_0855	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_0893	H_0857	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_0894	H_0453	1	0	1	1	1	1	DUF2252 domain-containing protein	1	1	0	0	0	0	0	0	0	0
+F_0895	H_0151	1	0	1	1	1	1	phosphoketolase family protein	0	0	0	0	0	0	1	1	0	0
+F_0896	H_0337	1	0	1	1	1	1	acetyl-CoA C-acetyltransferase	0	0	0	0	0	0	1	1	0	0
+F_0897	H_0858	1	0	1	1	1	1	monocarboxylate uptake permease MctP	0	0	0	0	0	0	1	1	0	0
+F_0898	H_0859	1	0	1	1	1	1	AAA family ATPase	1	1	0	0	0	0	0	0	0	0
+F_0899	H_0485	1	0	1	1	1	1	response regulator	1	1	0	0	0	0	0	0	0	0
+F_0900	H_0860	1	0	1	1	1	1	IS4 family transposase	1	1	0	0	0	0	0	0	0	0
+F_0902	H_0458	1	0	1	1	1	1	sulfite exporter TauE/SafE family protein	0	0	0	0	0	0	1	1	0	0
+F_0903	H_0862	1	0	1	1	1	1	UPF0175 family protein	0	0	0	0	0	0	1	1	0	0
+F_0904	H_0525	1	0	1	1	1	1	IS3 family transposase	0	0	0	0	0	0	1	1	0	0
+F_0905	H_0863	1	0	1	1	1	1	NHL repeat-containing protein	0	0	0	0	0	0	1	1	0	0
+F_0906	H_0864	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_0907	H_0865	1	0	1	1	1	1	type II toxin-antitoxin system VapC family toxin	0	0	0	0	0	0	0	0	1	1
+F_0908	H_0866	1	0	1	1	1	1	c-type cytochrome	0	0	0	0	0	0	0	0	1	1
+F_0910	H_0868	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_0911	H_0869	1	0	1	1	1	1	Transcription regulator PadR, N-terminal	0	0	0	0	0	0	0	0	1	1
+F_0914	H_0872	1	0	1	1	1	1	YciI family protein	0	0	0	0	0	0	1	1	0	0
+F_0915	H_0873	1	0	1	1	1	1	3'-5' exoribonuclease domain-containing protein	1	1	0	0	0	0	0	0	0	0
+F_0916	H_0874	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	0	0	1	1
+F_0917	H_0875	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_0919	H_0877	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_0920	H_0878	1	0	1	1	1	1	redoxin domain-containing protein	1	1	0	0	0	0	0	0	0	0
+F_0921	H_0879	1	0	1	1	1	1	SDR family NAD(P)-dependent oxidoreductase	0	0	0	0	0	0	1	1	0	0
+F_0922	H_0880	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_0923	H_0881	1	0	1	1	1	1	NHL repeat-containing protein	0	0	0	0	0	0	1	1	0	0
+F_0924	H_0882	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	0	0	1	1
+F_0925	H_0883	1	0	1	1	1	1	IS3 family transposase	1	1	0	0	0	0	0	0	0	0
+F_0926	H_0022	1	0	1	1	1	1	IS110 family transposase	0	0	0	0	0	0	1	1	0	0
+F_0927	H_0884	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_0928	H_0885	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_0929	H_0886	1	0	1	1	1	1	type II toxin-antitoxin system HicA family toxin	0	0	0	0	0	0	1	1	0	0
+F_0930	H_0033	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_0931	H_0235	1	0	1	1	1	1	methyl-accepting chemotaxis protein	0	0	0	0	0	0	1	1	0	0
+F_0932	H_0887	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_0933	H_0888	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_0934	H_0889	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	0	0	1	1
+F_0935	H_0890	1	0	1	1	1	1	class D beta-lactamase	0	0	0	0	0	0	1	1	0	0
+F_0936	H_0891	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_0937	H_0892	1	0	1	1	1	1	ASCH domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_0939	H_0894	1	0	1	1	1	1	serine/threonine transporter SstT	0	0	0	0	0	0	1	1	0	0
+F_0940	H_0339	1	0	1	1	1	1	transposase	1	1	0	0	0	0	0	0	0	0
+F_0941	H_0895	1	0	1	1	1	1	polyhydroxyalkanoate depolymerase	0	0	0	0	0	0	1	1	0	0
+F_0942	H_0304	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_0943	H_0896	1	0	1	1	1	1	YciI family protein	0	0	0	0	0	0	1	1	0	0
+F_0944	H_0897	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_0946	H_0899	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_0947	H_0900	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_0948	H_0901	1	0	1	1	1	1	type II toxin-antitoxin system PemK/MazF family toxin	0	0	0	0	0	0	1	1	0	0
+F_0949	H_0902	1	0	1	1	1	1	sensor histidine kinase	1	1	0	0	0	0	0	0	0	0
+F_0951	H_0904	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	0	0	1	1
+F_0952	H_0905	1	0	1	1	1	1	Sbal_3080 family lipoprotein	0	0	0	0	0	0	1	1	0	0
+F_0953	H_0906	1	0	1	1	1	1	winged helix-turn-helix transcriptional regulator	0	0	0	0	0	0	1	1	0	0
+F_0954	H_0907	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_0955	H_0313	1	0	1	1	1	1	IS5 family transposase	1	1	0	0	0	0	0	0	0	0
+F_0956	H_0440	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_0957	H_0908	1	0	1	1	1	1	universal stress protein	0	0	0	0	0	0	1	1	0	0
+F_0958	H_0909	1	0	1	1	1	1	DUF5979 domain-containing protein	1	1	0	0	0	0	0	0	0	0
+F_0959	H_0910	1	0	1	1	1	1	shikimate dehydrogenase	0	0	0	0	0	0	1	1	0	0
+F_0960	H_0911	1	0	1	1	1	1	universal stress protein	0	0	0	0	0	0	1	1	0	0
+F_0961	H_0912	1	0	1	1	1	1	C4-dicarboxylate ABC transporter substrate-binding protein	0	0	0	0	0	0	1	1	0	0
+F_0962	H_0913	1	0	1	1	1	1	reductive dehalogenase domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_0963	H_0914	1	0	1	1	1	1	type II toxin-antitoxin system RelE/ParE family toxin	0	0	0	0	0	0	1	1	0	0
+F_0964	H_0915	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	0	0	1	1
+F_0965	H_0916	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_0966	H_0917	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_0967	H_0918	1	0	1	1	1	1	BrnA antitoxin family protein	0	0	0	0	0	0	1	1	0	0
+F_0968	H_0065	1	0	1	1	1	1	Fic family protein	0	0	0	0	0	0	1	1	0	0
+F_0969	H_0919	1	0	1	1	1	1	phospholipase D family protein	0	0	0	0	0	0	1	1	0	0
+F_0970	H_0341	1	0	1	1	1	1	type II toxin-antitoxin system RelE/ParE family toxin	0	0	0	0	0	0	0	0	1	1
+F_0971	H_0920	1	0	1	1	1	1	MATE family efflux transporter	1	1	0	0	0	0	0	0	0	0
+F_0972	H_0139	1	0	1	1	1	1	IS110 family transposase	1	1	0	0	0	0	0	0	0	0
+F_0973	H_0921	1	0	1	1	1	1	Crp/Fnr family transcriptional regulator	0	0	0	0	0	0	1	1	0	0
+F_0974	H_0922	1	0	1	1	1	1	aldo/keto reductase	0	0	0	0	0	0	1	1	0	0
+F_0975	H_0923	1	0	1	1	1	1	retroviral-like aspartic protease family protein	0	0	0	0	0	0	0	0	1	1
+F_0976	H_0924	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_0977	H_0925	1	0	1	1	1	1	IS200/IS605 family transposase	1	1	0	0	0	0	0	0	0	0
+F_0978	H_0926	1	0	1	1	1	1	SRPBCC family protein	0	0	0	0	0	0	1	1	0	0
+F_0979	H_0927	1	0	1	1	1	1	type II toxin-antitoxin system CcdA family antitoxin	0	0	0	0	0	0	1	1	0	0
+F_0980	H_0928	1	0	1	1	1	1	helix-turn-helix domain-containing protein	1	1	0	0	0	0	0	0	0	0
+F_0981	H_0929	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_0982	H_0930	1	0	1	1	1	1	putative DNA-binding domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_0983	H_0404	1	0	1	1	1	1	VOC family protein	0	0	0	0	0	0	1	1	0	0
+F_0984	H_0931	1	0	1	1	1	1	class I SAM-dependent methyltransferase	0	0	0	0	0	0	1	1	0	0
+F_0985	H_0932	1	0	1	1	1	1	IS21 family transposase	0	0	0	0	0	0	1	1	0	0
+F_0986	H_0933	1	0	1	1	1	1	helix-turn-helix domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_0987	H_0934	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_0988	H_0935	1	0	1	1	1	1	methyl-accepting chemotaxis protein	0	0	0	0	0	0	1	1	0	0
+F_0989	H_0465	1	0	1	1	1	1	alpha/beta hydrolase family protein	1	1	0	0	0	0	0	0	0	0
+F_0990	H_0936	1	0	1	1	1	1	AEC family transporter	1	1	0	0	0	0	0	0	0	0
+F_0991	H_0937	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_0992	H_0938	1	0	1	1	1	1	serine hydrolase domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_0993	H_0939	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_0998	H_0942	1	0	1	1	1	1	DUF6036 family nucleotidyltransferase	1	1	0	0	0	0	0	0	0	0
+F_0999	H_0943	1	0	1	1	1	1	DUF4844 domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1000	H_0944	1	0	1	1	1	1	BrnT family toxin	0	0	0	0	0	0	1	1	0	0
+F_1001	H_0203	1	0	1	1	1	1	aldo/keto reductase family oxidoreductase	0	0	0	0	0	0	1	1	0	0
+F_1002	H_0243	1	0	1	1	1	1	IS5 family transposase	1	1	0	0	0	0	0	0	0	0
+F_1003	H_0067	1	0	1	1	1	1	IS3 family transposase	1	1	0	0	0	0	0	0	0	0
+F_1005	H_0571	1	0	1	1	1	1	helix-turn-helix transcriptional regulator	1	1	0	0	0	0	0	0	0	0
+F_1006	H_0946	1	0	1	1	1	1	DUF2892 domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1007	H_0947	1	0	1	1	1	1	type II toxin-antitoxin system ParD family antitoxin	0	0	0	0	0	0	1	1	0	0
+F_1008	H_0948	1	0	1	1	1	1	SPW repeat protein	0	0	0	0	0	0	1	1	0	0
+F_1009	H_0949	1	0	1	1	1	1	DUF2892 domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1010	H_0950	1	0	1	1	1	1	acyl CoA:acetate/3-ketoacid CoA transferase	0	0	0	0	0	0	0	0	1	1
+F_1011	H_0951	1	0	1	1	1	1	transposase	1	1	0	0	0	0	0	0	0	0
+F_1013	H_0952	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	0	0	1	1
+F_1016	H_0955	1	0	1	1	1	1	class I SAM-dependent methyltransferase	1	1	0	0	0	0	0	0	0	0
+F_1017	H_0956	1	0	1	1	1	1	DUF6151 family protein	0	0	0	0	0	0	1	1	0	0
+F_1018	H_0957	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	0	0	1	1
+F_1019	H_0346	1	0	1	1	1	1	peroxiredoxin-like family protein	0	0	0	0	0	0	1	1	0	0
+F_1020	H_0958	1	0	1	1	1	1	enoyl-CoA hydratase/isomerase family protein	0	0	0	0	0	0	1	1	0	0
+F_1021	H_0959	1	0	1	1	1	1	TetR/AcrR family transcriptional regulator	0	0	0	0	0	0	1	1	0	0
+F_1022	H_0960	1	0	1	1	1	1	alpha/beta fold hydrolase	0	0	0	0	0	0	0	0	1	1
+F_1023	H_0961	1	0	1	1	1	1	FitA-like ribbon-helix-helix domain-containing protein	0	0	0	0	0	0	0	0	1	1
+F_1024	H_0962	1	0	1	1	1	1	IS21-like element helper ATPase IstB	0	0	0	0	0	0	1	1	0	0
+F_1025	H_0963	1	0	1	1	1	1	type II toxin-antitoxin system prevent-host-death family antitoxin	0	0	0	0	0	0	1	1	0	0
+F_1026	H_0964	1	0	1	1	1	1	prevent-host-death protein	0	0	0	0	0	0	1	1	0	0
+F_1027	H_0965	1	0	1	1	1	1	ExbD/TolR family protein	0	0	0	0	0	0	1	1	0	0
+F_1028	H_0966	1	0	1	1	1	1	GlsB/YeaQ/YmgE family stress response membrane protein	0	0	0	0	0	0	0	0	1	1
+F_1029	H_0967	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1030	H_0087	1	0	1	1	1	1	LysR family transcriptional regulator	0	0	0	0	0	0	1	1	0	0
+F_1031	H_0968	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1032	H_0969	1	0	1	1	1	1	DUF2846 domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1034	H_0971	1	0	1	1	1	1	MFS transporter	0	0	0	0	0	0	1	1	0	0
+F_1036	H_0973	1	0	1	1	1	1	carbonic anhydrase	1	1	0	0	0	0	0	0	0	0
+F_1037	H_0974	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1038	H_0975	1	0	1	1	1	1	VOC family protein	0	0	0	0	0	0	1	1	0	0
+F_1040	H_0976	1	0	1	1	1	1	LysR family transcriptional regulator	1	1	0	0	0	0	0	0	0	0
+F_1043	H_0979	1	0	1	1	1	1	MarR family winged helix-turn-helix transcriptional regulator	0	0	0	0	0	0	1	1	0	0
+F_1044	H_0980	1	0	1	1	1	1	AAA family ATPase	0	0	0	0	0	0	1	1	0	0
+F_1045	H_0981	1	0	1	1	1	1	glutathione S-transferase	0	0	0	0	0	0	1	1	0	0
+F_1047	H_0205	1	0	1	1	1	1	DUF2846 domain-containing protein	0	0	0	0	0	0	0	0	1	1
+F_1049	H_0983	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_1050	H_0984	1	0	1	1	1	1	glycine zipper 2TM domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1051	H_0985	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1052	H_0986	1	0	1	1	1	1	glutathione S-transferase family protein	0	0	0	0	0	0	1	1	0	0
+F_1053	H_0987	1	0	1	1	1	1	alpha/beta hydrolase	0	0	0	0	0	0	0	0	1	1
+F_1054	H_0988	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1055	H_0989	1	0	1	1	1	1	LysE family translocator	0	0	0	0	0	0	1	1	0	0
+F_1056	H_0990	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1057	H_0216	1	0	1	1	1	1	YadA family autotransporter adhesin	0	0	0	0	0	0	0	0	1	1
+F_1059	H_0992	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1060	H_0993	1	0	1	1	1	1	THxN family PEP-CTERM protein	0	0	0	0	0	0	1	1	0	0
+F_1061	H_0994	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1062	H_0995	1	0	1	1	1	1	DMT family transporter	0	0	0	0	0	0	1	1	0	0
+F_1064	H_0997	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1065	H_0998	1	0	1	1	1	1	rhomboid family intramembrane serine protease	0	0	0	0	0	0	1	1	0	0
+F_1066	H_0999	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	0	0	1	1
+F_1068	H_1001	1	0	1	1	1	1	IS110 family transposase	1	1	0	0	0	0	0	0	0	0
+F_1069	H_1002	1	0	1	1	1	1	response regulator	0	0	0	0	0	0	1	1	0	0
+F_1070	H_1003	1	0	1	1	1	1	ATP-binding protein	0	0	0	0	0	0	1	1	0	0
+F_1071	H_1004	1	0	1	1	1	1	hydrolase	0	0	0	0	0	0	1	1	0	0
+F_1072	H_0351	1	0	1	1	1	1	type II toxin-antitoxin system RelE/ParE family toxin	0	0	0	0	0	0	1	1	0	0
+F_1073	H_1005	1	0	1	1	1	1	IS3 family transposase	1	1	0	0	0	0	0	0	0	0
+F_1074	H_1006	1	0	1	1	1	1	alpha/beta hydrolase domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1075	H_1007	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1076	H_1008	1	0	1	1	1	1	M35 family metallo-endopeptidase	0	0	0	0	0	0	1	1	0	0
+F_1077	H_1009	1	0	1	1	1	1	VIT1/CCC1 transporter family protein	0	0	0	0	0	0	1	1	0	0
+F_1078	H_1010	1	0	1	1	1	1	sterol desaturase family protein	0	0	0	0	0	0	0	0	1	1
+F_1079	H_1011	1	0	1	1	1	1	DUF1272 domain-containing protein	1	1	0	0	0	0	0	0	0	0
+F_1080	H_0415	1	0	1	1	1	1	acrylyl-CoA reductase (NADPH)	0	0	0	0	0	0	1	1	0	0
+F_1081	H_0209	1	0	1	1	1	1	gamma-glutamyltransferase family protein	0	0	1	1	0	0	0	0	0	0
+F_1082	H_1012	1	0	1	1	1	1	IS3 family transposase	1	1	0	0	0	0	0	0	0	0
+F_1083	H_1013	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1084	H_1014	1	0	1	1	1	1	alpha/beta fold hydrolase	0	0	0	0	0	0	1	1	0	0
+F_1085	H_1015	1	0	1	1	1	1	esterase-like activity of phytase family protein	0	0	0	0	0	0	1	1	0	0
+F_1087	H_1017	1	0	1	1	1	1	NAD(P)H:quinone oxidoreductase	0	0	0	0	0	0	1	1	0	0
+F_1088	H_1018	1	0	1	1	1	1	acyl-CoA dehydrogenase	0	0	0	0	0	0	0	0	1	1
+F_1089	H_1019	1	0	1	1	1	1	glycosyltransferase family 2 protein	0	0	0	0	0	0	1	1	0	0
+F_1090	H_1020	1	0	1	1	1	1	I78 family peptidase inhibitor	0	0	0	0	0	0	0	0	1	1
+F_1091	H_0223	1	0	1	1	1	1	low affinity iron permease family protein	0	0	0	0	0	0	1	1	0	0
+F_1092	H_1021	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_1094	H_1023	1	0	1	1	1	1	plasmid stabilization protein	0	0	0	0	0	0	1	1	0	0
+F_1095	H_0076	1	0	1	1	1	1	IS4 family transposase	0	0	0	0	0	0	1	1	0	0
+F_1097	H_1025	1	0	1	1	1	1	TerB family tellurite resistance protein	0	0	0	0	0	0	1	1	0	0
+F_1098	H_1026	1	0	1	1	1	1	ATP-dependent Clp protease proteolytic subunit	0	0	0	0	0	0	1	1	0	0
+F_1099	H_0299	1	0	1	1	1	1	DUF2325 domain-containing protein	1	1	0	0	0	0	0	0	0	0
+F_1100	H_1027	1	0	1	1	1	1	ATPase	0	0	0	0	0	0	1	1	0	0
+F_1102	H_1029	1	0	1	1	1	1	lysozyme inhibitor LprI family protein	0	0	0	0	0	0	1	1	0	0
+F_1103	H_1030	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1104	H_1031	1	0	1	1	1	1	YlcI/YnfO family protein	0	0	0	0	0	0	1	1	0	0
+F_1105	H_0190	1	0	1	1	1	1	IS5 family transposase	1	1	0	0	0	0	0	0	0	0
+F_1106	H_1032	1	0	1	1	1	1	DUF2798 domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1107	H_1033	1	0	1	1	1	1	avidin/streptavidin family protein	0	0	0	0	0	0	1	1	0	0
+F_1111	H_1037	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_1112	H_1038	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1113	H_1039	1	0	1	1	1	1	TetR/AcrR family transcriptional regulator	0	0	0	0	0	0	1	1	0	0
+F_1114	H_1040	1	0	1	1	1	1	IS4 family transposase	1	1	0	0	0	0	0	0	0	0
+F_1115	H_1041	1	0	1	1	1	1	winged helix-turn-helix domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1116	H_1042	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1117	H_1043	1	0	1	1	1	1	glutaredoxin domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1118	H_1044	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_1119	H_1045	1	0	1	1	1	1	DUF932 domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1120	H_0095	1	0	1	1	1	1	GGDEF domain-containing protein	0	0	0	0	0	0	0	0	1	1
+F_1121	H_0210	1	0	1	1	1	1	RNA-guided endonuclease InsQ/TnpB family protein	1	1	0	0	0	0	0	0	0	0
+F_1122	H_1046	1	0	1	1	1	1	phosphodiesterase	0	0	0	0	0	0	1	1	0	0
+F_1123	H_1047	1	0	1	1	1	1	SRPBCC family protein	0	0	0	0	0	0	1	1	0	0
+F_1124	H_1048	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1125	H_1049	1	0	1	1	1	1	AraC family transcriptional regulator	0	0	0	0	0	0	0	0	1	1
+F_1127	H_1051	1	0	1	1	1	1	NAD(P)/FAD-dependent oxidoreductase	0	0	0	0	0	0	0	0	1	1
+F_1129	H_1053	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1130	H_1054	1	0	1	1	1	1	IS30 family transposase	1	1	0	0	0	0	0	0	0	0
+F_1131	H_1055	1	0	1	1	1	1	Hsp20/alpha crystallin family protein	0	0	0	0	0	0	1	1	0	0
+F_1132	H_1056	1	0	1	1	1	1	L,D-transpeptidase	0	0	0	0	0	0	1	1	0	0
+F_1133	H_1057	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1135	H_1058	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1136	H_1059	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1137	H_1060	1	0	1	1	1	1	GFA family protein	1	1	0	0	0	0	0	0	0	0
+F_1138	H_1061	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	0	0	1	1
+F_1139	H_0107	1	0	1	1	1	1	LysM peptidoglycan-binding domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1140	H_1062	1	0	1	1	1	1	putative transporter small subunit	0	0	0	0	0	0	1	1	0	0
+F_1141	H_1063	1	0	1	1	1	1	N-acetyltransferase	0	0	0	0	0	0	1	1	0	0
+F_1142	H_1064	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1144	H_1066	1	0	1	1	1	1	TetR/AcrR family transcriptional regulator	0	0	0	0	0	0	0	0	1	1
+F_1145	H_1067	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1146	H_1068	1	0	1	1	1	1	AraC family transcriptional regulator	0	0	0	0	0	0	1	1	0	0
+F_1147	H_1069	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1148	H_1070	1	0	1	1	1	1	DUF2145 domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1150	H_1071	1	0	1	1	1	1	leucine-rich repeat domain-containing protein	1	1	0	0	0	0	0	0	0	0
+F_1151	H_1072	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_1153	H_0100	1	0	1	1	1	1	MFS transporter	1	1	0	0	0	0	0	0	0	0
+F_1154	H_1073	1	0	1	1	1	1	alpha/beta hydrolase family protein	0	0	0	0	0	0	0	0	1	1
+F_1155	H_1074	1	0	1	1	1	1	amidohydrolase family protein	0	0	0	0	0	0	1	1	0	0
+F_1156	H_1075	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1157	H_0139	1	0	1	1	1	1	IS110 family RNA-guided transposase	1	1	0	0	0	0	0	0	0	0
+F_1158	H_1076	1	0	1	1	1	1	DUF6402 family protein	0	0	0	0	0	0	0	0	1	1
+F_1160	H_1078	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1161	H_1079	1	0	1	1	1	1	chorismate mutase	0	0	0	0	0	0	1	1	0	0
+F_1162	H_0035	1	0	1	1	1	1	type IV toxin-antitoxin system AbiEi family antitoxin domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1165	H_1082	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1166	H_0535	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1167	H_1083	1	0	1	1	1	1	RidA family protein	0	0	0	0	0	0	1	1	0	0
+F_1168	H_0567	1	0	1	1	1	1	acyl-CoA thioester hydrolase/BAAT C-terminal domain-containing protein	1	1	0	0	0	0	0	0	0	0
+F_1169	H_1084	1	0	1	1	1	1	TRAP transporter substrate-binding protein	0	0	0	0	0	0	1	1	0	0
+F_1170	H_1085	1	0	1	1	1	1	polysaccharide deacetylase family protein	0	0	0	0	0	0	0	0	1	1
+F_1171	H_1086	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_1172	H_1087	1	0	1	1	1	1	Bug family tripartite tricarboxylate transporter substrate binding protein	1	1	0	0	0	0	0	0	0	0
+F_1173	H_1088	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1174	H_1089	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1175	H_1090	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	0	0	1	1
+F_1176	H_1091	1	0	1	1	1	1	PPC domain-containing DNA-binding protein	0	0	0	0	0	0	1	1	0	0
+F_1177	H_1092	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1178	H_1093	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1180	H_1095	1	0	1	1	1	1	DUF5979 domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1181	H_1096	1	0	1	1	1	1	NADP-specific glutamate dehydrogenase	0	0	0	0	0	0	1	1	0	0
+F_1182	H_1097	1	0	1	1	1	1	L-serine ammonia-lyase	1	1	0	0	0	0	0	0	0	0
+F_1183	H_1098	1	0	1	1	1	1	alpha/beta fold hydrolase	0	0	0	0	0	0	1	1	0	0
+F_1184	H_1099	1	0	1	1	1	1	DUF411 domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1185	H_1100	1	0	1	1	1	1	sensor histidine kinase	0	0	0	0	0	0	1	1	0	0
+F_1186	H_1101	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1187	H_1102	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_1188	H_1103	1	0	1	1	1	1	aspartate carbamoyltransferase	0	0	0	0	0	0	1	1	0	0
+F_1189	H_1104	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1190	H_1105	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1191	H_1106	1	0	1	1	1	1	Do family serine endopeptidase	0	0	0	0	0	0	0	0	1	1
+F_1192	H_1107	1	0	1	1	1	1	NAD-dependent succinate-semialdehyde dehydrogenase	0	0	0	0	0	0	0	0	1	1
+F_1193	H_1108	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1194	H_1109	1	0	1	1	1	1	excisionase family DNA-binding protein	0	0	0	0	0	0	1	1	0	0
+F_1195	H_1110	1	0	1	1	1	1	imm11 family protein	1	1	0	0	0	0	0	0	0	0
+F_1196	H_1111	1	0	1	1	1	1	HNH endonuclease	0	0	0	0	0	0	1	1	0	0
+F_1198	H_1113	1	0	1	1	1	1	IS3 family transposase	0	0	0	0	0	0	1	1	0	0
+F_1199	H_0575	1	0	1	1	1	1	glutathione S-transferase	0	0	0	0	0	0	1	1	0	0
+F_1200	H_1114	1	0	1	1	1	1	sodium:solute symporter family protein	0	0	0	0	0	0	1	1	0	0
+F_1201	H_0360	1	0	1	1	1	1	IS110 family RNA-guided transposase	1	1	0	0	0	0	0	0	0	0
+F_1202	H_1115	1	0	1	1	1	1	KGG domain-containing protein	1	1	0	0	0	0	0	0	0	0
+F_1203	H_1116	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1204	H_1117	1	0	1	1	1	1	DUF6998 domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1206	H_0313	1	0	1	1	1	1	IS5 family transposase	0	0	0	0	0	0	1	1	0	0
+F_1207	H_0530	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1208	H_1119	1	0	1	1	1	1	IS1595 family transposase	1	1	0	0	0	0	0	0	0	0
+F_1209	H_1120	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	0	0	1	1
+F_1210	H_0362	1	0	1	1	1	1	ankyrin repeat domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1211	H_1121	1	0	1	1	1	1	SIP domain-containing protein	1	1	0	0	0	0	0	0	0	0
+F_1212	H_1122	1	0	1	1	1	1	DHA2 family efflux MFS transporter permease subunit	0	0	0	0	0	0	1	1	0	0
+F_1213	H_0362	1	0	1	1	1	1	ankyrin repeat domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1214	H_1123	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1215	H_1124	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1216	H_1125	1	0	1	1	1	1	DUF6228 family protein	1	1	0	0	0	0	0	0	0	0
+F_1217	H_1126	1	0	1	1	1	1	DUF6976 family protein	0	0	0	0	0	0	0	0	1	1
+F_1219	H_1127	1	0	1	1	1	1	lipocalin-like domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1220	H_1128	1	0	1	1	1	1	DUF2189 domain-containing protein	0	0	0	0	0	0	0	0	1	1
+F_1221	H_1129	1	0	1	1	1	1	DUF1493 family protein	0	0	0	0	0	0	1	1	0	0
+F_1222	H_1130	1	0	1	1	1	1	class I SAM-dependent methyltransferase	0	0	0	0	0	0	1	1	0	0
+F_1223	H_1131	1	0	1	1	1	1	Hsp20/alpha crystallin family protein	0	0	0	0	0	0	1	1	0	0
+F_1224	H_1132	1	0	1	1	1	1	MFS transporter	0	0	0	0	0	0	1	1	0	0
+F_1225	H_1133	1	0	1	1	1	1	MolR family transcriptional regulator	0	0	0	0	0	0	1	1	0	0
+F_1226	H_1134	1	0	1	1	1	1	AraC family transcriptional regulator	0	0	0	0	0	0	1	1	0	0
+F_1227	H_0364	1	0	1	1	1	1	SDR family oxidoreductase	0	0	0	0	0	0	0	0	1	1
+F_1228	H_1135	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	0	0	1	1
+F_1229	H_1136	1	0	1	1	1	1	ISL3 family transposase	1	1	0	0	0	0	0	0	0	0
+F_1230	H_1137	1	0	1	1	1	1	SAM-dependent methyltransferase	0	0	0	0	0	0	0	0	1	1
+F_1231	H_1138	1	0	1	1	1	1	glycosyltransferase family 32 protein	0	0	0	0	0	0	1	1	0	0
+F_1232	H_1139	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_1233	H_1140	1	0	1	1	1	1	LysR family transcriptional regulator	0	0	0	0	0	0	1	1	0	0
+F_1234	H_1141	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1235	H_1142	1	0	1	1	1	1	anti-phage deoxyguanosine triphosphatase	0	0	0	0	0	0	0	0	1	1
+F_1236	H_1143	1	0	1	1	1	1	SDR family NAD(P)-dependent oxidoreductase	0	0	1	1	0	0	0	0	0	0
+F_1237	H_1144	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1239	H_1146	1	0	1	1	1	1	DUF2975 domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1240	H_0071	1	0	1	1	1	1	Lrp/AsnC family transcriptional regulator	0	0	0	0	0	0	1	1	0	0
+F_1241	H_1147	1	0	1	1	1	1	type II toxin-antitoxin system RelE/ParE family toxin	0	0	0	0	0	0	0	0	1	1
+F_1242	H_1148	1	0	1	1	1	1	IS630 family transposase	1	1	0	0	0	0	0	0	0	0
+F_1243	H_1149	1	0	1	1	1	1	DUF3574 domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1244	H_1150	1	0	1	1	1	1	ethanolamine permease	0	0	0	0	0	0	0	0	1	1
+F_1245	H_1151	1	0	1	1	1	1	esterase-like activity of phytase family protein	0	0	0	0	0	0	1	1	0	0
+F_1246	H_1152	1	0	1	1	1	1	molybdopterin-dependent oxidoreductase	0	0	0	0	0	0	1	1	0	0
+F_1247	H_0008	1	0	1	1	1	1	IS5 family transposase	1	1	0	0	0	0	0	0	0	0
+F_1248	H_1153	1	0	1	1	1	1	phosphoadenosine phosphosulfate reductase domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1249	H_1154	1	0	1	1	1	1	PIN domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1250	H_1155	1	0	1	1	1	1	helix-turn-helix transcriptional regulator	0	0	0	0	0	0	1	1	0	0
+F_1251	H_1156	1	0	1	1	1	1	3-hydroxybutyrate dehydrogenase	0	0	0	0	0	0	1	1	0	0
+F_1252	H_1157	1	0	1	1	1	1	helix-turn-helix transcriptional regulator	0	0	0	0	0	0	1	1	0	0
+F_1253	H_1158	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_1254	H_1159	1	0	1	1	1	1	RloB family protein	1	1	0	0	0	0	0	0	0	0
+F_1255	H_1160	1	0	1	1	1	1	SDR family oxidoreductase	0	0	1	1	0	0	0	0	0	0
+F_1256	H_1161	1	0	1	1	1	1	type II toxin-antitoxin system HicB family antitoxin	0	0	0	0	0	0	1	1	0	0
+F_1257	H_1162	1	0	1	1	1	1	amino acid ABC transporter permease	0	0	0	0	0	0	1	1	0	0
+F_1258	H_1163	1	0	1	1	1	1	ATP-binding protein	0	0	0	0	0	0	1	1	0	0
+F_1259	H_1164	1	0	1	1	1	1	Crp/Fnr family transcriptional regulator	0	0	0	0	0	0	0	0	1	1
+F_1260	H_1165	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1262	H_1167	1	0	1	1	1	1	HDOD domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1264	H_0369	1	0	1	1	1	1	1-deoxy-D-xylulose-5-phosphate synthase	0	0	0	0	0	0	1	1	0	0
+F_1265	H_0291	1	0	1	1	1	1	TorF family putative porin	0	0	0	0	0	0	0	0	1	1
+F_1266	H_1169	1	0	1	1	1	1	putative toxin-antitoxin system toxin component, PIN family	0	0	0	0	0	0	1	1	0	0
+F_1267	H_1170	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1268	H_1171	1	0	1	1	1	1	type II toxin-antitoxin system RelE/ParE family toxin	0	0	0	0	0	0	1	1	0	0
+F_1269	H_1172	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1270	H_1173	1	0	1	1	1	1	alpha/beta hydrolase	0	0	0	0	0	0	1	1	0	0
+F_1271	H_1174	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1272	H_1175	1	0	1	1	1	1	site-2 protease family protein	0	0	0	0	0	0	1	1	0	0
+F_1273	H_1176	1	0	1	1	1	1	DUF6788 family protein	1	1	0	0	0	0	0	0	0	0
+F_1274	H_1177	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1275	H_1178	1	0	1	1	1	1	beta-propeller domain-containing protein	0	0	0	0	0	0	0	0	1	1
+F_1276	H_0422	1	0	1	1	1	1	helix-turn-helix domain-containing protein	0	0	0	0	0	0	0	0	1	1
+F_1277	H_1179	1	0	1	1	1	1	arsenical pump-driving ATPase	0	0	0	0	0	0	0	0	1	1
+F_1278	H_1180	1	0	1	1	1	1	acyl-CoA desaturase	0	0	0	0	0	0	1	1	0	0
+F_1279	H_1181	1	0	1	1	1	1	LysR family transcriptional regulator	0	0	0	0	0	0	1	1	0	0
+F_1280	H_1182	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1281	H_1183	1	0	1	1	1	1	site-specific recombinase	0	0	1	1	0	0	0	0	0	0
+F_1282	H_1184	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1283	H_0221	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1284	H_1185	1	0	1	1	1	1	AbrB family transcriptional regulator	1	1	0	0	0	0	0	0	0	0
+F_1285	H_0172	1	0	1	1	1	1	IS30 family transposase	1	1	0	0	0	0	0	0	0	0
+F_1286	H_1186	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_1288	H_0223	1	0	1	1	1	1	low affinity iron permease family protein	0	0	0	0	0	0	1	1	0	0
+F_1289	H_1188	1	0	1	1	1	1	LysR family transcriptional regulator	0	0	0	0	0	0	1	1	0	0
+F_1290	H_1189	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1291	H_1190	1	0	1	1	1	1	amino acid ABC transporter permease	0	0	0	0	0	0	1	1	0	0
+F_1292	H_1191	1	0	1	1	1	1	nuclear transport factor 2 family protein	0	0	0	0	0	0	1	1	0	0
+F_1294	H_1193	1	0	1	1	1	1	tetratricopeptide repeat protein	0	0	0	0	0	0	1	1	0	0
+F_1295	H_0057	1	0	1	1	1	1	IS630 family transposase	0	0	1	1	0	0	0	0	0	0
+F_1296	H_1194	1	0	1	1	1	1	IS3 family transposase	1	1	0	0	0	0	0	0	0	0
+F_1297	H_1195	1	0	1	1	1	1	cupin domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1300	H_0374	1	0	1	1	1	1	IS3 family transposase	1	1	0	0	0	0	0	0	0	0
+F_1301	H_1198	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1302	H_1199	1	0	1	1	1	1	methyl-accepting chemotaxis protein	0	0	0	0	0	0	0	0	1	1
+F_1303	H_1200	1	0	1	1	1	1	GspE/PulE family protein	0	0	0	0	0	0	1	1	0	0
+F_1304	H_1201	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1305	H_1202	1	0	1	1	1	1	type II toxin-antitoxin system Phd/YefM family antitoxin	0	0	0	0	0	0	0	0	1	1
+F_1306	H_1203	1	0	1	1	1	1	YybH family protein	0	0	0	0	0	0	1	1	0	0
+F_1307	H_1204	1	0	1	1	1	1	type II toxin-antitoxin system VapC family toxin	0	0	0	0	0	0	0	0	1	1
+F_1308	H_1205	1	0	1	1	1	1	type II toxin-antitoxin system HipA family toxin YjjJ	0	0	0	0	0	0	1	1	0	0
+F_1309	H_1206	1	0	1	1	1	1	type II toxin-antitoxin system RelE/ParE family toxin	0	0	0	0	1	1	0	0	0	0
+F_1310	H_1207	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1311	H_0072	1	0	1	1	1	1	RNA-guided endonuclease InsQ/TnpB family protein	1	1	0	0	0	0	0	0	0	0
+F_1312	H_1208	1	0	1	1	1	1	alpha-E domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1314	H_1209	1	0	1	1	1	1	IS4-like element ISBvi1 family transposase	1	1	0	0	0	0	0	0	0	0
+F_1316	H_1211	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1317	H_1212	1	0	1	1	1	1	PAS domain-containing methyl-accepting chemotaxis protein	0	0	0	0	0	0	0	0	1	1
+F_1318	H_1213	1	0	1	1	1	1	DUF6896 domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1319	H_0142	1	0	1	1	1	1	IS481 family transposase	1	1	0	0	0	0	0	0	0	0
+F_1320	H_1214	1	0	1	1	1	1	helix-turn-helix domain-containing protein	0	0	0	0	0	0	0	0	1	1
+F_1321	H_1215	1	0	1	1	1	1	Bug family tripartite tricarboxylate transporter substrate binding protein	0	0	0	0	0	0	1	1	0	0
+F_1322	H_1216	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_1323	H_1217	1	0	1	1	1	1	DUF6036 family nucleotidyltransferase	0	0	0	0	0	0	1	1	0	0
+F_1324	H_1218	1	0	1	1	1	1	DUF4136 domain-containing protein	1	1	0	0	0	0	0	0	0	0
+F_1325	H_1219	1	0	1	1	1	1	winged helix-turn-helix transcriptional regulator	0	0	0	0	0	0	1	1	0	0
+F_1326	H_1220	1	0	1	1	1	1	type II toxin-antitoxin system RelE/ParE family toxin	0	0	0	0	0	0	1	1	0	0
+F_1327	H_1221	1	0	1	1	1	1	aldo/keto reductase	0	0	0	0	0	0	0	0	1	1
+F_1328	H_1222	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1329	H_1223	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1330	H_1224	1	0	1	1	1	1	type II toxin-antitoxin system VapC family toxin	1	1	0	0	0	0	0	0	0	0
+F_1331	H_1225	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1332	H_1226	1	0	1	1	1	1	acyltransferase family protein	0	0	0	0	0	0	0	0	1	1
+F_1333	H_1227	1	0	1	1	1	1	helix-turn-helix domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1334	H_0067	1	0	1	1	1	1	IS3 family transposase	1	1	0	0	0	0	0	0	0	0
+F_1335	H_1228	1	0	1	1	1	1	5-carboxymethyl-2-hydroxymuconate Delta-isomerase	0	0	0	0	0	0	1	1	0	0
+F_1336	H_0380	1	0	1	1	1	1	O-acetylhomoserine aminocarboxypropyltransferase/cysteine synthase family protein	0	0	0	0	0	0	1	1	0	0
+F_1337	H_1229	1	0	1	1	1	1	FAD-binding oxidoreductase	0	0	0	0	0	0	1	1	0	0
+F_1338	H_0381	1	0	1	1	1	1	type II toxin-antitoxin system RelE/ParE family toxin	0	0	0	0	0	0	1	1	0	0
+F_1340	H_0073	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1342	H_1232	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1344	H_0036	1	0	1	1	1	1	group II intron reverse transcriptase/maturase	0	0	0	0	0	0	1	1	0	0
+F_1345	H_1234	1	0	1	1	1	1	TetR/AcrR family transcriptional regulator	0	0	0	0	0	0	1	1	0	0
+F_1346	H_1235	1	0	1	1	1	1	IS481 family transposase	0	0	0	0	0	0	1	1	0	0
+F_1348	H_1237	1	0	1	1	1	1	PP2C family protein-serine/threonine phosphatase	0	0	0	0	0	0	1	1	0	0
+F_1350	H_1239	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1351	H_1240	1	0	1	1	1	1	TetR/AcrR family transcriptional regulator	0	0	0	0	0	0	1	1	0	0
+F_1353	H_1242	1	0	1	1	1	1	helix-turn-helix domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1354	H_1243	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1355	H_1244	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1356	H_1245	1	0	1	1	1	1	NHL repeat-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1357	H_1246	1	0	1	1	1	1	phospholipase D-like domain-containing protein	0	0	0	0	0	0	0	0	1	1
+F_1358	H_1247	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_1359	H_0337	1	0	1	1	1	1	acetyl-CoA C-acetyltransferase	0	0	0	0	0	0	1	1	0	0
+F_1360	H_1248	1	0	1	1	1	1	DUF3311 domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1362	H_1249	1	0	1	1	1	1	guanylate cyclase	0	0	0	0	0	0	1	1	0	0
+F_1365	H_1251	1	0	1	1	1	1	AbrB/MazE/SpoVT family DNA-binding domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1366	H_0433	1	0	1	1	1	1	type II toxin-antitoxin system RelE/ParE family toxin	0	0	0	0	0	0	1	1	0	0
+F_1367	H_1252	1	0	1	1	1	1	enoyl-CoA hydratase-related protein	0	0	0	0	0	0	1	1	0	0
+F_1368	H_1253	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1369	H_1254	1	0	1	1	1	1	LamG-like jellyroll fold domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1370	H_1255	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1372	H_1256	1	0	1	1	1	1	PRC-barrel domain-containing protein	0	0	0	0	0	0	0	0	1	1
+F_1374	H_1258	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_1375	H_1259	1	0	1	1	1	1	helix-turn-helix domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1376	H_1260	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1377	H_1261	1	0	1	1	1	1	acyltransferase family protein	0	0	0	0	0	0	1	1	0	0
+F_1379	H_1263	1	0	1	1	1	1	DUF2855 family protein	0	0	0	0	0	0	1	1	0	0
+F_1382	H_1266	1	0	1	1	1	1	YciI family protein	0	0	0	0	0	0	1	1	0	0
+F_1383	H_1267	1	0	1	1	1	1	GYD domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1384	H_1268	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_1385	H_1269	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	0	0	1	1
+F_1386	H_0107	1	0	1	1	1	1	LysM peptidoglycan-binding domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1387	H_1270	1	0	1	1	1	1	nuclear transport factor 2 family protein	1	1	0	0	0	0	0	0	0	0
+F_1390	H_1273	1	0	1	1	1	1	LLM class flavin-dependent oxidoreductase	0	0	0	0	0	0	1	1	0	0
+F_1391	H_0173	1	0	1	1	1	1	GNAT family N-acetyltransferase	0	0	0	0	0	0	1	1	0	0
+F_1392	H_0321	1	0	1	1	1	1	Bug family tripartite tricarboxylate transporter substrate binding protein	0	0	0	0	0	0	1	1	0	0
+F_1394	H_1275	1	0	1	1	1	1	CerR family C-terminal domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1395	H_1276	1	0	1	1	1	1	GrpB family protein	0	0	0	0	0	0	1	1	0	0
+F_1396	H_1277	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1397	H_1278	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1398	H_1279	1	0	1	1	1	1	helix-turn-helix domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1399	H_0320	1	0	1	1	1	1	type II toxin-antitoxin system CcdA family antitoxin	0	0	0	0	0	0	1	1	0	0
+F_1400	H_1280	1	0	1	1	1	1	carboxymuconolactone decarboxylase family protein	1	1	0	0	0	0	0	0	0	0
+F_1401	H_1281	1	0	1	1	1	1	DUF1778 domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1403	H_1283	1	0	1	1	1	1	cation:proton antiporter domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1405	H_1284	1	0	1	1	1	1	4-oxalocrotonate tautomerase	1	1	0	0	0	0	0	0	0	0
+F_1406	H_1285	1	0	1	1	1	1	transposase	1	1	0	0	0	0	0	0	0	0
+F_1408	H_1287	1	0	1	1	1	1	chromate efflux transporter	0	0	0	0	0	0	0	0	1	1
+F_1409	H_0158	1	0	1	1	1	1	SDR family oxidoreductase	0	0	0	0	0	0	1	1	0	0
+F_1411	H_1289	1	0	1	1	1	1	helix-turn-helix domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1412	H_1290	1	0	1	1	1	1	helix-turn-helix domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1413	H_1291	1	0	1	1	1	1	YceI family protein	0	0	0	0	0	0	1	1	0	0
+F_1414	H_0551	1	0	1	1	1	1	IS3 family transposase	1	1	0	0	0	0	0	0	0	0
+F_1415	H_1292	1	0	1	1	1	1	nuclear transport factor 2 family protein	0	0	0	0	0	0	0	0	1	1
+F_1416	H_1293	1	0	1	1	1	1	YHS domain-containing (seleno)protein	0	0	0	0	0	0	1	1	0	0
+F_1417	H_1294	1	0	1	1	1	1	OprD family outer membrane porin	0	0	0	0	0	0	1	1	0	0
+F_1418	H_1295	1	0	1	1	1	1	PIN domain-containing protein	0	0	0	0	0	0	0	0	1	1
+F_1419	H_1296	1	0	1	1	1	1	SMI1/KNR4 family protein	1	1	0	0	0	0	0	0	0	0
+F_1420	H_1297	1	0	1	1	1	1	PIN domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1421	H_1298	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1422	H_1299	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1423	H_1300	1	0	1	1	1	1	DmpA family aminopeptidase	0	0	0	0	0	0	1	1	0	0
+F_1424	H_1301	1	0	1	1	1	1	transposase	0	0	0	0	0	0	1	1	0	0
+F_1425	H_1302	1	0	1	1	1	1	NAD(P)H:quinone oxidoreductase	0	0	0	0	0	0	1	1	0	0
+F_1426	H_0193	1	0	1	1	1	1	S1 family peptidase	0	0	0	0	0	0	1	1	0	0
+F_1427	H_1303	1	0	1	1	1	1	HIT family protein	0	0	0	0	0	0	1	1	0	0
+F_1428	H_1304	1	0	1	1	1	1	cupin domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1429	H_1305	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	0	0	1	1
+F_1430	H_1306	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	0	0	1	1
+F_1431	H_1307	1	0	1	1	1	1	HDOD domain-containing protein	1	1	0	0	0	0	0	0	0	0
+F_1433	H_0112	1	0	1	1	1	1	IS481 family transposase	1	1	0	0	0	0	0	0	0	0
+F_1434	H_1309	1	0	1	1	1	1	LysR substrate-binding domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1435	H_1310	1	0	1	1	1	1	dioxygenase family protein	0	0	0	0	0	0	1	1	0	0
+F_1436	H_1311	1	0	1	1	1	1	nuclear transport factor 2 family protein	0	0	0	0	0	0	1	1	0	0
+F_1438	H_1313	1	0	1	1	1	1	AraC family transcriptional regulator	0	0	0	0	0	0	1	1	0	0
+F_1439	H_1314	1	0	1	1	1	1	addiction module antidote protein	0	0	0	0	0	0	1	1	0	0
+F_1440	H_0288	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1441	H_0114	1	0	1	1	1	1	SRPBCC family protein	0	0	0	0	0	0	1	1	0	0
+F_1442	H_0394	1	0	1	1	1	1	YncE family protein	1	1	0	0	0	0	0	0	0	0
+F_1443	H_1315	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1444	H_1316	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1445	H_1317	1	0	1	1	1	1	CBS domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1446	H_1318	1	0	1	1	1	1	Bug family tripartite tricarboxylate transporter substrate binding protein	1	1	0	0	0	0	0	0	0	0
+F_1448	H_1320	1	0	1	1	1	1	VOC family protein	1	1	0	0	0	0	0	0	0	0
+F_1449	H_1321	1	0	1	1	1	1	helix-turn-helix transcriptional regulator	0	0	0	0	0	0	0	0	1	1
+F_1451	H_1323	1	0	1	1	1	1	type II toxin-antitoxin system RelE/ParE family toxin	0	0	1	1	0	0	0	0	0	0
+F_1452	H_1324	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	0	0	1	1
+F_1453	H_0398	1	0	1	1	1	1	ATP-binding protein	0	0	0	0	0	0	0	0	1	1
+F_1454	H_1325	1	0	1	1	1	1	ATPase	0	0	0	0	0	0	1	1	0	0
+F_1455	H_1326	1	0	1	1	1	1	SRPBCC domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1456	H_1327	1	0	1	1	1	1	enoyl-CoA hydratase/isomerase family protein	0	0	0	0	0	0	1	1	0	0
+F_1457	H_0529	1	0	1	1	1	1	type II toxin-antitoxin system Phd/YefM family antitoxin	1	1	0	0	0	0	0	0	0	0
+F_1458	H_1328	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1459	H_1329	1	0	1	1	1	1	Bug family tripartite tricarboxylate transporter substrate binding protein	0	0	0	0	0	0	0	0	1	1
+F_1460	H_0335	1	0	1	1	1	1	type II toxin-antitoxin system RelE/ParE family toxin	0	0	0	0	0	0	1	1	0	0
+F_1461	H_1330	1	0	1	1	1	1	outer membrane protein assembly factor BamB family protein	0	0	0	0	0	0	0	0	1	1
+F_1463	H_1332	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1464	H_1333	1	0	1	1	1	1	BrnT family toxin	0	0	0	0	0	0	1	1	0	0
+F_1465	H_0401	1	0	1	1	1	1	M48 family metalloprotease	0	0	0	0	0	0	1	1	0	0
+F_1466	H_1334	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1468	H_0232	1	0	1	1	1	1	tripartite tricarboxylate transporter permease	0	0	0	0	0	0	1	1	0	0
+F_1469	H_1336	1	0	1	1	1	1	2OG-Fe(II) oxygenase	0	0	0	0	0	0	1	1	0	0
+F_1470	H_1337	1	0	1	1	1	1	PQQ-dependent sugar dehydrogenase	0	0	0	0	0	0	0	0	1	1
+F_1471	H_0196	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	0	0	1	1
+F_1472	H_1338	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1473	H_1339	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	0	0	1	1
+F_1474	H_1340	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_1475	H_1341	1	0	1	1	1	1	DMT family protein	0	0	0	0	0	0	1	1	0	0
+F_1476	H_1342	1	0	1	1	1	1	class II glutamine amidotransferase	0	0	0	0	0	0	1	1	0	0
+F_1477	H_1343	1	0	1	1	1	1	antitoxin	0	0	0	0	0	0	1	1	0	0
+F_1478	H_1344	1	0	1	1	1	1	restriction endonuclease	0	0	0	0	0	0	1	1	0	0
+F_1479	H_0403	1	0	1	1	1	1	DNA-binding transcriptional regulator	0	0	0	0	0	0	0	0	1	1
+F_1480	H_0404	1	0	1	1	1	1	VOC family protein	0	0	0	0	0	0	1	1	0	0
+F_1481	H_1346	1	0	1	1	1	1	PaaI family thioesterase	0	0	0	0	0	0	1	1	0	0
+F_1482	H_0185	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1483	H_1347	1	0	1	1	1	1	glutathione S-transferase family protein	0	0	0	0	0	0	0	0	1	1
+F_1484	H_1348	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	0	0	1	1
+F_1485	H_1349	1	0	1	1	1	1	BrnT family toxin	0	0	0	0	0	0	1	1	0	0
+F_1486	H_1350	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1487	H_1351	1	0	1	1	1	1	GIY-YIG nuclease family protein	1	1	0	0	0	0	0	0	0	0
+F_1488	H_1352	1	0	1	1	1	1	DUF2971 domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1489	H_1353	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1490	H_0172	1	0	1	1	1	1	IS30 family transposase	1	1	0	0	0	0	0	0	0	0
+F_1492	H_1355	1	0	1	1	1	1	PQQ-dependent sugar dehydrogenase	0	0	0	0	0	0	1	1	0	0
+F_1493	H_1356	1	0	1	1	1	1	thioredoxin family protein	1	1	0	0	0	0	0	0	0	0
+F_1494	H_1357	1	0	1	1	1	1	DUF1778 domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1495	H_1358	1	0	1	1	1	1	VOC family protein	0	0	0	0	0	0	1	1	0	0
+F_1496	H_1359	1	0	1	1	1	1	PPC domain-containing DNA-binding protein	0	0	0	0	0	0	1	1	0	0
+F_1497	H_1360	1	0	1	1	1	1	DUF2798 domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1498	H_1361	1	0	1	1	1	1	substrate-binding periplasmic protein	0	0	0	0	0	0	1	1	0	0
+F_1499	H_1362	1	0	1	1	1	1	H-NS family nucleoid-associated regulatory protein	0	0	0	0	0	0	1	1	0	0
+F_1500	H_1363	1	0	1	1	1	1	DUF805 domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1501	H_0406	1	0	1	1	1	1	M20/M25/M40 family metallo-hydrolase	0	0	0	0	0	0	1	1	0	0
+F_1502	H_1364	1	0	1	1	1	1	SLC13 family permease	1	1	0	0	0	0	0	0	0	0
+F_1503	H_0489	1	0	1	1	1	1	ribbon-helix-helix protein, CopG family	0	0	0	0	0	0	1	1	0	0
+F_1504	H_1365	1	0	1	1	1	1	branched-chain amino acid ABC transporter substrate-binding protein	0	0	0	0	0	0	1	1	0	0
+F_1505	H_1366	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1506	H_1367	1	0	1	1	1	1	4-hydroxyphenylpyruvate dioxygenase	0	0	0	0	0	0	1	1	0	0
+F_1507	H_1368	1	0	1	1	1	1	IS5 family transposase	1	1	0	0	0	0	0	0	0	0
+F_1508	H_1369	1	0	1	1	1	1	MarR family winged helix-turn-helix transcriptional regulator	0	0	0	0	0	0	1	1	0	0
+F_1509	H_1370	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1510	H_1371	1	0	1	1	1	1	GFA family protein	1	1	0	0	0	0	0	0	0	0
+F_1511	H_1372	1	0	1	1	1	1	thioredoxin family protein	0	0	0	0	0	0	1	1	0	0
+F_1512	H_0009	1	0	1	1	1	1	type IV pili methyl-accepting chemotaxis transducer N-terminal domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1513	H_1373	1	0	1	1	1	1	porin family protein	0	0	0	0	0	0	0	0	1	1
+F_1514	H_0026	1	0	1	1	1	1	IS5 family transposase	1	1	0	0	0	0	0	0	0	0
+F_1515	H_1374	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1516	H_1375	1	0	1	1	1	1	tetratricopeptide repeat protein	0	0	0	0	0	0	1	1	0	0
+F_1518	H_0410	1	0	1	1	1	1	JAB domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1520	H_0497	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1521	H_1378	1	0	1	1	1	1	extracellular catalytic domain type 1 short-chain-length polyhydroxyalkanoate depolymerase	0	0	0	0	0	0	1	1	0	0
+F_1522	H_1379	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	0	0	1	1
+F_1523	H_1380	1	0	1	1	1	1	nucleotidyl transferase AbiEii/AbiGii toxin family protein	0	0	0	0	0	0	1	1	0	0
+F_1524	H_1381	1	0	1	1	1	1	GFA family protein	0	0	0	0	0	0	1	1	0	0
+F_1525	H_1382	1	0	1	1	1	1	amidohydrolase family protein	0	0	0	0	0	0	1	1	0	0
+F_1526	H_1383	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1527	H_1384	1	0	1	1	1	1	PHB depolymerase family esterase	1	1	0	0	0	0	0	0	0	0
+F_1528	H_1385	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1529	H_1386	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_1530	H_0137	1	0	1	1	1	1	IS3 family transposase	0	0	0	0	0	0	1	1	0	0
+F_1532	H_1388	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	0	0	1	1
+F_1533	H_1389	1	0	1	1	1	1	nucleotidyl transferase AbiEii/AbiGii toxin family protein	0	0	0	0	0	0	0	0	1	1
+F_1534	H_1390	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1535	H_0445	1	0	1	1	1	1	IS3 family transposase	1	1	0	0	0	0	0	0	0	0
+F_1536	H_1391	1	0	1	1	1	1	glutathione S-transferase family protein	0	0	0	0	0	0	0	0	1	1
+F_1537	H_1392	1	0	1	1	1	1	alpha/beta hydrolase	0	0	0	0	0	0	1	1	0	0
+F_1538	H_1393	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1539	H_1394	1	0	1	1	1	1	sensor histidine kinase	0	0	0	0	0	0	0	0	1	1
+F_1540	H_1395	1	0	1	1	1	1	TA system antitoxin ParD family protein	0	0	0	0	0	0	1	1	0	0
+F_1541	H_1396	1	0	1	1	1	1	IS630 family transposase	0	0	0	0	0	0	1	1	0	0
+F_1542	H_1397	1	0	1	1	1	1	zeta toxin family protein	0	0	0	0	0	0	1	1	0	0
+F_1543	H_0133	1	0	1	1	1	1	ISL3 family transposase ISIde1	1	1	0	0	0	0	0	0	0	0
+F_1544	H_1398	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1545	H_1399	1	0	1	1	1	1	DUF6790 family protein	0	0	0	0	0	0	1	1	0	0
+F_1546	H_1400	1	0	1	1	1	1	PIN domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1547	H_1401	1	0	1	1	1	1	MORN repeat-containing protein	1	1	0	0	0	0	0	0	0	0
+F_1548	H_1402	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_1549	H_1403	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_1550	H_0285	1	0	1	1	1	1	MBL fold metallo-hydrolase RNA specificity domain-containing protein	0	0	0	0	0	0	0	0	1	1
+F_1551	H_0221	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1552	H_1404	1	0	1	1	1	1	ABC transporter substrate-binding protein	0	0	0	0	0	0	1	1	0	0
+F_1554	H_1406	1	0	1	1	1	1	type II toxin-antitoxin system RelE/ParE family toxin	0	0	0	0	0	0	1	1	0	0
+F_1555	H_1407	1	0	1	1	1	1	tripartite tricarboxylate transporter substrate binding protein	1	1	0	0	0	0	0	0	0	0
+F_1556	H_1408	1	0	1	1	1	1	tetratricopeptide repeat protein	0	0	0	0	0	0	1	1	0	0
+F_1557	H_1409	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1558	H_1410	1	0	1	1	1	1	PIN domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1559	H_1411	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	0	0	1	1
+F_1560	H_0327	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1561	H_1412	1	0	1	1	1	1	TetR/AcrR family transcriptional regulator	0	0	0	0	0	0	1	1	0	0
+F_1562	H_1413	1	0	1	1	1	1	M24 family metallopeptidase	0	0	0	0	0	0	1	1	0	0
+F_1563	H_0414	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1564	H_0415	1	0	1	1	1	1	acrylyl-CoA reductase (NADPH)	0	0	0	0	0	0	0	0	1	1
+F_1565	H_1414	1	0	1	1	1	1	helix-turn-helix domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1566	H_0150	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1567	H_0136	1	0	1	1	1	1	ArsR/SmtB family transcription factor	0	0	0	0	0	0	1	1	0	0
+F_1568	H_1415	1	0	1	1	1	1	LysR family transcriptional regulator	0	0	0	0	0	0	1	1	0	0
+F_1569	H_1416	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1570	H_1417	1	0	1	1	1	1	type II toxin-antitoxin system RelE/ParE family toxin	0	0	0	0	0	0	1	1	0	0
+F_1571	H_1418	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1572	H_1419	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1573	H_1420	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	0	0	1	1
+F_1575	H_1422	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1576	H_1423	1	0	1	1	1	1	DMT family transporter	1	1	0	0	0	0	0	0	0	0
+F_1577	H_0167	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1578	H_0417	1	0	1	1	1	1	O-acetyl-ADP-ribose deacetylase	0	0	0	0	0	0	0	0	1	1
+F_1579	H_1424	1	0	1	1	1	1	SCO4402 family protein	0	0	0	0	0	0	1	1	0	0
+F_1580	H_1425	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_1581	H_1426	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1582	H_1427	1	0	1	1	1	1	type 1 glutamine amidotransferase domain-containing protein	0	0	0	0	0	0	0	0	1	1
+F_1584	H_1428	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_1585	H_0421	1	0	1	1	1	1	glutathione S-transferase family protein	0	0	0	0	0	0	0	0	1	1
+F_1586	H_1429	1	0	1	1	1	1	class I SAM-dependent methyltransferase	0	0	0	0	0	0	0	0	1	1
+F_1587	H_1430	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1589	H_0221	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1591	H_0021	1	0	1	1	1	1	YhcG family protein	0	0	0	0	0	0	1	1	0	0
+F_1592	H_1431	1	0	1	1	1	1	2'-5' RNA ligase family protein	0	0	0	0	0	0	1	1	0	0
+F_1593	H_0423	1	0	1	1	1	1	nuclear transport factor 2 family protein	0	0	0	0	0	0	1	1	0	0
+F_1594	H_1432	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1595	H_1433	1	0	1	1	1	1	phosphatase domain-containing putative toxin	0	0	0	0	0	0	1	1	0	0
+F_1596	H_1434	1	0	1	1	1	1	putative DNA-mimic protein	0	0	0	0	0	0	1	1	0	0
+F_1597	H_1435	1	0	1	1	1	1	IS110 family RNA-guided transposase	1	1	0	0	0	0	0	0	0	0
+F_1598	H_1436	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1599	H_0238	1	0	1	1	1	1	IS5 family transposase	1	1	0	0	0	0	0	0	0	0
+F_1600	H_1437	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1601	H_1438	1	0	1	1	1	1	hypothetical protein	0	0	1	1	0	0	0	0	0	0
+F_1602	H_1439	1	0	1	1	1	1	TraB/GumN family protein	0	0	0	0	0	0	1	1	0	0
+F_1603	H_1440	1	0	1	1	1	1	AraC family transcriptional regulator	0	0	0	0	0	0	0	0	1	1
+F_1604	H_1441	1	0	1	1	1	1	NHL repeat-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1606	H_1443	1	0	1	1	1	1	NUDIX hydrolase	0	0	0	0	0	0	1	1	0	0
+F_1608	H_1445	1	0	1	1	1	1	Ivy family c-type lysozyme inhibitor	1	1	0	0	0	0	0	0	0	0
+F_1610	H_1446	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1611	H_0022	1	0	1	1	1	1	IS110 family RNA-guided transposase	1	1	0	0	0	0	0	0	0	0
+F_1612	H_1447	1	0	1	1	1	1	glutathione S-transferase family protein	0	0	0	0	0	0	1	1	0	0
+F_1613	H_1448	1	0	1	1	1	1	antitoxin	0	0	0	0	0	0	1	1	0	0
+F_1614	H_1449	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_1615	H_0116	1	0	1	1	1	1	DUF3592 domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1616	H_1450	1	0	1	1	1	1	class I adenylate-forming enzyme family protein	1	1	0	0	0	0	0	0	0	0
+F_1617	H_1451	1	0	1	1	1	1	S41 family peptidase	0	0	0	0	0	0	1	1	0	0
+F_1618	H_1452	1	0	1	1	1	1	YceI family protein	0	0	0	0	0	0	1	1	0	0
+F_1619	H_1453	1	0	1	1	1	1	haloacid dehalogenase type II	0	0	0	0	0	0	1	1	0	0
+F_1620	H_1454	1	0	1	1	1	1	type II toxin-antitoxin system VapC family toxin	0	0	0	0	0	0	1	1	0	0
+F_1621	H_0180	1	0	1	1	1	1	DUF3443 family protein	1	1	0	0	0	0	0	0	0	0
+F_1622	H_1455	1	0	1	1	1	1	pyridoxamine 5'-phosphate oxidase family protein	0	0	0	0	0	0	1	1	0	0
+F_1623	H_1456	1	0	1	1	1	1	IclR family transcriptional regulator	0	0	0	0	0	0	1	1	0	0
+F_1625	H_1457	1	0	1	1	1	1	ethanolamine ammonia-lyase subunit EutC	0	0	0	0	0	0	1	1	0	0
+F_1626	H_1458	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1627	H_1459	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_1628	H_1460	1	0	1	1	1	1	DUF1097 domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1629	H_0433	1	0	1	1	1	1	type II toxin-antitoxin system RelE/ParE family toxin	0	0	0	0	0	0	1	1	0	0
+F_1630	H_0242	1	0	1	1	1	1	M35 family metalloendopeptidase	0	0	0	0	0	0	1	1	0	0
+F_1631	H_1461	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1632	H_0243	1	0	1	1	1	1	IS5 family transposase	1	1	0	0	0	0	0	0	0	0
+F_1633	H_1462	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1634	H_1463	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	0	0	1	1
+F_1636	H_0517	1	0	1	1	1	1	GCN5 family acetyltransferase	0	0	0	0	0	0	1	1	0	0
+F_1637	H_1464	1	0	1	1	1	1	tripartite tricarboxylate transporter substrate binding protein	1	1	0	0	0	0	0	0	0	0
+F_1638	H_1465	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1639	H_1466	1	0	1	1	1	1	aldo/keto reductase	0	0	0	0	0	0	0	0	1	1
+F_1640	H_1467	1	0	1	1	1	1	ViuB Siderophore-interacting protein	0	0	0	0	0	0	0	0	1	1
+F_1641	H_1468	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	0	0	1	1
+F_1642	H_1469	1	0	1	1	1	1	helix-turn-helix domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1643	H_1470	1	0	1	1	1	1	c-type cytochrome	0	0	0	0	0	0	1	1	0	0
+F_1644	H_0440	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1645	H_1471	1	0	1	1	1	1	LysE family translocator	0	0	0	0	0	0	1	1	0	0
+F_1646	H_0414	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1647	H_1472	1	0	1	1	1	1	OmpW/AlkL family protein	0	0	0	0	0	0	1	1	0	0
+F_1648	H_1473	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1649	H_0441	1	0	1	1	1	1	bluetail domain-containing putative surface protein	0	0	0	0	0	0	1	1	0	0
+F_1650	H_1474	1	0	1	1	1	1	DUF4419 domain-containing protein	0	0	0	0	0	0	0	0	1	1
+F_1652	H_1476	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1654	H_0040	1	0	1	1	1	1	M20/M25/M40 family metallo-hydrolase	0	0	0	0	0	0	1	1	0	0
+F_1656	H_1479	1	0	1	1	1	1	acyltransferase family protein	0	0	0	0	0	0	1	1	0	0
+F_1657	H_0284	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1658	H_0067	1	0	1	1	1	1	IS3 family transposase	1	1	0	0	0	0	0	0	0	0
+F_1659	H_1480	1	0	1	1	1	1	alpha/beta hydrolase family protein	0	0	0	0	0	0	1	1	0	0
+F_1660	H_1481	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_1661	H_1482	1	0	1	1	1	1	MFS transporter	0	0	0	0	0	0	1	1	0	0
+F_1662	H_0005	1	0	1	1	1	1	nucleotidyl transferase AbiEii/AbiGii toxin family protein	0	0	0	0	0	0	1	1	0	0
+F_1663	H_0024	1	0	1	1	1	1	glycerophosphodiester phosphodiesterase	0	0	0	0	0	0	1	1	0	0
+F_1664	H_0445	1	0	1	1	1	1	IS3 family transposase	1	1	0	0	0	0	0	0	0	0
+F_1665	H_0079	1	0	1	1	1	1	IS256 family transposase	1	1	0	0	0	0	0	0	0	0
+F_1666	H_1483	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1667	H_0137	1	0	1	1	1	1	IS3 family transposase	1	1	0	0	0	0	0	0	0	0
+F_1668	H_1484	1	0	1	1	1	1	VOC family protein	0	0	0	0	0	0	0	0	1	1
+F_1670	H_1485	1	0	1	1	1	1	FAD-dependent monooxygenase	1	1	0	0	0	0	0	0	0	0
+F_1671	H_1486	1	0	1	1	1	1	Bug family tripartite tricarboxylate transporter substrate binding protein	0	0	0	0	0	0	1	1	0	0
+F_1672	H_1487	1	0	1	1	1	1	Dabb family protein	0	0	0	0	0	0	1	1	0	0
+F_1673	H_1488	1	0	1	1	1	1	GNAT family N-acetyltransferase	1	1	0	0	0	0	0	0	0	0
+F_1675	H_1489	1	0	1	1	1	1	helix-turn-helix domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1676	H_1490	1	0	1	1	1	1	IS3 family transposase	1	1	0	0	0	0	0	0	0	0
+F_1677	H_1491	1	0	1	1	1	1	type II toxin-antitoxin system ParD family antitoxin	0	0	1	1	0	0	0	0	0	0
+F_1678	H_1492	1	0	1	1	1	1	DUF899 domain-containing protein	0	0	0	0	0	0	0	0	1	1
+F_1679	H_1493	1	0	1	1	1	1	VOC family protein	1	1	0	0	0	0	0	0	0	0
+F_1680	H_1494	1	0	1	1	1	1	REP-associated tyrosine transposase	0	0	0	0	0	0	1	1	0	0
+F_1682	H_1496	1	0	1	1	1	1	DUF4126 domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1683	H_1497	1	0	1	1	1	1	glycine zipper domain-containing protein	1	1	0	0	0	0	0	0	0	0
+F_1684	H_1498	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1685	H_1499	1	0	1	1	1	1	GFA family protein	0	0	0	0	0	0	1	1	0	0
+F_1686	H_1500	1	0	1	1	1	1	M20 aminoacylase family protein	0	0	0	0	0	0	1	1	0	0
+F_1687	H_0450	1	0	1	1	1	1	GNAT family N-acetyltransferase	0	0	0	0	0	0	1	1	0	0
+F_1688	H_1501	1	0	1	1	1	1	MFS family transporter	0	0	0	0	0	0	0	0	1	1
+F_1689	H_1502	1	0	1	1	1	1	AraC family transcriptional regulator	0	0	1	1	0	0	0	0	0	0
+F_1690	H_1503	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1692	H_1505	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1693	H_0453	1	0	1	1	1	1	DUF2252 domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1694	H_1506	1	0	1	1	1	1	helix-turn-helix transcriptional regulator	0	0	0	0	0	0	1	1	0	0
+F_1695	H_0068	1	0	1	1	1	1	IS110 family RNA-guided transposase	1	1	0	0	0	0	0	0	0	0
+F_1696	H_1507	1	0	1	1	1	1	helix-turn-helix domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1697	H_1508	1	0	1	1	1	1	helix-turn-helix domain-containing protein	0	0	0	0	0	0	0	0	1	1
+F_1698	H_1509	1	0	1	1	1	1	GNAT family N-acetyltransferase	0	0	0	0	0	0	1	1	0	0
+F_1699	H_1510	1	0	1	1	1	1	aspartate/glutamate racemase family protein	0	0	0	0	0	0	1	1	0	0
+F_1700	H_0566	1	0	1	1	1	1	mobile mystery protein A	0	0	0	0	0	0	0	0	1	1
+F_1702	H_1512	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1703	H_1513	1	0	1	1	1	1	lysozyme inhibitor LprI family protein	1	1	0	0	0	0	0	0	0	0
+F_1704	H_0374	1	0	1	1	1	1	IS3 family transposase	1	1	0	0	0	0	0	0	0	0
+F_1705	H_1514	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_1706	H_1515	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1707	H_1516	1	0	1	1	1	1	TRAP transporter large permease subunit	0	0	0	0	0	0	1	1	0	0
+F_1708	H_0322	1	0	1	1	1	1	JmjC domain-containing protein	0	0	0	0	0	0	0	0	1	1
+F_1709	H_1517	1	0	1	1	1	1	methyltransferase, TIGR04325 family	0	0	0	0	0	0	1	1	0	0
+F_1712	H_1519	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_1715	H_1522	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1716	H_1523	1	0	1	1	1	1	CopG family ribbon-helix-helix protein	0	0	0	0	0	0	1	1	0	0
+F_1718	H_1525	1	0	1	1	1	1	helix-turn-helix domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1719	H_1526	1	0	1	1	1	1	pyridoxamine 5'-phosphate oxidase family protein	0	0	0	0	0	0	1	1	0	0
+F_1721	H_1528	1	0	1	1	1	1	DUF6547 family protein	1	1	0	0	0	0	0	0	0	0
+F_1722	H_1529	1	0	1	1	1	1	GNAT family N-acetyltransferase	1	1	0	0	0	0	0	0	0	0
+F_1723	H_1530	1	0	1	1	1	1	LysR family transcriptional regulator	0	0	0	0	0	0	0	0	1	1
+F_1725	H_1532	1	0	1	1	1	1	helix-turn-helix domain-containing protein	1	1	0	0	0	0	0	0	0	0
+F_1726	H_1533	1	0	1	1	1	1	serine/threonine protein kinase	1	1	0	0	0	0	0	0	0	0
+F_1727	H_1534	1	0	1	1	1	1	S-methyl thiohydantoin desulfurase domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1729	H_1536	1	0	1	1	1	1	2-dehydropantoate 2-reductase	1	1	0	0	0	0	0	0	0	0
+F_1730	H_1537	1	0	1	1	1	1	glycosyltransferase family 4 protein	0	0	0	0	0	0	0	0	1	1
+F_1731	H_0271	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1733	H_0008	1	0	1	1	1	1	IS5 family transposase	1	1	0	0	0	0	0	0	0	0
+F_1734	H_1539	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1735	H_1540	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1738	H_1542	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1739	H_1543	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1740	H_1544	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1741	H_1545	1	0	1	1	1	1	PhoX family protein	0	0	0	0	0	0	1	1	0	0
+F_1742	H_1546	1	0	1	1	1	1	helix-turn-helix domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1743	H_0598	1	0	1	1	1	1	IS110 family transposase	0	0	0	0	0	0	1	1	0	0
+F_1744	H_0036	1	0	1	1	1	1	group II intron reverse transcriptase/maturase	0	0	0	0	0	0	1	1	0	0
+F_1745	H_1547	1	0	1	1	1	1	MBL fold metallo-hydrolase	0	0	0	0	0	0	1	1	0	0
+F_1746	H_1548	1	0	1	1	1	1	IS110 family RNA-guided transposase	1	1	0	0	0	0	0	0	0	0
+F_1747	H_1549	1	0	1	1	1	1	hypothetical protein	0	0	1	1	0	0	0	0	0	0
+F_1748	H_1550	1	0	1	1	1	1	DUF805 domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1749	H_1551	1	0	1	1	1	1	helix-turn-helix domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1750	H_1552	1	0	1	1	1	1	porin	0	0	0	0	0	0	1	1	0	0
+F_1751	H_1553	1	0	1	1	1	1	MerR family transcriptional regulator	0	0	0	0	0	0	1	1	0	0
+F_1752	H_0564	1	0	1	1	1	1	GNAT family N-acetyltransferase	0	0	0	0	0	0	1	1	0	0
+F_1753	H_1554	1	0	1	1	1	1	SRPBCC family protein	0	0	0	0	0	0	1	1	0	0
+F_1754	H_1555	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1755	H_1556	1	0	1	1	1	1	immunity protein Imm33 domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1756	H_1557	1	0	1	1	1	1	BrnA antitoxin family protein	0	0	0	0	0	0	1	1	0	0
+F_1757	H_0154	1	0	1	1	1	1	VOC family protein	0	0	0	0	0	0	1	1	0	0
+F_1758	H_0458	1	0	1	1	1	1	sulfite exporter TauE/SafE family protein	0	0	0	0	0	0	1	1	0	0
+F_1759	H_1558	1	0	1	1	1	1	IS1634 family transposase	1	1	0	0	0	0	0	0	0	0
+F_1760	H_1559	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1761	H_1560	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_1762	H_1561	1	0	1	1	1	1	peroxiredoxin	0	0	0	0	0	0	1	1	0	0
+F_1763	H_1562	1	0	1	1	1	1	YlcI/YnfO family protein	0	0	0	0	0	0	1	1	0	0
+F_1764	H_1563	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1765	H_1564	1	0	1	1	1	1	oxidoreductase	0	0	0	0	0	0	1	1	0	0
+F_1767	H_1566	1	0	1	1	1	1	GNAT family N-acetyltransferase	0	0	0	0	0	0	1	1	0	0
+F_1768	H_1567	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1769	H_1568	1	0	1	1	1	1	type II toxin-antitoxin system RelE/ParE family toxin	0	0	0	0	0	0	1	1	0	0
+F_1770	H_1569	1	0	1	1	1	1	sulfite exporter TauE/SafE family protein	0	0	0	0	0	0	1	1	0	0
+F_1772	H_1571	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1773	H_1572	1	0	1	1	1	1	TSUP family transporter	0	0	0	0	0	0	1	1	0	0
+F_1774	H_1573	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1775	H_0461	1	0	1	1	1	1	GNAT family N-acetyltransferase	0	0	0	0	0	0	1	1	0	0
+F_1776	H_1574	1	0	1	1	1	1	IS630 family transposase	0	0	0	0	0	0	1	1	0	0
+F_1778	H_1576	1	0	1	1	1	1	dihydrodipicolinate synthase family protein	0	0	0	0	0	0	1	1	0	0
+F_1779	H_1577	1	0	1	1	1	1	surface-adhesin E family protein	0	0	0	0	0	0	1	1	0	0
+F_1780	H_1578	1	0	1	1	1	1	LysR family transcriptional regulator	0	0	0	0	0	0	0	0	1	1
+F_1781	H_1579	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1782	H_1580	1	0	1	1	1	1	PA4824 family protein	0	0	0	0	0	0	1	1	0	0
+F_1783	H_1581	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1784	H_0326	1	0	1	1	1	1	helix-turn-helix domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1785	H_1582	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_1786	H_1583	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_1787	H_1584	1	0	1	1	1	1	c-type cytochrome	0	0	0	0	0	0	1	1	0	0
+F_1788	H_0482	1	0	1	1	1	1	homoserine/homoserine lactone efflux protein	0	0	0	0	0	0	1	1	0	0
+F_1789	H_1585	1	0	1	1	1	1	amidohydrolase family protein	0	0	0	0	0	0	0	0	1	1
+F_1790	H_1586	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1791	H_1587	1	0	1	1	1	1	porin	0	0	0	0	0	0	1	1	0	0
+F_1792	H_1588	1	0	1	1	1	1	type II toxin-antitoxin system VapB family antitoxin	0	0	0	0	0	0	1	1	0	0
+F_1793	H_0421	1	0	1	1	1	1	glutathione S-transferase family protein	0	0	0	0	0	0	1	1	0	0
+F_1795	H_1590	1	0	1	1	1	1	BrnT family toxin	0	0	0	0	0	0	1	1	0	0
+F_1796	H_0465	1	0	1	1	1	1	alpha/beta hydrolase	0	0	0	0	0	0	0	0	1	1
+F_1798	H_1591	1	0	1	1	1	1	class I SAM-dependent methyltransferase	1	1	0	0	0	0	0	0	0	0
+F_1799	H_1592	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1800	H_1593	1	0	1	1	1	1	tetratricopeptide repeat protein	0	0	0	0	0	0	1	1	0	0
+F_1801	H_1594	1	0	1	1	1	1	SDR family oxidoreductase	0	0	0	0	0	0	0	0	1	1
+F_1802	H_1595	1	0	1	1	1	1	virulence RhuM family protein	0	0	0	0	0	0	1	1	0	0
+F_1803	H_1596	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_1804	H_1597	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1805	H_1598	1	0	1	1	1	1	carboxypeptidase-like regulatory domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1806	H_1599	1	0	1	1	1	1	basic amino acid ABC transporter substrate-binding protein	0	0	0	0	0	0	1	1	0	0
+F_1807	H_1600	1	0	1	1	1	1	methyl-accepting chemotaxis protein	0	0	0	0	0	0	1	1	0	0
+F_1808	H_1601	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1809	H_1602	1	0	1	1	1	1	pyrroloquinoline quinone biosynthesis protein PqqB	0	0	0	0	0	0	1	1	0	0
+F_1811	H_1603	1	0	1	1	1	1	peptidyl-tRNA hydrolase	0	0	0	0	0	0	1	1	0	0
+F_1812	H_1604	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1813	H_1605	1	0	1	1	1	1	acyltransferase	0	0	0	0	0	0	0	0	1	1
+F_1814	H_0256	1	0	1	1	1	1	BON domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1815	H_1606	1	0	1	1	1	1	BrnT family toxin	0	0	0	0	0	0	1	1	0	0
+F_1816	H_1607	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	0	0	1	1
+F_1817	H_0257	1	0	1	1	1	1	IS4 family transposase	1	1	0	0	0	0	0	0	0	0
+F_1818	H_1608	1	0	1	1	1	1	type II toxin-antitoxin system HipA family toxin	0	0	0	0	0	0	1	1	0	0
+F_1820	H_1609	1	0	1	1	1	1	AbrB/MazE/SpoVT family DNA-binding domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1823	H_1612	1	0	1	1	1	1	VWA domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1824	H_1613	1	0	1	1	1	1	AraC family transcriptional regulator	0	0	0	0	0	0	1	1	0	0
+F_1825	H_1614	1	0	1	1	1	1	septal ring lytic transglycosylase RlpA family protein	0	0	0	0	0	0	0	0	1	1
+F_1827	H_1616	1	0	1	1	1	1	ISL3 family transposase	1	1	0	0	0	0	0	0	0	0
+F_1828	H_1617	1	0	1	1	1	1	ribonuclease VapC2	0	0	0	0	0	0	1	1	0	0
+F_1829	H_1618	1	0	1	1	1	1	lactonase family protein	0	0	0	0	0	0	1	1	0	0
+F_1830	H_1619	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1831	H_0479	1	0	1	1	1	1	IS200/IS605 family transposase	1	1	0	0	0	0	0	0	0	0
+F_1832	H_1620	1	0	1	1	1	1	SIR2 family NAD-dependent protein deacylase	0	0	0	0	0	0	0	0	1	1
+F_1833	H_0157	1	0	1	1	1	1	GNAT family N-acetyltransferase	1	1	0	0	0	0	0	0	0	0
+F_1834	H_1621	1	0	1	1	1	1	5-carboxymethyl-2-hydroxymuconate Delta-isomerase	0	0	0	0	0	0	1	1	0	0
+F_1835	H_0034	1	0	1	1	1	1	Bug family tripartite tricarboxylate transporter substrate binding protein	0	0	0	0	0	0	0	0	1	1
+F_1836	H_1622	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1837	H_1623	1	0	1	1	1	1	GNAT family N-acetyltransferase	0	0	0	0	0	0	1	1	0	0
+F_1838	H_1624	1	0	1	1	1	1	CcdB family protein	0	0	0	0	0	0	1	1	0	0
+F_1839	H_1625	1	0	1	1	1	1	helix-turn-helix domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1840	H_1626	1	0	1	1	1	1	dicarboxylate transporter/tellurite-resistance protein TehA	0	0	0	0	0	0	1	1	0	0
+F_1841	H_1627	1	0	1	1	1	1	IQM protein middle domain-containing protein	1	1	0	0	0	0	0	0	0	0
+F_1842	H_0480	1	0	1	1	1	1	polysaccharide deacetylase	0	0	0	0	0	0	1	1	0	0
+F_1843	H_1628	1	0	1	1	1	1	CAP domain-containing protein	1	1	0	0	0	0	0	0	0	0
+F_1844	H_0228	1	0	1	1	1	1	addiction module antidote protein	0	0	0	0	0	0	0	0	1	1
+F_1845	H_1629	1	0	1	1	1	1	cyanophycinase	0	0	0	0	0	0	1	1	0	0
+F_1846	H_1630	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_1848	H_1632	1	0	1	1	1	1	IPTL-CTERM sorting domain-containing protein	1	1	0	0	0	0	0	0	0	0
+F_1849	H_0482	1	0	1	1	1	1	homoserine/homoserine lactone efflux protein	0	0	0	0	0	0	1	1	0	0
+F_1850	H_0036	1	0	1	1	1	1	group II intron reverse transcriptase/maturase	1	1	0	0	0	0	0	0	0	0
+F_1851	H_1633	1	0	1	1	1	1	RCC1 domain-containing protein	0	0	0	0	0	0	0	0	1	1
+F_1852	H_1634	1	0	1	1	1	1	RNA polymerase sigma factor	1	1	0	0	0	0	0	0	0	0
+F_1853	H_1635	1	0	1	1	1	1	tetratricopeptide repeat protein	1	1	0	0	0	0	0	0	0	0
+F_1854	H_1636	1	0	1	1	1	1	DUF4382 domain-containing protein	1	1	0	0	0	0	0	0	0	0
+F_1855	H_0103	1	0	1	1	1	1	group II intron reverse transcriptase/maturase	0	0	1	1	0	0	0	0	0	0
+F_1856	H_1637	1	0	1	1	1	1	NAD(P)-dependent oxidoreductase	0	0	0	0	0	0	1	1	0	0
+F_1857	H_1638	1	0	1	1	1	1	Rieske 2Fe-2S domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1858	H_1639	1	0	1	1	1	1	M81 family metallopeptidase	1	1	0	0	0	0	0	0	0	0
+F_1860	H_0485	1	0	1	1	1	1	response regulator	1	1	0	0	0	0	0	0	0	0
+F_1861	H_0344	1	0	1	1	1	1	substrate-binding domain-containing protein	1	1	0	0	0	0	0	0	0	0
+F_1862	H_1641	1	0	1	1	1	1	dienelactone hydrolase family protein	0	0	1	1	0	0	0	0	0	0
+F_1863	H_1642	1	0	1	1	1	1	PIN domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1864	H_1643	1	0	1	1	1	1	DMT family transporter	0	0	0	0	0	0	0	0	1	1
+F_1865	H_1644	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1866	H_1645	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1867	H_1646	1	0	1	1	1	1	tetratricopeptide repeat protein	0	0	0	0	0	0	1	1	0	0
+F_1868	H_1647	1	0	1	1	1	1	formamidase	0	0	0	0	0	0	1	1	0	0
+F_1869	H_1648	1	0	1	1	1	1	cryptochrome/photolyase family protein	0	0	0	0	0	0	0	0	1	1
+F_1870	H_1649	1	0	1	1	1	1	WG repeat-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1872	H_1651	1	0	1	1	1	1	MGMT family protein	0	0	0	0	0	0	1	1	0	0
+F_1873	H_1652	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1875	H_1654	1	0	1	1	1	1	cell envelope integrity protein TolA	0	0	0	0	0	0	0	0	1	1
+F_1876	H_1655	1	0	1	1	1	1	organic hydroperoxide resistance protein	0	0	0	0	0	0	1	1	0	0
+F_1877	H_1656	1	0	1	1	1	1	acyl-CoA dehydrogenase family protein	1	1	0	0	0	0	0	0	0	0
+F_1878	H_1657	1	0	1	1	1	1	ATP-binding protein	1	1	0	0	0	0	0	0	0	0
+F_1881	H_1660	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	0	0	1	1
+F_1882	H_0017	1	0	1	1	1	1	IS1595 family transposase	1	1	0	0	0	0	0	0	0	0
+F_1883	H_1661	1	0	1	1	1	1	DUF1153 domain-containing protein	1	1	0	0	0	0	0	0	0	0
+F_1884	H_1662	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1885	H_1663	1	0	1	1	1	1	GAF domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1886	H_1664	1	0	1	1	1	1	glucose 1-dehydrogenase	0	0	0	0	0	0	1	1	0	0
+F_1887	H_1665	1	0	1	1	1	1	tetratricopeptide repeat protein	0	0	0	0	0	0	1	1	0	0
+F_1888	H_1666	1	0	1	1	1	1	alpha/beta fold hydrolase	0	0	0	0	0	0	1	1	0	0
+F_1889	H_1667	1	0	1	1	1	1	AraC family transcriptional regulator	0	0	0	0	0	0	1	1	0	0
+F_1890	H_0036	1	0	1	1	1	1	group II intron reverse transcriptase/maturase	1	1	0	0	0	0	0	0	0	0
+F_1892	H_1668	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	0	0	1	1
+F_1893	H_0074	1	0	1	1	1	1	helix-turn-helix transcriptional regulator	0	0	0	0	0	0	1	1	0	0
+F_1894	H_1669	1	0	1	1	1	1	WG repeat-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1896	H_1671	1	0	1	1	1	1	Flp family type IVb pilin	0	0	0	0	0	0	1	1	0	0
+F_1897	H_1672	1	0	1	1	1	1	M14 family metallopeptidase	0	0	0	0	0	0	1	1	0	0
+F_1898	H_1673	1	0	1	1	1	1	MFS transporter	0	0	0	0	0	0	0	0	1	1
+F_1899	H_1674	1	0	1	1	1	1	TetR/AcrR family transcriptional regulator	0	0	0	0	0	0	0	0	1	1
+F_1900	H_1675	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1901	H_1676	1	0	1	1	1	1	acid phosphatase	0	0	0	0	0	0	1	1	0	0
+F_1902	H_1677	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_1903	H_1678	1	0	1	1	1	1	GFA family protein	0	0	0	0	0	0	1	1	0	0
+F_1905	H_1679	1	0	1	1	1	1	BrnA antitoxin family protein	0	0	0	0	0	0	1	1	0	0
+F_1907	H_1681	1	0	1	1	1	1	AMP-binding protein	1	1	0	0	0	0	0	0	0	0
+F_1908	H_1682	1	0	1	1	1	1	DUF692 family multinuclear iron-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1910	H_1684	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_1911	H_1685	1	0	1	1	1	1	MORN repeat-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1912	H_1686	1	0	1	1	1	1	HPP family protein	0	0	0	0	0	0	1	1	0	0
+F_1913	H_1687	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_1914	H_1688	1	0	1	1	1	1	GNAT family N-acetyltransferase	0	0	0	0	0	0	1	1	0	0
+F_1915	H_1689	1	0	1	1	1	1	rhodanese-like domain-containing protein	1	1	0	0	0	0	0	0	0	0
+F_1916	H_1690	1	0	1	1	1	1	helix-turn-helix domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1917	H_1691	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	0	0	1	1
+F_1918	H_0154	1	0	1	1	1	1	VOC family protein	1	1	0	0	0	0	0	0	0	0
+F_1919	H_1692	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	0	0	1	1
+F_1920	H_1693	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1921	H_1694	1	0	1	1	1	1	nitrilase-related carbon-nitrogen hydrolase	0	0	0	0	0	0	1	1	0	0
+F_1923	H_1696	1	0	1	1	1	1	malonic semialdehyde reductase	0	0	0	0	0	0	1	1	0	0
+F_1925	H_1698	1	0	1	1	1	1	ABC transporter substrate-binding protein	0	0	0	0	0	0	0	0	1	1
+F_1926	H_0008	1	0	1	1	1	1	IS5 family transposase	1	1	0	0	0	0	0	0	0	0
+F_1930	H_0068	1	0	1	1	1	1	IS110 family RNA-guided transposase	1	1	0	0	0	0	0	0	0	0
+F_1931	H_1702	1	0	1	1	1	1	MFS transporter	0	0	0	0	0	0	1	1	0	0
+F_1932	H_1703	1	0	1	1	1	1	DUF1330 domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1933	H_1704	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1934	H_0101	1	0	1	1	1	1	shikimate kinase	0	0	0	0	0	0	1	1	0	0
+F_1935	H_1705	1	0	1	1	1	1	DUF4124 domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1936	H_1706	1	0	1	1	1	1	Dps family protein	0	0	0	0	0	0	0	0	1	1
+F_1937	H_1707	1	0	1	1	1	1	MBL fold metallo-hydrolase	0	0	0	0	0	0	1	1	0	0
+F_1938	H_1708	1	0	1	1	1	1	NADH:flavin oxidoreductase/NADH oxidase	0	0	0	0	0	0	1	1	0	0
+F_1940	H_0189	1	0	1	1	1	1	DUF1266 domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1941	H_1710	1	0	1	1	1	1	AraC family transcriptional regulator	0	0	0	0	0	0	1	1	0	0
+F_1942	H_1711	1	0	1	1	1	1	nucleoside hydrolase	0	0	1	1	0	0	0	0	0	0
+F_1943	H_1712	1	0	1	1	1	1	3-oxoadipyl-CoA thiolase	0	0	0	0	0	0	1	1	0	0
+F_1945	H_1714	1	0	1	1	1	1	group II intron reverse transcriptase/maturase	1	1	0	0	0	0	0	0	0	0
+F_1946	H_0497	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1947	H_1715	1	0	1	1	1	1	RES family NAD+ phosphorylase	0	0	0	0	0	0	1	1	0	0
+F_1948	H_1716	1	0	1	1	1	1	IS3 family transposase	1	1	0	0	0	0	0	0	0	0
+F_1949	H_1717	1	0	1	1	1	1	Imm32 family immunity protein	1	1	0	0	0	0	0	0	0	0
+F_1950	H_1718	1	0	1	1	1	1	aminotransferase-like domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1951	H_1719	1	0	1	1	1	1	helicase SNF2	0	0	0	0	0	0	1	1	0	0
+F_1952	H_1720	1	0	1	1	1	1	DUF3616 domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1953	H_1721	1	0	1	1	1	1	glycosyltransferase family 2 protein	0	0	0	0	0	0	1	1	0	0
+F_1954	H_1722	1	0	1	1	1	1	Bug family tripartite tricarboxylate transporter substrate binding protein	0	0	0	0	0	0	1	1	0	0
+F_1955	H_1723	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	0	0	1	1
+F_1956	H_1724	1	0	1	1	1	1	VOC family protein	0	0	0	0	0	0	1	1	0	0
+F_1957	H_1725	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_1958	H_1726	1	0	1	1	1	1	M20 family peptidase	0	0	0	0	0	0	1	1	0	0
+F_1961	H_0079	1	0	1	1	1	1	IS256 family transposase	0	0	0	0	0	0	1	1	0	0
+F_1962	H_0008	1	0	1	1	1	1	IS5 family transposase	1	1	0	0	0	0	0	0	0	0
+F_1963	H_1729	1	0	1	1	1	1	DUF3750 domain-containing protein	1	1	0	0	0	0	0	0	0	0
+F_1964	H_1730	1	0	1	1	1	1	DUF4337 domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1966	H_1732	1	0	1	1	1	1	IS3 family transposase	0	0	0	0	1	1	0	0	0	0
+F_1967	H_1733	1	0	1	1	1	1	type II toxin-antitoxin system VapC family toxin	0	0	0	0	0	0	1	1	0	0
+F_1968	H_1734	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1969	H_1735	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1971	H_1737	1	0	1	1	1	1	3-methyl-2-oxobutanoate hydroxymethyltransferase	1	1	0	0	0	0	0	0	0	0
+F_1972	H_1738	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1973	H_1739	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_1974	H_1740	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1975	H_1741	1	0	1	1	1	1	transporter substrate-binding domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1976	H_1742	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	0	0	1	1
+F_1977	H_1743	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_1978	H_1744	1	0	1	1	1	1	CZB domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1979	H_1745	1	0	1	1	1	1	cytochrome b	0	0	0	0	0	0	1	1	0	0
+F_1980	H_1746	1	0	1	1	1	1	SDR family NAD(P)-dependent oxidoreductase	0	0	0	0	0	0	0	0	1	1
+F_1981	H_1747	1	0	1	1	1	1	winged helix-turn-helix domain-containing protein	1	1	0	0	0	0	0	0	0	0
+F_1982	H_1748	1	0	1	1	1	1	hydrolase	1	1	0	0	0	0	0	0	0	0
+F_1983	H_0420	1	0	1	1	1	1	alkaline phosphatase D family protein	0	0	0	0	0	0	0	0	1	1
+F_1984	H_1749	1	0	1	1	1	1	flavin reductase family protein	0	0	0	0	0	0	1	1	0	0
+F_1986	H_1751	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1987	H_1752	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1988	H_0197	1	0	1	1	1	1	DUF2844 domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1989	H_0360	1	0	1	1	1	1	IS110 family RNA-guided transposase	0	0	0	0	0	0	1	1	0	0
+F_1990	H_1753	1	0	1	1	1	1	FdhF/YdeP family oxidoreductase	0	0	0	0	0	0	1	1	0	0
+F_1991	H_1754	1	0	1	1	1	1	type II toxin-antitoxin system ParD family antitoxin	0	0	0	0	0	0	1	1	0	0
+F_1993	H_0178	1	0	1	1	1	1	helix-turn-helix domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_1995	H_1756	1	0	1	1	1	1	2-hydroxychromene-2-carboxylate isomerase	1	1	0	0	0	0	0	0	0	0
+F_1996	H_1757	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1997	H_0167	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_1998	H_1758	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	0	0	1	1
+F_1999	H_1759	1	0	1	1	1	1	ethanolamine ammonia-lyase subunit EutB	0	0	0	0	0	0	1	1	0	0
+F_2000	H_1760	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2001	H_1761	1	0	1	1	1	1	DUF6036 family nucleotidyltransferase	0	0	0	0	0	0	1	1	0	0
+F_2002	H_1762	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2003	H_1763	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2004	H_0110	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2005	H_1764	1	0	1	1	1	1	nuclear transport factor 2 family protein	0	0	0	0	0	0	1	1	0	0
+F_2006	H_1765	1	0	1	1	1	1	secreted signal peptide protein	0	0	0	0	0	0	1	1	0	0
+F_2007	H_1766	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2008	H_1767	1	0	1	1	1	1	Xre family toxin-antitoxin system antitoxin	0	0	0	0	0	0	1	1	0	0
+F_2009	H_1768	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	0	0	1	1
+F_2010	H_1769	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_2011	H_1770	1	0	1	1	1	1	DUF3303 domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_2012	H_1771	1	0	1	1	1	1	MotA/TolQ/ExbB proton channel family protein	0	0	0	0	0	0	1	1	0	0
+F_2013	H_0080	1	0	1	1	1	1	Fic family protein	0	0	0	0	0	0	1	1	0	0
+F_2014	H_1772	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_2015	H_1773	1	0	1	1	1	1	DUF4148 domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_2016	H_1774	1	0	1	1	1	1	glutathione S-transferase	0	0	0	0	0	0	1	1	0	0
+F_2017	H_1775	1	0	1	1	1	1	VOC family protein	0	0	0	0	0	0	1	1	0	0
+F_2018	H_1776	1	0	1	1	1	1	IS110 family transposase	1	1	0	0	0	0	0	0	0	0
+F_2019	H_1777	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2020	H_1778	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2021	H_1779	1	0	1	1	1	1	DUF1963 domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_2022	H_0380	1	0	1	1	1	1	O-acetylhomoserine aminocarboxypropyltransferase/cysteine synthase family protein	0	0	0	0	0	0	0	0	1	1
+F_2023	H_0277	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2024	H_1780	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2026	H_1782	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2027	H_1783	1	0	1	1	1	1	OmpA family protein	0	0	0	0	0	0	1	1	0	0
+F_2028	H_0280	1	0	1	1	1	1	restriction endonuclease	0	0	0	0	0	0	0	0	1	1
+F_2029	H_1784	1	0	1	1	1	1	serine hydrolase domain-containing protein	0	0	0	0	0	0	0	0	1	1
+F_2031	H_1786	1	0	1	1	1	1	cation diffusion facilitator family transporter	0	0	0	0	0	0	1	1	0	0
+F_2032	H_1787	1	0	1	1	1	1	helix-turn-helix domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_2033	H_0262	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2034	H_0228	1	0	1	1	1	1	addiction module antidote protein	1	1	0	0	0	0	0	0	0	0
+F_2035	H_1788	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2037	H_1789	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_2040	H_1791	1	0	1	1	1	1	GAF domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_2041	H_1792	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_2042	H_1793	1	0	1	1	1	1	IS4 family transposase	1	1	0	0	0	0	0	0	0	0
+F_2043	H_0032	1	0	1	1	1	1	amidohydrolase family protein	0	0	0	0	0	0	0	0	1	1
+F_2044	H_1794	1	0	1	1	1	1	FkbM family methyltransferase	1	1	0	0	0	0	0	0	0	0
+F_2045	H_0346	1	0	1	1	1	1	peroxiredoxin-like family protein	0	0	0	0	0	0	0	0	1	1
+F_2046	H_1795	1	0	1	1	1	1	GntP family permease	1	1	0	0	0	0	0	0	0	0
+F_2047	H_1796	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2049	H_1797	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2050	H_1798	1	0	1	1	1	1	PIN domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_2052	H_1800	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2053	H_1801	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	0	0	1	1
+F_2054	H_0516	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2056	H_1803	1	0	1	1	1	1	IS3 family transposase	1	1	0	0	0	0	0	0	0	0
+F_2057	H_0517	1	0	1	1	1	1	GNAT family N-acetyltransferase	0	0	0	0	0	0	1	1	0	0
+F_2058	H_1804	1	0	1	1	1	1	DUF2799 domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_2059	H_1805	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2060	H_0180	1	0	1	1	1	1	DUF3443 family protein	0	0	0	0	0	0	1	1	0	0
+F_2062	H_1807	1	0	1	1	1	1	chloride channel protein	0	0	0	0	0	0	1	1	0	0
+F_2063	H_0284	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2064	H_1808	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2065	H_1809	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2066	H_1810	1	0	1	1	1	1	IS630 family transposase	1	1	0	0	0	0	0	0	0	0
+F_2067	H_1811	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2068	H_1812	1	0	1	1	1	1	porin	1	1	0	0	0	0	0	0	0	0
+F_2069	H_1813	1	0	1	1	1	1	type II toxin-antitoxin system RelE/ParE family toxin	0	0	0	0	0	0	1	1	0	0
+F_2070	H_1814	1	0	1	1	1	1	GNAT family N-acetyltransferase	0	0	0	0	0	0	0	0	1	1
+F_2071	H_1815	1	0	1	1	1	1	gamma-glutamyltransferase	0	0	0	0	0	0	0	0	1	1
+F_2072	H_0286	1	0	1	1	1	1	ABC transporter substrate-binding protein	0	0	0	0	0	0	1	1	0	0
+F_2073	H_1816	1	0	1	1	1	1	VOC family protein	0	0	0	0	0	0	1	1	0	0
+F_2074	H_1817	1	0	1	1	1	1	MFS transporter	0	0	0	0	0	0	1	1	0	0
+F_2075	H_1818	1	0	1	1	1	1	T6SS amidase immunity protein Tai4 family protein	0	0	0	0	0	0	1	1	0	0
+F_2076	H_1819	1	0	1	1	1	1	DUF6622 family protein	0	0	0	0	0	0	1	1	0	0
+F_2077	H_0291	1	0	1	1	1	1	TorF family putative porin	0	0	0	0	0	0	1	1	0	0
+F_2078	H_1820	1	0	1	1	1	1	phosphogluconate dehydrogenase (NAD(+)-dependent, decarboxylating)	0	0	0	0	0	0	1	1	0	0
+F_2079	H_0111	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_2080	H_1821	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2081	H_0429	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2082	H_0318	1	0	1	1	1	1	gamma-glutamyltransferase	1	1	0	0	0	0	0	0	0	0
+F_2083	H_1822	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	0	0	1	1
+F_2084	H_1823	1	0	1	1	1	1	Bug family tripartite tricarboxylate transporter substrate binding protein	0	0	0	0	0	0	1	1	0	0
+F_2085	H_1824	1	0	1	1	1	1	hemagglutinin	0	0	0	0	0	0	1	1	0	0
+F_2086	H_1825	1	0	1	1	1	1	RES family NAD+ phosphorylase	0	0	0	0	0	0	1	1	0	0
+F_2087	H_1826	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_2088	H_1827	1	0	1	1	1	1	FG-GAP repeat domain-containing protein	0	0	0	0	0	0	0	0	1	1
+F_2089	H_1828	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_2090	H_1829	1	0	1	1	1	1	DUF3182 family protein	1	1	0	0	0	0	0	0	0	0
+F_2091	H_1830	1	0	1	1	1	1	FecR family protein	0	0	0	0	0	0	1	1	0	0
+F_2092	H_1831	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_2093	H_1832	1	0	1	1	1	1	sensor histidine kinase	1	1	0	0	0	0	0	0	0	0
+F_2094	H_1833	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2097	H_1835	1	0	1	1	1	1	serine hydrolase domain-containing protein	0	0	0	0	0	0	0	0	1	1
+F_2098	H_0054	1	0	1	1	1	1	UDP-glucose 4-epimerase GalE	0	0	0	0	0	0	1	1	0	0
+F_2099	H_1836	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2100	H_0345	1	0	1	1	1	1	ORF6N domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_2101	H_0070	1	0	1	1	1	1	short chain dehydrogenase	0	0	0	0	0	0	1	1	0	0
+F_2102	H_1837	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2103	H_0057	1	0	1	1	1	1	IS630 family transposase	1	1	0	0	0	0	0	0	0	0
+F_2104	H_1838	1	0	1	1	1	1	triacylglycerol lipase	0	0	0	0	0	0	0	0	1	1
+F_2106	H_0525	1	0	1	1	1	1	IS3 family transposase	1	1	0	0	0	0	0	0	0	0
+F_2107	H_1840	1	0	1	1	1	1	elongation factor Tu	1	1	0	0	0	0	0	0	0	0
+F_2108	H_1841	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2109	H_1842	1	0	1	1	1	1	TonB-dependent receptor	0	0	0	0	0	0	1	1	0	0
+F_2112	H_1845	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_2113	H_1846	1	0	1	1	1	1	restriction endonuclease	0	0	0	0	0	0	1	1	0	0
+F_2114	H_1847	1	0	1	1	1	1	ABC transporter substrate-binding protein	0	0	0	0	0	0	1	1	0	0
+F_2115	H_1848	1	0	1	1	1	1	nuclease-related domain-containing protein	0	0	0	0	0	0	0	0	1	1
+F_2116	H_0106	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2117	H_1849	1	0	1	1	1	1	FMN-binding negative transcriptional regulator	0	0	0	0	0	0	0	0	1	1
+F_2118	H_1850	1	0	1	1	1	1	response regulator transcription factor	0	0	0	0	0	0	1	1	0	0
+F_2119	H_1851	1	0	1	1	1	1	DUF4287 domain-containing protein	0	0	0	0	0	0	0	0	1	1
+F_2120	H_0450	1	0	1	1	1	1	GNAT family N-acetyltransferase	0	0	0	0	0	0	1	1	0	0
+F_2121	H_1852	1	0	1	1	1	1	Bug family tripartite tricarboxylate transporter substrate binding protein	0	0	0	0	0	0	1	1	0	0
+F_2122	H_0341	1	0	1	1	1	1	type II toxin-antitoxin system RelE/ParE family toxin	1	1	0	0	0	0	0	0	0	0
+F_2123	H_1853	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2124	H_1854	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_2125	H_1855	1	0	1	1	1	1	6-pyruvoyl trahydropterin synthase family protein	0	0	0	0	0	0	0	0	1	1
+F_2126	H_0181	1	0	1	1	1	1	MgtC/SapB family protein	0	0	0	0	0	0	1	1	0	0
+F_2129	H_1857	1	0	1	1	1	1	multidrug transporter subunit MdtD	0	0	0	0	0	0	1	1	0	0
+F_2130	H_0047	1	0	1	1	1	1	alpha/beta hydrolase	0	0	0	0	0	0	1	1	0	0
+F_2131	H_1858	1	0	1	1	1	1	integrase arm-type DNA-binding domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_2132	H_0124	1	0	1	1	1	1	CcdB family protein	1	1	0	0	0	0	0	0	0	0
+F_2133	H_0105	1	0	1	1	1	1	TIGR03118 family protein	0	0	0	0	0	0	1	1	0	0
+F_2134	H_0289	1	0	1	1	1	1	mobile mystery protein B	0	0	0	0	0	0	1	1	0	0
+F_2135	H_0273	1	0	1	1	1	1	ribbon-helix-helix domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_2136	H_0165	1	0	1	1	1	1	C4-dicarboxylate transporter DctA	0	0	0	0	0	0	0	0	1	1
+F_2137	H_0529	1	0	1	1	1	1	type II toxin-antitoxin system Phd/YefM family antitoxin	0	0	0	0	0	0	1	1	0	0
+F_2138	H_1859	1	0	1	1	1	1	MFS transporter	1	1	0	0	0	0	0	0	0	0
+F_2139	H_1860	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2140	H_0530	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2142	H_1861	1	0	1	1	1	1	ABC transporter substrate-binding protein	0	0	0	0	0	0	1	1	0	0
+F_2143	H_0532	1	0	1	1	1	1	L,D-transpeptidase Cds6 family protein	0	0	0	0	0	0	1	1	0	0
+F_2144	H_1862	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_2145	H_0291	1	0	1	1	1	1	TorF family putative porin	0	0	0	0	0	0	0	0	1	1
+F_2146	H_0023	1	0	1	1	1	1	IS1182 family transposase	0	0	0	0	0	0	1	1	0	0
+F_2147	H_0108	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_2148	H_1863	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2149	H_1864	1	0	1	1	1	1	BrnA antitoxin family protein	0	0	0	0	0	0	1	1	0	0
+F_2150	H_1865	1	0	1	1	1	1	DoxX family protein	0	0	0	0	0	0	1	1	0	0
+F_2151	H_0549	1	0	1	1	1	1	IS1380 family transposase	0	0	0	0	0	0	1	1	0	0
+F_2152	H_0257	1	0	1	1	1	1	IS4 family transposase	1	1	0	0	0	0	0	0	0	0
+F_2153	H_1866	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2154	H_1867	1	0	1	1	1	1	GNAT family acetyltransferase	0	0	0	0	0	0	1	1	0	0
+F_2155	H_1868	1	0	1	1	1	1	DUF421 domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_2157	H_1870	1	0	1	1	1	1	alpha/beta hydrolase	0	0	0	0	0	0	1	1	0	0
+F_2158	H_1871	1	0	1	1	1	1	ATP-binding response regulator	0	0	0	0	0	0	1	1	0	0
+F_2159	H_0059	1	0	1	1	1	1	DUF2846 domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_2160	H_1872	1	0	1	1	1	1	N-acetylmuramoyl-L-alanine amidase	0	0	0	0	0	0	1	1	0	0
+F_2161	H_0096	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_2163	H_1873	1	0	1	1	1	1	NmrA family NAD(P)-binding protein	1	1	0	0	0	0	0	0	0	0
+F_2164	H_1874	1	0	1	1	1	1	RhuM family protein	1	1	0	0	0	0	0	0	0	0
+F_2165	H_0545	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2166	H_1875	1	0	1	1	1	1	helix-turn-helix transcriptional regulator	0	0	0	0	0	0	1	1	0	0
+F_2167	H_0026	1	0	1	1	1	1	IS5 family transposase	1	1	0	0	0	0	0	0	0	0
+F_2170	H_1876	1	0	1	1	1	1	DUF6124 family protein	1	1	0	0	0	0	0	0	0	0
+F_2171	H_1877	1	0	1	1	1	1	ribosomal protein L7/L12	1	1	0	0	0	0	0	0	0	0
+F_2172	H_1878	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2174	H_1880	1	0	1	1	1	1	type II toxin-antitoxin system RelE/ParE family toxin	0	0	0	0	0	0	1	1	0	0
+F_2175	H_1881	1	0	1	1	1	1	DUF1090 domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_2176	H_1882	1	0	1	1	1	1	prolipoprotein diacylglyceryl transferase	0	0	0	0	0	0	1	1	0	0
+F_2177	H_1883	1	0	1	1	1	1	HigA family addiction module antitoxin	0	0	0	0	0	0	0	0	1	1
+F_2178	H_1884	1	0	1	1	1	1	gamma-glutamyltransferase family protein	0	0	0	0	0	0	0	0	1	1
+F_2179	H_0441	1	0	1	1	1	1	bluetail domain-containing putative surface protein	0	0	0	0	0	0	1	1	0	0
+F_2180	H_1885	1	0	1	1	1	1	helix-turn-helix domain-containing protein	1	1	0	0	0	0	0	0	0	0
+F_2181	H_1886	1	0	1	1	1	1	bifunctional 2',3'-cyclic-nucleotide 2'-phosphodiesterase/3'-nucleotidase	0	0	0	0	0	0	1	1	0	0
+F_2182	H_1887	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_2183	H_1888	1	0	1	1	1	1	alpha/beta fold hydrolase	0	0	0	0	0	0	1	1	0	0
+F_2184	H_1889	1	0	1	1	1	1	DUF6130 family protein	0	0	0	0	0	0	1	1	0	0
+F_2186	H_1891	1	0	1	1	1	1	lysozyme inhibitor LprI family protein	0	0	0	0	0	0	1	1	0	0
+F_2187	H_0073	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2188	H_1892	1	0	1	1	1	1	type II toxin-antitoxin system Phd/YefM family antitoxin	0	0	0	0	0	0	1	1	0	0
+F_2189	H_1893	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	0	0	1	1
+F_2190	H_0289	1	0	1	1	1	1	mobile mystery protein B	1	1	0	0	0	0	0	0	0	0
+F_2191	H_0544	1	0	1	1	1	1	IS1182 family transposase	1	1	0	0	0	0	0	0	0	0
+F_2192	H_1894	1	0	1	1	1	1	ferritin-like domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_2193	H_0284	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2194	H_0545	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2195	H_0205	1	0	1	1	1	1	DUF2846 domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_2197	H_1896	1	0	1	1	1	1	transposase	0	0	1	1	0	0	0	0	0	0
+F_2198	H_1897	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2199	H_1898	1	0	1	1	1	1	GNAT family N-acetyltransferase	1	1	0	0	0	0	0	0	0	0
+F_2200	H_1899	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_2201	H_1900	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_2202	H_1901	1	0	1	1	1	1	DUF6088 family protein	0	0	0	0	0	0	1	1	0	0
+F_2203	H_1902	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_2204	H_1903	1	0	1	1	1	1	YlcI/YnfO family protein	0	0	0	0	0	0	1	1	0	0
+F_2205	H_1904	1	0	1	1	1	1	acetoacetyl-CoA reductase	1	1	0	0	0	0	0	0	0	0
+F_2206	H_1905	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2208	H_1906	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2209	H_0054	1	0	1	1	1	1	UDP-glucose 4-epimerase GalE	0	0	0	0	0	0	1	1	0	0
+F_2210	H_1907	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2211	H_1908	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	0	0	1	1
+F_2212	H_1909	1	0	1	1	1	1	CcdB family protein	0	0	0	0	0	0	1	1	0	0
+F_2213	H_0068	1	0	1	1	1	1	IS110 family RNA-guided transposase	0	0	0	0	0	0	1	1	0	0
+F_2214	H_1910	1	0	1	1	1	1	CcdB family protein	0	0	0	0	0	0	1	1	0	0
+F_2216	H_0549	1	0	1	1	1	1	IS1380 family transposase	0	0	0	0	0	0	1	1	0	0
+F_2219	H_1914	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2220	H_1915	1	0	1	1	1	1	IS1634 family transposase	1	1	0	0	0	0	0	0	0	0
+F_2221	H_1916	1	0	1	1	1	1	trypsin-like peptidase domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_2222	H_0551	1	0	1	1	1	1	IS3 family transposase	1	1	0	0	0	0	0	0	0	0
+F_2223	H_1917	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	0	0	1	1
+F_2224	H_1918	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2225	H_1919	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	0	0	1	1
+F_2226	H_1920	1	0	1	1	1	1	DUF4087 domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_2227	H_1921	1	0	1	1	1	1	cytochrome-c peroxidase	0	0	0	0	0	0	1	1	0	0
+F_2228	H_1922	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2229	H_1923	1	0	1	1	1	1	GntR family transcriptional regulator	0	0	0	0	0	0	1	1	0	0
+F_2230	H_1924	1	0	1	1	1	1	purine-cytosine permease family protein	0	0	0	0	0	0	1	1	0	0
+F_2232	H_1926	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2234	H_1928	1	0	1	1	1	1	type II toxin-antitoxin system RelE/ParE family toxin	0	0	0	0	0	0	1	1	0	0
+F_2235	H_1929	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2236	H_1930	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2238	H_1932	1	0	1	1	1	1	tautomerase family protein	1	1	0	0	0	0	0	0	0	0
+F_2239	H_1933	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_2240	H_1934	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2241	H_1935	1	0	1	1	1	1	dienelactone hydrolase family protein	0	0	0	0	0	0	1	1	0	0
+F_2242	H_1936	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2243	H_0014	1	0	1	1	1	1	IS30 family transposase	1	1	0	0	0	0	0	0	0	0
+F_2244	H_1937	1	0	1	1	1	1	metal-dependent hydrolase	0	0	0	0	0	0	1	1	0	0
+F_2245	H_0067	1	0	1	1	1	1	IS3 family transposase	1	1	0	0	0	0	0	0	0	0
+F_2247	H_1939	1	0	1	1	1	1	GntR family transcriptional regulator	0	0	0	0	0	0	0	0	1	1
+F_2248	H_0050	1	0	1	1	1	1	IS3 family transposase	0	0	0	0	0	0	1	1	0	0
+F_2249	H_0181	1	0	1	1	1	1	MgtC/SapB family protein	0	0	0	0	0	0	1	1	0	0
+F_2250	H_1940	1	0	1	1	1	1	IS630 family transposase	0	0	0	0	0	0	1	1	0	0
+F_2252	H_1942	1	0	1	1	1	1	LysE family translocator	0	0	0	0	0	0	1	1	0	0
+F_2253	H_1943	1	0	1	1	1	1	RNA polymerase factor sigma-32	1	1	0	0	0	0	0	0	0	0
+F_2254	H_1944	1	0	1	1	1	1	anthrone oxygenase family protein	0	0	0	0	0	0	0	0	1	1
+F_2256	H_1946	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2257	H_0607	1	0	1	1	1	1	DUF7673 family protein	0	0	0	0	0	0	1	1	0	0
+F_2258	H_1947	1	0	1	1	1	1	DUF2846 domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_2259	H_1948	1	0	1	1	1	1	DUF1569 domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_2260	H_1949	1	0	1	1	1	1	branched-chain amino acid ABC transporter substrate-binding protein	0	0	0	0	0	0	0	0	1	1
+F_2261	H_1950	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2262	H_1951	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2263	H_0162	1	0	1	1	1	1	AraC family transcriptional regulator	0	0	0	0	0	0	1	1	0	0
+F_2264	H_1952	1	0	1	1	1	1	PIN domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_2265	H_1953	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2266	H_1954	1	0	1	1	1	1	CopG family transcriptional regulator	0	0	0	0	0	0	1	1	0	0
+F_2267	H_1955	1	0	1	1	1	1	LysE family translocator	0	0	0	0	0	0	1	1	0	0
+F_2268	H_0307	1	0	1	1	1	1	LysR family transcriptional regulator	0	0	0	0	0	0	1	1	0	0
+F_2269	H_1956	1	0	1	1	1	1	DUF1801 domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_2270	H_1957	1	0	1	1	1	1	IS3 family transposase	1	1	0	0	0	0	0	0	0	0
+F_2271	H_1958	1	0	1	1	1	1	AAA family ATPase	0	0	0	0	0	0	1	1	0	0
+F_2272	H_1959	1	0	1	1	1	1	HD-GYP domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_2273	H_1960	1	0	1	1	1	1	class I SAM-dependent methyltransferase	0	0	0	0	0	0	1	1	0	0
+F_2274	H_0561	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	0	0	1	1
+F_2275	H_1961	1	0	1	1	1	1	papain-like cysteine protease family protein	0	0	0	0	0	0	1	1	0	0
+F_2276	H_0158	1	0	1	1	1	1	SDR family oxidoreductase	0	0	0	0	0	0	1	1	0	0
+F_2277	H_0150	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_2278	H_1962	1	0	1	1	1	1	SLAC1 anion channel family protein	0	0	0	0	0	0	1	1	0	0
+F_2279	H_1963	1	0	1	1	1	1	DUF899 domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_2281	H_1965	1	0	1	1	1	1	DUF1003 domain-containing protein	1	1	0	0	0	0	0	0	0	0
+F_2283	H_1967	1	0	1	1	1	1	acyltransferase family protein	0	0	0	0	0	0	0	0	1	1
+F_2284	H_1968	1	0	1	1	1	1	DegT/DnrJ/EryC1/StrS family aminotransferase	0	0	0	0	0	0	1	1	0	0
+F_2285	H_1969	1	0	1	1	1	1	LysR family transcriptional regulator	1	1	0	0	0	0	0	0	0	0
+F_2286	H_1970	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2287	H_1971	1	0	1	1	1	1	5-carboxymethyl-2-hydroxymuconate Delta-isomerase	0	0	0	0	0	0	1	1	0	0
+F_2289	H_1973	1	0	1	1	1	1	7-carboxy-7-deazaguanine synthase	0	0	0	0	0	0	0	0	1	1
+F_2290	H_1974	1	0	1	1	1	1	LysR substrate-binding domain-containing protein	0	0	0	0	0	0	0	0	1	1
+F_2291	H_1975	1	0	1	1	1	1	macro domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_2292	H_0561	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2293	H_1976	1	0	1	1	1	1	AraC family transcriptional regulator	0	0	0	0	0	0	0	0	1	1
+F_2295	H_0564	1	0	1	1	1	1	GNAT family N-acetyltransferase	0	0	0	0	0	0	1	1	0	0
+F_2296	H_1978	1	0	1	1	1	1	DUF4288 domain-containing protein	0	0	0	0	0	0	0	0	1	1
+F_2297	H_0566	1	0	1	1	1	1	mobile mystery protein A	1	1	0	0	0	0	0	0	0	0
+F_2298	H_0567	1	0	1	1	1	1	acyl-CoA thioesterase/bile acid-CoA:amino acid N-acyltransferase family protein	0	0	0	0	0	0	0	0	1	1
+F_2299	H_1979	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2300	H_0144	1	0	1	1	1	1	transcriptional regulator	0	0	0	0	0	0	1	1	0	0
+F_2301	H_1980	1	0	1	1	1	1	DUF3592 domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_2302	H_0300	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2303	H_1981	1	0	1	1	1	1	DNA topoisomerase IV subunit B family protein	0	0	0	0	0	0	1	1	0	0
+F_2304	H_1982	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2305	H_1983	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2309	H_0150	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2310	H_1987	1	0	1	1	1	1	helix-turn-helix domain-containing protein	0	0	0	0	0	0	0	0	1	1
+F_2311	H_1988	1	0	1	1	1	1	secondary thiamine-phosphate synthase enzyme YjbQ	1	1	0	0	0	0	0	0	0	0
+F_2312	H_0010	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2313	H_1989	1	0	1	1	1	1	histidinol-phosphate transaminase	0	0	0	0	0	0	1	1	0	0
+F_2314	H_1990	1	0	1	1	1	1	ParB/Srx family N-terminal domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_2315	H_1991	1	0	1	1	1	1	HAD family hydrolase	1	1	0	0	0	0	0	0	0	0
+F_2316	H_1992	1	0	1	1	1	1	MFS transporter	0	0	0	0	0	0	1	1	0	0
+F_2317	H_1993	1	0	1	1	1	1	helix-turn-helix domain-containing protein	0	0	0	0	0	0	0	0	1	1
+F_2318	H_1994	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2320	H_0014	1	0	1	1	1	1	IS30 family transposase	1	1	0	0	0	0	0	0	0	0
+F_2321	H_1995	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2322	H_0571	1	0	1	1	1	1	helix-turn-helix transcriptional regulator	0	0	0	0	0	0	1	1	0	0
+F_2323	H_1996	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_2324	H_1997	1	0	1	1	1	1	ADP-ribosylglycohydrolase family protein	0	0	1	1	0	0	0	0	0	0
+F_2325	H_1998	1	0	1	1	1	1	class I SAM-dependent methyltransferase	0	0	0	0	0	0	1	1	0	0
+F_2326	H_1999	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2327	H_2000	1	0	1	1	1	1	DMT family transporter	0	0	0	0	0	0	1	1	0	0
+F_2328	H_2001	1	0	1	1	1	1	ABC transporter substrate-binding protein	0	0	0	0	0	0	1	1	0	0
+F_2329	H_0575	1	0	1	1	1	1	glutathione S-transferase	1	1	0	0	0	0	0	0	0	0
+F_2330	H_2002	1	0	1	1	1	1	TetR/AcrR family transcriptional regulator	0	0	0	0	0	0	1	1	0	0
+F_2331	H_2003	1	0	1	1	1	1	toxin-antitoxin system YwqK family antitoxin	1	1	0	0	0	0	0	0	0	0
+F_2332	H_0172	1	0	1	1	1	1	IS30 family transposase	1	1	0	0	0	0	0	0	0	0
+F_2333	H_2004	1	0	1	1	1	1	flagellar protein FlaG	1	1	0	0	0	0	0	0	0	0
+F_2334	H_2005	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2335	H_2006	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_2336	H_2007	1	0	1	1	1	1	OmpA family protein	1	1	0	0	0	0	0	0	0	0
+F_2337	H_2008	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2338	H_2009	1	0	1	1	1	1	tannase/feruloyl esterase family alpha/beta hydrolase	0	0	0	0	0	0	0	0	1	1
+F_2339	H_2010	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	0	0	1	1
+F_2340	H_2011	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_2341	H_2012	1	0	1	1	1	1	DUF2059 domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_2342	H_2013	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2343	H_2014	1	0	1	1	1	1	class IV adenylate cyclase	0	0	0	0	0	0	1	1	0	0
+F_2344	H_0169	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2345	H_2015	1	0	1	1	1	1	pilus assembly protein PilP	0	0	0	0	0	0	1	1	0	0
+F_2346	H_2016	1	0	1	1	1	1	transcriptional regulator	0	0	0	0	0	0	1	1	0	0
+F_2347	H_2017	1	0	1	1	1	1	tripartite tricarboxylate transporter TctB family protein	0	0	0	0	0	0	1	1	0	0
+F_2349	H_2019	1	0	1	1	1	1	AbrB/MazE/SpoVT family DNA-binding domain-containing protein	0	0	0	0	0	0	0	0	1	1
+F_2350	H_2020	1	0	1	1	1	1	helix-turn-helix domain-containing protein	1	1	0	0	0	0	0	0	0	0
+F_2351	H_2021	1	0	1	1	1	1	DUF2846 domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_2354	H_2023	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2355	H_2024	1	0	1	1	1	1	MFS transporter	0	0	0	0	0	0	1	1	0	0
+F_2356	H_2025	1	0	1	1	1	1	aldo/keto reductase	0	0	0	0	0	0	1	1	0	0
+F_2359	H_2028	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2361	H_0026	1	0	1	1	1	1	IS5 family transposase	1	1	0	0	0	0	0	0	0	0
+F_2362	H_2030	1	0	1	1	1	1	LysR family transcriptional regulator	0	0	0	0	0	0	1	1	0	0
+F_2363	H_2031	1	0	1	1	1	1	aquaporin Z	0	0	0	0	0	0	1	1	0	0
+F_2364	H_0403	1	0	1	1	1	1	helix-turn-helix domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_2365	H_2032	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_2366	H_2033	1	0	1	1	1	1	AraC family transcriptional regulator	0	0	0	0	0	0	0	0	1	1
+F_2367	H_0036	1	0	1	1	1	1	group II intron reverse transcriptase/maturase	1	1	0	0	0	0	0	0	0	0
+F_2368	H_2034	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2370	H_2036	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2371	H_2037	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2372	H_2038	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2373	H_2039	1	0	1	1	1	1	IPTL-CTERM sorting domain-containing protein	1	1	0	0	0	0	0	0	0	0
+F_2374	H_2040	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2375	H_0058	1	0	1	1	1	1	helix-turn-helix domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_2377	H_2042	1	0	1	1	1	1	Hsp20/alpha crystallin family protein	0	0	0	0	0	0	1	1	0	0
+F_2378	H_2043	1	0	1	1	1	1	restriction endonuclease	0	0	0	0	0	0	0	0	1	1
+F_2379	H_2044	1	0	1	1	1	1	OsmC family protein	0	0	0	0	0	0	1	1	0	0
+F_2380	H_0328	1	0	1	1	1	1	S1C family serine protease	0	0	0	0	0	0	0	0	1	1
+F_2381	H_2045	1	0	1	1	1	1	YhjD/YihY/BrkB family envelope integrity protein	1	1	0	0	0	0	0	0	0	0
+F_2382	H_2046	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2383	H_2047	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2384	H_2048	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2386	H_2049	1	0	1	1	1	1	tetratricopeptide repeat protein	1	1	0	0	0	0	0	0	0	0
+F_2387	H_2050	1	0	1	1	1	1	nuclear transport factor 2 family protein	0	0	0	0	0	0	1	1	0	0
+F_2388	H_2051	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_2390	H_2053	1	0	1	1	1	1	transposase	1	1	0	0	0	0	0	0	0	0
+F_2391	H_2054	1	0	1	1	1	1	SGNH/GDSL hydrolase family protein	0	0	0	0	0	0	1	1	0	0
+F_2392	H_2055	1	0	1	1	1	1	DUF4274 domain-containing protein	1	1	0	0	0	0	0	0	0	0
+F_2393	H_2056	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2394	H_2057	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	0	0	1	1
+F_2395	H_2058	1	0	1	1	1	1	LysR family transcriptional regulator	0	0	0	0	0	0	1	1	0	0
+F_2396	H_2059	1	0	1	1	1	1	fimbrial protein	1	1	0	0	0	0	0	0	0	0
+F_2398	H_0172	1	0	1	1	1	1	transcriptional regulator	1	1	0	0	0	0	0	0	0	0
+F_2399	H_2061	1	0	1	1	1	1	YitT family protein	0	0	0	0	0	0	1	1	0	0
+F_2400	H_2062	1	0	1	1	1	1	CocE/NonD family hydrolase	0	0	0	0	0	0	1	1	0	0
+F_2401	H_2063	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	0	0	1	1
+F_2402	H_2064	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	0	0	1	1
+F_2403	H_2065	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2404	H_0596	1	0	1	1	1	1	PIN domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_2405	H_2066	1	0	1	1	1	1	anti-sigma factor	1	1	0	0	0	0	0	0	0	0
+F_2406	H_2067	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	0	0	1	1
+F_2407	H_2068	1	0	1	1	1	1	DUF2628 domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_2408	H_2069	1	0	1	1	1	1	Bug family tripartite tricarboxylate transporter substrate binding protein	0	0	0	0	0	0	1	1	0	0
+F_2409	H_2070	1	0	1	1	1	1	flavodoxin	0	0	0	0	0	0	1	1	0	0
+F_2410	H_2071	1	0	1	1	1	1	IS1182 family transposase	1	1	0	0	0	0	0	0	0	0
+F_2411	H_0598	1	0	1	1	1	1	IS110 family RNA-guided transposase	0	0	0	0	0	0	1	1	0	0
+F_2413	H_2073	1	0	1	1	1	1	TetR/AcrR family transcriptional regulator	0	0	0	0	0	0	0	0	1	1
+F_2414	H_2074	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2415	H_0042	1	0	1	1	1	1	IS5 family transposase	1	1	0	0	0	0	0	0	0	0
+F_2417	H_2076	1	0	1	1	1	1	TA system antitoxin ParD family protein	0	0	0	0	0	0	1	1	0	0
+F_2418	H_2077	1	0	1	1	1	1	IS481 family transposase	1	1	0	0	0	0	0	0	0	0
+F_2419	H_2078	1	0	1	1	1	1	amidohydrolase family protein	0	0	0	0	0	0	1	1	0	0
+F_2420	H_2079	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2421	H_0150	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2422	H_2080	1	0	1	1	1	1	GNAT family N-acetyltransferase	0	0	0	0	0	0	1	1	0	0
+F_2423	H_2081	1	0	1	1	1	1	DMT family transporter	0	0	0	0	0	0	1	1	0	0
+F_2426	H_2084	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_2427	H_2085	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2428	H_2086	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2429	H_2087	1	0	1	1	1	1	DUF2569 family protein	0	0	0	0	0	0	0	0	1	1
+F_2430	H_2088	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2433	H_2091	1	0	1	1	1	1	acyltransferase family protein	0	0	0	0	0	0	1	1	0	0
+F_2434	H_2092	1	0	1	1	1	1	SH3 domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_2435	H_2093	1	0	1	1	1	1	aspartyl protease family protein	0	0	0	0	0	0	0	0	1	1
+F_2436	H_2094	1	0	1	1	1	1	pyruvate kinase	0	0	0	0	0	0	1	1	0	0
+F_2438	H_2096	1	0	1	1	1	1	nucleotidyltransferase domain-containing protein	0	0	0	0	0	0	0	0	1	1
+F_2439	H_0607	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2440	H_0044	1	0	1	1	1	1	type II toxin-antitoxin system death-on-curing family toxin	0	0	0	0	0	0	0	0	1	1
+F_2441	H_2097	1	0	1	1	1	1	DUF6151 family protein	0	0	0	0	0	0	1	1	0	0
+F_2442	H_0193	1	0	1	1	1	1	S1 family peptidase	0	0	0	0	0	0	0	0	1	1
+F_2443	H_2098	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_2444	H_2099	1	0	1	1	1	1	TetR/AcrR family transcriptional regulator	0	0	0	0	0	0	0	0	1	1
+F_2445	H_2100	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2446	H_2101	1	0	1	1	1	1	NADH:flavin oxidoreductase/NADH oxidase	0	0	0	0	0	0	0	0	1	1
+F_2447	H_2102	1	0	1	1	1	1	peptidoglycan-binding domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_2448	H_2103	1	0	1	1	1	1	MFS transporter	1	1	0	0	0	0	0	0	0	0
+F_2449	H_0423	1	0	1	1	1	1	nuclear transport factor 2 family protein	0	0	0	0	0	0	1	1	0	0
+F_2450	H_0008	1	0	1	1	1	1	IS5 family transposase	1	1	0	0	0	0	0	0	0	0
+F_2451	H_2104	1	0	1	1	1	1	ribbon-helix-helix protein, CopG family	0	0	0	0	0	0	0	0	1	1
+F_2452	H_2105	1	0	1	1	1	1	DUF1810 domain-containing protein	0	0	0	0	0	0	1	1	0	0
+F_2453	H_2106	1	0	1	1	1	1	TetR/AcrR family transcriptional regulator	0	0	0	0	0	0	1	1	0	0
+F_2454	H_0111	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	1	1	0	0
+F_2455	H_2107	1	0	1	1	1	1	class I SAM-dependent methyltransferase	0	0	0	0	0	0	1	1	0	0
+F_2456	H_2108	1	0	1	1	1	1	hypothetical protein	0	0	0	0	0	0	0	0	1	1
+F_2457	H_2109	1	0	1	1	1	1	IS1595 family transposase	0	0	0	0	0	0	1	1	0	0
+F_2458	H_2110	1	0	1	1	1	1	hypothetical protein	1	1	0	0	0	0	0	0	0	0
+F_2459	H_0313	1	0	1	1	1	1	IS5 family transposase	1	1	0	0	0	0	0	0	0	0

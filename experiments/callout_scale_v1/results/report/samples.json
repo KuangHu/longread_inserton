@@ -1,0 +1,281 @@
+[
+  {
+    "sample": "PaAR2038",
+    "native_families": 149,
+    "native_records": 762,
+    "exported_records": 762,
+    "invalid_native_records": 0,
+    "exact_coordinate_groups": 657,
+    "records_with_exact_aliases": 183,
+    "records_with_partial_overlap": 340,
+    "boundary_sources": {
+      "provisional_homology_median": 742,
+      "native_interval_only_unresolved": 14,
+      "homology_extent_censored_at_window": 6
+    },
+    "flanks_complete": 762,
+    "triplet_acgt_only": 762,
+    "exported_fasta_missing": 0,
+    "tnp_records": {
+      "unsupported": 420,
+      "supported": 279,
+      "unavailable": 63
+    },
+    "layers": {
+      "all": {
+        "records": 762,
+        "v1_full_ge2": 762,
+        "audited_full": 762
+      },
+      "<400": {
+        "records": 236,
+        "v1_full_ge2": 236,
+        "audited_full": 236
+      },
+      ">=400": {
+        "records": 526,
+        "v1_full_ge2": 526,
+        "audited_full": 526
+      },
+      "priority": {
+        "records": 520,
+        "v1_full_ge2": 520,
+        "audited_full": 520
+      }
+    },
+    "v1_classes": {
+      "full_span": 761,
+      "full_span_and_empty_allele": 1
+    },
+    "audited_classes": {
+      "audited_full_span": 762
+    },
+    "v1_full_ge2_but_not_audited": 0,
+    "audited_but_not_v1": 0,
+    "note": "Records, not insertion events. Exact aliases and partial overlaps are diagnostics, not locus counts."
+  },
+  {
+    "sample": "SMT4a",
+    "native_families": 62,
+    "native_records": 333,
+    "exported_records": 333,
+    "invalid_native_records": 0,
+    "exact_coordinate_groups": 268,
+    "records_with_exact_aliases": 104,
+    "records_with_partial_overlap": 126,
+    "boundary_sources": {
+      "provisional_homology_median": 316,
+      "native_interval_only_unresolved": 3,
+      "homology_extent_censored_at_window": 14
+    },
+    "flanks_complete": 329,
+    "triplet_acgt_only": 332,
+    "exported_fasta_missing": 0,
+    "tnp_records": {
+      "supported": 105,
+      "unsupported": 228
+    },
+    "layers": {
+      "all": {
+        "records": 333,
+        "v1_full_ge2": 328,
+        "audited_full": 328
+      },
+      "<400": {
+        "records": 122,
+        "v1_full_ge2": 118,
+        "audited_full": 118
+      },
+      ">=400": {
+        "records": 211,
+        "v1_full_ge2": 210,
+        "audited_full": 210
+      },
+      "priority": {
+        "records": 199,
+        "v1_full_ge2": 199,
+        "audited_full": 199
+      }
+    },
+    "v1_classes": {
+      "full_span": 322,
+      "full_span_and_empty_allele": 7,
+      "both_junctions_separate": 1,
+      "edge_limited": 3
+    },
+    "audited_classes": {
+      "audited_full_span": 317,
+      "audited_full_span_with_conflict": 11,
+      "full_span_cigar_fail": 2,
+      "edge_limited": 3
+    },
+    "v1_full_ge2_but_not_audited": 0,
+    "audited_but_not_v1": 0,
+    "note": "Records, not insertion events. Exact aliases and partial overlaps are diagnostics, not locus counts."
+  },
+  {
+    "sample": "LjRoot223",
+    "native_families": 44,
+    "native_records": 287,
+    "exported_records": 287,
+    "invalid_native_records": 0,
+    "exact_coordinate_groups": 246,
+    "records_with_exact_aliases": 72,
+    "records_with_partial_overlap": 112,
+    "boundary_sources": {
+      "provisional_homology_median": 276,
+      "native_interval_only_unresolved": 7,
+      "homology_extent_censored_at_window": 4
+    },
+    "flanks_complete": 287,
+    "triplet_acgt_only": 287,
+    "exported_fasta_missing": 0,
+    "tnp_records": {
+      "supported": 89,
+      "unsupported": 198
+    },
+    "layers": {
+      "all": {
+        "records": 287,
+        "v1_full_ge2": 287,
+        "audited_full": 287
+      },
+      "<400": {
+        "records": 137,
+        "v1_full_ge2": 137,
+        "audited_full": 137
+      },
+      ">=400": {
+        "records": 150,
+        "v1_full_ge2": 150,
+        "audited_full": 150
+      },
+      "priority": {
+        "records": 146,
+        "v1_full_ge2": 146,
+        "audited_full": 146
+      }
+    },
+    "v1_classes": {
+      "full_span": 287
+    },
+    "audited_classes": {
+      "audited_full_span": 287
+    },
+    "v1_full_ge2_but_not_audited": 0,
+    "audited_but_not_v1": 0,
+    "note": "Records, not insertion events. Exact aliases and partial overlaps are diagnostics, not locus counts."
+  },
+  {
+    "sample": "R-93128",
+    "native_families": 63,
+    "native_records": 492,
+    "exported_records": 491,
+    "invalid_native_records": 1,
+    "exact_coordinate_groups": 449,
+    "records_with_exact_aliases": 66,
+    "records_with_partial_overlap": 315,
+    "boundary_sources": {
+      "provisional_homology_median": 446,
+      "homology_extent_censored_at_window": 29,
+      "native_interval_only_unresolved": 16
+    },
+    "flanks_complete": 480,
+    "triplet_acgt_only": 491,
+    "exported_fasta_missing": 0,
+    "tnp_records": {
+      "supported": 65,
+      "unsupported": 422,
+      "unavailable": 4
+    },
+    "layers": {
+      "all": {
+        "records": 491,
+        "v1_full_ge2": 459,
+        "audited_full": 459
+      },
+      "<400": {
+        "records": 288,
+        "v1_full_ge2": 286,
+        "audited_full": 286
+      },
+      ">=400": {
+        "records": 203,
+        "v1_full_ge2": 173,
+        "audited_full": 173
+      },
+      "priority": {
+        "records": 174,
+        "v1_full_ge2": 161,
+        "audited_full": 161
+      }
+    },
+    "v1_classes": {
+      "full_span": 463,
+      "ambiguous_multimapping": 15,
+      "edge_limited": 11,
+      "one_junction": 2
+    },
+    "audited_classes": {
+      "audited_full_span": 459,
+      "ambiguous_competing": 21,
+      "edge_limited": 11
+    },
+    "v1_full_ge2_but_not_audited": 0,
+    "audited_but_not_v1": 0,
+    "note": "Records, not insertion events. Exact aliases and partial overlaps are diagnostics, not locus counts."
+  },
+  {
+    "sample": "R-91497",
+    "native_families": 43,
+    "native_records": 491,
+    "exported_records": 491,
+    "invalid_native_records": 0,
+    "exact_coordinate_groups": 442,
+    "records_with_exact_aliases": 89,
+    "records_with_partial_overlap": 329,
+    "boundary_sources": {
+      "provisional_homology_median": 472,
+      "native_interval_only_unresolved": 8,
+      "homology_extent_censored_at_window": 11
+    },
+    "flanks_complete": 491,
+    "triplet_acgt_only": 491,
+    "exported_fasta_missing": 0,
+    "tnp_records": {
+      "supported": 30,
+      "unsupported": 461
+    },
+    "layers": {
+      "all": {
+        "records": 491,
+        "v1_full_ge2": 491,
+        "audited_full": 491
+      },
+      "<400": {
+        "records": 360,
+        "v1_full_ge2": 360,
+        "audited_full": 360
+      },
+      ">=400": {
+        "records": 131,
+        "v1_full_ge2": 131,
+        "audited_full": 131
+      },
+      "priority": {
+        "records": 120,
+        "v1_full_ge2": 120,
+        "audited_full": 120
+      }
+    },
+    "v1_classes": {
+      "full_span": 491
+    },
+    "audited_classes": {
+      "audited_full_span": 491
+    },
+    "v1_full_ge2_but_not_audited": 0,
+    "audited_but_not_v1": 0,
+    "note": "Records, not insertion events. Exact aliases and partial overlaps are diagnostics, not locus counts."
+  }
+]

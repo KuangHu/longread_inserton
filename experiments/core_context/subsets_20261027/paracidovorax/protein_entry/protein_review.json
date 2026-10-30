@@ -1,0 +1,34 @@
+{
+  "subset": "paracidovorax",
+  "product_hint_by_scope_structure": {
+    "all:single_gene:hypothetical": 3,
+    "all:single_gene:integrase_recombinase_resolvase": 1,
+    "all:single_gene:other": 11,
+    "all:single_gene:translation_or_ribosomal": 1,
+    "all:single_gene:transposase_or_IS": 8,
+    "all:two_gene:hypothetical": 1,
+    "all:two_gene:other": 8,
+    "target_lt2500:single_gene:hypothetical": 3,
+    "target_lt2500:single_gene:integrase_recombinase_resolvase": 1,
+    "target_lt2500:single_gene:other": 8,
+    "target_lt2500:single_gene:translation_or_ribosomal": 1,
+    "target_lt2500:single_gene:transposase_or_IS": 8,
+    "target_lt2500:two_gene:hypothetical": 1,
+    "target_lt2500:two_gene:other": 5
+  },
+  "single_gene_graph_overlap": {
+    "all:any_occurrence_in_graph_diff_group:non_IS_hint": 10,
+    "all:any_occurrence_in_graph_diff_group:IS_hint": 8,
+    "all:none_in_graph_diff_group:non_IS_hint": 6,
+    "target_lt2500:any_occurrence_in_graph_diff_group:non_IS_hint": 9,
+    "target_lt2500:any_occurrence_in_graph_diff_group:IS_hint": 8,
+    "target_lt2500:none_in_graph_diff_group:non_IS_hint": 4
+  },
+  "case_rule": "are fixed by rule, in the\ntarget_lt2500 scope: single-gene cores with >= 1 different_context_candidate pair, ranked by context classes linked by those pairs, then\nsamples, then core key; the top three are drawn with one occurrence per context class (up to four), plus the\nsimilar-context core with the most samples as a reference. Neighbour genes are coloured by homology group.",
+  "cases": [
+    "different-context candidate PF_34809b3c6b4f: IS481-like element ISAav5 family transposase (54 occ, 3 samples, 36 classes)",
+    "different-context candidate PF_2bf098df0d79: IS3 family transposase (55 occ, 3 samples, 43 classes)",
+    "different-context candidate PF_f094f2564f99: IS5 family transposase (30 occ, 4 samples, 22 classes)",
+    "similar-context reference PF_0031a7c8121e: peptidylprolyl isomerase"
+  ]
+}
