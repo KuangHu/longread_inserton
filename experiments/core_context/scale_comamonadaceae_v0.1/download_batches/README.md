@@ -56,6 +56,11 @@ Compute only reads runs in the ready manifest (see the repository README).
 - **Reads directory** `/global/scratch/users/kh36969/longread_callout/data/reads`: 226.5 GB in all.
   - 185.1 GB is verified files.
   - 37 GB is rejected copies kept for the record (`md5_mismatch_attempt*`).
+    - These were deleted on 2026-10-31: 6 copies of 4 runs (ERR15741491, SRR21808314 ×3, SRR40356285,
+      SRR40356314).
+    - Each run keeps its verified final copy, and each reject's md5 and size stay in its `verify.json`.
+    - The block comparison for SRR21808314 stays in `SRR21808314_blockdiff.txt`.
+    - Afterwards all four runs passed `check --rehash`, and the reads directory was 184 GB.
   - The rest is other files.
 - **`/global/scratch`:** about 2,078 TB free. `checkquota` shows no per-user scratch quota.
 - **All five batches:** add 42.7 GB.
