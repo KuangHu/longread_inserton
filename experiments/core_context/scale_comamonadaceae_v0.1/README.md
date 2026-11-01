@@ -982,6 +982,111 @@ The reading of round 3 is unchanged: this is read verification of positions alre
 locus_ambiguous and 201 insufficient_coverage intervals are not supported here, not absent. The 2 conflicts are
 still the IS21 control case `VC_aa36fecdda17`, reported as a case of its own; no threshold was changed.
 
+### Round 5: cumulative, 231 assemblies, 255 runs (download batches 3–5 added)
+
+**Reads added:** download batches 3, 4 and 5, run in parallel on lrc-xfer (52 runs, 23.7 GB; logs
+`download_batches/batch{3,4,5}_prepare.log`). All 52 runs verified. `ucd_readcheck.py pairs` was rerun: 233
+assemblies have reads, and 4,224 A / 5,605 B pairs can be tested (round 4 list: 3,980 / 3,966). Two of the 233
+assemblies have no listed pair.
+
+**Selection:** the 184 round-4 assemblies plus 47 new ones. The genome mapping was run for the 47 new assemblies
+only; the check was run for all 231.
+
+**Completeness (by id):** 231 / 231 assemblies, 255 / 255 runs, 21,486 / 21,486 intervals with results.
+- No task failed (`readcheck_round5/jobs.txt`). The node exclusion from round 3 was still in place.
+- **Contig-start intervals:** the same 13 as before, all supported again on the rotated copies. The 3 rotated runs
+  are the same reads mapped again, not new data. Their results are within the 21,486.
+- **Round-4 intervals:** 19,412 of the 19,415 are identical. The other 3 are in SAMN31258398 (NZ_CP109906.1,
+  around 5,195,200–5,196,080). All three are still supported; only single-read counts moved:
+  - `P_1ddca118bf21`: P 513 → 514, cigar_fail 0 → 1;
+  - `P_1bd7640586ad`: cigar_fail 1 → 0;
+  - `P_28b0e2c768be`: P 514 → 513.
+- **Cause of those 3 changes:** this region has about 25 intervals whose ends differ by 1–10 bp. Two of them
+  (`P_1ddca118bf21`, `P_1bd7640586ad`) start at the same position, so their order in `positions.tsv` (sorted by sample,
+  contig, lo) depends on input order, and that order changed with the new pairs. With the two references swapped
+  in the alleles FASTA, minimap2 broke a tie differently and one read moved between neighbouring alleles. The
+  input reads and assembly did not change. A sort that also uses hi and test_id would remove this; not changed in
+  this round.
+- **New intervals:** 2,071 in all. 1,958 are supported, 109 are insufficient_coverage, and 4 are locus_ambiguous
+  (3 in SAMN43526786, 1 in SAMN51281045). None is a conflict.
+
+| unit | count |
+|---|---:|
+| pairs | 36,083 |
+| occurrences | 12,812 (2,993 with more than one interval, max 26) |
+| tested intervals | 21,486 (387 carry more than one occurrence id) |
+
+| interval class | intervals | of which new in round 5 |
+|---|---:|---:|
+| supported | 21,092 | 1,958 |
+| insufficient_coverage | 310 | 109 |
+| locus_ambiguous | 82 | 4 |
+| conflict | 2 | 0 |
+
+**New insufficient_coverage intervals, by assembly.** The checked run (bytes, reads mapped to the assembly) is given
+for each assembly. Small runs explain some of these, but not all:
+
+| assembly | insufficient / intervals | run | what is seen |
+|---|---:|---|---|
+| SAMEA115676945 | 36 / 36 | ERR13194361, 21 MB, 7,900 reads | no P or A at any interval |
+| SAMD00735226 | 21 / 21 | DRR527052, 297 MB, 1,868 reads | mean depth on the contig 1.1×: most of the run does not map |
+| SAMN51281029 | 20 / 94 | SRR40356320, 34 MB, 7,752 reads | P_matched 0–2 at these 20 |
+| SAMEA115676840 | 17 / 17 | ERR13194256, 5.7 MB, 7,541 reads | P_matched 0–1 |
+| SAMN09743972 | 11 / 13 | SRR7743797, 248 MB, 49,128 reads (median 5.1 kb) | see below |
+| SAMN51281031, SAMN51281050 | 2 each | | |
+
+- **SAMN09743972 is not a small-run case.** Depth on the chromosome is about 78× and the reads are long enough.
+  - At the 2 supported intervals, 24 and 34 alignments span the interval with 1 kb on each side.
+  - At the 11 insufficient intervals, none does: alignments reach each interval (up to 179 partly overlap it) but
+    stop there. Neither P nor A is matched.
+  - This is not explained here. It is recorded as not supported, not as absent, and is a case to look at.
+
+| count mode, supported intervals | intervals | assemblies | P_matched min / median |
+|---|---:|---:|---:|
+| molecules | 16,190 | 176 | 3 / 52 |
+| assumed_molecules | 1,127 | 12 | 10 / 112 |
+| read_records | 3,775 | 38 | 4 / 88 |
+
+| pairs | both supported | one supported | none supported | single side supported | single side not supported |
+|---|---:|---:|---:|---:|---:|
+| A single-gene | 3,765 | 22 | 19 | | |
+| A two-gene | 225 | | 2 | | |
+| B single-gene | 5,000 | 97 | | | |
+| B two-gene | 477 | 25 | | | |
+| C single-gene | | | | 21,483 | 280 |
+| C two-gene | | | | 2,165 | 34 |
+| conserved paralog control | A 187 / B 6 | A 1 | A 3 | C 23 | C 1 |
+| repeated-context control | 2,108 | 135 | 24 | | |
+
+The repeated-context controls also include 1 conflict pair.
+
+**Gains from batches 3–5 (round 4 → round 5, candidates, controls excluded):**
+- **Cores** with at least one A or B pair with both intervals supported: 1,051 → 1,083 (+32; 885 single-gene,
+  198 two-gene). 637 of them have such a B pair (round 4: 616). 2,897 cores have a side with reads (round 4: 2,707).
+- **A/B pairs** with both intervals supported: 7,696 → 9,467 (+1,771; A +191, B +1,580).
+- **Occurrences** with every interval supported: 11,197 → 12,510 (+1,313).
+- **Where the +32 comes from** (traced core by core):
+  - 40 cores first became testable as A/B in round 5, which equals the plan's upper bound of 40 (31 + 9 + 0).
+    31 of them have a supported A/B pair.
+  - The other 9 are not supported because of insufficient_coverage intervals:
+    - in SAMEA115676858: PF_0d00493b7d15, PF_3772d2d3b304, `PF_1935c3014ad1+,PF_37ceb292b388+`;
+    - in SAMN09743972: PF_206f77ffce73, `PF_206f77ffce73+,PF_efe09bd06aaa+`;
+    - in SAMEA115676945: PF_2dc5193fcd35, PF_a4093c590f0b;
+    - in SAMEA115676840: PF_b90e881e9fa7;
+    - in SAMD00735226: `PF_320fe9adc5f6+,PF_bb7d1433ebf1-`.
+
+    In every B pair the other side is supported. These cores are not supported here, not shown to be absent.
+  - 1 core testable but not supported in round 4 is now supported: PF_a5b7c5bdd9f7, one of the 5 cores held back by
+    SAMEA115676858 in round 4, through a new pair.
+  - No core supported in round 4 lost support. So +32 = 31 + 1.
+
+The reading is unchanged:
+- **What this round is:** read verification of positions already found in assemblies, not discovery of new sites.
+- **The 1,083 cores** have read-supported local structures. They are not insertions shown to be mobile.
+- **Unsupported intervals:** the 82 locus_ambiguous and 310 insufficient_coverage intervals are not supported here,
+  not absent.
+- **Conflicts:** the 2 conflicts are still the IS21 control case `VC_aa36fecdda17`.
+
 **Figures (`readcheck_round*/figures/`, SVG):** one panel per interval, showing U / element / D and the genome
 alignments of reads with a call there, colored by call: blue P, red A, orange locus_ambiguous, light grey off_locus,
 purple cigar_fail. Pairs shown:
@@ -997,10 +1102,12 @@ purple cigar_fail. Pairs shown:
 - `runs.tsv`, `status.tsv`, `selection.json`, `samples.txt`, `summary.json`.
 
 Not done yet:
-- **Adding sites from long reads (the original aim) has not started.** Rounds 1–4 only take positions already in
+- **Adding sites from long reads (the original aim) has not started.** Rounds 1–5 only take positions already in
   assemblies and check them with reads. The next stage is: known core → search the reads for homologous cores →
   extract the context on both sides → decide whether a position appears that is not yet listed;
 - candidate interpretation layer;
-- download batches 3–5 (not started; see `download_batches/README.md`).
+- SAMN09743972: why reads stop at 11 intervals despite about 78× depth;
+- all five planned download batches are done. The 104 assemblies left out of the plan (118.4 GB) add no core and
+  no A/B pair.
 
 Stopped here for review.

@@ -3,31 +3,31 @@
  "evidence_source": "assembly_only",
  "production_ready": false,
  "batches": "1,2,3",
- "assemblies_with_verified_local_reads": 186,
+ "assemblies_with_verified_local_reads": 233,
  "pairs": {
   "single_gene": {
-   "A": 3769,
-   "B": 3606,
-   "C": 21149
+   "A": 3997,
+   "B": 5100,
+   "C": 21783
   },
   "two_gene": {
-   "A": 211,
-   "B": 360,
-   "C": 2146
+   "A": 227,
+   "B": 505,
+   "C": 2203
   }
  },
  "pairs_conserved_paralog_control": {
-  "A": 151,
+  "A": 191,
   "B": 6,
-  "C": 23
+  "C": 24
  },
  "pair_assemblies": {
-  "A": 177,
-  "B": 171,
-  "C": 183
+  "A": 223,
+  "B": 206,
+  "C": 229
  },
  "repeated_context_controls": {
-  "single_gene": 1574,
-  "two_gene": 605
+  "single_gene": 1651,
+  "two_gene": 617
  }
 }

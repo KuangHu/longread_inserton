@@ -83,7 +83,7 @@ counted, so a small core gain does not mean a small gain overall.
 |---|---|---|---|---|---|---|---|
 | 1 | 2026-10-31 | 20 / 20 | 235.9 GB / 194.5 GB | round 3, complete by id | 780 → 994 (+214) | 6,071 → 7,131 (+1,060) | 9,629 → 10,648 (+1,019) |
 | 2 | 2026-10-31 | 19 / 19 | 206.8 GB / 204.1 GB | round 4, complete by id | 994 → 1,051 (+57) | 7,131 → 7,696 (+565) | 10,648 → 11,197 (+549) |
-| 3–5 | 2026-11-01, in parallel | 19 / 19, 20 / 20, 13 / 13 | 230.5 GB / 227.8 GB (after the last batch) | round 5, running | | | |
+| 3–5 | 2026-11-01, in parallel | 19 / 19, 20 / 20, 13 / 13 | 230.5 GB / 227.8 GB (after the last batch) | round 5, complete by id | 1,051 → 1,083 (+32) | 7,696 → 9,467 (+1,771) | 11,197 → 12,510 (+1,313) |
 
 Batches 3–5 ran as three parallel prepare processes. Each log's storage-after line counts the other batches' files as
 they stood when that batch finished; the line of the last to finish (batch 4) is the final state. One batch-4
