@@ -1,0 +1,161 @@
+{
+ "version": "ucd_readcheck_v0.1",
+ "caller": "s3_readcheck_v0.3",
+ "evidence_added": "long_read_position_check",
+ "evidence_source_of_pairs": "assembly_only",
+ "production_ready": false,
+ "note": "reads are mostly the ones the assembly was built from: a self-consistency check of the local U-core-D assembly structure under the current alignment, locus-competition and counting rules; not a proof that every misassembly is excluded, not exact biological insertion boundaries, not mobility or independent insertion events",
+ "units": {
+  "pairs": 33420,
+  "occurrences": 11413,
+  "intervals": 19415,
+  "assemblies": 184,
+  "occurrences_with_multiple_intervals": 2706,
+  "max_intervals_per_occurrence": 26,
+  "intervals_with_multiple_occurrences": 357
+ },
+ "complete": true,
+ "completeness": {
+  "complete": true,
+  "assemblies_expected": 184,
+  "assemblies_complete": 184,
+  "runs_expected": 203,
+  "runs_checked": 203,
+  "intervals_expected": 19415,
+  "intervals_with_result": 19415,
+  "rotated_intervals_expected": 13,
+  "rotated_intervals_with_result": 13,
+  "rotated_runs_expected": 3,
+  "rotated_runs_checked": 3
+ },
+ "interval_class": {
+  "supported": 19134,
+  "locus_ambiguous": 78,
+  "insufficient_coverage": 201,
+  "conflict": 2
+ },
+ "rotated_intervals": {
+  "complete_in_header|supported": 10,
+  "not_complete_in_header|supported": 3
+ },
+ "interval_verdict": {
+  "consistent": 19134,
+  "insufficient": 279,
+  "mixed": 1,
+  "contradicted": 1
+ },
+ "occurrence_class": {
+  "all_intervals_supported": 11197,
+  "no_interval_supported": 214,
+  "conflict_at_an_interval": 2
+ },
+ "support_by_count_mode": {
+  "assumed_molecules": {
+   "intervals": 1106,
+   "min": 10,
+   "median": 113,
+   "max": 287,
+   "assemblies": 11,
+   "intervals_with_A_matched": 13
+  },
+  "molecules": {
+   "intervals": 14802,
+   "min": 0,
+   "median": 53,
+   "max": 4786,
+   "assemblies": 150,
+   "intervals_with_A_matched": 156
+  },
+  "read_records": {
+   "intervals": 3507,
+   "min": 4,
+   "median": 88,
+   "max": 2826,
+   "assemblies": 23,
+   "intervals_with_A_matched": 7
+  }
+ },
+ "pair_class": {
+  "A|single_gene|candidate": {
+   "both_positions_supported": 3588,
+   "one_position_supported": 15,
+   "no_position_supported": 15
+  },
+  "A|single_gene|conserved_paralog_control": {
+   "both_positions_supported": 149,
+   "one_position_supported": 1,
+   "no_position_supported": 1
+  },
+  "A|two_gene|candidate": {
+   "both_positions_supported": 211
+  },
+  "B|single_gene|candidate": {
+   "both_positions_supported": 3549,
+   "one_position_supported": 54
+  },
+  "B|single_gene|conserved_paralog_control": {
+   "both_positions_supported": 3
+  },
+  "B|two_gene|candidate": {
+   "both_positions_supported": 348,
+   "one_position_supported": 9
+  },
+  "B|two_gene|conserved_paralog_control": {
+   "both_positions_supported": 3
+  },
+  "C|single_gene|candidate": {
+   "single_side_supported": 20926,
+   "single_side_not_supported": 204
+  },
+  "C|single_gene|conserved_paralog_control": {
+   "single_side_supported": 19
+  },
+  "C|two_gene|candidate": {
+   "single_side_supported": 2123,
+   "single_side_not_supported": 19
+  },
+  "C|two_gene|conserved_paralog_control": {
+   "single_side_supported": 4
+  },
+  "control|single_gene|repeated_context_control": {
+   "both_positions_supported": 1486,
+   "one_position_supported": 79,
+   "no_position_supported": 9
+  },
+  "control|two_gene|repeated_context_control": {
+   "both_positions_supported": 550,
+   "one_position_supported": 51,
+   "no_position_supported": 3,
+   "conflict_at_a_position": 1
+  }
+ },
+ "distinct_cores": {
+  "A|single_gene": {
+   "both_positions_supported": 501,
+   "no_position_supported": 14,
+   "one_position_supported": 4
+  },
+  "A|two_gene": {
+   "both_positions_supported": 87
+  },
+  "B|single_gene": {
+   "both_positions_supported": 494,
+   "one_position_supported": 25
+  },
+  "B|two_gene": {
+   "both_positions_supported": 125,
+   "one_position_supported": 5
+  },
+  "C|single_gene": {
+   "single_side_not_supported": 70,
+   "single_side_supported": 1738
+  },
+  "C|two_gene": {
+   "single_side_not_supported": 10,
+   "single_side_supported": 392
+  }
+ },
+ "runs": {
+  "checked": 206
+ }
+}

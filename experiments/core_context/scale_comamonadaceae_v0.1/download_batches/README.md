@@ -76,3 +76,4 @@ counted, so a small core gain does not mean a small gain overall.
 | batch | downloaded (lrc-xfer) | verified | storage after (reads dir / verified) | read-check round | cores | pairs | occurrences |
 |---|---|---|---|---|---|---|---|
 | 1 | 2026-10-31 | 20 / 20 | 235.9 GB / 194.5 GB | round 3, complete by id | 780 → 994 (+214) | 6,071 → 7,131 (+1,060) | 9,629 → 10,648 (+1,019) |
+| 2 | 2026-10-31 | 19 / 19 | 206.8 GB / 204.1 GB | round 4, complete by id | 994 → 1,051 (+57) | 7,131 → 7,696 (+565) | 10,648 → 11,197 (+549) |

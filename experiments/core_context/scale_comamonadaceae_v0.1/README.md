@@ -906,6 +906,73 @@ supported A/B pair.
 - **Not done:** no threshold was changed, and the case is reported as a conflict.
 - **Figure:** `readcheck_round3/figures/VC_aa36fecdda17.svg`.
 
+### Round 4: cumulative, 184 assemblies, 203 runs (download batch 2 added)
+
+**Reads added:** download batch 2 (`download_batches/`, 19 runs, 9.6 GB, prepared on lrc-xfer; log
+`download_batches/batch2_prepare.log`). All 19 runs verified. One transfer was interrupted (curl exit 18), resumed
+and verified. `ucd_readcheck.py pairs` was rerun: 186 assemblies have reads, and 3,980 A / 3,966 B pairs can be
+tested (round 3 list: 3,728 / 3,629). Two of the 186 assemblies have no listed pair.
+
+**Selection:** the 169 round-3 assemblies plus 15 new ones. The genome mapping was run for the 15 new assemblies
+only; the check was run for all 184.
+
+**Completeness (by id):** 184 / 184 assemblies, 203 / 203 runs, 19,415 / 19,415 intervals with results.
+- No task failed (jobs in `readcheck_round4/jobs.txt`), with the same temporary node exclusion as round 3.
+- The 18,387 round-3 intervals were reproduced exactly (verdict, every count, class).
+- **Contig-start intervals:** the same 13 as in round 3, retested on the rotated copies (3 rotated runs, the same
+  read sets mapped again, not new data), all 13 again supported. Their results are within the 19,415.
+- 1,028 intervals are new: 998 supported, 30 insufficient_coverage, none locus_ambiguous or conflict.
+
+| unit | count |
+|---|---:|
+| pairs | 33,420 |
+| occurrences | 11,413 (2,706 with more than one interval, max 26) |
+| tested intervals | 19,415 (357 carry more than one occurrence id) |
+
+| interval class | intervals | of which new in round 4 |
+|---|---:|---:|
+| supported | 19,134 | 998 |
+| insufficient_coverage | 201 | 30 |
+| locus_ambiguous | 78 | 0 |
+| conflict | 2 | 0 |
+
+- **Occurrences:** 11,197 have every interval supported, 214 have none supported, 2 have a conflict (still only
+  `VC_aa36fecdda17`).
+- **New intervals that are not supported:** all 30 are in SAMEA115676858, whose only run (ERR13194274) is 5.9 MB:
+  445 reads map to the assembly. At these intervals P_matched is 0–2 molecules, A_matched 0. They are not supported
+  here, not absent.
+- **Count modes of the new intervals:** 809 molecules, 219 read_records.
+
+| count mode, supported intervals | intervals | assemblies | P_matched min / median |
+|---|---:|---:|---:|
+| molecules | 14,521 | 148 | 3 / 55 |
+| assumed_molecules | 1,106 | 11 | 10 / 113 |
+| read_records | 3,507 | 23 | 4 / 88 |
+
+| pairs | both supported | one supported | none supported | single side supported | single side not supported |
+|---|---:|---:|---:|---:|---:|
+| A single-gene | 3,588 | 15 | 15 | | |
+| A two-gene | 211 | | | | |
+| B single-gene | 3,549 | 54 | | | |
+| B two-gene | 348 | 9 | | | |
+| C single-gene | | | | 20,926 | 204 |
+| C two-gene | | | | 2,123 | 19 |
+| conserved paralog control | A 149 / B 6 | A 1 | A 1 | C 23 | |
+| repeated-context control | 2,036 | 130 | 12 | | |
+
+The repeated-context controls also include 1 conflict pair.
+
+**Gains from batch 2 (round 3 → round 4, candidates, controls excluded):**
+- **Cores** with at least one A or B pair with both intervals supported: 994 → 1,051 (+57; 858 single-gene,
+  193 two-gene). 616 have such a B pair (round 3: 585). Batch 2 was planned to make at most 61 more cores testable
+  as A/B. 2,707 cores have a side with reads (round 3: 2,553).
+- **A/B pairs** with both intervals supported: 7,131 → 7,696 (+565).
+- **Occurrences** with every interval supported: 10,648 → 11,197 (+549).
+
+The reading of round 3 is unchanged: this is read verification of positions already found in assemblies; the
+1,051 cores are cores with read-supported local structures, not insertions shown to be mobile; the 78
+locus_ambiguous and 201 insufficient_coverage intervals are not supported here, not absent.
+
 **Figures (`readcheck_round*/figures/`, SVG):** one panel per interval, showing U / element / D and the genome
 alignments of reads with a call there, colored by call: blue P, red A, orange locus_ambiguous, light grey off_locus,
 purple cigar_fail. Pairs shown:
@@ -922,6 +989,6 @@ purple cigar_fail. Pairs shown:
 
 Not done yet:
 - candidate interpretation layer;
-- no new downloads.
+- download batches 3–5 (not started; see `download_batches/README.md`).
 
 Stopped here for review.
