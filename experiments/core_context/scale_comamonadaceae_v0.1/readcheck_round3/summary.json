@@ -22,38 +22,44 @@
   "runs_expected": 184,
   "runs_checked": 184,
   "intervals_expected": 18387,
-  "intervals_with_result": 18387
+  "intervals_with_result": 18387,
+  "rotated_intervals_expected": 13,
+  "rotated_intervals_with_result": 13,
+  "rotated_runs_expected": 3,
+  "rotated_runs_checked": 3
  },
  "interval_class": {
-  "supported": 18123,
+  "supported": 18136,
   "locus_ambiguous": 78,
   "insufficient_coverage": 171,
-  "conflict": 2,
-  "not_tested": 13
+  "conflict": 2
+ },
+ "rotated_intervals": {
+  "annotated_complete|supported": 10,
+  "circular_not_annotated|supported": 3
  },
  "interval_verdict": {
-  "consistent": 18123,
+  "consistent": 18136,
   "insufficient": 249,
   "mixed": 1,
-  "contradicted": 1,
-  "not_tested:element_interval_crosses_contig_end": 13
+  "contradicted": 1
  },
  "occurrence_class": {
-  "all_intervals_supported": 10645,
-  "no_interval_supported": 197,
+  "all_intervals_supported": 10648,
+  "no_interval_supported": 194,
   "conflict_at_an_interval": 2
  },
  "support_by_count_mode": {
   "assumed_molecules": {
-   "intervals": 1097,
+   "intervals": 1106,
    "min": 10,
-   "median": 112,
+   "median": 113,
    "max": 287,
    "assemblies": 11,
    "intervals_with_A_matched": 13
   },
   "molecules": {
-   "intervals": 13989,
+   "intervals": 13993,
    "min": 0,
    "median": 55,
    "max": 4786,
@@ -71,8 +77,8 @@
  },
  "pair_class": {
   "A|single_gene|candidate": {
-   "both_positions_supported": 3372,
-   "one_position_supported": 29,
+   "both_positions_supported": 3386,
+   "one_position_supported": 15,
    "no_position_supported": 11
   },
   "A|single_gene|conserved_paralog_control": {
@@ -98,8 +104,8 @@
    "both_positions_supported": 3
   },
   "C|single_gene|candidate": {
-   "single_side_supported": 20298,
-   "single_side_not_supported": 194
+   "single_side_supported": 20300,
+   "single_side_not_supported": 192
   },
   "C|single_gene|conserved_paralog_control": {
    "single_side_supported": 17
@@ -127,7 +133,7 @@
   "A|single_gene": {
    "both_positions_supported": 470,
    "no_position_supported": 12,
-   "one_position_supported": 6
+   "one_position_supported": 4
   },
   "A|two_gene": {
    "both_positions_supported": 80
@@ -141,8 +147,8 @@
    "one_position_supported": 5
   },
   "C|single_gene": {
-   "single_side_not_supported": 64,
-   "single_side_supported": 1641
+   "single_side_not_supported": 62,
+   "single_side_supported": 1642
   },
   "C|two_gene": {
    "single_side_not_supported": 6,
@@ -150,6 +156,6 @@
   }
  },
  "runs": {
-  "checked": 184
+  "checked": 187
  }
 }

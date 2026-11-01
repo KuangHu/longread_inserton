@@ -12,13 +12,13 @@
 #   genome     --array=0-<n-1>  one assembly of <round>/samples.txt per task: whole-run reads -> whole assembly, once
 #   check      --array=0-<n-1>  one assembly per task: allele check of the round's positions
 #   summarize  one task (FIGURES=<pair ids>)
-# Usage: sbatch [--array=..] ucd_readcheck.sbatch <round_dir> <stage> [repo_out]
+# Usage: sbatch [--array=..] [--export=ALL,LIST=rotated_samples.txt] ucd_readcheck.sbatch <round_dir> <stage> [repo_out]
 set -euo pipefail
 RD=${1:?round_dir}; STAGE=${2:?stage}; OUT=${3:-}
 CODE=/global/home/users/kh36969/middle_insertion_callout/longread_inserton
 HERE=$CODE/experiments/core_context
 T=${SLURM_ARRAY_TASK_ID:-0}
-S=$(sed -n "$((T + 1))p" $RD/samples.txt)
+S=$(sed -n "$((T + 1))p" $RD/${LIST:-samples.txt})  # LIST=rotated_samples.txt: rotated pseudo-assemblies
 mkdir -p $RD/time
 echo "[$(date -Is)] host=$(hostname) stage=$STAGE task=$T sample=$S commit=$(git -C $CODE rev-parse HEAD) dirty=$(git -C $CODE status --porcelain experiments/core_context | wc -l)"
 source ~/miniconda3/etc/profile.d/conda.sh

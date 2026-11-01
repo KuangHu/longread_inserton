@@ -639,6 +639,10 @@ interval?
   - molecule grouping and length-matched counts apply;
   - verdict: insufficient if fewer than 3, consistent if the other allele is at most 10%, otherwise mixed or
     contradicted.
+- `rotate`: an interval that crosses a contig end is retested on a copy of that contig rotated by half its length
+  (pseudo-assembly `<sample>@rot`, same runs and rules). Only a circular replicon can support it. The result keeps
+  the original interval id with `coordinates=rotated:<topology>`, and completeness requires every rotated interval
+  and run.
 - **Interval class:** supported, conflict, locus_ambiguous, insufficient_coverage, not_tested (interval at a contig
   end) or not_checked (no result).
 - **Completeness:**
@@ -781,7 +785,8 @@ pairs can be tested (round 2 list: 3,288 / 2,979). Two of the 171 assemblies hav
 **Selection:** the 149 round-2 assemblies plus 20 new ones. The genome mapping was run for the 20 new assemblies
 only; the check was run for all 169.
 
-**Completeness (by id):** 169 / 169 assemblies, 184 / 184 runs, 18,387 / 18,387 intervals with results.
+**Completeness (by id):** 169 / 169 assemblies, 184 / 184 runs, 18,387 / 18,387 intervals with results; rotated:
+13 / 13 intervals, 3 / 3 runs.
 - The 16,641 round-2 intervals were reproduced exactly (verdict, every count, class).
 - 18 assemblies had a failed attempt, and every one was rerun to a full result (`readcheck_round3/status.tsv`, job
   ids in `jobs.txt`).
@@ -801,15 +806,37 @@ only; the check was run for all 169.
 
 | interval class | intervals | of which new in round 3 |
 |---|---:|---:|
-| supported | 18,123 | 1,710 |
+| supported | 18,136 | 1,710 |
 | insufficient_coverage | 171 | 12 |
 | locus_ambiguous | 78 | 24 |
 | conflict | 2 | 0 |
-| not_tested (contig end) | 13 | 0 |
+
+**Intervals across a contig start (`rotate` stage):**
+- **Before:** 13 intervals were `not_tested`. In each, the element plus its extensions crosses position 0 of a
+  replicon:
+  - 9 in SAMN04157986, chromosome CP029373;
+  - 1 in SAMN43145737, chromosome 1 CP168540;
+  - 3 in SAMN51281025, plasmid contig JBRAYN010000002, whose header does not say complete.
+- **How they were tested:** each contig was rotated by half its length (`<sample>@rot` pseudo-assemblies,
+  `readcheck_round3/rotated_positions.tsv`).
+  - The rotated alleles equal the original sequence read across the start/end junction.
+  - All runs were mapped to the pseudo-assembly and counted with the same rules.
+  - Both alleles span the junction, so only a circular replicon can give support.
+- **Result:** all 13 are supported, with A = 0 in every case:
+  - SAMN04157986: P_matched 132 each (assumed molecules);
+  - SAMN43145737: 54 molecules;
+  - SAMN51281025: 28–31 molecules.
+
+  The reads therefore also span the junction of the plasmid contig that is not annotated as circular.
+- **Recording:** `positions.tsv.gz` marks these intervals with `coordinates=rotated:<topology>:offset=<n>`.
+  `summary.json` has `rotated_intervals`, and the completeness block counts their results and runs.
+- **Effect on pairs:** 14 A pairs went from one to both positions supported, and 2 C pairs became single side
+  supported. No new core gained a supported A/B pair, because those cores already had one.
+
 
 - **Occurrences:**
-  - 10,645 have every interval supported;
-  - 197 have no interval supported;
+  - 10,648 have every interval supported;
+  - 194 have no interval supported;
   - 2 have a conflict.
 - **Conflict:** still only the repeated-context control `VC_aa36fecdda17` (SAMEA120399594).
 - **New intervals that are not supported:**
@@ -825,11 +852,11 @@ only; the check was run for all 169.
 
 | pairs | both supported | one supported | none supported | single side supported | single side not supported |
 |---|---:|---:|---:|---:|---:|
-| A single-gene | 3,372 | 29 | 11 | | |
+| A single-gene | 3,386 | 15 | 11 | | |
 | A two-gene | 174 | | | | |
 | B single-gene | 3,259 | 43 | | | |
 | B two-gene | 312 | 9 | | | |
-| C single-gene | | | | 20,298 | 194 |
+| C single-gene | | | | 20,300 | 192 |
 | C two-gene | | | | 1,998 | 15 |
 | conserved paralog control | A 140 / B 6 | A 1 | A 1 | C 21 | |
 | repeated-context control | 1,994 | 130 | 12 | | |
@@ -841,7 +868,7 @@ The repeated-context controls also include 1 conflict pair.
 such a B pair (round 2: 459). Batch 1 was planned to make at most 219 more cores testable as A/B; 214 more now have a
 supported A/B pair.
 
-**Reading:** unchanged from round 2. The local assembled structure is supported at 18,123 of 18,387 tested intervals
+**Reading:** unchanged from round 2. The local assembled structure is supported at 18,136 of 18,387 tested intervals
 under the current rules. The check does not separate a mobile element from a conserved paralog or a segmental
 duplicate. Candidate interpretation is a separate layer and has not been done.
 

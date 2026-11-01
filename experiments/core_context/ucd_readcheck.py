@@ -19,6 +19,14 @@ check     One assembly, one round: reads with a genome alignment near a tested p
           the same assembly: P = U + element + D (as assembled), A = U + D (element removed; no empty site needed).
           Counting is s3_readcheck v0.3 unchanged (span + ANCHOR, CIGAR limit, allele score margin, genome-wide anchor
           competition, molecule grouping, length-matched counts, role verdict).
+rotate    Round: intervals not_tested because the element interval crosses a contig end (lo < 0 or hi > length) are
+          tested again on a rotated copy of that contig. The contig is rotated by half its length (other contigs
+          unchanged) and written as pseudo-assembly <sample>@rot; its intervals go to rotated_positions.tsv and the
+          pseudo-assemblies to rotated_samples.txt. genome and check then run on the pseudo-assembly unchanged (same
+          runs, same counting); summarize puts the result back on the original interval id with
+          coordinates=rotated:<topology>. Both alleles span the contig's start/end junction, so reads support either
+          only if the replicon is circular. topology: annotated_complete (FASTA header says complete genome / complete
+          sequence) or circular_not_annotated.
 status    Completeness per assembly of a round: expected intervals vs results on disk, genome mapping status per run,
           and every SLURM attempt (--jobs) with state, node and the error line of failed attempts. One row per
           assembly; a failed attempt is never read as missing support.
@@ -41,6 +49,7 @@ import argparse
 import gzip
 import hashlib
 import json
+import re
 import subprocess
 import sys
 import time
@@ -229,13 +238,22 @@ def cmd_select(a):
     print(json.dumps(summ, indent=1))
 
 
+ROT = '@rot'
+
+
+def real_sample(sample):
+    return sample.split(ROT)[0]
+
+
 def fasta_of(repo_out, sample):
+    if sample.endswith(ROT):
+        return str(PROJ / 'core_context' / 'rotated' / real_sample(sample) / 'assembly.fna')
     return next(r['fasta'] for r in pc.read_tsv(repo_out / 'manifest.tsv') if r['sample'] == sample)
 
 
 def cmd_genome(a):
     """Map every read of every verified run of one assembly to the whole assembly, once."""
-    runs = run_info()[a.sample]
+    runs = run_info()[real_sample(a.sample)]
     if not runs:
         raise reads_ready.InputNotReady({a.sample: 'no_ready_run'})
     fa = fasta_of(a.repo_out, a.sample)
@@ -300,7 +318,11 @@ def count_mode(bu, unit_of):
 
 def cmd_check(a):
     rd = a.round_dir
-    positions = [p for p in pc.read_tsv(rd / 'positions.tsv') if p['sample'] == a.sample]
+    if a.sample.endswith(ROT):
+        positions = [dict(test_id=p['test_id'], sample=a.sample, contig=p['contig'], lo=p['rot_lo'], hi=p['rot_hi'])
+                     for p in pc.read_tsv(rd / 'rotated_positions.tsv') if p['pseudo_sample'] == a.sample]
+    else:
+        positions = [p for p in pc.read_tsv(rd / 'positions.tsv') if p['sample'] == a.sample]
     seqs = rc3.read_fasta(fasta_of(a.repo_out, a.sample))
     tests, fa, skipped = make_tests(positions, seqs)
     od = rd / 'check' / a.sample
@@ -312,7 +334,7 @@ def cmd_check(a):
         near[p['contig']].append((int(p['lo']) - rc3.FLANK, int(p['hi']) + rc3.FLANK))
     gmeta = json.loads((PROJ / 'core_context' / 'readmap' / a.sample / 'genome.json').read_text())
     reads_ready.require([m['run'] for m in gmeta['runs'] if m['status'] == 'mapped'])
-    runs = {r['run']: r for r in run_info()[a.sample]}
+    runs = {r['run']: r for r in run_info()[real_sample(a.sample)]}
     items, used, plot = [], [], defaultdict(list)
     for m in gmeta['runs']:
         if m['status'] != 'mapped':
@@ -394,6 +416,53 @@ def cmd_check(a):
         subprocess.run(['gzip', '-f', str(x)], check=True)
 
 
+def headers(path):
+    with open(str(path)) as h:
+        return {l[1:].split()[0]: l[1:].strip() for l in h if l.startswith('>')}
+
+
+def cmd_rotate(a):
+    """Rotated pseudo-assemblies for the intervals of a round that cross a contig end (see module doc)."""
+    rd = a.round_dir
+    positions = {p['test_id']: p for p in pc.read_tsv(rd / 'positions.tsv')}
+    cross = defaultdict(list)
+    for s in sorted({p['sample'] for p in positions.values()}):
+        f = rd / 'check' / s / 'positions_result.tsv'
+        for r in pc.read_tsv(f) if f.exists() else []:
+            if r['verdict'] == 'not_tested:element_interval_crosses_contig_end':
+                cross[s].append(positions[r['test_id']])
+    rows = []
+    for s, ps in sorted(cross.items()):
+        fa = fasta_of(a.repo_out, s)
+        seqs, head = rc3.read_fasta(fa), headers(fa)
+        off = {}
+        for p in ps:
+            n = len(seqs[p['contig']])
+            off[p['contig']] = n // 2
+            lo, hi = int(p['lo']) - n // 2, int(p['hi']) - n // 2
+            lo, hi = (lo + n, hi + n) if lo < 0 else (lo, hi)
+            if not 0 <= lo < hi <= n:
+                raise SystemExit('%s: interval %s still crosses the end after rotation' % (s, p['test_id']))
+            h = head[p['contig']]
+            rows.append(dict(test_id=p['test_id'], sample=s, pseudo_sample=s + ROT, contig=p['contig'],
+                             contig_len=n, offset=n // 2, lo=p['lo'], hi=p['hi'], rot_lo=lo, rot_hi=hi,
+                             topology='annotated_complete' if re.search(r'complete (genome|sequence)', h)
+                             else 'circular_not_annotated', header=h))
+        od = PROJ / 'core_context' / 'rotated' / s
+        od.mkdir(parents=True, exist_ok=True)
+        tmp = od / 'assembly.fna.tmp'
+        with open(str(tmp), 'w') as h:
+            for c, q in seqs.items():
+                k = off.get(c, 0)
+                h.write('>%s rotated_by=%d\n%s\n' % (c, k, q[k:] + q[:k]))
+        tmp.rename(od / 'assembly.fna')
+    if rows:
+        pc.write_tsv(rd / 'rotated_positions.tsv', rows, list(rows[0]))
+    (rd / 'rotated_samples.txt').write_text(''.join(s + ROT + '\n' for s in sorted(cross)))
+    print(json.dumps(dict(intervals=len(rows), assemblies=sorted(cross),
+                          topology=dict(Counter(r['topology'] for r in rows))), indent=1))
+
+
 def position_class(r):
     v = r['verdict']
     if v == 'consistent':
@@ -455,26 +524,34 @@ def occurrence_class(classes):
     return 'some_intervals_supported' if 'supported' in classes else 'no_interval_supported'
 
 
-def completeness(positions, res, runs_used, ready_runs):
+def completeness(positions, res, runs_used, ready_runs, rotated=()):
     """ID-level completeness of a round: every expected interval id has a result and no result id is unexpected,
-    and every run the sample has ready was checked (by run id, not by row counts)."""
+    and every run the sample has ready was checked (by run id, not by row counts). rotated: rows of
+    rotated_positions.tsv; each needs a result from its pseudo-assembly (coordinates set), and every ready run of the
+    real sample must have been checked on the pseudo-assembly."""
     exp_iv, got_iv = defaultdict(set), defaultdict(set)
     for t, p in positions.items():
         exp_iv[p['sample']].add(t)
     for t, r in res.items():
         got_iv[r['sample']].add(t)
     exp_runs = {(s, r) for s in exp_iv for r in ready_runs.get(s, [])}
+    exp_rot_runs = {(x['pseudo_sample'], r) for x in rotated for r in ready_runs.get(x['sample'], [])}
+    exp_runs_all = exp_runs | exp_rot_runs
+    miss_rot = sorted(x['test_id'] for x in rotated if not res.get(x['test_id'], {}).get('coordinates'))
     got_runs = {(x['sample'], x['run']) for x in runs_used if x['status'] == 'checked'}
     miss_iv = {s: sorted(exp_iv[s] - got_iv[s]) for s in exp_iv if exp_iv[s] - got_iv[s]}
     extra_iv = {s: sorted(got_iv[s] - exp_iv[s]) for s in got_iv if got_iv[s] - exp_iv[s]}
-    miss_runs = sorted('%s:%s' % x for x in exp_runs - got_runs)
-    extra_runs = sorted('%s:%s' % x for x in got_runs - exp_runs)
+    miss_runs = sorted('%s:%s' % x for x in exp_runs_all - got_runs)
+    extra_runs = sorted('%s:%s' % x for x in got_runs - exp_runs_all)
     done = {s for s in exp_iv if s not in miss_iv and not any(x.startswith(s + ':') for x in miss_runs)}
-    return dict(complete=not (miss_iv or extra_iv or miss_runs or extra_runs),
+    return dict(complete=not (miss_iv or extra_iv or miss_runs or extra_runs or miss_rot),
                 assemblies_expected=len(exp_iv), assemblies_complete=len(done),
                 runs_expected=len(exp_runs), runs_checked=len(exp_runs & got_runs),
                 intervals_expected=len(positions), intervals_with_result=sum(len(exp_iv[s] & got_iv[s]) for s in exp_iv),
+                rotated_intervals_expected=len(rotated), rotated_intervals_with_result=len(rotated) - len(miss_rot),
+                rotated_runs_expected=len(exp_rot_runs), rotated_runs_checked=len(exp_rot_runs & got_runs),
                 missing_intervals_by_assembly={s: len(v) for s, v in miss_iv.items()},
+                missing_rotated_interval_ids=miss_rot,
                 missing_interval_ids=miss_iv, missing_runs=miss_runs,
                 missing_unexpected_interval_ids=extra_iv, missing_unexpected_runs=extra_runs)
 
@@ -512,7 +589,17 @@ def cmd_summarize(a):
             res[r['test_id']] = r
         runs_used += [dict(x, sample=s) for x in json.loads((od / 'run.json').read_text())['runs']]
         plot.update(json.loads((od / 'plot.json').read_text()))
-    comp = completeness(positions, res, runs_used, {s: [r['run'] for r in v] for s, v in run_info().items()})
+    rot = pc.read_tsv(rd / 'rotated_positions.tsv') if (rd / 'rotated_positions.tsv').exists() else []
+    for s in sorted({x['pseudo_sample'] for x in rot}):
+        f = rd / 'check' / s / 'positions_result.tsv'
+        got = {r['test_id']: r for r in pc.read_tsv(f)} if f.exists() else {}
+        for x in rot:
+            if x['pseudo_sample'] == s and x['test_id'] in got:
+                res[x['test_id']] = dict(got[x['test_id']], sample=x['sample'],
+                                         coordinates='rotated:%s:offset=%s' % (x['topology'], x['offset']))
+        if f.exists():
+            runs_used += [dict(r, sample=s) for r in json.loads((rd / 'check' / s / 'run.json').read_text())['runs']]
+    comp = completeness(positions, res, runs_used, {s: [r['run'] for r in v] for s, v in run_info().items()}, rot)
     if not comp['complete']:
         if not a.allow_incomplete:
             sys.exit('incomplete round, no formal summary: %s (run status; --allow-incomplete writes a progress '
@@ -524,7 +611,7 @@ def cmd_summarize(a):
     out_pos = []
     for t, p in sorted(positions.items(), key=lambda x: (x[1]['sample'], x[1]['contig'], int(x[1]['lo']))):
         r = res.get(t, dict(verdict='not_checked'))
-        out_pos.append(dict(p, **{k: r.get(k, '') for k in RESULT_COLS[2:]},
+        out_pos.append(dict(p, **{k: r.get(k, '') for k in RESULT_COLS[2:]}, coordinates=r.get('coordinates', ''),
                             position_class=position_class(r) if r['verdict'] != 'not_checked' else 'not_checked'))
     pcls = {p['test_id']: p['position_class'] for p in out_pos}
     pos_row = {p['test_id']: p for p in out_pos}
@@ -583,6 +670,8 @@ def cmd_summarize(a):
                                int(p['n_occurrences']) > 1 for p in out_pos)),
                 complete=True, completeness={k: v for k, v in comp.items() if not k.startswith('missing')},
                 interval_class=dict(Counter(p['position_class'] for p in out_pos)),
+                rotated_intervals=dict(Counter('%s|%s' % (p['coordinates'].split(':')[1], p['position_class'])
+                                               for p in out_pos if p['coordinates'])),
                 interval_verdict=dict(Counter(p['verdict'] for p in out_pos)),
                 occurrence_class=dict(Counter(o['occurrence_class'] for o in out_occ)),
                 support_by_count_mode={m: dict(support_stats([p for p in tested if p['count_mode'] == m]),
@@ -667,7 +756,7 @@ def cmd_status(a):
 
 def main():
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    p.add_argument('mode', choices=['pairs', 'select', 'genome', 'check', 'status', 'summarize'])
+    p.add_argument('mode', choices=['pairs', 'select', 'genome', 'check', 'rotate', 'status', 'summarize'])
     p.add_argument('--work', type=Path, default=PROJ / 'core_context' / 'scale_comamonadaceae_v0.1')
     p.add_argument('--repo-out', type=Path, default=Path(__file__).resolve().parent / 'scale_comamonadaceae_v0.1')
     p.add_argument('--batches', default='1,2,3')
@@ -682,7 +771,7 @@ def main():
                    'only progress_snapshot.json (complete=false, checked / expected counts, classes over checked '
                    'intervals); the formal summary needs every expected interval and run id')
     a = p.parse_args()
-    dict(pairs=cmd_pairs, select=cmd_select, genome=cmd_genome, check=cmd_check, status=cmd_status,
+    dict(pairs=cmd_pairs, select=cmd_select, genome=cmd_genome, check=cmd_check, rotate=cmd_rotate, status=cmd_status,
          summarize=cmd_summarize)[a.mode](a)
 
 
