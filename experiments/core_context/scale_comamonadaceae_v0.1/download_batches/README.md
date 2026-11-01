@@ -59,3 +59,9 @@ Compute only reads runs in the ready manifest (see the repository README).
   - The rest is other files.
 - **`/global/scratch`:** about 2,078 TB free. `checkquota` shows no per-user scratch quota.
 - **All five batches:** add 42.7 GB.
+
+## Progress
+
+| batch | downloaded (lrc-xfer) | verified | storage after (reads dir / verified) | read-check round |
+|---|---|---|---|---|
+| 1 | 2026-10-31 | 20 / 20 | 235.9 GB / 194.5 GB | round 3: complete by id; 214 more cores with a supported A/B pair (994 in all) |

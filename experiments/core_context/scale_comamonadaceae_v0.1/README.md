@@ -613,7 +613,7 @@ reads (usable run, `verify.json` verified, MD5 equal to the archive). Each row f
 - **`validation_controls_b1-2-3.tsv.gz`:** same-assembly pairs with `context_repeated_both_sides` in assemblies with
   reads (1,499 single-gene, 588 two-gene). These are not U-core-D pairs and are tested on the coding span.
 
-## Long-read check (`readcheck_round1/`, `readcheck_round2/`)
+## Long-read check (`readcheck_round1/`, `readcheck_round2/`, `readcheck_round3/`)
 
 **Question:** do the assembly's own long reads support the local U-core-D structure it shows at each tested
 interval?
@@ -770,6 +770,80 @@ counts of independent families.
   does not separate a mobile element from a conserved paralog or a segmental duplicate.
 - Interpreting the candidates (conserved paralog position, large duplication, different host context, unexplained)
   is a separate layer and has not been done.
+
+### Round 3: cumulative, 169 assemblies, 184 runs (download batch 1 added)
+
+**Reads added:** download batch 1 (`download_batches/`, 20 runs, 9.4 GB, prepared on lrc-xfer; log
+`download_batches/batch1_prepare.log`). All 20 runs verified. `ucd_readcheck.py pairs` was rerun with the new reads,
+so `validation_pairs_b1-2-3.*` now list the tiers as of round 3: 171 assemblies have reads, and 3,728 A / 3,629 B
+pairs can be tested (round 2 list: 3,288 / 2,979). Two of the 171 assemblies have no listed pair.
+
+**Selection:** the 149 round-2 assemblies plus 20 new ones. The genome mapping was run for the 20 new assemblies
+only; the check was run for all 169.
+
+**Completeness (by id):** 169 / 169 assemblies, 184 / 184 runs, 18,387 / 18,387 intervals with results.
+- The 16,641 round-2 intervals were reproduced exactly (verdict, every count, class).
+- 18 assemblies had a failed attempt, and every one was rerun to a full result (`readcheck_round3/status.tsv`, job
+  ids in `jobs.txt`).
+- All failures were shared-storage errors on 7 nodes: errno 108 `Cannot send after transport endpoint shutdown`
+  while reading SRR12046205 / SRR12046249, plus one errno 5 write error.
+  - Every task on n0186, n0191, n0194, n0318, n0321, n0328 and n0357 failed.
+  - No task on any other node failed, including the 146 that read the same two files in the same two minutes.
+  - These failures point to the nodes' connection to the storage targets holding those files, not to the files or
+    the whole filesystem. This was not confirmed with the cluster admins.
+- The nodes were excluded for the reruns. The exclusion is temporary.
+
+| unit | count |
+|---|---:|
+| pairs | 32,020 |
+| occurrences | 10,844 (2,527 with more than one interval, max 26) |
+| tested intervals | 18,387 (299 carry more than one occurrence id) |
+
+| interval class | intervals | of which new in round 3 |
+|---|---:|---:|
+| supported | 18,123 | 1,710 |
+| insufficient_coverage | 171 | 12 |
+| locus_ambiguous | 78 | 24 |
+| conflict | 2 | 0 |
+| not_tested (contig end) | 13 | 0 |
+
+- **Occurrences:**
+  - 10,645 have every interval supported;
+  - 197 have no interval supported;
+  - 2 have a conflict.
+- **Conflict:** still only the repeated-context control `VC_aa36fecdda17` (SAMEA120399594).
+- **New intervals that are not supported:**
+  - the 12 insufficient intervals are all in SAMN51281038, whose only run is 0.06 GB;
+  - the 24 `locus_ambiguous` intervals are 12 in SAMD00659498 and 12 in SAMN51281038;
+  - every new interval is counted in molecules.
+
+| count mode, supported intervals | intervals | assemblies | P_matched min / median |
+|---|---:|---:|---:|
+| molecules | 13,738 | 137 | 3 / 57 |
+| assumed_molecules | 1,097 | 11 | 10 / 112 |
+| read_records | 3,288 | 19 | 4 / 89 |
+
+| pairs | both supported | one supported | none supported | single side supported | single side not supported |
+|---|---:|---:|---:|---:|---:|
+| A single-gene | 3,372 | 29 | 11 | | |
+| A two-gene | 174 | | | | |
+| B single-gene | 3,259 | 43 | | | |
+| B two-gene | 312 | 9 | | | |
+| C single-gene | | | | 20,298 | 194 |
+| C two-gene | | | | 1,998 | 15 |
+| conserved paralog control | A 140 / B 6 | A 1 | A 1 | C 21 | |
+| repeated-context control | 1,994 | 130 | 12 | | |
+
+The repeated-context controls also include 1 conflict pair.
+
+**Distinct cores (candidates, controls excluded):** 2,553 cores have a side with reads (round 2: 2,184). 994 of them
+(812 single-gene, 182 two-gene) have at least one A or B pair with both intervals supported (round 2: 780). 585 have
+such a B pair (round 2: 459). Batch 1 was planned to make at most 219 more cores testable as A/B; 214 more now have a
+supported A/B pair.
+
+**Reading:** unchanged from round 2. The local assembled structure is supported at 18,123 of 18,387 tested intervals
+under the current rules. The check does not separate a mobile element from a conserved paralog or a segmental
+duplicate. Candidate interpretation is a separate layer and has not been done.
 
 **Figures (`readcheck_round*/figures/`, SVG):** one panel per interval, showing U / element / D and the genome
 alignments of reads with a call there, colored by call: blue P, red A, orange locus_ambiguous, light grey off_locus,

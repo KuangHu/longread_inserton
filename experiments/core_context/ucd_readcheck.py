@@ -499,6 +499,7 @@ def progress_snapshot(comp, positions, res):
 
 def cmd_summarize(a):
     rd = a.round_dir
+    a.out.mkdir(parents=True, exist_ok=True)
     pairs = pc.read_tsv(rd / 'pairs.tsv')
     positions = {p['test_id']: p for p in pc.read_tsv(rd / 'positions.tsv')}
     links = pc.read_tsv(rd / 'interval_map.tsv')
