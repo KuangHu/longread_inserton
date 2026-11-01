@@ -24,9 +24,12 @@ rotate    Round: intervals not_tested because the element interval crosses a con
           unchanged) and written as pseudo-assembly <sample>@rot; its intervals go to rotated_positions.tsv and the
           pseudo-assemblies to rotated_samples.txt. genome and check then run on the pseudo-assembly unchanged (same
           runs, same counting); summarize puts the result back on the original interval id with
-          coordinates=rotated:<topology>. Both alleles span the contig's start/end junction, so reads support either
-          only if the replicon is circular. topology: annotated_complete (FASTA header says complete genome / complete
-          sequence) or circular_not_annotated.
+          coordinates=rotated:<header>:offset=<n>. The tested interval contains the contig's start/end junction: P
+          (as assembled) contains it, while A = U + D removes the interval and the junction with it. A supported
+          interval therefore means reads span the junction with the assembled structure there. That is compatible
+          with a circular assembly; it does not establish the topology of the whole replicon. header records only the
+          FASTA header: complete_in_header (complete genome / complete sequence) or not_complete_in_header; it is
+          not a read-based result.
 status    Completeness per assembly of a round: expected intervals vs results on disk, genome mapping status per run,
           and every SLURM attempt (--jobs) with state, node and the error line of failed attempts. One row per
           assembly; a failed attempt is never read as missing support.
@@ -446,8 +449,8 @@ def cmd_rotate(a):
             h = head[p['contig']]
             rows.append(dict(test_id=p['test_id'], sample=s, pseudo_sample=s + ROT, contig=p['contig'],
                              contig_len=n, offset=n // 2, lo=p['lo'], hi=p['hi'], rot_lo=lo, rot_hi=hi,
-                             topology='annotated_complete' if re.search(r'complete (genome|sequence)', h)
-                             else 'circular_not_annotated', header=h))
+                             header_annotation='complete_in_header' if re.search(r'complete (genome|sequence)', h)
+                             else 'not_complete_in_header', header=h))
         od = PROJ / 'core_context' / 'rotated' / s
         od.mkdir(parents=True, exist_ok=True)
         tmp = od / 'assembly.fna.tmp'
@@ -460,7 +463,7 @@ def cmd_rotate(a):
         pc.write_tsv(rd / 'rotated_positions.tsv', rows, list(rows[0]))
     (rd / 'rotated_samples.txt').write_text(''.join(s + ROT + '\n' for s in sorted(cross)))
     print(json.dumps(dict(intervals=len(rows), assemblies=sorted(cross),
-                          topology=dict(Counter(r['topology'] for r in rows))), indent=1))
+                          header_annotation=dict(Counter(r['header_annotation'] for r in rows))), indent=1))
 
 
 def position_class(r):
@@ -596,7 +599,7 @@ def cmd_summarize(a):
         for x in rot:
             if x['pseudo_sample'] == s and x['test_id'] in got:
                 res[x['test_id']] = dict(got[x['test_id']], sample=x['sample'],
-                                         coordinates='rotated:%s:offset=%s' % (x['topology'], x['offset']))
+                                         coordinates='rotated:%s:offset=%s' % (x['header_annotation'], x['offset']))
         if f.exists():
             runs_used += [dict(r, sample=s) for r in json.loads((rd / 'check' / s / 'run.json').read_text())['runs']]
     comp = completeness(positions, res, runs_used, {s: [r['run'] for r in v] for s, v in run_info().items()}, rot)

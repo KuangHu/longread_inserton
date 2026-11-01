@@ -62,6 +62,12 @@ Compute only reads runs in the ready manifest (see the repository README).
 
 ## Progress
 
-| batch | downloaded (lrc-xfer) | verified | storage after (reads dir / verified) | read-check round |
-|---|---|---|---|---|
-| 1 | 2026-10-31 | 20 / 20 | 235.9 GB / 194.5 GB | round 3: complete by id; 214 more cores with a supported A/B pair (994 in all) |
+Each batch reports three gains over the previous round. A batch can add evidence for cores that are already
+counted, so a small core gain does not mean a small gain overall.
+- **Cores:** distinct candidate cores with an A/B pair supported on both sides.
+- **Pairs:** A/B candidate pairs with both positions supported.
+- **Occurrences:** occurrences with every interval supported.
+
+| batch | downloaded (lrc-xfer) | verified | storage after (reads dir / verified) | read-check round | cores | pairs | occurrences |
+|---|---|---|---|---|---|---|---|
+| 1 | 2026-10-31 | 20 / 20 | 235.9 GB / 194.5 GB | round 3, complete by id | 780 → 994 (+214) | 6,071 → 7,131 (+1,060) | 9,629 → 10,648 (+1,019) |

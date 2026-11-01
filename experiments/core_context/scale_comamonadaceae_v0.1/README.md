@@ -640,9 +640,11 @@ interval?
   - verdict: insufficient if fewer than 3, consistent if the other allele is at most 10%, otherwise mixed or
     contradicted.
 - `rotate`: an interval that crosses a contig end is retested on a copy of that contig rotated by half its length
-  (pseudo-assembly `<sample>@rot`, same runs and rules). Only a circular replicon can support it. The result keeps
-  the original interval id with `coordinates=rotated:<topology>`, and completeness requires every rotated interval
-  and run.
+  (pseudo-assembly `<sample>@rot`, same runs and rules). The interval contains the contig's start/end junction. P
+  (as assembled) contains it; A = U + D removes it together with the interval. The result keeps the original
+  interval id with `coordinates=rotated:<header>:offset=<n>`, and completeness requires every rotated interval and
+  run. `<header>` is only what the FASTA header says (`complete_in_header` / `not_complete_in_header`), not a
+  read-based topology.
 - **Interval class:** supported, conflict, locus_ambiguous, insufficient_coverage, not_tested (interval at a contig
   end) or not_checked (no result).
 - **Completeness:**
@@ -785,8 +787,9 @@ pairs can be tested (round 2 list: 3,288 / 2,979). Two of the 171 assemblies hav
 **Selection:** the 149 round-2 assemblies plus 20 new ones. The genome mapping was run for the 20 new assemblies
 only; the check was run for all 169.
 
-**Completeness (by id):** 169 / 169 assemblies, 184 / 184 runs, 18,387 / 18,387 intervals with results; rotated:
-13 / 13 intervals, 3 / 3 runs.
+**Completeness (by id):** 169 / 169 assemblies, 184 / 184 runs, 18,387 / 18,387 intervals with results.
+- The 13 rotated results replace those intervals' `not_tested` and are counted within the 18,387, not in addition.
+- The 3 rotated runs are the same read sets mapped again to the rotated copies, not new data.
 - The 16,641 round-2 intervals were reproduced exactly (verdict, every count, class).
 - 18 assemblies had a failed attempt, and every one was rerun to a full result (`readcheck_round3/status.tsv`, job
   ids in `jobs.txt`).
@@ -819,16 +822,20 @@ only; the check was run for all 169.
   - 3 in SAMN51281025, plasmid contig JBRAYN010000002, whose header does not say complete.
 - **How they were tested:** each contig was rotated by half its length (`<sample>@rot` pseudo-assemblies,
   `readcheck_round3/rotated_positions.tsv`).
-  - The rotated alleles equal the original sequence read across the start/end junction.
-  - All runs were mapped to the pseudo-assembly and counted with the same rules.
-  - Both alleles span the junction, so only a circular replicon can give support.
+  - The rotated P allele and its flanks equal the original sequence read across the start/end junction.
+  - The existing runs were mapped again to the pseudo-assembly and counted with the same rules.
+  - Only P contains the junction: the synthetic A = U + D removes the interval and the junction with it, so the
+    test does not check the junction on both alleles.
 - **Result:** all 13 are supported, with A = 0 in every case:
   - SAMN04157986: P_matched 132 each (assumed molecules);
   - SAMN43145737: 54 molecules;
   - SAMN51281025: 28–31 molecules.
 
-  The reads therefore also span the junction of the plasmid contig that is not annotated as circular.
-- **Recording:** `positions.tsv.gz` marks these intervals with `coordinates=rotated:<topology>:offset=<n>`.
+  For all three contigs, including the plasmid contig whose header does not say complete, reads support the
+  start/end junction and the candidate structure across it. This is compatible with a circular assembly, but the
+  topology of the whole replicon has not been established independently.
+- **Recording:** `positions.tsv.gz` marks these intervals with `coordinates=rotated:<header>:offset=<n>`, where
+  `<header>` is `complete_in_header` (10) or `not_complete_in_header` (3) from the FASTA header only.
   `summary.json` has `rotated_intervals`, and the completeness block counts their results and runs.
 - **Effect on pairs:** 14 A pairs went from one to both positions supported, and 2 C pairs became single side
   supported. No new core gained a supported A/B pair, because those cores already had one.
@@ -868,9 +875,36 @@ The repeated-context controls also include 1 conflict pair.
 such a B pair (round 2: 459). Batch 1 was planned to make at most 219 more cores testable as A/B; 214 more now have a
 supported A/B pair.
 
-**Reading:** unchanged from round 2. The local assembled structure is supported at 18,136 of 18,387 tested intervals
-under the current rules. The check does not separate a mobile element from a conserved paralog or a segmental
-duplicate. Candidate interpretation is a separate layer and has not been done.
+**Reading:**
+- **Status of the intervals:** the local assembled structure is supported at 18,136 of 18,387 tested intervals under
+  the current rules. The other 251 are not supported here (78 locus_ambiguous, 171 insufficient_coverage,
+  2 conflict); unsupported here does not mean the structure is absent.
+- **What was checked:** this is read verification of positions already found in assemblies (same or homologous core,
+  different U / D context; no empty site in another assembly needed). It does not search the reads for new
+  positions of a core.
+- **What the 994 cores are:** cores with read-supported local structures, not 994 insertions shown to be mobile.
+  Whether a structure is a mobile element, a repeat / paralog or segmental duplicate, or has a new function needs
+  another kind of evidence. Candidate interpretation is a separate layer and has not been done.
+
+**Conflict case `VC_aa36fecdda17` (both conflicts of rounds 2 and 3; repeated-context control, not a candidate):**
+- **The element:** in SAMEA120399594 (Variovorax sp. R-92947, GCF_977011995.1, one ONT run ERR15741494), the tested
+  interval is a 2,383 bp IS21 unit (IS21 family transposase + IstB helper ATPase).
+  - The assembly holds 31 identical full-length copies of this unit (2,383 / 2,383 identity, minimap2 asm20 of the
+    unit against the assembly).
+  - One of those copies is a 2,563 bp contig of its own, NZ_CDRNCW010000004.1.
+- **Side a** (NZ_CDRNCW010000001.1:3426335-3428718, P_e0201d6b63ef): 92 P / 34 A molecules, `mixed`.
+  - 268 molecules were locus_ambiguous and 52 off_locus.
+  - The two single-gene intervals inside the same unit (P_572b5be0a35d, P_22e7a0cd0c97) are supported. Their A
+    alleles remove one gene only, so molecules without the whole unit match neither allele.
+- **Side b** (NZ_CDRNCW010000002.1:596056-598439, P_a8a1e13b7601): 0 P / 21 A molecules, `contradicted`.
+  - 306 molecules were locus_ambiguous and 51 off_locus.
+  - The molecules anchored at this position join U directly to D, and none carries the unit there.
+- **Possible explanations** (these data cannot separate them):
+  - insertion polymorphism of an active IS21 in the sequenced culture, which would fit side a;
+  - the assembler placing an IS copy where most molecules have none, which would fit side b, given 31 identical
+    copies and a contig holding a single copy.
+- **Not done:** no threshold was changed, and the case is reported as a conflict.
+- **Figure:** `readcheck_round3/figures/VC_aa36fecdda17.svg`.
 
 **Figures (`readcheck_round*/figures/`, SVG):** one panel per interval, showing U / element / D and the genome
 alignments of reads with a call there, colored by call: blue P, red A, orange locus_ambiguous, light grey off_locus,

@@ -35,8 +35,8 @@
   "conflict": 2
  },
  "rotated_intervals": {
-  "annotated_complete|supported": 10,
-  "circular_not_annotated|supported": 3
+  "complete_in_header|supported": 10,
+  "not_complete_in_header|supported": 3
  },
  "interval_verdict": {
   "consistent": 18136,

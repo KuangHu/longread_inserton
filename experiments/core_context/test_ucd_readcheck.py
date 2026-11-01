@@ -118,7 +118,7 @@ class RotatedCompletenessTests(unittest.TestCase):
         self.assertFalse(c['complete'])
         self.assertEqual(c['missing_rotated_interval_ids'], ['T2'])
         self.assertEqual(c['missing_runs'], ['S1@rot:R1'])
-        res['T2'] = dict(sample='S1', verdict='consistent', coordinates='rotated:annotated_complete:offset=500')
+        res['T2'] = dict(sample='S1', verdict='consistent', coordinates='rotated:complete_in_header:offset=500')
         c = u.completeness(positions, res, runs + [dict(sample='S1@rot', run='R1', status='checked')], {'S1': ['R1']}, rot)
         self.assertTrue(c['complete'])
         self.assertEqual((c['rotated_runs_checked'], c['rotated_intervals_with_result']), (1, 1))
@@ -156,7 +156,7 @@ class RotateTests(unittest.TestCase):
                 rot = u.rc3.read_fasta(real(None, 'S1' + u.ROT))
             rows = {r['test_id']: r for r in u.pc.read_tsv(rd / 'rotated_positions.tsv')}
             self.assertEqual(sorted(rows), ['T1', 'T2'])
-            self.assertEqual(rows['T1']['topology'], 'annotated_complete')
+            self.assertEqual(rows['T1']['header_annotation'], 'complete_in_header')
             self.assertEqual(rot['c2'], 'ACGTACGT')
             wrap = {'T1': q[-40:] + q[:60], 'T2': q[950:] + q[:30]}
             for k, r in rows.items():
