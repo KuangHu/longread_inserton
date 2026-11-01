@@ -66,7 +66,7 @@ def index(reads=READS):
                          bytes=j.get("bytes", ""), md5=j.get("md5", ""), sha256=j.get("sha256", ""), status=j["status"],
                          verified_at=j.get("content_checked") or j.get("download_started", ""), verify_json=str(v)))
     out = Path(reads) / MANIFEST
-    tmp = out.with_name(out.name + ".tmp")
+    tmp = out.with_name("%s.%d.tmp" % (out.name, os.getpid()))  # own tmp per process: batches may run in parallel
     with open(str(tmp), "w") as h:
         w = csv.DictWriter(h, COLS, delimiter="\t", lineterminator="\n")
         w.writeheader()

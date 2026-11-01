@@ -51,6 +51,12 @@ Compute only reads runs in the ready manifest (see the repository README).
    - Until then, use `--allow-incomplete` for a progress snapshot.
 5. **Next batch:** go on to the next batch only after checking storage again.
 
+**Several batches at once** (from batch 3 on):
+- **Why it's safe:** the batches share no run, and each run downloads into its own directory.
+- **The manifest:** each prepare process rewrites it through its own temporary file. The last process to finish
+  lists every verified run, and a final `index` makes sure of it.
+- **Storage:** each process checks only its own batch. Check the sum of the batches with the dry runs first.
+
 ## Storage at planning time
 
 - **Reads directory** `/global/scratch/users/kh36969/longread_callout/data/reads`: 226.5 GB in all.
