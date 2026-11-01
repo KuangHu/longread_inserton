@@ -964,14 +964,23 @@ The repeated-context controls also include 1 conflict pair.
 
 **Gains from batch 2 (round 3 → round 4, candidates, controls excluded):**
 - **Cores** with at least one A or B pair with both intervals supported: 994 → 1,051 (+57; 858 single-gene,
-  193 two-gene). 616 have such a B pair (round 3: 585). Batch 2 was planned to make at most 61 more cores testable
-  as A/B. 2,707 cores have a side with reads (round 3: 2,553).
+  193 two-gene). 616 have such a B pair (round 3: 585). 2,707 cores have a side with reads (round 3: 2,553).
+- **Where the +57 comes from** (traced core by core, not inferred from the totals):
+  - 61 cores first became testable as A/B in round 4, which matches the plan's upper bound of 61. 56 of them have a
+    supported A/B pair.
+  - The other 5 (PF_6722c700cd1b, PF_8e13e6bb6b7a, PF_8e78cae79a8b, PF_a5b7c5bdd9f7, PF_b042ff788fe1) each have a
+    single A/B pair. In every case, the interval that is not supported is in SAMEA115676858 and is
+    insufficient_coverage. These cores are not supported here, not shown to be absent.
+  - 1 core that was testable but not supported in round 3 now is (PF_4d485e55cef8). Its round-3 B pairs had their
+    other side in SAMN51281038, whose run is 0.06 GB. Round 4 adds B pairs with SAMN51281039.
+  - No core supported in round 3 lost support. So +57 = 56 + 1, and the gap to 61 is not a count of 4 lost cores.
 - **A/B pairs** with both intervals supported: 7,131 → 7,696 (+565).
 - **Occurrences** with every interval supported: 10,648 → 11,197 (+549).
 
 The reading of round 3 is unchanged: this is read verification of positions already found in assemblies; the
 1,051 cores are cores with read-supported local structures, not insertions shown to be mobile; the 78
-locus_ambiguous and 201 insufficient_coverage intervals are not supported here, not absent.
+locus_ambiguous and 201 insufficient_coverage intervals are not supported here, not absent. The 2 conflicts are
+still the IS21 control case `VC_aa36fecdda17`, reported as a case of its own; no threshold was changed.
 
 **Figures (`readcheck_round*/figures/`, SVG):** one panel per interval, showing U / element / D and the genome
 alignments of reads with a call there, colored by call: blue P, red A, orange locus_ambiguous, light grey off_locus,
@@ -988,6 +997,9 @@ purple cigar_fail. Pairs shown:
 - `runs.tsv`, `status.tsv`, `selection.json`, `samples.txt`, `summary.json`.
 
 Not done yet:
+- **Adding sites from long reads (the original aim) has not started.** Rounds 1–4 only take positions already in
+  assemblies and check them with reads. The next stage is: known core → search the reads for homologous cores →
+  extract the context on both sides → decide whether a position appears that is not yet listed;
 - candidate interpretation layer;
 - download batches 3–5 (not started; see `download_batches/README.md`).
 
