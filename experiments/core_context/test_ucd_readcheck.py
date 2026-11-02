@@ -58,7 +58,7 @@ class AlignEachIntervalTests(unittest.TestCase):
         seq = ''.join(rnd.choice('ACGT') for _ in range(20000))
         ps = [dict(sample='s', test_id='P_a', contig='c', lo='6000', hi='7000'),
               dict(sample='s', test_id='P_b', contig='c', lo='6002', hi='7000')]  # near-identical neighbour
-        reads = {'r%d' % i: seq[x:x + 6000] + '\n' for i, x in enumerate(range(2000, 4000, 100))}
+        reads = {'r%d' % i: [seq[x:x + 6000] + '\n'] for i, x in enumerate(range(2000, 4000, 100))}
         d = Path(tempfile.mkdtemp())
         try:
             out = {}
@@ -69,6 +69,28 @@ class AlignEachIntervalTests(unittest.TestCase):
                 out[name] = sorted(l for l in (d / name).read_text().splitlines() if l.split('\t')[5].startswith('P_a|'))
             self.assertTrue(out['alone'])
             self.assertEqual(out['alone'], out['both'])
+        finally:
+            shutil.rmtree(str(d))
+
+
+    def test_records_sharing_a_name_are_all_aligned(self):
+        # counterexample to v0.2 before the fix: two CLR subreads of one SRA spot (same name); only the last one was
+        # aligned, so a spanning subread followed by a short one was lost
+        import random
+        import shutil
+        import tempfile
+        from pathlib import Path
+        if not shutil.which('minimap2'):
+            self.skipTest('minimap2 not on PATH')
+        rnd = random.Random(1)
+        seq = ''.join(rnd.choice('ACGT') for _ in range(20000))
+        tests, fa, _ = u.make_tests([dict(sample='s', test_id='P_a', contig='c', lo='6000', hi='7000')], {'c': seq})
+        reads = {'spot1': [seq[3000:10000] + '\n', seq[5000:6500] + '\n']}
+        d = Path(tempfile.mkdtemp())
+        try:
+            u.align_each_interval(tests, fa, {'P_a': {'spot1'}}, ['spot1'], reads, 'map-hifi', d / 'tmp', d / 'out', 1)
+            qlens = {int(l.split('\t')[1]) for l in (d / 'out').read_text().splitlines()}
+            self.assertEqual(qlens, {7000, 1500})
         finally:
             shutil.rmtree(str(d))
 

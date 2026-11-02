@@ -374,7 +374,8 @@ def cmd_check(a):
             for line in h:
                 if line.split('\t', 1)[0] in names:
                     o.write(line)
-        recs, seq_of, keep = [], {}, False  # reads in file order; FASTA is enough for minimap2
+        recs, seq_of, keep = [], {}, False  # reads in file order; FASTA is enough for minimap2. Records sharing a
+        # name (CLR subreads of one SRA spot) are all kept: v0.1 aligned every record, the caller merges them by name
         with gzip.open(r['local_file'], 'rt') as h:
             for i, line in enumerate(h):
                 if i % 4 == 0:
@@ -383,10 +384,10 @@ def cmd_check(a):
                     if keep:
                         recs.append((name, rc3.record_ids(line[1:].strip(), r['grouping'])))
                 elif i % 4 == 1 and keep:
-                    seq_of[name] = line
+                    seq_of.setdefault(name, []).append(line)
         mol = rc3.molecules(recs)
         apaf = od / ('alleles_%s.paf' % r['run'])
-        align_each_interval(tests, fa, reads_of, [n for n, _ in recs], seq_of, rc3.PRESET[r['read_type']], od / 'tmp',
+        align_each_interval(tests, fa, reads_of, list(dict.fromkeys(n for n, _ in recs)), seq_of, rc3.PRESET[r['read_type']], od / 'tmp',
                             apaf, a.threads)
         items.append((apaf, sub_g, mol, r['run']))
         used.append(dict(run=r['run'], status='checked', read_type=r['read_type'], grouping=r['grouping'],
@@ -434,7 +435,8 @@ def cmd_check(a):
 
 def align_each_interval(tests, fa, reads_of, order, seq_of, preset, tmp, out, threads):
     """minimap2 (s3 MM arguments, one thread per job) of each interval's near reads against that interval's two
-    alleles only; the PAF of every interval is appended to out in test order."""
+    alleles only; the PAF of every interval is appended to out in test order. seq_of: name -> every record's sequence
+    line under that name, in file order."""
     tmp.mkdir(exist_ok=True)
     alleles = dict(fa)
     rank = {n: i for i, n in enumerate(order)}
@@ -446,7 +448,7 @@ def align_each_interval(tests, fa, reads_of, order, seq_of, preset, tmp, out, th
             return ''
         ref, qry = tmp / (tid + '.alleles.fa'), tmp / (tid + '.reads.fa')
         ref.write_text(''.join('>%s|C|%s\n%s\n' % (tid, al, alleles['%s|C|%s' % (tid, al)]) for al in 'PA'))
-        qry.write_text(''.join('>%s\n%s' % (n, seq_of[n]) for n in reads))
+        qry.write_text(''.join('>%s\n%s' % (n, x) for n in reads for x in seq_of[n]))
         res = subprocess.run(['minimap2', '-x', preset] + rc3.MM + ['-t', '1', str(ref), str(qry)],
                              stdout=subprocess.PIPE, stderr=subprocess.DEVNULL, check=True, universal_newlines=True)
         ref.unlink()

@@ -195,7 +195,7 @@ def run_sample(s, cands, work, threads):
                         run_of[name] = r['run']
                         order[r['run']].append(name)
                 elif i % 4 == 1 and keep:
-                    seq_of[name] = line
+                    seq_of.setdefault(name, []).append(line)
     mol = rc3.molecules(recs)
     tests, fa, info = [], [], {}
     for c in cands:
@@ -204,7 +204,7 @@ def run_sample(s, cands, work, threads):
             info[cid] = dict(status='no_placed_record_in_current_search')
             continue
         o = pick[cid]
-        core = seq_of[o['read']].strip()[o['qs'] - o['left_extra']:o['qe'] + o['right_extra']]
+        core = seq_of[o['read']][0].strip()[o['qs'] - o['left_extra']:o['qe'] + o['right_extra']]
         core = core if o['left_strand'] == '+' else rc3.rc(core)
         t, alleles = test_of(cid, c['key'][2], c['key'][3], c['key'][4], core, seq[c['key'][2]])
         tests.append(t)
@@ -246,7 +246,7 @@ def run_sample(s, cands, work, threads):
                  for q in near[cid]}
         info[cid].update({'v02rule_' + k: v for k, v in rs.empty_site_counts(
             {o['read'] for o in cores[cid]}, {q: x for q, x in calls.items() if x}, mol).items()})
-    return info, near, per_rec, mol, cores, audit, run_of, geo, {n: len(x.strip()) for n, x in seq_of.items()}
+    return info, near, per_rec, mol, cores, audit, run_of, geo, {n: len(x[0].strip()) for n, x in seq_of.items()}
 
 
 def svg(cid, info, rows, geo, w=900, row=5):
