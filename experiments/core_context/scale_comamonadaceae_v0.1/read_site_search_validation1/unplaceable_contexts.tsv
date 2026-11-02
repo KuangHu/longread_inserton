@@ -1,193 +1,193 @@
-sample	flank	structure	core_key	kind	cls	raw_cls	molecules	read_records	contig	start	end	left_contig	left_pos	left_strand	right_contig	right_pos	right_strand	core_strand	core_len	extra_left	extra_left_range	extra_right	extra_right_range	insert_len	boundary	insert_size	catalog	catalog_unmatched	shifted_from	core_in_assembly	empty_site_molecules	empty_site_read_records	empty_site_indel_molecules	both_forms_molecules	members	identity_median	runs	annotation	annotation
-SAMN37751820	1000	single_gene	PF_22499bdc5ca8	core	unplaceable_context:left_ambiguous|right_ambiguous		94	94																											1	1.0	SRR26364401		
-SAMN37751820	1000	single_gene	PF_22499bdc5ca8	core	unplaceable_context:left_placed|right_ambiguous		58	58	NZ_CP138516.1	544000																									1	1.0	SRR26364401		
-SAMN37751820	1000	single_gene	PF_22499bdc5ca8	core	unplaceable_context:left_placed|right_ambiguous		47	47	NZ_CP138516.1	548200																									1	1.0	SRR26364401		
-SAMN37751820	1000	single_gene	PF_22499bdc5ca8	core	unplaceable_context:left_ambiguous|right_placed		46	46	NZ_CP138516.1	548200																									1	1.0	SRR26364401		
-SAMN37751820	1000	single_gene	PF_22499bdc5ca8	core	unplaceable_context:left_ambiguous|right_placed		41	41	NZ_CP138516.1	544000																									1	1.0	SRR26364401		
-SAMN51281039	1000	single_gene	PF_899b400d9eb9	core	unplaceable_context:left_placed|right_ambiguous		12	12	NZ_JBRAYW010000002.1	1330900																									6	0.878	SRR40356309		
-SAMN51281039	1000	single_gene	PF_899b400d9eb9	core	unplaceable_context:left_ambiguous|right_placed		10	10	NZ_JBRAYW010000002.1	1330900																									5	0.888	SRR40356309		
-SAMN51281039	1000	single_gene	PF_899b400d9eb9	core	unplaceable_context:left_placed|right_ambiguous		6	6	NZ_JBRAYW010000003.1	472700																									4	0.876	SRR40356309		
-SAMN30525383	1000	single_gene	PF_bba335071573	core	unplaceable_context:left_ambiguous|right_ambiguous		5	5																											1	0.81	SRR21472668		
-SAMN30525383	1000	single_gene	PF_bba335071573	core	unplaceable_context:left_ambiguous|right_placed		3	3	NZ_CP104581.1	1907700																									1	0.814	SRR21472668		
-SAMN51281039	1000	single_gene	PF_899b400d9eb9	core	unplaceable_context:left_ambiguous|right_placed		3	3	NZ_JBRAYW010000003.1	472700																									1	0.872	SRR40356309		
-SAMEA115676833	1000	single_gene	PF_04ddd6e0b61d	core	unplaceable_context:left_placed|right_unplaced		2	2	NZ_CAXURB020000001.1	889000																									1	0.956	ERR13194249		
-SAMN30525383	1000	single_gene	PF_bba335071573	core	unplaceable_context:left_placed|right_ambiguous		2	2	NZ_CP104581.1	1907700																									1	0.822	SRR21472668		
-SAMN30525383	1000	single_gene	PF_bba335071573	core	unplaceable_context:left_placed|right_ambiguous		2	2	NZ_CP104581.1	1940500																									1	0.825	SRR21472668		
-SAMN30525383	1000	single_gene	PF_168312759736	core	unplaceable_context:left_unplaced|right_placed		2	2	NZ_CP104581.1	230400																									1	0.794	SRR21472668		
-SAMN56368990	1000	two_gene	PF_1070e9db34e1-,PF_fb001729adf8-	core	unplaceable_context:left_unplaced|right_placed		2	2	NZ_CM192233.1	1873900																									1	0.805	SRR37524064		
-SAMN56368990	1000	single_gene	PF_fb001729adf8	core	unplaceable_context:left_unplaced|right_placed		2	2	NZ_CM192233.1	1873700																									1	0.778	SRR37524064		
-SAMN56368990	1000	single_gene	PF_561be4b3b1a2	core	unplaceable_context:left_placed|right_unplaced		2	2	NZ_CM192233.1	4471300																									2	0.777	SRR37524064		
-SAMN56368990	1000	single_gene	NEG_50S_ribosomal_protein_L2	neg	unplaceable_context:left_unplaced|right_placed		2	2	NZ_CM192233.1	3099100																									1	0.914	SRR37524064		
-SAMEA115676833	1000	single_gene	PF_4d0d78b981b9	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CAXURB020000001.1	2687800																									1	0.754	ERR13194249		
-SAMEA115676833	1000	single_gene	PF_0b7c1ff7cdef	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CAXURB020000001.1	2687900																									1	0.717	ERR13194249		
-SAMEA115676833	1000	single_gene	PF_b0ecd17a4b0a	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CAXURB020000001.1	3764200																									1	0.756	ERR13194249		
-SAMEA115676833	1000	single_gene	PF_d5e6672ea115	core	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_CAXURB020000001.1	1404000																									1	0.695	ERR13194249		
-SAMEA115676833	1000	two_gene	PF_0d3807f64b8b+,PF_18176272e7e4+	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CAXURB020000001.1	1553100																									1	0.957	ERR13194249		
-SAMEA115676833	1000	single_gene	PF_556897da28d5	core	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_CAXURB020000001.1	6158200																									1	0.852	ERR13194249		
-SAMEA115676833	1000	single_gene	PF_f7781b53d99e	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CAXURB020000001.1	2083800																									1	0.801	ERR13194249		
-SAMEA115676833	1000	single_gene	PF_7b228c1ef9c8	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CAXURB020000001.1	5196900																									1	0.954	ERR13194249		
-SAMEA115676833	1000	single_gene	PF_bba335071573	core	unplaceable_context:left_placed|right_ambiguous		1	1	NZ_CAXURB020000002.1	154500																									1	0.803	ERR13194249		
-SAMEA115676833	1000	single_gene	PF_024273ae023b	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CAXURB020000001.1	2697100																									1	0.849	ERR13194249		
-SAMEA115676833	1000	single_gene	PF_04ddd6e0b61d	core	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_CAXURB020000001.1	6187700																									1	0.911	ERR13194249		
-SAMEA115676833	1000	single_gene	PF_376d954964a2	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CAXURB020000001.1	2985000																									1	0.737	ERR13194249		
-SAMEA115676833	1000	single_gene	PF_6884d63a167d	core	unplaceable_context:left_no_anchor|right_no_anchor		1	1																											1	0.763	ERR13194249		
-SAMEA115676833	1000	single_gene	PF_2c9509acf196	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CAXURB020000001.1	2217600																									1	0.831	ERR13194249		
-SAMEA115676833	1000	single_gene	PF_478da072f3f4	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CAXURB020000001.1	3454300																									1	0.756	ERR13194249		
-SAMEA115676833	1000	single_gene	PF_a5b7c5bdd9f7	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CAXURB020000001.1	5163400																									1	0.817	ERR13194249		
-SAMEA115676833	1000	two_gene	PF_12ee006dfecf-,PF_84d6c74d12eb-	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CAXURB020000001.1	4953600																									1	0.793	ERR13194249		
-SAMEA115676833	1000	single_gene	PF_38e64e6fcbf6	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CAXURB020000001.1	6075800																									1	0.825	ERR13194249		
-SAMEA115676833	1000	single_gene	PF_3742ce334857	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CAXURB020000001.1	1692800																									1	0.92	ERR13194249		
-SAMEA115676833	1000	two_gene	PF_0d3807f64b8b+,PF_18176272e7e4+	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CAXURB020000001.1	1553100																									1	0.922	ERR13194249		
-SAMEA115676833	1000	single_gene	PF_b5d82c1a0468	core	unplaceable_context:left_no_anchor|right_no_anchor		1	1																											1	0.732	ERR13194249		
-SAMEA115676833	1000	single_gene	PF_5fa4deae7f3d	core	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_CAXURB020000001.1	36200																									1	0.827	ERR13194249		
-SAMEA115676833	1000	two_gene	PF_00df8e00f517-,PF_db890cd6927c-	core	unplaceable_context:left_no_anchor|right_placed		1	1	NZ_CAXURB020000001.1	6554000																									1	0.844	ERR13194249		
-SAMEA115676833	1000	single_gene	PF_581045a9c919	core	unplaceable_context:left_no_anchor|right_no_anchor		1	1																											1	0.914	ERR13194249		
-SAMEA115676833	1000	single_gene	PF_3e958560fd28	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CAXURB020000001.1	5383500																									1	0.812	ERR13194249		
-SAMEA115676833	1000	single_gene	PF_a5b7c5bdd9f7	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CAXURB020000001.1	5163400																									1	0.946	ERR13194249		
-SAMEA115676833	1000	single_gene	PF_4d0d78b981b9	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CAXURB020000001.1	2688800																									1	0.778	ERR13194249		
-SAMEA115676833	1000	single_gene	PF_04ddd6e0b61d	core	unplaceable_context:left_ambiguous|right_placed		1	1	NZ_CAXURB020000001.1	6921600																									1	0.907	ERR13194249		
-SAMEA115676833	1000	two_gene	PF_048221251129+,PF_c310c121a32b+	core	unplaceable_context:left_no_anchor|right_placed		1	1	NZ_CAXURB020000001.1	2538000																									1	0.872	ERR13194249		
-SAMEA115676833	1000	single_gene	PF_c7f0ebb50c0f	core	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_CAXURB020000001.1	2638400																									1	0.928	ERR13194249		
-SAMEA115676833	1000	single_gene	PF_4b0167d036b1	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CAXURB020000001.1	5581100																									1	0.848	ERR13194249		
-SAMEA115676833	1000	single_gene	PF_bef0ccbcd171	core	unplaceable_context:left_no_anchor|right_no_anchor		1	1																											1	0.747	ERR13194249		
-SAMEA115676833	1000	single_gene	PF_1c18420c45b8	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CAXURB020000001.1	3127300																									1	0.738	ERR13194249		
-SAMEA115676833	1000	single_gene	NEG_30S_ribosomal_protein_S3	neg	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CAXURB020000001.1	5787200																									1	0.856	ERR13194249		
-SAMEA115676833	1000	single_gene	PF_994791c28995	core	unplaceable_context:left_no_anchor|right_no_anchor		1	1																											1	0.79	ERR13194249		
-SAMEA115676833	1000	two_gene	PF_5e391084117c-,PF_f00499babf7c-	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CAXURB020000001.1	4025900																									1	0.794	ERR13194249		
-SAMEA115676833	1000	single_gene	PF_65d3b6ecdd84	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CAXURB020000001.1	5237300																									1	0.777	ERR13194249		
-SAMEA115676833	1000	single_gene	PF_7b228c1ef9c8	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CAXURB020000001.1	5198400																									1	0.935	ERR13194249		
-SAMEA115676833	1000	single_gene	PF_031d6969733b	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CAXURB020000001.1	3711900																									1	0.834	ERR13194249		
-SAMEA115676833	1000	two_gene	PF_0d3807f64b8b+,PF_18176272e7e4+	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CAXURB020000001.1	5210400																									1	0.91	ERR13194249		
-SAMEA115676833	1000	two_gene	PF_0d3807f64b8b+,PF_5a58c6b06f9e+	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CAXURB020000001.1	5210400																									1	0.832	ERR13194249		
-SAMEA115676833	1000	single_gene	PF_0d7463965220	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CAXURB020000001.1	5210100																									1	0.959	ERR13194249		
-SAMEA115676833	1000	single_gene	PF_a1ee9058425f	core	unplaceable_context:left_no_anchor|right_no_anchor		1	1																											1	0.764	ERR13194249		
-SAMEA115676833	1000	single_gene	PF_a5c0db98e215	core	unplaceable_context:left_no_anchor|right_no_anchor		1	1																											1	0.761	ERR13194249		
-SAMEA115676833	1000	single_gene	PF_bfe06e27eb7f	core	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_CAXURB020000001.1	5299700																									1	0.818	ERR13194249		
-SAMEA115676833	1000	single_gene	PF_2f7ff5592f64	core	unplaceable_context:left_no_anchor|right_no_anchor		1	1																											1	0.766	ERR13194249		
-SAMEA115676833	1000	single_gene	PF_30e908c94d77	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CAXURB020000001.1	6323200																									1	0.807	ERR13194249		
-SAMEA115676833	1000	two_gene	PF_67f142b058e5-,PF_9f901d69cf6a-	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CAXURB020000001.1	5302600																									1	0.807	ERR13194249		
-SAMEA115676833	1000	two_gene	PF_048221251129+,PF_c310c121a32b+	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CAXURB020000001.1	2536300																									1	0.942	ERR13194249		
-SAMEA115676833	1000	single_gene	PF_4b0167d036b1	core	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_CAXURB020000001.1	5581600																									1	0.87	ERR13194249		
-SAMEA115676833	1000	two_gene	PF_18393aa3ce4b-,PF_2f5454f46bc3+	core	unplaceable_context:left_no_anchor|right_no_anchor		1	1																											1	0.783	ERR13194249		
-SAMEA115676833	1000	single_gene	PF_2f5454f46bc3	core	unplaceable_context:left_no_anchor|right_placed		1	1	NZ_CAXURB020000001.1	347400																									1	0.8	ERR13194249		
-SAMEA115676833	1000	single_gene	PF_00e24e912a89	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CAXURB020000001.1	4537300																									1	0.941	ERR13194249		
-SAMEA115676833	1000	single_gene	NEG_50S_ribosomal_protein_L2	neg	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CAXURB020000001.1	5788700																									1	0.813	ERR13194249		
-SAMEA115676833	1000	single_gene	PF_4d0d78b981b9	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CAXURB020000001.1	2688800																									1	0.751	ERR13194249		
-SAMN30525383	1000	single_gene	PF_ef91c915a3f0	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CP104581.1	326000																									1	0.875	SRR21472668		
-SAMN30525383	1000	single_gene	PF_9a161937e9e8	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CP104581.1	2500600																									1	0.778	SRR21472668		
-SAMN30525383	1000	single_gene	PF_bba335071573	core	unplaceable_context:left_placed|right_ambiguous		1	1	NZ_CP104581.1	1853800																									1	0.815	SRR21472668		
-SAMN30525383	1000	single_gene	PF_00083a451c2f	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CP104581.1	5608800																									1	0.63	SRR21472668		
-SAMN30525383	1000	single_gene	PF_42c0b9dc09c4	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CP104581.1	6172600																									1	0.773	SRR21472668		
-SAMN30525383	1000	single_gene	NEG_DNA-directed_RNA_polymerase_subunit_betap	neg	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_CP104581.1	507800																									1	0.837	SRR21472668		
-SAMN30525383	1000	single_gene	PF_7dd788787bef	core	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_CP104581.1	6470000																									1	0.875	SRR21472668		
-SAMN30525383	1000	single_gene	PF_d8a967460ec8	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CP104581.1	5587800																									1	0.713	SRR21472668		
-SAMN30525383	1000	single_gene	PF_cf7ea308f9ec	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CP104581.1	5255500																									1	0.872	SRR21472668		
-SAMN30525383	1000	single_gene	PF_7dd788787bef	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CP104581.1	5812800																									1	0.962	SRR21472668		
-SAMN30525383	1000	single_gene	PF_30e908c94d77	core	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_CP104581.1	6553500																									1	0.811	SRR21472668		
-SAMN30525383	1000	single_gene	PF_3742ce334857	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CP104581.1	275200																									1	0.688	SRR21472668		
-SAMN30525383	1000	single_gene	PF_d4868dc023a2	core	unplaceable_context:left_placed|right_inner_end_unaligned		1	1	NZ_CP104581.1	4607500																									1	0.899	SRR21472668		
-SAMN30525383	1000	single_gene	PF_0460e11aa714	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CP104581.1	638900																									1	0.846	SRR21472668		
-SAMN30525383	1000	two_gene	PF_467212ea8719-,PF_98f453334b4a-	core	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_CP104581.1	1383000																									1	0.676	SRR21472668		
-SAMN30525383	1000	single_gene	PF_098418fd5d4c	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CP104581.1	3332300																									1	0.872	SRR21472668		
-SAMN30525383	1000	two_gene	PF_eb008b96ab06-,PF_f17a1f74034f-	core	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_CP104581.1	5439600																									1	0.738	SRR21472668		
-SAMN30525383	1000	two_gene	PF_eb008b96ab06-,PF_f17a1f74034f-	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CP104581.1	5439600																									1	0.731	SRR21472668		
-SAMN30525383	1000	single_gene	PF_00083a451c2f	core	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_CP104581.1	5607000																									1	0.974	SRR21472668		
-SAMN30525383	1000	single_gene	PF_004c631ea011	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CP104581.1	3339600																									1	0.674	SRR21472668		
-SAMN30525383	1000	single_gene	PF_b597cbc0e144	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CP104581.1	404300																									1	0.835	SRR21472668		
-SAMN37751820	1000	single_gene	PF_22499bdc5ca8	core	unplaceable_context:left_ambiguous|right_placed		1	1	NZ_CP138516.1	548300																									1	0.998	SRR26364401		
-SAMN43526786	1000	two_gene	PF_68994a247bf2+,PF_b5b6c183ff93+	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_JBIOAO010000001.1	4078100																									1	0.933	SRR30602165		
-SAMN43526786	1000	single_gene	PF_024273ae023b	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_JBIOAO010000001.1	3124900																									1	0.726	SRR30602165		
-SAMN43526786	1000	single_gene	PF_5194ba28f00a	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_JBIOAO010000003.1	213700																									1	0.705	SRR30602165		
-SAMN43526786	1000	single_gene	PF_a5b7c5bdd9f7	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_JBIOAO010000001.1	3994300																									1	0.799	SRR30602165		
-SAMN43526786	1000	single_gene	PF_5fd8b570dedb	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_JBIOAO010000001.1	3749900																									1	0.793	SRR30602165		
-SAMN51281039	1000	two_gene	PF_059d9ad3417e-,PF_43c67127316c+	core	unplaceable_context:left_no_anchor|right_no_anchor		1	1																											1	0.993	SRR40356309		
-SAMN51281039	1000	single_gene	PF_43b7faf02a61	core	unplaceable_context:left_no_anchor|right_no_anchor		1	1																											1	0.982	SRR40356309		
-SAMN51281039	1000	single_gene	PF_6177765cebad	core	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_CM191377.1	4277000																									1	0.872	SRR40356309		
-SAMN51281039	1000	single_gene	PF_8dbda71ce266	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CM191377.1	1008800																									1	0.966	SRR40356309		
-SAMN51281039	1000	two_gene	PF_05fcddb35717-,PF_0d7f96f762b0+	core	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_CM191377.1	504600																									1	0.844	SRR40356309		
-SAMN51281039	1000	single_gene	PF_168312759736	core	unplaceable_context:left_no_anchor|right_placed		1	1	NZ_CM191377.1	4296300																									1	0.909	SRR40356309		
-SAMN51281039	1000	single_gene	PF_e63109d69dc9	core	unplaceable_context:left_no_anchor|right_no_anchor		1	1																											1	0.965	SRR40356309		
-SAMN51281039	1000	single_gene	PF_0fb68642bb0a	core	unplaceable_context:left_ambiguous|right_placed		1	1	NZ_CM191377.1	4121900																									1	0.846	SRR40356309		
-SAMN51281039	1000	single_gene	PF_3e958560fd28	core	unplaceable_context:left_no_anchor|right_no_anchor		1	1																											1	0.977	SRR40356309		
-SAMN51281039	1000	single_gene	PF_dcc786d2c661	core	unplaceable_context:left_no_anchor|right_no_anchor		1	1																											1	0.729	SRR40356309		
-SAMN51281039	1000	single_gene	PF_5194ba28f00a	core	unplaceable_context:left_no_anchor|right_placed		1	1	NZ_CM191377.1	2951000																									1	0.851	SRR40356309		
-SAMN51281039	1000	single_gene	PF_bb7d9706463d	core	unplaceable_context:left_no_anchor|right_placed		1	1	NZ_JBRAYW010000003.1	292000																									1	0.979	SRR40356309		
-SAMN51281039	1000	single_gene	PF_00751457ae62	core	unplaceable_context:left_no_anchor|right_no_anchor		1	1																											1	0.818	SRR40356309		
-SAMN51281039	1000	single_gene	PF_120d4b4359d1	core	unplaceable_context:left_no_anchor|right_no_anchor		1	1																											1	0.993	SRR40356309		
-SAMN51281039	1000	single_gene	PF_012494601f0c	core	unplaceable_context:left_no_anchor|right_no_anchor		1	1																											1	0.98	SRR40356309		
-SAMN51281039	1000	single_gene	PF_e3594074c5dc	core	unplaceable_context:left_no_anchor|right_no_anchor		1	1																											1	0.846	SRR40356309		
-SAMN51281039	1000	single_gene	PF_3d1dd61247a4	core	unplaceable_context:left_no_anchor|right_no_anchor		1	1																											1	0.992	SRR40356309		
-SAMN51281039	1000	single_gene	PF_53c753c7fbf6	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CM191377.1	2220400																									1	0.795	SRR40356309		
-SAMN51281039	1000	single_gene	PF_74113d9d9773	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CM191377.1	2220400																									1	0.796	SRR40356309		
-SAMN51281039	1000	single_gene	PF_19ed421f2ad2	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CM191377.1	2220400																									1	0.774	SRR40356309		
-SAMN51281039	1000	single_gene	PF_8ea3d0f8cd94	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CM191377.1	2220400																									1	0.78	SRR40356309		
-SAMN51281039	1000	single_gene	PF_25f17a616e0d	core	unplaceable_context:left_placed|right_ambiguous		1	1	NZ_JBRAYW010000003.1	337400																									1	0.961	SRR40356309		
-SAMN51281039	1000	single_gene	PF_25f17a616e0d	core	unplaceable_context:left_ambiguous|right_placed		1	1	NZ_JBRAYW010000003.1	337400																									1	0.83	SRR40356309		
-SAMN51281039	1000	single_gene	PF_2f7ff5592f64	core	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_JBRAYW010000002.1	1128500																									1	0.782	SRR40356309		
-SAMN51281039	1000	single_gene	PF_74113d9d9773	core	unplaceable_context:left_unplaced|right_no_anchor		1	1																											1	0.936	SRR40356309		
-SAMN51281039	1000	single_gene	PF_6177765cebad	core	unplaceable_context:left_no_anchor|right_no_anchor		1	1																											1	0.822	SRR40356309		
-SAMN51281039	1000	single_gene	PF_f44b61fd9ede	core	unplaceable_context:left_no_anchor|right_no_anchor		1	1																											1	0.795	SRR40356309		
-SAMN51281039	1000	single_gene	PF_d24566fcb05c	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_JBRAYW010000002.1	1183600																									1	0.955	SRR40356309		
-SAMN51281039	1000	single_gene	PF_985151b4ac19	core	unplaceable_context:left_no_anchor|right_placed		1	1	NZ_CM191377.1	3769400																									1	0.983	SRR40356309		
-SAMN51281039	1000	single_gene	PF_985151b4ac19	core	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_CM191377.1	3768900																									1	0.848	SRR40356309		
-SAMN51281039	1000	two_gene	PF_224aff0cca86-,PF_519c612878c1-	core	unplaceable_context:left_no_anchor|right_no_anchor		1	1																											1	0.887	SRR40356309		
-SAMN51281039	1000	single_gene	PF_5b2fc37def9f	core	unplaceable_context:left_no_anchor|right_no_anchor		1	1																											1	0.949	SRR40356309		
-SAMN51281039	1000	single_gene	PF_06ab882489d5	core	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_JBRAYW010000002.1	1632000																									1	0.985	SRR40356309		
-SAMN51281039	1000	two_gene	PF_08a7261eda9e+,PF_aa04659a1fdc+	core	unplaceable_context:left_no_anchor|right_placed		1	1	NZ_CM191377.1	630500																									1	0.968	SRR40356309		
-SAMN51281039	1000	two_gene	PF_05dd6c473866-,PF_1c711bc16e00-	core	unplaceable_context:left_no_anchor|right_placed		1	1	NZ_CM191377.1	630500																									1	0.889	SRR40356309		
-SAMN51281039	1000	single_gene	NEG_30S_ribosomal_protein_S3	neg	unplaceable_context:left_no_anchor|right_placed		1	1	NZ_CM191377.1	4181500																									1	0.828	SRR40356309		
-SAMN51281039	1000	single_gene	PF_0fb68642bb0a	core	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_CM191377.1	4121900																									1	0.842	SRR40356309		
-SAMN51281039	1000	single_gene	PF_9342615150e9	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CM191377.1	2745900																									1	0.968	SRR40356309		
-SAMN51281039	1000	single_gene	PF_20ab9dfcb5c6	core	unplaceable_context:left_placed|right_ambiguous		1	1	NZ_CM191377.1	1166600																									1	0.973	SRR40356309		
-SAMN51281039	1000	single_gene	PF_d96f7f38f9cc	core	unplaceable_context:left_placed|right_ambiguous		1	1	NZ_CM191377.1	1167200																									1	0.822	SRR40356309		
-SAMN51281039	1000	single_gene	PF_899b400d9eb9	core	unplaceable_context:left_placed|right_ambiguous		1	1	NZ_CM191377.1	4854300																									1	0.869	SRR40356309		
-SAMN51281039	1000	single_gene	PF_098418fd5d4c	core	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_CM191377.1	4550100																									1	0.816	SRR40356309		
-SAMN51281039	1000	single_gene	PF_30e908c94d77	core	unplaceable_context:left_no_anchor|right_placed		1	1	NZ_CM191377.1	3607300																									1	0.782	SRR40356309		
-SAMN51281039	1000	single_gene	PF_024273ae023b	core	unplaceable_context:left_no_anchor|right_ambiguous		1	1																											1	0.992	SRR40356309		
-SAMN51281039	1000	single_gene	PF_18e547c5debf	core	unplaceable_context:left_no_anchor|right_no_anchor		1	1																											1	0.713	SRR40356309		
-SAMN51281039	1000	single_gene	PF_65d3b6ecdd84	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CM191377.1	4948200																									1	0.808	SRR40356309		
-SAMN51281039	1000	single_gene	PF_65d3b6ecdd84	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CM191377.1	4945100																									1	0.721	SRR40356309		
-SAMN51281039	1000	single_gene	PF_286455842f3a	core	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_CM191377.1	736700																									1	0.996	SRR40356309		
-SAMN51281039	1000	single_gene	PF_19e75d1cb2ec	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_JBRAYW010000002.1	1346200																									1	0.987	SRR40356309		
-SAMN56368990	1000	single_gene	PF_e2d41995bfd9	core	unplaceable_context:left_no_anchor|right_no_anchor		1	1																											1	0.76	SRR37524064		
-SAMN56368990	1000	single_gene	PF_3742ce334857	core	unplaceable_context:left_no_anchor|right_no_anchor		1	1																											1	0.734	SRR37524064		
-SAMN56368990	1000	single_gene	NEG_30S_ribosomal_protein_S3	neg	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CM192233.1	3095800																									1	0.675	SRR37524064		
-SAMN56368990	1000	two_gene	PF_8ab0042e14c0+,PF_d4d5d1a501af+	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CM192233.1	5074200																									1	0.868	SRR37524064		
-SAMN56368990	1000	single_gene	PF_2c3c5d9942ec	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CM192233.1	146400																									1	0.796	SRR37524064		
-SAMN56368990	1000	two_gene	PF_2127cfb86a5a+,PF_3efad5def11c+	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CM192233.1	943900																									1	0.969	SRR37524064		
-SAMN56368990	1000	single_gene	PF_1d8ee71b623c	core	unplaceable_context:left_no_anchor|right_no_anchor		1	1																											1	0.962	SRR37524064		
-SAMN56368990	1000	single_gene	PF_ca277b2aa974	core	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_CM192233.1	5049200																									1	0.762	SRR37524064		
-SAMN56368990	1000	single_gene	PF_2c7a58cb13d6	core	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_CM192233.1	5049200																									1	0.744	SRR37524064		
-SAMN56368990	1000	two_gene	PF_8ab0042e14c0+,PF_d4d5d1a501af+	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CM192233.1	5074200																									1	0.864	SRR37524064		
-SAMN56368990	1000	single_gene	PF_120d4b4359d1	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CM192233.1	219600																									1	0.818	SRR37524064		
-SAMN56368990	1000	single_gene	PF_adba26696cac	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CM192233.1	219600																									1	0.804	SRR37524064		
-SAMN56368990	1000	single_gene	PF_f81beb53032d	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CM192233.1	219600																									1	0.804	SRR37524064		
-SAMN56368990	1000	single_gene	PF_e0c6c23253b8	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CM192233.1	219600																									1	0.76	SRR37524064		
-SAMN56368990	1000	single_gene	PF_bef0ccbcd171	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CM192233.1	6075700																									1	0.869	SRR37524064		
-SAMN56368990	1000	single_gene	PF_13fed6d55caa	core	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_CM192233.1	5100200																									1	0.706	SRR37524064		
-SAMN56368990	1000	single_gene	PF_d96f7f38f9cc	core	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_CM192233.1	4064100																									1	0.715	SRR37524064		
-SAMN56368990	1000	two_gene	PF_5062cae4c63b-,PF_7157964b3173+	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CM192233.1	1157500																									1	0.939	SRR37524064		
-SAMN56368990	1000	two_gene	PF_093c3a75d608+,PF_7143e021e74c+	core	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_CM192233.1	5999900																									1	0.813	SRR37524064		
-SAMN56368990	1000	single_gene	PF_d4d5d1a501af	core	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_CM192233.1	1868300																									1	0.864	SRR37524064		
-SAMN56368990	1000	single_gene	PF_d04423b54d5b	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CM192233.1	3674800																									1	0.83	SRR37524064		
-SAMN56368990	1000	single_gene	PF_f09fbf9e5eef	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CM192233.1	973700																									1	0.818	SRR37524064		
-SAMN56368990	1000	single_gene	PF_2b5810b4e935	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CM192233.1	1878000																									1	0.954	SRR37524064		
-SAMN56368990	1000	single_gene	PF_d04423b54d5b	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CM192233.1	1794300																									1	0.74	SRR37524064		
-SAMN56368990	1000	single_gene	PF_1c29b207ddfe	core	unplaceable_context:left_unplaced|right_no_anchor		1	1																											1	0.776	SRR37524064		
-SAMN56368990	1000	single_gene	PF_4b0167d036b1	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CM192233.1	3249200																									1	0.837	SRR37524064		
-SAMN56368990	1000	two_gene	PF_27c0d2619878+,PF_5a897ae1bf14+	core	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_CM192233.1	1445300																									1	0.79	SRR37524064		
-SAMN56368990	1000	two_gene	PF_05dd6c473866-,PF_1c711bc16e00-	core	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_CM192233.1	1445300																									1	0.779	SRR37524064		
-SAMN56368990	1000	two_gene	PF_4c33608c0beb-,PF_a3a82132f332-	core	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_CM192233.1	1445300																									1	0.778	SRR37524064		
-SAMN56368990	1000	two_gene	PF_68994a247bf2+,PF_b5b6c183ff93+	core	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_CM192233.1	1445300																									1	0.777	SRR37524064		
-SAMN56368990	1000	two_gene	PF_048221251129+,PF_c310c121a32b+	core	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_CM192233.1	1445300																									1	0.769	SRR37524064		
-SAMN56368990	1000	two_gene	PF_048221251129+,PF_5a897ae1bf14+	core	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_CM192233.1	1445300																									1	0.777	SRR37524064		
-SAMN56368990	1000	two_gene	PF_08a7261eda9e+,PF_aa04659a1fdc+	core	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_CM192233.1	1445300																									1	0.761	SRR37524064		
-SAMN56368990	1000	single_gene	PF_3e958560fd28	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CM192233.1	4347400																									1	0.773	SRR37524064		
-SAMN56368990	1000	single_gene	NEG_DNA-directed_RNA_polymerase_subunit_beta	neg	unplaceable_context:left_no_anchor|right_unplaced		1	1																											1	0.859	SRR37524064		
-SAMN56368990	1000	single_gene	PF_55c3746835ff	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CM192233.1	4134400																									1	0.899	SRR37524064		
-SAMN56368990	1000	single_gene	PF_2b5810b4e935	core	unplaceable_context:left_unplaced|right_unplaced		1	1																											1	0.717	SRR37524064		
-SAMN56368990	1000	single_gene	PF_120d4b4359d1	core	unplaceable_context:left_no_anchor|right_placed		1	1	NZ_CM192233.1	219600																									1	0.765	SRR37524064		
-SAMN56368990	1000	single_gene	PF_adba26696cac	core	unplaceable_context:left_no_anchor|right_placed		1	1	NZ_CM192233.1	219600																									1	0.754	SRR37524064		
-SAMN56368990	1000	single_gene	PF_f81beb53032d	core	unplaceable_context:left_no_anchor|right_placed		1	1	NZ_CM192233.1	219600																									1	0.754	SRR37524064		
-SAMN56368990	1000	single_gene	PF_c92d731fd2f2	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CM192233.1	5271800																									1	0.778	SRR37524064		
-SAMN56368990	1000	single_gene	PF_d04423b54d5b	core	unplaceable_context:left_no_anchor|right_placed		1	1	NZ_CM192233.1	1733500																									1	0.695	SRR37524064		
+sample	flank	structure	core_key	kind	cls	raw_cls	molecules	read_records	contig	start	end	left_contig	left_pos	left_strand	right_contig	right_pos	right_strand	core_strand	core_len	extra_left	extra_left_range	extra_right	extra_right_range	insert_len	boundary	boundary_molecules	left_agree_molecules	right_agree_molecules	both_agree_molecules	insert_size	catalog	catalog_unmatched	shifted_from	core_in_assembly	empty_site_molecules	empty_site_read_records	empty_site_indel_molecules	both_forms_molecules	members	identity_median	runs	annotation	annotation
+SAMN37751820	1000	single_gene	PF_22499bdc5ca8	core	unplaceable_context:left_ambiguous|right_ambiguous		94	94																															1	1.0	SRR26364401		
+SAMN37751820	1000	single_gene	PF_22499bdc5ca8	core	unplaceable_context:left_placed|right_ambiguous		58	58	NZ_CP138516.1	544000																													1	1.0	SRR26364401		
+SAMN37751820	1000	single_gene	PF_22499bdc5ca8	core	unplaceable_context:left_placed|right_ambiguous		47	47	NZ_CP138516.1	548200																													1	1.0	SRR26364401		
+SAMN37751820	1000	single_gene	PF_22499bdc5ca8	core	unplaceable_context:left_ambiguous|right_placed		46	46	NZ_CP138516.1	548200																													1	1.0	SRR26364401		
+SAMN37751820	1000	single_gene	PF_22499bdc5ca8	core	unplaceable_context:left_ambiguous|right_placed		41	41	NZ_CP138516.1	544000																													1	1.0	SRR26364401		
+SAMN51281039	1000	single_gene	PF_899b400d9eb9	core	unplaceable_context:left_placed|right_ambiguous		12	12	NZ_JBRAYW010000002.1	1330900																													6	0.878	SRR40356309		
+SAMN51281039	1000	single_gene	PF_899b400d9eb9	core	unplaceable_context:left_ambiguous|right_placed		10	10	NZ_JBRAYW010000002.1	1330900																													5	0.888	SRR40356309		
+SAMN51281039	1000	single_gene	PF_899b400d9eb9	core	unplaceable_context:left_placed|right_ambiguous		6	6	NZ_JBRAYW010000003.1	472700																													4	0.876	SRR40356309		
+SAMN30525383	1000	single_gene	PF_bba335071573	core	unplaceable_context:left_ambiguous|right_ambiguous		5	5																															1	0.81	SRR21472668		
+SAMN30525383	1000	single_gene	PF_bba335071573	core	unplaceable_context:left_ambiguous|right_placed		3	3	NZ_CP104581.1	1907700																													1	0.814	SRR21472668		
+SAMN51281039	1000	single_gene	PF_899b400d9eb9	core	unplaceable_context:left_ambiguous|right_placed		3	3	NZ_JBRAYW010000003.1	472700																													1	0.872	SRR40356309		
+SAMEA115676833	1000	single_gene	PF_04ddd6e0b61d	core	unplaceable_context:left_placed|right_unplaced		2	2	NZ_CAXURB020000001.1	889000																													1	0.956	ERR13194249		
+SAMN30525383	1000	single_gene	PF_bba335071573	core	unplaceable_context:left_placed|right_ambiguous		2	2	NZ_CP104581.1	1907700																													1	0.822	SRR21472668		
+SAMN30525383	1000	single_gene	PF_bba335071573	core	unplaceable_context:left_placed|right_ambiguous		2	2	NZ_CP104581.1	1940500																													1	0.825	SRR21472668		
+SAMN30525383	1000	single_gene	PF_168312759736	core	unplaceable_context:left_unplaced|right_placed		2	2	NZ_CP104581.1	230400																													1	0.794	SRR21472668		
+SAMN56368990	1000	two_gene	PF_1070e9db34e1-,PF_fb001729adf8-	core	unplaceable_context:left_unplaced|right_placed		2	2	NZ_CM192233.1	1873900																													1	0.805	SRR37524064		
+SAMN56368990	1000	single_gene	PF_fb001729adf8	core	unplaceable_context:left_unplaced|right_placed		2	2	NZ_CM192233.1	1873700																													1	0.778	SRR37524064		
+SAMN56368990	1000	single_gene	PF_561be4b3b1a2	core	unplaceable_context:left_placed|right_unplaced		2	2	NZ_CM192233.1	4471300																													2	0.777	SRR37524064		
+SAMN56368990	1000	single_gene	NEG_50S_ribosomal_protein_L2	neg	unplaceable_context:left_unplaced|right_placed		2	2	NZ_CM192233.1	3099100																													1	0.914	SRR37524064		
+SAMEA115676833	1000	single_gene	PF_4d0d78b981b9	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CAXURB020000001.1	2687800																													1	0.754	ERR13194249		
+SAMEA115676833	1000	single_gene	PF_0b7c1ff7cdef	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CAXURB020000001.1	2687900																													1	0.717	ERR13194249		
+SAMEA115676833	1000	single_gene	PF_b0ecd17a4b0a	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CAXURB020000001.1	3764200																													1	0.756	ERR13194249		
+SAMEA115676833	1000	single_gene	PF_d5e6672ea115	core	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_CAXURB020000001.1	1404000																													1	0.695	ERR13194249		
+SAMEA115676833	1000	two_gene	PF_0d3807f64b8b+,PF_18176272e7e4+	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CAXURB020000001.1	1553100																													1	0.957	ERR13194249		
+SAMEA115676833	1000	single_gene	PF_556897da28d5	core	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_CAXURB020000001.1	6158200																													1	0.852	ERR13194249		
+SAMEA115676833	1000	single_gene	PF_f7781b53d99e	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CAXURB020000001.1	2083800																													1	0.801	ERR13194249		
+SAMEA115676833	1000	single_gene	PF_7b228c1ef9c8	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CAXURB020000001.1	5196900																													1	0.954	ERR13194249		
+SAMEA115676833	1000	single_gene	PF_bba335071573	core	unplaceable_context:left_placed|right_ambiguous		1	1	NZ_CAXURB020000002.1	154500																													1	0.803	ERR13194249		
+SAMEA115676833	1000	single_gene	PF_024273ae023b	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CAXURB020000001.1	2697100																													1	0.849	ERR13194249		
+SAMEA115676833	1000	single_gene	PF_04ddd6e0b61d	core	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_CAXURB020000001.1	6187700																													1	0.911	ERR13194249		
+SAMEA115676833	1000	single_gene	PF_376d954964a2	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CAXURB020000001.1	2985000																													1	0.737	ERR13194249		
+SAMEA115676833	1000	single_gene	PF_6884d63a167d	core	unplaceable_context:left_no_anchor|right_no_anchor		1	1																															1	0.763	ERR13194249		
+SAMEA115676833	1000	single_gene	PF_2c9509acf196	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CAXURB020000001.1	2217600																													1	0.831	ERR13194249		
+SAMEA115676833	1000	single_gene	PF_478da072f3f4	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CAXURB020000001.1	3454300																													1	0.756	ERR13194249		
+SAMEA115676833	1000	single_gene	PF_a5b7c5bdd9f7	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CAXURB020000001.1	5163400																													1	0.817	ERR13194249		
+SAMEA115676833	1000	two_gene	PF_12ee006dfecf-,PF_84d6c74d12eb-	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CAXURB020000001.1	4953600																													1	0.793	ERR13194249		
+SAMEA115676833	1000	single_gene	PF_38e64e6fcbf6	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CAXURB020000001.1	6075800																													1	0.825	ERR13194249		
+SAMEA115676833	1000	single_gene	PF_3742ce334857	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CAXURB020000001.1	1692800																													1	0.92	ERR13194249		
+SAMEA115676833	1000	two_gene	PF_0d3807f64b8b+,PF_18176272e7e4+	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CAXURB020000001.1	1553100																													1	0.922	ERR13194249		
+SAMEA115676833	1000	single_gene	PF_b5d82c1a0468	core	unplaceable_context:left_no_anchor|right_no_anchor		1	1																															1	0.732	ERR13194249		
+SAMEA115676833	1000	single_gene	PF_5fa4deae7f3d	core	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_CAXURB020000001.1	36200																													1	0.827	ERR13194249		
+SAMEA115676833	1000	two_gene	PF_00df8e00f517-,PF_db890cd6927c-	core	unplaceable_context:left_no_anchor|right_placed		1	1	NZ_CAXURB020000001.1	6554000																													1	0.844	ERR13194249		
+SAMEA115676833	1000	single_gene	PF_581045a9c919	core	unplaceable_context:left_no_anchor|right_no_anchor		1	1																															1	0.914	ERR13194249		
+SAMEA115676833	1000	single_gene	PF_3e958560fd28	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CAXURB020000001.1	5383500																													1	0.812	ERR13194249		
+SAMEA115676833	1000	single_gene	PF_a5b7c5bdd9f7	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CAXURB020000001.1	5163400																													1	0.946	ERR13194249		
+SAMEA115676833	1000	single_gene	PF_4d0d78b981b9	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CAXURB020000001.1	2688800																													1	0.778	ERR13194249		
+SAMEA115676833	1000	single_gene	PF_04ddd6e0b61d	core	unplaceable_context:left_ambiguous|right_placed		1	1	NZ_CAXURB020000001.1	6921600																													1	0.907	ERR13194249		
+SAMEA115676833	1000	two_gene	PF_048221251129+,PF_c310c121a32b+	core	unplaceable_context:left_no_anchor|right_placed		1	1	NZ_CAXURB020000001.1	2538000																													1	0.872	ERR13194249		
+SAMEA115676833	1000	single_gene	PF_c7f0ebb50c0f	core	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_CAXURB020000001.1	2638400																													1	0.928	ERR13194249		
+SAMEA115676833	1000	single_gene	PF_4b0167d036b1	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CAXURB020000001.1	5581100																													1	0.848	ERR13194249		
+SAMEA115676833	1000	single_gene	PF_bef0ccbcd171	core	unplaceable_context:left_no_anchor|right_no_anchor		1	1																															1	0.747	ERR13194249		
+SAMEA115676833	1000	single_gene	PF_1c18420c45b8	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CAXURB020000001.1	3127300																													1	0.738	ERR13194249		
+SAMEA115676833	1000	single_gene	NEG_30S_ribosomal_protein_S3	neg	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CAXURB020000001.1	5787200																													1	0.856	ERR13194249		
+SAMEA115676833	1000	single_gene	PF_994791c28995	core	unplaceable_context:left_no_anchor|right_no_anchor		1	1																															1	0.79	ERR13194249		
+SAMEA115676833	1000	two_gene	PF_5e391084117c-,PF_f00499babf7c-	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CAXURB020000001.1	4025900																													1	0.794	ERR13194249		
+SAMEA115676833	1000	single_gene	PF_65d3b6ecdd84	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CAXURB020000001.1	5237300																													1	0.777	ERR13194249		
+SAMEA115676833	1000	single_gene	PF_7b228c1ef9c8	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CAXURB020000001.1	5198400																													1	0.935	ERR13194249		
+SAMEA115676833	1000	single_gene	PF_031d6969733b	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CAXURB020000001.1	3711900																													1	0.834	ERR13194249		
+SAMEA115676833	1000	two_gene	PF_0d3807f64b8b+,PF_18176272e7e4+	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CAXURB020000001.1	5210400																													1	0.91	ERR13194249		
+SAMEA115676833	1000	two_gene	PF_0d3807f64b8b+,PF_5a58c6b06f9e+	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CAXURB020000001.1	5210400																													1	0.832	ERR13194249		
+SAMEA115676833	1000	single_gene	PF_0d7463965220	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CAXURB020000001.1	5210100																													1	0.959	ERR13194249		
+SAMEA115676833	1000	single_gene	PF_a1ee9058425f	core	unplaceable_context:left_no_anchor|right_no_anchor		1	1																															1	0.764	ERR13194249		
+SAMEA115676833	1000	single_gene	PF_a5c0db98e215	core	unplaceable_context:left_no_anchor|right_no_anchor		1	1																															1	0.761	ERR13194249		
+SAMEA115676833	1000	single_gene	PF_bfe06e27eb7f	core	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_CAXURB020000001.1	5299700																													1	0.818	ERR13194249		
+SAMEA115676833	1000	single_gene	PF_2f7ff5592f64	core	unplaceable_context:left_no_anchor|right_no_anchor		1	1																															1	0.766	ERR13194249		
+SAMEA115676833	1000	single_gene	PF_30e908c94d77	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CAXURB020000001.1	6323200																													1	0.807	ERR13194249		
+SAMEA115676833	1000	two_gene	PF_67f142b058e5-,PF_9f901d69cf6a-	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CAXURB020000001.1	5302600																													1	0.807	ERR13194249		
+SAMEA115676833	1000	two_gene	PF_048221251129+,PF_c310c121a32b+	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CAXURB020000001.1	2536300																													1	0.942	ERR13194249		
+SAMEA115676833	1000	single_gene	PF_4b0167d036b1	core	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_CAXURB020000001.1	5581600																													1	0.87	ERR13194249		
+SAMEA115676833	1000	two_gene	PF_18393aa3ce4b-,PF_2f5454f46bc3+	core	unplaceable_context:left_no_anchor|right_no_anchor		1	1																															1	0.783	ERR13194249		
+SAMEA115676833	1000	single_gene	PF_2f5454f46bc3	core	unplaceable_context:left_no_anchor|right_placed		1	1	NZ_CAXURB020000001.1	347400																													1	0.8	ERR13194249		
+SAMEA115676833	1000	single_gene	PF_00e24e912a89	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CAXURB020000001.1	4537300																													1	0.941	ERR13194249		
+SAMEA115676833	1000	single_gene	NEG_50S_ribosomal_protein_L2	neg	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CAXURB020000001.1	5788700																													1	0.813	ERR13194249		
+SAMEA115676833	1000	single_gene	PF_4d0d78b981b9	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CAXURB020000001.1	2688800																													1	0.751	ERR13194249		
+SAMN30525383	1000	single_gene	PF_ef91c915a3f0	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CP104581.1	326000																													1	0.875	SRR21472668		
+SAMN30525383	1000	single_gene	PF_9a161937e9e8	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CP104581.1	2500600																													1	0.778	SRR21472668		
+SAMN30525383	1000	single_gene	PF_bba335071573	core	unplaceable_context:left_placed|right_ambiguous		1	1	NZ_CP104581.1	1853800																													1	0.815	SRR21472668		
+SAMN30525383	1000	single_gene	PF_00083a451c2f	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CP104581.1	5608800																													1	0.63	SRR21472668		
+SAMN30525383	1000	single_gene	PF_42c0b9dc09c4	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CP104581.1	6172600																													1	0.773	SRR21472668		
+SAMN30525383	1000	single_gene	NEG_DNA-directed_RNA_polymerase_subunit_betap	neg	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_CP104581.1	507800																													1	0.837	SRR21472668		
+SAMN30525383	1000	single_gene	PF_7dd788787bef	core	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_CP104581.1	6470000																													1	0.875	SRR21472668		
+SAMN30525383	1000	single_gene	PF_d8a967460ec8	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CP104581.1	5587800																													1	0.713	SRR21472668		
+SAMN30525383	1000	single_gene	PF_cf7ea308f9ec	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CP104581.1	5255500																													1	0.872	SRR21472668		
+SAMN30525383	1000	single_gene	PF_7dd788787bef	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CP104581.1	5812800																													1	0.962	SRR21472668		
+SAMN30525383	1000	single_gene	PF_30e908c94d77	core	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_CP104581.1	6553500																													1	0.811	SRR21472668		
+SAMN30525383	1000	single_gene	PF_3742ce334857	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CP104581.1	275200																													1	0.688	SRR21472668		
+SAMN30525383	1000	single_gene	PF_d4868dc023a2	core	unplaceable_context:left_placed|right_inner_end_unaligned		1	1	NZ_CP104581.1	4607500																													1	0.899	SRR21472668		
+SAMN30525383	1000	single_gene	PF_0460e11aa714	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CP104581.1	638900																													1	0.846	SRR21472668		
+SAMN30525383	1000	two_gene	PF_467212ea8719-,PF_98f453334b4a-	core	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_CP104581.1	1383000																													1	0.676	SRR21472668		
+SAMN30525383	1000	single_gene	PF_098418fd5d4c	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CP104581.1	3332300																													1	0.872	SRR21472668		
+SAMN30525383	1000	two_gene	PF_eb008b96ab06-,PF_f17a1f74034f-	core	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_CP104581.1	5439600																													1	0.738	SRR21472668		
+SAMN30525383	1000	two_gene	PF_eb008b96ab06-,PF_f17a1f74034f-	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CP104581.1	5439600																													1	0.731	SRR21472668		
+SAMN30525383	1000	single_gene	PF_00083a451c2f	core	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_CP104581.1	5607000																													1	0.974	SRR21472668		
+SAMN30525383	1000	single_gene	PF_004c631ea011	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CP104581.1	3339600																													1	0.674	SRR21472668		
+SAMN30525383	1000	single_gene	PF_b597cbc0e144	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CP104581.1	404300																													1	0.835	SRR21472668		
+SAMN37751820	1000	single_gene	PF_22499bdc5ca8	core	unplaceable_context:left_ambiguous|right_placed		1	1	NZ_CP138516.1	548300																													1	0.998	SRR26364401		
+SAMN43526786	1000	two_gene	PF_68994a247bf2+,PF_b5b6c183ff93+	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_JBIOAO010000001.1	4078100																													1	0.933	SRR30602165		
+SAMN43526786	1000	single_gene	PF_024273ae023b	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_JBIOAO010000001.1	3124900																													1	0.726	SRR30602165		
+SAMN43526786	1000	single_gene	PF_5194ba28f00a	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_JBIOAO010000003.1	213700																													1	0.705	SRR30602165		
+SAMN43526786	1000	single_gene	PF_a5b7c5bdd9f7	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_JBIOAO010000001.1	3994300																													1	0.799	SRR30602165		
+SAMN43526786	1000	single_gene	PF_5fd8b570dedb	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_JBIOAO010000001.1	3749900																													1	0.793	SRR30602165		
+SAMN51281039	1000	two_gene	PF_059d9ad3417e-,PF_43c67127316c+	core	unplaceable_context:left_no_anchor|right_no_anchor		1	1																															1	0.993	SRR40356309		
+SAMN51281039	1000	single_gene	PF_43b7faf02a61	core	unplaceable_context:left_no_anchor|right_no_anchor		1	1																															1	0.982	SRR40356309		
+SAMN51281039	1000	single_gene	PF_6177765cebad	core	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_CM191377.1	4277000																													1	0.872	SRR40356309		
+SAMN51281039	1000	single_gene	PF_8dbda71ce266	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CM191377.1	1008800																													1	0.966	SRR40356309		
+SAMN51281039	1000	two_gene	PF_05fcddb35717-,PF_0d7f96f762b0+	core	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_CM191377.1	504600																													1	0.844	SRR40356309		
+SAMN51281039	1000	single_gene	PF_168312759736	core	unplaceable_context:left_no_anchor|right_placed		1	1	NZ_CM191377.1	4296300																													1	0.909	SRR40356309		
+SAMN51281039	1000	single_gene	PF_e63109d69dc9	core	unplaceable_context:left_no_anchor|right_no_anchor		1	1																															1	0.965	SRR40356309		
+SAMN51281039	1000	single_gene	PF_0fb68642bb0a	core	unplaceable_context:left_ambiguous|right_placed		1	1	NZ_CM191377.1	4121900																													1	0.846	SRR40356309		
+SAMN51281039	1000	single_gene	PF_3e958560fd28	core	unplaceable_context:left_no_anchor|right_no_anchor		1	1																															1	0.977	SRR40356309		
+SAMN51281039	1000	single_gene	PF_dcc786d2c661	core	unplaceable_context:left_no_anchor|right_no_anchor		1	1																															1	0.729	SRR40356309		
+SAMN51281039	1000	single_gene	PF_5194ba28f00a	core	unplaceable_context:left_no_anchor|right_placed		1	1	NZ_CM191377.1	2951000																													1	0.851	SRR40356309		
+SAMN51281039	1000	single_gene	PF_bb7d9706463d	core	unplaceable_context:left_no_anchor|right_placed		1	1	NZ_JBRAYW010000003.1	292000																													1	0.979	SRR40356309		
+SAMN51281039	1000	single_gene	PF_00751457ae62	core	unplaceable_context:left_no_anchor|right_no_anchor		1	1																															1	0.818	SRR40356309		
+SAMN51281039	1000	single_gene	PF_120d4b4359d1	core	unplaceable_context:left_no_anchor|right_no_anchor		1	1																															1	0.993	SRR40356309		
+SAMN51281039	1000	single_gene	PF_012494601f0c	core	unplaceable_context:left_no_anchor|right_no_anchor		1	1																															1	0.98	SRR40356309		
+SAMN51281039	1000	single_gene	PF_e3594074c5dc	core	unplaceable_context:left_no_anchor|right_no_anchor		1	1																															1	0.846	SRR40356309		
+SAMN51281039	1000	single_gene	PF_3d1dd61247a4	core	unplaceable_context:left_no_anchor|right_no_anchor		1	1																															1	0.992	SRR40356309		
+SAMN51281039	1000	single_gene	PF_53c753c7fbf6	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CM191377.1	2220400																													1	0.795	SRR40356309		
+SAMN51281039	1000	single_gene	PF_74113d9d9773	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CM191377.1	2220400																													1	0.796	SRR40356309		
+SAMN51281039	1000	single_gene	PF_19ed421f2ad2	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CM191377.1	2220400																													1	0.774	SRR40356309		
+SAMN51281039	1000	single_gene	PF_8ea3d0f8cd94	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CM191377.1	2220400																													1	0.78	SRR40356309		
+SAMN51281039	1000	single_gene	PF_25f17a616e0d	core	unplaceable_context:left_placed|right_ambiguous		1	1	NZ_JBRAYW010000003.1	337400																													1	0.961	SRR40356309		
+SAMN51281039	1000	single_gene	PF_25f17a616e0d	core	unplaceable_context:left_ambiguous|right_placed		1	1	NZ_JBRAYW010000003.1	337400																													1	0.83	SRR40356309		
+SAMN51281039	1000	single_gene	PF_2f7ff5592f64	core	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_JBRAYW010000002.1	1128500																													1	0.782	SRR40356309		
+SAMN51281039	1000	single_gene	PF_74113d9d9773	core	unplaceable_context:left_unplaced|right_no_anchor		1	1																															1	0.936	SRR40356309		
+SAMN51281039	1000	single_gene	PF_6177765cebad	core	unplaceable_context:left_no_anchor|right_no_anchor		1	1																															1	0.822	SRR40356309		
+SAMN51281039	1000	single_gene	PF_f44b61fd9ede	core	unplaceable_context:left_no_anchor|right_no_anchor		1	1																															1	0.795	SRR40356309		
+SAMN51281039	1000	single_gene	PF_d24566fcb05c	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_JBRAYW010000002.1	1183600																													1	0.955	SRR40356309		
+SAMN51281039	1000	single_gene	PF_985151b4ac19	core	unplaceable_context:left_no_anchor|right_placed		1	1	NZ_CM191377.1	3769400																													1	0.983	SRR40356309		
+SAMN51281039	1000	single_gene	PF_985151b4ac19	core	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_CM191377.1	3768900																													1	0.848	SRR40356309		
+SAMN51281039	1000	two_gene	PF_224aff0cca86-,PF_519c612878c1-	core	unplaceable_context:left_no_anchor|right_no_anchor		1	1																															1	0.887	SRR40356309		
+SAMN51281039	1000	single_gene	PF_5b2fc37def9f	core	unplaceable_context:left_no_anchor|right_no_anchor		1	1																															1	0.949	SRR40356309		
+SAMN51281039	1000	single_gene	PF_06ab882489d5	core	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_JBRAYW010000002.1	1632000																													1	0.985	SRR40356309		
+SAMN51281039	1000	two_gene	PF_08a7261eda9e+,PF_aa04659a1fdc+	core	unplaceable_context:left_no_anchor|right_placed		1	1	NZ_CM191377.1	630500																													1	0.968	SRR40356309		
+SAMN51281039	1000	two_gene	PF_05dd6c473866-,PF_1c711bc16e00-	core	unplaceable_context:left_no_anchor|right_placed		1	1	NZ_CM191377.1	630500																													1	0.889	SRR40356309		
+SAMN51281039	1000	single_gene	NEG_30S_ribosomal_protein_S3	neg	unplaceable_context:left_no_anchor|right_placed		1	1	NZ_CM191377.1	4181500																													1	0.828	SRR40356309		
+SAMN51281039	1000	single_gene	PF_0fb68642bb0a	core	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_CM191377.1	4121900																													1	0.842	SRR40356309		
+SAMN51281039	1000	single_gene	PF_9342615150e9	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CM191377.1	2745900																													1	0.968	SRR40356309		
+SAMN51281039	1000	single_gene	PF_20ab9dfcb5c6	core	unplaceable_context:left_placed|right_ambiguous		1	1	NZ_CM191377.1	1166600																													1	0.973	SRR40356309		
+SAMN51281039	1000	single_gene	PF_d96f7f38f9cc	core	unplaceable_context:left_placed|right_ambiguous		1	1	NZ_CM191377.1	1167200																													1	0.822	SRR40356309		
+SAMN51281039	1000	single_gene	PF_899b400d9eb9	core	unplaceable_context:left_placed|right_ambiguous		1	1	NZ_CM191377.1	4854300																													1	0.869	SRR40356309		
+SAMN51281039	1000	single_gene	PF_098418fd5d4c	core	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_CM191377.1	4550100																													1	0.816	SRR40356309		
+SAMN51281039	1000	single_gene	PF_30e908c94d77	core	unplaceable_context:left_no_anchor|right_placed		1	1	NZ_CM191377.1	3607300																													1	0.782	SRR40356309		
+SAMN51281039	1000	single_gene	PF_024273ae023b	core	unplaceable_context:left_no_anchor|right_ambiguous		1	1																															1	0.992	SRR40356309		
+SAMN51281039	1000	single_gene	PF_18e547c5debf	core	unplaceable_context:left_no_anchor|right_no_anchor		1	1																															1	0.713	SRR40356309		
+SAMN51281039	1000	single_gene	PF_65d3b6ecdd84	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CM191377.1	4948200																													1	0.808	SRR40356309		
+SAMN51281039	1000	single_gene	PF_65d3b6ecdd84	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CM191377.1	4945100																													1	0.721	SRR40356309		
+SAMN51281039	1000	single_gene	PF_286455842f3a	core	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_CM191377.1	736700																													1	0.996	SRR40356309		
+SAMN51281039	1000	single_gene	PF_19e75d1cb2ec	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_JBRAYW010000002.1	1346200																													1	0.987	SRR40356309		
+SAMN56368990	1000	single_gene	PF_e2d41995bfd9	core	unplaceable_context:left_no_anchor|right_no_anchor		1	1																															1	0.76	SRR37524064		
+SAMN56368990	1000	single_gene	PF_3742ce334857	core	unplaceable_context:left_no_anchor|right_no_anchor		1	1																															1	0.734	SRR37524064		
+SAMN56368990	1000	single_gene	NEG_30S_ribosomal_protein_S3	neg	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CM192233.1	3095800																													1	0.675	SRR37524064		
+SAMN56368990	1000	two_gene	PF_8ab0042e14c0+,PF_d4d5d1a501af+	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CM192233.1	5074200																													1	0.868	SRR37524064		
+SAMN56368990	1000	single_gene	PF_2c3c5d9942ec	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CM192233.1	146400																													1	0.796	SRR37524064		
+SAMN56368990	1000	two_gene	PF_2127cfb86a5a+,PF_3efad5def11c+	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CM192233.1	943900																													1	0.969	SRR37524064		
+SAMN56368990	1000	single_gene	PF_1d8ee71b623c	core	unplaceable_context:left_no_anchor|right_no_anchor		1	1																															1	0.962	SRR37524064		
+SAMN56368990	1000	single_gene	PF_ca277b2aa974	core	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_CM192233.1	5049200																													1	0.762	SRR37524064		
+SAMN56368990	1000	single_gene	PF_2c7a58cb13d6	core	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_CM192233.1	5049200																													1	0.744	SRR37524064		
+SAMN56368990	1000	two_gene	PF_8ab0042e14c0+,PF_d4d5d1a501af+	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CM192233.1	5074200																													1	0.864	SRR37524064		
+SAMN56368990	1000	single_gene	PF_120d4b4359d1	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CM192233.1	219600																													1	0.818	SRR37524064		
+SAMN56368990	1000	single_gene	PF_adba26696cac	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CM192233.1	219600																													1	0.804	SRR37524064		
+SAMN56368990	1000	single_gene	PF_f81beb53032d	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CM192233.1	219600																													1	0.804	SRR37524064		
+SAMN56368990	1000	single_gene	PF_e0c6c23253b8	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CM192233.1	219600																													1	0.76	SRR37524064		
+SAMN56368990	1000	single_gene	PF_bef0ccbcd171	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CM192233.1	6075700																													1	0.869	SRR37524064		
+SAMN56368990	1000	single_gene	PF_13fed6d55caa	core	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_CM192233.1	5100200																													1	0.706	SRR37524064		
+SAMN56368990	1000	single_gene	PF_d96f7f38f9cc	core	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_CM192233.1	4064100																													1	0.715	SRR37524064		
+SAMN56368990	1000	two_gene	PF_5062cae4c63b-,PF_7157964b3173+	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CM192233.1	1157500																													1	0.939	SRR37524064		
+SAMN56368990	1000	two_gene	PF_093c3a75d608+,PF_7143e021e74c+	core	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_CM192233.1	5999900																													1	0.813	SRR37524064		
+SAMN56368990	1000	single_gene	PF_d4d5d1a501af	core	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_CM192233.1	1868300																													1	0.864	SRR37524064		
+SAMN56368990	1000	single_gene	PF_d04423b54d5b	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CM192233.1	3674800																													1	0.83	SRR37524064		
+SAMN56368990	1000	single_gene	PF_f09fbf9e5eef	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CM192233.1	973700																													1	0.818	SRR37524064		
+SAMN56368990	1000	single_gene	PF_2b5810b4e935	core	unplaceable_context:left_unplaced|right_placed		1	1	NZ_CM192233.1	1878000																													1	0.954	SRR37524064		
+SAMN56368990	1000	single_gene	PF_d04423b54d5b	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CM192233.1	1794300																													1	0.74	SRR37524064		
+SAMN56368990	1000	single_gene	PF_1c29b207ddfe	core	unplaceable_context:left_unplaced|right_no_anchor		1	1																															1	0.776	SRR37524064		
+SAMN56368990	1000	single_gene	PF_4b0167d036b1	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CM192233.1	3249200																													1	0.837	SRR37524064		
+SAMN56368990	1000	two_gene	PF_27c0d2619878+,PF_5a897ae1bf14+	core	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_CM192233.1	1445300																													1	0.79	SRR37524064		
+SAMN56368990	1000	two_gene	PF_05dd6c473866-,PF_1c711bc16e00-	core	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_CM192233.1	1445300																													1	0.779	SRR37524064		
+SAMN56368990	1000	two_gene	PF_4c33608c0beb-,PF_a3a82132f332-	core	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_CM192233.1	1445300																													1	0.778	SRR37524064		
+SAMN56368990	1000	two_gene	PF_68994a247bf2+,PF_b5b6c183ff93+	core	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_CM192233.1	1445300																													1	0.777	SRR37524064		
+SAMN56368990	1000	two_gene	PF_048221251129+,PF_c310c121a32b+	core	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_CM192233.1	1445300																													1	0.769	SRR37524064		
+SAMN56368990	1000	two_gene	PF_048221251129+,PF_5a897ae1bf14+	core	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_CM192233.1	1445300																													1	0.777	SRR37524064		
+SAMN56368990	1000	two_gene	PF_08a7261eda9e+,PF_aa04659a1fdc+	core	unplaceable_context:left_placed|right_no_anchor		1	1	NZ_CM192233.1	1445300																													1	0.761	SRR37524064		
+SAMN56368990	1000	single_gene	PF_3e958560fd28	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CM192233.1	4347400																													1	0.773	SRR37524064		
+SAMN56368990	1000	single_gene	NEG_DNA-directed_RNA_polymerase_subunit_beta	neg	unplaceable_context:left_no_anchor|right_unplaced		1	1																															1	0.859	SRR37524064		
+SAMN56368990	1000	single_gene	PF_55c3746835ff	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CM192233.1	4134400																													1	0.899	SRR37524064		
+SAMN56368990	1000	single_gene	PF_2b5810b4e935	core	unplaceable_context:left_unplaced|right_unplaced		1	1																															1	0.717	SRR37524064		
+SAMN56368990	1000	single_gene	PF_120d4b4359d1	core	unplaceable_context:left_no_anchor|right_placed		1	1	NZ_CM192233.1	219600																													1	0.765	SRR37524064		
+SAMN56368990	1000	single_gene	PF_adba26696cac	core	unplaceable_context:left_no_anchor|right_placed		1	1	NZ_CM192233.1	219600																													1	0.754	SRR37524064		
+SAMN56368990	1000	single_gene	PF_f81beb53032d	core	unplaceable_context:left_no_anchor|right_placed		1	1	NZ_CM192233.1	219600																													1	0.754	SRR37524064		
+SAMN56368990	1000	single_gene	PF_c92d731fd2f2	core	unplaceable_context:left_placed|right_unplaced		1	1	NZ_CM192233.1	5271800																													1	0.778	SRR37524064		
+SAMN56368990	1000	single_gene	PF_d04423b54d5b	core	unplaceable_context:left_no_anchor|right_placed		1	1	NZ_CM192233.1	1733500																													1	0.695	SRR37524064		

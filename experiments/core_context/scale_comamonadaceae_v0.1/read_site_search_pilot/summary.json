@@ -1,5 +1,5 @@
 {
- "version": "read_site_search_v0.3",
+ "version": "read_site_search_v0.3.1",
  "samples": [
   "SAMN51658617",
   "SAMN49042133",
@@ -80,27 +80,27 @@
     "negative_control|not_round5_supported": "30/30"
    },
    "not_in_assembly_by_boundary_and_size": {
-    "not_in_assembly:junction|exact|le_2500": 65,
-    "not_in_assembly:junction|consistent|le_2500": 174,
-    "not_in_assembly:core_absent|consistent|le_2500": 24,
-    "not_in_assembly:other_sequence|exact|le_2500": 2
+    "not_in_assembly:junction|no_extension_detected|le_2500": 65,
+    "not_in_assembly:junction|extension_consistent|le_2500": 174,
+    "not_in_assembly:core_absent|extension_consistent|le_2500": 24,
+    "not_in_assembly:other_sequence|no_extension_detected|le_2500": 2
    },
    "positions_with_extra_sequence": {
-    "known_catalog_position_other_core|exact": 655,
-    "known_catalog_position|exact": 521,
-    "homolog_not_in_catalog|exact": 288,
-    "catalog_omission|exact": 7,
-    "catalog_mismatch|exact": 88,
-    "homolog_not_in_catalog|consistent": 48,
-    "not_in_assembly|exact": 67,
-    "not_in_assembly|consistent": 198,
-    "known_catalog_position_other_core|consistent": 9,
-    "contig_end_join|consistent": 7,
-    "catalog_mismatch|consistent": 35,
-    "contig_end_join|exact": 5,
+    "known_catalog_position_other_core|no_extension_detected": 654,
+    "known_catalog_position|no_extension_detected": 521,
+    "homolog_not_in_catalog|no_extension_detected": 288,
+    "catalog_omission|no_extension_detected": 7,
+    "catalog_mismatch|no_extension_detected": 88,
+    "homolog_not_in_catalog|extension_consistent": 48,
+    "not_in_assembly|no_extension_detected": 67,
+    "not_in_assembly|extension_consistent": 198,
+    "known_catalog_position_other_core|extension_consistent": 10,
+    "contig_end_join|extension_consistent": 7,
+    "catalog_mismatch|extension_consistent": 35,
+    "contig_end_join|no_extension_detected": 5,
     "known_catalog_position_other_core|unknown": 1,
     "catalog_mismatch|unknown": 5,
-    "catalog_omission|consistent": 1
+    "catalog_omission|extension_consistent": 1
    },
    "negative_control": {
     "genes_searched": 55,
@@ -357,26 +357,26 @@
     "negative_control|not_round5_supported": "30/30"
    },
    "not_in_assembly_by_boundary_and_size": {
-    "not_in_assembly:junction|consistent|le_2500": 5,
-    "not_in_assembly:junction|exact|le_2500": 2,
-    "not_in_assembly:core_absent|consistent|le_2500": 5
+    "not_in_assembly:junction|extension_consistent|le_2500": 5,
+    "not_in_assembly:junction|no_extension_detected|le_2500": 2,
+    "not_in_assembly:core_absent|extension_consistent|le_2500": 5
    },
    "positions_with_extra_sequence": {
-    "known_catalog_position_other_core|exact": 620,
-    "known_catalog_position|exact": 520,
-    "homolog_not_in_catalog|exact": 237,
-    "catalog_omission|exact": 7,
-    "catalog_mismatch|exact": 72,
-    "not_in_assembly|consistent": 10,
-    "contig_end_join|consistent": 5,
-    "not_in_assembly|exact": 2,
-    "contig_end_join|exact": 4,
-    "known_catalog_position_other_core|consistent": 2,
+    "known_catalog_position_other_core|no_extension_detected": 619,
+    "known_catalog_position|no_extension_detected": 520,
+    "homolog_not_in_catalog|no_extension_detected": 237,
+    "catalog_omission|no_extension_detected": 7,
+    "catalog_mismatch|no_extension_detected": 72,
+    "not_in_assembly|extension_consistent": 10,
+    "contig_end_join|extension_consistent": 5,
+    "not_in_assembly|no_extension_detected": 2,
+    "contig_end_join|no_extension_detected": 4,
+    "known_catalog_position_other_core|extension_consistent": 3,
     "known_catalog_position_other_core|unknown": 1,
     "catalog_mismatch|unknown": 5,
-    "catalog_omission|consistent": 1,
-    "catalog_mismatch|consistent": 2,
-    "homolog_not_in_catalog|consistent": 4
+    "catalog_omission|extension_consistent": 1,
+    "catalog_mismatch|extension_consistent": 2,
+    "homolog_not_in_catalog|extension_consistent": 4
    },
    "negative_control": {
     "genes_searched": 55,
@@ -465,20 +465,20 @@
     "negative_control|not_round5_supported": "30/30"
    },
    "not_in_assembly_by_boundary_and_size": {
-    "not_in_assembly:core_absent|consistent|le_2500": 5
+    "not_in_assembly:core_absent|extension_consistent|le_2500": 5
    },
    "positions_with_extra_sequence": {
-    "known_catalog_position_other_core|exact": 604,
-    "known_catalog_position|exact": 519,
-    "homolog_not_in_catalog|exact": 216,
-    "catalog_omission|exact": 6,
-    "catalog_mismatch|exact": 65,
-    "contig_end_join|consistent": 4,
-    "contig_end_join|exact": 3,
-    "not_in_assembly|consistent": 5,
+    "known_catalog_position_other_core|no_extension_detected": 604,
+    "known_catalog_position|no_extension_detected": 519,
+    "homolog_not_in_catalog|no_extension_detected": 216,
+    "catalog_omission|no_extension_detected": 6,
+    "catalog_mismatch|no_extension_detected": 65,
+    "contig_end_join|extension_consistent": 4,
+    "contig_end_join|no_extension_detected": 3,
+    "not_in_assembly|extension_consistent": 5,
     "known_catalog_position_other_core|unknown": 1,
     "catalog_mismatch|unknown": 1,
-    "homolog_not_in_catalog|consistent": 1
+    "homolog_not_in_catalog|extension_consistent": 1
    },
    "negative_control": {
     "genes_searched": 55,
@@ -541,17 +541,17 @@
     "negative_control|not_round5_supported": "30/30"
    },
    "not_in_assembly_by_boundary_and_size": {
-    "not_in_assembly:core_absent|consistent|le_2500": 5
+    "not_in_assembly:core_absent|extension_consistent|le_2500": 5
    },
    "positions_with_extra_sequence": {
-    "known_catalog_position_other_core|exact": 592,
-    "known_catalog_position|exact": 516,
-    "homolog_not_in_catalog|exact": 195,
-    "catalog_omission|exact": 6,
-    "catalog_mismatch|exact": 57,
-    "contig_end_join|consistent": 4,
-    "contig_end_join|exact": 2,
-    "not_in_assembly|consistent": 5
+    "known_catalog_position_other_core|no_extension_detected": 592,
+    "known_catalog_position|no_extension_detected": 516,
+    "homolog_not_in_catalog|no_extension_detected": 195,
+    "catalog_omission|no_extension_detected": 6,
+    "catalog_mismatch|no_extension_detected": 57,
+    "contig_end_join|extension_consistent": 4,
+    "contig_end_join|no_extension_detected": 2,
+    "not_in_assembly|extension_consistent": 5
    },
    "negative_control": {
     "genes_searched": 55,
@@ -621,29 +621,29 @@
     "negative_control|not_round5_supported": "30/30"
    },
    "not_in_assembly_by_boundary_and_size": {
-    "not_in_assembly:junction|exact|le_2500": 56,
-    "not_in_assembly:junction|consistent|le_2500": 285,
+    "not_in_assembly:junction|no_extension_detected|le_2500": 56,
+    "not_in_assembly:junction|extension_consistent|le_2500": 285,
     "not_in_assembly:junction|unknown|le_2500": 3,
-    "not_in_assembly:junction|consistent|gt_2500": 8,
-    "not_in_assembly:core_absent|consistent|le_2500": 19
+    "not_in_assembly:junction|extension_consistent|gt_2500": 8,
+    "not_in_assembly:core_absent|extension_consistent|le_2500": 19
    },
    "positions_with_extra_sequence": {
-    "known_catalog_position_other_core|exact": 649,
-    "known_catalog_position|exact": 533,
-    "homolog_not_in_catalog|exact": 286,
-    "catalog_omission|exact": 10,
-    "catalog_mismatch|exact": 87,
-    "homolog_not_in_catalog|consistent": 49,
-    "not_in_assembly|exact": 56,
-    "not_in_assembly|consistent": 312,
+    "known_catalog_position_other_core|no_extension_detected": 648,
+    "known_catalog_position|no_extension_detected": 533,
+    "homolog_not_in_catalog|no_extension_detected": 286,
+    "catalog_omission|no_extension_detected": 10,
+    "catalog_mismatch|no_extension_detected": 87,
+    "homolog_not_in_catalog|extension_consistent": 49,
+    "not_in_assembly|no_extension_detected": 56,
+    "not_in_assembly|extension_consistent": 312,
     "not_in_assembly|unknown": 3,
-    "known_catalog_position_other_core|consistent": 12,
-    "contig_end_join|consistent": 8,
-    "catalog_mismatch|consistent": 37,
-    "contig_end_join|exact": 5,
+    "known_catalog_position_other_core|extension_consistent": 13,
+    "contig_end_join|extension_consistent": 8,
+    "catalog_mismatch|extension_consistent": 37,
+    "contig_end_join|no_extension_detected": 5,
     "known_catalog_position_other_core|unknown": 1,
     "catalog_mismatch|unknown": 5,
-    "catalog_omission|consistent": 1
+    "catalog_omission|extension_consistent": 1
    },
    "negative_control": {
     "genes_searched": 55,
@@ -879,27 +879,27 @@
    },
    "not_in_assembly_by_boundary_and_size": {
     "not_in_assembly:junction|unknown|le_2500": 3,
-    "not_in_assembly:junction|consistent|le_2500": 11,
-    "not_in_assembly:junction|exact|le_2500": 2,
-    "not_in_assembly:core_absent|consistent|le_2500": 5
+    "not_in_assembly:junction|extension_consistent|le_2500": 11,
+    "not_in_assembly:junction|no_extension_detected|le_2500": 2,
+    "not_in_assembly:core_absent|extension_consistent|le_2500": 5
    },
    "positions_with_extra_sequence": {
-    "known_catalog_position_other_core|exact": 615,
-    "known_catalog_position|exact": 531,
-    "homolog_not_in_catalog|exact": 228,
-    "catalog_omission|exact": 7,
-    "catalog_mismatch|exact": 72,
+    "known_catalog_position_other_core|no_extension_detected": 614,
+    "known_catalog_position|no_extension_detected": 531,
+    "homolog_not_in_catalog|no_extension_detected": 228,
+    "catalog_omission|no_extension_detected": 7,
+    "catalog_mismatch|no_extension_detected": 72,
     "not_in_assembly|unknown": 3,
-    "not_in_assembly|consistent": 16,
-    "known_catalog_position_other_core|consistent": 4,
-    "contig_end_join|consistent": 6,
-    "not_in_assembly|exact": 2,
-    "contig_end_join|exact": 3,
+    "not_in_assembly|extension_consistent": 16,
+    "known_catalog_position_other_core|extension_consistent": 5,
+    "contig_end_join|extension_consistent": 6,
+    "not_in_assembly|no_extension_detected": 2,
+    "contig_end_join|no_extension_detected": 3,
     "known_catalog_position_other_core|unknown": 1,
     "catalog_mismatch|unknown": 5,
-    "catalog_omission|consistent": 1,
-    "homolog_not_in_catalog|consistent": 6,
-    "catalog_mismatch|consistent": 1
+    "catalog_omission|extension_consistent": 1,
+    "homolog_not_in_catalog|extension_consistent": 6,
+    "catalog_mismatch|extension_consistent": 1
    },
    "negative_control": {
     "genes_searched": 55,
@@ -986,20 +986,20 @@
     "negative_control|not_round5_supported": "30/30"
    },
    "not_in_assembly_by_boundary_and_size": {
-    "not_in_assembly:core_absent|consistent|le_2500": 5,
-    "not_in_assembly:junction|consistent|le_2500": 1
+    "not_in_assembly:core_absent|extension_consistent|le_2500": 5,
+    "not_in_assembly:junction|extension_consistent|le_2500": 1
    },
    "positions_with_extra_sequence": {
-    "known_catalog_position_other_core|exact": 600,
-    "known_catalog_position|exact": 530,
-    "homolog_not_in_catalog|exact": 209,
-    "catalog_omission|exact": 6,
-    "catalog_mismatch|exact": 64,
-    "contig_end_join|consistent": 5,
-    "contig_end_join|exact": 3,
-    "not_in_assembly|consistent": 6,
+    "known_catalog_position_other_core|no_extension_detected": 600,
+    "known_catalog_position|no_extension_detected": 530,
+    "homolog_not_in_catalog|no_extension_detected": 209,
+    "catalog_omission|no_extension_detected": 6,
+    "catalog_mismatch|no_extension_detected": 64,
+    "contig_end_join|extension_consistent": 5,
+    "contig_end_join|no_extension_detected": 3,
+    "not_in_assembly|extension_consistent": 6,
     "known_catalog_position_other_core|unknown": 1,
-    "homolog_not_in_catalog|consistent": 1,
+    "homolog_not_in_catalog|extension_consistent": 1,
     "catalog_mismatch|unknown": 1
    },
    "negative_control": {
@@ -1064,18 +1064,18 @@
     "negative_control|not_round5_supported": "29/30"
    },
    "not_in_assembly_by_boundary_and_size": {
-    "not_in_assembly:core_absent|consistent|le_2500": 5,
-    "not_in_assembly:junction|consistent|le_2500": 1
+    "not_in_assembly:core_absent|extension_consistent|le_2500": 5,
+    "not_in_assembly:junction|extension_consistent|le_2500": 1
    },
    "positions_with_extra_sequence": {
-    "known_catalog_position_other_core|exact": 587,
-    "known_catalog_position|exact": 529,
-    "homolog_not_in_catalog|exact": 191,
-    "catalog_omission|exact": 6,
-    "catalog_mismatch|exact": 58,
-    "contig_end_join|consistent": 5,
-    "contig_end_join|exact": 2,
-    "not_in_assembly|consistent": 6
+    "known_catalog_position_other_core|no_extension_detected": 587,
+    "known_catalog_position|no_extension_detected": 529,
+    "homolog_not_in_catalog|no_extension_detected": 191,
+    "catalog_omission|no_extension_detected": 6,
+    "catalog_mismatch|no_extension_detected": 58,
+    "contig_end_join|extension_consistent": 5,
+    "contig_end_join|no_extension_detected": 2,
+    "not_in_assembly|extension_consistent": 6
    },
    "negative_control": {
     "genes_searched": 55,
@@ -1144,26 +1144,26 @@
     "negative_control|not_round5_supported": "28/30"
    },
    "not_in_assembly_by_boundary_and_size": {
-    "not_in_assembly:junction|consistent|le_2500": 304,
-    "not_in_assembly:junction|exact|le_2500": 38,
-    "not_in_assembly:junction|consistent|gt_2500": 6,
+    "not_in_assembly:junction|extension_consistent|le_2500": 304,
+    "not_in_assembly:junction|no_extension_detected|le_2500": 38,
+    "not_in_assembly:junction|extension_consistent|gt_2500": 6,
     "not_in_assembly:junction|unknown|le_2500": 2,
-    "not_in_assembly:core_absent|consistent|le_2500": 17
+    "not_in_assembly:core_absent|extension_consistent|le_2500": 17
    },
    "positions_with_extra_sequence": {
-    "known_catalog_position_other_core|exact": 648,
-    "known_catalog_position|exact": 550,
-    "homolog_not_in_catalog|exact": 278,
-    "not_in_assembly|consistent": 327,
-    "catalog_omission|exact": 8,
-    "catalog_mismatch|exact": 85,
-    "homolog_not_in_catalog|consistent": 44,
-    "not_in_assembly|exact": 38,
-    "contig_end_join|consistent": 9,
-    "catalog_mismatch|consistent": 27,
+    "known_catalog_position_other_core|no_extension_detected": 648,
+    "known_catalog_position|no_extension_detected": 550,
+    "homolog_not_in_catalog|no_extension_detected": 278,
+    "not_in_assembly|extension_consistent": 327,
+    "catalog_omission|no_extension_detected": 8,
+    "catalog_mismatch|no_extension_detected": 85,
+    "homolog_not_in_catalog|extension_consistent": 44,
+    "not_in_assembly|no_extension_detected": 38,
+    "contig_end_join|extension_consistent": 9,
+    "catalog_mismatch|extension_consistent": 27,
     "not_in_assembly|unknown": 2,
-    "contig_end_join|exact": 5,
-    "known_catalog_position_other_core|consistent": 9,
+    "contig_end_join|no_extension_detected": 5,
+    "known_catalog_position_other_core|extension_consistent": 9,
     "known_catalog_position_other_core|unknown": 1,
     "catalog_mismatch|unknown": 5
    },
@@ -1430,27 +1430,27 @@
     "negative_control|not_round5_supported": "28/30"
    },
    "not_in_assembly_by_boundary_and_size": {
-    "not_in_assembly:junction|consistent|le_2500": 9,
-    "not_in_assembly:junction|exact|le_2500": 2,
+    "not_in_assembly:junction|extension_consistent|le_2500": 9,
+    "not_in_assembly:junction|no_extension_detected|le_2500": 2,
     "not_in_assembly:junction|unknown|le_2500": 2,
-    "not_in_assembly:core_absent|consistent|le_2500": 5
+    "not_in_assembly:core_absent|extension_consistent|le_2500": 5
    },
    "positions_with_extra_sequence": {
-    "known_catalog_position_other_core|exact": 617,
-    "known_catalog_position|exact": 547,
-    "homolog_not_in_catalog|exact": 220,
-    "catalog_omission|exact": 6,
-    "catalog_mismatch|exact": 72,
-    "not_in_assembly|consistent": 14,
-    "contig_end_join|consistent": 6,
-    "not_in_assembly|exact": 2,
+    "known_catalog_position_other_core|no_extension_detected": 617,
+    "known_catalog_position|no_extension_detected": 547,
+    "homolog_not_in_catalog|no_extension_detected": 220,
+    "catalog_omission|no_extension_detected": 6,
+    "catalog_mismatch|no_extension_detected": 72,
+    "not_in_assembly|extension_consistent": 14,
+    "contig_end_join|extension_consistent": 6,
+    "not_in_assembly|no_extension_detected": 2,
     "not_in_assembly|unknown": 2,
-    "contig_end_join|exact": 3,
-    "known_catalog_position_other_core|consistent": 2,
+    "contig_end_join|no_extension_detected": 3,
+    "known_catalog_position_other_core|extension_consistent": 2,
     "known_catalog_position_other_core|unknown": 1,
     "catalog_mismatch|unknown": 5,
-    "homolog_not_in_catalog|consistent": 4,
-    "catalog_mismatch|consistent": 1
+    "homolog_not_in_catalog|extension_consistent": 4,
+    "catalog_mismatch|extension_consistent": 1
    },
    "negative_control": {
     "genes_searched": 55,
@@ -1541,20 +1541,20 @@
     "negative_control|not_round5_supported": "28/30"
    },
    "not_in_assembly_by_boundary_and_size": {
-    "not_in_assembly:core_absent|consistent|le_2500": 5,
-    "not_in_assembly:junction|consistent|le_2500": 1
+    "not_in_assembly:core_absent|extension_consistent|le_2500": 5,
+    "not_in_assembly:junction|extension_consistent|le_2500": 1
    },
    "positions_with_extra_sequence": {
-    "known_catalog_position_other_core|exact": 599,
-    "known_catalog_position|exact": 545,
-    "homolog_not_in_catalog|exact": 204,
-    "catalog_omission|exact": 6,
-    "catalog_mismatch|exact": 65,
-    "contig_end_join|consistent": 6,
-    "contig_end_join|exact": 2,
-    "not_in_assembly|consistent": 6,
+    "known_catalog_position_other_core|no_extension_detected": 599,
+    "known_catalog_position|no_extension_detected": 545,
+    "homolog_not_in_catalog|no_extension_detected": 204,
+    "catalog_omission|no_extension_detected": 6,
+    "catalog_mismatch|no_extension_detected": 65,
+    "contig_end_join|extension_consistent": 6,
+    "contig_end_join|no_extension_detected": 2,
+    "not_in_assembly|extension_consistent": 6,
     "known_catalog_position_other_core|unknown": 1,
-    "homolog_not_in_catalog|consistent": 1
+    "homolog_not_in_catalog|extension_consistent": 1
    },
    "negative_control": {
     "genes_searched": 55,
@@ -1621,18 +1621,18 @@
     "negative_control|not_round5_supported": "27/30"
    },
    "not_in_assembly_by_boundary_and_size": {
-    "not_in_assembly:core_absent|consistent|le_2500": 5,
-    "not_in_assembly:junction|consistent|le_2500": 1
+    "not_in_assembly:core_absent|extension_consistent|le_2500": 5,
+    "not_in_assembly:junction|extension_consistent|le_2500": 1
    },
    "positions_with_extra_sequence": {
-    "known_catalog_position_other_core|exact": 585,
-    "known_catalog_position|exact": 541,
-    "homolog_not_in_catalog|exact": 183,
-    "catalog_omission|exact": 6,
-    "catalog_mismatch|exact": 58,
-    "contig_end_join|consistent": 6,
-    "contig_end_join|exact": 2,
-    "not_in_assembly|consistent": 6
+    "known_catalog_position_other_core|no_extension_detected": 585,
+    "known_catalog_position|no_extension_detected": 541,
+    "homolog_not_in_catalog|no_extension_detected": 183,
+    "catalog_omission|no_extension_detected": 6,
+    "catalog_mismatch|no_extension_detected": 58,
+    "contig_end_join|extension_consistent": 6,
+    "contig_end_join|no_extension_detected": 2,
+    "not_in_assembly|extension_consistent": 6
    },
    "negative_control": {
     "genes_searched": 55,

@@ -1,5 +1,5 @@
 {
- "version": "read_site_search_v0.3",
+ "version": "read_site_search_v0.3.1",
  "samples": [
   "SAMN51281039",
   "SAMN30525383",
@@ -63,24 +63,24 @@
     "negative_control|not_round5_supported": "17/17"
    },
    "not_in_assembly_by_boundary_and_size": {
-    "not_in_assembly:core_absent|consistent|le_2500": 3,
-    "not_in_assembly:junction|consistent|le_2500": 20,
-    "not_in_assembly:junction|exact|le_2500": 3,
-    "not_in_assembly:junction|consistent|gt_2500": 3
+    "not_in_assembly:core_absent|extension_consistent|le_2500": 3,
+    "not_in_assembly:junction|extension_consistent|le_2500": 20,
+    "not_in_assembly:junction|no_extension_detected|le_2500": 3,
+    "not_in_assembly:junction|extension_consistent|gt_2500": 3
    },
    "positions_with_extra_sequence": {
-    "homolog_not_in_catalog|exact": 226,
-    "homolog_not_in_catalog|consistent": 39,
-    "known_catalog_position_other_core|exact": 421,
-    "known_catalog_position|exact": 309,
-    "not_in_assembly|consistent": 26,
+    "homolog_not_in_catalog|no_extension_detected": 226,
+    "homolog_not_in_catalog|extension_consistent": 39,
+    "known_catalog_position_other_core|no_extension_detected": 421,
+    "known_catalog_position|no_extension_detected": 309,
+    "not_in_assembly|extension_consistent": 26,
     "homolog_not_in_catalog|unknown": 3,
-    "catalog_mismatch|exact": 55,
-    "not_in_assembly|exact": 3,
-    "known_catalog_position_other_core|consistent": 14,
-    "catalog_omission|exact": 1,
-    "catalog_mismatch|consistent": 13,
-    "known_catalog_position|consistent": 1,
+    "catalog_mismatch|no_extension_detected": 55,
+    "not_in_assembly|no_extension_detected": 3,
+    "known_catalog_position_other_core|extension_consistent": 14,
+    "catalog_omission|no_extension_detected": 1,
+    "catalog_mismatch|extension_consistent": 13,
+    "known_catalog_position|extension_consistent": 1,
     "catalog_mismatch|unknown": 1
    },
    "negative_control": {
@@ -139,15 +139,15 @@
    },
    "not_in_assembly_by_boundary_and_size": {},
    "positions_with_extra_sequence": {
-    "homolog_not_in_catalog|exact": 187,
-    "known_catalog_position_other_core|exact": 399,
-    "known_catalog_position|exact": 309,
+    "homolog_not_in_catalog|no_extension_detected": 187,
+    "known_catalog_position_other_core|no_extension_detected": 399,
+    "known_catalog_position|no_extension_detected": 309,
     "homolog_not_in_catalog|unknown": 3,
-    "catalog_mismatch|exact": 41,
-    "known_catalog_position_other_core|consistent": 1,
-    "catalog_omission|exact": 1,
+    "catalog_mismatch|no_extension_detected": 41,
+    "known_catalog_position_other_core|extension_consistent": 1,
+    "catalog_omission|no_extension_detected": 1,
     "catalog_mismatch|unknown": 1,
-    "homolog_not_in_catalog|consistent": 1
+    "homolog_not_in_catalog|extension_consistent": 1
    },
    "negative_control": {
     "genes_searched": 28,
@@ -201,12 +201,12 @@
    },
    "not_in_assembly_by_boundary_and_size": {},
    "positions_with_extra_sequence": {
-    "homolog_not_in_catalog|exact": 177,
-    "known_catalog_position_other_core|exact": 387,
-    "known_catalog_position|exact": 309,
+    "homolog_not_in_catalog|no_extension_detected": 177,
+    "known_catalog_position_other_core|no_extension_detected": 387,
+    "known_catalog_position|no_extension_detected": 309,
     "homolog_not_in_catalog|unknown": 2,
-    "catalog_mismatch|exact": 35,
-    "catalog_omission|exact": 1
+    "catalog_mismatch|no_extension_detected": 35,
+    "catalog_omission|no_extension_detected": 1
    },
    "negative_control": {
     "genes_searched": 28,
@@ -260,11 +260,11 @@
    },
    "not_in_assembly_by_boundary_and_size": {},
    "positions_with_extra_sequence": {
-    "homolog_not_in_catalog|exact": 158,
-    "known_catalog_position_other_core|exact": 368,
-    "known_catalog_position|exact": 308,
-    "catalog_omission|exact": 1,
-    "catalog_mismatch|exact": 33
+    "homolog_not_in_catalog|no_extension_detected": 158,
+    "known_catalog_position_other_core|no_extension_detected": 368,
+    "known_catalog_position|no_extension_detected": 308,
+    "catalog_omission|no_extension_detected": 1,
+    "catalog_mismatch|no_extension_detected": 33
    },
    "negative_control": {
     "genes_searched": 28,
@@ -326,24 +326,24 @@
     "negative_control|not_round5_supported": "17/17"
    },
    "not_in_assembly_by_boundary_and_size": {
-    "not_in_assembly:junction|consistent|le_2500": 22,
-    "not_in_assembly:core_absent|consistent|le_2500": 2,
-    "not_in_assembly:junction|consistent|gt_2500": 2,
-    "not_in_assembly:core_absent|consistent|gt_2500": 1,
-    "not_in_assembly:junction|exact|le_2500": 3
+    "not_in_assembly:junction|extension_consistent|le_2500": 22,
+    "not_in_assembly:core_absent|extension_consistent|le_2500": 2,
+    "not_in_assembly:junction|extension_consistent|gt_2500": 2,
+    "not_in_assembly:core_absent|extension_consistent|gt_2500": 1,
+    "not_in_assembly:junction|no_extension_detected|le_2500": 3
    },
    "positions_with_extra_sequence": {
-    "known_catalog_position_other_core|exact": 419,
-    "homolog_not_in_catalog|exact": 224,
-    "known_catalog_position|exact": 314,
-    "homolog_not_in_catalog|consistent": 37,
+    "known_catalog_position_other_core|no_extension_detected": 419,
+    "homolog_not_in_catalog|no_extension_detected": 224,
+    "known_catalog_position|no_extension_detected": 314,
+    "homolog_not_in_catalog|extension_consistent": 37,
     "homolog_not_in_catalog|unknown": 2,
-    "not_in_assembly|consistent": 27,
-    "catalog_mismatch|exact": 55,
-    "not_in_assembly|exact": 3,
-    "known_catalog_position_other_core|consistent": 14,
-    "catalog_omission|exact": 1,
-    "catalog_mismatch|consistent": 16
+    "not_in_assembly|extension_consistent": 27,
+    "catalog_mismatch|no_extension_detected": 55,
+    "not_in_assembly|no_extension_detected": 3,
+    "known_catalog_position_other_core|extension_consistent": 14,
+    "catalog_omission|no_extension_detected": 1,
+    "catalog_mismatch|extension_consistent": 16
    },
    "negative_control": {
     "genes_searched": 28,
@@ -400,14 +400,14 @@
    },
    "not_in_assembly_by_boundary_and_size": {},
    "positions_with_extra_sequence": {
-    "known_catalog_position_other_core|exact": 398,
-    "homolog_not_in_catalog|exact": 184,
-    "known_catalog_position|exact": 314,
+    "known_catalog_position_other_core|no_extension_detected": 398,
+    "homolog_not_in_catalog|no_extension_detected": 184,
+    "known_catalog_position|no_extension_detected": 314,
     "homolog_not_in_catalog|unknown": 2,
-    "catalog_mismatch|exact": 40,
-    "known_catalog_position_other_core|consistent": 1,
-    "catalog_omission|exact": 1,
-    "homolog_not_in_catalog|consistent": 3
+    "catalog_mismatch|no_extension_detected": 40,
+    "known_catalog_position_other_core|extension_consistent": 1,
+    "catalog_omission|no_extension_detected": 1,
+    "homolog_not_in_catalog|extension_consistent": 3
    },
    "negative_control": {
     "genes_searched": 28,
@@ -460,12 +460,12 @@
    },
    "not_in_assembly_by_boundary_and_size": {},
    "positions_with_extra_sequence": {
-    "known_catalog_position_other_core|exact": 385,
-    "homolog_not_in_catalog|exact": 173,
-    "known_catalog_position|exact": 314,
+    "known_catalog_position_other_core|no_extension_detected": 385,
+    "homolog_not_in_catalog|no_extension_detected": 173,
+    "known_catalog_position|no_extension_detected": 314,
     "homolog_not_in_catalog|unknown": 1,
-    "catalog_omission|exact": 1,
-    "catalog_mismatch|exact": 35
+    "catalog_omission|no_extension_detected": 1,
+    "catalog_mismatch|no_extension_detected": 35
    },
    "negative_control": {
     "genes_searched": 28,
@@ -519,11 +519,11 @@
    },
    "not_in_assembly_by_boundary_and_size": {},
    "positions_with_extra_sequence": {
-    "known_catalog_position_other_core|exact": 369,
-    "homolog_not_in_catalog|exact": 157,
-    "known_catalog_position|exact": 310,
-    "catalog_omission|exact": 1,
-    "catalog_mismatch|exact": 33
+    "known_catalog_position_other_core|no_extension_detected": 369,
+    "homolog_not_in_catalog|no_extension_detected": 157,
+    "known_catalog_position|no_extension_detected": 310,
+    "catalog_omission|no_extension_detected": 1,
+    "catalog_mismatch|no_extension_detected": 33
    },
    "negative_control": {
     "genes_searched": 28,
@@ -582,23 +582,23 @@
     "negative_control|not_round5_supported": "17/17"
    },
    "not_in_assembly_by_boundary_and_size": {
-    "not_in_assembly:junction|consistent|le_2500": 33,
-    "not_in_assembly:core_absent|consistent|le_2500": 2,
-    "not_in_assembly:junction|exact|le_2500": 2
+    "not_in_assembly:junction|extension_consistent|le_2500": 33,
+    "not_in_assembly:core_absent|extension_consistent|le_2500": 2,
+    "not_in_assembly:junction|no_extension_detected|le_2500": 2
    },
    "positions_with_extra_sequence": {
-    "known_catalog_position_other_core|exact": 415,
-    "homolog_not_in_catalog|exact": 218,
-    "known_catalog_position|exact": 315,
-    "homolog_not_in_catalog|consistent": 32,
+    "known_catalog_position_other_core|no_extension_detected": 415,
+    "homolog_not_in_catalog|no_extension_detected": 218,
+    "known_catalog_position|no_extension_detected": 315,
+    "homolog_not_in_catalog|extension_consistent": 32,
     "homolog_not_in_catalog|unknown": 1,
-    "not_in_assembly|consistent": 35,
-    "catalog_mismatch|exact": 52,
-    "known_catalog_position|consistent": 1,
-    "not_in_assembly|exact": 2,
-    "known_catalog_position_other_core|consistent": 10,
-    "catalog_omission|exact": 1,
-    "catalog_mismatch|consistent": 14
+    "not_in_assembly|extension_consistent": 35,
+    "catalog_mismatch|no_extension_detected": 52,
+    "known_catalog_position|extension_consistent": 1,
+    "not_in_assembly|no_extension_detected": 2,
+    "known_catalog_position_other_core|extension_consistent": 10,
+    "catalog_omission|no_extension_detected": 1,
+    "catalog_mismatch|extension_consistent": 14
    },
    "negative_control": {
     "genes_searched": 28,
@@ -677,15 +677,15 @@
    },
    "not_in_assembly_by_boundary_and_size": {},
    "positions_with_extra_sequence": {
-    "known_catalog_position_other_core|exact": 396,
-    "homolog_not_in_catalog|exact": 172,
-    "known_catalog_position|exact": 315,
+    "known_catalog_position_other_core|no_extension_detected": 396,
+    "homolog_not_in_catalog|no_extension_detected": 172,
+    "known_catalog_position|no_extension_detected": 315,
     "homolog_not_in_catalog|unknown": 1,
-    "homolog_not_in_catalog|consistent": 2,
-    "catalog_mismatch|exact": 36,
-    "known_catalog_position|consistent": 1,
-    "known_catalog_position_other_core|consistent": 1,
-    "catalog_omission|exact": 1
+    "homolog_not_in_catalog|extension_consistent": 2,
+    "catalog_mismatch|no_extension_detected": 36,
+    "known_catalog_position|extension_consistent": 1,
+    "known_catalog_position_other_core|extension_consistent": 1,
+    "catalog_omission|no_extension_detected": 1
    },
    "negative_control": {
     "genes_searched": 28,
@@ -741,11 +741,11 @@
    },
    "not_in_assembly_by_boundary_and_size": {},
    "positions_with_extra_sequence": {
-    "known_catalog_position_other_core|exact": 381,
-    "homolog_not_in_catalog|exact": 160,
-    "known_catalog_position|exact": 314,
-    "catalog_mismatch|exact": 35,
-    "catalog_omission|exact": 1
+    "known_catalog_position_other_core|no_extension_detected": 381,
+    "homolog_not_in_catalog|no_extension_detected": 160,
+    "known_catalog_position|no_extension_detected": 314,
+    "catalog_mismatch|no_extension_detected": 35,
+    "catalog_omission|no_extension_detected": 1
    },
    "negative_control": {
     "genes_searched": 28,
@@ -801,11 +801,11 @@
    },
    "not_in_assembly_by_boundary_and_size": {},
    "positions_with_extra_sequence": {
-    "known_catalog_position_other_core|exact": 365,
-    "homolog_not_in_catalog|exact": 144,
-    "known_catalog_position|exact": 305,
-    "catalog_mismatch|exact": 31,
-    "catalog_omission|exact": 1
+    "known_catalog_position_other_core|no_extension_detected": 365,
+    "homolog_not_in_catalog|no_extension_detected": 144,
+    "known_catalog_position|no_extension_detected": 305,
+    "catalog_mismatch|no_extension_detected": 31,
+    "catalog_omission|no_extension_detected": 1
    },
    "negative_control": {
     "genes_searched": 28,
