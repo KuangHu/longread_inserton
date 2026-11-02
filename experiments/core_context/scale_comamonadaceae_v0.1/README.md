@@ -1080,7 +1080,7 @@ only; the check was run for all 231.
       - 25: no alignment to either allele.
     - No read got as far as the CIGAR, allele-margin or locus checks, so neither P nor A was matched.
     - At the 2 supported intervals, 26 and 38 reads pass.
-  - **The run is not raw sequencing output:**
+  - **The run shows signatures of read processing:**
     - The submitted file is `aligned_readsV3.bam` (pool metadata, PacBio RS II).
     - Consecutive reads share their start coordinate and are ordered by end coordinate. Their strands do not
       alternate as passes of one molecule would (45% alternate, about chance).
@@ -1090,8 +1090,10 @@ only; the check was run for all 231.
     - This fits reads exported from an alignment and trimmed to aligned segments, which would make read ends mark
       where that earlier alignment stopped rather than where molecules ended. That is an inference from these
       signatures; the submitter's processing is not documented here.
-  - **Reading:** this run cannot test whether reads span these 11 intervals. That is neither evidence of an
-    assembly error nor evidence that the structures are absent.
+  - **Reading:** at these 11 intervals the reads lack usable spanning evidence, which we suspect comes from read
+    processing before submission. The submitted aligned BAM alone does not prove that cause, and it does not show
+    that the whole run cannot span intervals: the same run supports 2 intervals of this assembly. This is neither
+    evidence of an assembly error nor evidence that the structures are absent.
   - **The other aligned-BAM run:** SRR23501622 (SAMN33025486, `Aligned_LMJ.bam`) is the only other run among the 255
     checked whose submitted file name says aligned. Its end-to-end fraction is 60.5%, in the normal range. Its 241 intervals are all
     supported and are kept.

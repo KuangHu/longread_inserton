@@ -92,6 +92,10 @@ class InsertFieldsTests(unittest.TestCase):
         f = rs.insert_fields([self.obs(60, 30), self.obs(90, 40), self.obs(70, 35)])
         self.assertEqual((f['boundary'], f['extra_left'], f['insert_len']), ('consistent', 70, 1305))
         self.assertEqual(rs.insert_fields([self.obs(10, 30), self.obs(300, 30)])['boundary'], 'unknown')
+        # one stray molecule of ten does not make a known position's boundary unknown
+        f = rs.insert_fields([self.obs(0, 0)] * 9 + [self.obs(60, 0)])
+        self.assertEqual((f['boundary'], f['extra_left_range']), ('exact', '0-60'))
+        self.assertEqual(rs.insert_fields([self.obs(0, 0)] * 7 + [self.obs(200, 0)] * 3)['boundary'], 'unknown')
         self.assertEqual(rs.insert_fields([self.obs(900, 600)])['insert_size'], 'gt_2500')  # the insertion, not the core
 
 
@@ -114,6 +118,13 @@ class CanonicalTests(unittest.TestCase):
         rev = dict(left_contig='c', left_pos=2100, left_strand='-', right_contig='c', right_pos=1100, right_strand='-')
         self.assertEqual(rs.canonical(fwd), rs.canonical(rev))
         self.assertEqual(rs.geometry(*rs.canonical(rev), 1000), ('proper', 1100, 2100))
+
+    def test_plus_minus_junction_from_both_strands(self):
+        # a read joining c:4097738 (+) to c:2231535 (-), and a read of the other strand: one key
+        a = dict(left_contig='c', left_pos=4097738, left_strand='+', right_contig='c', right_pos=2231535, right_strand='-')
+        b = dict(left_contig='c', left_pos=2231535, left_strand='+', right_contig='c', right_pos=4097738, right_strand='-')
+        self.assertEqual(rs.canonical(a), rs.canonical(b))
+        self.assertEqual(rs.canonical(b), ('c', 2231535, '+', 'c', 4097738, '-'))
 
 
 class ClusterTests(unittest.TestCase):

@@ -10,6 +10,9 @@ freeze   Pilot samples by a fixed rule (written to <out>/samples.tsv and freeze.
            an aligned BAM, depth >= 30x (verified bases / assembly length); per genus the eligible sample with the
            most candidate cores supported in read-check round 5 (ties: depth, then id); genera whose best sample has
            >= 15 such cores; then HiFi samples by the same score until at least 2 HiFi samples are in.
+         --exclude: samples used in development (earlier batches' samples.tsv files and listed ids) are not eligible
+         (reason used_in_development); the rule is otherwise the same, so a validation batch is the next sample
+         per genus.
 panel    Core panel: the distinct core DNA sequences (coding span, in core orientation) of every occurrence in the
          pool of the cores with an A/B pair supported on both sides in round 5. Catalog: every reviewed occurrence
          (any core) of the pilot samples. Negative control: per pilot sample, single-copy conserved genes (fixed
@@ -35,8 +38,9 @@ Flank placement (placement): the best assembly alignment of a flank must cover >
 its inner end (the end next to the insertion) within INNER_CLIP bp; otherwise the inner coordinate is not observed and
 the flank is inner_end_unaligned. A competing alignment within MIN_DELTA_AS elsewhere makes it ambiguous.
 A merged position reports the core hit length, the extra sequence per side (median and range, assembly orientation)
-and the putative insertion length (extra left + core hit + extra right, median). boundary = exact (no extra on either
-side in every molecule), consistent (each side's extra varies by <= TOL bp across molecules) or unknown. insert_size =
+and the putative insertion length (extra left + core hit + extra right, median). boundary: on each side at least
+BOUNDARY_AGREE of the molecules have an extra length within TOL of the side's median, else unknown; then exact
+(both medians 0) or consistent. insert_size =
 le_2500 / gt_2500 applies MAX_INSERT to the putative insertion, not to the core; whether the insertion holds 1-2 genes
 is not checked here. The insertion length replaces the core length in the geometry and class rules below.
 
@@ -107,6 +111,7 @@ COUNTS = (1, 2, 3, 5)  # independent molecules a merged position needs
 HIT_COVERAGE = 0.8  # fraction of the panel sequence a core hit must cover
 PLACED_FRACTION = 0.8  # fraction of a flank its best assembly alignment must cover
 INNER_CLIP = 20  # bp; the best flank alignment must reach the flank's inner end within this
+BOUNDARY_AGREE = 0.8  # fraction of a position's molecules whose extra sequence per side is within TOL of the median
 MAX_INSERT = 2500  # bp; target insertion size (match_both_lt2500), bounds the extra sequence searched beyond a core hit
 TOL = rc3.LOCUS_TOL  # bp; placements of one position agree within this
 MIN_DELTA_AS = rc3.MIN_DELTA_AS
@@ -129,6 +134,9 @@ def cmd_freeze(a):
     if (a.out / 'samples.tsv').exists():
         sys.exit('frozen already: %s' % (a.out / 'samples.tsv'))
     man, meta = manifest(), {r['run_accession']: r for r in pc.read_tsv(POOL / 'runs.tsv')}
+    dev = set()
+    for x in filter(None, a.exclude.split(',')):
+        dev |= set(pilot_samples(Path(x).parent)) if x.endswith('.tsv') else {x}
     runs = defaultdict(list)
     for r in pc.read_tsv(ROUND5 / 'runs.tsv'):
         if not r['sample'].endswith(u.ROT):
@@ -152,7 +160,8 @@ def cmd_freeze(a):
             ('read_type', any(t not in ('ont', HIFI) for t in types)),
             ('aligned_bam_submission', any('align' in x.lower() for x in sub)),
             ('depth_below_30x', bases < 30 * int(m['total_bp'])),
-            ('run_not_ready', any(r['run'] not in files for r in rs))) if bad]
+            ('run_not_ready', any(r['run'] not in files for r in rs)),
+            ('used_in_development', s in dev)) if bad]
         rows.append(dict(sample=s, genus=m['genus'], organism=m['organism'], assembly=m['assembly'],
                          assembly_level=m['assembly_level'], read_type='/'.join(types),
                          runs=';'.join(r['run'] for r in rs), depth=round(bases / int(m['total_bp']), 1),
@@ -178,7 +187,9 @@ def cmd_freeze(a):
     pc.write_tsv(a.out / 'candidates_considered.tsv', rows, [c for c in rows[0]])
     (a.out / 'freeze.json').write_text(json.dumps(dict(
         version=VERSION, rule=__doc__.split('freeze   ')[1].split('panel    ')[0].split(), samples=[r['sample'] for r in pick],
-        considered=len(rows), eligible=len(el), round5=str(ROUND5)), indent=1) + '\n')
+        considered=len(rows), eligible=len(el), round5=str(ROUND5), excluded_as_development=sorted(dev),
+        code_commit=subprocess.run(['git', 'rev-parse', 'HEAD'], stdout=subprocess.PIPE, universal_newlines=True,
+                                   cwd=str(Path(__file__).parent)).stdout.strip()), indent=1) + '\n')
     for r in pick:
         print(r['sample'], r['genus'], r['read_type'], r['depth'], r['supported_candidate_cores'], r['reason'])
 
@@ -335,14 +346,21 @@ def placement(alns, side):
     return 'placed', best['t'], inner(best), best['strand']
 
 
+def swapped(o):
+    """True when the observation is read from the other strand of its canonical view: its left flank (read-forward)
+    maps to the minus strand, or (a junction joining a plus and a minus placement, whose two views both start on
+    plus) its right anchor sorts before its left one."""
+    if o['left_strand'] == '-':
+        return True
+    return o['right_strand'] == '-' and (o['right_contig'], o['right_pos']) < (o['left_contig'], o['left_pos'])
+
+
 def canonical(o):
-    """Flank placements in assembly orientation: an observation whose left flank (read-forward) maps to the minus
-    strand is the same position read from the other strand, so the sides are swapped and the strands flipped.
-    Reads from both strands of one position then merge."""
-    if o['left_strand'] != '-':
+    """Flank placements in assembly orientation: an observation read from the other strand (swapped) has its sides
+    swapped and its strands flipped. Reads from both strands of one position then merge."""
+    if not swapped(o):
         return o['left_contig'], o['left_pos'], o['left_strand'], o['right_contig'], o['right_pos'], o['right_strand']
-    flip = {'+': '-', '-': '+'}
-    return o['right_contig'], o['right_pos'], flip[o['right_strand']], o['left_contig'], o['left_pos'], '+'
+    return o['right_contig'], o['right_pos'], FLIP[o['right_strand']], o['left_contig'], o['left_pos'], FLIP[o['left_strand']]
 
 
 def geometry(lc, lp, ls, rc, rp, rs, core_len):
@@ -564,9 +582,12 @@ def merge(obs, catalog, seqs, member_seq, od, seq_of, preset, groups):
             if o['flank'] == L and o['status'] == 'placed':
                 lc, lp, ls, rc, rp, rs = canonical(o)
                 o.update(c_left_pos=lp, c_right_pos=rp)
-                o['c_extra'] = (o['left_extra'], o['right_extra']) if o['left_strand'] != '-' else (
-                    o['right_extra'], o['left_extra'])
-                by[(o['structure'], o['core_key'], lc, ls, rc, rs, o['core_strand'])].append(o)
+                sw = swapped(o)
+                o['c_extra'] = (o['right_extra'], o['left_extra']) if sw else (o['left_extra'], o['right_extra'])
+                # core orientation relative to the canonical left flank (a plus/minus junction read from its other
+                # strand has the opposite read-forward orientation)
+                o['c_core_strand'] = FLIP[o['core_strand']] if sw and o['left_strand'] == '+' else o['core_strand']
+                by[(o['structure'], o['core_key'], lc, ls, rc, rs, o['c_core_strand'])].append(o)
         placed = []
         for key, os_ in by.items():
             for cl in cluster(os_):
@@ -753,9 +774,10 @@ def insert_fields(cl):
     observations of one merged position."""
     el, er = [o['c_extra'][0] for o in cl], [o['c_extra'][1] for o in cl]
     ins = int(median([a + (o['qe'] - o['qs']) + b for o, a, b in zip(cl, el, er)]))
-    b = ('exact' if not any(el) and not any(er) else
-         'consistent' if max(el) - min(el) <= TOL and max(er) - min(er) <= TOL else 'unknown')
-    return dict(extra_left=median(el), extra_left_range='%d-%d' % (min(el), max(el)), extra_right=median(er),
+    ml, mr = median(el), median(er)
+    agree = all(sum(abs(x - m) <= TOL for x in xs) >= BOUNDARY_AGREE * len(xs) for xs, m in ((el, ml), (er, mr)))
+    b = 'unknown' if not agree else 'exact' if ml == mr == 0 else 'consistent'
+    return dict(extra_left=ml, extra_left_range='%d-%d' % (min(el), max(el)), extra_right=mr,
                 extra_right_range='%d-%d' % (min(er), max(er)), insert_len=ins, boundary=b,
                 insert_size='le_%d' % MAX_INSERT if ins <= MAX_INSERT else 'gt_%d' % MAX_INSERT)
 
@@ -954,6 +976,8 @@ def main():
     p.add_argument('--out', type=Path, default=REPO / 'read_site_search_pilot')
     p.add_argument('--sample')
     p.add_argument('--threads', type=int, default=16)
+    p.add_argument('--exclude', default='', help='freeze: comma-separated samples.tsv paths and sample ids used in '
+                   'development')
     a = p.parse_args()
     dict(freeze=cmd_freeze, panel=cmd_panel, search=cmd_search, combine=cmd_combine)[a.mode](a)
 

@@ -67,6 +67,8 @@ def candidates(work, out):
         if int(r['flank']) == rs.MAIN_FLANK and r['cls'] == CLS and int(r['molecules']) >= rs.MAIN_COUNT:
             add(r, 'current')
     for s in rs.pilot_samples(out):
+        if not (work / 'v0.1_backup' / s).exists():  # a batch without a v0.1 run (validation)
+            continue
         for r in pc.read_tsv(work / 'v0.1_backup' / s / 'positions.tsv.gz'):
             if int(r['flank']) == rs.MAIN_FLANK and r['cls'] == CLS and int(r['molecules']) >= rs.MAIN_COUNT:
                 add(dict(r, sample=s), 'v0.1')
