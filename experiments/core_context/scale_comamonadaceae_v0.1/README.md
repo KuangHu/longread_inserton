@@ -1161,14 +1161,66 @@ purple cigar_fail. Pairs shown:
 - `occurrences.tsv.gz`, `interval_map.tsv.gz`, `pairs.tsv.gz`;
 - `runs.tsv`, `status.tsv`, `selection.json`, `samples.txt`, `summary.json`.
 
+## Round-5 cumulative set recounted with `ucd_readcheck` v0.2 (`readcheck_round5_v02/`, 2026-11-02)
+
+- **What was rerun:**
+  - the same 21,486 intervals, 231 assemblies (plus 3 rotated contigs) and 258 runs;
+  - the same whole-genome read alignments (reused, not remapped) and the same thresholds.
+
+  Only the allele alignment differs: each interval's two alleles are aligned on their own. Jobs are in the round
+  directory's `jobs.txt`. The v0.1 results stay in `readcheck_round5/`. Comparison: `compare_v01_v02.py` →
+  `compare.json`, and `interval_changes.tsv` (every interval with a count or class change, or near a threshold).
+- **A bug found and fixed on the way:**
+  - The first v0.2 recount aligned only the last record of each read name. PacBio CLR runs store several subreads
+    under one SRA spot name, so v0.1 aligned every one.
+  - Symptom: P_matched fell by up to 76, at CLR samples only, for example SAMN13450421.
+  - Fixed in `ucd_readcheck.py` (commit d070d94, test `test_records_sharing_a_name_are_all_aligned`), then the
+    whole set was rerun. The numbers below are from the fixed run.
+  - The SAMN31258398 set-independence regression was not affected: all of its variants ran the same code.
+- **Classes:**
+  - 21,092 / 21,092 supported intervals stay supported.
+  - 3 intervals change class, none of them supported:
+    - SAMEA120399594 `P_bdd8dc42b674`: `locus_ambiguous` → `conflict`. Its A_matched goes 2 → 3, which reaches
+      MIN_SPAN with P_matched 0, so the verdict goes `insufficient` → `contradicted`. Its pair goes
+      `one_position_supported` → `conflict_at_a_position`.
+    - SAMN37458465 `P_ef165fbaec0b` and `P_f11ad9520de1`: `insufficient_coverage` → `locus_ambiguous`. Each has 1
+      more molecule whose anchors also place elsewhere. P_matched stays 2, below MIN_SPAN.
+  - Every other pair class is unchanged.
+- **Counts:**
+  - P_matched rises at 786 intervals (at most +19) and falls by 1 at 10. The 10 falls are 7 at SAMN31258398 and 1
+    each at SAMEA120399594, SAMEA120399592 and SAMN28084394.
+  - Totals:
+
+    | count | v0.1 | v0.2 |
+    |---|---:|---:|
+    | P_matched | 2,505,543 | 2,507,165 |
+    | off_locus | 144,837 | 14,826 |
+    | cigar_fail | 13,746 | 9,354 |
+    | locus_ambiguous | 351,390 | 363,291 |
+
+  - **Why off_locus falls:** reads far from an interval no longer reach its alleles.
+  - **Why locus_ambiguous rises:** in v0.1, some reads near an interval aligned better to another interval's
+    allele and never reached this one. Now each reaches its own interval's alleles, and their anchors also place
+    elsewhere.
+- **Near the thresholds** (v0.1, with n = P_matched + A_matched):
+  - **n of 2–5:** 361 supported intervals; all stay supported. 3 gain a molecule and none drops below 3.
+  - **Other allele's share within 5 points of 10%:** 13 supported intervals; all stay supported.
+  - **Insufficient with n of 2–5:** 61 intervals. 2 become `locus_ambiguous` and 1 `conflict`, as listed above;
+    none becomes supported.
+- **Reading:** the per-interval method removes the dependence on which other intervals are checked together.
+  It changes no supported result of the round-5 set. It is the current read-check baseline.
+
 Not done yet:
-- **Adding sites from long reads (the original aim):** a pilot has run on 11 frozen samples, v0.1 and then v0.2
-  with rule fixes (results in `READ_SITE_SEARCH_PILOT.md`; at v0.2 no position is classed core-absent, and the 4
-  v0.1 sites have strict P/A evidence per molecule); the full run has not started. Rounds 1–5 only took positions already in assemblies
+- **Adding sites from long reads (the original aim):** see `READ_SITE_SEARCH_PILOT.md`.
+  - **Development:** v0.1 → v0.3 on 11 frozen samples. v0.3 treats the core hit as a seed and finds the insertion
+    boundary beyond extra sequence; its rules are frozen at tag `read_site_search_v0.3_frozen`.
+  - **Validation:** one batch of 7 samples not used in development has run; it found no candidate at ≥ 3
+    molecules.
+  - **Full run:** not started. Rounds 1–5 only took positions already in assemblies
   and checked them with reads. The read search goes: known core → homologous cores in all reads → both flanks →
   merge repeated observations of one position → compare with the assembly position catalog → report by class;
 - candidate interpretation layer;
-- a full read-check round with `ucd_readcheck` v0.2 (per-interval alleles; rounds 1–5 are v0.1);
+- rounds 1–4 are not rerun with `ucd_readcheck` v0.2; the round-5 cumulative set is (above);
 - all five planned download batches are done. The 104 assemblies left out of the plan (118.4 GB) add no core and
   no A/B pair to the current catalog of assembly positions. That says nothing about their value for finding new
   sites in reads (see `READ_SITE_SEARCH_PILOT.md`).
