@@ -838,6 +838,8 @@ def cmd_combine(a):
         if sel:
             pc.write_tsv(out / ('%s.tsv' % name), sorted(sel, key=lambda r: (-int(r['molecules']), r['sample'])),
                          cols)
+        elif (out / ('%s.tsv' % name)).exists():
+            (out / ('%s.tsv' % name)).unlink()  # no row at this run: no table left from an earlier one
     summ['search'] = {s: {k: v for k, v in j.items() if k in ('panel_hits', 'reads_with_hits', 'molecules_with_hits',
                                                              'observation_status')} for s, j in runs.items()}
     (out / 'summary.json').write_text(json.dumps(summ, indent=1) + '\n')

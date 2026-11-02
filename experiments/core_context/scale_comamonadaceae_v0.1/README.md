@@ -1160,8 +1160,9 @@ purple cigar_fail. Pairs shown:
 - `runs.tsv`, `status.tsv`, `selection.json`, `samples.txt`, `summary.json`.
 
 Not done yet:
-- **Adding sites from long reads (the original aim):** a pilot has run on 11 frozen samples (results in
-  `READ_SITE_SEARCH_PILOT.md`); the full run has not started. Rounds 1–5 only took positions already in assemblies
+- **Adding sites from long reads (the original aim):** a pilot has run on 11 frozen samples, v0.1 and then v0.2
+  with rule fixes (results in `READ_SITE_SEARCH_PILOT.md`; at v0.2 no position is classed core-absent, and the 4
+  v0.1 sites have strict P/A evidence per molecule); the full run has not started. Rounds 1–5 only took positions already in assemblies
   and checked them with reads. The read search goes: known core → homologous cores in all reads → both flanks →
   merge repeated observations of one position → compare with the assembly position catalog → report by class;
 - candidate interpretation layer;

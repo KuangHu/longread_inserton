@@ -151,6 +151,8 @@ changed):
     - 28 have a merged position overlapping or next to them that was matched to a different catalog occurrence.
       These are mostly two-gene occurrences and partial hits: a position is matched to an occurrence only if the
       occurrence lies wholly within it. Matching by overlap is a change for v0.2. It is not made here.
+      **Corrected in v0.2 (below):** with matching by core relation, orientation and coverage, recovery is
+      unchanged (329 / 366). These misses are not a matching problem; see the v0.2 recovery misses.
 - **Negative control:**
   - Of the 55 (sample, gene) combinations searched, 47 give exactly one position and none gives two or more.
   - 8 give none. In those, the sample's own copy was not in the panel and only a distant homolog was.
@@ -222,4 +224,186 @@ changed):
 
 - Placing unplaced or ambiguous flanks on other assemblies of the pool.
 - Matching positions to catalog occurrences by overlap rather than containment (the 28 recovery misses).
+- Any assembly outside the frozen 11; no downloads.
+
+## Pilot v0.2 (2026-11-01): rule fixes, same 11 samples, same thresholds
+
+Requested after review of v0.1. Panel, samples, panel PAFs and all thresholds are unchanged. Only the per-sample
+search after the panel alignment and the combine step were rerun. Jobs are in `read_site_search_pilot/jobs.txt`.
+The v0.1 per-sample tables are kept in the work directory under `v0.1_backup/`; the v0.1 combined tables are in git
+at 8af82d6. Tests in `../test_read_site_search.py` include one counterexample per fix.
+
+### What changed
+
+1. **Flank inner end (`placement`):**
+   - v0.1 took the inner coordinate from the end of the best flank alignment even when that alignment stopped short
+     of the core.
+   - A flank is now `placed` only if its best alignment reaches the inner end within `INNER_CLIP` = 20 read
+     bases. This value was fixed before the rerun.
+   - Otherwise the flank is `inner_end_unaligned`, and the context is reported as `unplaceable_context:*`.
+   - Of the 217,223 aligned 1 kb flanks:
+
+     | bases short of the inner end | share of flanks |
+     |---|---:|
+     | 0 | 84.9% |
+     | 1–20 | 13.2% |
+     | 21–50 | 1.1% |
+     | more than 50 | 0.8% |
+2. **Catalog matching (`match_catalog`):** an occurrence matches only if all three conditions hold.
+   - **Core relation:** the occurrence is of the same core, or of a homologous core that shares a protein family or
+     homology group.
+   - **Orientation:** the occurrence's strand agrees with the core's orientation in the assembly as the reads show
+     it. For a homologous core, the shared family's sign converts between the two.
+   - **Coverage:** the overlap is at least 80% of the occurrence and at least 80% of the interval.
+   - An unrelated core's occurrence is only noted (`catalog_unmatched`), whatever its overlap.
+   - A same or homologous occurrence that fails orientation or coverage gives `catalog_mismatch:<reason>`. That
+     class is neither known nor a candidate.
+   - Control genes are related to cores through their own protein families.
+3. **`shifted_known_position` (`mark_shifted`):**
+   - A position counts as a shifted copy of a known position only if the known position's core is the same or
+     homologous, in a consistent orientation.
+   - Two known positions of one core matched to the same occurrence are one position. The one with fewer molecules
+     is marked shifted. The negative control found this case: a partial hit of a control gene matched the same
+     occurrence as the full hit.
+   - `shifted_from` names the known position.
+4. **Empty-site molecules (`empty_site_reads` / `empty_site_counts`):** a record counts if two conditions hold.
+   - One of its whole-assembly alignments spans the site ± 1 kb.
+   - Its local CIGAR over the site ± 300 bp passes the read check's indel rule (`cigar_ok`, limit half the insert
+     length).
+
+   v0.1 counted read names and used only the whole alignment's length difference. Records are now merged into
+   molecules. A molecule that carries the core and also spans the empty site is counted apart (`both_forms`).
+
+### Main setting (flanks 1 kb, at least 3 molecules), v0.1 → v0.2
+
+| report group | class | v0.1 | v0.2 |
+|---|---|---:|---:|
+| known positions | `known_catalog_position` | 533 | 530 |
+| | `known_catalog_position_other_core` | 526 | 600 |
+| | `catalog_mismatch:coverage` (new; not known, not a candidate) | – | 64 |
+| | `shifted_known_position` (not counted) | 93 | 92 |
+| catalog omissions | `catalog_omission:same_family` | 0 | 0 |
+| | `catalog_omission:no_annotated_cds` | 6 | 6 |
+| homologs not in the catalog | `homolog_not_in_catalog:same_homology_group` | 295 | 138 |
+| | `homolog_not_in_catalog:other_family` | 59 | 73 |
+| structures the assembly does not show | `not_in_assembly:core_absent` | 4 | **0** |
+| | `not_in_assembly:junction` / `other_sequence` | 0 / 0 | 0 / 0 |
+| assembly breaks | `contig_end_join` | 5 | 3 |
+| unplaceable contexts | `unplaceable_context:*` | 150 | 390 |
+| | of which with a flank `inner_end_unaligned` | – | 243 |
+
+- **Recovery:** round-5-supported 329 / 366 (unchanged); others 201 / 227 (v0.1: 204).
+- **Negative control:** 47 genes with exactly one position, 8 with none, none with two or more (as in v0.1).
+- **Where the v0.1 positions went** (`read_site_search_pilot/v01_to_v02.tsv`; v0.1 "catalog omission" is
+  counted before the family split):
+
+  | v0.1 class | v0.2 class | positions |
+  |---|---|---:|
+  | catalog omission (360) | homolog not in the catalog | 185 |
+  | | known position of a homologous core | 123 |
+  | | shifted | 24 |
+  | | `catalog_mismatch:coverage` | 21 |
+  | | catalog omission | 6 |
+  | known position of another core (526) | the same class | 446 |
+  | | `catalog_mismatch:coverage` | 43 |
+  | | shifted | 22 |
+  | | homolog not in the catalog (the core in that occurrence is unrelated) | 15 |
+  | known position of the same core (533) | the same class | 531 |
+
+  - The rise in homologous-core matches is because a homolog's occurrence now matches with 80% reciprocal coverage
+    instead of lying wholly inside within 50 bp.
+  - The 15 positions that became "homolog not in the catalog" had matched an occurrence of an unrelated core.
+- **`catalog_mismatch:coverage`:** all 64 overlap a homologous core's occurrence that covers less than 80% of the
+  interval or of itself. This is typically a one-gene occurrence inside a two-gene core's interval, or the reverse.
+  No same-core occurrence failed on orientation.
+- **The 92 shifted positions:**
+  - 77 are a second position of one core on the same homologous occurrence (rule 3).
+  - 15 overlap a known position of a related core.
+- **Sensitivity:** junctions and core-absent positions at N = 1 (68 junctions, 0 core-absent at 1 kb) vanish by
+  N = 2–3 as before. The negative control has 2–3 genes with two positions at N = 1 and none from N = 3 at every
+  flank length.
+
+### The 4 v0.1 candidates
+
+All 4 left `not_in_assembly:core_absent` because of rule 1.
+- **Why:** at each site the flank alignments stop a consistent number of bases short of the core hit on both
+  sides. The reads therefore carry more inserted sequence than the core hit: the core plus about 60–105 bp of end
+  sequence that the assembly lacks.
+- **v0.1's coordinates:** v0.1 placed the junctions where the assembly alignment stops. Under the strict rule,
+  those coordinates are not the inner ends of the flanks.
+- **The site is still known:** the search no longer places these positions, but the junction where the reads
+  leave the assembly is still observed.
+- **Strict test:** each site was therefore tested with the read check's own rules (`../candidate_evidence.py`;
+  s3 v0.3 rules, thresholds unchanged).
+  - **Alleles:**
+    - P = U + the read's whole insert (core hit plus the unaligned ends, from the best-identity record) + D;
+    - A = the assembly as it is.
+  - **Reads:** every record with a whole-assembly alignment within 2 kb, plus the core-carrying records.
+  - **Counting:** molecules, merged across runs.
+- **Outputs** (`read_site_search_pilot/candidates/`):
+  - `evidence_summary.tsv`;
+  - `evidence_molecules.tsv`: one row per molecule, with its records' calls and nothing dropped;
+  - one SVG per candidate, one row per molecule on U | insert | D.
+
+| sample : site | v0.1 molecules (core / empty) | v0.2 search | unaligned ends L / R (median, range) | insert / core hit | strict P matched | strict A matched | conflict | unknown | empty-site molecules, v0.2 rule |
+|---|---|---|---|---|---:|---:|---:|---:|---:|
+| SAMN30525180 NZ_JAOCIM010000001.1:3,553,051–059 | 41 / 16 | 40 molecules, both flanks `inner_end_unaligned` | 69 (58–91) / 36 (30–54) | 1,334 / 1,228 | 46 | 25 | 0 | 58 | 22 (+2 indel) |
+| SAMN30525180 NZ_JAOCIM010000001.1:1,653,143–151 | 9 / 48 | 9, both `inner_end_unaligned` | 69 (65–75) / 35 (33–39) | 1,328 / 1,226 | 10 | 90 | 0 | 47 | 78 |
+| SAMN11265848 NZ_CM195847.1:3,064,452–457 | 24 / 177 | 23 both, 1 one side `inner_end_unaligned` | 21 (17–60) / 76 (68–94) | 1,176 / 1,079 | 30 | 302 | 0 | 1,028 | 197 |
+| SAMN15738716 NZ_JARXUY010000001.1:3,158,294–304 (HiFi) | 10 / 53 | 10, one side `inner_end_unaligned` | 57 (56–58) / 7 (7–14) | 1,402 / 1,338 | 12 | 61 | 0 | 38 | 53 |
+
+- **Which side is which:** L / R are in assembly orientation. The two SAMN30525180 sites show the same end lengths
+  (69 / 35–36 bp) with the same core, which fits the same inserted unit at both.
+- **Strict P / A counts:** the caller's own counts, per run, agree with the per-molecule table
+  (`per_run_caller_counts`).
+- **The read check's verdict, taking the assembly's allele (A) as the expected one:**
+  - 3,553,051: `mixed` (46 P / 25 A);
+  - SAMN15738716: `mixed` (12 / 61);
+  - 1,653,143: `consistent` with A, with P at 10% of 100;
+  - SAMN11265848: `consistent` with A, with P at 9% of 332.
+
+  "Consistent" means only that P is at or under the read check's 10% rule. It does not mean P is absent: 10 and
+  30 molecules carry the insert with both junctions spanned.
+- **Unknown molecules:** these are mostly reads that end inside the tested span (`partial:ends`, `partial:short_read`).
+  The step of each one is in `unknown_by_step`.
+  - SAMN11265848 has 1,028 because its ONT reads are short at this site. The figure keeps them all.
+- **No conflicts:** no molecule's records disagree, and no molecule the search saw with the core here is called A.
+- **Seen only by the strict test:** 1–6 molecules per site are strict P but were not counted by the search at
+  this position. Why was not traced.
+- **Empty-site counts:** the v0.2 rule gives 197 / 53 / 78 / 22 molecules against v0.1's 177 / 53 / 48 / 16. v0.1
+  rejected reads whose whole alignment had a net length difference over 200 bp anywhere; v0.2 checks only the site.
+- **Wording:** at each of the 4 sites, some molecules of the sequenced DNA carry an insert of 1.2–1.4 kb with both
+  junctions spanned by the read check's rules, and others span the empty site. These are candidate structures in
+  part of the sequenced DNA. They are not insertion events, mobility, or new sites in a population sense.
+- **Search class:** the search no longer classes them as `not_in_assembly:core_absent`, because their inner flank
+  ends are not aligned. They stand as strict-test results at 4 sites chosen by v0.1.
+- **Other such sites not looked for:** at the main setting, 8 unplaceable contexts have both flanks
+  `inner_end_unaligned`.
+  - With neither flank placed, these contexts are grouped by core only, not by location.
+  - Two of them are the cores of the 3 ONT candidates (58 and 42 molecules).
+  - The other 6 are 6 cores with 3–4 molecules each.
+  - Whether other sites of this kind exist was not searched for systematically.
+
+### Recovery misses, v0.2 (`read_site_search_pilot/recovery_misses_v02.tsv`)
+
+The 37 round-5-supported positions not recovered:
+
+| reason | positions |
+|---|---:|
+| the core's own observations there have one flank ambiguous (repeat context) | 15 |
+| no two-sided observation of the core there at all | 18 |
+| found with fewer than 3 molecules | 2 |
+| one flank unplaced | 1 |
+| 2 two-sided observations, merged into a junction and a shifted position | 1 |
+
+- **Cores with no two-sided observation:** these are short (183–507 bp) one-gene cores lying inside a larger
+  multi-gene occurrence. The larger occurrence is recovered as its own core.
+- **v0.1's explanation was wrong:** none of the misses is fixed by matching, so the v0.1 explanation (containment
+  vs overlap) was wrong.
+
+### Still not done
+
+- Placing unplaced or ambiguous flanks on other assemblies of the pool.
+- A systematic search for sites whose flanks stop short of the core consistently (an insert larger than the core).
+  That would need its own rule, fixed in advance.
 - Any assembly outside the frozen 11; no downloads.
