@@ -341,8 +341,8 @@ def cmd_search(a):
                          right_status=pr[0], right_contig=pr[1], right_pos=pr[2], right_strand=pr[3])
                 o['status'] = 'placed' if pl[0] == pr[0] == 'placed' else 'unplaceable_context'
             obs.append(o)
-    positions = merge(obs, catalog, seqs, member_seq, od)
-    cols = ['flank', 'structure', 'core_key', 'kind', 'cls', 'molecules', 'read_records', 'contig', 'start', 'end',
+    positions = merge(obs, catalog, seqs, member_seq, od, seq_of, presets[0])
+    cols = ['flank', 'structure', 'core_key', 'kind', 'cls', 'raw_cls', 'molecules', 'read_records', 'contig', 'start', 'end',
             'left_contig', 'left_pos', 'left_strand', 'right_contig', 'right_pos', 'right_strand', 'catalog',
             'core_in_assembly', 'members', 'identity_median', 'runs']
     pc.write_tsv(od / 'positions.tsv.gz', positions, cols)
@@ -377,7 +377,7 @@ def panel_members(panel, names):
     return out
 
 
-def merge(obs, catalog, seqs, member_seq, od):
+def merge(obs, catalog, seqs, member_seq, od, seq_of, preset):
     """Placed observations -> one row per merged position (per flank length); unplaceable ones -> one row per
     (core, placed side anchor, reason). Molecules are counted once per position."""
     rows = []
@@ -388,9 +388,11 @@ def merge(obs, catalog, seqs, member_seq, od):
                 lc, lp, ls, rc, rp, rs = canonical(o)
                 o.update(c_left_pos=lp, c_right_pos=rp)
                 groups[(o['structure'], o['core_key'], lc, ls, rc, rs)].append(o)
+        placed = []
         for key, os_ in groups.items():
             for cl in cluster(os_):
-                rows.append(position_row(L, key, cl, catalog, seqs, member_seq, od))
+                placed.append(position_row(L, key, cl, catalog, seqs, member_seq, od, seq_of, preset))
+        rows += mark_shifted(placed)
         un = defaultdict(list)
         for o in obs:
             if o['flank'] == L and o['status'] == 'unplaceable_context':
@@ -436,7 +438,7 @@ def cluster(os_):
     return out
 
 
-def position_row(L, key, cl, catalog, seqs, member_seq, od):
+def position_row(L, key, cl, catalog, seqs, member_seq, od, seq_of, preset):
     st, ck, lc, ls, rc, rs = key
     lp = int(median([o['c_left_pos'] for o in cl]))
     rp = int(median([o['c_right_pos'] for o in cl]))
@@ -455,8 +457,14 @@ def position_row(L, key, cl, catalog, seqs, member_seq, od):
             cls = 'known_catalog_position_other_core'
         else:
             seg = seqs[lc][max(0, x):max(0, y)]
-            mem = Counter(o['member'] for o in cl).most_common(1)[0][0]
-            inside = contains(seg, member_seq[mem], od) if len(seg) >= 0.5 * core_len else False
+            if len(seg) >= 0.5 * core_len:
+                # does the assembly between the flanks hold the core? the panel sequence (may be from another genus)
+                # or the core region of up to 3 of this position's own reads
+                mem = Counter(o['member'] for o in cl).most_common(1)[0][0]
+                own = sorted(cl, key=lambda o: (-o['identity'], o['read']))[:3]
+                inside = ('panel_sequence' if contains(seg, member_seq[mem], od, 'asm20') else
+                          'own_reads' if any(contains(seg, seq_of[o['read']][o['qs']:o['qe']], od, preset) for o in own)
+                          else '')
             cls = ('catalog_omission' if inside else 'not_in_assembly:other_sequence'
                    if len(seg) >= 0.5 * core_len else 'not_in_assembly:core_absent')
     return dict(flank=L, structure=st, core_key=ck, kind=cl[0]['kind'], cls=cls,
@@ -467,14 +475,34 @@ def position_row(L, key, cl, catalog, seqs, member_seq, od):
                 runs=';'.join(sorted({o['run'] for o in cl})))
 
 
-def contains(seg, core, od):
-    """The assembly segment contains the core: one minimap2 asm20 alignment covering >= HIT_COVERAGE of it."""
+def mark_shifted(rows):
+    """A non-known position whose assembly interval (or, for a junction, either flank anchor) overlaps a known
+    position of the same core or a homologous one in the same sample is the known position seen with shifted
+    anchors (a core hit that covers only part of the gene moves a flank): cls shifted_known_position, raw_cls
+    keeps the class it had. Found with the negative-control genes of the pilot."""
+    known = defaultdict(list)
+    for r in rows:
+        if r['cls'].startswith('known_catalog_position'):
+            known[r['contig']].append((r['start'], r['end']))
+    for r in rows:
+        if r['cls'].startswith('known_catalog_position'):
+            continue
+        hit = (any(a < r['end'] + TOL and b > r['start'] - TOL for a, b in known[r['contig']]) if r['contig'] else
+               any(a - TOL <= p <= b + TOL for c, p in ((r['left_contig'], r['left_pos']), (r['right_contig'], r['right_pos']))
+                   for a, b in known[c]))
+        if hit:
+            r['raw_cls'], r['cls'] = r['cls'], 'shifted_known_position'
+    return rows
+
+
+def contains(seg, core, od, preset):
+    """The assembly segment contains the core: one minimap2 alignment covering >= HIT_COVERAGE of it."""
     if not seg or not core:
         return False
     ref, qry = od / 'seg.fa', od / 'core.fa'
     ref.write_text('>seg\n%s\n' % seg)
     qry.write_text('>core\n%s\n' % core)
-    res = subprocess.run(['minimap2', '-x', 'asm20', '-c', str(ref), str(qry)], stdout=subprocess.PIPE,
+    res = subprocess.run(['minimap2', '-x', preset, '-c', str(ref), str(qry)], stdout=subprocess.PIPE,
                          stderr=subprocess.DEVNULL, universal_newlines=True, check=True)
     ref.unlink()
     qry.unlink()
@@ -503,11 +531,13 @@ def cmd_combine(a):
     for L in FLANKS:
         for N in COUNTS:
             sel = [r for r in rows if int(r['flank']) == L]
-            pos = [r for r in sel if not r['cls'].startswith(('unplaceable', 'one_sided'))]
+            pos = [r for r in sel if not r['cls'].startswith(('unplaceable', 'one_sided', 'shifted'))]
             ok = [r for r in pos if int(r['molecules']) >= N]
             g = {kind: dict(positions_by_class=dict(Counter(r['cls'] for r in ok if r['kind'] == kind)),
                             positions_below_N=dict(Counter(r['cls'] for r in pos if r['kind'] == kind
                                                            and int(r['molecules']) < N)),
+                            shifted_known_positions=sum(r['cls'] == 'shifted_known_position' and r['kind'] == kind
+                                                        and int(r['molecules']) >= N for r in sel),
                             unplaceable_contexts=dict(Counter(r['cls'] for r in sel if r['kind'] == kind and
                                                               r['cls'].startswith('unplaceable')
                                                               and int(r['molecules']) >= N)))

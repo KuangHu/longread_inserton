@@ -51,5 +51,18 @@ class ClusterTests(unittest.TestCase):
         self.assertEqual(sorted(len(c) for c in rs.cluster(obs)), [1, 2])
 
 
+class ShiftedTests(unittest.TestCase):
+    def test_position_overlapping_a_known_one_is_marked_and_keeps_its_class(self):
+        rows = [dict(cls='known_catalog_position', contig='c', start=1000, end=2000),
+                dict(cls='not_in_assembly:other_sequence', contig='c', start=1150, end=2000),
+                dict(cls='catalog_omission', contig='c', start=5000, end=6000),
+                dict(cls='not_in_assembly:junction', contig='', start='', end='', left_contig='c', left_pos=1990,
+                     right_contig='d', right_pos=10)]
+        out = rs.mark_shifted(rows)
+        self.assertEqual([r['cls'] for r in out], ['known_catalog_position', 'shifted_known_position',
+                                                    'catalog_omission', 'shifted_known_position'])
+        self.assertEqual(out[1]['raw_cls'], 'not_in_assembly:other_sequence')
+
+
 if __name__ == '__main__':
     unittest.main()
