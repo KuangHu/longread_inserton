@@ -19,9 +19,25 @@ search   One sample: all reads of every verified run -> panel (minimap2, read pr
          check; merged positions; classes; per (L, N) counts. Never downloads (ready manifest only).
 combine  Pilot tables and summary over the samples.
 
+Flank placement (placement): the best assembly alignment of a flank must cover >= PLACED_FRACTION of it AND reach
+its inner end (the end next to the core) within INNER_CLIP bp; otherwise the inner coordinate is not observed and the
+flank is inner_end_unaligned. A competing alignment within MIN_DELTA_AS elsewhere makes it ambiguous.
+
+Catalog matching (match_catalog), since v0.2: an occurrence matches a merged position only when all three hold
+  core relation  same core key, or a homologous core (a shared protein family or homology group, see core_relation);
+                 an occurrence of an unrelated core is never a match, whatever its overlap
+  orientation    the occurrence strand equals the core's orientation in the assembly as the reads show it (read hit
+                 strand and flank strand), converted through the shared family's sign for a homologous core; when no
+                 sign can be derived the orientation is undetermined and there is no match
+  coverage       the overlap is >= HIT_COVERAGE of the occurrence and >= HIT_COVERAGE of the interval between the flanks
+(v0.1 required only that an occurrence of any core lie wholly inside the interval.)
+
 Classes of a merged position (both flanks placed, each without a competing placement within MIN_DELTA_AS):
-  known_catalog_position          a catalog occurrence of this core lies between the two flanks
-  known_catalog_position_other_core   a catalog occurrence of another core lies there (homologous core)
+  known_catalog_position          a catalog occurrence of this core matches
+  known_catalog_position_other_core   a catalog occurrence of a homologous core matches
+  catalog_mismatch:<reason>       an occurrence of this or a homologous core overlaps but fails orientation or
+                                  coverage (reason: orientation, orientation_undetermined, coverage); neither known nor
+                                  a candidate
   catalog_omission / homolog_not_in_catalog   no catalog occurrence there, but the assembly sequence between the
                                   flanks contains the core (the panel sequence or the position's own reads, aligned);
                                   split by the annotated CDS there (see annotate_omissions): only a CDS of the core's
@@ -35,9 +51,14 @@ Classes of a merged position (both flanks placed, each without a competing place
   contig_end_join                 a junction whose flanks sit at the end and at the start of the same contig: the
                                   reads join the contig's end to its start through the core (the assembly breaks
                                   there); not a structure missing from the assembly
-  shifted_known_position          overlaps a known position of the sample (a partial core hit moved a flank)
-not_in_assembly:core_absent positions also report empty_site_molecules: molecules spanning the empty site in the
-read check's whole-assembly alignments.
+  shifted_known_position          overlaps a known position of the sample whose core is the same or homologous, in a
+                                  consistent orientation (a partial core hit moved a flank); an unrelated core's
+                                  known position nearby does not make a position shifted
+not_in_assembly:core_absent positions also report the molecules spanning the empty site (empty_sites): a molecule
+counts when one of its records has a whole-assembly alignment (read check genome PAF) over the site +/- EMPTY_SPAN
+whose local CIGAR over site +/- ANCHOR passes the read check's indel rule (s3 cigar_ok, limit half the core length);
+records are merged into molecules with the same FASTQ-header grouping as the search; a molecule with both a core
+record at the position and an empty-site record is counted apart (both_forms_molecules), never on either side.
 Not positions: unplaceable_context (a flank unplaced or placed ambiguously; reported by side), one_sided (a flank
 shorter than L). Every merged position is reported with its number of independent molecules; a candidate needs
 >= N (pilot N = 3, sensitivity N in COUNTS).
@@ -59,7 +80,7 @@ from scale_candidates import POOL
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / 'scripts'))
 import reads_ready  # noqa: E402
 
-VERSION = 'read_site_search_v0.1'
+VERSION = 'read_site_search_v0.2'  # v0.2: inner-end rule, catalog match by core relation / orientation / coverage, empty-site CIGAR + molecules, shifted by core relation
 WORK = u.PROJ / 'core_context' / 'read_site_search' / 'pilot_v0.1'
 REPO = Path(__file__).resolve().parent / 'scale_comamonadaceae_v0.1'
 ROUND5 = REPO / 'readcheck_round5'
@@ -68,6 +89,7 @@ MAIN_FLANK, MAIN_COUNT = 1000, 3
 COUNTS = (1, 2, 3, 5)  # independent molecules a merged position needs
 HIT_COVERAGE = 0.8  # fraction of the panel sequence a core hit must cover
 PLACED_FRACTION = 0.8  # fraction of a flank its best assembly alignment must cover
+INNER_CLIP = 20  # bp; the best flank alignment must reach the flank's inner end within this
 TOL = rc3.LOCUS_TOL  # bp; placements of one position agree within this
 MIN_DELTA_AS = rc3.MIN_DELTA_AS
 END_ZONE = 5000  # bp: a flank this close to a contig end (beyond the core length) counts as at that end
@@ -223,7 +245,7 @@ def paf_rows(path):
             tags = dict(x.split(':', 2)[::2] for x in f[12:])
             yield dict(q=f[0], qlen=int(f[1]), qs=int(f[2]), qe=int(f[3]), strand=f[4], t=f[5], tlen=int(f[6]),
                        ts=int(f[7]), te=int(f[8]), match=int(f[9]), block=int(f[10]), score=int(tags.get('AS', 0)),
-                       tp=tags.get('tp', 'P'))
+                       tp=tags.get('tp', 'P'), cg=tags.get('cg', ''))
 
 
 def core_hits(paf, coverage):
@@ -249,7 +271,10 @@ def core_hits(paf, coverage):
 
 def placement(alns, side):
     """Best placement of one flank: (status, contig, inner position, strand). The inner position is the assembly
-    coordinate of the flank end next to the core (left flank: its last base; right flank: its first base)."""
+    coordinate of the flank end next to the core (left flank: its last base; right flank: its first base). It is only
+    observed when the best alignment reaches that end of the flank (within INNER_CLIP read bases; the flank is in
+    read-forward orientation, so the inner end is the query end for L and the query start for R, either strand);
+    otherwise inner_end_unaligned, with the position the alignment would give."""
     if not alns:
         return 'unplaced', '', -1, ''
     best = max(alns, key=lambda g: g['score'])
@@ -258,6 +283,8 @@ def placement(alns, side):
 
     def inner(g):
         return (g['te'] if g['strand'] == '+' else g['ts']) if side == 'L' else (g['ts'] if g['strand'] == '+' else g['te'])
+    if (best['qlen'] - best['qe'] if side == 'L' else best['qs']) > INNER_CLIP:
+        return 'inner_end_unaligned', best['t'], inner(best), best['strand']
     for g in alns:
         if g is not best and g['score'] >= best['score'] - MIN_DELTA_AS and (
                 g['t'] != best['t'] or g['strand'] != best['strand'] or abs(inner(g) - inner(best)) > TOL):
@@ -336,6 +363,7 @@ def cmd_search(a):
         alns[g['q']].append(g)
     seqs = rc3.read_fasta(fasta)
     catalog = [c for c in pc.read_tsv(a.work / 'panel' / 'catalog.tsv') if c['sample'] == s]
+    groups = family_groups(a.work)
     member_seq = panel_members(panel, {x['member'] for x in hits})
     obs = []
     for x in hits:
@@ -348,18 +376,23 @@ def cmd_search(a):
                 pl = placement(alns.get(k + '|L', []), 'L')
                 pr = placement(alns.get(k + '|R', []), 'R')
                 o.update(left_status=pl[0], left_contig=pl[1], left_pos=pl[2], left_strand=pl[3],
-                         right_status=pr[0], right_contig=pr[1], right_pos=pr[2], right_strand=pr[3])
+                         right_status=pr[0], right_contig=pr[1], right_pos=pr[2], right_strand=pr[3],
+                         left_inner_clip=inner_clip(alns.get(k + '|L', []), 'L'),
+                         right_inner_clip=inner_clip(alns.get(k + '|R', []), 'R'))
+                if pl[3]:
+                    o['core_strand'] = x['strand'] if pl[3] == '+' else FLIP[x['strand']]
                 o['status'] = 'placed' if pl[0] == pr[0] == 'placed' else 'unplaceable_context'
             obs.append(o)
-    positions = merge(obs, catalog, seqs, member_seq, od, seq_of, presets[0])
-    empty_sites(s, positions)
+    positions = merge(obs, catalog, seqs, member_seq, od, seq_of, presets[0], groups)
+    empty_sites(s, positions, runs, recs)
     cols = ['flank', 'structure', 'core_key', 'kind', 'cls', 'raw_cls', 'molecules', 'read_records', 'contig', 'start', 'end',
-            'left_contig', 'left_pos', 'left_strand', 'right_contig', 'right_pos', 'right_strand', 'catalog',
-            'core_in_assembly', 'empty_site_molecules', 'members', 'identity_median', 'runs']
+            'left_contig', 'left_pos', 'left_strand', 'right_contig', 'right_pos', 'right_strand', 'core_strand',
+            'core_len', 'catalog', 'catalog_unmatched', 'shifted_from', 'core_in_assembly'] + EMPTY_COLS + [
+            'members', 'identity_median', 'runs']
     pc.write_tsv(od / 'positions.tsv.gz', positions, cols)
     ocols = ['flank', 'run', 'read', 'molecule', 'structure', 'core_key', 'kind', 'member', 'qs', 'qe', 'strand',
-             'coverage', 'identity', 'status', 'left_status', 'left_contig', 'left_pos', 'left_strand', 'right_status',
-             'right_contig', 'right_pos', 'right_strand']
+             'coverage', 'identity', 'status', 'left_status', 'left_contig', 'left_pos', 'left_strand', 'left_inner_clip',
+             'right_status', 'right_contig', 'right_pos', 'right_strand', 'right_inner_clip', 'core_strand']
     pc.write_tsv(od / 'observations.tsv.gz', obs, ocols)
     subprocess.run(['gzip', '-f', str(fpaf)], check=True)
     fl.unlink()
@@ -368,30 +401,78 @@ def cmd_search(a):
                                               sha256=r['sha256']) for r in runs],
         panel_hits=len(hits), reads_with_hits=len(hit_reads), molecules_with_hits=len(set(mol.values())),
         hit_coverage=HIT_COVERAGE, flanks=FLANKS, minimap2_panel=MM_PANEL, minimap2_flank=MM_FLANK,
-        observation_status={str(L): dict(Counter(o['status'] for o in obs if o['flank'] == L)) for L in FLANKS}),
+        observation_status={str(L): dict(Counter(o['status'] for o in obs if o['flank'] == L)) for L in FLANKS},
+        inner_clip_of_aligned_flanks={str(L): dict(Counter(
+            '%s:%s' % (side, 'none' if o[side + '_inner_clip'] == '' else '0' if o[side + '_inner_clip'] == 0 else
+                       '1-%d' % INNER_CLIP if o[side + '_inner_clip'] <= INNER_CLIP else '%d-%d' % (INNER_CLIP + 1, TOL)
+                       if o[side + '_inner_clip'] <= TOL else '>%d' % TOL)
+            for o in obs if o['flank'] == L and o['status'] != 'one_sided' for side in ('left', 'right'))) for L in FLANKS}),
         indent=1) + '\n')
 
 
-def empty_sites(sample, positions):
-    """For not_in_assembly:core_absent positions: molecules whose genome alignment (read check, whole-assembly map)
-    spans the empty site +/- EMPTY_SPAN in one piece with no length gain > 200 bp, i.e. molecules without the core
-    there. Reported beside the molecules with the core; not required for the class."""
+EMPTY_COLS = ['empty_site_molecules', 'empty_site_read_records', 'empty_site_indel_molecules', 'both_forms_molecules']
+
+
+def empty_site_reads(alns, site_lo, site_hi, core_len):
+    """Genome alignments of one read -> 'empty' (one alignment over [site_lo - EMPTY_SPAN, site_hi + EMPTY_SPAN] whose
+    CIGAR over [site_lo - ANCHOR, site_hi + ANCHOR] passes s3 cigar_ok with limit max(MIN_INDEL, core_len / 2)),
+    'indel' (spans, but every spanning alignment carries an indel event there: possibly the core or another
+    insertion), or '' (does not span)."""
+    span = [g for g in alns if g['ts'] <= site_lo - EMPTY_SPAN and g['te'] >= site_hi + EMPTY_SPAN]
+    if not span:
+        return ''
+    limit = max(rc3.MIN_INDEL, core_len / 2.0)
+    return 'empty' if any(rc3.cigar_ok(g, site_lo - rc3.ANCHOR, site_hi + rc3.ANCHOR, limit) for g in span) else 'indel'
+
+
+def empty_site_counts(core_reads, site_reads, mol):
+    """Molecule counts at one site: core_reads = records with the core there (search), site_reads = {read: 'empty' |
+    'indel'}; mol = {read: molecule}. A molecule with a core record and an empty-site record is both_forms (counted on
+    neither side); an indel-only molecule is reported apart."""
+    m = lambda r: mol.get(r, r)
+    core = {m(r) for r in core_reads}
+    empty = {m(r) for r, c in site_reads.items() if c == 'empty'}
+    indel = {m(r) for r, c in site_reads.items() if c == 'indel'} - empty - core
+    return dict(empty_site_molecules=len(empty - core), empty_site_read_records=sum(
+        c == 'empty' and m(r) not in core for r, c in site_reads.items()), empty_site_indel_molecules=len(indel),
+        both_forms_molecules=len(empty & core))
+
+
+def empty_sites(sample, positions, runs, hit_recs):
+    """Empty-site molecules of every not_in_assembly:core_absent position (see module doc), from the read check's
+    whole-assembly PAFs of the sample. Not required for the class."""
     sites = [r for r in positions if r['cls'] == 'not_in_assembly:core_absent']
     if not sites:
         return
-    names = defaultdict(set)
+    per = defaultdict(lambda: defaultdict(list))  # site index -> read -> spanning-candidate alignments
     for paf in sorted((u.PROJ / 'core_context' / 'readmap' / sample).glob('*.paf.gz')):
-        with gzip.open(str(paf), 'rt') as h:
-            for line in h:
-                f = line.split('\t', 9)
-                ts, te, qs, qe = int(f[7]), int(f[8]), int(f[2]), int(f[3])
-                for r in sites:
-                    site = (r['start'] + r['end']) // 2
-                    if (f[5] == r['contig'] and ts <= site - EMPTY_SPAN and te >= site + EMPTY_SPAN
-                            and abs((qe - qs) - (te - ts)) < 200):
-                        names[id(r)].add(f[0])
-    for r in sites:
-        r['empty_site_molecules'] = len(names[id(r)])
+        for g in paf_rows(paf):
+            for i, r in enumerate(sites):
+                lo, hi = min(r['start'], r['end']), max(r['start'], r['end'])
+                if g['t'] == r['contig'] and g['ts'] <= lo - EMPTY_SPAN and g['te'] >= hi + EMPTY_SPAN:
+                    per[i][g['q']].append(g)
+    calls = {i: {q: empty_site_reads(gs, min(sites[i]['start'], sites[i]['end']), max(sites[i]['start'], sites[i]['end']),
+                                     sites[i]['core_len']) for q, gs in per[i].items()} for i in range(len(sites))}
+    names = {q for c in calls.values() for q in c}
+    recs = list(hit_recs)
+    for r in runs:  # molecule ids of the empty-site records (FASTQ headers), merged with the core records
+        with gzip.open(r['local_file'], 'rt') as h:
+            for i, line in enumerate(h):
+                if i % 4 == 0:
+                    name = line[1:].split(None, 1)[0]
+                    if name in names:
+                        recs.append((name, rc3.record_ids(line[1:].strip(), r['grouping'])))
+    mol = rc3.molecules(recs)
+    for i, r in enumerate(sites):
+        r.update(empty_site_counts(r['_reads'], calls[i], mol))
+
+
+def inner_clip(alns, side):
+    """Read bases between the best flank alignment and the flank's inner end ('' when unaligned)."""
+    if not alns:
+        return ''
+    best = max(alns, key=lambda g: g['score'])
+    return best['qlen'] - best['qe'] if side == 'L' else best['qs']
 
 
 def flank_written(x, seq_of, L):
@@ -410,22 +491,22 @@ def panel_members(panel, names):
     return out
 
 
-def merge(obs, catalog, seqs, member_seq, od, seq_of, preset):
+def merge(obs, catalog, seqs, member_seq, od, seq_of, preset, groups):
     """Placed observations -> one row per merged position (per flank length); unplaceable ones -> one row per
     (core, placed side anchor, reason). Molecules are counted once per position."""
     rows = []
     for L in FLANKS:
-        groups = defaultdict(list)
+        by = defaultdict(list)
         for o in obs:
             if o['flank'] == L and o['status'] == 'placed':
                 lc, lp, ls, rc, rp, rs = canonical(o)
                 o.update(c_left_pos=lp, c_right_pos=rp)
-                groups[(o['structure'], o['core_key'], lc, ls, rc, rs)].append(o)
+                by[(o['structure'], o['core_key'], lc, ls, rc, rs, o['core_strand'])].append(o)
         placed = []
-        for key, os_ in groups.items():
+        for key, os_ in by.items():
             for cl in cluster(os_):
-                placed.append(position_row(L, key, cl, catalog, seqs, member_seq, od, seq_of, preset))
-        rows += mark_shifted(placed)
+                placed.append(position_row(L, key, cl, catalog, seqs, member_seq, od, seq_of, preset, groups))
+        rows += mark_shifted(placed, groups)
         un = defaultdict(list)
         for o in obs:
             if o['flank'] == L and o['status'] == 'unplaceable_context':
@@ -471,26 +552,98 @@ def cluster(os_):
     return out
 
 
-def position_row(L, key, cl, catalog, seqs, member_seq, od, seq_of, preset):
-    st, ck, lc, ls, rc, rs = key
+FLIP = {'+': '-', '-': '+'}
+
+
+def core_families(ck):
+    """Protein families of a core key with their sign (orientation relative to the core); no sign means '+'."""
+    return {f.rstrip('+-'): '-' if f.endswith('-') else '+' for f in ck.split(',') if f.startswith('PF_')}
+
+
+def core_relation(a, b, groups):
+    """('same', '+'), ('homolog', sign) or ('unrelated', ''). Homolog: the cores share a protein family, or a family
+    of each lies in a common homology group (groups: family -> homology groups). sign = '+' when the shared families
+    have the same orientation in both cores, '-' when opposite, '' when undetermined (the pairs disagree)."""
+    if a == b:
+        return 'same', '+'
+    fa, fb = core_families(a), core_families(b)
+    signs = {'+' if fa[f] == fb[f] else '-' for f in set(fa) & set(fb)}
+    if not signs:
+        signs = {'+' if fa[x] == fb[y] else '-' for x in fa for y in fb if groups.get(x, set()) & groups.get(y, set())}
+    if not signs:
+        return 'unrelated', ''
+    return 'homolog', signs.pop() if len(signs) == 1 else ''
+
+
+def family_groups(work):
+    """family -> homology groups, for the families of the panel and catalog core keys (cached in panel/)."""
+    path = work / 'panel' / 'family_groups.tsv'
+    if not path.exists():
+        want = {f for t in ('members.tsv', 'catalog.tsv') for m in pc.read_tsv(work / 'panel' / t)
+                for f in core_families(m['core_key'])}
+        got = set()
+        with gzip.open(str(u.PROJ / 'core_context' / 'scale_comamonadaceae_v0.1' / 'families' / 'catalog.tsv.gz'),
+                       'rt') as h:
+            next(h)
+            for line in h:
+                f = line.split('\t', 4)
+                if f[1] in want:
+                    got.add((f[1], f[3]))
+        pc.write_tsv(path, [dict(family=f, homology_group=g) for f, g in sorted(got)], ['family', 'homology_group'])
+    out = defaultdict(set)
+    for r in pc.read_tsv(path):
+        out[r['family']].add(r['homology_group'])
+    return out
+
+
+def match_catalog(contig, x, y, strand, ck, catalog, groups):
+    """Catalog occurrences at the interval [x, y) of contig for a core ck lying on strand there (see module doc):
+    (class or None, matched occurrence ids, unmatched notes). Only occurrences overlapping the interval are looked at;
+    an unrelated core's occurrence is only noted."""
+    lo, hi = min(x, y), max(x, y)
+    match, miss, notes = defaultdict(list), [], []
+    for c in catalog:
+        s0, e0 = int(c['start0']), int(c['end0'])
+        ov = min(hi, e0) - max(lo, s0)
+        if c['contig'] != contig or ov <= 0:
+            continue
+        rel, sign = core_relation(ck, c['core_key'], groups)
+        if rel == 'unrelated':
+            notes.append('%s:unrelated' % c['occurrence_id'])
+            continue
+        why = (['orientation_undetermined'] if not sign else
+               ['orientation'] if c['strand'] != (strand if sign == '+' else FLIP[strand]) else [])
+        if not (ov >= HIT_COVERAGE * (e0 - s0) and ov >= HIT_COVERAGE * (hi - lo)):
+            why.append('coverage')
+        if why:
+            miss.append((rel != 'same', -ov, c['occurrence_id'], why))
+            notes.append('%s:%s:%s' % (c['occurrence_id'], rel, '+'.join(why)))
+        else:
+            match[rel].append(c['occurrence_id'])
+    if match['same']:
+        return 'known_catalog_position', ';'.join(sorted(match['same'])), ';'.join(notes)
+    if match['homolog']:
+        return 'known_catalog_position_other_core', ';'.join(sorted(match['homolog'])), ';'.join(notes)
+    if miss:
+        first = min(miss)
+        return 'catalog_mismatch:' + first[3][0], first[2], ';'.join(notes)
+    return None, '', ';'.join(notes)
+
+
+def position_row(L, key, cl, catalog, seqs, member_seq, od, seq_of, preset, groups):
+    st, ck, lc, ls, rc, rs, cs = key
     lp = int(median([o['c_left_pos'] for o in cl]))
     rp = int(median([o['c_right_pos'] for o in cl]))
     core_len = int(median([o['qe'] - o['qs'] for o in cl]))
     geo, x, y = geometry(lc, lp, ls, rc, rp, rs, core_len)
-    cat, inside = '', ''
+    cat, inside, notes = '', '', ''
     if geo == 'junction':
         n = len(seqs[lc])
         cls = ('contig_end_join' if lc == rc and ls == rs and lp > n - core_len - END_ZONE and rp < core_len + END_ZONE
                else 'not_in_assembly:junction')
     else:
-        here = [c for c in catalog if c['contig'] == lc and int(c['start0']) >= x - TOL and int(c['end0']) <= y + TOL]
-        same = [c for c in here if c['core_key'] == ck]
-        cat = ';'.join(sorted(c['occurrence_id'] for c in (same or here)))
-        if same:
-            cls = 'known_catalog_position'
-        elif here:
-            cls = 'known_catalog_position_other_core'
-        else:
+        cls, cat, notes = match_catalog(lc, x, y, cs, ck, catalog, groups)
+        if cls is None:
             seg = seqs[lc][max(0, x):max(0, y)]
             if len(seg) >= 0.5 * core_len:
                 # does the assembly between the flanks hold the core? the panel sequence (may be from another genus)
@@ -505,28 +658,37 @@ def position_row(L, key, cl, catalog, seqs, member_seq, od, seq_of, preset):
     return dict(flank=L, structure=st, core_key=ck, kind=cl[0]['kind'], cls=cls,
                 molecules=len({o['molecule'] for o in cl}), read_records=len(cl), contig=lc if geo == 'proper' else '',
                 start=x if geo == 'proper' else '', end=y if geo == 'proper' else '', left_contig=lc, left_pos=lp,
-                left_strand=ls, right_contig=rc, right_pos=rp, right_strand=rs, catalog=cat, core_in_assembly=inside,
+                left_strand=ls, right_contig=rc, right_pos=rp, right_strand=rs, core_strand=cs, core_len=core_len,
+                catalog=cat, catalog_unmatched=notes, core_in_assembly=inside,
                 members=len({o['member'] for o in cl}), identity_median=median([o['identity'] for o in cl]),
-                runs=';'.join(sorted({o['run'] for o in cl})))
+                runs=';'.join(sorted({o['run'] for o in cl})), _reads={o['read'] for o in cl})
 
 
-def mark_shifted(rows):
+def mark_shifted(rows, groups):
     """A non-known position whose assembly interval (or, for a junction, either flank anchor) overlaps a known
-    position of the same core or a homologous one in the same sample is the known position seen with shifted
-    anchors (a core hit that covers only part of the gene moves a flank): cls shifted_known_position, raw_cls
-    keeps the class it had. Found with the negative-control genes of the pilot."""
+    position of the same sample is the known position seen with shifted anchors (a core hit that covers only part
+    of the gene moves a flank) only if the known position's core is the same or a homologous one (core_relation)
+    and, when the relation gives a sign, in the consistent orientation: cls shifted_known_position, raw_cls keeps
+    the class it had, shifted_from names the known position. Found with the negative-control genes of the pilot;
+    v0.1 did not check the core."""
     known = defaultdict(list)
     for r in rows:
         if r['cls'].startswith('known_catalog_position'):
-            known[r['contig']].append((r['start'], r['end']))
+            known[r['contig']].append(r)
     for r in rows:
         if r['cls'].startswith('known_catalog_position'):
             continue
-        hit = (any(a < r['end'] + TOL and b > r['start'] - TOL for a, b in known[r['contig']]) if r['contig'] else
-               any(a - TOL <= p <= b + TOL for c, p in ((r['left_contig'], r['left_pos']), (r['right_contig'], r['right_pos']))
-                   for a, b in known[c]))
-        if hit:
-            r['raw_cls'], r['cls'] = r['cls'], 'shifted_known_position'
+        near = ([k for k in known[r['contig']] if k['start'] < r['end'] + TOL and k['end'] > r['start'] - TOL]
+                if r['contig'] else
+                [k for c, p in ((r['left_contig'], r['left_pos']), (r['right_contig'], r['right_pos']))
+                 for k in known[c] if k['start'] - TOL <= p <= k['end'] + TOL])
+        for k in near:
+            rel, sign = core_relation(r['core_key'], k['core_key'], groups)
+            if rel != 'unrelated' and (not sign or r['core_strand'] == (k['core_strand'] if sign == '+'
+                                                                         else FLIP[k['core_strand']])):
+                r['raw_cls'], r['cls'] = r['cls'], 'shifted_known_position'
+                r['shifted_from'] = '%s:%s-%s:%s' % (k['contig'], k['start'], k['end'], k['core_key'])
+                break
     return rows
 
 
@@ -645,6 +807,7 @@ def cmd_combine(a):
     pc.write_tsv(out / 'positions.tsv.gz', rows, cols)
     main = [r for r in rows if int(r['flank']) == MAIN_FLANK]
     for cls, name in (('catalog_omission', 'catalog_omissions'), ('not_in_assembly', 'not_in_assembly'),
+                      ('catalog_mismatch', 'catalog_mismatches'), ('shifted_known_position', 'shifted_known_positions'),
                       ('unplaceable_context', 'unplaceable_contexts'),
                       ('homolog_not_in_catalog', 'homologs_not_in_catalog'), ('contig_end_join', 'contig_end_joins')):
         sel = [r for r in main if r['cls'].startswith(cls)]
