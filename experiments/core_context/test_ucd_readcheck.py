@@ -34,6 +34,17 @@ class GeometryTests(unittest.TestCase):
         self.assertEqual((tests, fa), ([], []))
         self.assertEqual(skipped[0]['reason'], 'element_interval_crosses_contig_end')
 
+    def test_allele_fasta_order_does_not_depend_on_input_order(self):
+        import random
+        seq = ''.join('ACGT'[(i * 7 + i // 3) % 4] for i in range(9000))
+        ps = [dict(sample='s', test_id='P_%d' % k, contig='c', lo=str(lo), hi=str(hi))
+              for k, (lo, hi) in enumerate([(3000, 4200), (3000, 4201), (3002, 4200), (2999, 4300)])]
+        ref = u.make_tests(ps, {'c': seq})
+        for seed in range(5):
+            random.Random(seed).shuffle(ps)
+            self.assertEqual(u.make_tests(ps, {'c': seq}), ref)
+        self.assertEqual([t['test_id'] for t in ref[0]], ['P_3', 'P_0', 'P_1', 'P_2'])  # same lo: hi decides
+
 
 class ClassTests(unittest.TestCase):
     def test_tiers(self):
@@ -70,6 +81,14 @@ class ClassTests(unittest.TestCase):
         self.assertEqual(u.occurrence_class(['supported', 'supported']), 'all_intervals_supported')
         self.assertEqual(u.occurrence_class(['supported', 'locus_ambiguous']), 'some_intervals_supported')
         self.assertEqual(u.occurrence_class(['supported', 'conflict']), 'conflict_at_an_interval')
+
+    def test_roles_separate_candidates_from_both_kinds_of_control(self):
+        self.assertEqual(u.pair_role(dict(tier='B', control_class='')), 'candidate')
+        self.assertEqual(u.pair_role(dict(tier='A', control_class='conserved_paralog_control')), 'control')
+        self.assertEqual(u.pair_role(dict(tier='control', control_class='repeated_context_control')), 'control')
+        self.assertEqual(u.occurrence_role({'candidate'}), 'candidate_only')
+        self.assertEqual(u.occurrence_role({'control'}), 'control_only')
+        self.assertEqual(u.occurrence_role({'candidate', 'control'}), 'candidate_and_control')
 
 
 class CompletenessTests(unittest.TestCase):

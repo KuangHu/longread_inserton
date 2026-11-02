@@ -77,14 +77,20 @@ Each batch reports three gains over the previous round. A batch can add evidence
 counted, so a small core gain does not mean a small gain overall.
 - **Cores:** distinct candidate cores with an A/B pair supported on both sides.
 - **Pairs:** A/B candidate pairs with both positions supported.
-- **Occurrences:** occurrences with every interval supported.
+- **Candidate occurrences:** occurrences in at least one candidate pair (any tier, controls excluded) with every
+  interval supported. An occurrence that is also in a control pair is counted.
+- **All occurrences:** the same over every checked occurrence, controls included. Until 2026-11-01 this was the only
+  occurrence column, under a heading that said controls excluded.
 
-| batch | downloaded (lrc-xfer) | verified | storage after (reads dir / verified) | read-check round | cores | pairs | occurrences |
-|---|---|---|---|---|---|---|---|
-| 1 | 2026-10-31 | 20 / 20 | 235.9 GB / 194.5 GB | round 3, complete by id | 780 → 994 (+214) | 6,071 → 7,131 (+1,060) | 9,629 → 10,648 (+1,019) |
-| 2 | 2026-10-31 | 19 / 19 | 206.8 GB / 204.1 GB | round 4, complete by id | 994 → 1,051 (+57) | 7,131 → 7,696 (+565) | 10,648 → 11,197 (+549) |
-| 3–5 | 2026-11-01, in parallel | 19 / 19, 20 / 20, 13 / 13 | 230.5 GB / 227.8 GB (after the last batch) | round 5, complete by id | 1,051 → 1,083 (+32) | 7,696 → 9,467 (+1,771) | 11,197 → 12,510 (+1,313) |
+| batch | downloaded (lrc-xfer) | verified | storage after (reads dir / verified) | read-check round | cores | pairs | candidate occurrences | all occurrences |
+|---|---|---|---|---|---|---|---|---|
+| 1 | 2026-10-31 | 20 / 20 | 235.9 GB / 194.5 GB | round 3, complete by id | 780 → 994 (+214) | 6,071 → 7,131 (+1,060) | 6,392 → 7,291 (+899) | 9,629 → 10,648 (+1,019) |
+| 2 | 2026-10-31 | 19 / 19 | 206.8 GB / 204.1 GB | round 4, complete by id | 994 → 1,051 (+57) | 7,131 → 7,696 (+565) | 7,291 → 7,744 (+453) | 10,648 → 11,197 (+549) |
+| 3–5 | 2026-11-01, in parallel | 19 / 19, 20 / 20, 13 / 13 | 230.5 GB / 227.8 GB (after the last batch) | round 5, complete by id | 1,051 → 1,083 (+32) | 7,696 → 9,467 (+1,771) | 7,744 → 8,853 (+1,109) | 11,197 → 12,510 (+1,313) |
 
 Batches 3–5 ran as three parallel prepare processes. Each log's storage-after line counts the other batches' files as
 they stood when that batch finished; the line of the last to finish (batch 4) is the final state. One batch-4
 transfer was interrupted (curl exit 18), resumed and verified. The ready manifest lists 288 runs, all verified.
+
+The round-2 candidate count (6,392) was recomputed by the current `summarize` from the unchanged round-2 results;
+the published round-2 files were left as they were.

@@ -975,7 +975,12 @@ The repeated-context controls also include 1 conflict pair.
     other side in SAMN51281038, whose run is 0.06 GB. Round 4 adds B pairs with SAMN51281039.
   - No core supported in round 3 lost support. So +57 = 56 + 1, and the gap to 61 is not a count of 4 lost cores.
 - **A/B pairs** with both intervals supported: 7,131 → 7,696 (+565).
-- **Occurrences** with every interval supported: 10,648 → 11,197 (+549).
+- **Occurrences** with every interval supported (corrected 2026-11-01; this line first gave all checked
+  occurrences under the "controls excluded" heading):
+  - **candidate occurrences** (in at least one candidate pair of any tier, A, B or C): 7,291 → 7,744 (+453).
+    The 72 occurrences that are also in a control pair are counted here and listed in `summary.json`
+    (`occurrence_class_by_role`, `candidate_and_control`).
+  - all checked occurrences, candidates and controls together: 10,648 → 11,197 (+549).
 
 The reading of round 3 is unchanged: this is read verification of positions already found in assemblies; the
 1,051 cores are cores with read-supported local structures, not insertions shown to be mobile; the 78
@@ -1001,12 +1006,29 @@ only; the check was run for all 231.
   - `P_1ddca118bf21`: P 513 → 514, cigar_fail 0 → 1;
   - `P_1bd7640586ad`: cigar_fail 1 → 0;
   - `P_28b0e2c768be`: P 514 → 513.
-- **Cause of those 3 changes:** this region has about 25 intervals whose ends differ by 1–10 bp. Two of them
-  (`P_1ddca118bf21`, `P_1bd7640586ad`) start at the same position, so their order in `positions.tsv` (sorted by sample,
-  contig, lo) depends on input order, and that order changed with the new pairs. With the two references swapped
-  in the alleles FASTA, minimap2 broke a tie differently and one read moved between neighbouring alleles. The
-  input reads and assembly did not change. A sort that also uses hi and test_id would remove this; not changed in
-  this round.
+- **Cause of those 3 changes, and the follow-up regression** (`order_regression/`, SAMN31258398 only, job id in
+  `order_regression/jobs.txt`):
+  - **The trigger:** this region has 26 intervals whose ends differ by 1–10 bp. Two of them start at the same
+    position. Intervals were ordered by sample, contig and lo only, so the order of these two depended on input
+    order, which changed with the new pairs.
+  - **Fix 1, input order:** the alleles FASTA now follows a total order (sample, contig, lo, hi, test_id) whatever
+    the input order (`position_key`; unit test with shuffled input). With the fix, the same input run twice and two
+    shuffled inputs give identical results at all 304 intervals of the assembly.
+  - **What the fix does not cover: the allele set.**
+    - The same intervals checked with fewer neighbours give different counts: the 26-interval cluster alone
+      differs from the full 304 at 22 of its 26 intervals, and `P_1ddca118bf21` checked alone differs too.
+    - The new fixed order itself differs from the round-4 and round-5 orders at 32 and 30 intervals.
+    - The differences are small: at most 5 in P_matched (1.2%), no verdict change in any variant.
+  - **Mechanism:**
+    - The allele alignment reports at most 100 secondary alignments per read (`-N 100`).
+    - Near this cluster a read matches more than 100 nearly identical allele references. 1,303 reads reach the cap
+      of 101 alignments (1 primary + 100 secondary).
+    - Which alignments are dropped then depends on the other references in the FASTA, and with them the read's best
+      spanning alignment and the anchors used for the locus check.
+    - All 34 read-level calls that differ between the full and cluster runs belong to capped reads.
+  - **Not yet decided:** the fix would change results everywhere, so it needs a decision before the next round.
+    One option is to align each interval's alleles separately, which makes counts independent of the other
+    intervals. Another is to raise or remove the cap. Neither is applied, and rounds 1–5 are not rerun.
 - **New intervals:** 2,071 in all. 1,958 are supported, 109 are insufficient_coverage, and 4 are locus_ambiguous
   (3 in SAMN43526786, 1 in SAMN51281045). None is a conflict.
 
@@ -1023,8 +1045,9 @@ only; the check was run for all 231.
 | locus_ambiguous | 82 | 4 |
 | conflict | 2 | 0 |
 
-**New insufficient_coverage intervals, by assembly.** The checked run (bytes, reads mapped to the assembly) is given
-for each assembly. Small runs explain some of these, but not all:
+**New insufficient_coverage intervals, by assembly.** `insufficient_coverage` means that fewer than 3 read units
+(MIN_SPAN) passed every rule as P or A matched. It does not by itself mean low sequencing depth. The checked run
+(bytes, reads mapped to the assembly) is given for each assembly. Small runs explain some of these, but not all:
 
 | assembly | insufficient / intervals | run | what is seen |
 |---|---:|---|---|
@@ -1035,11 +1058,33 @@ for each assembly. Small runs explain some of these, but not all:
 | SAMN09743972 | 11 / 13 | SRR7743797, 248 MB, 49,128 reads (median 5.1 kb) | see below |
 | SAMN51281031, SAMN51281050 | 2 each | | |
 
-- **SAMN09743972 is not a small-run case.** Depth on the chromosome is about 78× and the reads are long enough.
-  - At the 2 supported intervals, 24 and 34 alignments span the interval with 1 kb on each side.
-  - At the 11 insufficient intervals, none does: alignments reach each interval (up to 179 partly overlap it) but
-    stop there. Neither P nor A is matched.
-  - This is not explained here. It is recorded as not supported, not as absent, and is a case to look at.
+- **SAMN09743972 is not a small-run case.** Depth on the chromosome is about 78× (read records).
+  - **Step trace with the caller's own rules** (`../trace_intervals.py`, per read in
+    `readcheck_round5/trace_SAMN09743972.tsv.gz`):
+    - A read counts only if one allele alignment spans the tested span [lo − 300, hi + 300] on the allele
+      (ANCHOR = 300 bp, not the 1 kb used in the first look). The mean span is 1.8 kb.
+    - At the 11 intervals, 1,361 read–interval records were near the interval, and not one passed this span step:
+      - 774: read shorter than the span;
+      - 497: the read is long enough but ends inside the span;
+      - 65: the alignment stops inside the span while the read continues (clipped);
+      - 25: no alignment to either allele.
+    - No read got as far as the CIGAR, allele-margin or locus checks, so neither P nor A was matched.
+    - At the 2 supported intervals, 26 and 38 reads pass.
+  - **The run is not raw sequencing output:**
+    - The submitted file is `aligned_readsV3.bam` (pool metadata, PacBio RS II).
+    - Consecutive reads share their start coordinate and are ordered by end coordinate. Their strands do not
+      alternate as passes of one molecule would (45% alternate, about chance).
+    - 96.4% of its reads align end to end with ≤ 5 bp clipped; five other PacBio runs checked give 57–78%.
+    - Read ends pile up at the interval edges. For example, 18 consecutive reads (spots 1381–1398) all begin at
+      503,813 and end between 505,250 and 505,370, inside `P_6986dd6dd4c7` (503,800–505,404) ± 300 bp.
+    - This fits reads exported from an alignment and trimmed to aligned segments, which would make read ends mark
+      where that earlier alignment stopped rather than where molecules ended. That is an inference from these
+      signatures; the submitter's processing is not documented here.
+  - **Reading:** this run cannot test whether reads span these 11 intervals. That is neither evidence of an
+    assembly error nor evidence that the structures are absent.
+  - **The other aligned-BAM run:** SRR23501622 (SAMN33025486, `Aligned_LMJ.bam`) is the only other run among the 255
+    checked whose submitted file name says aligned. Its end-to-end fraction is 60.5%, in the normal range. Its 241 intervals are all
+    supported and are kept.
 
 | count mode, supported intervals | intervals | assemblies | P_matched min / median |
 |---|---:|---:|---:|
@@ -1064,7 +1109,10 @@ The repeated-context controls also include 1 conflict pair.
 - **Cores** with at least one A or B pair with both intervals supported: 1,051 → 1,083 (+32; 885 single-gene,
   198 two-gene). 637 of them have such a B pair (round 4: 616). 2,897 cores have a side with reads (round 4: 2,707).
 - **A/B pairs** with both intervals supported: 7,696 → 9,467 (+1,771; A +191, B +1,580).
-- **Occurrences** with every interval supported: 11,197 → 12,510 (+1,313).
+- **Occurrences** with every interval supported:
+  - **candidate occurrences** (in at least one candidate pair of any tier): 7,744 → 8,853 (+1,109), of 9,037
+    candidate occurrences checked. The 79 occurrences that are also in a control pair are counted here.
+  - all checked occurrences, candidates and controls together: 11,197 → 12,510 (+1,313).
 - **Where the +32 comes from** (traced core by core):
   - 40 cores first became testable as A/B in round 5, which equals the plan's upper bound of 40 (31 + 9 + 0).
     31 of them have a supported A/B pair.
@@ -1104,10 +1152,13 @@ purple cigar_fail. Pairs shown:
 Not done yet:
 - **Adding sites from long reads (the original aim) has not started.** Rounds 1–5 only take positions already in
   assemblies and check them with reads. The next stage is: known core → search the reads for homologous cores →
-  extract the context on both sides → decide whether a position appears that is not yet listed;
+  extract the context on both sides → merge repeated observations of one position → compare with the assembly
+  position catalog → report candidate new sites. The pilot design is in `READ_SITE_SEARCH_PILOT.md` (draft, not
+  started);
 - candidate interpretation layer;
-- SAMN09743972: why reads stop at 11 intervals despite about 78× depth;
+- a decision on the allele-alignment cap (see round 5: counts depend on the allele set through `-N 100`);
 - all five planned download batches are done. The 104 assemblies left out of the plan (118.4 GB) add no core and
-  no A/B pair.
+  no A/B pair to the current catalog of assembly positions. That says nothing about their value for finding new
+  sites in reads (see `READ_SITE_SEARCH_PILOT.md`).
 
 Stopped here for review.

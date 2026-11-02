@@ -49,6 +49,20 @@
   "no_interval_supported": 194,
   "conflict_at_an_interval": 2
  },
+ "occurrence_class_by_role": {
+  "candidate_and_control": {
+   "all_intervals_supported": 65
+  },
+  "candidate_only": {
+   "all_intervals_supported": 7226,
+   "no_interval_supported": 108
+  },
+  "control_only": {
+   "all_intervals_supported": 3357,
+   "no_interval_supported": 86,
+   "conflict_at_an_interval": 2
+  }
+ },
  "support_by_count_mode": {
   "assumed_molecules": {
    "intervals": 1106,
@@ -153,6 +167,32 @@
   "C|two_gene": {
    "single_side_not_supported": 6,
    "single_side_supported": 379
+  }
+ },
+ "distinct_cores_candidates": {
+  "A|single_gene": {
+   "both_positions_supported": 464,
+   "no_position_supported": 11,
+   "one_position_supported": 3
+  },
+  "A|two_gene": {
+   "both_positions_supported": 80
+  },
+  "B|single_gene": {
+   "both_positions_supported": 467,
+   "one_position_supported": 21
+  },
+  "B|two_gene": {
+   "both_positions_supported": 118,
+   "one_position_supported": 5
+  },
+  "C|single_gene": {
+   "single_side_not_supported": 62,
+   "single_side_supported": 1637
+  },
+  "C|two_gene": {
+   "single_side_not_supported": 6,
+   "single_side_supported": 377
   }
  },
  "runs": {

@@ -231,7 +231,7 @@ def cmd_select(a):
     for p in pos.values():
         p['n_occurrences'], p['n_pairs'] = len(p['occurrences']), len(p['pairs'])
         p['occurrences'], p['pairs'] = ';'.join(sorted(p['occurrences'])), ';'.join(sorted(p['pairs']))
-    pc.write_tsv(rd / 'positions.tsv', sorted(pos.values(), key=lambda x: (x['sample'], x['contig'], x['lo'])),
+    pc.write_tsv(rd / 'positions.tsv', sorted(pos.values(), key=position_key),
                  ['test_id', 'sample', 'contig', 'lo', 'hi', 'n_occurrences', 'occurrences', 'n_pairs', 'pairs'])
     pc.write_tsv(rd / 'interval_map.tsv', links, list(links[0]))
     (rd / 'samples.txt').write_text('\n'.join(sorted(want)) + '\n')
@@ -286,10 +286,17 @@ def cmd_genome(a):
     print(json.dumps(done, indent=1))
 
 
+def position_key(p):
+    """Total order of intervals: (sample, contig, lo, hi, test_id). The allele FASTA follows it, so the reference
+    order seen by minimap2 does not depend on input order (two intervals can share contig and lo)."""
+    return p.get('sample', ''), p['contig'], int(p['lo']), int(p['hi']), p['test_id']
+
+
 def make_tests(positions, seqs):
-    """s3 test rows (role C = this assembly; E mirrors C and has no alleles) and the allele FASTA records."""
+    """s3 test rows (role C = this assembly; E mirrors C and has no alleles) and the allele FASTA records, in
+    position_key order whatever the input order."""
     tests, fa, skipped = [], [], []
-    for p in positions:
+    for p in sorted(positions, key=position_key):
         seq = seqs[p['contig']]
         lo, hi = int(p['lo']), int(p['hi'])
         if lo < 0 or hi > len(seq):
@@ -519,6 +526,16 @@ def support_stats(rows, key='P_matched'):
     return dict(intervals=len(v), min=v[0], median=v[len(v) // 2], max=v[-1]) if v else dict(intervals=0)
 
 
+def pair_role(row):
+    """candidate, or control (repeated-context control pairs and conserved-paralog control pairs)."""
+    return 'control' if row['tier'] == 'control' or row['control_class'] else 'candidate'
+
+
+def occurrence_role(roles):
+    """An occurrence is in candidate pairs only, control pairs only, or both (counted in each candidate total)."""
+    return 'candidate_and_control' if len(roles) > 1 else next(iter(roles)) + '_only'
+
+
 def occurrence_class(classes):
     if 'conflict' in classes:
         return 'conflict_at_an_interval'
@@ -630,18 +647,19 @@ def cmd_summarize(a):
                               a_position_class=cl.get('a', ''), b_position_class=cl.get('b', ''),
                               pair_class=pair_class(r['tier'], cl.get('a'), cl.get('b'))))
     # occurrences: every occurrence id with a tested side, with all of its intervals
-    occ = defaultdict(lambda: dict(test_ids=set(), pairs=set()))
+    occ = defaultdict(lambda: dict(test_ids=set(), pairs=set(), roles=set()))
     for x in links:
         o = occ[x['occurrence']]
         o['test_ids'].add(x['test_id'])
         o['pairs'].add(x['pair_id'])
+        o['roles'].add(pair_role(x))
     out_occ = []
     for oid, o in sorted(occ.items()):
         ts = sorted(o['test_ids'])
         cls = [pcls[t] for t in ts]
         modes = sorted({pos_row[t]['count_mode'] for t in ts})
         out_occ.append(dict(occurrence=oid, sample=positions[ts[0]]['sample'], n_intervals=len(ts),
-                            test_ids=';'.join(ts), n_pairs=len(o['pairs']),
+                            test_ids=';'.join(ts), n_pairs=len(o['pairs']), role=occurrence_role(o['roles']),
                             interval_classes=';'.join('%s:%d' % kv for kv in sorted(Counter(cls).items())),
                             occurrence_class=occurrence_class(cls), count_mode=modes[0] if len(modes) == 1 else 'mixed',
                             P_matched_min=min(int(pos_row[t]['P_matched'] or 0) for t in ts)))
@@ -658,6 +676,10 @@ def cmd_summarize(a):
     for r in out_pairs:
         if not r['control_class'].startswith('repeated'):
             cores['%s|%s' % (r['tier'], r['structure'])][r['pair_class']].add(r['core_key'])
+    cand_cores = defaultdict(lambda: defaultdict(set))  # candidate pairs only: no control class of either kind
+    for r in out_pairs:
+        if pair_role(r) == 'candidate':
+            cand_cores['%s|%s' % (r['tier'], r['structure'])][r['pair_class']].add(r['core_key'])
     ipo = Counter(len(o['test_ids']) for o in occ.values())
     tested = [p for p in out_pos if p['count_mode']]
     summ = dict(version=VERSION, caller=rc3.VERSION, evidence_added='long_read_position_check',
@@ -677,6 +699,8 @@ def cmd_summarize(a):
                                                for p in out_pos if p['coordinates'])),
                 interval_verdict=dict(Counter(p['verdict'] for p in out_pos)),
                 occurrence_class=dict(Counter(o['occurrence_class'] for o in out_occ)),
+                occurrence_class_by_role={r: dict(Counter(o['occurrence_class'] for o in out_occ if o['role'] == r))
+                                          for r in sorted({o['role'] for o in out_occ})},
                 support_by_count_mode={m: dict(support_stats([p for p in tested if p['count_mode'] == m]),
                                                assemblies=len({p['sample'] for p in tested if p['count_mode'] == m}),
                                                intervals_with_A_matched=sum(int(p['A_matched']) > 0 for p in tested
@@ -684,6 +708,7 @@ def cmd_summarize(a):
                                        for m in sorted({p['count_mode'] for p in tested})},
                 pair_class={k: dict(v) for k, v in sorted(groups.items())},
                 distinct_cores={k: {c: len(v) for c, v in sorted(d.items())} for k, d in sorted(cores.items())},
+                distinct_cores_candidates={k: {c: len(v) for c, v in sorted(d.items())} for k, d in sorted(cand_cores.items())},
                 runs=dict(Counter(r['status'] for r in runs_used)))
     (a.out / 'summary.json').write_text(json.dumps(summ, indent=1) + '\n')
     for f in ('selection.json', 'samples.txt'):
