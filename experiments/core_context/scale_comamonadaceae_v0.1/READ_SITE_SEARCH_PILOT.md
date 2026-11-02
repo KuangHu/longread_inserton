@@ -401,9 +401,160 @@ The 37 round-5-supported positions not recovered:
 - **v0.1's explanation was wrong:** none of the misses is fixed by matching, so the v0.1 explanation (containment
   vs overlap) was wrong.
 
-### Still not done
+### Still not done (at v0.2)
 
 - Placing unplaced or ambiguous flanks on other assemblies of the pool.
 - A systematic search for sites whose flanks stop short of the core consistently (an insert larger than the core).
-  That would need its own rule, fixed in advance.
+  That would need its own rule, fixed in advance. **Done in v0.3 (below).**
 - Any assembly outside the frozen 11; no downloads.
+
+## v0.3 (2026-11-02): the core hit is a seed, not the insertion boundary
+
+Requested after the 4 v0.1 sites were found only by hand. The fix is a general rule, not an allowance for those
+sites; thresholds are unchanged. Rules are frozen at git tag `read_site_search_v0.3_frozen` (commit 650b5c8), before
+the validation batch was chosen.
+
+### The rule (`boundary`, `flank_of`, `insert_fields` in `../read_site_search.py`)
+
+1. **Search window:** per core hit and side, the read beyond the hit, up to 2,500 − hit length + 2 kb, is aligned to
+   the sample's own assembly. The 2,500 bp bound is the project's target insertion size (`match_both_lt2500`)
+   applied to the whole putative insertion, not a per-case allowance.
+2. **Host anchor:** the alignment nearest the core whose aligned read span is at least 80% of L. Its inner end is
+   the putative junction.
+   - The read bases between the core hit and the junction are **extra sequence**, recorded per side. Up to
+     20 bases counts as 0 (alignment end noise, `INNER_CLIP`).
+   - Shorter alignments in between stay extra. An example is an element end that also occurs elsewhere.
+   - The search does not skip an inner-most anchor that sits in a repeat in favour of a farther unique alignment,
+     because that would move the junction. Such a position becomes unplaceable instead.
+3. **Placement:** exactly L bp of read ending at the junction is the flank, placed by the v0.2 rule. The host anchor
+   must therefore itself cover the junction: an unaligned inner end is still `inner_end_unaligned`, never ignored.
+4. **Per merged position:**
+   - **Lengths reported:** core hit length, extra sequence per side (median and range, assembly orientation), and
+     the putative insertion length (`insert_len`, median of extra + core hit + extra).
+   - **`boundary`:**
+     - `unknown` unless, on each side, at least 80% of the molecules have an extra length within 50 bp of that
+       side's median;
+     - otherwise `exact` when both medians are 0, else `consistent`.
+   - **`insert_size`:** `le_2500` or `gt_2500` of the putative insertion. Whether it holds 1–2 genes is not checked
+     here.
+   - **The insertion replaces the core:** its length replaces the core length in the geometry, class and empty-site
+     rules.
+5. **Empty site:** still auxiliary evidence, never a discovery condition.
+
+**Changed on the development samples before freezing** (each with a test in `../test_read_site_search.py`):
+- **Boundary rule:**
+  - First version: all molecules within 50 bp.
+  - Problem: 106 of the known positions came out `unknown` because of one stray molecule each, though their
+    median extra was 0.
+  - Final: the 80% majority above.
+- **Junction from two strands:** a plus/minus junction read from its two strands was two positions. It is now
+  merged (`swapped`, `canonical`).
+
+**Counterexample tests:**
+- extra sequence beyond the core;
+- partial core hit;
+- a short alignment between anchor and core;
+- repeated flank (ambiguous, not skipped);
+- neighbouring different insertion, both absent from and present in the assembly;
+- one stray molecule;
+- plus/minus junction from both strands.
+
+### Regression on the 11 development samples (flanks 1 kb, ≥ 3 molecules), v0.2 → v0.3
+
+| class | v0.2 | v0.3 |
+|---|---:|---:|
+| `known_catalog_position` | 530 (all `exact` at v0.3) | 530 |
+| `known_catalog_position_other_core` | 600 | 601 (600 `exact`) |
+| `catalog_mismatch:coverage` | 64 | 65 |
+| `catalog_omission:no_annotated_cds` | 6 | 6 |
+| `homolog_not_in_catalog` (group / other) | 138 / 73 | 135 / 75 |
+| `not_in_assembly:core_absent` | 0 | **5** (all `consistent`, `le_2500`) |
+| `not_in_assembly:junction` | 0 | 1 |
+| `contig_end_join` | 3 | 8 |
+| `unplaceable_context:*` | 390 | 109 |
+| `shifted_known_position` | 92 | 98 |
+
+- **Recovery:** round-5-supported 329 / 366, others 201 / 227 (both unchanged).
+- **Negative control:** 47 genes with exactly one position, 8 with none, none with two or more (unchanged). The
+  8 control-gene contexts that were unplaceable at v0.2 are gone.
+- **Unplaceable contexts:** 390 → 109. The 243 v0.2 contexts with an unaligned inner flank end no longer exist as a
+  class: their junctions are now found beyond the extra sequence. Of the 109 left, 99 have a flank in a repeat
+  (`ambiguous`) and 10 have flanks without an anchor or unplaced.
+- **The 4 development cases are found automatically,** each `consistent`:
+
+  | site | molecules | extra L / R (median, range) | insert / core hit |
+  |---|---:|---|---|
+  | SAMN30525180 3,553,051–059 | 41 | 69 (58–156) / 36 (30–54) | 1,326 / 1,220 |
+  | SAMN30525180 1,653,143–151 | 9 | 69 (65–75) / 35 (33–39) | 1,323 / 1,217 |
+  | SAMN11265848 3,064,452–457 | 23 | 21 (0–60) / 76 (68–94) | 1,176 / 1,078 |
+  | SAMN15738716 3,158,294–304 (HiFi) | 10 | 57 (56–58) / 0 | 1,395 / 1,339 |
+
+  These 4 are development regression cases. They do not validate the rule.
+- **A fifth site (also development data):** SAMN30525180 NZ_JAOCIM010000001.1:1,564,844–853, same core
+  PF_a5c0db98e215 with the same extra lengths (69 / 34 bp), 5 molecules.
+  - Strict P/A (`candidates/`): 7 P matched, 57 A matched, no conflict, 51 unknown.
+  - The site lies inside a catalog occurrence of an unrelated core (`catalog_unmatched`).
+  - The strict P/A counts of the 4 earlier sites are unchanged.
+- **New junction:** SAMN15738716 PF_fd55e20062f5, 62 molecules. It joins NZ_JARXUY010000001.1:2,231,535 (+) to
+  4,097,738 (−), 1.87 Mb apart in opposite orientation, through an insertion of 1,333 bp (core hit 900 + 433 bp
+  extra).
+  - This is a candidate structure the assembly does not show. It could be an inversion in part of the culture or an
+    assembly join error.
+  - It is not resolved here.
+- **Contig end joins (5 new):**
+  - Mostly SAMEA115676957 (contig-level) with 0–206 bp of extra sequence.
+  - SAMN52101483 NZ_CM129821.1, 89 molecules, 414 bp extra.
+  - SAMN15738716 contig 2, 48 molecules, 293 bp extra, the same core as its candidate.
+  - These were unplaceable at v0.2 because their inner flank ends did not align.
+
+## Validation batch 1 (2026-11-02): frozen rules, samples not used in development
+
+- **Samples (`read_site_search_validation1/`, frozen before the run):** the pilot freeze rule, unchanged, applied
+  after excluding every sample used in development (`freeze.json`: the 11 pilot samples, SAMN31258398 and
+  SAMN09743972).
+  - **Result:** 7 samples from 6 genera, 5 ONT and 2 HiFi: SAMN51281039 (Variovorax), SAMN30525383 (Delftia),
+    SAMN38562701 (Comamonas, HiFi), SAMEA115676833 (Acidovorax), SAMN56368990 (Hydrogenophaga), SAMN43526786
+    (Polaromonas), SAMN37751820 (Variovorax, HiFi).
+  - **Inputs:** reads already on disk, no downloads. The panel was rebuilt for these samples' catalog and control
+    genes (same 1,083 cores).
+- **Code:** the search ran at the frozen rules (commit 0293d34 = the tag plus the frozen sample list).
+  `candidate_evidence.py` was changed afterwards only to follow a read-check fix, with no effect on ONT/HiFi. No
+  validation candidate reached it.
+
+### Results (flanks 1 kb, ≥ 3 molecules)
+
+| class | positions |
+|---|---:|
+| `known_catalog_position` | 314 (all `exact`) |
+| `known_catalog_position_other_core` | 385 (all `exact`) |
+| `catalog_mismatch:coverage` | 35 |
+| `catalog_omission:no_annotated_cds` | 1 |
+| `homolog_not_in_catalog` (group / other) | 112 / 62 |
+| `not_in_assembly:*` | 0 |
+| `contig_end_join` | 0 |
+| `unplaceable_context:*` | 11 |
+| `shifted_known_position` | 75 |
+
+- **Recovery:**
+  - round-5-supported: 181 / 190 (95%);
+  - others: 133 / 135;
+  - control genes as catalog entries: 17 / 17.
+- **Negative control:** 28 genes searched. 25 have exactly one position, 3 have none, and none has two or more at
+  every N ≥ 2. At N = 1 with 2 kb flanks, one gene has 2.
+- **Candidate structures:** none reach 3 molecules.
+  - Below threshold: 3 `core_absent` (1 molecule each) and 27 junctions (1 molecule each).
+  - None of these comes close to the N = 3 bar (none has 2 molecules).
+- **Sensitivity grid:** in `summary.json`.
+  - Junctions appear only at N = 1 (26–35).
+  - Recovery is 176–183 / 190 across flank lengths and N.
+
+### Reading
+
+- **Rule held:** on samples not used to build it, the frozen rule keeps known-site recovery (95%) and the negative
+  control clean.
+- **Boundaries:** known positions come out with exact boundaries, as at a correctly placed core they should.
+- **No extended-insertion structure:** the batch has no structure the assembly lacks with an insertion longer
+  than its core.
+- **What this does not show:** this batch does not measure the rule's sensitivity for such structures. There is no
+  positive case in it to find. One small batch without findings is not evidence that such structures are rare.
+
