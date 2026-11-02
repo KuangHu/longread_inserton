@@ -106,7 +106,11 @@ class CoreRelationTests(unittest.TestCase):
         self.assertEqual(rs.core_relation('PF_a', 'PF_c', FAM), ('unrelated', ''))
         self.assertEqual(rs.core_relation('PF_a+,PF_c+', 'PF_c-,PF_x+', FAM), ('homolog', '-'))
         self.assertEqual(rs.core_relation('PF_a+,PF_c+', 'PF_a+,PF_c-', FAM), ('homolog', ''))  # pairs disagree
-        self.assertEqual(rs.core_relation('NEG_recA', 'PF_a', FAM), ('unrelated', ''))
+        self.assertEqual(rs.core_relation('NEG_recA', 'PF_a', FAM), ('unrelated', ''))  # control family unknown
+        # a control gene whose protein is in family PF_a is a homolog of a core of that family, not of others
+        fam = dict(FAM, **{'neg:NEG_recA': {'PF_a'}})
+        self.assertEqual(rs.core_relation('NEG_recA', 'PF_a+,PF_x+', fam), ('homolog', '+'))
+        self.assertEqual(rs.core_relation('NEG_recA', 'PF_c', fam), ('unrelated', ''))
 
 
 class MatchCatalogTests(unittest.TestCase):

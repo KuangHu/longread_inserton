@@ -12,6 +12,7 @@
 #   panel    one task
 #   search   --array=0-<n-1>  one pilot sample (read_site_search_pilot/samples.tsv) per task
 #   combine  one task
+#   evidence one task: strict P/A per molecule for the candidate structures (candidate_evidence.py)
 # Usage: sbatch [--array=..] read_site_search.sbatch <stage>
 set -euo pipefail
 STAGE=${1:?stage}
@@ -27,5 +28,6 @@ case $STAGE in
 panel)   python read_site_search.py panel ;;
 search)  python read_site_search.py search --sample $S --threads $SLURM_CPUS_PER_TASK ;;
 combine) python read_site_search.py combine ;;
+evidence) python candidate_evidence.py --threads $SLURM_CPUS_PER_TASK ;;
 esac
 echo "[$(date -Is)] done"

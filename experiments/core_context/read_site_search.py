@@ -555,8 +555,11 @@ def cluster(os_):
 FLIP = {'+': '-', '-': '+'}
 
 
-def core_families(ck):
-    """Protein families of a core key with their sign (orientation relative to the core); no sign means '+'."""
+def core_families(ck, groups=None):
+    """Protein families of a core key with their sign (orientation relative to the core); no sign means '+'. A
+    negative-control key (NEG_<product>) has the families of the control genes' proteins (groups['neg:' + key])."""
+    if ck.startswith('NEG_'):
+        return {f: '+' for f in (groups or {}).get('neg:' + ck, ())}
     return {f.rstrip('+-'): '-' if f.endswith('-') else '+' for f in ck.split(',') if f.startswith('PF_')}
 
 
@@ -566,7 +569,7 @@ def core_relation(a, b, groups):
     have the same orientation in both cores, '-' when opposite, '' when undetermined (the pairs disagree)."""
     if a == b:
         return 'same', '+'
-    fa, fb = core_families(a), core_families(b)
+    fa, fb = core_families(a, groups), core_families(b, groups)
     signs = {'+' if fa[f] == fb[f] else '-' for f in set(fa) & set(fb)}
     if not signs:
         signs = {'+' if fa[x] == fb[y] else '-' for x in fa for y in fb if groups.get(x, set()) & groups.get(y, set())}
@@ -576,20 +579,33 @@ def core_relation(a, b, groups):
 
 
 def family_groups(work):
-    """family -> homology groups, for the families of the panel and catalog core keys (cached in panel/)."""
+    """family -> homology groups for the families of the panel and catalog core keys, and 'neg:' + control key ->
+    protein families of the control genes (their proteins in the family catalog); cached in panel/."""
     path = work / 'panel' / 'family_groups.tsv'
     if not path.exists():
+        prot = {}  # control gene protein -> control key
+        for m in pc.read_tsv(work / 'panel' / 'members.tsv'):
+            if m['member'].startswith('neg|'):
+                s, contig, lo = m['first_occurrence'].split('|')
+                g = next(g for g in pc.read_tsv(u.PROJ / 'core_context' / 'scale_comamonadaceae_v0.1' / 'genes' /
+                                                ('%s.tsv.gz' % s))
+                         if g['type'] == 'CDS' and g['contig'] == contig and g['start0'] == lo)
+                prot[g['protein_sha256']] = 'neg:' + m['core_key']
         want = {f for t in ('members.tsv', 'catalog.tsv') for m in pc.read_tsv(work / 'panel' / t)
                 for f in core_families(m['core_key'])}
-        got = set()
+        got, neg = defaultdict(set), set()
         with gzip.open(str(u.PROJ / 'core_context' / 'scale_comamonadaceae_v0.1' / 'families' / 'catalog.tsv.gz'),
                        'rt') as h:
             next(h)
             for line in h:
                 f = line.split('\t', 4)
-                if f[1] in want:
-                    got.add((f[1], f[3]))
-        pc.write_tsv(path, [dict(family=f, homology_group=g) for f, g in sorted(got)], ['family', 'homology_group'])
+                got[f[1]].add(f[3])
+                if f[0] in prot:
+                    neg.add((prot[f[0]], f[1]))
+        want |= {f for _, f in neg}
+        rows = [dict(family=f, homology_group=g) for f in sorted(want) for g in sorted(got[f])]
+        rows += [dict(family=k, homology_group=f) for k, f in sorted(neg)]
+        pc.write_tsv(path, rows, ['family', 'homology_group'])
     out = defaultdict(set)
     for r in pc.read_tsv(path):
         out[r['family']].add(r['homology_group'])
