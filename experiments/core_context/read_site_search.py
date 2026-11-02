@@ -22,14 +22,22 @@ combine  Pilot tables and summary over the samples.
 Classes of a merged position (both flanks placed, each without a competing placement within MIN_DELTA_AS):
   known_catalog_position          a catalog occurrence of this core lies between the two flanks
   known_catalog_position_other_core   a catalog occurrence of another core lies there (homologous core)
-  catalog_omission                no catalog occurrence there, but the assembly sequence between the flanks
-                                  contains the core (aligned): the assembly has it, the catalog does not list it
+  catalog_omission / homolog_not_in_catalog   no catalog occurrence there, but the assembly sequence between the
+                                  flanks contains the core (the panel sequence or the position's own reads, aligned);
+                                  split by the annotated CDS there (see annotate_omissions): only a CDS of the core's
+                                  own family, or no CDS, is a catalog omission
   not_in_assembly:core_absent     the flanks are adjacent in the assembly (or the sequence between is much shorter
                                   than the core and does not contain it): reads carry the core at a junction the
                                   assembly shows without it
   not_in_assembly:other_sequence  sequence between the flanks of core-like length that does not contain the core
   not_in_assembly:junction        flanks on different contigs, opposite strands, or far apart: the reads join two
                                   assembly regions with the core between
+  contig_end_join                 a junction whose flanks sit at the end and at the start of the same contig: the
+                                  reads join the contig's end to its start through the core (the assembly breaks
+                                  there); not a structure missing from the assembly
+  shifted_known_position          overlaps a known position of the sample (a partial core hit moved a flank)
+not_in_assembly:core_absent positions also report empty_site_molecules: molecules spanning the empty site in the
+read check's whole-assembly alignments.
 Not positions: unplaceable_context (a flank unplaced or placed ambiguously; reported by side), one_sided (a flank
 shorter than L). Every merged position is reported with its number of independent molecules; a candidate needs
 >= N (pilot N = 3, sensitivity N in COUNTS).
@@ -62,6 +70,8 @@ HIT_COVERAGE = 0.8  # fraction of the panel sequence a core hit must cover
 PLACED_FRACTION = 0.8  # fraction of a flank its best assembly alignment must cover
 TOL = rc3.LOCUS_TOL  # bp; placements of one position agree within this
 MIN_DELTA_AS = rc3.MIN_DELTA_AS
+END_ZONE = 5000  # bp: a flank this close to a contig end (beyond the core length) counts as at that end
+EMPTY_SPAN = 1000  # bp each side: a molecule spans an empty site with one genome alignment over site +/- this
 MM_PANEL = ['-c', '--secondary=yes', '-N', '200', '-p', '0.5']
 MM_FLANK = ['-c', '--secondary=yes', '-N', '10', '-p', '0.5']
 HIFI = 'pacbio_hifi_ccs'
@@ -342,9 +352,10 @@ def cmd_search(a):
                 o['status'] = 'placed' if pl[0] == pr[0] == 'placed' else 'unplaceable_context'
             obs.append(o)
     positions = merge(obs, catalog, seqs, member_seq, od, seq_of, presets[0])
+    empty_sites(s, positions)
     cols = ['flank', 'structure', 'core_key', 'kind', 'cls', 'raw_cls', 'molecules', 'read_records', 'contig', 'start', 'end',
             'left_contig', 'left_pos', 'left_strand', 'right_contig', 'right_pos', 'right_strand', 'catalog',
-            'core_in_assembly', 'members', 'identity_median', 'runs']
+            'core_in_assembly', 'empty_site_molecules', 'members', 'identity_median', 'runs']
     pc.write_tsv(od / 'positions.tsv.gz', positions, cols)
     ocols = ['flank', 'run', 'read', 'molecule', 'structure', 'core_key', 'kind', 'member', 'qs', 'qe', 'strand',
              'coverage', 'identity', 'status', 'left_status', 'left_contig', 'left_pos', 'left_strand', 'right_status',
@@ -359,6 +370,28 @@ def cmd_search(a):
         hit_coverage=HIT_COVERAGE, flanks=FLANKS, minimap2_panel=MM_PANEL, minimap2_flank=MM_FLANK,
         observation_status={str(L): dict(Counter(o['status'] for o in obs if o['flank'] == L)) for L in FLANKS}),
         indent=1) + '\n')
+
+
+def empty_sites(sample, positions):
+    """For not_in_assembly:core_absent positions: molecules whose genome alignment (read check, whole-assembly map)
+    spans the empty site +/- EMPTY_SPAN in one piece with no length gain > 200 bp, i.e. molecules without the core
+    there. Reported beside the molecules with the core; not required for the class."""
+    sites = [r for r in positions if r['cls'] == 'not_in_assembly:core_absent']
+    if not sites:
+        return
+    names = defaultdict(set)
+    for paf in sorted((u.PROJ / 'core_context' / 'readmap' / sample).glob('*.paf.gz')):
+        with gzip.open(str(paf), 'rt') as h:
+            for line in h:
+                f = line.split('\t', 9)
+                ts, te, qs, qe = int(f[7]), int(f[8]), int(f[2]), int(f[3])
+                for r in sites:
+                    site = (r['start'] + r['end']) // 2
+                    if (f[5] == r['contig'] and ts <= site - EMPTY_SPAN and te >= site + EMPTY_SPAN
+                            and abs((qe - qs) - (te - ts)) < 200):
+                        names[id(r)].add(f[0])
+    for r in sites:
+        r['empty_site_molecules'] = len(names[id(r)])
 
 
 def flank_written(x, seq_of, L):
@@ -446,7 +479,9 @@ def position_row(L, key, cl, catalog, seqs, member_seq, od, seq_of, preset):
     geo, x, y = geometry(lc, lp, ls, rc, rp, rs, core_len)
     cat, inside = '', ''
     if geo == 'junction':
-        cls = 'not_in_assembly:junction'
+        n = len(seqs[lc])
+        cls = ('contig_end_join' if lc == rc and ls == rs and lp > n - core_len - END_ZONE and rp < core_len + END_ZONE
+               else 'not_in_assembly:junction')
     else:
         here = [c for c in catalog if c['contig'] == lc and int(c['start0']) >= x - TOL and int(c['end0']) <= y + TOL]
         same = [c for c in here if c['core_key'] == ck]
@@ -510,6 +545,57 @@ def contains(seg, core, od, preset):
                (l.split('\t') for l in res.stdout.splitlines()))
 
 
+def annotate_omissions(rows):
+    """Positions where the assembly between the flanks holds the read's core sequence but the catalog lists no
+    reviewed occurrence, split by the annotated CDS there:
+       catalog_omission:same_family            a CDS of the core's own protein family: a gap of the catalog
+       catalog_omission:no_annotated_cds       no CDS lies wholly within the interval
+       homolog_not_in_catalog:same_homology_group   a CDS of another family of the core's homology group, a family
+                                               the reviewed catalog does not cover
+       homolog_not_in_catalog:other_family     a CDS of an unrelated family (a DNA-level homolog of the core)"""
+    om = [r for r in rows if r['cls'] == 'catalog_omission']
+    if not om:
+        return
+    gdir = u.PROJ / 'core_context' / 'scale_comamonadaceae_v0.1' / 'genes'
+    genes = {}
+    for s in {r['sample'] for r in om}:
+        d = defaultdict(list)
+        for g in pc.read_tsv(gdir / ('%s.tsv.gz' % s)):
+            if g['type'] == 'CDS':
+                d[g['contig']].append(g)
+        genes[s] = d
+    within = {}
+    for r in om:
+        x, y = int(r['start']), int(r['end'])
+        within[id(r)] = [g for g in genes[r['sample']][r['contig']]
+                         if int(g['start0']) >= x - TOL * 4 and int(g['end0']) <= y + TOL * 4]
+    want = {g['protein_sha256'] for gs in within.values() for g in gs}
+    core_fams = {f.rstrip('+-') for r in om for f in r['core_key'].split(',')}
+    fam, group_of = {}, defaultdict(set)  # protein -> (family, homology group); core family -> homology groups
+    with gzip.open(str(u.PROJ / 'core_context' / 'scale_comamonadaceae_v0.1' / 'families' / 'catalog.tsv.gz'), 'rt') as h:
+        next(h)
+        for line in h:
+            f = line.split('\t', 4)
+            if f[0] in want:
+                fam[f[0]] = (f[1], f[3])
+            if f[1] in core_fams:
+                group_of[f[1]].add(f[3])
+    core_group = {r['core_key']: set().union(*(group_of[f.rstrip('+-')] for f in r['core_key'].split(',')))
+                  for r in om}
+    for r in om:
+        gs = within[id(r)]
+        fams = [fam.get(g['protein_sha256'], ('', '')) for g in gs]
+        r['annotation'] = ';'.join('%s:%s:%s' % (g['product'], f[0], f[1]) for g, f in zip(gs, fams))
+        if not gs:
+            r['cls'] = 'catalog_omission:no_annotated_cds'
+        elif any(f[0] and f[0] in r['core_key'] for f in fams):
+            r['cls'] = 'catalog_omission:same_family'
+        elif any(f[1] and f[1] in core_group[r['core_key']] for f in fams):
+            r['cls'] = 'homolog_not_in_catalog:same_homology_group'
+        else:
+            r['cls'] = 'homolog_not_in_catalog:other_family'
+
+
 def cmd_combine(a):
     samples = pilot_samples(a.out)
     rows, runs = [], {}
@@ -518,6 +604,7 @@ def cmd_combine(a):
         for r in pc.read_tsv(od / 'positions.tsv.gz'):
             rows.append(dict(sample=s, **r))
         runs[s] = json.loads((od / 'search.json').read_text())
+    annotate_omissions(rows)
     catalog = pc.read_tsv(a.work / 'panel' / 'catalog.tsv')
     members = pc.read_tsv(a.work / 'panel' / 'members.tsv')
     panel_cores = {(m['structure'], m['core_key']) for m in members}
@@ -553,14 +640,16 @@ def cmd_combine(a):
                                  for r in ok if r['kind'] == 'neg' and per_gene[(r['sample'], r['core_key'])] > 1])
             summ['grid']['L%d_N%d' % (L, N)] = g
     out = a.out
-    pc.write_tsv(out / 'positions.tsv.gz', rows, ['sample'] + [c for c in rows[0] if c != 'sample'])
+    cols = ['sample'] + [c for c in rows[0] if c != 'sample'] + ['annotation']
+    pc.write_tsv(out / 'positions.tsv.gz', rows, cols)
     main = [r for r in rows if int(r['flank']) == MAIN_FLANK]
     for cls, name in (('catalog_omission', 'catalog_omissions'), ('not_in_assembly', 'not_in_assembly'),
-                      ('unplaceable_context', 'unplaceable_contexts')):
+                      ('unplaceable_context', 'unplaceable_contexts'),
+                      ('homolog_not_in_catalog', 'homologs_not_in_catalog'), ('contig_end_join', 'contig_end_joins')):
         sel = [r for r in main if r['cls'].startswith(cls)]
         if sel:
             pc.write_tsv(out / ('%s.tsv' % name), sorted(sel, key=lambda r: (-int(r['molecules']), r['sample'])),
-                         list(sel[0]))
+                         cols)
     summ['search'] = {s: {k: v for k, v in j.items() if k in ('panel_hits', 'reads_with_hits', 'molecules_with_hits',
                                                              'observation_status')} for s, j in runs.items()}
     (out / 'summary.json').write_text(json.dumps(summ, indent=1) + '\n')
