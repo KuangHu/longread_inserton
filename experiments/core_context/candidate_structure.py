@@ -18,7 +18,10 @@ first, overlaps <= ORF_OVERLAP bp allowed); complete = start and stop inside the
 (blastp) against the annotated proteins of the sample and every protein of the core's families (pool proteins);
 best hit gives family, homology group and product; a complete gene = complete ORF whose best hit covers >=
 GENE_COVERAGE of the subject and of the ORF. Gene count = complete genes; partial ORFs and ORFs without a hit are
-listed, not counted. Assembled copies: the insertion is aligned to the sample's own assembly (minimap2 asm20, all
+listed, not counted. Positions where the consensus is ambiguous (N: depth < MIN_DEPTH or no base reaches
+CALL_FRACTION) are counted (insert_ambiguous_bases); with any of them the gene count is not interpreted (genes_status
+unresolved_ambiguous_consensus, target_1_2_genes unresolved): a frameshift or stop of a low-depth consensus is never
+read as a broken gene. Assembled copies: the insertion is aligned to the sample's own assembly (minimap2 asm20, all
 copies); copies covering >= GENE_COVERAGE of the insertion are listed with the annotated CDS inside them and whether
 they are catalog occurrences, so the consensus genes can be compared with an annotated copy.
 Not insertion candidates: not_in_assembly:junction positions are listed apart as structural anomalies.
@@ -301,18 +304,20 @@ def main():
                                                 and g['pseudo'] == 'False' for g in inside),
                                products=';'.join(g['product'] for g in inside), catalog=';'.join(cat)))
         copy_rows += copies
-        rows.append(dict(row, status='checked', insert_len=len(ins), insert_size='le_%d' % rs.MAX_INSERT
+        amb = sum(ch not in 'ACGT' for ch in ins)
+        rows.append(dict(row, status='checked', insert_len=len(ins), insert_ambiguous_bases=amb,
+                         genes_status='resolved' if not amb else 'unresolved_ambiguous_consensus', insert_size='le_%d' % rs.MAX_INSERT
                          if len(ins) <= rs.MAX_INSERT else 'gt_%d' % rs.MAX_INSERT,
                          insert_min_depth=min(dep), insert_median_depth=sorted(dep)[len(dep) // 2],
                          **core, orfs=len(os_), complete_genes=genes,
-                         target_1_2_genes=1 <= genes <= 2 and len(ins) <= rs.MAX_INSERT,
+                         target_1_2_genes=('unresolved' if amb else 1 <= genes <= 2 and len(ins) <= rs.MAX_INSERT),
                          assembled_copies=len(copies),
                          assembled_copy_best=max(copies, key=lambda x: x['identity'])['contig'] + ':%d-%d' % (
                              max(copies, key=lambda x: x['identity'])['start'],
                              max(copies, key=lambda x: x['identity'])['end']) if copies else ''))
     cols = ['candidate', 'sample', 'core_key', 'status', 'P_molecules', 'records_used', 'P_matched', 'A_matched',
             'boundary', 'boundary_molecules', 'both_agree_molecules', 'search_insert_len', 'insert_len', 'insert_size',
-            'insert_min_depth', 'insert_median_depth', 'core_member', 'core_member_len', 'core_coverage',
+            'insert_min_depth', 'insert_median_depth', 'insert_ambiguous_bases', 'genes_status', 'core_member', 'core_member_len', 'core_coverage',
             'core_identity', 'core_both_ends', 'core_in_insert', 'orfs', 'complete_genes', 'target_1_2_genes',
             'assembled_copies', 'assembled_copy_best']
     pc.write_tsv(od / 'structure_summary.tsv', rows, cols)
