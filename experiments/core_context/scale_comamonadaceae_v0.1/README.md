@@ -1160,13 +1160,12 @@ purple cigar_fail. Pairs shown:
 - `runs.tsv`, `status.tsv`, `selection.json`, `samples.txt`, `summary.json`.
 
 Not done yet:
-- **Adding sites from long reads (the original aim) has not started.** Rounds 1–5 only take positions already in
-  assemblies and check them with reads. The next stage is: known core → search the reads for homologous cores →
-  extract the context on both sides → merge repeated observations of one position → compare with the assembly
-  position catalog → report candidate new sites. The pilot design is in `READ_SITE_SEARCH_PILOT.md` (draft, not
-  started);
+- **Adding sites from long reads (the original aim):** a pilot has run on 11 frozen samples (results in
+  `READ_SITE_SEARCH_PILOT.md`); the full run has not started. Rounds 1–5 only took positions already in assemblies
+  and checked them with reads. The read search goes: known core → homologous cores in all reads → both flanks →
+  merge repeated observations of one position → compare with the assembly position catalog → report by class;
 - candidate interpretation layer;
-- a decision on the allele-alignment cap (see round 5: counts depend on the allele set through `-N 100`);
+- a full read-check round with `ucd_readcheck` v0.2 (per-interval alleles; rounds 1–5 are v0.1);
 - all five planned download batches are done. The 104 assemblies left out of the plan (118.4 GB) add no core and
   no A/B pair to the current catalog of assembly positions. That says nothing about their value for finding new
   sites in reads (see `READ_SITE_SEARCH_PILOT.md`).

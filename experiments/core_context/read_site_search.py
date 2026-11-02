@@ -549,7 +549,7 @@ def annotate_omissions(rows):
     """Positions where the assembly between the flanks holds the read's core sequence but the catalog lists no
     reviewed occurrence, split by the annotated CDS there:
        catalog_omission:same_family            a CDS of the core's own protein family: a gap of the catalog
-       catalog_omission:no_annotated_cds       no CDS lies wholly within the interval
+       catalog_omission:no_annotated_cds       no CDS lies within the interval or covers >= 80% of it
        homolog_not_in_catalog:same_homology_group   a CDS of another family of the core's homology group, a family
                                                the reviewed catalog does not cover
        homolog_not_in_catalog:other_family     a CDS of an unrelated family (a DNA-level homolog of the core)"""
@@ -567,8 +567,9 @@ def annotate_omissions(rows):
     within = {}
     for r in om:
         x, y = int(r['start']), int(r['end'])
-        within[id(r)] = [g for g in genes[r['sample']][r['contig']]
-                         if int(g['start0']) >= x - TOL * 4 and int(g['end0']) <= y + TOL * 4]
+        within[id(r)] = [g for g in genes[r['sample']][r['contig']]  # within the interval, or covering >= 80% of it
+                         if int(g['start0']) >= x - TOL * 4 and int(g['end0']) <= y + TOL * 4
+                         or min(y, int(g['end0'])) - max(x, int(g['start0'])) >= HIT_COVERAGE * (y - x)]
     want = {g['protein_sha256'] for gs in within.values() for g in gs}
     core_fams = {f.rstrip('+-') for r in om for f in r['core_key'].split(',')}
     fam, group_of = {}, defaultdict(set)  # protein -> (family, homology group); core family -> homology groups
