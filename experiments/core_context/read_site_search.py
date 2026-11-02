@@ -686,13 +686,21 @@ def mark_shifted(rows, groups):
     of the gene moves a flank) only if the known position's core is the same or a homologous one (core_relation)
     and, when the relation gives a sign, in the consistent orientation: cls shifted_known_position, raw_cls keeps
     the class it had, shifted_from names the known position. Found with the negative-control genes of the pilot;
-    v0.1 did not check the core."""
+    v0.1 did not check the core. Two known positions of one core matched to the same catalog occurrence are one
+    position: the one with fewer molecules (ties: later start) is shifted_known_position as well."""
     known = defaultdict(list)
-    for r in rows:
-        if r['cls'].startswith('known_catalog_position'):
+    first = {}
+    for r in sorted((r for r in rows if r['cls'].startswith('known_catalog_position')),
+                    key=lambda r: (-r['molecules'], r['start'])):
+        k = (r['core_key'], r['catalog'])
+        if k in first:
+            r['raw_cls'], r['cls'] = r['cls'], 'shifted_known_position'
+            r['shifted_from'] = '%s:%s-%s:%s' % (r['contig'], first[k]['start'], first[k]['end'], r['core_key'])
+        else:
+            first[k] = r
             known[r['contig']].append(r)
     for r in rows:
-        if r['cls'].startswith('known_catalog_position'):
+        if r['cls'].startswith(('known_catalog_position', 'shifted')):
             continue
         near = ([k for k in known[r['contig']] if k['start'] < r['end'] + TOL and k['end'] > r['start'] - TOL]
                 if r['contig'] else

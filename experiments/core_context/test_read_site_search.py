@@ -66,7 +66,8 @@ class ClusterTests(unittest.TestCase):
 
 
 def row(cls, ck='PF_a', cs='+', contig='c', start=1000, end=2000, **kw):
-    return dict(dict(cls=cls, core_key=ck, core_strand=cs, contig=contig, start=start, end=end), **kw)
+    return dict(dict(cls=cls, core_key=ck, core_strand=cs, contig=contig, start=start, end=end, molecules=3,
+                     catalog=''), **kw)
 
 
 class ShiftedTests(unittest.TestCase):
@@ -93,6 +94,16 @@ class ShiftedTests(unittest.TestCase):
         self.assertEqual([r['cls'] for r in out], ['known_catalog_position', 'not_in_assembly:other_sequence',
                                                     'known_catalog_position', 'catalog_omission',
                                                     'shifted_known_position'])
+
+
+    def test_two_known_positions_of_one_occurrence(self):
+        # counterexample found by the negative control: a partial hit of the same gene matches the same occurrence
+        rows = [row('known_catalog_position', start=1200, catalog='o1', molecules=6),
+                row('known_catalog_position', catalog='o1', molecules=63),
+                row('known_catalog_position', ck='PF_b', catalog='o1', molecules=5)]  # another core: its own position
+        out = rs.mark_shifted(rows, FAM)
+        self.assertEqual([r['cls'] for r in out], ['shifted_known_position', 'known_catalog_position',
+                                                    'known_catalog_position'])
 
 
 def occ(oid, ck='PF_a', start=1000, end=2000, strand='+', contig='c'):
