@@ -552,9 +552,111 @@ the validation batch was chosen.
 
 - **Rule held:** on samples not used to build it, the frozen rule keeps known-site recovery (95%) and the negative
   control clean.
-- **Boundaries:** known positions come out with exact boundaries, as at a correctly placed core they should.
+- **Boundaries:** known positions come out `exact` (v0.3.1: `no_extension_detected`). **Corrected in v0.3.1:**
+  this is not a check of boundary accuracy. It only says that the reads join U and D next to the core hit, with ≤
+  20 bp counted as 0. Where the assembly holds the whole element, element ends beyond the core align as flank.
 - **No extended-insertion structure:** the batch has no structure the assembly lacks with an insertion longer
   than its core.
 - **What this does not show:** this batch does not measure the rule's sensitivity for such structures. There is no
   positive case in it to find. One small batch without findings is not evidence that such structures are rare.
 
+
+## v0.3.1 (2026-11-02): boundary counted by molecule; full-insertion check of the 5 candidates
+
+### Boundary statistics (`insert_fields`)
+
+- **What was wrong (found in review, reproduced with the function itself):**
+  - v0.3 took medians and the 80% agreement over observation records, not molecules.
+  - It also tested each side separately.
+  - Counterexamples, now tests:
+    - one molecule with 8 identical records plus 2 molecules with different ones was called `exact`, with only
+      1 / 3 molecules supporting both sides;
+    - 80% agreement on each side but 60% on both at once was also called `exact`.
+- **Fix:**
+  - Each molecule's records are reduced to one value per side (their median) before the medians over molecules.
+  - A molecule agrees on a side if its extra length is within 50 bp of that median.
+  - The boundary needs at least 80% of the molecules to agree on both sides at once.
+  - Reported per position: `boundary_molecules`, `left_agree_molecules`, `right_agree_molecules`,
+    `both_agree_molecules`.
+- **Labels:**
+  - `exact` → `no_extension_detected`;
+  - `consistent` → `extension_consistent`;
+  - `unknown` is unchanged.
+
+  `no_extension_detected` means only that the reads join U and D directly next to the core hit; ≤ 20 bp of extra
+  sequence counts as 0. It does not establish the element's own boundaries: where the assembly holds the whole
+  element, element ends beyond the core align as flank.
+- **Effect on real data:** none. Rerun on both batches; jobs are in each `jobs.txt`.
+  - Every position keeps its boundary class: development 530 / 600 known positions `no_extension_detected`;
+    validation 314 / 385.
+  - The 5 candidates:
+
+    | site | molecules | agree on both sides |
+    |---|---:|---:|
+    | SAMN30525180 3,553,051 | 41 | 40 |
+    | SAMN30525180 1,653,143 | 9 | 9 |
+    | SAMN30525180 1,564,844 | 5 | 5 |
+    | SAMN11265848 | 23 | 23 |
+    | SAMN15738716 | 10 | 10 |
+
+    All 5 are `extension_consistent`.
+
+### Full-insertion check (`../candidate_structure.py`; `read_site_search_pilot/candidates/structure_*`)
+
+Three levels, reported apart:
+- **core hit:** coverage, identity and both ends of the panel core sequence in the insertion;
+- **structure:** molecules joining U – insertion – D (strict P/A) and the boundary counts by molecule;
+- **complete target:** the insertion between the junctions is < 2,500 bp and holds 1–2 complete genes.
+
+Method:
+- **Insertion sequence:** a consensus from every record of the molecules the strict check called P, never one read.
+  - Draft: the P allele window, the insertion ± 300 bp of assembly.
+  - Polishing: minimap2 + `samtools consensus` (simple mode, call fraction 0.6, min depth 3), 2 rounds.
+  - Junctions: blastn of 300 bp of U and D against the consensus. A target-site duplication stays in U and D.
+- **Genes:**
+  - ORFs on both strands (table 11, ≥ 50 aa), blastp against the sample's annotated proteins and every pool protein
+    of the core's family.
+  - A complete gene is a complete ORF whose best hit covers ≥ 90% of the subject and of the ORF.
+  - Ambiguous consensus bases (N) are counted. If any lies outside a complete gene, the gene count is not
+    interpreted (`unresolved`). A frameshift in a low-depth consensus is never read as a broken gene.
+- **Assembled copies:** the insertion is aligned to the sample's own assembly (asm20, all copies). Copies covering
+  ≥ 90% of it are listed with the annotated CDS inside and their catalog status.
+
+| site | P molecules (records) | insertion bp | depth min / median | core coverage / identity / both ends | complete genes | gene (best hit) | genes status | assembled copies (in catalog) | target (< 2,500 bp, 1–2 genes) |
+|---|---|---:|---|---|---:|---|---|---|---|
+| SAMN30525180 3,553,051 | 46 (46) | 1,332 | 37 / 46 | 100% / 99.84% / yes | 1 | IS256 family transposase, 408 aa, 99.8% | 2 ambiguous bases, inside the gene | 16 (15) | met |
+| SAMN30525180 1,653,143 | 10 (10) | 1,331 | 8 / 12 | 100% / 99.84% / yes | 1 | IS256 family transposase, 408 aa, 99.8% | 2 ambiguous bases, inside the gene | 16 (15) | met |
+| SAMN30525180 1,564,844 | 7 (7) | 1,328 | 5 / 7 | 100% / 98.70% / yes | 0 | (a 325-aa ORF covering 80% of the IS256 protein) | **unresolved**: 19 ambiguous bases, 1 inserted base against the assembled copy | 16 (15) | unresolved |
+| SAMN11265848 | 30 (30) | 1,177 | 25 / 32 | 100% / 100% / yes | 1 | IS630 family transposase, 359 aa, 100% | resolved | 23 (21) | met |
+| SAMN15738716 (HiFi) | 12 (12) | 1,402 | 11 / 12 | 100% / 100% / yes | 1 | IS4 family transposase, 445 aa, 100% | resolved | 12 (12) | met |
+
+- **Core level:** every insertion holds the whole panel core, both ends covered.
+- **Gene count:** the gene count comes from the insertion, not from the seed core. Each resolved insertion holds
+  exactly one complete gene, the core's own transposase family.
+- **The 1,564,844 site:**
+  - At 5–7 molecules the consensus is not good enough to call genes. Its one inserted base against the assembled
+    copy and its 19 ambiguous bases explain the shortened ORF; the gene is not called broken.
+  - Its sequence otherwise matches the other SAMN30525180 insertions and 16 assembled copies at 99.9%.
+- **Ambiguous positions 252–253** at the other two SAMN30525180 sites: the molecules there carry mixed bases at
+  37–46× depth. This could be a two-base difference among the copies or a systematic read error. It is not
+  resolved here.
+- **Assembled copies:** every insertion matches 12–23 assembled copies elsewhere in its own genome at 99.9–100%.
+  Nearly all of them are catalog occurrences of the same core.
+- **Reading:**
+  - At these 5 sites, part of the sequenced DNA carries a copy of a multi-copy insertion-sequence-family element at a
+    site where the assembly shows the empty site.
+  - Four meet the complete target (< 2,500 bp, one complete gene); one is unresolved.
+  - This is a candidate structure in part of the DNA. It is not an independent insertion event, and mobility is not
+    shown.
+- **Not an insertion:** the 62-molecule junction of SAMN15738716 (PF_fd55e20062f5, 2,231,535 + ↔ 4,097,738 −, an
+  insertion of 1,333 bp between) is listed apart as a structural anomaly (`candidates/structural_anomalies.tsv`).
+  It is not treated as an insertion.
+
+### Next (needs decision; nothing started)
+
+- **Second validation batch:** after these rules are frozen, as a new tag.
+- **Computational positive test,** fixed in advance and reported apart from real samples:
+  - in validation samples, cut a seeded random set of known catalog occurrences out of the assembly, with an extra
+    0–300 bp drawn per side, and search the real reads against the edited assembly;
+  - the cut sequence is the truth for the site and for the insertion length and boundary;
+  - this measures sensitivity for insertions longer than the core, which a random batch without positives cannot.

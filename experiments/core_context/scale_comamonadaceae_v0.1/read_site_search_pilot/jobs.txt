@@ -7,3 +7,6 @@ evidence 27487452 (after failed 27487222); search rerun (duplicate known positio
 v0.3 (seed vs boundary) search 27488252 combine 27488253 evidence 27488254
 v0.3 rerun (majority boundary, junction strands) search 27488386 combine 27488388 evidence 27488389
 v0.3.1 (boundary by molecule) search 27497888 combine 27497889 evidence 27497890
+structure 27497980
+structure rerun (ambiguous bases) 27498157
+structure rerun (ambiguous bases in genes) 27498184
