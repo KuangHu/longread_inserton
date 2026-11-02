@@ -19,9 +19,10 @@ first, overlaps <= ORF_OVERLAP bp allowed); complete = start and stop inside the
 best hit gives family, homology group and product; a complete gene = complete ORF whose best hit covers >=
 GENE_COVERAGE of the subject and of the ORF. Gene count = complete genes; partial ORFs and ORFs without a hit are
 listed, not counted. Positions where the consensus is ambiguous (N: depth < MIN_DEPTH or no base reaches
-CALL_FRACTION) are counted (insert_ambiguous_bases); with any of them the gene count is not interpreted (genes_status
-unresolved_ambiguous_consensus, target_1_2_genes unresolved): a frameshift or stop of a low-depth consensus is never
-read as a broken gene. Assembled copies: the insertion is aligned to the sample's own assembly (minimap2 asm20, all
+CALL_FRACTION) are counted (insert_ambiguous_bases). genes_status: resolved (none); resolved_ambiguous_bases_in_genes
+(every one lies inside a complete gene: an N does not shift the frame, the gene is still full length); otherwise
+unresolved_ambiguous_consensus, and then the gene count is not interpreted (target_1_2_genes unresolved): a frameshift
+or stop of a low-depth consensus is never read as a broken gene. Assembled copies: the insertion is aligned to the sample's own assembly (minimap2 asm20, all
 copies); copies covering >= GENE_COVERAGE of the insertion are listed with the annotated CDS inside them and whether
 they are catalog occurrences, so the consensus genes can be compared with an annotated copy.
 Not insertion candidates: not_in_assembly:junction positions are listed apart as structural anomalies.
@@ -266,7 +267,7 @@ def main():
                 f = l.split('\t')
                 if f[0] not in hits or float(f[11]) > float(hits[f[0]][11]):
                     hits[f[0]] = f
-        genes = 0
+        genes, gene_iv = 0, []
         for i, o in enumerate(os_):
             h = hits.get('orf%d' % i)
             fm = fam.get(h[1], ('', '')) if h else ('', '')
@@ -274,6 +275,8 @@ def main():
             qcov = (int(h[5]) - int(h[4]) + 1) / int(h[8]) if h else 0
             full = bool(o['complete'] and h and scov >= GENE_COVERAGE and qcov >= GENE_COVERAGE)
             genes += full
+            if full:
+                gene_iv.append((o['start'], o['end']))
             orf_rows.append(dict(candidate=cid, orf='orf%d' % i, start=o['start'], end=o['end'], strand=o['strand'],
                                  aa=o['aa'], complete_orf=o['complete'], best_hit=h[1][:16] if h else '',
                                  identity=h[2] if h else '', subject_coverage=round(scov, 3), orf_coverage=round(qcov, 3),
@@ -304,9 +307,12 @@ def main():
                                                 and g['pseudo'] == 'False' for g in inside),
                                products=';'.join(g['product'] for g in inside), catalog=';'.join(cat)))
         copy_rows += copies
-        amb = sum(ch not in 'ACGT' for ch in ins)
-        rows.append(dict(row, status='checked', insert_len=len(ins), insert_ambiguous_bases=amb,
-                         genes_status='resolved' if not amb else 'unresolved_ambiguous_consensus', insert_size='le_%d' % rs.MAX_INSERT
+        amb_at = [k for k, ch in enumerate(ins) if ch not in 'ACGT']
+        amb = len(amb_at) if amb_at and not all(any(x <= k < y for x, y in gene_iv) for k in amb_at) else 0
+        rows.append(dict(row, status='checked', insert_len=len(ins), insert_ambiguous_bases=len(amb_at),
+                         ambiguous_positions=','.join(map(str, amb_at)),
+                         genes_status='resolved' if not amb_at else 'resolved_ambiguous_bases_in_genes' if not amb
+                         else 'unresolved_ambiguous_consensus', insert_size='le_%d' % rs.MAX_INSERT
                          if len(ins) <= rs.MAX_INSERT else 'gt_%d' % rs.MAX_INSERT,
                          insert_min_depth=min(dep), insert_median_depth=sorted(dep)[len(dep) // 2],
                          **core, orfs=len(os_), complete_genes=genes,
@@ -317,7 +323,7 @@ def main():
                              max(copies, key=lambda x: x['identity'])['end']) if copies else ''))
     cols = ['candidate', 'sample', 'core_key', 'status', 'P_molecules', 'records_used', 'P_matched', 'A_matched',
             'boundary', 'boundary_molecules', 'both_agree_molecules', 'search_insert_len', 'insert_len', 'insert_size',
-            'insert_min_depth', 'insert_median_depth', 'insert_ambiguous_bases', 'genes_status', 'core_member', 'core_member_len', 'core_coverage',
+            'insert_min_depth', 'insert_median_depth', 'insert_ambiguous_bases', 'ambiguous_positions', 'genes_status', 'core_member', 'core_member_len', 'core_coverage',
             'core_identity', 'core_both_ends', 'core_in_insert', 'orfs', 'complete_genes', 'target_1_2_genes',
             'assembled_copies', 'assembled_copy_best']
     pc.write_tsv(od / 'structure_summary.tsv', rows, cols)
