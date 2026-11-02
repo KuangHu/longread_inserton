@@ -1,85 +1,103 @@
-# Read-based site search: pilot design (draft, not started)
+# Read-based site search: pilot design (v0.1)
 
 Rounds 1–5 took positions already in assemblies and checked them with reads. This stage asks a different
-question: **given a known core, do the reads hold it at a position that the assembly catalog does not list?**
+question: **given a known core, do the reads hold it at a position that the assembly or its catalog does not
+show?**
 
 ```
-known core → find the core in reads → extract both flanks from each read → merge observations of one position
-           → compare with the assembly position catalog → report candidate new sites
+known core → find homologous cores in all reads → take both flanks from each read → merge observations of one
+position by molecule → compare with the assembly and its position catalog → report by class
 ```
 
-- **No empty site needed:** a position is reported from reads that carry the core with both flanks placed. It
-  does not need an assembly without the core at that position.
-- **One read hit is not one site:** hits are merged by molecule, then by position. Only the merged position is a
-  candidate, and only with enough independent molecules.
+- **No empty site is needed.** A position is reported from reads that carry the core with both flanks placed.
+- **One read hit is not one site.** Hits are merged by molecule, then by position; only merged positions are
+  counted.
+- **All qualifying reads are searched.** Every read of every verified run of a pilot sample is aligned to the core
+  panel, not only reads near catalog positions.
+- **No new downloads.** The pilot uses reads already verified on disk.
+- Code: `../read_site_search.py` (stages `freeze`, `panel`, `search`, `combine`) and `../read_site_search.sbatch`.
 
-## Pilot scope
+## Frozen pilot samples (`read_site_search_pilot/`, frozen before any search)
 
-- **Assemblies:** about 10, chosen for read quality, not for expected results.
-  - Prefer molecule-level counting (ONT `molecules`, HiFi), long reads, and depth of at least 30 molecules.
-  - Exclude runs whose reads are not raw sequencing output, e.g. SRR7743797 (submitted as `aligned_readsV3.bam`,
-    reads in reference order and probably trimmed to aligned segments; see the round 5 notes).
-- **Cores:** three groups, fixed before the search runs.
-  - **Test cores:** cores with a supported A/B pair whose occurrences include a pilot assembly, of several product
-    classes (transposase, recombinase, hypothetical, other).
-  - **Negative control:** single-copy conserved genes (e.g. ribosomal proteins, `rpoB`). New positions found for
-    these measure false positives: chimeric reads, mis-placed flanks.
-  - **Positive control:** catalog positions already supported in rounds 1–5 in the same assemblies. Recovering
-    them measures sensitivity.
+- **Rule** (`freeze.json`; every assembly considered is in `candidates_considered.tsv` with the reason it was not
+  eligible):
+  - **Eligible:** every checked run counted in molecules; read type ONT or PacBio HiFi/CCS; no run submitted as an
+    aligned BAM; depth at least 30× (verified bases / assembly length).
+  - **Per genus:** the eligible sample with the most candidate cores supported in read-check round 5 (ties: depth,
+    then id). Genera whose best sample has at least 15 such cores.
+  - **HiFi minimum:** then HiFi samples by the same score until at least 2 HiFi samples are included.
+- **Result:** 11 samples from 10 genera, 9 ONT and 2 HiFi (`samples.tsv`, with run ids and SHA256 of the read
+  files).
+
+## Core panel and catalog
+
+- **Test cores:** the 1,083 candidate cores with an A/B pair supported on both sides in round 5. Their panel holds
+  the distinct DNA sequences of the coding span of every occurrence in the pool, in core orientation.
+- **Catalog:** every reviewed occurrence (any core) in the pilot samples. A position is compared with the catalog
+  of its own core and with that of any other core.
+
+## Controls
+
+- **Known positions (positive control):** catalog occurrences of panel cores in the pilot samples, split into those
+  supported in round 5 and the rest. Recovery is the fraction found as `known_catalog_position` with enough
+  molecules. It measures sensitivity, and its misses show where the search loses positions.
+- **Single-copy genes (negative control):** per pilot sample, genes from a fixed product list (RNA polymerase β and
+  β′, gyrase B, RecA, DNA polymerase III β, ribosomal proteins L2 and S3, Ffh). Each must occur exactly once in the
+  annotation, complete and not pseudo, and must overlap no catalog occurrence. They go through the same search.
+  - **Panel in practice (`panel/panel.json`):** 30 genes. These are RNA polymerase β and β′ in all 11 samples, L2
+    in 3, S3 in 4 and DNA polymerase III β in 1.
+  - **Products that gave no gene:** gyrase B, RecA and Ffh. Their annotated names differ from the list, or the
+    gene overlaps a catalog occurrence. The list was not changed after the panel was built.
+  - Expected: exactly one position each, `known_catalog_position`.
+  - Any other position for them measures false positives from chimeric reads, mis-placed flanks or the merging
+    rules.
+- **Thresholds:** fixed before the run. The main setting is flanks of 1 kb and at least 3 independent molecules.
+  Sensitivity is reported for flanks of 500 / 1,000 / 2,000 bp × 1 / 2 / 3 / 5 molecules. No threshold is
+  tuned on the results.
 
 ## Steps
 
-1. **Find the core in reads.**
-   - Query: the core DNA of each occurrence (the tested element interval).
-   - Align the reads of a pilot run to the core panel with minimap2, using the read-type preset.
-   - Keep hits that cover most of the core. Record the read coordinates, strand and identity.
-   - Hits that cover only part of the core are kept as a separate class, not dropped silently.
-2. **Extract both flanks** from each hit: the read sequence beyond each end of the core hit.
-   - A hit is *two-sided* when both flanks are at least L long (L to be fixed; ≥ 1 kb proposed, well above the
-     caller's 300 bp anchor).
-   - One-sided hits are recorded but do not by themselves make a position.
-3. **Place each flank** on the sample's own assembly, then on the pool if it does not place there.
-   - Keep every placement and its score.
-   - A flank with two near-equal placements is `flank_ambiguous`. The same genome-wide competition rule as the
-     current caller applies.
-4. **Merge observations.**
-   - First collapse reads of one molecule (same molecule grouping as the check stage).
-   - Then group molecules whose U and D placements agree within a tolerance and have the same orientation.
-   - The unit counted per position is molecules, or assumed molecules / read records where that is all a run
-     allows.
-5. **Compare with the catalog** (all occurrences of that core and its homologs in the pool), giving one class per
-   merged position:
-   - `catalog_position`: matches a listed occurrence in this assembly;
-   - `catalog_position_other_assembly`: flanks place at a listed occurrence of another assembly only;
-   - `unlisted_in_own_assembly`: both flanks place in this assembly, adjacent or close, at a position with no copy
-     of the core. Reads carry the core at a position the assembly does not show;
-   - `flanks_unplaced` / `flank_ambiguous` / `one_sided`: not a position.
-6. **Report candidate new sites.** A candidate is an `unlisted_in_own_assembly` or
-   `catalog_position_other_assembly` position with at least N independent molecules (N to be fixed; 3 like the
-   current MIN_SPAN proposed). Each candidate lists:
-   - molecules, read records, flank lengths and identities;
-   - whether any molecule at the same place lacks the core (reported, not required);
-   - the run and its count mode.
+1. **Core hits:** minimap2 (read preset) of all reads against the panel.
+   - A hit covers at least 80% of a panel sequence.
+   - Per read and core, overlapping hits keep the best one.
+2. **Flanks:** exactly L bp of read sequence next to each end of the hit. A hit without L bp on both sides is
+   `one_sided` at that L.
+3. **Placement:** each flank is aligned to the sample's own assembly.
+   - `placed`: the best alignment covers at least 80% of the flank and no other alignment within 20 AS
+     (MIN_DELTA_AS) places it elsewhere (beyond 50 bp, another contig or strand).
+   - `ambiguous`: such a competing placement exists.
+   - `unplaced`: no alignment covers enough of the flank.
+4. **Merge:**
+   - Reads of one molecule count once (the same grouping as the read check).
+   - Molecules whose two flank anchors agree within 50 bp form one position.
+5. **Classes** (see the docstring of `read_site_search.py` for the exact rules):
 
-## What the pilot measures before any claim
+| report group | class | meaning |
+|---|---|---|
+| known positions recovered | `known_catalog_position` | a catalog occurrence of this core lies between the two flanks |
+| | `known_catalog_position_other_core` | a catalog occurrence of another (homologous) core lies there |
+| catalog omissions | `catalog_omission` | the assembly sequence between the flanks contains the core, but no catalog occurrence is listed there |
+| structures the assembly does not show | `not_in_assembly:core_absent` | the flanks are adjacent in the assembly; the reads carry the core at a junction the assembly shows without it |
+| | `not_in_assembly:other_sequence` | sequence of core-like length between the flanks that does not contain the core |
+| | `not_in_assembly:junction` | flanks on different contigs, opposite strands or far apart |
+| unplaceable contexts | `unplaceable_context:<left>\|<right>` | at least one flank unplaced or ambiguous, reported by side |
 
-- **Sensitivity:** recovery of the positive-control catalog positions.
-- **False positives:** new positions for the negative-control cores, and for the test cores in assemblies where
-  the core is absent.
-- **Effect of thresholds:** how candidate counts change with L, N and the identity cutoff. The thresholds are
-  fixed before the full run, not tuned to its results.
+## How results are worded
 
-## How results will be worded
+- **Same reads as the assembly:** the reads are mostly the ones the assembly was built from.
+  - A `not_in_assembly` position means some molecules of the sequenced culture carry the core at a junction the
+    assembly does not show. It can be a minority structure in the culture, a structure the assembler collapsed or
+    resolved differently, or chimeric molecules.
+  - It is not an independent insertion event, not mobility, and not a new site in any population sense. It is
+    called a **candidate structure not shown by the assembly**.
+- **Catalog omissions** are gaps in the catalog (annotation or review filters), not new sites.
+- **Unplaceable contexts** are flank sequences the own assembly does not hold uniquely. They are not called absent
+  from the assembly, and they are not called new.
+- **Merged positions only:** every count is of merged positions with their molecules, never of read hits.
+- **Not found is not absent:** a known position that is not recovered is a sensitivity miss to explain, not
+  evidence that the structure is absent.
 
-- **Same reads as the assembly:** the reads are mostly the ones the assembly was built from. An
-  `unlisted_in_own_assembly` position is a position present in some molecules of the sequenced culture, or one the
-  assembly collapsed. It is not an independent insertion event, and not mobility.
-- **Not a single-read count:** a candidate is a merged position, never one read hit.
-- **No result is not absence:** a core not found in reads means "not found here", not absent.
+## Not in the pilot
 
-## Open decisions (for review before the pilot runs)
-
-- Which ~10 assemblies and which cores.
-- L (flank length), N (molecules), the identity and coverage cutoffs for core hits, and the placement tolerance.
-- Whether the 104 assemblies left out of the read-check download plan should be considered for this stage. That
-  plan scored assemblies only by known catalog positions. They may still matter for finding new sites.
+- Placing unplaced flanks on other assemblies of the pool.
+- Assemblies outside the frozen 11, including the 104 left out of the read-check downloads.

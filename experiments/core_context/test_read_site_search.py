@@ -36,10 +36,18 @@ class GeometryTests(unittest.TestCase):
         self.assertEqual(rs.geometry('c', 2100, '+', 'c', 1100, '+', 1000)[0], 'junction')
 
 
+class CanonicalTests(unittest.TestCase):
+    def test_both_strands_of_one_position_give_the_same_key(self):
+        fwd = dict(left_contig='c', left_pos=1100, left_strand='+', right_contig='c', right_pos=2100, right_strand='+')
+        rev = dict(left_contig='c', left_pos=2100, left_strand='-', right_contig='c', right_pos=1100, right_strand='-')
+        self.assertEqual(rs.canonical(fwd), rs.canonical(rev))
+        self.assertEqual(rs.geometry(*rs.canonical(rev), 1000), ('proper', 1100, 2100))
+
+
 class ClusterTests(unittest.TestCase):
     def test_observations_within_tolerance_merge(self):
-        obs = [dict(left_pos=1000, right_pos=2000), dict(left_pos=1030, right_pos=2010),
-               dict(left_pos=1500, right_pos=2500)]
+        obs = [dict(c_left_pos=1000, c_right_pos=2000), dict(c_left_pos=1030, c_right_pos=2010),
+               dict(c_left_pos=1500, c_right_pos=2500)]
         self.assertEqual(sorted(len(c) for c in rs.cluster(obs)), [1, 2])
 
 

@@ -255,6 +255,16 @@ def placement(alns, side):
     return 'placed', best['t'], inner(best), best['strand']
 
 
+def canonical(o):
+    """Flank placements in assembly orientation: an observation whose left flank (read-forward) maps to the minus
+    strand is the same position read from the other strand, so the sides are swapped and the strands flipped.
+    Reads from both strands of one position then merge."""
+    if o['left_strand'] != '-':
+        return o['left_contig'], o['left_pos'], o['left_strand'], o['right_contig'], o['right_pos'], o['right_strand']
+    flip = {'+': '-', '-': '+'}
+    return o['right_contig'], o['right_pos'], flip[o['right_strand']], o['left_contig'], o['left_pos'], '+'
+
+
 def geometry(lc, lp, ls, rc, rp, rs, core_len):
     """('proper', assembly start, end of the sequence between the flanks) or ('junction', ...)."""
     if lc != rc or ls != rs:
@@ -375,8 +385,9 @@ def merge(obs, catalog, seqs, member_seq, od):
         groups = defaultdict(list)
         for o in obs:
             if o['flank'] == L and o['status'] == 'placed':
-                groups[(o['structure'], o['core_key'], o['left_contig'], o['left_strand'], o['right_contig'],
-                        o['right_strand'])].append(o)
+                lc, lp, ls, rc, rp, rs = canonical(o)
+                o.update(c_left_pos=lp, c_right_pos=rp)
+                groups[(o['structure'], o['core_key'], lc, ls, rc, rs)].append(o)
         for key, os_ in groups.items():
             for cl in cluster(os_):
                 rows.append(position_row(L, key, cl, catalog, seqs, member_seq, od))
@@ -412,11 +423,12 @@ def median(xs):
 
 def cluster(os_):
     """Single linkage on (left position, right position) within TOL."""
-    os_ = sorted(os_, key=lambda o: (o['left_pos'], o['right_pos']))
+    os_ = sorted(os_, key=lambda o: (o['c_left_pos'], o['c_right_pos']))
     out = []
     for o in os_:
         for c in out:
-            if any(abs(o['left_pos'] - p['left_pos']) <= TOL and abs(o['right_pos'] - p['right_pos']) <= TOL for p in c):
+            if any(abs(o['c_left_pos'] - p['c_left_pos']) <= TOL and abs(o['c_right_pos'] - p['c_right_pos']) <= TOL
+                   for p in c):
                 c.append(o)
                 break
         else:
@@ -426,8 +438,8 @@ def cluster(os_):
 
 def position_row(L, key, cl, catalog, seqs, member_seq, od):
     st, ck, lc, ls, rc, rs = key
-    lp = int(median([o['left_pos'] for o in cl]))
-    rp = int(median([o['right_pos'] for o in cl]))
+    lp = int(median([o['c_left_pos'] for o in cl]))
+    rp = int(median([o['c_right_pos'] for o in cl]))
     core_len = int(median([o['qe'] - o['qs'] for o in cl]))
     geo, x, y = geometry(lc, lp, ls, rc, rp, rs, core_len)
     cat, inside = '', ''
@@ -481,6 +493,9 @@ def cmd_combine(a):
     catalog = pc.read_tsv(a.work / 'panel' / 'catalog.tsv')
     members = pc.read_tsv(a.work / 'panel' / 'members.tsv')
     panel_cores = {(m['structure'], m['core_key']) for m in members}
+    # every (sample, negative-control gene) whose reads were searched: the sample's own gene, or (when its own copy is
+    # a catalog occurrence and so left out) the copies of other samples
+    neg_genes = {(s, m['core_key']) for m in members if m['member'].startswith('neg|') for s in samples}
     r5 = {}
     for p in pc.read_tsv(ROUND5 / 'interval_map.tsv.gz'):
         r5.setdefault(p['occurrence'], set()).add(p['position_class'])
@@ -497,8 +512,15 @@ def cmd_combine(a):
                                                               r['cls'].startswith('unplaceable')
                                                               and int(r['molecules']) >= N)))
                  for kind in ('core', 'neg')}
-            rec = recovery(ok, catalog, panel_cores, samples, r5)
-            g.update(rec)
+            g.update(recovery(ok, catalog, panel_cores, samples, r5))
+            per_gene = Counter((r['sample'], r['core_key']) for r in ok if r['kind'] == 'neg')
+            g['negative_control'] = dict(
+                genes_searched=len(neg_genes), positions_per_gene=dict(sorted(Counter(
+                    per_gene[k] for k in neg_genes).items())),
+                extra_positions=[dict(sample=r['sample'], gene=r['core_key'], cls=r['cls'], molecules=r['molecules'],
+                                      contig=r['left_contig'], left_pos=r['left_pos'], right_contig=r['right_contig'],
+                                      right_pos=r['right_pos'])
+                                 for r in ok if r['kind'] == 'neg' and per_gene[(r['sample'], r['core_key'])] > 1])
             summ['grid']['L%d_N%d' % (L, N)] = g
     out = a.out
     pc.write_tsv(out / 'positions.tsv.gz', rows, ['sample'] + [c for c in rows[0] if c != 'sample'])
@@ -516,8 +538,9 @@ def cmd_combine(a):
 
 
 def recovery(ok, catalog, panel_cores, samples, r5):
-    """Known catalog positions of panel cores in the pilot samples recovered as known_catalog_position."""
-    got = {o for r in ok if r['cls'] == 'known_catalog_position' for o in r['catalog'].split(';')}
+    """Known catalog positions of panel cores in the pilot samples recovered as a known_catalog_position of the same
+    or of a homologous core."""
+    got = {o for r in ok if r['cls'].startswith('known_catalog_position') for o in r['catalog'].split(';')}
     tot = Counter()
     for c in catalog:
         if c['sample'] in samples and (c['structure'], c['core_key']) in panel_cores:
