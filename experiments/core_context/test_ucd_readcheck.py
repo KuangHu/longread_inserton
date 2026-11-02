@@ -46,6 +46,33 @@ class GeometryTests(unittest.TestCase):
         self.assertEqual([t['test_id'] for t in ref[0]], ['P_3', 'P_0', 'P_1', 'P_2'])  # same lo: hi decides
 
 
+class AlignEachIntervalTests(unittest.TestCase):
+    def test_interval_hits_do_not_depend_on_other_intervals(self):
+        import random
+        import shutil
+        import tempfile
+        from pathlib import Path
+        if not shutil.which('minimap2'):
+            self.skipTest('minimap2 not on PATH')
+        rnd = random.Random(0)
+        seq = ''.join(rnd.choice('ACGT') for _ in range(20000))
+        ps = [dict(sample='s', test_id='P_a', contig='c', lo='6000', hi='7000'),
+              dict(sample='s', test_id='P_b', contig='c', lo='6002', hi='7000')]  # near-identical neighbour
+        reads = {'r%d' % i: seq[x:x + 6000] + '\n' for i, x in enumerate(range(2000, 4000, 100))}
+        d = Path(tempfile.mkdtemp())
+        try:
+            out = {}
+            for name, sel in (('alone', ps[:1]), ('both', ps)):
+                tests, fa, _ = u.make_tests(sel, {'c': seq})
+                reads_of = {t['test_id']: set(reads) for t in tests}
+                u.align_each_interval(tests, fa, reads_of, sorted(reads), reads, 'map-hifi', d / 'tmp', d / name, 2)
+                out[name] = sorted(l for l in (d / name).read_text().splitlines() if l.split('\t')[5].startswith('P_a|'))
+            self.assertTrue(out['alone'])
+            self.assertEqual(out['alone'], out['both'])
+        finally:
+            shutil.rmtree(str(d))
+
+
 class ClassTests(unittest.TestCase):
     def test_tiers(self):
         self.assertEqual(u.tier_of('same_assembly', True, True), 'A')

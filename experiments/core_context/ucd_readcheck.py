@@ -17,6 +17,11 @@ genome    One assembly: SHA256 of each run rechecked against verify.json, then a
 check     One assembly, one round: reads with a genome alignment near a tested position are taken from the full
           genome PAF (not from any earlier gap-pipeline subset) and mapped to two local alleles per position built from
           the same assembly: P = U + element + D (as assembled), A = U + D (element removed; no empty site needed).
+          Since v0.2 each interval is aligned on its own: only that interval's two alleles, and only reads with a
+          genome alignment within FLANK of that interval. An interval's counts then do not depend on which other
+          intervals are checked with it (v0.1 aligned all alleles of an assembly together, and minimap2's cap of
+          100 secondary alignments made the reported hits depend on the other alleles). The genome-wide anchor
+          competition still uses each read's alignments to the whole assembly.
           Counting is s3_readcheck v0.3 unchanged (span + ANCHOR, CIGAR limit, allele score margin, genome-wide anchor
           competition, molecule grouping, length-matched counts, role verdict).
 rotate    Round: intervals not_tested because the element interval crosses a contig end (lo < 0 or hi > length) are
@@ -57,6 +62,7 @@ import subprocess
 import sys
 import time
 from collections import Counter, defaultdict
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 import protein_context as pc
@@ -67,7 +73,7 @@ from scale_candidates import POOL, READS
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / 'scripts'))
 import reads_ready  # noqa: E402  (ready manifest check; never downloads)
 
-VERSION = 'ucd_readcheck_v0.1'
+VERSION = 'ucd_readcheck_v0.2'  # v0.2: each interval's alleles aligned on their own (v0.1: one FASTA for all)
 PROJ = Path('/global/scratch/users/kh36969/longread_callout')
 CONTROL_HINTS = {'translation_or_ribosomal': 'conserved_paralog_control'}
 COUNT_UNIT = {'one_record_per_molecule': 'molecules', 'zmw_from_read_name': 'molecules',
@@ -339,9 +345,11 @@ def cmd_check(a):
     od.mkdir(parents=True, exist_ok=True)
     afa = od / 'alleles.fa'
     afa.write_text(''.join('>%s\n%s\n' % x for x in fa))
-    near = defaultdict(list)
-    for p in positions:
-        near[p['contig']].append((int(p['lo']) - rc3.FLANK, int(p['hi']) + rc3.FLANK))
+    windows = defaultdict(list)  # contig -> [(window start, window end, test_id)] of the tested intervals
+    for t in tests:
+        contig, se = t['C_site'].rsplit(':', 1)
+        lo, hi = map(int, se.split('-'))
+        windows[contig].append((lo - rc3.FLANK, hi + rc3.FLANK, t['test_id']))
     gmeta = json.loads((PROJ / 'core_context' / 'readmap' / a.sample / 'genome.json').read_text())
     reads_ready.require([m['run'] for m in gmeta['runs'] if m['status'] == 'mapped'])
     runs = {r['run']: r for r in run_info()[real_sample(a.sample)]}
@@ -352,36 +360,34 @@ def cmd_check(a):
             continue
         r = runs[m['run']]
         gpaf = PROJ / 'core_context' / 'readmap' / a.sample / ('%s.paf.gz' % r['run'])
-        names, lines, total = set(), [], set()
+        reads_of, total = defaultdict(set), set()  # test_id -> reads with a genome alignment near that interval
         with gzip.open(str(gpaf), 'rt') as h:
             for line in h:
                 f = line.split('\t', 9)
                 total.add(f[0])
-                if any(int(f[7]) < hi and int(f[8]) > lo for lo, hi in near.get(f[5], ())):
-                    names.add(f[0])
+                for lo, hi, tid in windows.get(f[5], ()):
+                    if int(f[7]) < hi and int(f[8]) > lo:
+                        reads_of[tid].add(f[0])
+        names = set().union(*reads_of.values()) if reads_of else set()
         sub_g = od / ('genome_%s.paf' % r['run'])
         with gzip.open(str(gpaf), 'rt') as h, open(str(sub_g), 'w') as o:
             for line in h:
                 if line.split('\t', 1)[0] in names:
                     o.write(line)
-        sub_fq = od / ('subset_%s.fq' % r['run'])
-        recs, keep = [], False
-        with gzip.open(r['local_file'], 'rt') as h, open(str(sub_fq), 'w') as o:
+        recs, seq_of, keep = [], {}, False  # reads in file order; FASTA is enough for minimap2
+        with gzip.open(r['local_file'], 'rt') as h:
             for i, line in enumerate(h):
                 if i % 4 == 0:
                     name = line[1:].split(None, 1)[0]
                     keep = name in names
                     if keep:
                         recs.append((name, rc3.record_ids(line[1:].strip(), r['grouping'])))
-                if keep:
-                    o.write(line)
+                elif i % 4 == 1 and keep:
+                    seq_of[name] = line
         mol = rc3.molecules(recs)
         apaf = od / ('alleles_%s.paf' % r['run'])
-        with open(str(apaf), 'w') as h:
-            subprocess.run(['minimap2', '-x', rc3.PRESET[r['read_type']]] + rc3.MM + ['-t', str(a.threads), str(afa),
-                                                                                       str(sub_fq)],
-                           stdout=h, stderr=subprocess.DEVNULL, check=True)
-        sub_fq.unlink()
+        align_each_interval(tests, fa, reads_of, [n for n, _ in recs], seq_of, rc3.PRESET[r['read_type']], od / 'tmp',
+                            apaf, a.threads)
         items.append((apaf, sub_g, mol, r['run']))
         used.append(dict(run=r['run'], status='checked', read_type=r['read_type'], grouping=r['grouping'],
                          reads_mapped_to_assembly=len(total), reads_near_positions=len(names),
@@ -424,6 +430,33 @@ def cmd_check(a):
                                                  molecules_supporting_loci=dict(multi)), indent=1) + '\n')
     for x in od.glob('*.paf'):
         subprocess.run(['gzip', '-f', str(x)], check=True)
+
+
+def align_each_interval(tests, fa, reads_of, order, seq_of, preset, tmp, out, threads):
+    """minimap2 (s3 MM arguments, one thread per job) of each interval's near reads against that interval's two
+    alleles only; the PAF of every interval is appended to out in test order."""
+    tmp.mkdir(exist_ok=True)
+    alleles = dict(fa)
+    rank = {n: i for i, n in enumerate(order)}
+
+    def one(t):
+        tid = t['test_id']
+        reads = sorted(reads_of.get(tid, ()), key=rank.__getitem__)
+        if not reads:
+            return ''
+        ref, qry = tmp / (tid + '.alleles.fa'), tmp / (tid + '.reads.fa')
+        ref.write_text(''.join('>%s|C|%s\n%s\n' % (tid, al, alleles['%s|C|%s' % (tid, al)]) for al in 'PA'))
+        qry.write_text(''.join('>%s\n%s' % (n, seq_of[n]) for n in reads))
+        res = subprocess.run(['minimap2', '-x', preset] + rc3.MM + ['-t', '1', str(ref), str(qry)],
+                             stdout=subprocess.PIPE, stderr=subprocess.DEVNULL, check=True, universal_newlines=True)
+        ref.unlink()
+        qry.unlink()
+        return res.stdout
+
+    with ThreadPoolExecutor(max_workers=threads) as ex, open(str(out), 'w') as h:
+        for text in ex.map(one, tests):
+            h.write(text)
+    tmp.rmdir()
 
 
 def headers(path):
