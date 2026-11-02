@@ -6,7 +6,7 @@
 <rect x="435.9" y="36" width="168.1" height="10" fill="#333333"/>
 <rect x="604.1" y="36" width="285.9" height="10" fill="#cccccc"/>
 <text x="150.0" y="60">U (assembly, 2000 bp)</text>
-<text x="435.9" y="60">insert 1176 bp from reads (core hit 1079 bp + unaligned flank ends)</text>
+<text x="435.9" y="60">insert 1176 bp from reads (core hit 1079 bp + extra sequence)</text>
 <text x="608.1" y="60">D (assembly)</text>
 <line x1="393.0" x2="393.0" y1="34" y2="7025" stroke="#888" stroke-dasharray="1,3"/>
 <line x1="647.0" x2="647.0" y1="34" y2="7025" stroke="#888" stroke-dasharray="1,3"/>
