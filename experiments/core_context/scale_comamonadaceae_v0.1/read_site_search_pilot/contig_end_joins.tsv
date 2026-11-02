@@ -1,12 +1,6 @@
-sample	flank	structure	core_key	kind	cls	raw_cls	molecules	read_records	contig	start	end	left_contig	left_pos	left_strand	right_contig	right_pos	right_strand	catalog	core_in_assembly	empty_site_molecules	members	identity_median	runs	annotation
-SAMEA115676957	1000	single_gene	PF_83e735c0c78b	core	contig_end_join		31	31				NZ_CAXUQU020000002.1	486638	+	NZ_CAXUQU020000002.1	0	+				1	0.957	ERR13194373	
-SAMEA115676957	1000	two_gene	PF_0d3807f64b8b+,PF_18176272e7e4+	core	contig_end_join		22	22				NZ_CAXUQU020000001.1	6888375	+	NZ_CAXUQU020000001.1	151	+				2	0.928	ERR13194373	
-SAMEA115676957	1000	two_gene	PF_0d3807f64b8b+,PF_5a58c6b06f9e+	core	contig_end_join		18	18				NZ_CAXUQU020000001.1	6888375	+	NZ_CAXUQU020000001.1	151	+				4	0.824	ERR13194373	
-SAMEA115676957	1000	single_gene	PF_0d3807f64b8b	core	contig_end_join		11	11				NZ_CAXUQU020000001.1	6888375	+	NZ_CAXUQU020000001.1	0	+				1	0.944	ERR13194373	
-SAMEA115676957	1000	single_gene	PF_0d7463965220	core	contig_end_join		3	3				NZ_CAXUQU020000001.1	6888726	+	NZ_CAXUQU020000001.1	151	+				2	0.926	ERR13194373	
-SAMEA115676957	1000	two_gene	PF_0d3807f64b8b+,PF_18176272e7e4+	core	contig_end_join		2	2				NZ_CAXUQU020000001.1	6888387	+	NZ_CAXUQU020000001.1	244	+				1	0.831	ERR13194373	
-SAMEA115676957	1000	two_gene	PF_0d3807f64b8b+,PF_5a58c6b06f9e+	core	contig_end_join		1	1				NZ_CAXUQU020000001.1	6888366	+	NZ_CAXUQU020000001.1	91	+				1	0.764	ERR13194373	
-SAMEA115676957	1000	single_gene	PF_0d7463965220	core	contig_end_join		1	1				NZ_CAXUQU020000001.1	6888375	+	NZ_CAXUQU020000001.1	0	+				1	0.946	ERR13194373	
-SAMEA115676957	1000	single_gene	PF_0d7463965220	core	contig_end_join		1	1				NZ_CAXUQU020000001.1	6888686	+	NZ_CAXUQU020000001.1	230	+				1	0.814	ERR13194373	
-SAMEA115676957	1000	two_gene	PF_0d7463965220+,PF_0d7463965220+	core	contig_end_join		1	1				NZ_CAXUQU020000001.1	6888375	+	NZ_CAXUQU020000001.1	134	+				1	0.81	ERR13194373	
-SAMEA115676957	1000	two_gene	PF_0d7463965220+,PF_0d7463965220+	core	contig_end_join		1	1				NZ_CAXUQU020000001.1	6888387	+	NZ_CAXUQU020000001.1	230	+				1	0.722	ERR13194373	
+sample	flank	structure	core_key	kind	cls	raw_cls	molecules	read_records	contig	start	end	left_contig	left_pos	left_strand	right_contig	right_pos	right_strand	core_strand	core_len	catalog	catalog_unmatched	shifted_from	core_in_assembly	empty_site_molecules	empty_site_read_records	empty_site_indel_molecules	both_forms_molecules	members	identity_median	runs	annotation
+SAMEA115676957	1000	two_gene	PF_0d3807f64b8b+,PF_18176272e7e4+	core	contig_end_join		20	20				NZ_CAXUQU020000001.1	6888375	+	NZ_CAXUQU020000001.1	151	+	+	640									1	0.928	ERR13194373	
+SAMEA115676957	1000	two_gene	PF_0d3807f64b8b+,PF_5a58c6b06f9e+	core	contig_end_join		16	16				NZ_CAXUQU020000001.1	6888375	+	NZ_CAXUQU020000001.1	151	+	+	640									4	0.824	ERR13194373	
+SAMEA115676957	1000	single_gene	PF_0d7463965220	core	contig_end_join		3	3				NZ_CAXUQU020000001.1	6888726	+	NZ_CAXUQU020000001.1	151	+	+	292									2	0.926	ERR13194373	
+SAMEA115676957	1000	two_gene	PF_0d3807f64b8b+,PF_5a58c6b06f9e+	core	contig_end_join		1	1				NZ_CAXUQU020000001.1	6888366	+	NZ_CAXUQU020000001.1	91	+	+	561									1	0.764	ERR13194373	
+SAMEA115676957	1000	two_gene	PF_0d7463965220+,PF_0d7463965220+	core	contig_end_join		1	1				NZ_CAXUQU020000001.1	6888375	+	NZ_CAXUQU020000001.1	134	+	+	629									1	0.81	ERR13194373	

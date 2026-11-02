@@ -72,7 +72,7 @@ def candidates(work, out):
             if int(r['flank']) == rs.MAIN_FLANK and r['cls'] == CLS and int(r['molecules']) >= rs.MAIN_COUNT:
                 add(dict(r, sample=s), 'v0.1')
     for c in got:
-        c['cid'] = '%s|%s|%d|%d|%s' % (c['key'][0], c['key'][2], c['key'][3], c['key'][4], c['key'][1])
+        c['cid'] = '%s:%s:%d-%d:%s' % (c['key'][0], c['key'][2], c['key'][3], c['key'][4], c['key'][1])
     return got
 
 
@@ -363,7 +363,7 @@ def main():
             rows.sort(key=lambda r: (ORDER.index(r['strict_call']) if r['strict_call'] in ORDER else
                                      ORDER.index('conflict') if r['evidence'] == 'conflict' else 99,
                                      r['_aln'][1]['ts'] if r['_aln'][1] else 0, r['molecule']))
-            (od / ('%s.svg' % cid.replace('|', '_'))).write_text(svg(cid, info[cid], rows, geo[cid]))
+            (od / ('%s.svg' % cid.replace(':', '_'))).write_text(svg(cid, info[cid], rows, geo[cid]))
             mrows += rows
             n = Counter(r['strict_call'] for r in rows)
             e = Counter(r['evidence'] for r in rows)
