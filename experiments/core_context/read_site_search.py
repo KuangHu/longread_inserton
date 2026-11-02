@@ -38,9 +38,11 @@ Flank placement (placement): the best assembly alignment of a flank must cover >
 its inner end (the end next to the insertion) within INNER_CLIP bp; otherwise the inner coordinate is not observed and
 the flank is inner_end_unaligned. A competing alignment within MIN_DELTA_AS elsewhere makes it ambiguous.
 A merged position reports the core hit length, the extra sequence per side (median and range, assembly orientation)
-and the putative insertion length (extra left + core hit + extra right, median). boundary: on each side at least
-BOUNDARY_AGREE of the molecules have an extra length within TOL of the side's median, else unknown; then exact
-(both medians 0) or consistent. insert_size =
+and the putative insertion length (extra left + core hit + extra right, median), all by molecule (insert_fields).
+boundary: at least BOUNDARY_AGREE of the molecules agree with the medians on both sides at once (counts per side and
+jointly are reported), else unknown; then no_extension_detected (both medians 0) or extension_consistent.
+no_extension_detected means the reads join U and D next to the core hit; it does not establish the element's own
+boundaries. insert_size =
 le_2500 / gt_2500 applies MAX_INSERT to the putative insertion, not to the core; whether the insertion holds 1-2 genes
 is not checked here. The insertion length replaces the core length in the geometry and class rules below.
 
@@ -101,7 +103,8 @@ from scale_candidates import POOL
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / 'scripts'))
 import reads_ready  # noqa: E402
 
-VERSION = 'read_site_search_v0.3'  # v0.3: core hit = seed; host anchors found beyond extra sequence (v0.2: inner-end rule, catalog match by core relation / orientation / coverage, empty-site CIGAR + molecules, shifted by core relation)
+VERSION = 'read_site_search_v0.3.1'  # v0.3.1: boundary counted by molecule, both sides jointly; labels no_extension_detected / extension_consistent
+VERSION_PREV = 'read_site_search_v0.3'  # v0.3: core hit = seed; host anchors found beyond extra sequence (v0.2: inner-end rule, catalog match by core relation / orientation / coverage, empty-site CIGAR + molecules, shifted by core relation)
 WORK = u.PROJ / 'core_context' / 'read_site_search' / 'pilot_v0.1'
 REPO = Path(__file__).resolve().parent / 'scale_comamonadaceae_v0.1'
 ROUND5 = REPO / 'readcheck_round5'
@@ -470,7 +473,8 @@ def cmd_search(a):
     cols = ['flank', 'structure', 'core_key', 'kind', 'cls', 'raw_cls', 'molecules', 'read_records', 'contig', 'start', 'end',
             'left_contig', 'left_pos', 'left_strand', 'right_contig', 'right_pos', 'right_strand', 'core_strand',
             'core_len', 'extra_left', 'extra_left_range', 'extra_right', 'extra_right_range', 'insert_len',
-            'boundary', 'insert_size', 'catalog', 'catalog_unmatched', 'shifted_from', 'core_in_assembly'] + EMPTY_COLS + [
+            'boundary', 'boundary_molecules', 'left_agree_molecules', 'right_agree_molecules', 'both_agree_molecules',
+            'insert_size', 'catalog', 'catalog_unmatched', 'shifted_from', 'core_in_assembly'] + EMPTY_COLS + [
             'members', 'identity_median', 'runs']
     pc.write_tsv(od / 'positions.tsv.gz', positions, cols)
     ocols = ['flank', 'run', 'read', 'molecule', 'structure', 'core_key', 'kind', 'member', 'qs', 'qe', 'strand',
@@ -771,14 +775,32 @@ def position_row(L, key, cl, catalog, seqs, member_seq, od, seq_of, preset, grou
 
 def insert_fields(cl):
     """Extra sequence per side (assembly orientation), putative insertion length, boundary and size class of the
-    observations of one merged position."""
-    el, er = [o['c_extra'][0] for o in cl], [o['c_extra'][1] for o in cl]
-    ins = int(median([a + (o['qe'] - o['qs']) + b for o, a, b in zip(cl, el, er)]))
+    observations of one merged position, counted by molecule: each molecule's records are first reduced to one value
+    per side (their median), so a molecule with many records counts once. Agreement: a molecule agrees on a side when
+    its extra length is within TOL of the median over molecules; boundary needs >= BOUNDARY_AGREE of the molecules to
+    agree on both sides at once (one side each is not enough). boundary = no_extension_detected (both medians 0;
+    <= INNER_CLIP bases count as 0) or extension_consistent, else unknown. no_extension_detected only says that the
+    reads join U and D directly next to the core hit; it does not establish the element's own boundaries (where the
+    assembly holds the whole element, element ends beyond the core align with the flank)."""
+    per = defaultdict(list)
+    for o in cl:
+        per[o['molecule']].append(o)
+    el, er, ln = [], [], []
+    for os_ in per.values():
+        el.append(int(median([o['c_extra'][0] for o in os_])))
+        er.append(int(median([o['c_extra'][1] for o in os_])))
+        ln.append(int(median([o['c_extra'][0] + (o['qe'] - o['qs']) + o['c_extra'][1] for o in os_])))
     ml, mr = median(el), median(er)
-    agree = all(sum(abs(x - m) <= TOL for x in xs) >= BOUNDARY_AGREE * len(xs) for xs, m in ((el, ml), (er, mr)))
-    b = 'unknown' if not agree else 'exact' if ml == mr == 0 else 'consistent'
+    left = [abs(x - ml) <= TOL for x in el]
+    right = [abs(x - mr) <= TOL for x in er]
+    both = sum(a and b for a, b in zip(left, right))
+    b = ('unknown' if both < BOUNDARY_AGREE * len(el) else
+         'no_extension_detected' if ml == mr == 0 else 'extension_consistent')
+    ins = int(median(ln))
     return dict(extra_left=ml, extra_left_range='%d-%d' % (min(el), max(el)), extra_right=mr,
                 extra_right_range='%d-%d' % (min(er), max(er)), insert_len=ins, boundary=b,
+                boundary_molecules=len(el), left_agree_molecules=sum(left), right_agree_molecules=sum(right),
+                both_agree_molecules=both,
                 insert_size='le_%d' % MAX_INSERT if ins <= MAX_INSERT else 'gt_%d' % MAX_INSERT)
 
 

@@ -328,6 +328,8 @@ def main():
                         right_pos=c['key'][4], found_in='+'.join(sorted(c['found_in'])),
                         v01_molecules=v1.get('molecules', ''), v01_empty_site_molecules=v1.get('empty_site_molecules', ''),
                         molecules=v2.get('molecules', ''), boundary=v2.get('boundary', ''),
+                        **{k: v2.get(k, '') for k in ('boundary_molecules', 'left_agree_molecules',
+                                                      'right_agree_molecules', 'both_agree_molecules')},
                         insert_size=v2.get('insert_size', ''), **{k: v2.get(k, '') for k in rs.EMPTY_COLS})
             if info[cid]['status'] != 'tested':
                 summ.append(dict(base, status=info[cid]['status']))
@@ -379,7 +381,8 @@ def main():
              'note', 'record_calls']
     pc.write_tsv(od / 'evidence_molecules.tsv', mrows, mcols)
     scols = ['candidate', 'sample', 'core_key', 'contig', 'left_pos', 'right_pos', 'found_in', 'status', 'v01_molecules',
-             'v01_empty_site_molecules', 'molecules', 'boundary', 'insert_size'] + rs.EMPTY_COLS + [
+             'v01_empty_site_molecules', 'molecules', 'boundary', 'boundary_molecules', 'left_agree_molecules',
+             'right_agree_molecules', 'both_agree_molecules', 'insert_size'] + rs.EMPTY_COLS + [
              'core_from_read', 'core_len', 'insert_len', 'left_extra_median', 'left_extra_range', 'right_extra_median',
              'right_extra_range', 'search_statuses', 'core_identity', 'P_len', 'A_len'] + [
              'v02rule_' + k for k in rs.EMPTY_COLS] + ['molecules_near', 'search_core_molecules',

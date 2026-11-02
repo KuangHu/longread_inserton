@@ -83,20 +83,38 @@ class BoundaryTests(unittest.TestCase):
 
 
 class InsertFieldsTests(unittest.TestCase):
-    def obs(self, el, er, core=1200):
-        return dict(c_extra=(el, er), qs=0, qe=core)
+    def obs(self, el, er, core=1200, mol=None):
+        self.n = getattr(self, 'n', 0) + 1
+        return dict(c_extra=(el, er), qs=0, qe=core, molecule=mol or 'm%d' % self.n)
 
     def test_boundary_classes_and_size(self):
         f = rs.insert_fields([self.obs(0, 0), self.obs(0, 0)])
-        self.assertEqual((f['boundary'], f['insert_len'], f['insert_size']), ('exact', 1200, 'le_2500'))
+        self.assertEqual((f['boundary'], f['insert_len'], f['insert_size']), ('no_extension_detected', 1200, 'le_2500'))
         f = rs.insert_fields([self.obs(60, 30), self.obs(90, 40), self.obs(70, 35)])
-        self.assertEqual((f['boundary'], f['extra_left'], f['insert_len']), ('consistent', 70, 1305))
+        self.assertEqual((f['boundary'], f['extra_left'], f['insert_len']), ('extension_consistent', 70, 1305))
         self.assertEqual(rs.insert_fields([self.obs(10, 30), self.obs(300, 30)])['boundary'], 'unknown')
-        # one stray molecule of ten does not make a known position's boundary unknown
-        f = rs.insert_fields([self.obs(0, 0)] * 9 + [self.obs(60, 0)])
-        self.assertEqual((f['boundary'], f['extra_left_range']), ('exact', '0-60'))
-        self.assertEqual(rs.insert_fields([self.obs(0, 0)] * 7 + [self.obs(200, 0)] * 3)['boundary'], 'unknown')
         self.assertEqual(rs.insert_fields([self.obs(900, 600)])['insert_size'], 'gt_2500')  # the insertion, not the core
+        # one stray molecule of ten does not make the boundary unknown
+        f = rs.insert_fields([self.obs(0, 0) for _ in range(9)] + [self.obs(60, 0)])
+        self.assertEqual((f['boundary'], f['extra_left_range']), ('no_extension_detected', '0-60'))
+        self.assertEqual(rs.insert_fields([self.obs(0, 0) for _ in range(7)] + [self.obs(200, 0) for _ in range(3)])
+                         ['boundary'], 'unknown')
+
+    def test_counted_by_molecule(self):
+        # reviewer's counterexample: one molecule with 8 identical records, two molecules with one different record
+        # each; by records this was no_extension_detected, by molecules only 1 / 3 supports both sides
+        cl = [self.obs(0, 0, mol='a') for _ in range(8)] + [self.obs(100, 0, mol='b'), self.obs(0, 100, mol='c')]
+        f = rs.insert_fields(cl)
+        self.assertEqual((f['boundary_molecules'], f['left_agree_molecules'], f['right_agree_molecules'],
+                          f['both_agree_molecules'], f['boundary']), (3, 2, 2, 1, 'unknown'))
+
+    def test_both_sides_jointly(self):
+        # reviewer's counterexample: 80% agree on each side but only 60% on both at once
+        cl = ([self.obs(0, 0) for _ in range(6)] + [self.obs(200, 0) for _ in range(2)] +
+              [self.obs(0, 200) for _ in range(2)])
+        f = rs.insert_fields(cl)
+        self.assertEqual((f['left_agree_molecules'], f['right_agree_molecules'], f['both_agree_molecules'],
+                          f['boundary']), (8, 8, 6, 'unknown'))
 
 
 class GeometryTests(unittest.TestCase):
