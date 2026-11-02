@@ -1026,9 +1026,19 @@ only; the check was run for all 231.
     - Which alignments are dropped then depends on the other references in the FASTA, and with them the read's best
       spanning alignment and the anchors used for the locus check.
     - All 34 read-level calls that differ between the full and cluster runs belong to capped reads.
-  - **Not yet decided:** the fix would change results everywhere, so it needs a decision before the next round.
-    One option is to align each interval's alleles separately, which makes counts independent of the other
-    intervals. Another is to raise or remove the cap. Neither is applied, and rounds 1–5 are not rerun.
+  - **Fix 2, allele set (`ucd_readcheck` v0.2, chosen 2026-11-01):** each interval is aligned on its own, with only
+    its two alleles and only reads that have a genome alignment within 2 kb (FLANK) of it. The genome-wide anchor
+    competition and every s3 threshold are unchanged.
+  - **v0.2 regression on SAMN31258398** (`order_regression/compare_v0.2.tsv`, job in `jobs_v0.2.txt`): the full
+    304 intervals run twice, two shuffles, the 26-interval cluster, and each of the 3 intervals alone give
+    identical results at every shared interval. Against v0.1 (round 5), 106 of 304 intervals differ, with no
+    verdict change:
+    - off_locus is lower by 5,136 in total. Reads with no genome alignment near an interval are no longer
+      aligned to its alleles; such reads could only ever be off_locus there.
+    - P_matched is higher by 221 in total (at most 19 at one interval, 4.6%). These are reads that v0.1 lost to
+      the cap.
+    - cigar_fail is lower by 347 in total.
+  - **Rounds 1–5 are v0.1 results** and are not rerun. A later full round would use v0.2.
 - **New intervals:** 2,071 in all. 1,958 are supported, 109 are insufficient_coverage, and 4 are locus_ambiguous
   (3 in SAMN43526786, 1 in SAMN51281045). None is a conflict.
 
