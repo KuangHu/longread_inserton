@@ -1,14 +1,13 @@
 """Strict P/A evidence, per molecule, for candidate structures of the read-site search (not_in_assembly:core_absent).
 
-A candidate is a merged position whose two flanks are adjacent in the sample's own assembly while reads carry a core
-between them: v0.1 not_in_assembly:core_absent positions with >= MAIN_COUNT molecules, and v0.2 ones (none at the
-main setting: under the v0.2 inner-end rule the v0.1 candidates became unplaceable_context:*inner_end_unaligned,
-because the flank alignments stop a consistent number of bases short of the core hit). lp / rp are where the left /
-right flank alignments end next to the core (the junctions with the assembly; rp < lp when the flanks overlap). The
-records of a candidate are the v0.2 search observations of its core (flank MAIN_FLANK) whose flanks are both placed or
-inner_end_unaligned at lp / rp (canonical, within TOL). The inserted sequence is the read sequence between the two
-junctions: core hit plus the unaligned inner flank bases (insert = read[qs - left clip, qe + right clip)), taken
-from the best-identity record, in assembly orientation, so P is built from the reads themselves. Each candidate is
+A candidate is a merged position whose two flanks are adjacent in the sample's own assembly while reads carry an
+insertion between them: not_in_assembly:core_absent positions with >= MAIN_COUNT molecules of the current search
+(v0.3: host anchors found beyond extra sequence), plus the v0.1 ones (development regression cases, from the v0.1
+backup tables). lp / rp are the junctions (inner ends of the host anchors; rp < lp when the flanks overlap). The
+records of a candidate are the current search observations of its core (flank MAIN_FLANK) with both flanks placed at
+lp / rp (canonical, within TOL). The inserted sequence is the read sequence between the two junctions: extra left +
+core hit + extra right (insert = read[qs - left extra, qe + right extra)), taken from the best-identity record, in
+assembly orientation, so P is built from the reads themselves. Each candidate is
 tested with the read check's own rules (s3_readcheck v0.3 via ucd_readcheck, thresholds unchanged) against two local
 alleles built from the same assembly:
   P = asm[lp - FLANK, lp) + insert + asm[rp, rp + FLANK)   the structure the core-carrying reads show
@@ -66,7 +65,7 @@ def candidates(work, out):
         got.append(dict(key=k, found_in={version}, **{version: r}))
     for r in pc.read_tsv(out / 'positions.tsv.gz'):
         if int(r['flank']) == rs.MAIN_FLANK and r['cls'] == CLS and int(r['molecules']) >= rs.MAIN_COUNT:
-            add(r, 'v0.2')
+            add(r, 'current')
     for s in rs.pilot_samples(out):
         for r in pc.read_tsv(work / 'v0.1_backup' / s / 'positions.tsv.gz'):
             if int(r['flank']) == rs.MAIN_FLANK and r['cls'] == CLS and int(r['molecules']) >= rs.MAIN_COUNT:
@@ -76,19 +75,15 @@ def candidates(work, out):
     return got
 
 
-SIDE_OK = ('placed', 'inner_end_unaligned')
-
-
 def core_records(work, c):
-    """Search observations (v0.2, MAIN_FLANK) of this core with both flanks placed or inner_end_unaligned whose
-    canonical flank ends are those of the candidate within TOL."""
+    """Current search observations (MAIN_FLANK) of this core with both flanks placed whose canonical flank ends are
+    those of the candidate within TOL."""
     s, ck, contig, lp, rp = c['key']
     out = []
     for o in pc.read_tsv(work / 'samples' / s / 'observations.tsv.gz'):
-        if (int(o['flank']) != rs.MAIN_FLANK or o['core_key'] != ck or o['left_status'] not in SIDE_OK
-                or o['right_status'] not in SIDE_OK):
+        if int(o['flank']) != rs.MAIN_FLANK or o['core_key'] != ck or o['status'] != 'placed':
             continue
-        for k in ('left_pos', 'right_pos', 'qs', 'qe', 'left_inner_clip', 'right_inner_clip'):
+        for k in ('left_pos', 'right_pos', 'qs', 'qe', 'left_extra', 'right_extra'):
             o[k] = int(o[k])
         lc, a, ls, rc_, b, rs_ = rs.canonical(o)
         if lc == rc_ == contig and ls == rs_ == '+' and abs(a - lp) <= rs.TOL and abs(b - rp) <= rs.TOL:
@@ -204,22 +199,22 @@ def run_sample(s, cands, work, threads):
     for c in cands:
         cid = c['cid']
         if cid not in pick:
-            info[cid] = dict(status='no_core_record_in_v0.2_search')
+            info[cid] = dict(status='no_placed_record_in_current_search')
             continue
         o = pick[cid]
-        core = seq_of[o['read']].strip()[o['qs'] - o['left_inner_clip']:o['qe'] + o['right_inner_clip']]
+        core = seq_of[o['read']].strip()[o['qs'] - o['left_extra']:o['qe'] + o['right_extra']]
         core = core if o['left_strand'] == '+' else rc3.rc(core)
         t, alleles = test_of(cid, c['key'][2], c['key'][3], c['key'][4], core, seq[c['key'][2]])
         tests.append(t)
         fa += alleles
-        # clips in assembly orientation (a record read from the other strand has its sides swapped)
-        cl = [(x['left_inner_clip'], x['right_inner_clip']) if x['left_strand'] == '+' else
-              (x['right_inner_clip'], x['left_inner_clip']) for x in cores[cid]]
+        # extra sequence in assembly orientation (a record read from the other strand has its sides swapped)
+        cl = [(x['left_extra'], x['right_extra']) if x['left_strand'] == '+' else
+              (x['right_extra'], x['left_extra']) for x in cores[cid]]
         info[cid] = dict(status='tested', core_from_read=o['read'], core_len=o['qe'] - o['qs'], insert_len=len(core),
                          core_identity=o['identity'], P_len=len(alleles[0][1]), A_len=len(alleles[1][1]),
-                         left_clip_median=rs.median([x[0] for x in cl]), right_clip_median=rs.median([x[1] for x in cl]),
-                         left_clip_range='%d-%d' % (min(x[0] for x in cl), max(x[0] for x in cl)),
-                         right_clip_range='%d-%d' % (min(x[1] for x in cl), max(x[1] for x in cl)),
+                         left_extra_median=rs.median([x[0] for x in cl]), right_extra_median=rs.median([x[1] for x in cl]),
+                         left_extra_range='%d-%d' % (min(x[0] for x in cl), max(x[0] for x in cl)),
+                         right_extra_range='%d-%d' % (min(x[1] for x in cl), max(x[1] for x in cl)),
                          search_statuses=json.dumps(dict(Counter('%s|%s' % (x['left_status'], x['right_status'])
                                                                  for x in cores[cid]))))
     (od / 'alleles.fa').write_text(''.join('>%s\n%s\n' % x for x in fa))
@@ -270,8 +265,8 @@ def svg(cid, info, rows, geo, w=900, row=5):
            '<rect x="%.1f" y="36" width="%.1f" height="10" fill="#333333"/>' % (sx(F), sx(F + L) - sx(F)),
            '<rect x="%.1f" y="36" width="%.1f" height="10" fill="#cccccc"/>' % (sx(F + L), sx(n) - sx(F + L)),
            '<text x="%.1f" y="60">U (assembly, %d bp)</text>' % (sx(0), F),
-           '<text x="%.1f" y="60">insert %d bp from reads (core hit %d bp + unaligned flank ends)</text>' % (
-               sx(F), L, info['core_len']),
+           '<text x="%.1f" y="60">insert %d bp from reads (core hit %d bp + extra sequence)</text>' % (
+               sx(F), L, info['core_len']),  # extra sequence = insert - core hit
            '<text x="%.1f" y="60">D (assembly)</text>' % (sx(F + L) + 4)]
     for x in (lo_p, hi_p):
         out.append('<line x1="%.1f" x2="%.1f" y1="34" y2="%d" stroke="#888" stroke-dasharray="1,3"/>' % (sx(x), sx(x), h))
@@ -326,11 +321,12 @@ def main():
         info, near, per_rec, mol, cores, audit, run_of, geo, qlen = run_sample(s, cs, a.work, a.threads)
         for c in cs:
             cid = c['cid']
-            v1, v2 = c.get('v0.1', {}), c.get('v0.2', {})
+            v1, v2 = c.get('v0.1', {}), c.get('current', {})
             base = dict(candidate=cid, sample=s, core_key=c['key'][1], contig=c['key'][2], left_pos=c['key'][3],
                         right_pos=c['key'][4], found_in='+'.join(sorted(c['found_in'])),
                         v01_molecules=v1.get('molecules', ''), v01_empty_site_molecules=v1.get('empty_site_molecules', ''),
-                        v02_molecules=v2.get('molecules', ''), **{'v02_' + k: v2.get(k, '') for k in rs.EMPTY_COLS})
+                        molecules=v2.get('molecules', ''), boundary=v2.get('boundary', ''),
+                        insert_size=v2.get('insert_size', ''), **{k: v2.get(k, '') for k in rs.EMPTY_COLS})
             if info[cid]['status'] != 'tested':
                 summ.append(dict(base, status=info[cid]['status']))
                 continue
@@ -381,9 +377,9 @@ def main():
              'note', 'record_calls']
     pc.write_tsv(od / 'evidence_molecules.tsv', mrows, mcols)
     scols = ['candidate', 'sample', 'core_key', 'contig', 'left_pos', 'right_pos', 'found_in', 'status', 'v01_molecules',
-             'v01_empty_site_molecules', 'v02_molecules'] + ['v02_' + k for k in rs.EMPTY_COLS] + [
-             'core_from_read', 'core_len', 'insert_len', 'left_clip_median', 'left_clip_range', 'right_clip_median',
-             'right_clip_range', 'search_statuses', 'core_identity', 'P_len', 'A_len'] + [
+             'v01_empty_site_molecules', 'molecules', 'boundary', 'insert_size'] + rs.EMPTY_COLS + [
+             'core_from_read', 'core_len', 'insert_len', 'left_extra_median', 'left_extra_range', 'right_extra_median',
+             'right_extra_range', 'search_statuses', 'core_identity', 'P_len', 'A_len'] + [
              'v02rule_' + k for k in rs.EMPTY_COLS] + ['molecules_near', 'search_core_molecules',
              'P_matched', 'P', 'A_matched', 'A', 'conflict', 'unknown', 'unknown_by_step', 'strict_P_not_seen_by_search',
              'search_core_vs_strict_A', 'assembly_allele_verdict', 'per_run_caller_counts']

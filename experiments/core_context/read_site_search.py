@@ -19,9 +19,26 @@ search   One sample: all reads of every verified run -> panel (minimap2, read pr
          check; merged positions; classes; per (L, N) counts. Never downloads (ready manifest only).
 combine  Pilot tables and summary over the samples.
 
+The core hit is a search seed, not the insertion boundary (v0.3). Per hit and side, two stages:
+  boundary   the read sequence beyond the hit, up to MAX_INSERT - core hit length + max(FLANKS) bp (the target
+             insertion size bounds the extra sequence; no per-case allowance), is aligned to the sample's own
+             assembly. The host anchor is the alignment nearest the core whose aligned read span is >= PLACED_FRACTION
+             of L; its inner end is the putative junction. The read bases between the core hit and the junction are
+             extra sequence (part of the insertion: element ends, the rest of a partially hit core, or a neighbouring
+             insertion), recorded per side; <= INNER_CLIP bases count as 0. Shorter alignments in between (e.g. an
+             element end that also occurs elsewhere) stay extra. No such alignment: no_anchor; fewer than L read bases
+             beyond the junction: one_sided.
+  placement  exactly L bp of read sequence ending at the junction is the flank; it is placed by the rule below, so the
+             host anchor must itself cover the junction. An inner-most anchor in a repeat is ambiguous; the search does
+             not skip to a farther unique alignment, which would move the junction.
 Flank placement (placement): the best assembly alignment of a flank must cover >= PLACED_FRACTION of it AND reach
-its inner end (the end next to the core) within INNER_CLIP bp; otherwise the inner coordinate is not observed and the
-flank is inner_end_unaligned. A competing alignment within MIN_DELTA_AS elsewhere makes it ambiguous.
+its inner end (the end next to the insertion) within INNER_CLIP bp; otherwise the inner coordinate is not observed and
+the flank is inner_end_unaligned. A competing alignment within MIN_DELTA_AS elsewhere makes it ambiguous.
+A merged position reports the core hit length, the extra sequence per side (median and range, assembly orientation)
+and the putative insertion length (extra left + core hit + extra right, median). boundary = exact (no extra on either
+side in every molecule), consistent (each side's extra varies by <= TOL bp across molecules) or unknown. insert_size =
+le_2500 / gt_2500 applies MAX_INSERT to the putative insertion, not to the core; whether the insertion holds 1-2 genes
+is not checked here. The insertion length replaces the core length in the geometry and class rules below.
 
 Catalog matching (match_catalog), since v0.2: an occurrence matches a merged position only when all three hold
   core relation  same core key, or a homologous core (a shared protein family or homology group, see core_relation);
@@ -80,7 +97,7 @@ from scale_candidates import POOL
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / 'scripts'))
 import reads_ready  # noqa: E402
 
-VERSION = 'read_site_search_v0.2'  # v0.2: inner-end rule, catalog match by core relation / orientation / coverage, empty-site CIGAR + molecules, shifted by core relation
+VERSION = 'read_site_search_v0.3'  # v0.3: core hit = seed; host anchors found beyond extra sequence (v0.2: inner-end rule, catalog match by core relation / orientation / coverage, empty-site CIGAR + molecules, shifted by core relation)
 WORK = u.PROJ / 'core_context' / 'read_site_search' / 'pilot_v0.1'
 REPO = Path(__file__).resolve().parent / 'scale_comamonadaceae_v0.1'
 ROUND5 = REPO / 'readcheck_round5'
@@ -90,6 +107,7 @@ COUNTS = (1, 2, 3, 5)  # independent molecules a merged position needs
 HIT_COVERAGE = 0.8  # fraction of the panel sequence a core hit must cover
 PLACED_FRACTION = 0.8  # fraction of a flank its best assembly alignment must cover
 INNER_CLIP = 20  # bp; the best flank alignment must reach the flank's inner end within this
+MAX_INSERT = 2500  # bp; target insertion size (match_both_lt2500), bounds the extra sequence searched beyond a core hit
 TOL = rc3.LOCUS_TOL  # bp; placements of one position agree within this
 MIN_DELTA_AS = rc3.MIN_DELTA_AS
 END_ZONE = 5000  # bp: a flank this close to a contig end (beyond the core length) counts as at that end
@@ -269,6 +287,31 @@ def core_hits(paf, coverage):
     return hits
 
 
+def boundary(alns, side, seg_len, L):
+    """Junction of one side from the alignments of the read segment beyond the core hit (read-forward; the core is at
+    the segment's end for L and at its start for R): (status, extra bases between core hit and junction). The host
+    anchor is the alignment nearest the core with an aligned read span >= PLACED_FRACTION * L."""
+    if seg_len < L:
+        return 'one_sided', ''
+    anchors = [g for g in alns if g['qe'] - g['qs'] >= PLACED_FRACTION * L]
+    if not anchors:
+        return 'no_anchor', ''
+    if side == 'L':
+        j = max(g['qe'] for g in anchors)
+        extra, room = seg_len - j, j
+    else:
+        j = min(g['qs'] for g in anchors)
+        extra, room = j, seg_len - j
+    if extra <= INNER_CLIP:
+        extra, room = 0, room + extra
+    return ('ok', extra) if room >= L else ('one_sided', extra)
+
+
+def flank_of(seg, side, extra, L):
+    """Exactly L read bases ending at the junction (left) or starting at it (right)."""
+    return seg[len(seg) - extra - L:len(seg) - extra] if side == 'L' else seg[extra:extra + L]
+
+
 def placement(alns, side):
     """Best placement of one flank: (status, contig, inner position, strand). The inner position is the assembly
     coordinate of the flank end next to the core (left flank: its last base; right flank: its first base). It is only
@@ -345,22 +388,41 @@ def cmd_search(a):
                 elif i % 4 == 1 and name in hit_reads:
                     seq_of[name] = line.strip()
     mol = rc3.molecules(recs)
+    presets = sorted(set(preset.values())) or ['map-ont']  # one preset per sample in the pilot
+
+    def mm(fa, out):
+        with open(str(out), 'w') as h:
+            subprocess.run(['minimap2', '-x', presets[0]] + MM_FLANK + ['-t', str(a.threads), fasta, str(fa)],
+                           stdout=h, stderr=subprocess.DEVNULL, check=True)
+        got = defaultdict(list)
+        for g in paf_rows(out):
+            got[g['q']].append(g)
+        subprocess.run(['gzip', '-f', str(out)], check=True)
+        fa.unlink()
+        return got
+    # stage 1 (boundary): the read beyond each hit, up to MAX_INSERT - hit length + max(FLANKS) bp per side
+    segs = {}
+    sfa = od / 'segments.fa'
+    with open(str(sfa), 'w') as h:
+        for x in hits:
+            sq, ext = seq_of[x['read']], max(0, MAX_INSERT - (x['qe'] - x['qs'])) + max(FLANKS)
+            segs[x['hit_id']] = (sq[max(0, x['qs'] - ext):x['qs']], sq[x['qe']:x['qe'] + ext])
+            for side, sg in zip('LR', segs[x['hit_id']]):
+                if len(sg) >= min(FLANKS):
+                    h.write('>%s|%s\n%s\n' % (x['hit_id'], side, sg))
+    salns = mm(sfa, od / 'segments.paf')
+    # stage 2 (placement): exactly L bp ending at each junction
+    bnd = {}
     fl = od / 'flanks.fa'
     with open(str(fl), 'w') as h:
         for x in hits:
-            sq = seq_of[x['read']]
             for L in FLANKS:
-                left, right = sq[max(0, x['qs'] - L):x['qs']], sq[x['qe']:x['qe'] + L]
-                if len(left) == L and len(right) == L:
-                    h.write('>%s|%d|L\n%s\n>%s|%d|R\n%s\n' % (x['hit_id'], L, left, x['hit_id'], L, right))
-    presets = sorted(set(preset.values())) or ['map-ont']
-    fpaf = od / 'flanks.paf'
-    with open(str(fpaf), 'w') as h:  # one preset per sample in the pilot (single-run samples)
-        subprocess.run(['minimap2', '-x', presets[0]] + MM_FLANK + ['-t', str(a.threads), fasta, str(fl)],
-                       stdout=h, stderr=subprocess.DEVNULL, check=True)
-    alns = defaultdict(list)
-    for g in paf_rows(fpaf):
-        alns[g['q']].append(g)
+                for side, sg in zip('LR', segs[x['hit_id']]):
+                    st, extra = boundary(salns.get('%s|%s' % (x['hit_id'], side), []), side, len(sg), L)
+                    bnd[(x['hit_id'], L, side)] = (st, extra)
+                    if st == 'ok':
+                        h.write('>%s|%d|%s\n%s\n' % (x['hit_id'], L, side, flank_of(sg, side, extra, L)))
+    alns = mm(fl, od / 'flanks.paf')
     seqs = rc3.read_fasta(fasta)
     catalog = [c for c in pc.read_tsv(a.work / 'panel' / 'catalog.tsv') if c['sample'] == s]
     groups = family_groups(a.work)
@@ -370,11 +432,13 @@ def cmd_search(a):
         for L in FLANKS:
             o = dict(x, molecule=mol.get(x['read'], x['read']), flank=L)
             k = '%s|%d' % (x['hit_id'], L)
-            if not flank_written(x, seq_of, L):
+            (sl, el), (sr, er) = bnd[(x['hit_id'], L, 'L')], bnd[(x['hit_id'], L, 'R')]
+            o.update(left_extra=el, right_extra=er)
+            if 'one_sided' in (sl, sr):
                 o.update(status='one_sided')
             else:
-                pl = placement(alns.get(k + '|L', []), 'L')
-                pr = placement(alns.get(k + '|R', []), 'R')
+                pl = placement(alns.get(k + '|L', []), 'L') if sl == 'ok' else (sl, '', -1, '')
+                pr = placement(alns.get(k + '|R', []), 'R') if sr == 'ok' else (sr, '', -1, '')
                 o.update(left_status=pl[0], left_contig=pl[1], left_pos=pl[2], left_strand=pl[3],
                          right_status=pr[0], right_contig=pr[1], right_pos=pr[2], right_strand=pr[3],
                          left_inner_clip=inner_clip(alns.get(k + '|L', []), 'L'),
@@ -387,20 +451,24 @@ def cmd_search(a):
     empty_sites(s, positions, runs, recs)
     cols = ['flank', 'structure', 'core_key', 'kind', 'cls', 'raw_cls', 'molecules', 'read_records', 'contig', 'start', 'end',
             'left_contig', 'left_pos', 'left_strand', 'right_contig', 'right_pos', 'right_strand', 'core_strand',
-            'core_len', 'catalog', 'catalog_unmatched', 'shifted_from', 'core_in_assembly'] + EMPTY_COLS + [
+            'core_len', 'extra_left', 'extra_left_range', 'extra_right', 'extra_right_range', 'insert_len',
+            'boundary', 'insert_size', 'catalog', 'catalog_unmatched', 'shifted_from', 'core_in_assembly'] + EMPTY_COLS + [
             'members', 'identity_median', 'runs']
     pc.write_tsv(od / 'positions.tsv.gz', positions, cols)
     ocols = ['flank', 'run', 'read', 'molecule', 'structure', 'core_key', 'kind', 'member', 'qs', 'qe', 'strand',
-             'coverage', 'identity', 'status', 'left_status', 'left_contig', 'left_pos', 'left_strand', 'left_inner_clip',
-             'right_status', 'right_contig', 'right_pos', 'right_strand', 'right_inner_clip', 'core_strand']
+             'coverage', 'identity', 'status', 'left_extra', 'right_extra', 'left_status', 'left_contig', 'left_pos',
+             'left_strand', 'left_inner_clip', 'right_status', 'right_contig', 'right_pos', 'right_strand',
+             'right_inner_clip', 'core_strand']
     pc.write_tsv(od / 'observations.tsv.gz', obs, ocols)
-    subprocess.run(['gzip', '-f', str(fpaf)], check=True)
-    fl.unlink()
     (od / 'search.json').write_text(json.dumps(dict(
         version=VERSION, sample=s, runs=[dict(run=r['run'], read_type=r['read_type'], grouping=r['grouping'],
                                               sha256=r['sha256']) for r in runs],
         panel_hits=len(hits), reads_with_hits=len(hit_reads), molecules_with_hits=len(set(mol.values())),
-        hit_coverage=HIT_COVERAGE, flanks=FLANKS, minimap2_panel=MM_PANEL, minimap2_flank=MM_FLANK,
+        hit_coverage=HIT_COVERAGE, flanks=FLANKS, max_insert=MAX_INSERT, minimap2_panel=MM_PANEL, minimap2_flank=MM_FLANK,
+        extra_bases={str(L): dict(Counter(
+            '%s:%s' % (side, 'none' if o[side + '_extra'] == '' else '0' if o[side + '_extra'] == 0 else
+                       '21-100' if o[side + '_extra'] <= 100 else '101-500' if o[side + '_extra'] <= 500 else '>500')
+            for o in obs if o['flank'] == L and o['status'] == 'placed' for side in ('left', 'right'))) for L in FLANKS},
         observation_status={str(L): dict(Counter(o['status'] for o in obs if o['flank'] == L)) for L in FLANKS},
         inner_clip_of_aligned_flanks={str(L): dict(Counter(
             '%s:%s' % (side, 'none' if o[side + '_inner_clip'] == '' else '0' if o[side + '_inner_clip'] == 0 else
@@ -413,7 +481,7 @@ def cmd_search(a):
 EMPTY_COLS = ['empty_site_molecules', 'empty_site_read_records', 'empty_site_indel_molecules', 'both_forms_molecules']
 
 
-def empty_site_reads(alns, site_lo, site_hi, core_len):
+def empty_site_reads(alns, site_lo, site_hi, core_len):  # core_len: the insertion length
     """Genome alignments of one read -> 'empty' (one alignment over [site_lo - EMPTY_SPAN, site_hi + EMPTY_SPAN] whose
     CIGAR over [site_lo - ANCHOR, site_hi + ANCHOR] passes s3 cigar_ok with limit max(MIN_INDEL, core_len / 2)),
     'indel' (spans, but every spanning alignment carries an indel event there: possibly the core or another
@@ -452,7 +520,7 @@ def empty_sites(sample, positions, runs, hit_recs):
                 if g['t'] == r['contig'] and g['ts'] <= lo - EMPTY_SPAN and g['te'] >= hi + EMPTY_SPAN:
                     per[i][g['q']].append(g)
     calls = {i: {q: empty_site_reads(gs, min(sites[i]['start'], sites[i]['end']), max(sites[i]['start'], sites[i]['end']),
-                                     sites[i]['core_len']) for q, gs in per[i].items()} for i in range(len(sites))}
+                                     sites[i]['insert_len']) for q, gs in per[i].items()} for i in range(len(sites))}
     names = {q for c in calls.values() for q in c}
     recs = list(hit_recs)
     for r in runs:  # molecule ids of the empty-site records (FASTQ headers), merged with the core records
@@ -473,11 +541,6 @@ def inner_clip(alns, side):
         return ''
     best = max(alns, key=lambda g: g['score'])
     return best['qlen'] - best['qe'] if side == 'L' else best['qs']
-
-
-def flank_written(x, seq_of, L):
-    n = len(seq_of[x['read']])
-    return x['qs'] >= L and n - x['qe'] >= L
 
 
 def panel_members(panel, names):
@@ -501,6 +564,8 @@ def merge(obs, catalog, seqs, member_seq, od, seq_of, preset, groups):
             if o['flank'] == L and o['status'] == 'placed':
                 lc, lp, ls, rc, rp, rs = canonical(o)
                 o.update(c_left_pos=lp, c_right_pos=rp)
+                o['c_extra'] = (o['left_extra'], o['right_extra']) if o['left_strand'] != '-' else (
+                    o['right_extra'], o['left_extra'])
                 by[(o['structure'], o['core_key'], lc, ls, rc, rs, o['core_strand'])].append(o)
         placed = []
         for key, os_ in by.items():
@@ -651,6 +716,8 @@ def position_row(L, key, cl, catalog, seqs, member_seq, od, seq_of, preset, grou
     lp = int(median([o['c_left_pos'] for o in cl]))
     rp = int(median([o['c_right_pos'] for o in cl]))
     core_len = int(median([o['qe'] - o['qs'] for o in cl]))
+    ins = insert_fields(cl)
+    core_len_hit, core_len = core_len, ins['insert_len']  # the insertion, not the core hit, in the rules below
     geo, x, y = geometry(lc, lp, ls, rc, rp, rs, core_len)
     cat, inside, notes = '', '', ''
     if geo == 'junction':
@@ -674,10 +741,23 @@ def position_row(L, key, cl, catalog, seqs, member_seq, od, seq_of, preset, grou
     return dict(flank=L, structure=st, core_key=ck, kind=cl[0]['kind'], cls=cls,
                 molecules=len({o['molecule'] for o in cl}), read_records=len(cl), contig=lc if geo == 'proper' else '',
                 start=x if geo == 'proper' else '', end=y if geo == 'proper' else '', left_contig=lc, left_pos=lp,
-                left_strand=ls, right_contig=rc, right_pos=rp, right_strand=rs, core_strand=cs, core_len=core_len,
+                left_strand=ls, right_contig=rc, right_pos=rp, right_strand=rs, core_strand=cs, core_len=core_len_hit,
+                **ins,
                 catalog=cat, catalog_unmatched=notes, core_in_assembly=inside,
                 members=len({o['member'] for o in cl}), identity_median=median([o['identity'] for o in cl]),
                 runs=';'.join(sorted({o['run'] for o in cl})), _reads={o['read'] for o in cl})
+
+
+def insert_fields(cl):
+    """Extra sequence per side (assembly orientation), putative insertion length, boundary and size class of the
+    observations of one merged position."""
+    el, er = [o['c_extra'][0] for o in cl], [o['c_extra'][1] for o in cl]
+    ins = int(median([a + (o['qe'] - o['qs']) + b for o, a, b in zip(cl, el, er)]))
+    b = ('exact' if not any(el) and not any(er) else
+         'consistent' if max(el) - min(el) <= TOL and max(er) - min(er) <= TOL else 'unknown')
+    return dict(extra_left=median(el), extra_left_range='%d-%d' % (min(el), max(el)), extra_right=median(er),
+                extra_right_range='%d-%d' % (min(er), max(er)), insert_len=ins, boundary=b,
+                insert_size='le_%d' % MAX_INSERT if ins <= MAX_INSERT else 'gt_%d' % MAX_INSERT)
 
 
 def mark_shifted(rows, groups):
@@ -817,6 +897,12 @@ def cmd_combine(a):
                                                               and int(r['molecules']) >= N)))
                  for kind in ('core', 'neg')}
             g.update(recovery(ok, catalog, panel_cores, samples, r5))
+            g['not_in_assembly_by_boundary_and_size'] = dict(Counter(
+                '%s|%s|%s' % (r['cls'], r['boundary'], r['insert_size']) for r in ok
+                if r['kind'] == 'core' and r['cls'].startswith('not_in_assembly')))
+            g['positions_with_extra_sequence'] = dict(Counter(
+                '%s|%s' % (r['cls'].split(':')[0], r['boundary']) for r in ok if r['kind'] == 'core'
+                and not r['cls'].startswith(('unplaceable', 'one_sided', 'shifted'))))
             per_gene = Counter((r['sample'], r['core_key']) for r in ok if r['kind'] == 'neg')
             g['negative_control'] = dict(
                 genes_searched=len(neg_genes), positions_per_gene=dict(sorted(Counter(

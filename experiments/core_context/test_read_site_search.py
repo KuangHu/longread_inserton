@@ -37,6 +37,64 @@ class PlacementTests(unittest.TestCase):
         self.assertEqual(rs.placement([aln(qs=0, qe=979, ts=121, te=1100)], 'L')[0], 'inner_end_unaligned')
 
 
+class BoundaryTests(unittest.TestCase):
+    """The core hit is a seed: the junction is the inner end of the host anchor nearest the core."""
+    def test_extra_sequence_beyond_the_core(self):
+        # left segment of 3000 bp, the host anchor stops 80 bp before the core hit: 80 bp of extra sequence
+        self.assertEqual(rs.boundary([aln(qs=0, qe=2920, qlen=3000)], 'L', 3000, 1000), ('ok', 80))
+        self.assertEqual(rs.boundary([aln(qs=80, qe=3000, qlen=3000)], 'R', 3000, 1000), ('ok', 80))
+        self.assertEqual(rs.flank_of('A' * 1920 + 'C' * 1000 + 'G' * 80, 'L', 80, 1000), 'C' * 1000)
+        self.assertEqual(rs.flank_of('G' * 80 + 'C' * 1000 + 'A' * 1920, 'R', 80, 1000), 'C' * 1000)
+        self.assertEqual(rs.boundary([aln(qs=0, qe=2985, qlen=3000)], 'L', 3000, 1000), ('ok', 0))  # <= INNER_CLIP
+
+    def test_partial_core_hit(self):
+        # the hit covered 80% of the core: the other 20% (240 bp) aligns contiguously with the host when the
+        # assembly holds the core (no extra), or is extra sequence when it does not
+        self.assertEqual(rs.boundary([aln(qs=0, qe=3000, qlen=3000)], 'R', 3000, 1000), ('ok', 0))
+        self.assertEqual(rs.boundary([aln(qs=240, qe=3000, qlen=3000)], 'R', 3000, 1000), ('ok', 240))
+
+    def test_short_alignment_in_between_stays_extra(self):
+        # a 100 bp element end that also occurs elsewhere aligns between the host anchor and the core
+        alns = [aln(qs=0, qe=2800, qlen=3000), aln(t='d', qs=2850, qe=2950, qlen=3000)]
+        self.assertEqual(rs.boundary(alns, 'L', 3000, 1000), ('ok', 200))
+
+    def test_repeated_flank_is_not_skipped(self):
+        # the inner-most anchor lies in a repeat (two placements): the junction stays there, and placement of the
+        # L bp flank is then ambiguous; the farther unique alignment is not used
+        alns = [aln(qs=0, qe=1500, qlen=3000), aln(t='r1', qs=1600, qe=3000, qlen=3000),
+                aln(t='r2', qs=1600, qe=3000, qlen=3000)]
+        self.assertEqual(rs.boundary(alns, 'L', 3000, 1000), ('ok', 0))
+        two = [aln(t='r1', ts=100, te=1100), aln(t='r2', ts=5000, te=6000, score=995)]
+        self.assertEqual(rs.placement(two, 'L')[0], 'ambiguous')
+
+    def test_neighbouring_insertion(self):
+        # host anchor, then an 800 bp insertion absent from the assembly, then 70 bp of element end: all 870 bp are
+        # extra sequence (the putative insertion includes the neighbour; its composition is not resolved here)
+        self.assertEqual(rs.boundary([aln(qs=0, qe=2130, qlen=3000)], 'L', 3000, 1000), ('ok', 870))
+        # the neighbour present elsewhere in the assembly (an alignment >= 0.8 L): the junction moves to it and
+        # its placement decides (elsewhere -> a junction class, repeat -> ambiguous), never a silent skip
+        alns = [aln(qs=0, qe=2130, qlen=3000), aln(t='d', qs=2130, qe=2930, qlen=3000)]
+        self.assertEqual(rs.boundary(alns, 'L', 3000, 1000), ('ok', 70))
+
+    def test_no_anchor_and_one_sided(self):
+        self.assertEqual(rs.boundary([aln(qs=0, qe=500, qlen=3000)], 'L', 3000, 1000), ('no_anchor', ''))
+        self.assertEqual(rs.boundary([], 'L', 900, 1000), ('one_sided', ''))
+        self.assertEqual(rs.boundary([aln(qs=600, qe=1500, qlen=1500)], 'R', 1500, 1000), ('one_sided', 600))
+
+
+class InsertFieldsTests(unittest.TestCase):
+    def obs(self, el, er, core=1200):
+        return dict(c_extra=(el, er), qs=0, qe=core)
+
+    def test_boundary_classes_and_size(self):
+        f = rs.insert_fields([self.obs(0, 0), self.obs(0, 0)])
+        self.assertEqual((f['boundary'], f['insert_len'], f['insert_size']), ('exact', 1200, 'le_2500'))
+        f = rs.insert_fields([self.obs(60, 30), self.obs(90, 40), self.obs(70, 35)])
+        self.assertEqual((f['boundary'], f['extra_left'], f['insert_len']), ('consistent', 70, 1305))
+        self.assertEqual(rs.insert_fields([self.obs(10, 30), self.obs(300, 30)])['boundary'], 'unknown')
+        self.assertEqual(rs.insert_fields([self.obs(900, 600)])['insert_size'], 'gt_2500')  # the insertion, not the core
+
+
 class GeometryTests(unittest.TestCase):
     def test_forward_and_reverse_give_the_sequence_between_the_flanks(self):
         self.assertEqual(rs.geometry('c', 1100, '+', 'c', 2100, '+', 1000), ('proper', 1100, 2100))
