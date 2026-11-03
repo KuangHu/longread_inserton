@@ -10,6 +10,8 @@ freeze   Pilot samples by a fixed rule (written to <out>/samples.tsv and freeze.
            an aligned BAM, depth >= 30x (verified bases / assembly length); per genus the eligible sample with the
            most candidate cores supported in read-check round 5 (ties: depth, then id); genera whose best sample has
            >= 15 such cores; then HiFi samples by the same score until at least 2 HiFi samples are in.
+         --batch-size N (scale batch): every eligible sample not excluded, all genera, taken genus by genus in turn
+         (genera ordered by their best sample, samples within a genus by the same score), first N.
          --exclude: samples used in development (earlier batches' samples.tsv files and listed ids) are not eligible
          (reason used_in_development); the rule is otherwise the same, so a validation batch is the next sample
          per genus.
@@ -87,6 +89,7 @@ shorter than L). Every merged position is reported with its number of independen
 >= N (pilot N = 3, sensitivity N in COUNTS).
 """
 import argparse
+import hashlib
 import gzip
 import json
 import subprocess
@@ -128,8 +131,30 @@ NEG_PRODUCTS = ('DNA-directed RNA polymerase subunit beta', "DNA-directed RNA po
                 '50S ribosomal protein L2', '30S ribosomal protein S3', 'signal recognition particle protein')
 
 
+EDITED = None  # computational positive test: <work>/edited holds edited assemblies with their genes and catalog
+GENES = u.PROJ / 'core_context' / 'scale_comamonadaceae_v0.1' / 'genes'
+
+
+def set_work(work):
+    """Inputs of an edited-assembly run (positive test): <work>/edited/manifest.tsv replaces the fasta of its samples,
+    edited/genes/<s>.tsv.gz their gene tables and edited/occurrences.tsv their catalog occurrences (all in edited
+    coordinates). The truth of the edit is never under <work>."""
+    global EDITED
+    EDITED = work / 'edited' if (work / 'edited' / 'manifest.tsv').exists() else None
+
+
 def manifest():
-    return {r['sample']: r for r in pc.read_tsv(REPO / 'manifest.tsv')}
+    m = {r['sample']: r for r in pc.read_tsv(REPO / 'manifest.tsv')}
+    if EDITED:
+        for r in pc.read_tsv(EDITED / 'manifest.tsv'):
+            m[r['sample']] = dict(m[r['sample']], **r)
+    return m
+
+
+def genes_path(s):
+    if EDITED and (EDITED / 'genes' / ('%s.tsv.gz' % s)).exists():
+        return EDITED / 'genes' / ('%s.tsv.gz' % s)
+    return GENES / ('%s.tsv.gz' % s)
 
 
 def cmd_freeze(a):
@@ -172,13 +197,23 @@ def cmd_freeze(a):
     el = sorted((r for r in rows if r['eligible']), key=lambda r: (-r['supported_candidate_cores'], -r['depth'],
                                                                    r['sample']))
     pick, seen = [], set()
+    if a.batch_size:  # scale batch: genera in turn (each genus' samples by the same score), first batch_size
+        by = defaultdict(list)
+        for r in el:
+            by[r['genus']].append(r)
+        order = []
+        for i in range(max(map(len, by.values())) if by else 0):
+            order += [by[g][i] for g in sorted(by, key=lambda g: (-by[g][0]['supported_candidate_cores'],
+                                                                 -by[g][0]['depth'], g)) if i < len(by[g])]
+        pick = [dict(r, reason='scale_batch') for r in order[:a.batch_size]]
+        el = []  # the per-genus rule below is not applied
     for r in el:
         if r['genus'] not in seen:
             seen.add(r['genus'])
             if r['supported_candidate_cores'] >= 15:
                 pick.append(dict(r, reason='best_of_genus'))
     for r in el:
-        if sum(HIFI in x['read_type'] for x in pick) >= 2:
+        if a.batch_size or sum(HIFI in x['read_type'] for x in pick) >= 2:
             break
         if HIFI in r['read_type'] and r['sample'] not in {x['sample'] for x in pick}:
             pick.append(dict(r, reason='hifi_minimum'))
@@ -189,8 +224,16 @@ def cmd_freeze(a):
     pc.write_tsv(a.out / 'samples.tsv', pick, cols)
     pc.write_tsv(a.out / 'candidates_considered.tsv', rows, [c for c in rows[0]])
     (a.out / 'freeze.json').write_text(json.dumps(dict(
-        version=VERSION, rule=__doc__.split('freeze   ')[1].split('panel    ')[0].split(), samples=[r['sample'] for r in pick],
-        considered=len(rows), eligible=len(el), round5=str(ROUND5), excluded_as_development=sorted(dev),
+        version=VERSION, rule=' '.join(__doc__.split('freeze   ')[1].split('panel    ')[0].split()),
+        batch_size=a.batch_size, samples=[r['sample'] for r in pick],
+        considered=len(rows), eligible=sum(r['eligible'] for r in rows), round5=str(ROUND5),
+        excluded_as_development=sorted(dev),
+        params=dict(flanks=FLANKS, counts=COUNTS, main_flank=MAIN_FLANK, main_count=MAIN_COUNT,
+                    hit_coverage=HIT_COVERAGE, placed_fraction=PLACED_FRACTION, inner_clip=INNER_CLIP,
+                    boundary_agree=BOUNDARY_AGREE, max_insert=MAX_INSERT, tol=TOL, min_delta_as=MIN_DELTA_AS,
+                    end_zone=END_ZONE, empty_span=EMPTY_SPAN, minimap2_panel=MM_PANEL, minimap2_flank=MM_FLANK),
+        ready_manifest=str(reads_ready.READS / reads_ready.MANIFEST),
+        ready_manifest_sha256=hashlib.sha256((reads_ready.READS / reads_ready.MANIFEST).read_bytes()).hexdigest(),
         code_commit=subprocess.run(['git', 'rev-parse', 'HEAD'], stdout=subprocess.PIPE, universal_newlines=True,
                                    cwd=str(Path(__file__).parent)).stdout.strip()), indent=1) + '\n')
     for r in pick:
@@ -212,8 +255,13 @@ def cmd_panel(a):
              and u.pair_role(p) == 'candidate' and p['pair_class'] == 'both_positions_supported'}
     occ_dir = u.PROJ / 'core_context' / 'scale_comamonadaceae_v0.1' / 'review' / 's6' / 'b1-2-3'
     want, catalog = defaultdict(list), []
+    edited = defaultdict(list)
+    if EDITED:
+        for r in pc.read_tsv(EDITED / 'occurrences.tsv'):
+            edited[r['sample']].append(r)
     for k in range(64):
-        for r in pc.read_tsv(occ_dir / ('shard_%03d' % k) / 'occurrences.tsv.gz'):
+        rows = [r for r in pc.read_tsv(occ_dir / ('shard_%03d' % k) / 'occurrences.tsv.gz') if r['sample'] not in edited]
+        for r in rows + (sum(edited.values(), []) if k == 0 else []):
             if (r['structure'], r['core_key']) in cores:
                 want[r['sample']].append(r)
             if r['sample'] in pilot:
@@ -240,8 +288,7 @@ def cmd_panel(a):
         occ_by[(r['sample'], r['contig'])].append((int(r['start0']), int(r['end0'])))
     with open(str(wd / 'panel.fa'), 'a') as h:
         for s in sorted(pilot):
-            genes = [g for g in pc.read_tsv(u.PROJ / 'core_context' / 'scale_comamonadaceae_v0.1' / 'genes' /
-                                            ('%s.tsv.gz' % s)) if g['type'] == 'CDS']
+            genes = [g for g in pc.read_tsv(genes_path(s)) if g['type'] == 'CDS']
             n = Counter(g['product'] for g in genes)
             seqs = rc3.read_fasta(man[s]['fasta'])
             for g in genes:
@@ -264,8 +311,10 @@ def cmd_panel(a):
                 panel_occurrences=sum(m['occurrences'] for m in members),
                 panel_bp=sum(m['length'] for m in members), negative_control_members=len(neg),
                 negative_control_products=dict(Counter(m['core_key'] for m in neg)),
-                catalog_occurrences_pilot=len(catalog), pilot_samples=sorted(pilot))
+                catalog_occurrences_pilot=len(catalog), pilot_samples=sorted(pilot),
+                edited_samples=sorted(edited))
     (wd / 'panel.json').write_text(json.dumps(summ, indent=1) + '\n')
+    family_groups(a.work)  # cached once here, not by concurrent search tasks
     print(json.dumps(summ, indent=1))
 
 
@@ -677,8 +726,7 @@ def family_groups(work):
         for m in pc.read_tsv(work / 'panel' / 'members.tsv'):
             if m['member'].startswith('neg|'):
                 s, contig, lo = m['first_occurrence'].split('|')
-                g = next(g for g in pc.read_tsv(u.PROJ / 'core_context' / 'scale_comamonadaceae_v0.1' / 'genes' /
-                                                ('%s.tsv.gz' % s))
+                g = next(g for g in pc.read_tsv(genes_path(s))
                          if g['type'] == 'CDS' and g['contig'] == contig and g['start0'] == lo)
                 prot[g['protein_sha256']] = 'neg:' + m['core_key']
         want = {f for t in ('members.tsv', 'catalog.tsv') for m in pc.read_tsv(work / 'panel' / t)
@@ -871,11 +919,10 @@ def annotate_omissions(rows):
     om = [r for r in rows if r['cls'] == 'catalog_omission']
     if not om:
         return
-    gdir = u.PROJ / 'core_context' / 'scale_comamonadaceae_v0.1' / 'genes'
     genes = {}
     for s in {r['sample'] for r in om}:
         d = defaultdict(list)
-        for g in pc.read_tsv(gdir / ('%s.tsv.gz' % s)):
+        for g in pc.read_tsv(genes_path(s)):
             if g['type'] == 'CDS':
                 d[g['contig']].append(g)
         genes[s] = d
@@ -1005,7 +1052,10 @@ def main():
     p.add_argument('--threads', type=int, default=16)
     p.add_argument('--exclude', default='', help='freeze: comma-separated samples.tsv paths and sample ids used in '
                    'development')
+    p.add_argument('--batch-size', type=int, default=0, help='freeze: scale batch of this many samples (every '
+                   'eligible sample not excluded, genera in turn) instead of the per-genus validation rule')
     a = p.parse_args()
+    set_work(a.work)
     dict(freeze=cmd_freeze, panel=cmd_panel, search=cmd_search, combine=cmd_combine)[a.mode](a)
 
 

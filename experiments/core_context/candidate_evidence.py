@@ -312,6 +312,7 @@ def main():
     p.add_argument('--out', type=Path, default=rs.REPO / 'read_site_search_pilot')
     p.add_argument('--threads', type=int, default=16)
     a = p.parse_args()
+    rs.set_work(a.work)
     od = a.out / 'candidates'
     od.mkdir(parents=True, exist_ok=True)
     cands = candidates(a.work, a.out)

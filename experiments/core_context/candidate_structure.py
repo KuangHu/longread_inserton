@@ -13,12 +13,16 @@ MIN_DEPTH, insertions shown, deletions removed) gives a new draft; ROUNDS rounds
 reported (min over the insertion). The junctions are where PAD bp of assembly U ends and PAD bp of D begins in the
 consensus (blastn, best HSP reaching the inner end); the insertion is the sequence between them (a target-site
 duplication stays in U and D).
-Genes: ORFs of the insertion on both strands (translation table 11, starts ATG/GTG/TTG, >= MIN_ORF_AA aa, longest
-first, overlaps <= ORF_OVERLAP bp allowed); complete = start and stop inside the insertion. Each ORF is searched
+Genes: ORFs of the insertion on both strands (translation table 11, starts ATG/GTG/TTG, >= MIN_ORF_AA aa); every ORF is
+listed. Primary ORFs: complete first, then longest, overlapping the ones already chosen by <= ORF_OVERLAP bp; the
+others are listed as overlapping ORFs (primary False), never dropped. complete = start and stop inside the insertion. Each ORF is searched
 (blastp) against the annotated proteins of the sample and every protein of the core's families (pool proteins);
-best hit gives family, homology group and product; a complete gene = complete ORF whose best hit covers >=
-GENE_COVERAGE of the subject and of the ORF. Gene count = complete genes; partial ORFs and ORFs without a hit are
-listed, not counted. Positions where the consensus is ambiguous (N: depth < MIN_DEPTH or no base reaches
+best hit gives family, homology group and product; a complete gene = complete primary ORF whose best hit covers >=
+GENE_COVERAGE of the subject and of the ORF. A known complete gene does not rule out unknown genes: primary ORFs
+outside the complete genes (no hit, partial, or a partial-length hit) are unexplained ORFs, and the gene count is the
+range [complete genes, complete genes + unexplained ORFs] (target(): met only when the whole range is 1-2). Each
+protein family of the core is checked apart (core_families_complete: families of the core with a complete gene), so
+a two-gene core needs both genes. Positions where the consensus is ambiguous (N: depth < MIN_DEPTH or no base reaches
 CALL_FRACTION) are counted (insert_ambiguous_bases). genes_status: resolved (none); resolved_ambiguous_bases_in_genes
 (every one lies inside a complete gene: an N does not shift the frame, the gene is still full length); otherwise
 unresolved_ambiguous_consensus, and then the gene count is not interpreted (target_1_2_genes unresolved): a frameshift
@@ -51,7 +55,6 @@ ORF_OVERLAP = 60
 GENE_COVERAGE = 0.9
 FAMILIES = u.PROJ / 'core_context' / 'scale_comamonadaceae_v0.1' / 'families' / 'catalog.tsv.gz'
 POOL_PROTEINS = u.PROJ / 'core_context' / 'scale_comamonadaceae_v0.1' / 'pool_proteins.faa.gz'
-GENES = u.PROJ / 'core_context' / 'scale_comamonadaceae_v0.1' / 'genes'
 
 
 def run(cmd, out=None):
@@ -142,9 +145,10 @@ def orfs(seq):
                 i = j + 1
     keep = []
     for o in sorted(out, key=lambda o: (not o['complete'], -o['aa'], o['start'])):
-        if all(min(o['end'], k['end']) - max(o['start'], k['start']) <= ORF_OVERLAP for k in keep):
+        o['primary'] = all(min(o['end'], k['end']) - max(o['start'], k['start']) <= ORF_OVERLAP for k in keep)
+        if o['primary']:
             keep.append(o)
-    return sorted(keep, key=lambda o: o['start'])
+    return sorted(out, key=lambda o: (o['start'], o['strand']))  # every ORF; overlapping ones are primary=False
 
 
 def protein_db(samples, core_fams, wd):
@@ -152,7 +156,7 @@ def protein_db(samples, core_fams, wd):
     sha -> (family, homology group) and sha -> product."""
     want, prod = set(), {}
     for s in samples:
-        for g in pc.read_tsv(GENES / ('%s.tsv.gz' % s)):
+        for g in pc.read_tsv(rs.genes_path(s)):
             if g['type'] == 'CDS' and g['protein_sha256']:
                 want.add(g['protein_sha256'])
                 prod.setdefault(g['protein_sha256'], g['product'])
@@ -176,12 +180,26 @@ def protein_db(samples, core_fams, wd):
     return db, fam, prod
 
 
+def target(amb, genes, other, length):
+    """Complete target (< MAX_INSERT bp, 1-2 genes), with the gene count as a range [genes, genes + other]: met when
+    the whole range lies in 1-2; not_met when the insertion is >= MAX_INSERT, the range lies above 2, or there is no
+    ORF at all; otherwise unresolved (ambiguous consensus, or unexplained ORFs that could be unannotated genes)."""
+    if rs.size_class(length) != 'lt_%d' % rs.MAX_INSERT or genes > 2 or genes + other == 0:
+        return 'not_met'
+    if amb:
+        return 'unresolved_ambiguous_consensus'
+    if genes >= 1 and genes + other <= 2:
+        return 'met'
+    return 'unresolved_unexplained_orfs'
+
+
 def main():
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     p.add_argument('--work', type=Path, default=rs.WORK)
     p.add_argument('--out', type=Path, default=rs.REPO / 'read_site_search_pilot')
     p.add_argument('--threads', type=int, default=16)
     a = p.parse_args()
+    rs.set_work(a.work)
     od = a.out / 'candidates'
     summ = list(pc.read_tsv(od / 'evidence_summary.tsv'))
     mols = defaultdict(list)
@@ -267,28 +285,39 @@ def main():
                 f = l.split('\t')
                 if f[0] not in hits or float(f[11]) > float(hits[f[0]][11]):
                     hits[f[0]] = f
-        genes, gene_iv = 0, []
+        genes, gene_iv, fam_full = 0, [], set()
         for i, o in enumerate(os_):
             h = hits.get('orf%d' % i)
             fm = fam.get(h[1], ('', '')) if h else ('', '')
             scov = (int(h[7]) - int(h[6]) + 1) / int(h[9]) if h else 0
             qcov = (int(h[5]) - int(h[4]) + 1) / int(h[8]) if h else 0
-            full = bool(o['complete'] and h and scov >= GENE_COVERAGE and qcov >= GENE_COVERAGE)
+            full = bool(o['primary'] and o['complete'] and h and scov >= GENE_COVERAGE and qcov >= GENE_COVERAGE)
+            o['full'] = full
             genes += full
             if full:
                 gene_iv.append((o['start'], o['end']))
+                fam_full.add(fm[0])
             orf_rows.append(dict(candidate=cid, orf='orf%d' % i, start=o['start'], end=o['end'], strand=o['strand'],
-                                 aa=o['aa'], complete_orf=o['complete'], best_hit=h[1][:16] if h else '',
+                                 aa=o['aa'], complete_orf=o['complete'], primary=o['primary'], best_hit=h[1][:16] if h else '',
                                  identity=h[2] if h else '', subject_coverage=round(scov, 3), orf_coverage=round(qcov, 3),
                                  family=fm[0], homology_group=fm[1], core_family=fm[0] in core_fams,
                                  product=prod.get(h[1], '') if h else '', complete_gene=full))
+        for r in orf_rows:  # listed after all genes are known
+            if r['candidate'] == cid:
+                r['overlaps_complete_gene'] = any(min(int(r['end']), y) - max(int(r['start']), x) > ORF_OVERLAP
+                                                  for x, y in gene_iv) and not r['complete_gene']
+        # ORFs not explained by a complete gene: primary ORFs (no homolog hit, partial, or a partial-length hit) that
+        # do not overlap a complete gene. Each could be an unannotated gene, so the gene count is a range
+        other = [o for o in os_ if o['primary'] and not o['full']
+                 and not any(min(o['end'], y) - max(o['start'], x) > ORF_OVERLAP for x, y in gene_iv)]
+        cfam = sorted(rs.core_families(c['core_key']))
         # assembled copies of the insertion in the sample's own assembly
         qi = cw / 'insert.fa'
         qi.write_text('>ins\n%s\n' % ins)
         out = run(['minimap2', '-cx', 'asm20', '--secondary=yes', '-N', '50', '-p', '0.5', rs.manifest()[s]['fasta'],
                    str(qi)])
         gl = defaultdict(list)
-        for g in pc.read_tsv(GENES / ('%s.tsv.gz' % s)):
+        for g in pc.read_tsv(rs.genes_path(s)):
             if g['type'] == 'CDS':
                 gl[g['contig']].append(g)
         copies = []
@@ -314,8 +343,12 @@ def main():
                          genes_status='resolved' if not amb_at else 'resolved_ambiguous_bases_in_genes' if not amb
                          else 'unresolved_ambiguous_consensus', insert_size=rs.size_class(len(ins)),
                          insert_min_depth=min(dep), insert_median_depth=sorted(dep)[len(dep) // 2],
-                         **core, orfs=len(os_), complete_genes=genes,
-                         target_1_2_genes=('unresolved' if amb else 1 <= genes <= 2 and rs.size_class(len(ins)) == 'lt_%d' % rs.MAX_INSERT),
+                         **core, orfs=len(os_), primary_orfs=sum(o['primary'] for o in os_),
+                         overlapping_orfs=sum(not o['primary'] for o in os_), complete_genes=genes,
+                         unexplained_orfs=len(other), gene_count_range='%d-%d' % (genes, genes + len(other)),
+                         core_families=';'.join(cfam),
+                         core_families_complete='%d/%d' % (len(set(cfam) & fam_full), len(cfam)),
+                         target_1_2_genes=target(amb, genes, len(other), len(ins)),
                          assembled_copies=len(copies),
                          assembled_copy_best=max(copies, key=lambda x: x['identity'])['contig'] + ':%d-%d' % (
                              max(copies, key=lambda x: x['identity'])['start'],
@@ -323,7 +356,9 @@ def main():
     cols = ['candidate', 'sample', 'core_key', 'status', 'P_molecules', 'records_used', 'P_matched', 'A_matched',
             'boundary', 'boundary_molecules', 'both_agree_molecules', 'search_insert_len', 'insert_len', 'insert_size',
             'insert_min_depth', 'insert_median_depth', 'insert_ambiguous_bases', 'ambiguous_positions', 'genes_status', 'core_member', 'core_member_len', 'core_coverage',
-            'core_identity', 'core_both_ends', 'core_in_insert', 'orfs', 'complete_genes', 'target_1_2_genes',
+            'core_identity', 'core_both_ends', 'core_in_insert', 'core_families', 'core_families_complete', 'orfs',
+            'primary_orfs', 'overlapping_orfs', 'complete_genes', 'unexplained_orfs', 'gene_count_range',
+            'target_1_2_genes',
             'assembled_copies', 'assembled_copy_best']
     pc.write_tsv(od / 'structure_summary.tsv', rows, cols)
     if orf_rows:
