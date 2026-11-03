@@ -87,13 +87,20 @@ class InsertFieldsTests(unittest.TestCase):
         self.n = getattr(self, 'n', 0) + 1
         return dict(c_extra=(el, er), qs=0, qe=core, molecule=mol or 'm%d' % self.n)
 
+    def test_target_size_is_strictly_below_2500(self):
+        self.assertEqual([rs.size_class(n) for n in (1, 2499, 2500, 2501)], ['lt_2500', 'lt_2500', 'ge_2500', 'ge_2500'])
+        # the insertion (extra left + core hit + extra right) is compared, not the core hit
+        self.assertEqual(rs.insert_fields([self.obs(650, 649)])['insert_size'], 'lt_2500')  # 2499 bp
+        self.assertEqual(rs.insert_fields([self.obs(650, 650)])['insert_size'], 'ge_2500')  # 2500 bp
+        self.assertEqual(rs.insert_fields([self.obs(0, 0, core=2500)])['insert_size'], 'ge_2500')
+
     def test_boundary_classes_and_size(self):
         f = rs.insert_fields([self.obs(0, 0), self.obs(0, 0)])
-        self.assertEqual((f['boundary'], f['insert_len'], f['insert_size']), ('no_extension_detected', 1200, 'le_2500'))
+        self.assertEqual((f['boundary'], f['insert_len'], f['insert_size']), ('no_extension_detected', 1200, 'lt_2500'))
         f = rs.insert_fields([self.obs(60, 30), self.obs(90, 40), self.obs(70, 35)])
         self.assertEqual((f['boundary'], f['extra_left'], f['insert_len']), ('extension_consistent', 70, 1305))
         self.assertEqual(rs.insert_fields([self.obs(10, 30), self.obs(300, 30)])['boundary'], 'unknown')
-        self.assertEqual(rs.insert_fields([self.obs(900, 600)])['insert_size'], 'gt_2500')  # the insertion, not the core
+        self.assertEqual(rs.insert_fields([self.obs(900, 600)])['insert_size'], 'ge_2500')  # the insertion, not the core
         # one stray molecule of ten does not make the boundary unknown
         f = rs.insert_fields([self.obs(0, 0) for _ in range(9)] + [self.obs(60, 0)])
         self.assertEqual((f['boundary'], f['extra_left_range']), ('no_extension_detected', '0-60'))

@@ -43,7 +43,7 @@ boundary: at least BOUNDARY_AGREE of the molecules agree with the medians on bot
 jointly are reported), else unknown; then no_extension_detected (both medians 0) or extension_consistent.
 no_extension_detected means the reads join U and D next to the core hit; it does not establish the element's own
 boundaries. insert_size =
-le_2500 / gt_2500 applies MAX_INSERT to the putative insertion, not to the core; whether the insertion holds 1-2 genes
+lt_2500 / ge_2500 (strictly < MAX_INSERT since v0.3.2) applies MAX_INSERT to the putative insertion, not to the core; whether the insertion holds 1-2 genes
 is not checked here. The insertion length replaces the core length in the geometry and class rules below.
 
 Catalog matching (match_catalog), since v0.2: an occurrence matches a merged position only when all three hold
@@ -103,8 +103,8 @@ from scale_candidates import POOL
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / 'scripts'))
 import reads_ready  # noqa: E402
 
-VERSION = 'read_site_search_v0.3.1'  # v0.3.1: boundary counted by molecule, both sides jointly; labels no_extension_detected / extension_consistent
-VERSION_PREV = 'read_site_search_v0.3'  # v0.3: core hit = seed; host anchors found beyond extra sequence (v0.2: inner-end rule, catalog match by core relation / orientation / coverage, empty-site CIGAR + molecules, shifted by core relation)
+VERSION = 'read_site_search_v0.3.2'  # v0.3.2: target size strictly < MAX_INSERT (lt_2500 / ge_2500; was le / gt). v0.3.1: v0.3.1: boundary counted by molecule, both sides jointly; labels no_extension_detected / extension_consistent
+VERSION_PREV = 'read_site_search_v0.3.1'  # v0.3: v0.3: core hit = seed; host anchors found beyond extra sequence (v0.2: inner-end rule, catalog match by core relation / orientation / coverage, empty-site CIGAR + molecules, shifted by core relation)
 WORK = u.PROJ / 'core_context' / 'read_site_search' / 'pilot_v0.1'
 REPO = Path(__file__).resolve().parent / 'scale_comamonadaceae_v0.1'
 ROUND5 = REPO / 'readcheck_round5'
@@ -801,7 +801,12 @@ def insert_fields(cl):
                 extra_right_range='%d-%d' % (min(er), max(er)), insert_len=ins, boundary=b,
                 boundary_molecules=len(el), left_agree_molecules=sum(left), right_agree_molecules=sum(right),
                 both_agree_molecules=both,
-                insert_size='le_%d' % MAX_INSERT if ins <= MAX_INSERT else 'gt_%d' % MAX_INSERT)
+                insert_size=size_class(ins))
+
+
+def size_class(n):
+    """Target size of a putative insertion, strictly below MAX_INSERT: lt_2500 (n < 2500) or ge_2500."""
+    return ('lt_%d' if n < MAX_INSERT else 'ge_%d') % MAX_INSERT
 
 
 def mark_shifted(rows, groups):

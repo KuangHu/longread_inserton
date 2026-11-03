@@ -435,8 +435,8 @@ the validation batch was chosen.
      - `unknown` unless, on each side, at least 80% of the molecules have an extra length within 50 bp of that
        side's median;
      - otherwise `exact` when both medians are 0, else `consistent`.
-   - **`insert_size`:** `le_2500` or `gt_2500` of the putative insertion. Whether it holds 1–2 genes is not checked
-     here.
+   - **`insert_size`:** `le_2500` or `gt_2500` of the putative insertion (since v0.3.2: `lt_2500`, strictly
+     < 2,500 bp, or `ge_2500`). Whether it holds 1–2 genes is not checked here.
    - **The insertion replaces the core:** its length replaces the core length in the geometry, class and empty-site
      rules.
 5. **Empty site:** still auxiliary evidence, never a discovery condition.
@@ -652,7 +652,17 @@ Method:
   insertion of 1,333 bp between) is listed apart as a structural anomaly (`candidates/structural_anomalies.tsv`).
   It is not treated as an insertion.
 
-### Next (needs decision; nothing started)
+### v0.3.2: target size strictly < 2,500 bp
+
+- **The change:** the size class of a putative insertion is now `lt_2500` (< 2,500 bp) or `ge_2500`; before it was
+  `le_2500` / `gt_2500`, so exactly 2,500 bp counted as in target. The complete-target column of the structure
+  check uses the same rule (`size_class`).
+- **Boundary test:** 2,499 bp → `lt_2500`; 2,500 and 2,501 bp → `ge_2500`, for the insertion length (extra + core
+  hit + extra), not the core hit.
+- **Effect on earlier results:** no merged position in the development or validation-1 runs has an insertion of
+  exactly 2,500 bp, so only the label changes. No other threshold changed.
+
+### Next (decided 2026-11-02: proceed; see the scale-up section)
 
 - **Second validation batch:** after these rules are frozen, as a new tag.
 - **Computational positive test,** fixed in advance and reported apart from real samples:

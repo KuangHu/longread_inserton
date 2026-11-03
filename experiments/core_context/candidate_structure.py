@@ -312,11 +312,10 @@ def main():
         rows.append(dict(row, status='checked', insert_len=len(ins), insert_ambiguous_bases=len(amb_at),
                          ambiguous_positions=','.join(map(str, amb_at)),
                          genes_status='resolved' if not amb_at else 'resolved_ambiguous_bases_in_genes' if not amb
-                         else 'unresolved_ambiguous_consensus', insert_size='le_%d' % rs.MAX_INSERT
-                         if len(ins) <= rs.MAX_INSERT else 'gt_%d' % rs.MAX_INSERT,
+                         else 'unresolved_ambiguous_consensus', insert_size=rs.size_class(len(ins)),
                          insert_min_depth=min(dep), insert_median_depth=sorted(dep)[len(dep) // 2],
                          **core, orfs=len(os_), complete_genes=genes,
-                         target_1_2_genes=('unresolved' if amb else 1 <= genes <= 2 and len(ins) <= rs.MAX_INSERT),
+                         target_1_2_genes=('unresolved' if amb else 1 <= genes <= 2 and rs.size_class(len(ins)) == 'lt_%d' % rs.MAX_INSERT),
                          assembled_copies=len(copies),
                          assembled_copy_best=max(copies, key=lambda x: x['identity'])['contig'] + ':%d-%d' % (
                              max(copies, key=lambda x: x['identity'])['start'],
