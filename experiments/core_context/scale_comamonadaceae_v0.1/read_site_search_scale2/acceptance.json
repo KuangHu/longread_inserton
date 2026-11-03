@@ -1,0 +1,898 @@
+{
+ "version": "read_site_search_v0.3.2",
+ "batch": "read_site_search_scale2",
+ "expected_samples": 40,
+ "sample_status": {
+  "complete": 40
+ },
+ "samples_not_complete": {},
+ "complete": true,
+ "problems": [],
+ "known_recovery": {
+  "core|not_round5_supported": "1225/1311",
+  "core|round5_supported": "1336/1405",
+  "negative_control|not_round5_supported": "77/80"
+ },
+ "negative_control": {
+  "genes_searched": 80,
+  "positions_per_gene": {
+   "0": 3,
+   "1": 77
+  }
+ },
+ "negative_control_extra_positions": 0,
+ "sites": {
+  "version": "read_site_search_v0.3.2",
+  "main": {
+   "flank": 1000,
+   "molecules": 3
+  },
+  "sites_by_category": {
+   "known": 5653,
+   "in_assembly_not_in_catalog": 1026,
+   "not_in_assembly_candidate": 1,
+   "structural_anomaly": 9,
+   "unresolved": 206
+  },
+  "sites_below_molecule_threshold": {
+   "structural_anomaly": 1809,
+   "known": 192,
+   "in_assembly_not_in_catalog": 281,
+   "unresolved": 69,
+   "not_in_assembly_candidate": 81
+  },
+  "flags_of_counted_sites": {
+   "cores_disagree": 214,
+   "boundary_unknown": 2,
+   "size_ge_2500": 2
+  },
+  "sites_with_several_cores": 833,
+  "positions_merged_into_sites": 13900,
+  "not_in_assembly_candidates": {
+   "sites": 1,
+   "positions": 1,
+   "cores": 1,
+   "samples": 1,
+   "by_class": {
+    "not_in_assembly:core_absent": 1
+   }
+  },
+  "negative_control_sites_per_gene": {
+   "genes_by_site_count": {
+    "1": 77
+   },
+   "genes_with_several_sites": []
+  },
+  "unplaceable_contexts_ge_N": {
+   "ambiguous_placement (repeat)": 1068,
+   "no_anchor_or_unplaced": 37
+  },
+  "one_sided_observation_groups": 6033
+ },
+ "candidates_reviewed": {
+  "evidence": {
+   "tested": 1
+  },
+  "structure": {
+   "checked|unresolved_unexplained_orfs": 1
+  }
+ },
+ "jobs": [
+  {
+   "job": "27506992",
+   "name": "read_site_search",
+   "state": "COMPLETED",
+   "elapsed": "00:02:35",
+   "max_rss": "",
+   "node": "n0090.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506992.batch",
+   "name": "batch",
+   "state": "COMPLETED",
+   "elapsed": "00:02:35",
+   "max_rss": "11285436K",
+   "node": "n0090.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506994",
+   "name": "read_site_search",
+   "state": "COMPLETED",
+   "elapsed": "00:00:37",
+   "max_rss": "",
+   "node": "n0090.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506994.batch",
+   "name": "batch",
+   "state": "COMPLETED",
+   "elapsed": "00:00:37",
+   "max_rss": "1026952K",
+   "node": "n0090.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506995",
+   "name": "read_site_search",
+   "state": "COMPLETED",
+   "elapsed": "00:00:26",
+   "max_rss": "",
+   "node": "n0090.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506995.batch",
+   "name": "batch",
+   "state": "COMPLETED",
+   "elapsed": "00:00:26",
+   "max_rss": "539624K",
+   "node": "n0090.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506996",
+   "name": "read_site_search",
+   "state": "COMPLETED",
+   "elapsed": "00:01:26",
+   "max_rss": "",
+   "node": "n0090.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506996.batch",
+   "name": "batch",
+   "state": "COMPLETED",
+   "elapsed": "00:01:26",
+   "max_rss": "978620K",
+   "node": "n0090.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_0",
+   "name": "read_site_search",
+   "state": "COMPLETED",
+   "elapsed": "00:01:19",
+   "max_rss": "",
+   "node": "n0090.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_0.batch",
+   "name": "batch",
+   "state": "COMPLETED",
+   "elapsed": "00:01:19",
+   "max_rss": "1209644K",
+   "node": "n0090.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_1",
+   "name": "read_site_search",
+   "state": "COMPLETED",
+   "elapsed": "00:01:27",
+   "max_rss": "",
+   "node": "n0232.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_1.batch",
+   "name": "batch",
+   "state": "COMPLETED",
+   "elapsed": "00:01:27",
+   "max_rss": "1195624K",
+   "node": "n0232.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_2",
+   "name": "read_site_search",
+   "state": "COMPLETED",
+   "elapsed": "00:02:45",
+   "max_rss": "",
+   "node": "n0233.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_2.batch",
+   "name": "batch",
+   "state": "COMPLETED",
+   "elapsed": "00:02:45",
+   "max_rss": "1529092K",
+   "node": "n0233.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_3",
+   "name": "read_site_search",
+   "state": "COMPLETED",
+   "elapsed": "00:01:46",
+   "max_rss": "",
+   "node": "n0235.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_3.batch",
+   "name": "batch",
+   "state": "COMPLETED",
+   "elapsed": "00:01:46",
+   "max_rss": "1161204K",
+   "node": "n0235.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_4",
+   "name": "read_site_search",
+   "state": "COMPLETED",
+   "elapsed": "00:01:00",
+   "max_rss": "",
+   "node": "n0238.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_4.batch",
+   "name": "batch",
+   "state": "COMPLETED",
+   "elapsed": "00:01:00",
+   "max_rss": "922944K",
+   "node": "n0238.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_5",
+   "name": "read_site_search",
+   "state": "COMPLETED",
+   "elapsed": "00:00:59",
+   "max_rss": "",
+   "node": "n0239.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_5.batch",
+   "name": "batch",
+   "state": "COMPLETED",
+   "elapsed": "00:00:59",
+   "max_rss": "1000064K",
+   "node": "n0239.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_6",
+   "name": "read_site_search",
+   "state": "COMPLETED",
+   "elapsed": "00:02:27",
+   "max_rss": "",
+   "node": "n0241.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_6.batch",
+   "name": "batch",
+   "state": "COMPLETED",
+   "elapsed": "00:02:27",
+   "max_rss": "1574592K",
+   "node": "n0241.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_7",
+   "name": "read_site_search",
+   "state": "COMPLETED",
+   "elapsed": "00:01:56",
+   "max_rss": "",
+   "node": "n0248.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_7.batch",
+   "name": "batch",
+   "state": "COMPLETED",
+   "elapsed": "00:01:56",
+   "max_rss": "1257080K",
+   "node": "n0248.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_8",
+   "name": "read_site_search",
+   "state": "COMPLETED",
+   "elapsed": "00:00:26",
+   "max_rss": "",
+   "node": "n0255.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_8.batch",
+   "name": "batch",
+   "state": "COMPLETED",
+   "elapsed": "00:00:26",
+   "max_rss": "688344K",
+   "node": "n0255.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_9",
+   "name": "read_site_search",
+   "state": "COMPLETED",
+   "elapsed": "00:06:39",
+   "max_rss": "",
+   "node": "n0257.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_9.batch",
+   "name": "batch",
+   "state": "COMPLETED",
+   "elapsed": "00:06:39",
+   "max_rss": "2933848K",
+   "node": "n0257.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_10",
+   "name": "read_site_search",
+   "state": "COMPLETED",
+   "elapsed": "00:04:55",
+   "max_rss": "",
+   "node": "n0260.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_10.batch",
+   "name": "batch",
+   "state": "COMPLETED",
+   "elapsed": "00:04:55",
+   "max_rss": "2706648K",
+   "node": "n0260.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_11",
+   "name": "read_site_search",
+   "state": "COMPLETED",
+   "elapsed": "00:02:24",
+   "max_rss": "",
+   "node": "n0022.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_11.batch",
+   "name": "batch",
+   "state": "COMPLETED",
+   "elapsed": "00:02:24",
+   "max_rss": "1870140K",
+   "node": "n0022.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_12",
+   "name": "read_site_search",
+   "state": "COMPLETED",
+   "elapsed": "00:01:20",
+   "max_rss": "",
+   "node": "n0054.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_12.batch",
+   "name": "batch",
+   "state": "COMPLETED",
+   "elapsed": "00:01:20",
+   "max_rss": "1190708K",
+   "node": "n0054.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_13",
+   "name": "read_site_search",
+   "state": "COMPLETED",
+   "elapsed": "00:01:10",
+   "max_rss": "",
+   "node": "n0302.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_13.batch",
+   "name": "batch",
+   "state": "COMPLETED",
+   "elapsed": "00:01:10",
+   "max_rss": "1131300K",
+   "node": "n0302.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_14",
+   "name": "read_site_search",
+   "state": "COMPLETED",
+   "elapsed": "00:01:20",
+   "max_rss": "",
+   "node": "n0278.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_14.batch",
+   "name": "batch",
+   "state": "COMPLETED",
+   "elapsed": "00:01:20",
+   "max_rss": "970108K",
+   "node": "n0278.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_15",
+   "name": "read_site_search",
+   "state": "COMPLETED",
+   "elapsed": "00:10:13",
+   "max_rss": "",
+   "node": "n0279.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_15.batch",
+   "name": "batch",
+   "state": "COMPLETED",
+   "elapsed": "00:10:13",
+   "max_rss": "5212624K",
+   "node": "n0279.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_16",
+   "name": "read_site_search",
+   "state": "COMPLETED",
+   "elapsed": "00:08:24",
+   "max_rss": "",
+   "node": "n0280.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_16.batch",
+   "name": "batch",
+   "state": "COMPLETED",
+   "elapsed": "00:08:24",
+   "max_rss": "3952840K",
+   "node": "n0280.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_17",
+   "name": "read_site_search",
+   "state": "COMPLETED",
+   "elapsed": "00:02:54",
+   "max_rss": "",
+   "node": "n0284.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_17.batch",
+   "name": "batch",
+   "state": "COMPLETED",
+   "elapsed": "00:02:54",
+   "max_rss": "1703168K",
+   "node": "n0284.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_18",
+   "name": "read_site_search",
+   "state": "COMPLETED",
+   "elapsed": "00:01:17",
+   "max_rss": "",
+   "node": "n0216.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_18.batch",
+   "name": "batch",
+   "state": "COMPLETED",
+   "elapsed": "00:01:17",
+   "max_rss": "971292K",
+   "node": "n0216.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_19",
+   "name": "read_site_search",
+   "state": "COMPLETED",
+   "elapsed": "00:01:26",
+   "max_rss": "",
+   "node": "n0217.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_19.batch",
+   "name": "batch",
+   "state": "COMPLETED",
+   "elapsed": "00:01:26",
+   "max_rss": "960488K",
+   "node": "n0217.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_20",
+   "name": "read_site_search",
+   "state": "COMPLETED",
+   "elapsed": "00:04:28",
+   "max_rss": "",
+   "node": "n0221.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_20.batch",
+   "name": "batch",
+   "state": "COMPLETED",
+   "elapsed": "00:04:28",
+   "max_rss": "1782828K",
+   "node": "n0221.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_21",
+   "name": "read_site_search",
+   "state": "COMPLETED",
+   "elapsed": "00:02:25",
+   "max_rss": "",
+   "node": "n0222.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_21.batch",
+   "name": "batch",
+   "state": "COMPLETED",
+   "elapsed": "00:02:25",
+   "max_rss": "1477400K",
+   "node": "n0222.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_22",
+   "name": "read_site_search",
+   "state": "COMPLETED",
+   "elapsed": "00:06:31",
+   "max_rss": "",
+   "node": "n0223.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_22.batch",
+   "name": "batch",
+   "state": "COMPLETED",
+   "elapsed": "00:06:31",
+   "max_rss": "2459492K",
+   "node": "n0223.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_23",
+   "name": "read_site_search",
+   "state": "COMPLETED",
+   "elapsed": "00:03:03",
+   "max_rss": "",
+   "node": "n0224.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_23.batch",
+   "name": "batch",
+   "state": "COMPLETED",
+   "elapsed": "00:03:03",
+   "max_rss": "1769812K",
+   "node": "n0224.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_24",
+   "name": "read_site_search",
+   "state": "COMPLETED",
+   "elapsed": "00:02:05",
+   "max_rss": "",
+   "node": "n0225.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_24.batch",
+   "name": "batch",
+   "state": "COMPLETED",
+   "elapsed": "00:02:05",
+   "max_rss": "1310896K",
+   "node": "n0225.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_25",
+   "name": "read_site_search",
+   "state": "COMPLETED",
+   "elapsed": "00:01:13",
+   "max_rss": "",
+   "node": "n0255.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_25.batch",
+   "name": "batch",
+   "state": "COMPLETED",
+   "elapsed": "00:01:13",
+   "max_rss": "859144K",
+   "node": "n0255.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_26",
+   "name": "read_site_search",
+   "state": "COMPLETED",
+   "elapsed": "00:02:25",
+   "max_rss": "",
+   "node": "n0238.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_26.batch",
+   "name": "batch",
+   "state": "COMPLETED",
+   "elapsed": "00:02:25",
+   "max_rss": "1199896K",
+   "node": "n0238.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_27",
+   "name": "read_site_search",
+   "state": "COMPLETED",
+   "elapsed": "00:01:35",
+   "max_rss": "",
+   "node": "n0239.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_27.batch",
+   "name": "batch",
+   "state": "COMPLETED",
+   "elapsed": "00:01:35",
+   "max_rss": "994708K",
+   "node": "n0239.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_28",
+   "name": "read_site_search",
+   "state": "COMPLETED",
+   "elapsed": "00:04:19",
+   "max_rss": "",
+   "node": "n0090.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_28.batch",
+   "name": "batch",
+   "state": "COMPLETED",
+   "elapsed": "00:04:19",
+   "max_rss": "2565732K",
+   "node": "n0090.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_29",
+   "name": "read_site_search",
+   "state": "COMPLETED",
+   "elapsed": "00:01:35",
+   "max_rss": "",
+   "node": "n0232.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_29.batch",
+   "name": "batch",
+   "state": "COMPLETED",
+   "elapsed": "00:01:35",
+   "max_rss": "991020K",
+   "node": "n0232.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_30",
+   "name": "read_site_search",
+   "state": "COMPLETED",
+   "elapsed": "00:04:15",
+   "max_rss": "",
+   "node": "n0054.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_30.batch",
+   "name": "batch",
+   "state": "COMPLETED",
+   "elapsed": "00:04:15",
+   "max_rss": "2403936K",
+   "node": "n0054.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_31",
+   "name": "read_site_search",
+   "state": "COMPLETED",
+   "elapsed": "00:02:30",
+   "max_rss": "",
+   "node": "n0216.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_31.batch",
+   "name": "batch",
+   "state": "COMPLETED",
+   "elapsed": "00:02:30",
+   "max_rss": "1339456K",
+   "node": "n0216.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_32",
+   "name": "read_site_search",
+   "state": "COMPLETED",
+   "elapsed": "00:00:48",
+   "max_rss": "",
+   "node": "n0302.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_32.batch",
+   "name": "batch",
+   "state": "COMPLETED",
+   "elapsed": "00:00:48",
+   "max_rss": "867676K",
+   "node": "n0302.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_33",
+   "name": "read_site_search",
+   "state": "COMPLETED",
+   "elapsed": "00:06:47",
+   "max_rss": "",
+   "node": "n0278.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_33.batch",
+   "name": "batch",
+   "state": "COMPLETED",
+   "elapsed": "00:06:47",
+   "max_rss": "2722000K",
+   "node": "n0278.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_34",
+   "name": "read_site_search",
+   "state": "COMPLETED",
+   "elapsed": "00:02:28",
+   "max_rss": "",
+   "node": "n0235.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_34.batch",
+   "name": "batch",
+   "state": "COMPLETED",
+   "elapsed": "00:02:28",
+   "max_rss": "1292896K",
+   "node": "n0235.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_35",
+   "name": "read_site_search",
+   "state": "COMPLETED",
+   "elapsed": "00:00:56",
+   "max_rss": "",
+   "node": "n0255.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_35.batch",
+   "name": "batch",
+   "state": "COMPLETED",
+   "elapsed": "00:00:56",
+   "max_rss": "735216K",
+   "node": "n0255.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_36",
+   "name": "read_site_search",
+   "state": "COMPLETED",
+   "elapsed": "00:01:03",
+   "max_rss": "",
+   "node": "n0217.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_36.batch",
+   "name": "batch",
+   "state": "COMPLETED",
+   "elapsed": "00:01:03",
+   "max_rss": "819168K",
+   "node": "n0217.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_37",
+   "name": "read_site_search",
+   "state": "COMPLETED",
+   "elapsed": "00:01:36",
+   "max_rss": "",
+   "node": "n0248.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_37.batch",
+   "name": "batch",
+   "state": "COMPLETED",
+   "elapsed": "00:01:36",
+   "max_rss": "930784K",
+   "node": "n0248.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_38",
+   "name": "read_site_search",
+   "state": "COMPLETED",
+   "elapsed": "00:07:25",
+   "max_rss": "",
+   "node": "n0241.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_38.batch",
+   "name": "batch",
+   "state": "COMPLETED",
+   "elapsed": "00:07:25",
+   "max_rss": "2848856K",
+   "node": "n0241.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_39",
+   "name": "read_site_search",
+   "state": "COMPLETED",
+   "elapsed": "00:02:52",
+   "max_rss": "",
+   "node": "n0022.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506993_39.batch",
+   "name": "batch",
+   "state": "COMPLETED",
+   "elapsed": "00:02:52",
+   "max_rss": "1823660K",
+   "node": "n0022.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506997",
+   "name": "read_site_search",
+   "state": "COMPLETED",
+   "elapsed": "00:00:06",
+   "max_rss": "",
+   "node": "n0090.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506997.batch",
+   "name": "batch",
+   "state": "COMPLETED",
+   "elapsed": "00:00:06",
+   "max_rss": "239916K",
+   "node": "n0090.lr6",
+   "exit": "0:0"
+  }
+ ],
+ "failed_jobs": [],
+ "max_rss_gb": 11.29,
+ "disk_bytes": {
+  "work": 1768211590,
+  "out": 7492967
+ }
+}

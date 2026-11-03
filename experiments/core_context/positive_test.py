@@ -56,6 +56,9 @@ LEN_BINS = ((0, 1000, '<1000'), (1000, 1500, '1000-1499'), (1500, 10 ** 9, '>=15
 OCC = u.PROJ / 'core_context' / 'scale_comamonadaceae_v0.1' / 'review' / 's6' / 'b1-2-3'
 
 
+EDIT_NEAR = 2500  # an away-from-cut call with one end this close to a cut is attributed to the edit
+
+
 def len_bin(n):
     return next(name for lo, hi, name in LEN_BINS if lo <= n < hi)
 
@@ -249,10 +252,41 @@ def cmd_score(a):
     pc.write_tsv(a.out / 'positive_test_scores.tsv', out, sorted({k for e in out for k in e},
                                                                     key=lambda k: list(out[0]).index(k)
                                                                     if k in out[0] else 999))
-    realnia = {(r['sample'], r['left_contig'], int(r['left_pos']) // rs.TOL) for r in real
-               if r['cls'].startswith('not_in_assembly') and r['left_pos']}
+    realnia = defaultdict(list)
+    for r in real:
+        if r['cls'].startswith('not_in_assembly') and r['left_pos']:
+            realnia[(r['sample'], r['left_contig'])].append(int(r['left_pos']))
+    cuts_by = defaultdict(list)
+    for t in truth:
+        cuts_by[(t['sample'], t['contig'])].append((int(t['edited_junction']), int(t['hi']) - int(t['lo'])))
+
+    def original(s, c, p):
+        """An edited-assembly position back on the original assembly: add the length of every cut before it."""
+        return p + sum(n for j, n in cuts_by[(s, c)] if j <= p)
     away = [r for r in rows if id(r) not in near_cut and r['cls'].startswith('not_in_assembly')
             and int(r['molecules']) >= rs.MAIN_COUNT]
+    away_real = [r for r in away if r['left_pos'] and any(
+        abs(original(r['sample'], r['left_contig'], int(r['left_pos'])) - q) <= rs.TOL
+        for q in realnia[(r['sample'], r['left_contig'])])]
+    def cut_dist(s, c, p):
+        """Distance from an edited-assembly position to the nearest cut junction on that contig ('' if none)."""
+        d = [abs(p - j) for j, _ in cuts_by[(s, c)]]
+        return min(d) if d and p else ''
+    away_rows = []
+    for r in away:
+        dl = cut_dist(r['sample'], r['left_contig'], int(r['left_pos'] or 0))
+        dr = cut_dist(r['sample'], r['right_contig'], int(r['right_pos'] or 0))
+        near = [d for d in (dl, dr) if d != '']
+        real_ = any(r is x for x in away_real)
+        away_rows.append(dict(
+            sample=r['sample'], core_key=r['core_key'], cls=r['cls'], molecules=r['molecules'],
+            left_contig=r['left_contig'], left_pos=r['left_pos'], right_contig=r['right_contig'],
+            right_pos=r['right_pos'],
+            left_pos_original=original(r['sample'], r['left_contig'], int(r['left_pos'])) if r['left_pos'] else '',
+            left_cut_distance=dl, right_cut_distance=dr, also_in_real_run=real_,
+            origin='also_in_real_run' if real_ else
+            'one_end_within_%d_of_a_cut' % EDIT_NEAR if near and min(near) <= EDIT_NEAR else 'unexplained'))
+    pc.write_tsv(a.out / 'positive_test_away_from_cuts.tsv', away_rows, list(away_rows[0]) if away_rows else ['sample'])
 
     def strata(key):
         c = defaultdict(Counter)
@@ -281,8 +315,7 @@ def cmd_score(a):
             '0-10' if abs(e['consensus_len_error']) <= 10 else '11-50' if abs(e['consensus_len_error']) <= 50 else '>50'
             for e in det if e.get('consensus_len_error', '') != '')),
         not_in_assembly_away_from_cuts=dict(
-            total=len(away), also_in_real_run=sum((r['sample'], r['left_contig'], int(r['left_pos']) // rs.TOL)
-                                                 in realnia for r in away if r['left_pos'])))
+            total=len(away), origin=dict(Counter(r['origin'] for r in away_rows))))
     (a.out / 'positive_test_score.json').write_text(json.dumps(summ, indent=1) + '\n')
     print(json.dumps(summ, indent=1))
 
