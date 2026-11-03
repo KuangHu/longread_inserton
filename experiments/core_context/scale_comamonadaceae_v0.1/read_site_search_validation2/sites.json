@@ -1,0 +1,39 @@
+{
+ "version": "read_site_search_v0.3.2",
+ "main": {
+  "flank": 1000,
+  "molecules": 3
+ },
+ "sites_by_category": {
+  "known": 645,
+  "in_assembly_not_in_catalog": 94,
+  "not_in_assembly_candidate": 0,
+  "structural_anomaly": 1,
+  "unresolved": 28
+ },
+ "sites_below_molecule_threshold": {
+  "known": 21,
+  "not_in_assembly_candidate": 11,
+  "structural_anomaly": 20,
+  "in_assembly_not_in_catalog": 43,
+  "unresolved": 22
+ },
+ "flags_of_counted_sites": {
+  "boundary_unknown": 3,
+  "cores_disagree": 12
+ },
+ "sites_with_several_cores": 70,
+ "positions_merged_into_sites": 1524,
+ "not_in_assembly_candidates": {
+  "sites": 0,
+  "positions": 0,
+  "cores": 0,
+  "samples": 0,
+  "by_class": {}
+ },
+ "unplaceable_contexts_ge_N": {
+  "ambiguous_placement (repeat)": 130,
+  "no_anchor_or_unplaced": 2
+ },
+ "one_sided_observation_groups": 682
+}
