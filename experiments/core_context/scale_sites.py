@@ -134,6 +134,27 @@ def site_row(sid, s, ps):
                 catalog=';'.join(sorted({o for r in ps for o in r['catalog'].split(';') if o})))
 
 
+def neg_sites(rows):
+    """Negative-control genes (single-copy by annotation): physical sites (>= MAIN_COUNT molecules) per gene, after
+    the same merge as for cores, so one locus split into two position clusters counts once; more than one site
+    is listed: one_locus_junction_differs_gt_TOL (the sites' intervals overlap: one locus whose clusters disagree on
+    a junction by more than TOL) or separate_loci (another copy elsewhere)."""
+    per, extra = Counter(), []
+    neg = [r for r in rows if r['kind'] == 'neg' and int(r['molecules']) >= rs.MAIN_COUNT
+           and (category(r['cls']) or r['cls'] == 'shifted_known_position')]
+    for key in sorted({(r['sample'], r['core_key']) for r in neg}):
+        g = group_sites([r for r in neg if (r['sample'], r['core_key']) == key])
+        g = [x for x in g if any(category(r['cls']) for r in x)]
+        per[len(g)] += 1
+        if len(g) > 1:
+            iv = [(x[0]['left_contig'], min(int(x[0]['left_pos']), int(x[0]['right_pos'])),
+                   max(int(x[0]['left_pos']), int(x[0]['right_pos']))) for x in g]
+            same = all(c == iv[0][0] and lo < iv[0][2] and hi > iv[0][1] for c, lo, hi in iv)
+            extra.append(dict(sample=key[0], gene=key[1], kind='one_locus_junction_differs_gt_TOL' if same
+                              else 'separate_loci', sites=['%s:%d-%d' % v for v in iv]))
+    return dict(genes_by_site_count={str(k): v for k, v in sorted(per.items())}, genes_with_several_sites=extra)
+
+
 def cmd_sites(a):
     rows = [r for r in pc.read_tsv(a.out / 'positions.tsv.gz') if int(r['flank']) == rs.MAIN_FLANK]
     core = [r for r in rows if r['kind'] == 'core']
@@ -173,6 +194,7 @@ def cmd_sites(a):
                                         cores=len({r['core_key'] for r in new_pos}),
                                         samples=len({x['sample'] for x in new}),
                                         by_class=dict(Counter(r['cls'] for r in new_pos))),
+        negative_control_sites_per_gene=neg_sites(rows),
         unplaceable_contexts_ge_N=dict(unpl),
         one_sided_observation_groups=sum(r['cls'] == 'one_sided' for r in core))
     (a.out / 'sites.json').write_text(json.dumps(summ, indent=1) + '\n')

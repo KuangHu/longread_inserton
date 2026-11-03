@@ -31,6 +31,12 @@
   "samples": 0,
   "by_class": {}
  },
+ "negative_control_sites_per_gene": {
+  "genes_by_site_count": {
+   "1": 16
+  },
+  "genes_with_several_sites": []
+ },
  "unplaceable_contexts_ge_N": {
   "ambiguous_placement (repeat)": 130,
   "no_anchor_or_unplaced": 2
