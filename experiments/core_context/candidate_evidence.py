@@ -167,7 +167,7 @@ def run_sample(s, cands, work, threads):
         lo, hi = min(c['key'][3], c['key'][4]), max(c['key'][3], c['key'][4])
         win[c['key'][2]].append((lo - rc3.FLANK, hi + rc3.FLANK, c['cid']))
     near, gl = defaultdict(set), defaultdict(list)  # cid -> reads near; read -> genome PAF lines
-    for paf in sorted((u.PROJ / 'core_context' / 'readmap' / s).glob('*.paf.gz')):
+    for paf in sorted(rs.readmap_dir(s).glob('*.paf.gz')):
         with gzip.open(str(paf), 'rt') as h:
             for line in h:
                 f = line.split('\t', 9)
@@ -177,7 +177,7 @@ def run_sample(s, cands, work, threads):
     for cid, os_ in cores.items():
         near[cid] |= {o['read'] for o in os_}
     names = set().union(*near.values())
-    for paf in sorted((u.PROJ / 'core_context' / 'readmap' / s).glob('*.paf.gz')):
+    for paf in sorted(rs.readmap_dir(s).glob('*.paf.gz')):
         with gzip.open(str(paf), 'rt') as h:
             for line in h:
                 if line.split('\t', 1)[0] in names:

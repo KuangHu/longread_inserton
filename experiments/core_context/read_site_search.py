@@ -151,6 +151,14 @@ def manifest():
     return m
 
 
+def readmap_dir(s):
+    """Whole-assembly read alignments of a sample (ucd_readcheck genome stage); for an edited assembly, the same
+    alignment against the edited assembly (positive_test.py readmap)."""
+    if EDITED and (EDITED / 'manifest.tsv').exists() and s in {r['sample'] for r in pc.read_tsv(EDITED / 'manifest.tsv')}:
+        return EDITED / 'readmap' / s
+    return u.PROJ / 'core_context' / 'readmap' / s
+
+
 def genes_path(s):
     if EDITED and (EDITED / 'genes' / ('%s.tsv.gz' % s)).exists():
         return EDITED / 'genes' / ('%s.tsv.gz' % s)
@@ -584,7 +592,7 @@ def empty_sites(sample, positions, runs, hit_recs):
     if not sites:
         return
     per = defaultdict(lambda: defaultdict(list))  # site index -> read -> spanning-candidate alignments
-    for paf in sorted((u.PROJ / 'core_context' / 'readmap' / sample).glob('*.paf.gz')):
+    for paf in sorted(readmap_dir(sample).glob('*.paf.gz')):
         for g in paf_rows(paf):
             for i, r in enumerate(sites):
                 lo, hi = min(r['start'], r['end']), max(r['start'], r['end'])

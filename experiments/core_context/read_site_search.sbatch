@@ -14,6 +14,7 @@
 #   combine  one task
 #   evidence one task: strict P/A per molecule for the candidate structures (candidate_evidence.py)
 #   structure one task: consensus insertion, core coverage, genes, assembled copies (candidate_structure.py)
+#   readmap  --array: positive test only, one edited sample's reads -> its edited assembly (before panel)
 #   sites    one task: physical sites across core seeds (scale_sites.py); acceptance/archive/cleanup run after it
 # Usage: sbatch [--array=..] [--export=ALL,OUT=<repo dir>,WORK=<scratch dir>] read_site_search.sbatch <stage>
 set -euo pipefail
@@ -35,5 +36,6 @@ combine) python read_site_search.py combine --out $OUT --work $WORK ;;
 evidence) python candidate_evidence.py --threads $SLURM_CPUS_PER_TASK --out $OUT --work $WORK ;;
 structure) python candidate_structure.py --threads $SLURM_CPUS_PER_TASK --out $OUT --work $WORK ;;
 sites)   python scale_sites.py sites --out $OUT --work $WORK ;;
+readmap) python positive_test.py readmap --samples $S --threads $SLURM_CPUS_PER_TASK --work $WORK ;;
 esac
 echo "[$(date -Is)] done"
