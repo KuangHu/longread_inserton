@@ -1,5 +1,5 @@
 {
- "version": "read_site_search_v0.3.1",
+ "version": "read_site_search_v0.3.2",
  "samples": [
   "SAMN51281039",
   "SAMN30525383",
@@ -63,10 +63,10 @@
     "negative_control|not_round5_supported": "17/17"
    },
    "not_in_assembly_by_boundary_and_size": {
-    "not_in_assembly:core_absent|extension_consistent|le_2500": 3,
-    "not_in_assembly:junction|extension_consistent|le_2500": 20,
-    "not_in_assembly:junction|no_extension_detected|le_2500": 3,
-    "not_in_assembly:junction|extension_consistent|gt_2500": 3
+    "not_in_assembly:core_absent|extension_consistent|lt_2500": 3,
+    "not_in_assembly:junction|extension_consistent|lt_2500": 20,
+    "not_in_assembly:junction|no_extension_detected|lt_2500": 3,
+    "not_in_assembly:junction|extension_consistent|ge_2500": 3
    },
    "positions_with_extra_sequence": {
     "homolog_not_in_catalog|no_extension_detected": 226,
@@ -326,11 +326,11 @@
     "negative_control|not_round5_supported": "17/17"
    },
    "not_in_assembly_by_boundary_and_size": {
-    "not_in_assembly:junction|extension_consistent|le_2500": 22,
-    "not_in_assembly:core_absent|extension_consistent|le_2500": 2,
-    "not_in_assembly:junction|extension_consistent|gt_2500": 2,
-    "not_in_assembly:core_absent|extension_consistent|gt_2500": 1,
-    "not_in_assembly:junction|no_extension_detected|le_2500": 3
+    "not_in_assembly:junction|extension_consistent|lt_2500": 22,
+    "not_in_assembly:core_absent|extension_consistent|lt_2500": 2,
+    "not_in_assembly:junction|extension_consistent|ge_2500": 2,
+    "not_in_assembly:core_absent|extension_consistent|ge_2500": 1,
+    "not_in_assembly:junction|no_extension_detected|lt_2500": 3
    },
    "positions_with_extra_sequence": {
     "known_catalog_position_other_core|no_extension_detected": 419,
@@ -582,9 +582,9 @@
     "negative_control|not_round5_supported": "17/17"
    },
    "not_in_assembly_by_boundary_and_size": {
-    "not_in_assembly:junction|extension_consistent|le_2500": 33,
-    "not_in_assembly:core_absent|extension_consistent|le_2500": 2,
-    "not_in_assembly:junction|no_extension_detected|le_2500": 2
+    "not_in_assembly:junction|extension_consistent|lt_2500": 33,
+    "not_in_assembly:core_absent|extension_consistent|lt_2500": 2,
+    "not_in_assembly:junction|no_extension_detected|lt_2500": 2
    },
    "positions_with_extra_sequence": {
     "known_catalog_position_other_core|no_extension_detected": 415,

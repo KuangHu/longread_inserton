@@ -1,5 +1,5 @@
 {
- "version": "read_site_search_v0.3.1",
+ "version": "read_site_search_v0.3.2",
  "samples": [
   "SAMN51658617",
   "SAMN49042133",
@@ -80,10 +80,10 @@
     "negative_control|not_round5_supported": "30/30"
    },
    "not_in_assembly_by_boundary_and_size": {
-    "not_in_assembly:junction|no_extension_detected|le_2500": 65,
-    "not_in_assembly:junction|extension_consistent|le_2500": 174,
-    "not_in_assembly:core_absent|extension_consistent|le_2500": 24,
-    "not_in_assembly:other_sequence|no_extension_detected|le_2500": 2
+    "not_in_assembly:junction|no_extension_detected|lt_2500": 65,
+    "not_in_assembly:junction|extension_consistent|lt_2500": 174,
+    "not_in_assembly:core_absent|extension_consistent|lt_2500": 24,
+    "not_in_assembly:other_sequence|no_extension_detected|lt_2500": 2
    },
    "positions_with_extra_sequence": {
     "known_catalog_position_other_core|no_extension_detected": 654,
@@ -357,9 +357,9 @@
     "negative_control|not_round5_supported": "30/30"
    },
    "not_in_assembly_by_boundary_and_size": {
-    "not_in_assembly:junction|extension_consistent|le_2500": 5,
-    "not_in_assembly:junction|no_extension_detected|le_2500": 2,
-    "not_in_assembly:core_absent|extension_consistent|le_2500": 5
+    "not_in_assembly:junction|extension_consistent|lt_2500": 5,
+    "not_in_assembly:junction|no_extension_detected|lt_2500": 2,
+    "not_in_assembly:core_absent|extension_consistent|lt_2500": 5
    },
    "positions_with_extra_sequence": {
     "known_catalog_position_other_core|no_extension_detected": 619,
@@ -465,7 +465,7 @@
     "negative_control|not_round5_supported": "30/30"
    },
    "not_in_assembly_by_boundary_and_size": {
-    "not_in_assembly:core_absent|extension_consistent|le_2500": 5
+    "not_in_assembly:core_absent|extension_consistent|lt_2500": 5
    },
    "positions_with_extra_sequence": {
     "known_catalog_position_other_core|no_extension_detected": 604,
@@ -541,7 +541,7 @@
     "negative_control|not_round5_supported": "30/30"
    },
    "not_in_assembly_by_boundary_and_size": {
-    "not_in_assembly:core_absent|extension_consistent|le_2500": 5
+    "not_in_assembly:core_absent|extension_consistent|lt_2500": 5
    },
    "positions_with_extra_sequence": {
     "known_catalog_position_other_core|no_extension_detected": 592,
@@ -621,11 +621,11 @@
     "negative_control|not_round5_supported": "30/30"
    },
    "not_in_assembly_by_boundary_and_size": {
-    "not_in_assembly:junction|no_extension_detected|le_2500": 56,
-    "not_in_assembly:junction|extension_consistent|le_2500": 285,
-    "not_in_assembly:junction|unknown|le_2500": 3,
-    "not_in_assembly:junction|extension_consistent|gt_2500": 8,
-    "not_in_assembly:core_absent|extension_consistent|le_2500": 19
+    "not_in_assembly:junction|no_extension_detected|lt_2500": 56,
+    "not_in_assembly:junction|extension_consistent|lt_2500": 285,
+    "not_in_assembly:junction|unknown|lt_2500": 3,
+    "not_in_assembly:junction|extension_consistent|ge_2500": 8,
+    "not_in_assembly:core_absent|extension_consistent|lt_2500": 19
    },
    "positions_with_extra_sequence": {
     "known_catalog_position_other_core|no_extension_detected": 648,
@@ -878,10 +878,10 @@
     "negative_control|not_round5_supported": "30/30"
    },
    "not_in_assembly_by_boundary_and_size": {
-    "not_in_assembly:junction|unknown|le_2500": 3,
-    "not_in_assembly:junction|extension_consistent|le_2500": 11,
-    "not_in_assembly:junction|no_extension_detected|le_2500": 2,
-    "not_in_assembly:core_absent|extension_consistent|le_2500": 5
+    "not_in_assembly:junction|unknown|lt_2500": 3,
+    "not_in_assembly:junction|extension_consistent|lt_2500": 11,
+    "not_in_assembly:junction|no_extension_detected|lt_2500": 2,
+    "not_in_assembly:core_absent|extension_consistent|lt_2500": 5
    },
    "positions_with_extra_sequence": {
     "known_catalog_position_other_core|no_extension_detected": 614,
@@ -986,8 +986,8 @@
     "negative_control|not_round5_supported": "30/30"
    },
    "not_in_assembly_by_boundary_and_size": {
-    "not_in_assembly:core_absent|extension_consistent|le_2500": 5,
-    "not_in_assembly:junction|extension_consistent|le_2500": 1
+    "not_in_assembly:core_absent|extension_consistent|lt_2500": 5,
+    "not_in_assembly:junction|extension_consistent|lt_2500": 1
    },
    "positions_with_extra_sequence": {
     "known_catalog_position_other_core|no_extension_detected": 600,
@@ -1064,8 +1064,8 @@
     "negative_control|not_round5_supported": "29/30"
    },
    "not_in_assembly_by_boundary_and_size": {
-    "not_in_assembly:core_absent|extension_consistent|le_2500": 5,
-    "not_in_assembly:junction|extension_consistent|le_2500": 1
+    "not_in_assembly:core_absent|extension_consistent|lt_2500": 5,
+    "not_in_assembly:junction|extension_consistent|lt_2500": 1
    },
    "positions_with_extra_sequence": {
     "known_catalog_position_other_core|no_extension_detected": 587,
@@ -1144,11 +1144,11 @@
     "negative_control|not_round5_supported": "28/30"
    },
    "not_in_assembly_by_boundary_and_size": {
-    "not_in_assembly:junction|extension_consistent|le_2500": 304,
-    "not_in_assembly:junction|no_extension_detected|le_2500": 38,
-    "not_in_assembly:junction|extension_consistent|gt_2500": 6,
-    "not_in_assembly:junction|unknown|le_2500": 2,
-    "not_in_assembly:core_absent|extension_consistent|le_2500": 17
+    "not_in_assembly:junction|extension_consistent|lt_2500": 304,
+    "not_in_assembly:junction|no_extension_detected|lt_2500": 38,
+    "not_in_assembly:junction|extension_consistent|ge_2500": 6,
+    "not_in_assembly:junction|unknown|lt_2500": 2,
+    "not_in_assembly:core_absent|extension_consistent|lt_2500": 17
    },
    "positions_with_extra_sequence": {
     "known_catalog_position_other_core|no_extension_detected": 648,
@@ -1430,10 +1430,10 @@
     "negative_control|not_round5_supported": "28/30"
    },
    "not_in_assembly_by_boundary_and_size": {
-    "not_in_assembly:junction|extension_consistent|le_2500": 9,
-    "not_in_assembly:junction|no_extension_detected|le_2500": 2,
-    "not_in_assembly:junction|unknown|le_2500": 2,
-    "not_in_assembly:core_absent|extension_consistent|le_2500": 5
+    "not_in_assembly:junction|extension_consistent|lt_2500": 9,
+    "not_in_assembly:junction|no_extension_detected|lt_2500": 2,
+    "not_in_assembly:junction|unknown|lt_2500": 2,
+    "not_in_assembly:core_absent|extension_consistent|lt_2500": 5
    },
    "positions_with_extra_sequence": {
     "known_catalog_position_other_core|no_extension_detected": 617,
@@ -1541,8 +1541,8 @@
     "negative_control|not_round5_supported": "28/30"
    },
    "not_in_assembly_by_boundary_and_size": {
-    "not_in_assembly:core_absent|extension_consistent|le_2500": 5,
-    "not_in_assembly:junction|extension_consistent|le_2500": 1
+    "not_in_assembly:core_absent|extension_consistent|lt_2500": 5,
+    "not_in_assembly:junction|extension_consistent|lt_2500": 1
    },
    "positions_with_extra_sequence": {
     "known_catalog_position_other_core|no_extension_detected": 599,
@@ -1621,8 +1621,8 @@
     "negative_control|not_round5_supported": "27/30"
    },
    "not_in_assembly_by_boundary_and_size": {
-    "not_in_assembly:core_absent|extension_consistent|le_2500": 5,
-    "not_in_assembly:junction|extension_consistent|le_2500": 1
+    "not_in_assembly:core_absent|extension_consistent|lt_2500": 5,
+    "not_in_assembly:junction|extension_consistent|lt_2500": 1
    },
    "positions_with_extra_sequence": {
     "known_catalog_position_other_core|no_extension_detected": 585,
