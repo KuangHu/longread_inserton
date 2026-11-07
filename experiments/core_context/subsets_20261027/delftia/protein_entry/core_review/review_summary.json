@@ -1,0 +1,171 @@
+{
+  "version": "core_context_review_v0.4",
+  "subset": "delftia",
+  "evidence_source": "assembly_only",
+  "scope": "target_lt2500",
+  "parameters": {
+    "window_bp": 3000,
+    "chain_gap_bp": 50,
+    "end_margin_bp": 5,
+    "spread_bp": 20,
+    "max_scan": 10,
+    "K": 3,
+    "mobile_hints": [
+      "integrase_recombinase_resolvase",
+      "phage_like",
+      "transposase_or_IS"
+    ],
+    "blastn_task": "blastn",
+    "evalue": 1e-05
+  },
+  "blast_version": "blastn: 2.17.0+",
+  "site_groups_computed": false,
+  "production_ready": false,
+  "structures": {
+    "single_gene": {
+      "cores": 79,
+      "cores_by_status": {
+        "cross_assembly_host_different": 67,
+        "within_assembly_host_different_only": 12
+      },
+      "cores_with_cross_assembly_different_pair": 67,
+      "cores_with_within_assembly_different_pair": 20,
+      "cores_within_assembly_only": 12,
+      "different_pairs": {
+        "within_assembly": 215,
+        "cross_assembly": 541
+      },
+      "host_relation_of_different_pairs": {
+        "cross:different_context_candidate": 533,
+        "cross:one_side_shared_unresolved": 8,
+        "within:different_context_candidate": 215
+      },
+      "pairs_identical_protein": 272,
+      "pairs_protein_identity_lt95": 202,
+      "pairs_identical_core_dna": 167,
+      "pairs_without_core_dna_hit": 0,
+      "cross_pairs_without_ani": 0,
+      "cores_by_cross_median_core_dna_minus_ani": {
+        "1_to_5": 26,
+        "gt_5": 3,
+        "le_1": 38,
+        "no_cross_pair_with_ani": 12
+      },
+      "occurrences": 374,
+      "occurrences_boundary_resolved": 214,
+      "occurrences_with_partner_end_in_chain_gap": 0,
+      "pair_end_cover": {
+        "up": {
+          "covered": 624,
+          "covered_at_chain_end": 45,
+          "not_reached": 87
+        },
+        "down": {
+          "covered": 623,
+          "not_reached": 102,
+          "covered_at_chain_end": 31
+        }
+      },
+      "cores_by_copy_pattern": {
+        "same_count_where_present": 49,
+        "same_count_in_all_assemblies": 20,
+        "count_varies": 10
+      },
+      "occurrences_with_partner_not_covering_an_end": 121,
+      "occurrences_side_status": {
+        "up": {
+          "resolved": 270,
+          "inconsistent_between_partners": 35,
+          "end_not_covered": 56,
+          "end_not_covered_by_some_partners": 13
+        },
+        "down": {
+          "reaches_window_or_contig_end": 3,
+          "resolved": 257,
+          "end_not_covered_by_some_partners": 22,
+          "end_not_covered": 69,
+          "inconsistent_between_partners": 23
+        }
+      },
+      "resolved_estimated_lt2500": 214,
+      "resolved_estimated_ge2500": 0,
+      "resolved_extension_total_range": "2..1804",
+      "occurrences_near_mobile_neighbour": 94
+    },
+    "two_gene": {
+      "cores": 27,
+      "cores_by_status": {
+        "cross_assembly_host_different": 26,
+        "host_context_unresolved": 1
+      },
+      "cores_with_cross_assembly_different_pair": 26,
+      "cores_with_within_assembly_different_pair": 2,
+      "cores_within_assembly_only": 1,
+      "different_pairs": {
+        "within_assembly": 7,
+        "cross_assembly": 92
+      },
+      "host_relation_of_different_pairs": {
+        "cross:different_context_candidate": 92,
+        "within:different_context_candidate": 6,
+        "within:one_side_shared_unresolved": 1
+      },
+      "pairs_identical_protein": 2,
+      "pairs_protein_identity_lt95": 50,
+      "pairs_identical_core_dna": 1,
+      "pairs_without_core_dna_hit": 0,
+      "cross_pairs_without_ani": 0,
+      "cores_by_cross_median_core_dna_minus_ani": {
+        "le_1": 19,
+        "1_to_5": 7,
+        "no_cross_pair_with_ani": 1
+      },
+      "occurrences": 97,
+      "occurrences_boundary_resolved": 40,
+      "occurrences_with_partner_end_in_chain_gap": 0,
+      "pair_end_cover": {
+        "up": {
+          "covered": 82,
+          "not_reached": 17
+        },
+        "down": {
+          "covered_at_chain_end": 9,
+          "not_reached": 57,
+          "covered": 33
+        }
+      },
+      "cores_by_copy_pattern": {
+        "same_count_where_present": 24,
+        "same_count_in_all_assemblies": 2,
+        "count_varies": 1
+      },
+      "occurrences_with_partner_not_covering_an_end": 52,
+      "occurrences_side_status": {
+        "up": {
+          "resolved": 72,
+          "end_not_covered": 17,
+          "end_not_covered_by_some_partners": 6,
+          "inconsistent_between_partners": 2
+        },
+        "down": {
+          "resolved": 54,
+          "end_not_covered": 39,
+          "inconsistent_between_partners": 1,
+          "end_not_covered_by_some_partners": 1,
+          "reaches_window_or_contig_end": 2
+        }
+      },
+      "resolved_estimated_lt2500": 40,
+      "resolved_estimated_ge2500": 0,
+      "resolved_extension_total_range": "2..745",
+      "occurrences_near_mobile_neighbour": 18
+    }
+  },
+  "cases": [
+    "A1 PF_4b70bb8e2b9d: IS5 family transposase | 30 occ / 4 samples, copies 5,8,9,0,8,0,0; different pairs within 44, cross 134; host-different within 44, cross 134; protein id 99.3..100.0, core DNA id 97.8..100.0",
+    "A2 PF_3070024975f6: IS481 family transposase | 21 occ / 5 samples, copies 2,6,6,1,6,0,0; different pairs within 45, cross 112; host-different within 45, cross 112; protein id 98.2..100.0, core DNA id 98.4..100.0",
+    "B PF_ad056eba1256: IS5 family transposase | 15 occ / 1 samples, copies 0,0,0,0,0,0,15; different pairs within 44, cross 0; host-different within 44, cross 0; protein id 100.0..100.0, core DNA id 100.0..100.0",
+    "D PF_10b9be14a143-,PF_1180b16eba28-: electron transfer flavoprotein subunit alpha/FixB  | 14 occ / 7 samples, copies 2,2,2,2,2,2,2; different pairs within 6, cross 30; host-different within 6, cross 30; protein id 94.2..99.6, core DNA id 87.6..98.8"
+  ],
+  "case_rule": "Fixed rule: A1/A2 = single-gene cores with the most cross-assembly host-different pairs; B = single-gene core\n    with the most within-assembly host-different pairs and none across; C = core with the most near-different /\n    host-similar (nested) pairs; D = two-gene core with the most host-different pairs. Ties: samples, then key; a core\n    already picked is skipped for the next rank."
+}

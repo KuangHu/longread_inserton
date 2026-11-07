@@ -1,0 +1,77 @@
+{
+  "run": {
+    "run": "SRR21808314",
+    "sample_id": "SAMN27609613",
+    "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR218/014/SRR21808314/SRR21808314_1.fastq.gz",
+    "fastq_bytes": 10636918594,
+    "fastq_md5": "dbec8d7bb2eef34d204990aec9681d7e",
+    "platform": "OXFORD_NANOPORE",
+    "archive_base_count": 10221536460,
+    "archive_read_count": 1096351
+  },
+  "download_started": "2026-10-25T22:31:20-0700",
+  "local_file": "/global/scratch/users/kh36969/longread_callout/data/reads/SRR21808314/SRR21808314_1.fastq.gz",
+  "bytes": 10636918594,
+  "md5": "dbec8d7bb2eef34d204990aec9681d7e",
+  "sha256": "df2700d4c74fcad36bb746313632306474a2d19c771478a8cf7c83279a858651",
+  "rejected_downloads": [
+    {
+      "attempt": 1,
+      "md5": "de7cc2197bc19c7d01a113a7cef8694f",
+      "bytes": 10636918594,
+      "kept_as": "/global/scratch/users/kh36969/longread_callout/data/reads/SRR21808314/md5_mismatch_attempt1/SRR21808314_1.fastq.gz"
+    },
+    {
+      "attempt": 2,
+      "md5": "ac822e3b447564743be5add04ecaa621",
+      "bytes": 10636918594,
+      "kept_as": "/global/scratch/users/kh36969/longread_callout/data/reads/SRR21808314/md5_mismatch_attempt2/SRR21808314_1.fastq.gz"
+    },
+    {
+      "attempt": 3,
+      "md5": "3778e2de080a9431eeaafdbe540f7958",
+      "bytes": 10636918594,
+      "kept_as": "/global/scratch/users/kh36969/longread_callout/data/reads/SRR21808314/md5_mismatch_attempt3/SRR21808314_1.fastq.gz"
+    }
+  ],
+  "checks": {
+    "bytes_match": true,
+    "md5_match": true,
+    "unchanged_since_download": true,
+    "spot_count_match": true,
+    "base_count_match": true
+  },
+  "status": "verified",
+  "repair": {
+    "method": "1 MiB majority vote over the three rejected same-size downloads; no-majority blocks refetched by HTTP Range (none needed); accepted only because the whole-file MD5 equals the archive MD5",
+    "script": "/global/scratch/users/kh36969/longread_callout/fna_pool/comamonadaceae_20261024/s5_readcheck/main/majority_repair_SRR21808314.py",
+    "repair_log": "/global/scratch/users/kh36969/longread_callout/data/reads/SRR21808314/majority_repair/repair.json",
+    "voted_blocks": 10,
+    "range_fetched_blocks": 0,
+    "installed": "2026-10-26T07:05:23-0700"
+  },
+  "spots_absent_from_fastq": 0,
+  "summary": {
+    "records": 1096351,
+    "bases": 10221536460,
+    "read_unit_counts": {
+      "name_stripped": 1096351
+    },
+    "distinct_zmws": null,
+    "distinct_sra_spots": 1096351,
+    "max_records_per_spot": 1,
+    "placeholder_quality_records": 0,
+    "example_headers": [
+      "@SRR21808314.1 1/1",
+      "@SRR21808314.2 2/1",
+      "@SRR21808314.3 3/1",
+      "@SRR21808314.4 4/1"
+    ],
+    "mean_length": 9323.2,
+    "median_length": 6370,
+    "max_length": 104042,
+    "n50": 15886,
+    "molecule_grouping": "one_record_per_molecule"
+  },
+  "content_checked": "2026-10-26T07:18:34-0700"
+}

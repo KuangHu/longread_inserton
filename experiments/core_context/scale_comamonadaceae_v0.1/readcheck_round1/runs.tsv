@@ -1,0 +1,13 @@
+count_unit	grouping	molecules_near_positions	read_type	reads_mapped_to_assembly	reads_near_positions	run	sample	status
+molecules	one_record_per_molecule	3682	ont	27449	3682	ERR13194347	SAMEA115676931	checked
+molecules	one_record_per_molecule	7251	ont	47564	7251	ERR13194383	SAMEA115676967	checked
+read_records	molecule_grouping_unavailable	5427	pacbio_unresolved	46842	5427	SRR7135406	SAMN08775333	checked
+read_records	molecule_grouping_unavailable	14119	pacbio_unresolved	107601	14119	SRR7135407	SAMN08775333	checked
+read_records	molecule_grouping_unavailable	9315	pacbio_unresolved	73644	9315	SRR7135411	SAMN08775340	checked
+read_records	molecule_grouping_unavailable	12464	pacbio_unresolved	96773	12464	SRR7135412	SAMN08775340	checked
+assumed_molecules	sra_spot_as_zmw_assumed	14073	pacbio_clr_subreads	109019	14073	SRR12046249	SAMN13450421	checked
+assumed_molecules	sra_spot_as_zmw_assumed	12855	pacbio_clr_subreads	112304	12855	SRR14198828	SAMN18676188	checked
+assumed_molecules	sra_spot_as_zmw_assumed	13194	pacbio_clr_subreads	113892	13194	SRR14198827	SAMN18676188	checked
+read_records	molecule_grouping_unavailable	56116	pacbio_unresolved	568179	56116	SRR22007585	SAMN31258398	checked
+molecules	zmw_from_read_name	8036	pacbio_hifi_ccs	69877	8036	SRR27033690	SAMN38562701	checked
+molecules	one_record_per_molecule	16019	ont	215956	16019	SRR40356272	SAMN51658617	checked

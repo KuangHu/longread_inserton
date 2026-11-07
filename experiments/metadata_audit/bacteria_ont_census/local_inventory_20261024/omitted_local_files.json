@@ -1,0 +1,45 @@
+[
+  {
+    "source_path": "ena_bacteria_ont_2026-10-24/ena_raw.json",
+    "bytes": 77369095,
+    "sha256": "8d266937bcfc2ef5422035b85d2164463cd5a2e4d8898ecf18122191089080cd",
+    "reason": "Large raw API response, derived duplicate, or local database; retained locally"
+  },
+  {
+    "source_path": "ena_bacteria_ont_2026-10-24/fastq_available_runs.jsonl",
+    "bytes": 101025732,
+    "sha256": "9ce8a65d9e621a6e1ff18bdda7b1e6663f432b8c34c571d7a018ec0aab9e9074",
+    "reason": "Large raw API response, derived duplicate, or local database; retained locally"
+  },
+  {
+    "source_path": "ena_bacteria_ont_2026-10-24/file_inventory.jsonl",
+    "bytes": 50987895,
+    "sha256": "e3fcd0bd1d7806f5e2042635dcbd85d27f5cbefbeea8e901d7b96c98b73d94ee",
+    "reason": "Large raw API response, derived duplicate, or local database; retained locally"
+  },
+  {
+    "source_path": "ena_bacteria_ont_2026-10-24/organism_environment/ena_context_raw.json",
+    "bytes": 67609128,
+    "sha256": "038289132d595d6de13fbda57b1b8bb2bb232dfdfc9e1a0cd265eddf8c26fd12",
+    "reason": "Large raw API response, derived duplicate, or local database; retained locally"
+  },
+  {
+    "source_path": "ena_bacteria_ont_2026-10-24/organism_environment/organism_environment.sqlite",
+    "bytes": 122171392,
+    "sha256": "fe8d45e776185088394c7a15f883e18afa3dfbccbdf289f7c8411ea955419ea6",
+    "reason": "Large raw API response, derived duplicate, or local database; retained locally"
+  },
+  {
+    "source_path": "ena_bacteria_ont_2026-10-24/run_inventory.sqlite",
+    "bytes": 242315264,
+    "sha256": "26732e2130fe78ac78196619e85201faf0b33f6e3ee91a92131533e40bcc4fdc",
+    "reason": "Large raw API response, derived duplicate, or local database; retained locally"
+  },
+  {
+    "source_path": "taxonomy_cache/taxdump.tar.gz",
+    "bytes": 79923669,
+    "sha256": "f5fde59b09353e446b0da82b8370da272dec4ed8cea2d3d3b7c8f49de868e5d6",
+    "source_url": "https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump.tar.gz",
+    "reason": "External taxonomy snapshot retained locally; current remote file can change"
+  }
+]

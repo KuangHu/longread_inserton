@@ -1,0 +1,740 @@
+{
+ "version": "stage1_catalog_v1",
+ "evidence_source": "assembly_only",
+ "read_evidence_status": "long_read_evidence_pending",
+ "batches": [
+  "actinomycetaceae",
+  "comamonadaceae",
+  "eggerthellaceae",
+  "erwiniaceae",
+  "flavobacteriaceae",
+  "lachnospiraceae",
+  "metamycoplasmataceae",
+  "microbacteriaceae",
+  "micrococcaceae",
+  "nitrobacteraceae"
+ ],
+ "member_min": {
+  "family": [
+   0.9,
+   0.8
+  ],
+  "homology_group": [
+   0.5,
+   0.8
+  ]
+ },
+ "settings": {
+  "family": [
+   "--min-seq-id",
+   "0.9",
+   "-c",
+   "0.8",
+   "--cov-mode",
+   "0",
+   "--cluster-mode",
+   "0",
+   "--cluster-reassign",
+   "1"
+  ],
+  "homology_group": [
+   "--min-seq-id",
+   "0.5",
+   "-c",
+   "0.8",
+   "--cov-mode",
+   "0",
+   "--cluster-mode",
+   "0",
+   "--cluster-reassign",
+   "1"
+  ]
+ },
+ "cluster_run": {
+  "version": "stage1_catalog_v1",
+  "mmseqs": "/global/scratch/users/kh36969/longread_callout/env/s4/bin/mmseqs",
+  "mmseqs_version": "17.b804f",
+  "settings": {
+   "family": [
+    "--min-seq-id",
+    "0.9",
+    "-c",
+    "0.8",
+    "--cov-mode",
+    "0",
+    "--cluster-mode",
+    "0",
+    "--cluster-reassign",
+    "1"
+   ],
+   "homology_group": [
+    "--min-seq-id",
+    "0.5",
+    "-c",
+    "0.8",
+    "--cov-mode",
+    "0",
+    "--cluster-mode",
+    "0",
+    "--cluster-reassign",
+    "1"
+   ]
+  },
+  "align": [
+   "--alignment-mode",
+   "3",
+   "-e",
+   "10",
+   "-a"
+  ],
+  "commands": [
+   "/global/scratch/users/kh36969/longread_callout/env/s4/bin/mmseqs createdb /global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/stage1_catalog/proteins.faa /global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/stage1_catalog/mmseqs/db --shuffle 1 --createdb-mode 1",
+   "/global/scratch/users/kh36969/longread_callout/env/s4/bin/mmseqs cluster /global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/stage1_catalog/mmseqs/db /global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/stage1_catalog/mmseqs/family_clu /global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/stage1_catalog/mmseqs/tmp_family --threads 16 --alignment-mode 3 --min-seq-id 0.9 -c 0.8 --cov-mode 0 --cluster-mode 0 --cluster-reassign 1",
+   "/global/scratch/users/kh36969/longread_callout/env/s4/bin/mmseqs createtsv /global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/stage1_catalog/mmseqs/db /global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/stage1_catalog/mmseqs/db /global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/stage1_catalog/mmseqs/family_clu /global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/stage1_catalog/mmseqs/family_cluster.tsv",
+   "/global/scratch/users/kh36969/longread_callout/env/s4/bin/mmseqs align /global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/stage1_catalog/mmseqs/db /global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/stage1_catalog/mmseqs/db /global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/stage1_catalog/mmseqs/family_clu /global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/stage1_catalog/mmseqs/family_aln --threads 16 --alignment-mode 3 -e 10 -a",
+   "/global/scratch/users/kh36969/longread_callout/env/s4/bin/mmseqs convertalis /global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/stage1_catalog/mmseqs/db /global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/stage1_catalog/mmseqs/db /global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/stage1_catalog/mmseqs/family_aln /global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/stage1_catalog/mmseqs/family_members.m8 --format-output query,target,fident,qcov,tcov,alnlen",
+   "/global/scratch/users/kh36969/longread_callout/env/s4/bin/mmseqs cluster /global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/stage1_catalog/mmseqs/db /global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/stage1_catalog/mmseqs/homology_group_clu /global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/stage1_catalog/mmseqs/tmp_homology_group --threads 16 --alignment-mode 3 --min-seq-id 0.5 -c 0.8 --cov-mode 0 --cluster-mode 0 --cluster-reassign 1",
+   "/global/scratch/users/kh36969/longread_callout/env/s4/bin/mmseqs createtsv /global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/stage1_catalog/mmseqs/db /global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/stage1_catalog/mmseqs/db /global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/stage1_catalog/mmseqs/homology_group_clu /global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/stage1_catalog/mmseqs/homology_group_cluster.tsv",
+   "/global/scratch/users/kh36969/longread_callout/env/s4/bin/mmseqs align /global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/stage1_catalog/mmseqs/db /global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/stage1_catalog/mmseqs/db /global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/stage1_catalog/mmseqs/homology_group_clu /global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/stage1_catalog/mmseqs/homology_group_aln --threads 16 --alignment-mode 3 -e 10 -a",
+   "/global/scratch/users/kh36969/longread_callout/env/s4/bin/mmseqs convertalis /global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/stage1_catalog/mmseqs/db /global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/stage1_catalog/mmseqs/db /global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/stage1_catalog/mmseqs/homology_group_aln /global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/stage1_catalog/mmseqs/homology_group_members.m8 --format-output query,target,fident,qcov,tcov,alnlen"
+  ],
+  "input_sha256": "2a0a10d5f6ae715da7b564412d9ea230f6963a4feba6e2b60d3640d983ae59b5"
+ },
+ "global": {
+  "loci": 85123,
+  "samples": 15308,
+  "assemblies": 15308,
+  "bioprojects": 6049,
+  "organism_labels": 6797,
+  "categories": {
+   "main": 16414,
+   "replacement": 6274,
+   "short_other_segment": 25479,
+   "annotation_pending": 36238,
+   "direction_mixed": 129,
+   "partner_mixed": 589
+  },
+  "protein_instances": 60747,
+  "protein_accessions": 39065,
+  "distinct_proteins": 37895,
+  "families": 26643,
+  "homology_groups": 20973,
+  "architectures": 21714,
+  "distinct_core_sequences": 63501,
+  "member_check": {
+   "family": {
+    "members": 37895,
+    "passed": 37895,
+    "fail": []
+   },
+   "homology_group": {
+    "members": 37895,
+    "passed": 37895,
+    "fail": []
+   }
+  },
+  "proteins_in_more_than_one_batch": 0,
+  "families_in_more_than_one_batch": 10,
+  "sum_of_local_families": 26653,
+  "sum_of_local_distinct_proteins": 37895,
+  "local_family_relations": {
+   "one_to_one": 26632,
+   "merged_across_batches": 18,
+   "merged_within_batch": 2,
+   "split;merged_across_batches": 1
+  }
+ },
+ "per_batch": {
+  "actinomycetaceae": {
+   "loci": 1378,
+   "samples": 672,
+   "assemblies": 672,
+   "bioprojects": 195,
+   "organism_labels": 265,
+   "categories": {
+    "main": 373,
+    "replacement": 303,
+    "short_other_segment": 574,
+    "annotation_pending": 114,
+    "direction_mixed": 3,
+    "partner_mixed": 11
+   },
+   "protein_instances": 1676,
+   "protein_accessions": 994,
+   "distinct_proteins": 993,
+   "families": 682,
+   "homology_groups": 618,
+   "architectures": 543,
+   "distinct_core_sequences": 1067,
+   "local_families": 682,
+   "coding_anomaly_records": {
+    "mismatch": 7
+   },
+   "carrier_read_status_loci": {
+    "no_linked_runs": 1242,
+    "usable_runs_remote_only": 104,
+    "no_usable_runs": 32
+   }
+  },
+  "comamonadaceae": {
+   "loci": 5099,
+   "samples": 1148,
+   "assemblies": 1148,
+   "bioprojects": 594,
+   "organism_labels": 719,
+   "categories": {
+    "replacement": 502,
+    "short_other_segment": 2697,
+    "main": 1010,
+    "annotation_pending": 853,
+    "partner_mixed": 35,
+    "direction_mixed": 2
+   },
+   "protein_instances": 5313,
+   "protein_accessions": 3778,
+   "distinct_proteins": 3673,
+   "families": 2460,
+   "homology_groups": 2113,
+   "architectures": 1979,
+   "distinct_core_sequences": 4167,
+   "local_families": 2460,
+   "coding_anomaly_records": {
+    "mismatch": 24
+   },
+   "carrier_read_status_loci": {
+    "no_linked_runs": 4207,
+    "usable_runs_local_verified": 671,
+    "usable_runs_remote_only": 187,
+    "no_usable_runs": 34
+   }
+  },
+  "eggerthellaceae": {
+   "loci": 1212,
+   "samples": 200,
+   "assemblies": 200,
+   "bioprojects": 87,
+   "organism_labels": 52,
+   "categories": {
+    "short_other_segment": 169,
+    "main": 117,
+    "replacement": 66,
+    "partner_mixed": 5,
+    "annotation_pending": 855
+   },
+   "protein_instances": 475,
+   "protein_accessions": 291,
+   "distinct_proteins": 290,
+   "families": 231,
+   "homology_groups": 217,
+   "architectures": 174,
+   "distinct_core_sequences": 922,
+   "local_families": 231,
+   "coding_anomaly_records": {
+    "mismatch": 2
+   },
+   "carrier_read_status_loci": {
+    "no_linked_runs": 1198,
+    "usable_runs_remote_only": 14
+   }
+  },
+  "erwiniaceae": {
+   "loci": 3191,
+   "samples": 1230,
+   "assemblies": 1230,
+   "bioprojects": 535,
+   "organism_labels": 296,
+   "categories": {
+    "annotation_pending": 481,
+    "main": 1072,
+    "short_other_segment": 1097,
+    "replacement": 505,
+    "direction_mixed": 8,
+    "partner_mixed": 28
+   },
+   "protein_instances": 3733,
+   "protein_accessions": 2017,
+   "distinct_proteins": 1983,
+   "families": 1144,
+   "homology_groups": 924,
+   "architectures": 874,
+   "distinct_core_sequences": 2477,
+   "local_families": 1144,
+   "coding_anomaly_records": {
+    "mismatch": 11
+   },
+   "carrier_read_status_loci": {
+    "no_linked_runs": 2656,
+    "usable_runs_remote_only": 512,
+    "no_usable_runs": 23
+   }
+  },
+  "flavobacteriaceae": {
+   "loci": 6917,
+   "samples": 2388,
+   "assemblies": 2388,
+   "bioprojects": 1217,
+   "organism_labels": 1139,
+   "categories": {
+    "main": 2312,
+    "replacement": 1080,
+    "short_other_segment": 3186,
+    "direction_mixed": 18,
+    "partner_mixed": 75,
+    "annotation_pending": 246
+   },
+   "protein_instances": 8596,
+   "protein_accessions": 6080,
+   "distinct_proteins": 5859,
+   "families": 4847,
+   "homology_groups": 4025,
+   "architectures": 3936,
+   "distinct_core_sequences": 5471,
+   "local_families": 4847,
+   "coding_anomaly_records": {
+    "mismatch": 10
+   },
+   "carrier_read_status_loci": {
+    "no_linked_runs": 6323,
+    "usable_runs_remote_only": 450,
+    "no_usable_runs": 144
+   }
+  },
+  "lachnospiraceae": {
+   "loci": 29174,
+   "samples": 2439,
+   "assemblies": 2439,
+   "bioprojects": 475,
+   "organism_labels": 685,
+   "categories": {
+    "annotation_pending": 22840,
+    "short_other_segment": 2368,
+    "main": 3306,
+    "replacement": 537,
+    "partner_mixed": 109,
+    "direction_mixed": 14
+   },
+   "protein_instances": 7942,
+   "protein_accessions": 4884,
+   "distinct_proteins": 4764,
+   "families": 3179,
+   "homology_groups": 2582,
+   "architectures": 2577,
+   "distinct_core_sequences": 22963,
+   "local_families": 3180,
+   "coding_anomaly_records": {
+    "mismatch": 52
+   },
+   "carrier_read_status_loci": {
+    "no_linked_runs": 28049,
+    "usable_runs_remote_only": 1099,
+    "no_usable_runs": 26
+   }
+  },
+  "metamycoplasmataceae": {
+   "loci": 967,
+   "samples": 493,
+   "assemblies": 493,
+   "bioprojects": 130,
+   "organism_labels": 45,
+   "categories": {
+    "main": 510,
+    "short_other_segment": 105,
+    "replacement": 22,
+    "direction_mixed": 4,
+    "partner_mixed": 12,
+    "annotation_pending": 314
+   },
+   "protein_instances": 728,
+   "protein_accessions": 425,
+   "distinct_proteins": 409,
+   "families": 226,
+   "homology_groups": 183,
+   "architectures": 190,
+   "distinct_core_sequences": 754,
+   "local_families": 226,
+   "coding_anomaly_records": {
+    "mismatch": 4
+   },
+   "carrier_read_status_loci": {
+    "no_linked_runs": 690,
+    "usable_runs_remote_only": 243,
+    "no_usable_runs": 34
+   }
+  },
+  "microbacteriaceae": {
+   "loci": 18749,
+   "samples": 2651,
+   "assemblies": 2651,
+   "bioprojects": 1119,
+   "organism_labels": 1506,
+   "categories": {
+    "annotation_pending": 9068,
+    "replacement": 1148,
+    "short_other_segment": 6753,
+    "main": 1737,
+    "partner_mixed": 34,
+    "direction_mixed": 9
+   },
+   "protein_instances": 12433,
+   "protein_accessions": 8844,
+   "distinct_proteins": 8806,
+   "families": 6442,
+   "homology_groups": 5082,
+   "architectures": 5169,
+   "distinct_core_sequences": 12810,
+   "local_families": 6441,
+   "coding_anomaly_records": {
+    "mismatch": 21
+   },
+   "carrier_read_status_loci": {
+    "no_linked_runs": 17560,
+    "usable_runs_remote_only": 931,
+    "no_usable_runs": 258
+   }
+  },
+  "micrococcaceae": {
+   "loci": 6609,
+   "samples": 2260,
+   "assemblies": 2260,
+   "bioprojects": 1036,
+   "organism_labels": 1002,
+   "categories": {
+    "annotation_pending": 582,
+    "short_other_segment": 3664,
+    "replacement": 651,
+    "main": 1626,
+    "partner_mixed": 64,
+    "direction_mixed": 22
+   },
+   "protein_instances": 7024,
+   "protein_accessions": 5421,
+   "distinct_proteins": 5094,
+   "families": 3552,
+   "homology_groups": 2837,
+   "architectures": 3001,
+   "distinct_core_sequences": 5488,
+   "local_families": 3552,
+   "coding_anomaly_records": {
+    "mismatch": 39
+   },
+   "carrier_read_status_loci": {
+    "no_linked_runs": 5626,
+    "usable_runs_remote_only": 529,
+    "no_usable_runs": 454
+   }
+  },
+  "nitrobacteraceae": {
+   "loci": 11827,
+   "samples": 1827,
+   "assemblies": 1827,
+   "bioprojects": 1041,
+   "organism_labels": 1088,
+   "categories": {
+    "replacement": 1460,
+    "main": 4351,
+    "short_other_segment": 4866,
+    "partner_mixed": 216,
+    "annotation_pending": 885,
+    "direction_mixed": 49
+   },
+   "protein_instances": 12827,
+   "protein_accessions": 6331,
+   "distinct_proteins": 6024,
+   "families": 3890,
+   "homology_groups": 3001,
+   "architectures": 3277,
+   "distinct_core_sequences": 7393,
+   "local_families": 3890,
+   "coding_anomaly_records": {
+    "mismatch": 14
+   },
+   "carrier_read_status_loci": {
+    "no_linked_runs": 8906,
+    "usable_runs_remote_only": 2865,
+    "no_usable_runs": 56
+   }
+  }
+ },
+ "coding_anomalies": {
+  "records": 184,
+  "by_translation": {
+   "mismatch": 184
+  },
+  "loci": 180,
+  "by_category": {
+   "boundary_intersection": 88,
+   "gene_integrity_anomaly": 96
+  }
+ },
+ "read_metadata": {
+  "carrier_loci_status": {
+   "no_linked_runs": 76457,
+   "usable_runs_remote_only": 6934,
+   "no_usable_runs": 1061,
+   "usable_runs_local_verified": 671
+  },
+  "runs": 4414,
+  "runs_usable": 3244,
+  "runs_verified_local": 162,
+  "distinct_usable_remote_runs_for_candidate_loci": 1908,
+  "est_download_bytes_distinct_runs": 1556288472503,
+  "manifest_rows": 223309,
+  "downloads_started": 0
+ },
+ "pilot_read_evidence_links": {
+  "loci": 464,
+  "link_basis": {
+   "exact_biosample_assembly_contig_coordinates_core": 231,
+   "not_linked": 233
+  },
+  "unmatched_reason": {
+   "unresolved_overlapping_stage1_loci": 88,
+   "identical_core_coordinates_in_stage1_s4_category:boundary_or_repeat_review": 85,
+   "unresolved_no_overlapping_stage1_locus": 47,
+   "carrier_not_in_stage1_pool": 11,
+   "identical_core_coordinates_in_stage1_s3:status=unresolved,core_len=1096": 1,
+   "identical_core_coordinates_in_stage1_s3:status=unresolved,core_len=876": 1
+  },
+  "tests": 743,
+  "test_link_scope": {
+   "same_carrier_partner_test": 268,
+   "not_linked": 361,
+   "same_carrier_locus_partner_not_in_stage1_locus": 114
+  }
+ },
+ "member_check_repairs": [
+  {
+   "level": "homology_group",
+   "member": "77004f24470806360d867b4877217a1aba9fb8f9601973c58f2e85c47cdf8c03",
+   "original_rep": "d5ef725fb2093e937e8cd5f2b9bcd7e475e7fc11905d7f6e3abd65d39ccb70a2",
+   "original_identity": 0.619,
+   "original_member_cov": 0.748,
+   "original_rep_cov": 0.706,
+   "candidates_passing": 0,
+   "action": "singleton_no_passing_representative",
+   "new_rep": "77004f24470806360d867b4877217a1aba9fb8f9601973c58f2e85c47cdf8c03",
+   "new_identity": 1.0,
+   "new_member_cov": 1.0,
+   "new_rep_cov": 1.0
+  }
+ ],
+ "stage2_read_coverage": {
+  "main": {
+   "loci": 16414,
+   "carrier_usable": 3159,
+   "carrier_and_partner_usable": 1088,
+   "carrier_usable_no_partner_usable": 2071,
+   "partner_only_usable": 1621,
+   "no_usable_reads": 11634,
+   "carrier_no_linked_runs": 13034,
+   "best_partner_linked_not_usable": 143,
+   "carrier_remote_downloadable": 2955,
+   "best_partner_no_linked_runs": 13562,
+   "best_partner_remote_downloadable": 2435,
+   "carrier_linked_not_usable": 221,
+   "best_partner_local_verified": 274,
+   "carrier_local_verified": 204,
+   "distinct_runs_to_download": 1506,
+   "carrier_runs_to_download": 1231,
+   "partner_runs_to_download": 275,
+   "est_bytes_known": 1221551833200,
+   "runs_unknown_size": 0,
+   "runs_unknown_size_ids": [],
+   "local_verified_runs_used": 146
+  },
+  "partner_mixed": {
+   "loci": 589,
+   "carrier_usable": 153,
+   "carrier_and_partner_usable": 76,
+   "carrier_usable_no_partner_usable": 77,
+   "partner_only_usable": 110,
+   "no_usable_reads": 326,
+   "carrier_linked_not_usable": 11,
+   "best_partner_no_linked_runs": 391,
+   "carrier_no_linked_runs": 425,
+   "carrier_remote_downloadable": 143,
+   "best_partner_remote_downloadable": 170,
+   "carrier_local_verified": 10,
+   "best_partner_local_verified": 16,
+   "best_partner_linked_not_usable": 12,
+   "distinct_runs_to_download": 266,
+   "carrier_runs_to_download": 141,
+   "partner_runs_to_download": 125,
+   "est_bytes_known": 300452142276,
+   "runs_unknown_size": 0,
+   "runs_unknown_size_ids": [],
+   "local_verified_runs_used": 32
+  },
+  "direction_mixed": {
+   "loci": 129,
+   "carrier_usable": 23,
+   "carrier_and_partner_usable": 12,
+   "carrier_usable_no_partner_usable": 11,
+   "partner_only_usable": 24,
+   "no_usable_reads": 82,
+   "carrier_no_linked_runs": 106,
+   "best_partner_no_linked_runs": 92,
+   "best_partner_local_verified": 1,
+   "carrier_local_verified": 1,
+   "carrier_remote_downloadable": 22,
+   "best_partner_remote_downloadable": 35,
+   "best_partner_linked_not_usable": 1,
+   "distinct_runs_to_download": 48,
+   "carrier_runs_to_download": 22,
+   "partner_runs_to_download": 26,
+   "est_bytes_known": 37180281064,
+   "runs_unknown_size": 0,
+   "runs_unknown_size_ids": [],
+   "local_verified_runs_used": 2
+  },
+  "short_other_segment": {
+   "loci": 25479,
+   "carrier_usable": 3240,
+   "carrier_and_partner_usable": 851,
+   "carrier_usable_no_partner_usable": 2389,
+   "partner_only_usable": 2792,
+   "no_usable_reads": 19447,
+   "carrier_remote_downloadable": 2836,
+   "best_partner_remote_downloadable": 3146,
+   "carrier_no_linked_runs": 21974,
+   "best_partner_no_linked_runs": 21583,
+   "carrier_linked_not_usable": 265,
+   "best_partner_linked_not_usable": 253,
+   "best_partner_local_verified": 497,
+   "carrier_local_verified": 404,
+   "distinct_runs_to_download": 1566,
+   "carrier_runs_to_download": 1319,
+   "partner_runs_to_download": 247,
+   "est_bytes_known": 1292995061289,
+   "runs_unknown_size": 0,
+   "runs_unknown_size_ids": [],
+   "local_verified_runs_used": 141
+  },
+  "replacement": {
+   "loci": 6274,
+   "carrier_usable": 709,
+   "carrier_and_partner_usable": 143,
+   "carrier_usable_no_partner_usable": 566,
+   "partner_only_usable": 601,
+   "no_usable_reads": 4964,
+   "carrier_no_linked_runs": 5507,
+   "best_partner_no_linked_runs": 5479,
+   "carrier_linked_not_usable": 58,
+   "best_partner_linked_not_usable": 51,
+   "best_partner_remote_downloadable": 659,
+   "carrier_remote_downloadable": 657,
+   "carrier_local_verified": 52,
+   "best_partner_local_verified": 85,
+   "distinct_runs_to_download": 868,
+   "carrier_runs_to_download": 593,
+   "partner_runs_to_download": 275,
+   "est_bytes_known": 775060196998,
+   "runs_unknown_size": 0,
+   "runs_unknown_size_ids": [],
+   "local_verified_runs_used": 91
+  },
+  "annotation_pending": {
+   "loci": 36238,
+   "carrier_usable": 321,
+   "carrier_and_partner_usable": 0,
+   "carrier_usable_no_partner_usable": 321,
+   "partner_only_usable": 6527,
+   "no_usable_reads": 29390,
+   "carrier_no_linked_runs": 35411,
+   "best_partner_no_linked_runs": 29518,
+   "best_partner_remote_downloadable": 6405,
+   "best_partner_local_verified": 122,
+   "best_partner_linked_not_usable": 193,
+   "carrier_remote_downloadable": 321,
+   "carrier_linked_not_usable": 506,
+   "distinct_runs_to_download": 124,
+   "carrier_runs_to_download": 14,
+   "partner_runs_to_download": 110,
+   "est_bytes_known": 105735089828,
+   "runs_unknown_size": 0,
+   "runs_unknown_size_ids": [],
+   "local_verified_runs_used": 6
+  },
+  "all": {
+   "loci": 85123,
+   "carrier_usable": 7605,
+   "carrier_and_partner_usable": 2170,
+   "carrier_usable_no_partner_usable": 5435,
+   "partner_only_usable": 11675,
+   "no_usable_reads": 65843,
+   "carrier_no_linked_runs": 76457,
+   "best_partner_linked_not_usable": 653,
+   "best_partner_no_linked_runs": 70625,
+   "carrier_remote_downloadable": 6934,
+   "best_partner_remote_downloadable": 12850,
+   "carrier_linked_not_usable": 1061,
+   "best_partner_local_verified": 995,
+   "carrier_local_verified": 671,
+   "distinct_runs_to_download": 1908,
+   "carrier_runs_to_download": 1736,
+   "partner_runs_to_download": 172,
+   "est_bytes_known": 1556288472503,
+   "runs_unknown_size": 0,
+   "runs_unknown_size_ids": [],
+   "local_verified_runs_used": 158
+  }
+ },
+ "traceability": {
+  "ok": true,
+  "checks": {
+   "global_locus_id_unique": {
+    "ok": true,
+    "detail": 85123
+   },
+   "biosample_in_one_batch": {
+    "ok": true,
+    "detail": []
+   },
+   "assembly_in_one_sample_key": {
+    "ok": true,
+    "detail": []
+   },
+   "core_rows_sample_key_in_catalog": {
+    "ok": true,
+    "detail": ""
+   },
+   "instances_in_protein_catalog": {
+    "ok": true,
+    "detail": 60747
+   },
+   "locus_protein_hashes_in_catalog": {
+    "ok": true,
+    "detail": ""
+   },
+   "instance_locus_in_core_catalog": {
+    "ok": true,
+    "detail": ""
+   },
+   "local_ids_namespaced_and_mapped": {
+    "ok": true,
+    "detail": 48197
+   },
+   "members_pass_final_check_family": {
+    "ok": true,
+    "detail": []
+   },
+   "representatives_are_members_family": {
+    "ok": true,
+    "detail": ""
+   },
+   "members_pass_final_check_homology_group": {
+    "ok": true,
+    "detail": []
+   },
+   "representatives_are_members_homology_group": {
+    "ok": true,
+    "detail": ""
+   },
+   "core_fasta_one_record_per_locus": {
+    "ok": true,
+    "detail": 85123
+   }
+  }
+ },
+ "problems": {}
+}

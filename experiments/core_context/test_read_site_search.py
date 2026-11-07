@@ -1,0 +1,271 @@
+import unittest
+
+import read_site_search as rs
+
+
+def aln(t='c', ts=0, te=1000, strand='+', qs=0, qe=1000, qlen=1000, score=1000):
+    return dict(t=t, ts=ts, te=te, strand=strand, qs=qs, qe=qe, qlen=qlen, score=score)
+
+
+FAM = {'PF_a': {'PH_1'}, 'PF_b': {'PH_1'}, 'PF_c': {'PH_2'}}
+
+
+class PlacementTests(unittest.TestCase):
+    def test_inner_end_is_next_to_the_core(self):
+        self.assertEqual(rs.placement([aln(ts=100, te=1100)], 'L'), ('placed', 'c', 1100, '+'))
+        self.assertEqual(rs.placement([aln(ts=2000, te=3000)], 'R'), ('placed', 'c', 2000, '+'))
+        self.assertEqual(rs.placement([aln(ts=100, te=1100, strand='-')], 'L'), ('placed', 'c', 100, '-'))
+        self.assertEqual(rs.placement([aln(ts=2000, te=3000, strand='-')], 'R'), ('placed', 'c', 3000, '-'))
+
+    def test_competing_placement_is_ambiguous_and_short_alignment_unplaced(self):
+        two = [aln(ts=100, te=1100, score=1000), aln(t='d', ts=5000, te=6000, score=990)]
+        self.assertEqual(rs.placement(two, 'L')[0], 'ambiguous')
+        far = [aln(ts=100, te=1100, score=1000), aln(t='d', ts=5000, te=6000, score=900)]
+        self.assertEqual(rs.placement(far, 'L')[0], 'placed')
+        self.assertEqual(rs.placement([aln(qs=0, qe=500)], 'L')[0], 'unplaced')
+        self.assertEqual(rs.placement([], 'R')[0], 'unplaced')
+
+    def test_inner_end_must_be_aligned(self):
+        # counterexample to v0.1: 85% of the flank aligned, but not its inner end -> the inner coordinate is not seen
+        self.assertEqual(rs.placement([aln(qs=0, qe=850, ts=100, te=950)], 'L')[0], 'inner_end_unaligned')
+        self.assertEqual(rs.placement([aln(qs=150, qe=1000, ts=2000, te=2850)], 'R')[0], 'inner_end_unaligned')
+        self.assertEqual(rs.placement([aln(qs=0, qe=850, ts=100, te=950, strand='-')], 'L')[0], 'inner_end_unaligned')
+        # the outer end unaligned is fine; the inner end within INNER_CLIP is fine
+        self.assertEqual(rs.placement([aln(qs=150, qe=1000, ts=250, te=1100)], 'L'), ('placed', 'c', 1100, '+'))
+        self.assertEqual(rs.placement([aln(qs=0, qe=850, ts=2000, te=2850)], 'R'), ('placed', 'c', 2000, '+'))
+        self.assertEqual(rs.placement([aln(qs=0, qe=990, ts=110, te=1100)], 'L')[0], 'placed')
+        self.assertEqual(rs.placement([aln(qs=0, qe=979, ts=121, te=1100)], 'L')[0], 'inner_end_unaligned')
+
+
+class BoundaryTests(unittest.TestCase):
+    """The core hit is a seed: the junction is the inner end of the host anchor nearest the core."""
+    def test_extra_sequence_beyond_the_core(self):
+        # left segment of 3000 bp, the host anchor stops 80 bp before the core hit: 80 bp of extra sequence
+        self.assertEqual(rs.boundary([aln(qs=0, qe=2920, qlen=3000)], 'L', 3000, 1000), ('ok', 80))
+        self.assertEqual(rs.boundary([aln(qs=80, qe=3000, qlen=3000)], 'R', 3000, 1000), ('ok', 80))
+        self.assertEqual(rs.flank_of('A' * 1920 + 'C' * 1000 + 'G' * 80, 'L', 80, 1000), 'C' * 1000)
+        self.assertEqual(rs.flank_of('G' * 80 + 'C' * 1000 + 'A' * 1920, 'R', 80, 1000), 'C' * 1000)
+        self.assertEqual(rs.boundary([aln(qs=0, qe=2985, qlen=3000)], 'L', 3000, 1000), ('ok', 0))  # <= INNER_CLIP
+
+    def test_partial_core_hit(self):
+        # the hit covered 80% of the core: the other 20% (240 bp) aligns contiguously with the host when the
+        # assembly holds the core (no extra), or is extra sequence when it does not
+        self.assertEqual(rs.boundary([aln(qs=0, qe=3000, qlen=3000)], 'R', 3000, 1000), ('ok', 0))
+        self.assertEqual(rs.boundary([aln(qs=240, qe=3000, qlen=3000)], 'R', 3000, 1000), ('ok', 240))
+
+    def test_short_alignment_in_between_stays_extra(self):
+        # a 100 bp element end that also occurs elsewhere aligns between the host anchor and the core
+        alns = [aln(qs=0, qe=2800, qlen=3000), aln(t='d', qs=2850, qe=2950, qlen=3000)]
+        self.assertEqual(rs.boundary(alns, 'L', 3000, 1000), ('ok', 200))
+
+    def test_repeated_flank_is_not_skipped(self):
+        # the inner-most anchor lies in a repeat (two placements): the junction stays there, and placement of the
+        # L bp flank is then ambiguous; the farther unique alignment is not used
+        alns = [aln(qs=0, qe=1500, qlen=3000), aln(t='r1', qs=1600, qe=3000, qlen=3000),
+                aln(t='r2', qs=1600, qe=3000, qlen=3000)]
+        self.assertEqual(rs.boundary(alns, 'L', 3000, 1000), ('ok', 0))
+        two = [aln(t='r1', ts=100, te=1100), aln(t='r2', ts=5000, te=6000, score=995)]
+        self.assertEqual(rs.placement(two, 'L')[0], 'ambiguous')
+
+    def test_neighbouring_insertion(self):
+        # host anchor, then an 800 bp insertion absent from the assembly, then 70 bp of element end: all 870 bp are
+        # extra sequence (the putative insertion includes the neighbour; its composition is not resolved here)
+        self.assertEqual(rs.boundary([aln(qs=0, qe=2130, qlen=3000)], 'L', 3000, 1000), ('ok', 870))
+        # the neighbour present elsewhere in the assembly (an alignment >= 0.8 L): the junction moves to it and
+        # its placement decides (elsewhere -> a junction class, repeat -> ambiguous), never a silent skip
+        alns = [aln(qs=0, qe=2130, qlen=3000), aln(t='d', qs=2130, qe=2930, qlen=3000)]
+        self.assertEqual(rs.boundary(alns, 'L', 3000, 1000), ('ok', 70))
+
+    def test_no_anchor_and_one_sided(self):
+        self.assertEqual(rs.boundary([aln(qs=0, qe=500, qlen=3000)], 'L', 3000, 1000), ('no_anchor', ''))
+        self.assertEqual(rs.boundary([], 'L', 900, 1000), ('one_sided', ''))
+        self.assertEqual(rs.boundary([aln(qs=600, qe=1500, qlen=1500)], 'R', 1500, 1000), ('one_sided', 600))
+
+
+class InsertFieldsTests(unittest.TestCase):
+    def obs(self, el, er, core=1200, mol=None):
+        self.n = getattr(self, 'n', 0) + 1
+        return dict(c_extra=(el, er), qs=0, qe=core, molecule=mol or 'm%d' % self.n)
+
+    def test_target_size_is_strictly_below_2500(self):
+        self.assertEqual([rs.size_class(n) for n in (1, 2499, 2500, 2501)], ['lt_2500', 'lt_2500', 'ge_2500', 'ge_2500'])
+        # the insertion (extra left + core hit + extra right) is compared, not the core hit
+        self.assertEqual(rs.insert_fields([self.obs(650, 649)])['insert_size'], 'lt_2500')  # 2499 bp
+        self.assertEqual(rs.insert_fields([self.obs(650, 650)])['insert_size'], 'ge_2500')  # 2500 bp
+        self.assertEqual(rs.insert_fields([self.obs(0, 0, core=2500)])['insert_size'], 'ge_2500')
+
+    def test_boundary_classes_and_size(self):
+        f = rs.insert_fields([self.obs(0, 0), self.obs(0, 0)])
+        self.assertEqual((f['boundary'], f['insert_len'], f['insert_size']), ('no_extension_detected', 1200, 'lt_2500'))
+        f = rs.insert_fields([self.obs(60, 30), self.obs(90, 40), self.obs(70, 35)])
+        self.assertEqual((f['boundary'], f['extra_left'], f['insert_len']), ('extension_consistent', 70, 1305))
+        self.assertEqual(rs.insert_fields([self.obs(10, 30), self.obs(300, 30)])['boundary'], 'unknown')
+        self.assertEqual(rs.insert_fields([self.obs(900, 600)])['insert_size'], 'ge_2500')  # the insertion, not the core
+        # one stray molecule of ten does not make the boundary unknown
+        f = rs.insert_fields([self.obs(0, 0) for _ in range(9)] + [self.obs(60, 0)])
+        self.assertEqual((f['boundary'], f['extra_left_range']), ('no_extension_detected', '0-60'))
+        self.assertEqual(rs.insert_fields([self.obs(0, 0) for _ in range(7)] + [self.obs(200, 0) for _ in range(3)])
+                         ['boundary'], 'unknown')
+
+    def test_counted_by_molecule(self):
+        # reviewer's counterexample: one molecule with 8 identical records, two molecules with one different record
+        # each; by records this was no_extension_detected, by molecules only 1 / 3 supports both sides
+        cl = [self.obs(0, 0, mol='a') for _ in range(8)] + [self.obs(100, 0, mol='b'), self.obs(0, 100, mol='c')]
+        f = rs.insert_fields(cl)
+        self.assertEqual((f['boundary_molecules'], f['left_agree_molecules'], f['right_agree_molecules'],
+                          f['both_agree_molecules'], f['boundary']), (3, 2, 2, 1, 'unknown'))
+
+    def test_both_sides_jointly(self):
+        # reviewer's counterexample: 80% agree on each side but only 60% on both at once
+        cl = ([self.obs(0, 0) for _ in range(6)] + [self.obs(200, 0) for _ in range(2)] +
+              [self.obs(0, 200) for _ in range(2)])
+        f = rs.insert_fields(cl)
+        self.assertEqual((f['left_agree_molecules'], f['right_agree_molecules'], f['both_agree_molecules'],
+                          f['boundary']), (8, 8, 6, 'unknown'))
+
+
+class GeometryTests(unittest.TestCase):
+    def test_forward_and_reverse_give_the_sequence_between_the_flanks(self):
+        self.assertEqual(rs.geometry('c', 1100, '+', 'c', 2100, '+', 1000), ('proper', 1100, 2100))
+        self.assertEqual(rs.geometry('c', 2100, '-', 'c', 1100, '-', 1000), ('proper', 1100, 2100))
+        self.assertEqual(rs.geometry('c', 1100, '+', 'c', 1100, '+', 1000), ('proper', 1100, 1100))  # empty
+
+    def test_junctions(self):
+        self.assertEqual(rs.geometry('c', 1100, '+', 'd', 2100, '+', 1000)[0], 'junction')
+        self.assertEqual(rs.geometry('c', 1100, '+', 'c', 2100, '-', 1000)[0], 'junction')
+        self.assertEqual(rs.geometry('c', 1100, '+', 'c', 50000, '+', 1000)[0], 'junction')
+        self.assertEqual(rs.geometry('c', 2100, '+', 'c', 1100, '+', 1000)[0], 'junction')
+
+
+class CanonicalTests(unittest.TestCase):
+    def test_both_strands_of_one_position_give_the_same_key(self):
+        fwd = dict(left_contig='c', left_pos=1100, left_strand='+', right_contig='c', right_pos=2100, right_strand='+')
+        rev = dict(left_contig='c', left_pos=2100, left_strand='-', right_contig='c', right_pos=1100, right_strand='-')
+        self.assertEqual(rs.canonical(fwd), rs.canonical(rev))
+        self.assertEqual(rs.geometry(*rs.canonical(rev), 1000), ('proper', 1100, 2100))
+
+    def test_plus_minus_junction_from_both_strands(self):
+        # a read joining c:4097738 (+) to c:2231535 (-), and a read of the other strand: one key
+        a = dict(left_contig='c', left_pos=4097738, left_strand='+', right_contig='c', right_pos=2231535, right_strand='-')
+        b = dict(left_contig='c', left_pos=2231535, left_strand='+', right_contig='c', right_pos=4097738, right_strand='-')
+        self.assertEqual(rs.canonical(a), rs.canonical(b))
+        self.assertEqual(rs.canonical(b), ('c', 2231535, '+', 'c', 4097738, '-'))
+
+
+class ClusterTests(unittest.TestCase):
+    def test_observations_within_tolerance_merge(self):
+        obs = [dict(c_left_pos=1000, c_right_pos=2000), dict(c_left_pos=1030, c_right_pos=2010),
+               dict(c_left_pos=1500, c_right_pos=2500)]
+        self.assertEqual(sorted(len(c) for c in rs.cluster(obs)), [1, 2])
+
+
+def row(cls, ck='PF_a', cs='+', contig='c', start=1000, end=2000, **kw):
+    return dict(dict(cls=cls, core_key=ck, core_strand=cs, contig=contig, start=start, end=end, molecules=3,
+                     catalog=''), **kw)
+
+
+class ShiftedTests(unittest.TestCase):
+    def test_position_overlapping_a_known_one_is_marked_and_keeps_its_class(self):
+        rows = [row('known_catalog_position'),
+                row('not_in_assembly:other_sequence', start=1150),
+                row('catalog_omission', start=5000, end=6000),
+                row('not_in_assembly:junction', contig='', start='', end='', left_contig='c', left_pos=1990,
+                    right_contig='d', right_pos=10)]
+        out = rs.mark_shifted(rows, FAM)
+        self.assertEqual([r['cls'] for r in out], ['known_catalog_position', 'shifted_known_position',
+                                                    'catalog_omission', 'shifted_known_position'])
+        self.assertEqual(out[1]['raw_cls'], 'not_in_assembly:other_sequence')
+
+    def test_core_relation_is_checked(self):
+        # counterexamples to v0.1: an unrelated core's known position, or a homolog in the opposite orientation,
+        # does not make an overlapping position shifted; a homologous core in a consistent orientation does
+        rows = [row('known_catalog_position', ck='PF_c'),
+                row('not_in_assembly:other_sequence', ck='PF_a', start=1150),
+                row('known_catalog_position', ck='PF_b', contig='d'),
+                row('catalog_omission', ck='PF_a', contig='d', start=1100, cs='-'),
+                row('catalog_omission', ck='PF_a', contig='d', start=1100, end=1900)]
+        out = rs.mark_shifted(rows, FAM)
+        self.assertEqual([r['cls'] for r in out], ['known_catalog_position', 'not_in_assembly:other_sequence',
+                                                    'known_catalog_position', 'catalog_omission',
+                                                    'shifted_known_position'])
+
+
+    def test_two_known_positions_of_one_occurrence(self):
+        # counterexample found by the negative control: a partial hit of the same gene matches the same occurrence
+        rows = [row('known_catalog_position', start=1200, catalog='o1', molecules=6),
+                row('known_catalog_position', catalog='o1', molecules=63),
+                row('known_catalog_position', ck='PF_b', catalog='o1', molecules=5)]  # another core: its own position
+        out = rs.mark_shifted(rows, FAM)
+        self.assertEqual([r['cls'] for r in out], ['shifted_known_position', 'known_catalog_position',
+                                                    'known_catalog_position'])
+
+
+def occ(oid, ck='PF_a', start=1000, end=2000, strand='+', contig='c'):
+    return dict(occurrence_id=oid, core_key=ck, contig=contig, start0=start, end0=end, strand=strand)
+
+
+class CoreRelationTests(unittest.TestCase):
+    def test_relation_and_sign(self):
+        self.assertEqual(rs.core_relation('PF_a', 'PF_a', FAM), ('same', '+'))
+        self.assertEqual(rs.core_relation('PF_a', 'PF_b', FAM), ('homolog', '+'))  # same homology group
+        self.assertEqual(rs.core_relation('PF_a', 'PF_c', FAM), ('unrelated', ''))
+        self.assertEqual(rs.core_relation('PF_a+,PF_c+', 'PF_c-,PF_x+', FAM), ('homolog', '-'))
+        self.assertEqual(rs.core_relation('PF_a+,PF_c+', 'PF_a+,PF_c-', FAM), ('homolog', ''))  # pairs disagree
+        self.assertEqual(rs.core_relation('NEG_recA', 'PF_a', FAM), ('unrelated', ''))  # control family unknown
+        # a control gene whose protein is in family PF_a is a homolog of a core of that family, not of others
+        fam = dict(FAM, **{'neg:NEG_recA': {'PF_a'}})
+        self.assertEqual(rs.core_relation('NEG_recA', 'PF_a+,PF_x+', fam), ('homolog', '+'))
+        self.assertEqual(rs.core_relation('NEG_recA', 'PF_c', fam), ('unrelated', ''))
+
+
+class MatchCatalogTests(unittest.TestCase):
+    def test_same_core_orientation_and_coverage(self):
+        # boundary offset of 60 bp (> TOL; v0.1 containment failed) but reciprocal coverage holds -> matched
+        self.assertEqual(rs.match_catalog('c', 1000, 2000, '+', 'PF_a', [occ('o1', start=940, end=2000)], FAM)[:2],
+                         ('known_catalog_position', 'o1'))
+        # counterexample: same core, opposite orientation -> not known
+        self.assertEqual(rs.match_catalog('c', 1000, 2000, '-', 'PF_a', [occ('o1')], FAM)[0],
+                         'catalog_mismatch:orientation')
+
+    def test_overlap_alone_is_not_a_match(self):
+        # an unrelated core wholly inside the interval (v0.1 called this known_catalog_position_other_core)
+        cls, ids, notes = rs.match_catalog('c', 1000, 2000, '+', 'PF_a', [occ('o2', ck='PF_c', start=1100, end=1900)], FAM)
+        self.assertEqual((cls, ids, notes), (None, '', 'o2:unrelated'))
+        # a homolog covering only half the interval (a one-gene occurrence inside a two-gene core): coverage fails
+        self.assertEqual(rs.match_catalog('c', 1000, 3000, '+', 'PF_a+,PF_c+', [occ('o3', ck='PF_b', end=2000)],
+                                          FAM)[0], 'catalog_mismatch:coverage')
+        # the same core's occurrence overlapping by 30%: not a match either
+        self.assertEqual(rs.match_catalog('c', 1000, 2000, '+', 'PF_a', [occ('o4', start=1700, end=2700)], FAM)[0],
+                         'catalog_mismatch:coverage')
+        # same core preferred over a matching homolog
+        self.assertEqual(rs.match_catalog('c', 1000, 2000, '+', 'PF_a', [occ('o5', ck='PF_b'), occ('o6')], FAM)[:2],
+                         ('known_catalog_position', 'o6'))
+        self.assertEqual(rs.match_catalog('c', 1000, 2000, '+', 'PF_a', [occ('o5', ck='PF_b')], FAM)[:2],
+                         ('known_catalog_position_other_core', 'o5'))
+
+
+def galn(ts, te, cg, t='c'):
+    return dict(t=t, ts=ts, te=te, cg=cg, strand='+', qs=0, qe=te - ts)
+
+
+class EmptySiteTests(unittest.TestCase):
+    def test_local_cigar(self):
+        clean = galn(3000, 7000, '4000M')
+        self.assertEqual(rs.empty_site_reads([clean], 5000, 5008, 1200), 'empty')
+        # counterexample to v0.1 (length difference < 200 bp overall): a 1.2 kb insertion at the site and a 1.2 kb
+        # deletion 1.5 kb away cancel in length, but the read carries an insertion at the site
+        ins = galn(3000, 8200, '2000M1200I1500M1200D500M')
+        self.assertEqual(rs.empty_site_reads([ins], 2000 + 3000, 2008 + 3000, 1200), 'indel')
+        self.assertEqual(rs.empty_site_reads([galn(4500, 7000, '2500M')], 5000, 5008, 1200), '')  # does not span
+
+    def test_molecules(self):
+        mol = {'r1': 'm1', 'r1d': 'm1', 'r2': 'm2', 'r3': 'm3', 'r4': 'm4'}
+        got = rs.empty_site_counts({'r3'}, {'r1': 'empty', 'r1d': 'empty', 'r2': 'indel', 'r3': 'empty',
+                                            'r4': 'empty'}, mol)
+        # r1 and its duplex record r1d are one molecule; r3 also carries the core there -> both_forms, not empty
+        self.assertEqual(got, dict(empty_site_molecules=2, empty_site_read_records=3, empty_site_indel_molecules=1,
+                                   both_forms_molecules=1))
+
+
+if __name__ == '__main__':
+    unittest.main()

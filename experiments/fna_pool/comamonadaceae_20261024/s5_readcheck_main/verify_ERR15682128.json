@@ -1,0 +1,48 @@
+{
+  "run": {
+    "run": "ERR15682128",
+    "sample_id": "SAMEA120311175",
+    "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR156/028/ERR15682128/ERR15682128.fastq.gz",
+    "fastq_bytes": 628164057,
+    "fastq_md5": "bc6fb403e517671d651a3640c96c8db5",
+    "platform": "OXFORD_NANOPORE",
+    "archive_base_count": 782441434,
+    "archive_read_count": 241413
+  },
+  "download_started": "2026-10-25T17:55:31-0700",
+  "local_file": "/global/scratch/users/kh36969/longread_callout/data/reads/ERR15682128/ERR15682128.fastq.gz",
+  "bytes": 628164057,
+  "md5": "bc6fb403e517671d651a3640c96c8db5",
+  "sha256": "351fa08ca87c33fd5fb0f0449a9c2e5480825b80678d6e0e9cb5deb00159b344",
+  "rejected_downloads": [],
+  "spots_absent_from_fastq": 0,
+  "summary": {
+    "records": 241413,
+    "bases": 782441434,
+    "read_unit_counts": {
+      "other_name": 241413
+    },
+    "distinct_zmws": null,
+    "distinct_sra_spots": 241413,
+    "max_records_per_spot": 1,
+    "placeholder_quality_records": 1,
+    "example_headers": [
+      "@ERR15682128.1 23d0d2d0-407f-4022-ab75-56b5e52551ae;c5566594-bc28-442b-8b59-bb143d4d4c7f qs:f:28.2628 st:Z:2025-05-06T18:28:22.384+00:00 RG:Z:08595e7f6a1ac98befde7898d0cc30f472415901_dna_r10.4.1_e8.2_400bps_sup@v5.0.0_dna_r10.4.1_e8.2_5khz_stereo@v1.3",
+      "@ERR15682128.2 d5a03166-db41-4730-8384-995e191d531c;396c9148-84e7-494c-a682-02b48acc6fa6 qs:f:32.1376 st:Z:2025-05-06T17:29:22.128+00:00 RG:Z:08595e7f6a1ac98befde7898d0cc30f472415901_dna_r10.4.1_e8.2_400bps_sup@v5.0.0_dna_r10.4.1_e8.2_5khz_stereo@v1.3",
+      "@ERR15682128.3 302bbfea-0f98-4850-bfe0-9a59a48ef185;e71eb680-68aa-4d5d-9f8d-168156b36458 qs:f:29.3681 st:Z:2025-05-06T23:22:13.417+00:00 RG:Z:08595e7f6a1ac98befde7898d0cc30f472415901_dna_r10.4.1_e8.2_400bps_sup@v5.0.0_dna_r10.4.1_e8.2_5khz_stereo@v1.3",
+      "@ERR15682128.4 f4ef6c1e-0e1d-4841-9757-be99a297ccd5;b001442c-89e0-4a56-8d24-bfb1a564f597 qs:f:28.7536 st:Z:2025-05-07T00:09:48.647+00:00 RG:Z:08595e7f6a1ac98befde7898d0cc30f472415901_dna_r10.4.1_e8.2_400bps_sup@v5.0.0_dna_r10.4.1_e8.2_5khz_stereo@v1.3"
+    ],
+    "mean_length": 3241.1,
+    "median_length": 773,
+    "max_length": 408980,
+    "n50": 7464,
+    "molecule_grouping": "one_record_per_molecule"
+  },
+  "checks": {
+    "bytes_match": true,
+    "md5_match": true,
+    "spot_count_match": true,
+    "base_count_match": true
+  },
+  "status": "verified"
+}

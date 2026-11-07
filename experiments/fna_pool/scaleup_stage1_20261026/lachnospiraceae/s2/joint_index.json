@@ -1,0 +1,19 @@
+{
+  "joint_fna": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/lachnospiraceae/s2/joint.fna.gz",
+  "joint_fna_sha256": "8457d365ca00408e16226839c4377c2b83473a3d1a4bcb53dcfb74330deda434",
+  "samples": 3252,
+  "contigs": 316383,
+  "contig_bp": 12665278929,
+  "header": "sample_id|assembly|contig",
+  "check": "every joint record SHA256 equals the S1 record SHA256 of its source FNA",
+  "pool_rows": 3254,
+  "excluded_not_verified": 2,
+  "annotation_status": {
+    "annotation_missing": 284,
+    "present": 2968
+  },
+  "gff_features_out_of_range": 0,
+  "contig_index": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/lachnospiraceae/s2/contig_index.tsv.gz",
+  "contig_index_sha256": "d6b8e2c09e319fd0355ffc493bb8b2041b776611930b61e48edcfb493134edc8",
+  "gff_features_origin_spanning": 142
+}

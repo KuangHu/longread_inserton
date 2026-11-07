@@ -1,0 +1,9 @@
+{
+  "records_scanned": 20000,
+  "molecules_in_scan": 1724,
+  "records_with_adapter": 4123,
+  "fraction_with_adapter": 0.2061,
+  "rule": ">=2 distinct SMRTbell adapter 15-mers (either strand) in the record",
+  "median_length": 2312,
+  "interpretation": "adapters_inside_records: likely unsplit polymerase reads"
+}

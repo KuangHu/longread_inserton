@@ -1,0 +1,6404 @@
+[
+  {
+    "query": "Bs869T2_PILER_0.0",
+    "organism": "Bs869T2",
+    "method": "PILER",
+    "native_family": "0.0",
+    "length": 5800,
+    "raw_occurrences": 5,
+    "occurrences": [
+      {
+        "contig": "NZ_CP072522.1",
+        "accession": "NZ_CP072522.1",
+        "start0": 1405830,
+        "end0": 1411519,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072522.1_feature_2497",
+            "type": "rRNA",
+            "overlap_bp": 113,
+            "feature_length_bp": 113,
+            "product": [
+              "5S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "DT99_RS36150"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP072522.1_feature_2499",
+            "type": "rRNA",
+            "overlap_bp": 2882,
+            "feature_length_bp": 2882,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "DT99_RS36155"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP072522.1_feature_2501",
+            "type": "tRNA",
+            "overlap_bp": 76,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Ala"
+            ],
+            "locus_tag": [
+              "DT99_RS36160"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP072522.1_feature_2503",
+            "type": "tRNA",
+            "overlap_bp": 77,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Ile"
+            ],
+            "locus_tag": [
+              "DT99_RS36165"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP072522.1_feature_2505",
+            "type": "rRNA",
+            "overlap_bp": 1533,
+            "feature_length_bp": 1533,
+            "product": [
+              "16S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "DT99_RS36170"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 2653385,
+        "end0": 2659113,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_4741",
+            "type": "rRNA",
+            "overlap_bp": 113,
+            "feature_length_bp": 113,
+            "product": [
+              "5S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "DT99_RS28340"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP072521.1_feature_4743",
+            "type": "rRNA",
+            "overlap_bp": 2882,
+            "feature_length_bp": 2882,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "DT99_RS28345"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP072521.1_feature_4745",
+            "type": "tRNA",
+            "overlap_bp": 76,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Ala"
+            ],
+            "locus_tag": [
+              "DT99_RS28350"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP072521.1_feature_4747",
+            "type": "tRNA",
+            "overlap_bp": 77,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Ile"
+            ],
+            "locus_tag": [
+              "DT99_RS28355"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP072521.1_feature_4749",
+            "type": "rRNA",
+            "overlap_bp": 1533,
+            "feature_length_bp": 1533,
+            "product": [
+              "16S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "DT99_RS28360"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 342243,
+        "end0": 348041,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_627",
+            "type": "rRNA",
+            "overlap_bp": 1533,
+            "feature_length_bp": 1533,
+            "product": [
+              "16S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "DT99_RS01545"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP072520.1_feature_629",
+            "type": "tRNA",
+            "overlap_bp": 77,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Ile"
+            ],
+            "locus_tag": [
+              "DT99_RS01550"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP072520.1_feature_631",
+            "type": "tRNA",
+            "overlap_bp": 76,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Ala"
+            ],
+            "locus_tag": [
+              "DT99_RS01555"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP072520.1_feature_633",
+            "type": "rRNA",
+            "overlap_bp": 2882,
+            "feature_length_bp": 2882,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "DT99_RS01560"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP072520.1_feature_635",
+            "type": "rRNA",
+            "overlap_bp": 113,
+            "feature_length_bp": 113,
+            "product": [
+              "5S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "DT99_RS01565"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 560647,
+        "end0": 566419,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_1060",
+            "type": "CDS",
+            "overlap_bp": 204,
+            "feature_length_bp": 204,
+            "product": [
+              "hypothetical protein"
+            ],
+            "locus_tag": [
+              "DT99_RS02625"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP072520.1_feature_1062",
+            "type": "rRNA",
+            "overlap_bp": 1533,
+            "feature_length_bp": 1533,
+            "product": [
+              "16S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "DT99_RS02630"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP072520.1_feature_1064",
+            "type": "tRNA",
+            "overlap_bp": 77,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Ile"
+            ],
+            "locus_tag": [
+              "DT99_RS02635"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP072520.1_feature_1066",
+            "type": "tRNA",
+            "overlap_bp": 76,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Ala"
+            ],
+            "locus_tag": [
+              "DT99_RS02640"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP072520.1_feature_1068",
+            "type": "rRNA",
+            "overlap_bp": 2882,
+            "feature_length_bp": 2882,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "DT99_RS02645"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP072520.1_feature_1070",
+            "type": "rRNA",
+            "overlap_bp": 113,
+            "feature_length_bp": 113,
+            "product": [
+              "5S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "DT99_RS02650"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 2556529,
+        "end0": 2562240,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_4758",
+            "type": "rRNA",
+            "overlap_bp": 113,
+            "feature_length_bp": 113,
+            "product": [
+              "5S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "DT99_RS11820"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP072520.1_feature_4760",
+            "type": "rRNA",
+            "overlap_bp": 2882,
+            "feature_length_bp": 2882,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "DT99_RS11825"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP072520.1_feature_4762",
+            "type": "tRNA",
+            "overlap_bp": 76,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Ala"
+            ],
+            "locus_tag": [
+              "DT99_RS11830"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP072520.1_feature_4764",
+            "type": "tRNA",
+            "overlap_bp": 77,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Ile"
+            ],
+            "locus_tag": [
+              "DT99_RS11835"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP072520.1_feature_4766",
+            "type": "rRNA",
+            "overlap_bp": 1533,
+            "feature_length_bp": 1533,
+            "product": [
+              "16S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "DT99_RS11840"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "Bs869T2__NZ_CP072520.1_feature_1060",
+      "identity_pct": 57.627,
+      "alignment_aa": 59,
+      "query_start": 5569,
+      "query_end": 5745,
+      "evalue": 1.9e-12,
+      "bitscore": 62.0,
+      "subject_length": 67,
+      "title": "hypothetical protein"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "Bs869T2_PILER_1.1",
+    "organism": "Bs869T2",
+    "method": "PILER",
+    "native_family": "1.1",
+    "length": 1657,
+    "raw_occurrences": 3,
+    "occurrences": [
+      {
+        "contig": "NZ_CP072522.1",
+        "accession": "NZ_CP072522.1",
+        "start0": 535826,
+        "end0": 537466,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072522.1_feature_954",
+            "type": "CDS",
+            "overlap_bp": 1629,
+            "feature_length_bp": 1629,
+            "product": [
+              "electron transfer flavoprotein-ubiquinone oxidoreductase"
+            ],
+            "locus_tag": [
+              "DT99_RS32330"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072522.1",
+        "accession": "NZ_CP072522.1",
+        "start0": 921150,
+        "end0": 922806,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072522.1_feature_1642",
+            "type": "CDS",
+            "overlap_bp": 1628,
+            "feature_length_bp": 1629,
+            "product": [
+              "electron transfer flavoprotein-ubiquinone oxidoreductase"
+            ],
+            "locus_tag": [
+              "DT99_RS34045"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 1610307,
+        "end0": 1611964,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_3009",
+            "type": "CDS",
+            "overlap_bp": 1657,
+            "feature_length_bp": 1674,
+            "product": [
+              "electron transfer flavoprotein-ubiquinone oxidoreductase"
+            ],
+            "locus_tag": [
+              "DT99_RS07485"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "Bs869T2__NZ_CP072520.1_feature_3009",
+      "identity_pct": 99.637,
+      "alignment_aa": 551,
+      "query_start": 1656,
+      "query_end": 4,
+      "evalue": 0.0,
+      "bitscore": 1115.0,
+      "subject_length": 557,
+      "title": "electron transfer flavoprotein-ubiquinone oxidoreductase"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "Bs869T2_RS_R0",
+    "organism": "Bs869T2",
+    "method": "RS",
+    "native_family": "R=0",
+    "length": 97,
+    "raw_occurrences": 44,
+    "occurrences": [
+      {
+        "contig": "NZ_CP072522.1",
+        "accession": "NZ_CP072522.1",
+        "start0": 868411,
+        "end0": 868491,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072522.1_feature_1538",
+            "type": "CDS",
+            "overlap_bp": 80,
+            "feature_length_bp": 1551,
+            "product": [
+              "sugar ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS33785"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072522.1",
+        "accession": "NZ_CP072522.1",
+        "start0": 432486,
+        "end0": 432570,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072522.1_feature_768",
+            "type": "CDS",
+            "overlap_bp": 84,
+            "feature_length_bp": 783,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS31865"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 2831947,
+        "end0": 2832042,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_5081",
+            "type": "CDS",
+            "overlap_bp": 95,
+            "feature_length_bp": 1044,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS29190"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 2664763,
+        "end0": 2664857,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_4761",
+            "type": "CDS",
+            "overlap_bp": 94,
+            "feature_length_bp": 1104,
+            "product": [
+              "2-aminoethylphosphonate ABC transport system ATP-binding subunit PhnT"
+            ],
+            "locus_tag": [
+              "DT99_RS28390"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 2533011,
+        "end0": 2533103,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_4552",
+            "type": "CDS",
+            "overlap_bp": 92,
+            "feature_length_bp": 2100,
+            "product": [
+              "peptidase domain-containing ABC transporter"
+            ],
+            "locus_tag": [
+              "DT99_RS27875"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 2387045,
+        "end0": 2387097,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_4296",
+            "type": "CDS",
+            "overlap_bp": 52,
+            "feature_length_bp": 627,
+            "product": [
+              "methylamine dehydrogenase accessory protein MauD"
+            ],
+            "locus_tag": [
+              "DT99_RS27235"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 2340557,
+        "end0": 2340639,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_4202",
+            "type": "CDS",
+            "overlap_bp": 82,
+            "feature_length_bp": 702,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS27000"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 2304738,
+        "end0": 2304831,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_4150",
+            "type": "CDS",
+            "overlap_bp": 93,
+            "feature_length_bp": 1725,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS26870"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 1808941,
+        "end0": 1809035,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_3254",
+            "type": "CDS",
+            "overlap_bp": 94,
+            "feature_length_bp": 777,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS24640"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 1620119,
+        "end0": 1620201,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_2946",
+            "type": "CDS",
+            "overlap_bp": 82,
+            "feature_length_bp": 690,
+            "product": [
+              "urea ABC transporter ATP-binding subunit UrtE"
+            ],
+            "locus_tag": [
+              "DT99_RS23865"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 1610529,
+        "end0": 1610623,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_2926",
+            "type": "CDS",
+            "overlap_bp": 94,
+            "feature_length_bp": 915,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS23815"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 1336277,
+        "end0": 1336373,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_2425",
+            "type": "CDS",
+            "overlap_bp": 96,
+            "feature_length_bp": 948,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS22560"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 1102556,
+        "end0": 1102651,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_2037",
+            "type": "CDS",
+            "overlap_bp": 95,
+            "feature_length_bp": 3540,
+            "product": [
+              "ABC transporter ATP-binding protein/permease"
+            ],
+            "locus_tag": [
+              "DT99_RS21590"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 1032404,
+        "end0": 1032498,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_1905",
+            "type": "CDS",
+            "overlap_bp": 94,
+            "feature_length_bp": 846,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS21265"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 858583,
+        "end0": 858678,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_1619",
+            "type": "CDS",
+            "overlap_bp": 95,
+            "feature_length_bp": 831,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS20550"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 819268,
+        "end0": 819362,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_1549",
+            "type": "CDS",
+            "overlap_bp": 94,
+            "feature_length_bp": 702,
+            "product": [
+              "sulfate/molybdate ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS20375"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 582857,
+        "end0": 582953,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_1102",
+            "type": "CDS",
+            "overlap_bp": 96,
+            "feature_length_bp": 1083,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS19260"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 533317,
+        "end0": 533402,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_1006",
+            "type": "CDS",
+            "overlap_bp": 85,
+            "feature_length_bp": 858,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS19025"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 3534186,
+        "end0": 3534282,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_6598",
+            "type": "CDS",
+            "overlap_bp": 96,
+            "feature_length_bp": 1092,
+            "product": [
+              "putative 2-aminoethylphosphonate ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS16395"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 3381544,
+        "end0": 3381640,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_6302",
+            "type": "CDS",
+            "overlap_bp": 96,
+            "feature_length_bp": 1155,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS15655"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 3204559,
+        "end0": 3204655,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_5978",
+            "type": "CDS",
+            "overlap_bp": 96,
+            "feature_length_bp": 795,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS14850"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 2944954,
+        "end0": 2945035,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_5507",
+            "type": "CDS",
+            "overlap_bp": 81,
+            "feature_length_bp": 885,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS13680"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 2837599,
+        "end0": 2837683,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_5305",
+            "type": "CDS",
+            "overlap_bp": 84,
+            "feature_length_bp": 717,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS13170"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 2800783,
+        "end0": 2800879,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_5220",
+            "type": "CDS",
+            "overlap_bp": 96,
+            "feature_length_bp": 816,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS12960"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 2714581,
+        "end0": 2714664,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_5052",
+            "type": "CDS",
+            "overlap_bp": 83,
+            "feature_length_bp": 1950,
+            "product": [
+              "ATP-binding cassette domain-containing protein"
+            ],
+            "locus_tag": [
+              "DT99_RS12550"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 2333311,
+        "end0": 2333391,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_4342",
+            "type": "CDS",
+            "overlap_bp": 80,
+            "feature_length_bp": 1932,
+            "product": [
+              "ATP-binding cassette domain-containing protein"
+            ],
+            "locus_tag": [
+              "DT99_RS10795"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 2332453,
+        "end0": 2332533,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_4342",
+            "type": "CDS",
+            "overlap_bp": 80,
+            "feature_length_bp": 1932,
+            "product": [
+              "ATP-binding cassette domain-containing protein"
+            ],
+            "locus_tag": [
+              "DT99_RS10795"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 1998778,
+        "end0": 1998872,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_3706",
+            "type": "CDS",
+            "overlap_bp": 94,
+            "feature_length_bp": 702,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS09210"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 1994716,
+        "end0": 1994789,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_3700",
+            "type": "CDS",
+            "overlap_bp": 73,
+            "feature_length_bp": 1593,
+            "product": [
+              "ABC-F family ATPase"
+            ],
+            "locus_tag": [
+              "DT99_RS09195"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 1964071,
+        "end0": 1964167,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_3654",
+            "type": "CDS",
+            "overlap_bp": 96,
+            "feature_length_bp": 1161,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS09085"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 1802113,
+        "end0": 1802209,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_3377",
+            "type": "CDS",
+            "overlap_bp": 96,
+            "feature_length_bp": 849,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS08405"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 1757226,
+        "end0": 1757321,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_3303",
+            "type": "CDS",
+            "overlap_bp": 95,
+            "feature_length_bp": 1059,
+            "product": [
+              "sulfate/molybdate ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS08220"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 1477819,
+        "end0": 1477902,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_2775",
+            "type": "CDS",
+            "overlap_bp": 83,
+            "feature_length_bp": 786,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS06900"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 1408148,
+        "end0": 1408243,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_2653",
+            "type": "CDS",
+            "overlap_bp": 95,
+            "feature_length_bp": 849,
+            "product": [
+              "phosphate ABC transporter ATP-binding protein PstB"
+            ],
+            "locus_tag": [
+              "DT99_RS06590"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 1382035,
+        "end0": 1382091,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_2605",
+            "type": "CDS",
+            "overlap_bp": 56,
+            "feature_length_bp": 1218,
+            "product": [
+              "polyhydroxyalkanoate depolymerase"
+            ],
+            "locus_tag": [
+              "DT99_RS06470"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 1327943,
+        "end0": 1328039,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_2499",
+            "type": "CDS",
+            "overlap_bp": 96,
+            "feature_length_bp": 1032,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS36810"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 1297859,
+        "end0": 1297937,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_2456",
+            "type": "CDS",
+            "overlap_bp": 78,
+            "feature_length_bp": 774,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS06100"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 1241469,
+        "end0": 1241565,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_2370",
+            "type": "CDS",
+            "overlap_bp": 96,
+            "feature_length_bp": 1833,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS05885"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 975989,
+        "end0": 976075,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_1801",
+            "type": "CDS",
+            "overlap_bp": 86,
+            "feature_length_bp": 858,
+            "product": [
+              "urea ABC transporter ATP-binding protein UrtD"
+            ],
+            "locus_tag": [
+              "DT99_RS04470"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 870421,
+        "end0": 870479,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_1619",
+            "type": "CDS",
+            "overlap_bp": 58,
+            "feature_length_bp": 1662,
+            "product": [
+              "FAD-dependent oxidoreductase"
+            ],
+            "locus_tag": [
+              "DT99_RS04015"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 532704,
+        "end0": 532786,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_1006",
+            "type": "CDS",
+            "overlap_bp": 82,
+            "feature_length_bp": 1668,
+            "product": [
+              "energy-dependent translational throttle protein EttA"
+            ],
+            "locus_tag": [
+              "DT99_RS02490"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 111940,
+        "end0": 112023,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_196",
+            "type": "CDS",
+            "overlap_bp": 83,
+            "feature_length_bp": 1785,
+            "product": [
+              "branched-chain amino acid ABC transporter ATP-binding protein/permease"
+            ],
+            "locus_tag": [
+              "DT99_RS00485"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 103396,
+        "end0": 103474,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_184",
+            "type": "CDS",
+            "overlap_bp": 78,
+            "feature_length_bp": 756,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS00455"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 102617,
+        "end0": 102701,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_182",
+            "type": "CDS",
+            "overlap_bp": 84,
+            "feature_length_bp": 780,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS00450"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "Bs869T2__NZ_CP072520.1_feature_6302",
+      "identity_pct": 81.25,
+      "alignment_aa": 32,
+      "query_start": 2,
+      "query_end": 97,
+      "evalue": 3.9e-12,
+      "bitscore": 55.1,
+      "subject_length": 384,
+      "title": "ABC transporter ATP-binding protein"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "Bs869T2_RS_R1",
+    "organism": "Bs869T2",
+    "method": "RS",
+    "native_family": "R=1",
+    "length": 70,
+    "raw_occurrences": 21,
+    "occurrences": [
+      {
+        "contig": "NZ_CP072522.1",
+        "accession": "NZ_CP072522.1",
+        "start0": 896711,
+        "end0": 896779,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072522.1_feature_1594",
+            "type": "CDS",
+            "overlap_bp": 68,
+            "feature_length_bp": 780,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS33925"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072522.1",
+        "accession": "NZ_CP072522.1",
+        "start0": 869551,
+        "end0": 869619,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072522.1_feature_1538",
+            "type": "CDS",
+            "overlap_bp": 68,
+            "feature_length_bp": 1551,
+            "product": [
+              "sugar ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS33785"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072522.1",
+        "accession": "NZ_CP072522.1",
+        "start0": 232340,
+        "end0": 232408,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072522.1_feature_430",
+            "type": "CDS",
+            "overlap_bp": 68,
+            "feature_length_bp": 1515,
+            "product": [
+              "sugar ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS31030"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072522.1",
+        "accession": "NZ_CP072522.1",
+        "start0": 141454,
+        "end0": 141522,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072522.1_feature_260",
+            "type": "CDS",
+            "overlap_bp": 68,
+            "feature_length_bp": 702,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS30610"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 2958030,
+        "end0": 2958098,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_5299",
+            "type": "CDS",
+            "overlap_bp": 68,
+            "feature_length_bp": 1548,
+            "product": [
+              "L-arabinose ABC transporter ATP-binding protein AraG"
+            ],
+            "locus_tag": [
+              "DT99_RS29730"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 2780836,
+        "end0": 2780893,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_4973",
+            "type": "CDS",
+            "overlap_bp": 57,
+            "feature_length_bp": 822,
+            "product": [
+              "heme ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS28920"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 2341648,
+        "end0": 2341717,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_4204",
+            "type": "CDS",
+            "overlap_bp": 69,
+            "feature_length_bp": 774,
+            "product": [
+              "high-affinity branched-chain amino acid ABC transporter ATP-binding protein LivG"
+            ],
+            "locus_tag": [
+              "DT99_RS27005"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 2097345,
+        "end0": 2097414,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_3792",
+            "type": "CDS",
+            "overlap_bp": 69,
+            "feature_length_bp": 1521,
+            "product": [
+              "sugar ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS25975"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 1621205,
+        "end0": 1621274,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_2948",
+            "type": "CDS",
+            "overlap_bp": 69,
+            "feature_length_bp": 744,
+            "product": [
+              "urea ABC transporter ATP-binding protein UrtD"
+            ],
+            "locus_tag": [
+              "DT99_RS23870"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 1520231,
+        "end0": 1520287,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_2767",
+            "type": "CDS",
+            "overlap_bp": 56,
+            "feature_length_bp": 1809,
+            "product": [
+              "branched-chain amino acid ABC transporter ATP-binding protein/permease"
+            ],
+            "locus_tag": [
+              "DT99_RS23415"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 819635,
+        "end0": 819692,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_1549",
+            "type": "CDS",
+            "overlap_bp": 57,
+            "feature_length_bp": 702,
+            "product": [
+              "sulfate/molybdate ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS20375"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 532905,
+        "end0": 532973,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_1006",
+            "type": "CDS",
+            "overlap_bp": 68,
+            "feature_length_bp": 858,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS19025"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 2944630,
+        "end0": 2944681,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_5507",
+            "type": "CDS",
+            "overlap_bp": 51,
+            "feature_length_bp": 885,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS13680"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 2714994,
+        "end0": 2715063,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_5052",
+            "type": "CDS",
+            "overlap_bp": 69,
+            "feature_length_bp": 1950,
+            "product": [
+              "ATP-binding cassette domain-containing protein"
+            ],
+            "locus_tag": [
+              "DT99_RS12550"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 2714031,
+        "end0": 2714100,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_5052",
+            "type": "CDS",
+            "overlap_bp": 69,
+            "feature_length_bp": 1950,
+            "product": [
+              "ATP-binding cassette domain-containing protein"
+            ],
+            "locus_tag": [
+              "DT99_RS12550"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 1994182,
+        "end0": 1994234,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_3700",
+            "type": "CDS",
+            "overlap_bp": 52,
+            "feature_length_bp": 1593,
+            "product": [
+              "ABC-F family ATPase"
+            ],
+            "locus_tag": [
+              "DT99_RS09195"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 1567257,
+        "end0": 1567314,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_2937",
+            "type": "CDS",
+            "overlap_bp": 57,
+            "feature_length_bp": 1578,
+            "product": [
+              "sugar ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS07305"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 1557145,
+        "end0": 1557213,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_2919",
+            "type": "CDS",
+            "overlap_bp": 68,
+            "feature_length_bp": 753,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS07260"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 976357,
+        "end0": 976425,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_1801",
+            "type": "CDS",
+            "overlap_bp": 68,
+            "feature_length_bp": 858,
+            "product": [
+              "urea ABC transporter ATP-binding protein UrtD"
+            ],
+            "locus_tag": [
+              "DT99_RS04470"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 646312,
+        "end0": 646380,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_1222",
+            "type": "CDS",
+            "overlap_bp": 68,
+            "feature_length_bp": 1512,
+            "product": [
+              "L-arabinose ABC transporter ATP-binding protein AraG"
+            ],
+            "locus_tag": [
+              "DT99_RS03030"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 102275,
+        "end0": 102329,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_182",
+            "type": "CDS",
+            "overlap_bp": 54,
+            "feature_length_bp": 780,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS00450"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "Bs869T2__NZ_CP072522.1_feature_1594",
+      "identity_pct": 73.913,
+      "alignment_aa": 23,
+      "query_start": 2,
+      "query_end": 70,
+      "evalue": 3.32e-07,
+      "bitscore": 40.4,
+      "subject_length": 259,
+      "title": "ABC transporter ATP-binding protein"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "Bs869T2_RS_R2",
+    "organism": "Bs869T2",
+    "method": "RS",
+    "native_family": "R=2",
+    "length": 461,
+    "raw_occurrences": 25,
+    "occurrences": [
+      {
+        "contig": "NZ_CP072522.1",
+        "accession": "NZ_CP072522.1",
+        "start0": 1027330,
+        "end0": 1027638,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072522.1_feature_1824",
+            "type": "CDS",
+            "overlap_bp": 308,
+            "feature_length_bp": 1698,
+            "product": [
+              "dipeptide ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS34490"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072522.1",
+        "accession": "NZ_CP072522.1",
+        "start0": 996060,
+        "end0": 996492,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072522.1_feature_1764",
+            "type": "CDS",
+            "overlap_bp": 432,
+            "feature_length_bp": 804,
+            "product": [
+              "amino acid ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS34345"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072522.1",
+        "accession": "NZ_CP072522.1",
+        "start0": 887134,
+        "end0": 887569,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072522.1_feature_1578",
+            "type": "CDS",
+            "overlap_bp": 435,
+            "feature_length_bp": 840,
+            "product": [
+              "amino acid ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS33885"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072522.1",
+        "accession": "NZ_CP072522.1",
+        "start0": 418534,
+        "end0": 418897,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072522.1_feature_740",
+            "type": "CDS",
+            "overlap_bp": 363,
+            "feature_length_bp": 798,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS31795"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 2831778,
+        "end0": 2832222,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_5081",
+            "type": "CDS",
+            "overlap_bp": 444,
+            "feature_length_bp": 1044,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS29190"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 2500792,
+        "end0": 2501105,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_4482",
+            "type": "CDS",
+            "overlap_bp": 313,
+            "feature_length_bp": 939,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS27700"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 2260185,
+        "end0": 2260544,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_4068",
+            "type": "CDS",
+            "overlap_bp": 359,
+            "feature_length_bp": 2058,
+            "product": [
+              "MacB family efflux pump subunit"
+            ],
+            "locus_tag": [
+              "DT99_RS26665"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 1569376,
+        "end0": 1569827,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_2857",
+            "type": "CDS",
+            "overlap_bp": 451,
+            "feature_length_bp": 1797,
+            "product": [
+              "amino acid ABC transporter permease/ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS36685"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 1424250,
+        "end0": 1424709,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_2587",
+            "type": "CDS",
+            "overlap_bp": 459,
+            "feature_length_bp": 756,
+            "product": [
+              "amino acid ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS22965"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 1319103,
+        "end0": 1319366,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_2397",
+            "type": "CDS",
+            "overlap_bp": 263,
+            "feature_length_bp": 816,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS22490"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 1270276,
+        "end0": 1270331,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_2309",
+            "type": "CDS",
+            "overlap_bp": 55,
+            "feature_length_bp": 2451,
+            "product": [
+              "glycoside hydrolase family 2 protein"
+            ],
+            "locus_tag": [
+              "DT99_RS22265"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 1106788,
+        "end0": 1107229,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_2043",
+            "type": "CDS",
+            "overlap_bp": 441,
+            "feature_length_bp": 729,
+            "product": [
+              "glutamine ABC transporter ATP-binding protein GlnQ"
+            ],
+            "locus_tag": [
+              "DT99_RS21605"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 1032265,
+        "end0": 1032668,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_1905",
+            "type": "CDS",
+            "overlap_bp": 403,
+            "feature_length_bp": 846,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS21265"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 691620,
+        "end0": 692080,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_1310",
+            "type": "CDS",
+            "overlap_bp": 460,
+            "feature_length_bp": 768,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS19780"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 620518,
+        "end0": 620977,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_1178",
+            "type": "CDS",
+            "overlap_bp": 459,
+            "feature_length_bp": 726,
+            "product": [
+              "amino acid ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS19450"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 2743603,
+        "end0": 2744063,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_5124",
+            "type": "CDS",
+            "overlap_bp": 460,
+            "feature_length_bp": 780,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS12720"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 2425736,
+        "end0": 2426085,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_4528",
+            "type": "CDS",
+            "overlap_bp": 349,
+            "feature_length_bp": 759,
+            "product": [
+              "lipoprotein-releasing ABC transporter ATP-binding protein LolD"
+            ],
+            "locus_tag": [
+              "DT99_RS11255"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 2203228,
+        "end0": 2203582,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_4098",
+            "type": "CDS",
+            "overlap_bp": 354,
+            "feature_length_bp": 702,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS10185"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 1757157,
+        "end0": 1757501,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_3303",
+            "type": "CDS",
+            "overlap_bp": 344,
+            "feature_length_bp": 1059,
+            "product": [
+              "sulfate/molybdate ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS08220"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 1725943,
+        "end0": 1726254,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_3229",
+            "type": "CDS",
+            "overlap_bp": 311,
+            "feature_length_bp": 960,
+            "product": [
+              "ATP-binding cassette domain-containing protein"
+            ],
+            "locus_tag": [
+              "DT99_RS08035"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 1263389,
+        "end0": 1263847,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_2404",
+            "type": "CDS",
+            "overlap_bp": 458,
+            "feature_length_bp": 795,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS05970"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 916351,
+        "end0": 916665,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_1695",
+            "type": "CDS",
+            "overlap_bp": 314,
+            "feature_length_bp": 1050,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS04205"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 700162,
+        "end0": 700621,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_1324",
+            "type": "CDS",
+            "overlap_bp": 459,
+            "feature_length_bp": 726,
+            "product": [
+              "amino acid ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS03285"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 432347,
+        "end0": 432803,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_808",
+            "type": "CDS",
+            "overlap_bp": 456,
+            "feature_length_bp": 822,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS01995"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 56341,
+        "end0": 56723,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_88",
+            "type": "CDS",
+            "overlap_bp": 382,
+            "feature_length_bp": 798,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS00215"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "Bs869T2__NZ_CP072521.1_feature_2857",
+      "identity_pct": 72.115,
+      "alignment_aa": 104,
+      "query_start": 457,
+      "query_end": 146,
+      "evalue": 1.11e-42,
+      "bitscore": 131.0,
+      "subject_length": 598,
+      "title": "amino acid ABC transporter permease/ATP-binding protein"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "Bs869T2_RS_R3",
+    "organism": "Bs869T2",
+    "method": "RS",
+    "native_family": "R=3",
+    "length": 55,
+    "raw_occurrences": 15,
+    "occurrences": [
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 2966778,
+        "end0": 2966829,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_5317",
+            "type": "CDS",
+            "overlap_bp": 51,
+            "feature_length_bp": 1149,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS29775"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 2500502,
+        "end0": 2500556,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_4482",
+            "type": "CDS",
+            "overlap_bp": 54,
+            "feature_length_bp": 939,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS27700"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 2369212,
+        "end0": 2369265,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_4254",
+            "type": "CDS",
+            "overlap_bp": 53,
+            "feature_length_bp": 1539,
+            "product": [
+              "sugar ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS27130"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 2260022,
+        "end0": 2260075,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_4068",
+            "type": "CDS",
+            "overlap_bp": 53,
+            "feature_length_bp": 2058,
+            "product": [
+              "MacB family efflux pump subunit"
+            ],
+            "locus_tag": [
+              "DT99_RS26665"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 1808615,
+        "end0": 1808669,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_3254",
+            "type": "CDS",
+            "overlap_bp": 54,
+            "feature_length_bp": 777,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS24640"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 91206,
+        "end0": 91260,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_176",
+            "type": "CDS",
+            "overlap_bp": 54,
+            "feature_length_bp": 1194,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS16955"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 3381232,
+        "end0": 3381283,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_6302",
+            "type": "CDS",
+            "overlap_bp": 51,
+            "feature_length_bp": 1155,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS15655"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 3148768,
+        "end0": 3148819,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_5876",
+            "type": "CDS",
+            "overlap_bp": 51,
+            "feature_length_bp": 2886,
+            "product": [
+              "excinuclease ABC subunit UvrA"
+            ],
+            "locus_tag": [
+              "DT99_RS14595"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 2332080,
+        "end0": 2332131,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_4342",
+            "type": "CDS",
+            "overlap_bp": 51,
+            "feature_length_bp": 1932,
+            "product": [
+              "ATP-binding cassette domain-containing protein"
+            ],
+            "locus_tag": [
+              "DT99_RS10795"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 2038269,
+        "end0": 2038319,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_3776",
+            "type": "CDS",
+            "overlap_bp": 50,
+            "feature_length_bp": 1338,
+            "product": [
+              "ribosome biogenesis GTPase Der"
+            ],
+            "locus_tag": [
+              "DT99_RS09385"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 1964428,
+        "end0": 1964481,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_3654",
+            "type": "CDS",
+            "overlap_bp": 53,
+            "feature_length_bp": 1161,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS09085"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 1407793,
+        "end0": 1407847,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_2653",
+            "type": "CDS",
+            "overlap_bp": 54,
+            "feature_length_bp": 849,
+            "product": [
+              "phosphate ABC transporter ATP-binding protein PstB"
+            ],
+            "locus_tag": [
+              "DT99_RS06590"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 1219884,
+        "end0": 1219936,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_2316",
+            "type": "CDS",
+            "overlap_bp": 52,
+            "feature_length_bp": 900,
+            "product": [
+              "GTPase Era"
+            ],
+            "locus_tag": [
+              "DT99_RS05750"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 1075725,
+        "end0": 1075775,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_2021",
+            "type": "CDS",
+            "overlap_bp": 50,
+            "feature_length_bp": 675,
+            "product": [
+              "guanylate kinase"
+            ],
+            "locus_tag": [
+              "DT99_RS05015"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 410204,
+        "end0": 410258,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_775",
+            "type": "CDS",
+            "overlap_bp": 54,
+            "feature_length_bp": 1086,
+            "product": [
+              "sn-glycerol-3-phosphate import ATP-binding protein UgpC"
+            ],
+            "locus_tag": [
+              "DT99_RS01915"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "Bs869T2__NZ_CP072520.1_feature_3303",
+      "identity_pct": 77.778,
+      "alignment_aa": 18,
+      "query_start": 2,
+      "query_end": 55,
+      "evalue": 3.33e-06,
+      "bitscore": 37.4,
+      "subject_length": 352,
+      "title": "sulfate/molybdate ABC transporter ATP-binding protein"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "Bs869T2_RS_R4",
+    "organism": "Bs869T2",
+    "method": "RS",
+    "native_family": "R=4",
+    "length": 83,
+    "raw_occurrences": 21,
+    "occurrences": [
+      {
+        "contig": "NZ_CP072522.1",
+        "accession": "NZ_CP072522.1",
+        "start0": 592456,
+        "end0": 592538,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072522.1_feature_1032",
+            "type": "CDS",
+            "overlap_bp": 82,
+            "feature_length_bp": 1185,
+            "product": [
+              "porin"
+            ],
+            "locus_tag": [
+              "DT99_RS32525"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072522.1",
+        "accession": "NZ_CP072522.1",
+        "start0": 267392,
+        "end0": 267470,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072522.1_feature_488",
+            "type": "CDS",
+            "overlap_bp": 78,
+            "feature_length_bp": 1056,
+            "product": [
+              "porin"
+            ],
+            "locus_tag": [
+              "DT99_RS31175"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 2596941,
+        "end0": 2597023,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_4646",
+            "type": "CDS",
+            "overlap_bp": 82,
+            "feature_length_bp": 1194,
+            "product": [
+              "porin"
+            ],
+            "locus_tag": [
+              "DT99_RS28105"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 2397123,
+        "end0": 2397198,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_4314",
+            "type": "CDS",
+            "overlap_bp": 75,
+            "feature_length_bp": 1140,
+            "product": [
+              "porin"
+            ],
+            "locus_tag": [
+              "DT99_RS27280"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 2352760,
+        "end0": 2352832,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_4224",
+            "type": "CDS",
+            "overlap_bp": 72,
+            "feature_length_bp": 1152,
+            "product": [
+              "porin"
+            ],
+            "locus_tag": [
+              "DT99_RS27055"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 2045061,
+        "end0": 2045141,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_3686",
+            "type": "CDS",
+            "overlap_bp": 80,
+            "feature_length_bp": 1209,
+            "product": [
+              "porin"
+            ],
+            "locus_tag": [
+              "DT99_RS25710"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 1955094,
+        "end0": 1955169,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_3524",
+            "type": "CDS",
+            "overlap_bp": 75,
+            "feature_length_bp": 1116,
+            "product": [
+              "porin"
+            ],
+            "locus_tag": [
+              "DT99_RS25305"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 1935425,
+        "end0": 1935478,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_3476",
+            "type": "CDS",
+            "overlap_bp": 53,
+            "feature_length_bp": 1080,
+            "product": [
+              "porin"
+            ],
+            "locus_tag": [
+              "DT99_RS25185"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 1743194,
+        "end0": 1743265,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_3148",
+            "type": "CDS",
+            "overlap_bp": 71,
+            "feature_length_bp": 1104,
+            "product": [
+              "porin"
+            ],
+            "locus_tag": [
+              "DT99_RS24375"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 1542508,
+        "end0": 1542590,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_2807",
+            "type": "CDS",
+            "overlap_bp": 82,
+            "feature_length_bp": 1212,
+            "product": [
+              "porin"
+            ],
+            "locus_tag": [
+              "DT99_RS23520"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 1332895,
+        "end0": 1332977,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_2419",
+            "type": "CDS",
+            "overlap_bp": 82,
+            "feature_length_bp": 1218,
+            "product": [
+              "porin"
+            ],
+            "locus_tag": [
+              "DT99_RS22545"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 1305315,
+        "end0": 1305376,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_2375",
+            "type": "CDS",
+            "overlap_bp": 61,
+            "feature_length_bp": 1092,
+            "product": [
+              "porin"
+            ],
+            "locus_tag": [
+              "DT99_RS22435"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 981145,
+        "end0": 981225,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_1833",
+            "type": "CDS",
+            "overlap_bp": 80,
+            "feature_length_bp": 1158,
+            "product": [
+              "porin"
+            ],
+            "locus_tag": [
+              "DT99_RS21085"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 649629,
+        "end0": 649711,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_1226",
+            "type": "CDS",
+            "overlap_bp": 82,
+            "feature_length_bp": 1161,
+            "product": [
+              "porin"
+            ],
+            "locus_tag": [
+              "DT99_RS19570"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 289742,
+        "end0": 289820,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_536",
+            "type": "CDS",
+            "overlap_bp": 78,
+            "feature_length_bp": 1152,
+            "product": [
+              "porin"
+            ],
+            "locus_tag": [
+              "DT99_RS17860"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 24212,
+        "end0": 24278,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_52",
+            "type": "CDS",
+            "overlap_bp": 66,
+            "feature_length_bp": 1092,
+            "product": [
+              "porin"
+            ],
+            "locus_tag": [
+              "DT99_RS16645"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 3020017,
+        "end0": 3020092,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_5647",
+            "type": "CDS",
+            "overlap_bp": 75,
+            "feature_length_bp": 1203,
+            "product": [
+              "porin"
+            ],
+            "locus_tag": [
+              "DT99_RS14025"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 1485630,
+        "end0": 1485712,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_2793",
+            "type": "CDS",
+            "overlap_bp": 82,
+            "feature_length_bp": 1161,
+            "product": [
+              "porin"
+            ],
+            "locus_tag": [
+              "DT99_RS06945"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 1350268,
+        "end0": 1350322,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_2539",
+            "type": "CDS",
+            "overlap_bp": 54,
+            "feature_length_bp": 1071,
+            "product": [
+              "porin"
+            ],
+            "locus_tag": [
+              "DT99_RS06305"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 1080437,
+        "end0": 1080507,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_2035",
+            "type": "CDS",
+            "overlap_bp": 70,
+            "feature_length_bp": 1146,
+            "product": [
+              "porin"
+            ],
+            "locus_tag": [
+              "DT99_RS05050"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 570810,
+        "end0": 570885,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_1076",
+            "type": "CDS",
+            "overlap_bp": 75,
+            "feature_length_bp": 1152,
+            "product": [
+              "porin"
+            ],
+            "locus_tag": [
+              "DT99_RS02665"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "Bs869T2__NZ_CP072521.1_feature_1833",
+      "identity_pct": 81.481,
+      "alignment_aa": 27,
+      "query_start": 3,
+      "query_end": 83,
+      "evalue": 2.23e-09,
+      "bitscore": 47.0,
+      "subject_length": 385,
+      "title": "porin"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "Bs869T2_RS_R5",
+    "organism": "Bs869T2",
+    "method": "RS",
+    "native_family": "R=5",
+    "length": 119,
+    "raw_occurrences": 11,
+    "occurrences": [
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 2597682,
+        "end0": 2597797,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_4646",
+            "type": "CDS",
+            "overlap_bp": 115,
+            "feature_length_bp": 1194,
+            "product": [
+              "porin"
+            ],
+            "locus_tag": [
+              "DT99_RS28105"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 2589954,
+        "end0": 2590073,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_4636",
+            "type": "CDS",
+            "overlap_bp": 119,
+            "feature_length_bp": 1095,
+            "product": [
+              "porin"
+            ],
+            "locus_tag": [
+              "DT99_RS28080"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 2480869,
+        "end0": 2480986,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_4460",
+            "type": "CDS",
+            "overlap_bp": 117,
+            "feature_length_bp": 1071,
+            "product": [
+              "porin"
+            ],
+            "locus_tag": [
+              "DT99_RS27645"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 1821746,
+        "end0": 1821865,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_3278",
+            "type": "CDS",
+            "overlap_bp": 119,
+            "feature_length_bp": 1155,
+            "product": [
+              "porin"
+            ],
+            "locus_tag": [
+              "DT99_RS24700"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 1743870,
+        "end0": 1743986,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_3148",
+            "type": "CDS",
+            "overlap_bp": 116,
+            "feature_length_bp": 1104,
+            "product": [
+              "porin"
+            ],
+            "locus_tag": [
+              "DT99_RS24375"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 1305997,
+        "end0": 1306079,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_2375",
+            "type": "CDS",
+            "overlap_bp": 82,
+            "feature_length_bp": 1092,
+            "product": [
+              "porin"
+            ],
+            "locus_tag": [
+              "DT99_RS22435"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 569810,
+        "end0": 569925,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_1078",
+            "type": "CDS",
+            "overlap_bp": 115,
+            "feature_length_bp": 1119,
+            "product": [
+              "porin"
+            ],
+            "locus_tag": [
+              "DT99_RS19200"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 290479,
+        "end0": 290598,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_536",
+            "type": "CDS",
+            "overlap_bp": 119,
+            "feature_length_bp": 1152,
+            "product": [
+              "porin"
+            ],
+            "locus_tag": [
+              "DT99_RS17860"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 3020775,
+        "end0": 3020893,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_5647",
+            "type": "CDS",
+            "overlap_bp": 118,
+            "feature_length_bp": 1203,
+            "product": [
+              "porin"
+            ],
+            "locus_tag": [
+              "DT99_RS14025"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 2220344,
+        "end0": 2220459,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_4126",
+            "type": "CDS",
+            "overlap_bp": 115,
+            "feature_length_bp": 1047,
+            "product": [
+              "porin"
+            ],
+            "locus_tag": [
+              "DT99_RS10255"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 1486349,
+        "end0": 1486468,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_2793",
+            "type": "CDS",
+            "overlap_bp": 119,
+            "feature_length_bp": 1161,
+            "product": [
+              "porin"
+            ],
+            "locus_tag": [
+              "DT99_RS06945"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "Bs869T2__NZ_CP072521.1_feature_3278",
+      "identity_pct": 87.179,
+      "alignment_aa": 39,
+      "query_start": 118,
+      "query_end": 2,
+      "evalue": 1.84e-17,
+      "bitscore": 70.5,
+      "subject_length": 384,
+      "title": "porin"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "Bs869T2_RS_R6",
+    "organism": "Bs869T2",
+    "method": "RS",
+    "native_family": "R=6",
+    "length": 5714,
+    "raw_occurrences": 6,
+    "occurrences": [
+      {
+        "contig": "NZ_CP072522.1",
+        "accession": "NZ_CP072522.1",
+        "start0": 1405841,
+        "end0": 1411554,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072522.1_feature_2497",
+            "type": "rRNA",
+            "overlap_bp": 113,
+            "feature_length_bp": 113,
+            "product": [
+              "5S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "DT99_RS36150"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP072522.1_feature_2499",
+            "type": "rRNA",
+            "overlap_bp": 2882,
+            "feature_length_bp": 2882,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "DT99_RS36155"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP072522.1_feature_2501",
+            "type": "tRNA",
+            "overlap_bp": 76,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Ala"
+            ],
+            "locus_tag": [
+              "DT99_RS36160"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP072522.1_feature_2503",
+            "type": "tRNA",
+            "overlap_bp": 77,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Ile"
+            ],
+            "locus_tag": [
+              "DT99_RS36165"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP072522.1_feature_2505",
+            "type": "rRNA",
+            "overlap_bp": 1533,
+            "feature_length_bp": 1533,
+            "product": [
+              "16S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "DT99_RS36170"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 2653413,
+        "end0": 2659123,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_4741",
+            "type": "rRNA",
+            "overlap_bp": 113,
+            "feature_length_bp": 113,
+            "product": [
+              "5S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "DT99_RS28340"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP072521.1_feature_4743",
+            "type": "rRNA",
+            "overlap_bp": 2882,
+            "feature_length_bp": 2882,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "DT99_RS28345"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP072521.1_feature_4745",
+            "type": "tRNA",
+            "overlap_bp": 76,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Ala"
+            ],
+            "locus_tag": [
+              "DT99_RS28350"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP072521.1_feature_4747",
+            "type": "tRNA",
+            "overlap_bp": 77,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Ile"
+            ],
+            "locus_tag": [
+              "DT99_RS28355"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP072521.1_feature_4749",
+            "type": "rRNA",
+            "overlap_bp": 1533,
+            "feature_length_bp": 1533,
+            "product": [
+              "16S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "DT99_RS28360"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 2556540,
+        "end0": 2562235,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_4758",
+            "type": "rRNA",
+            "overlap_bp": 113,
+            "feature_length_bp": 113,
+            "product": [
+              "5S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "DT99_RS11820"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP072520.1_feature_4760",
+            "type": "rRNA",
+            "overlap_bp": 2882,
+            "feature_length_bp": 2882,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "DT99_RS11825"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP072520.1_feature_4762",
+            "type": "tRNA",
+            "overlap_bp": 76,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Ala"
+            ],
+            "locus_tag": [
+              "DT99_RS11830"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP072520.1_feature_4764",
+            "type": "tRNA",
+            "overlap_bp": 77,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Ile"
+            ],
+            "locus_tag": [
+              "DT99_RS11835"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP072520.1_feature_4766",
+            "type": "rRNA",
+            "overlap_bp": 1533,
+            "feature_length_bp": 1533,
+            "product": [
+              "16S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "DT99_RS11840"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 560702,
+        "end0": 566410,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_1060",
+            "type": "CDS",
+            "overlap_bp": 201,
+            "feature_length_bp": 204,
+            "product": [
+              "hypothetical protein"
+            ],
+            "locus_tag": [
+              "DT99_RS02625"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP072520.1_feature_1062",
+            "type": "rRNA",
+            "overlap_bp": 1533,
+            "feature_length_bp": 1533,
+            "product": [
+              "16S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "DT99_RS02630"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP072520.1_feature_1064",
+            "type": "tRNA",
+            "overlap_bp": 77,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Ile"
+            ],
+            "locus_tag": [
+              "DT99_RS02635"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP072520.1_feature_1066",
+            "type": "tRNA",
+            "overlap_bp": 76,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Ala"
+            ],
+            "locus_tag": [
+              "DT99_RS02640"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP072520.1_feature_1068",
+            "type": "rRNA",
+            "overlap_bp": 2882,
+            "feature_length_bp": 2882,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "DT99_RS02645"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP072520.1_feature_1070",
+            "type": "rRNA",
+            "overlap_bp": 113,
+            "feature_length_bp": 113,
+            "product": [
+              "5S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "DT99_RS02650"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 342298,
+        "end0": 348011,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_627",
+            "type": "rRNA",
+            "overlap_bp": 1533,
+            "feature_length_bp": 1533,
+            "product": [
+              "16S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "DT99_RS01545"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP072520.1_feature_629",
+            "type": "tRNA",
+            "overlap_bp": 77,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Ile"
+            ],
+            "locus_tag": [
+              "DT99_RS01550"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP072520.1_feature_631",
+            "type": "tRNA",
+            "overlap_bp": 76,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Ala"
+            ],
+            "locus_tag": [
+              "DT99_RS01555"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP072520.1_feature_633",
+            "type": "rRNA",
+            "overlap_bp": 2882,
+            "feature_length_bp": 2882,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "DT99_RS01560"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP072520.1_feature_635",
+            "type": "rRNA",
+            "overlap_bp": 113,
+            "feature_length_bp": 113,
+            "product": [
+              "5S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "DT99_RS01565"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 25777,
+        "end0": 27817,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_36",
+            "type": "rRNA",
+            "overlap_bp": 1533,
+            "feature_length_bp": 1533,
+            "product": [
+              "16S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "DT99_RS00090"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "Bs869T2__NZ_CP072520.1_feature_1060",
+      "identity_pct": 97.297,
+      "alignment_aa": 37,
+      "query_start": 5509,
+      "query_end": 5619,
+      "evalue": 2.07e-18,
+      "bitscore": 79.0,
+      "subject_length": 67,
+      "title": "hypothetical protein"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "Bs869T2_RS_R7",
+    "organism": "Bs869T2",
+    "method": "RS",
+    "native_family": "R=7",
+    "length": 778,
+    "raw_occurrences": 9,
+    "occurrences": [
+      {
+        "contig": "NZ_CP072522.1",
+        "accession": "NZ_CP072522.1",
+        "start0": 177651,
+        "end0": 178426,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072522.1_feature_324",
+            "type": "CDS",
+            "overlap_bp": 775,
+            "feature_length_bp": 1566,
+            "product": [
+              "methyl-accepting chemotaxis protein"
+            ],
+            "locus_tag": [
+              "DT99_RS30765"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 2101795,
+        "end0": 2102565,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_3800",
+            "type": "CDS",
+            "overlap_bp": 770,
+            "feature_length_bp": 1554,
+            "product": [
+              "methyl-accepting chemotaxis protein"
+            ],
+            "locus_tag": [
+              "DT99_RS25995"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 1883708,
+        "end0": 1884481,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_3382",
+            "type": "CDS",
+            "overlap_bp": 773,
+            "feature_length_bp": 1560,
+            "product": [
+              "methyl-accepting chemotaxis protein"
+            ],
+            "locus_tag": [
+              "DT99_RS24950"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 1856762,
+        "end0": 1857539,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_3342",
+            "type": "CDS",
+            "overlap_bp": 777,
+            "feature_length_bp": 1731,
+            "product": [
+              "methyl-accepting chemotaxis protein"
+            ],
+            "locus_tag": [
+              "DT99_RS24855"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 1376156,
+        "end0": 1376925,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_2495",
+            "type": "CDS",
+            "overlap_bp": 769,
+            "feature_length_bp": 1983,
+            "product": [
+              "methyl-accepting chemotaxis protein"
+            ],
+            "locus_tag": [
+              "DT99_RS22735"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 3208947,
+        "end0": 3209724,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_5988",
+            "type": "CDS",
+            "overlap_bp": 777,
+            "feature_length_bp": 1638,
+            "product": [
+              "methyl-accepting chemotaxis protein"
+            ],
+            "locus_tag": [
+              "DT99_RS14875"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 1766690,
+        "end0": 1767467,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_3319",
+            "type": "CDS",
+            "overlap_bp": 777,
+            "feature_length_bp": 1770,
+            "product": [
+              "methyl-accepting chemotaxis protein"
+            ],
+            "locus_tag": [
+              "DT99_RS08260"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 1593884,
+        "end0": 1594661,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_2977",
+            "type": "CDS",
+            "overlap_bp": 777,
+            "feature_length_bp": 1674,
+            "product": [
+              "methyl-accepting chemotaxis protein"
+            ],
+            "locus_tag": [
+              "DT99_RS07405"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 248506,
+        "end0": 249243,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_442",
+            "type": "CDS",
+            "overlap_bp": 737,
+            "feature_length_bp": 1962,
+            "product": [
+              "methyl-accepting chemotaxis protein"
+            ],
+            "locus_tag": [
+              "DT99_RS01085"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "Bs869T2__NZ_CP072520.1_feature_5988",
+      "identity_pct": 78.378,
+      "alignment_aa": 259,
+      "query_start": 1,
+      "query_end": 777,
+      "evalue": 7e-89,
+      "bitscore": 271.0,
+      "subject_length": 545,
+      "title": "methyl-accepting chemotaxis protein"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "Bs869T2_RS_R8",
+    "organism": "Bs869T2",
+    "method": "RS",
+    "native_family": "R=8",
+    "length": 126,
+    "raw_occurrences": 6,
+    "occurrences": [
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 2559907,
+        "end0": 2560032,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_4588",
+            "type": "CDS",
+            "overlap_bp": 125,
+            "feature_length_bp": 7395,
+            "product": [
+              "YadA-like family protein"
+            ],
+            "locus_tag": [
+              "DT99_RS27960"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 2559259,
+        "end0": 2559383,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_4588",
+            "type": "CDS",
+            "overlap_bp": 124,
+            "feature_length_bp": 7395,
+            "product": [
+              "YadA-like family protein"
+            ],
+            "locus_tag": [
+              "DT99_RS27960"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 2558719,
+        "end0": 2558844,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_4588",
+            "type": "CDS",
+            "overlap_bp": 125,
+            "feature_length_bp": 7395,
+            "product": [
+              "YadA-like family protein"
+            ],
+            "locus_tag": [
+              "DT99_RS27960"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 2558125,
+        "end0": 2558249,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_4588",
+            "type": "CDS",
+            "overlap_bp": 124,
+            "feature_length_bp": 7395,
+            "product": [
+              "YadA-like family protein"
+            ],
+            "locus_tag": [
+              "DT99_RS27960"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 2556105,
+        "end0": 2556228,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_4588",
+            "type": "CDS",
+            "overlap_bp": 123,
+            "feature_length_bp": 7395,
+            "product": [
+              "YadA-like family protein"
+            ],
+            "locus_tag": [
+              "DT99_RS27960"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 2555416,
+        "end0": 2555529,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_4588",
+            "type": "CDS",
+            "overlap_bp": 113,
+            "feature_length_bp": 7395,
+            "product": [
+              "YadA-like family protein"
+            ],
+            "locus_tag": [
+              "DT99_RS27960"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "Bs869T2_RS_R9",
+    "organism": "Bs869T2",
+    "method": "RS",
+    "native_family": "R=9",
+    "length": 677,
+    "raw_occurrences": 6,
+    "occurrences": [
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 2769234,
+        "end0": 2769908,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_4951",
+            "type": "CDS",
+            "overlap_bp": 674,
+            "feature_length_bp": 783,
+            "product": [
+              "ABC transporter substrate-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS28865"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 803870,
+        "end0": 804546,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_1517",
+            "type": "CDS",
+            "overlap_bp": 676,
+            "feature_length_bp": 783,
+            "product": [
+              "ABC transporter substrate-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS20295"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 689051,
+        "end0": 689727,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_1304",
+            "type": "CDS",
+            "overlap_bp": 676,
+            "feature_length_bp": 774,
+            "product": [
+              "ABC transporter substrate-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS19765"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 2740986,
+        "end0": 2741660,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_5118",
+            "type": "CDS",
+            "overlap_bp": 674,
+            "feature_length_bp": 783,
+            "product": [
+              "ABC transporter substrate-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS12705"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 1273557,
+        "end0": 1274233,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_2420",
+            "type": "CDS",
+            "overlap_bp": 676,
+            "feature_length_bp": 795,
+            "product": [
+              "ABC transporter substrate-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS06010"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 148546,
+        "end0": 149220,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_258",
+            "type": "CDS",
+            "overlap_bp": 674,
+            "feature_length_bp": 789,
+            "product": [
+              "ABC transporter substrate-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS00640"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "Bs869T2__NZ_CP072521.1_feature_1304",
+      "identity_pct": 82.667,
+      "alignment_aa": 225,
+      "query_start": 3,
+      "query_end": 677,
+      "evalue": 7.57e-141,
+      "bitscore": 392.0,
+      "subject_length": 257,
+      "title": "ABC transporter substrate-binding protein"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "Bs869T2_RS_R10",
+    "organism": "Bs869T2",
+    "method": "RS",
+    "native_family": "R=10",
+    "length": 572,
+    "raw_occurrences": 10,
+    "occurrences": [
+      {
+        "contig": "NZ_CP072522.1",
+        "accession": "NZ_CP072522.1",
+        "start0": 591853,
+        "end0": 591995,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072522.1_feature_1032",
+            "type": "CDS",
+            "overlap_bp": 142,
+            "feature_length_bp": 1185,
+            "product": [
+              "porin"
+            ],
+            "locus_tag": [
+              "DT99_RS32525"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072522.1",
+        "accession": "NZ_CP072522.1",
+        "start0": 268141,
+        "end0": 268713,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072522.1_feature_490",
+            "type": "CDS",
+            "overlap_bp": 572,
+            "feature_length_bp": 1149,
+            "product": [
+              "porin"
+            ],
+            "locus_tag": [
+              "DT99_RS31180"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 2614556,
+        "end0": 2614749,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_4678",
+            "type": "CDS",
+            "overlap_bp": 193,
+            "feature_length_bp": 1113,
+            "product": [
+              "porin"
+            ],
+            "locus_tag": [
+              "DT99_RS28185"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 1821432,
+        "end0": 1821914,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_3278",
+            "type": "CDS",
+            "overlap_bp": 482,
+            "feature_length_bp": 1155,
+            "product": [
+              "porin"
+            ],
+            "locus_tag": [
+              "DT99_RS24700"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 1516038,
+        "end0": 1516611,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_2759",
+            "type": "CDS",
+            "overlap_bp": 573,
+            "feature_length_bp": 1149,
+            "product": [
+              "porin"
+            ],
+            "locus_tag": [
+              "DT99_RS23395"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 1413078,
+        "end0": 1413651,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_2563",
+            "type": "CDS",
+            "overlap_bp": 573,
+            "feature_length_bp": 1143,
+            "product": [
+              "porin"
+            ],
+            "locus_tag": [
+              "DT99_RS22905"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 687360,
+        "end0": 687931,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_1300",
+            "type": "CDS",
+            "overlap_bp": 571,
+            "feature_length_bp": 1128,
+            "product": [
+              "porin"
+            ],
+            "locus_tag": [
+              "DT99_RS19755"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 480779,
+        "end0": 481350,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_910",
+            "type": "CDS",
+            "overlap_bp": 571,
+            "feature_length_bp": 1185,
+            "product": [
+              "porin"
+            ],
+            "locus_tag": [
+              "DT99_RS18790"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 290165,
+        "end0": 290736,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_536",
+            "type": "CDS",
+            "overlap_bp": 571,
+            "feature_length_bp": 1152,
+            "product": [
+              "porin"
+            ],
+            "locus_tag": [
+              "DT99_RS17860"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 1080848,
+        "end0": 1081422,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_2035",
+            "type": "CDS",
+            "overlap_bp": 574,
+            "feature_length_bp": 1146,
+            "product": [
+              "porin"
+            ],
+            "locus_tag": [
+              "DT99_RS05050"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "Bs869T2__NZ_CP072521.1_feature_536",
+      "identity_pct": 75.401,
+      "alignment_aa": 187,
+      "query_start": 561,
+      "query_end": 1,
+      "evalue": 4.11e-100,
+      "bitscore": 292.0,
+      "subject_length": 383,
+      "title": "porin"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "Bs869T2_RS_R11",
+    "organism": "Bs869T2",
+    "method": "RS",
+    "native_family": "R=11",
+    "length": 53,
+    "raw_occurrences": 8,
+    "occurrences": [
+      {
+        "contig": "NZ_CP072522.1",
+        "accession": "NZ_CP072522.1",
+        "start0": 415642,
+        "end0": 415693,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072522.1_feature_736",
+            "type": "CDS",
+            "overlap_bp": 51,
+            "feature_length_bp": 3594,
+            "product": [
+              "YadA family autotransporter adhesin"
+            ],
+            "locus_tag": [
+              "DT99_RS31785"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072522.1",
+        "accession": "NZ_CP072522.1",
+        "start0": 302658,
+        "end0": 302709,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072522.1_feature_536",
+            "type": "CDS",
+            "overlap_bp": 51,
+            "feature_length_bp": 4551,
+            "product": [
+              "YadA-like family protein"
+            ],
+            "locus_tag": [
+              "DT99_RS31295"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 200181,
+        "end0": 200233,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_376",
+            "type": "CDS",
+            "overlap_bp": 52,
+            "feature_length_bp": 10914,
+            "product": [
+              "YadA-like family protein"
+            ],
+            "locus_tag": [
+              "DT99_RS17455"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 199051,
+        "end0": 199102,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_376",
+            "type": "CDS",
+            "overlap_bp": 51,
+            "feature_length_bp": 10914,
+            "product": [
+              "YadA-like family protein"
+            ],
+            "locus_tag": [
+              "DT99_RS17455"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 197775,
+        "end0": 197827,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_376",
+            "type": "CDS",
+            "overlap_bp": 52,
+            "feature_length_bp": 10914,
+            "product": [
+              "YadA-like family protein"
+            ],
+            "locus_tag": [
+              "DT99_RS17455"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 196851,
+        "end0": 196903,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_376",
+            "type": "CDS",
+            "overlap_bp": 52,
+            "feature_length_bp": 10914,
+            "product": [
+              "YadA-like family protein"
+            ],
+            "locus_tag": [
+              "DT99_RS17455"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 194724,
+        "end0": 194775,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_376",
+            "type": "CDS",
+            "overlap_bp": 51,
+            "feature_length_bp": 10914,
+            "product": [
+              "YadA-like family protein"
+            ],
+            "locus_tag": [
+              "DT99_RS17455"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 231386,
+        "end0": 231436,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_408",
+            "type": "CDS",
+            "overlap_bp": 50,
+            "feature_length_bp": 1410,
+            "product": [
+              "flagellar filament capping protein FliD"
+            ],
+            "locus_tag": [
+              "DT99_RS01000"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "Bs869T2_RS_R12",
+    "organism": "Bs869T2",
+    "method": "RS",
+    "native_family": "R=12",
+    "length": 152,
+    "raw_occurrences": 9,
+    "occurrences": [
+      {
+        "contig": "NZ_CP072522.1",
+        "accession": "NZ_CP072522.1",
+        "start0": 135814,
+        "end0": 135965,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072522.1_feature_248",
+            "type": "CDS",
+            "overlap_bp": 151,
+            "feature_length_bp": 1437,
+            "product": [
+              "aldehyde dehydrogenase family protein"
+            ],
+            "locus_tag": [
+              "DT99_RS30580"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072522.1",
+        "accession": "NZ_CP072522.1",
+        "start0": 47874,
+        "end0": 48011,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072522.1_feature_88",
+            "type": "CDS",
+            "overlap_bp": 137,
+            "feature_length_bp": 1518,
+            "product": [
+              "aldehyde dehydrogenase family protein"
+            ],
+            "locus_tag": [
+              "DT99_RS30185"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 2445209,
+        "end0": 2445360,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_4390",
+            "type": "CDS",
+            "overlap_bp": 151,
+            "feature_length_bp": 1470,
+            "product": [
+              "betaine-aldehyde dehydrogenase"
+            ],
+            "locus_tag": [
+              "DT99_RS27470"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 2439384,
+        "end0": 2439463,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_4380",
+            "type": "CDS",
+            "overlap_bp": 79,
+            "feature_length_bp": 1596,
+            "product": [
+              "DHA2 family efflux MFS transporter permease subunit"
+            ],
+            "locus_tag": [
+              "DT99_RS27445"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 2383962,
+        "end0": 2384113,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_4288",
+            "type": "CDS",
+            "overlap_bp": 151,
+            "feature_length_bp": 1506,
+            "product": [
+              "aldehyde dehydrogenase family protein"
+            ],
+            "locus_tag": [
+              "DT99_RS27215"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 1299316,
+        "end0": 1299465,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_2359",
+            "type": "CDS",
+            "overlap_bp": 149,
+            "feature_length_bp": 1464,
+            "product": [
+              "5-carboxymethyl-2-hydroxymuconate semialdehyde dehydrogenase"
+            ],
+            "locus_tag": [
+              "DT99_RS22390"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 627896,
+        "end0": 628047,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_1194",
+            "type": "CDS",
+            "overlap_bp": 151,
+            "feature_length_bp": 1473,
+            "product": [
+              "aldehyde dehydrogenase family protein"
+            ],
+            "locus_tag": [
+              "DT99_RS19490"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 1968730,
+        "end0": 1968880,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_3664",
+            "type": "CDS",
+            "overlap_bp": 150,
+            "feature_length_bp": 1437,
+            "product": [
+              "aldehyde dehydrogenase family protein"
+            ],
+            "locus_tag": [
+              "DT99_RS09110"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 166035,
+        "end0": 166146,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_286",
+            "type": "CDS",
+            "overlap_bp": 111,
+            "feature_length_bp": 1527,
+            "product": [
+              "acetaldehyde dehydrogenase ExaC"
+            ],
+            "locus_tag": [
+              "DT99_RS00710"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "Bs869T2__NZ_CP072521.1_feature_2359",
+      "identity_pct": 68.0,
+      "alignment_aa": 50,
+      "query_start": 2,
+      "query_end": 151,
+      "evalue": 2.47e-19,
+      "bitscore": 76.6,
+      "subject_length": 487,
+      "title": "5-carboxymethyl-2-hydroxymuconate semialdehyde dehydrogenase"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "Bs869T2_RS_R13",
+    "organism": "Bs869T2",
+    "method": "RS",
+    "native_family": "R=13",
+    "length": 1640,
+    "raw_occurrences": 4,
+    "occurrences": [
+      {
+        "contig": "NZ_CP072522.1",
+        "accession": "NZ_CP072522.1",
+        "start0": 1328614,
+        "end0": 1330253,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072522.1_feature_2365",
+            "type": "CDS",
+            "overlap_bp": 1639,
+            "feature_length_bp": 1674,
+            "product": [
+              "electron transfer flavoprotein-ubiquinone oxidoreductase"
+            ],
+            "locus_tag": [
+              "DT99_RS35830"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072522.1",
+        "accession": "NZ_CP072522.1",
+        "start0": 921150,
+        "end0": 922789,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072522.1_feature_1642",
+            "type": "CDS",
+            "overlap_bp": 1628,
+            "feature_length_bp": 1629,
+            "product": [
+              "electron transfer flavoprotein-ubiquinone oxidoreductase"
+            ],
+            "locus_tag": [
+              "DT99_RS34045"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072522.1",
+        "accession": "NZ_CP072522.1",
+        "start0": 535827,
+        "end0": 537464,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072522.1_feature_954",
+            "type": "CDS",
+            "overlap_bp": 1628,
+            "feature_length_bp": 1629,
+            "product": [
+              "electron transfer flavoprotein-ubiquinone oxidoreductase"
+            ],
+            "locus_tag": [
+              "DT99_RS32330"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 1610308,
+        "end0": 1611947,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_3009",
+            "type": "CDS",
+            "overlap_bp": 1639,
+            "feature_length_bp": 1674,
+            "product": [
+              "electron transfer flavoprotein-ubiquinone oxidoreductase"
+            ],
+            "locus_tag": [
+              "DT99_RS07485"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "Bs869T2__NZ_CP072520.1_feature_3009",
+      "identity_pct": 99.817,
+      "alignment_aa": 545,
+      "query_start": 1638,
+      "query_end": 4,
+      "evalue": 0.0,
+      "bitscore": 1106.0,
+      "subject_length": 557,
+      "title": "electron transfer flavoprotein-ubiquinone oxidoreductase"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "Bs869T2_RS_R14",
+    "organism": "Bs869T2",
+    "method": "RS",
+    "native_family": "R=14",
+    "length": 309,
+    "raw_occurrences": 7,
+    "occurrences": [
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 2967090,
+        "end0": 2967325,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_5317",
+            "type": "CDS",
+            "overlap_bp": 235,
+            "feature_length_bp": 1149,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS29775"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 1306790,
+        "end0": 1307098,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_2377",
+            "type": "CDS",
+            "overlap_bp": 308,
+            "feature_length_bp": 1068,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS22440"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 903885,
+        "end0": 904193,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_1689",
+            "type": "CDS",
+            "overlap_bp": 308,
+            "feature_length_bp": 1098,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS20725"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 2934817,
+        "end0": 2935125,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_5487",
+            "type": "CDS",
+            "overlap_bp": 308,
+            "feature_length_bp": 1110,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS13630"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 1327733,
+        "end0": 1328041,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_2499",
+            "type": "CDS",
+            "overlap_bp": 308,
+            "feature_length_bp": 1032,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS36810"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 1028627,
+        "end0": 1028935,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_1913",
+            "type": "CDS",
+            "overlap_bp": 308,
+            "feature_length_bp": 1119,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS04750"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 410520,
+        "end0": 410825,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_775",
+            "type": "CDS",
+            "overlap_bp": 305,
+            "feature_length_bp": 1086,
+            "product": [
+              "sn-glycerol-3-phosphate import ATP-binding protein UgpC"
+            ],
+            "locus_tag": [
+              "DT99_RS01915"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "Bs869T2__NZ_CP072520.1_feature_1913",
+      "identity_pct": 77.67,
+      "alignment_aa": 103,
+      "query_start": 1,
+      "query_end": 309,
+      "evalue": 1.06e-54,
+      "bitscore": 172.0,
+      "subject_length": 372,
+      "title": "ABC transporter ATP-binding protein"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "Bs869T2_RS_R15",
+    "organism": "Bs869T2",
+    "method": "RS",
+    "native_family": "R=15",
+    "length": 112,
+    "raw_occurrences": 4,
+    "occurrences": [
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 201298,
+        "end0": 201409,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_376",
+            "type": "CDS",
+            "overlap_bp": 111,
+            "feature_length_bp": 10914,
+            "product": [
+              "YadA-like family protein"
+            ],
+            "locus_tag": [
+              "DT99_RS17455"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 197380,
+        "end0": 197491,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_376",
+            "type": "CDS",
+            "overlap_bp": 111,
+            "feature_length_bp": 10914,
+            "product": [
+              "YadA-like family protein"
+            ],
+            "locus_tag": [
+              "DT99_RS17455"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 196678,
+        "end0": 196789,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_376",
+            "type": "CDS",
+            "overlap_bp": 111,
+            "feature_length_bp": 10914,
+            "product": [
+              "YadA-like family protein"
+            ],
+            "locus_tag": [
+              "DT99_RS17455"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 195940,
+        "end0": 196051,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_376",
+            "type": "CDS",
+            "overlap_bp": 111,
+            "feature_length_bp": 10914,
+            "product": [
+              "YadA-like family protein"
+            ],
+            "locus_tag": [
+              "DT99_RS17455"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "Bs869T2__NZ_CP072521.1_feature_376",
+      "identity_pct": 100.0,
+      "alignment_aa": 37,
+      "query_start": 1,
+      "query_end": 111,
+      "evalue": 7.87e-19,
+      "bitscore": 74.3,
+      "subject_length": 3637,
+      "title": "YadA-like family protein"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "Bs869T2_RS_R16",
+    "organism": "Bs869T2",
+    "method": "RS",
+    "native_family": "R=16",
+    "length": 380,
+    "raw_occurrences": 7,
+    "occurrences": [
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 2640188,
+        "end0": 2640566,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_4718",
+            "type": "CDS",
+            "overlap_bp": 378,
+            "feature_length_bp": 1326,
+            "product": [
+              "MFS transporter"
+            ],
+            "locus_tag": [
+              "DT99_RS28285"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 1062925,
+        "end0": 1063303,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_1961",
+            "type": "CDS",
+            "overlap_bp": 378,
+            "feature_length_bp": 1320,
+            "product": [
+              "MFS transporter"
+            ],
+            "locus_tag": [
+              "DT99_RS21400"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 575897,
+        "end0": 576278,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_1088",
+            "type": "CDS",
+            "overlap_bp": 381,
+            "feature_length_bp": 1338,
+            "product": [
+              "MFS transporter"
+            ],
+            "locus_tag": [
+              "DT99_RS19225"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 3433655,
+        "end0": 3434031,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_6398",
+            "type": "CDS",
+            "overlap_bp": 376,
+            "feature_length_bp": 1308,
+            "product": [
+              "MFS transporter"
+            ],
+            "locus_tag": [
+              "DT99_RS15895"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 3005876,
+        "end0": 3006252,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_5617",
+            "type": "CDS",
+            "overlap_bp": 376,
+            "feature_length_bp": 1659,
+            "product": [
+              "MFS transporter"
+            ],
+            "locus_tag": [
+              "DT99_RS13950"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 2482407,
+        "end0": 2482789,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_4620",
+            "type": "CDS",
+            "overlap_bp": 382,
+            "feature_length_bp": 1413,
+            "product": [
+              "MFS transporter"
+            ],
+            "locus_tag": [
+              "DT99_RS11480"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 1351700,
+        "end0": 1352079,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_2543",
+            "type": "CDS",
+            "overlap_bp": 379,
+            "feature_length_bp": 1311,
+            "product": [
+              "MFS transporter"
+            ],
+            "locus_tag": [
+              "DT99_RS06315"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "Bs869T2__NZ_CP072520.1_feature_2543",
+      "identity_pct": 75.397,
+      "alignment_aa": 126,
+      "query_start": 3,
+      "query_end": 380,
+      "evalue": 6.61e-65,
+      "bitscore": 201.0,
+      "subject_length": 436,
+      "title": "MFS transporter"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "Bs869T2_RS_R17",
+    "organism": "Bs869T2",
+    "method": "RS",
+    "native_family": "R=17",
+    "length": 58,
+    "raw_occurrences": 4,
+    "occurrences": [
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 201981,
+        "end0": 202038,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_376",
+            "type": "CDS",
+            "overlap_bp": 57,
+            "feature_length_bp": 10914,
+            "product": [
+              "YadA-like family protein"
+            ],
+            "locus_tag": [
+              "DT99_RS17455"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 200277,
+        "end0": 200334,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_376",
+            "type": "CDS",
+            "overlap_bp": 57,
+            "feature_length_bp": 10914,
+            "product": [
+              "YadA-like family protein"
+            ],
+            "locus_tag": [
+              "DT99_RS17455"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 196596,
+        "end0": 196653,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_376",
+            "type": "CDS",
+            "overlap_bp": 57,
+            "feature_length_bp": 10914,
+            "product": [
+              "YadA-like family protein"
+            ],
+            "locus_tag": [
+              "DT99_RS17455"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 195852,
+        "end0": 195909,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_376",
+            "type": "CDS",
+            "overlap_bp": 57,
+            "feature_length_bp": 10914,
+            "product": [
+              "YadA-like family protein"
+            ],
+            "locus_tag": [
+              "DT99_RS17455"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "Bs869T2__NZ_CP072521.1_feature_376",
+      "identity_pct": 94.737,
+      "alignment_aa": 19,
+      "query_start": 57,
+      "query_end": 1,
+      "evalue": 8.36e-08,
+      "bitscore": 42.0,
+      "subject_length": 3637,
+      "title": "YadA-like family protein"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "Bs869T2_RS_R18",
+    "organism": "Bs869T2",
+    "method": "RS",
+    "native_family": "R=18",
+    "length": 93,
+    "raw_occurrences": 5,
+    "occurrences": [
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 2823948,
+        "end0": 2824037,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_5271",
+            "type": "tRNA",
+            "overlap_bp": 85,
+            "feature_length_bp": 85,
+            "product": [
+              "tRNA-Leu"
+            ],
+            "locus_tag": [
+              "DT99_RS13085"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 2224454,
+        "end0": 2224520,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_4136",
+            "type": "tRNA",
+            "overlap_bp": 66,
+            "feature_length_bp": 87,
+            "product": [
+              "tRNA-Leu"
+            ],
+            "locus_tag": [
+              "DT99_RS10280"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 1707490,
+        "end0": 1707582,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_3189",
+            "type": "tRNA",
+            "overlap_bp": 86,
+            "feature_length_bp": 87,
+            "product": [
+              "tRNA-Leu"
+            ],
+            "locus_tag": [
+              "DT99_RS07935"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 1706117,
+        "end0": 1706209,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_3185",
+            "type": "tRNA",
+            "overlap_bp": 86,
+            "feature_length_bp": 87,
+            "product": [
+              "tRNA-Leu"
+            ],
+            "locus_tag": [
+              "DT99_RS07925"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 1705066,
+        "end0": 1705158,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_3181",
+            "type": "tRNA",
+            "overlap_bp": 86,
+            "feature_length_bp": 87,
+            "product": [
+              "tRNA-Leu"
+            ],
+            "locus_tag": [
+              "DT99_RS07915"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "Bs869T2_RS_R19",
+    "organism": "Bs869T2",
+    "method": "RS",
+    "native_family": "R=19",
+    "length": 62,
+    "raw_occurrences": 4,
+    "occurrences": [
+      {
+        "contig": "NZ_CP072522.1",
+        "accession": "NZ_CP072522.1",
+        "start0": 1027523,
+        "end0": 1027585,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072522.1_feature_1824",
+            "type": "CDS",
+            "overlap_bp": 62,
+            "feature_length_bp": 1698,
+            "product": [
+              "dipeptide ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS34490"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 1207874,
+        "end0": 1207936,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_2213",
+            "type": "CDS",
+            "overlap_bp": 62,
+            "feature_length_bp": 1905,
+            "product": [
+              "dipeptide ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS22030"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 2358355,
+        "end0": 2358417,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_4402",
+            "type": "CDS",
+            "overlap_bp": 62,
+            "feature_length_bp": 1623,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS10945"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 1916295,
+        "end0": 1916355,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_3570",
+            "type": "CDS",
+            "overlap_bp": 60,
+            "feature_length_bp": 1635,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "DT99_RS08875"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "Bs869T2_RS_R20",
+    "organism": "Bs869T2",
+    "method": "RS",
+    "native_family": "R=20",
+    "length": 186,
+    "raw_occurrences": 4,
+    "occurrences": [
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 201088,
+        "end0": 201273,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_376",
+            "type": "CDS",
+            "overlap_bp": 185,
+            "feature_length_bp": 10914,
+            "product": [
+              "YadA-like family protein"
+            ],
+            "locus_tag": [
+              "DT99_RS17455"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 199576,
+        "end0": 199761,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_376",
+            "type": "CDS",
+            "overlap_bp": 185,
+            "feature_length_bp": 10914,
+            "product": [
+              "YadA-like family protein"
+            ],
+            "locus_tag": [
+              "DT99_RS17455"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 197170,
+        "end0": 197355,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_376",
+            "type": "CDS",
+            "overlap_bp": 185,
+            "feature_length_bp": 10914,
+            "product": [
+              "YadA-like family protein"
+            ],
+            "locus_tag": [
+              "DT99_RS17455"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072521.1",
+        "accession": "NZ_CP072521.1",
+        "start0": 195724,
+        "end0": 195909,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072521.1_feature_376",
+            "type": "CDS",
+            "overlap_bp": 185,
+            "feature_length_bp": 10914,
+            "product": [
+              "YadA-like family protein"
+            ],
+            "locus_tag": [
+              "DT99_RS17455"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "Bs869T2__NZ_CP072521.1_feature_376",
+      "identity_pct": 95.161,
+      "alignment_aa": 62,
+      "query_start": 186,
+      "query_end": 1,
+      "evalue": 3.53e-33,
+      "bitscore": 116.0,
+      "subject_length": 3637,
+      "title": "YadA-like family protein"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "Bs869T2_RS_R21",
+    "organism": "Bs869T2",
+    "method": "RS",
+    "native_family": "R=21",
+    "length": 77,
+    "raw_occurrences": 4,
+    "occurrences": [
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 2463034,
+        "end0": 2463110,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_4592",
+            "type": "tRNA",
+            "overlap_bp": 76,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Met"
+            ],
+            "locus_tag": [
+              "DT99_RS11410"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 1720314,
+        "end0": 1720390,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_3215",
+            "type": "tRNA",
+            "overlap_bp": 76,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Met"
+            ],
+            "locus_tag": [
+              "DT99_RS08000"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 1634991,
+        "end0": 1635067,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_3057",
+            "type": "tRNA",
+            "overlap_bp": 76,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Pro"
+            ],
+            "locus_tag": [
+              "DT99_RS07605"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP072520.1",
+        "accession": "NZ_CP072520.1",
+        "start0": 1054635,
+        "end0": 1054711,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP072520.1_feature_1969",
+            "type": "tRNA",
+            "overlap_bp": 76,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Met"
+            ],
+            "locus_tag": [
+              "DT99_RS04890"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  }
+]

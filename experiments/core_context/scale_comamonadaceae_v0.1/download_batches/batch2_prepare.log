@@ -1,0 +1,24 @@
+storage before: reads dir 235.9 GB in all (194.5 GB verified, 0.0 GB partial); filesystem free 2082.6 TB
+batch: 19 runs, 9.60 GB still to download; free after 2082591.6 GB (minimum 500 GB)
+SAMN30697778 SRR29761616 verified
+SAMN43526803 SRR30602146 verified
+SAMN02471431 SRR10820824 verified
+SAMN47300670 SRR32649614 verified
+SAMD00265974 DRR259339 verified
+SAMN04909706 SRR3880289 verified
+SAMN51281036 SRR40356312 verified
+SAMN07626132 SRR6824062 verified
+SAMN07626132 SRR6824064 verified
+SAMN07626132 SRR6824063 verified
+SAMEA115676858 ERR13194274 verified
+SAMN08777390 SRR6976448 verified
+SAMN08777390 SRR6976447 verified
+SAMEA115676957 ERR13194373 verified
+SAMN51281015 SRR40356326 verified
+download interrupted (curl exit 18: curl: (18) transfer closed with 742437834 bytes remaining to read); attempt 1/8
+SAMN51819094 SRR35628932 verified
+SAMN08777904 SRR6976454 verified
+SAMN08777904 SRR6976455 verified
+SAMN51281039 SRR40356309 verified
+storage after: reads dir 206.8 GB in all (204.1 GB verified, 0.0 GB partial); filesystem free 2081.9 TB
+ready manifest: 236 runs, 236 verified; 0 of 19 requested runs not verified

@@ -1,0 +1,10 @@
+{
+ "work": "/global/scratch/users/kh36969/longread_callout/core_context/read_site_search/pilot_v0.1",
+ "listed": 100,
+ "bytes_listed": 415644886,
+ "bytes_freed": 415644886,
+ "applied": true,
+ "kept_for_consumers": [],
+ "kept": "kept: samples/*/search.json, positions.tsv.gz, observations.tsv.gz (per-molecule evidence); panel/; candidates/ (allele windows and read-to-allele / genome alignments of the candidates); structure/*/final.fa, final.bam(.bai) (consensus and its read support)",
+ "work_bytes_after": 145835338
+}

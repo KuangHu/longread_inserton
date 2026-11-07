@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="420" font-family="sans-serif">
+<rect width="100%" height="100%" fill="white"/>
+<text x="4" y="16" font-size="12">L_77c5930d8e14  SAMD00076718  core 50886 bp  two_flank_anchored  support all_calls_anchored  boundary partner_dependent  tandem False  core copies carrier/partner 1/0</text>
+<line x1="112.7" y1="30" x2="112.7" y2="412" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<line x1="1007.3" y1="30" x2="1007.3" y2="412" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<text x="4" y="64" font-size="11" font-weight="bold">SAMD00076718 NZ_AP026738.1 (carrier)</text>
+<line x1="60" y1="100" x2="1060" y2="100" stroke="#888"/>
+<rect x="95.2" y="132" width="17.6" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="103.9" y="152" font-size="9" text-anchor="middle">U</text>
+<rect x="112.7" y="132" width="894.5" height="8" fill="#e76f51" opacity="0.55"/>
+<text x="560.0" y="152" font-size="9" text-anchor="middle">core 50886</text>
+<rect x="1007.3" y="132" width="17.6" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="1016.1" y="152" font-size="9" text-anchor="middle">D</text>
+<polygon points="60.0,85 60.0,85 65.9,91 60.0,97 60.0,97" fill="#999"><title>LysE family translocator 3073895-3074576 +</title></polygon>
+<polygon points="68.2,85 72.5,85 78.5,91 72.5,97 68.2,97" fill="#3b6fb6"><title>peroxidase-related enzyme 3074712-3075294 +</title></polygon>
+<polygon points="80.5,85 84.4,85 90.4,91 84.4,97 80.5,97" fill="#3b6fb6"><title>YceI family protein 3075410-3075974 +</title></polygon>
+<polygon points="90.4,85 97.1,85 103.1,91 97.1,97 90.4,97" fill="#3b6fb6"><title>YceI family protein 3075970-3076693 +</title></polygon>
+<polygon points="103.0,85 107.3,85 113.3,91 107.3,97 103.0,97" fill="#3b6fb6"><title>SRPBCC family protein 3076689-3077277 +</title></polygon>
+<polygon points="115.2,109 121.2,103 124.6,103 124.6,115 121.2,115" fill="#3b6fb6"><title>YcxB family protein 3077381-3077918 -</title></polygon>
+<polygon points="131.1,109 137.1,103 150.1,103 150.1,115 137.1,115" fill="#999"><title>RtcB family protein 3078287-3079367 -</title></polygon>
+<polygon points="161.8,85 170.5,85 176.5,91 170.5,97 161.8,97" fill="#3b6fb6"><title>HamA C-terminal domain-containing protei 3080035-3080872 +</title></polygon>
+<polygon points="176.5,85 208.0,85 214.0,91 208.0,97 176.5,97" fill="#3b6fb6"><title>DEAD/DEAH box helicase 3080868-3083004 +</title></polygon>
+<text x="176.5" y="81" font-size="8" fill="#333">DEAD/DEA</text>
+<polygon points="218.2,85 218.2,85 223.5,91 218.2,97 218.2,97" fill="#3b6fb6"><title>H-NS histone family protein 3083245-3083545 +</title></polygon>
+<polygon points="228.4,85 229.6,85 235.6,91 229.6,97 228.4,97" fill="#3b6fb6"><title>LexA family protein 3083821-3084235 +</title></polygon>
+<polygon points="235.8,85 252.6,85 258.6,91 252.6,97 235.8,97" fill="#3b6fb6"><title>Y-family DNA polymerase 3084241-3085540 +</title></polygon>
+<polygon points="260.5,109 266.5,103 274.3,103 274.3,115 266.5,115" fill="#3b6fb6"><title>ZIP family metal transporter 3085651-3086434 -</title></polygon>
+<polygon points="275.7,109 281.7,103 287.6,103 287.6,115 281.7,115" fill="#3b6fb6"><title>hypothetical protein 3086512-3087190 -</title></polygon>
+<polygon points="287.8,109 293.8,103 300.7,103 300.7,115 293.8,115" fill="#3b6fb6"><title>HupE/UreJ family protein 3087200-3087935 -</title></polygon>
+<polygon points="303.4,85 304.9,85 310.9,91 304.9,97 303.4,97" fill="#3b6fb6"><title>hypothetical protein 3088090-3088516 +</title></polygon>
+<polygon points="311.9,109 317.9,103 335.4,103 335.4,115 317.9,115" fill="#3b6fb6"><title>MFS transporter 3088570-3089911 -</title></polygon>
+<polygon points="336.2,109 342.2,103 393.1,103 393.1,115 342.2,115" fill="#3b6fb6"><title>CusA/CzcA family heavy metal efflux RND  3089955-3093189 -</title></polygon>
+<text x="336.2" y="125" font-size="8" fill="#333">CusA/CzcA fa</text>
+<polygon points="393.0,109 399.0,103 413.7,103 413.7,115 399.0,115" fill="#3b6fb6"><title>efflux RND transporter periplasmic adapt 3093185-3094364 -</title></polygon>
+<polygon points="413.6,109 419.6,103 436.4,103 436.4,115 419.6,115" fill="#3b6fb6"><title>TolC family protein 3094360-3095656 -</title></polygon>
+<polygon points="438.4,109 444.4,103 448.4,103 448.4,115 444.4,115" fill="#3b6fb6"><title>RNA polymerase sigma factor 3095766-3096339 -</title></polygon>
+<polygon points="448.4,109 454.4,103 457.1,103 457.1,115 454.4,115" fill="#3b6fb6"><title>periplasmic heavy metal sensor 3096335-3096833 -</title></polygon>
+<polygon points="456.1,109 461.4,103 461.4,103 461.4,115 461.4,115" fill="#3b6fb6"><title>CnrY/NccY family anti-sigma factor 3096778-3097075 -</title></polygon>
+<polygon points="474.1,85 497.0,85 503.0,91 497.0,97 474.1,97" fill="#3b6fb6"><title>phosphoethanolamine transferase 3097802-3099446 +</title></polygon>
+<polygon points="504.3,109 510.3,103 510.4,103 510.4,115 510.3,115" fill="#3b6fb6"><title>hypothetical protein 3099516-3099864 -</title></polygon>
+<polygon points="515.3,85 521.5,85 527.5,91 521.5,97 515.3,97" fill="#3b6fb6"><title>heavy metal response regulator transcrip 3100142-3100835 +</title></polygon>
+<polygon points="527.4,85 544.9,85 550.9,91 544.9,97 527.4,97" fill="#3b6fb6"><title>heavy metal sensor histidine kinase 3100831-3102166 +</title></polygon>
+<polygon points="564.5,85 579.3,85 585.3,91 579.3,97 564.5,97" fill="#3b6fb6"><title>TolC family protein 3102941-3104126 +</title></polygon>
+<polygon points="589.2,85 589.9,85 595.9,91 589.9,97 589.2,97" fill="#3b6fb6"><title>hypothetical protein 3104347-3104731 +</title></polygon>
+<polygon points="595.9,85 609.5,85 615.5,91 609.5,97 595.9,97" fill="#3b6fb6"><title>efflux RND transporter periplasmic adapt 3104727-3105846 +</title></polygon>
+<polygon points="615.8,85 665.1,85 671.1,91 665.1,97 615.8,97" fill="#3b6fb6"><title>efflux RND transporter permease subunit 3105861-3109005 +</title></polygon>
+<text x="615.8" y="81" font-size="8" fill="#333">efflux RND t</text>
+<polygon points="672.1,85 672.7,85 678.7,91 672.7,97 672.1,97" fill="#3b6fb6"><title>hypothetical protein 3109064-3109436 +</title></polygon>
+<polygon points="679.3,85 691.7,85 697.7,91 691.7,97 679.3,97" fill="#3b6fb6"><title>DMT family transporter 3109474-3110518 +</title></polygon>
+<polygon points="700.1,85 711.0,85 717.0,91 711.0,97 700.1,97" fill="#3b6fb6"><title>chromate resistance protein ChrB domain- 3110655-3111618 +</title></polygon>
+<polygon points="717.4,85 732.4,85 738.4,91 732.4,97 717.4,97" fill="#3b6fb6"><title>chromate transporter 3111642-3112836 +</title></polygon>
+<polygon points="739.5,85 744.3,85 750.3,91 744.3,97 739.5,97" fill="#3b6fb6"><title>superoxide dismutase 3112899-3113514 +</title></polygon>
+<polygon points="750.7,85 752.8,85 758.8,91 752.8,97 750.7,97" fill="#3b6fb6"><title>chromate resistance protein ChrB domain- 3113536-3113995 +</title></polygon>
+<polygon points="763.4,85 763.4,85 766.6,91 763.4,97 763.4,97" fill="#3b6fb6"><title>hypothetical protein 3114256-3114436 +</title></polygon>
+<polygon points="769.1,109 774.9,103 774.9,103 774.9,115 774.9,115" fill="#3b6fb6"><title>helix-turn-helix domain-containing prote 3114581-3114911 -</title></polygon>
+<polygon points="780.2,109 786.2,103 788.5,103 788.5,115 786.2,115" fill="#3b6fb6"><title>hypothetical protein 3115214-3115685 -</title></polygon>
+<polygon points="793.2,109 799.2,103 802.8,103 802.8,115 799.2,115" fill="#3b6fb6"><title>HAD domain-containing protein 3115953-3116496 -</title></polygon>
+<polygon points="804.2,109 809.9,103 809.9,103 809.9,115 809.9,115" fill="#3b6fb6"><title>hypothetical protein 3116577-3116904 -</title></polygon>
+<polygon points="811.0,109 817.0,103 818.5,103 818.5,115 817.0,115" fill="#3b6fb6"><title>hypothetical protein 3116967-3117393 -</title></polygon>
+<polygon points="823.9,85 823.9,85 828.7,91 823.9,97 823.9,97" fill="#3b6fb6"><title>helix-turn-helix domain-containing prote 3117698-3117974 +</title></polygon>
+<polygon points="839.5,109 845.5,103 846.5,103 846.5,115 845.5,115" fill="#3b6fb6"><title>TetR family transcriptional regulator 3118583-3118985 -</title></polygon>
+<polygon points="846.4,109 852.4,103 879.4,103 879.4,115 852.4,115" fill="#3b6fb6"><title>tyrosine-type recombinase/integrase 3118977-3120858 -</title></polygon>
+<text x="846.4" y="125" font-size="8" fill="#333">tyrosin</text>
+<polygon points="879.4,109 885.4,103 907.8,103 907.8,115 885.4,115" fill="#3b6fb6"><title>hypothetical protein 3120854-3122471 -</title></polygon>
+<polygon points="908.0,109 914.0,103 928.8,103 928.8,115 914.0,115" fill="#3b6fb6"><title>tyrosine-type recombinase/integrase 3122480-3123665 -</title></polygon>
+<polygon points="935.6,85 935.6,85 941.4,91 935.6,97 935.6,97" fill="#3b6fb6"><title>IS5 family transposase 3124054-3124385 +</title></polygon>
+<polygon points="941.4,85 943.8,85 949.8,91 943.8,97 941.4,97" fill="#3b6fb6"><title>IS5 family transposase 3124384-3124863 +</title></polygon>
+<polygon points="950.7,109 956.7,103 957.8,103 957.8,115 956.7,115" fill="#999"><title>RtcB family protein 3124910-3125314 -</title></polygon>
+<polygon points="959.1,85 963.2,85 969.2,91 963.2,97 959.1,97" fill="#3b6fb6"><title>hypothetical protein 3125389-3125962 +</title></polygon>
+<polygon points="970.3,109 976.3,103 977.2,103 977.2,115 976.3,115" fill="#3b6fb6"><title>thiol-disulfide oxidoreductase DCC famil 3126026-3126416 -</title></polygon>
+<polygon points="977.1,109 983.1,103 986.7,103 986.7,115 983.1,115" fill="#3b6fb6"><title>DUF4166 domain-containing protein 3126412-3126958 -</title></polygon>
+<polygon points="986.7,109 992.7,103 1006.2,103 1006.2,115 992.7,115" fill="#3b6fb6"><title>saccharopine dehydrogenase family protei 3126957-3128070 -</title></polygon>
+<polygon points="1007.9,109 1013.9,103 1031.1,103 1031.1,115 1013.9,115" fill="#3b6fb6"><title>sigma-54-dependent transcriptional regul 3128164-3129487 -</title></polygon>
+<polygon points="1031.4,109 1037.4,103 1060.0,103 1060.0,115 1037.4,115" fill="#3b6fb6"><title>sensor histidine kinase 3129500-3131369 -</title></polygon>
+<text x="60" y="166" font-size="9" fill="#666">NZ_AP026738.1:3074243-3131129  core 3077243-3128129</text>
+<text x="4" y="184" font-size="11" font-weight="bold">SAMD00411011 NZ_AP025193.1 (partner, + strand, two_flank_anchored, pair P00007)</text>
+<line x1="60" y1="220" x2="1060" y2="220" stroke="#888"/>
+<rect x="132.4" y="252" width="17.6" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="141.2" y="272" font-size="9" text-anchor="middle">U'</text>
+<rect x="950.7" y="252" width="17.6" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="959.5" y="272" font-size="9" text-anchor="middle">D'</text>
+<rect x="150.0" y="252" width="800.7" height="8" fill="#ffffff" opacity="0.55"/>
+<polygon points="60.0,205 60.0,205 65.7,211 60.0,217 60.0,217" fill="#3b6fb6"><title>LysE family translocator 2890690-2891374 +</title></polygon>
+<polygon points="68.0,205 72.3,205 78.3,211 72.3,217 68.0,217" fill="#3b6fb6"><title>peroxidase-related enzyme 2891506-2892088 +</title></polygon>
+<polygon points="80.3,205 84.2,205 90.2,211 84.2,217 80.3,217" fill="#3b6fb6"><title>YceI family protein 2892204-2892768 +</title></polygon>
+<polygon points="90.1,205 96.9,205 102.9,211 96.9,217 90.1,217" fill="#3b6fb6"><title>YceI family protein 2892764-2893487 +</title></polygon>
+<polygon points="102.8,205 107.1,205 113.1,211 107.1,217 102.8,217" fill="#3b6fb6"><title>SRPBCC family protein 2893483-2894071 +</title></polygon>
+<polygon points="115.0,229 121.0,223 124.4,223 124.4,235 121.0,235" fill="#3b6fb6"><title>YcxB family protein 2894175-2894712 -</title></polygon>
+<line x1="150.0" y1="229" x2="950.7" y2="229" stroke="#555" stroke-dasharray="2,2"/>
+<polygon points="131.1,229 137.1,223 150.0,223 150.0,235 137.1,235" fill="#999"><title>RtcB family protein 2895093-2896168 -</title></polygon>
+<polygon points="950.7,229 956.7,223 957.8,223 957.8,235 956.7,235" fill="#999"><title>RtcB family protein 2896168-2896571 -</title></polygon>
+<polygon points="959.1,205 963.2,205 969.2,211 963.2,217 959.1,217" fill="#3b6fb6"><title>hypothetical protein 2896646-2897219 +</title></polygon>
+<polygon points="970.3,229 976.3,223 977.2,223 977.2,235 976.3,235" fill="#3b6fb6"><title>thiol-disulfide oxidoreductase DCC famil 2897283-2897673 -</title></polygon>
+<polygon points="977.1,229 983.1,223 986.7,223 986.7,235 983.1,235" fill="#3b6fb6"><title>DUF4166 domain-containing protein 2897669-2898215 -</title></polygon>
+<polygon points="986.7,229 992.7,223 1006.2,223 1006.2,235 992.7,235" fill="#3b6fb6"><title>saccharopine dehydrogenase family protei 2898214-2899327 -</title></polygon>
+<polygon points="1007.9,229 1013.9,223 1031.1,223 1031.1,235 1013.9,235" fill="#3b6fb6"><title>sigma-54-dependent transcriptional regul 2899421-2900744 -</title></polygon>
+<polygon points="1031.4,229 1037.4,223 1060.0,223 1060.0,235 1037.4,235" fill="#3b6fb6"><title>sensor histidine kinase 2900757-2902620 -</title></polygon>
+<text x="60" y="286" font-size="9" fill="#666">NZ_AP025193.1 site 2896168  other-side gap 0 bp  this call's core 3079362-3124911</text>
+<rect x="150.0" y="218" width="800.7" height="4" fill="#f4f4f4"/><text x="550.3" y="272" font-size="9" text-anchor="middle" fill="#a5372f">empty site</text>
+<text x="4" y="304" font-size="11" font-weight="bold">SAMN38562701 NZ_CP139994.1 (partner, + strand, two_flank_anchored, pair P00022)</text>
+<line x1="60" y1="340" x2="1060" y2="340" stroke="#888"/>
+<rect x="95.2" y="372" width="17.6" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="103.9" y="392" font-size="9" text-anchor="middle">U'</text>
+<rect x="1007.3" y="372" width="17.6" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="1016.1" y="392" font-size="9" text-anchor="middle">D'</text>
+<rect x="112.7" y="372" width="894.5" height="8" fill="#9b5de5" opacity="0.55"/>
+<text x="560.0" y="392" font-size="9" text-anchor="middle">other side 3353</text>
+<polygon points="60.0,325 60.0,325 65.8,331 60.0,337 60.0,337" fill="#3b6fb6"><title>LysE family translocator 2996419-2997103 +</title></polygon>
+<polygon points="68.2,325 72.5,325 78.5,331 72.5,337 68.2,337" fill="#3b6fb6"><title>peroxidase-related enzyme 2997244-2997826 +</title></polygon>
+<polygon points="80.5,325 84.4,325 90.4,331 84.4,337 80.5,337" fill="#3b6fb6"><title>YceI family protein 2997942-2998506 +</title></polygon>
+<polygon points="90.4,325 97.1,325 103.1,331 97.1,337 90.4,337" fill="#3b6fb6"><title>YceI family protein 2998502-2999225 +</title></polygon>
+<polygon points="103.0,325 115.6,325 121.6,331 115.6,337 103.0,337" fill="#3b6fb6"><title>SRPBCC family protein 2999221-2999809 +</title></polygon>
+<polygon points="198.4,349 204.4,343 592.7,343 592.7,355 204.4,355" fill="#3b6fb6"><title>RtcB family protein 3000096-3001575 -</title></polygon>
+<text x="198.4" y="365" font-size="8" fill="#333">RtcB family protein</text>
+<polygon points="613.0,325 759.6,325 765.6,331 759.6,337 613.0,337" fill="#3b6fb6"><title>hypothetical protein 3001650-3002223 +</title></polygon>
+<text x="613.0" y="321" font-size="8" fill="#333">hypothetical protein</text>
+<polygon points="782.9,349 788.9,343 886.7,343 886.7,355 788.9,355" fill="#3b6fb6"><title>thiol-disulfide oxidoreductase DCC famil 3002287-3002677 -</title></polygon>
+<text x="782.9" y="365" font-size="8" fill="#333">thiol-disulfide oxidor</text>
+<polygon points="885.9,349 891.9,343 997.7,343 997.7,355 891.9,355" fill="#3b6fb6"><title>DUF4166 domain-containing protein 3002673-3003093 -</title></polygon>
+<polygon points="1007.9,349 1013.9,343 1031.1,343 1031.1,355 1013.9,355" fill="#3b6fb6"><title>sigma-54-dependent transcriptional regul 3003163-3004486 -</title></polygon>
+<polygon points="1031.4,349 1037.4,343 1060.0,343 1060.0,355 1037.4,355" fill="#3b6fb6"><title>sensor histidine kinase 3004499-3006374 -</title></polygon>
+<text x="60" y="406" font-size="9" fill="#666">NZ_CP139994.1 site 2999775  other-side gap 3353 bp  this call's core 3077243-3128129</text>
+</svg>

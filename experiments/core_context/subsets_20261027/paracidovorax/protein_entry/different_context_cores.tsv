@@ -1,0 +1,61 @@
+scope	structure	core_key	occurrences	samples	max_copies_in_one_sample	context_classes_provisional	context_classes_linked_by_different_candidate	different_context_candidate	similar_context	one_side_shared_unresolved	insufficient_context_labels	span_range	spacing_range	product_hint	graph_overlap	products
+all	single_gene	PF_34809b3c6b4f	54	3	19	36	30	1051	24	9	347	948..948		transposase_or_IS	graph_diff_group=54	IS481-like element ISAav5 family transposase
+all	single_gene	PF_2bf098df0d79	55	3	22	43	23	317	16	6	1146	1565..1565		transposase_or_IS	graph_diff_group=55	IS3 family transposase
+all	single_gene	PF_f094f2564f99	30	4	11	22	19	287	11	8	129	813..813		transposase_or_IS	graph_diff_group=30	IS5 family transposase
+all	single_gene	PF_036484edd177	18	4	10	14	14	147	5	1	0	951..951		transposase_or_IS	graph_diff_group=18	IS110 family transposase
+all	single_gene	PF_159d26168a59	12	2	11	12	7	20	0	3	43	1214..1214		transposase_or_IS	graph_diff_group=12	IS3-like element ISAav4 family transposase
+all	single_gene	PF_282ac9979b1c	8	2	7	8	7	20	0	1	7	1086..1086		transposase_or_IS	graph_diff_group=7,no_graph_block_50_2500=1	IS5 family transposase
+all	single_gene	PF_61e54a119449	11	2	8	10	7	27	1	0	27	806..809		transposase_or_IS	graph_diff_group=11	IS5 family transposase
+all	single_gene	PF_2233e75f0d33	6	4	3	4	4	5	3	7	0	2526..2547		other	graph_diff_group=6	type VI secretion system Vgr family protein
+all	single_gene	PF_7dd3f7e54a3d	7	4	3	5	4	6	3	0	12	963..964		transposase_or_IS	graph_diff_group=7	IS5 family transposase
+all	single_gene	PF_1a133c9f7afe	8	4	2	2	2	16	12	0	0	1191..1191		translation_or_ribosomal	graph_diff_group=8	elongation factor Tu
+all	single_gene	PF_2e54c2b700ce	8	4	2	2	2	16	12	0	0	1497..1506		other	graph_block_other=8	NAD-dependent succinate-semialdehyde dehydrogenase
+all	single_gene	PF_324b6101b432	8	4	2	2	2	16	12	0	0	1041..1071		other	graph_diff_group=8	peptidoglycan-binding domain-containing protein
+all	single_gene	PF_385cfa7e1be1	4	4	1	2	2	1	3	0	2	1524..1557		other	no_graph_block_50_2500=4	CYTH and CHAD domain-containing protein
+all	single_gene	PF_47707861c399	8	4	2	2	2	16	12	0	0	1092..1098		other	graph_diff_group=8	tartrate dehydrogenase
+all	single_gene	PF_4c6408b25ca1	4	4	1	2	2	3	3	0	0	621..621		hypothetical	no_graph_block_50_2500=4	hypothetical protein
+all	single_gene	PF_6dc17827152e	4	4	1	2	2	3	3	0	0	2502..2508		other	no_graph_block_50_2500=4	CRISPR-associated endonuclease Cas3''
+all	single_gene	PF_74d9b3a73a4e	4	4	1	2	2	3	3	0	0	1332..1344		other	graph_diff_group=4	chloride channel protein
+all	single_gene	PF_985fd2122c98	5	4	2	2	2	3	6	0	1	4974..5076		other	graph_block_other=5	RHS repeat-associated core domain-containing protein
+all	single_gene	PF_b86727df30a3	4	4	1	2	2	3	3	0	0	1392..1392		other	graph_diff_group=4	aminopeptidase P N-terminal domain-containing protein
+all	single_gene	PF_46b8bec3c462	3	3	1	2	2	2	1	0	0	1290..1290		other	graph_diff_group=3	SfnB family sulfur acquisition oxidoreductase
+all	single_gene	PF_bfadc79880e4	3	2	2	3	2	1	0	2	0	225..225		hypothetical	graph_block_other=2,no_graph_block_50_2500=1	hypothetical protein
+all	single_gene	PF_f9df8baacc20	3	2	2	2	2	2	1	0	0	1818..1818		other	graph_diff_group=3	methyl-accepting chemotaxis protein
+all	single_gene	PF_b50e82efc9b8	2	1	2	2	2	1	0	0	0	639..648		hypothetical	graph_diff_group=2	hypothetical protein
+all	single_gene	PF_b9458396d99c	2	1	2	2	2	1	0	0	0	594..594		integrase_recombinase_resolvase	graph_diff_group=1,no_graph_block_50_2500=1	recombinase family protein
+all	two_gene	PF_2233e75f0d33+,PF_63e863dff60d+	5	3	3	3	3	2	3	3	2	3015..3037	30..31	other	graph_diff_group=5	type VI secretion system Vgr family protein | DUF1795 domain-containing protein
+all	two_gene	PF_0899555d6690+,PF_d79aea21ea56+	4	4	1	2	2	2	3	0	1	2847..2850	42..42	other	graph_block_other=3,no_graph_block_50_2500=1	PQQ-dependent sugar dehydrogenase | superoxide dismutase family protein
+all	two_gene	PF_4ad8f14f7497+,PF_9608eadad31c+	8	4	2	2	2	8	12	0	8	1709..1834	26..151	other	graph_diff_group=8	electron transfer flavoprotein subunit alpha/FixB family protein | electron transfer flavoprotein subunit beta/FixA family protein
+all	two_gene	PF_c4ab41fe61f6-,PF_ec925dcb5f87-	4	4	1	3	2	2	1	3	0	1222..1222	115..115	other	graph_diff_group=4	amino acid ABC transporter substrate-binding protein | DUF2905 domain-containing protein
+all	two_gene	PF_dead2b62191c-,PF_e732a7b7e2d5-	4	4	1	2	2	3	3	0	0	2323..2415	55..147	other	graph_diff_group=4	MATE family efflux transporter | MarC family protein
+all	two_gene	PF_e2bb3e43436e+,PF_f5416f08af4e+	4	4	1	2	2	2	3	0	1	1987..1987	58..58	other	graph_diff_group=4	chaperonin GroEL | co-chaperone GroES
+all	two_gene	PF_0a8e4b048497+,PF_5e579dd4a05b+	5	3	2	2	2	6	4	0	0	7557..7801	154..162	other	graph_diff_group=5	RHS repeat-associated core domain-containing protein | type VI secretion system Vgr family protein
+all	two_gene	PF_404e83c63551-,PF_87b01b4a4ab6-	3	3	1	2	2	1	1	1	0	1328..1331	-4..-4	hypothetical	graph_block_other=3	replication initiation factor domain-containing protein | hypothetical protein
+all	two_gene	PF_bd45e31b8f27-,PF_dec8f266343e+	2	2	1	2	2	1	0	0	0	984..987	48..48	other	no_graph_block_50_2500=2	LexA family protein | transcriptional regulator
+target_lt2500	single_gene	PF_34809b3c6b4f	54	3	19	36	30	1051	24	9	347	948..948		transposase_or_IS	graph_diff_group=54	IS481-like element ISAav5 family transposase
+target_lt2500	single_gene	PF_2bf098df0d79	55	3	22	43	23	317	16	6	1146	1565..1565		transposase_or_IS	graph_diff_group=55	IS3 family transposase
+target_lt2500	single_gene	PF_f094f2564f99	30	4	11	22	19	287	11	8	129	813..813		transposase_or_IS	graph_diff_group=30	IS5 family transposase
+target_lt2500	single_gene	PF_036484edd177	18	4	10	14	14	147	5	1	0	951..951		transposase_or_IS	graph_diff_group=18	IS110 family transposase
+target_lt2500	single_gene	PF_159d26168a59	12	2	11	12	7	20	0	3	43	1214..1214		transposase_or_IS	graph_diff_group=12	IS3-like element ISAav4 family transposase
+target_lt2500	single_gene	PF_282ac9979b1c	8	2	7	8	7	20	0	1	7	1086..1086		transposase_or_IS	graph_diff_group=7,no_graph_block_50_2500=1	IS5 family transposase
+target_lt2500	single_gene	PF_61e54a119449	11	2	8	10	7	27	1	0	27	806..809		transposase_or_IS	graph_diff_group=11	IS5 family transposase
+target_lt2500	single_gene	PF_7dd3f7e54a3d	7	4	3	5	4	6	3	0	12	963..964		transposase_or_IS	graph_diff_group=7	IS5 family transposase
+target_lt2500	single_gene	PF_1a133c9f7afe	8	4	2	2	2	16	12	0	0	1191..1191		translation_or_ribosomal	graph_diff_group=8	elongation factor Tu
+target_lt2500	single_gene	PF_2e54c2b700ce	8	4	2	2	2	16	12	0	0	1497..1506		other	graph_block_other=8	NAD-dependent succinate-semialdehyde dehydrogenase
+target_lt2500	single_gene	PF_324b6101b432	8	4	2	2	2	16	12	0	0	1041..1071		other	graph_diff_group=8	peptidoglycan-binding domain-containing protein
+target_lt2500	single_gene	PF_385cfa7e1be1	4	4	1	2	2	1	3	0	2	1524..1557		other	no_graph_block_50_2500=4	CYTH and CHAD domain-containing protein
+target_lt2500	single_gene	PF_47707861c399	8	4	2	2	2	16	12	0	0	1092..1098		other	graph_diff_group=8	tartrate dehydrogenase
+target_lt2500	single_gene	PF_4c6408b25ca1	4	4	1	2	2	3	3	0	0	621..621		hypothetical	no_graph_block_50_2500=4	hypothetical protein
+target_lt2500	single_gene	PF_74d9b3a73a4e	4	4	1	2	2	3	3	0	0	1332..1344		other	graph_diff_group=4	chloride channel protein
+target_lt2500	single_gene	PF_b86727df30a3	4	4	1	2	2	3	3	0	0	1392..1392		other	graph_diff_group=4	aminopeptidase P N-terminal domain-containing protein
+target_lt2500	single_gene	PF_46b8bec3c462	3	3	1	2	2	2	1	0	0	1290..1290		other	graph_diff_group=3	SfnB family sulfur acquisition oxidoreductase
+target_lt2500	single_gene	PF_bfadc79880e4	3	2	2	3	2	1	0	2	0	225..225		hypothetical	graph_block_other=2,no_graph_block_50_2500=1	hypothetical protein
+target_lt2500	single_gene	PF_f9df8baacc20	3	2	2	2	2	2	1	0	0	1818..1818		other	graph_diff_group=3	methyl-accepting chemotaxis protein
+target_lt2500	single_gene	PF_b50e82efc9b8	2	1	2	2	2	1	0	0	0	639..648		hypothetical	graph_diff_group=2	hypothetical protein
+target_lt2500	single_gene	PF_b9458396d99c	2	1	2	2	2	1	0	0	0	594..594		integrase_recombinase_resolvase	graph_diff_group=1,no_graph_block_50_2500=1	recombinase family protein
+target_lt2500	two_gene	PF_4ad8f14f7497+,PF_9608eadad31c+	8	4	2	2	2	8	12	0	8	1709..1834	26..151	other	graph_diff_group=8	electron transfer flavoprotein subunit alpha/FixB family protein | electron transfer flavoprotein subunit beta/FixA family protein
+target_lt2500	two_gene	PF_c4ab41fe61f6-,PF_ec925dcb5f87-	4	4	1	3	2	2	1	3	0	1222..1222	115..115	other	graph_diff_group=4	amino acid ABC transporter substrate-binding protein | DUF2905 domain-containing protein
+target_lt2500	two_gene	PF_dead2b62191c-,PF_e732a7b7e2d5-	4	4	1	2	2	3	3	0	0	2323..2415	55..147	other	graph_diff_group=4	MATE family efflux transporter | MarC family protein
+target_lt2500	two_gene	PF_e2bb3e43436e+,PF_f5416f08af4e+	4	4	1	2	2	2	3	0	1	1987..1987	58..58	other	graph_diff_group=4	chaperonin GroEL | co-chaperone GroES
+target_lt2500	two_gene	PF_404e83c63551-,PF_87b01b4a4ab6-	3	3	1	2	2	1	1	1	0	1328..1331	-4..-4	hypothetical	graph_block_other=3	replication initiation factor domain-containing protein | hypothetical protein
+target_lt2500	two_gene	PF_bd45e31b8f27-,PF_dec8f266343e+	2	2	1	2	2	1	0	0	0	984..987	48..48	other	no_graph_block_50_2500=2	LexA family protein | transcriptional regulator

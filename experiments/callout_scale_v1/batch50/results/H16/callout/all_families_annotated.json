@@ -1,0 +1,6911 @@
+[
+  {
+    "query": "H16_RS_R0",
+    "organism": "H16",
+    "method": "RS",
+    "native_family": "R=0",
+    "length": 817,
+    "raw_occurrences": 32,
+    "occurrences": [
+      {
+        "contig": "NZ_CP196509.1",
+        "accession": "NZ_CP196509.1",
+        "start0": 36789,
+        "end0": 37608,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196509.1_feature_74",
+            "type": "CDS",
+            "overlap_bp": 819,
+            "feature_length_bp": 1014,
+            "product": [
+              "tripartite tricarboxylate transporter substrate binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS32415"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196509.1",
+        "accession": "NZ_CP196509.1",
+        "start0": 24242,
+        "end0": 25060,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196509.1_feature_52",
+            "type": "CDS",
+            "overlap_bp": 818,
+            "feature_length_bp": 1008,
+            "product": [
+              "tripartite tricarboxylate transporter substrate binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS32360"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 2572335,
+        "end0": 2573111,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_4628",
+            "type": "CDS",
+            "overlap_bp": 776,
+            "feature_length_bp": 963,
+            "product": [
+              "tripartite tricarboxylate transporter substrate binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS30700"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 2390054,
+        "end0": 2390857,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_4310",
+            "type": "CDS",
+            "overlap_bp": 803,
+            "feature_length_bp": 984,
+            "product": [
+              "Bug family tripartite tricarboxylate transporter substrate binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS29905"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 2183507,
+        "end0": 2184124,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_3960",
+            "type": "CDS",
+            "overlap_bp": 617,
+            "feature_length_bp": 975,
+            "product": [
+              "tripartite tricarboxylate transporter substrate-binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS29030"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 2057122,
+        "end0": 2057925,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_3726",
+            "type": "CDS",
+            "overlap_bp": 803,
+            "feature_length_bp": 1005,
+            "product": [
+              "tripartite tricarboxylate transporter substrate-binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS28445"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 2031791,
+        "end0": 2032607,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_3668",
+            "type": "CDS",
+            "overlap_bp": 816,
+            "feature_length_bp": 984,
+            "product": [
+              "tripartite tricarboxylate transporter substrate binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS28300"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 1730870,
+        "end0": 1731683,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_3165",
+            "type": "CDS",
+            "overlap_bp": 813,
+            "feature_length_bp": 981,
+            "product": [
+              "Bug family tripartite tricarboxylate transporter substrate binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS27045"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 1623077,
+        "end0": 1623881,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_2973",
+            "type": "CDS",
+            "overlap_bp": 804,
+            "feature_length_bp": 960,
+            "product": [
+              "Bug family tripartite tricarboxylate transporter substrate binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS26565"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 1174791,
+        "end0": 1175283,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_2138",
+            "type": "CDS",
+            "overlap_bp": 492,
+            "feature_length_bp": 996,
+            "product": [
+              "tripartite tricarboxylate transporter substrate binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS24480"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 1026666,
+        "end0": 1027400,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_1858",
+            "type": "CDS",
+            "overlap_bp": 734,
+            "feature_length_bp": 993,
+            "product": [
+              "tripartite tricarboxylate transporter substrate binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS23780"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 873161,
+        "end0": 873974,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_1584",
+            "type": "CDS",
+            "overlap_bp": 813,
+            "feature_length_bp": 1008,
+            "product": [
+              "tripartite tricarboxylate transporter substrate-binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS23095"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 721519,
+        "end0": 721569,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_1328",
+            "type": "CDS",
+            "overlap_bp": 50,
+            "feature_length_bp": 858,
+            "product": [
+              "SDR family NAD(P)-dependent oxidoreductase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS22455"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 711956,
+        "end0": 712028,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_1310",
+            "type": "CDS",
+            "overlap_bp": 72,
+            "feature_length_bp": 1755,
+            "product": [
+              "FAD-dependent oxidoreductase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS22410"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 606572,
+        "end0": 607389,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_1104",
+            "type": "CDS",
+            "overlap_bp": 817,
+            "feature_length_bp": 996,
+            "product": [
+              "tripartite tricarboxylate transporter substrate binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS21895"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 544382,
+        "end0": 545088,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_988",
+            "type": "CDS",
+            "overlap_bp": 706,
+            "feature_length_bp": 969,
+            "product": [
+              "Bug family tripartite tricarboxylate transporter substrate binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS21610"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 477571,
+        "end0": 477625,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_856",
+            "type": "CDS",
+            "overlap_bp": 54,
+            "feature_length_bp": 804,
+            "product": [
+              "enoyl-CoA hydratase/isomerase family protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS21280"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 455264,
+        "end0": 455596,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_814",
+            "type": "CDS",
+            "overlap_bp": 332,
+            "feature_length_bp": 972,
+            "product": [
+              "Bug family tripartite tricarboxylate transporter substrate binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS21175"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 444165,
+        "end0": 444985,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_800",
+            "type": "CDS",
+            "overlap_bp": 820,
+            "feature_length_bp": 1047,
+            "product": [
+              "Bug family tripartite tricarboxylate transporter substrate binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS21140"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 319821,
+        "end0": 320022,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_574",
+            "type": "CDS",
+            "overlap_bp": 201,
+            "feature_length_bp": 990,
+            "product": [
+              "Bug family tripartite tricarboxylate transporter substrate binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS20575"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 231776,
+        "end0": 232575,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_412",
+            "type": "CDS",
+            "overlap_bp": 799,
+            "feature_length_bp": 987,
+            "product": [
+              "Bug family tripartite tricarboxylate transporter substrate binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS20170"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 100772,
+        "end0": 101583,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_176",
+            "type": "CDS",
+            "overlap_bp": 811,
+            "feature_length_bp": 975,
+            "product": [
+              "Bug family tripartite tricarboxylate transporter substrate binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS19580"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 59982,
+        "end0": 60771,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_106",
+            "type": "CDS",
+            "overlap_bp": 789,
+            "feature_length_bp": 1041,
+            "product": [
+              "tripartite tricarboxylate transporter substrate binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS19405"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 3833955,
+        "end0": 3834018,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_7284",
+            "type": "CDS",
+            "overlap_bp": 63,
+            "feature_length_bp": 1722,
+            "product": [
+              "thiosulfohydrolase SoxB"
+            ],
+            "locus_tag": [
+              "OOOCML_RS18200"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 3223136,
+        "end0": 3223916,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_6102",
+            "type": "CDS",
+            "overlap_bp": 780,
+            "feature_length_bp": 1014,
+            "product": [
+              "Bug family tripartite tricarboxylate transporter substrate binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS15245"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 2509660,
+        "end0": 2509711,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_4767",
+            "type": "CDS",
+            "overlap_bp": 51,
+            "feature_length_bp": 918,
+            "product": [
+              "cytochrome-c oxidase, cbb3-type subunit III"
+            ],
+            "locus_tag": [
+              "OOOCML_RS11910"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 2254567,
+        "end0": 2255381,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_4259",
+            "type": "CDS",
+            "overlap_bp": 814,
+            "feature_length_bp": 1008,
+            "product": [
+              "tripartite tricarboxylate transporter substrate binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS10640"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 590858,
+        "end0": 591178,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_1136",
+            "type": "CDS",
+            "overlap_bp": 320,
+            "feature_length_bp": 1020,
+            "product": [
+              "Bug family tripartite tricarboxylate transporter substrate binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS02835"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 356977,
+        "end0": 357721,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_682",
+            "type": "CDS",
+            "overlap_bp": 744,
+            "feature_length_bp": 978,
+            "product": [
+              "Bug family tripartite tricarboxylate transporter substrate binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS01700"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 211202,
+        "end0": 211990,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_396",
+            "type": "CDS",
+            "overlap_bp": 788,
+            "feature_length_bp": 987,
+            "product": [
+              "tripartite tricarboxylate transporter substrate-binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS00990"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 103639,
+        "end0": 104300,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_182",
+            "type": "CDS",
+            "overlap_bp": 661,
+            "feature_length_bp": 969,
+            "product": [
+              "Bug family tripartite tricarboxylate transporter substrate binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS00455"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 50934,
+        "end0": 51736,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_70",
+            "type": "CDS",
+            "overlap_bp": 802,
+            "feature_length_bp": 978,
+            "product": [
+              "Bug family tripartite tricarboxylate transporter substrate binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS00175"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "H16__NZ_CP196508.1_feature_1104",
+      "identity_pct": 65.918,
+      "alignment_aa": 267,
+      "query_start": 20,
+      "query_end": 817,
+      "evalue": 1.59e-101,
+      "bitscore": 297.0,
+      "subject_length": 331,
+      "title": "tripartite tricarboxylate transporter substrate binding protein"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "H16_RS_R1",
+    "organism": "H16",
+    "method": "RS",
+    "native_family": "R=1",
+    "length": 53,
+    "raw_occurrences": 10,
+    "occurrences": [
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 832795,
+        "end0": 832845,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 710539,
+        "end0": 710589,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 696904,
+        "end0": 696956,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 2246920,
+        "end0": 2246972,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 2076683,
+        "end0": 2076735,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_3919",
+            "type": "CDS",
+            "overlap_bp": 52,
+            "feature_length_bp": 966,
+            "product": [
+              "AraC family transcriptional regulator"
+            ],
+            "locus_tag": [
+              "OOOCML_RS09790"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 1171752,
+        "end0": 1171802,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 1057731,
+        "end0": 1057783,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 456170,
+        "end0": 456223,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 351497,
+        "end0": 351547,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 183793,
+        "end0": 183843,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "H16_RS_R2",
+    "organism": "H16",
+    "method": "RS",
+    "native_family": "R=2",
+    "length": 55,
+    "raw_occurrences": 12,
+    "occurrences": [
+      {
+        "contig": "NZ_CP196509.1",
+        "accession": "NZ_CP196509.1",
+        "start0": 329080,
+        "end0": 329134,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196509.1_feature_646",
+            "type": "CDS",
+            "overlap_bp": 54,
+            "feature_length_bp": 924,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS33845"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 2268764,
+        "end0": 2268818,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_4116",
+            "type": "CDS",
+            "overlap_bp": 54,
+            "feature_length_bp": 714,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS29420"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 1657256,
+        "end0": 1657307,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_3033",
+            "type": "CDS",
+            "overlap_bp": 51,
+            "feature_length_bp": 834,
+            "product": [
+              "methionine ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS26715"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 3693954,
+        "end0": 3694005,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_6998",
+            "type": "CDS",
+            "overlap_bp": 51,
+            "feature_length_bp": 951,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS17485"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 3276324,
+        "end0": 3276374,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_6196",
+            "type": "CDS",
+            "overlap_bp": 50,
+            "feature_length_bp": 777,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS15480"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 2884823,
+        "end0": 2884877,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_5473",
+            "type": "CDS",
+            "overlap_bp": 54,
+            "feature_length_bp": 1932,
+            "product": [
+              "ATP-binding cassette domain-containing protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS13675"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 2876199,
+        "end0": 2876252,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_5461",
+            "type": "CDS",
+            "overlap_bp": 53,
+            "feature_length_bp": 1830,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS13645"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 2831281,
+        "end0": 2831331,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_5373",
+            "type": "CDS",
+            "overlap_bp": 50,
+            "feature_length_bp": 702,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS13425"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 2449995,
+        "end0": 2450046,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_4641",
+            "type": "CDS",
+            "overlap_bp": 51,
+            "feature_length_bp": 762,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS11595"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 1674421,
+        "end0": 1674475,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_3117",
+            "type": "CDS",
+            "overlap_bp": 54,
+            "feature_length_bp": 768,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS07785"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 1347726,
+        "end0": 1347780,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_2519",
+            "type": "CDS",
+            "overlap_bp": 54,
+            "feature_length_bp": 720,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS06290"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 883935,
+        "end0": 883985,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_1640",
+            "type": "CDS",
+            "overlap_bp": 50,
+            "feature_length_bp": 1035,
+            "product": [
+              "methionine ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS04095"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "H16_RS_R3",
+    "organism": "H16",
+    "method": "RS",
+    "native_family": "R=3",
+    "length": 97,
+    "raw_occurrences": 24,
+    "occurrences": [
+      {
+        "contig": "NZ_CP196509.1",
+        "accession": "NZ_CP196509.1",
+        "start0": 297617,
+        "end0": 297688,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196509.1_feature_570",
+            "type": "CDS",
+            "overlap_bp": 71,
+            "feature_length_bp": 612,
+            "product": [
+              "cytochrome c biogenesis heme-transporting ATPase CcmA"
+            ],
+            "locus_tag": [
+              "OOOCML_RS33655"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 2291914,
+        "end0": 2291995,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_4162",
+            "type": "CDS",
+            "overlap_bp": 81,
+            "feature_length_bp": 708,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS29535"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 2112174,
+        "end0": 2112255,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_3822",
+            "type": "CDS",
+            "overlap_bp": 81,
+            "feature_length_bp": 879,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS28685"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 1805802,
+        "end0": 1805883,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_3287",
+            "type": "CDS",
+            "overlap_bp": 81,
+            "feature_length_bp": 1059,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS27350"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 1440305,
+        "end0": 1440399,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_2639",
+            "type": "CDS",
+            "overlap_bp": 94,
+            "feature_length_bp": 729,
+            "product": [
+              "phosphonate C-P lyase system protein PhnL"
+            ],
+            "locus_tag": [
+              "OOOCML_RS25730"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 1176117,
+        "end0": 1176213,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_2140",
+            "type": "CDS",
+            "overlap_bp": 96,
+            "feature_length_bp": 777,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS24485"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 520780,
+        "end0": 520875,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_942",
+            "type": "CDS",
+            "overlap_bp": 95,
+            "feature_length_bp": 1149,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS21495"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 3928940,
+        "end0": 3929034,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_7468",
+            "type": "CDS",
+            "overlap_bp": 94,
+            "feature_length_bp": 744,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS18655"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 3693598,
+        "end0": 3693693,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_6998",
+            "type": "CDS",
+            "overlap_bp": 95,
+            "feature_length_bp": 951,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS17485"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 3638284,
+        "end0": 3638378,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_6876",
+            "type": "CDS",
+            "overlap_bp": 94,
+            "feature_length_bp": 1668,
+            "product": [
+              "energy-dependent translational throttle protein EttA"
+            ],
+            "locus_tag": [
+              "OOOCML_RS17180"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 3193651,
+        "end0": 3193740,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_6046",
+            "type": "CDS",
+            "overlap_bp": 89,
+            "feature_length_bp": 966,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS15105"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 2885343,
+        "end0": 2885437,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_5473",
+            "type": "CDS",
+            "overlap_bp": 94,
+            "feature_length_bp": 1932,
+            "product": [
+              "ATP-binding cassette domain-containing protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS13675"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 2884490,
+        "end0": 2884586,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_5473",
+            "type": "CDS",
+            "overlap_bp": 96,
+            "feature_length_bp": 1932,
+            "product": [
+              "ATP-binding cassette domain-containing protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS13675"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 2831622,
+        "end0": 2831718,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_5375",
+            "type": "CDS",
+            "overlap_bp": 96,
+            "feature_length_bp": 768,
+            "product": [
+              "high-affinity branched-chain amino acid ABC transporter ATP-binding protein LivG"
+            ],
+            "locus_tag": [
+              "OOOCML_RS13430"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 2830917,
+        "end0": 2831007,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_5373",
+            "type": "CDS",
+            "overlap_bp": 90,
+            "feature_length_bp": 702,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS13425"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 2717048,
+        "end0": 2717129,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_5137",
+            "type": "CDS",
+            "overlap_bp": 81,
+            "feature_length_bp": 1131,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS12835"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 2655531,
+        "end0": 2655611,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_5027",
+            "type": "CDS",
+            "overlap_bp": 80,
+            "feature_length_bp": 789,
+            "product": [
+              "phosphate ABC transporter ATP-binding protein PstB"
+            ],
+            "locus_tag": [
+              "OOOCML_RS12560"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 2617238,
+        "end0": 2617332,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_4957",
+            "type": "CDS",
+            "overlap_bp": 94,
+            "feature_length_bp": 1662,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS12385"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 2287955,
+        "end0": 2288049,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_4317",
+            "type": "CDS",
+            "overlap_bp": 94,
+            "feature_length_bp": 1935,
+            "product": [
+              "ATP-binding cassette domain-containing protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS10785"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 1347350,
+        "end0": 1347445,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_2517",
+            "type": "CDS",
+            "overlap_bp": 95,
+            "feature_length_bp": 807,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS06285"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 1175272,
+        "end0": 1175365,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_2185",
+            "type": "CDS",
+            "overlap_bp": 93,
+            "feature_length_bp": 849,
+            "product": [
+              "urea ABC transporter ATP-binding protein UrtD"
+            ],
+            "locus_tag": [
+              "OOOCML_RS05455"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 494928,
+        "end0": 495024,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_944",
+            "type": "CDS",
+            "overlap_bp": 96,
+            "feature_length_bp": 855,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS02355"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 305819,
+        "end0": 305897,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_586",
+            "type": "CDS",
+            "overlap_bp": 78,
+            "feature_length_bp": 819,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS01460"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 301552,
+        "end0": 301638,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_578",
+            "type": "CDS",
+            "overlap_bp": 86,
+            "feature_length_bp": 963,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS01440"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "H16__NZ_CP196508.1_feature_942",
+      "identity_pct": 78.125,
+      "alignment_aa": 32,
+      "query_start": 2,
+      "query_end": 97,
+      "evalue": 1.26e-10,
+      "bitscore": 50.8,
+      "subject_length": 382,
+      "title": "ABC transporter ATP-binding protein"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "H16_RS_R4",
+    "organism": "H16",
+    "method": "RS",
+    "native_family": "R=4",
+    "length": 117,
+    "raw_occurrences": 18,
+    "occurrences": [
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 2661076,
+        "end0": 2661129,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_4784",
+            "type": "CDS",
+            "overlap_bp": 53,
+            "feature_length_bp": 1008,
+            "product": [
+              "SDR family oxidoreductase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS31090"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 2155266,
+        "end0": 2155371,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_3906",
+            "type": "CDS",
+            "overlap_bp": 105,
+            "feature_length_bp": 879,
+            "product": [
+              "oxidoreductase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS28895"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 2149910,
+        "end0": 2150027,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_3894",
+            "type": "CDS",
+            "overlap_bp": 117,
+            "feature_length_bp": 765,
+            "product": [
+              "SDR family oxidoreductase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS28865"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 2025927,
+        "end0": 2026029,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_3654",
+            "type": "CDS",
+            "overlap_bp": 102,
+            "feature_length_bp": 711,
+            "product": [
+              "SDR family NAD(P)-dependent oxidoreductase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS28265"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 1926293,
+        "end0": 1926410,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_3473",
+            "type": "CDS",
+            "overlap_bp": 117,
+            "feature_length_bp": 768,
+            "product": [
+              "2-hydroxycyclohexanecarboxyl-CoA dehydrogenase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS27815"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 1451600,
+        "end0": 1451717,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_2667",
+            "type": "CDS",
+            "overlap_bp": 117,
+            "feature_length_bp": 765,
+            "product": [
+              "SDR family oxidoreductase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS25800"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 826150,
+        "end0": 826252,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_1502",
+            "type": "CDS",
+            "overlap_bp": 102,
+            "feature_length_bp": 804,
+            "product": [
+              "SDR family oxidoreductase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS22890"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 765468,
+        "end0": 765585,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_1408",
+            "type": "CDS",
+            "overlap_bp": 117,
+            "feature_length_bp": 915,
+            "product": [
+              "SDR family NAD(P)-dependent oxidoreductase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS22655"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 739785,
+        "end0": 739849,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_1364",
+            "type": "CDS",
+            "overlap_bp": 64,
+            "feature_length_bp": 804,
+            "product": [
+              "SDR family oxidoreductase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS22545"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 736434,
+        "end0": 736543,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_1358",
+            "type": "CDS",
+            "overlap_bp": 109,
+            "feature_length_bp": 885,
+            "product": [
+              "SDR family oxidoreductase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS22530"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 706931,
+        "end0": 707035,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_1300",
+            "type": "CDS",
+            "overlap_bp": 104,
+            "feature_length_bp": 810,
+            "product": [
+              "SDR family NAD(P)-dependent oxidoreductase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS22385"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 449632,
+        "end0": 449749,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_804",
+            "type": "CDS",
+            "overlap_bp": 117,
+            "feature_length_bp": 912,
+            "product": [
+              "SDR family NAD(P)-dependent oxidoreductase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS21150"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 2690444,
+        "end0": 2690561,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_5091",
+            "type": "CDS",
+            "overlap_bp": 117,
+            "feature_length_bp": 753,
+            "product": [
+              "SDR family oxidoreductase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS12720"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 2341717,
+        "end0": 2341834,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_4423",
+            "type": "CDS",
+            "overlap_bp": 117,
+            "feature_length_bp": 915,
+            "product": [
+              "SDR family NAD(P)-dependent oxidoreductase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS11050"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 1663837,
+        "end0": 1663954,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_3095",
+            "type": "CDS",
+            "overlap_bp": 117,
+            "feature_length_bp": 783,
+            "product": [
+              "SDR family oxidoreductase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS07730"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 1446455,
+        "end0": 1446552,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_2699",
+            "type": "CDS",
+            "overlap_bp": 97,
+            "feature_length_bp": 777,
+            "product": [
+              "3-hydroxybutyrate dehydrogenase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS06740"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 1396620,
+        "end0": 1396737,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_2603",
+            "type": "CDS",
+            "overlap_bp": 117,
+            "feature_length_bp": 825,
+            "product": [
+              "SDR family NAD(P)-dependent oxidoreductase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS06500"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 807239,
+        "end0": 807356,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_1500",
+            "type": "CDS",
+            "overlap_bp": 117,
+            "feature_length_bp": 759,
+            "product": [
+              "SDR family oxidoreductase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS03745"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "H16_RS_R5",
+    "organism": "H16",
+    "method": "RS",
+    "native_family": "R=5",
+    "length": 50,
+    "raw_occurrences": 0,
+    "occurrences": [],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "H16_RS_R6",
+    "organism": "H16",
+    "method": "RS",
+    "native_family": "R=6",
+    "length": 3143,
+    "raw_occurrences": 5,
+    "occurrences": [
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 866366,
+        "end0": 869508,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_1572",
+            "type": "rRNA",
+            "overlap_bp": 1457,
+            "feature_length_bp": 1532,
+            "product": [
+              "16S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "OOOCML_RS23065"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP196508.1_feature_1574",
+            "type": "tRNA",
+            "overlap_bp": 77,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Ile"
+            ],
+            "locus_tag": [
+              "OOOCML_RS23070"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP196508.1_feature_1576",
+            "type": "tRNA",
+            "overlap_bp": 76,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Ala"
+            ],
+            "locus_tag": [
+              "OOOCML_RS23075"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP196508.1_feature_1578",
+            "type": "rRNA",
+            "overlap_bp": 1162,
+            "feature_length_bp": 2974,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "OOOCML_RS23080"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 173636,
+        "end0": 176778,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_302",
+            "type": "rRNA",
+            "overlap_bp": 1457,
+            "feature_length_bp": 1532,
+            "product": [
+              "16S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "OOOCML_RS19895"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP196508.1_feature_304",
+            "type": "tRNA",
+            "overlap_bp": 77,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Ile"
+            ],
+            "locus_tag": [
+              "OOOCML_RS19900"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP196508.1_feature_306",
+            "type": "tRNA",
+            "overlap_bp": 76,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Ala"
+            ],
+            "locus_tag": [
+              "OOOCML_RS19905"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP196508.1_feature_308",
+            "type": "rRNA",
+            "overlap_bp": 1162,
+            "feature_length_bp": 2881,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "OOOCML_RS19910"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 3779744,
+        "end0": 3782886,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_7178",
+            "type": "rRNA",
+            "overlap_bp": 1161,
+            "feature_length_bp": 2881,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "OOOCML_RS17935"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP196507.1_feature_7180",
+            "type": "tRNA",
+            "overlap_bp": 76,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Ala"
+            ],
+            "locus_tag": [
+              "OOOCML_RS17940"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP196507.1_feature_7182",
+            "type": "tRNA",
+            "overlap_bp": 77,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Ile"
+            ],
+            "locus_tag": [
+              "OOOCML_RS17945"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP196507.1_feature_7184",
+            "type": "rRNA",
+            "overlap_bp": 1458,
+            "feature_length_bp": 1532,
+            "product": [
+              "16S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "OOOCML_RS17950"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 3574405,
+        "end0": 3577547,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_6758",
+            "type": "rRNA",
+            "overlap_bp": 1161,
+            "feature_length_bp": 2881,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "OOOCML_RS16885"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP196507.1_feature_6760",
+            "type": "tRNA",
+            "overlap_bp": 76,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Ala"
+            ],
+            "locus_tag": [
+              "OOOCML_RS16890"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP196507.1_feature_6762",
+            "type": "tRNA",
+            "overlap_bp": 77,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Ile"
+            ],
+            "locus_tag": [
+              "OOOCML_RS16895"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP196507.1_feature_6764",
+            "type": "rRNA",
+            "overlap_bp": 1458,
+            "feature_length_bp": 1532,
+            "product": [
+              "16S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "OOOCML_RS16900"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 1804500,
+        "end0": 1806016,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_3359",
+            "type": "rRNA",
+            "overlap_bp": 1457,
+            "feature_length_bp": 1532,
+            "product": [
+              "16S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "OOOCML_RS08390"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "H16_RS_R7",
+    "organism": "H16",
+    "method": "RS",
+    "native_family": "R=7",
+    "length": 71,
+    "raw_occurrences": 10,
+    "occurrences": [
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 2066361,
+        "end0": 2066431,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_3742",
+            "type": "CDS",
+            "overlap_bp": 70,
+            "feature_length_bp": 1092,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS28485"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 2045973,
+        "end0": 2046031,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_3702",
+            "type": "CDS",
+            "overlap_bp": 58,
+            "feature_length_bp": 735,
+            "product": [
+              "amino acid ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS28385"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 1805635,
+        "end0": 1805703,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_3287",
+            "type": "CDS",
+            "overlap_bp": 68,
+            "feature_length_bp": 1059,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS27350"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 3596451,
+        "end0": 3596520,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_6808",
+            "type": "CDS",
+            "overlap_bp": 69,
+            "feature_length_bp": 1332,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS17010"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 3579495,
+        "end0": 3579551,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_6770",
+            "type": "CDS",
+            "overlap_bp": 56,
+            "feature_length_bp": 753,
+            "product": [
+              "amino acid ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS16915"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 3268711,
+        "end0": 3268776,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_6182",
+            "type": "CDS",
+            "overlap_bp": 65,
+            "feature_length_bp": 780,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS15445"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 2524471,
+        "end0": 2524541,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_4789",
+            "type": "CDS",
+            "overlap_bp": 70,
+            "feature_length_bp": 1101,
+            "product": [
+              "sn-glycerol-3-phosphate import ATP-binding protein UgpC"
+            ],
+            "locus_tag": [
+              "OOOCML_RS11965"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 1032404,
+        "end0": 1032474,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_1900",
+            "type": "CDS",
+            "overlap_bp": 70,
+            "feature_length_bp": 1563,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS04745"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 501412,
+        "end0": 501478,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_958",
+            "type": "CDS",
+            "overlap_bp": 66,
+            "feature_length_bp": 735,
+            "product": [
+              "amino acid ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS02390"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 59891,
+        "end0": 59955,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_90",
+            "type": "CDS",
+            "overlap_bp": 64,
+            "feature_length_bp": 762,
+            "product": [
+              "amino acid ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS00225"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "H16__NZ_CP196508.1_feature_3742",
+      "identity_pct": 82.609,
+      "alignment_aa": 23,
+      "query_start": 69,
+      "query_end": 1,
+      "evalue": 1.68e-09,
+      "bitscore": 47.0,
+      "subject_length": 363,
+      "title": "ABC transporter ATP-binding protein"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "H16_RS_R8",
+    "organism": "H16",
+    "method": "RS",
+    "native_family": "R=8",
+    "length": 64,
+    "raw_occurrences": 10,
+    "occurrences": [
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 2882070,
+        "end0": 2882131,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_5192",
+            "type": "CDS",
+            "overlap_bp": 61,
+            "feature_length_bp": 1158,
+            "product": [
+              "acyl-CoA dehydrogenase family protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS32110"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 846971,
+        "end0": 847034,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_1538",
+            "type": "CDS",
+            "overlap_bp": 63,
+            "feature_length_bp": 1152,
+            "product": [
+              "acyl-CoA dehydrogenase family protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS22980"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 734697,
+        "end0": 734760,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_1354",
+            "type": "CDS",
+            "overlap_bp": 63,
+            "feature_length_bp": 1068,
+            "product": [
+              "acyl-CoA dehydrogenase family protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS22520"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 456038,
+        "end0": 456101,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_816",
+            "type": "CDS",
+            "overlap_bp": 63,
+            "feature_length_bp": 1164,
+            "product": [
+              "acyl-CoA dehydrogenase family protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS21180"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 452401,
+        "end0": 452464,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_808",
+            "type": "CDS",
+            "overlap_bp": 63,
+            "feature_length_bp": 1134,
+            "product": [
+              "acyl-CoA dehydrogenase family protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS21160"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 420071,
+        "end0": 420134,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_760",
+            "type": "CDS",
+            "overlap_bp": 63,
+            "feature_length_bp": 1137,
+            "product": [
+              "acyl-CoA dehydrogenase family protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS21040"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 3045221,
+        "end0": 3045283,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_5775",
+            "type": "CDS",
+            "overlap_bp": 62,
+            "feature_length_bp": 1194,
+            "product": [
+              "acyl-CoA dehydrogenase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS14430"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 2141189,
+        "end0": 2141251,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_4041",
+            "type": "CDS",
+            "overlap_bp": 62,
+            "feature_length_bp": 1182,
+            "product": [
+              "isovaleryl-CoA dehydrogenase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS10095"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 179572,
+        "end0": 179634,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_334",
+            "type": "CDS",
+            "overlap_bp": 62,
+            "feature_length_bp": 1182,
+            "product": [
+              "isovaleryl-CoA dehydrogenase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS00835"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 114863,
+        "end0": 114923,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_202",
+            "type": "CDS",
+            "overlap_bp": 60,
+            "feature_length_bp": 2355,
+            "product": [
+              "acyl-CoA dehydrogenase family protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS00505"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "H16__NZ_CP196508.1_feature_760",
+      "identity_pct": 71.429,
+      "alignment_aa": 21,
+      "query_start": 2,
+      "query_end": 64,
+      "evalue": 2.61e-07,
+      "bitscore": 40.8,
+      "subject_length": 378,
+      "title": "acyl-CoA dehydrogenase family protein"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "H16_RS_R9",
+    "organism": "H16",
+    "method": "RS",
+    "native_family": "R=9",
+    "length": 263,
+    "raw_occurrences": 11,
+    "occurrences": [
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 1622088,
+        "end0": 1622350,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_2971",
+            "type": "CDS",
+            "overlap_bp": 262,
+            "feature_length_bp": 1248,
+            "product": [
+              "CaiB/BaiF CoA transferase family protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS26560"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 1533752,
+        "end0": 1534013,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_2817",
+            "type": "CDS",
+            "overlap_bp": 261,
+            "feature_length_bp": 1299,
+            "product": [
+              "CaiB/BaiF CoA transferase family protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS26175"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 1110912,
+        "end0": 1111159,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_2022",
+            "type": "CDS",
+            "overlap_bp": 247,
+            "feature_length_bp": 1251,
+            "product": [
+              "CaiB/BaiF CoA transferase family protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS24190"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 1096034,
+        "end0": 1096296,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_1996",
+            "type": "CDS",
+            "overlap_bp": 262,
+            "feature_length_bp": 1197,
+            "product": [
+              "CaiB/BaiF CoA transferase family protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS24125"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 1034326,
+        "end0": 1034585,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_1870",
+            "type": "CDS",
+            "overlap_bp": 259,
+            "feature_length_bp": 1191,
+            "product": [
+              "CaiB/BaiF CoA transferase family protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS23810"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 400323,
+        "end0": 400536,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_726",
+            "type": "CDS",
+            "overlap_bp": 213,
+            "feature_length_bp": 1227,
+            "product": [
+              "CaiB/BaiF CoA transferase family protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS20955"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 101908,
+        "end0": 102170,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_178",
+            "type": "CDS",
+            "overlap_bp": 262,
+            "feature_length_bp": 1122,
+            "product": [
+              "CaiB/BaiF CoA transferase family protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS19585"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 3457245,
+        "end0": 3457507,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_6546",
+            "type": "CDS",
+            "overlap_bp": 262,
+            "feature_length_bp": 1236,
+            "product": [
+              "CaiB/BaiF CoA transferase family protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS16355"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 2995692,
+        "end0": 2995953,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_5679",
+            "type": "CDS",
+            "overlap_bp": 261,
+            "feature_length_bp": 1221,
+            "product": [
+              "CaiB/BaiF CoA transferase family protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS14190"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 2800656,
+        "end0": 2800915,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_5317",
+            "type": "CDS",
+            "overlap_bp": 259,
+            "feature_length_bp": 1164,
+            "product": [
+              "CaiB/BaiF CoA transferase family protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS13285"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 1679571,
+        "end0": 1679826,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_3129",
+            "type": "CDS",
+            "overlap_bp": 255,
+            "feature_length_bp": 1191,
+            "product": [
+              "CaiB/BaiF CoA transferase family protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS07815"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "H16__NZ_CP196508.1_feature_1996",
+      "identity_pct": 72.414,
+      "alignment_aa": 87,
+      "query_start": 3,
+      "query_end": 263,
+      "evalue": 7.16e-31,
+      "bitscore": 109.0,
+      "subject_length": 398,
+      "title": "CaiB/BaiF CoA transferase family protein"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "H16_RS_R10",
+    "organism": "H16",
+    "method": "RS",
+    "native_family": "R=10",
+    "length": 218,
+    "raw_occurrences": 10,
+    "occurrences": [
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 2487856,
+        "end0": 2488002,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_4474",
+            "type": "CDS",
+            "overlap_bp": 146,
+            "feature_length_bp": 729,
+            "product": [
+              "response regulator transcription factor"
+            ],
+            "locus_tag": [
+              "OOOCML_RS30315"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 2359555,
+        "end0": 2359769,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_4268",
+            "type": "CDS",
+            "overlap_bp": 214,
+            "feature_length_bp": 723,
+            "product": [
+              "response regulator transcription factor"
+            ],
+            "locus_tag": [
+              "OOOCML_RS29800"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 2024945,
+        "end0": 2025165,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_3652",
+            "type": "CDS",
+            "overlap_bp": 220,
+            "feature_length_bp": 744,
+            "product": [
+              "response regulator"
+            ],
+            "locus_tag": [
+              "OOOCML_RS28260"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 1859544,
+        "end0": 1859758,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_3375",
+            "type": "CDS",
+            "overlap_bp": 214,
+            "feature_length_bp": 690,
+            "product": [
+              "heavy metal response regulator transcription factor"
+            ],
+            "locus_tag": [
+              "OOOCML_RS27570"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 4022763,
+        "end0": 4022980,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_7618",
+            "type": "CDS",
+            "overlap_bp": 217,
+            "feature_length_bp": 675,
+            "product": [
+              "response regulator"
+            ],
+            "locus_tag": [
+              "OOOCML_RS19030"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 1978258,
+        "end0": 1978454,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_3715",
+            "type": "CDS",
+            "overlap_bp": 196,
+            "feature_length_bp": 699,
+            "product": [
+              "response regulator transcription factor"
+            ],
+            "locus_tag": [
+              "OOOCML_RS09280"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 1583821,
+        "end0": 1584038,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_2959",
+            "type": "CDS",
+            "overlap_bp": 217,
+            "feature_length_bp": 723,
+            "product": [
+              "osmolarity response regulator transcription factor OmpR"
+            ],
+            "locus_tag": [
+              "OOOCML_RS07390"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 619989,
+        "end0": 620203,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_1180",
+            "type": "CDS",
+            "overlap_bp": 214,
+            "feature_length_bp": 744,
+            "product": [
+              "response regulator"
+            ],
+            "locus_tag": [
+              "OOOCML_RS02945"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 570209,
+        "end0": 570426,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_1096",
+            "type": "CDS",
+            "overlap_bp": 217,
+            "feature_length_bp": 690,
+            "product": [
+              "response regulator"
+            ],
+            "locus_tag": [
+              "OOOCML_RS02735"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 310961,
+        "end0": 311094,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_596",
+            "type": "CDS",
+            "overlap_bp": 133,
+            "feature_length_bp": 699,
+            "product": [
+              "two-component system response regulator CreB"
+            ],
+            "locus_tag": [
+              "OOOCML_RS01485"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "H16__NZ_CP196507.1_feature_2959",
+      "identity_pct": 68.056,
+      "alignment_aa": 72,
+      "query_start": 218,
+      "query_end": 3,
+      "evalue": 8.83e-23,
+      "bitscore": 84.7,
+      "subject_length": 240,
+      "title": "osmolarity response regulator transcription factor OmpR"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "H16_RS_R11",
+    "organism": "H16",
+    "method": "RS",
+    "native_family": "R=11",
+    "length": 3607,
+    "raw_occurrences": 5,
+    "occurrences": [
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 865901,
+        "end0": 869508,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_1572",
+            "type": "rRNA",
+            "overlap_bp": 1532,
+            "feature_length_bp": 1532,
+            "product": [
+              "16S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "OOOCML_RS23065"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP196508.1_feature_1574",
+            "type": "tRNA",
+            "overlap_bp": 77,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Ile"
+            ],
+            "locus_tag": [
+              "OOOCML_RS23070"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP196508.1_feature_1576",
+            "type": "tRNA",
+            "overlap_bp": 76,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Ala"
+            ],
+            "locus_tag": [
+              "OOOCML_RS23075"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP196508.1_feature_1578",
+            "type": "rRNA",
+            "overlap_bp": 1162,
+            "feature_length_bp": 2974,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "OOOCML_RS23080"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 173172,
+        "end0": 176778,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_302",
+            "type": "rRNA",
+            "overlap_bp": 1532,
+            "feature_length_bp": 1532,
+            "product": [
+              "16S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "OOOCML_RS19895"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP196508.1_feature_304",
+            "type": "tRNA",
+            "overlap_bp": 77,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Ile"
+            ],
+            "locus_tag": [
+              "OOOCML_RS19900"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP196508.1_feature_306",
+            "type": "tRNA",
+            "overlap_bp": 76,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Ala"
+            ],
+            "locus_tag": [
+              "OOOCML_RS19905"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP196508.1_feature_308",
+            "type": "rRNA",
+            "overlap_bp": 1162,
+            "feature_length_bp": 2881,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "OOOCML_RS19910"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 3779744,
+        "end0": 3783351,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_7178",
+            "type": "rRNA",
+            "overlap_bp": 1161,
+            "feature_length_bp": 2881,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "OOOCML_RS17935"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP196507.1_feature_7180",
+            "type": "tRNA",
+            "overlap_bp": 76,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Ala"
+            ],
+            "locus_tag": [
+              "OOOCML_RS17940"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP196507.1_feature_7182",
+            "type": "tRNA",
+            "overlap_bp": 77,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Ile"
+            ],
+            "locus_tag": [
+              "OOOCML_RS17945"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP196507.1_feature_7184",
+            "type": "rRNA",
+            "overlap_bp": 1532,
+            "feature_length_bp": 1532,
+            "product": [
+              "16S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "OOOCML_RS17950"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 3574405,
+        "end0": 3578011,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_6758",
+            "type": "rRNA",
+            "overlap_bp": 1161,
+            "feature_length_bp": 2881,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "OOOCML_RS16885"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP196507.1_feature_6760",
+            "type": "tRNA",
+            "overlap_bp": 76,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Ala"
+            ],
+            "locus_tag": [
+              "OOOCML_RS16890"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP196507.1_feature_6762",
+            "type": "tRNA",
+            "overlap_bp": 77,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Ile"
+            ],
+            "locus_tag": [
+              "OOOCML_RS16895"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP196507.1_feature_6764",
+            "type": "rRNA",
+            "overlap_bp": 1532,
+            "feature_length_bp": 1532,
+            "product": [
+              "16S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "OOOCML_RS16900"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP196507.1_feature_6766",
+            "type": "CDS",
+            "overlap_bp": 175,
+            "feature_length_bp": 231,
+            "product": [
+              "hypothetical protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS16905"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 1804232,
+        "end0": 1806016,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_3359",
+            "type": "rRNA",
+            "overlap_bp": 1532,
+            "feature_length_bp": 1532,
+            "product": [
+              "16S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "OOOCML_RS08390"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "H16__NZ_CP196507.1_feature_6766",
+      "identity_pct": 96.491,
+      "alignment_aa": 57,
+      "query_start": 3606,
+      "query_end": 3436,
+      "evalue": 1.68e-30,
+      "bitscore": 112.0,
+      "subject_length": 76,
+      "title": "hypothetical protein"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "H16_RS_R12",
+    "organism": "H16",
+    "method": "RS",
+    "native_family": "R=12",
+    "length": 1954,
+    "raw_occurrences": 5,
+    "occurrences": [
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 869612,
+        "end0": 871565,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_1578",
+            "type": "rRNA",
+            "overlap_bp": 1708,
+            "feature_length_bp": 2974,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "OOOCML_RS23080"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP196508.1_feature_1580",
+            "type": "rRNA",
+            "overlap_bp": 113,
+            "feature_length_bp": 113,
+            "product": [
+              "5S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "OOOCML_RS23085"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 176789,
+        "end0": 178742,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_308",
+            "type": "rRNA",
+            "overlap_bp": 1708,
+            "feature_length_bp": 2881,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "OOOCML_RS19910"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP196508.1_feature_310",
+            "type": "rRNA",
+            "overlap_bp": 113,
+            "feature_length_bp": 113,
+            "product": [
+              "5S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "OOOCML_RS19915"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 3777781,
+        "end0": 3779733,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_7176",
+            "type": "rRNA",
+            "overlap_bp": 113,
+            "feature_length_bp": 113,
+            "product": [
+              "5S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "OOOCML_RS17930"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP196507.1_feature_7178",
+            "type": "rRNA",
+            "overlap_bp": 1709,
+            "feature_length_bp": 2881,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "OOOCML_RS17935"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 3572441,
+        "end0": 3574394,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_6756",
+            "type": "rRNA",
+            "overlap_bp": 113,
+            "feature_length_bp": 113,
+            "product": [
+              "5S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "OOOCML_RS16880"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP196507.1_feature_6758",
+            "type": "rRNA",
+            "overlap_bp": 1709,
+            "feature_length_bp": 2881,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "OOOCML_RS16885"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 1807654,
+        "end0": 1809396,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_3361",
+            "type": "rRNA",
+            "overlap_bp": 1708,
+            "feature_length_bp": 3080,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "OOOCML_RS08395"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "H16_RS_R13",
+    "organism": "H16",
+    "method": "RS",
+    "native_family": "R=13",
+    "length": 50,
+    "raw_occurrences": 0,
+    "occurrences": [],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "H16_RS_R14",
+    "organism": "H16",
+    "method": "RS",
+    "native_family": "R=14",
+    "length": 406,
+    "raw_occurrences": 6,
+    "occurrences": [
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 2593932,
+        "end0": 2594336,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_4670",
+            "type": "CDS",
+            "overlap_bp": 404,
+            "feature_length_bp": 1950,
+            "product": [
+              "methyl-accepting chemotaxis protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS30805"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 2397776,
+        "end0": 2398181,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_4322",
+            "type": "CDS",
+            "overlap_bp": 405,
+            "feature_length_bp": 1158,
+            "product": [
+              "methyl-accepting chemotaxis protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS29935"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 2179559,
+        "end0": 2179964,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_3952",
+            "type": "CDS",
+            "overlap_bp": 405,
+            "feature_length_bp": 1542,
+            "product": [
+              "methyl-accepting chemotaxis protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS29010"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 1170404,
+        "end0": 1170809,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_2134",
+            "type": "CDS",
+            "overlap_bp": 405,
+            "feature_length_bp": 1545,
+            "product": [
+              "methyl-accepting chemotaxis protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS24470"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 253732,
+        "end0": 254137,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_456",
+            "type": "CDS",
+            "overlap_bp": 405,
+            "feature_length_bp": 1767,
+            "product": [
+              "methyl-accepting chemotaxis protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS20280"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 2481843,
+        "end0": 2482248,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_4719",
+            "type": "CDS",
+            "overlap_bp": 405,
+            "feature_length_bp": 1566,
+            "product": [
+              "methyl-accepting chemotaxis protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS11790"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "H16__NZ_CP196508.1_feature_3952",
+      "identity_pct": 86.667,
+      "alignment_aa": 135,
+      "query_start": 406,
+      "query_end": 2,
+      "evalue": 5.64e-55,
+      "bitscore": 177.0,
+      "subject_length": 513,
+      "title": "methyl-accepting chemotaxis protein"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "H16_RS_R15",
+    "organism": "H16",
+    "method": "RS",
+    "native_family": "R=15",
+    "length": 58,
+    "raw_occurrences": 6,
+    "occurrences": [
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 2458567,
+        "end0": 2458623,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 2458435,
+        "end0": 2458491,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 710539,
+        "end0": 710590,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 696904,
+        "end0": 696960,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 272310,
+        "end0": 272366,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 2246920,
+        "end0": 2246977,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "H16_RS_R16",
+    "organism": "H16",
+    "method": "RS",
+    "native_family": "R=16",
+    "length": 68,
+    "raw_occurrences": 5,
+    "occurrences": [
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 1676031,
+        "end0": 1676098,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 1538613,
+        "end0": 1538680,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 639022,
+        "end0": 639089,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_1168",
+            "type": "CDS",
+            "overlap_bp": 32,
+            "feature_length_bp": 660,
+            "product": [
+              "response regulator"
+            ],
+            "locus_tag": [
+              "OOOCML_RS22055"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 745296,
+        "end0": 745362,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 351345,
+        "end0": 351412,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "H16_RS_R17",
+    "organism": "H16",
+    "method": "RS",
+    "native_family": "R=17",
+    "length": 127,
+    "raw_occurrences": 7,
+    "occurrences": [
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 2762185,
+        "end0": 2762297,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_4966",
+            "type": "CDS",
+            "overlap_bp": 112,
+            "feature_length_bp": 1425,
+            "product": [
+              "aldehyde dehydrogenase family protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS31545"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 2314016,
+        "end0": 2314140,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_4196",
+            "type": "CDS",
+            "overlap_bp": 124,
+            "feature_length_bp": 1428,
+            "product": [
+              "NAD-dependent succinate-semialdehyde dehydrogenase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS29620"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 2211424,
+        "end0": 2211549,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_4006",
+            "type": "CDS",
+            "overlap_bp": 125,
+            "feature_length_bp": 1521,
+            "product": [
+              "aldehyde dehydrogenase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS29145"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 2185639,
+        "end0": 2185762,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_3964",
+            "type": "CDS",
+            "overlap_bp": 123,
+            "feature_length_bp": 1461,
+            "product": [
+              "aldehyde dehydrogenase family protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS29040"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 2124462,
+        "end0": 2124588,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_3844",
+            "type": "CDS",
+            "overlap_bp": 126,
+            "feature_length_bp": 1446,
+            "product": [
+              "aldehyde dehydrogenase family protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS28740"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 1725348,
+        "end0": 1725474,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_3155",
+            "type": "CDS",
+            "overlap_bp": 126,
+            "feature_length_bp": 1449,
+            "product": [
+              "NADP-dependent succinate-semialdehyde dehydrogenase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS27020"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 1106036,
+        "end0": 1106162,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_2014",
+            "type": "CDS",
+            "overlap_bp": 126,
+            "feature_length_bp": 1452,
+            "product": [
+              "NAD-dependent succinate-semialdehyde dehydrogenase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS24170"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "H16__NZ_CP196508.1_feature_2014",
+      "identity_pct": 83.333,
+      "alignment_aa": 42,
+      "query_start": 127,
+      "query_end": 2,
+      "evalue": 4.37e-20,
+      "bitscore": 78.2,
+      "subject_length": 483,
+      "title": "NAD-dependent succinate-semialdehyde dehydrogenase"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "H16_RS_R18",
+    "organism": "H16",
+    "method": "RS",
+    "native_family": "R=18",
+    "length": 88,
+    "raw_occurrences": 4,
+    "occurrences": [
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 1793652,
+        "end0": 1793739,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_3265",
+            "type": "tRNA",
+            "overlap_bp": 87,
+            "feature_length_bp": 87,
+            "product": [
+              "tRNA-Leu"
+            ],
+            "locus_tag": [
+              "OOOCML_RS27295"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 2551988,
+        "end0": 2552075,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_4835",
+            "type": "tRNA",
+            "overlap_bp": 86,
+            "feature_length_bp": 87,
+            "product": [
+              "tRNA-Leu"
+            ],
+            "locus_tag": [
+              "OOOCML_RS12080"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 2309355,
+        "end0": 2309442,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_4369",
+            "type": "tRNA",
+            "overlap_bp": 86,
+            "feature_length_bp": 87,
+            "product": [
+              "tRNA-Leu"
+            ],
+            "locus_tag": [
+              "OOOCML_RS10915"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 2308553,
+        "end0": 2308639,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_4363",
+            "type": "tRNA",
+            "overlap_bp": 86,
+            "feature_length_bp": 87,
+            "product": [
+              "tRNA-Leu"
+            ],
+            "locus_tag": [
+              "OOOCML_RS10900"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "H16_RS_R19",
+    "organism": "H16",
+    "method": "RS",
+    "native_family": "R=19",
+    "length": 123,
+    "raw_occurrences": 6,
+    "occurrences": [
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 1922389,
+        "end0": 1922511,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_3467",
+            "type": "CDS",
+            "overlap_bp": 122,
+            "feature_length_bp": 1644,
+            "product": [
+              "cyclohexanecarboxylate-CoA ligase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS27800"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 1397308,
+        "end0": 1397430,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_2551",
+            "type": "CDS",
+            "overlap_bp": 122,
+            "feature_length_bp": 1749,
+            "product": [
+              "class I adenylate-forming enzyme family protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS25510"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 1302459,
+        "end0": 1302565,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_2364",
+            "type": "CDS",
+            "overlap_bp": 106,
+            "feature_length_bp": 1635,
+            "product": [
+              "acyl-CoA synthetase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS25045"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 3784855,
+        "end0": 3784977,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_7186",
+            "type": "CDS",
+            "overlap_bp": 122,
+            "feature_length_bp": 1674,
+            "product": [
+              "AMP-binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS17955"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 2969446,
+        "end0": 2969568,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_5635",
+            "type": "CDS",
+            "overlap_bp": 122,
+            "feature_length_bp": 1530,
+            "product": [
+              "acyl--CoA ligase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS14080"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 2139887,
+        "end0": 2140009,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_4039",
+            "type": "CDS",
+            "overlap_bp": 122,
+            "feature_length_bp": 1725,
+            "product": [
+              "AMP-binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS10090"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "H16__NZ_CP196507.1_feature_4039",
+      "identity_pct": 82.5,
+      "alignment_aa": 40,
+      "query_start": 2,
+      "query_end": 121,
+      "evalue": 5.55e-22,
+      "bitscore": 83.6,
+      "subject_length": 574,
+      "title": "AMP-binding protein"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "H16_RS_R20",
+    "organism": "H16",
+    "method": "RS",
+    "native_family": "R=20",
+    "length": 132,
+    "raw_occurrences": 4,
+    "occurrences": [
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 1637277,
+        "end0": 1637406,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 937764,
+        "end0": 937895,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 1708649,
+        "end0": 1708780,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_3191",
+            "type": "CDS",
+            "overlap_bp": 2,
+            "feature_length_bp": 420,
+            "product": [
+              "DoxX family protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS07970"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 265639,
+        "end0": 265770,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_510",
+            "type": "CDS",
+            "overlap_bp": 3,
+            "feature_length_bp": 438,
+            "product": [
+              "universal stress protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS01270"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "H16_RS_R21",
+    "organism": "H16",
+    "method": "RS",
+    "native_family": "R=21",
+    "length": 59,
+    "raw_occurrences": 6,
+    "occurrences": [
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 2523610,
+        "end0": 2523669,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_4532",
+            "type": "CDS",
+            "overlap_bp": 59,
+            "feature_length_bp": 796,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS30460"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 807087,
+        "end0": 807146,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_1468",
+            "type": "CDS",
+            "overlap_bp": 59,
+            "feature_length_bp": 1002,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS22805"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 3564421,
+        "end0": 3564479,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_6740",
+            "type": "CDS",
+            "overlap_bp": 58,
+            "feature_length_bp": 999,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS16840"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 3192668,
+        "end0": 3192722,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_6044",
+            "type": "CDS",
+            "overlap_bp": 54,
+            "feature_length_bp": 1047,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS15100"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 2585265,
+        "end0": 2585324,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_4899",
+            "type": "CDS",
+            "overlap_bp": 59,
+            "feature_length_bp": 813,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS12240"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 2265348,
+        "end0": 2265406,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_4279",
+            "type": "CDS",
+            "overlap_bp": 58,
+            "feature_length_bp": 1656,
+            "product": [
+              "dipeptide ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS10690"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "H16__NZ_CP196507.1_feature_4311",
+      "identity_pct": 94.737,
+      "alignment_aa": 19,
+      "query_start": 58,
+      "query_end": 2,
+      "evalue": 3.73e-07,
+      "bitscore": 40.0,
+      "subject_length": 627,
+      "title": "dipeptide ABC transporter ATP-binding protein"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "H16_RS_R22",
+    "organism": "H16",
+    "method": "RS",
+    "native_family": "R=22",
+    "length": 76,
+    "raw_occurrences": 5,
+    "occurrences": [
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 2854396,
+        "end0": 2854471,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 2854001,
+        "end0": 2854076,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 2652839,
+        "end0": 2652906,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 3932832,
+        "end0": 3932907,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 734635,
+        "end0": 734711,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "H16_RS_R23",
+    "organism": "H16",
+    "method": "RS",
+    "native_family": "R=23",
+    "length": 74,
+    "raw_occurrences": 5,
+    "occurrences": [
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 2847884,
+        "end0": 2847957,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_5120",
+            "type": "CDS",
+            "overlap_bp": 73,
+            "feature_length_bp": 849,
+            "product": [
+              "TauD/TfdA dioxygenase family protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS31930"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 2524756,
+        "end0": 2524829,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_4534",
+            "type": "CDS",
+            "overlap_bp": 73,
+            "feature_length_bp": 963,
+            "product": [
+              "TauD/TfdA dioxygenase family protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS30465"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 1721193,
+        "end0": 1721266,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_3145",
+            "type": "CDS",
+            "overlap_bp": 73,
+            "feature_length_bp": 912,
+            "product": [
+              "TauD/TfdA dioxygenase family protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS26995"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 1166684,
+        "end0": 1166757,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_2126",
+            "type": "CDS",
+            "overlap_bp": 73,
+            "feature_length_bp": 912,
+            "product": [
+              "TauD/TfdA dioxygenase family protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS24450"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 481448,
+        "end0": 481521,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_862",
+            "type": "CDS",
+            "overlap_bp": 73,
+            "feature_length_bp": 906,
+            "product": [
+              "TauD/TfdA dioxygenase family protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS21295"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "H16__NZ_CP196508.1_feature_862",
+      "identity_pct": 83.333,
+      "alignment_aa": 24,
+      "query_start": 1,
+      "query_end": 72,
+      "evalue": 4.38e-11,
+      "bitscore": 51.6,
+      "subject_length": 301,
+      "title": "TauD/TfdA dioxygenase family protein"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "H16_RS_R24",
+    "organism": "H16",
+    "method": "RS",
+    "native_family": "R=24",
+    "length": 95,
+    "raw_occurrences": 6,
+    "occurrences": [
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 961715,
+        "end0": 961807,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_1734",
+            "type": "CDS",
+            "overlap_bp": 92,
+            "feature_length_bp": 1224,
+            "product": [
+              "acyl-CoA dehydrogenase family protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS23470"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 846193,
+        "end0": 846287,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_1536",
+            "type": "CDS",
+            "overlap_bp": 94,
+            "feature_length_bp": 1236,
+            "product": [
+              "acyl-CoA dehydrogenase family protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS22975"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 813521,
+        "end0": 813615,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_1478",
+            "type": "CDS",
+            "overlap_bp": 94,
+            "feature_length_bp": 1185,
+            "product": [
+              "acyl-CoA dehydrogenase family protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS22830"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 752679,
+        "end0": 752771,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_1386",
+            "type": "CDS",
+            "overlap_bp": 92,
+            "feature_length_bp": 1194,
+            "product": [
+              "acyl-CoA dehydrogenase family protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS22600"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 450731,
+        "end0": 450819,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_806",
+            "type": "CDS",
+            "overlap_bp": 88,
+            "feature_length_bp": 1218,
+            "product": [
+              "acyl-CoA dehydrogenase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS21155"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 1162441,
+        "end0": 1162535,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_2163",
+            "type": "CDS",
+            "overlap_bp": 94,
+            "feature_length_bp": 1203,
+            "product": [
+              "acyl-CoA dehydrogenase family protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS05400"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "H16__NZ_CP196508.1_feature_1734",
+      "identity_pct": 90.323,
+      "alignment_aa": 31,
+      "query_start": 2,
+      "query_end": 94,
+      "evalue": 3.95e-15,
+      "bitscore": 63.5,
+      "subject_length": 407,
+      "title": "acyl-CoA dehydrogenase family protein"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "H16_RS_R25",
+    "organism": "H16",
+    "method": "RS",
+    "native_family": "R=25",
+    "length": 989,
+    "raw_occurrences": 5,
+    "occurrences": [
+      {
+        "contig": "NZ_CP196509.1",
+        "accession": "NZ_CP196509.1",
+        "start0": 38161,
+        "end0": 39149,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196509.1_feature_78",
+            "type": "CDS",
+            "overlap_bp": 988,
+            "feature_length_bp": 1128,
+            "product": [
+              "muconate/chloromuconate family cycloisomerase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS32425"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196509.1",
+        "accession": "NZ_CP196509.1",
+        "start0": 25637,
+        "end0": 26625,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196509.1_feature_56",
+            "type": "CDS",
+            "overlap_bp": 988,
+            "feature_length_bp": 1119,
+            "product": [
+              "muconate/chloromuconate family cycloisomerase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS32370"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 605331,
+        "end0": 606319,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_1102",
+            "type": "CDS",
+            "overlap_bp": 988,
+            "feature_length_bp": 1119,
+            "product": [
+              "muconate/chloromuconate family cycloisomerase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS21890"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 3987422,
+        "end0": 3987472,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_7562",
+            "type": "CDS",
+            "overlap_bp": 50,
+            "feature_length_bp": 1014,
+            "product": [
+              "methionyl-tRNA formyltransferase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS18890"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 2134352,
+        "end0": 2135340,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_4029",
+            "type": "CDS",
+            "overlap_bp": 988,
+            "feature_length_bp": 1146,
+            "product": [
+              "muconate/chloromuconate family cycloisomerase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS10065"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "H16__NZ_CP196508.1_feature_1102",
+      "identity_pct": 97.568,
+      "alignment_aa": 329,
+      "query_start": 1,
+      "query_end": 987,
+      "evalue": 0.0,
+      "bitscore": 607.0,
+      "subject_length": 372,
+      "title": "muconate/chloromuconate family cycloisomerase"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "H16_RS_R26",
+    "organism": "H16",
+    "method": "RS",
+    "native_family": "R=26",
+    "length": 92,
+    "raw_occurrences": 4,
+    "occurrences": [
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 2829742,
+        "end0": 2829833,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_5088",
+            "type": "CDS",
+            "overlap_bp": 91,
+            "feature_length_bp": 1557,
+            "product": [
+              "methyl-accepting chemotaxis protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS31850"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 2593711,
+        "end0": 2593802,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_4670",
+            "type": "CDS",
+            "overlap_bp": 91,
+            "feature_length_bp": 1950,
+            "product": [
+              "methyl-accepting chemotaxis protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS30805"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 2179339,
+        "end0": 2179430,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_3952",
+            "type": "CDS",
+            "overlap_bp": 91,
+            "feature_length_bp": 1542,
+            "product": [
+              "methyl-accepting chemotaxis protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS29010"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 254266,
+        "end0": 254357,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_456",
+            "type": "CDS",
+            "overlap_bp": 91,
+            "feature_length_bp": 1767,
+            "product": [
+              "methyl-accepting chemotaxis protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS20280"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "H16__NZ_CP196508.1_feature_4322",
+      "identity_pct": 76.667,
+      "alignment_aa": 30,
+      "query_start": 92,
+      "query_end": 3,
+      "evalue": 7.8e-09,
+      "bitscore": 45.4,
+      "subject_length": 385,
+      "title": "methyl-accepting chemotaxis protein"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "H16_RS_R27",
+    "organism": "H16",
+    "method": "RS",
+    "native_family": "R=27",
+    "length": 300,
+    "raw_occurrences": 5,
+    "occurrences": [
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 2854024,
+        "end0": 2854295,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 2652854,
+        "end0": 2653153,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 844982,
+        "end0": 845281,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 3932585,
+        "end0": 3932878,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 734660,
+        "end0": 734958,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "H16_RS_R28",
+    "organism": "H16",
+    "method": "RS",
+    "native_family": "R=28",
+    "length": 55,
+    "raw_occurrences": 5,
+    "occurrences": [
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 3980314,
+        "end0": 3980369,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_7550",
+            "type": "tRNA",
+            "overlap_bp": 55,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Phe"
+            ],
+            "locus_tag": [
+              "OOOCML_RS18860"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 3051055,
+        "end0": 3051109,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_5787",
+            "type": "tRNA",
+            "overlap_bp": 54,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Lys"
+            ],
+            "locus_tag": [
+              "OOOCML_RS14460"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 2798922,
+        "end0": 2798977,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_5313",
+            "type": "tRNA",
+            "overlap_bp": 55,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Asn"
+            ],
+            "locus_tag": [
+              "OOOCML_RS13275"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 1088735,
+        "end0": 1088790,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_2024",
+            "type": "tRNA",
+            "overlap_bp": 55,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Thr"
+            ],
+            "locus_tag": [
+              "OOOCML_RS05055"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 565796,
+        "end0": 565852,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_1088",
+            "type": "tRNA",
+            "overlap_bp": 56,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Met"
+            ],
+            "locus_tag": [
+              "OOOCML_RS02715"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "H16_RS_R29",
+    "organism": "H16",
+    "method": "RS",
+    "native_family": "R=29",
+    "length": 57,
+    "raw_occurrences": 4,
+    "occurrences": [
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 454574,
+        "end0": 454630,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 454574,
+        "end0": 454630,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 449117,
+        "end0": 449173,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 449117,
+        "end0": 449173,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "H16_RS_R30",
+    "organism": "H16",
+    "method": "RS",
+    "native_family": "R=30",
+    "length": 85,
+    "raw_occurrences": 3,
+    "occurrences": [
+      {
+        "contig": "NZ_CP196509.1",
+        "accession": "NZ_CP196509.1",
+        "start0": 199086,
+        "end0": 199170,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196509.1_feature_380",
+            "type": "CDS",
+            "overlap_bp": 84,
+            "feature_length_bp": 999,
+            "product": [
+              "site-specific integrase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS33180"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196509.1",
+        "accession": "NZ_CP196509.1",
+        "start0": 102209,
+        "end0": 102293,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196509.1_feature_204",
+            "type": "CDS",
+            "overlap_bp": 84,
+            "feature_length_bp": 999,
+            "product": [
+              "site-specific integrase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS32740"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196509.1",
+        "accession": "NZ_CP196509.1",
+        "start0": 99728,
+        "end0": 99812,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196509.1_feature_198",
+            "type": "CDS",
+            "overlap_bp": 84,
+            "feature_length_bp": 999,
+            "product": [
+              "site-specific integrase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS32725"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "H16__NZ_CP196509.1_feature_198",
+      "identity_pct": 100.0,
+      "alignment_aa": 28,
+      "query_start": 2,
+      "query_end": 85,
+      "evalue": 1.71e-14,
+      "bitscore": 61.2,
+      "subject_length": 332,
+      "title": "site-specific integrase"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "H16_RS_R31",
+    "organism": "H16",
+    "method": "RS",
+    "native_family": "R=31",
+    "length": 1984,
+    "raw_occurrences": 3,
+    "occurrences": [
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 869612,
+        "end0": 871595,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_1578",
+            "type": "rRNA",
+            "overlap_bp": 1708,
+            "feature_length_bp": 2974,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "OOOCML_RS23080"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP196508.1_feature_1580",
+            "type": "rRNA",
+            "overlap_bp": 113,
+            "feature_length_bp": 113,
+            "product": [
+              "5S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "OOOCML_RS23085"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 176789,
+        "end0": 178772,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_308",
+            "type": "rRNA",
+            "overlap_bp": 1708,
+            "feature_length_bp": 2881,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "OOOCML_RS19910"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP196508.1_feature_310",
+            "type": "rRNA",
+            "overlap_bp": 113,
+            "feature_length_bp": 113,
+            "product": [
+              "5S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "OOOCML_RS19915"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 3572411,
+        "end0": 3574394,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_6756",
+            "type": "rRNA",
+            "overlap_bp": 113,
+            "feature_length_bp": 113,
+            "product": [
+              "5S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "OOOCML_RS16880"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP196507.1_feature_6758",
+            "type": "rRNA",
+            "overlap_bp": 1709,
+            "feature_length_bp": 2881,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "OOOCML_RS16885"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "H16_RS_R32",
+    "organism": "H16",
+    "method": "RS",
+    "native_family": "R=32",
+    "length": 55,
+    "raw_occurrences": 3,
+    "occurrences": [
+      {
+        "contig": "NZ_CP196509.1",
+        "accession": "NZ_CP196509.1",
+        "start0": 197586,
+        "end0": 197640,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196509.1_feature_376",
+            "type": "CDS",
+            "overlap_bp": 54,
+            "feature_length_bp": 1239,
+            "product": [
+              "site-specific integrase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS33170"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196509.1",
+        "accession": "NZ_CP196509.1",
+        "start0": 103739,
+        "end0": 103793,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196509.1_feature_208",
+            "type": "CDS",
+            "overlap_bp": 54,
+            "feature_length_bp": 1239,
+            "product": [
+              "site-specific integrase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS32750"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196509.1",
+        "accession": "NZ_CP196509.1",
+        "start0": 98228,
+        "end0": 98282,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196509.1_feature_194",
+            "type": "CDS",
+            "overlap_bp": 54,
+            "feature_length_bp": 1002,
+            "product": [
+              "site-specific integrase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS32715"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "H16__NZ_CP196509.1_feature_376",
+      "identity_pct": 100.0,
+      "alignment_aa": 18,
+      "query_start": 1,
+      "query_end": 54,
+      "evalue": 2.86e-08,
+      "bitscore": 43.1,
+      "subject_length": 412,
+      "title": "site-specific integrase"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "H16_RS_R33",
+    "organism": "H16",
+    "method": "RS",
+    "native_family": "R=33",
+    "length": 1313,
+    "raw_occurrences": 3,
+    "occurrences": [
+      {
+        "contig": "NZ_CP196509.1",
+        "accession": "NZ_CP196509.1",
+        "start0": 158368,
+        "end0": 159680,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196509.1_feature_316",
+            "type": "CDS",
+            "overlap_bp": 1227,
+            "feature_length_bp": 1227,
+            "product": [
+              "ISL3-like element ISAe1 family transposase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS33020"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196509.1",
+        "accession": "NZ_CP196509.1",
+        "start0": 104694,
+        "end0": 106006,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196509.1_feature_210",
+            "type": "CDS",
+            "overlap_bp": 1227,
+            "feature_length_bp": 1227,
+            "product": [
+              "ISL3-like element ISAe1 family transposase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS32755"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP196509.1_feature_212",
+            "type": "CDS",
+            "overlap_bp": 18,
+            "feature_length_bp": 855,
+            "product": [
+              "tyrosine-type recombinase/integrase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS32760"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 1999135,
+        "end0": 2000447,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_3775",
+            "type": "CDS",
+            "overlap_bp": 17,
+            "feature_length_bp": 237,
+            "product": [
+              "hypothetical protein"
+            ],
+            "locus_tag": [
+              "OOOCML_RS09430"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP196507.1_feature_3777",
+            "type": "CDS",
+            "overlap_bp": 1227,
+            "feature_length_bp": 1227,
+            "product": [
+              "ISL3-like element ISAe1 family transposase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS09435"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "H16__NZ_CP196509.1_feature_316",
+      "identity_pct": 100.0,
+      "alignment_aa": 408,
+      "query_start": 1250,
+      "query_end": 27,
+      "evalue": 0.0,
+      "bitscore": 842.0,
+      "subject_length": 408,
+      "title": "ISL3-like element ISAe1 family transposase"
+    },
+    "best_deposited_tnp_hit": {
+      "subject": "H16__NZ_CP196509.1_feature_316",
+      "identity_pct": 100.0,
+      "alignment_aa": 408,
+      "query_start": 1250,
+      "query_end": 27,
+      "evalue": 0.0,
+      "bitscore": 842.0,
+      "subject_length": 408,
+      "title": "ISL3-like element ISAe1 family transposase"
+    },
+    "native_records_overlapping_tnp_CDS": 3,
+    "tnp_supported": true,
+    "deposited_tnp_products": [
+      "ISL3-like element ISAe1 family transposase"
+    ]
+  },
+  {
+    "query": "H16_RS_R34",
+    "organism": "H16",
+    "method": "RS",
+    "native_family": "R=34",
+    "length": 80,
+    "raw_occurrences": 3,
+    "occurrences": [
+      {
+        "contig": "NZ_CP196509.1",
+        "accession": "NZ_CP196509.1",
+        "start0": 197982,
+        "end0": 198061,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196509.1_feature_376",
+            "type": "CDS",
+            "overlap_bp": 32,
+            "feature_length_bp": 1239,
+            "product": [
+              "site-specific integrase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS33170"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP196509.1_feature_378",
+            "type": "CDS",
+            "overlap_bp": 51,
+            "feature_length_bp": 945,
+            "product": [
+              "tyrosine-type recombinase/integrase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS33175"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196509.1",
+        "accession": "NZ_CP196509.1",
+        "start0": 103318,
+        "end0": 103397,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196509.1_feature_206",
+            "type": "CDS",
+            "overlap_bp": 50,
+            "feature_length_bp": 945,
+            "product": [
+              "tyrosine-type recombinase/integrase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS32745"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP196509.1_feature_208",
+            "type": "CDS",
+            "overlap_bp": 33,
+            "feature_length_bp": 1239,
+            "product": [
+              "site-specific integrase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS32750"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196509.1",
+        "accession": "NZ_CP196509.1",
+        "start0": 98624,
+        "end0": 98703,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196509.1_feature_194",
+            "type": "CDS",
+            "overlap_bp": 32,
+            "feature_length_bp": 1002,
+            "product": [
+              "site-specific integrase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS32715"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP196509.1_feature_196",
+            "type": "CDS",
+            "overlap_bp": 51,
+            "feature_length_bp": 945,
+            "product": [
+              "tyrosine-type recombinase/integrase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS32720"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "H16__NZ_CP196509.1_feature_378",
+      "identity_pct": 100.0,
+      "alignment_aa": 17,
+      "query_start": 30,
+      "query_end": 80,
+      "evalue": 3.85e-06,
+      "bitscore": 37.7,
+      "subject_length": 314,
+      "title": "tyrosine-type recombinase/integrase"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "H16_RS_R35",
+    "organism": "H16",
+    "method": "RS",
+    "native_family": "R=35",
+    "length": 64,
+    "raw_occurrences": 3,
+    "occurrences": [
+      {
+        "contig": "NZ_CP196509.1",
+        "accession": "NZ_CP196509.1",
+        "start0": 198929,
+        "end0": 198992,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196509.1_feature_378",
+            "type": "CDS",
+            "overlap_bp": 26,
+            "feature_length_bp": 945,
+            "product": [
+              "tyrosine-type recombinase/integrase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS33175"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP196509.1_feature_380",
+            "type": "CDS",
+            "overlap_bp": 41,
+            "feature_length_bp": 999,
+            "product": [
+              "site-specific integrase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS33180"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196509.1",
+        "accession": "NZ_CP196509.1",
+        "start0": 102387,
+        "end0": 102450,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196509.1_feature_204",
+            "type": "CDS",
+            "overlap_bp": 40,
+            "feature_length_bp": 999,
+            "product": [
+              "site-specific integrase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS32740"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP196509.1_feature_206",
+            "type": "CDS",
+            "overlap_bp": 27,
+            "feature_length_bp": 945,
+            "product": [
+              "tyrosine-type recombinase/integrase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS32745"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196509.1",
+        "accession": "NZ_CP196509.1",
+        "start0": 99571,
+        "end0": 99634,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196509.1_feature_196",
+            "type": "CDS",
+            "overlap_bp": 26,
+            "feature_length_bp": 945,
+            "product": [
+              "tyrosine-type recombinase/integrase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS32720"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP196509.1_feature_198",
+            "type": "CDS",
+            "overlap_bp": 41,
+            "feature_length_bp": 999,
+            "product": [
+              "site-specific integrase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS32725"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "H16_RS_R36",
+    "organism": "H16",
+    "method": "RS",
+    "native_family": "R=36",
+    "length": 78,
+    "raw_occurrences": 3,
+    "occurrences": [
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 2612662,
+        "end0": 2612739,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_4945",
+            "type": "tRNA",
+            "overlap_bp": 76,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Asp"
+            ],
+            "locus_tag": [
+              "OOOCML_RS12355"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 2612067,
+        "end0": 2612144,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_4939",
+            "type": "tRNA",
+            "overlap_bp": 76,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Asp"
+            ],
+            "locus_tag": [
+              "OOOCML_RS12340"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 1623662,
+        "end0": 1623739,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_3029",
+            "type": "tRNA",
+            "overlap_bp": 77,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Asp"
+            ],
+            "locus_tag": [
+              "OOOCML_RS07565"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "H16_RS_R37",
+    "organism": "H16",
+    "method": "RS",
+    "native_family": "R=37",
+    "length": 80,
+    "raw_occurrences": 3,
+    "occurrences": [
+      {
+        "contig": "NZ_CP196509.1",
+        "accession": "NZ_CP196509.1",
+        "start0": 199711,
+        "end0": 199790,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196509.1_feature_380",
+            "type": "CDS",
+            "overlap_bp": 79,
+            "feature_length_bp": 999,
+            "product": [
+              "site-specific integrase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS33180"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196509.1",
+        "accession": "NZ_CP196509.1",
+        "start0": 101589,
+        "end0": 101668,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196509.1_feature_204",
+            "type": "CDS",
+            "overlap_bp": 79,
+            "feature_length_bp": 999,
+            "product": [
+              "site-specific integrase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS32740"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196509.1",
+        "accession": "NZ_CP196509.1",
+        "start0": 100353,
+        "end0": 100432,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196509.1_feature_198",
+            "type": "CDS",
+            "overlap_bp": 79,
+            "feature_length_bp": 999,
+            "product": [
+              "site-specific integrase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS32725"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "H16__NZ_CP196509.1_feature_198",
+      "identity_pct": 100.0,
+      "alignment_aa": 26,
+      "query_start": 1,
+      "query_end": 78,
+      "evalue": 3.99e-12,
+      "bitscore": 54.7,
+      "subject_length": 332,
+      "title": "site-specific integrase"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "H16_RS_R38",
+    "organism": "H16",
+    "method": "RS",
+    "native_family": "R=38",
+    "length": 71,
+    "raw_occurrences": 3,
+    "occurrences": [
+      {
+        "contig": "NZ_CP196509.1",
+        "accession": "NZ_CP196509.1",
+        "start0": 198674,
+        "end0": 198744,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196509.1_feature_378",
+            "type": "CDS",
+            "overlap_bp": 70,
+            "feature_length_bp": 945,
+            "product": [
+              "tyrosine-type recombinase/integrase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS33175"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196509.1",
+        "accession": "NZ_CP196509.1",
+        "start0": 102635,
+        "end0": 102705,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196509.1_feature_206",
+            "type": "CDS",
+            "overlap_bp": 70,
+            "feature_length_bp": 945,
+            "product": [
+              "tyrosine-type recombinase/integrase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS32745"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196509.1",
+        "accession": "NZ_CP196509.1",
+        "start0": 99316,
+        "end0": 99386,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196509.1_feature_196",
+            "type": "CDS",
+            "overlap_bp": 70,
+            "feature_length_bp": 945,
+            "product": [
+              "tyrosine-type recombinase/integrase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS32720"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "H16__NZ_CP196509.1_feature_196",
+      "identity_pct": 100.0,
+      "alignment_aa": 23,
+      "query_start": 1,
+      "query_end": 69,
+      "evalue": 9.47e-11,
+      "bitscore": 50.4,
+      "subject_length": 314,
+      "title": "tyrosine-type recombinase/integrase"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "H16_RS_R39",
+    "organism": "H16",
+    "method": "RS",
+    "native_family": "R=39",
+    "length": 76,
+    "raw_occurrences": 3,
+    "occurrences": [
+      {
+        "contig": "NZ_CP196509.1",
+        "accession": "NZ_CP196509.1",
+        "start0": 197341,
+        "end0": 197416,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196509.1_feature_376",
+            "type": "CDS",
+            "overlap_bp": 75,
+            "feature_length_bp": 1239,
+            "product": [
+              "site-specific integrase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS33170"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196509.1",
+        "accession": "NZ_CP196509.1",
+        "start0": 103963,
+        "end0": 104038,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196509.1_feature_208",
+            "type": "CDS",
+            "overlap_bp": 75,
+            "feature_length_bp": 1239,
+            "product": [
+              "site-specific integrase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS32750"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196509.1",
+        "accession": "NZ_CP196509.1",
+        "start0": 97983,
+        "end0": 98058,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196509.1_feature_194",
+            "type": "CDS",
+            "overlap_bp": 75,
+            "feature_length_bp": 1002,
+            "product": [
+              "site-specific integrase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS32715"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "H16__NZ_CP196509.1_feature_376",
+      "identity_pct": 100.0,
+      "alignment_aa": 24,
+      "query_start": 3,
+      "query_end": 74,
+      "evalue": 3.39e-11,
+      "bitscore": 52.0,
+      "subject_length": 412,
+      "title": "site-specific integrase"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "H16_RS_R40",
+    "organism": "H16",
+    "method": "RS",
+    "native_family": "R=40",
+    "length": 60,
+    "raw_occurrences": 3,
+    "occurrences": [
+      {
+        "contig": "NZ_CP196509.1",
+        "accession": "NZ_CP196509.1",
+        "start0": 52644,
+        "end0": 52704,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196509.1_feature_108",
+            "type": "CDS",
+            "overlap_bp": 60,
+            "feature_length_bp": 1239,
+            "product": [
+              "phosphoglycerate kinase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS32500"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196508.1",
+        "accession": "NZ_CP196508.1",
+        "start0": 1550570,
+        "end0": 1550630,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196508.1_feature_2841",
+            "type": "CDS",
+            "overlap_bp": 60,
+            "feature_length_bp": 1242,
+            "product": [
+              "phosphoglycerate kinase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS26235"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196507.1",
+        "accession": "NZ_CP196507.1",
+        "start0": 595086,
+        "end0": 595146,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196507.1_feature_1142",
+            "type": "CDS",
+            "overlap_bp": 60,
+            "feature_length_bp": 1197,
+            "product": [
+              "phosphoglycerate kinase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS02850"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "H16__NZ_CP196508.1_feature_2841",
+      "identity_pct": 100.0,
+      "alignment_aa": 20,
+      "query_start": 1,
+      "query_end": 60,
+      "evalue": 3.12e-07,
+      "bitscore": 40.4,
+      "subject_length": 413,
+      "title": "phosphoglycerate kinase"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "H16_RS_R41",
+    "organism": "H16",
+    "method": "RS",
+    "native_family": "R=41",
+    "length": 86,
+    "raw_occurrences": 3,
+    "occurrences": [
+      {
+        "contig": "NZ_CP196509.1",
+        "accession": "NZ_CP196509.1",
+        "start0": 198572,
+        "end0": 198657,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196509.1_feature_378",
+            "type": "CDS",
+            "overlap_bp": 85,
+            "feature_length_bp": 945,
+            "product": [
+              "tyrosine-type recombinase/integrase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS33175"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196509.1",
+        "accession": "NZ_CP196509.1",
+        "start0": 102722,
+        "end0": 102807,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196509.1_feature_206",
+            "type": "CDS",
+            "overlap_bp": 85,
+            "feature_length_bp": 945,
+            "product": [
+              "tyrosine-type recombinase/integrase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS32745"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP196509.1",
+        "accession": "NZ_CP196509.1",
+        "start0": 99214,
+        "end0": 99299,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP196509.1_feature_196",
+            "type": "CDS",
+            "overlap_bp": 85,
+            "feature_length_bp": 945,
+            "product": [
+              "tyrosine-type recombinase/integrase"
+            ],
+            "locus_tag": [
+              "OOOCML_RS32720"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "H16__NZ_CP196509.1_feature_378",
+      "identity_pct": 100.0,
+      "alignment_aa": 28,
+      "query_start": 1,
+      "query_end": 84,
+      "evalue": 1.85e-14,
+      "bitscore": 61.2,
+      "subject_length": 314,
+      "title": "tyrosine-type recombinase/integrase"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  }
+]

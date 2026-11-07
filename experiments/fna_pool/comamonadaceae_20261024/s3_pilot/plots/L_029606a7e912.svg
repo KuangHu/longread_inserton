@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="300" font-family="sans-serif">
+<rect width="100%" height="100%" fill="white"/>
+<text x="4" y="16" font-size="12">L_029606a7e912  SAMD00076718  core 19144 bp  two_flank_anchored  support all_calls_anchored  boundary exact  tandem False  core copies carrier/partner 1/0</text>
+<line x1="179.3" y1="30" x2="179.3" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<line x1="940.7" y1="30" x2="940.7" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<text x="4" y="64" font-size="11" font-weight="bold">SAMD00076718 NZ_AP026738.1 (carrier)</text>
+<line x1="60" y1="100" x2="1060" y2="100" stroke="#888"/>
+<rect x="139.5" y="132" width="39.8" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="159.4" y="152" font-size="9" text-anchor="middle">U</text>
+<rect x="179.3" y="132" width="761.4" height="8" fill="#e76f51" opacity="0.55"/>
+<text x="560.0" y="152" font-size="9" text-anchor="middle">core 19144</text>
+<rect x="940.7" y="132" width="39.8" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="960.6" y="152" font-size="9" text-anchor="middle">D</text>
+<polygon points="60.0,85 80.4,85 86.4,91 80.4,97 60.0,97" fill="#3b6fb6"><title>alpha/beta fold hydrolase 2317250-2318267 +</title></polygon>
+<polygon points="86.2,85 169.0,85 175.0,91 169.0,97 86.2,97" fill="#3b6fb6"><title>RelA/SpoT family protein 2318263-2320495 +</title></polygon>
+<text x="86.2" y="81" font-size="8" fill="#333">RelA/SpoT family pr</text>
+<polygon points="179.2,85 179.2,85 182.3,91 179.2,97 179.2,97" fill="#b68a3b"><title>tRNA-Val 2320600-2320677 +</title></polygon>
+<polygon points="198.4,109 203.6,103 203.6,103 203.6,115 203.6,115" fill="#3b6fb6"><title>hypothetical protein 2321084-2321213 -</title></polygon>
+<polygon points="220.4,109 225.7,103 225.7,103 225.7,115 225.7,115" fill="#999"><title>IS5/IS1182 family transposase 2321637-2321769 -</title></polygon>
+<polygon points="247.4,109 253.4,103 286.9,103 286.9,115 253.4,115" fill="#3b6fb6"><title>Bug family tripartite tricarboxylate tra 2322314-2323307 -</title></polygon>
+<text x="247.4" y="125" font-size="8" fill="#333">Bug fami</text>
+<polygon points="294.4,109 300.4,103 327.8,103 327.8,115 300.4,115" fill="#3b6fb6"><title>class III extradiol dioxygenase subunit  2323496-2324336 -</title></polygon>
+<text x="294.4" y="125" font-size="8" fill="#333">class I</text>
+<polygon points="327.5,109 333.5,103 344.0,103 344.0,115 333.5,115" fill="#3b6fb6"><title>protocatechuate 4,5-dioxygenase subunit  2324328-2324745 -</title></polygon>
+<polygon points="343.9,109 349.9,103 392.3,103 392.3,115 349.9,115" fill="#3b6fb6"><title>4-hydroxybenzoate 3-monooxygenase 2324741-2325959 -</title></polygon>
+<text x="343.9" y="125" font-size="8" fill="#333">4-hydroxyb</text>
+<polygon points="397.3,85 428.3,85 434.3,91 428.3,97 397.3,97" fill="#3b6fb6"><title>LysR substrate-binding domain-containing 2326085-2327015 +</title></polygon>
+<text x="397.3" y="81" font-size="8" fill="#333">LysR sub</text>
+<polygon points="439.0,109 445.0,103 455.5,103 455.5,115 445.0,115" fill="#999"><title>transposase 2327133-2327547 -</title></polygon>
+<polygon points="467.0,109 473.0,103 517.6,103 517.6,115 473.0,115" fill="#3b6fb6"><title>c-type cytochrome biogenesis protein Ccm 2327836-2329108 -</title></polygon>
+<text x="467.0" y="125" font-size="8" fill="#333">c-type cyt</text>
+<polygon points="517.4,109 523.4,103 536.3,103 536.3,115 523.4,115" fill="#3b6fb6"><title>cytochrome c-type biogenesis protein 2329104-2329578 -</title></polygon>
+<polygon points="536.1,109 542.1,103 556.7,103 556.7,115 542.1,115" fill="#3b6fb6"><title>DsbE family thiol:disulfide interchange  2329574-2330093 -</title></polygon>
+<polygon points="556.7,109 562.7,103 636.5,103 636.5,115 562.7,115" fill="#3b6fb6"><title>heme lyase CcmF/NrfE family subunit 2330092-2332099 -</title></polygon>
+<text x="556.7" y="125" font-size="8" fill="#333">heme lyase CcmF/N</text>
+<polygon points="636.4,109 642.4,103 656.8,103 656.8,115 642.4,115" fill="#3b6fb6"><title>cytochrome c maturation protein CcmE 2332095-2332608 -</title></polygon>
+<polygon points="656.6,109 662.3,103 662.3,103 662.3,115 662.3,115" fill="#3b6fb6"><title>heme exporter protein CcmD 2332604-2332748 -</title></polygon>
+<polygon points="662.3,109 668.3,103 692.6,103 692.6,115 668.3,115" fill="#3b6fb6"><title>heme ABC transporter permease CcmC 2332747-2333509 -</title></polygon>
+<text x="662.3" y="125" font-size="8" fill="#333">heme A</text>
+<polygon points="692.6,109 698.6,103 718.8,103 718.8,115 698.6,115" fill="#3b6fb6"><title>heme exporter protein CcmB 2333510-2334167 -</title></polygon>
+<polygon points="718.5,109 724.5,103 745.9,103 745.9,115 724.5,115" fill="#3b6fb6"><title>heme ABC exporter ATP-binding protein Cc 2334160-2334850 -</title></polygon>
+<polygon points="746.1,109 752.1,103 771.9,103 771.9,115 752.1,115" fill="#3b6fb6"><title>cytochrome c3 family protein 2334854-2335502 -</title></polygon>
+<polygon points="772.8,109 778.8,103 793.0,103 793.0,115 778.8,115" fill="#3b6fb6"><title>nitrate reductase cytochrome c-type subu 2335526-2336033 -</title></polygon>
+<polygon points="793.7,109 799.7,103 892.7,103 892.7,115 799.7,115" fill="#3b6fb6"><title>periplasmic nitrate reductase subunit al 2336050-2338540 -</title></polygon>
+<text x="793.7" y="125" font-size="8" fill="#333">periplasmic nitrate r</text>
+<polygon points="892.4,109 898.4,103 904.4,103 904.4,115 898.4,115" fill="#3b6fb6"><title>chaperone NapD 2338532-2338835 -</title></polygon>
+<polygon points="904.1,109 910.1,103 910.5,103 910.5,115 910.1,115" fill="#3b6fb6"><title>periplasmic nitrate reductase, NapE prot 2338827-2338989 -</title></polygon>
+<polygon points="940.4,109 946.4,103 958.9,103 958.9,115 946.4,115" fill="#3b6fb6"><title>nuclear transport factor 2 family protei 2339739-2340204 -</title></polygon>
+<polygon points="959.6,109 965.6,103 991.2,103 991.2,115 965.6,115" fill="#3b6fb6"><title>SDR family oxidoreductase 2340222-2341017 -</title></polygon>
+<text x="959.6" y="125" font-size="8" fill="#333">SDR fa</text>
+<polygon points="992.5,109 998.5,103 1011.6,103 1011.6,115 998.5,115" fill="#3b6fb6"><title>SRPBCC domain-containing protein 2341051-2341531 -</title></polygon>
+<polygon points="1012.2,109 1018.2,103 1030.3,103 1030.3,115 1018.2,115" fill="#3b6fb6"><title>nuclear transport factor 2 family protei 2341544-2342000 -</title></polygon>
+<polygon points="1031.5,109 1037.5,103 1060.0,103 1060.0,115 1037.5,115" fill="#3b6fb6"><title>EthD domain-containing protein 2342031-2342754 -</title></polygon>
+<text x="60" y="166" font-size="9" fill="#666">NZ_AP026738.1:2317603-2342747  core 2320603-2339747</text>
+<text x="4" y="184" font-size="11" font-weight="bold">SAMN38562701 NZ_CP139994.1 (partner, + strand, two_flank_anchored, pair P00022)</text>
+<line x1="60" y1="220" x2="1060" y2="220" stroke="#888"/>
+<rect x="139.5" y="252" width="39.8" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="159.4" y="272" font-size="9" text-anchor="middle">U'</text>
+<rect x="940.7" y="252" width="39.8" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="960.6" y="272" font-size="9" text-anchor="middle">D'</text>
+<rect x="179.3" y="252" width="761.4" height="8" fill="#9b5de5" opacity="0.55"/>
+<text x="560.0" y="272" font-size="9" text-anchor="middle">other side 1761</text>
+<polygon points="60.0,205 80.4,205 86.4,211 80.4,217 60.0,217" fill="#3b6fb6"><title>alpha/beta fold hydrolase 2397651-2398668 +</title></polygon>
+<polygon points="86.2,205 169.0,205 175.0,211 169.0,217 86.2,217" fill="#3b6fb6"><title>RelA/SpoT family protein 2398664-2400896 +</title></polygon>
+<text x="86.2" y="201" font-size="8" fill="#333">RelA/SpoT family pr</text>
+<polygon points="179.2,205 204.9,205 210.9,211 204.9,217 179.2,217" fill="#b68a3b"><title>tRNA-Val 2401001-2401078 +</title></polygon>
+<polygon points="403.7,229 409.7,223 635.5,223 635.5,235 409.7,235" fill="#3b6fb6"><title>toxin 2401523-2402060 -</title></polygon>
+<text x="403.7" y="245" font-size="8" fill="#333">toxin</text>
+<polygon points="802.8,229 808.8,223 868.5,223 868.5,235 808.8,235" fill="#3b6fb6"><title>hypothetical protein 2402446-2402599 -</title></polygon>
+<text x="802.8" y="245" font-size="8" fill="#333">hypothetical p</text>
+<polygon points="937.2,229 943.2,223 958.9,223 958.9,235 943.2,235" fill="#3b6fb6"><title>nuclear transport factor 2 family protei 2402757-2403222 -</title></polygon>
+<polygon points="959.6,229 965.6,223 991.2,223 991.2,235 965.6,235" fill="#3b6fb6"><title>SDR family oxidoreductase 2403240-2404035 -</title></polygon>
+<text x="959.6" y="245" font-size="8" fill="#333">SDR fa</text>
+<polygon points="992.9,229 998.9,223 1012.0,223 1012.0,235 998.9,235" fill="#3b6fb6"><title>SRPBCC domain-containing protein 2404077-2404557 -</title></polygon>
+<polygon points="1012.5,229 1018.5,223 1030.6,223 1030.6,235 1018.5,235" fill="#3b6fb6"><title>nuclear transport factor 2 family protei 2404570-2405026 -</title></polygon>
+<polygon points="1031.8,205 1035.1,205 1041.1,211 1035.1,217 1031.8,217" fill="#3b6fb6"><title>hypothetical protein 2405057-2405291 +</title></polygon>
+<polygon points="1041.0,229 1047.0,223 1060.0,223 1060.0,235 1047.0,235" fill="#3b6fb6"><title>sulfotransferase family protein 2405287-2406475 -</title></polygon>
+<text x="60" y="286" font-size="9" fill="#666">NZ_CP139994.1 site 2401004  other-side gap 1761 bp  this call's core 2320603-2339747</text>
+</svg>

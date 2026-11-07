@@ -1,0 +1,13 @@
+{
+  "schema": "audited_evidence_check_v1",
+  "sample": "SMT4a",
+  "status": "pass",
+  "members": 333,
+  "audited_class_counts": {
+    "audited_full_span": 317,
+    "audited_full_span_with_conflict": 11,
+    "full_span_cigar_fail": 2,
+    "edge_limited": 3
+  },
+  "scope": "Recomputed units/classes from read_evidence.tsv; no re-mapping"
+}

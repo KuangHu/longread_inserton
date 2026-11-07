@@ -1,0 +1,81 @@
+{
+ "version": "read_site_search_v0.3.2",
+ "rule": "Pilot samples by a fixed rule (written to <out>/samples.tsv and freeze.json before any search): eligible = every checked run counted in molecules, read type ONT or PacBio HiFi/CCS, no run submitted as an aligned BAM, depth >= 30x (verified bases / assembly length); per genus the eligible sample with the most candidate cores supported in read-check round 5 (ties: depth, then id); genera whose best sample has >= 15 such cores; then HiFi samples by the same score until at least 2 HiFi samples are in. --batch-size N (scale batch): every eligible sample not excluded, all genera, taken genus by genus in turn (genera ordered by their best sample, samples within a genus by the same score), first N. --exclude: samples used in development (earlier batches' samples.tsv files and listed ids) are not eligible (reason used_in_development); the rule is otherwise the same, so a validation batch is the next sample per genus.",
+ "batch_size": 0,
+ "samples": [
+  "SAMN48135827",
+  "SAMD00407106",
+  "SAMEA115676837",
+  "SAMN30525278",
+  "SAMN34353142",
+  "SAMN37752145"
+ ],
+ "considered": 231,
+ "eligible": 126,
+ "round5": "/global/home/users/kh36969/middle_insertion_callout/longread_inserton/experiments/core_context/scale_comamonadaceae_v0.1/readcheck_round5",
+ "excluded_as_development": [
+  "SAMD00260131",
+  "SAMD00265974",
+  "SAMEA115676833",
+  "SAMEA115676957",
+  "SAMN09743972",
+  "SAMN11265848",
+  "SAMN15738716",
+  "SAMN30525180",
+  "SAMN30525383",
+  "SAMN31258398",
+  "SAMN37751790",
+  "SAMN37751820",
+  "SAMN38562701",
+  "SAMN41424278",
+  "SAMN43526786",
+  "SAMN49042133",
+  "SAMN51281039",
+  "SAMN51658617",
+  "SAMN52101483",
+  "SAMN56368990"
+ ],
+ "params": {
+  "flanks": [
+   500,
+   1000,
+   2000
+  ],
+  "counts": [
+   1,
+   2,
+   3,
+   5
+  ],
+  "main_flank": 1000,
+  "main_count": 3,
+  "hit_coverage": 0.8,
+  "placed_fraction": 0.8,
+  "inner_clip": 20,
+  "boundary_agree": 0.8,
+  "max_insert": 2500,
+  "tol": 50,
+  "min_delta_as": 20,
+  "end_zone": 5000,
+  "empty_span": 1000,
+  "minimap2_panel": [
+   "-c",
+   "--secondary=yes",
+   "-N",
+   "200",
+   "-p",
+   "0.5"
+  ],
+  "minimap2_flank": [
+   "-c",
+   "--secondary=yes",
+   "-N",
+   "10",
+   "-p",
+   "0.5"
+  ]
+ },
+ "ready_manifest": "/global/scratch/users/kh36969/longread_callout/data/reads/ready_manifest.tsv",
+ "ready_manifest_sha256": "ba60fe83b9db21e4cb834b75418fb837e2025bfb2c63921f03f6221540d3c46f",
+ "code_commit": "1e10b3da1b9744717fd7593f0056ba7389390338"
+}

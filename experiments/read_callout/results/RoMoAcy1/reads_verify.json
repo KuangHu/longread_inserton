@@ -1,0 +1,50 @@
+{
+  "run": {
+    "sample_id": "RoMoAcy1",
+    "run": "SRR15616890",
+    "biosample": "SAMN12617337",
+    "assembly": "GCA_019856255.1",
+    "platform": "PACBIO_SMRT",
+    "instrument_model": "PacBio RS",
+    "role": "phase_C_pacbio_2",
+    "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR156/090/SRR15616890/SRR15616890_subreads.fastq.gz",
+    "archive_read_count": 122352,
+    "archive_base_count": 1576526964,
+    "fastq_bytes": 1357700967,
+    "fastq_md5": "15c63f8a6f101605744e5172d4bbdfff"
+  },
+  "download_started": "2026-10-22T18:11:17-0700",
+  "local_file": "$PROJ/data/reads/SRR15616890/SRR15616890_subreads.fastq.gz",
+  "bytes": 1357700967,
+  "md5": "15c63f8a6f101605744e5172d4bbdfff",
+  "sha256": "c5be8b471d0ed4cb0af729ec0dc0c773289abb8c8a09a3a04808691b05d00a4a",
+  "summary": {
+    "records": 122352,
+    "bases": 1576526964,
+    "read_unit_counts": {
+      "name_stripped": 122352
+    },
+    "distinct_zmws": null,
+    "distinct_sra_spots": 122352,
+    "max_records_per_spot": 1,
+    "placeholder_quality_records": 0,
+    "example_headers": [
+      "@SRR15616890.1 1/1",
+      "@SRR15616890.2 2/1",
+      "@SRR15616890.3 3/1",
+      "@SRR15616890.4 4/1"
+    ],
+    "mean_length": 12885.2,
+    "median_length": 11415.5,
+    "max_length": 69000,
+    "n50": 18219,
+    "molecule_grouping": "molecule_grouping_unavailable"
+  },
+  "checks": {
+    "bytes_match": true,
+    "md5_match": true,
+    "spot_count_match": true,
+    "base_count_match": true
+  },
+  "status": "verified"
+}

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="300" font-family="sans-serif">
+<rect width="100%" height="100%" fill="white"/>
+<text x="4" y="16" font-size="12">L_02729f48424a  SAMN51281027  core 318 bp  two_flank_anchored  support all_calls_anchored  boundary exact  tandem False  core copies carrier/partner 6/2</text>
+<line x1="534.8" y1="30" x2="534.8" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<line x1="585.2" y1="30" x2="585.2" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<text x="4" y="64" font-size="11" font-weight="bold">SAMN51281027 NZ_CM191384.1 (carrier)</text>
+<line x1="60" y1="100" x2="1060" y2="100" stroke="#888"/>
+<rect x="376.6" y="132" width="158.3" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="455.7" y="152" font-size="9" text-anchor="middle">U</text>
+<rect x="534.8" y="132" width="50.3" height="8" fill="#e76f51" opacity="0.55"/>
+<text x="560.0" y="152" font-size="9" text-anchor="middle">core 318</text>
+<rect x="585.2" y="132" width="158.3" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="664.3" y="152" font-size="9" text-anchor="middle">D</text>
+<polygon points="60.0,109 66.0,103 75.5,103 75.5,115 66.0,115" fill="#3b6fb6"><title>alpha/beta hydrolase 4762203-4762554 -</title></polygon>
+<polygon points="98.9,109 104.9,103 152.6,103 152.6,115 104.9,115" fill="#3b6fb6"><title>hypothetical protein 4762702-4763041 -</title></polygon>
+<text x="98.9" y="125" font-size="8" fill="#333">hypothetica</text>
+<polygon points="166.8,109 172.8,103 221.4,103 221.4,115 172.8,115" fill="#3b6fb6"><title>FmdB family zinc ribbon protein 4763131-4763476 -</title></polygon>
+<text x="166.8" y="125" font-size="8" fill="#333">FmdB family</text>
+<polygon points="222.6,109 228.6,103 417.7,103 417.7,115 228.6,115" fill="#3b6fb6"><title>formamidase 4763483-4764716 -</title></polygon>
+<polygon points="423.7,109 429.7,103 532.9,103 532.9,115 429.7,115" fill="#3b6fb6"><title>urea ABC transporter ATP-binding subunit 4764754-4765444 -</title></polygon>
+<text x="423.7" y="125" font-size="8" fill="#333">urea ABC transporter AT</text>
+<polygon points="585.2,109 591.2,103 702.9,103 702.9,115 591.2,115" fill="#3b6fb6"><title>urea ABC transporter ATP-binding protein 4765774-4766518 -</title></polygon>
+<text x="585.2" y="125" font-size="8" fill="#333">urea ABC transporter ATP-</text>
+<polygon points="705.8,109 711.8,103 894.8,103 894.8,115 711.8,115" fill="#3b6fb6"><title>urea ABC transporter permease subunit Ur 4766536-4767730 -</title></polygon>
+<polygon points="900.1,109 906.1,103 1045.0,103 1045.0,115 906.1,115" fill="#3b6fb6"><title>urea ABC transporter permease subunit Ur 4767764-4768679 -</title></polygon>
+<text x="900.1" y="125" font-size="8" fill="#333">urea ABC transporter permease s</text>
+<polygon points="1055.7,109 1060.0,103 1060.0,103 1060.0,115 1060.0,115" fill="#3b6fb6"><title>urea ABC transporter substrate-binding p 4768747-4770013 -</title></polygon>
+<text x="60" y="166" font-size="9" fill="#666">NZ_CM191384.1:4762456-4768774  core 4765456-4765774</text>
+<text x="4" y="184" font-size="11" font-weight="bold">SAMD00623152 NZ_AP028664.1 (partner, - strand, two_flank_anchored, pair P00111)</text>
+<line x1="60" y1="220" x2="1060" y2="220" stroke="#888"/>
+<rect x="376.6" y="252" width="158.3" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="455.7" y="272" font-size="9" text-anchor="middle">U'</text>
+<rect x="585.2" y="252" width="158.3" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="664.3" y="272" font-size="9" text-anchor="middle">D'</text>
+<rect x="534.8" y="252" width="50.3" height="8" fill="#9b5de5" opacity="0.55"/>
+<text x="560.0" y="272" font-size="9" text-anchor="middle">other side 3</text>
+<polygon points="1057.8,229 1060.0,223 1060.0,223 1060.0,235 1060.0,235" fill="#3b6fb6"><title>urea ABC transporter substrate-binding p 1956712-1957978 -</title></polygon>
+<polygon points="902.4,229 908.4,223 1047.2,223 1047.2,235 908.4,235" fill="#3b6fb6"><title>urea ABC transporter permease subunit Ur 1958045-1958960 -</title></polygon>
+<text x="902.4" y="245" font-size="8" fill="#333">urea ABC transporter permease s</text>
+<polygon points="705.1,229 711.1,223 897.0,223 897.0,235 711.1,235" fill="#3b6fb6"><title>urea ABC transporter permease subunit Ur 1958994-1960206 -</title></polygon>
+<polygon points="585.2,229 591.2,223 702.9,223 702.9,235 591.2,235" fill="#3b6fb6"><title>urea ABC transporter ATP-binding protein 1960220-1960964 -</title></polygon>
+<polygon points="423.7,229 429.7,223 532.9,223 532.9,235 429.7,235" fill="#3b6fb6"><title>urea ABC transporter ATP-binding subunit 1960979-1961669 -</title></polygon>
+<polygon points="222.7,229 228.7,223 417.9,223 417.9,235 228.7,235" fill="#3b6fb6"><title>formamidase 1961706-1962939 -</title></polygon>
+<polygon points="167.0,229 173.0,223 221.6,223 221.6,235 173.0,235" fill="#3b6fb6"><title>zinc ribbon domain-containing protein 1962946-1963291 -</title></polygon>
+<polygon points="88.2,229 94.2,223 143.7,223 143.7,235 94.2,235" fill="#3b6fb6"><title>alpha/beta hydrolase 1963438-1963789 -</title></polygon>
+<polygon points="60.0,205 60.0,205 65.9,211 60.0,217 60.0,217" fill="#3b6fb6"><title>methyltransferase 1963930-1964614 +</title></polygon>
+<text x="60" y="286" font-size="9" fill="#666">NZ_AP028664.1 site 1960964  other-side gap 3 bp  this call's core 4765456-4765774</text>
+</svg>

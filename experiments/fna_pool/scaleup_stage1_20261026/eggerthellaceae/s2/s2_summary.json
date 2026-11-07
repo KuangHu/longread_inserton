@@ -1,0 +1,107 @@
+{
+  "schema": "fna_pool_s2_v2",
+  "samples": 329,
+  "skani_pairs_reported": 22297,
+  "possible_pairs": 53956,
+  "samples_without_skani_output": [
+    "SAMEA14418517",
+    "SAMEA14418522",
+    "SAMEA3673154",
+    "SAMN02598434"
+  ],
+  "samples_without_skani_output_note": "no skani output under its default screen (~80% ANI k-mer screen) and AF >= 15 reporting; not evidence that no local homology exists",
+  "pair_status": {
+    "in_pair_table": 325,
+    "no_pair_selected_pending_review": 4
+  },
+  "pair_status_linked": {
+    "in_pair_table": 11
+  },
+  "clone_groups": 244,
+  "clone_groups_size_gt1": 54,
+  "species_clusters": 56,
+  "species_cluster_sizes": {
+    "1": 20,
+    "2": 21,
+    "3": 4,
+    "4": 4,
+    "6": 1,
+    "8": 2,
+    "12": 1,
+    "24": 1,
+    "32": 1,
+    "149": 1
+  },
+  "species_clusters_ge_10": 4,
+  "genera": 21,
+  "source_rules": "batch50_source_class+v2(word-bounded plant keywords; '<facility> plant' -> facility)",
+  "source_class": {
+    "unclear": 73,
+    "clinical/animal": 243,
+    "environmental": 13
+  },
+  "source_class_linked": {
+    "clinical/animal": 9,
+    "unclear": 2
+  },
+  "pairs": 1004,
+  "pairs_with_multiple_reasons": 32,
+  "pairs_by_reason": {
+    "audit_multi_project_all_vs_all": 66,
+    "clone_partner": 82,
+    "distance_tier_ani_90_95": 5,
+    "distance_tier_ani_95_97": 5,
+    "distance_tier_ani_97_99": 5,
+    "distance_tier_ani_99.99_100": 5,
+    "distance_tier_ani_99_99.99": 5,
+    "distance_tier_ani_lt90": 5,
+    "distance_tier_no_skani_output_same_genus": 5,
+    "nearest_other_species": 271,
+    "species_neighbour": 582
+  },
+  "pairs_same_cluster_below_species_threshold": [
+    "P00013",
+    "P00114",
+    "P00131",
+    "P00134",
+    "P00141"
+  ],
+  "pairs_both_linked": 2,
+  "pairs_either_linked": 79,
+  "audit_clusters": {
+    "single_project": {
+      "id": "",
+      "size": 0,
+      "linked": 0,
+      "bioprojects": 0,
+      "organisms": {}
+    },
+    "multi_project": {
+      "id": "SAMEA13256512",
+      "size": 12,
+      "linked": 0,
+      "bioprojects": 7,
+      "organisms": {
+        "Adlercreutzia muris": 8,
+        "Eggerthellaceae bacterium": 4
+      }
+    }
+  },
+  "distance_tier_candidates": {
+    "ani_90_95": 480,
+    "ani_95_97": 256,
+    "ani_97_99": 9489,
+    "ani_99.99_100": 103,
+    "ani_99_99.99": 891,
+    "ani_lt90": 2251,
+    "no_skani_output_same_genus": 1236
+  },
+  "settings": {
+    "clone": "ANI >= 99.99 and AF >= 95 both",
+    "species": "single linkage over pairs with ANI >= 95 and AF >= 50 both; a cluster label does not mean every member pair meets it (pair_meets_species_threshold)",
+    "neighbours": "1 clone partner, 3 nearest same-cluster non-clone, 1 nearest other-cluster (skani output)",
+    "audit": "all pairs of one single-project and one multi-project cluster with 10-20 members",
+    "distance_tiers": "same genus, different BioProject; up to 5 pairs per tier ['ani_99.99_100', 'ani_99_99.99', 'ani_97_99', 'ani_95_97', 'ani_90_95', 'ani_lt90'] + no skani output; linked first, then SHA256 order",
+    "note": "initial settings for this pool, not calibrated thresholds; S3 must judge each pair from its own alignment"
+  }
+}

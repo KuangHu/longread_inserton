@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="300" font-family="sans-serif">
+<rect width="100%" height="100%" fill="white"/>
+<text x="4" y="16" font-size="12">L_00aa9db9bf77  SAMD00571185  core 63 bp  replacement  support not_anchored  boundary exact  tandem False  core copies carrier/partner 1/0</text>
+<line x1="554.8" y1="30" x2="554.8" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<line x1="565.2" y1="30" x2="565.2" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<text x="4" y="64" font-size="11" font-weight="bold">SAMD00571185 NZ_AP027205.1 (carrier)</text>
+<line x1="60" y1="100" x2="1060" y2="100" stroke="#888"/>
+<rect x="389.9" y="132" width="164.9" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="472.3" y="152" font-size="9" text-anchor="middle">U</text>
+<rect x="554.8" y="132" width="10.4" height="8" fill="#e76f51" opacity="0.55"/>
+<text x="560.0" y="152" font-size="9" text-anchor="middle">core 63</text>
+<rect x="565.2" y="132" width="164.9" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="647.7" y="152" font-size="9" text-anchor="middle">D</text>
+<polygon points="112.3,109 118.3,103 361.2,103 361.2,115 118.3,115" fill="#3b6fb6"><title>class I adenylate-forming enzyme family  202148-203657 -</title></polygon>
+<text x="112.3" y="125" font-size="8" fill="#333">class I adenylate-forming enzyme family </text>
+<polygon points="363.5,109 369.5,103 529.7,103 529.7,115 369.5,115" fill="#3b6fb6"><title>Bug family tripartite tricarboxylate tra 203671-204679 -</title></polygon>
+<text x="363.5" y="125" font-size="8" fill="#333">Bug family tripartite tricarboxylate</text>
+<polygon points="555.5,109 561.5,103 725.7,103 725.7,115 561.5,115" fill="#3b6fb6"><title>LysR family transcriptional regulator 204835-205867 -</title></polygon>
+<text x="555.5" y="125" font-size="8" fill="#333">LysR family transcriptional regulator</text>
+<polygon points="742.0,85 937.9,85 943.9,91 937.9,97 742.0,97" fill="#3b6fb6"><title>CaiB/BaiF CoA transferase family protein 205966-207190 +</title></polygon>
+<text x="742.0" y="81" font-size="8" fill="#333">CaiB/BaiF CoA transferase family protein</text>
+<polygon points="955.1,85 1054.0,85 1060.0,91 1054.0,97 955.1,97" fill="#3b6fb6"><title>NADPH:quinone oxidoreductase family prot 207258-208278 +</title></polygon>
+<text x="955.1" y="81" font-size="8" fill="#333">NADPH:quinone oxidored</text>
+<text x="60" y="166" font-size="9" fill="#666">NZ_AP027205.1:201831-207894  core 204831-204894</text>
+<text x="4" y="184" font-size="11" font-weight="bold">SAMD00407106 NZ_AP025556.1 (partner, + strand, replacement, pair P00033)</text>
+<line x1="60" y1="220" x2="1060" y2="220" stroke="#888"/>
+<rect x="389.9" y="252" width="164.9" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="472.3" y="272" font-size="9" text-anchor="middle">U'</text>
+<rect x="565.2" y="252" width="164.9" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="647.7" y="272" font-size="9" text-anchor="middle">D'</text>
+<rect x="554.8" y="252" width="10.4" height="8" fill="#9b5de5" opacity="0.55"/>
+<text x="560.0" y="272" font-size="9" text-anchor="middle">other side 26</text>
+<polygon points="113.8,229 119.8,223 362.7,223 362.7,235 119.8,235" fill="#3b6fb6"><title>class I adenylate-forming enzyme family  204159-205668 -</title></polygon>
+<text x="113.8" y="245" font-size="8" fill="#333">class I adenylate-forming enzyme family </text>
+<polygon points="365.0,229 371.0,223 529.7,223 529.7,235 371.0,235" fill="#3b6fb6"><title>Bug family tripartite tricarboxylate tra 205682-206681 -</title></polygon>
+<text x="365.0" y="245" font-size="8" fill="#333">Bug family tripartite tricarboxylat</text>
+<polygon points="556.0,229 562.0,223 725.7,223 725.7,235 562.0,235" fill="#3b6fb6"><title>LysR family transcriptional regulator 206836-207832 -</title></polygon>
+<text x="556.0" y="245" font-size="8" fill="#333">LysR family transcriptional regulato</text>
+<polygon points="742.0,205 937.9,205 943.9,211 937.9,217 742.0,217" fill="#3b6fb6"><title>CaiB/BaiF CoA transferase family protein 207931-209155 +</title></polygon>
+<text x="742.0" y="201" font-size="8" fill="#333">CaiB/BaiF CoA transferase family protein</text>
+<polygon points="953.1,205 1054.0,205 1060.0,211 1054.0,217 953.1,217" fill="#3b6fb6"><title>NADPH:quinone oxidoreductase family prot 209211-210231 +</title></polygon>
+<text x="953.1" y="201" font-size="8" fill="#333">NADPH:quinone oxidoredu</text>
+<text x="60" y="286" font-size="9" fill="#666">NZ_AP025556.1 site 206833  other-side gap 26 bp  this call's core 204831-204894</text>
+</svg>

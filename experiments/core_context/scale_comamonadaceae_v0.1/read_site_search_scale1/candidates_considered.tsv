@@ -1,0 +1,232 @@
+sample	genus	organism	assembly	assembly_level	read_type	runs	depth	supported_candidate_cores	eligible	not_eligible
+SAMD00076718	Comamonas	Comamonas thiooxydans	GCF_002157685.2	Complete Genome	pacbio_unresolved	DRR396223	124.2	28	False	not_counted_in_molecules;read_type
+SAMD00260131	Alicycliphilus	Alicycliphilus denitrificans	GCF_016592015.1	Complete Genome	ont	DRR256277	171.4	27	False	used_in_development
+SAMD00265974	Rhodoferax	Rhodoferax lithotrophicus	GCF_019973615.1	Complete Genome	ont	DRR259339	99.1	15	False	used_in_development
+SAMD00407106	Delftia	Delftia lacustris	GCF_022846195.1	Complete Genome	ont	DRR319914	275.0	32	False	used_in_development
+SAMD00549750	Limnohabitans	Limnohabitans sp. INBF002	GCF_027924905.1	Complete Genome	pacbio_unresolved	DRR413434	155.1	3	False	not_counted_in_molecules;read_type
+SAMD00549751	Limnohabitans	Limnohabitans sp. TEGF004	GCF_027924965.1	Complete Genome	pacbio_unresolved	DRR413435	79.4	3	False	not_counted_in_molecules;read_type
+SAMD00549752	Limnohabitans	Limnohabitans sp. MORI2	GCF_027925025.1	Complete Genome	pacbio_unresolved	DRR413436	20.0	1	False	not_counted_in_molecules;read_type;depth_below_30x
+SAMD00554136	Comamonadaceae	Comamonadaceae bacterium OS-1	GCA_027923965.1	Complete Genome	ont	DRR416890	208.8	12	True	
+SAMD00554137	Comamonadaceae	Comamonadaceae bacterium OS-4	GCA_027924025.1	Complete Genome	ont	DRR416892	277.8	13	True	
+SAMD00571185	Delftia	Delftia tsuruhatensis	GCF_055379645.1	Complete Genome	ont	DRR428552	76.1	16	True	
+SAMD00659498	Acidovorax	Acidovorax sp. DW039	GCF_037101375.1	Complete Genome	pacbio_unresolved	DRR514962	204.8	17	False	read_type
+SAMD00735222	Limnohabitans	Limnohabitans sp. INBF003	GCF_055396645.1	Complete Genome	pacbio_unresolved	DRR527048	129.9	14	False	read_type
+SAMD00735223	Limnohabitans	Limnohabitans sp. INBF004	GCF_055396085.1	Complete Genome	pacbio_unresolved	DRR527049	30.9	10	False	read_type
+SAMD00735224	Limnohabitans	Limnohabitans sp. TEGF002	GCF_055395845.1	Complete Genome	pacbio_unresolved	DRR527050	31.3	9	False	read_type
+SAMD00735225	Limnohabitans	Limnohabitans sp. TEGF003	GCF_055395455.1	Complete Genome	pacbio_unresolved	DRR527051	62.4	19	False	read_type
+SAMD00735226	Limnohabitans	Limnohabitans sp. TEGF005	GCF_055394835.1	Complete Genome	pacbio_unresolved	DRR527052	136.5	0	False	read_type
+SAMD00797420	Acidovorax	Acidovorax sacchari	GCF_042847045.1	Complete Genome	ont	DRR576325	143.0	11	True	
+SAMEA115676832	Acidovorax	Acidovorax sp. LjRoot117	GCF_964252695.1	Contig	ont	ERR13194248	35.1	0	True	
+SAMEA115676833	Acidovorax	Acidovorax sp. LjRoot118	GCF_964253575.1	Contig	ont	ERR13194249	62.1	30	False	used_in_development
+SAMEA115676837	Acidovorax	Acidovorax sp. LjRoot129	GCF_964253765.1	Contig	ont	ERR13194253	86.9	25	False	used_in_development
+SAMEA115676839	Variovorax	Variovorax sp. LjRoot130	GCF_964253755.1	Contig	ont	ERR13194255	16.3	76	False	depth_below_30x
+SAMEA115676840	Polaromonas	Polaromonas sp. LjRoot131	GCF_964252805.1	Contig	ont	ERR13194256	1.1	0	False	depth_below_30x
+SAMEA115676843	Variovorax	Variovorax paradoxus	GCF_964253095.1	Contig	ont	ERR13194259	26.2	68	False	depth_below_30x
+SAMEA115676855	Variovorax	Variovorax paradoxus	GCF_964253045.1	Contig	ont	ERR13194271	28.4	48	False	depth_below_30x
+SAMEA115676858	Acidovorax	Acidovorax delafieldii	GCF_964252815.1	Contig	ont	ERR13194274	1.1	1	False	depth_below_30x
+SAMEA115676862	Variovorax	Variovorax paradoxus	GCF_964253105.1	Contig	ont	ERR13194278	58.2	55	True	
+SAMEA115676863	Variovorax	Variovorax sp. LjRoot175	GCF_964253805.1	Contig	ont	ERR13194279	13.2	83	False	depth_below_30x
+SAMEA115676864	Variovorax	Variovorax sp. LjRoot178	GCF_964252785.1	Contig	ont	ERR13194280	17.0	0	False	depth_below_30x
+SAMEA115676868	Acidovorax	Acidovorax delafieldii	GCF_964254125.1	Contig	ont	ERR13194284	17.0	8	False	depth_below_30x
+SAMEA115676870	Acidovorax	Acidovorax sp. LjRoot194	GCF_964253015.1	Contig	ont	ERR13194286	27.0	16	False	depth_below_30x
+SAMEA115676913	Variovorax	Variovorax paradoxus	GCF_964254155.1	Contig	ont	ERR13194329	27.3	41	False	depth_below_30x
+SAMEA115676931	Variovorax	Variovorax sp. LjRoot290	GCF_964253985.1	Contig	ont	ERR13194347	26.3	95	False	depth_below_30x
+SAMEA115676933	Variovorax	Variovorax paradoxus	GCF_964253075.1	Contig	ont	ERR13194349	24.1	61	False	depth_below_30x
+SAMEA115676939	Variovorax	Variovorax paradoxus	GCF_964253865.1	Contig	ont	ERR13194355	42.9	58	True	
+SAMEA115676945	Acidovorax	Acidovorax sp. LjRoot38	GCF_964252975.1	Contig	ont	ERR13194361	3.6	0	False	depth_below_30x
+SAMEA115676946	Pseudorhodoferax	Pseudorhodoferax sp. LjRoot39	GCF_964253035.1	Contig	ont	ERR13194362	14.2	25	False	depth_below_30x
+SAMEA115676956	Variovorax	Variovorax paradoxus	GCF_964253415.1	Contig	ont	ERR13194372	38.6	48	True	
+SAMEA115676957	Acidovorax	Acidovorax sp. LjRoot66	GCF_964253305.1	Contig	ont	ERR13194373	31.6	33	False	used_in_development
+SAMEA115676958	Variovorax	Variovorax paradoxus	GCF_964253385.1	Contig	ont	ERR13194374	20.8	64	False	depth_below_30x
+SAMEA115676961	Acidovorax	Acidovorax sp. LjRoot74	GCF_964254355.1	Contig	ont	ERR13194377	57.0	19	True	
+SAMEA115676967	Variovorax	Variovorax sp. LjRoot84	GCF_964254305.1	Contig	ont	ERR13194383	29.5	105	False	depth_below_30x
+SAMEA115676974	Variovorax	Variovorax paradoxus	GCF_964254325.2	Contig	ont	ERR13194390	38.6	62	True	
+SAMEA120301455	Delftia	Delftia acidovorans	GCF_976987185.1	Complete Genome	ont	ERR15677731	145.6	24	True	
+SAMEA120308851	Delftia	Delftia acidovorans	GCF_976989105.1	Complete Genome	ont	ERR15680760	110.2	19	True	
+SAMEA120308854	Delftia	Delftia acidovorans	GCF_976989065.1	Complete Genome	ont	ERR15680824	103.4	17	True	
+SAMEA120308855	Delftia	Delftia acidovorans	GCF_976988975.1	Contig	ont	ERR15680828	101.2	17	True	
+SAMEA120308864	Delftia	Delftia acidovorans	GCF_976989035.1	Complete Genome	ont	ERR15680836	143.9	24	True	
+SAMEA120309484	Variovorax	Variovorax beijingensis	GCF_976989265.1	Contig	ont	ERR15681452	182.4	63	True	
+SAMEA120309485	Variovorax	Variovorax gossypii	GCF_976989165.1	Contig	ont	ERR15681453	183.1	48	True	
+SAMEA120311175	Delftia	Delftia acidovorans	GCF_976995725.1	Contig	ont	ERR15682128	122.8	25	True	
+SAMEA120314584	Variovorax	Variovorax boronicumulans	GCF_976997465.1	Complete Genome	ont	ERR15686824	115.2	26	True	
+SAMEA120314636	Variovorax	Variovorax boronicumulans	GCF_976997285.1	Complete Genome	ont	ERR15686901	124.4	21	True	
+SAMEA120314645	Variovorax	Variovorax boronicumulans	GCF_976997575.1	Complete Genome	ont	ERR15686910	122.9	20	True	
+SAMEA120322934	Variovorax	Variovorax gossypii	GCF_977004815.1	Contig	ont	ERR15693031	163.1	45	True	
+SAMEA120325695	Variovorax	Variovorax beijingensis	GCF_977007205.1	Contig	ont	ERR15695456	208.7	58	True	
+SAMEA120356367	Variovorax	Variovorax gossypii	GCF_977007995.1	Contig	ont	ERR15696519	102.5	39	True	
+SAMEA120399592	Variovorax	Variovorax durovernensis	GCF_977012005.1	Contig	ont	ERR15741491	186.9	41	True	
+SAMEA120399594	Variovorax	Variovorax durovernensis	GCF_977011995.1	Contig	ont	ERR15741494	188.3	44	True	
+SAMEA120399595	Variovorax	Variovorax durovernensis	GCF_977011975.1	Contig	ont	ERR15741495	171.6	46	True	
+SAMEA120399599	Variovorax	Variovorax boronicumulans	GCF_977012065.1	Complete Genome	ont	ERR15741489	146.2	20	True	
+SAMEA6863324	Comamonas	Comamonas aquatica	GCF_903815275.1	Complete Genome	ont	ERR4184149	384.4	17	True	
+SAMEA6863325	Delftia	Delftia tsuruhatensis	GCF_903815225.1	Complete Genome	ont	ERR4184150	155.1	24	True	
+SAMEA6863356	Comamonas	Comamonas aquatica	GCF_903684545.1	Contig	ont	ERR4184112	794.7	5	True	
+SAMN02471431	Hydrogenophaga	Hydrogenophaga sp. PBC	GCF_000263795.2	Complete Genome	ont	SRR10820824	28.4	18	False	depth_below_30x
+SAMN04157986	Paracidovorax	Paracidovorax citrulli	GCF_001593665.2	Complete Genome	pacbio_clr_subreads	SRR7524637	736.2	6	False	not_counted_in_molecules;read_type
+SAMN04909706	Acidovorax	Acidovorax sp. RAC01	GCF_001714725.1	Complete Genome	pacbio_hifi_ccs	SRR3880289	217.1	20	False	not_counted_in_molecules
+SAMN04909718	Hydrogenophaga	Hydrogenophaga sp. RAC07	GCF_001713375.1	Complete Genome	pacbio_hifi_ccs	SRR3880379	342.9	13	False	not_counted_in_molecules
+SAMN05216519	Delftia	Delftia acidovorans	GCF_900215545.1	Contig	pacbio_unresolved	SRR5166877	108.0	20	False	not_counted_in_molecules;read_type
+SAMN05443405	Acidovorax	Acidovorax temperans	GCF_006716905.1	Contig	pacbio_unresolved	SRR9002440;SRR9002441	629.7	39	False	not_counted_in_molecules;read_type
+SAMN05518800	Variovorax	Variovorax sp. YR752	GCF_900215425.1	Contig	pacbio_unresolved	SRR5742466;SRR5742467;SRR5742382	99.9	47	False	not_counted_in_molecules;read_type
+SAMN05714655	Paracidovorax	Paracidovorax avenae	GCF_003029685.1	Chromosome	pacbio_clr_subreads	SRR4096818	670.0	16	False	not_counted_in_molecules;read_type
+SAMN05714662	Paracidovorax	Paracidovorax avenae	GCA_003029725.1	Chromosome	pacbio_clr_subreads	SRR4096857	608.0	6	False	not_counted_in_molecules;read_type
+SAMN05828192	Delftia	Delftia tsuruhatensis	GCF_001753225.1	Complete Genome	pacbio_unresolved	SRR4408348	23.2	34	False	not_counted_in_molecules;read_type;depth_below_30x
+SAMN06562982	Comamonas	Comamonas kerstersii	GCF_002056725.1	Complete Genome	pacbio_hifi_ccs	SRR7284692	669.4	15	False	not_counted_in_molecules
+SAMN07312438	Comamonas	Comamonas terrigena	GCF_002554425.1	Contig	pacbio_clr_subreads	SRR5872859	271.8	12	False	not_counted_in_molecules;read_type
+SAMN07626132	Comamonas	Comamonas sp. 26	GCF_002754475.1	Contig	pacbio_unresolved	SRR6824062;SRR6824064;SRR6824063	361.0	18	False	not_counted_in_molecules;read_type
+SAMN07626133	Acidovorax	Acidovorax sp. 56	GCF_002749705.1	Contig	pacbio_unresolved	SRR6824088	117.7	30	False	not_counted_in_molecules;read_type
+SAMN07626134	Acidovorax	Acidovorax sp. 30	GCF_002846435.1	Contig	pacbio_unresolved	SRR6824085	122.8	9	False	not_counted_in_molecules;read_type
+SAMN07626141	Acidovorax	Acidovorax sp. 59	GCF_002754175.1	Contig	pacbio_unresolved	SRR6824077;SRR6824078	191.6	9	False	not_counted_in_molecules;read_type
+SAMN07626145	Variovorax	Variovorax sp. 54	GCF_002754375.1	Contig	pacbio_unresolved	SRR6824079;SRR6824080;SRR6824081	124.1	23	False	not_counted_in_molecules;read_type
+SAMN07626146	Delftia	Delftia sp. 60	GCF_002754395.1	Contig	pacbio_unresolved	SRR6824086	106.1	27	False	not_counted_in_molecules;read_type
+SAMN07626150	Acidovorax	Acidovorax sp. 62	GCF_002754495.1	Contig	pacbio_unresolved	SRR6824210	126.0	15	False	not_counted_in_molecules;read_type
+SAMN07626151	Acidovorax	Acidovorax sp. 69	GCF_002797445.1	Contig	pacbio_unresolved	SRR6824213;SRR6824214	193.3	4	False	not_counted_in_molecules;read_type
+SAMN08473591	Variovorax	Variovorax sp. PMC12	GCF_003019815.1	Complete Genome	pacbio_clr_subreads	SRR6750233;SRR6686697	238.4	30	False	not_counted_in_molecules;read_type
+SAMN08775333	Paracidovorax	Paracidovorax citrulli	GCF_003096435.1	Contig	pacbio_unresolved	SRR7135406;SRR7135407	148.6	17	False	not_counted_in_molecules;read_type
+SAMN08775340	Paracidovorax	Paracidovorax citrulli	GCF_003387255.1	Contig	pacbio_unresolved	SRR7135411;SRR7135412	167.2	17	False	not_counted_in_molecules;read_type
+SAMN08775346	Paracidovorax	Paracidovorax citrulli	GCF_003664145.1	Contig	pacbio_unresolved	SRR7135408;SRR7135409	150.4	17	False	not_counted_in_molecules;read_type
+SAMN08777389	Acidovorax	Acidovorax sp. 107	GCF_003058055.1	Contig	pacbio_unresolved	SRR6976451	137.3	16	False	not_counted_in_molecules;read_type
+SAMN08777390	Acidovorax	Acidovorax sp. 100	GCF_003688355.1	Contig	pacbio_unresolved	SRR6976448;SRR6976447	159.1	15	False	not_counted_in_molecules;read_type
+SAMN08777898	Acidovorax	Acidovorax sp. 93	GCF_003633835.1	Contig	pacbio_unresolved	SRR6976407;SRR6976406	155.4	14	False	not_counted_in_molecules;read_type
+SAMN08777899	Acidovorax	Acidovorax sp. 94	GCF_003634645.1	Contig	pacbio_unresolved	SRR6976412	115.8	13	False	not_counted_in_molecules;read_type
+SAMN08777900	Acidovorax	Acidovorax sp. 99	GCF_003096455.1	Contig	pacbio_unresolved	SRR6976417;SRR6976418	186.6	8	False	not_counted_in_molecules;read_type
+SAMN08777902	Acidovorax	Acidovorax sp. 106	GCF_003663825.1	Contig	pacbio_unresolved	SRR6976449;SRR6976450	143.9	14	False	not_counted_in_molecules;read_type
+SAMN08777904	Simplicispira	Simplicispira sp. 110	GCF_003387115.1	Contig	pacbio_unresolved	SRR6976454;SRR6976455	194.6	8	False	not_counted_in_molecules;read_type
+SAMN08777906	Simplicispira	Simplicispira sp. 125	GCF_003096555.1	Contig	pacbio_unresolved	SRR6976498;SRR6976497	210.7	8	False	not_counted_in_molecules;read_type
+SAMN09743972	Hylemonella	Hylemonella gracilis	GCF_004328645.1	Chromosome	pacbio_unresolved	SRR7743797	78.5	0	False	not_counted_in_molecules;read_type;aligned_bam_submission;used_in_development
+SAMN11265848	Diaphorobacter	Diaphorobacter sp. DS2	GCF_004563745.2	Complete Genome	ont	SRR34023662;SRR31313490	584.2	23	False	used_in_development
+SAMN11620948	Variovorax	Variovorax sp. KBS0712	GCF_006323185.2	Contig	ont	SRR10064734	103.2	27	True	
+SAMN13450420	Delftia	Delftia lacustris	GCF_016027815.1	Complete Genome	pacbio_clr_subreads	SRR12046205	361.1	45	False	not_counted_in_molecules;read_type
+SAMN13450421	Delftia	Delftia acidovorans	GCF_016027775.1	Complete Genome	pacbio_clr_subreads	SRR12046249	353.3	34	False	not_counted_in_molecules;read_type
+SAMN13450439	Delftia	Delftia acidovorans	GCF_016027075.1	Complete Genome	pacbio_clr_subreads	SRR12045673	318.2	31	False	not_counted_in_molecules;read_type
+SAMN13450469	Delftia	Delftia acidovorans	GCF_016026535.1	Complete Genome	pacbio_clr_subreads	SRR12047132;SRR12047131	93.0	21	False	not_counted_in_molecules;read_type
+SAMN13494298	Variovorax	Variovorax paradoxus	GCF_009755665.1	Complete Genome	ont	SRR10662238	891.5	27	True	
+SAMN15097745	Rhodoferax	Rhodoferax sp. BAB1	GCF_013334205.1	Complete Genome	pacbio_unresolved	SRR11977808	23.4	6	False	not_counted_in_molecules;read_type;depth_below_30x
+SAMN15738716	Polaromonas	Polaromonas sp. CG_23.6	GCF_029892315.1	Contig	pacbio_hifi_ccs	SRR35181478	103.2	23	False	used_in_development
+SAMN15853741	Comamonas	Comamonas kerstersii	GCF_017976505.1	Complete Genome	ont	SRR14226837	296.1	16	True	
+SAMN16231215	Variovorax	Variovorax sp. 38R	GCF_014843395.1	Complete Genome	ont	SRR12697332	595.2	28	True	
+SAMN16357166	Delftia	Delftia acidovorans	GCF_016127415.1	Complete Genome	pacbio_clr_subreads	SRR12827394	352.8	39	False	not_counted_in_molecules;read_type
+SAMN16392950	Variovorax	Variovorax paradoxus	GCF_016806145.1	Complete Genome	ont	SRR12791241	120.4	38	True	
+SAMN18676188	Comamonas	Comamonas aquatica	GCF_018064205.1	Complete Genome	pacbio_clr_subreads	SRR14198828;SRR14198827	901.3	21	False	not_counted_in_molecules;read_type
+SAMN19030610	Hydrogenophaga	Hydrogenophaga taeniospiralis	GCF_020510445.1	Contig	pacbio_unresolved	SRR16235512	238.2	24	False	read_type
+SAMN23078433	Polaromonas	Polaromonas sp. P1(28)-13	GCA_024703815.1	Complete Genome	ont	SRR21050831	177.8	1	True	
+SAMN23078434	Polaromonas	Polaromonas sp. P1(28)-8	GCA_024703835.1	Complete Genome	ont	SRR21050830	128.8	5	True	
+SAMN23078435	Polaromonas	Polaromonas sp. P2-4	GCA_024703855.1	Complete Genome	ont	SRR21050829	206.1	4	True	
+SAMN23078436	Polaromonas	Polaromonas sp. P1-6	GCA_024703875.1	Complete Genome	ont	SRR21050828	198.2	4	True	
+SAMN23567018	Delftia	Delftia acidovorans	GCF_022117555.1	Contig	ont	SRR17102512	20.6	29	False	depth_below_30x
+SAMN25942280	Delftia	Delftia acidovorans	GCF_022393415.1	Contig	pacbio_unresolved	SRR18054574	104.9	23	False	not_counted_in_molecules;read_type
+SAMN25942281	Comamonas	Comamonas sp. B21-038	GCF_022387135.1	Chromosome	pacbio_unresolved	SRR18054573	273.8	17	False	not_counted_in_molecules;read_type
+SAMN27609613	Variovorax	Variovorax sp. S12S4	GCF_023195515.1	Contig	ont	SRR21808314	1710.9	30	True	
+SAMN28084390	Acidovorax	Acidovorax sp. NCPPB 3576	GCF_028473605.1	Complete Genome	ont	SRR19119760	56.7	17	True	
+SAMN28084394	Acidovorax	Acidovorax sp. GBBC 1281	GCF_028473645.1	Complete Genome	ont	SRR19119756	56.7	18	True	
+SAMN28094724	Variovorax	Variovorax sp. TBS-050B	GCF_029893635.1	Contig	pacbio_hifi_ccs	SRR26130517	93.3	4	True	
+SAMN29007424	Comamonadaceae	Comamonadaceae bacterium OTU4NAUVB1	GCA_024372625.1	Complete Genome	pacbio_hifi_ccs	SRR19646381	33.4	13	False	not_counted_in_molecules
+SAMN30525180	Comamonas	Comamonas aquatica	GCF_029843545.1	Contig	ont	SRR21472835	87.4	32	False	used_in_development
+SAMN30525278	Comamonas	Comamonas aquatica	GCF_029841605.1	Contig	ont	SRR21472542	64.3	24	False	used_in_development
+SAMN30525383	Delftia	Delftia tsuruhatensis	GCF_029814915.1	Complete Genome	ont	SRR21472668	45.5	33	False	used_in_development
+SAMN30697778	Comamonas	Comamonas squillarum	GCF_025309455.1	Complete Genome	ont	SRR29761616	346.8	18	True	
+SAMN31258398	Delftia	Delftia sp. UGAL515B_04	GCF_033096485.1	Complete Genome	pacbio_unresolved	SRR22007585	640.7	32	False	not_counted_in_molecules;read_type;used_in_development
+SAMN33025486	Acidovorax	Acidovorax temperans	GCF_028596105.1	Complete Genome	pacbio_unresolved	SRR23501622	2819.8	45	False	not_counted_in_molecules;read_type;aligned_bam_submission
+SAMN34252313	Paracidovorax	Paracidovorax wautersii	GCF_031453675.1	Contig	pacbio_hifi_ccs	SRR24512220	70.4	5	False	not_counted_in_molecules
+SAMN34299902	Variovorax	Variovorax paradoxus	GCF_030815975.1	Contig	pacbio_hifi_ccs	SRR35247470	80.5	25	True	
+SAMN34299950	Acidovorax	Acidovorax delafieldii	GCF_031453525.1	Contig	pacbio_hifi_ccs	SRR26131797	297.6	10	True	
+SAMN34353142	Variovorax	Variovorax sp. W2I14	GCF_050435205.1	Contig	pacbio_hifi_ccs	SRR35247518	66.1	36	False	used_in_development
+SAMN35085406	Variovorax	Variovorax sp. W1I1	GCF_030815625.1	Contig	pacbio_hifi_ccs	SRR35247416	21.6	38	False	depth_below_30x
+SAMN37458465	Delftia	Delftia tsuruhatensis	GCF_034554595.1	Complete Genome	ont	SRR26117949	13.2	36	False	depth_below_30x
+SAMN37751790	Variovorax	Variovorax sp. SPNA7	GCF_033807855.1	Complete Genome	pacbio_hifi_ccs	SRR26357062	79.8	47	False	used_in_development
+SAMN37751820	Variovorax	Variovorax paradoxus	GCF_033807875.1	Complete Genome	pacbio_hifi_ccs	SRR26364401	210.8	42	False	used_in_development
+SAMN37752145	Variovorax	Variovorax sp. EBFNA2	GCF_033802765.1	Complete Genome	pacbio_hifi_ccs	SRR26382609	172.5	35	False	used_in_development
+SAMN38562701	Comamonas	Comamonas testosteroni	GCF_034424235.1	Complete Genome	pacbio_hifi_ccs	SRR27033690	137.4	31	False	used_in_development
+SAMN41424278	Vandammella	Vandammella animalimorsus	GCF_039849035.1	Complete Genome	ont	SRR29059439	43.5	19	False	used_in_development
+SAMN41513636	Variovorax	Variovorax sp. OAS795	GCF_040546685.1	Contig	pacbio_hifi_ccs	SRR29952227	85.0	19	True	
+SAMN41832008	Hydrogenophaga	Hydrogenophaga sp. ANAO-22	GCF_042466645.1	Complete Genome	pacbio_clr_subreads	SRR29429604	102.7	19	False	not_counted_in_molecules;read_type
+SAMN42395758	Rhodoferax	Rhodoferax sp. WC2427	GCF_040822085.1	Complete Genome	ont	SRR29831490	51.0	1	True	
+SAMN42552694	Delftia	Delftia acidovorans	GCF_057418825.1	Complete Genome	ont	SRR29924133	166.4	19	True	
+SAMN42749333	Comamonas	Comamonas thiooxydans	GCF_057457745.1	Complete Genome	ont	SRR29926081	180.4	17	True	
+SAMN43145729	Variovorax	Variovorax sp. Varisp27	GCF_059491925.1	Complete Genome	ont	SRR32164052	16.7	26	False	depth_below_30x
+SAMN43145737	Variovorax	Variovorax sp. Varisp41	GCF_047325085.1	Complete Genome	ont	SRR32164039	97.3	34	True	
+SAMN43145742	Variovorax	Variovorax sp. Varisp46	GCF_059491885.1	Complete Genome	ont	SRR32164030	34.6	29	True	
+SAMN43145748	Polaromonas	Polaromonas sp. Polasp52	GCF_059491565.1	Complete Genome	ont	SRR32164180	21.0	17	False	depth_below_30x
+SAMN43145749	Variovorax	Variovorax sp. Varisp53	GCF_059491555.1	Complete Genome	ont	SRR32164178	1412.8	25	True	
+SAMN43526776	Variovorax	Variovorax boronicumulans	GCF_042698915.1	Complete Genome	ont	SRR30602141	26.6	21	False	depth_below_30x
+SAMN43526777	Variovorax	Variovorax sp. UC122_21	GCF_044056785.1	Complete Genome	ont	SRR30602140	17.0	25	False	depth_below_30x
+SAMN43526780	Acidovorax	Acidovorax delafieldii	GCF_044056765.1	Complete Genome	ont	SRR30602137	59.8	11	True	
+SAMN43526786	Polaromonas	Polaromonas sp. UC242_47	GCF_044452385.1	Contig	ont	SRR30602165	39.9	20	False	used_in_development
+SAMN43526787	Hydrogenophaga	Hydrogenophaga sp. UC242_50	GCF_042697355.1	Chromosome	ont	SRR30602164	48.4	1	True	
+SAMN43526788	Hydrogenophaga	Hydrogenophaga sp. UC242_53	GCF_042696965.1	Complete Genome	ont	SRR30602163	80.8	3	True	
+SAMN43526803	Variovorax	Variovorax sp. UC74_104	GCF_044055375.1	Complete Genome	ont	SRR30602146	39.5	22	True	
+SAMN47200781	Variovorax	Variovorax sp. R-27	GCF_049913215.1	Complete Genome	ont	SRR32610405;SRR32610406	82.4	44	True	
+SAMN47200782	Acidovorax	Acidovorax facilis	GCF_049913225.1	Complete Genome	ont	SRR32610404;SRR32610402	42.0	25	True	
+SAMN47300670	Acidovorax	Acidovorax facilis	GCF_050627005.1	Complete Genome	pacbio_hifi_ccs	SRR32649614	40.2	15	True	
+SAMN47300672	Polaromonas	Polaromonas aquatica	GCF_050626995.1	Complete Genome	pacbio_hifi_ccs	SRR32649602	41.0	8	True	
+SAMN47300673	Acidovorax	Acidovorax facilis	GCF_050626955.1	Complete Genome	pacbio_hifi_ccs	SRR32649591	60.6	15	True	
+SAMN47300681	Variovorax	Variovorax paradoxus NBRC 15149	GCF_050626895.1	Complete Genome	pacbio_hifi_ccs	SRR32649611	15.4	34	False	depth_below_30x
+SAMN47300695	Variovorax	Variovorax paradoxus NBRC 15149	GCF_050627025.1	Complete Genome	pacbio_hifi_ccs	SRR32649596	76.4	27	True	
+SAMN48135827	Variovorax	Variovorax sp. YR566	GCF_051992195.1	Complete Genome	ont	SRR33303079	275.3	67	False	used_in_development
+SAMN48330266	Comamonas	Comamonas sediminis	GCF_057748255.1	Complete Genome	ont	SRR33422105	398.2	16	True	
+SAMN49042133	Delftia	Delftia acidovorans	GCF_059084005.1	Complete Genome	ont	SRR33981858	165.0	41	False	used_in_development
+SAMN51281014	Variovorax	Variovorax sp. BK049	GCF_060373955.1	Complete Genome	ont	SRR40356327	217.6	11	True	
+SAMN51281015	Variovorax	Variovorax sp. BK066	GCF_060420765.1	Complete Genome	ont	SRR40356326	199.4	15	True	
+SAMN51281016	Variovorax	Variovorax sp. CF013	GCF_060373945.1	Complete Genome	ont	SRR40356315	67.6	2	True	
+SAMN51281017	Variovorax	Variovorax sp. CF015	GCF_060373885.1	Complete Genome	ont	SRR40356304	67.5	35	True	
+SAMN51281018	Variovorax	Variovorax sp. CF016	GCF_060373865.1	Complete Genome	ont	SRR40356293	37.7	35	True	
+SAMN51281019	Variovorax	Variovorax sp. CF024	GCF_060373785.1	Complete Genome	ont	SRR40356282	141.2	38	True	
+SAMN51281020	Variovorax	Variovorax sp. CF045	GCF_060421335.1	Complete Genome	ont	SRR40356271	143.7	66	True	
+SAMN51281021	Variovorax	Variovorax sp. CF057	GCF_060373725.1	Complete Genome	ont	SRR40356270	40.5	34	True	
+SAMN51281022	Variovorax	Variovorax sp. CF094	GCF_060373705.1	Complete Genome	ont	SRR40356269	67.6	56	True	
+SAMN51281023	Variovorax	Variovorax sp. CF130	GCF_060373665.1	Complete Genome	ont	SRR40356268	50.3	35	True	
+SAMN51281024	Variovorax	Variovorax sp. CF143	GCF_060373585.1	Complete Genome	ont	SRR40356325	36.2	44	True	
+SAMN51281025	Variovorax	Variovorax sp. CF153	GCF_060373565.1	Complete Genome	ont	SRR40356324	27.0	85	False	depth_below_30x
+SAMN51281026	Variovorax	Variovorax sp. CF163	GCF_060421345.1	Complete Genome	ont	SRR40356323	46.1	33	True	
+SAMN51281027	Variovorax	Variovorax sp. CF247	GCF_060373485.1	Complete Genome	ont	SRR40356322	63.3	47	True	
+SAMN51281028	Variovorax	Variovorax sp. CF249	GCF_060373425.1	Complete Genome	ont	SRR40356321	50.0	45	True	
+SAMN51281029	Variovorax	Variovorax sp. CF252	GCF_060373385.1	Complete Genome	ont	SRR40356320	5.5	36	False	depth_below_30x
+SAMN51281030	Variovorax	Variovorax sp. CF256	GCF_060421535.1	Complete Genome	ont	SRR40356319	161.3	48	True	
+SAMN51281031	Variovorax	Variovorax sp. CF264	GCF_060421545.1	Complete Genome	ont	SRR40356318	37.6	44	True	
+SAMN51281032	Variovorax	Variovorax sp. CF277	GCF_060373345.1	Complete Genome	ont	SRR40356317	113.3	57	True	
+SAMN51281033	Variovorax	Variovorax sp. CF360	GCF_060421895.1	Complete Genome	ont	SRR40356316	225.9	61	True	
+SAMN51281034	Variovorax	Variovorax sp. CF381	GCF_060373265.1	Complete Genome	ont	SRR40356314	303.8	27	True	
+SAMN51281035	Variovorax	Variovorax sp. CF391	GCF_060373275.1	Complete Genome	ont	SRR40356313	96.0	2	True	
+SAMN51281036	Variovorax	Variovorax sp. CF393	GCF_060421975.1	Complete Genome	ont	SRR40356312	65.8	34	True	
+SAMN51281037	Variovorax	Variovorax sp. CF396	GCF_060373185.1	Complete Genome	ont	SRR40356311	35.7	32	True	
+SAMN51281038	Variovorax	Variovorax sp. OK113	GCF_060426025.1	Complete Genome	ont	SRR40356310	8.0	78	False	depth_below_30x
+SAMN51281039	Variovorax	Variovorax sp. OK115	GCF_060373095.1	Complete Genome	ont	SRR40356309	40.0	78	False	used_in_development
+SAMN51281040	Variovorax	Variovorax sp. OK222	GCF_060373085.1	Complete Genome	ont	SRR40356308	38.1	50	True	
+SAMN51281041	Variovorax	Variovorax sp. OK231	GCF_060373065.1	Complete Genome	ont	SRR40356307	299.7	50	True	
+SAMN51281042	Variovorax	Variovorax sp. OK250	GCF_060372945.1	Complete Genome	ont	SRR40356306	105.6	50	True	
+SAMN51281043	Variovorax	Variovorax sp. OK565	GCF_060372925.1	Complete Genome	ont	SRR40356305	38.3	50	True	
+SAMN51281044	Variovorax	Variovorax sp. OK614	GCF_060372905.1	Complete Genome	ont	SRR40356303	220.8	52	True	
+SAMN51281045	Variovorax	Variovorax sp. OK624	GCF_060426045.1	Complete Genome	ont	SRR40356302	38.8	52	True	
+SAMN51281046	Variovorax	Variovorax sp. OK632	GCF_060372785.1	Complete Genome	ont	SRR40356301	57.7	52	True	
+SAMN51281047	Variovorax	Variovorax sp. OK638	GCF_060414525.1	Complete Genome	ont	SRR40356300	28.8	50	False	depth_below_30x
+SAMN51281048	Variovorax	Variovorax sp. OK658	GCF_060372735.1	Complete Genome	ont	SRR40356299	105.8	52	True	
+SAMN51281049	Variovorax	Variovorax sp. OV006	GCF_060372645.1	Complete Genome	ont	SRR40356298	76.0	56	True	
+SAMN51281050	Variovorax	Variovorax sp. OV017	GCF_060372635.1	Complete Genome	ont	SRR40356297	51.9	46	True	
+SAMN51281051	Variovorax	Variovorax sp. OV089	GCF_060372575.1	Complete Genome	ont	SRR40356296	74.5	47	True	
+SAMN51281052	Variovorax	Variovorax sp. OV092	GCF_060422815.1	Complete Genome	ont	SRR40356295	141.2	49	True	
+SAMN51281053	Variovorax	Variovorax sp. OV254	GCF_060372485.1	Complete Genome	ont	SRR40356294	70.2	37	True	
+SAMN51281054	Variovorax	Variovorax sp. OV307	GCF_060372445.1	Complete Genome	ont	SRR40356292	48.4	21	True	
+SAMN51281055	Variovorax	Variovorax sp. OV418	GCF_060426065.1	Complete Genome	ont	SRR40356291	59.8	32	True	
+SAMN51281056	Variovorax	Variovorax sp. OV448	GCF_060372385.1	Complete Genome	ont	SRR40356290	81.4	36	True	
+SAMN51281057	Variovorax	Variovorax sp. OV596	GCF_060372305.1	Complete Genome	ont	SRR40356289	80.7	18	True	
+SAMN51281058	Variovorax	Variovorax sp. YR389	GCF_060422895.1	Complete Genome	ont	SRR40356288	70.5	22	True	
+SAMN51281059	Variovorax	Variovorax sp. YR747	GCF_060372275.1	Complete Genome	ont	SRR40356287	45.8	43	True	
+SAMN51658604	Variovorax	Variovorax sp. BK047	GCF_060362225.1	Complete Genome	ont	SRR40356286	127.0	13	True	
+SAMN51658605	Variovorax	Variovorax sp. CF410	GCF_060362165.1	Complete Genome	ont	SRR40356285	618.8	50	True	
+SAMN51658606	Variovorax	Variovorax sp. OK220	GCF_060362185.1	Complete Genome	ont	SRR40356284	87.9	48	True	
+SAMN51658607	Variovorax	Variovorax sp. OK629	GCF_060362105.1	Complete Genome	ont	SRR40356283	51.4	52	True	
+SAMN51658608	Variovorax	Variovorax sp. OV560	GCF_060362065.1	Complete Genome	ont	SRR40356281	112.2	49	True	
+SAMN51658609	Variovorax	Variovorax sp. OV586	GCF_060362035.1	Complete Genome	ont	SRR40356280	81.4	53	True	
+SAMN51658610	Variovorax	Variovorax sp. YR064	GCF_060361885.1	Complete Genome	ont	SRR40356279	101.1	45	True	
+SAMN51658611	Variovorax	Variovorax sp. YR166	GCF_060361965.1	Complete Genome	ont	SRR40356278	27.2	55	False	depth_below_30x
+SAMN51658612	Variovorax	Variovorax sp. YR178	GCF_060361895.1	Complete Genome	ont	SRR40356277	104.9	30	True	
+SAMN51658613	Variovorax	Variovorax sp. YR271	GCF_060361845.1	Complete Genome	ont	SRR40356276	70.5	37	True	
+SAMN51658614	Variovorax	Variovorax sp. YR282	GCF_060361725.1	Complete Genome	ont	SRR40356275	130.8	26	True	
+SAMN51658615	Variovorax	Variovorax sp. YR376	GCF_060361765.1	Complete Genome	ont	SRR40356274	49.7	60	True	
+SAMN51658616	Variovorax	Variovorax sp. YR572	GCF_060361785.1	Complete Genome	ont	SRR40356273	186.0	52	True	
+SAMN51658617	Variovorax	Variovorax sp. YR724	GCF_060361635.1	Complete Genome	ont	SRR40356272	162.6	90	False	used_in_development
+SAMN51819094	Comamonadaceae	Comamonadaceae bacterium KH_043	GCA_057839205.1	Complete Genome	ont	SRR35628932	231.5	9	True	
+SAMN52101483	Hydrogenophaga	Hydrogenophaga sp. A37	GCF_053010425.1	Complete Genome	ont	SRR35699700	163.4	39	False	used_in_development
+SAMN56368954	Acidovorax	Acidovorax sp. GW101-3H11	GCF_060484195.1	Complete Genome	ont	SRR37523579	90.2	21	True	
+SAMN56368990	Hydrogenophaga	Hydrogenophaga sp. GW460-11-11-14-LB1	GCF_060483935.1	Complete Genome	ont	SRR37524064	127.2	20	False	used_in_development

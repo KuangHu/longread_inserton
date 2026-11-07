@@ -1,0 +1,1 @@
+minimap2 -x map-ont -c --secondary=yes -N 50 -p 0.8 -I 8G -t 16 $PROJ/data/assemblies/R-91497/GCF_977004965.1/ncbi_dataset/data/GCF_977004965.1/GCF_977004965.1_ASM97700496v1_genomic.fna $PROJ/data/reads/ERR15693036/ERR15693036.fastq.gz

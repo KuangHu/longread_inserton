@@ -1,0 +1,52 @@
+{
+  "run": {
+    "sample_id": "LjRoot223",
+    "run": "ERR13194296",
+    "biosample": "SAMEA115676880",
+    "assembly": "GCA_964253525.2",
+    "platform": "OXFORD_NANOPORE",
+    "instrument_model": "MinION",
+    "role": "paraburkholderia_round1_terricola",
+    "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR131/096/ERR13194296/ERR13194296.fastq.gz",
+    "archive_read_count": 18146,
+    "archive_base_count": 104222747,
+    "fastq_bytes": 99129012,
+    "fastq_md5": "eb034543edb71553616061eb637d8e9b"
+  },
+  "download_started": "2026-10-23T11:19:45-0700",
+  "local_file": "$PROJ/data/reads/ERR13194296/ERR13194296.fastq.gz",
+  "bytes": 99129012,
+  "md5": "eb034543edb71553616061eb637d8e9b",
+  "sha256": "62b129f3bcbae22b4476906887a8b8d288e32ef97d4a748abecfe857f730e18b",
+  "rejected_downloads": [],
+  "spots_absent_from_fastq": 0,
+  "summary": {
+    "records": 18146,
+    "bases": 104222747,
+    "read_unit_counts": {
+      "other_name": 18146
+    },
+    "distinct_zmws": null,
+    "distinct_sra_spots": 18146,
+    "max_records_per_spot": 1,
+    "placeholder_quality_records": 0,
+    "example_headers": [
+      "@ERR13194296.1 0959d9d3-712e-404c-8312-49292e2669c5 runid=2342e2ef08d617049e876391328a5bfbf4d13f7e sampleid=no_sample read=19132 ch=67 start_time=2022-04-04T17:12:32Z model_version_id=2021-05-17_dna_r9.4.1_minion_384_d37a2ab9 barcode=barcode75",
+      "@ERR13194296.2 0df6a800-f892-4991-9b9e-07f140279baf runid=2342e2ef08d617049e876391328a5bfbf4d13f7e sampleid=no_sample read=20125 ch=217 start_time=2022-04-04T17:12:24Z model_version_id=2021-05-17_dna_r9.4.1_minion_384_d37a2ab9 barcode=barcode75",
+      "@ERR13194296.3 d8d6cf0b-4346-48a6-a888-a8b5cf99cef5 runid=2342e2ef08d617049e876391328a5bfbf4d13f7e sampleid=no_sample read=26082 ch=14 start_time=2022-04-04T17:12:26Z model_version_id=2021-05-17_dna_r9.4.1_minion_384_d37a2ab9 barcode=barcode75",
+      "@ERR13194296.4 1a168e8c-1e05-4f62-acb6-f4eccc10f23c runid=2342e2ef08d617049e876391328a5bfbf4d13f7e sampleid=no_sample read=22236 ch=248 start_time=2022-04-04T17:11:50Z model_version_id=2021-05-17_dna_r9.4.1_minion_384_d37a2ab9 barcode=barcode75"
+    ],
+    "mean_length": 5743.6,
+    "median_length": 772.5,
+    "max_length": 116054,
+    "n50": 21087,
+    "molecule_grouping": "one_record_per_molecule"
+  },
+  "checks": {
+    "bytes_match": true,
+    "md5_match": true,
+    "spot_count_match": true,
+    "base_count_match": true
+  },
+  "status": "verified"
+}

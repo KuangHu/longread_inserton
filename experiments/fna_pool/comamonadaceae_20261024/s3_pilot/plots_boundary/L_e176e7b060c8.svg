@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="420" font-family="sans-serif">
+<rect width="100%" height="100%" fill="white"/>
+<text x="4" y="16" font-size="12">L_e176e7b060c8  SAMN51281027  core 1122 bp  two_flank_anchored  support direction_mixed  boundary direction_dependent  tandem False  core copies carrier/partner 1/0</text>
+<line x1="481.2" y1="30" x2="481.2" y2="412" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<line x1="638.8" y1="30" x2="638.8" y2="412" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<text x="4" y="64" font-size="11" font-weight="bold">SAMN51281027 NZ_CM191384.1 (carrier)</text>
+<line x1="60" y1="100" x2="1060" y2="100" stroke="#888"/>
+<rect x="340.8" y="132" width="140.4" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="411.0" y="152" font-size="9" text-anchor="middle">U</text>
+<rect x="481.2" y="132" width="157.5" height="8" fill="#e76f51" opacity="0.55"/>
+<text x="560.0" y="152" font-size="9" text-anchor="middle">core 1122</text>
+<rect x="638.8" y="132" width="140.4" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="709.0" y="152" font-size="9" text-anchor="middle">D</text>
+<polygon points="60.0,109 66.0,103 397.7,103 397.7,115 66.0,115" fill="#3b6fb6"><title>efflux RND transporter permease subunit 2971381-2974609 -</title></polygon>
+<text x="60.0" y="125" font-size="8" fill="#333">efflux RND transporter permease subunit</text>
+<polygon points="413.1,85 478.3,85 484.3,91 478.3,97 413.1,97" fill="#3b6fb6"><title>gluconokinase 2974719-2975226 +</title></polygon>
+<text x="413.1" y="81" font-size="8" fill="#333">gluconokinase</text>
+<polygon points="483.8,109 489.8,103 552.8,103 552.8,115 489.8,115" fill="#3b6fb6"><title>MarR family winged helix-turn-helix tran 2975222-2975714 -</title></polygon>
+<text x="483.8" y="125" font-size="8" fill="#333">MarR family win</text>
+<polygon points="561.1,85 629.3,85 635.3,91 629.3,97 561.1,97" fill="#3b6fb6"><title>thioesterase family protein 2975773-2976301 +</title></polygon>
+<text x="561.1" y="81" font-size="8" fill="#333">thioesterase fam</text>
+<polygon points="638.8,109 644.8,103 838.4,103 838.4,115 644.8,115" fill="#3b6fb6"><title>decarboxylating NADP(+)-dependent phosph 2976326-2977748 -</title></polygon>
+<text x="638.8" y="125" font-size="8" fill="#333">decarboxylating NADP(+)-dependent phosph</text>
+<polygon points="855.7,85 986.6,85 992.6,91 986.6,97 855.7,97" fill="#3b6fb6"><title>AraC-like ligand-binding domain-containi 2977871-2978846 +</title></polygon>
+<text x="855.7" y="81" font-size="8" fill="#333">AraC-like ligand-binding doma</text>
+<polygon points="1008.9,85 1054.0,85 1060.0,91 1054.0,97 1008.9,97" fill="#3b6fb6"><title>alpha/beta fold hydrolase 2978962-2979691 +</title></polygon>
+<text x="1008.9" y="81" font-size="8" fill="#333">alpha/beta </text>
+<text x="60" y="166" font-size="9" fill="#666">NZ_CM191384.1:2972204-2979326  core 2975204-2976326</text>
+<text x="4" y="184" font-size="11" font-weight="bold">SAMD00623152 NZ_AP028664.1 (partner, - strand, two_flank_anchored, pair P00111)</text>
+<line x1="60" y1="220" x2="1060" y2="220" stroke="#888"/>
+<rect x="340.8" y="252" width="140.4" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="411.0" y="272" font-size="9" text-anchor="middle">U'</text>
+<rect x="638.8" y="252" width="140.4" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="709.0" y="272" font-size="9" text-anchor="middle">D'</text>
+<rect x="481.2" y="252" width="157.5" height="8" fill="#9b5de5" opacity="0.55"/>
+<text x="560.0" y="272" font-size="9" text-anchor="middle">other side 41</text>
+<polygon points="1011.0,205 1054.0,205 1060.0,211 1054.0,217 1011.0,217" fill="#3b6fb6"><title>alpha/beta fold hydrolase 3479970-3480699 +</title></polygon>
+<text x="1011.0" y="201" font-size="8" fill="#333">alpha/beta</text>
+<polygon points="855.6,205 988.1,205 994.1,211 988.1,217 855.6,217" fill="#3b6fb6"><title>helix-turn-helix domain-containing prote 3480819-3481806 +</title></polygon>
+<polygon points="638.8,229 644.8,223 838.9,223 838.9,235 644.8,235" fill="#3b6fb6"><title>decarboxylating NADP(+)-dependent phosph 3481925-3483350 -</title></polygon>
+<text x="638.8" y="245" font-size="8" fill="#333">decarboxylating NADP(+)-dependent phosph</text>
+<polygon points="413.1,205 559.9,205 565.9,211 559.9,217 413.1,217" fill="#3b6fb6"><title>gluconokinase 3483369-3483876 +</title></polygon>
+<polygon points="238.7,205 386.5,205 392.5,211 386.5,217 238.7,217" fill="#3b6fb6"><title>PA0069 family radical SAM protein 3484023-3485118 +</title></polygon>
+<polygon points="137.1,229 143.1,223 221.8,223 221.8,235 143.1,235" fill="#3b6fb6"><title>GbsR/MarR family transcriptional regulat 3485239-3485842 -</title></polygon>
+<polygon points="69.5,229 75.5,223 129.4,223 129.4,235 75.5,235" fill="#3b6fb6"><title>thiol-disulfide oxidoreductase DCC famil 3485897-3486323 -</title></polygon>
+<polygon points="60.0,229 66.0,223 67.7,223 67.7,235 66.0,235" fill="#3b6fb6"><title>cyclopropane-fatty-acyl-phospholipid syn 3486336-3487299 -</title></polygon>
+<text x="60" y="286" font-size="9" fill="#666">NZ_AP028664.1 site 3483350  other-side gap 41 bp  this call's core 2975204-2976326</text>
+<text x="4" y="304" font-size="11" font-weight="bold">SAMD00623152 NZ_AP028664.1 (partner, - strand, unresolved, pair P00111)</text>
+<line x1="60" y1="340" x2="1060" y2="340" stroke="#888"/>
+<rect x="342.1" y="372" width="140.4" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="412.3" y="392" font-size="9" text-anchor="middle">U'</text>
+<rect x="633.6" y="372" width="140.4" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="703.8" y="392" font-size="9" text-anchor="middle">D'</text>
+<rect x="482.5" y="372" width="151.1" height="8" fill="#ffffff" opacity="0.55"/>
+<polygon points="1010.3,325 1054.0,325 1060.0,331 1054.0,337 1010.3,337" fill="#3b6fb6"><title>alpha/beta fold hydrolase 3479970-3480699 +</title></polygon>
+<text x="1010.3" y="321" font-size="8" fill="#333">alpha/beta</text>
+<polygon points="854.9,325 987.4,325 993.4,331 987.4,337 854.9,337" fill="#3b6fb6"><title>helix-turn-helix domain-containing prote 3480819-3481806 +</title></polygon>
+<polygon points="638.1,349 644.1,343 838.2,343 838.2,355 644.1,355" fill="#3b6fb6"><title>decarboxylating NADP(+)-dependent phosph 3481925-3483350 -</title></polygon>
+<text x="638.1" y="365" font-size="8" fill="#333">decarboxylating NADP(+)-dependent phosph</text>
+<line x1="482.5" y1="331" x2="633.6" y2="331" stroke="#555" stroke-dasharray="2,2"/>
+<polygon points="413.1,325 476.5,325 482.5,331 476.5,337 413.1,337" fill="#3b6fb6"><title>gluconokinase 3483369-3483382 +</title></polygon>
+<polygon points="633.6,325 633.6,325 635.4,331 633.6,337 633.6,337" fill="#3b6fb6"><title>gluconokinase 3483382-3483876 +</title></polygon>
+<polygon points="238.7,325 386.5,325 392.5,331 386.5,337 238.7,337" fill="#3b6fb6"><title>PA0069 family radical SAM protein 3484023-3485118 +</title></polygon>
+<polygon points="137.1,349 143.1,343 221.8,343 221.8,355 143.1,355" fill="#3b6fb6"><title>GbsR/MarR family transcriptional regulat 3485239-3485842 -</title></polygon>
+<polygon points="69.5,349 75.5,343 129.4,343 129.4,355 75.5,355" fill="#3b6fb6"><title>thiol-disulfide oxidoreductase DCC famil 3485897-3486323 -</title></polygon>
+<polygon points="60.0,349 66.0,343 67.7,343 67.7,355 66.0,355" fill="#3b6fb6"><title>cyclopropane-fatty-acyl-phospholipid syn 3486336-3487299 -</title></polygon>
+<text x="60" y="406" font-size="9" fill="#666">NZ_AP028664.1 site 3483382  other-side gap 0 bp  this call's core 2975213-2976289</text>
+<rect x="482.5" y="338" width="151.1" height="4" fill="#f4f4f4"/><text x="558.0" y="392" font-size="9" text-anchor="middle" fill="#a5372f">empty site</text>
+</svg>

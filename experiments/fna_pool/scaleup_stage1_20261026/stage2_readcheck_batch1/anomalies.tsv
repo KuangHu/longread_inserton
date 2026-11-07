@@ -1,0 +1,10 @@
+kind	test_id	locus_id	global_locus_id	carrier	partner	C_verdict	E_verdict	C_counts	E_counts	difference_class	core_len
+side_with_reads_insufficient	T_cac106d116cc	L_6d359bab178f	comamonadaceae:L_6d359bab178f	SAMEA115676870	SAMEA115676832	consistent	insufficient	P26/A0 matched P26/A0 amb0 lamb0 off0	P0/A0 matched P0/A0 amb0 lamb0 off0	presence_absence	1168
+side_with_reads_insufficient	T_35068f8d6e71	L_5200f7ff1bc6	comamonadaceae:L_5200f7ff1bc6	SAMEA115676864	SAMEA115676839	insufficient	consistent	P0/A0 matched P0/A0 amb0 lamb0 off0	P0/A17 matched P0/A17 amb0 lamb0 off0	presence_absence	602
+side_with_reads_insufficient	T_7eb6f876cfb2	L_69cc79279671	comamonadaceae:L_69cc79279671	SAMEA115676863	SAMEA115676864	consistent	insufficient	P13/A0 matched P13/A0 amb0 lamb0 off0	P0/A0 matched P0/A0 amb0 lamb0 off0	presence_absence	1505
+side_with_reads_insufficient	T_feb4dbe9c11a	L_8cfc807f1281	comamonadaceae:L_8cfc807f1281	SAMEA115676864	SAMN05444679	insufficient	no_reads	P0/A0 matched P0/A0 amb0 lamb0 off0	P0/A0 matched P0/A0 amb0 lamb0 off0	presence_absence	1518
+side_with_reads_insufficient	T_d3dbece3227c	L_297ed8416122	comamonadaceae:L_297ed8416122	SAMEA115676864	SAMN41069998	insufficient	no_reads	P0/A0 matched P0/A0 amb0 lamb0 off0	P0/A0 matched P0/A0 amb0 lamb0 off0	presence_absence	1078
+run_linked_not_usable				SAMN11265848				SRR31313491			
+run_not_local				SAMN51281050				SRR40356297			
+run_not_local				SAMN51658612				SRR40356277			
+run_not_local				SAMN51658615				SRR40356274			

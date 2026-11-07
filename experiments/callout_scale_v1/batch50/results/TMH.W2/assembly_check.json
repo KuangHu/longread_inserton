@@ -1,0 +1,56 @@
+{
+  "sample": "TMH_W2",
+  "gca": "GCA_050847365.1",
+  "gcf": "GCF_050847365.1",
+  "identical_sequence_sets": true,
+  "choice": "gcf_sequence_and_annotation",
+  "gca_records": {
+    "CP193792.1": [
+      3834119,
+      "d78d2b3d99f2a1ffbf7d4b239e46a5a5a5bdd4a7cc2f01a12d0f65dd744d9ab7"
+    ],
+    "CP193793.1": [
+      2672119,
+      "9eda48f2d88a74ef5d0801cd36e857fa22e4c238e58f95e9d5b37b7b6461b4e8"
+    ],
+    "CP193794.1": [
+      387751,
+      "d7b787eca03fb884eef2c648e5a28444a9492c0873171df15ae61cbc053e9166"
+    ],
+    "CP193795.1": [
+      306689,
+      "a5a6fdb248ca0d423b28cf3c8f129711f04400fcd6d4f421798d80b2176d9d05"
+    ],
+    "CP193796.1": [
+      210405,
+      "265571f2ca2f3c186c440eb25b819ea710d392380b36efab81fc6630edf36bf2"
+    ]
+  },
+  "gcf_records": {
+    "NZ_CP193792.1": [
+      3834119,
+      "d78d2b3d99f2a1ffbf7d4b239e46a5a5a5bdd4a7cc2f01a12d0f65dd744d9ab7"
+    ],
+    "NZ_CP193793.1": [
+      2672119,
+      "9eda48f2d88a74ef5d0801cd36e857fa22e4c238e58f95e9d5b37b7b6461b4e8"
+    ],
+    "NZ_CP193794.1": [
+      387751,
+      "d7b787eca03fb884eef2c648e5a28444a9492c0873171df15ae61cbc053e9166"
+    ],
+    "NZ_CP193795.1": [
+      306689,
+      "a5a6fdb248ca0d423b28cf3c8f129711f04400fcd6d4f421798d80b2176d9d05"
+    ],
+    "NZ_CP193796.1": [
+      210405,
+      "265571f2ca2f3c186c440eb25b819ea710d392380b36efab81fc6630edf36bf2"
+    ]
+  },
+  "cds_features": 6810,
+  "fasta": "/global/scratch/users/kh36969/longread_callout/data/assemblies_batch50/TMH.W2/GCF_050847365.1/ncbi_dataset/data/GCF_050847365.1/GCF_050847365.1_Toby_Cupriavidus_sp_TMH.W2_genomic.fna",
+  "fasta_sha256": "5efde2c6b3a5f5c0e3b2a4bdbc7f5846c861b36a16d22db950fc481063228db0",
+  "gbff": "/global/scratch/users/kh36969/longread_callout/data/assemblies_batch50/TMH.W2/GCF_050847365.1/ncbi_dataset/data/GCF_050847365.1/genomic.gbff",
+  "gbff_sha256": "0cc3ba633c9f65bbf8e6c4f23cf709c15499674b2ab2c85e915f4ef68a1306c4"
+}

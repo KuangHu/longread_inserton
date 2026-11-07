@@ -1,0 +1,150 @@
+{
+  "schema": "fna_pool_s2_v2",
+  "samples": 2499,
+  "skani_pairs_reported": 2170003,
+  "possible_pairs": 3121251,
+  "samples_without_skani_output": [
+    "SAMD00061100",
+    "SAMD00154410",
+    "SAMEA115608175",
+    "SAMEA6372300",
+    "SAMN02584966",
+    "SAMN02604289",
+    "SAMN02604338",
+    "SAMN11586500",
+    "SAMN11586503",
+    "SAMN14604835",
+    "SAMN20395209",
+    "SAMN37373265",
+    "SAMN38194231"
+  ],
+  "samples_without_skani_output_note": "no skani output under its default screen (~80% ANI k-mer screen) and AF >= 15 reporting; not evidence that no local homology exists",
+  "pair_status": {
+    "in_pair_table": 2486,
+    "no_pair_selected_pending_review": 13
+  },
+  "pair_status_linked": {
+    "in_pair_table": 187
+  },
+  "clone_groups": 1551,
+  "clone_groups_size_gt1": 269,
+  "species_clusters": 270,
+  "species_cluster_sizes": {
+    "1": 150,
+    "2": 47,
+    "3": 19,
+    "4": 9,
+    "5": 5,
+    "6": 5,
+    "7": 2,
+    "8": 5,
+    "9": 1,
+    "10": 2,
+    "11": 2,
+    "12": 1,
+    "13": 1,
+    "17": 2,
+    "19": 1,
+    "21": 1,
+    "23": 3,
+    "30": 1,
+    "34": 1,
+    "38": 1,
+    "40": 1,
+    "45": 1,
+    "47": 1,
+    "52": 1,
+    "70": 1,
+    "75": 1,
+    "101": 1,
+    "121": 1,
+    "337": 1,
+    "350": 1,
+    "494": 1
+  },
+  "species_clusters_ge_10": 27,
+  "genera": 16,
+  "source_rules": "batch50_source_class+v2(word-bounded plant keywords; '<facility> plant' -> facility)",
+  "source_class": {
+    "unclear": 1415,
+    "clinical/animal": 121,
+    "environmental": 169,
+    "plant": 793,
+    "enrichment": 1
+  },
+  "source_class_linked": {
+    "unclear": 113,
+    "environmental": 35,
+    "plant": 34,
+    "clinical/animal": 5
+  },
+  "pairs": 8710,
+  "pairs_with_multiple_reasons": 41,
+  "pairs_by_reason": {
+    "audit_multi_project_all_vs_all": 171,
+    "clone_partner": 872,
+    "distance_tier_ani_90_95": 5,
+    "distance_tier_ani_95_97": 5,
+    "distance_tier_ani_97_99": 5,
+    "distance_tier_ani_99.99_100": 5,
+    "distance_tier_ani_99_99.99": 5,
+    "distance_tier_ani_lt90": 5,
+    "distance_tier_no_skani_output_same_genus": 5,
+    "nearest_other_species": 2388,
+    "species_neighbour": 5285
+  },
+  "pairs_same_cluster_below_species_threshold": [
+    "P01344",
+    "P03264",
+    "P05973",
+    "P08394"
+  ],
+  "pairs_both_linked": 125,
+  "pairs_either_linked": 977,
+  "audit_clusters": {
+    "single_project": {
+      "id": "",
+      "size": 0,
+      "linked": 0,
+      "bioprojects": 0,
+      "organisms": {}
+    },
+    "multi_project": {
+      "id": "SAMN05560685",
+      "size": 19,
+      "linked": 0,
+      "bioprojects": 17,
+      "organisms": {
+        "Pantoea sp. Ae16": 1,
+        "Pantoea eucrina": 8,
+        "Pantoea sp. BRM17": 1,
+        "Pantoea sp. ICBG 1758": 1,
+        "Pantoea sp. RIT413": 1,
+        "Pantoea sp. 3_1284": 1,
+        "Pantoea sp. PSNIH1": 1,
+        "Pantoea sp. Bo_10": 1,
+        "Pantoea sp. Bo_7": 1,
+        "Pantoea sp. M_9": 1,
+        "Pantoea sp. Acro-807": 1,
+        "Pantoea sp. SYBGC1": 1
+      }
+    }
+  },
+  "distance_tier_candidates": {
+    "ani_90_95": 62540,
+    "ani_95_97": 20338,
+    "ani_97_99": 147154,
+    "ani_99.99_100": 20116,
+    "ani_99_99.99": 40960,
+    "ani_lt90": 1019956,
+    "no_skani_output_same_genus": 56203
+  },
+  "settings": {
+    "clone": "ANI >= 99.99 and AF >= 95 both",
+    "species": "single linkage over pairs with ANI >= 95 and AF >= 50 both; a cluster label does not mean every member pair meets it (pair_meets_species_threshold)",
+    "neighbours": "1 clone partner, 3 nearest same-cluster non-clone, 1 nearest other-cluster (skani output)",
+    "audit": "all pairs of one single-project and one multi-project cluster with 10-20 members",
+    "distance_tiers": "same genus, different BioProject; up to 5 pairs per tier ['ani_99.99_100', 'ani_99_99.99', 'ani_97_99', 'ani_95_97', 'ani_90_95', 'ani_lt90'] + no skani output; linked first, then SHA256 order",
+    "note": "initial settings for this pool, not calibrated thresholds; S3 must judge each pair from its own alignment"
+  }
+}

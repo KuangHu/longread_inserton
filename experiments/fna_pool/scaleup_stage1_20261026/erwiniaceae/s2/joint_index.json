@@ -1,0 +1,19 @@
+{
+  "joint_fna": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/erwiniaceae/s2/joint.fna.gz",
+  "joint_fna_sha256": "3c4851830e60c899247769192d68475f76e82c4fc9461c924a3d7263767698d6",
+  "samples": 2499,
+  "contigs": 141566,
+  "contig_bp": 11085581785,
+  "header": "sample_id|assembly|contig",
+  "check": "every joint record SHA256 equals the S1 record SHA256 of its source FNA",
+  "pool_rows": 2500,
+  "excluded_not_verified": 1,
+  "annotation_status": {
+    "annotation_missing": 23,
+    "present": 2476
+  },
+  "gff_features_out_of_range": 0,
+  "contig_index": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/erwiniaceae/s2/contig_index.tsv.gz",
+  "contig_index_sha256": "893b68c4b1b99dba6a4279fa907a7d9785369b3db7f9217eb2521c87c06902d8",
+  "gff_features_origin_spanning": 1111
+}

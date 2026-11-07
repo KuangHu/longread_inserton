@@ -1,0 +1,83 @@
+{
+  "subset": "delftia",
+  "version": "core_context_graph_v0.1",
+  "evidence_source": "assembly_only",
+  "production_ready": false,
+  "samples": 7,
+  "contigs": 8,
+  "total_bp": 45419660,
+  "pangraph": "pangraph 1.4.0",
+  "binary_sha256": "462949f3bd0988054942287ffb820c1cc60731ac0cf99179fbea6189ea518e1a",
+  "graph_verify_passed": true,
+  "graph_sha256": "2604757008b1ac12c9328fd1c6775770772c585d2aa970c87fc96b6754e54b97",
+  "build_seconds": 175.738,
+  "cost": {
+    "build": {
+      "wall": "2:58.19",
+      "max_rss_gb": 3.34
+    },
+    "call": {
+      "wall": "13:30.42",
+      "max_rss_gb": 0.36
+    }
+  },
+  "graph_blocks": 5106,
+  "repeated_blocks_any_length": 3590,
+  "repeated_block_length_classes": {
+    "some_in_range": 2659,
+    "all_ge_2500": 931
+  },
+  "repeated_block_groups_in_range": 2656,
+  "groups_spanning_2plus_samples": 2613,
+  "groups_single_sample_only": 43,
+  "occurrences": 11319,
+  "occurrences_second_copy_same_sample": 574,
+  "context_pairs": 25595,
+  "relations": {
+    "similar_flanks_candidate_same_context": 9890,
+    "different_adjacency_low_flank_similarity_candidate": 1474,
+    "context_unresolved": 10027,
+    "core_similarity_below_threshold": 4150,
+    "edge_or_missing_context": 54
+  },
+  "groups_multicopy_in_some_sample": 135,
+  "groups_with_different_context_candidate": 257,
+  "groups_with_different_context_candidate_multicopy": 53,
+  "relations_by_copy_structure": {
+    "multicopy_group:cross_sample_pair": {
+      "similar_flanks_candidate_same_context": 660,
+      "different_adjacency_low_flank_similarity_candidate": 336,
+      "context_unresolved": 1989,
+      "core_similarity_below_threshold": 1812,
+      "edge_or_missing_context": 13
+    },
+    "multicopy_group:same_sample_pair": {
+      "similar_flanks_candidate_same_context": 24,
+      "different_adjacency_low_flank_similarity_candidate": 336,
+      "context_unresolved": 625,
+      "core_similarity_below_threshold": 409,
+      "edge_or_missing_context": 2
+    },
+    "single_copy_per_sample_group:cross_sample_pair": {
+      "similar_flanks_candidate_same_context": 9206,
+      "different_adjacency_low_flank_similarity_candidate": 802,
+      "context_unresolved": 7413,
+      "core_similarity_below_threshold": 1929,
+      "edge_or_missing_context": 39
+    }
+  },
+  "truncated_pair_reviews": 0,
+  "excluded_circular_nodes": 0,
+  "boundary": {
+    "edge_limited_occurrences": 10,
+    "occurrences_within_500bp_of_contig_end": 10,
+    "occurrences_next_to_another_repeated_block": 10920,
+    "occurrences_with_a_feature_cut_by_core_end": 8043,
+    "occurrences_with_no_feature_overlap": 811,
+    "occurrences_with_1_2_complete_cds_inside_and_no_cut": 1888,
+    "note": "GFF3 overlap preview only; S4 coding checks not applied; graph blocks are not complete insertions"
+  },
+  "case_pair_rule": "are chosen by a fixed rule, not by eye: per relation, the pair from the group with\nthe most samples (then most occurrences, then id) whose two occurrences are in different samples\nif any exist, then the smallest occurrence ids.",
+  "annotation_complete": false,
+  "site_groups_computed": false
+}

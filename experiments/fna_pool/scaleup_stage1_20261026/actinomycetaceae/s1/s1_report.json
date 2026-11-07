@@ -1,0 +1,25 @@
+{
+  "manifest": "scaleup_stage1_20261026/actinomycetaceae/download_manifest.tsv",
+  "rows": 2262,
+  "status": {
+    "verified": 2262
+  },
+  "by_purpose": {
+    "gca_identity_check": {
+      "verified": 1123
+    },
+    "primary": {
+      "verified": 1139
+    }
+  },
+  "annotation": {
+    "present": 1132,
+    "annotation_missing": 7
+  },
+  "pair_checks": {
+    "identical_sequences": 1123
+  },
+  "bytes": 7970944677,
+  "files": 6788,
+  "failed": []
+}

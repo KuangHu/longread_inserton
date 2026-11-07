@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-24",
+  "ena_family_query": "tax_tree(119060) AND instrument_platform=\"OXFORD_NANOPORE\" AND library_source=\"GENOMIC\"",
+  "ena_runs_returned": 867,
+  "ena_biosamples_returned": 817,
+  "ncbi_complete_genbank_assemblies_returned": 1489,
+  "exact_biosample_complete_matches": 337,
+  "exact_biosample_complete_biosamples": 316,
+  "slot10": {
+    "order": "10",
+    "sample_id": "Bs869T2",
+    "species": "Burkholderia seminalis",
+    "run": "SRR14075918",
+    "biosample": "SAMN02720836",
+    "assembly": "GCA_000705535.2",
+    "tier": "complete",
+    "records": "3",
+    "largest_bp": "3012498",
+    "ani_to_AR20_38": "not_run",
+    "caveat": "Complete; plant endophyte 869T2 from surface-sterilized vetiver roots; lowest-accession eligible family-level ONT/Complete exact-BioSample match"
+  },
+  "dd10_resolution": {
+    "run": "SRR33434047",
+    "biosample": "SAMN47339132",
+    "assembly": "GCA_049177125.1",
+    "doi": "10.1128/mra.00286-25",
+    "resolution": "The 2026 genome announcement describes DD10 as a single-colony cultured isolate with Nanopore DNA prepared from LB liquid culture; the MISAG BioSample template is retained as a raw-metadata conflict but is not treated as single-cell MDA evidence."
+  }
+}

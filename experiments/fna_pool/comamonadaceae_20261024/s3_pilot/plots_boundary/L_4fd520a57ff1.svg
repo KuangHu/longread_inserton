@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="420" font-family="sans-serif">
+<rect width="100%" height="100%" fill="white"/>
+<text x="4" y="16" font-size="12">L_4fd520a57ff1  SAMD00076718  core 44014 bp  two_flank_anchored  support partner_mixed  boundary partner_dependent  tandem False  core copies carrier/partner 1/0</text>
+<line x1="120.0" y1="30" x2="120.0" y2="412" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<line x1="1000.0" y1="30" x2="1000.0" y2="412" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<text x="4" y="64" font-size="11" font-weight="bold">SAMD00076718 NZ_AP026738.1 (carrier)</text>
+<line x1="60" y1="100" x2="1060" y2="100" stroke="#888"/>
+<rect x="100.0" y="132" width="20.0" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="110.0" y="152" font-size="9" text-anchor="middle">U</text>
+<rect x="120.0" y="132" width="880.0" height="8" fill="#e76f51" opacity="0.55"/>
+<text x="560.0" y="152" font-size="9" text-anchor="middle">core 44014</text>
+<rect x="1000.0" y="132" width="20.0" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="1010.0" y="152" font-size="9" text-anchor="middle">D</text>
+<polygon points="60.0,85 71.5,85 77.5,91 71.5,97 60.0,97" fill="#3b6fb6"><title>fatty acid desaturase 4439958-4440963 +</title></polygon>
+<polygon points="78.8,109 83.3,103 83.3,103 83.3,115 83.3,115" fill="#3b6fb6"><title>sulfurtransferase TusA family protein 4441027-4441255 -</title></polygon>
+<polygon points="84.7,109 90.7,103 97.1,103 97.1,115 90.7,115" fill="#3b6fb6"><title>NUDIX domain-containing protein 4441323-4441947 -</title></polygon>
+<polygon points="99.3,109 105.3,103 117.4,103 117.4,115 105.3,115" fill="#3b6fb6"><title>cysteine synthase CysM 4442056-4442962 -</title></polygon>
+<polygon points="118.2,85 118.2,85 119.9,91 118.2,97 118.2,97" fill="#b68a3b"><title>tRNA-Leu 4443002-4443087 +</title></polygon>
+<polygon points="135.2,85 135.2,85 140.3,91 135.2,97 135.2,97" fill="#3b6fb6"><title>hypothetical protein 4443849-4444104 +</title></polygon>
+<polygon points="155.8,85 164.4,85 170.4,91 164.4,97 155.8,97" fill="#3b6fb6"><title>CatB-related O-acetyltransferase 4444879-4445611 +</title></polygon>
+<polygon points="171.4,85 186.4,85 192.4,91 186.4,97 171.4,97" fill="#3b6fb6"><title>alpha/beta hydrolase family protein 4445662-4446709 +</title></polygon>
+<polygon points="194.8,85 202.0,85 208.0,91 202.0,97 194.8,97" fill="#3b6fb6"><title>hypothetical protein 4446829-4447492 +</title></polygon>
+<polygon points="208.1,109 214.1,103 217.7,103 217.7,115 214.1,115" fill="#3b6fb6"><title>hypothetical protein 4447495-4447975 -</title></polygon>
+<polygon points="217.6,109 223.6,103 230.1,103 230.1,115 223.6,115" fill="#3b6fb6"><title>glycoside hydrolase family protein 4447971-4448595 -</title></polygon>
+<polygon points="230.0,109 234.3,103 234.3,103 234.3,115 234.3,115" fill="#3b6fb6"><title>hypothetical protein 4448591-4448807 -</title></polygon>
+<polygon points="235.5,109 241.5,103 273.1,103 273.1,115 241.5,115" fill="#3b6fb6"><title>hypothetical protein 4448868-4450749 -</title></polygon>
+<text x="235.5" y="125" font-size="8" fill="#333">hypothet</text>
+<polygon points="274.8,109 280.8,103 328.5,103 328.5,115 280.8,115" fill="#3b6fb6"><title>host specificity factor TipJ family phag 4450832-4453517 -</title></polygon>
+<polygon points="326.8,109 332.8,103 336.0,103 336.0,115 332.8,115" fill="#3b6fb6"><title>hypothetical protein 4453431-4453893 -</title></polygon>
+<polygon points="335.9,109 341.9,103 345.8,103 345.8,115 341.9,115" fill="#3b6fb6"><title>DUF1833 family protein 4453889-4454381 -</title></polygon>
+<polygon points="345.8,109 351.8,103 355.2,103 355.2,115 351.8,115" fill="#3b6fb6"><title>hypothetical protein 4454383-4454851 -</title></polygon>
+<polygon points="355.2,109 361.2,103 407.5,103 407.5,115 361.2,115" fill="#3b6fb6"><title>phage tail tape measure C-terminal domai 4454851-4457470 -</title></polygon>
+<text x="355.2" y="125" font-size="8" fill="#333">phage tail </text>
+<polygon points="408.3,109 413.0,103 413.0,103 413.0,115 413.0,115" fill="#3b6fb6"><title>phage tail assembly protein T 4457511-4457742 -</title></polygon>
+<polygon points="412.9,109 418.9,103 420.9,103 420.9,115 418.9,115" fill="#3b6fb6"><title>phage tail assembly chaperone family pro 4457738-4458137 -</title></polygon>
+<polygon points="420.8,109 426.8,103 430.9,103 430.9,115 426.8,115" fill="#3b6fb6"><title>phage tail tube protein 4458133-4458640 -</title></polygon>
+<polygon points="432.2,109 438.2,103 440.0,103 440.0,115 438.2,115" fill="#3b6fb6"><title>DUF3168 domain-containing protein 4458702-4459092 -</title></polygon>
+<polygon points="439.9,109 445.9,103 449.3,103 449.3,115 445.9,115" fill="#3b6fb6"><title>HK97-gp10 family putative phage morphoge 4459088-4459559 -</title></polygon>
+<polygon points="449.1,109 455.1,103 455.9,103 455.9,115 455.1,115" fill="#3b6fb6"><title>phage head closure protein 4459551-4459890 -</title></polygon>
+<polygon points="455.8,109 459.7,103 459.7,103 459.7,115 459.7,115" fill="#3b6fb6"><title>hypothetical protein 4459886-4460078 -</title></polygon>
+<polygon points="461.0,109 467.0,103 467.8,103 467.8,115 467.0,115" fill="#3b6fb6"><title>head-tail connector protein 4460147-4460486 -</title></polygon>
+<polygon points="467.7,109 472.6,103 472.6,103 472.6,115 472.6,115" fill="#3b6fb6"><title>hypothetical protein 4460482-4460725 -</title></polygon>
+<polygon points="473.6,109 479.6,103 500.5,103 500.5,115 479.6,115" fill="#3b6fb6"><title>phage major capsid protein 4460773-4462120 -</title></polygon>
+<polygon points="500.7,109 506.7,103 518.2,103 518.2,115 506.7,115" fill="#3b6fb6"><title>head maturation protease, ClpP-related 4462130-4463003 -</title></polygon>
+<polygon points="518.2,109 524.2,103 544.1,103 544.1,115 524.2,115" fill="#3b6fb6"><title>phage portal protein 4463006-4464302 -</title></polygon>
+<polygon points="544.0,109 550.0,103 578.5,103 578.5,115 550.0,115" fill="#3b6fb6"><title>terminase large subunit 4464298-4466023 -</title></polygon>
+<text x="544.0" y="125" font-size="8" fill="#333">termina</text>
+<polygon points="578.4,109 584.4,103 588.0,103 588.0,115 584.4,115" fill="#3b6fb6"><title>phage terminase small subunit P27 family 4466015-4466495 -</title></polygon>
+<polygon points="598.9,109 604.9,103 605.2,103 605.2,115 604.9,115" fill="#3b6fb6"><title>formyl transferase 4467040-4467355 -</title></polygon>
+<polygon points="604.9,109 609.9,103 609.9,103 609.9,115 609.9,115" fill="#3b6fb6"><title>hypothetical protein 4467344-4467593 -</title></polygon>
+<polygon points="612.8,109 618.8,103 620.8,103 620.8,115 618.8,115" fill="#3b6fb6"><title>Acb2/Tad1 domain-containing protein 4467736-4468138 -</title></polygon>
+<polygon points="625.6,109 631.6,103 638.8,103 638.8,115 631.6,115" fill="#3b6fb6"><title>hypothetical protein 4468375-4469035 -</title></polygon>
+<polygon points="639.0,109 644.3,103 644.3,103 644.3,115 644.3,115" fill="#3b6fb6"><title>hypothetical protein 4469049-4469310 -</title></polygon>
+<polygon points="644.1,109 650.1,103 651.6,103 651.6,115 650.1,115" fill="#3b6fb6"><title>dATP/dGTP diphosphohydrolase domain-cont 4469303-4469678 -</title></polygon>
+<polygon points="651.9,109 656.6,103 656.6,103 656.6,115 656.6,115" fill="#3b6fb6"><title>hypothetical protein 4469692-4469926 -</title></polygon>
+<polygon points="656.5,109 662.5,103 664.1,103 664.1,115 662.5,115" fill="#3b6fb6"><title>DUF1064 domain-containing protein 4469922-4470303 -</title></polygon>
+<polygon points="664.3,109 670.3,103 679.9,103 679.9,115 670.3,115" fill="#3b6fb6"><title>ATP-binding protein 4470311-4471091 -</title></polygon>
+<polygon points="679.8,109 685.8,103 695.4,103 695.4,115 685.8,115" fill="#3b6fb6"><title>helix-turn-helix domain-containing prote 4471090-4471870 -</title></polygon>
+<polygon points="695.4,109 701.4,103 710.0,103 710.0,115 701.4,115" fill="#3b6fb6"><title>phage antirepressor KilAC domain-contain 4471866-4472598 -</title></polygon>
+<polygon points="710.0,109 716.0,103 719.7,103 719.7,115 716.0,115" fill="#3b6fb6"><title>phage regulatory CII family protein 4472597-4473083 -</title></polygon>
+<polygon points="727.3,85 734.5,85 740.5,91 734.5,97 727.3,97" fill="#3b6fb6"><title>S24 family peptidase 4473463-4474126 +</title></polygon>
+<polygon points="740.6,109 745.9,103 745.9,103 745.9,115 745.9,115" fill="#3b6fb6"><title>hypothetical protein 4474129-4474393 -</title></polygon>
+<polygon points="756.9,85 756.9,85 759.6,91 756.9,97 756.9,97" fill="#3b6fb6"><title>hypothetical protein 4474943-4475081 +</title></polygon>
+<polygon points="760.8,85 760.8,85 764.7,91 760.8,97 760.8,97" fill="#3b6fb6"><title>hypothetical protein 4475137-4475332 +</title></polygon>
+<polygon points="765.9,85 784.2,85 790.2,91 784.2,97 765.9,97" fill="#3b6fb6"><title>recombination-associated protein RdgC 4475396-4476608 +</title></polygon>
+<polygon points="792.1,85 822.0,85 828.0,91 822.0,97 792.1,97" fill="#3b6fb6"><title>DNA cytosine methyltransferase 4476703-4478500 +</title></polygon>
+<text x="792.1" y="81" font-size="8" fill="#333">DNA cyt</text>
+<polygon points="829.1,85 851.4,85 857.4,91 851.4,97 829.1,97" fill="#3b6fb6"><title>hypothetical protein 4478555-4479968 +</title></polygon>
+<polygon points="857.3,85 857.3,85 862.4,91 857.3,97 857.3,97" fill="#3b6fb6"><title>hypothetical protein 4479964-4480222 +</title></polygon>
+<polygon points="862.4,85 862.4,85 867.3,91 862.4,97 862.4,97" fill="#3b6fb6"><title>hypothetical protein 4480221-4480464 +</title></polygon>
+<polygon points="871.6,85 873.5,85 879.5,91 873.5,97 871.6,97" fill="#3b6fb6"><title>hypothetical protein 4480681-4481077 +</title></polygon>
+<polygon points="889.4,85 891.3,85 897.3,91 891.3,97 889.4,97" fill="#3b6fb6"><title>hypothetical protein 4481570-4481966 +</title></polygon>
+<polygon points="898.5,109 904.5,103 909.4,103 909.4,115 904.5,115" fill="#3b6fb6"><title>hypothetical protein 4482024-4482573 -</title></polygon>
+<polygon points="911.6,85 915.6,85 921.6,91 915.6,97 911.6,97" fill="#3b6fb6"><title>class I SAM-dependent methyltransferase 4482683-4483181 +</title></polygon>
+<polygon points="926.2,85 926.2,85 930.5,91 926.2,97 926.2,97" fill="#3b6fb6"><title>phage protein 4483409-4483625 +</title></polygon>
+<polygon points="930.4,85 945.0,85 951.0,91 945.0,97 930.4,97" fill="#3b6fb6"><title>site-specific integrase 4483621-4484653 +</title></polygon>
+<polygon points="966.3,85 977.2,85 983.2,91 977.2,97 966.3,97" fill="#3b6fb6"><title>AlpA family phage regulatory protein 4485419-4486262 +</title></polygon>
+<polygon points="985.8,85 985.8,85 991.8,91 985.8,97 985.8,97" fill="#3b6fb6"><title>hypothetical protein 4486391-4486691 +</title></polygon>
+<polygon points="991.6,85 991.6,85 997.2,91 991.6,97 991.6,97" fill="#3b6fb6"><title>hypothetical protein 4486681-4486960 +</title></polygon>
+<polygon points="1001.1,109 1007.1,103 1016.4,103 1016.4,115 1007.1,115" fill="#3b6fb6"><title>LuxR C-terminal-related transcriptional  4487155-4487923 -</title></polygon>
+<polygon points="1026.0,109 1029.6,103 1029.6,103 1029.6,115 1029.6,115" fill="#3b6fb6"><title>hypothetical protein 4488404-4488584 -</title></polygon>
+<polygon points="1028.0,85 1034.4,85 1040.4,91 1034.4,97 1028.0,97" fill="#3b6fb6"><title>hypothetical protein 4488501-4489125 +</title></polygon>
+<polygon points="1042.0,85 1050.8,85 1056.8,91 1050.8,97 1042.0,97" fill="#3b6fb6"><title>hypothetical protein 4489201-4489942 +</title></polygon>
+<polygon points="1057.4,85 1057.4,85 1060.0,91 1057.4,97 1057.4,97" fill="#3b6fb6"><title>hypothetical protein 4489972-4490305 +</title></polygon>
+<text x="60" y="166" font-size="9" fill="#666">NZ_AP026738.1:4440089-4490103  core 4443089-4487103</text>
+<text x="4" y="184" font-size="11" font-weight="bold">SAMN38562701 NZ_CP139994.1 (partner, + strand, two_flank_anchored, pair P00022)</text>
+<line x1="60" y1="220" x2="1060" y2="220" stroke="#888"/>
+<rect x="100.0" y="252" width="20.0" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="110.0" y="272" font-size="9" text-anchor="middle">U'</text>
+<rect x="1000.0" y="252" width="20.0" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="1010.0" y="272" font-size="9" text-anchor="middle">D'</text>
+<rect x="120.0" y="252" width="880.0" height="8" fill="#9b5de5" opacity="0.55"/>
+<text x="560.0" y="272" font-size="9" text-anchor="middle">other side 526</text>
+<polygon points="60.0,205 69.6,205 75.6,211 69.6,217 60.0,217" fill="#3b6fb6"><title>UTP--glucose-1-phosphate uridylyltransfe 4307784-4308672 +</title></polygon>
+<polygon points="77.0,229 81.6,223 81.6,223 81.6,235 81.6,235" fill="#3b6fb6"><title>sulfurtransferase TusA family protein 4308743-4308971 -</title></polygon>
+<polygon points="82.9,229 88.9,223 95.4,223 95.4,235 88.9,235" fill="#3b6fb6"><title>NUDIX domain-containing protein 4309039-4309663 -</title></polygon>
+<polygon points="99.3,229 105.3,223 117.4,223 117.4,235 105.3,235" fill="#3b6fb6"><title>cysteine synthase CysM 4309860-4310766 -</title></polygon>
+<polygon points="118.2,205 118.2,205 119.9,211 118.2,217 118.2,217" fill="#b68a3b"><title>tRNA-Leu 4310806-4310891 +</title></polygon>
+<polygon points="463.0,205 696.2,205 702.2,211 696.2,217 463.0,217" fill="#3b6fb6"><title>hypothetical protein 4311098-4311242 +</title></polygon>
+<text x="463.0" y="201" font-size="8" fill="#333">hypothetical protein</text>
+<polygon points="1001.1,229 1007.1,223 1016.4,223 1016.4,235 1007.1,235" fill="#3b6fb6"><title>LuxR C-terminal-related transcriptional  4311471-4312239 -</title></polygon>
+<polygon points="1028.0,205 1034.4,205 1040.4,211 1034.4,217 1028.0,217" fill="#3b6fb6"><title>hypothetical protein 4312817-4313441 +</title></polygon>
+<polygon points="1048.0,205 1050.8,205 1056.8,211 1050.8,217 1048.0,217" fill="#3b6fb6"><title>hypothetical protein 4313820-4314258 +</title></polygon>
+<text x="60" y="286" font-size="9" fill="#666">NZ_CP139994.1 site 4310893  other-side gap 526 bp  this call's core 4443089-4487103</text>
+<text x="4" y="304" font-size="11" font-weight="bold">SAMD00411011 NZ_AP025193.1 (partner, + strand, unresolved, pair P00007)</text>
+<line x1="60" y1="340" x2="1060" y2="340" stroke="#888"/>
+<rect x="98.8" y="372" width="20.0" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="108.8" y="392" font-size="9" text-anchor="middle">U'</text>
+<rect x="953.0" y="372" width="20.0" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="963.0" y="392" font-size="9" text-anchor="middle">D'</text>
+<rect x="118.8" y="372" width="834.2" height="8" fill="#ffffff" opacity="0.55"/>
+<polygon points="60.0,325 69.3,325 75.3,331 69.3,337 60.0,337" fill="#3b6fb6"><title>UTP--glucose-1-phosphate uridylyltransfe 4009524-4010412 +</title></polygon>
+<polygon points="77.0,349 81.6,343 81.6,343 81.6,355 81.6,355" fill="#3b6fb6"><title>sulfurtransferase TusA family protein 4010499-4010727 -</title></polygon>
+<polygon points="82.9,349 88.9,343 95.4,343 95.4,355 88.9,355" fill="#3b6fb6"><title>NUDIX domain-containing protein 4010795-4011419 -</title></polygon>
+<polygon points="99.3,349 105.3,343 117.4,343 117.4,355 105.3,355" fill="#3b6fb6"><title>cysteine synthase CysM 4011616-4012522 -</title></polygon>
+<line x1="118.8" y1="331" x2="953.0" y2="331" stroke="#555" stroke-dasharray="2,2"/>
+<polygon points="118.2,325 118.2,325 118.8,331 118.2,337 118.2,337" fill="#b68a3b"><title>tRNA-Leu 4012562-4012590 +</title></polygon>
+<polygon points="953.0,325 953.0,325 954.1,331 953.0,337 953.0,337" fill="#b68a3b"><title>tRNA-Leu 4012590-4012647 +</title></polygon>
+<polygon points="964.3,325 975.4,325 981.4,331 975.4,337 964.3,337" fill="#3b6fb6"><title>AlpA family phage regulatory protein 4013159-4014011 +</title></polygon>
+<polygon points="990.1,349 996.1,343 1005.4,343 1005.4,355 996.1,355" fill="#3b6fb6"><title>LuxR C-terminal-related transcriptional  4014445-4015213 -</title></polygon>
+<polygon points="1015.1,349 1018.7,343 1018.7,343 1018.7,355 1018.7,355" fill="#3b6fb6"><title>hypothetical protein 4015695-4015875 -</title></polygon>
+<polygon points="1017.0,325 1023.5,325 1029.5,331 1023.5,337 1017.0,337" fill="#3b6fb6"><title>hypothetical protein 4015792-4016416 +</title></polygon>
+<polygon points="1037.0,325 1039.8,325 1045.8,331 1039.8,337 1037.0,337" fill="#3b6fb6"><title>hypothetical protein 4016795-4017233 +</title></polygon>
+<polygon points="1046.4,325 1047.1,325 1053.1,331 1047.1,337 1046.4,337" fill="#3b6fb6"><title>hypothetical protein 4017263-4017596 +</title></polygon>
+<text x="60" y="406" font-size="9" fill="#666">NZ_AP025193.1 site 4012590  other-side gap 0 bp  this call's core 4443030-4484750</text>
+<rect x="118.8" y="338" width="834.2" height="4" fill="#f4f4f4"/><text x="535.9" y="392" font-size="9" text-anchor="middle" fill="#a5372f">empty site</text>
+</svg>

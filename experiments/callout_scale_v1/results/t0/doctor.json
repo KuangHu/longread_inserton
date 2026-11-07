@@ -1,0 +1,58 @@
+{
+  "pals": {
+    "available": true,
+    "path": "$PROJ/env/bin/pals",
+    "sha256": "7fc935c4bdcbaca135ec4619a0b021d78eb9d6f8aba29aee5812fed1d32ce8f8",
+    "banner": "\nPALS v1.0\nhttp://www.drive5.com/pals\nWritten by Bob Edgar and Gene Myers.\nThis software is donated to the public domain.\nPlease visit web site for requested citation.\n\n\nUsage:\n    pals -target <fastafile> -query <fastafile>\n    pals -self <fastafile>\n\nOptions:\n    -out <outfile>       (default standard output)\n    -fwdonly             don't align reverse strand\n    -filterout <file>    save filter hits to file\n\nAlignment parameters can be specified in three ways:\n    (1) Defaults         -length 400 -pctid 94\n    (2) Specify -length <minhitlength> -pctid <minhitid>\n    (3) Specify all filter and d.p. parameters:\n           -wordsize     Filter word size\n           -seedlength   Seed hit length\n           -seeddiffs    Max #diffs in seed hit\n           -length       Min length of final hit\n           -pctid        Min %id of final hit\n           -tubeoffset   (Optional)\n\nFor further information, please see the User Guide.\n\nMust specify either -self or both -target and -query\n",
+    "returncode": 1
+  },
+  "piler2": {
+    "available": true,
+    "path": "$PROJ/env/bin/piler2",
+    "sha256": "c99d545feef5b40c8eb0e07e6f418198fae2506d24227c58104118df54731b64",
+    "banner": "\nPILER v1.0\nhttp://www.drive5.com/piler\nWritten by Robert C. Edgar\nThis software is donated to the public domain.\nPlease visit web site for requested citation.\n\nUsage:\n  piler -trs <hitfile> -out <trsfile> [options]\n  piler -trs2fasta <trsfile> -seq <fastafile> [-path <path>] [-maxfam <maxfam>]\n  piler -cons <alnfile> -out <fastafile> -label <label>\n  piler -annot <gff> -rep <repfile> -out <annotfile>\n  piler -help\n  piler -version\n\nUse -quiet to suppress progress messages\n\n-trs options:\n  -mincover <n>\n  -maxlengthdiffpct <n>\n  -piles <pilefile>\n  -images <imagefile>\n  -multihit\n\nFor further information, please see the User Guide.\n\n** Command line error** No command specified\n",
+    "returncode": 1
+  },
+  "muscle": {
+    "available": true,
+    "path": "$PROJ/env/msi/bin/muscle",
+    "sha256": "ee852e2f932d1743db002dc409fd7449fa47ec94289d9eda3e73419e866406ff",
+    "banner": "MUSCLE v3.8.1551 by Robert C. Edgar\n",
+    "returncode": 0
+  },
+  "build_lmer_table": {
+    "available": true,
+    "path": "$PROJ/env/bin/build_lmer_table",
+    "sha256": "1c945a5e1bd338dd8e05d06a3a820b23163a95c698c4fe279e6bcd61c40274e9",
+    "banner": "build_lmer_table Version 1.0.7\n\nUsage:\n   build_lmer_table -l <l> -sequence <seq> -freq <output> [opts]\n       -tandem <d> --- tandem distance window (def: 500)\n       -min <#> --- smallest number of required lmers (def: 3)\n       -v --- output a small amount of debugging information.\n",
+    "returncode": 1
+  },
+  "RepeatScout": {
+    "available": true,
+    "path": "$PROJ/env/bin/RepeatScout",
+    "sha256": "ebea49aa4a701812c98583ba1ba3e2247c114302bd43cb8b14567049dce46f3a",
+    "banner": "RepeatScout Version 1.0.7\n\nUsage: \nRepeatScout [opts][-ranges <file>] -sequence <file> -output <file> -freq <file> -l #\n     -sequence <file>  # file containing sequence data (FASTA format)\n     -output <file>    # file to write identified consensi to (FASTA format)\n     -freq <file>      # file containing l-mer frequency table\n     -l #              # length of l-mers to use (must be same as frequency file)\n     -ranges <file>    # file to save the extended sequence ranges (optional)\n\n     -L # size of region to extend left or right (10000) \n     -match # reward for a match (+1)  \n     -mismatch # penalty for a mismatch (-1) \n     -gap  # penalty for a gap (-5)\n     -maxgap # maximum number of gaps allowed (5) \n     -maxoccurrences # cap on the number of sequences to align (10,000) \n     -maxrepeats # stop work after reporting this number of repeats (10000)\n     -cappenalty # cap on penalty for exiting alignment of a sequence (-20)\n     -tandemdist # of bases that must intervene between two l-mers for both to be counted (500)\n     -minthresh # stop if fewer than this number of l-mers are found in the seeding phase (3)\n     -minimprovement # amount that a the alignment needs to improve each step to be considered progress (3)\n     -stopafter # stop the alignment after this number of no-progress columns (100)\n     -goodlength # minimum required length for a sequence to be reported (50)\n     -maxentropy # entropy (complexity) threshold for an l-mer to be considered (-.7)\n     -v[v[v[v]]] How verbose do you want it to be?  -vvvv is super-verbose.\n",
+    "returncode": 1
+  },
+  "blastn": {
+    "available": true,
+    "path": "$PROJ/env/msi/bin/blastn",
+    "sha256": "5315f017257c48d794a7f1ec48433f135bd97cd50531bea6d0b25af69366f17f",
+    "banner": "blastn: 2.17.0+\n Package: blast 2.17.0, build Aug 22 2026 11:52:50\n",
+    "returncode": 0
+  },
+  "blastx": {
+    "available": true,
+    "path": "$PROJ/env/msi/bin/blastx",
+    "sha256": "382ae2c8ad83048dc3f71628bc50875f26db8b2b84213c8a57a652ede7e6b69e",
+    "banner": "blastx: 2.17.0+\n Package: blast 2.17.0, build Aug 22 2026 11:52:50\n",
+    "returncode": 0
+  },
+  "makeblastdb": {
+    "available": true,
+    "path": "$PROJ/env/msi/bin/makeblastdb",
+    "sha256": "b4a5bf8a217322a3c00158e79a17f2d1fa4c25808789ec4155aa335ac4579944",
+    "banner": "makeblastdb: 2.17.0+\n Package: blast 2.17.0, build Aug 22 2026 11:52:50\n",
+    "returncode": 0
+  }
+}

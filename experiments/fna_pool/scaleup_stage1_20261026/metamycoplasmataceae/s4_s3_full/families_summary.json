@@ -1,0 +1,125 @@
+{
+ "version": "s4_annotate_v0.2",
+ "mmseqs": "17.b804f",
+ "settings": {
+  "family": [
+   "--min-seq-id",
+   "0.9",
+   "-c",
+   "0.8",
+   "--cov-mode",
+   "0",
+   "--cluster-mode",
+   "0",
+   "--cluster-reassign",
+   "1"
+  ],
+  "homology_group": [
+   "--min-seq-id",
+   "0.5",
+   "-c",
+   "0.8",
+   "--cov-mode",
+   "0",
+   "--cluster-mode",
+   "0",
+   "--cluster-reassign",
+   "1"
+  ]
+ },
+ "member_min": {
+  "family": [
+   0.9,
+   0.8
+  ],
+  "homology_group": [
+   0.5,
+   0.8
+  ]
+ },
+ "check_search": [
+  "--exhaustive-search",
+  "1",
+  "--alignment-mode",
+  "3",
+  "-e",
+  "10",
+  "--max-seqs",
+  "100000",
+  "--format-output",
+  "query,target,fident,qcov,tcov,alnlen"
+ ],
+ "distinct_proteins": 409,
+ "member_check": {
+  "family": {
+   "members": 409,
+   "passed": 409,
+   "fail": []
+  },
+  "homology_group": {
+   "members": 409,
+   "passed": 409,
+   "fail": []
+  }
+ },
+ "main": {
+  "loci": 510,
+  "carriers": 303,
+  "species": 41,
+  "cds_units": 555,
+  "distinct_proteins": 297,
+  "families": 172,
+  "homology_groups": 141,
+  "family_architectures": 146
+ },
+ "partner_mixed": {
+  "loci": 12,
+  "carriers": 12,
+  "species": 5,
+  "cds_units": 13,
+  "distinct_proteins": 11,
+  "families": 10,
+  "homology_groups": 10,
+  "family_architectures": 9
+ },
+ "direction_mixed": {
+  "loci": 4,
+  "carriers": 4,
+  "species": 3,
+  "cds_units": 4,
+  "distinct_proteins": 3,
+  "families": 3,
+  "homology_groups": 3,
+  "family_architectures": 3
+ },
+ "short_other_segment": {
+  "loci": 105,
+  "carriers": 90,
+  "species": 23,
+  "cds_units": 118,
+  "distinct_proteins": 101,
+  "families": 73,
+  "homology_groups": 63,
+  "family_architectures": 62
+ },
+ "replacement": {
+  "loci": 22,
+  "carriers": 21,
+  "species": 9,
+  "cds_units": 38,
+  "distinct_proteins": 27,
+  "families": 19,
+  "homology_groups": 16,
+  "family_architectures": 12
+ },
+ "all": {
+  "loci": 653,
+  "carriers": 365,
+  "species": 45,
+  "cds_units": 728,
+  "distinct_proteins": 409,
+  "families": 226,
+  "homology_groups": 183,
+  "family_architectures": 190
+ }
+}

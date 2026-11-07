@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="300" font-family="sans-serif">
+<rect width="100%" height="100%" fill="white"/>
+<text x="4" y="16" font-size="12">L_0454a4e43612  SAMD00407106  core 361 bp  two_flank_anchored  support all_calls_anchored  boundary exact  tandem False  core copies carrier/partner 1/0</text>
+<line x1="531.6" y1="30" x2="531.6" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<line x1="588.4" y1="30" x2="588.4" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<text x="4" y="64" font-size="11" font-weight="bold">SAMD00407106 NZ_AP025556.1 (carrier)</text>
+<line x1="60" y1="100" x2="1060" y2="100" stroke="#888"/>
+<rect x="374.4" y="132" width="157.2" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="453.0" y="152" font-size="9" text-anchor="middle">U</text>
+<rect x="531.6" y="132" width="56.8" height="8" fill="#e76f51" opacity="0.55"/>
+<text x="560.0" y="152" font-size="9" text-anchor="middle">core 361</text>
+<rect x="588.4" y="132" width="157.2" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="667.0" y="152" font-size="9" text-anchor="middle">D</text>
+<polygon points="60.0,109 66.0,103 98.0,103 98.0,115 66.0,115" fill="#3b6fb6"><title>hypothetical protein 3159082-3159640 -</title></polygon>
+<text x="60.0" y="125" font-size="8" fill="#333">hypothet</text>
+<polygon points="102.6,109 108.6,103 161.1,103 161.1,115 108.6,115" fill="#3b6fb6"><title>hypothetical protein 3159669-3160041 -</title></polygon>
+<polygon points="179.5,109 185.5,103 414.3,103 414.3,115 185.5,115" fill="#3b6fb6"><title>type VI secretion system contractile she 3160158-3161652 -</title></polygon>
+<text x="179.5" y="125" font-size="8" fill="#333">type VI secretion system contractile she</text>
+<polygon points="418.7,109 424.7,103 504.1,103 504.1,115 424.7,115" fill="#3b6fb6"><title>type VI secretion system contractile she 3161680-3162223 -</title></polygon>
+<text x="418.7" y="125" font-size="8" fill="#333">type VI secretion </text>
+<polygon points="523.4,109 529.4,103 589.9,103 589.9,115 529.4,115" fill="#3b6fb6"><title>hypothetical protein 3162346-3162769 -</title></polygon>
+<text x="523.4" y="125" font-size="8" fill="#333">hypothetical p</text>
+<polygon points="589.3,109 595.3,103 750.6,103 750.6,115 595.3,115" fill="#3b6fb6"><title>type VI secretion system protein TssA 3162765-3163791 -</title></polygon>
+<polygon points="759.9,109 765.9,103 870.7,103 870.7,115 765.9,115" fill="#3b6fb6"><title>type VI secretion system-associated prot 3163850-3164555 -</title></polygon>
+<text x="759.9" y="125" font-size="8" fill="#333">type VI secretion system</text>
+<polygon points="867.7,109 873.7,103 1060.0,103 1060.0,115 873.7,115" fill="#3b6fb6"><title>type VI secretion system membrane subuni 3164536-3168193 -</title></polygon>
+<text x="60" y="166" font-size="9" fill="#666">NZ_AP025556.1:3159398-3165759  core 3162398-3162759</text>
+<text x="4" y="184" font-size="11" font-weight="bold">SAMEA120308855 NZ_CDRKIR010000001.1 (partner, + strand, two_flank_anchored, pair P00034)</text>
+<line x1="60" y1="220" x2="1060" y2="220" stroke="#888"/>
+<rect x="374.4" y="252" width="157.2" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="453.0" y="272" font-size="9" text-anchor="middle">U'</text>
+<rect x="588.4" y="252" width="157.2" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="667.0" y="272" font-size="9" text-anchor="middle">D'</text>
+<rect x="531.6" y="252" width="56.8" height="8" fill="#9b5de5" opacity="0.55"/>
+<text x="560.0" y="272" font-size="9" text-anchor="middle">other side 2</text>
+<polygon points="60.0,229 66.0,223 98.0,223 98.0,235 66.0,235" fill="#3b6fb6"><title>hypothetical protein 3102060-3102600 -</title></polygon>
+<text x="60.0" y="245" font-size="8" fill="#333">hypothet</text>
+<polygon points="102.6,229 108.6,223 161.1,223 161.1,235 108.6,235" fill="#3b6fb6"><title>hypothetical protein 3102629-3103001 -</title></polygon>
+<polygon points="179.5,229 185.5,223 414.3,223 414.3,235 185.5,235" fill="#3b6fb6"><title>type VI secretion system contractile she 3103118-3104612 -</title></polygon>
+<text x="179.5" y="245" font-size="8" fill="#333">type VI secretion system contractile she</text>
+<polygon points="418.7,229 424.7,223 504.1,223 504.1,235 424.7,235" fill="#3b6fb6"><title>type VI secretion system contractile she 3104640-3105183 -</title></polygon>
+<text x="418.7" y="245" font-size="8" fill="#333">type VI secretion </text>
+<polygon points="589.3,229 595.3,223 750.6,223 750.6,235 595.3,235" fill="#3b6fb6"><title>type VI secretion system protein TssA 3105366-3106392 -</title></polygon>
+<text x="589.3" y="245" font-size="8" fill="#333">type VI secretion system protein Ts</text>
+<polygon points="759.6,229 765.6,223 870.4,223 870.4,235 765.6,235" fill="#3b6fb6"><title>type VI secretion system-associated prot 3106449-3107154 -</title></polygon>
+<text x="759.6" y="245" font-size="8" fill="#333">type VI secretion system</text>
+<polygon points="867.4,229 873.4,223 1060.0,223 1060.0,235 873.4,235" fill="#3b6fb6"><title>type VI secretion system membrane subuni 3107135-3110792 -</title></polygon>
+<text x="60" y="286" font-size="9" fill="#666">NZ_CDRKIR010000001.1 site 3105358  other-side gap 2 bp  this call's core 3162398-3162759</text>
+</svg>

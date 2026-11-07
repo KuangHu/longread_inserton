@@ -1,0 +1,100 @@
+[2026-10-24 20:01:46] manifest 984 rows; verified 0; to do 984
+[2026-10-24 20:01:46] chunk_20261024200146_293939: 50 accessions, include=genome,gff3,protein,seq-report
+Found 200 of 200 files for rehydration
+Done
+[2026-10-24 20:03:06] chunk_20261024200146_293939: 50/50 verified
+[2026-10-24 20:03:06] chunk_20261024200306_293939: 50 accessions, include=genome,gff3,protein,seq-report
+Found 200 of 200 files for rehydration
+Done
+[2026-10-24 20:04:36] chunk_20261024200306_293939: 50/50 verified
+[2026-10-24 20:04:36] chunk_20261024200436_293939: 50 accessions, include=genome,gff3,protein,seq-report
+Found 200 of 200 files for rehydration
+Done
+[2026-10-24 20:05:44] chunk_20261024200436_293939: 50/50 verified
+[2026-10-24 20:05:44] chunk_20261024200544_293939: 50 accessions, include=genome,gff3,protein,seq-report
+Found 200 of 200 files for rehydration
+Done
+[2026-10-24 20:06:54] chunk_20261024200544_293939: 50/50 verified
+[2026-10-24 20:06:54] chunk_20261024200654_293939: 50 accessions, include=genome,gff3,protein,seq-report
+Found 200 of 200 files for rehydration
+Done
+[2026-10-24 20:08:12] chunk_20261024200654_293939: 50/50 verified
+[2026-10-24 20:08:12] chunk_20261024200812_293939: 50 accessions, include=genome,gff3,protein,seq-report
+Found 200 of 200 files for rehydration
+Done
+[2026-10-24 20:09:03] chunk_20261024200812_293939: 50/50 verified
+[2026-10-24 20:09:03] chunk_20261024200903_293939: 50 accessions, include=genome,gff3,protein,seq-report
+Found 200 of 200 files for rehydration
+Done
+[2026-10-24 20:10:07] chunk_20261024200903_293939: 50/50 verified
+[2026-10-24 20:10:07] chunk_20261024201007_293939: 50 accessions, include=genome,gff3,protein,seq-report
+Found 200 of 200 files for rehydration
+Done
+[2026-10-24 20:11:13] chunk_20261024201007_293939: 50/50 verified
+[2026-10-24 20:11:13] chunk_20261024201113_293939: 50 accessions, include=genome,gff3,protein,seq-report
+Found 200 of 200 files for rehydration
+Done
+Traceback (most recent call last):
+  File "download_fna.py", line 335, in <module>
+    main()
+  File "download_fna.py", line 331, in main
+    run(a) if a.mode == "run" else report(a)
+  File "download_fna.py", line 196, in run
+    do_chunk(a, data, include, chunk)
+  File "download_fna.py", line 239, in do_chunk
+    res, files = verify(acc, r, tmp / "pkg", md5ok)
+  File "download_fna.py", line 142, in verify
+    srmap = {s.get(key): int(s["length"]) for s in sr}
+  File "download_fna.py", line 142, in <dictcomp>
+    srmap = {s.get(key): int(s["length"]) for s in sr}
+KeyError: 'length'
+[2026-10-24 20:24:01] manifest 984 rows; verified 422; to do 562
+[2026-10-24 20:24:01] chunk_20261024202401_304823: 50 accessions, include=genome,seq-report
+Found 100 of 100 files for rehydration
+Done
+[2026-10-24 20:24:57] chunk_20261024202401_304823: 50/50 verified
+[2026-10-24 20:24:57] chunk_20261024202457_304823: 50 accessions, include=genome,seq-report
+Found 100 of 100 files for rehydration
+Done
+[2026-10-24 20:25:55] chunk_20261024202457_304823: 50/50 verified
+[2026-10-24 20:25:55] chunk_20261024202555_304823: 50 accessions, include=genome,seq-report
+Found 100 of 100 files for rehydration
+Done
+[2026-10-24 20:26:24] chunk_20261024202555_304823: 50/50 verified
+[2026-10-24 20:26:24] chunk_20261024202624_304823: 50 accessions, include=genome,seq-report
+Found 100 of 100 files for rehydration
+Done
+[2026-10-24 20:26:55] chunk_20261024202624_304823: 50/50 verified
+[2026-10-24 20:26:55] chunk_20261024202655_304823: 50 accessions, include=genome,seq-report
+Found 100 of 100 files for rehydration
+Done
+[2026-10-24 20:27:28] chunk_20261024202655_304823: 50/50 verified
+[2026-10-24 20:27:28] chunk_20261024202728_304823: 50 accessions, include=genome,seq-report
+Found 100 of 100 files for rehydration
+Done
+[2026-10-24 20:27:58] chunk_20261024202728_304823: 50/50 verified
+[2026-10-24 20:27:58] chunk_20261024202758_304823: 50 accessions, include=genome,seq-report
+Found 100 of 100 files for rehydration
+Done
+[2026-10-24 20:28:28] chunk_20261024202758_304823: 50/50 verified
+[2026-10-24 20:28:28] chunk_20261024202828_304823: 50 accessions, include=genome,seq-report
+Found 100 of 100 files for rehydration
+Done
+[2026-10-24 20:28:59] chunk_20261024202828_304823: 50/50 verified
+[2026-10-24 20:28:59] chunk_20261024202859_304823: 50 accessions, include=genome,seq-report
+Found 100 of 100 files for rehydration
+Done
+[2026-10-24 20:29:30] chunk_20261024202859_304823: 50/50 verified
+[2026-10-24 20:29:30] chunk_20261024202930_304823: 35 accessions, include=genome,seq-report
+Found 70 of 70 files for rehydration
+Done
+[2026-10-24 20:29:51] chunk_20261024202930_304823: 35/35 verified
+[2026-10-24 20:29:51] chunk_20261024202951_304823: 50 accessions, include=genome,gff3,protein,seq-report
+Found 200 of 200 files for rehydration
+Done
+[2026-10-24 20:30:27] chunk_20261024202951_304823: 50/50 verified
+[2026-10-24 20:30:27] chunk_20261024203027_304823: 27 accessions, include=genome,gff3,protein,seq-report
+Found 108 of 108 files for rehydration
+Done
+[2026-10-24 20:30:53] chunk_20261024203027_304823: 27/27 verified
+[2026-10-24 20:30:53] done

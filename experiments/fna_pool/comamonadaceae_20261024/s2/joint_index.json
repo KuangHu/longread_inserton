@@ -1,0 +1,9 @@
+{
+  "joint_fna": "/global/scratch/users/kh36969/longread_callout/fna_pool/comamonadaceae_20261024/s2/joint.fna.gz",
+  "joint_fna_sha256": "f1149852d554b6b0e138135b363659886bdc417cdbaf807221879d3d5a4d7a68",
+  "samples": 499,
+  "contigs": 1320,
+  "contig_bp": 2915207232,
+  "header": "sample_id|assembly|contig",
+  "check": "every joint record SHA256 equals the S1 record SHA256 of its source FNA"
+}

@@ -1,0 +1,158 @@
+{
+ "caller": "s3_readcheck_v0.2",
+ "flank": 2000,
+ "anchor": 300,
+ "min_delta_as": 20,
+ "min_span": 3,
+ "max_other_fraction": 0.1,
+ "min_indel": 10,
+ "query_overlap": 0.5,
+ "tests": 969,
+ "test_verdicts": {
+  "partner_only_consistent": 342,
+  "carrier_only_consistent": 277,
+  "not_tested": 52,
+  "both_samples_consistent": 294,
+  "mixed": 3,
+  "contradicted": 1
+ },
+ "side_verdicts": {
+  "no_reads/consistent": 332,
+  "consistent/no_reads": 276,
+  "insufficient/no_reads": 22,
+  "no_reads/insufficient": 10,
+  "consistent/consistent": 294,
+  "insufficient/insufficient": 20,
+  "mixed/consistent": 2,
+  "insufficient/consistent": 10,
+  "consistent/contradicted": 1,
+  "consistent/insufficient": 1,
+  "mixed/no_reads": 1
+ },
+ "loci": 704,
+ "evidence_levels": {
+  "E1p": 222,
+  "E1c": 171,
+  "E2s": 7,
+  "E0": 33,
+  "E2": 267,
+  "X": 4
+ },
+ "short_loci": 525,
+ "short_evidence_levels": {
+  "E1p": 163,
+  "E1c": 139,
+  "E2s": 3,
+  "E2": 218,
+  "X": 2
+ },
+ "short_by_difference_class": {
+  "complex_small_other": {
+   "E1p": 109,
+   "E1c": 101,
+   "E2s": 3,
+   "E2": 118
+  },
+  "presence_absence": {
+   "E1p": 46,
+   "E1c": 30,
+   "E2": 87,
+   "X": 1
+  },
+  "replacement": {
+   "E1p": 8,
+   "E2": 13,
+   "X": 1,
+   "E1c": 8
+  }
+ },
+ "short_by_support": {
+  "all_calls_anchored": {
+   "E1p": 140,
+   "E1c": 121,
+   "E2": 216,
+   "X": 2
+  },
+  "direction_mixed": {
+   "E1p": 23,
+   "E2": 1,
+   "E1c": 18
+  },
+  "partner_mixed": {
+   "E2s": 3,
+   "E2": 1
+  }
+ },
+ "short_by_boundary": {
+  "direction_dependent": {
+   "E1c": 5,
+   "E1p": 10
+  },
+  "exact": {
+   "E1p": 67,
+   "E1c": 56,
+   "E2": 210,
+   "X": 2
+  },
+  "within_shift": {
+   "E2s": 3,
+   "E1p": 86,
+   "E2": 8,
+   "E1c": 78
+  }
+ },
+ "short_by_carrier_count_unit": {
+  "": {
+   "E1p": 163
+  },
+  "molecules": {
+   "E2": 201,
+   "X": 2,
+   "E1c": 124
+  },
+  "read_records": {
+   "E1c": 15,
+   "E2s": 3,
+   "E2": 17
+  }
+ },
+ "molecules_by_loci_supported": {
+  "0": 1485,
+  "1": 79823,
+  ">=2": 16292
+ },
+ "excluded_molecule_test_pairs": {
+  "cigar_fail": 1832,
+  "locus_ambiguous": 195,
+  "off_locus": 538,
+  "ambiguous": 3
+ },
+ "samples_with_reads": [
+  "SAMD00076718",
+  "SAMD00407106",
+  "SAMD00571185",
+  "SAMD00735223",
+  "SAMD00735224",
+  "SAMEA120308855",
+  "SAMEA120314636",
+  "SAMN13450421",
+  "SAMN38562701",
+  "SAMN51281027",
+  "SAMN51281044",
+  "SAMN51658614"
+ ],
+ "count_units": {
+  "SAMD00076718": "read_records",
+  "SAMD00407106": "molecules",
+  "SAMD00571185": "molecules",
+  "SAMD00735223": "molecules",
+  "SAMD00735224": "molecules",
+  "SAMEA120308855": "molecules",
+  "SAMEA120314636": "molecules",
+  "SAMN13450421": "molecules",
+  "SAMN38562701": "molecules",
+  "SAMN51281027": "molecules",
+  "SAMN51281044": "molecules",
+  "SAMN51658614": "molecules"
+ }
+}

@@ -1,0 +1,25 @@
+{
+  "manifest": "scaleup_stage1_20261026/nitrobacteraceae/download_manifest.tsv",
+  "rows": 3892,
+  "status": {
+    "verified": 3892
+  },
+  "by_purpose": {
+    "gca_identity_check": {
+      "verified": 1917
+    },
+    "primary": {
+      "verified": 1975
+    }
+  },
+  "annotation": {
+    "present": 1971,
+    "annotation_missing": 4
+  },
+  "pair_checks": {
+    "identical_sequences": 1917
+  },
+  "bytes": 48516974945,
+  "files": 11726,
+  "failed": []
+}
