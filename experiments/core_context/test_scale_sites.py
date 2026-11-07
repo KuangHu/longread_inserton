@@ -40,5 +40,22 @@ class SiteTests(unittest.TestCase):
         self.assertIn('below_molecule_threshold', r['flags'])
 
 
+class RetryTests(unittest.TestCase):
+    def test_failed_attempt_counts_as_retried_only_when_the_same_task_later_completed(self):
+        import tempfile
+        from pathlib import Path
+        with tempfile.TemporaryDirectory() as d:
+            jt = Path(d) / 'jobs.txt'
+            jt.write_text('t commit x panel 100 search 101 combine 102\nretry: search 200 combine 201\n')
+            res = [dict(job='101_1', state='COMPLETED'), dict(job='101_2', state='FAILED'),
+                   dict(job='101_3', state='FAILED'), dict(job='102', state='FAILED'),
+                   dict(job='200_2', state='COMPLETED'), dict(job='201', state='COMPLETED')]
+            bad = [x for x in res if x['state'] != 'COMPLETED']
+            retried, failed = ss.superseded(bad, res, jt)
+            self.assertEqual(sorted(x['job'] for x in retried), ['101_2', '102'])
+            self.assertEqual([x['job'] for x in failed], ['101_3'])  # index 3 never completed: still a failure
+            self.assertEqual({x['job']: x['replaced_by'] for x in retried}, {'101_2': '200_2', '102': '201'})
+
+
 if __name__ == '__main__':
     unittest.main()

@@ -670,3 +670,202 @@ Method:
     0–300 bp drawn per side, and search the real reads against the edited assembly;
   - the cut sequence is the truth for the site and for the insertion length and boundary;
   - this measures sensitivity for insertions longer than the core, which a random batch without positives cannot.
+
+## Scale-up (2026-11-02 to 11-06): all eligible Comamonadaceae samples, frozen v0.3.2
+
+### Freeze
+
+- **Code:** tag `read_site_search_v0.3.2_frozen` (commit 3b72e64). Relative to v0.3.1 the only rule change is that
+  the target size is strictly < 2,500 bp. It is its own commit, with boundary tests at 2,499, 2,500 and 2,501 bp.
+  - No threshold was changed after any scale result.
+  - Later commits only add bookkeeping: site layer, acceptance, cleanup, positive test, retry-aware acceptance.
+- **Per-batch record:** each batch's `freeze.json` stores:
+  - the eligibility rule text and the parameters;
+  - the code commit;
+  - the ready-manifest path and its sha256 (`ba60fe83b9db…` for every batch);
+  - the sample list with run sha256s.
+- **Main setting:** flanks 1 kb, at least 3 independent molecules. The core hit is a seed; no empty site is required;
+  a single read is never a site.
+- **Batches:**
+  - validation 2 (6 samples) and scale 1–3 (40 each) are every eligible sample not used in development, with
+    genera interleaved round-robin;
+  - development (11) and validation 1 (7) were rerun on v0.3.2: labels changed, no position, class, count or length
+    did.
+
+### Downloads
+
+`download_batches/site_search_download_check.py` → `site_search_download_check.tsv`: **no run can be added to this
+search.** Every usable ONT/HiFi run of a manifest sample is already verified. The rest are:
+
+| reason | runs | BioSamples | size |
+|---|---|---|---|
+| no assembly in the reviewed manifest (nothing to place flanks on) | 113 | 101 | 97.4 GB |
+| assembly excluded as NCBI atypical | 3 | 3 | 21.1 GB |
+| run not usable (PCR / amplicon / WGA / single cell / metagenome / mean read < 500 bp / no ENA md5) | 49 | 47 | 22.6 GB |
+
+So nothing was downloaded in this round, and compute read only the verified ready manifest. Of the 231 samples
+considered, 87 were not eligible and are not in the search (`read_site_search_scale3/candidates_considered.tsv`):
+- 49 with CLR or reads not countable as molecules, alone or with another reason;
+- 33 below 30× depth;
+- 7 with other read types;
+- 2 aligned-BAM submissions.
+
+The reasons overlap; see the file for exact combinations. CLR and possibly trimmed data were not mixed in.
+
+### Results by batch
+
+Generated tables: `read_site_search_scale_report.md` (`../scale_report.py`). Real batches, development and the
+computational test are never summed together. All batches are complete by sample ID: 0 failed, 0 awaiting input.
+
+**Real samples not used in development (validation 1–2, scale 1–3; 133 samples):**
+
+| | validation1 | validation2 | scale1 | scale2 | scale3 | total |
+|---|---|---|---|---|---|---|
+| samples complete | 7/7 | 6/6 | 40/40 | 40/40 | 40/40 | 133/133 |
+| known recovery, round-5 supported | 181/190 | 151/166 | 761/808 | 1336/1405 | 757/794 | 3186/3363 (94.7%) |
+| known recovery, other catalog | 133/135 | 183/197 | 753/806 | 1225/1311 | 973/990 | 3267/3439 (95.0%) |
+| known sites | 617 | 645 | 3397 | 5653 | 4054 | 14366 |
+| in assembly, not in catalog | 149 | 94 | 809 | 1026 | 1083 | 3161 |
+| **not-in-assembly candidate sites** | 0 | 0 | 8 | 1 | 1 | **10** |
+| candidate positions / core keys / samples | 0 | 0 | 9 / 8 / 4 | 1 / 1 / 1 | 2 / 2 / 1 | 12 / 11 / 6 |
+| structural anomaly (distant / inverted junction) | 0 | 1 | 66 | 9 | 7 | 83 |
+| unresolved | 28 | 28 | 184 | 206 | 154 | 600 |
+| boundary unknown (counted sites) | 1 | 3 | 24 | 2 | 18 | 48 |
+| ambiguous placement (repeat) / truncated alignment | 11 / 0 | 130 / 0 | 358 / 6 | 1068 / 0 | 143 / 1 | 1710 / 7 |
+| max RSS (GB) | 1.43 | 11.01 | 11.38 | 11.29 | 15.55 | |
+| cleanup freed (GB) | 0.12 | 0.29 | 1.58 | 1.67 | 2.36 | 6.02 |
+
+Notes on the table:
+- Counts are physical sites, with cores at one place merged; candidate positions and cores are counted separately.
+- Core keys: 11 distinct in total.
+- "Unresolved" means boundary unknown, repeated placement or insufficient coverage.
+- Ambiguous placement and truncated alignment are unplaceable contexts with ≥ 3 molecules.
+
+**Negative controls (single-copy housekeeping genes), by physical site:**
+- Validation 1–2 and scale 2: every searched gene at one site.
+- Scale 1: 265 at one site, 1 at none, 7 at two.
+  - 5 of the 7 are one locus whose clusters differ by more than 50 bp on one junction.
+  - The other 2 are separate loci: SAMN51281032 RNAP β/β′ also sits on plasmid NZ_JBRAYR010000004.1, a real second
+    assembled copy.
+- Scale 3: 264 at one site, 1 at none, 3 at two, 1 at three. All 4 multi-site genes are
+  `one_locus_junction_differs_gt_TOL`.
+
+**The 10 real candidate sites (12 positions).** These are "candidate structures in part of the sequenced DNA", not
+insertion events. Strict per-molecule P counts are 0 throughout; the P allele is only matched (P_matched), and the
+empty allele is auxiliary.
+
+| batch | site | core(s) | P_matched / A_matched | insertion | full-insertion check |
+|---|---|---|---|---|---|
+| scale1 | SAMEA6863324 NZ_LR813086.1:398,381 | PF_1d912f750caa | 6 / 373 | 1,029 bp | unresolved, ambiguous consensus |
+| scale1 | SAMEA6863324 NZ_LR813086.1:3,619,182 | PF_31cb679e911e (+PF_0b44bc63f72c) | 3 / 347 | 835 bp | unresolved, ambiguous consensus |
+| scale1 | SAMEA6863356 NZ_CAHPRW010000010.1:10,237 | PF_09076b68b6fc | 3 / 569 | 1,023 bp | unresolved, ambiguous consensus |
+| scale1 | SAMEA6863356 NZ_CAHPRW010000010.1:11,355 | PF_09076b68b6fc | 3 / 572 | 1,240 bp | unresolved, ambiguous consensus; boundary unknown |
+| scale1 | SAMN28084394 NZ_CP097269.1:821,263 | PF_12774aadd19f | 6 / 45 | 1,154 bp | unresolved, ambiguous consensus |
+| scale1 | SAMN28084394 NZ_CP097269.1:820,188 | PF_6eeae208e0a0 | 3 / 52 | 1,261 bp | unresolved, ambiguous consensus |
+| scale1 | SAMN42749333 NZ_CP162616.1:5,467,735–5,467,993 | PF_5194ba28f00a | 3 / 158 | — | junction not found in consensus |
+| scale1 | SAMN42749333 NZ_CP162616.1:456,191–458,920 | PF_7dd788787bef | — | — | `other_sequence`: not reviewed (evidence covers core_absent only) |
+| scale2 | SAMEA120309485 NZ_CDRKJB010000001.1:3,210,811 | PF_d6e933620b0d | 6 / 114 | 1,302 bp | unresolved, ORFs not explained by a complete gene (range 0–2) |
+| scale3 | SAMN13494298 NZ_CP046622.1:3,263,988–3,264,147 | PF_052544d04561; PF_2f595d1c0409−,PF_82422e478eda+ | 21 / 577 | 2,150 bp | unresolved, ambiguous consensus |
+
+About these candidates:
+- None reaches "complete target met". Most are rare structures in 3–6 molecules against 45–577 empty-allele
+  molecules, so the consensus is thin.
+- The scale-2 insertion has 3 assembled copies elsewhere in the same genome. Its core is 100% identical, but no ORF
+  is a complete gene.
+- The scale-3 site:
+  - has 21 molecules;
+  - has 26 ambiguous bases in a 2,150 bp consensus;
+  - its two seed cores cover only 55% and 90% of the core, at 86–88% identity, with neither end covered;
+  - its gene count is unresolved (0–3).
+
+### Computational positive test (`read_site_search_positive1`; reported apart from real samples)
+
+**Design:**
+- Seed 20261102. 100 known catalog occurrences cut from the assemblies of the 13 validation samples (`positive_test.py
+  prepare`).
+- Strata: core length bin × single / two-gene × repeated / single-copy × extra sequence (none, or 1–300 bp per side).
+- Edited assemblies, catalog, coordinates and genome alignments are rebuilt. The truth (`read_site_search_positive1_truth/`,
+  sha256 in `prepare.json`) is used only by `score`.
+
+**Result:** 99/100 cuts detected as not_in_assembly with ≥ 3 molecules. Every length bin, structure, repeat
+class and extra mode is at 100%, except one single-copy < 1 kb single-gene cut.
+- **The miss** (SAMN37751820 PF_4aecb2fa43e0): it was found with 126 molecules, but at a 51 bp junction offset
+  (2,413,797 / 2,413,848). That is outside the 50 bp tolerance, so it stays scored as not detected.
+- **Insertion length:** 72 cuts within 10 bp, 27 within 11–50 bp. The size class agrees in 99/99.
+- **Extra sequence per side:** 92 within 20 bp, 2 within 21–50 bp, 5 above 50 bp. In all 5, the total insertion
+  length is still within 20 bp. The left/right split is measured from whichever core seeded the read; these are
+  two-gene or repeated windows.
+- **Boundary:**
+  - 47 extension_consistent;
+  - 50 no_extension_detected (no evidence of extension; this is not boundary validation);
+  - 2 unknown.
+  - Against the truth: cuts with extra sequence 45 extension_consistent / 1 no_extension_detected / 2 unknown (of
+    48); cuts without extra sequence 49 no_extension_detected / 2 extension_consistent (of 51).
+- **Consensus:** 49 met, 25 unresolved with ambiguous consensus, 25 unresolved with unexplained ORFs.
+  - Consensus length is within 10 bp of the truth for 98.
+  - Unresolved here is the rule doing its job (an unexplained ORF keeps the gene count open), not a miss.
+- **Not-in-assembly calls away from cuts:** 24.
+  - 9 are also in the unedited real run;
+  - 15 have one end within 2.5 kb of a cut and are side effects of the edit;
+  - 0 unexplained (`positive_test_away_from_cuts.tsv`).
+
+### Failures, retries and integrity
+
+- **Scale 3:** 5 of 40 search tasks failed in the first run (tasks 19, 25, 27, 31, 38).
+  - All failures ran on n0334.lr6.
+  - The error was Errno 108, "cannot send after transport endpoint shutdown", while the ready-manifest check stat'ed
+    read files on scratch. The files are intact and readable from login.
+- **Retry 1** (n0334 excluded): 19, 25 and 31 completed; 27 and 38 failed on n0348 / n0357.
+- **Retry 2:** 27 and 38 failed on n0258 / n0194.
+- **Retry 3** (30 min later, 5 nodes excluded): both completed. Combine completed. Evidence failed on n0184 with the
+  same error, and its rerun completed, as did structure and sites.
+- The 35 search tasks that succeeded first time were not rerun. Method and code were unchanged.
+- Every attempt is in `read_site_search_scale3/jobs.txt`. `acceptance.json` lists each failed or cancelled attempt
+  under `retried`, with the job that replaced it.
+- Acceptance counts an attempt as retried only if a later job of the same stage and array index completed; otherwise
+  it stays a failure (test in `test_scale_sites.py`).
+- Final state: 40/40 complete, `failed_jobs` empty.
+- The other batches ran without failures.
+
+### Cleanup
+
+After acceptance, each batch's work directory is archived (`archive.tar`, sha256 in `archive.json`). Then the
+rebuildable files listed in `cleanup_manifest.tsv` are deleted. They are listed by explicit pattern under the
+absolute work path:
+- boundary / placement / panel alignments;
+- consensus rounds and drafts;
+- reads extracted from the verified FASTQ;
+- blast temporaries.
+
+Kept:
+- per-molecule evidence (`positions`, `observations`, `search.json`);
+- the panel;
+- candidate allele windows and alignments;
+- consensus `final.fa` / `final.bam`;
+- the edited assemblies and their genome alignments of the positive test.
+
+Read files, manifests and the repository are never touched. Space reclaimed:
+- real batches: 6.02 GB;
+- development rerun: 0.42 GB;
+- positive test: 0.73 GB;
+- total: 7.17 GB.
+
+### Unresolved
+
+- All 10 real candidate sites stay unresolved at the full-insertion level, mostly because the consensus is thin.
+  More molecules would need more sequencing of those strains, not a looser rule.
+- `other_sequence` candidates (1 site, SAMN42749333 456,191–458,920) are not reviewed by `candidate_evidence.py`,
+  which covers `core_absent` only.
+- **One locus can split into two clusters:** some negative-control loci split when one junction differs by more
+  than 50 bp. They are labelled `one_locus_junction_differs_gt_TOL`, not merged. The single positive-test miss is
+  the same 51 bp effect.
+- 1,710 contexts with ≥ 3 molecules in real batches are ambiguously placed in repeats, and 600 sites are unresolved.
+  These are reported, not called absent.
+
+### Remaining data
+
+- **Downloadable for this search:** 0 runs.
+- **Not eligible (87 samples):** CLR or not molecule-countable, < 30×, other read types, aligned BAM.
+- **Runs without a usable assembly:** 116 runs (104 BioSamples).
+- **Unusable runs:** 49 runs (47 BioSamples).
+- These need either an assembly (not this method's scope) or a separate decision on CLR.

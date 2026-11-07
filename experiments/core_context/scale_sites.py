@@ -219,6 +219,42 @@ def du(path):
                .stdout.split()[0]) if Path(path).exists() else 0
 
 
+def stage_of_jobs(jobs_txt):
+    """Job id -> stage, from the '<stage> <id>' pairs that the submit script and retries append to jobs.txt."""
+    st = {}
+    if jobs_txt.exists():
+        for line in jobs_txt.read_text().splitlines():
+            w = line.replace(',', ' ').split()
+            for k, v in zip(w, w[1:]):
+                if v.isdigit() and k in STAGES:
+                    st[v] = k
+    return st
+
+
+STAGES = ('readmap', 'panel', 'search', 'combine', 'evidence', 'structure', 'sites')
+
+
+def superseded(bad, res, jobs_txt):
+    """A failed or cancelled attempt counts as retried only when a later job of the same stage (and the same array
+    index) COMPLETED; every other one stays a failure. Returns (retried rows with the attempt that replaced them,
+    failures)."""
+    st = stage_of_jobs(jobs_txt)
+
+    def key(job):
+        base, _, idx = job.partition('_')
+        return st.get(base), idx, int(base)
+    done = [key(x['job']) for x in res if x['state'] == 'COMPLETED' and '.' not in x['job']]
+    retried, failed = [], []
+    for x in bad:
+        g, idx, n = key(x['job'])
+        by = [d for d in done if g and d[0] == g and d[1] == idx and d[2] > n]
+        if by:
+            retried.append(dict(x, stage=g, replaced_by='%d%s' % (by[0][2], '_' + idx if idx else '')))
+        else:
+            failed.append(x)
+    return retried, failed
+
+
 def cmd_accept(a):
     samples = list(pc.read_tsv(a.out / 'samples.tsv'))
     status, problems = {}, []
@@ -256,7 +292,8 @@ def cmd_accept(a):
         problems.append('structure check not run')
     jobs = [x for x in a.jobs.split(',') if x]
     res = sacct(jobs)
-    failed_jobs = [x for x in res if x['state'] not in ('COMPLETED',) and '.' not in x['job']]
+    bad_jobs = [x for x in res if x['state'] not in ('COMPLETED',) and '.' not in x['job']]
+    retried, failed_jobs = superseded(bad_jobs, res, a.out / 'jobs.txt')
     main = summ.get('grid', {}).get('L%d_N%d' % (rs.MAIN_FLANK, rs.MAIN_COUNT), {})
     out = dict(
         version=rs.VERSION, batch=str(a.out.name), expected_samples=len(samples), sample_status=dict(n),
@@ -269,7 +306,7 @@ def cmd_accept(a):
             evidence=dict(Counter(c['status'] for c in ev)) if ev else {},
             structure=dict(Counter((c.get('status'), c.get('target_1_2_genes')) and
                                    '%s|%s' % (c.get('status'), c.get('target_1_2_genes', '')) for c in st)) if st else {}),
-        jobs=res, failed_jobs=failed_jobs,
+        jobs=res, failed_jobs=failed_jobs, retried=retried,
         max_rss_gb=round(max([float(x['max_rss'].rstrip('K')) / 1e6 for x in res if x['max_rss'].endswith('K')]
                              or [0]), 2),
         disk_bytes=dict(work=du(a.work), out=du(a.out)))

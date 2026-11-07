@@ -1216,7 +1216,15 @@ Not done yet:
     boundary beyond extra sequence; its rules are frozen at tag `read_site_search_v0.3_frozen`.
   - **Validation:** one batch of 7 samples not used in development has run; it found no candidate at ≥ 3
     molecules.
-  - **Full run:** not started. Rounds 1–5 only took positions already in assemblies
+  - **Full run (2026-11-06, frozen v0.3.2):** every eligible sample, 133 real (validation 1–2, scale 1–3) +
+    11 development, all complete.
+    - Known recovery is 95%.
+    - 10 not-in-assembly candidate sites (12 positions, 6 samples); none reaches "complete target", mostly thin
+      consensus.
+    - Computational positive test: 99/100 cuts found.
+    - No further run is downloadable for this search. See the scale-up section of `READ_SITE_SEARCH_PILOT.md` and
+      `read_site_search_scale_report.md`.
+  - **Before the full run:** Rounds 1–5 only took positions already in assemblies
   and checked them with reads. The read search goes: known core → homologous cores in all reads → both flanks →
   merge repeated observations of one position → compare with the assembly position catalog → report by class;
 - candidate interpretation layer;
