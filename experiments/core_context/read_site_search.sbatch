@@ -33,7 +33,7 @@ case $STAGE in
 panel)   python read_site_search.py panel --out $OUT --work $WORK ;;
 search)  python read_site_search.py search --sample $S --threads $SLURM_CPUS_PER_TASK --out $OUT --work $WORK ;;
 combine) python read_site_search.py combine --out $OUT --work $WORK ;;
-evidence) python candidate_evidence.py --threads $SLURM_CPUS_PER_TASK --out $OUT --work $WORK ;;
+evidence) python candidate_evidence.py --threads $SLURM_CPUS_PER_TASK --out $OUT --work $WORK ${EVIDENCE_CLASSES:+--classes $EVIDENCE_CLASSES} ;;
 structure) python candidate_structure.py --threads $SLURM_CPUS_PER_TASK --out $OUT --work $WORK ;;
 sites)   python scale_sites.py sites --out $OUT --work $WORK ;;
 readmap) python positive_test.py readmap --samples $S --threads $SLURM_CPUS_PER_TASK --work $WORK ;;

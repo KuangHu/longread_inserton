@@ -50,9 +50,11 @@ ORDER = ['P_matched', 'P', 'A_matched', 'A', 'conflict', 'ambiguous', 'cigar_fai
          'partial:clipped', 'partial:ends', 'partial:short_read', 'no_allele_hit']
 
 
-def candidates(work, out):
+def candidates(work, out, classes=(CLS,)):
     """v0.2 main-setting core_absent positions with >= MAIN_COUNT molecules, plus the v0.1 ones (from the backup of
-    the v0.1 per-sample tables), merged by (sample, core, contig, flank ends within TOL)."""
+    the v0.1 per-sample tables), merged by (sample, core, contig, flank ends within TOL). `classes` widens the review
+    to not_in_assembly:other_sequence (assembly holds a different sequence between the flanks: A is then the assembly
+    as it is, with that sequence; P the reads' insert between the same flanks); thresholds are unchanged."""
     got = []
 
     def add(r, version):
@@ -64,13 +66,13 @@ def candidates(work, out):
                 return
         got.append(dict(key=k, found_in={version}, **{version: r}))
     for r in pc.read_tsv(out / 'positions.tsv.gz'):
-        if int(r['flank']) == rs.MAIN_FLANK and r['cls'] == CLS and int(r['molecules']) >= rs.MAIN_COUNT:
+        if int(r['flank']) == rs.MAIN_FLANK and r['cls'] in classes and int(r['molecules']) >= rs.MAIN_COUNT:
             add(r, 'current')
     for s in rs.pilot_samples(out):
         if not (work / 'v0.1_backup' / s).exists():  # a batch without a v0.1 run (validation)
             continue
         for r in pc.read_tsv(work / 'v0.1_backup' / s / 'positions.tsv.gz'):
-            if int(r['flank']) == rs.MAIN_FLANK and r['cls'] == CLS and int(r['molecules']) >= rs.MAIN_COUNT:
+            if int(r['flank']) == rs.MAIN_FLANK and r['cls'] in classes and int(r['molecules']) >= rs.MAIN_COUNT:
                 add(dict(r, sample=s), 'v0.1')
     for c in got:
         c['cid'] = '%s:%s:%d-%d:%s' % (c['key'][0], c['key'][2], c['key'][3], c['key'][4], c['key'][1])
@@ -311,11 +313,13 @@ def main():
     p.add_argument('--work', type=Path, default=rs.WORK)
     p.add_argument('--out', type=Path, default=rs.REPO / 'read_site_search_pilot')
     p.add_argument('--threads', type=int, default=16)
+    p.add_argument('--classes', default=CLS, help='comma-separated position classes to review (default core_absent; '
+                   'not_in_assembly:other_sequence is opt-in)')
     a = p.parse_args()
     rs.set_work(a.work)
     od = a.out / 'candidates'
     od.mkdir(parents=True, exist_ok=True)
-    cands = candidates(a.work, a.out)
+    cands = candidates(a.work, a.out, tuple(a.classes.split(',')))
     by_s = defaultdict(list)
     for c in cands:
         by_s[c['key'][0]].append(c)
