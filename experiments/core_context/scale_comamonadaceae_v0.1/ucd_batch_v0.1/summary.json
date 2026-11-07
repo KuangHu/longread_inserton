@@ -1,0 +1,345 @@
+{
+ "version": "ucd_batch_v0.1",
+ "freeze": {
+  "code_sha256": {
+   "ucd_compare.py": "9b37da5e4dc9fbb6e2857f250bdbff9a1626f68ca5bdbc78d78d1f5b0b590792",
+   "ucd_checks.py": "35111726de4e9bbfdee693ad3e21a72d82164f76554e117a78d28c64e86d3cb5",
+   "ucd_batch.py": "2399d9060221f9af94ed7970147801a9ab8026570718f842ed205a4fa5e9093a"
+  },
+  "config": {
+   "context": 1000,
+   "ins_identity": 90.0,
+   "ins_coverage": 0.9,
+   "ctx_identity": 80.0,
+   "ctx_similar_cov": 0.8,
+   "ctx_different_cov": 0.2,
+   "min_hsp": 30,
+   "evalue": 1e-05,
+   "min_usable_bp": 800,
+   "lc_window": 64,
+   "lc_step": 32,
+   "lc_entropy": 3.0
+  },
+  "check_config": {
+   "max_chain_overlap": 20
+  },
+  "coordinates": "0-based half-open, forward strand of the contig as in the source FASTA; U/X/D sequences are given in the insertion orientation (minus strand = reverse complement of the forward interval)",
+  "scope": "full comparison of the existing candidate catalogue (match_both_lt2500, b1-2-3); not a complete discovery over all FASTA",
+  "input_pairs_sha256": "4436cf68a4e966fc2ea8b9748dbf2f8d9019de63b555947acafa8857b104fb15",
+  "sources_sha256": "0b4526c8ff9edaa5c38df0c46b1136076d997a2ecb1928737aaa2bf7e0249e27",
+  "input_errors": {},
+  "sources": {
+   "verified": 1669
+  }
+ },
+ "completeness": {
+  "expected": 190656,
+  "observed": 190656,
+  "missing": 0,
+  "duplicated": 0,
+  "unexpected": 0,
+  "missing_chunks": [],
+  "missing_examples": [],
+  "duplicated_examples": [],
+  "complete": true
+ },
+ "by_kind": {
+  "cds_core": {
+   "rows": 95328,
+   "source_check": {
+    "pass": 95215,
+    "fail": 113
+   },
+   "source_failure_reasons": {
+    "screen_sequence_differs:D": 35,
+    "screen_sequence_differs:U": 64,
+    "screen_sequence_differs:X": 18
+   },
+   "not_run_reasons": {},
+   "ucd_check": {
+    "insertion_dissimilar": {
+     "pairs": 32389,
+     "occurrences": 12589,
+     "samples": 1634,
+     "cores": 2158
+    },
+    "insertion_partial": {
+     "pairs": 73,
+     "occurrences": 42,
+     "samples": 34,
+     "cores": 8
+    },
+    "insufficient_context": {
+     "pairs": 483,
+     "occurrences": 240,
+     "samples": 72,
+     "cores": 25
+    },
+    "not_run:source_check_failed": {
+     "pairs": 113,
+     "occurrences": 158,
+     "samples": 98,
+     "cores": 48
+    },
+    "only_one_side_different": {
+     "pairs": 2572,
+     "occurrences": 1377,
+     "samples": 588,
+     "cores": 276
+    },
+    "same_context": {
+     "pairs": 27,
+     "occurrences": 33,
+     "samples": 31,
+     "cores": 7
+    },
+    "swapped_or_rearranged_context": {
+     "pairs": 60,
+     "occurrences": 88,
+     "samples": 55,
+     "cores": 24
+    },
+    "ucd_supported": {
+     "pairs": 48411,
+     "occurrences": 20572,
+     "samples": 1589,
+     "cores": 3383
+    },
+    "uncertain_context": {
+     "pairs": 11200,
+     "occurrences": 6551,
+     "samples": 1386,
+     "cores": 1454
+    }
+   },
+   "final_pass": {
+    "pairs": 48411,
+    "occurrences": 20572,
+    "samples": 1589,
+    "cores": 3383
+   },
+   "final_pass_by_scope_structure": {
+    "cross_assembly|single_gene": {
+     "pairs": 31097,
+     "occurrences": 11556,
+     "samples": 1522,
+     "cores": 2229
+    },
+    "cross_assembly|two_gene": {
+     "pairs": 4027,
+     "occurrences": 2775,
+     "samples": 1051,
+     "cores": 501
+    },
+    "same_assembly|single_gene": {
+     "pairs": 12395,
+     "occurrences": 7723,
+     "samples": 1052,
+     "cores": 895
+    },
+    "same_assembly|two_gene": {
+     "pairs": 892,
+     "occurrences": 685,
+     "samples": 227,
+     "cores": 150
+    }
+   },
+   "screen_vs_check": {
+    "insertion_dissimilar -> insertion_dissimilar": 32389,
+    "insertion_partial -> insertion_partial": 73,
+    "insufficient_context -> insufficient_context": 483,
+    "only_one_side_different -> only_one_side_different": 2572,
+    "same_context -> same_context": 27,
+    "swapped_or_rearranged_context -> swapped_or_rearranged_context": 60,
+    "ucd_supported -> ucd_supported": 48411,
+    "uncertain_context -> uncertain_context": 11200
+   },
+   "screen_check_disagree": 0
+  },
+  "candidate_insertion": {
+   "rows": 95328,
+   "source_check": {
+    "pass": 95186,
+    "fail": 142
+   },
+   "source_failure_reasons": {
+    "screen_sequence_differs:D": 39,
+    "screen_sequence_differs:U": 64,
+    "screen_sequence_differs:X": 18,
+    "interval_out_of_bounds": 25
+   },
+   "not_run_reasons": {},
+   "ucd_check": {
+    "insertion_dissimilar": {
+     "pairs": 36550,
+     "occurrences": 15942,
+     "samples": 1645,
+     "cores": 2828
+    },
+    "insertion_partial": {
+     "pairs": 160,
+     "occurrences": 211,
+     "samples": 140,
+     "cores": 40
+    },
+    "insufficient_context": {
+     "pairs": 459,
+     "occurrences": 209,
+     "samples": 57,
+     "cores": 18
+    },
+    "not_run:source_check_failed": {
+     "pairs": 142,
+     "occurrences": 194,
+     "samples": 116,
+     "cores": 57
+    },
+    "only_one_side_different": {
+     "pairs": 43,
+     "occurrences": 55,
+     "samples": 46,
+     "cores": 14
+    },
+    "swapped_or_rearranged_context": {
+     "pairs": 67,
+     "occurrences": 104,
+     "samples": 72,
+     "cores": 32
+    },
+    "ucd_supported": {
+     "pairs": 56811,
+     "occurrences": 23829,
+     "samples": 1616,
+     "cores": 4099
+    },
+    "uncertain_context": {
+     "pairs": 1096,
+     "occurrences": 1149,
+     "samples": 618,
+     "cores": 277
+    }
+   },
+   "final_pass": {
+    "pairs": 56811,
+    "occurrences": 23829,
+    "samples": 1616,
+    "cores": 4099
+   },
+   "final_pass_by_scope_structure": {
+    "cross_assembly|single_gene": {
+     "pairs": 35579,
+     "occurrences": 12864,
+     "samples": 1553,
+     "cores": 2543
+    },
+    "cross_assembly|two_gene": {
+     "pairs": 4808,
+     "occurrences": 3450,
+     "samples": 1139,
+     "cores": 672
+    },
+    "same_assembly|single_gene": {
+     "pairs": 15394,
+     "occurrences": 9317,
+     "samples": 1064,
+     "cores": 1162
+    },
+    "same_assembly|two_gene": {
+     "pairs": 1030,
+     "occurrences": 845,
+     "samples": 251,
+     "cores": 201
+    }
+   },
+   "screen_vs_check": {
+    "insertion_dissimilar -> insertion_dissimilar": 36524,
+    "insertion_partial -> insertion_dissimilar": 26,
+    "insertion_partial -> insertion_partial": 160,
+    "insufficient_context -> insufficient_context": 459,
+    "only_one_side_different -> only_one_side_different": 43,
+    "swapped_or_rearranged_context -> swapped_or_rearranged_context": 67,
+    "ucd_supported -> ucd_supported": 56811,
+    "uncertain_context -> uncertain_context": 1096
+   },
+   "screen_check_disagree": 26
+  }
+ },
+ "timing": {
+  "chunks": 48,
+  "sum_chunk_wall_s": 10557.6,
+  "worker_cpu_s": 102338.2,
+  "worker_wall_s": 229894.2,
+  "worker_wall_s_per_pair": 2.412,
+  "first_finished": "2026-11-07 12:21:18",
+  "last_finished": "2026-11-07 12:53:34",
+  "hosts": {
+   "n0177.lr6": 1,
+   "n0192.lr6": 3,
+   "n0210.lr6": 5,
+   "n0189.lr6": 2,
+   "n0217.lr6": 2,
+   "n0218.lr6": 3,
+   "n0219.lr6": 1,
+   "n0221.lr6": 2,
+   "n0175.lr6": 2,
+   "n0056.lr6": 1,
+   "n0135.lr6": 1,
+   "n0168.lr6": 1,
+   "n0169.lr6": 1,
+   "n0226.lr6": 1,
+   "n0227.lr6": 1,
+   "n0340.lr6": 1,
+   "n0176.lr6": 1,
+   "n0183.lr6": 1,
+   "n0190.lr6": 1,
+   "n0098.lr6": 1,
+   "n0341.lr6": 1,
+   "n0078.lr6": 1,
+   "n0128.lr6": 1,
+   "n0130.lr6": 1,
+   "n0050.lr6": 1,
+   "n0053.lr6": 1,
+   "n0062.lr6": 1,
+   "n0067.lr6": 1,
+   "n0003.lr6": 2,
+   "n0131.lr6": 1,
+   "n0043.lr6": 1,
+   "n0126.lr6": 1,
+   "n0413.lr6": 1,
+   "n0031.lr6": 1,
+   "n0261.lr6": 1
+  }
+ },
+ "files": {
+  "ucd_all_rows_cds_core.tsv.gz": {
+   "path": "/global/scratch/users/kh36969/longread_callout/core_context/ucd_batch_v0.1/ucd_all_rows_cds_core.tsv.gz",
+   "bytes": 28049140,
+   "sha256": "ac9a92230958dfee26a011cd86db28648ff1fcf20e9a2f9a552f6af957356777"
+  },
+  "ucd_all_rows_candidate_insertion.tsv.gz": {
+   "path": "/global/scratch/users/kh36969/longread_callout/core_context/ucd_batch_v0.1/ucd_all_rows_candidate_insertion.tsv.gz",
+   "bytes": 26969580,
+   "sha256": "52ecb6d22515fc41ad71919aaaa2aac1a25273f7178d14f57a4cb4d412a04080"
+  },
+  "evidence_sequences.fa.gz": {
+   "path": "/global/scratch/users/kh36969/longread_callout/core_context/ucd_batch_v0.1/evidence_sequences.fa.gz",
+   "bytes": 51668443,
+   "sha256": "a022363d4286a6a4b7a8311fd55f162d93dd45dbfb0ee5c6d4274a11f28036ab"
+  },
+  "evidence_hsps.tsv.gz": {
+   "path": "/global/scratch/users/kh36969/longread_callout/core_context/ucd_batch_v0.1/evidence_hsps.tsv.gz",
+   "bytes": 4837375,
+   "sha256": "c89a2e60a8a18a95e689d8a51fdafa8b434eb44982443dc71f845907ed3f08e1"
+  },
+  "ucd_final_cds_core.tsv.gz": {
+   "path": "scale_comamonadaceae_v0.1/ucd_batch_v0.1/ucd_final_cds_core.tsv.gz",
+   "bytes": 13356977,
+   "sha256": "be219f16e67ae2f429d095d0f6b4434715f474e76c7851a494bd2201bc6fea85"
+  },
+  "ucd_final_candidate_insertion.tsv.gz": {
+   "path": "scale_comamonadaceae_v0.1/ucd_batch_v0.1/ucd_final_candidate_insertion.tsv.gz",
+   "bytes": 15145308,
+   "sha256": "0a4e5f341488b1d363cbcc6aaae9559bcaef1904821bb0493fbf26f36cc94c25"
+  }
+ }
+}

@@ -1215,6 +1215,10 @@ purple cigar_fail. Pairs shown:
     no S6 groups and no read-check result.
   - Small run (918 pairs: dev/validation samples and the named cases): all 17 named cases `ucd_supported`.
   - Results, figures and scale-up estimate: `ucd_compare_v0.1/README.md`.
+- **U–X–D comparison of the whole `match_both_lt2500` catalogue (`ucd_batch_v0.1/`, 2026-11-07):**
+  - All 95,328 pairs ran, each with a source check and an independent U–X–D check.
+  - Final pass: 48,411 pairs on `cds_core` and 56,811 on `candidate_insertion`.
+  - Completeness, failures and retries, timing, and the cost of the remaining full run: `ucd_batch_v0.1/README.md`.
 
 Not done yet:
 - **Adding sites from long reads (the original aim):** see `READ_SITE_SEARCH_PILOT.md`.
