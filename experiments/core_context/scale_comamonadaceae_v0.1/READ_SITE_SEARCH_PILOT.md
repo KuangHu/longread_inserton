@@ -763,7 +763,7 @@ empty allele is auxiliary.
 | scale1 | SAMN28084394 NZ_CP097269.1:821,263 | PF_12774aadd19f | 6 / 45 | 1,154 bp | unresolved, ambiguous consensus |
 | scale1 | SAMN28084394 NZ_CP097269.1:820,188 | PF_6eeae208e0a0 | 3 / 52 | 1,261 bp | unresolved, ambiguous consensus |
 | scale1 | SAMN42749333 NZ_CP162616.1:5,467,735–5,467,993 | PF_5194ba28f00a | 3 / 158 | — | junction not found in consensus |
-| scale1 | SAMN42749333 NZ_CP162616.1:456,191–458,920 | PF_7dd788787bef | — | — | `other_sequence`: not reviewed (evidence covers core_absent only) |
+| scale1 | SAMN42749333 NZ_CP162616.1:456,191–458,920 | PF_7dd788787bef | 4 / 85 | 2,473 bp (assembly: 2,729 bp of other sequence) | unresolved, ambiguous consensus (gene range 1–4); reviewed separately, see below |
 | scale2 | SAMEA120309485 NZ_CDRKJB010000001.1:3,210,811 | PF_d6e933620b0d | 6 / 114 | 1,302 bp | unresolved, ORFs not explained by a complete gene (range 0–2) |
 | scale3 | SAMN13494298 NZ_CP046622.1:3,263,988–3,264,147 | PF_052544d04561; PF_2f595d1c0409−,PF_82422e478eda+ | 21 / 577 | 2,150 bp | unresolved, ambiguous consensus |
 
@@ -854,8 +854,15 @@ Read files, manifests and the repository are never touched. Space reclaimed:
 
 - All 10 real candidate sites stay unresolved at the full-insertion level, mostly because the consensus is thin.
   More molecules would need more sequencing of those strains, not a looser rule.
-- `other_sequence` candidates (1 site, SAMN42749333 456,191–458,920) are not reviewed by `candidate_evidence.py`,
-  which covers `core_absent` only.
+- **The one `other_sequence` candidate** was reviewed afterwards, with unchanged thresholds, in
+  `read_site_search_scale1_review_other_sequence/` (`candidate_evidence.py --classes not_in_assembly:other_sequence`,
+  commit 5deda86).
+  - Molecules: 4 P_matched and 85 A_matched; strict P is 0.
+  - Boundary: extension_consistent in 3/3 molecules.
+  - Insertion: 2,473 bp (lt_2500) where the assembly holds 2,729 bp.
+  - Core: fully covered, 99.4% identity, both ends.
+  - Consensus: depth 2–4 with 9 ambiguous bases, so the gene count is unresolved (1–4).
+  - The batch run itself only reviews `core_absent` by default.
 - **One locus can split into two clusters:** some negative-control loci split when one junction differs by more
   than 50 bp. They are labelled `one_locus_junction_differs_gt_TOL`, not merged. The single positive-test miss is
   the same 51 bp effect.
