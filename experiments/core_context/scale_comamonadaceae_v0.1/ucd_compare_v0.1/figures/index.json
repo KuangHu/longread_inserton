@@ -1,0 +1,32 @@
+[
+ {
+  "file": "figures/ucd_supported_NC_UCD02_candidate_insertion.svg",
+  "verdict": "ucd_supported",
+  "pair_key": "NC_UCD02|candidate_insertion",
+  "case": "UCD02"
+ },
+ {
+  "file": "figures/same_context_VC_00a85a0dba74_cds_core.svg",
+  "verdict": "same_context",
+  "pair_key": "VC_00a85a0dba74|cds_core",
+  "case": ""
+ },
+ {
+  "file": "figures/only_one_side_different_VP_05b4be5ebd7f_cds_core.svg",
+  "verdict": "only_one_side_different",
+  "pair_key": "VP_05b4be5ebd7f|cds_core",
+  "case": ""
+ },
+ {
+  "file": "figures/swapped_or_rearranged_context_VP_e90421fa9b5b_candidate_insertion.svg",
+  "verdict": "swapped_or_rearranged_context",
+  "pair_key": "VP_e90421fa9b5b|candidate_insertion",
+  "case": ""
+ },
+ {
+  "file": "figures/insufficient_context_VP_fa59b4a0a82d_candidate_insertion.svg",
+  "verdict": "insufficient_context",
+  "pair_key": "VP_fa59b4a0a82d|candidate_insertion",
+  "case": ""
+ }
+]

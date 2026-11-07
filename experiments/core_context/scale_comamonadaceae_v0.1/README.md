@@ -1210,6 +1210,12 @@ purple cigar_fail. Pairs shown:
 - **Reading:** the per-interval method removes the dependence on which other intervals are checked together.
   It changes no supported result of the round-5 set. It is the current read-check baseline.
 
+- **U–insertion–D comparison (`../ucd_compare.py`, v0.1, 2026-11-06):** a separate module.
+  - Method: compares X/X′ and the 1 kb flanks of a pair directly at DNA level. It needs no empty site, no gap caller,
+    no S6 groups and no read-check result.
+  - Small run (918 pairs: dev/validation samples and the named cases): all 17 named cases `ucd_supported`.
+  - Results, figures and scale-up estimate: `ucd_compare_v0.1/README.md`.
+
 Not done yet:
 - **Adding sites from long reads (the original aim):** see `READ_SITE_SEARCH_PILOT.md`.
   - **Development:** v0.1 → v0.3 on 11 frozen samples. v0.3 treats the core hit as a seed and finds the insertion
