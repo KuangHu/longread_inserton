@@ -121,6 +121,20 @@ class Helpers(unittest.TestCase):
         d = uc.sides_of(U1[:200] + X + D1, 200, 1400, '+', 1000)
         self.assertEqual(len(d['U']), 200)
 
+    def test_rc_iupac_and_case(self):
+        self.assertEqual(uc.rc('ACGTRYKMSWBDHVN'), 'NBDHVWSKMRYACGT')
+        self.assertEqual(uc.rc('acgtrykm'), 'kmryacgt')
+        for s in ('ACGTRYSWKMBDHVN' * 3, 'acgtnrykmswbdhv', 'AcGtRy'):
+            self.assertEqual(uc.rc(uc.rc(s)), s)
+        self.assertEqual(uc.rc(X), X.translate(str.maketrans('ACGT', 'TGCA'))[::-1])  # A/C/G/T unchanged
+
+    def test_minus_strand_extraction_with_ambiguity_codes(self):
+        g = U1[:500] + 'ACRYGT' + X[:300] + 'KMNSW' + D1[:500]
+        d = uc.sides_of(g, 500, 811, '-', 500)
+        comp = dict(zip('ACGTRYKMSWN', 'TGCAYRMKSWN'))
+        self.assertEqual(d['X'], ''.join(comp[c] for c in reversed(g[500:811])))
+        self.assertNotIn('?', d['X'])
+
     def test_union_coverage_counts_overlaps_once(self):
         self.assertEqual(uc.union_len([(0, 100), (50, 150), (300, 310)]), 160)
 

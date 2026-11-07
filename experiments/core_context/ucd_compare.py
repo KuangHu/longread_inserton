@@ -74,7 +74,7 @@ from collections import Counter, defaultdict
 from concurrent.futures import ProcessPoolExecutor
 from pathlib import Path
 
-VERSION = 'ucd_compare_v0.1'
+VERSION = 'ucd_compare_v0.1.1'  # v0.1.1: rc() complements every IUPAC code (v0.1 left R/Y/K/M/... uncomplemented)
 HERE = Path(__file__).resolve().parent
 REPO = HERE / 'scale_comamonadaceae_v0.1'
 SCRATCH = Path('/global/scratch/users/kh36969/longread_callout/core_context')
@@ -88,7 +88,9 @@ CONFIG = dict(
     lc_window=64, lc_step=32, lc_entropy=3.0,
 )
 KINDS = ('cds_core', 'candidate_insertion')
-COMP = str.maketrans('ACGTNacgtn', 'TGCANtgcan')
+_FWD = 'ACGTURYSWKMBDHVN'
+_REV = 'TGCAAYRSWMKVHDBN'
+COMP = str.maketrans(_FWD + _FWD.lower(), _REV + _REV.lower())  # full IUPAC, case kept
 SIDE = ('occurrence', 'sample', 'contig', 'start0', 'end0', 'strand', 'elem_lo', 'elem_hi', 'boundary_up',
         'boundary_down', 'estimated_span', 'position_class')
 LABELS = ('pair_id', 'source', 'case', 'tier', 'structure', 'core_key', 'product', 'product_hint', 'control_class',

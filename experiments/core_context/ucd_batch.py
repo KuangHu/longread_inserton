@@ -1,11 +1,11 @@
 """Batch run of the U-insertion-D comparison over an existing candidate catalogue, with two checks per pair.
 
-Scope: a full comparison of the pairs of the existing candidate catalogue (here every match_both_lt2500 pair of the
-boundary review, b1-2-3). It is not a complete discovery over every FASTA. Pairs are taken as listed; nothing is
-filtered by old read-check, gap-caller or S6 results (s6_grouping is carried as a label only).
+Scope: a full comparison of the pairs of an existing candidate catalogue. It is not a complete discovery over every
+FASTA. Pairs are taken as listed; nothing is filtered by old read-check, gap-caller or S6 results (s6_grouping is
+carried as a label only).
 
 Per pair and interval kind (cds_core, candidate_insertion; always output separately):
-  screen         ucd_compare.compare (v0.1, frozen), on the sequences the screen extracts itself. Kept as is.
+  screen         ucd_compare.compare (frozen rules), on the sequences the screen extracts itself. Kept as is.
   source_check   Check 1 (ucd_checks.check1_side). Both sides must pass:
                  - the source FASTA sha256 equals the verified manifest;
                  - the contig exists and the interval is in bounds;
@@ -13,15 +13,21 @@ Per pair and interval kind (cds_core, candidate_insertion; always output separat
                    reverse-complemented.
   ucd_check      Check 2 (ucd_checks.check_ucd) on the Check-1 sequences: collinear insertion chain, frozen context rule.
   final_status   pass = source_check pass and ucd_check ucd_supported; otherwise not_passed, with failure_reason.
+  A candidate_insertion interval exists only where the boundary review resolved both ends of both occurrences. Where
+  it does not, the row says which end is missing; no boundary is inferred here.
 
 Commands
-  freeze   build the input pair table from the catalogue + boundary / occurrence shards; verify each source FASTA against
-           the manifest; split into chunks; record sha256 of code, inputs and parameters (freeze.json).
+  freeze   build the input table and split it into chunks; record sha256 of code, inputs and parameters (freeze.json).
+           --catalogue match FILE     the pairs listed in a catalogue file (as v0.1)
+           --catalogue boundary       every core pair of the boundary review shards; writes catalogue_ids.txt.gz
+           --exclude-input FILE       drop the pair IDs of an earlier input table (ID difference, counted)
+           --from-input FILE --ids F  reuse rows of an earlier frozen input table for the listed IDs (reruns)
   chunk    process one chunk (SLURM array index). A finished chunk (done.json matching the freeze) is skipped, so a
-           resubmitted array resumes where it stopped. Code changed since freeze -> refuse to run.
-  merge    per-ID completeness (every pair_id x interval kind exactly once), then final tables, counts, examples.
-  cleanup  after a complete merge: remove the chunk directories (rebuildable). Keeps the source table, the final
-           sequences and the alignment evidence.
+           resubmitted array resumes. Code changed since freeze -> refuse to run.
+  merge    per-ID completeness of this run (every pair_id x interval kind exactly once); then rows per kind and
+           evidence, streamed. Detailed tables and counts: ucd_combine.py.
+  cleanup  after a complete merge: remove chunk directories and chunk inputs (rebuildable from freeze); writes the
+           list of removed paths first.
 """
 import argparse
 import csv
@@ -34,14 +40,14 @@ import socket
 import sys
 import tempfile
 import time
-from collections import Counter, OrderedDict, defaultdict
+from collections import Counter, OrderedDict
 from concurrent.futures import ProcessPoolExecutor
 from pathlib import Path
 
 import ucd_checks as ck
 import ucd_compare as uc
 
-VERSION = 'ucd_batch_v0.1'
+VERSION = 'ucd_batch_v0.2'
 HERE = Path(__file__).resolve().parent
 CODE = ('ucd_compare.py', 'ucd_checks.py', 'ucd_batch.py')
 KINDS = uc.KINDS
@@ -63,7 +69,7 @@ CHK = (['chk_b_flipped', 'chk_insertion_class', 'chk_insertion_identity', 'chk_i
 ROW_COLS = (['pair_key', 'pair_id', 'interval_kind'] + list(LABELS[1:]) +
             ['%s_%s' % (s, f) for s in 'ab' for f in PROV] + ['x_len_a', 'x_len_b'] +
             ['screen_' + k for k in SCREEN] + ['source_check', 'source_reasons', 'ucd_check'] + CHK +
-            ['final_status', 'failure_reason', 'screen_check_agree'])
+            ['final_status', 'failure_reason', 'screen_check_agree', 'code_version'])
 HSP_COLS = ['pair_key', 'q', 's', 'strand', 'pident', 'length', 'nident', 'qs', 'qe', 'ss', 'se', 'qlen', 'slen',
             'evalue', 'bitscore', 'in_insertion_chain']
 
@@ -80,82 +86,133 @@ def pair_id(structure, core, scope, oa, ob):
     return 'M' + hashlib.sha1('|'.join((structure, core, scope, oa, ob)).encode()).hexdigest()[:12]
 
 
+def ids_of(path):
+    op = gzip.open if str(path).endswith('.gz') else open
+    with op(path, 'rt') as f:
+        first = f.readline().rstrip('\n').split('\t')
+        if 'pair_id' in first:
+            i = first.index('pair_id')
+            return {line.split('\t')[i].rstrip('\n') for line in f}
+        return {first[0]} | {line.strip() for line in f if line.strip()}
+
+
 # ---------------------------------------------------------------- freeze
 
-def cmd_freeze(a):
-    out, work = Path(a.out), Path(a.work)
-    out.mkdir(parents=True, exist_ok=True)
-    work.mkdir(parents=True, exist_ok=True)
-    cat = uc.read_tsv(a.catalogue)
-    keys = {}
-    for r in cat:
-        oa, ob = sorted((r['occurrence_a'], r['occurrence_b']))
-        k = (r['structure'], r['core_key'], r['pair_scope'], oa, ob)
-        if k in keys:
-            sys.exit('duplicate catalogue pair %s' % (k,))
-        keys[k] = r
+def build_from_catalogue(a, man):
+    """Input rows (lists in INPUT_COLS order) for the catalogue pairs, from the boundary and occurrence shards."""
+    keys = None
+    if a.catalogue != 'boundary':
+        keys = {}
+        for r in uc.read_tsv(a.catalogue):
+            oa, ob = sorted((r['occurrence_a'], r['occurrence_b']))
+            k = (r['structure'], r['core_key'], r['pair_scope'], oa, ob)
+            if k in keys:
+                sys.exit('duplicate catalogue pair %s' % (k,))
+            keys[k] = r
     found, need = {}, set()
     for i in range(64):
         for r in uc.read_tsv(Path(a.review) / 'boundary' / a.tag / ('shard_%03d' % i) / 'pairs.tsv.gz'):
             oa, ob = r['occurrence_a'], r['occurrence_b']
             sw = oa > ob
             k = (r['structure'], r['core_key'], r['pair_scope']) + ((ob, oa) if sw else (oa, ob))
-            if k in keys:
-                if k in found:
-                    sys.exit('pair found twice in boundary shards %s' % (k,))
-                found[k] = (r, sw)
-                need |= {oa, ob}
+            if keys is not None and k not in keys:
+                continue
+            if k in found:
+                sys.exit('pair found twice in boundary shards %s' % (k,))
+            lab = keys[k] if keys is not None else r
+            found[k] = ([lab.get(f, '') for f in LABELS[4:]], sw, r['a_up'], r['a_down'], r['b_up'], r['b_down'])
+            need |= {oa, ob}
     occ = {}
     for i in range(64):
         for r in uc.read_tsv(Path(a.review) / 's6' / a.tag / ('shard_%03d' % i) / 'occurrences.tsv.gz'):
             if r['occurrence_id'] in need:
-                occ[(r['structure'], r['occurrence_id'])] = r
+                occ[(r['structure'], r['occurrence_id'])] = (r['sample'], r['contig'], r['start0'], r['end0'],
+                                                             r['strand'])
     bnd = {}
     for scope in ('same_assembly', 'cross_assembly'):
         for r in uc.read_tsv(uc.REPO / ('boundary_occurrences_%s_%s.tsv.gz' % (scope, a.tag))):
             if r['occurrence_id'] in need:
-                bnd[(scope, r['structure'], r['occurrence_id'])] = r
-    man = uc.manifest(a.manifest)
+                bnd[(scope, r['structure'], r['occurrence_id'])] = (r['up_status'], r['down_status'],
+                                                                    r['estimated_span'])
+    missing = [k for k in (keys or {}) if k not in found]
     rows = []
-    for k, c in keys.items():
+    for k in list(found) + missing:
         structure, core, scope, oa, ob = k
-        x = dict(pair_id=pair_id(*k), structure=structure, core_key=core, pair_scope=scope,
-                 **{f: c.get(f, '') for f in LABELS[4:]})
-        f, sw = found.get(k, (None, False))
+        f = found.get(k)
+        x = dict(pair_id=pair_id(*k), structure=structure, core_key=core, pair_scope=scope)
+        x.update(zip(LABELS[4:], f[0] if f else [keys[k].get(c, '') for c in LABELS[4:]]))
         for s, o in (('a', oa), ('b', ob)):
-            e = []
-            if f is None:
-                e.append('pair_not_in_boundary_review')
+            e = [] if f else ['pair_not_in_boundary_review']
             ro = occ.get((structure, o))
             if ro is None:
                 e.append('occurrence_coordinates_missing')
-            d = dict(occurrence=o, sample=o.split('|')[1], input_error=','.join(e))
+            d = dict(occurrence=o, sample=o.split('|')[1])
             if ro:
-                d.update(sample=ro['sample'], contig=ro['contig'], start0=ro['start0'], end0=ro['end0'],
-                         strand=ro['strand'])
+                d.update(zip(('sample', 'contig', 'start0', 'end0', 'strand'), ro))
             d['assembly'] = man.get(d['sample'], {}).get('assembly', '')
             if not d['assembly']:
-                d['input_error'] = ','.join(filter(None, (d['input_error'], 'sample_not_in_manifest')))
-            if f is not None and ro:
-                src = ('b' if s == 'a' else 'a') if sw else s
-                up, down = f[src + '_up'], f[src + '_down']
+                e.append('sample_not_in_manifest')
+            if f and ro:
+                src = ('b' if s == 'a' else 'a') if f[1] else s
+                up, down = (f[2], f[3]) if src == 'a' else (f[4], f[5])
                 d.update(ext_up=up, ext_down=down)
                 if up != '' and down != '':
-                    st, en = int(ro['start0']), int(ro['end0'])
-                    lo, hi = (st - int(up), en + int(down)) if ro['strand'] == '+' else (st - int(down), en + int(up))
+                    st, en = int(ro[2]), int(ro[3])
+                    lo, hi = (st - int(up), en + int(down)) if ro[4] == '+' else (st - int(down), en + int(up))
                     d.update(elem_lo=lo, elem_hi=hi)
-            b = bnd.get((scope, structure, o), {})
-            d.update(boundary_up=b.get('up_status', ''), boundary_down=b.get('down_status', ''),
-                     estimated_span=b.get('estimated_span', ''))
+            b = bnd.get((scope, structure, o), ('', '', ''))
+            d.update(boundary_up=b[0], boundary_down=b[1], estimated_span=b[2], input_error=','.join(e))
             x.update({'%s_%s' % (s, q): v for q, v in d.items()})
-        rows.append(x)
-    rows.sort(key=lambda r: (r['a_sample'], r['b_sample'], r['pair_id']))
-    for i, r in enumerate(rows):
-        r['chunk'] = i // a.chunk_size
+        rows.append([x.get(c, '') for c in INPUT_COLS])
+    return rows
+
+
+def cmd_freeze(a):
+    out, work = Path(a.out), Path(a.work)
+    out.mkdir(parents=True, exist_ok=True)
+    work.mkdir(parents=True, exist_ok=True)
+    man = uc.manifest(a.manifest)
+    ci = {c: i for i, c in enumerate(INPUT_COLS)}
+    info = {}
+    if a.from_input:
+        want = ids_of(a.ids)
+        rows = [[r[c] for c in INPUT_COLS] for r in uc.read_tsv(a.from_input) if r['pair_id'] in want]
+        info.update(from_input=a.from_input, from_input_sha256=sha_file(a.from_input), ids=a.ids,
+                    ids_sha256=sha_file(a.ids), ids_requested=len(want), ids_found=len(rows))
+        if len(rows) != len(want):
+            sys.exit('%d requested IDs not in %s' % (len(want) - len(rows), a.from_input))
+    else:
+        rows = build_from_catalogue(a, man)
+        ids = [r[0] for r in rows]
+        if len(set(ids)) != len(ids):
+            sys.exit('pair_id collision: %d rows, %d distinct IDs' % (len(ids), len(set(ids))))
+        info['catalogue_pairs'] = len(rows)
+        cat = work / 'catalogue_ids.txt.gz'
+        with gzip.open(cat, 'wt') as f:
+            f.write('pair_id\n' + '\n'.join(sorted(ids)) + '\n')
+        info.update(catalogue_ids=str(cat), catalogue_ids_sha256=sha_file(cat))
+        if a.exclude_input:
+            ex = ids_of(a.exclude_input)
+            rows = [r for r in rows if r[0] not in ex]
+            info.update(exclude_input=a.exclude_input, exclude_input_sha256=sha_file(a.exclude_input),
+                        excluded_ids=len(ex), excluded_ids_in_catalogue=len(ex & set(ids)),
+                        remaining_after_difference=len(rows))
+    rows.sort(key=lambda r: (r[ci['a_sample']], r[ci['b_sample']], r[0]))
     n_chunks = (len(rows) + a.chunk_size - 1) // a.chunk_size
-    uc.write_tsv(out / 'input_pairs.tsv.gz', rows, INPUT_COLS)
-    # sources: every assembly used, verified against the manifest sha256 now (compute nodes re-verify on load)
-    samples = sorted({r[s + '_sample'] for r in rows for s in 'ab'})
+    (work / 'inputs').mkdir(exist_ok=True)
+    allp = work / 'input_pairs.tsv.gz'
+    with gzip.open(allp, 'wt') as fa:
+        fa.write('\t'.join(INPUT_COLS) + '\n')
+        for c in range(n_chunks):
+            part = rows[c * a.chunk_size:(c + 1) * a.chunk_size]
+            with gzip.open(work / 'inputs' / ('c%04d.tsv.gz' % c), 'wt') as f:
+                f.write('\t'.join(INPUT_COLS) + '\n')
+                for r in part:
+                    r[ci['chunk']] = c
+                    line = '\t'.join(str(v) for v in r) + '\n'
+                    f.write(line)
+                    fa.write(line)
+    samples = sorted({r[ci[s + '_sample']] for r in rows for s in 'ab'})
     src = []
     for smp in samples:
         m = man.get(smp)
@@ -169,17 +226,17 @@ def cmd_freeze(a):
                         status='verified' if h == m['fna_sha256'] else ('missing' if not h else 'sha256_mismatch')))
     uc.write_tsv(out / 'sources.tsv.gz', src, ['sample', 'assembly', 'fasta', 'manifest_sha256', 'observed_sha256',
                                                'bytes', 'status'])
-    cfg = dict(uc.CONFIG)
-    frz = dict(version=VERSION, screen_version=uc.VERSION, check_version=ck.CHECK_VERSION, config=cfg,
+    errs = Counter(e for r in rows for s in 'ab' for e in r[ci[s + '_input_error']].split(',') if e)
+    frz = dict(version=VERSION, screen_version=uc.VERSION, check_version=ck.CHECK_VERSION, config=dict(uc.CONFIG),
                check_config=ck.CHECK_CONFIG, coordinates=ck.COORDS, code_sha256=code_hashes(),
-               scope='full comparison of the existing candidate catalogue (match_both_lt2500, %s); not a complete '
-                     'discovery over all FASTA' % a.tag,
-               inputs={str(p): sha_file(p) for p in (Path(a.catalogue), Path(a.manifest))},
-               input_pairs=len(rows), input_pairs_sha256=sha_file(out / 'input_pairs.tsv.gz'),
+               scope='full comparison of an existing candidate catalogue (%s, %s); not a complete discovery over all '
+                     'FASTA' % ('boundary review core pairs' if a.catalogue == 'boundary' else a.catalogue, a.tag),
+               inputs={str(p): sha_file(p) for p in [Path(a.manifest)] +
+                       ([Path(a.catalogue)] if a.catalogue not in ('boundary', '') else [])},
+               input_pairs=len(rows), input_pairs_path=str(allp), input_pairs_sha256=sha_file(allp),
                sources_sha256=sha_file(out / 'sources.tsv.gz'), chunk_size=a.chunk_size, chunks=n_chunks,
-               input_errors=dict(Counter(e for r in rows for s in 'ab' for e in r[s + '_input_error'].split(',') if e)),
-               sources=dict(Counter(s['status'] for s in src)), work=str(work),
-               frozen_at=time.strftime('%Y-%m-%d %H:%M:%S'))
+               input_errors=dict(errs), sources=dict(Counter(s['status'] for s in src)), work=str(work),
+               frozen_at=time.strftime('%Y-%m-%d %H:%M:%S'), **info)
     (out / 'freeze.json').write_text(json.dumps(frz, indent=1) + '\n')
     print(json.dumps({k: v for k, v in frz.items() if k != 'config'}, indent=1))
 
@@ -189,11 +246,11 @@ def cmd_freeze(a):
 _W = {}
 
 
-def _init(man, cfg, ccfg):
-    _W.update(man=man, cfg=cfg, ccfg=ccfg, genomes=OrderedDict(), sources=OrderedDict())
+def _init(man, cfg, ccfg, code_version):
+    _W.update(man=man, cfg=cfg, ccfg=ccfg, code_version=code_version, genomes=OrderedDict(), sources=OrderedDict())
 
 
-def _lru(cache, key, make, size=48):
+def _lru(cache, key, make, size):
     if key in cache:
         cache.move_to_end(key)
         return cache[key]
@@ -204,21 +261,29 @@ def _lru(cache, key, make, size=48):
 
 
 def screen_genome(sample):
-    return _lru(_W['genomes'], sample, lambda: uc.read_fasta(_W['man'][sample]['fasta']))
+    return _lru(_W['genomes'], sample, lambda: uc.read_fasta(_W['man'][sample]['fasta']), 64)
 
 
 def source(sample):
     m = _W['man'][sample]
-    return _lru(_W['sources'], sample, lambda: ck.Source(m['fasta'], m['fna_sha256']))
+    return _lru(_W['sources'], sample, lambda: ck.Source(m['fasta'], m['fna_sha256']), 400)
 
 
 def interval(r, s, kind):
+    """(lo, hi), or the reason there is none (input error, or which boundary / extension is missing)."""
     if r[s + '_input_error']:
         return 'input_error:' + r[s + '_input_error']
     if kind == 'cds_core':
         return int(r[s + '_start0']), int(r[s + '_end0'])
-    if r[s + '_elem_lo'] == '' or r[s + '_boundary_up'] != 'resolved' or r[s + '_boundary_down'] != 'resolved':
-        return None
+    why = []
+    for end in ('up', 'down'):
+        st = r['%s_boundary_%s' % (s, end)]
+        if st != 'resolved':
+            why.append('boundary_%s=%s' % (end, st or 'none'))
+    if r[s + '_elem_lo'] == '':
+        why.append('pair_extension_not_determined')
+    if why:
+        return 'candidate_interval_not_available(%s)' % ','.join(why)
     return int(r[s + '_elem_lo']), int(r[s + '_elem_hi'])
 
 
@@ -231,7 +296,7 @@ def work_pair(r):
     try:
         for kind in KINDS:
             key = '%s|%s' % (r['pair_id'], kind)
-            row = dict({k: r[k] for k in LABELS}, pair_key=key, interval_kind=kind)
+            row = dict({k: r[k] for k in LABELS}, pair_key=key, interval_kind=kind, code_version=_W['code_version'])
             for s in 'ab':
                 row.update({'%s_%s' % (s, f): r[s + '_' + f] for f in ('occurrence', 'sample', 'assembly', 'contig',
                                                                          'strand', 'boundary_up', 'boundary_down',
@@ -239,21 +304,18 @@ def work_pair(r):
             ivs = {s: interval(r, s, kind) for s in 'ab'}
             bad = [s for s in 'ab' if not isinstance(ivs[s], tuple)]
             if bad:
-                why = ';'.join('%s:%s' % (s, ivs[s] or 'interval_not_available') for s in bad)
-                row.update(source_check='not_run', source_reasons=why, ucd_check='not_run',
-                           final_status='not_passed', failure_reason=why)
+                why = ';'.join('%s:%s' % (s, ivs[s]) for s in bad)
+                row.update(source_check='not_run', source_reasons=why, ucd_check='not_run', final_status='not_passed',
+                           failure_reason=why)
                 rows.append(row)
                 continue
-            # screen (v0.1, its own extraction)
+            # screen (its own extraction)
             S = {}
             for s in 'ab':
-                g = screen_genome(r[s + '_sample'])
-                cs = g.get(r[s + '_contig'])
-                if cs is None:
-                    S[s] = None
-                    continue
-                S[s] = dict(uc.sides_of(cs, ivs[s][0], ivs[s][1], r[s + '_strand'], L), id=r[s + '_occurrence'],
-                            sample=r[s + '_sample'], contig=r[s + '_contig'])
+                cs = screen_genome(r[s + '_sample']).get(r[s + '_contig'])
+                S[s] = None if cs is None else dict(uc.sides_of(cs, ivs[s][0], ivs[s][1], r[s + '_strand'], L),
+                                                    id=r[s + '_occurrence'], sample=r[s + '_sample'],
+                                                    contig=r[s + '_contig'])
             if S['a'] and S['b']:
                 sc = uc.compare(S['a'], S['b'], cfg, tmp)
                 row.update({'screen_' + k: sc[k] for k in SCREEN})
@@ -262,11 +324,10 @@ def work_pair(r):
             # Check 1
             C, why = {}, []
             for s in 'ab':
-                c = ck.check1_side(source(r[s + '_sample']), r[s + '_contig'], ivs[s][0], ivs[s][1],
-                                   r[s + '_strand'], L, S[s])
-                C[s] = c
-                row.update({'%s_fasta_sha256' % s: getattr(source(r[s + '_sample']), 'sha256', ''),
-                            '%s_contig_len' % s: c['contig_len'], '%s_edge' % s: c['edge']})
+                src = source(r[s + '_sample'])
+                c = C[s] = ck.check1_side(src, r[s + '_contig'], ivs[s][0], ivs[s][1], r[s + '_strand'], L, S[s])
+                row.update({'%s_fasta_sha256' % s: getattr(src, 'sha256', ''), '%s_contig_len' % s: c['contig_len'],
+                            '%s_edge' % s: c['edge']})
                 if 'ivs' in c:
                     row.update({'%s_%s_interval' % (s, p.lower()): '%d-%d' % c['ivs'][p] for p in 'XUD'})
                     row.update({'%s_%s_sha' % (s, p.lower()): c['sha'][p] for p in 'XUD'})
@@ -311,7 +372,10 @@ def cmd_chunk(a):
     frz = json.loads((out / 'freeze.json').read_text())
     if code_hashes() != frz['code_sha256']:
         sys.exit('code differs from the frozen code (freeze.json); refusing to run')
-    idx = a.index if a.index is not None else int(os.environ['SLURM_ARRAY_TASK_ID'])
+    idx = a.index if a.index is not None else int(os.environ['SLURM_ARRAY_TASK_ID']) + a.offset
+    if idx >= frz['chunks']:
+        print('chunk %d beyond %d chunks; nothing to do' % (idx, frz['chunks']))
+        return
     d = work / 'chunks' / ('c%04d' % idx)
     done = d / 'done.json'
     if done.exists():
@@ -320,12 +384,14 @@ def cmd_chunk(a):
                 sha_file(d / 'rows.tsv.gz') == j.get('rows_sha256'):
             print('chunk %d already complete; skipped' % idx)
             return
-    pairs = [r for r in uc.read_tsv(out / 'input_pairs.tsv.gz') if int(r['chunk']) == idx]
+    pairs = uc.read_tsv(work / 'inputs' / ('c%04d.tsv.gz' % idx))
     man = uc.manifest(a.manifest)
+    cv = '%s+%s' % (VERSION, hashlib.sha256(''.join(frz['code_sha256'][c] for c in CODE).encode()).hexdigest()[:12])
     d.mkdir(parents=True, exist_ok=True)
     t0 = time.time()
     rows, seqs, hsps, cpu, wall = [], {}, [], [], []
-    with ProcessPoolExecutor(a.threads, initializer=_init, initargs=(man, frz['config'], frz['check_config'])) as ex:
+    with ProcessPoolExecutor(a.threads, initializer=_init,
+                             initargs=(man, frz['config'], frz['check_config'], cv)) as ex:
         for rs, sq, hs, c, w in ex.map(work_pair, pairs, chunksize=4):
             rows += rs
             seqs.update(sq)
@@ -344,7 +410,7 @@ def cmd_chunk(a):
     tmpd.rmdir()
     j = dict(chunk=idx, pairs=len(pairs), rows=len(rows), pair_ids_sha256=hashlib.sha256(
         '\n'.join(sorted(r['pair_id'] for r in pairs)).encode()).hexdigest(),
-        rows_sha256=sha_file(d / 'rows.tsv.gz'), input_pairs_sha256=frz['input_pairs_sha256'],
+        rows_sha256=sha_file(d / 'rows.tsv.gz'), input_pairs_sha256=frz['input_pairs_sha256'], code_version=cv,
         wall_s=round(time.time() - t0, 1), threads=a.threads, worker_wall_s=round(sum(wall), 1),
         child_process_cpu_s=round(sum(cpu), 1), host=socket.gethostname(),
         slurm=dict(job=os.environ.get('SLURM_ARRAY_JOB_ID', os.environ.get('SLURM_JOB_ID', '')),
@@ -354,67 +420,58 @@ def cmd_chunk(a):
     print(json.dumps(j))
 
 
-# ---------------------------------------------------------------- merge
-
-def counts(rows):
-    occ = {o for r in rows for o in (r['a_occurrence'], r['b_occurrence'])}
-    return dict(pairs=len(rows), occurrences=len(occ),
-                samples=len({r['a_sample'] for r in rows} | {r['b_sample'] for r in rows}),
-                cores=len({(r['structure'], r['core_key']) for r in rows}))
-
+# ---------------------------------------------------------------- merge (one run; streamed)
 
 def cmd_merge(a):
     out, work = Path(a.out), Path(a.work)
     frz = json.loads((out / 'freeze.json').read_text())
-    inp = uc.read_tsv(out / 'input_pairs.tsv.gz')
-    expect = {(r['pair_id'], k) for r in inp for k in KINDS}
-    rows, seen, missing_chunks, done = [], Counter(), [], []
+    expect = set()
+    for i in range(frz['chunks']):
+        expect |= {r['pair_id'] for r in uc.read_tsv(work / 'inputs' / ('c%04d.tsv.gz' % i))}
+    missing_chunks, done = [], []
     for i in range(frz['chunks']):
         d = work / 'chunks' / ('c%04d' % i)
-        if not (d / 'done.json').exists():
+        ok = (d / 'done.json').exists()
+        if ok:
+            j = json.loads((d / 'done.json').read_text())
+            ok = sha_file(d / 'rows.tsv.gz') == j['rows_sha256']
+        if ok:
+            done.append(j)
+        else:
             missing_chunks.append(i)
-            continue
-        j = json.loads((d / 'done.json').read_text())
-        if sha_file(d / 'rows.tsv.gz') != j['rows_sha256']:
-            missing_chunks.append(i)
-            continue
-        done.append(j)
-        for r in uc.read_tsv(d / 'rows.tsv.gz'):
-            seen[(r['pair_id'], r['interval_kind'])] += 1
-            rows.append(r)
-    missing = sorted(expect - set(seen))
-    dup = sorted(k for k, v in seen.items() if v > 1)
-    extra = sorted(set(seen) - expect)
-    comp = dict(expected=len(expect), observed=len(seen), missing=len(missing), duplicated=len(dup), unexpected=len(extra),
-                missing_chunks=missing_chunks, missing_examples=missing[:20], duplicated_examples=dup[:20],
-                complete=not (missing or dup or extra or missing_chunks))
+    if missing_chunks:
+        comp = dict(complete=False, missing_chunks=missing_chunks)
+        (out / 'completeness.json').write_text(json.dumps(comp, indent=1) + '\n')
+        sys.exit('incomplete: %d chunks missing; resubmit them (finished chunks are skipped)' % len(missing_chunks))
+    seen = {k: set() for k in KINDS}
+    dup, extra = Counter(), Counter()
+    outs = {k: gzip.open(work / ('rows_%s.tsv.gz' % k), 'wt') for k in KINDS}
+    for f in outs.values():
+        f.write('\t'.join(ROW_COLS) + '\n')
+    for i in range(frz['chunks']):
+        with gzip.open(work / 'chunks' / ('c%04d' % i) / 'rows.tsv.gz', 'rt') as f:
+            hdr = f.readline().rstrip('\n').split('\t')
+            assert hdr == ROW_COLS
+            ip, ik = hdr.index('pair_id'), hdr.index('interval_kind')
+            for line in f:
+                v = line.split('\t')
+                pid, kind = v[ip], v[ik]
+                if pid not in expect or kind not in seen:
+                    extra[kind] += 1
+                elif pid in seen[kind]:
+                    dup[kind] += 1
+                seen.setdefault(kind, set()).add(pid)
+                outs[kind].write(line) if kind in outs else None
+    for f in outs.values():
+        f.close()
+    missing = {k: len(expect - seen[k]) for k in KINDS}
+    comp = dict(expected_pairs=len(expect), expected_rows=len(expect) * len(KINDS),
+                observed_rows={k: len(seen[k]) for k in KINDS}, missing=missing, duplicated=dict(dup),
+                unexpected=dict(extra), missing_chunks=[],
+                complete=not (any(missing.values()) or dup or extra))
     (out / 'completeness.json').write_text(json.dumps(comp, indent=1) + '\n')
     if not comp['complete']:
-        print(json.dumps(comp, indent=1))
-        sys.exit('incomplete: rerun the missing chunks (the array resumes) before merging')
-    res = {}
-    for kind in KINDS:
-        rk = sorted((r for r in rows if r['interval_kind'] == kind), key=lambda r: r['pair_id'])
-        uc.write_tsv(work / ('ucd_all_rows_%s.tsv.gz' % kind), rk, ROW_COLS)
-        uc.write_tsv(out / ('ucd_final_%s.tsv.gz' % kind), [r for r in rk if r['final_status'] == 'pass'], ROW_COLS)
-        by = defaultdict(list)
-        for r in rk:
-            by[r['ucd_check']].append(r)
-        res[kind] = dict(
-            rows=len(rk),
-            source_check=dict(Counter(r['source_check'] for r in rk)),
-            source_failure_reasons=dict(Counter(x.split(':', 1)[1].split('@')[0] for r in rk if r['source_check'] == 'fail'
-                                                for x in r['source_reasons'].split(';'))),
-            not_run_reasons=dict(Counter(x.split(':', 1)[1] for r in rk if r['source_check'] == 'not_run'
-                                         for x in r['source_reasons'].split(';'))),
-            ucd_check={v: counts(x) for v, x in sorted(by.items())},
-            final_pass=counts([r for r in rk if r['final_status'] == 'pass']),
-            final_pass_by_scope_structure={'%s|%s' % k: counts(x) for k, x in sorted(_group(
-                [r for r in rk if r['final_status'] == 'pass'], ('pair_scope', 'structure')).items())},
-            screen_vs_check=dict(sorted(Counter('%s -> %s' % (r.get('screen_verdict') or '-', r['ucd_check'])
-                                                for r in rk if r['source_check'] == 'pass').items())),
-            screen_check_disagree=sum(r['screen_check_agree'] == 'False' for r in rk))
-    # evidence: final sequences (deduplicated by occurrence interval) and Check-2 HSPs
+        sys.exit('incomplete or inconsistent: %s' % json.dumps(comp))
     seq_p, hsp_p = work / 'evidence_sequences.fa.gz', work / 'evidence_hsps.tsv.gz'
     seen_s = set()
     with gzip.open(seq_p, 'wt') as fo:
@@ -426,54 +483,51 @@ def cmd_merge(a):
                         seen_s.add(k)
                         fo.write(h + s)
     with gzip.open(hsp_p, 'wt') as fo:
+        fo.write('\t'.join(HSP_COLS) + '\n')
         for i in range(frz['chunks']):
             with gzip.open(work / 'chunks' / ('c%04d' % i) / 'hsps.tsv.gz', 'rt') as f:
-                hdr = f.readline()
-                if i == 0:
-                    fo.write(hdr)
+                f.readline()
                 shutil.copyfileobj(f, fo)
-    cpu = sum(j['child_process_cpu_s'] for j in done)
-    summ = dict(
-        version=VERSION, freeze=dict((k, frz[k]) for k in ('code_sha256', 'config', 'check_config', 'coordinates',
-                                                           'scope', 'input_pairs_sha256', 'sources_sha256',
-                                                           'input_errors', 'sources')),
-        completeness=comp, by_kind=res,
-        timing=dict(chunks=len(done), sum_chunk_wall_s=round(sum(j['wall_s'] for j in done), 1),
-                    worker_cpu_s=round(cpu, 1), worker_wall_s=round(sum(j['worker_wall_s'] for j in done), 1),
-                    worker_wall_s_per_pair=round(sum(j['worker_wall_s'] for j in done) / max(1, len(inp)), 3),
-                    first_finished=min(j['finished'] for j in done), last_finished=max(j['finished'] for j in done),
-                    hosts=dict(Counter(j['host'] for j in done))),
-        files={p.name: dict(path=str(p), bytes=p.stat().st_size, sha256=sha_file(p)) for p in
-               [work / ('ucd_all_rows_%s.tsv.gz' % k) for k in KINDS] + [seq_p, hsp_p] +
-               [out / ('ucd_final_%s.tsv.gz' % k) for k in KINDS]})
-    (out / 'summary.json').write_text(json.dumps(summ, indent=1) + '\n')
-    print(json.dumps(dict(completeness=comp, by_kind={k: dict(final_pass=v['final_pass'], source_check=v['source_check'])
-                                                      for k, v in res.items()}, timing=summ['timing']), indent=1))
-
-
-def _group(rows, cols):
-    g = defaultdict(list)
-    for r in rows:
-        g[tuple(r[c] for c in cols)].append(r)
-    return g
+    (out / 'chunks_done.json').write_text(json.dumps(done, indent=1) + '\n')
+    summ = dict(version=VERSION, completeness=comp, code_versions=dict(Counter(j['code_version'] for j in done)),
+                timing=dict(chunks=len(done), sum_chunk_wall_s=round(sum(j['wall_s'] for j in done), 1),
+                            worker_cpu_s=round(sum(j['child_process_cpu_s'] for j in done), 1),
+                            worker_wall_s=round(sum(j['worker_wall_s'] for j in done), 1),
+                            first_finished=min(j['finished'] for j in done),
+                            last_finished=max(j['finished'] for j in done)),
+                evidence_sequences_distinct=len(seen_s),
+                files={p.name: dict(path=str(p), bytes=p.stat().st_size, sha256=sha_file(p)) for p in
+                       [work / ('rows_%s.tsv.gz' % k) for k in KINDS] + [seq_p, hsp_p]})
+    (out / 'merge.json').write_text(json.dumps(summ, indent=1) + '\n')
+    print(json.dumps(summ, indent=1))
 
 
 # ---------------------------------------------------------------- cleanup
 
 def cmd_cleanup(a):
-    out, work = Path(a.out), Path(a.work)
+    out, work = Path(a.out), Path(a.work).resolve()
     comp = json.loads((out / 'completeness.json').read_text())
-    summ = json.loads((out / 'summary.json').read_text())
+    summ = json.loads((out / 'merge.json').read_text())
     if not comp.get('complete'):
         sys.exit('merge not complete; nothing removed')
     for name, f in summ['files'].items():
         if sha_file(f['path']) != f['sha256']:
-            sys.exit('merged file %s does not match summary.json; nothing removed' % name)
-    d = work / 'chunks'
-    freed = sum(p.stat().st_size for p in d.rglob('*') if p.is_file())
+            sys.exit('merged file %s does not match merge.json; nothing removed' % name)
+    targets = [work / 'chunks', work / 'inputs']
+    for t in targets:
+        if not str(t).startswith('/global/scratch/users/kh36969/longread_callout/core_context/') or t.parent != work:
+            sys.exit('refusing to remove %s (outside this run directory)' % t)
+    listing = [dict(path=str(p), bytes=p.stat().st_size) for t in targets if t.exists() for p in sorted(t.rglob('*'))
+               if p.is_file()]
+    freed = sum(x['bytes'] for x in listing)
+    uc.write_tsv(out / 'cleanup_list.tsv.gz', listing, ['path', 'bytes'])
     if a.apply:
-        shutil.rmtree(d)
-    rec = dict(removed=str(d), bytes=freed, applied=a.apply, kept=sorted(summ['files']) + ['sources.tsv.gz'],
+        for t in targets:
+            if t.exists():
+                shutil.rmtree(t)
+    rec = dict(removed=[str(t) for t in targets], files=len(listing), bytes=freed, applied=a.apply,
+               list='cleanup_list.tsv.gz', kept=sorted(summ['files']) + ['input_pairs.tsv.gz', 'sources.tsv.gz',
+                                                                         'freeze.json'],
                at=time.strftime('%Y-%m-%d %H:%M:%S'))
     (out / 'cleanup.json').write_text(json.dumps(rec, indent=1) + '\n')
     print(json.dumps(rec, indent=1))
@@ -488,16 +542,23 @@ def main():
         x.add_argument('--work', required=True)
         x.add_argument('--manifest', default=str(uc.REPO / 'manifest.tsv'))
         if name == 'freeze':
-            x.add_argument('--catalogue', default=str(uc.REPO / 'match_both_lt2500_pairs_b1-2-3.tsv.gz'))
+            x.add_argument('--catalogue', default='',
+                           help="'boundary' (every boundary-review core pair) or a catalogue file")
+            x.add_argument('--exclude-input', default='', help='drop the pair IDs of this earlier input table')
+            x.add_argument('--from-input', default='', help='take rows from this earlier frozen input table ...')
+            x.add_argument('--ids', default='', help='... for these pair IDs (one per line or a table with pair_id)')
             x.add_argument('--review', default=str(uc.SCRATCH / 'scale_comamonadaceae_v0.1' / 'review'))
             x.add_argument('--tag', default='b1-2-3')
-            x.add_argument('--chunk-size', type=int, default=2000)
+            x.add_argument('--chunk-size', type=int, default=5000)
         if name == 'chunk':
             x.add_argument('--index', type=int)
+            x.add_argument('--offset', type=int, default=0, help='added to SLURM_ARRAY_TASK_ID (arrays > 1000)')
             x.add_argument('--threads', type=int, default=int(os.environ.get('SLURM_CPUS_PER_TASK', 4)))
         if name == 'cleanup':
             x.add_argument('--apply', action='store_true')
     a = p.parse_args()
+    if a.cmd == 'freeze' and not (a.catalogue or a.from_input):
+        sys.exit('freeze needs --catalogue or --from-input/--ids')
     dict(freeze=cmd_freeze, chunk=cmd_chunk, merge=cmd_merge, cleanup=cmd_cleanup)[a.cmd](a)
 
 

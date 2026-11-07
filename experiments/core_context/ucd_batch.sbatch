@@ -9,7 +9,7 @@
 #SBATCH --time=04:00:00
 #SBATCH --output=/global/home/users/kh36969/logs/core_context/%x_%A_%a.out
 # usage: sbatch [--array=0-47] ucd_batch.sbatch <freeze|chunk|merge> [extra args]
-# OUT/WORK default to the b1-2-3 match_both_lt2500 run; a resubmitted array skips finished chunks.
+# OUT/WORK must be exported for v0.2 runs (defaults are the v0.1 run); a resubmitted array skips finished chunks.
 set -euo pipefail
 source ~/miniconda3/etc/profile.d/conda.sh
 conda activate /global/scratch/users/kh36969/longread_callout/env/msi
