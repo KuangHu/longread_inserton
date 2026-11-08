@@ -38,7 +38,8 @@ RSS_BATCHES = (('pilot', 'pilot_v0.1', 'read_site_search_pilot', 'development'),
                ('scale1', 'scale1', 'read_site_search_scale1', 'real'),
                ('scale2', 'scale2', 'read_site_search_scale2', 'real'),
                ('scale3', 'scale3', 'read_site_search_scale3', 'real'))
-POOL = REPO.parent.parent / 'fna_pool' / 'scaleup_stage1_20261026' / 'comamonadaceae' / 'pool.tsv'
+POOLS = REPO.parent.parent / 'fna_pool' / 'scaleup_stage1_20261026'  # <family>/pool.tsv: usable long-read runs per BioSample
+REFRESH = REPO.parent.parent / 'fna_pool' / 'refresh_20261108'  # refreshed pools (new BioSamples of batch 8)
 MAIN_FLANK, MAIN_COUNT = 1000, 3
 EVID = (['rc_%s_%s' % (s, f) for s in 'ab' for f in ('status', 'test_id', 'verdict', 'count_mode', 'P_matched',
                                                        'A_matched', 'locus_ambiguous', 'other_intervals')] +
@@ -90,10 +91,15 @@ def main():
     p.add_argument('--out-table', required=True, help='full rows + evidence (scratch)')
     p.add_argument('--out-compact', required=True, help='key columns + evidence (git)')
     p.add_argument('--summary', required=True)
+    p.add_argument('--manifest', default=str(REPO / 'manifest.tsv'), help='catalogue manifest of the rows (recorded)')
     a = p.parse_args()
     pos, by_occ, tid, r5strand, r5samples = load_r5()
     searched, panel, found = load_rss()
-    usable = {r['biosample']: int(r['n_usable_runs'] or 0) for r in uc.read_tsv(POOL)}
+    usable = {}
+    for root in (POOLS, REFRESH):  # frozen pools first; refreshed rows add BioSamples new in the refresh only
+        for pool in sorted(root.glob('*/pool.tsv')):
+            for r in uc.read_tsv(pool):
+                usable.setdefault(r['biosample'], int(r['n_usable_runs'] or 0))
     cnt = defaultdict(Counter)
     strand_mismatch = 0
     with gzip.open(a.rows, 'rt') as f, gzip.open(a.out_table, 'wt') as fo, gzip.open(a.out_compact, 'wt') as fc:
@@ -154,12 +160,12 @@ def main():
             cnt['rc_pair|' + scope][e['rc_pair']] += 1
             cnt['rss_pair'][e['rss_pair']] += 1
             cnt['final_status_unchanged'][r['final_status']] += 1
-    summ = dict(version='ucd_read_evidence_v0.1', rows=a.rows, rows_sha256=ub.sha_file(a.rows),
+    summ = dict(version='ucd_read_evidence_v0.2', rows=a.rows, rows_sha256=ub.sha_file(a.rows),
                 sources=dict(round5_v02={str(x): ub.sha_file(x) for x in (R5 / 'positions.tsv.gz',
                                                                          R5 / 'interval_map.tsv.gz',
                                                                          R5 / 'pairs.tsv.gz')},
-                             read_site_search=[b[0] for b in RSS_BATCHES], pool=str(POOL),
-                             manifest_sha256=ub.sha_file(REPO / 'manifest.tsv')),
+                             read_site_search=[b[0] for b in RSS_BATCHES], pools=[str(POOLS), str(REFRESH)],
+                             manifest_sha256=ub.sha_file(a.manifest)),
                 rule=dict(rc='exact sample + contig + lo/hi + strand; no inheritance across intervals',
                           rss='flank %d, >= %d molecules, known_catalog_position*' % (MAIN_FLANK, MAIN_COUNT)),
                 strand_mismatch_rejected=strand_mismatch,
