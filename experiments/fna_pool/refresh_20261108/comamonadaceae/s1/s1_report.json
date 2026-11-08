@@ -1,0 +1,25 @@
+{
+  "manifest": "experiments/fna_pool/refresh_20261108/comamonadaceae/download_manifest.tsv",
+  "rows": 3347,
+  "status": {
+    "verified": 3347
+  },
+  "by_purpose": {
+    "gca_identity_check": {
+      "verified": 1631
+    },
+    "primary": {
+      "verified": 1716
+    }
+  },
+  "annotation": {
+    "present": 1686,
+    "annotation_missing": 30
+  },
+  "pair_checks": {
+    "identical_sequences": 1631
+  },
+  "bytes": 28219133410,
+  "files": 10074,
+  "failed": []
+}

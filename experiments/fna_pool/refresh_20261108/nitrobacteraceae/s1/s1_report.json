@@ -1,0 +1,25 @@
+{
+  "manifest": "experiments/fna_pool/refresh_20261108/nitrobacteraceae/download_manifest.tsv",
+  "rows": 3901,
+  "status": {
+    "verified": 3901
+  },
+  "by_purpose": {
+    "gca_identity_check": {
+      "verified": 1921
+    },
+    "primary": {
+      "verified": 1980
+    }
+  },
+  "annotation": {
+    "present": 1975,
+    "annotation_missing": 5
+  },
+  "pair_checks": {
+    "identical_sequences": 1921
+  },
+  "bytes": 48634849739,
+  "files": 11752,
+  "failed": []
+}

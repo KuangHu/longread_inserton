@@ -1,0 +1,34 @@
+{
+  "manifest": "experiments/fna_pool/refresh_20261108/micrococcaceae/download_manifest.tsv",
+  "rows": 5734,
+  "status": {
+    "verified": 5733,
+    "failed": 1
+  },
+  "by_purpose": {
+    "gca_identity_check": {
+      "verified": 2739
+    },
+    "primary": {
+      "verified": 2994,
+      "failed": 1
+    }
+  },
+  "annotation": {
+    "present": 2971,
+    "annotation_missing": 21,
+    "": 2
+  },
+  "pair_checks": {
+    "identical_sequences": 2739
+  },
+  "bytes": 30614396410,
+  "files": 17410,
+  "failed": [
+    {
+      "accession": "GCA_977014115.1",
+      "attempts": 3,
+      "reason": "annotation_files_complete"
+    }
+  ]
+}

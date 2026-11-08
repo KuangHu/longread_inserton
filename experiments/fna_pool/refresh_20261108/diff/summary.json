@@ -1,0 +1,117 @@
+{
+ "microbacteriaceae": {
+  "frozen_pool": 3444,
+  "refreshed_pool": 3453,
+  "status": {
+   "unchanged": 3443,
+   "new_biosample": 9,
+   "accession_updated": 1
+  },
+  "download_gap": 10,
+  "new_runs": 2,
+  "new_runs_in_pool_samples": 2
+ },
+ "actinomycetaceae": {
+  "frozen_pool": 1139,
+  "refreshed_pool": 1140,
+  "status": {
+   "unchanged": 1139,
+   "new_biosample": 1
+  },
+  "download_gap": 1,
+  "new_runs": 0,
+  "new_runs_in_pool_samples": 0
+ },
+ "flavobacteriaceae": {
+  "frozen_pool": 3704,
+  "refreshed_pool": 3717,
+  "status": {
+   "unchanged": 3695,
+   "accession_updated": 9,
+   "new_biosample": 13
+  },
+  "download_gap": 22,
+  "new_runs": 1,
+  "new_runs_in_pool_samples": 1
+ },
+ "eggerthellaceae": {
+  "frozen_pool": 329,
+  "refreshed_pool": 329,
+  "status": {
+   "unchanged": 328,
+   "accession_updated": 1
+  },
+  "download_gap": 1,
+  "new_runs": 0,
+  "new_runs_in_pool_samples": 0
+ },
+ "lachnospiraceae": {
+  "frozen_pool": 3254,
+  "refreshed_pool": 3256,
+  "status": {
+   "unchanged": 3254,
+   "new_biosample": 2
+  },
+  "download_gap": 2,
+  "new_runs": 0,
+  "new_runs_in_pool_samples": 0
+ },
+ "comamonadaceae": {
+  "frozen_pool": 1705,
+  "refreshed_pool": 1716,
+  "status": {
+   "unchanged": 1701,
+   "accession_updated": 4,
+   "new_biosample": 11
+  },
+  "download_gap": 15,
+  "new_runs": 2,
+  "new_runs_in_pool_samples": 2
+ },
+ "nitrobacteraceae": {
+  "frozen_pool": 1975,
+  "refreshed_pool": 1980,
+  "status": {
+   "unchanged": 1975,
+   "new_biosample": 5
+  },
+  "download_gap": 5,
+  "new_runs": 0,
+  "new_runs_in_pool_samples": 0
+ },
+ "micrococcaceae": {
+  "frozen_pool": 2975,
+  "refreshed_pool": 2995,
+  "status": {
+   "unchanged": 2971,
+   "accession_updated": 4,
+   "new_biosample": 20
+  },
+  "download_gap": 24,
+  "new_runs": 3,
+  "new_runs_in_pool_samples": 0
+ },
+ "metamycoplasmataceae": {
+  "frozen_pool": 1738,
+  "refreshed_pool": 1760,
+  "status": {
+   "unchanged": 1738,
+   "new_biosample": 22
+  },
+  "download_gap": 22,
+  "new_runs": 1,
+  "new_runs_in_pool_samples": 0
+ },
+ "erwiniaceae": {
+  "frozen_pool": 2500,
+  "refreshed_pool": 2506,
+  "status": {
+   "unchanged": 2495,
+   "new_biosample": 6,
+   "accession_updated": 5
+  },
+  "download_gap": 11,
+  "new_runs": 0,
+  "new_runs_in_pool_samples": 0
+ }
+}

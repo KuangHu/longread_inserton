@@ -1,0 +1,25 @@
+{
+  "manifest": "experiments/fna_pool/refresh_20261108/eggerthellaceae/download_manifest.tsv",
+  "rows": 639,
+  "status": {
+    "verified": 639
+  },
+  "by_purpose": {
+    "gca_identity_check": {
+      "verified": 310
+    },
+    "primary": {
+      "verified": 329
+    }
+  },
+  "annotation": {
+    "present": 315,
+    "annotation_missing": 14
+  },
+  "pair_checks": {
+    "identical_sequences": 310
+  },
+  "bytes": 2946198044,
+  "files": 1910,
+  "failed": []
+}
