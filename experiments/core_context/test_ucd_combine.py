@@ -46,5 +46,36 @@ class Helpers(unittest.TestCase):
                          'candidate_interval_not_available(boundary_up=end_not_covered,pair_extension_not_determined)')
 
 
+class Fingerprint(unittest.TestCase):
+    R = {'a_sample': 'S1', 'a_assembly': 'G1', 'a_contig': 'c', 'a_strand': '+', 'a_input_error': '',
+         'a_start0': '10', 'a_end0': '20', 'a_boundary_up': 'resolved', 'a_boundary_down': 'resolved', 'a_elem_lo': '5',
+         'a_elem_hi': '25', 'b_sample': 'S2', 'b_assembly': 'G2', 'b_contig': 'd', 'b_strand': '-', 'b_input_error': '',
+         'b_start0': '1', 'b_end0': '9', 'b_boundary_up': 'resolved', 'b_boundary_down': 'end_not_covered',
+         'b_elem_lo': '', 'b_elem_hi': ''}
+    MAN = {'S1': {'fna_sha256': 'x1'}, 'S2': {'fna_sha256': 'x2'}}
+    CODE = {'ucd_compare.py': 'c1', 'ucd_checks.py': 'k1'}
+
+    def fp(self, r=None, man=None, code=None, cfg=None, kind='cds_core'):
+        return ub.fingerprint(r or self.R, kind, man or self.MAN, cfg or {'context': 1000}, {'m': 20},
+                              code or self.CODE)
+
+    def test_same_input_same_fingerprint(self):
+        self.assertEqual(self.fp(), self.fp(dict(self.R)))
+
+    def test_any_input_change_changes_it(self):
+        base = self.fp()
+        self.assertNotEqual(base, self.fp(dict(self.R, a_strand='-')))
+        self.assertNotEqual(base, self.fp(dict(self.R, a_end0='21')))
+        self.assertNotEqual(base, self.fp(man={'S1': {'fna_sha256': 'y'}, 'S2': {'fna_sha256': 'x2'}}))
+        self.assertNotEqual(base, self.fp(code={'ucd_compare.py': 'c2', 'ucd_checks.py': 'k1'}))
+        self.assertNotEqual(base, self.fp(cfg={'context': 500}))
+
+    def test_candidate_depends_on_boundary_status(self):
+        c = self.fp(kind='candidate_insertion')
+        self.assertNotEqual(c, self.fp(dict(self.R, b_boundary_down='resolved', b_elem_lo='0', b_elem_hi='12'),
+                                       kind='candidate_insertion'))
+        self.assertEqual(self.fp(), self.fp(dict(self.R, b_boundary_down='resolved')))  # cds_core unaffected
+
+
 if __name__ == '__main__':
     unittest.main()

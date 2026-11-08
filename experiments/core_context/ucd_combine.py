@@ -133,10 +133,12 @@ def cmd_combine(a):
     work.mkdir(parents=True, exist_ok=True)
     expect = ids_file(a.ids)
     replace = ids_file(a.replace_ids) if a.replace_ids else set()
+    reuse_only = ids_file(a.reuse_ids) if a.reuse_ids else None
     sources = []
     if a.reuse:
-        sources.append(('reuse', Path(a.reuse), 'ucd_all_rows_%s.tsv.gz', lambda r: r['pair_id'] not in replace,
-                        a.reuse_version))
+        sources.append(('reuse', Path(a.reuse), a.reuse_pattern,
+                        (lambda r: r['pair_id'] in reuse_only) if reuse_only is not None else
+                        (lambda r: r['pair_id'] not in replace), a.reuse_version))
     if a.replace:
         sources.append(('replace', Path(a.replace), 'rows_%s.tsv.gz', lambda r: r['pair_id'] in replace, None))
     for w in filter(None, a.runs.split(',')):
@@ -218,6 +220,7 @@ def cmd_combine(a):
             files[p.name] = dict(path=str(p), bytes=p.stat().st_size, sha256=ub.sha_file(p))
     summ = dict(version='ucd_combine_v0.1', ids=a.ids, ids_sha256=ub.sha_file(a.ids), expected_pairs=len(expect),
                 replace_ids=a.replace_ids, replaced_pairs=len(replace), reuse=a.reuse, reuse_version=a.reuse_version,
+                reuse_ids=a.reuse_ids, reused_pairs=None if reuse_only is None else len(reuse_only),
                 replace=a.replace, runs=a.runs, completeness=comp_all, by_kind=res, files=files,
                 at=time.strftime('%Y-%m-%d %H:%M:%S'))
     (out / 'combined_summary.json').write_text(json.dumps(summ, indent=1) + '\n')
@@ -240,7 +243,9 @@ def main():
     x.add_argument('--work', required=True)
     x.add_argument('--ids', required=True, help='expected pair IDs (catalogue)')
     x.add_argument('--reuse', default='', help='earlier work dir with ucd_all_rows_<kind>.tsv.gz')
-    x.add_argument('--reuse-version', default='')
+    x.add_argument('--reuse-version', default='', help='code_version for reused rows that have none')
+    x.add_argument('--reuse-pattern', default='ucd_all_rows_%s.tsv.gz', help="e.g. 'all_rows_%%s.tsv.gz'")
+    x.add_argument('--reuse-ids', default='', help='reuse only these pair IDs (fingerprint-equal; ucd_batch freeze)')
     x.add_argument('--replace', default='', help='rerun work dir with rows_<kind>.tsv.gz')
     x.add_argument('--replace-ids', default='')
     x.add_argument('--runs', default='', help='comma-separated run work dirs taken whole')

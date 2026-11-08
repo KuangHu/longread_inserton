@@ -47,7 +47,10 @@ from pathlib import Path
 import ucd_checks as ck
 import ucd_compare as uc
 
-VERSION = 'ucd_batch_v0.2'
+VERSION = 'ucd_batch_v0.3'
+# The rule that turns input rows into intervals and verdicts into final_status (interval(), work_pair()). Unchanged
+# since v0.2; bump it if that logic changes, so earlier rows stop being reusable.
+DECISION_VERSION = 'decision_v0.2'
 HERE = Path(__file__).resolve().parent
 CODE = ('ucd_compare.py', 'ucd_checks.py', 'ucd_batch.py')
 KINDS = uc.KINDS
@@ -84,6 +87,18 @@ def code_hashes():
 
 def pair_id(structure, core, scope, oa, ob):
     return 'M' + hashlib.sha1('|'.join((structure, core, scope, oa, ob)).encode()).hexdigest()[:12]
+
+
+def fingerprint(r, kind, man, cfg, ccfg, code):
+    """Input fingerprint of one pair and interval kind: source files, intervals / reasons and strands of both sides,
+    parameters, and the screen / check code. Equal fingerprints mean the earlier row can be reused as it is."""
+    parts = [kind, DECISION_VERSION, json.dumps(cfg, sort_keys=True), json.dumps(ccfg, sort_keys=True),
+             code['ucd_compare.py'], code['ucd_checks.py']]
+    for s in 'ab':
+        smp = r[s + '_sample']
+        parts += [smp, r[s + '_assembly'], man.get(smp, {}).get('fna_sha256', 'no_manifest_entry'), r[s + '_contig'],
+                  r[s + '_strand'], str(interval(r, s, kind))]
+    return hashlib.sha256('\x1f'.join(map(str, parts)).encode()).hexdigest()[:24]
 
 
 def ids_of(path):
@@ -130,7 +145,7 @@ def build_from_catalogue(a, man):
                                                              r['strand'])
     bnd = {}
     for scope in ('same_assembly', 'cross_assembly'):
-        for r in uc.read_tsv(uc.REPO / ('boundary_occurrences_%s_%s.tsv.gz' % (scope, a.tag))):
+        for r in uc.read_tsv(Path(a.boundary_dir) / ('boundary_occurrences_%s_%s.tsv.gz' % (scope, a.tag))):
             if r['occurrence_id'] in need:
                 bnd[(scope, r['structure'], r['occurrence_id'])] = (r['up_status'], r['down_status'],
                                                                     r['estimated_span'])
@@ -167,6 +182,82 @@ def build_from_catalogue(a, man):
     return rows
 
 
+def classify(a, rows, man, info):
+    """new / changed / reused per pair against an earlier result's fingerprint index; retired = earlier IDs not in
+    this catalogue. Only new and changed pairs are run; reused pairs keep their earlier rows (ucd_combine)."""
+    prev = {}
+    with gzip.open(a.previous_index, 'rt') as f:
+        f.readline()
+        for line in f:
+            pid, kind, fp, cv = line.rstrip('\n').split('\t')
+            prev.setdefault(pid, {})[kind] = (fp, cv)
+    cfg, ccfg, code = dict(uc.CONFIG), ck.CHECK_CONFIG, code_hashes()
+    keep, cls, n = [], [], Counter()
+    for r in rows:
+        d = dict(zip(INPUT_COLS, r))
+        fps = {k: fingerprint(d, k, man, cfg, ccfg, code) for k in KINDS}
+        old = prev.get(r[0])
+        if old is None:
+            c = 'new'
+        elif all(old.get(k, ('',))[0] == fps[k] for k in KINDS):
+            c = 'reused'
+        else:
+            c = 'changed'
+        n[c] += 1
+        cls.append(dict(pair_id=r[0], status=c, **{'fp_' + k: fps[k] for k in KINDS},
+                        **{'previous_fp_' + k: (old or {}).get(k, ('',))[0] for k in KINDS},
+                        previous_code_version=(old or {}).get('cds_core', ('', ''))[1]))
+        if c != 'reused':
+            keep.append(r)
+    ids = {r[0] for r in rows}
+    retired = sorted(set(prev) - ids)
+    n['retired'] = len(retired)
+    w = Path(a.work)
+    uc.write_tsv(w / 'pair_status.tsv.gz', cls + [dict(pair_id=i, status='retired') for i in retired],
+                 ['pair_id', 'status'] + ['fp_' + k for k in KINDS] + ['previous_fp_' + k for k in KINDS] +
+                 ['previous_code_version'])
+    with gzip.open(w / 'reuse_ids.txt.gz', 'wt') as f:
+        f.write('pair_id\n' + ''.join(c['pair_id'] + '\n' for c in cls if c['status'] == 'reused'))
+    info.update(previous_index=a.previous_index, previous_index_sha256=sha_file(a.previous_index),
+                pair_status=dict(n), pair_status_table=str(w / 'pair_status.tsv.gz'),
+                pair_status_sha256=sha_file(w / 'pair_status.tsv.gz'), reuse_ids=str(w / 'reuse_ids.txt.gz'),
+                decision_version=DECISION_VERSION)
+    return keep, prev
+
+
+def cmd_index(a):
+    """Fingerprint index of an earlier final result: every (pair_id, kind) row of <final>/all_rows_<kind>.tsv.gz,
+    fingerprinted with the input row and code hashes of the run that produced it (by code_version)."""
+    srcs = {}
+    for spec in a.source:
+        label, inputs, frz = spec.split('|')
+        fj = json.loads(Path(frz).read_text())
+        srcs[label] = dict(inputs=inputs.split(','), code=fj['code_sha256'], cfg=fj['config'],
+                           ccfg=fj.get('check_config', {'max_chain_overlap': 20}))
+    man = uc.manifest(a.manifest)
+    rows = {}
+    for label, sdef in srcs.items():
+        for p in sdef['inputs']:
+            for r in uc.read_tsv(p):
+                rows.setdefault(label, {}).setdefault(r['pair_id'], r)
+    out = Path(a.out)
+    n = Counter()
+    with gzip.open(out, 'wt') as fo:
+        fo.write('pair_id\tinterval_kind\tfingerprint\tcode_version\n')
+        for kind in KINDS:
+            with gzip.open(Path(a.final) / ('all_rows_%s.tsv.gz' % kind), 'rt') as f:
+                h = f.readline().rstrip('\n').split('\t')
+                ip, iv = h.index('pair_id'), h.index('code_version')
+                for line in f:
+                    v = line.rstrip('\n').split('\t')
+                    pid, cv = v[ip], v[iv]
+                    s = srcs[cv]
+                    fp = fingerprint(rows[cv][pid], kind, man, s['cfg'], s['ccfg'], s['code'])
+                    fo.write('%s\t%s\t%s\t%s\n' % (pid, kind, fp, cv))
+                    n[(kind, cv)] += 1
+    print(json.dumps({'%s|%s' % k: v for k, v in n.items()}, indent=1))
+
+
 def cmd_freeze(a):
     out, work = Path(a.out), Path(a.work)
     out.mkdir(parents=True, exist_ok=True)
@@ -191,6 +282,8 @@ def cmd_freeze(a):
         with gzip.open(cat, 'wt') as f:
             f.write('pair_id\n' + '\n'.join(sorted(ids)) + '\n')
         info.update(catalogue_ids=str(cat), catalogue_ids_sha256=sha_file(cat))
+        if a.previous_index:
+            rows, prev = classify(a, rows, man, info)
         if a.exclude_input:
             ex = ids_of(a.exclude_input)
             rows = [r for r in rows if r[0] not in ex]
@@ -549,6 +642,8 @@ def main():
             x.add_argument('--ids', default='', help='... for these pair IDs (one per line or a table with pair_id)')
             x.add_argument('--review', default=str(uc.SCRATCH / 'scale_comamonadaceae_v0.1' / 'review'))
             x.add_argument('--tag', default='b1-2-3')
+            x.add_argument('--boundary-dir', default=str(uc.REPO), help='dir with boundary_occurrences_<scope>_<tag>')
+            x.add_argument('--previous-index', default='', help='fingerprint index of an earlier result (index)')
             x.add_argument('--chunk-size', type=int, default=5000)
         if name == 'chunk':
             x.add_argument('--index', type=int)
@@ -556,10 +651,16 @@ def main():
             x.add_argument('--threads', type=int, default=int(os.environ.get('SLURM_CPUS_PER_TASK', 4)))
         if name == 'cleanup':
             x.add_argument('--apply', action='store_true')
+    x = sp.add_parser('index')
+    x.add_argument('--final', required=True, help='dir with all_rows_<kind>.tsv.gz')
+    x.add_argument('--source', action='append', required=True,
+                   help="'<code_version>|<input_pairs[,input_pairs]>|<freeze.json>' of a run whose rows are in --final")
+    x.add_argument('--manifest', default=str(uc.REPO / 'manifest.tsv'))
+    x.add_argument('--out', required=True)
     a = p.parse_args()
     if a.cmd == 'freeze' and not (a.catalogue or a.from_input):
         sys.exit('freeze needs --catalogue or --from-input/--ids')
-    dict(freeze=cmd_freeze, chunk=cmd_chunk, merge=cmd_merge, cleanup=cmd_cleanup)[a.cmd](a)
+    dict(freeze=cmd_freeze, chunk=cmd_chunk, merge=cmd_merge, cleanup=cmd_cleanup, index=cmd_index)[a.cmd](a)
 
 
 if __name__ == '__main__':
