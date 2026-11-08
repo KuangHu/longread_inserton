@@ -39,7 +39,7 @@ case $STAGE in
 genes)       $TIME python scale_entry.py genes --manifest $MAN --work $WORK --batch $B --task $T --ntasks ${SLURM_ARRAY_TASK_COUNT:-1} ;;
 pool_proteins) $TIME python scale_entry.py pool_proteins --manifest $MAN --work $WORK ;;
 families)    $TIME python scale_entry.py families --pool --manifest $MAN --work $WORK --batch $B --threads $SLURM_CPUS_PER_TASK ;;
-families_add) $TIME python scale_entry.py families --manifest $MAN --work $WORK --batch $B --threads $SLURM_CPUS_PER_TASK ;;
+families_add) $TIME python scale_entry.py families --manifest $MAN --work $WORK --batch $B --threads $SLURM_CPUS_PER_TASK ${RESUME:+--resume} ;;
 occurrences) $TIME python scale_entry.py occurrences --manifest $MAN --work $WORK --batch $B ;;
 compare)     $TIME python scale_entry.py compare --work $WORK --batches $BS --shard $T ${MAX_SIG_PAIRS:+--max-sig-pairs $MAX_SIG_PAIRS} ;;
 summarize)   $TIME python scale_entry.py summarize --work $WORK --batches $BS --repo-out $OUT --regression $HERE/subsets_20261027/ucd_candidates_v0.1/candidates.tsv ;;

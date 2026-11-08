@@ -147,8 +147,16 @@ def search_existing(work_dir, new, reps_faa, level, a):
         with open(path, 'w') as f:
             for h in sorted(recs):
                 f.write('>%s\n%s\n' % (h, recs[h]))
-    subprocess.run([a.mmseqs, 'easy-search', str(q), str(t), str(hits), str(work_dir / ('tmp_' + level)),
-                    '--threads', str(a.threads)] + SEARCH, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    # resume: a finished search is reused only when its marker names the same query / target files and settings
+    done, key = work_dir / (level + '_hits.done'), '%s %s %s' % (pc.digest(q), pc.digest(t), ' '.join(SEARCH))
+    if getattr(a, 'resume', False) and hits.exists() and done.exists() and done.read_text().strip() == key:
+        print('[%s] reuse finished %s search %s' % (time.strftime('%F %T'), level, hits), flush=True)
+    else:
+        print('[%s] %s search: %d new vs %d reps' % (time.strftime('%F %T'), level, len(new), len(reps_faa)), flush=True)
+        subprocess.run([a.mmseqs, 'easy-search', str(q), str(t), str(hits), str(work_dir / ('tmp_' + level)),
+                        '--threads', str(a.threads)] + SEARCH, check=True, stdout=subprocess.DEVNULL,
+                       stderr=subprocess.DEVNULL)
+        done.write_text(key + '\n')
     best = {}
     for line in open(hits):
         x, r, fid, qc, tc, _ = line.rstrip('\n').split('\t')
@@ -200,7 +208,7 @@ def cmd_families(a):
                      batch=a.batch, assigned='cluster', family_identity='', homology_group_identity='') for h in sorted(new)]
         info.update(member_check=checks, member_repairs=nfix)
     else:
-        bdir.mkdir(parents=True, exist_ok=False)
+        bdir.mkdir(parents=True, exist_ok=bool(getattr(a, 'resume', False)))
         seq_of = dict(proteins)
         old_reps = {lv: {r[lv + '_rep'] for r in cat.values()} for lv in ('family', 'homology_group')}
         need = set().union(*old_reps.values()) - set(seq_of)
@@ -449,6 +457,8 @@ def main():
             s.add_argument('--pool', action='store_true', help='cluster every pool protein once (pool_proteins)')
             s.add_argument('--mmseqs', default='/global/scratch/users/kh36969/longread_callout/env/s4/bin/mmseqs')
             s.add_argument('--threads', type=int, default=8)
+            s.add_argument('--resume', action='store_true',
+                           help='batch mode: reuse a finished per-level search (<level>_hits.done marker)')
     s = sub.add_parser('pool_proteins')
     s.add_argument('--manifest', type=Path, required=True)
     s.add_argument('--work', type=Path, required=True)
