@@ -1,0 +1,124 @@
+{
+ "actinomycetaceae": {
+  "pool": 1139,
+  "status": {
+   "old_pipeline_only": 1139
+  },
+  "s1_verified": 1139,
+  "s2": 1139,
+  "s3_assemblies_in_gap_pairs": 1116,
+  "s4_assemblies_with_loci": 1097,
+  "notes": {}
+ },
+ "comamonadaceae": {
+  "pool": 1705,
+  "status": {
+   "ucd_checks_done": 1679,
+   "ucd_pool_not_included": 23,
+   "ucd_catalogue_no_pair": 3
+  },
+  "s1_verified": 1705,
+  "s2": 1705,
+  "s3_assemblies_in_gap_pairs": 1691,
+  "s4_assemblies_with_loci": 1617,
+  "notes": {
+   "no_gff3_or_faa": 23
+  }
+ },
+ "eggerthellaceae": {
+  "pool": 329,
+  "status": {
+   "old_pipeline_only": 329
+  },
+  "s1_verified": 329,
+  "s2": 329,
+  "s3_assemblies_in_gap_pairs": 325,
+  "s4_assemblies_with_loci": 312,
+  "notes": {}
+ },
+ "erwiniaceae": {
+  "pool": 2500,
+  "status": {
+   "old_pipeline_only": 2500
+  },
+  "s1_verified": 2499,
+  "s2": 2499,
+  "s3_assemblies_in_gap_pairs": 2486,
+  "s4_assemblies_with_loci": 2361,
+  "notes": {}
+ },
+ "flavobacteriaceae": {
+  "pool": 3704,
+  "status": {
+   "old_pipeline_only": 3704
+  },
+  "s1_verified": 3704,
+  "s2": 3704,
+  "s3_assemblies_in_gap_pairs": 3539,
+  "s4_assemblies_with_loci": 3266,
+  "notes": {}
+ },
+ "lachnospiraceae": {
+  "pool": 3254,
+  "status": {
+   "old_pipeline_only": 3254
+  },
+  "s1_verified": 3252,
+  "s2": 3252,
+  "s3_assemblies_in_gap_pairs": 3111,
+  "s4_assemblies_with_loci": 3035,
+  "notes": {}
+ },
+ "metamycoplasmataceae": {
+  "pool": 1738,
+  "status": {
+   "old_pipeline_only": 1738
+  },
+  "s1_verified": 1738,
+  "s2": 1738,
+  "s3_assemblies_in_gap_pairs": 1721,
+  "s4_assemblies_with_loci": 1410,
+  "notes": {}
+ },
+ "microbacteriaceae": {
+  "pool": 3444,
+  "status": {
+   "old_pipeline_only": 3444
+  },
+  "s1_verified": 3444,
+  "s2": 3444,
+  "s3_assemblies_in_gap_pairs": 3424,
+  "s4_assemblies_with_loci": 3195,
+  "notes": {}
+ },
+ "micrococcaceae": {
+  "pool": 2975,
+  "status": {
+   "old_pipeline_only": 2975
+  },
+  "s1_verified": 2974,
+  "s2": 2974,
+  "s3_assemblies_in_gap_pairs": 2963,
+  "s4_assemblies_with_loci": 2889,
+  "notes": {}
+ },
+ "nitrobacteraceae": {
+  "pool": 1975,
+  "status": {
+   "old_pipeline_only": 1975
+  },
+  "s1_verified": 1975,
+  "s2": 1975,
+  "s3_assemblies_in_gap_pairs": 1971,
+  "s4_assemblies_with_loci": 1958,
+  "notes": {}
+ },
+ "_catalogue_manifest": {
+  "path": "/global/home/users/kh36969/middle_insertion_callout/longread_inserton/experiments/core_context/scale_comamonadaceae_v0.1/manifest.tsv",
+  "file_lines": 1683,
+  "assemblies": 1682,
+  "distinct_samples": 1682,
+  "distinct_accessions": 1682,
+  "note": "1,683 is the line count of manifest.tsv including its header; the catalogue has 1,682 assemblies"
+ }
+}

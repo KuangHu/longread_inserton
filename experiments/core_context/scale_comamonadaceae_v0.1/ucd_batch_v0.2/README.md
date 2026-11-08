@@ -145,6 +145,48 @@ the smallest pair_id). Each shows:
 - the four junctions;
 - the Check-2 HSPs.
 
+## Long-read evidence of the strict pairs (`final/read_evidence_summary.json`, `final/strict_candidate_read_evidence.tsv.gz`)
+
+`../../ucd_read_evidence.py` adds evidence columns to the 57,145 strict `candidate_insertion` pairs. Pass / fail is
+unchanged (57,145 / 57,145 still `pass`). Long-read support is **not** an admission condition. It is reported apart
+from the assembly result.
+
+**Interval-level read check, round 5 v0.2** (`rc_<side>_*`):
+- **Matching rule:** a side takes a result only when the tested interval is this row's X: the same sample (same
+  manifest assembly), contig, lo / hi and occurrence, with the strand checked against round 5. No strand mismatch
+  occurred.
+- **No inheritance:** if the occurrence was tested on a different interval, nothing is inherited. Those intervals
+  are listed in `rc_<side>_other_intervals`.
+- **Copied as they are:** the raw interval class, verdict, count mode (molecules / read records / assumed
+  molecules), P_matched, A_matched and locus_ambiguous.
+
+| side status | sides |
+|---|---:|
+| supported | 29,018 |
+| insufficient_coverage | 269 |
+| locus_ambiguous | 34 |
+| tested_other_interval | 46 |
+| not_tested (the assembly has usable long-read runs) | 119 |
+| no_reads (no usable long-read run for the BioSample) | 84,804 |
+
+- **Pairs:**
+  - 7,803 with both sides supported;
+  - 13,264 with one side supported and the other `no_reads`;
+  - 35,655 with `no_reads` on both sides.
+  - The full breakdown, also per scope, is in the summary.
+- No conflict occurred among the strict pairs.
+
+**Read-site search, v0.3.2** (`rss_<side>_*`), as a separate field:
+- **Coverage:** the 133 real samples (validation 1–2, scale 1–3); pilot samples are labelled development.
+- **Rule:** flank 1 kb, at least 3 molecules, a `known_catalog_position*` position listing this occurrence.
+
+| side status | sides |
+|---|---:|
+| recovered | 12,892 |
+| not_recovered (not counted as unsupported) | 2,662 |
+| seen_below_threshold | 97 |
+| sample_not_searched | 98,639 |
+
 ## Integrity, retries and cost (`jobs.txt`, `*/chunks_done.json`, `*/merge.json`)
 
 - **Jobs:**
