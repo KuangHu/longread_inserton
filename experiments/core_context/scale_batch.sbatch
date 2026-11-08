@@ -12,6 +12,8 @@
 #   genes        --array=0-<n-1>   per-assembly genes, n tasks over the batch (resumable)
 #   pool_proteins one task: distinct proteins of every manifest assembly (read-only)
 #   families     one task, more CPUs / memory (--cpus-per-task=40 --mem=180G): the pool mapping, clustered once
+#   families_add one task (same resources): a new batch searched against the existing representatives, the rest
+#                clustered (scale_entry incremental mode; used to add another family's assemblies)
 #   occurrences  one task
 #   compare      --array=0-63      one shard per task over every batch in BATCHES (resumable)
 #   summarize    one task
@@ -37,6 +39,7 @@ case $STAGE in
 genes)       $TIME python scale_entry.py genes --manifest $MAN --work $WORK --batch $B --task $T --ntasks ${SLURM_ARRAY_TASK_COUNT:-1} ;;
 pool_proteins) $TIME python scale_entry.py pool_proteins --manifest $MAN --work $WORK ;;
 families)    $TIME python scale_entry.py families --pool --manifest $MAN --work $WORK --batch $B --threads $SLURM_CPUS_PER_TASK ;;
+families_add) $TIME python scale_entry.py families --manifest $MAN --work $WORK --batch $B --threads $SLURM_CPUS_PER_TASK ;;
 occurrences) $TIME python scale_entry.py occurrences --manifest $MAN --work $WORK --batch $B ;;
 compare)     $TIME python scale_entry.py compare --work $WORK --batches $BS --shard $T ${MAX_SIG_PAIRS:+--max-sig-pairs $MAX_SIG_PAIRS} ;;
 summarize)   $TIME python scale_entry.py summarize --work $WORK --batches $BS --repo-out $OUT --regression $HERE/subsets_20261027/ucd_candidates_v0.1/candidates.tsv ;;
