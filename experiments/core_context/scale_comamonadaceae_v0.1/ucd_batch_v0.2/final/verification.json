@@ -1,0 +1,18 @@
+{
+ "screen_vs_check_disagreements": {
+  "cds_core": {
+   "ucd_supported -> rearranged_or_fragmented_insertion": 90,
+   "uncertain_context -> rearranged_or_fragmented_insertion": 9,
+   "insertion_partial -> rearranged_or_fragmented_insertion": 3,
+   "uncertain_context -> ucd_supported": 2
+  },
+  "candidate_insertion": {
+   "insertion_partial -> insertion_dissimilar": 26
+  }
+ },
+ "final_files_verified_against_combined_summary": true,
+ "archive_manifest_rechecked_after_cleanup": {
+  "files": 19,
+  "mismatches": []
+ }
+}

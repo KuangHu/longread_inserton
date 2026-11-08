@@ -1,5 +1,9 @@
 # U–X–D comparison of the existing candidate catalogue, with source and independent checks (ucd_batch v0.1)
 
+> **Superseded by `../ucd_batch_v0.2/`.** This version's screen did not complement IUPAC codes on the minus strand
+> (117 pairs failed Check 1). v0.2 fixes that, reruns those pairs, and extends the run to the whole boundary-review
+> catalogue. This directory is kept unchanged as the faa63c3 result.
+
 **Scope:** every `match_both_lt2500` pair of the existing candidate catalogue (`match_both_lt2500_pairs_b1-2-3.tsv.gz`), 95,328 pairs.
 - This is a full comparison of that catalogue. It is **not** a complete discovery over every FASTA.
 - Pairs are taken as listed. Nothing is filtered by old read-check, gap-caller or S6 results; `s6_grouping` is a carried label.

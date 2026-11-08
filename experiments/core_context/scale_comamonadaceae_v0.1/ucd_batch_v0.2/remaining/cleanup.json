@@ -1,0 +1,20 @@
+{
+ "removed": [
+  "/global/scratch/users/kh36969/longread_callout/core_context/ucd_batch_v0.2/remaining/chunks",
+  "/global/scratch/users/kh36969/longread_callout/core_context/ucd_batch_v0.2/remaining/inputs"
+ ],
+ "files": 3800,
+ "bytes": 3708228410,
+ "applied": true,
+ "list": "cleanup_list.tsv.gz",
+ "kept": [
+  "evidence_hsps.tsv.gz",
+  "evidence_sequences.fa.gz",
+  "rows_candidate_insertion.tsv.gz",
+  "rows_cds_core.tsv.gz",
+  "input_pairs.tsv.gz",
+  "sources.tsv.gz",
+  "freeze.json"
+ ],
+ "at": "2026-11-07 19:27:41"
+}

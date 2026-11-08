@@ -1,0 +1,40 @@
+{
+ "reason": "run-level rows of the remaining run and first-batch scratch tables: every row is contained in final/all_rows_* (complete, checksummed in combined_summary.json; rows_by_source confirms 3,799,589 remaining rows per kind); rebuildable with ucd_combine.py from ucd_batch_v0.1 + rerun + (remaining chunks are gone, so the remaining rows survive only inside final/all_rows_*)",
+ "files": [
+  {
+   "path": "/global/scratch/users/kh36969/longread_callout/core_context/ucd_batch_v0.2/remaining/rows_cds_core.tsv.gz",
+   "bytes": 519361193
+  },
+  {
+   "path": "/global/scratch/users/kh36969/longread_callout/core_context/ucd_batch_v0.2/remaining/rows_candidate_insertion.tsv.gz",
+   "bytes": 193123877
+  },
+  {
+   "path": "/global/scratch/users/kh36969/longread_callout/core_context/ucd_batch_v0.2/first_batch/all_rows_candidate_insertion.tsv.gz",
+   "bytes": 26997435
+  },
+  {
+   "path": "/global/scratch/users/kh36969/longread_callout/core_context/ucd_batch_v0.2/first_batch/all_rows_cds_core.tsv.gz",
+   "bytes": 28070163
+  },
+  {
+   "path": "/global/scratch/users/kh36969/longread_callout/core_context/ucd_batch_v0.2/first_batch/pass_candidate_insertion.tsv.gz",
+   "bytes": 15179848
+  },
+  {
+   "path": "/global/scratch/users/kh36969/longread_callout/core_context/ucd_batch_v0.2/first_batch/pass_cds_core.tsv.gz",
+   "bytes": 13410207
+  },
+  {
+   "path": "/global/scratch/users/kh36969/longread_callout/core_context/ucd_batch_v0.2/first_batch/strict_lt2500_candidate_insertion.tsv.gz",
+   "bytes": 15144857
+  },
+  {
+   "path": "/global/scratch/users/kh36969/longread_callout/core_context/ucd_batch_v0.2/first_batch/strict_lt2500_cds_core.tsv.gz",
+   "bytes": 13410216
+  }
+ ],
+ "bytes": 824697796,
+ "applied": true,
+ "at": "2026-11-07 19:28:35"
+}

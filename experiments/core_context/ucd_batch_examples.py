@@ -17,20 +17,32 @@ import ucd_compare as uc
 J = 40  # bp shown either side of each junction
 
 
+def _pick(best, r):
+    k = (r['pair_scope'], r['structure'])
+    key = (-min(int(r['x_len_a']), int(r['x_len_b'])), r['pair_id'])
+    if k not in best or key < best[k][0]:
+        best[k] = (key, r)
+
+
 def main():
     p = argparse.ArgumentParser()
     p.add_argument('--out', required=True)
     p.add_argument('--work', required=True)
     p.add_argument('--kind', default='candidate_insertion')
+    p.add_argument('--rows', default='', help='rows file (default <work>/ucd_all_rows_<kind>.tsv.gz)')
+    p.add_argument('--evidence', default='', help='comma-separated dirs with evidence files (default <work>)')
+    p.add_argument('--name', default='examples.md')
     a = p.parse_args()
     out, work = Path(a.out), Path(a.work)
-    rows = [r for r in uc.read_tsv(work / ('ucd_all_rows_%s.tsv.gz' % a.kind)) if r['final_status'] == 'pass']
+    rows_p = Path(a.rows) if a.rows else work / ('ucd_all_rows_%s.tsv.gz' % a.kind)
+    ev = [Path(x) for x in (a.evidence.split(',') if a.evidence else [str(work)])]
     best = {}
-    for r in rows:
-        k = (r['pair_scope'], r['structure'])
-        key = (-min(int(r['x_len_a']), int(r['x_len_b'])), r['pair_id'])
-        if k not in best or key < best[k][0]:
-            best[k] = (key, r)
+    with gzip.open(rows_p, 'rt') as f:
+        hdr = f.readline().rstrip('\n').split('\t')
+        rows = (dict(zip(hdr, line.rstrip('\n').split('\t'))) for line in f)
+        rows = (r for r in rows if r['final_status'] == 'pass')
+        for r in rows:
+            _pick(best, r)
     pick = {r['pair_key']: r for _, r in best.values()}
     sids = {}
     for r in pick.values():
@@ -38,17 +50,18 @@ def main():
             lo, hi = r[s + '_x_interval'].split('-')
             sids['%s|%s|%s-%s' % (r[s + '_occurrence'], a.kind, lo, hi)] = None
     seqs = {}
-    with gzip.open(work / 'evidence_sequences.fa.gz', 'rt') as f:
-        for h, s in zip(f, f):
-            sid, part = h[1:].split()[0].rsplit('|', 1)
-            if sid in sids:
-                seqs[(sid, part)] = (h[1:].strip(), s.strip())
     hsps = defaultdict(list)
-    with gzip.open(work / 'evidence_hsps.tsv.gz', 'rt') as f:
-        cols = f.readline().rstrip('\n').split('\t')
-        for line in f:
-            if line.split('\t', 1)[0] in pick:
-                hsps[line.split('\t', 1)[0]].append(dict(zip(cols, line.rstrip('\n').split('\t'))))
+    for d in ev:
+        with gzip.open(d / 'evidence_sequences.fa.gz', 'rt') as f:
+            for h, s in zip(f, f):
+                sid, part = h[1:].split()[0].rsplit('|', 1)
+                if sid in sids:
+                    seqs[(sid, part)] = (h[1:].strip(), s.strip())
+        with gzip.open(d / 'evidence_hsps.tsv.gz', 'rt') as f:
+            cols = f.readline().rstrip('\n').split('\t')
+            for line in f:
+                if line.split('\t', 1)[0] in pick:
+                    hsps[line.split('\t', 1)[0]].append(dict(zip(cols, line.rstrip('\n').split('\t'))))
     L = ['# Real U–X–D examples (`%s`, final_status = pass)\n' % a.kind,
          'One per pair scope × structure, chosen by a fixed rule: the longest insertion, then the smallest pair_id '
          '(`ucd_batch_examples.py`).',
@@ -99,7 +112,7 @@ def main():
             L.append('| – | – | – | – | – | – | – | – |')
         L.append('\nNo HSP other than X/X′ means no reliable similarity between any pair of flanks.\n'
                  if all(h['q'] == 'X' and h['s'] == 'X' for h in hsps[k]) else '')
-    (out / 'examples.md').write_text('\n'.join(L) + '\n')
+    (out / a.name).write_text('\n'.join(L) + '\n')
     print('\n'.join(L))
 
 

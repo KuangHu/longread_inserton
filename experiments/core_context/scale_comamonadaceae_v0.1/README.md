@@ -1219,6 +1219,11 @@ purple cigar_fail. Pairs shown:
   - All 95,328 pairs ran, each with a source check and an independent U–X–D check.
   - Final pass: 48,411 pairs on `cds_core` and 56,811 on `candidate_insertion`.
   - Completeness, failures and retries, timing, and the cost of the remaining full run: `ucd_batch_v0.1/README.md`.
+- **ucd_batch v0.2, whole boundary-review catalogue (`ucd_batch_v0.2/`, 2026-11-07; supersedes v0.1):**
+  - The IUPAC reverse-complement fix was applied and the 117 affected pairs were rerun.
+  - All 3,894,917 pairs were compared, each with both checks.
+  - Pass: `cds_core` 1,045,058; `candidate_insertion` 86,528.
+  - Strict < 2,500 bp on both sides: 57,145 `candidate_insertion` pairs.
 
 Not done yet:
 - **Adding sites from long reads (the original aim):** see `READ_SITE_SEARCH_PILOT.md`.
