@@ -57,7 +57,12 @@ import core_review as cr
 import ucd_batch as ub
 import ucd_compare as uc
 
-VERSION = 'dna_discovery_v0.1.2'
+VERSION = 'dna_discovery_v0.2.1'
+# v0.2.1: alignment keys sharded by subject window (one blastn call per subject with all its queries); per-key
+#         results unchanged (one subject per call in both)
+# v0.2.0: enumerate / align replace pairs: canonical alignment keys (grid windows, relative orientation, A-B = B-A)
+#         computed once and cached; one subject per blastn call (result independent of batch composition);
+#         high-copy pairs enumerated completely in deterministic chunks (pair_chunk), deferred chunks resumable.
 # v0.1.1: minimap2 -c (v0.1 filtered identity on approximate PAF match counts)
 # v0.1.2: occurrence search with minimap2 -P (v0.1.1 used -N 1000, which caps secondary chains per query contig and
 #         silently dropped copies of high-copy segments); seed / library sequences clustered by greedy containment
@@ -78,8 +83,12 @@ PARAMS = dict(
     occ_min=100,                  # bp of an occurrence hit
     window=cr.W,                  # bp each side of the seed for the pair extension (core_review.W)
     chain_gap=cr.CHAIN_GAP, edge=cr.EDGE,
-    full_pairs=20000,             # all pairs of a library sequence up to this many
-    design_partners=8,            # partners per occurrence above it
+    full_pairs=20000,             # v0.1.2 pairs stage only: all pairs up to this many, design above (legacy)
+    design_partners=8,            # partners per occurrence of the cover design (v0.2: priority chunk 0 only)
+    pair_chunk=20000,             # v0.2: pairs per enumeration chunk (a chunk size, not a cap)
+    window_grid=1000,             # v0.2: alignment windows widened outward to this grid (>= W each side), so copies
+                                  #       seen through several library sequences share one alignment
+    key_shards=128,               # v0.2: alignment-key shards (one align task each)
     buckets=64,                   # occurrence files are split by library sequence into this many buckets
 )
 KIND = 'candidate_insertion'
@@ -485,10 +494,13 @@ def extend_pair(A, B, hsps, p):
     """Candidate X of one pair from the HSPs of A's vs B's oriented windows (core_review chain / extensions)."""
     wa, a0, a1 = A['_w']
     wb, b0, b1 = B['_w']
+    la, lb = A.get('_len', None), B.get('_len', None)
+    la = len(wa) if la is None else la
+    lb = len(wb) if lb is None else lb
     pieces = cr.chain([(h['qs'], h['qe'], h['ss'], h['se']) for h in hsps], a0, a1, b0, b1, p['chain_gap'])
     if not pieces:
         return dict(status='no_shared_block_at_seed')
-    e = cr.extensions(pieces, a0, a1, len(wa), b0, b1, len(wb), p['edge'])
+    e = cr.extensions(pieces, a0, a1, la, b0, b1, lb, p['edge'])
     res = {}
     for end in ('up', 'down'):
         cov = e[end + '_cover']
@@ -593,15 +605,351 @@ def cmd_pairs(a):
         shutil.rmtree(tmp, ignore_errors=True)
 
 
+# ---------------------------------------------------------------- enumerate / align (v0.2: alignment de-duplicated)
+
+SRC_SIDE = ['sample', 'contig', 'clen', 'lo', 'hi', 'strand', 'identity', 'wlo', 'whi']
+SRC_COLS = ['key', 'library_id', 'chunk', 'design'] + ['a_' + c for c in SRC_SIDE] + ['b_' + c for c in SRC_SIDE]
+
+
+def grid_window(lo, hi, clen, p):
+    """Alignment window of an occurrence: seed +/- W, widened outward to the window grid, clipped to the contig."""
+    W, G = p['window'], p['window_grid']
+    return (max(0, lo - W) // G) * G, min(clen, -(-(hi + W) // G) * G)
+
+
+def align_key(A, B):
+    """Canonical alignment key of a source pair: the two windows (sample, contig, lo, hi), first = smaller, and the
+    relative orientation of the two copies. A-B and B-A, and a pair seen in either global orientation, have one key."""
+    wa = (A['sample'], A['contig'], int(A['wlo']), int(A['whi']))
+    wb = (B['sample'], B['contig'], int(B['wlo']), int(B['whi']))
+    rel = '+' if A['strand'] == B['strand'] else '-'
+    first, second = (wa, wb) if wa <= wb else (wb, wa)
+    k = '%s|%s|%d|%d||%s|%s|%d|%d||%s' % (first + second + (rel,))
+    return hashlib.sha1(k.encode()).hexdigest()[:20], first, second, rel
+
+
+def key_shard(second, rel, nk):
+    """Shard of an alignment key: by its subject window (second window and relative orientation), so that all keys
+    of one subject are aligned in one blastn call (v0.2.1; v0.2.0 sharded by key hash: ~1.3 queries per call)."""
+    return int(hashlib.sha1(('%s|%s|%d|%d|%s' % (second + (rel,))).encode()).hexdigest()[:8], 16) % nk
+
+
+def pair_chunks(n, occs, p):
+    """Deterministic chunks of the n*(n-1)/2 pairs of one library sequence. Up to pair_chunk pairs: one chunk. Above:
+    chunk 0 = the occurrence-cover design (DESIGN_PARTNERS partners per occurrence; priority only), then all other
+    pairs in (i, j) order in chunks of pair_chunk. Every pair is in exactly one chunk; the chunk size is not a cap."""
+    total = n * (n - 1) // 2
+    C = p['pair_chunk']
+    if total <= C:
+        yield 0, 'all_pairs', ((i, j) for i in range(n) for j in range(i + 1, n)), total
+        return
+    first, _, _ = design(occs, p)
+    fs = set(first)
+    yield 0, 'cover_design', iter(first), len(first)
+    rest = total - len(first)
+    nchunks = -(-rest // C)
+
+    def gen(c):
+        k = 0
+        lo, hi = c * C, (c + 1) * C
+        for i in range(n):
+            for j in range(i + 1, n):
+                if (i, j) in fs:
+                    continue
+                if lo <= k < hi:
+                    yield i, j
+                k += 1
+                if k >= hi:
+                    return
+    for c in range(nchunks):
+        yield c + 1, 'remaining', gen(c), min(C, rest - c * C)
+
+
+def cmd_enumerate(a):
+    """Source pairs of every library sequence of one occurrence bucket, written to key shards (no alignment).
+    --max-pairs bounds this run; chunks beyond it are recorded as deferred and enumerated by a later --gen."""
+    w = Path(a.work)
+    B, NK = PARAMS['buckets'], PARAMS['key_shards']
+    bucket = a.index
+    if bucket >= B:
+        return print('no bucket %d' % bucket)
+    ed = w / 'enum' / ('g%d' % a.gen) / ('b%02d' % bucket)
+    if (ed / 'done.json').exists():
+        return print('done', ed)
+    done_chunks = set()
+    for g in range(a.gen):
+        pf = w / 'enum' / ('g%d' % g) / ('b%02d' % bucket) / 'progress.tsv.gz'
+        if not pf.exists():
+            sys.exit('generation %d of bucket %d not done' % (g, bucket))
+        for r in rows(pf):
+            if r['status'] == 'enumerated':  # a chunk is the same only for the same occurrence count of its sequence
+                done_chunks.add((r['library_id'], int(r['chunk']), int(r['occurrences'])))
+    ed.mkdir(parents=True, exist_ok=True)
+    t0 = time.time()
+    occ = defaultdict(list)
+    for f in sorted((w / 'occ').glob('lib*/*/b%02d.tsv.gz' % bucket)):
+        with gzip.open(f, 'rt') as fh:
+            h = fh.readline().rstrip('\n').split('\t')
+            for line in fh:
+                v = line.rstrip('\n').split('\t')
+                d = dict(zip(h, v))
+                d.pop('window')
+                occ[v[0]].append(d)
+    tmpf = {k: ed / ('.tmp_k%03d.tsv.gz' % k) for k in range(NK)}
+    fos = {k: gzip.open(tmpf[k], 'wt', compresslevel=3) for k in range(NK)}
+    for fo in fos.values():
+        fo.write('\t'.join(SRC_COLS) + '\n')
+    prog, n_enum, n_def, n_skip, budget = [], 0, 0, 0, a.max_pairs
+    try:
+        for lid in sorted(occ):
+            os_ = merge_occurrences([dict(o, window='') for o in occ[lid]])
+            os_.sort(key=occ_id)
+            for o in os_:
+                o['wlo'], o['whi'] = grid_window(int(o['lo']), int(o['hi']), int(o['contig_len']), PARAMS)
+            n = len(os_)
+            for c, how, it, size in pair_chunks(n, os_, PARAMS):
+                if (lid, c, n) in done_chunks:
+                    n_skip += size
+                    continue
+                if budget and n_enum + size > budget and n_enum > 0:
+                    prog.append(dict(library_id=lid, chunk=c, design=how, pairs=size, occurrences=n, status='deferred'))
+                    n_def += size
+                    continue
+                m = 0
+                for i, j in it:
+                    A, Bo = os_[i], os_[j]
+                    key, _, second, rel = align_key(A, Bo)
+                    vals = [key, lid, c, how]
+                    for O in (A, Bo):
+                        vals += [O['sample'], O['contig'], O['contig_len'], O['lo'], O['hi'], O['strand'],
+                                 O['identity'], O['wlo'], O['whi']]
+                    fos[key_shard(second, rel, NK)].write('\t'.join(map(str, vals)) + '\n')
+                    m += 1
+                prog.append(dict(library_id=lid, chunk=c, design=how, pairs=m, occurrences=n, status='enumerated'))
+                n_enum += m
+        for k in range(NK):
+            fos[k].close()
+            os.replace(tmpf[k], ed / ('k%03d.tsv.gz' % k))
+        write(ed / 'progress.tsv.gz', prog, ['library_id', 'chunk', 'design', 'pairs', 'occurrences', 'status'])
+        info = dict(bucket=bucket, gen=a.gen, library_sequences=len(occ), pairs_enumerated=n_enum,
+                    pairs_deferred=n_def, pairs_done_earlier=n_skip, max_pairs=a.max_pairs,
+                    chunks_deferred=sum(r['status'] == 'deferred' for r in prog),
+                    wall_s=round(time.time() - t0, 1), params=digest_params(), host=os.uname()[1])
+        (ed / 'done.json').write_text(json.dumps(info, indent=1) + '\n')
+        print(json.dumps(info))
+    finally:
+        for fo in fos.values():
+            if not fo.closed:
+                fo.close()
+
+
+def _blast_group(job):
+    """One subject window against all its query windows (blastn as core_review.blast: task blastn, plus strand, dust
+    off, evalue 1e-5). One subject per call, so every (query, subject) result equals a separate pairwise search."""
+    subj, queries = job
+    with tempfile.NamedTemporaryFile('w', suffix='.fa') as q, tempfile.NamedTemporaryFile('w', suffix='.fa') as s:
+        for k, seq in queries:
+            q.write('>%s\n%s\n' % (k, seq))
+        s.write('>s\n%s\n' % subj)
+        q.flush()
+        s.flush()
+        cmd = ['blastn', '-query', q.name, '-subject', s.name, '-outfmt', cr.OUTFMT, '-evalue', '1e-5',
+               '-max_target_seqs', '500', '-task', 'blastn', '-strand', 'plus', '-dust', 'no']
+        out = subprocess.run(cmd, check=True, capture_output=True, text=True).stdout
+    res = {k: [] for k, _ in queries}
+    for line in out.splitlines():
+        f = line.split('\t')
+        res[f[0]].append((int(f[4]), int(f[5]), int(f[6]), int(f[7])))
+    return res
+
+
+def to_source(hsps, L1, L2, a_is_first, flip):
+    """HSPs of the canonical frame (first window forward, second in relative orientation) in a source's frame
+    (A and B each in its library orientation): swap if A is the second window, reverse-complement both if needed."""
+    out = []
+    for qs, qe, ss, se in hsps:
+        if not a_is_first:
+            qs, qe, ss, se = ss, se, qs, qe
+        out.append((qs, qe, ss, se))
+    La, Lb = (L1, L2) if a_is_first else (L2, L1)
+    if flip:
+        out = [(La - qe + 1, La - qs + 1, Lb - se + 1, Lb - ss + 1) for qs, qe, ss, se in out]
+    return [dict(qs=a, qe=b, ss=c, se=d) for a, b, c, d in out]
+
+
+def seed_in_window(o):
+    """[c0, c1) of the seed in the occurrence's grid window, in library orientation."""
+    wl, wh, lo, hi = int(o['wlo']), int(o['whi']), int(o['lo']), int(o['hi'])
+    return (lo - wl, hi - wl) if o['strand'] == '+' else (wh - hi, wh - lo)
+
+
+ALIGN_COLS = PAIR_COLS + ['align_key', 'chunk', 'alignment']
+
+
+def cmd_align(a):
+    """Per key shard: every distinct alignment key once (cached across generations), then the extension of every
+    source pair from the HSPs in its own frame. Each source keeps its own seeds, X and library sequence."""
+    w = Path(a.work)
+    NK = PARAMS['key_shards']
+    s = a.index
+    if s >= NK:
+        return print('no shard %d' % s)
+    out = w / 'align' / ('g%d' % a.gen) / ('k%03d' % s)
+    if (out / 'done.json').exists():
+        return print('done', out)
+    nb = PARAMS['buckets']
+    miss = [b for b in range(nb) if not (w / 'enum' / ('g%d' % a.gen) / ('b%02d' % b) / 'done.json').exists()]
+    if miss:
+        sys.exit('enumerate g%d not done for buckets %s' % (a.gen, miss[:5]))
+    out.mkdir(parents=True, exist_ok=True)
+    t0 = time.time()
+    srcs = []
+    for b in range(nb):
+        srcs.extend(rows(w / 'enum' / ('g%d' % a.gen) / ('b%02d' % b) / ('k%03d.tsv.gz' % s)))
+    cache_dir = w / 'align' / 'cache' / ('k%03d' % s)
+    cache = {}
+    for f in sorted(cache_dir.glob('hsps_g*.tsv.gz')):
+        for r in rows(f):
+            cache[r['key']] = (int(r['qlen']), int(r['slen']),
+                               [tuple(map(int, x.split(','))) for x in r['hsps'].split(';') if x])
+    keys = {}
+    for r in srcs:
+        if r['key'] in cache or r['key'] in keys:
+            continue
+        A = {k: r['a_' + k] for k in SRC_SIDE}
+        Bo = {k: r['b_' + k] for k in SRC_SIDE}
+        key, first, second, rel = align_key(A, Bo)
+        if key != r['key']:
+            sys.exit('key mismatch %s %s' % (key, r['key']))
+        keys[key] = (first, second, rel)
+    # window sequences, one verified genome at a time
+    man = {m['sample']: m for m in rows(a.manifest)}
+    need = defaultdict(set)
+    for first, second, rel in keys.values():
+        need[first[0]].add(first)
+        need[second[0]].add(second)
+    seqs, bad = {}, []
+    for smp in sorted(need):
+        g = verified_fasta(man[smp])
+        if g is None:
+            bad.append(smp)
+            continue
+        for wnd in need[smp]:
+            seqs[wnd] = g[wnd[1]][wnd[2]:wnd[3]]
+        del g
+    if bad:
+        sys.exit('sha256 mismatch: %s' % bad)
+    groups = defaultdict(list)
+    for key, (first, second, rel) in keys.items():
+        groups[(second, rel)].append((key, seqs[first]))
+    jobs = []
+    for (second, rel), qs in sorted(groups.items()):
+        subj = seqs[second] if rel == '+' else cr.revcomp(seqs[second])
+        jobs.append((subj, sorted(qs)))
+    t1 = time.time()
+    new = {}
+    if jobs:
+        import multiprocessing as mp
+        with mp.Pool(a.threads) as pool:
+            for res in pool.imap_unordered(_blast_group, jobs, chunksize=1):
+                new.update(res)
+    t_blast = time.time() - t1
+    cache_dir.mkdir(parents=True, exist_ok=True)
+    crow = []
+    for key, (first, second, rel) in keys.items():
+        hs = new.get(key, [])
+        L1, L2 = first[3] - first[2], second[3] - second[2]
+        cache[key] = (L1, L2, hs)
+        crow.append(dict(key=key, first='%s|%s|%d-%d' % first, second='%s|%s|%d-%d' % second, rel=rel, qlen=L1,
+                         slen=L2, hsps=';'.join('%d,%d,%d,%d' % h for h in hs)))
+    write(cache_dir / ('hsps_g%d.tsv.gz' % a.gen), crow, ['key', 'first', 'second', 'rel', 'qlen', 'slen', 'hsps'])
+    P = []
+    for r in srcs:
+        A = {k: r['a_' + k] for k in SRC_SIDE}
+        Bo = {k: r['b_' + k] for k in SRC_SIDE}
+        _, first, second, rel = align_key(A, Bo)
+        L1, L2, hs = cache[r['key']]
+        wa = (A['sample'], A['contig'], int(A['wlo']), int(A['whi']))
+        a_first = wa == first
+        if first == second:  # both copies in one window: A is the query by occurrence order
+            a_first = True
+        o_first = A['strand'] if a_first else Bo['strand']
+        flip = o_first != '+'
+        if not a_first:
+            flip = A['strand'] != rel
+        hsps = to_source(hs, L1, L2, a_first, flip)
+        for O in (A, Bo):
+            c0, c1 = seed_in_window(O)
+            O['_w'] = (None, c0, c1)
+            O['_len'] = int(O['whi']) - int(O['wlo'])
+            O['contig_len'] = O['clen']
+            O['_id'] = occ_id(O)
+        e = extend_pair(A, Bo, hsps, PARAMS)
+        pr = dict(library_id=r['library_id'], design=r['design'], chunk=r['chunk'], align_key=r['key'],
+                  alignment='computed' if r['key'] in keys else 'cached',
+                  pair_scope='same_assembly' if A['sample'] == Bo['sample'] else 'cross_assembly',
+                  a_occurrence=A['_id'], b_occurrence=Bo['_id'], a_sample=A['sample'], b_sample=Bo['sample'],
+                  a_contig=A['contig'], b_contig=Bo['contig'], a_strand=A['strand'], b_strand=Bo['strand'],
+                  a_seed='%s-%s' % (A['lo'], A['hi']), b_seed='%s-%s' % (Bo['lo'], Bo['hi']),
+                  seed_identity_a=A['identity'], seed_identity_b=Bo['identity'], status=e['status'],
+                  boundary_up=e.get('up', e['status']), boundary_down=e.get('down', e['status']),
+                  chain_pieces=e.get('chain_pieces', ''))
+        for sd, O in (('a', A), ('b', Bo)):
+            up, down = e.get(sd + '_up'), e.get(sd + '_down')
+            pr[sd + '_ext_up'] = '' if up is None else up
+            pr[sd + '_ext_down'] = '' if down is None else down
+            if e['status'] == 'resolved':
+                lo, hi = genomic(O, up, down)
+                pr[sd + '_x'] = '%d-%d' % (lo, hi)
+                pr['x_len_' + sd] = hi - lo
+        k2 = (pr['a_sample'], pr['a_contig'], pr.get('a_x') or pr['a_seed'], pr['a_strand'], pr['b_sample'],
+              pr['b_contig'], pr.get('b_x') or pr['b_seed'], pr['b_strand'])
+        pr['pair_id'] = 'D' + hashlib.sha1('|'.join(k2).encode()).hexdigest()[:14]
+        P.append(pr)
+    write(out / 'pairs.tsv.gz', P, ALIGN_COLS)
+    info = dict(shard=s, gen=a.gen, sources=len(srcs), distinct_keys=len({r['key'] for r in srcs}),
+                keys_computed=len(keys), keys_cached=len({r['key'] for r in srcs} - set(keys)),
+                blast_calls=len(jobs), windows=len(seqs), blast_s=round(t_blast, 1),
+                status=dict(Counter(r['status'] for r in P)), wall_s=round(time.time() - t0, 1),
+                params=digest_params(), host=os.uname()[1])
+    (out / 'done.json').write_text(json.dumps(info, indent=1) + '\n')
+    print(json.dumps(info))
+
+
 # ---------------------------------------------------------------- collect
 
 def cmd_collect(a):
     """ucd_batch input table of the resolved pairs (candidate_insertion), one row per distinct pair of X intervals."""
     w = Path(a.work)
-    S = PARAMS['buckets'] * a.subs
-    miss = [i for i in range(S) if not (w / 'pairs' / ('shard_%04d' % i) / 'done.json').exists()]
-    if miss:
-        sys.exit('pair shards not done: %d (first %s)' % (len(miss), miss[:5]))
+    if a.gens:  # v0.2: align shards of the given generations; deferred = enumerate chunks never enumerated
+        gens = [int(g) for g in a.gens.split(',')]
+        NK, nb = PARAMS['key_shards'], PARAMS['buckets']
+        units = [w / 'align' / ('g%d' % g) / ('k%03d' % k) for g in gens for k in range(NK)]
+        miss = [str(u) for u in units if not (u / 'done.json').exists()]
+        if miss:
+            sys.exit('align shards not done: %d (first %s)' % (len(miss), miss[:3]))
+        enumerated = set()
+        deferred_rows = {}
+        for g in gens:
+            for b in range(nb):
+                for r in rows(w / 'enum' / ('g%d' % g) / ('b%02d' % b) / 'progress.tsv.gz'):
+                    k = (r['library_id'], r['chunk'])
+                    if r['status'] == 'enumerated':
+                        enumerated.add(k)
+                    else:
+                        deferred_rows[k] = int(r['pairs'])
+        pending = {k: v for k, v in deferred_rows.items() if k not in enumerated}
+        shard_files = [(u / 'pairs.tsv.gz', None) for u in units]
+        deferred_info = dict(chunks_pending=len(pending), pairs_pending=sum(pending.values()),
+                             libraries_pending=len({k[0] for k in pending}))
+    else:
+        S = PARAMS['buckets'] * a.subs
+        miss = [i for i in range(S) if not (w / 'pairs' / ('shard_%04d' % i) / 'done.json').exists()]
+        if miss:
+            sys.exit('pair shards not done: %d (first %s)' % (len(miss), miss[:5]))
+        shard_files = [(w / 'pairs' / ('shard_%04d' % i) / 'pairs.tsv.gz', w / 'pairs' / ('shard_%04d' % i))
+                       for i in range(S)]
+        deferred_info = None
     man = {m['sample']: m for m in rows(a.manifest)}
     seen, dup, st, scope, n_all = {}, Counter(), Counter(), Counter(), 0
     deferred = 0
@@ -610,10 +958,12 @@ def cmd_collect(a):
     ci = {c: i for i, c in enumerate(ub.INPUT_COLS)}
     with gzip.open(out / 'dna_pairs_all.tsv.gz', 'wt') as fa:
         fa.write('\t'.join(PAIR_COLS) + '\n')
-        for i in range(S):
-            d = w / 'pairs' / ('shard_%04d' % i)
-            deferred += json.loads((d / 'done.json').read_text())['pairs_deferred']
-            for r in rows(d / 'pairs.tsv.gz'):
+        alignment = Counter()
+        for pf, d in shard_files:
+            if d is not None:
+                deferred += json.loads((d / 'done.json').read_text())['pairs_deferred']
+            for r in rows(pf):
+                alignment[r.get('alignment', '')] += 1
                 n_all += 1
                 fa.write('\t'.join(str(r.get(c, '')) for c in PAIR_COLS) + '\n')
                 st[r['status']] += 1
@@ -648,7 +998,9 @@ def cmd_collect(a):
             f.write('\t'.join(str(v) for v in seen[pid]) + '\n')
     info = dict(version=VERSION, discovery_source='dna', params=PARAMS, pair_rows=n_all, status=dict(st),
                 resolved_distinct=len(seen), resolved_duplicate_rows=sum(dup.values()), scope=dict(scope),
-                pairs_deferred_high_copy=deferred, ucd_input=str(out / 'ucd_input.tsv.gz'),
+                pairs_deferred_high_copy=deferred if deferred_info is None else deferred_info['pairs_pending'],
+                deferred=deferred_info, gens=a.gens, source_alignment=dict(alignment),
+                ucd_input=str(out / 'ucd_input.tsv.gz'),
                 ucd_input_sha256=ub.sha_file(out / 'ucd_input.tsv.gz'),
                 dna_pairs_all_sha256=ub.sha_file(out / 'dna_pairs_all.tsv.gz'))
     (out / 'collect.json').write_text(json.dumps(info, indent=1) + '\n')
@@ -659,7 +1011,7 @@ def main():
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sp = p.add_subparsers(dest='cmd')
     sp.required = True
-    for name in ('plan', 'seeds', 'library', 'occurrences', 'pairs', 'collect'):
+    for name in ('plan', 'seeds', 'library', 'occurrences', 'pairs', 'enumerate', 'align', 'collect'):
         x = sp.add_parser(name)
         x.add_argument('--work', required=True)
         x.add_argument('--manifest', required=True)
@@ -677,11 +1029,17 @@ def main():
             x.add_argument('--force', action='store_true')
         if name in ('pairs', 'collect'):
             x.add_argument('--subs', type=int, default=1, help='pair tasks per bucket (array size buckets x subs)')
+        if name in ('enumerate', 'align'):
+            x.add_argument('--gen', type=int, default=0, help='generation (0 = first; later = resumed deferred chunks / '
+                                                           'new batches)')
+        if name == 'enumerate':
+            x.add_argument('--max-pairs', type=int, default=0, help='pairs enumerated by this task (0 = all)')
         if name == 'collect':
             x.add_argument('--out', required=True)
+            x.add_argument('--gens', default='', help='v0.2: generations of align shards to collect (e.g. 0,1)')
     a = p.parse_args()
     dict(plan=cmd_plan, seeds=cmd_seeds, library=cmd_library, occurrences=cmd_occurrences, pairs=cmd_pairs,
-         collect=cmd_collect)[a.cmd](a)
+         enumerate=cmd_enumerate, align=cmd_align, collect=cmd_collect)[a.cmd](a)
 
 
 if __name__ == '__main__':

@@ -1,0 +1,48 @@
+{
+ "version": "dna_discovery_v0.2.1",
+ "discovery_source": "dna",
+ "params": {
+  "seed_preset": "asm20",
+  "seed_min": 100,
+  "seed_max": 10000,
+  "seed_identity": 0.8,
+  "merge_overlap": 0.8,
+  "cluster_identity": 0.9,
+  "cluster_coverage": 0.8,
+  "occ_min": 100,
+  "window": 3000,
+  "chain_gap": 50,
+  "edge": 5,
+  "full_pairs": 20000,
+  "design_partners": 8,
+  "pair_chunk": 20000,
+  "window_grid": 1000,
+  "key_shards": 128,
+  "buckets": 64
+ },
+ "pair_rows": 10493703,
+ "status": {
+  "unresolved": 6947330,
+  "resolved": 2257904,
+  "no_shared_block_at_seed": 1288469
+ },
+ "resolved_distinct": 854446,
+ "resolved_duplicate_rows": 1403458,
+ "scope": {
+  "cross_assembly": 827099,
+  "same_assembly": 27347
+ },
+ "pairs_deferred_high_copy": 0,
+ "deferred": {
+  "chunks_pending": 0,
+  "pairs_pending": 0,
+  "libraries_pending": 0
+ },
+ "gens": "0",
+ "source_alignment": {
+  "computed": 10493703
+ },
+ "ucd_input": "/global/scratch/users/kh36969/longread_callout/core_context/dna_v0.1/validation/collect_v02/ucd_input.tsv.gz",
+ "ucd_input_sha256": "803a46a9ae0824f3b1c5f84482621b0e120125b34caac365c9e498125ed06fc3",
+ "dna_pairs_all_sha256": "844671679125b7c935576c65146b06b8a4936919ca049ccb82de6a8441e61e27"
+}

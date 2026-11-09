@@ -18,4 +18,5 @@ OUT=${OUT:-scale_comamonadaceae_v0.1/ucd_batch_v0.1}
 WORK=${WORK:-/global/scratch/users/kh36969/longread_callout/core_context/ucd_batch_v0.1}
 export TMPDIR=${SLURM_TMPDIR:-/tmp}
 CMD=$1; shift
+if [ "$CMD" = chunk ] && [ -n "${OFFSET:-}" ]; then set -- "$@" --offset $OFFSET; fi  # arrays > MaxArraySize
 /usr/bin/time -v python ucd_batch.py $CMD --out $OUT --work $WORK "$@"

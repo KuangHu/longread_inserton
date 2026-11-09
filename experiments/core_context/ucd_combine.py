@@ -144,6 +144,7 @@ def cmd_combine(a):
     for w in filter(None, a.runs.split(',')):
         sources.append(('run', Path(w), 'rows_%s.tsv.gz', lambda r: True, None))
     res, comp_all, files = {}, {}, {}
+    ub.set_kinds(a.kinds.split(','))
     for kind in ub.KINDS:
         seen, dup, extra, nostatus = set(), 0, 0, 0
         T = defaultdict(Tally)
@@ -249,6 +250,7 @@ def main():
     x.add_argument('--replace', default='', help='rerun work dir with rows_<kind>.tsv.gz')
     x.add_argument('--replace-ids', default='')
     x.add_argument('--runs', default='', help='comma-separated run work dirs taken whole')
+    x.add_argument('--kinds', default=','.join(uc.KINDS), help='interval kinds to combine')
     a = p.parse_args()
     dict(**{'rerun-report': cmd_rerun_report, 'combine': cmd_combine})[a.cmd](a)
 
