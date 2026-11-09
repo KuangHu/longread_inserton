@@ -20,7 +20,8 @@ CODE=/global/home/users/kh36969/middle_insertion_callout/longread_inserton/exper
 PY=/global/scratch/users/kh36969/longread_callout/env/msi/bin/python
 EXCL=n0004.lr6,n0065.lr6,n0072.lr6,n0018.lr6
 RETRIES=2
-SEED_CHUNK=${SEED_CHUNK:-100}; PART=${PART:-25}; UCD_CHUNK=${UCD_CHUNK:-5000}
+BIG=--partition=lr_bigmem   # single-task, memory-heavy steps (n0272, 1.5 TB)
+SEED_CHUNK=${SEED_CHUNK:-75}; PART=${PART:-25}; UCD_CHUNK=${UCD_CHUNK:-5000}
 cd $CODE
 mkdir -p $WORK/runlog
 exec 9>$WORK/runlog/driver.lock
@@ -85,7 +86,7 @@ NCH=$(awk -F'\t' -v t=$TAG '$2==t' $WORK/chunks.tsv | wc -l)
 say "seed chunks $NCH, parts $(awk -F'\t' -v t=$TAG '$2==t' $WORK/parts.tsv | wc -l)"
 seeds_missing() { awk -F'\t' -v t=$TAG '$2==t{print n++" "$1}' $WORK/chunks.tsv | while read i c; do
   [ -f $WORK/seeds/$c/done.json ] || echo $i; done; }
-run_until_done seeds seeds_missing --cpus-per-task=32 --mem=180G --time=24:00:00 -- \
+run_until_done seeds seeds_missing --cpus-per-task=32 --mem=90G --time=24:00:00 -- \
   dna_batch.sbatch $WORK $MAN seeds --tag $TAG
 
 if ! grep -q "\"tag\": \"$TAG\"" $WORK/library/lib_*.json 2>/dev/null; then
@@ -121,7 +122,7 @@ GENS=$(seq -s, 0 $(( $(wc -l < $WORK/gens.tsv) - 1 )))
 # ---------------------------------------------------------------- collect and the two checks
 C=$WORK/collect_$TAG
 if [ ! -f $C/collect.json ]; then
-  submit collect "0" --cpus-per-task=2 --mem=180G --time=24:00:00 -- \
+  submit collect "0" $BIG --cpus-per-task=4 --mem=400G --time=24:00:00 -- \
     --wrap="cd $CODE; $PY dna_discovery.py collect --work $WORK --manifest $MAN --out $C --gens $GENS"
   [ -f $C/collect.json ] || die "collect failed"
 fi
@@ -129,7 +130,7 @@ U=$WORK/ucd_$TAG; UW=$WORK/ucd_work_$TAG; F=$WORK/final_$TAG
 PREVF=$(tail -1 $WORK/finals.txt 2>/dev/null)
 if [ ! -f $U/freeze.json ]; then
   PI=""; [ -n "$PREVF" ] && PI="--previous-index $PREVF/index.tsv.gz"
-  submit freeze "0" --cpus-per-task=2 --mem=180G --time=24:00:00 -- \
+  submit freeze "0" $BIG --cpus-per-task=4 --mem=400G --time=24:00:00 -- \
     --wrap="cd $CODE; $PY ucd_batch.py freeze --out $U --work $UW --manifest $MAN --input-table $C/ucd_input.tsv.gz --kinds candidate_insertion --chunk-size $UCD_CHUNK $PI"
   [ -f $U/freeze.json ] || die "freeze failed"
 fi
@@ -139,14 +140,14 @@ if [ $NU -gt 0 ]; then
   run_until_done checks ucd_missing --cpus-per-task=32 --mem=64G --time=04:00:00 \
     --export=ALL,OUT=$U,WORK=$UW -- ucd_batch.sbatch chunk
   if [ ! -f $U/merge.json ]; then
-    submit merge "0" --cpus-per-task=32 --mem=180G --time=12:00:00 --export=ALL,OUT=$U,WORK=$UW -- ucd_batch.sbatch merge
+    submit merge "0" $BIG --cpus-per-task=16 --mem=400G --time=24:00:00 --export=ALL,OUT=$U,WORK=$UW -- ucd_batch.sbatch merge
   fi
   grep -q '"complete": true' $U/completeness.json || die "checks incomplete: $U/completeness.json"
 fi
 if [ ! -f $F/strict_lt2500_candidate_insertion.tsv.gz ]; then
   RU=""; [ -n "$PREVF" ] && RU="--reuse $PREVF --reuse-pattern all_rows_%s.tsv.gz --reuse-ids $UW/reuse_ids.txt.gz"
   RN=""; [ $NU -gt 0 ] && RN="--runs $UW"
-  submit combine "0" --cpus-per-task=2 --mem=120G --time=12:00:00 -- \
+  submit combine "0" $BIG --cpus-per-task=4 --mem=300G --time=24:00:00 -- \
     --wrap="cd $CODE; $PY ucd_combine.py combine --out $F --work $F --ids $UW/catalogue_ids.txt.gz --kinds candidate_insertion $RU $RN"
   [ -f $F/strict_lt2500_candidate_insertion.tsv.gz ] || die "combine failed"
 fi
@@ -165,7 +166,7 @@ for l in open('$WORK/index_sources.tsv'):
 print(' '.join("--source '%s|%s|%s'" % (cv, ','.join(v[0]), v[1]) for cv, v in d.items()))
 PYX
 )
-  submit index "0" --cpus-per-task=2 --mem=120G --time=12:00:00 -- \
+  submit index "0" $BIG --cpus-per-task=4 --mem=300G --time=24:00:00 -- \
     --wrap="cd $CODE; $PY ucd_batch.py index --out $F/index.tsv.gz --final $F --kinds candidate_insertion --manifest $MAN $SRC"
   [ -f $F/index.tsv.gz ] || die "index failed"
 fi
