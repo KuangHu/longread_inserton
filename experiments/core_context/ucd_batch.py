@@ -47,13 +47,20 @@ from pathlib import Path
 import ucd_checks as ck
 import ucd_compare as uc
 
-VERSION = 'ucd_batch_v0.3'
+VERSION = 'ucd_batch_v0.4'  # v0.4: --input-table (pre-built pair table, e.g. the DNA entry) and --kinds
 # The rule that turns input rows into intervals and verdicts into final_status (interval(), work_pair()). Unchanged
 # since v0.2; bump it if that logic changes, so earlier rows stop being reusable.
 DECISION_VERSION = 'decision_v0.2'
 HERE = Path(__file__).resolve().parent
 CODE = ('ucd_compare.py', 'ucd_checks.py', 'ucd_batch.py')
-KINDS = uc.KINDS
+KINDS = uc.KINDS  # interval kinds of this run; a run may restrict them (freeze --kinds, recorded in freeze.json)
+
+
+def set_kinds(kinds):
+    global KINDS
+    kinds = tuple(kinds)
+    assert kinds and all(k in uc.KINDS for k in kinds), kinds
+    KINDS = kinds
 SIDE = ('occurrence', 'sample', 'assembly', 'contig', 'start0', 'end0', 'strand', 'ext_up', 'ext_down', 'elem_lo',
         'elem_hi', 'boundary_up', 'boundary_down', 'estimated_span', 'input_error')
 LABELS = ('pair_id', 'structure', 'core_key', 'pair_scope', 'copy_class', 's6_grouping', 'core_match_class',
@@ -206,7 +213,7 @@ def classify(a, rows, man, info):
         n[c] += 1
         cls.append(dict(pair_id=r[0], status=c, **{'fp_' + k: fps[k] for k in KINDS},
                         **{'previous_fp_' + k: (old or {}).get(k, ('',))[0] for k in KINDS},
-                        previous_code_version=(old or {}).get('cds_core', ('', ''))[1]))
+                        previous_code_version=(old or {}).get(KINDS[0], ('', ''))[1]))
         if c != 'reused':
             keep.append(r)
     ids = {r[0] for r in rows}
@@ -228,6 +235,7 @@ def classify(a, rows, man, info):
 def cmd_index(a):
     """Fingerprint index of an earlier final result: every (pair_id, kind) row of <final>/all_rows_<kind>.tsv.gz,
     fingerprinted with the input row and code hashes of the run that produced it (by code_version)."""
+    set_kinds(a.kinds.split(','))
     srcs = {}
     for spec in a.source:
         label, inputs, frz = spec.split('|')
@@ -264,6 +272,7 @@ def cmd_freeze(a):
     work.mkdir(parents=True, exist_ok=True)
     man = uc.manifest(a.manifest)
     ci = {c: i for i, c in enumerate(INPUT_COLS)}
+    set_kinds(a.kinds.split(','))
     info = {}
     if a.from_input:
         want = ids_of(a.ids)
@@ -273,7 +282,11 @@ def cmd_freeze(a):
         if len(rows) != len(want):
             sys.exit('%d requested IDs not in %s' % (len(want) - len(rows), a.from_input))
     else:
-        rows = build_from_catalogue(a, man)
+        if a.input_table:  # pre-built pair table in INPUT_COLS (e.g. dna_discovery.py collect)
+            rows = [[r.get(c, '') for c in INPUT_COLS] for r in uc.read_tsv(a.input_table)]
+            info.update(input_table=a.input_table, input_table_sha256=sha_file(a.input_table))
+        else:
+            rows = build_from_catalogue(a, man)
         ids = [r[0] for r in rows]
         if len(set(ids)) != len(ids):
             sys.exit('pair_id collision: %d rows, %d distinct IDs' % (len(ids), len(set(ids))))
@@ -322,8 +335,10 @@ def cmd_freeze(a):
     errs = Counter(e for r in rows for s in 'ab' for e in r[ci[s + '_input_error']].split(',') if e)
     frz = dict(version=VERSION, screen_version=uc.VERSION, check_version=ck.CHECK_VERSION, config=dict(uc.CONFIG),
                check_config=ck.CHECK_CONFIG, coordinates=ck.COORDS, code_sha256=code_hashes(),
-               scope='full comparison of an existing candidate catalogue (%s, %s); not a complete discovery over all '
-                     'FASTA' % ('boundary review core pairs' if a.catalogue == 'boundary' else a.catalogue, a.tag),
+               scope=('two checks of a pre-built pair table (%s)' % a.input_table if a.input_table else
+                      'full comparison of an existing candidate catalogue (%s, %s); not a complete discovery over all '
+                      'FASTA' % ('boundary review core pairs' if a.catalogue == 'boundary' else a.catalogue, a.tag)),
+               kinds=list(KINDS),
                inputs={str(p): sha_file(p) for p in [Path(a.manifest)] +
                        ([Path(a.catalogue)] if a.catalogue not in ('boundary', '') else [])},
                input_pairs=len(rows), input_pairs_path=str(allp), input_pairs_sha256=sha_file(allp),
@@ -463,6 +478,7 @@ def work_pair(r):
 def cmd_chunk(a):
     out, work = Path(a.out), Path(a.work)
     frz = json.loads((out / 'freeze.json').read_text())
+    set_kinds(frz.get('kinds', uc.KINDS))
     if code_hashes() != frz['code_sha256']:
         sys.exit('code differs from the frozen code (freeze.json); refusing to run')
     idx = a.index if a.index is not None else int(os.environ['SLURM_ARRAY_TASK_ID']) + a.offset
@@ -518,6 +534,7 @@ def cmd_chunk(a):
 def cmd_merge(a):
     out, work = Path(a.out), Path(a.work)
     frz = json.loads((out / 'freeze.json').read_text())
+    set_kinds(frz.get('kinds', uc.KINDS))
     expect = set()
     for i in range(frz['chunks']):
         expect |= {r['pair_id'] for r in uc.read_tsv(work / 'inputs' / ('c%04d.tsv.gz' % i))}
@@ -644,6 +661,8 @@ def main():
             x.add_argument('--tag', default='b1-2-3')
             x.add_argument('--boundary-dir', default=str(uc.REPO), help='dir with boundary_occurrences_<scope>_<tag>')
             x.add_argument('--previous-index', default='', help='fingerprint index of an earlier result (index)')
+            x.add_argument('--input-table', default='', help='pre-built input table (INPUT_COLS); all its rows')
+            x.add_argument('--kinds', default=','.join(uc.KINDS), help='interval kinds of this run')
             x.add_argument('--chunk-size', type=int, default=5000)
         if name == 'chunk':
             x.add_argument('--index', type=int)
@@ -653,13 +672,14 @@ def main():
             x.add_argument('--apply', action='store_true')
     x = sp.add_parser('index')
     x.add_argument('--final', required=True, help='dir with all_rows_<kind>.tsv.gz')
+    x.add_argument('--kinds', default=','.join(uc.KINDS), help='interval kinds of the final result')
     x.add_argument('--source', action='append', required=True,
                    help="'<code_version>|<input_pairs[,input_pairs]>|<freeze.json>' of a run whose rows are in --final")
     x.add_argument('--manifest', default=str(uc.REPO / 'manifest.tsv'))
     x.add_argument('--out', required=True)
     a = p.parse_args()
-    if a.cmd == 'freeze' and not (a.catalogue or a.from_input):
-        sys.exit('freeze needs --catalogue or --from-input/--ids')
+    if a.cmd == 'freeze' and not (a.catalogue or a.from_input or a.input_table):
+        sys.exit('freeze needs --catalogue or --from-input/--ids or --input-table')
     dict(freeze=cmd_freeze, chunk=cmd_chunk, merge=cmd_merge, cleanup=cmd_cleanup, index=cmd_index)[a.cmd](a)
 
 
