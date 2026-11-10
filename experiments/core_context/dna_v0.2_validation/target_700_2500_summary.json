@@ -1,0 +1,26 @@
+{
+ "rule": "pass both checks and 700 <= extracted X length < 2500 bp on both sides",
+ "table": "/global/scratch/users/kh36969/longread_callout/core_context/dna_v0.1/validation/final_v02/strict_700_2500_candidate_insertion.tsv.gz",
+ "main": {
+  "pairs": 307257,
+  "distinct_x_intervals": 38708,
+  "assemblies": 50,
+  "by_scope": {
+   "same_assembly": 22740,
+   "cross_assembly": 284517
+  }
+ },
+ "wide_lt2500": {
+  "pairs": 313666,
+  "distinct_x_intervals": 42094,
+  "assemblies": 50,
+  "by_scope": {
+   "same_assembly": 23585,
+   "cross_assembly": 290081
+  }
+ },
+ "excluded_from_wide": {
+  "both_sides_below_700": 6380,
+  "one_side_below_700": 29
+ }
+}

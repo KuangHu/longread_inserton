@@ -7,7 +7,7 @@
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=32G
 #SBATCH --time=24:00:00
-#SBATCH --exclude=n0004.lr6,n0065.lr6,n0072.lr6
+#SBATCH --exclude=n0004.lr6,n0065.lr6,n0072.lr6,n0018.lr6,n0054.lr6
 #SBATCH --output=/global/home/users/kh36969/logs/core_context/%x_%A_%a.out
 # DNA-first discovery entry (dna_discovery.py), one stage per submission. Reads verified FNA + manifest only.
 #   seeds        --array=0-<chunks-1>  --cpus-per-task=32 --mem=90G   all-vs-all per seed chunk

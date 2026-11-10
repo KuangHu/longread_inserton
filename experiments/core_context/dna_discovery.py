@@ -57,7 +57,8 @@ import core_review as cr
 import ucd_batch as ub
 import ucd_compare as uc
 
-VERSION = 'dna_discovery_v0.2.1'
+VERSION = 'dna_discovery_v0.2.2'
+# v0.2.2: collect sends only pairs with 700 <= X < 2500 bp on both sides to the checks (others: out_of_target)
 # v0.2.1: alignment keys sharded by subject window (one blastn call per subject with all its queries); per-key
 #         results unchanged (one subject per call in both)
 # v0.2.0: enumerate / align replace pairs: canonical alignment keys (grid windows, relative orientation, A-B = B-A)
@@ -89,6 +90,8 @@ PARAMS = dict(
     window_grid=1000,             # v0.2: alignment windows widened outward to this grid (>= W each side), so copies
                                   #       seen through several library sequences share one alignment
     key_shards=128,               # v0.2: alignment-key shards (one align task each)
+    target_min=700, target_max=2500,  # v0.2.2: candidate X length of both sides before the two checks (collect);
+                                  #       seeds keep 100..10,000 bp, X is never cut to fit
     buckets=64,                   # occurrence files are split by library sequence into this many buckets
 )
 KIND = 'candidate_insertion'
@@ -918,6 +921,15 @@ def cmd_align(a):
 
 # ---------------------------------------------------------------- collect
 
+def length_class(r):
+    """Target length of a pair's candidate X (both sides): in_target / out_of_target; unresolved when not known."""
+    if r['status'] != 'resolved':
+        return 'unresolved'
+    lo, hi = PARAMS['target_min'], PARAMS['target_max']
+    ok = all(lo <= int(r['x_len_' + s]) < hi for s in 'ab')
+    return 'in_target' if ok else 'out_of_target'
+
+
 def cmd_collect(a):
     """ucd_batch input table of the resolved pairs (candidate_insertion), one row per distinct pair of X intervals."""
     w = Path(a.work)
@@ -952,25 +964,32 @@ def cmd_collect(a):
         deferred_info = None
     man = {m['sample']: m for m in rows(a.manifest)}
     seen, dup, st, scope, n_all = {}, Counter(), Counter(), Counter(), 0
+    out_target = set()
     deferred = 0
     out = Path(a.out)
     out.mkdir(parents=True, exist_ok=True)
     ci = {c: i for i, c in enumerate(ub.INPUT_COLS)}
     with gzip.open(out / 'dna_pairs_all.tsv.gz', 'wt') as fa:
-        fa.write('\t'.join(PAIR_COLS) + '\n')
+        fa.write('\t'.join(PAIR_COLS + ['length_class']) + '\n')
         alignment = Counter()
+        lclass = Counter()  # distinct resolved pairs by target length of both X
         for pf, d in shard_files:
             if d is not None:
                 deferred += json.loads((d / 'done.json').read_text())['pairs_deferred']
             for r in rows(pf):
                 alignment[r.get('alignment', '')] += 1
                 n_all += 1
-                fa.write('\t'.join(str(r.get(c, '')) for c in PAIR_COLS) + '\n')
+                lc = length_class(r)
+                fa.write('\t'.join([str(r.get(c, '')) for c in PAIR_COLS] + [lc]) + '\n')
                 st[r['status']] += 1
                 if r['status'] != 'resolved':
                     continue
-                if r['pair_id'] in seen:
+                if r['pair_id'] in seen or r['pair_id'] in out_target:
                     dup[r['pair_id']] += 1
+                    continue
+                lclass[lc] += 1
+                if lc != 'in_target':  # length known and outside the target: not sent to the two checks
+                    out_target.add(r['pair_id'])
                     continue
                 scope[r['pair_scope']] += 1
                 x = dict(pair_id=r['pair_id'], structure='dna_segment', core_key=r['library_id'],
@@ -997,7 +1016,10 @@ def cmd_collect(a):
         for pid in sorted(seen):
             f.write('\t'.join(str(v) for v in seen[pid]) + '\n')
     info = dict(version=VERSION, discovery_source='dna', params=PARAMS, pair_rows=n_all, status=dict(st),
-                resolved_distinct=len(seen), resolved_duplicate_rows=sum(dup.values()), scope=dict(scope),
+                resolved_distinct=len(seen) + len(out_target), resolved_duplicate_rows=sum(dup.values()),
+                target_length=dict(min=PARAMS['target_min'], max=PARAMS['target_max'], rule='both X, min <= len < max'),
+                resolved_distinct_by_length=dict(lclass), sent_to_checks=len(seen), out_of_target=len(out_target),
+                scope_sent_to_checks=dict(scope),
                 pairs_deferred_high_copy=deferred if deferred_info is None else deferred_info['pairs_pending'],
                 deferred=deferred_info, gens=a.gens, source_alignment=dict(alignment),
                 ucd_input=str(out / 'ucd_input.tsv.gz'),

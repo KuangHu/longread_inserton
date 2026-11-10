@@ -18,7 +18,7 @@ fi
 WORK=${1:?work}; MAN=${2:?manifest}; TAG=${3:?tag}; BATCHES=${4:?batches}; MAXP=${5:-4000000}; MAXG=${6:-3}
 CODE=/global/home/users/kh36969/middle_insertion_callout/longread_inserton/experiments/core_context
 PY=/global/scratch/users/kh36969/longread_callout/env/msi/bin/python
-EXCL=n0004.lr6,n0065.lr6,n0072.lr6,n0018.lr6
+EXCL=n0004.lr6,n0065.lr6,n0072.lr6,n0018.lr6,n0054.lr6
 RETRIES=2
 BIG=--partition=lr_bigmem   # single-task, memory-heavy steps (n0272, 1.5 TB)
 SEED_CHUNK=${SEED_CHUNK:-75}; PART=${PART:-25}; UCD_CHUNK=${UCD_CHUNK:-5000}
@@ -62,6 +62,10 @@ submit() {  # submit <stage-label> <index list "0 1 2 ..."> <sbatch args...> -- 
   done
   say "$label submitted: ${ids[*]} ($(echo $idx | wc -w) tasks)"
   wait_jobs "${ids[@]}"
+  # nodes where a task failed are excluded from later submissions (scratch I/O errors, node failures)
+  local bad=$(sacct -j $(echo ${ids[*]} | tr ' ' ',') -X -n -o State,NodeList%30 2>/dev/null |
+              awk '$1!="COMPLETED" && $1!="RUNNING" && $1!="PENDING" && $2!="None" {print $2}' | sort -u | paste -sd,)
+  if [ -n "$bad" ]; then EXCL="$EXCL,$bad"; say "excluding nodes after failures: $bad"; echo "$bad" >> $WORK/runlog/bad_nodes.txt; fi
 }
 
 run_until_done() {  # run_until_done <label> <missing-fn> <sbatch args...> -- <script and args...>
@@ -170,6 +174,7 @@ PYX
     --wrap="cd $CODE; $PY ucd_batch.py index --out $F/index.tsv.gz --final $F --kinds candidate_insertion --manifest $MAN $SRC"
   [ -f $F/index.tsv.gz ] || die "index failed"
 fi
+[ -f $F/target_700_2500_summary.json ] || $PY ucd_target.py --final $F >> $LOG 2>&1 || die "target table failed"
 grep -qx "$F" $WORK/finals.txt 2>/dev/null || echo $F >> $WORK/finals.txt
 
 # ---------------------------------------------------------------- batch report

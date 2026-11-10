@@ -89,6 +89,8 @@ def main():
                       strict_lt2500_pairs=n, strict_by_scope=dict(sscope), strict_occurrences=len(socc),
                       strict_assemblies=len(sasm), discovery_source='dna',
                       note='cumulative over all batches processed in this work dir')
+    tj = jl(Path(a.final) / 'target_700_2500_summary.json')
+    R['target_700_2500'] = tj['main'] if tj else None  # main table; final['strict_*'] is the wide < 2500 table
     # resources
     res = Counter()
     peak = {}

@@ -35,7 +35,7 @@ from pathlib import Path
 
 import ucd_compare as uc
 
-VERSION = 'dna_validate_v0.2.1'  # v0.2.1: reason of the pair for one_side_recovered
+VERSION = 'dna_validate_v0.2.2'  # v0.2.2: --min-len, same range for DNA and reference  # v0.2.1: reason of the pair for one_side_recovered
 MIN_OVERLAP = 0.5
 TOL = 10
 STRICT_MAX = 2500
@@ -66,9 +66,15 @@ def stream(path, keep=lambda r: True):
                 yield r
 
 
+MIN_LEN = 0  # set by --min-len (target table: 700); applied to the DNA rows and to the protein reference alike
+
+
+def in_len(r):
+    return all(max(MIN_LEN, 1) <= int(r['x_len_' + s] or 0) < STRICT_MAX for s in 'ab')
+
+
 def strict(r):
-    return r['final_status'] == 'pass' and 0 < int(r['x_len_a'] or 0) < STRICT_MAX and \
-        0 < int(r['x_len_b'] or 0) < STRICT_MAX
+    return r['final_status'] == 'pass' and in_len(r)
 
 
 def lkey(r):
@@ -84,7 +90,10 @@ def main():
     p.add_argument('--dna-rows', required=True, help='ucd_batch rows_candidate_insertion of the DNA pairs')
     p.add_argument('--protein-final', required=True)
     p.add_argument('--out', required=True)
+    p.add_argument('--min-len', type=int, default=0, help='lower X length bound of both sides (700 = target table)')
     a = p.parse_args()
+    global MIN_LEN
+    MIN_LEN = a.min_len
     S = {m['sample'] for m in uc.read_tsv(a.manifest)}
     inset = lambda r: r['a_sample'] in S and r['b_sample'] in S
     out = Path(a.out)
@@ -232,7 +241,8 @@ def main():
             return 'occurrence_not_detected:seed_only'
         return 'no_seed'
 
-    prot = list(stream(Path(a.protein_final) / 'strict_lt2500_candidate_insertion.tsv.gz', inset))
+    prot = list(stream(Path(a.protein_final) / 'strict_lt2500_candidate_insertion.tsv.gz',
+                       lambda r: inset(r) and in_len(r)))  # same length range as the DNA rows
     rec, rows = Counter(), []
     by_scope, by_strand = defaultdict(Counter), defaultdict(Counter)
     for pr in prot:
@@ -292,7 +302,7 @@ def main():
         ctl['%s -> %s' % (pr['ucd_check'], ':'.join(c.split(':')[:2]))] += 1
     C = dict(protein_control_rows=sum(ctl.values()), dna_judgement=dict(ctl.most_common()))
     res = dict(version=VERSION, assemblies=len(S), rules=dict(tol_bp=TOL, min_overlap=MIN_OVERLAP,
-                                                               strict_max_bp=STRICT_MAX),
+                                                               strict_min_bp=max(MIN_LEN, 1), strict_max_bp=STRICT_MAX),
                dna=D, recovery=R, controls=C)
     res = json.loads(json.dumps(res, default=lambda o: dict(o)))
     (out / 'validation.json').write_text(json.dumps(res, indent=1) + '\n')
