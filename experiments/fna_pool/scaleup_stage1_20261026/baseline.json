@@ -1,0 +1,450 @@
+{
+ "schema": "scaleup_stage1_baseline_v1",
+ "created": "2026-10-25T22:57:50-0700",
+ "git": {
+  "branch": "docs/read-unit-audit",
+  "head": "d1c663aec7e50a715d2f6d2297deaf32ad786e52",
+  "origin_head": "d1c663aec7e50a715d2f6d2297deaf32ad786e52",
+  "status": [
+   "?? experiments/fna_pool/scaleup_stage1.py"
+  ]
+ },
+ "slurm_queue": [],
+ "running_outside_slurm": [
+  "lrc-xfer tmux fna_fetch: s3_readcheck fetch --transfer-only for s5_readcheck/main (commit 7ccde0a)",
+  "login node: build_pool.py fetch for the 10 wave-1 families into fna_pool/scaleup_stage1_20261026"
+ ],
+ "tools": {
+  "minimap2": {
+   "path": "/global/scratch/users/kh36969/longread_callout/env/msi/bin/minimap2",
+   "version": "2.30-r1287",
+   "sha256": "5ef4a631a6318c66d1184007f87bedc55f712c27472d141da4d35e80df82e3cc"
+  },
+  "samtools": {
+   "path": "/global/scratch/users/kh36969/longread_callout/env/msi/bin/samtools",
+   "version": "samtools 1.23.1",
+   "sha256": "de2a6b39abaa296c2d6bf6cb456087c50ded11b4e14a796b3fa0fceb7c19ab03"
+  },
+  "python_msi": {
+   "path": "/global/scratch/users/kh36969/longread_callout/env/msi/bin/python",
+   "version": "Python 3.11.17",
+   "sha256": "392febf6de3f1040de43055a629ab4e85ee26d65f940b1d558468217d3bb65d6"
+  },
+  "mmseqs": {
+   "path": "/global/scratch/users/kh36969/longread_callout/env/s4/bin/mmseqs",
+   "version": "17.b804f",
+   "sha256": "b98e00c5e2262a836720fd674679439f5727b5636eaeee191ed27f3c38c49020"
+  },
+  "skani": {
+   "path": "/global/scratch/users/kh36969/longread_callout/paraburkholderia_ani/skani",
+   "version": "skani 0.4.0",
+   "sha256": "1482c7d1cf35210bf73c6d06c1b1fc97659dec18194c5355a31af672b6b03c0b"
+  },
+  "datasets": {
+   "path": "/global/home/users/kh36969/.conda/envs/claude-env/bin/datasets",
+   "version": "datasets version: 18.24.0",
+   "sha256": "6b8ad05cc02a8de0f9a72f049aaf0ff0c235be81b91ada88f007dd8599767d32"
+  },
+  "python_system": {
+   "path": "/usr/bin/python3",
+   "version": "Python 3.6.8",
+   "sha256": "908d8d0073749fd7ac4c64b0fd37436fd5d51adcef8ac1efab414d57729a222e"
+  }
+ },
+ "frozen_parameters": {
+  "build_pool": {
+   "LEVEL_RANK": {
+    "Complete Genome": 0,
+    "Chromosome": 1,
+    "Scaffold": 2,
+    "Contig": 3
+   },
+   "MIN_MEAN_LENGTH": 500,
+   "PLATFORMS": [
+    "OXFORD_NANOPORE",
+    "PACBIO_SMRT"
+   ],
+   "_source_sha256": "53fda65cc1ae55ca1e3adf78bb8bb3dcf98cf576e328e6fd6be69498e01b23c8"
+  },
+  "build_s2": {
+   "CLONE_ANI": 99.99,
+   "CLONE_AF": 95.0,
+   "SPECIES_ANI": 95.0,
+   "SPECIES_AF": 50.0,
+   "N_SPECIES_NEIGHBOURS": 3,
+   "AUDIT_MIN": 10,
+   "AUDIT_MAX": 20,
+   "DISTANCE_TIERS": [
+    [
+     "ani_99.99_100",
+     99.99,
+     100.01
+    ],
+    [
+     "ani_99_99.99",
+     99.0,
+     99.99
+    ],
+    [
+     "ani_97_99",
+     97.0,
+     99.0
+    ],
+    [
+     "ani_95_97",
+     95.0,
+     97.0
+    ],
+    [
+     "ani_90_95",
+     90.0,
+     95.0
+    ],
+    [
+     "ani_lt90",
+     0.0,
+     90.0
+    ]
+   ],
+   "PER_TIER": 5,
+   "SOURCE_RULES": "batch50_source_class+v2(word-bounded plant keywords; '<facility> plant' -> facility)",
+   "_source_sha256": "830d251f1bc4451a5512ca6ac0183628ceb06fd5d2a21ee13cc15e7aff7b0977"
+  },
+  "s3_pair_calls": {
+   "VERSION": "s3_pair_calls_v0.1",
+   "MM": [
+    "-x",
+    "asm20",
+    "-c",
+    "--eqx",
+    "--secondary=yes",
+    "-N",
+    "20",
+    "-p",
+    "0.5"
+   ],
+   "MIN_CORE": 50,
+   "MAX_CORE": 100000,
+   "FLANK": 200,
+   "FLANK_MIN_ID": 0.9,
+   "FLANK_MIN_COVER": 0.9,
+   "MERGE_MATCH": 5,
+   "BLOCK_OVERLAP": 50,
+   "SMALL_OTHER_GAP": 10,
+   "EDGE": 1000,
+   "COMPETE_COVER": 0.8,
+   "COMPETE_ID": 0.98,
+   "BOUNDARY_TOL": 20,
+   "UD": 1000,
+   "PROBE_MM": [
+    "-x",
+    "map-pb",
+    "-c",
+    "--eqx",
+    "--secondary=yes",
+    "-N",
+    "100",
+    "-p",
+    "0.1"
+   ],
+   "PROBE_CORE_MAX": 50000,
+   "DIFF_ORDER": [
+    "presence_absence",
+    "complex_small_other",
+    "replacement"
+   ],
+   "_source_sha256": "53e75c1eb338a45fc201dd46ab28445515620ea6971cdfff35c80f98c1e92cf3"
+  },
+  "s4_annotate": {
+   "VERSION": "s4_annotate_v0.2",
+   "SHORT": 2500,
+   "CONTEXT": 300,
+   "LISTS": [
+    "main",
+    "partner_mixed",
+    "direction_mixed",
+    "short_other_segment",
+    "replacement"
+   ],
+   "MMSEQS_SETTINGS": {
+    "family": [
+     "--min-seq-id",
+     "0.9",
+     "-c",
+     "0.8",
+     "--cov-mode",
+     "0",
+     "--cluster-mode",
+     "0",
+     "--cluster-reassign",
+     "1"
+    ],
+    "homology_group": [
+     "--min-seq-id",
+     "0.5",
+     "-c",
+     "0.8",
+     "--cov-mode",
+     "0",
+     "--cluster-mode",
+     "0",
+     "--cluster-reassign",
+     "1"
+    ]
+   },
+   "MEMBER_MIN": {
+    "family": [
+     0.9,
+     0.8
+    ],
+    "homology_group": [
+     0.5,
+     0.8
+    ]
+   },
+   "MMSEQS_CHECK": [
+    "--exhaustive-search",
+    "1",
+    "--alignment-mode",
+    "3",
+    "-e",
+    "10",
+    "--max-seqs",
+    "100000",
+    "--format-output",
+    "query,target,fident,qcov,tcov,alnlen"
+   ],
+   "STARTS": [
+    "ATA",
+    "ATC",
+    "ATG",
+    "ATT",
+    "CTG",
+    "GTG",
+    "TTG"
+   ],
+   "STOPS": [
+    "TAA",
+    "TAG",
+    "TGA"
+   ],
+   "_source_sha256": "b72d6d9b2ea809108bf4cadae58b0e011f6a40bc95b3bf69fefd19ff4a5fbec5",
+   "_translation": "table 11 hard-coded (CODE11); transl_table not read yet"
+  },
+  "s3_readcheck": {
+   "VERSION": "s3_readcheck_v0.3",
+   "FLANK": 2000,
+   "ANCHOR": 300,
+   "MIN_DELTA_AS": 20,
+   "MIN_SPAN": 3,
+   "MAX_OTHER_FRACTION": 0.1,
+   "MIN_INDEL": 10,
+   "LOCUS_TOL": 50,
+   "PRESET": {
+    "ont": "map-ont",
+    "pacbio_hifi_ccs": "map-hifi",
+    "pacbio_clr_subreads": "map-pb",
+    "pacbio_unresolved": "map-pb"
+   },
+   "MM": [
+    "-c",
+    "--secondary=yes",
+    "-N",
+    "100",
+    "-p",
+    "0.3"
+   ],
+   "MM_GENOME": [
+    "-c",
+    "--secondary=yes",
+    "-N",
+    "50",
+    "-p",
+    "0.5"
+   ],
+   "_source_sha256": "a844e45127c86c7a87539757963edfb20cebc952fec017471c0576615bc0ba50"
+  }
+ },
+ "baseline_pool": "experiments/fna_pool/comamonadaceae_20261024",
+ "baseline_result_sha256": {
+  "comamonadaceae_20261024/assemblies.tsv.gz": "cbfbd629807d1f8b7e72717fbbd5ffd9ec5fa26d521ecf1a30434bad8a6c2a48",
+  "comamonadaceae_20261024/assembly_run_links.tsv": "8e380030789736cb6b1d9e309c5ee3ff4974ca8b0ebce1c63be6b69efa96ec6b",
+  "comamonadaceae_20261024/download_manifest.tsv": "683be9c701eb59ce94a82b3114035b80df9aa7250dfcf23c93ed019268be6842",
+  "comamonadaceae_20261024/pool.tsv": "ce4311c6896edad6959be1d7b2c03e22a13780fbe59e3fd4890ec93cbb91ff98",
+  "comamonadaceae_20261024/runs.tsv": "d0fc7de2cb25263fde2c35c0e6e059198192a4cf0175342084a184dc297b831a",
+  "comamonadaceae_20261024/s1/accessions.tsv": "4c5b6bd7d7cffb78edb8a12d1a22073a10f62f85a6547241fd89804df830f148",
+  "comamonadaceae_20261024/s1/files.tsv": "efdead9fa231662bde01c91a327185da05d3a12d3bc2e8c03e003c5b453391db",
+  "comamonadaceae_20261024/s1/pair_checks.tsv": "a84244bdffb62b199c0b804c4b9a43328f36047ef1fa7fe4ade65369d66bec54",
+  "comamonadaceae_20261024/s1/s1_report.json": "c01a07e2c66b4611c798079459e0f9e28573d18247246da5729fadd671d35e8b",
+  "comamonadaceae_20261024/s2/catalog.tsv": "bb64fb481e8b304f1a325e0d52b24fb62a4d5d0bc8abbea683d24ccd010f66b5",
+  "comamonadaceae_20261024/s2/contig_index.tsv.gz": "2e3e9dcb5e19dd4ab65a7930df5f7b1df6642abec26998eb2d93e42fe1f5d32a",
+  "comamonadaceae_20261024/s2/groups.tsv": "19666305bee359afc22b188c65d5249264b106d95737a2e5f269428b10c98acc",
+  "comamonadaceae_20261024/s2/joint_index.json": "362fe2157e022b35390ad367315ec5b225c6b2d3262d2080e8f5c98e05d18b19",
+  "comamonadaceae_20261024/s2/pairs.tsv": "feefa5002eb25375f59f704b5cff2615da544cf96ef17ce04c2b1e095020cd56",
+  "comamonadaceae_20261024/s2/s2_summary.json": "3f6db9fd18451ecccf7ffc6875e4f4e8ef7997b15a3769d0557c5c176a804a07",
+  "comamonadaceae_20261024/s2/skani_run.json": "d8fd9230a2073eea69240ae1a9958cf24c30afdabbf86692a7a6cde54213aace",
+  "comamonadaceae_20261024/s3_full/call_runs.json": "6bf10b82a19d2011c20ad9b9eac31cfcf1db27dda3518a99f81d24e10681e6a6",
+  "comamonadaceae_20261024/s3_full/full_tables.sha256": "6861390008f2a97ad3669448b9d83ac743886d987d90c50babd16b4262e5deae",
+  "comamonadaceae_20261024/s3_full/pair_summary.tsv": "f2f4ba1f361c6b158037a257d65ff0ffca147bbf85218ce236a1769bbd6e4921",
+  "comamonadaceae_20261024/s3_full/pairs.tsv": "4c646b64b9277fb621b42b1aea6d566c97debae28a412b5a756f6a1eee25d23c",
+  "comamonadaceae_20261024/s3_full/short_loci_review.tsv": "c162734478202f8de342f9dccf908b7446f3c532224eeaa2957ae7de989668e9",
+  "comamonadaceae_20261024/s3_full/summary.json": "9558d08586b15193f75a752bacff7d83bc737d639d88b9c11309ffd295f79bb2",
+  "comamonadaceae_20261024/s3_pilot/calls_merged.tsv": "41d4fd49a5b4d27923069ce84d12a26b574c85076ae00fdb15334d904c31cc76",
+  "comamonadaceae_20261024/s3_pilot/loci.tsv": "c23059e1dbef2ef7bc3ea0a1723afd447d0606839769e6415cc414d4292d38e0",
+  "comamonadaceae_20261024/s3_pilot/one_flank.tsv": "0ecd46cf36a2fd1699bd9372b253a911e5fbde18578ab480c2229ce9e12bc912",
+  "comamonadaceae_20261024/s3_pilot/pilot_pairs.tsv": "ce9b9aa1b5e742f2c9d6affc5902efcfa4e0759e0df3c4b16384ea72cf5fda04",
+  "comamonadaceae_20261024/s3_pilot/pilot_summary.json": "db687b67e56eba26377c86e16db139711eb25ad1f69ebb7d9882625235d84ef8",
+  "comamonadaceae_20261024/s3_pilot/pilot_summary.tsv": "859129f854ee991b6d48d3bdc43d42b85f47c2ae8f1051e10bb4d5de0dbefa84",
+  "comamonadaceae_20261024/s3_pilot/readcheck/SAMD00076718.json": "0249ea065fb44d67ce2db06a65fac0bb0030a6cf8cca8e8f48197674f8082011",
+  "comamonadaceae_20261024/s3_pilot/readcheck/SAMD00407106.json": "f5795811f28d34f107cad7d6aaed6957c5a20d975fd74deb2d3705804f71fccd",
+  "comamonadaceae_20261024/s3_pilot/readcheck/SAMD00411011.json": "414c077abebc628b836633f00118e9459b26b7995377753848b54f3d969cbfd1",
+  "comamonadaceae_20261024/s3_pilot/readcheck/SAMD00571185.json": "97b135b447e9062d3c7443f5bbe3cc87c8602913b982139c32b0dbe15ada49a5",
+  "comamonadaceae_20261024/s3_pilot/readcheck/SAMD00623152.json": "f11e260896628c8bbb1a94e323adea8af71f0c1a8ebe5ef3e392b512b81a3e29",
+  "comamonadaceae_20261024/s3_pilot/readcheck/SAMD00735223.json": "f34ca1086645d2a6325f7094d95e5308d0bce2a54505db58eddac2b81ccd1497",
+  "comamonadaceae_20261024/s3_pilot/readcheck/SAMD00735224.json": "3f12e97cf05bdc1bdc1774746832af79d74999f0e6200a5539a9eb76cc0e83ee",
+  "comamonadaceae_20261024/s3_pilot/readcheck/SAMEA118088312.json": "be8aa2f23da3d171fd86095a73d6f8b8306386abc1d39529eaf55c4c6c5398b1",
+  "comamonadaceae_20261024/s3_pilot/readcheck/SAMEA120308855.json": "a89737b43e6c99a0b147fc404b5fd57849b99b6575dfe6c85e6fb0bec33897bc",
+  "comamonadaceae_20261024/s3_pilot/readcheck/SAMEA120314636.json": "08423e34cd6bdc0ec8f2780375a9f34ba4dce15576a0f90161564c4837f3ac9b",
+  "comamonadaceae_20261024/s3_pilot/readcheck/SAMEA120782404.json": "059d38e0e93ef53f57a1e018c924712b4ea4329b602238118e9dd0bf65c97bb7",
+  "comamonadaceae_20261024/s3_pilot/readcheck/SAMN13450421.json": "57a3b0ababb0e5db8a629a05683302780f10b48d964b920ce3f5ad9f993b4ffb",
+  "comamonadaceae_20261024/s3_pilot/readcheck/SAMN38562701.json": "3d9803ec7b3ca49a1063e03079ff57c4a2cd6f521ffd5c3f6f161267544b63ab",
+  "comamonadaceae_20261024/s3_pilot/readcheck/SAMN51281027.json": "75dbae6dd842c60f9938a7ef453fc2d8f0f9712e465e15102ea049298a44fa49",
+  "comamonadaceae_20261024/s3_pilot/readcheck/SAMN51281044.json": "af2e400c852c38d49215fbb287a1d977f2831f8a40697e989ef9d8b9d742cdde",
+  "comamonadaceae_20261024/s3_pilot/readcheck/SAMN51658614.json": "447d4ec2da32f2b95ffe943bf689bdb4fb50458e6b05edcf526a5af5b12a56f6",
+  "comamonadaceae_20261024/s3_pilot/readcheck/readcheck_loci.tsv": "1ae9decf53c1a1e73e62565da470f889720bb76b941a219db7d427654f2a9b2c",
+  "comamonadaceae_20261024/s3_pilot/readcheck/readcheck_summary.json": "16c2fb9b2fb74b0cba62f3a940623bdcdc823bbdd189c4facb0b26401dfe9672",
+  "comamonadaceae_20261024/s3_pilot/readcheck/readcheck_tests.tsv": "dc5d7391d7fde971e8e6de7933e62abb57159689fcb762542495053b2a881ac7",
+  "comamonadaceae_20261024/s3_pilot/readcheck/verify_DRR319914.json": "404c311f90609fd5c3505c3aadd5eb8d745b575cee24e1284a74fe0ea3d78643",
+  "comamonadaceae_20261024/s3_pilot/readcheck/verify_DRR396223.json": "39c27b7e07bb12875a56558e8091a20624a2392163b8efc1d746d10b08a0eeea",
+  "comamonadaceae_20261024/s3_pilot/readcheck/verify_DRR428552.json": "b2697e344dd9eef0a58eecaf430e978ed1ea2d70db857e3a120faa896a6dc5a7",
+  "comamonadaceae_20261024/s3_pilot/readcheck/verify_DRR527049.json": "1d49acd30291f17c7cecb66fdc913f2b1a2c93388d6068e43f5b9e2023192484",
+  "comamonadaceae_20261024/s3_pilot/readcheck/verify_DRR527050.json": "0ac9483bc52d177fdef8edf452affcdb43776576ccae3935cc808415ff179da7",
+  "comamonadaceae_20261024/s3_pilot/readcheck/verify_ERR15680828.json": "d6c096105bdfaa04c1b38602a33bd7551fe039738bdd823f5915ab2b97392467",
+  "comamonadaceae_20261024/s3_pilot/readcheck/verify_ERR15686901.json": "4ead4efff2ed7a476660eec3a880a9e5329f5ccfeeef8f45ea267af3cea99b0a",
+  "comamonadaceae_20261024/s3_pilot/readcheck/verify_SRR12046249.json": "244f747fde1c4b3d6c34f7cc28ff8338d5d765127ab0d8c027fde191e670e14f",
+  "comamonadaceae_20261024/s3_pilot/readcheck/verify_SRR27033690.json": "4bc2b2c649c491c4dd6dbda411ef70867e406f442ba8982a3a5e1af59c7209c6",
+  "comamonadaceae_20261024/s3_pilot/readcheck/verify_SRR40356275.json": "6020dc2c591ebf00b7213873d7dd150fb910946921f24941e19da80becae6c6b",
+  "comamonadaceae_20261024/s3_pilot/readcheck/verify_SRR40356303.json": "e83c98e557fbac815fee6d60321cfbc737363677c97724b24f4b4fa9eb6fb050",
+  "comamonadaceae_20261024/s3_pilot/readcheck/verify_SRR40356322.json": "87769e2a47ccd6ef1fdd3fcb415b62af197ab6587e69da5dd66818bc03498b76",
+  "comamonadaceae_20261024/s3_pilot/readcheck_v02/SAMD00076718.json": "0249ea065fb44d67ce2db06a65fac0bb0030a6cf8cca8e8f48197674f8082011",
+  "comamonadaceae_20261024/s3_pilot/readcheck_v02/SAMD00407106.json": "f5795811f28d34f107cad7d6aaed6957c5a20d975fd74deb2d3705804f71fccd",
+  "comamonadaceae_20261024/s3_pilot/readcheck_v02/SAMD00411011.json": "414c077abebc628b836633f00118e9459b26b7995377753848b54f3d969cbfd1",
+  "comamonadaceae_20261024/s3_pilot/readcheck_v02/SAMD00571185.json": "97b135b447e9062d3c7443f5bbe3cc87c8602913b982139c32b0dbe15ada49a5",
+  "comamonadaceae_20261024/s3_pilot/readcheck_v02/SAMD00623152.json": "f11e260896628c8bbb1a94e323adea8af71f0c1a8ebe5ef3e392b512b81a3e29",
+  "comamonadaceae_20261024/s3_pilot/readcheck_v02/SAMD00735223.json": "f34ca1086645d2a6325f7094d95e5308d0bce2a54505db58eddac2b81ccd1497",
+  "comamonadaceae_20261024/s3_pilot/readcheck_v02/SAMD00735224.json": "3f12e97cf05bdc1bdc1774746832af79d74999f0e6200a5539a9eb76cc0e83ee",
+  "comamonadaceae_20261024/s3_pilot/readcheck_v02/SAMEA118088312.json": "be8aa2f23da3d171fd86095a73d6f8b8306386abc1d39529eaf55c4c6c5398b1",
+  "comamonadaceae_20261024/s3_pilot/readcheck_v02/SAMEA120308855.json": "a89737b43e6c99a0b147fc404b5fd57849b99b6575dfe6c85e6fb0bec33897bc",
+  "comamonadaceae_20261024/s3_pilot/readcheck_v02/SAMEA120314636.json": "08423e34cd6bdc0ec8f2780375a9f34ba4dce15576a0f90161564c4837f3ac9b",
+  "comamonadaceae_20261024/s3_pilot/readcheck_v02/SAMEA120782404.json": "059d38e0e93ef53f57a1e018c924712b4ea4329b602238118e9dd0bf65c97bb7",
+  "comamonadaceae_20261024/s3_pilot/readcheck_v02/SAMN13450421.json": "57a3b0ababb0e5db8a629a05683302780f10b48d964b920ce3f5ad9f993b4ffb",
+  "comamonadaceae_20261024/s3_pilot/readcheck_v02/SAMN38562701.json": "3d9803ec7b3ca49a1063e03079ff57c4a2cd6f521ffd5c3f6f161267544b63ab",
+  "comamonadaceae_20261024/s3_pilot/readcheck_v02/SAMN51281027.json": "75dbae6dd842c60f9938a7ef453fc2d8f0f9712e465e15102ea049298a44fa49",
+  "comamonadaceae_20261024/s3_pilot/readcheck_v02/SAMN51281044.json": "af2e400c852c38d49215fbb287a1d977f2831f8a40697e989ef9d8b9d742cdde",
+  "comamonadaceae_20261024/s3_pilot/readcheck_v02/SAMN51658614.json": "447d4ec2da32f2b95ffe943bf689bdb4fb50458e6b05edcf526a5af5b12a56f6",
+  "comamonadaceae_20261024/s3_pilot/readcheck_v02/genome_SAMD00076718.json": "b9506dea7d86e4f08feeaaed8d982c11f81e0a8b73599fd54d1706cbce352bcb",
+  "comamonadaceae_20261024/s3_pilot/readcheck_v02/genome_SAMD00407106.json": "9448d8bc893047aa950835d49092f6b9c473da6a3b5a2d042dae5b3397c2c8e2",
+  "comamonadaceae_20261024/s3_pilot/readcheck_v02/genome_SAMD00411011.json": "687d6c3d7bd357668b50b39519aea0f5c57461b3fe99566eddb8b21745cc2f75",
+  "comamonadaceae_20261024/s3_pilot/readcheck_v02/genome_SAMD00571185.json": "d0bc07ebf196acb96ae2d9df763fd4067fcede5f25d6530bf2240ef64e6dc6ef",
+  "comamonadaceae_20261024/s3_pilot/readcheck_v02/genome_SAMD00623152.json": "83585f429e96804d7bcfcadad2cddc3f803dce9e1cdd7d937dcd1d9d524a6574",
+  "comamonadaceae_20261024/s3_pilot/readcheck_v02/genome_SAMD00735223.json": "0037dcae69796460c35659d3fe7f2b89e2906547c39f0d391425a1c31621771b",
+  "comamonadaceae_20261024/s3_pilot/readcheck_v02/genome_SAMD00735224.json": "4bf5dfc42f303b57b7e72be2d8dc042ef0ed78c872b7edb5cf5699d7c2c6c6a1",
+  "comamonadaceae_20261024/s3_pilot/readcheck_v02/genome_SAMEA118088312.json": "3b8f7134812270763ca1d820cdd1785f3d7296588a39d6a776b8edc70fc030ce",
+  "comamonadaceae_20261024/s3_pilot/readcheck_v02/genome_SAMEA120308855.json": "52a98ed1d8f9c7dfff04d006fad49071e83343adc997b7e731c02929a9e76af8",
+  "comamonadaceae_20261024/s3_pilot/readcheck_v02/genome_SAMEA120314636.json": "687faf403a354916edc46f3befa7331e9810b8b16fc93d07aa426915b0eed4f6",
+  "comamonadaceae_20261024/s3_pilot/readcheck_v02/genome_SAMEA120782404.json": "6b0f4626a254e352075e359356c1d59834466034a90c43733c21bcb880141268",
+  "comamonadaceae_20261024/s3_pilot/readcheck_v02/genome_SAMN13450421.json": "bdf00ebff1c3ea1bbcd2dd17e17ddd10763a525d9ebffe080e846280d8a4c1a7",
+  "comamonadaceae_20261024/s3_pilot/readcheck_v02/genome_SAMN38562701.json": "7b9cdbd2d886c4f95cdc5e7d4aeef38095fb394deb722f72e8ee72067596475a",
+  "comamonadaceae_20261024/s3_pilot/readcheck_v02/genome_SAMN51281027.json": "60f0e12cc7f28699ed413a8b7047a558650e16e43c024d76eef23854fa7d2ee7",
+  "comamonadaceae_20261024/s3_pilot/readcheck_v02/genome_SAMN51281044.json": "a50ea46adb20fecc79ac24caba89e087118eb0c2454bee9e6553fcdb7a36407f",
+  "comamonadaceae_20261024/s3_pilot/readcheck_v02/genome_SAMN51658614.json": "bdaee5462e26f9ac70019323cbafd02ed892df184e7182d9427cf6d13eb28ef2",
+  "comamonadaceae_20261024/s3_pilot/readcheck_v02/readcheck_loci.tsv": "18cbac02a4c1810418960a5698ec0f3ccde35ae7834cabb8708365176c931719",
+  "comamonadaceae_20261024/s3_pilot/readcheck_v02/readcheck_summary.json": "e1e91a1366068590196d5502dae16d817d24e6051d426a4465e2cef3b22a1b77",
+  "comamonadaceae_20261024/s3_pilot/readcheck_v02/readcheck_tests.tsv": "5f272defc0f3718fa21c778bb7092e01b46f87290a7569ebe862b43b7f004201",
+  "comamonadaceae_20261024/s3_pilot/readcheck_v02/verify_DRR319914.json": "404c311f90609fd5c3505c3aadd5eb8d745b575cee24e1284a74fe0ea3d78643",
+  "comamonadaceae_20261024/s3_pilot/readcheck_v02/verify_DRR396223.json": "39c27b7e07bb12875a56558e8091a20624a2392163b8efc1d746d10b08a0eeea",
+  "comamonadaceae_20261024/s3_pilot/readcheck_v02/verify_DRR428552.json": "b2697e344dd9eef0a58eecaf430e978ed1ea2d70db857e3a120faa896a6dc5a7",
+  "comamonadaceae_20261024/s3_pilot/readcheck_v02/verify_DRR527049.json": "1d49acd30291f17c7cecb66fdc913f2b1a2c93388d6068e43f5b9e2023192484",
+  "comamonadaceae_20261024/s3_pilot/readcheck_v02/verify_DRR527050.json": "0ac9483bc52d177fdef8edf452affcdb43776576ccae3935cc808415ff179da7",
+  "comamonadaceae_20261024/s3_pilot/readcheck_v02/verify_ERR15680828.json": "d6c096105bdfaa04c1b38602a33bd7551fe039738bdd823f5915ab2b97392467",
+  "comamonadaceae_20261024/s3_pilot/readcheck_v02/verify_ERR15686901.json": "4ead4efff2ed7a476660eec3a880a9e5329f5ccfeeef8f45ea267af3cea99b0a",
+  "comamonadaceae_20261024/s3_pilot/readcheck_v02/verify_SRR12046249.json": "244f747fde1c4b3d6c34f7cc28ff8338d5d765127ab0d8c027fde191e670e14f",
+  "comamonadaceae_20261024/s3_pilot/readcheck_v02/verify_SRR27033690.json": "4bc2b2c649c491c4dd6dbda411ef70867e406f442ba8982a3a5e1af59c7209c6",
+  "comamonadaceae_20261024/s3_pilot/readcheck_v02/verify_SRR40356275.json": "6020dc2c591ebf00b7213873d7dd150fb910946921f24941e19da80becae6c6b",
+  "comamonadaceae_20261024/s3_pilot/readcheck_v02/verify_SRR40356303.json": "e83c98e557fbac815fee6d60321cfbc737363677c97724b24f4b4fa9eb6fb050",
+  "comamonadaceae_20261024/s3_pilot/readcheck_v02/verify_SRR40356322.json": "87769e2a47ccd6ef1fdd3fcb415b62af197ab6587e69da5dd66818bc03498b76",
+  "comamonadaceae_20261024/s3_pilot/readcheck_v03/readcheck_loci.tsv": "7bc754ad8bb0da432d113dda80453e77fbec7c0f9fcf3a74c32a9c3ecf918718",
+  "comamonadaceae_20261024/s3_pilot/readcheck_v03/readcheck_summary.json": "b3679ed18a4e793384f61e67732dea768ab8c43ff37ff0732940154ea124f66d",
+  "comamonadaceae_20261024/s3_pilot/readcheck_v03/readcheck_tests.tsv": "46af220847f48bcc8440ddc5e197d4951c4bfaf25b6ab0f152e72f0c98524a11",
+  "comamonadaceae_20261024/s3_pilot/short_loci_review.tsv": "d02e5b46a9739c74053df6be340413a041ebee96726f1cc97c98ca70dea88e3e",
+  "comamonadaceae_20261024/s4_s3_full/annotation_files.tsv": "c179c5d6cc9d3b0504d0dcb7a4b74d4b0588150370dad58a60e1c11873570bdd",
+  "comamonadaceae_20261024/s4_s3_full/candidate_loci_families.tsv": "cb87166c8a185e9a9534fd86f83543d48c2a892273ebf936fcf7f19276d0bbcf",
+  "comamonadaceae_20261024/s4_s3_full/families.tsv": "2b8f0d3f77b0d93413062bf11fa72b8ccad8b85268503594cd3f913d21b5a926",
+  "comamonadaceae_20261024/s4_s3_full/families_summary.json": "9516d54af3af8654a2f48119e9f63309dcee5be6c954a112848dcc5d8bb9ad62",
+  "comamonadaceae_20261024/s4_s3_full/files.sha256": "d19ebff8fe0b4de353e3b2c1bd04c0766f6b536587ae5dd2d436e431711335ad",
+  "comamonadaceae_20261024/s4_s3_full/list_direction_mixed.tsv": "6e5acc36a8153adc53c49bbf617d96d3fcfd4059a8dab125ef3524d085236cc4",
+  "comamonadaceae_20261024/s4_s3_full/list_main.tsv": "d2bbfc58cdc2aff02663530b7208bd63015e0118bab21f57783a031c5822848e",
+  "comamonadaceae_20261024/s4_s3_full/list_partner_mixed.tsv": "8a2e55a9a7b4da8fbb2ac5474dc08612fe767d207cd8acd69aeb090b8d8df048",
+  "comamonadaceae_20261024/s4_s3_full/list_replacement.tsv": "a4bbb250227ccb230bfb0b79d49e357645fe4d86229099ddcf65c1f3794c428a",
+  "comamonadaceae_20261024/s4_s3_full/list_short_other_segment.tsv": "2e130f73ea9c16c537aab0b7368b159ec0dbbd7d418f12583d5ef25daceb160d",
+  "comamonadaceae_20261024/s4_s3_full/protein_members.tsv": "d88b6b04c17ea5cff97ba16e541c8e2439a3b4f64a5b54ae3a2f74555d43fb32",
+  "comamonadaceae_20261024/s4_s3_full/s4_loci.tsv.gz": "aace97d032bf89cc2b6f7b548fc7a277b0e509c2b0f715d613c6f43c0a2e6b66",
+  "comamonadaceae_20261024/s4_s3_full/s4_summary.json": "9412384388bd09c7a353f71504c9e1a8d1d35d1019673c49345bd17d01e9fb1b",
+  "comamonadaceae_20261024/s4_s3_full/seed_catalog.tsv": "2ddcccffc8c28e517ecdd115579212a7b67d174faa52ed044d1763ea05ea222d",
+  "comamonadaceae_20261024/s4_s3_full_v02/annotation_files.tsv": "c179c5d6cc9d3b0504d0dcb7a4b74d4b0588150370dad58a60e1c11873570bdd",
+  "comamonadaceae_20261024/s4_s3_full_v02/candidate_loci_families.tsv": "7691cf79daef5b0c621c0d6c4a10bbe0da02c8705a6c4545e32e1da3ca054f6d",
+  "comamonadaceae_20261024/s4_s3_full_v02/families.tsv": "26123a22fc66984cb37a91e5491cb9d36217fac476f8d139fe16d79f1dc23789",
+  "comamonadaceae_20261024/s4_s3_full_v02/families_summary.json": "5f9469b6cb5be958f08170a56828e05eb0e27cf7636875b5a9b3d77863b22559",
+  "comamonadaceae_20261024/s4_s3_full_v02/files.sha256": "d19ebff8fe0b4de353e3b2c1bd04c0766f6b536587ae5dd2d436e431711335ad",
+  "comamonadaceae_20261024/s4_s3_full_v02/list_direction_mixed.tsv": "6e5acc36a8153adc53c49bbf617d96d3fcfd4059a8dab125ef3524d085236cc4",
+  "comamonadaceae_20261024/s4_s3_full_v02/list_main.tsv": "d2bbfc58cdc2aff02663530b7208bd63015e0118bab21f57783a031c5822848e",
+  "comamonadaceae_20261024/s4_s3_full_v02/list_partner_mixed.tsv": "8a2e55a9a7b4da8fbb2ac5474dc08612fe767d207cd8acd69aeb090b8d8df048",
+  "comamonadaceae_20261024/s4_s3_full_v02/list_replacement.tsv": "a4bbb250227ccb230bfb0b79d49e357645fe4d86229099ddcf65c1f3794c428a",
+  "comamonadaceae_20261024/s4_s3_full_v02/list_short_other_segment.tsv": "2e130f73ea9c16c537aab0b7368b159ec0dbbd7d418f12583d5ef25daceb160d",
+  "comamonadaceae_20261024/s4_s3_full_v02/protein_members.tsv": "5b395f2de4ce0baf7a2f5e74d95562f89952c178d0d069b42a12a0d1044f7991",
+  "comamonadaceae_20261024/s4_s3_full_v02/s4_loci.tsv.gz": "75cd013a25dce51e50661f2c45a4317d91ca905ea132ee923e8edd5a6c44c099",
+  "comamonadaceae_20261024/s4_s3_full_v02/s4_summary.json": "b206b09f5bace9e5449a04280c83177329ef4d355c0f50756e4860f12c0554fa",
+  "comamonadaceae_20261024/s4_s3_full_v02/seed_catalog.tsv": "2ddcccffc8c28e517ecdd115579212a7b67d174faa52ed044d1763ea05ea222d",
+  "comamonadaceae_20261024/s4_s3_pilot/annotation_files.tsv": "9be6aaa72b2f1ba79d85a02600c40896eded596dd41801e8ec77d47f4c88f3fe",
+  "comamonadaceae_20261024/s4_s3_pilot/candidate_loci_families.tsv": "378f0a6079da1f702abd982556ad048a6b50256b2fdfdaf7e66df43e180582f2",
+  "comamonadaceae_20261024/s4_s3_pilot/families.tsv": "bfe708931fa3afbe2da1be6724c5f96546818c01ba5b303190f4165f1190c192",
+  "comamonadaceae_20261024/s4_s3_pilot/families_summary.json": "0a52b07dd312996a5818c8cb61ae880c0e906ed478a4c93f0234c47eb396ebff",
+  "comamonadaceae_20261024/s4_s3_pilot/files.sha256": "5254dd699ae263853757e898087d69f49a1bc43aed2c94f61b9dae57bb3d6007",
+  "comamonadaceae_20261024/s4_s3_pilot/list_direction_mixed.tsv": "6e5acc36a8153adc53c49bbf617d96d3fcfd4059a8dab125ef3524d085236cc4",
+  "comamonadaceae_20261024/s4_s3_pilot/list_main.tsv": "81af5c5d2f124fbc570bf3947d5c96b1490306083db71d27233cb38e588c5f0e",
+  "comamonadaceae_20261024/s4_s3_pilot/list_partner_mixed.tsv": "6e5acc36a8153adc53c49bbf617d96d3fcfd4059a8dab125ef3524d085236cc4",
+  "comamonadaceae_20261024/s4_s3_pilot/list_replacement.tsv": "e1bada76ae80fbf835a494b1c1b8bd45b7a67e0180819d0b5afbeddde1319255",
+  "comamonadaceae_20261024/s4_s3_pilot/list_short_other_segment.tsv": "9b654f7dc96d48089dae34d927caa0c8c3ca5724efcce778291028eddababd1b",
+  "comamonadaceae_20261024/s4_s3_pilot/protein_members.tsv": "704d413857cd8b864e3a3647c717de407dd95702e7690321b2d394c9a1670f05",
+  "comamonadaceae_20261024/s4_s3_pilot/s4_loci.tsv.gz": "6f1843977cd598fa29f05406d357e3bd9a50952036745c55bc07e0d4b6be9e0c",
+  "comamonadaceae_20261024/s4_s3_pilot/s4_summary.json": "832696b1a2ea323f49de5ff88a576192b2de86dd2f72c7ca8a8a32be7439afd2",
+  "comamonadaceae_20261024/s4_s3_pilot/seed_catalog.tsv": "4137ed5152801a470199624dee0b0aab6852853b0c87186830d6507238a9d414",
+  "comamonadaceae_20261024/summary.json": "fdad640da200027d9b9ba8f23dad164af6321e4865f740b75efd8228485c6429"
+ },
+ "data_directories": {
+  "/global/scratch/users/kh36969/longread_callout/data/reads": {
+   "entries": 150,
+   "du": "127G"
+  },
+  "/global/scratch/users/kh36969/longread_callout/fna_pool/comamonadaceae_20261024": {
+   "entries": 13,
+   "du": "19G"
+  },
+  "/global/scratch/users/kh36969/longread_callout/fna_pool/ena_transport_pilot": {
+   "entries": 10,
+   "du": "4.4G"
+  },
+  "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026": {
+   "entries": 24,
+   "du": "575M"
+  },
+  "/global/scratch/users/kh36969/longread_callout/fna_pool/test_dehydrated": {
+   "entries": 3,
+   "du": "16M"
+  },
+  "/global/scratch/users/kh36969/longread_callout/fna_pool/test_s1": {
+   "entries": 3,
+   "du": "48M"
+  }
+ }
+}

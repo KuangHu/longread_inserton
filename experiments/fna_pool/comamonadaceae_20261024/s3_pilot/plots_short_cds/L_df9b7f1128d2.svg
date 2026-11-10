@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="300" font-family="sans-serif">
+<rect width="100%" height="100%" fill="white"/>
+<text x="4" y="16" font-size="12">L_df9b7f1128d2  SAMD00407106  core 234 bp  two_flank_anchored  support all_calls_anchored  boundary exact  tandem False  core copies carrier/partner 1/0</text>
+<line x1="541.2" y1="30" x2="541.2" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<line x1="578.8" y1="30" x2="578.8" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<text x="4" y="64" font-size="11" font-weight="bold">SAMD00407106 NZ_AP025556.1 (carrier)</text>
+<line x1="60" y1="100" x2="1060" y2="100" stroke="#888"/>
+<rect x="380.8" y="132" width="160.4" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="461.0" y="152" font-size="9" text-anchor="middle">U</text>
+<rect x="541.2" y="132" width="37.5" height="8" fill="#e76f51" opacity="0.55"/>
+<text x="560.0" y="152" font-size="9" text-anchor="middle">core 234</text>
+<rect x="578.8" y="132" width="160.4" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="659.0" y="152" font-size="9" text-anchor="middle">D</text>
+<polygon points="60.0,85 217.6,85 223.6,91 217.6,97 60.0,97" fill="#3b6fb6"><title>CaiB/BaiF CoA transferase family protein 207931-209155 +</title></polygon>
+<text x="60.0" y="81" font-size="8" fill="#333">CaiB/BaiF CoA transferase family pr</text>
+<polygon points="232.6,85 390.2,85 396.2,91 390.2,97 232.6,97" fill="#3b6fb6"><title>NADPH:quinone oxidoreductase family prot 209211-210231 +</title></polygon>
+<text x="232.6" y="81" font-size="8" fill="#333">NADPH:quinone oxidoreductase family</text>
+<polygon points="395.6,85 534.9,85 540.9,91 534.9,97 395.6,97" fill="#3b6fb6"><title>Bug family tripartite tricarboxylate tra 210227-211133 +</title></polygon>
+<polygon points="542.7,109 548.7,103 577.3,103 577.3,115 548.7,115" fill="#3b6fb6"><title>hypothetical protein 211144-211360 -</title></polygon>
+<text x="542.7" y="125" font-size="8" fill="#333">hypothe</text>
+<polygon points="578.9,109 584.9,103 772.9,103 772.9,115 584.9,115" fill="#3b6fb6"><title>acetyl-CoA C-acetyltransferase 211370-212579 -</title></polygon>
+<polygon points="779.8,109 785.8,103 988.6,103 988.6,115 785.8,115" fill="#3b6fb6"><title>acetyl-CoA hydrolase/transferase family  212622-213924 -</title></polygon>
+<text x="779.8" y="125" font-size="8" fill="#333">acetyl-CoA hydrolase/transferase family </text>
+<polygon points="988.0,109 994.0,103 1060.0,103 1060.0,115 994.0,115" fill="#3b6fb6"><title>enoyl-CoA hydratase/isomerase family pro 213920-214718 -</title></polygon>
+<text x="988.0" y="125" font-size="8" fill="#333">enoyl-CoA hydra</text>
+<text x="60" y="166" font-size="9" fill="#666">NZ_AP025556.1:208135-214369  core 211135-211369</text>
+<text x="4" y="184" font-size="11" font-weight="bold">SAMEA120308855 NZ_CDRKIR010000001.1 (partner, + strand, two_flank_anchored, pair P00034)</text>
+<line x1="60" y1="220" x2="1060" y2="220" stroke="#888"/>
+<rect x="380.8" y="252" width="160.4" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="461.0" y="272" font-size="9" text-anchor="middle">U'</text>
+<rect x="578.8" y="252" width="160.4" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="659.0" y="272" font-size="9" text-anchor="middle">D'</text>
+<rect x="541.2" y="252" width="37.5" height="8" fill="#9b5de5" opacity="0.55"/>
+<text x="560.0" y="272" font-size="9" text-anchor="middle">other side 7</text>
+<polygon points="60.0,205 201.3,205 207.3,211 201.3,217 60.0,217" fill="#3b6fb6"><title>CaiB/BaiF CoA transferase family protein 216017-217241 +</title></polygon>
+<text x="60.0" y="201" font-size="8" fill="#333">CaiB/BaiF CoA transferase family</text>
+<polygon points="216.2,205 373.9,205 379.9,211 373.9,217 216.2,217" fill="#3b6fb6"><title>NADPH:quinone oxidoreductase family prot 217297-218317 +</title></polygon>
+<text x="216.2" y="201" font-size="8" fill="#333">NADPH:quinone oxidoreductase family</text>
+<polygon points="379.2,205 534.9,205 540.9,211 534.9,217 379.2,217" fill="#3b6fb6"><title>Bug family tripartite tricarboxylate tra 218313-219321 +</title></polygon>
+<polygon points="578.9,229 584.9,223 772.9,223 772.9,235 584.9,235" fill="#3b6fb6"><title>acetyl-CoA C-acetyltransferase 219331-220540 -</title></polygon>
+<text x="578.9" y="245" font-size="8" fill="#333">acetyl-CoA C-acetyltransferase</text>
+<polygon points="778.5,229 784.5,223 987.3,223 987.3,235 784.5,235" fill="#3b6fb6"><title>acetyl-CoA hydrolase/transferase family  220575-221877 -</title></polygon>
+<text x="778.5" y="245" font-size="8" fill="#333">acetyl-CoA hydrolase/transferase family </text>
+<polygon points="986.7,229 992.7,223 1060.0,223 1060.0,235 992.7,235" fill="#3b6fb6"><title>enoyl-CoA hydratase/isomerase family pro 221873-222671 -</title></polygon>
+<text x="986.7" y="245" font-size="8" fill="#333">enoyl-CoA hydra</text>
+<text x="60" y="286" font-size="9" fill="#666">NZ_CDRKIR010000001.1 site 219323  other-side gap 7 bp  this call's core 211135-211369</text>
+</svg>

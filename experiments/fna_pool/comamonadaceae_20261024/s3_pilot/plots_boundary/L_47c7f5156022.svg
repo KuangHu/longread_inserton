@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="420" font-family="sans-serif">
+<rect width="100%" height="100%" fill="white"/>
+<text x="4" y="16" font-size="12">L_47c7f5156022  SAMEA118088312  core 157 bp  two_flank_anchored  support direction_mixed  boundary direction_dependent  tandem False  core copies carrier/partner 2/1</text>
+<line x1="547.3" y1="30" x2="547.3" y2="412" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<line x1="572.7" y1="30" x2="572.7" y2="412" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<text x="4" y="64" font-size="11" font-weight="bold">SAMEA118088312 NZ_OZ253481.1 (carrier)</text>
+<line x1="60" y1="100" x2="1060" y2="100" stroke="#888"/>
+<rect x="384.8" y="132" width="162.4" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="466.0" y="152" font-size="9" text-anchor="middle">U</text>
+<rect x="547.3" y="132" width="25.5" height="8" fill="#e76f51" opacity="0.55"/>
+<text x="560.0" y="152" font-size="9" text-anchor="middle">core 157</text>
+<rect x="572.7" y="132" width="162.4" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="654.0" y="152" font-size="9" text-anchor="middle">D</text>
+<polygon points="60.0,85 142.0,85 148.0,91 142.0,97 60.0,97" fill="#3b6fb6"><title>threonine ammonia-lyase 3921621-3922821 +</title></polygon>
+<text x="60.0" y="81" font-size="8" fill="#333">threonine ammonia-l</text>
+<polygon points="165.2,85 183.6,85 189.6,91 183.6,97 165.2,97" fill="#3b6fb6"><title>hypothetical protein 3922927-3923077 +</title></polygon>
+<polygon points="242.4,85 539.5,85 545.5,91 539.5,97 242.4,97" fill="#3b6fb6"><title>phosphoenolpyruvate carboxykinase (GTP) 3923402-3925268 +</title></polygon>
+<text x="242.4" y="81" font-size="8" fill="#333">phosphoenolpyruvate carboxykinase (GTP)</text>
+<polygon points="592.9,109 598.9,103 661.1,103 661.1,115 598.9,115" fill="#3b6fb6"><title>hypothetical protein 3925560-3925980 -</title></polygon>
+<text x="592.9" y="125" font-size="8" fill="#333">hypothetical p</text>
+<polygon points="684.0,85 833.9,85 839.9,91 833.9,97 684.0,97" fill="#3b6fb6"><title>LysR family transcriptional regulator 3926121-3927081 +</title></polygon>
+<text x="684.0" y="81" font-size="8" fill="#333">LysR family transcriptional regul</text>
+<polygon points="847.7,85 987.9,85 993.9,91 987.9,97 847.7,97" fill="#3b6fb6"><title>metallophosphoesterase 3927129-3928029 +</title></polygon>
+<text x="847.7" y="81" font-size="8" fill="#333">metallophosphoesterase</text>
+<polygon points="1004.1,85 1054.0,85 1060.0,91 1054.0,97 1004.1,97" fill="#3b6fb6"><title>universal stress protein 3928092-3928515 +</title></polygon>
+<text x="1004.1" y="81" font-size="8" fill="#333">universal st</text>
+<text x="60" y="166" font-size="9" fill="#666">NZ_OZ253481.1:3922279-3928436  core 3925279-3925436</text>
+<text x="4" y="184" font-size="11" font-weight="bold">SAMN13450421 NZ_CP065695.1 (partner, - strand, two_flank_anchored, pair P00290)</text>
+<line x1="60" y1="220" x2="1060" y2="220" stroke="#888"/>
+<rect x="384.8" y="252" width="162.4" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="466.0" y="272" font-size="9" text-anchor="middle">U'</text>
+<rect x="572.7" y="252" width="162.4" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="654.0" y="272" font-size="9" text-anchor="middle">D'</text>
+<rect x="547.3" y="252" width="25.5" height="8" fill="#9b5de5" opacity="0.55"/>
+<text x="560.0" y="272" font-size="9" text-anchor="middle">other side 6</text>
+<polygon points="1004.1,205 1054.0,205 1060.0,211 1054.0,217 1004.1,217" fill="#3b6fb6"><title>universal stress protein 2841176-2841599 +</title></polygon>
+<text x="1004.1" y="201" font-size="8" fill="#333">universal st</text>
+<polygon points="847.7,205 987.9,205 993.9,211 987.9,217 847.7,217" fill="#3b6fb6"><title>metallophosphoesterase 2841662-2842562 +</title></polygon>
+<polygon points="684.0,205 833.9,205 839.9,211 833.9,217 684.0,217" fill="#3b6fb6"><title>LysR family transcriptional regulator 2842610-2843570 +</title></polygon>
+<polygon points="592.9,229 598.9,223 661.1,223 661.1,235 598.9,235" fill="#3b6fb6"><title>hypothetical protein 2843711-2844131 -</title></polygon>
+<text x="592.9" y="245" font-size="8" fill="#333">hypothetical p</text>
+<polygon points="242.4,205 539.5,205 545.5,211 539.5,217 242.4,217" fill="#3b6fb6"><title>phosphoenolpyruvate carboxykinase (GTP) 2844272-2846138 +</title></polygon>
+<polygon points="164.8,205 183.6,205 189.6,211 183.6,217 164.8,217" fill="#3b6fb6"><title>hypothetical protein 2846463-2846616 +</title></polygon>
+<polygon points="60.0,205 144.1,205 150.1,211 144.1,217 60.0,217" fill="#3b6fb6"><title>threonine ammonia-lyase 2846706-2847906 +</title></polygon>
+<text x="60" y="286" font-size="9" fill="#666">NZ_CP065695.1 site 2844255  other-side gap 6 bp  this call's core 3925279-3925436</text>
+<text x="4" y="304" font-size="11" font-weight="bold">SAMN13450421 NZ_CP065695.1 (partner, - strand, replacement, pair P00290)</text>
+<line x1="60" y1="340" x2="1060" y2="340" stroke="#888"/>
+<rect x="381.1" y="372" width="162.4" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="462.3" y="392" font-size="9" text-anchor="middle">U'</text>
+<rect x="571.8" y="372" width="162.4" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="653.0" y="392" font-size="9" text-anchor="middle">D'</text>
+<rect x="543.5" y="372" width="28.3" height="8" fill="#9b5de5" opacity="0.55"/>
+<text x="557.6" y="392" font-size="9" text-anchor="middle">other side 23</text>
+<polygon points="1004.1,325 1054.0,325 1060.0,331 1054.0,337 1004.1,337" fill="#3b6fb6"><title>universal stress protein 2841176-2841599 +</title></polygon>
+<text x="1004.1" y="321" font-size="8" fill="#333">universal st</text>
+<polygon points="847.7,325 987.9,325 993.9,331 987.9,337 847.7,337" fill="#3b6fb6"><title>metallophosphoesterase 2841662-2842562 +</title></polygon>
+<polygon points="684.0,325 833.9,325 839.9,331 833.9,337 684.0,337" fill="#3b6fb6"><title>LysR family transcriptional regulator 2842610-2843570 +</title></polygon>
+<polygon points="592.9,349 598.9,343 661.1,343 661.1,355 598.9,355" fill="#3b6fb6"><title>hypothetical protein 2843711-2844131 -</title></polygon>
+<text x="592.9" y="365" font-size="8" fill="#333">hypothetical p</text>
+<polygon points="242.4,325 552.4,325 558.4,331 552.4,337 242.4,337" fill="#3b6fb6"><title>phosphoenolpyruvate carboxykinase (GTP) 2844272-2846138 +</title></polygon>
+<polygon points="164.8,325 183.6,325 189.6,331 183.6,337 164.8,337" fill="#3b6fb6"><title>hypothetical protein 2846463-2846616 +</title></polygon>
+<polygon points="60.0,325 144.1,325 150.1,331 144.1,337 60.0,337" fill="#3b6fb6"><title>threonine ammonia-lyase 2846706-2847906 +</title></polygon>
+<text x="60" y="406" font-size="9" fill="#666">NZ_CP065695.1 site 2844261  other-side gap 23 bp  this call's core 3925256-3925430</text>
+</svg>

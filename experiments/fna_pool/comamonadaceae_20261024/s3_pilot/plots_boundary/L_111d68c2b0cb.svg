@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="420" font-family="sans-serif">
+<rect width="100%" height="100%" fill="white"/>
+<text x="4" y="16" font-size="12">L_111d68c2b0cb  SAMEA118088312  core 553 bp  two_flank_anchored  support all_calls_anchored  boundary direction_dependent  tandem False  core copies carrier/partner 1/0</text>
+<line x1="517.8" y1="30" x2="517.8" y2="412" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<line x1="602.2" y1="30" x2="602.2" y2="412" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<text x="4" y="64" font-size="11" font-weight="bold">SAMEA118088312 NZ_OZ253481.1 (carrier)</text>
+<line x1="60" y1="100" x2="1060" y2="100" stroke="#888"/>
+<rect x="365.2" y="132" width="152.6" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="441.5" y="152" font-size="9" text-anchor="middle">U</text>
+<rect x="517.8" y="132" width="84.4" height="8" fill="#e76f51" opacity="0.55"/>
+<text x="560.0" y="152" font-size="9" text-anchor="middle">core 553</text>
+<rect x="602.2" y="132" width="152.6" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="678.5" y="152" font-size="9" text-anchor="middle">D</text>
+<polygon points="60.0,109 66.0,103 237.5,103 237.5,115 66.0,115" fill="#3b6fb6"><title>ammonium transporter 5891962-5893303 -</title></polygon>
+<text x="60.0" y="125" font-size="8" fill="#333">ammonium transporter</text>
+<polygon points="272.4,85 388.7,85 394.7,91 388.7,97 272.4,97" fill="#3b6fb6"><title>class D beta-lactamase 5893532-5894333 +</title></polygon>
+<text x="272.4" y="81" font-size="8" fill="#333">class D beta-lactamase</text>
+<polygon points="401.7,109 407.7,103 514.8,103 514.8,115 407.7,115" fill="#3b6fb6"><title>SOS response-associated peptidase 5894379-5895120 -</title></polygon>
+<text x="401.7" y="125" font-size="8" fill="#333">SOS response-associated </text>
+<polygon points="545.9,85 591.2,85 597.2,91 591.2,97 545.9,97" fill="#3b6fb6"><title>hypothetical protein 5895324-5895660 +</title></polygon>
+<text x="545.9" y="81" font-size="8" fill="#333">hypothetica</text>
+<polygon points="603.1,109 609.1,103 725.8,103 725.8,115 609.1,115" fill="#3b6fb6"><title>PhzF family phenazine biosynthesis prote 5895699-5896503 -</title></polygon>
+<text x="603.1" y="125" font-size="8" fill="#333">PhzF family phenazine bios</text>
+<polygon points="756.5,109 762.5,103 1010.6,103 1010.6,115 762.5,115" fill="#3b6fb6"><title>hypothetical protein 5896704-5898369 -</title></polygon>
+<text x="756.5" y="125" font-size="8" fill="#333">hypothetical protein</text>
+<polygon points="1037.4,85 1054.0,85 1060.0,91 1054.0,97 1037.4,97" fill="#3b6fb6"><title>helix-turn-helix transcriptional regulat 5898545-5899514 +</title></polygon>
+<text x="60" y="166" font-size="9" fill="#666">NZ_OZ253481.1:5892140-5898693  core 5895140-5895693</text>
+<text x="4" y="184" font-size="11" font-weight="bold">SAMN13450421 NZ_CP065695.1 (partner, - strand, two_flank_anchored, pair P00290)</text>
+<line x1="60" y1="220" x2="1060" y2="220" stroke="#888"/>
+<rect x="369.2" y="252" width="152.6" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="445.5" y="272" font-size="9" text-anchor="middle">U'</text>
+<rect x="603.1" y="252" width="152.6" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="679.4" y="272" font-size="9" text-anchor="middle">D'</text>
+<rect x="521.8" y="252" width="81.3" height="8" fill="#9b5de5" opacity="0.55"/>
+<text x="562.4" y="272" font-size="9" text-anchor="middle">other side 23</text>
+<polygon points="1037.4,205 1054.0,205 1060.0,211 1054.0,217 1037.4,217" fill="#3b6fb6"><title>helix-turn-helix transcriptional regulat 795945-796914 +</title></polygon>
+<polygon points="756.5,229 762.5,223 1010.6,223 1010.6,235 762.5,235" fill="#3b6fb6"><title>hypothetical protein 797090-798755 -</title></polygon>
+<text x="756.5" y="245" font-size="8" fill="#333">hypothetical protein</text>
+<polygon points="603.1,229 609.1,223 725.8,223 725.8,235 609.1,235" fill="#3b6fb6"><title>PhzF family phenazine biosynthesis prote 798956-799760 -</title></polygon>
+<polygon points="401.7,229 407.7,223 514.8,223 514.8,235 407.7,235" fill="#3b6fb6"><title>SOS response-associated peptidase 799829-800570 -</title></polygon>
+<polygon points="271.2,205 387.4,205 393.4,211 387.4,217 271.2,217" fill="#3b6fb6"><title>class D beta-lactamase 800624-801425 +</title></polygon>
+<text x="271.2" y="201" font-size="8" fill="#333">class D beta-lactamase</text>
+<polygon points="60.0,229 66.0,223 236.3,223 236.3,235 66.0,235" fill="#3b6fb6"><title>ammonium transporter 801654-802995 -</title></polygon>
+<text x="60" y="286" font-size="9" fill="#666">NZ_CP065695.1 site 799760  other-side gap 23 bp  this call's core 5895166-5895699</text>
+<text x="4" y="304" font-size="11" font-weight="bold">SAMN13450421 NZ_CP065695.1 (partner, - strand, two_flank_anchored, pair P00290)</text>
+<line x1="60" y1="340" x2="1060" y2="340" stroke="#888"/>
+<rect x="365.2" y="372" width="152.6" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="441.5" y="392" font-size="9" text-anchor="middle">U'</text>
+<rect x="602.2" y="372" width="152.6" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="678.5" y="392" font-size="9" text-anchor="middle">D'</text>
+<rect x="517.8" y="372" width="84.4" height="8" fill="#9b5de5" opacity="0.55"/>
+<text x="560.0" y="392" font-size="9" text-anchor="middle">other side 43</text>
+<polygon points="1037.4,325 1054.0,325 1060.0,331 1054.0,337 1037.4,337" fill="#3b6fb6"><title>helix-turn-helix transcriptional regulat 795945-796914 +</title></polygon>
+<polygon points="756.5,349 762.5,343 1010.6,343 1010.6,355 762.5,355" fill="#3b6fb6"><title>hypothetical protein 797090-798755 -</title></polygon>
+<text x="756.5" y="365" font-size="8" fill="#333">hypothetical protein</text>
+<polygon points="603.1,349 609.1,343 725.8,343 725.8,355 609.1,355" fill="#3b6fb6"><title>PhzF family phenazine biosynthesis prote 798956-799760 -</title></polygon>
+<polygon points="401.7,349 407.7,343 514.8,343 514.8,355 407.7,355" fill="#3b6fb6"><title>SOS response-associated peptidase 799829-800570 -</title></polygon>
+<polygon points="271.2,325 387.4,325 393.4,331 387.4,337 271.2,337" fill="#3b6fb6"><title>class D beta-lactamase 800624-801425 +</title></polygon>
+<text x="271.2" y="321" font-size="8" fill="#333">class D beta-lactamase</text>
+<polygon points="60.0,349 66.0,343 236.3,343 236.3,355 66.0,355" fill="#3b6fb6"><title>ammonium transporter 801654-802995 -</title></polygon>
+<text x="60" y="406" font-size="9" fill="#666">NZ_CP065695.1 site 799766  other-side gap 43 bp  this call's core 5895140-5895693</text>
+</svg>

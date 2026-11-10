@@ -1,0 +1,25 @@
+{
+  "manifest": "scaleup_stage1_20261026/flavobacteriaceae/download_manifest.tsv",
+  "rows": 7219,
+  "status": {
+    "verified": 7219
+  },
+  "by_purpose": {
+    "gca_identity_check": {
+      "verified": 3515
+    },
+    "primary": {
+      "verified": 3704
+    }
+  },
+  "annotation": {
+    "present": 3682,
+    "annotation_missing": 22
+  },
+  "pair_checks": {
+    "identical_sequences": 3515
+  },
+  "bytes": 40192480625,
+  "files": 21802,
+  "failed": []
+}

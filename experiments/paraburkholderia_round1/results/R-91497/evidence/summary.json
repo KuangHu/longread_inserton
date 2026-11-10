@@ -1,0 +1,64 @@
+{
+  "sample": "R-91497",
+  "molecules_mapped": 366164,
+  "genome_bp": 9378368,
+  "molecule_depth": 198.1,
+  "members": 491,
+  "member_classes": {
+    "edge_limited": 0,
+    "full_span_and_empty_allele": 0,
+    "empty_allele_only": 0,
+    "full_span": 491,
+    "both_junctions_separate": 0,
+    "one_junction": 0,
+    "ambiguous_multimapping": 0,
+    "internal_only": 0,
+    "no_coverage": 0
+  },
+  "member_classes_tnp_supported": {
+    "edge_limited": 0,
+    "full_span_and_empty_allele": 0,
+    "empty_allele_only": 0,
+    "full_span": 30,
+    "both_junctions_separate": 0,
+    "one_junction": 0,
+    "ambiguous_multimapping": 0,
+    "internal_only": 0,
+    "no_coverage": 0
+  },
+  "reads_touching_candidates": 67263,
+  "palindromic_read_pieces": 648,
+  "known_boundary_split_alignments": 6,
+  "split_read_nonreference_junctions": 159,
+  "cigar_insertions_assigned_to_family": 3,
+  "cigar_insertions_unassigned": 844,
+  "nonreference_family_sites_called": 7,
+  "nonreference_family_sites_two_sided": 1,
+  "unassigned_insertion_sites_called": 10,
+  "thresholds": {
+    "ANCHOR_BP": 100,
+    "MIN_MAPQ": 20,
+    "BIG_INDEL_FRACTION": 0.5,
+    "EMPTY_GAP_BP": 200,
+    "JUNCTION_SLOP_BP": 150,
+    "CLUSTER_BP": 100,
+    "ADJACENT_READ_GAP": 200,
+    "MIN_ANCHOR_LEN": 500,
+    "MIN_SITE_MOLECULES": 2,
+    "MIN_INSERTION_BP": 300,
+    "MIN_INSERT_COVERED": 0.5,
+    "MIN_MEMBER_CONTAINED": 0.8,
+    "DEPTHS": [
+      5,
+      10,
+      20,
+      40,
+      80
+    ],
+    "SEEDS": [
+      11,
+      29,
+      47
+    ]
+  }
+}

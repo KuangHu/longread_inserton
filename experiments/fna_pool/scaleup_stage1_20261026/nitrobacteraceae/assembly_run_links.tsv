@@ -1,0 +1,464 @@
+assembly_accession	paired_accession	biosample	run	study	read_type	link_basis	source_run_evidence	run_usable	run_tax_id	run_organism	assembly_organism	genus_agrees	assembly_sequencing_tech
+GCA_900103365.1	GCF_900103365.1	SAMN05444050	SRR4237153	PRJNA331272	pacbio_unresolved	biosample_matched	not_checked	True	1882747	Afipia sp. GAS231	Afipia sp. GAS231	True	PacBio RS
+GCA_900142345.1	GCF_900142345.1	SAMN05444321	SRR4237157	PRJNA331283	pacbio_unresolved	biosample_matched	not_checked	True	722472	Bradyrhizobium lablabi	Bradyrhizobium lablabi	True	PacBio RS
+GCA_900104755.1	GCF_900104755.1	SAMN05444171	SRR4237164	PRJNA331280	pacbio_unresolved	biosample_matched	not_checked	True	722472	Bradyrhizobium lablabi	Bradyrhizobium lablabi	True	PacBio RS
+GCA_900104755.1	GCF_900104755.1	SAMN05444171	SRR4237165	PRJNA331280	pacbio_unresolved	biosample_matched	not_checked	True	722472	Bradyrhizobium lablabi	Bradyrhizobium lablabi	True	PacBio RS
+GCA_900105125.1	GCF_900105125.1	SAMN05444158	SRR4237168	PRJNA331276	pacbio_unresolved	biosample_matched	not_checked	True	255045	Bradyrhizobium canariense	Bradyrhizobium canariense	True	PacBio RS
+GCA_054653515.1	GCF_054653515.1	SAMD01611636	DRR723757	PRJDB20694	pacbio_unresolved	biosample_matched	not_checked	True	1215384	Bradyrhizobium sp. 17-4	Bradyrhizobium sp. 17-4	True	PacBio Revio
+GCA_011058295.2	GCF_011058295.2	SAMN14174716	SRR11185190	PRJNA608474	pacbio_clr_subreads	biosample_matched	not_checked	True	1197460	Bradyrhizobium sp. 6(2017)	Bradyrhizobium sp. 6(2017)	True	PacBio RSII; Illumina MiSeq
+GCA_011604645.2	GCF_011604645.2	SAMN14365434	SRR11303648	PRJNA612261	pacbio_clr_subreads	biosample_matched	not_checked	True	1404367	Bradyrhizobium symbiodeficiens	Bradyrhizobium symbiodeficiens	True	PacBio RSII
+GCA_011604665.2	GCF_011604665.2	SAMN14365685	SRR11304605	PRJNA612283	pacbio_clr_subreads	biosample_matched	not_checked	True	1404367	Bradyrhizobium symbiodeficiens	Bradyrhizobium symbiodeficiens	True	PacBio RSII
+GCA_016616235.1	GCF_016616235.1	SAMN16433501	SRR12919157	PRJNA669073	pacbio_clr_subreads	biosample_matched	not_checked	True	1355477	Bradyrhizobium diazoefficiens	Bradyrhizobium diazoefficiens	True	Illumina HiSeq; PacBio RSII
+GCA_017565685.3	GCF_017565685.3	SAMN18312895	SRR14068346	PRJNA714594	pacbio_unresolved	biosample_matched	not_checked	True	2819348	Bradyrhizobium barranii subsp. apii	Bradyrhizobium barranii subsp. apii	True	PacBio Sequel
+GCA_025811215.1	GCF_025811215.1	SAMN19678795	SRR14793653	PRJNA737057	pacbio_unresolved	biosample_matched	not_checked	False	1076	Rhodopseudomonas palustris	Rhodopseudomonas palustris	True	PacBio RSII
+GCA_017831945.1	GCF_017831945.1	SAMN17620000	SRR18709561	PRJNA695759	pacbio_unresolved	biosample_matched	not_checked	True	375	Bradyrhizobium japonicum	Bradyrhizobium diazoefficiens	True	PacBio
+GCA_017565685.3	GCF_017565685.3	SAMN18312895	SRR19205251	PRJNA714594	pacbio_unresolved	biosample_matched	not_checked	True	2819348	Bradyrhizobium barranii subsp. apii	Bradyrhizobium barranii subsp. apii	True	PacBio Sequel
+GCA_036924815.1		SAMN39613210	SRR27823317	PRJNA1069199	pacbio_hifi_ccs	biosample_matched	not_checked	True	3119822	Nitrobacteraceae bacterium AZCC 2161	Nitrobacteraceae bacterium AZCC 2161	True	PacBio
+GCA_036924895.1		SAMN39613214	SRR27823320	PRJNA1069202	pacbio_hifi_ccs	biosample_matched	not_checked	True	3119824	Nitrobacteraceae bacterium AZCC 2299	Nitrobacteraceae bacterium AZCC 2299	True	PacBio
+GCA_036924695.1	GCF_036924695.1	SAMN39621685	SRR27823329	PRJNA1069192	pacbio_hifi_ccs	biosample_matched	not_checked	True	3117015	Bradyrhizobium sp. AZCC 1708	Bradyrhizobium sp. AZCC 1708	True	PacBio
+GCA_036924645.1	GCF_036924645.1	SAMN39621682	SRR27823332	PRJNA1069206	pacbio_hifi_ccs	biosample_matched	not_checked	True	3117025	Bradyrhizobium sp. AZCC 2176	Bradyrhizobium sp. AZCC 2176	True	PacBio
+GCA_030585205.1	GCF_030585205.1	SAMN34405181	SRR24363115	PRJNA962169	pacbio_hifi_ccs	biosample_matched	not_checked	True	29448	Bradyrhizobium elkanii	Bradyrhizobium elkanii	True	PacBio RSII
+GCA_030584745.1	GCF_030584745.1	SAMN34405187	SRR24363422	PRJNA962175	pacbio_hifi_ccs	biosample_matched	not_checked	True	375	Bradyrhizobium japonicum	Bradyrhizobium japonicum	True	PacBio RSII
+GCA_021044685.1	GCF_021044685.1	SAMN23310456	SRR30076316	PRJNA781976	pacbio_unresolved	biosample_matched	not_checked	True	993502	Bradyrhizobium daqingense	Bradyrhizobium daqingense	True	PacBio Sequel
+GCA_037217215.1	GCF_037217215.1	SAMN40378253	SRR30172110	PRJNA1086481	pacbio_hifi_ccs	biosample_matched	not_checked	True	1404411	Bradyrhizobium septentrionale	Bradyrhizobium septentrionale	True	PacBio Sequel
+GCA_037814245.1	GCF_037814245.1	SAMN40545968	SRR30225273	PRJNA1089594	pacbio_hifi_ccs	biosample_matched	not_checked	True	1404367	Bradyrhizobium symbiodeficiens	Bradyrhizobium symbiodeficiens	True	PacBio Sequel
+GCA_037806365.1	GCF_037806365.1	SAMN40530432	SRR30225274	PRJNA1089211	pacbio_hifi_ccs	biosample_matched	not_checked	True	1404367	Bradyrhizobium symbiodeficiens	Bradyrhizobium symbiodeficiens	True	PacBio Sequel
+GCA_025962515.1		SAMN28058265	SRR35211485	PRJNA834277	pacbio_hifi_ccs	biosample_matched	not_checked	True	375	Bradyrhizobium japonicum	Bradyrhizobium diazoefficiens	True	PacBio
+GCA_024170525.1		SAMN18243431	SRR35212953	PRJNA708366	pacbio_hifi_ccs	biosample_matched	not_checked	True	29448	Bradyrhizobium elkanii	Bradyrhizobium elkanii	True	PacBio
+GCA_024170535.1		SAMN18242785	SRR35212958	PRJNA708373	pacbio_hifi_ccs	biosample_matched	not_checked	True	375	Bradyrhizobium japonicum	Bradyrhizobium elkanii	True	PacBio
+GCA_024170945.1	GCF_024170945.1	SAMN18243583	SRR35212963	PRJNA708379	pacbio_hifi_ccs	biosample_matched	not_checked	True	375	Bradyrhizobium japonicum	Bradyrhizobium japonicum	True	PacBio
+GCA_024808695.1	GCF_024808695.1	SAMN28058335	SRR35212968	PRJNA834241	pacbio_hifi_ccs	biosample_matched	not_checked	True	375	Bradyrhizobium japonicum	Bradyrhizobium japonicum	True	PacBio
+GCA_025960955.1	GCF_025960955.1	SAMN28058266	SRR35213019	PRJNA834272	pacbio_hifi_ccs	biosample_matched	not_checked	True	29448	Bradyrhizobium elkanii	Bradyrhizobium elkanii	True	PacBio
+GCA_024171205.1	GCF_024171205.1	SAMN18243360	SRR35213049	PRJNA708386	pacbio_hifi_ccs	biosample_matched	not_checked	True	375	Bradyrhizobium japonicum	Bradyrhizobium japonicum	True	PacBio
+GCA_024171105.1		SAMN18242737	SRR35213050	PRJNA708376	pacbio_hifi_ccs	biosample_matched	not_checked	True	375	Bradyrhizobium japonicum	Bradyrhizobium diazoefficiens	True	PacBio
+GCA_024171365.1	GCF_024171365.1	SAMN18243030	SRR35213051	PRJNA708378	pacbio_hifi_ccs	biosample_matched	not_checked	True	29448	Bradyrhizobium elkanii	Bradyrhizobium elkanii	True	PacBio
+GCA_024171165.1	GCF_024171165.1	SAMN18243359	SRR35213075	PRJNA708380	pacbio_hifi_ccs	biosample_matched	not_checked	True	29448	Bradyrhizobium elkanii	Bradyrhizobium elkanii	True	PacBio
+GCA_024171005.1	GCF_024171005.1	SAMN18242913	SRR35213084	PRJNA708383	pacbio_hifi_ccs	biosample_matched	not_checked	True	29448	Bradyrhizobium elkanii	Bradyrhizobium elkanii	True	PacBio
+GCA_024808455.1	GCF_024808455.1	SAMN28058336	SRR35213492	PRJNA834237	pacbio_hifi_ccs	biosample_matched	not_checked	True	1079467	Bradyrhizobium japonicum USDA 38	Bradyrhizobium japonicum USDA 38	True	PacBio
+GCA_024809375.1	GCF_024809375.1	SAMN28058283	SRR35214481	PRJNA834244	pacbio_hifi_ccs	biosample_matched	not_checked	True	29448	Bradyrhizobium elkanii	Bradyrhizobium elkanii	True	PacBio
+GCA_025962395.1		SAMN28058267	SRR35214482	PRJNA834251	pacbio_hifi_ccs	biosample_matched	not_checked	True	375	Bradyrhizobium japonicum	Bradyrhizobium ottawaense	True	PacBio
+GCA_025961135.1	GCF_025961135.1	SAMN28058278	SRR35215098	PRJNA834289	pacbio_hifi_ccs	biosample_matched	not_checked	True	29448	Bradyrhizobium elkanii	Bradyrhizobium elkanii	True	PacBio
+GCA_025961135.1	GCF_025961135.1	SAMN28058278	SRR35215099	PRJNA834289	pacbio_hifi_ccs	biosample_matched	not_checked	True	29448	Bradyrhizobium elkanii	Bradyrhizobium elkanii	True	PacBio
+GCA_024808735.1	GCF_024808735.1	SAMN28058251	SRR35215103	PRJNA834246	pacbio_hifi_ccs	biosample_matched	not_checked	True	375	Bradyrhizobium japonicum	Bradyrhizobium japonicum	True	PacBio
+GCA_024806645.1	GCF_024806645.1	SAMN28058337	SRR35216916	PRJNA834273	pacbio_hifi_ccs	biosample_matched	not_checked	True	29448	Bradyrhizobium elkanii	Bradyrhizobium elkanii	True	PacBio
+GCA_025961635.1	GCF_025961635.1	SAMN28058274	SRR35217034	PRJNA834287	pacbio_hifi_ccs	biosample_matched	not_checked	True	375	Bradyrhizobium japonicum	Bradyrhizobium japonicum	True	PacBio
+GCA_024808955.1	GCF_024808955.1	SAMN28058297	SRR35217035	PRJNA834278	pacbio_hifi_ccs	biosample_matched	not_checked	True	29448	Bradyrhizobium elkanii	Bradyrhizobium elkanii	True	PacBio
+GCA_025961155.1	GCF_025961155.1	SAMN28058248	SRR35217081	PRJNA834291	pacbio_hifi_ccs	biosample_matched	not_checked	True	29448	Bradyrhizobium elkanii	Bradyrhizobium elkanii	True	PacBio
+GCA_025961545.1	GCF_025961545.1	SAMN28058264	SRR35217127	PRJNA834284	pacbio_hifi_ccs	biosample_matched	not_checked	True	375	Bradyrhizobium japonicum	Bradyrhizobium japonicum	True	PacBio
+GCA_054823505.1	GCF_054823505.1	SAMN52637634	SRR35984637	PRJNA1339400	pacbio_hifi_ccs	biosample_matched	not_checked	True	43992	Bradyrhizobium liaoningense	Bradyrhizobium liaoningense	True	PacBio
+GCA_054823605.1	GCF_054823605.1	SAMN52637541	SRR35984705	PRJNA1343895	pacbio_hifi_ccs	biosample_matched	not_checked	True	990078	Bradyrhizobium huanghuaihaiense	Bradyrhizobium huanghuaihaiense	True	PacBio
+GCA_900105125.1	GCF_900105125.1	SAMN05444158	SRR4237171	PRJNA331276	pacbio_unresolved	biosample_matched	not_checked	True	255045	Bradyrhizobium canariense	Bradyrhizobium canariense	True	PacBio RS
+GCA_054822205.1	GCF_054822205.1	SAMN52638957	SRR35984726	PRJNA1339358	pacbio_hifi_ccs	biosample_matched	not_checked	True	630921	Bradyrhizobium embrapense	Bradyrhizobium embrapense	True	PacBio
+GCA_900129675.1	GCF_900129675.1	SAMN05443247	SRR4244868	PRJNA331278	pacbio_unresolved	biosample_matched	not_checked	True	1437360	Bradyrhizobium erythrophlei	Bradyrhizobium erythrophlei	True	PacBio RS
+GCA_054822365.1	GCF_054822365.1	SAMN52639248	SRR35984818	PRJNA1339298	pacbio_hifi_ccs	biosample_matched	not_checked	True	2823807	Bradyrhizobium barranii subsp. barranii	Bradyrhizobium barranii subsp. barranii	True	PacBio
+GCA_900129675.1	GCF_900129675.1	SAMN05443247	SRR4244869	PRJNA331278	pacbio_unresolved	biosample_matched	not_checked	True	1437360	Bradyrhizobium erythrophlei	Bradyrhizobium erythrophlei	True	PacBio RS
+GCA_054823385.1	GCF_054823385.1	SAMN52637216	SRR35984845	PRJNA1340258	pacbio_hifi_ccs	biosample_matched	not_checked	True	1355477	Bradyrhizobium diazoefficiens	Bradyrhizobium diazoefficiens	True	PacBio
+GCA_001887695.1	GCF_001887695.1	SAMN05890661	SRR4422926	PRJNA347501	pacbio_clr_subreads	biosample_matched	not_checked	False	375	Bradyrhizobium japonicum	Bradyrhizobium japonicum	True	
+GCA_054822475.1	GCF_054822475.1	SAMN52638821	SRR35984862	PRJNA1343823	pacbio_hifi_ccs	biosample_matched	not_checked	True	29448	Bradyrhizobium elkanii	Bradyrhizobium elkanii	True	PacBio
+GCA_054823215.1	GCF_054823215.1	SAMN52637806	SRR35984878	PRJNA1344014	pacbio_hifi_ccs	biosample_matched	not_checked	True	43992	Bradyrhizobium liaoningense	Bradyrhizobium liaoningense	True	PacBio
+GCA_054823345.1	GCF_054823345.1	SAMN52638889	SRR35984992	PRJNA1339829	pacbio_hifi_ccs	biosample_matched	not_checked	True	1355477	Bradyrhizobium diazoefficiens	Bradyrhizobium diazoefficiens	True	PacBio
+GCA_018279705.1	GCF_018279705.1	SAMN10961266	SRR8601622	PRJNA522948	pacbio_hifi_ccs	biosample_matched	not_checked	True	340268	Tardiphaga alba	Tardiphaga alba	True	PacBio RSII
+GCA_021184025.1	GCF_021184025.1	SAMN11039179	SRR8649080	PRJNA524969	pacbio_unresolved	biosample_matched	not_checked	True	475937	Rhodopseudomonas boonkerdii	Rhodopseudomonas boonkerdii	True	PacBio RSII
+GCA_051811025.1	GCF_051811025.1	SAMN42804681	SRR30466795	PRJNA1143473	ont	biosample_matched	not_checked	True	3240760	Tardiphaga sp. 813_E8_N1_3	Tardiphaga sp. 813_E8_N1_3	True	Illumina; Oxford Nanopore
+GCA_006459165.2	GCF_006459165.2	SAMN12079237	SRR9326682	PRJNA549279	pacbio_clr_subreads	biosample_matched	not_checked	True	1404367	Bradyrhizobium symbiodeficiens	Bradyrhizobium symbiodeficiens	True	PacBio RSII
+GCA_054052185.1	GCF_054052185.1	SAMN52863935	SRR36423328	PRJNA1347645	ont	biosample_matched	not_checked	True	931866	Bradyrhizobium ottawaense	Bradyrhizobium ottawaense	True	Oxford Nanopore MinION
+GCA_024199855.1	GCF_024199855.1	SAMN28667587	SRR19417280	PRJNA842432	ont	biosample_matched	not_checked	True	2949633	Bradyrhizobium sp. CCGB20	Bradyrhizobium sp. CCGB20	True	Illumina NovaSeq; Oxford Nanopore MinION
+GCA_900445155.1	GCF_900445155.1	SAMEA4556071	ERR1940984	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	1035	Afipia felis	Afipia felis	True	PacBio
+GCA_051810845.1	GCF_051810845.1	SAMN42804653	SRR30426463	PRJNA1143415	ont	biosample_matched	not_checked	True	3240789	Tardiphaga sp. 11_C7_N12_6	Tardiphaga sp. 11_C7_N12_6	True	Oxford Nanopore; Illumina
+GCA_011516665.3	GCF_011516665.3	SAMN14360474	SRR11297424	PRJNA612039	pacbio_clr_subreads	biosample_matched	not_checked	True	1404443	Bradyrhizobium sp. 41S5	Bradyrhizobium sp. 41S5	True	PacBio Sequel
+GCA_053851815.1		SAMN50934416	SRR37104813	PRJNA1314445	ont	biosample_matched	not_checked	True	3467042	Nitrobacteraceae bacterium UC4446_H13	Nitrobacteraceae bacterium UC4446_H13	True	Oxford Nanopore MinION
+GCA_016616425.1	GCF_016616425.1	SAMN16433460	SRR12919155	PRJNA669073	pacbio_clr_subreads	biosample_matched	not_checked	True	1355477	Bradyrhizobium diazoefficiens	Bradyrhizobium diazoefficiens	True	Illumina HiSeq; PacBio RSII
+GCA_060482225.1	GCF_060482225.1	SAMN56368758	SRR37523888	PRJNA1433495	ont	biosample_matched	not_checked	True	3692979	Bradyrhizobium sp. FW106-HT55D03	Bradyrhizobium sp. FW106-HT55D03	True	Oxford Nanopore
+GCA_016616235.1	GCF_016616235.1	SAMN16433501	SRR12919156	PRJNA669073	pacbio_clr_subreads	biosample_matched	not_checked	True	1355477	Bradyrhizobium diazoefficiens	Bradyrhizobium diazoefficiens	True	Illumina HiSeq; PacBio RSII
+GCA_059834925.1	GCF_059834925.1	SAMN61623539	SRR40095770	PRJNA1392171	ont	biosample_matched	not_checked	True	931866	Bradyrhizobium ottawaense	Bradyrhizobium ottawaense	True	Oxford Nanopore MinION
+GCA_055390255.1	GCF_055390255.1	SAMD00754109	DRR538833	PRJDB17632	ont	biosample_matched	not_checked	True	3126612	Nitrobacter sp. CN101	Nitrobacter sp. CN101	True	DNBSEQ-G400;GridION X5
+GCA_013373795.3	GCF_013373795.3	SAMN15299083	SRR13640827	PRJNA640100	pacbio_unresolved	biosample_matched	not_checked	True	2748629	Bradyrhizobium quebecense	Bradyrhizobium quebecense	True	PacBio Sequel
+GCA_017493175.3	GCF_017493175.3	SAMN18321481	SRR14069623	PRJNA714947	pacbio_unresolved	biosample_matched	not_checked	True	2748629	Bradyrhizobium quebecense	Bradyrhizobium quebecense	True	PacBio Sequel
+GCA_025811415.1		SAMN19678793	SRR14793655	PRJNA737057	pacbio_unresolved	biosample_matched	not_checked	False	1076	Rhodopseudomonas palustris	Rhodopseudomonas palustris	True	PacBio RSII
+GCA_023101665.1	GCF_023101665.1	SAMN16538618	SRR12935942	PRJNA671608	ont	biosample_matched	not_checked	True	2782662	Bradyrhizobium sp. 195	Bradyrhizobium sp. 195	True	Illumina HiSeq, Oxford Nanopore MinION
+GCA_017831985.1	GCF_017831985.1	SAMN17619951	SRR18709368	PRJNA695758	pacbio_unresolved	biosample_matched	not_checked	True	375	Bradyrhizobium japonicum	Bradyrhizobium diazoefficiens	True	PacBio
+GCA_023100965.1	GCF_023100965.1	SAMN16538616	SRR12935945	PRJNA671608	ont	biosample_matched	not_checked	True	2782660	Bradyrhizobium sp. 192	Bradyrhizobium sp. 192	True	Illumina HiSeq, Oxford Nanopore MinION
+GCA_023101685.1	GCF_023101685.1	SAMN16538610	SRR12935955	PRJNA671608	ont	biosample_matched	not_checked	True	2782654	Bradyrhizobium sp. 186	Bradyrhizobium sp. 186	True	Illumina HiSeq, Oxford Nanopore MinION
+GCA_023101025.1	GCF_023101025.1	SAMN16538609	SRR12935957	PRJNA671608	ont	biosample_matched	not_checked	True	2782653	Bradyrhizobium sp. 184	Bradyrhizobium sp. 184	True	Illumina HiSeq, Oxford Nanopore MinION
+GCA_023101045.1	GCF_023101045.1	SAMN16538608	SRR12935959	PRJNA671608	ont	biosample_matched	not_checked	True	2782652	Bradyrhizobium sp. 183	Bradyrhizobium sp. 183	True	Illumina HiSeq, Oxford Nanopore MinION
+GCA_030583565.1	GCF_030583565.1	SAMN34405176	SRR24363112	PRJNA962159	pacbio_hifi_ccs	biosample_matched	not_checked	True	1355477	Bradyrhizobium diazoefficiens	Bradyrhizobium diazoefficiens	True	PacBio RSII
+GCA_030584905.1	GCF_030584905.1	SAMN34405189	SRR24363113	PRJNA962174	pacbio_hifi_ccs	biosample_matched	not_checked	True	375	Bradyrhizobium japonicum	Bradyrhizobium japonicum	True	PacBio RSII
+GCA_030584805.1	GCF_030584805.1	SAMN34405190	SRR24363114	PRJNA962172	pacbio_hifi_ccs	biosample_matched	not_checked	True	931866	Bradyrhizobium ottawaense	Bradyrhizobium ottawaense	True	PacBio RSII
+GCA_030583485.1	GCF_030583485.1	SAMN34405175	SRR24363117	PRJNA962157	pacbio_hifi_ccs	biosample_matched	not_checked	True	1355477	Bradyrhizobium diazoefficiens	Bradyrhizobium diazoefficiens	True	PacBio RSII
+GCA_023100925.1	GCF_023100925.1	SAMN16538632	SRR12936022	PRJNA671608	ont	biosample_matched	not_checked	True	2782674	Bradyrhizobium sp. 40	Bradyrhizobium sp. 40	True	Illumina HiSeq, Oxford Nanopore MinION
+GCA_030585125.1	GCF_030585125.1	SAMN34405184	SRR24363121	PRJNA962165	pacbio_hifi_ccs	biosample_matched	not_checked	True	29448	Bradyrhizobium elkanii	Bradyrhizobium elkanii	True	PacBio RSII
+GCA_023375135.1	GCF_023375135.1	SAMN23371896	SRR17030680	PRJNA782308	ont	biosample_matched	not_checked	True	574727	Bradyrhizobium sp. C-145	Bradyrhizobium sp. C-145	True	Illumina NextSeq; Oxford Nanopore MinION
+GCA_030584725.1	GCF_030584725.1	SAMN34405179	SRR24363425	PRJNA962161	pacbio_hifi_ccs	biosample_matched	not_checked	True	29448	Bradyrhizobium elkanii	Bradyrhizobium elkanii	True	PacBio RSII
+GCA_023375135.1	GCF_023375135.1	SAMN23371896	SRR17030681	PRJNA782308	ont	biosample_matched	not_checked	True	574727	Bradyrhizobium sp. C-145	Bradyrhizobium sp. C-145	True	Illumina NextSeq; Oxford Nanopore MinION
+GCA_036924855.1		SAMN39613213	SRR27823313	PRJNA1069200	pacbio_hifi_ccs	biosample_matched	not_checked	True	3119823	Nitrobacteraceae bacterium AZCC 2146	Nitrobacteraceae bacterium AZCC 2146	True	PacBio
+GCA_036924495.1	GCF_036924495.1	SAMN39621690	SRR27823315	PRJNA1069198	pacbio_hifi_ccs	biosample_matched	not_checked	True	3117021	Bradyrhizobium sp. AZCC 2230	Bradyrhizobium sp. AZCC 2230	True	PacBio
+GCA_032917985.1	GCF_032917985.1	SAMN37684780	SRR26335727	PRJNA1023532	ont	biosample_matched	not_checked	True	3080013	Bradyrhizobium sp. BWA-3-5	Bradyrhizobium sp. BWA-3-5	True	Oxford Nanopore MinION
+GCA_036924735.1	GCF_036924735.1	SAMN39621691	SRR27823328	PRJNA1069195	pacbio_hifi_ccs	biosample_matched	not_checked	True	3117018	Bradyrhizobium sp. AZCC 1588	Bradyrhizobium sp. AZCC 1588	True	PacBio
+GCA_029910075.1	GCF_029910075.1	SAMN20568709	SRR21231526	PRJNA742876	ont	biosample_matched	not_checked	True	2866199	Bradyrhizobium sp. ISRA463	Bradyrhizobium sp. ISRA463	True	Oxford Nanopore MinION
+GCA_011516645.4	GCF_011516645.4	SAMN14360499	SRR30049938	PRJNA612041	pacbio_unresolved	biosample_matched	not_checked	True	1404411	Bradyrhizobium septentrionale	Bradyrhizobium septentrionale	True	PacBio Sequel
+GCA_029910055.1	GCF_029910055.1	SAMN20568708	SRR21295096	PRJNA742876	ont	biosample_matched	not_checked	True	2866198	Bradyrhizobium sp. ISRA443	Bradyrhizobium sp. ISRA443	True	Oxford Nanopore MinION and Illumina HiSeq
+GCA_017493175.3	GCF_017493175.3	SAMN18321481	SRR30076315	PRJNA714947	pacbio_unresolved	biosample_matched	not_checked	True	2748629	Bradyrhizobium quebecense	Bradyrhizobium quebecense	True	PacBio Sequel
+GCA_031202265.1	GCF_031202265.1	SAMN29254931	SRR30167947	PRJNA851850	ont	biosample_matched	not_checked	True	2954771	Bradyrhizobium sp. Ash2021	Bradyrhizobium sp. Ash2021	True	Illumina NextSeq; Oxford Nanopore
+GCA_011516665.3	GCF_011516665.3	SAMN14360474	SRR30089028	PRJNA612039	pacbio_unresolved	biosample_matched	not_checked	False	1404443	Bradyrhizobium sp. 41S5	Bradyrhizobium sp. 41S5	True	PacBio Sequel
+GCA_052075955.1	GCF_052075955.1	SAMN42804664	SRR30205929	PRJNA1143192	ont	biosample_matched	not_checked	True	3240366	Bradyrhizobium sp. 482_C4_N1_1	Bradyrhizobium sp. 482_C4_N1_1	True	Illumina; Oxford Nanopore
+GCA_037216975.1	GCF_037216975.1	SAMN40376079	SRR30172133	PRJNA1086437	pacbio_hifi_ccs	biosample_matched	not_checked	True	1404411	Bradyrhizobium septentrionale	Bradyrhizobium septentrionale	True	PacBio Sequel
+GCA_052075985.1	GCF_052075985.1	SAMN42804685	SRR30206135	PRJNA1143200	ont	biosample_matched	not_checked	True	3240369	Bradyrhizobium sp. 590_E5_N4_2	Bradyrhizobium sp. 590_E5_N4_2	True	Illumina; Oxford Nanopore
+GCA_042076515.1	GCF_042076515.1	SAMN40530420	SRR30223606	PRJNA1089209	pacbio_hifi_ccs	biosample_matched	not_checked	True	3133696	Bradyrhizobium sp. A5	Bradyrhizobium sp. A5	True	PacBio Sequel
+GCA_038449185.1	GCF_038449185.1	SAMN40603956	SRR30238164	PRJNA1091665	pacbio_hifi_ccs	biosample_matched	not_checked	True	931866	Bradyrhizobium ottawaense	Bradyrhizobium ottawaense	True	PacBio Sequel
+GCA_038449195.1	GCF_038449195.1	SAMN40603841	SRR30238177	PRJNA1091655	pacbio_hifi_ccs	biosample_matched	not_checked	True	931866	Bradyrhizobium ottawaense	Bradyrhizobium ottawaense	True	PacBio Sequel
+GCA_017834125.1	GCF_017834125.1	SAMN17673241	SRR35145685	PRJNA696470	pacbio_hifi_ccs	biosample_matched	not_checked	True	29448	Bradyrhizobium elkanii	Bradyrhizobium elkanii	True	PacBio
+GCA_024809275.1	GCF_024809275.1	SAMN28058301	SRR35211482	PRJNA834254	pacbio_hifi_ccs	biosample_matched	not_checked	True	375	Bradyrhizobium japonicum	Bradyrhizobium japonicum	True	PacBio
+GCA_024171085.1	GCF_024171085.1	SAMN18250929	SRR35212947	PRJNA708371	pacbio_hifi_ccs	biosample_matched	not_checked	True	2817704	Bradyrhizobium sp. USDA 4541	Bradyrhizobium sp. USDA 4541	True	PacBio
+GCA_052075965.1	GCF_052075965.1	SAMN42804663	SRR30397919	PRJNA1143194	ont	biosample_matched	not_checked	True	3240367	Bradyrhizobium sp. 482_C4_N1_8	Bradyrhizobium sp. 482_C4_N1_8	True	Illumina; Oxford Nanopore
+GCA_024171315.1	GCF_024171315.1	SAMN18251486	SRR35212951	PRJNA708367	pacbio_hifi_ccs	biosample_matched	not_checked	True	2817700	Bradyrhizobium sp. USDA 4532	Bradyrhizobium sp. USDA 4532	True	PacBio
+GCA_024171345.1	GCF_024171345.1	SAMN18251553	SRR35212955	PRJNA708368	pacbio_hifi_ccs	biosample_matched	not_checked	True	2817701	Bradyrhizobium sp. USDA 4537	Bradyrhizobium sp. USDA 4537	True	PacBio
+GCA_052076005.1	GCF_052076005.1	SAMN42804660	SRR30399108	PRJNA1143385	ont	biosample_matched	not_checked	True	3240373	Bradyrhizobium sp. 63_E2_N1_3	Bradyrhizobium sp. 63_E2_N1_3	True	Illumina; Oxford Nanopore
+GCA_024171265.1	GCF_024171265.1	SAMN18243585	SRR35212956	PRJNA708362	pacbio_hifi_ccs	biosample_matched	not_checked	True	375	Bradyrhizobium japonicum	Bradyrhizobium japonicum	True	PacBio
+GCA_024171125.1		SAMN18243432	SRR35213022	PRJNA708375	pacbio_hifi_ccs	biosample_matched	not_checked	True	375	Bradyrhizobium japonicum	Bradyrhizobium diazoefficiens	True	PacBio
+GCA_052076095.1	GCF_052076095.1	SAMN42804674	SRR30410555	PRJNA1143467	ont	biosample_matched	not_checked	True	3240784	Tardiphaga sp. 71_E8_N1_1	Tardiphaga sp. 71_E8_N1_1	True	Illumina; Oxford Nanopore
+GCA_024170905.1	GCF_024170905.1	SAMN18242910	SRR35214479	PRJNA708374	pacbio_hifi_ccs	biosample_matched	not_checked	True	375	Bradyrhizobium japonicum	Bradyrhizobium japonicum	True	PacBio
+GCA_052076055.1	GCF_052076055.1	SAMN42804654	SRR30412668	PRJNA1143429	ont	biosample_matched	not_checked	True	3240774	Tardiphaga sp. 215_C5_N2_1	Tardiphaga sp. 215_C5_N2_1	True	Illumina; Oxford Nanopore
+GCA_025961055.1	GCF_025961055.1	SAMN28058230	SRR35215091	PRJNA834288	pacbio_hifi_ccs	biosample_matched	not_checked	True	29448	Bradyrhizobium elkanii	Bradyrhizobium elkanii	True	PacBio
+GCA_025962295.1		SAMN28058233	SRR35215888	PRJNA834242	pacbio_hifi_ccs	biosample_matched	not_checked	True	375	Bradyrhizobium japonicum	Bradyrhizobium diazoefficiens	True	PacBio
+GCA_052658035.1	GCF_052658035.1	SAMN50694219	SRR35064586	PRJNA881974	ont	biosample_matched	not_checked	True	3457549	Rhodopseudomonas sp. RCAM05734	Rhodopseudomonas sp. RCAM05734	True	Oxford Nanopore MinION
+GCA_025961015.1	GCF_025961015.1	SAMN28058275	SRR35217030	PRJNA834276	pacbio_hifi_ccs	biosample_matched	not_checked	True	29448	Bradyrhizobium elkanii	Bradyrhizobium elkanii	True	PacBio
+GCA_025962555.1		SAMN28058311	SRR35217037	PRJNA834274	pacbio_hifi_ccs	biosample_matched	not_checked	True	375	Bradyrhizobium japonicum	Bradyrhizobium diazoefficiens	True	PacBio
+GCA_052402455.1	GCF_052402455.1	SAMN50804268	SRR35184177	PRJNA1311437	ont	biosample_matched	not_checked	True	2992140	Bradyrhizobium barranii	Bradyrhizobium barranii	True	Oxford Nanopore MinION
+GCA_024808915.1	GCF_024808915.1	SAMN28058279	SRR35217042	PRJNA834279	pacbio_hifi_ccs	biosample_matched	not_checked	True	29448	Bradyrhizobium elkanii	Bradyrhizobium elkanii	True	PacBio
+GCA_055698765.1	GCF_055698765.1	SAMN50289648	SRR35211196	PRJNA1298934	ont	biosample_matched	not_checked	True	29421	Nitrobacter vulgaris	Nitrobacter vulgaris	True	Oxford Nanopore MinION
+GCA_053891355.1	GCF_053891355.1	SAMN50479368	SRR35706457	PRJNA1302448	ont	biosample_matched	not_checked	True	2734912	Bradyrhizobium denitrificans	Bradyrhizobium denitrificans	True	Oxford Nanopore PromethION; Illumina NextSeq
+GCA_024807735.1	GCF_024807735.1	SAMN28058280	SRR35217045	PRJNA834269	pacbio_hifi_ccs	biosample_matched	not_checked	True	375	Bradyrhizobium japonicum	Bradyrhizobium japonicum	True	PacBio
+GCA_025961675.1	GCF_025961675.1	SAMN28058296	SRR35217066	PRJNA834280	pacbio_hifi_ccs	biosample_matched	not_checked	True	29448	Bradyrhizobium elkanii	Bradyrhizobium elkanii	True	PacBio
+GCA_025961155.1	GCF_025961155.1	SAMN28058248	SRR35217080	PRJNA834291	pacbio_hifi_ccs	biosample_matched	not_checked	True	29448	Bradyrhizobium elkanii	Bradyrhizobium elkanii	True	PacBio
+GCA_025961655.1	GCF_025961655.1	SAMN28058229	SRR35217138	PRJNA834290	pacbio_hifi_ccs	biosample_matched	not_checked	True	29448	Bradyrhizobium elkanii	Bradyrhizobium elkanii	True	PacBio
+GCA_054823085.1	GCF_054823085.1	SAMN52637267	SRR35984610	PRJNA1344059	pacbio_hifi_ccs	biosample_matched	not_checked	True	1355477	Bradyrhizobium diazoefficiens	Bradyrhizobium diazoefficiens	True	PacBio
+GCA_054823325.1	GCF_054823325.1	SAMN52637179	SRR35984625	PRJNA1344060	pacbio_hifi_ccs	biosample_matched	not_checked	True	1355477	Bradyrhizobium diazoefficiens	Bradyrhizobium diazoefficiens	True	PacBio
+GCA_054823065.1	GCF_054823065.1	SAMN52638822	SRR35984638	PRJNA1339684	pacbio_hifi_ccs	biosample_matched	not_checked	True	990078	Bradyrhizobium huanghuaihaiense	Bradyrhizobium huanghuaihaiense	True	PacBio
+GCA_054822385.1	GCF_054822385.1	SAMN52638723	SRR35984697	PRJNA1340401	pacbio_hifi_ccs	biosample_matched	not_checked	True	29448	Bradyrhizobium elkanii	Bradyrhizobium elkanii	True	PacBio
+GCA_054822145.1	GCF_054822145.1	SAMN52637261	SRR35984708	PRJNA1339685	pacbio_hifi_ccs	biosample_matched	not_checked	True	1355477	Bradyrhizobium diazoefficiens	Bradyrhizobium diazoefficiens	True	PacBio
+GCA_054822905.1	GCF_054822905.1	SAMN52637407	SRR35984817	PRJNA1344140	pacbio_hifi_ccs	biosample_matched	not_checked	True	2823807	Bradyrhizobium barranii subsp. barranii	Bradyrhizobium barranii subsp. barranii	True	PacBio
+GCA_054822405.1		SAMN52639030	SRR35984872	PRJNA1344017	pacbio_hifi_ccs	biosample_matched	not_checked	True	1355477	Bradyrhizobium diazoefficiens	Bradyrhizobium diazoefficiens	True	PacBio
+GCA_054823205.1	GCF_054823205.1	SAMN52638636	SRR35984999	PRJNA1340333	pacbio_hifi_ccs	biosample_matched	not_checked	True	43992	Bradyrhizobium liaoningense	Bradyrhizobium liaoningense	True	PacBio
+GCA_054822625.1	GCF_054822625.1	SAMN52638819	SRR35985002	PRJNA1339209	pacbio_hifi_ccs	biosample_matched	not_checked	True	630921	Bradyrhizobium embrapense	Bradyrhizobium embrapense	True	PacBio
+GCA_054822505.1	GCF_054822505.1	SAMN52637744	SRR35985016	PRJNA1340541	pacbio_hifi_ccs	biosample_matched	not_checked	True	1355477	Bradyrhizobium diazoefficiens	Bradyrhizobium diazoefficiens	True	PacBio
+GCA_054822705.1	GCF_054822705.1	SAMN52638722	SRR35985127	PRJNA1339683	pacbio_hifi_ccs	biosample_matched	not_checked	True	3475258	Bradyrhizobium sp. USDA 4454	Bradyrhizobium sp. USDA 4454	True	PacBio
+GCA_054822935.1	GCF_054822935.1	SAMN52638634	SRR35985128	PRJNA1339206	pacbio_hifi_ccs	biosample_matched	not_checked	True	43992	Bradyrhizobium liaoningense	Bradyrhizobium liaoningense	True	PacBio
+GCA_054823885.1	GCF_054823885.1	SAMN52638564	SRR35985170	PRJNA1339985	pacbio_hifi_ccs	biosample_matched	not_checked	True	2823807	Bradyrhizobium barranii subsp. barranii	Bradyrhizobium barranii subsp. barranii	True	PacBio
+GCA_007018435.1	GCF_007018435.1	SAMN12186337	SRR9640540	PRJNA548505	ont	biosample_matched	not_checked	True	2592815	Tardiphaga sp. vice278	Tardiphaga sp. vice278	True	Illumina; Oxford Nanopore MiniION
+GCA_964252915.2	GCF_964252915.1	SAMEA115676878	ERR13194294	PRJEB75483	ont	biosample_matched	not_checked	True	3342284	Bradyrhizobium sp. LjRoot220	Bradyrhizobium sp. LjRoot220	True	Illumina Novaseq 6000,MinION
+GCA_014189415.1	GCF_014189415.1	SAMN14403979	SRR11393284	PRJNA329489	ont	biosample_matched	not_checked	True	943830	Tardiphaga robiniae	Tardiphaga robiniae	True	Oxford Nanopore MiniION
+GCA_023101085.1	GCF_023101085.1	SAMN16538597	SRR12935974	PRJNA671608	ont	biosample_matched	not_checked	True	2782641	Bradyrhizobium sp. 170	Bradyrhizobium sp. 170	True	Illumina HiSeq, Oxford Nanopore MinION
+GCA_023100665.1	GCF_023100665.1	SAMN16538646	SRR12936005	PRJNA671608	ont	biosample_matched	not_checked	True	2782686	Bradyrhizobium sp. CW1	Bradyrhizobium sp. CW1	True	Illumina HiSeq, Oxford Nanopore MinION
+GCA_023101125.1	GCF_023101125.1	SAMN16538565	SRR12936042	PRJNA671608	ont	biosample_matched	not_checked	True	2782609	Bradyrhizobium sp. 131	Bradyrhizobium sp. 131	True	Illumina HiSeq, Oxford Nanopore MinION
+GCA_015624505.1	GCF_015624505.1	SAMN16089659	SRR13067350	PRJNA662585	ont	biosample_matched	not_checked	True	83627	Bradyrhizobium commune	Bradyrhizobium commune	True	Illumina; Oxford Nanopore MinION
+GCA_016584445.1	GCF_016584445.1	SAMN17028957	SRR13238693	PRJNA683609	ont	biosample_matched	not_checked	True	1076	Rhodopseudomonas palustris	Rhodopseudomonas palustris	True	Illumina NextSeq; Oxford Nanopore MinION
+GCA_023375135.1	GCF_023375135.1	SAMN23371896	SRR17030678	PRJNA782308	ont	biosample_matched	not_checked	True	574727	Bradyrhizobium sp. C-145	Bradyrhizobium sp. C-145	True	Illumina NextSeq; Oxford Nanopore MinION
+GCA_031600295.1	GCF_031600295.1	SAMN24839554	SRR17562209	PRJNA796295	ont	biosample_matched	not_checked	True	1076	Rhodopseudomonas palustris	Rhodopseudomonas palustris	True	Illumina NextSeq; Oxford Nanopore MinION
+GCA_024199935.1	GCF_024199935.1	SAMN28667582	SRR19417270	PRJNA842432	ont	biosample_matched	not_checked	True	2949628	Bradyrhizobium sp. CCGUVB14	Bradyrhizobium sp. CCGUVB14	True	Illumina NovaSeq; Oxford Nanopore MinION
+GCA_029910135.1		SAMN20568704	SRR21294676	PRJNA742876	ont	biosample_matched	not_checked	True	2866194	Bradyrhizobium sp. ISRA435	Bradyrhizobium sp. ISRA435	True	Oxford Nanopore MinION and Illumina HiSeq
+GCA_029909975.1	GCF_029909975.1	SAMN20568702	SRR21294699	PRJNA742876	ont	biosample_matched	not_checked	True	2866192	Bradyrhizobium sp. ISRA430	Bradyrhizobium sp. ISRA430	True	Oxford Nanopore MinION and Illumina HiSeq
+GCA_029910035.1	GCF_029910035.1	SAMN20568706	SRR21295027	PRJNA742876	ont	biosample_matched	not_checked	True	2866196	Bradyrhizobium sp. ISRA437	Bradyrhizobium sp. ISRA437	True	Oxford Nanopore MinION and Illumina HiSeq
+GCA_029909995.1	GCF_029909995.1	SAMN20568703	SRR21295174	PRJNA742876	ont	biosample_matched	not_checked	False	2866193	Bradyrhizobium sp. ISRA432	Bradyrhizobium sp. ISRA432	True	Oxford Nanopore MinION and Illumina HiSeq
+GCA_030378205.1	GCF_030378205.1	SAMN35351387	SRR24796020	PRJNA975924	ont	biosample_matched	not_checked	True	3049772	Bradyrhizobium sp. NP1	Bradyrhizobium sp. NP1	True	Oxford Nanopore GridION; Illumina NextSeq
+GCA_032918005.1	GCF_032918005.1	SAMN37684784	SRR26337672	PRJNA1023532	ont	biosample_matched	not_checked	True	3080014	Bradyrhizobium sp. NDS-1	Bradyrhizobium sp. NDS-1	True	Oxford Nanopore MinION
+GCA_052075975.1	GCF_052075975.1	SAMN42804684	SRR30205922	PRJNA1143196	ont	biosample_matched	not_checked	True	3240368	Bradyrhizobium sp. 521_C7_N1_3	Bradyrhizobium sp. 521_C7_N1_3	True	Illumina; Oxford Nanopore
+GCA_052075965.1	GCF_052075965.1	SAMN42804663	SRR30206108	PRJNA1143194	ont	biosample_matched	not_checked	True	3240367	Bradyrhizobium sp. 482_C4_N1_8	Bradyrhizobium sp. 482_C4_N1_8	True	Illumina; Oxford Nanopore
+GCA_052075955.1	GCF_052075955.1	SAMN42804664	SRR30397900	PRJNA1143192	ont	biosample_matched	not_checked	True	3240366	Bradyrhizobium sp. 482_C4_N1_1	Bradyrhizobium sp. 482_C4_N1_1	True	Illumina; Oxford Nanopore
+GCA_051810785.1	GCF_051810785.1	SAMN42804688	SRR30399592	PRJNA1143391	ont	biosample_matched	not_checked	True	3240376	Bradyrhizobium sp. 956_D2_N1_5	Bradyrhizobium sp. 956_D2_N1_5	True	Illumina; Oxford Nanopore
+GCA_051811125.1	GCF_051811125.1	SAMN42804670	SRR30410551	PRJNA1143482	ont	biosample_matched	not_checked	True	3240767	Tardiphaga sp. 866_E4_N2_1	Tardiphaga sp. 866_E4_N2_1	True	Illumina; Oxford Nanopore
+GCA_051810825.1	GCF_051810825.1	SAMN42804692	SRR30412371	PRJNA1143413	ont	biosample_matched	not_checked	True	3240378	Tardiphaga sp. 1201_B9_N1_2	Tardiphaga sp. 1201_B9_N1_2	True	Illumina; Oxford Nanopore
+GCA_051810805.1	GCF_051810805.1	SAMN42804691	SRR30412666	PRJNA1143410	ont	biosample_matched	not_checked	True	3240377	Tardiphaga sp. 1201_B9_N1_1	Tardiphaga sp. 1201_B9_N1_1	True	Illumina; Oxford Nanopore
+GCA_051810865.1	GCF_051810865.1	SAMN42804655	SRR30413067	PRJNA1143451	ont	biosample_matched	not_checked	True	3240777	Tardiphaga sp. 367_B4_N1_1	Tardiphaga sp. 367_B4_N1_1	True	Illumina; Oxford Nanopore
+GCA_051811045.1	GCF_051811045.1	SAMN42804671	SRR30467443	PRJNA1143474	ont	biosample_matched	not_checked	True	3240761	Tardiphaga sp. 839_C3_N1_4	Tardiphaga sp. 839_C3_N1_4	True	Illumina; Oxford Nanopore
+GCA_053474805.1	GCF_053474805.1	SAMN50671108	SRR35690102	PRJNA1307625	ont	biosample_matched	not_checked	True	3457316	Bradyrhizobium sp. WCU1	Bradyrhizobium sp. WCU1	True	Oxford Nanopore
+GCA_053851795.1		SAMN50934419	SRR37104812	PRJNA1314445	ont	biosample_matched	not_checked	True	3467041	Nitrobacteraceae bacterium UC4449_H16	Nitrobacteraceae bacterium UC4449_H16	True	Oxford Nanopore MinION
+GCA_056238545.1	GCF_056238545.1	SAMN56485145	SRR40822259	PRJNA1311437	ont	biosample_matched	not_checked	True	2992140	Bradyrhizobium barranii	Bradyrhizobium barranii	True	Oxford Nanopore MinION
+GCA_056552435.1	GCF_056552435.1	SAMN56486506	SRR40822260	PRJNA1311437	ont	biosample_matched	not_checked	True	2992140	Bradyrhizobium barranii	Bradyrhizobium barranii	True	Oxford Nanopore MinION
+GCA_056312355.1	GCF_056312355.1	SAMN56491185	SRR40822262	PRJNA1311437	ont	biosample_matched	not_checked	True	2992140	Bradyrhizobium barranii	Bradyrhizobium barranii	True	Oxford Nanopore MinION
+GCA_008932115.1	GCF_008932115.1	SAMN12900461	SRR10227619	PRJNA575551	pacbio_clr_subreads	biosample_matched	not_checked	True	244734	Bradyrhizobium betae	Bradyrhizobium betae	True	PacBio RSII
+GCA_011602485.2	GCF_011602485.2	SAMN14355123	SRR11297366	PRJNA611992	pacbio_clr_subreads	biosample_matched	not_checked	True	1404888	Bradyrhizobium sp. 1(2017)	Bradyrhizobium sp. 1(2017)	True	PacBio RSII
+GCA_011516635.5	GCF_011516635.5	SAMN14355770	SRR11297382	PRJNA612001	pacbio_clr_subreads	biosample_matched	not_checked	True	2819348	Bradyrhizobium barranii subsp. apii	Bradyrhizobium barranii subsp. apii	True	PacBio Sequel
+GCA_011604625.2	GCF_011604625.2	SAMN14364959	SRR11303813	PRJNA612209	pacbio_clr_subreads	biosample_matched	not_checked	True	1355477	Bradyrhizobium diazoefficiens	Bradyrhizobium diazoefficiens	True	PacBio RSII
+GCA_016612535.1	GCF_016612535.1	SAMN16433565	SRR12919150	PRJNA669073	pacbio_clr_subreads	biosample_matched	not_checked	True	1355477	Bradyrhizobium diazoefficiens	Bradyrhizobium diazoefficiens	True	Illumina HiSeq; PacBio RSII
+GCA_016599855.1	GCF_016599855.1	SAMN16433518	SRR12919153	PRJNA669073	pacbio_clr_subreads	biosample_matched	not_checked	True	1355477	Bradyrhizobium diazoefficiens	Bradyrhizobium diazoefficiens	True	Illumina HiSeq2000 and PacBio RS II
+GCA_013373785.3	GCF_013373785.3	SAMN15300336	SRR13642250	PRJNA640156	pacbio_unresolved	biosample_matched	not_checked	True	1404411	Bradyrhizobium septentrionale	Bradyrhizobium septentrionale	True	PacBio Sequel
+GCA_025811435.1	GCF_025811435.1	SAMN19678792	SRR14793656	PRJNA737057	pacbio_unresolved	biosample_matched	not_checked	False	1076	Rhodopseudomonas palustris	Rhodopseudomonas palustris	True	PacBio RSII
+GCA_017876705.1	GCF_017876705.1	SAMN17673373	SRR18709369	PRJNA696469	pacbio_unresolved	biosample_matched	not_checked	True	29448	Bradyrhizobium elkanii	Bradyrhizobium elkanii	True	PacBio
+GCA_017565685.3	GCF_017565685.3	SAMN18312895	SRR19205250	PRJNA714594	pacbio_unresolved	biosample_matched	not_checked	True	2819348	Bradyrhizobium barranii subsp. apii	Bradyrhizobium barranii subsp. apii	True	PacBio Sequel
+GCA_011516635.5	GCF_011516635.5	SAMN14355770	SRR19205252	PRJNA612001	pacbio_unresolved	biosample_matched	not_checked	True	2819348	Bradyrhizobium barranii subsp. apii	Bradyrhizobium barranii subsp. apii	True	PacBio Sequel
+GCA_036924615.1	GCF_036924615.1	SAMN39621689	SRR27823316	PRJNA1069207	pacbio_hifi_ccs	biosample_matched	not_checked	True	3117026	Bradyrhizobium sp. AZCC 2289	Bradyrhizobium sp. AZCC 2289	True	PacBio
+GCA_036924535.1	GCF_036924535.1	SAMN39621688	SRR27823319	PRJNA1069201	pacbio_hifi_ccs	biosample_matched	not_checked	True	3117022	Bradyrhizobium sp. AZCC 2262	Bradyrhizobium sp. AZCC 2262	True	PacBio
+GCA_036924595.1	GCF_036924595.1	SAMN39613212	SRR27823324	PRJNA1069204	pacbio_hifi_ccs	biosample_matched	not_checked	True	634784	Bradyrhizobium algeriense	Bradyrhizobium algeriense	True	PacBio
+GCA_016907215.1	GCF_016907215.1	SAMN17620003	SRR35148025	PRJNA695760	pacbio_hifi_ccs	biosample_matched	not_checked	True	255045	Bradyrhizobium canariense	Bradyrhizobium canariense	True	PacBio
+GCA_025962335.1	GCF_025962335.1	SAMN28058231	SRR35210682	PRJNA834247	pacbio_hifi_ccs	biosample_matched	not_checked	True	375	Bradyrhizobium japonicum	Bradyrhizobium ottawaense	True	PacBio
+GCA_024810215.1	GCF_024810215.1	SAMN28058245	SRR35211442	PRJNA834261	pacbio_hifi_ccs	biosample_matched	not_checked	True	29448	Bradyrhizobium elkanii	Bradyrhizobium elkanii	True	PacBio
+GCA_024170985.1	GCF_024170985.1	SAMN18251184	SRR35212952	PRJNA708372	pacbio_hifi_ccs	biosample_matched	not_checked	True	2817705	Bradyrhizobium sp. USDA 4545	Bradyrhizobium sp. USDA 4545	True	PacBio
+GCA_024170825.1	GCF_024170825.1	SAMN18242735	SRR35212969	PRJNA708492	pacbio_hifi_ccs	biosample_matched	not_checked	True	375	Bradyrhizobium japonicum	Bradyrhizobium japonicum	True	PacBio
+GCA_024171185.1		SAMN18242847	SRR35212972	PRJNA708384	pacbio_hifi_ccs	biosample_matched	not_checked	True	375	Bradyrhizobium japonicum	Bradyrhizobium diazoefficiens	True	PacBio
+GCA_024171445.1	GCF_024171445.1	SAMN18243430	SRR35213020	PRJNA708381	pacbio_hifi_ccs	biosample_matched	not_checked	True	375	Bradyrhizobium japonicum	Bradyrhizobium japonicum	True	PacBio
+GCA_025961175.1	GCF_025961175.1	SAMN28058322	SRR35213054	PRJNA834281	pacbio_hifi_ccs	biosample_matched	not_checked	True	29448	Bradyrhizobium elkanii	Bradyrhizobium elkanii	True	PacBio
+GCA_025961075.1	GCF_025961075.1	SAMN28058321	SRR35213066	PRJNA834283	pacbio_hifi_ccs	biosample_matched	not_checked	True	29448	Bradyrhizobium elkanii	Bradyrhizobium elkanii	True	PacBio
+GCA_024171225.1	GCF_024171225.1	SAMN18242738	SRR35213067	PRJNA708385	pacbio_hifi_ccs	biosample_matched	not_checked	True	29448	Bradyrhizobium elkanii	Bradyrhizobium elkanii	True	PacBio
+GCA_025962325.1		SAMN28058253	SRR35213082	PRJNA834249	pacbio_hifi_ccs	biosample_matched	not_checked	True	375	Bradyrhizobium japonicum	Bradyrhizobium ottawaense	True	PacBio
+GCA_024171285.1		SAMN18243081	SRR35213085	PRJNA708365	pacbio_hifi_ccs	biosample_matched	not_checked	True	375	Bradyrhizobium japonicum	Bradyrhizobium elkanii	True	PacBio
+GCA_024171045.1	GCF_024171045.1	SAMN18252188	SRR35213119	PRJNA708369	pacbio_hifi_ccs	biosample_matched	not_checked	True	2817702	Bradyrhizobium sp. USDA 4538	Bradyrhizobium sp. USDA 4538	True	PacBio
+GCA_025962445.1		SAMN28058324	SRR35213489	PRJNA834258	pacbio_hifi_ccs	biosample_matched	not_checked	True	375	Bradyrhizobium japonicum	Bradyrhizobium diazoefficiens	True	PacBio
+GCA_025962455.1		SAMN28058246	SRR35214478	PRJNA834256	pacbio_hifi_ccs	biosample_matched	not_checked	True	375	Bradyrhizobium japonicum	Bradyrhizobium diazoefficiens	True	PacBio
+GCA_024807775.1	GCF_024807775.1	SAMN28058281	SRR35214675	PRJNA834264	pacbio_hifi_ccs	biosample_matched	not_checked	True	29448	Bradyrhizobium elkanii	Bradyrhizobium elkanii	True	PacBio
+GCA_025962315.1		SAMN28058262	SRR35215007	PRJNA834248	pacbio_hifi_ccs	biosample_matched	not_checked	True	375	Bradyrhizobium japonicum	Bradyrhizobium ottawaense	True	PacBio
+GCA_025961055.1	GCF_025961055.1	SAMN28058230	SRR35215092	PRJNA834288	pacbio_hifi_ccs	biosample_matched	not_checked	True	29448	Bradyrhizobium elkanii	Bradyrhizobium elkanii	True	PacBio
+GCA_024807975.1	GCF_024807975.1	SAMN28058234	SRR35217010	PRJNA834271	pacbio_hifi_ccs	biosample_matched	not_checked	True	29448	Bradyrhizobium elkanii	Bradyrhizobium elkanii	True	PacBio
+GCA_025961025.1	GCF_025961025.1	SAMN28058309	SRR35217062	PRJNA834282	pacbio_hifi_ccs	biosample_matched	not_checked	True	29448	Bradyrhizobium elkanii	Bradyrhizobium elkanii	True	PacBio
+GCA_054823145.1	GCF_054823145.1	SAMN52637690	SRR35984609	PRJNA1344110	pacbio_hifi_ccs	biosample_matched	not_checked	True	1355477	Bradyrhizobium diazoefficiens	Bradyrhizobium diazoefficiens	True	PacBio
+GCA_054823185.1	GCF_054823185.1	SAMN52637805	SRR35984691	PRJNA1339205	pacbio_hifi_ccs	biosample_matched	not_checked	True	931866	Bradyrhizobium ottawaense	Bradyrhizobium ottawaense	True	PacBio
+GCA_054823805.1	GCF_054823805.1	SAMN52637259	SRR35984693	PRJNA1339735	pacbio_hifi_ccs	biosample_matched	not_checked	True	1355477	Bradyrhizobium diazoefficiens	Bradyrhizobium diazoefficiens	True	PacBio
+GCA_054823865.1	GCF_054823865.1	SAMN52639029	SRR35984698	PRJNA1339423	pacbio_hifi_ccs	biosample_matched	not_checked	True	1355477	Bradyrhizobium diazoefficiens	Bradyrhizobium diazoefficiens	True	PacBio
+GCA_054823025.1	GCF_054823025.1	SAMN52639099	SRR35984700	PRJNA1344118	pacbio_hifi_ccs	biosample_matched	not_checked	True	43992	Bradyrhizobium liaoningense	Bradyrhizobium liaoningense	True	PacBio
+GCA_054822685.1		SAMN52637406	SRR35984812	PRJNA1339498	pacbio_hifi_ccs	biosample_matched	not_checked	True	1355477	Bradyrhizobium diazoefficiens	Bradyrhizobium diazoefficiens	True	PacBio
+GCA_054822025.1	GCF_054822025.1	SAMN52637404	SRR35984859	PRJNA1339501	pacbio_hifi_ccs	biosample_matched	not_checked	True	1355477	Bradyrhizobium diazoefficiens	Bradyrhizobium diazoefficiens	True	PacBio
+GCA_054823365.1	GCF_054823365.1	SAMN52637219	SRR35984881	PRJNA1339426	pacbio_hifi_ccs	biosample_matched	not_checked	True	1355477	Bradyrhizobium diazoefficiens	Bradyrhizobium diazoefficiens	True	PacBio
+GCA_054823515.1	GCF_054823515.1	SAMN52637312	SRR35985001	PRJNA1344018	pacbio_hifi_ccs	biosample_matched	not_checked	True	43992	Bradyrhizobium liaoningense	Bradyrhizobium liaoningense	True	PacBio
+GCA_054822725.1	GCF_054822725.1	SAMN52637213	SRR35985022	PRJNA1340323	pacbio_hifi_ccs	biosample_matched	not_checked	True	29448	Bradyrhizobium elkanii	Bradyrhizobium elkanii	True	PacBio
+GCA_054822285.1	GCF_054822285.1	SAMN52638632	SRR35985048	PRJNA1339357	pacbio_hifi_ccs	biosample_matched	not_checked	True	1355477	Bradyrhizobium diazoefficiens	Bradyrhizobium diazoefficiens	True	PacBio
+GCA_054822805.1	GCF_054822805.1	SAMN52637638	SRR35985053	PRJNA1340073	pacbio_hifi_ccs	biosample_matched	not_checked	True	2823807	Bradyrhizobium barranii subsp. barranii	Bradyrhizobium barranii subsp. barranii	True	PacBio
+GCA_054823105.1		SAMN52639247	SRR35985070	PRJNA1344137	pacbio_hifi_ccs	biosample_matched	not_checked	True	1355477	Bradyrhizobium diazoefficiens	Bradyrhizobium diazoefficiens	True	PacBio
+GCA_900129425.1	GCF_900129425.1	SAMN05443248	SRR4237138	PRJNA331274	pacbio_unresolved	biosample_matched	not_checked	True	1437360	Bradyrhizobium erythrophlei	Bradyrhizobium erythrophlei	True	PacBio RS
+GCA_900129675.1	GCF_900129675.1	SAMN05443247	SRR4237155	PRJNA331278	pacbio_unresolved	biosample_matched	not_checked	True	1437360	Bradyrhizobium erythrophlei	Bradyrhizobium erythrophlei	True	PacBio RS
+GCA_900142345.1	GCF_900142345.1	SAMN05444321	SRR4237156	PRJNA331283	pacbio_unresolved	biosample_matched	not_checked	True	722472	Bradyrhizobium lablabi	Bradyrhizobium lablabi	True	PacBio RS
+GCA_900142345.1	GCF_900142345.1	SAMN05444321	SRR4237158	PRJNA331283	pacbio_unresolved	biosample_matched	not_checked	True	722472	Bradyrhizobium lablabi	Bradyrhizobium lablabi	True	PacBio RS
+GCA_900105845.1	GCF_900105845.1	SAMN05444164	SRR4237162	PRJNA331282	pacbio_unresolved	biosample_matched	not_checked	True	1437360	Bradyrhizobium erythrophlei	Bradyrhizobium erythrophlei	True	PacBio RS
+GCA_900099825.1	GCF_900099825.1	SAMN05444163	SRR4237167	PRJNA331281	pacbio_unresolved	biosample_matched	not_checked	True	931866	Bradyrhizobium ottawaense	Bradyrhizobium ottawaense	True	PacBio RS
+GCA_900129505.1	GCF_900129505.1	SAMN05444169	SRR4237177	PRJNA331275	pacbio_unresolved	biosample_matched	not_checked	True	1437360	Bradyrhizobium erythrophlei	Bradyrhizobium erythrophlei	True	PacBio RS
+GCA_001887695.1	GCF_001887695.1	SAMN05890661	SRR4422927	PRJNA347501	pacbio_clr_subreads	biosample_matched	not_checked	False	375	Bradyrhizobium japonicum	Bradyrhizobium japonicum	True	
+GCA_002266465.3	GCF_002266465.3	SAMN07448748	SRR8157874	PRJNA397108	pacbio_clr_subreads	biosample_matched	not_checked	True	1404367	Bradyrhizobium symbiodeficiens	Bradyrhizobium symbiodeficiens	True	PacBio
+GCA_030584865.1	GCF_030584865.1	SAMN34405186	SRR24336205	PRJNA962163	pacbio_hifi_ccs	biosample_matched	not_checked	True	375	Bradyrhizobium japonicum	Bradyrhizobium japonicum	True	PacBio RSII
+GCA_030584765.1	GCF_030584765.1	SAMN34405182	SRR24363118	PRJNA962168	pacbio_hifi_ccs	biosample_matched	not_checked	True	29448	Bradyrhizobium elkanii	Bradyrhizobium elkanii	True	PacBio RSII
+GCA_030584965.1	GCF_030584965.1	SAMN34405191	SRR24363123	PRJNA962171	pacbio_hifi_ccs	biosample_matched	not_checked	True	375	Bradyrhizobium japonicum	Bradyrhizobium japonicum USDA 123	True	PacBio RSII
+GCA_030582975.1	GCF_030582975.1	SAMN34405173	SRR24363157	PRJNA962155	pacbio_hifi_ccs	biosample_matched	not_checked	True	1355477	Bradyrhizobium diazoefficiens	Bradyrhizobium diazoefficiens	True	PacBio RSII
+GCA_030585185.1	GCF_030585185.1	SAMN34405178	SRR24363195	PRJNA962162	pacbio_hifi_ccs	biosample_matched	not_checked	True	29448	Bradyrhizobium elkanii	Bradyrhizobium elkanii	True	PacBio RSII
+GCA_030583525.1		SAMN34405177	SRR24363261	PRJNA962158	pacbio_hifi_ccs	biosample_matched	not_checked	True	29448	Bradyrhizobium elkanii	Bradyrhizobium elkanii	True	PacBio RSII
+GCA_030584825.1	GCF_030584825.1	SAMN34405174	SRR24602425	PRJNA962156	pacbio_hifi_ccs	biosample_matched	not_checked	True	1355477	Bradyrhizobium diazoefficiens	Bradyrhizobium diazoefficiens	True	PacBio RSII
+GCA_036923295.1	GCF_036923295.1	SAMN39945328	SRR30238161	PRJNA1076557	pacbio_hifi_ccs	biosample_matched	not_checked	True	3139729	Bradyrhizobium sp. 26S5	Bradyrhizobium sp. 26S5	True	PacBio Sequel
+GCA_024199845.1	GCF_024199845.1	SAMN28667586	SRR19417281	PRJNA842432	ont	biosample_matched	not_checked	True	2949632	Bradyrhizobium sp. CCGB12	Bradyrhizobium sp. CCGB12	True	Illumina NovaSeq; Oxford Nanopore MinION
+GCA_024199925.1	GCF_024199925.1	SAMN28667583	SRR19417284	PRJNA842432	ont	biosample_matched	not_checked	True	2949629	Bradyrhizobium sp. CCGUVB1N3	Bradyrhizobium sp. CCGUVB1N3	True	Illumina NovaSeq; Oxford Nanopore MinION
+GCA_051811005.1	GCF_051811005.1	SAMN42804672	SRR30426465	PRJNA1143470	ont	biosample_matched	not_checked	True	3240786	Tardiphaga sp. 804_B3_N1_9	Tardiphaga sp. 804_B3_N1_9	True	Illumina; Oxford Nanopore
+GCA_977007485.1	GCF_977007485.1	SAMEA120325677	ERR15695452	PRJEB88388	ont	biosample_matched	not_checked	True	3471939	Bradyrhizobium sp. R-92926	Bradyrhizobium liaoningense	True	MinION
+GCA_977007305.1	GCF_977007305.1	SAMEA120325688	ERR15695480	PRJEB88388	ont	biosample_matched	not_checked	True	3471944	Bradyrhizobium sp. R-93086	Bradyrhizobium liaoningense	True	MinION
+GCA_977012055.1	GCF_977012055.1	SAMEA120399601	ERR15741622	PRJEB88388	ont	biosample_matched	not_checked	True	3471986	Bradyrhizobium sp. R-93116	Bradyrhizobium cenepequi	True	MinION
+GCA_005937885.2	GCF_005937885.2	SAMN11620956	SRR10064720	PRJNA539822	ont	biosample_matched	not_checked	True	2578114	Bradyrhizobium sp. KBS0727	Bradyrhizobium sp. KBS0727	True	Illumina HiSeq; Oxford Nanopore MiniION
+GCA_023100985.1	GCF_023100985.1	SAMN16538615	SRR12935947	PRJNA671608	ont	biosample_matched	not_checked	True	2782659	Bradyrhizobium sp. 191	Bradyrhizobium sp. 191	True	Illumina HiSeq, Oxford Nanopore MinION
+GCA_023072905.1	GCF_023072905.1	SAMN16538589	SRR12935984	PRJNA671608	ont	biosample_matched	not_checked	True	2782633	Bradyrhizobium sp. 15	Bradyrhizobium sp. 15	True	Illumina HiSeq; Oxford Nanopore MinION
+GCA_023101105.1	GCF_023101105.1	SAMN16538585	SRR12935990	PRJNA671608	ont	biosample_matched	not_checked	True	2782629	Bradyrhizobium sp. 155	Bradyrhizobium sp. 155	True	Illumina HiSeq, Oxford Nanopore MinION
+GCA_023100945.1	GCF_023100945.1	SAMN16538622	SRR12936035	PRJNA671608	ont	biosample_matched	not_checked	True	2782665	Bradyrhizobium sp. 200	Bradyrhizobium sp. 200	True	Illumina HiSeq, Oxford Nanopore MinION
+GCA_030272265.2	GCF_030272265.2	SAMN23371906	SRR17042238	PRJNA782308	ont	biosample_matched	not_checked	True	2898442	Bradyrhizobium sp. 62B	Bradyrhizobium sp. 62B	True	Illumina NextSeq; Oxford Nanopore MinION
+GCA_030272265.2	GCF_030272265.2	SAMN23371906	SRR17042239	PRJNA782308	ont	biosample_matched	not_checked	True	2898442	Bradyrhizobium sp. 62B	Bradyrhizobium sp. 62B	True	Illumina NextSeq; Oxford Nanopore MinION
+GCA_032917945.1	GCF_032917945.1	SAMN37684830	SRR26336054	PRJNA1023532	ont	biosample_matched	not_checked	True	2831780	Bradyrhizobium sp. sBnM-33	Bradyrhizobium sp. sBnM-33	True	Oxford Nanopore MinION
+GCA_034562915.1	GCF_034562915.1	SAMN38810175	SRR27197669	PRJNA1051999	ont	biosample_matched	not_checked	True	931866	Bradyrhizobium ottawaense	Bradyrhizobium ottawaense	True	Oxford Nanopore MinION
+GCA_054392205.1	GCF_054392205.1	SAMN50046415	SRR35839238	PRJNA1293828	ont	biosample_matched	not_checked	True	3450748	Afipia sp. TerB	Afipia sp. TerB	True	Oxford Nanopore PromethION; Illumina NextSeq
+GCA_029909955.1	GCF_029909955.1	SAMN20568701	SRR21292614	PRJNA742876	ont	biosample_matched	not_checked	True	2866191	Bradyrhizobium sp. ISRA426	Bradyrhizobium sp. ISRA426	True	Oxford Nanopore MinION and Illumina HiSeq
+GCA_029910075.1	GCF_029910075.1	SAMN20568709	SRR21293074	PRJNA742876	ont	biosample_matched	not_checked	True	2866199	Bradyrhizobium sp. ISRA463	Bradyrhizobium sp. ISRA463	True	Oxford Nanopore MinION
+GCA_026625025.1	GCF_026625025.1	SAMN31769028	SRR22340637	PRJNA902690	ont	biosample_matched	not_checked	True	1076	Rhodopseudomonas palustris	Rhodopseudomonas palustris	True	Illumina NextSeq; Oxford Nanopore GridION
+GCA_026015985.1	GCF_026015985.1	SAMN31488911	SRR22403519	PRJNA881974	ont	biosample_matched	not_checked	True	2991972	Rhodopseudomonas sp. P2A-2r	Rhodopseudomonas sp. P2A-2r	True	Oxford Nanopore MinION
+GCA_055396875.1	GCF_055396875.1	SAMN42380441	SRR29747273	PRJNA1133237	ont	biosample_matched	not_checked	True	1076	Rhodopseudomonas palustris	Rhodopseudomonas palustris	True	Nanopore GridION
+GCA_051411095.1	GCF_051411095.1	SAMN42804667	SRR30066839	PRJNA1140108	ont	biosample_matched	not_checked	True	3238688	Bradyrhizobium sp. 1050_B9_N1_2	Bradyrhizobium sp. 1050_B9_N1_2	True	Illumina; Oxford Nanopore
+GCA_052075925.1	GCF_052075925.1	SAMN42804683	SRR30069482	PRJNA1140558	ont	biosample_matched	not_checked	True	3239014	Bradyrhizobium sp. 1200_D9_N1_2	Bradyrhizobium sp. 1200_D9_N1_2	True	Illumina; Oxford Nanopore
+GCA_052075935.1	GCF_052075935.1	SAMN42804666	SRR30081705	PRJNA1142925	ont	biosample_matched	not_checked	True	3240384	Bradyrhizobium sp. 215_C5_N1_1	Bradyrhizobium sp. 215_C5_N1_1	True	Illumina; Oxford Nanopore
+GCA_052075945.1	GCF_052075945.1	SAMN42804665	SRR30205884	PRJNA1143191	ont	biosample_matched	not_checked	True	3240381	Bradyrhizobium sp. 215_C5_N1_2	Bradyrhizobium sp. 215_C5_N1_2	True	Illumina; Oxford Nanopore
+GCA_052075985.1	GCF_052075985.1	SAMN42804685	SRR30398605	PRJNA1143200	ont	biosample_matched	not_checked	True	3240369	Bradyrhizobium sp. 590_E5_N4_2	Bradyrhizobium sp. 590_E5_N4_2	True	Illumina; Oxford Nanopore
+GCA_051810765.1	GCF_051810765.1	SAMN42804662	SRR30398934	PRJNA1143204	ont	biosample_matched	not_checked	True	3240370	Bradyrhizobium sp. 604_D8_N2_3	Bradyrhizobium sp. 604_D8_N2_3	True	Illumina; Oxford Nanopore
+GCA_052076025.1	GCF_052076025.1	SAMN42804695	SRR30399238	PRJNA1143390	ont	biosample_matched	not_checked	True	3240375	Bradyrhizobium sp. 956_D2_N1_4	Bradyrhizobium sp. 956_D2_N1_4	True	Illumina; Oxford Nanopore
+GCA_052076045.1	GCF_052076045.1	SAMN42804693	SRR30412585	PRJNA1143427	ont	biosample_matched	not_checked	True	3240788	Tardiphaga sp. 20_F10_N6_6	Tardiphaga sp. 20_F10_N6_6	True	Illumina; Oxford Nanopore
+GCA_052076035.1	GCF_052076035.1	SAMN42804669	SRR30412665	PRJNA1143425	ont	biosample_matched	not_checked	True	3240787	Tardiphaga sp. 172_B4_N1_3	Tardiphaga sp. 172_B4_N1_3	True	Illumina; Oxford Nanopore
+GCA_051810905.1	GCF_051810905.1	SAMN42804657	SRR30413212	PRJNA1143456	ont	biosample_matched	not_checked	True	3240780	Tardiphaga sp. 619_E2_N8_4	Tardiphaga sp. 619_E2_N8_4	True	Illumina; Oxford Nanopore
+GCA_051810985.1	GCF_051810985.1	SAMN42804647	SRR30414271	PRJNA1143465	ont	biosample_matched	not_checked	True	3240782	Tardiphaga sp. 619_E2_N8_6	Tardiphaga sp. 619_E2_N8_6	True	Illumina; Oxford Nanopore
+GCA_049949265.1	GCF_049949265.1	SAMN48030123	SRR33213279	PRJNA662585	ont	biosample_matched	not_checked	True	83641	Bradyrhizobium genosp. P	Bradyrhizobium genosp. P	True	Oxford Nanopore MinION
+GCA_051917485.2	GCF_051917485.1	SAMN49917713	SRR34571034	PRJNA1290346	ont	biosample_matched	not_checked	False	3450174	Bradyrhizobium sp. RDM12	Bradyrhizobium sp. RDM12	True	Oxford Nanopore GridION
+GCA_056114745.1	GCF_056114745.1	SAMN55652392	SRR37357119	PRJNA1392171	ont	biosample_matched	not_checked	True	375	Bradyrhizobium japonicum	Bradyrhizobium japonicum	True	Oxford Nanopore MinION
+GCA_051547705.1	GCF_051547705.1	SAMN49830964	SRR37880266	PRJNA1288025	ont	biosample_matched	not_checked	True	3447966	Bradyrhizobium sp. BR 1432	Bradyrhizobium sp. BR 1432	True	Oxford Nanopore MinION
+GCA_036964665.1	GCF_036964665.1	SAMN39855614	SRR39618644	PRJNA1074292	ont	biosample_matched	not_checked	True	3119830	Candidatus Nitrobacter laanbroekii	Candidatus Nitrobacter laanbroekii	True	Illumina MiSeq; Oxford Nanopore MinION
+GCA_030585025.1		SAMN34405192	SRR24363116	PRJNA962170	pacbio_hifi_ccs	biosample_matched	not_checked	True	375	Bradyrhizobium japonicum	Bradyrhizobium japonicum USDA 135	True	PacBio RSII
+GCA_030584785.1	GCF_030584785.1	SAMN34405188	SRR24363119	PRJNA962173	pacbio_hifi_ccs	biosample_matched	not_checked	True	375	Bradyrhizobium japonicum	Bradyrhizobium japonicum	True	PacBio RSII
+GCA_030584565.1	GCF_030584565.1	SAMN34405183	SRR24363120	PRJNA962167	pacbio_hifi_ccs	biosample_matched	not_checked	True	29448	Bradyrhizobium elkanii	Bradyrhizobium elkanii	True	PacBio RSII
+GCA_030584705.1	GCF_030584705.1	SAMN34405172	SRR24363132	PRJNA962154	pacbio_hifi_ccs	biosample_matched	not_checked	True	1355477	Bradyrhizobium diazoefficiens	Bradyrhizobium diazoefficiens	True	PacBio RSII
+GCA_013373785.3	GCF_013373785.3	SAMN15300336	SRR30076317	PRJNA640156	pacbio_unresolved	biosample_matched	not_checked	True	1404411	Bradyrhizobium septentrionale	Bradyrhizobium septentrionale	True	PacBio Sequel
+GCA_021044645.1	GCF_021044645.1	SAMN23283113	SRR30082401	PRJNA781608	pacbio_unresolved	biosample_matched	not_checked	True	1404741	Tardiphaga sp. 37S4	Tardiphaga sp. 37S4	True	PacBio Sequel
+GCA_037217225.1	GCF_037217225.1	SAMN40378463	SRR30162148	PRJNA1086487	pacbio_hifi_ccs	biosample_matched	not_checked	True	3139728	Bradyrhizobium sp. 27S5	Bradyrhizobium sp. 27S5	True	PacBio Sequel
+GCA_011516625.5	GCF_011516625.5	SAMN14360511	SRR30162149	PRJNA612049	pacbio_hifi_ccs	biosample_matched	not_checked	True	1404429	Bradyrhizobium sp. 2S1	Bradyrhizobium sp. 2S1	True	PacBio Sequel
+GCA_013373795.3	GCF_013373795.3	SAMN15299083	SRR30172181	PRJNA640100	pacbio_unresolved	biosample_matched	not_checked	True	2748629	Bradyrhizobium quebecense	Bradyrhizobium quebecense	True	PacBio Sequel
+GCA_042077125.1	GCF_042077125.1	SAMN40545824	SRR30238176	PRJNA1089590	pacbio_hifi_ccs	biosample_matched	not_checked	True	3133974	Bradyrhizobium sp. A11	Bradyrhizobium sp. A11	True	PacBio Sequel
+GCA_042137995.2	GCF_042137995.2	SAMN43576846	SRR30629247	PRJNA1159492	pacbio_unresolved	biosample_matched	not_checked	False	375	Bradyrhizobium japonicum	Bradyrhizobium japonicum	True	Illumina NovaSeq; PacBio Sequel
+GCA_054822005.1	GCF_054822005.1	SAMN52638852	SRR35973835	PRJNA1343668	pacbio_hifi_ccs	biosample_matched	not_checked	True	931866	Bradyrhizobium ottawaense	Bradyrhizobium ottawaense	True	PacBio
+GCA_054823265.1		SAMN52638229	SRR35984626	PRJNA1339681	pacbio_hifi_ccs	biosample_matched	not_checked	True	1355477	Bradyrhizobium diazoefficiens	Bradyrhizobium diazoefficiens	True	PacBio
+GCA_054822325.1	GCF_054822325.1	SAMN52637308	SRR35984639	PRJNA1340074	pacbio_hifi_ccs	biosample_matched	not_checked	True	1355477	Bradyrhizobium diazoefficiens	Bradyrhizobium diazoefficiens	True	PacBio
+GCA_054823705.1	GCF_054823705.1	SAMN52637220	SRR35984641	PRJNA1340165	pacbio_hifi_ccs	biosample_matched	not_checked	True	1355477	Bradyrhizobium diazoefficiens	Bradyrhizobium diazoefficiens	True	PacBio
+GCA_054822225.1	GCF_054822225.1	SAMN52638958	SRR35984696	PRJNA1339208	pacbio_hifi_ccs	biosample_matched	not_checked	True	1355477	Bradyrhizobium diazoefficiens	Bradyrhizobium diazoefficiens	True	PacBio
+GCA_054822585.1	GCF_054822585.1	SAMN52638156	SRR35984704	PRJNA1343897	pacbio_hifi_ccs	biosample_matched	not_checked	True	3475257	Bradyrhizobium sp. USDA 4451	Bradyrhizobium sp. USDA 4451	True	PacBio
+GCA_054822565.1	GCF_054822565.1	SAMN52638159	SRR35984707	PRJNA1344115	pacbio_hifi_ccs	biosample_matched	not_checked	True	1355477	Bradyrhizobium diazoefficiens	Bradyrhizobium diazoefficiens	True	PacBio
+GCA_054822545.1	GCF_054822545.1	SAMN52638378	SRR35984714	PRJNA1339558	pacbio_hifi_ccs	biosample_matched	not_checked	True	29448	Bradyrhizobium elkanii	Bradyrhizobium elkanii	True	PacBio
+GCA_054822465.1	GCF_054822465.1	SAMN52637175	SRR35984719	PRJNA1340334	pacbio_hifi_ccs	biosample_matched	not_checked	True	1355477	Bradyrhizobium diazoefficiens	Bradyrhizobium diazoefficiens	True	PacBio
+GCA_054822925.1	GCF_054822925.1	SAMN52637585	SRR35984722	PRJNA1339207	pacbio_hifi_ccs	biosample_matched	not_checked	True	43992	Bradyrhizobium liaoningense	Bradyrhizobium liaoningense	True	PacBio
+GCA_054823005.1	GCF_054823005.1	SAMN52637357	SRR35984730	PRJNA1344117	pacbio_hifi_ccs	biosample_matched	not_checked	True	2823807	Bradyrhizobium barranii subsp. barranii	Bradyrhizobium barranii subsp. barranii	True	PacBio
+GCA_054822245.1	GCF_054822245.1	SAMN52637180	SRR35985054	PRJNA1339903	pacbio_hifi_ccs	biosample_matched	not_checked	True	1355477	Bradyrhizobium diazoefficiens	Bradyrhizobium diazoefficiens	True	PacBio
+GCA_054822065.1	GCF_054822065.1	SAMN52638092	SRR35985154	PRJNA1340324	pacbio_hifi_ccs	biosample_matched	not_checked	True	1355477	Bradyrhizobium diazoefficiens	Bradyrhizobium diazoefficiens	True	PacBio
+GCA_054822875.1	GCF_054822875.1	SAMN52639175	SRR36002393	PRJNA1339267	pacbio_hifi_ccs	biosample_matched	not_checked	True	29448	Bradyrhizobium elkanii	Bradyrhizobium elkanii	True	PacBio
+GCA_900445145.1	GCF_900445145.1	SAMEA104224810	ERR2246654	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	1035	Afipia felis	Afipia felis	True	PacBio
+GCA_011068405.5	GCF_011068405.5	SAMN14212100	SRR11186639	PRJNA608878	pacbio_clr_subreads	biosample_matched	not_checked	True	2823807	Bradyrhizobium barranii subsp. barranii	Bradyrhizobium barranii subsp. barranii	True	PacBio Sequel
+GCA_011516645.4	GCF_011516645.4	SAMN14360499	SRR11297548	PRJNA612041	pacbio_clr_subreads	biosample_matched	not_checked	True	1404411	Bradyrhizobium septentrionale	Bradyrhizobium septentrionale	True	PacBio Sequel
+GCA_011516625.5	GCF_011516625.5	SAMN14360511	SRR11301540	PRJNA612049	pacbio_clr_subreads	biosample_matched	not_checked	True	1404429	Bradyrhizobium sp. 2S1	Bradyrhizobium sp. 2S1	True	PacBio Sequel
+GCA_011604665.2	GCF_011604665.2	SAMN14365685	SRR11304604	PRJNA612283	pacbio_clr_subreads	biosample_matched	not_checked	True	1404367	Bradyrhizobium symbiodeficiens	Bradyrhizobium symbiodeficiens	True	PacBio RSII
+GCA_016612535.1	GCF_016612535.1	SAMN16433565	SRR12919151	PRJNA669073	pacbio_clr_subreads	biosample_matched	not_checked	True	1355477	Bradyrhizobium diazoefficiens	Bradyrhizobium diazoefficiens	True	Illumina HiSeq; PacBio RSII
+GCA_016599855.1	GCF_016599855.1	SAMN16433518	SRR12919152	PRJNA669073	pacbio_clr_subreads	biosample_matched	not_checked	True	1355477	Bradyrhizobium diazoefficiens	Bradyrhizobium diazoefficiens	True	Illumina HiSeq2000 and PacBio RS II
+GCA_011068405.5	GCF_011068405.5	SAMN14212100	SRR17782760	PRJNA608878	pacbio_unresolved	biosample_matched	not_checked	True	2823807	Bradyrhizobium barranii subsp. barranii	Bradyrhizobium barranii subsp. barranii	True	PacBio Sequel
+GCA_016907215.1	GCF_016907215.1	SAMN17620003	SRR18709400	PRJNA695760	pacbio_unresolved	biosample_matched	not_checked	True	255045	Bradyrhizobium canariense	Bradyrhizobium canariense	True	PacBio
+GCA_017834125.1	GCF_017834125.1	SAMN17673241	SRR18709402	PRJNA696470	pacbio_unresolved	biosample_matched	not_checked	True	29448	Bradyrhizobium elkanii	Bradyrhizobium elkanii	True	PacBio
+GCA_036924515.1	GCF_036924515.1	SAMN39621686	SRR27823323	PRJNA1069197	pacbio_hifi_ccs	biosample_matched	not_checked	True	3117020	Bradyrhizobium sp. AZCC 1610	Bradyrhizobium sp. AZCC 1610	True	PacBio
+GCA_036924775.1	GCF_036924775.1	SAMN39621683	SRR27823325	PRJNA1069203	pacbio_hifi_ccs	biosample_matched	not_checked	True	3117023	Bradyrhizobium sp. AZCC 1620	Bradyrhizobium sp. AZCC 1620	True	PacBio
+GCA_036924765.1	GCF_036924765.1	SAMN39621679	SRR27823326	PRJNA1069212	pacbio_hifi_ccs	biosample_matched	not_checked	True	3117030	Bradyrhizobium sp. AZCC 1678	Bradyrhizobium sp. AZCC 1678	True	PacBio
+GCA_036924745.1	GCF_036924745.1	SAMN39621680	SRR27823333	PRJNA1069211	pacbio_hifi_ccs	biosample_matched	not_checked	True	3117029	Bradyrhizobium sp. AZCC 1693	Bradyrhizobium sp. AZCC 1693	True	PacBio
+GCA_017831985.1	GCF_017831985.1	SAMN17619951	SRR35145683	PRJNA695758	pacbio_hifi_ccs	biosample_matched	not_checked	True	375	Bradyrhizobium japonicum	Bradyrhizobium diazoefficiens	True	PacBio
+GCA_017831945.1	GCF_017831945.1	SAMN17620000	SRR35147769	PRJNA695759	pacbio_hifi_ccs	biosample_matched	not_checked	True	375	Bradyrhizobium japonicum	Bradyrhizobium diazoefficiens	True	PacBio
+GCA_017876705.1	GCF_017876705.1	SAMN17673373	SRR35148317	PRJNA696469	pacbio_hifi_ccs	biosample_matched	not_checked	True	29448	Bradyrhizobium elkanii	Bradyrhizobium elkanii	True	PacBio
+GCA_024808475.1	GCF_024808475.1	SAMN28058285	SRR35211265	PRJNA834425	pacbio_hifi_ccs	biosample_matched	not_checked	True	375	Bradyrhizobium japonicum	Bradyrhizobium japonicum	True	PacBio
+GCA_024807115.1	GCF_024807115.1	SAMN28058284	SRR35211266	PRJNA834236	pacbio_hifi_ccs	biosample_matched	not_checked	True	375	Bradyrhizobium japonicum	Bradyrhizobium japonicum	True	PacBio
+GCA_024807795.1	GCF_024807795.1	SAMN28058259	SRR35211436	PRJNA834265	pacbio_hifi_ccs	biosample_matched	not_checked	True	375	Bradyrhizobium japonicum	Bradyrhizobium japonicum	True	PacBio
+GCA_024171385.1	GCF_024171385.1	SAMN18251554	SRR35211480	PRJNA708370	pacbio_hifi_ccs	biosample_matched	not_checked	True	2817703	Bradyrhizobium sp. USDA 4539	Bradyrhizobium sp. USDA 4539	True	PacBio
+GCA_024170885.1	GCF_024170885.1	SAMN18242979	SRR35212914	PRJNA708363	pacbio_hifi_ccs	biosample_matched	not_checked	True	29448	Bradyrhizobium elkanii	Bradyrhizobium elkanii	True	PacBio
+GCA_024171145.1	GCF_024171145.1	SAMN18243082	SRR35212961	PRJNA708377	pacbio_hifi_ccs	biosample_matched	not_checked	True	375	Bradyrhizobium japonicum	Bradyrhizobium japonicum	True	PacBio
+GCA_024170925.1	GCF_024170925.1	SAMN18243433	SRR35212973	PRJNA708388	pacbio_hifi_ccs	biosample_matched	not_checked	True	375	Bradyrhizobium japonicum	Bradyrhizobium japonicum	True	PacBio
+GCA_025962375.1		SAMN28058326	SRR35213021	PRJNA834250	pacbio_hifi_ccs	biosample_matched	not_checked	True	375	Bradyrhizobium japonicum	Bradyrhizobium ottawaense	True	PacBio
+GCA_024809305.1	GCF_024809305.1	SAMN28058333	SRR35213064	PRJNA834252	pacbio_hifi_ccs	biosample_matched	not_checked	True	375	Bradyrhizobium japonicum	Bradyrhizobium japonicum	True	PacBio
+GCA_024171305.1	GCF_024171305.1	SAMN18242981	SRR35213073	PRJNA708364	pacbio_hifi_ccs	biosample_matched	not_checked	True	375	Bradyrhizobium japonicum	Bradyrhizobium japonicum	True	PacBio
+GCA_025962255.1		SAMN28058325	SRR35213098	PRJNA834426	pacbio_hifi_ccs	biosample_matched	not_checked	True	375	Bradyrhizobium japonicum	Bradyrhizobium diazoefficiens	True	PacBio
+GCA_024807895.1	GCF_024807895.1	SAMN28058298	SRR35213488	PRJNA834262	pacbio_hifi_ccs	biosample_matched	not_checked	True	29448	Bradyrhizobium elkanii	Bradyrhizobium elkanii	True	PacBio
+GCA_024807635.1	GCF_024807635.1	SAMN28058263	SRR35213493	PRJNA834239	pacbio_hifi_ccs	biosample_matched	not_checked	True	29448	Bradyrhizobium elkanii	Bradyrhizobium elkanii	True	PacBio
+GCA_024808795.1	GCF_024808795.1	SAMN28058250	SRR35213520	PRJNA834263	pacbio_hifi_ccs	biosample_matched	not_checked	True	29448	Bradyrhizobium elkanii	Bradyrhizobium elkanii	True	PacBio
+GCA_024808515.1	GCF_024808515.1	SAMN28058252	SRR35214822	PRJNA834257	pacbio_hifi_ccs	biosample_matched	not_checked	True	29448	Bradyrhizobium elkanii	Bradyrhizobium elkanii	True	PacBio
+GCA_029893425.1	GCF_029893425.1	SAMN31439214	SRR35215090	PRJNA893722	pacbio_hifi_ccs	biosample_matched	not_checked	True	29448	Bradyrhizobium elkanii	Bradyrhizobium elkanii	True	PacBio
+GCA_024807285.1	GCF_024807285.1	SAMN28058247	SRR35215096	PRJNA834243	pacbio_hifi_ccs	biosample_matched	not_checked	True	375	Bradyrhizobium japonicum	Bradyrhizobium japonicum	True	PacBio
+GCA_024809455.1	GCF_024809455.1	SAMN28058334	SRR35216333	PRJNA834245	pacbio_hifi_ccs	biosample_matched	not_checked	True	375	Bradyrhizobium japonicum	Bradyrhizobium japonicum	True	PacBio
+GCA_024808895.1	GCF_024808895.1	SAMN28058249	SRR35217036	PRJNA834268	pacbio_hifi_ccs	biosample_matched	not_checked	True	29448	Bradyrhizobium elkanii	Bradyrhizobium elkanii	True	PacBio
+GCA_024807725.1	GCF_024807725.1	SAMN28058292	SRR35217043	PRJNA834266	pacbio_hifi_ccs	biosample_matched	not_checked	True	375	Bradyrhizobium japonicum	Bradyrhizobium japonicum	True	PacBio
+GCA_024809655.1	GCF_024809655.1	SAMN28058312	SRR35217044	PRJNA834270	pacbio_hifi_ccs	biosample_matched	not_checked	True	29448	Bradyrhizobium elkanii	Bradyrhizobium elkanii	True	PacBio
+GCA_900142985.1	GCF_900142985.1	SAMN05444170	SRR4237183	PRJNA331277	pacbio_unresolved	biosample_matched	not_checked	True	1437360	Bradyrhizobium erythrophlei	Bradyrhizobium erythrophlei	True	PacBio RS
+GCA_004359355.1	GCF_004359355.1	SAMN10141985	SRR7945273	PRJNA493766	pacbio_clr_subreads	biosample_matched	not_checked	True	1355477	Bradyrhizobium diazoefficiens	Bradyrhizobium diazoefficiens	True	PacBio RSII; Illumina MiSeq
+GCA_030272265.2	GCF_030272265.2	SAMN23371906	SRR17042237	PRJNA782308	ont	biosample_matched	not_checked	True	2898442	Bradyrhizobium sp. 62B	Bradyrhizobium sp. 62B	True	Illumina NextSeq; Oxford Nanopore MinION
+GCA_040939785.1	GCF_040939785.1	SAMN42574413	SRR30011208	PRJNA1137243	ont	biosample_matched	not_checked	True	136996	Bradyrhizobium lupini	Bradyrhizobium lupini	True	Oxford Nanopore GridION
+GCA_052075915.1	GCF_052075915.1	SAMN42804682	SRR30067879	PRJNA1140556	ont	biosample_matched	not_checked	True	3239013	Bradyrhizobium sp. 1200_D9_N1_1	Bradyrhizobium sp. 1200_D9_N1_1	True	Illumina; Oxford Nanopore
+GCA_051811065.1	GCF_051811065.1	SAMN42804649	SRR30467826	PRJNA1143475	ont	biosample_matched	not_checked	True	3240762	Tardiphaga sp. 841_E9_N1_2	Tardiphaga sp. 841_E9_N1_2	True	Illumina; Oxford Nanopore
+GCA_049993905.1	GCF_049993905.1	SAMN47863641	SRR33243134	PRJNA851850	ont	biosample_matched	not_checked	True	3415673	Bradyrhizobium sp. McL0615	Bradyrhizobium sp. McL0615	True	Illumina NovaSeq 6000; Oxford Nanopore GridION
+GCA_053592855.1	GCF_053592855.1	SAMN53214506	SRR36097091	PRJNA1363662	ont	biosample_matched	not_checked	True	3680192	Bradyrhizobium sp. T-1	Bradyrhizobium sp. T-1	True	Illumina NovaSeq; Oxford Nanopore MinION
+GCA_053669695.1	GCF_053669695.1	SAMN53214519	SRR36097093	PRJNA1363663	ont	biosample_matched	not_checked	True	1325090	Bradyrhizobium guangdongense	Bradyrhizobium guangdongense	True	Illumina NovaSeq; Oxford Nanopore MinION
+GCA_055392175.1	GCF_055392175.1	SAMD00736786	DRR530028	PRJDB17485	ont	biosample_matched	not_checked	True	3116917	Afipia dichlorophenoxyacetatis	Afipia dichlorophenoxyacetatis	True	Nanopore PromethION
+GCA_964020685.1	GCF_964020685.1	SAMEA115296959	ERR14225714	PRJEB71438	ont	biosample_matched	not_checked	False	1035	Afipia felis	Afipia felis	True	Oxford Nanopore
+GCA_977008075.1	GCF_977008075.1	SAMEA120356358	ERR15696511	PRJEB88388	ont	biosample_matched	not_checked	True	3471958	Bradyrhizobium sp. R-93074	Bradyrhizobium cenepequi	True	MinION
+GCA_005937905.2	GCF_005937905.2	SAMN11620955	SRR10064723	PRJNA539822	ont	biosample_matched	not_checked	True	2578113	Bradyrhizobium sp. KBS0725	Bradyrhizobium sp. KBS0725	True	Illumina HiSeq; Oxford Nanopore MiniION
+GCA_023101005.1	GCF_023101005.1	SAMN16538611	SRR12935953	PRJNA671608	ont	biosample_matched	not_checked	True	2782655	Bradyrhizobium sp. 187	Bradyrhizobium sp. 187	True	Illumina HiSeq, Oxford Nanopore MinION
+GCA_023101065.1	GCF_023101065.1	SAMN16538599	SRR12935970	PRJNA671608	ont	biosample_matched	not_checked	True	2782643	Bradyrhizobium sp. 172	Bradyrhizobium sp. 172	True	Illumina HiSeq, Oxford Nanopore MinION
+GCA_024199845.1	GCF_024199845.1	SAMN28667586	SRR19417278	PRJNA842432	ont	biosample_matched	not_checked	True	2949632	Bradyrhizobium sp. CCGB12	Bradyrhizobium sp. CCGB12	True	Illumina NovaSeq; Oxford Nanopore MinION
+GCA_024199795.1	GCF_024199795.1	SAMN28667590	SRR19417279	PRJNA842432	ont	biosample_matched	not_checked	True	2949634	Bradyrhizobium sp. CCGB01	Bradyrhizobium sp. CCGB01	True	Illumina NovaSeq; Oxford Nanopore MinION
+GCA_029909975.1	GCF_029909975.1	SAMN20568702	SRR21293168	PRJNA742876	ont	biosample_matched	not_checked	True	2866192	Bradyrhizobium sp. ISRA430	Bradyrhizobium sp. ISRA430	True	Oxford Nanopore MinION and Illumina HiSeq
+GCA_032917965.1	GCF_032917965.1	SAMN37683990	SRR26335726	PRJNA1023532	ont	biosample_matched	not_checked	True	3080012	Bradyrhizobium sp. BWC-3-1	Bradyrhizobium sp. BWC-3-1	True	Oxford Nanopore MinION
+GCA_052075915.1	GCF_052075915.1	SAMN42804682	SRR30397702	PRJNA1140556	ont	biosample_matched	not_checked	True	3239013	Bradyrhizobium sp. 1200_D9_N1_1	Bradyrhizobium sp. 1200_D9_N1_1	True	Illumina; Oxford Nanopore
+GCA_052075945.1	GCF_052075945.1	SAMN42804665	SRR30397799	PRJNA1143191	ont	biosample_matched	not_checked	True	3240381	Bradyrhizobium sp. 215_C5_N1_2	Bradyrhizobium sp. 215_C5_N1_2	True	Illumina; Oxford Nanopore
+GCA_052075975.1	GCF_052075975.1	SAMN42804684	SRR30398607	PRJNA1143196	ont	biosample_matched	not_checked	True	3240368	Bradyrhizobium sp. 521_C7_N1_3	Bradyrhizobium sp. 521_C7_N1_3	True	Illumina; Oxford Nanopore
+GCA_052076015.1	GCF_052076015.1	SAMN42804687	SRR30399117	PRJNA1143387	ont	biosample_matched	not_checked	True	3240374	Bradyrhizobium sp. 930_D9_N1_4	Bradyrhizobium sp. 930_D9_N1_4	True	Illumina; Oxford Nanopore
+GCA_052076065.1	GCF_052076065.1	SAMN42804676	SRR30413018	PRJNA1143443	ont	biosample_matched	not_checked	True	3240775	Tardiphaga sp. 285_C5_N1_2	Tardiphaga sp. 285_C5_N1_2	True	Illumina; Oxford Nanopore
+GCA_051810885.1	GCF_051810885.1	SAMN42804656	SRR30413209	PRJNA1143452	ont	biosample_matched	not_checked	True	3240778	Tardiphaga sp. 538_B7_N1_4	Tardiphaga sp. 538_B7_N1_4	True	Illumina; Oxford Nanopore
+GCA_051810945.1	GCF_051810945.1	SAMN42804646	SRR30414255	PRJNA1143464	ont	biosample_matched	not_checked	True	3240781	Tardiphaga sp. 619_E2_N8_5	Tardiphaga sp. 619_E2_N8_5	True	Illumina; Oxford Nanopore
+GCA_051810925.1	GCF_051810925.1	SAMN42804675	SRR30426166	PRJNA1143455	ont	biosample_matched	not_checked	True	3240779	Tardiphaga sp. 604_B6_N1_1	Tardiphaga sp. 604_B6_N1_1	True	Illumina; Oxford Nanopore
+GCA_052076075.1	GCF_052076075.1	SAMN42804680	SRR30428064	PRJNA1143480	ont	biosample_matched	not_checked	True	3240766	Tardiphaga sp. 866_E4_N1_4	Tardiphaga sp. 866_E4_N1_4	True	Illumina; Oxford Nanopore
+GCA_042691665.1	GCF_042691665.1	SAMN43942329	SRR34821080	PRJNA1165669	ont	biosample_matched	not_checked	False	136996	Bradyrhizobium lupini	Bradyrhizobium lupini	True	Oxford Nanopore GridION
+GCA_058314695.1	GCF_058314695.1	SAMN56536429	SRR37671757	PRJNA1438386	ont	biosample_matched	not_checked	True	3695558	Bradyrhizobium sp. T-12	Bradyrhizobium sp. T-12	True	Illumina NovaSeq; Oxford Nanopore MinION
+GCA_007018945.1	GCF_007018945.1	SAMN12186462	SRR9640534	PRJNA548505	ont	biosample_matched	not_checked	True	2592816	Tardiphaga sp. vice352	Tardiphaga sp. vice352	True	Illumina; Oxford Nanopore MiniION
+GCA_007018905.1	GCF_007018905.1	SAMN12186598	SRR9640536	PRJNA548505	ont	biosample_matched	not_checked	True	2592817	Tardiphaga sp. vice304	Tardiphaga sp. vice304	True	Illumina; Oxford Nanopore MiniION
+GCA_007018645.1	GCF_007018645.1	SAMN12186028	SRR9640538	PRJNA548505	ont	biosample_matched	not_checked	True	2592814	Tardiphaga sp. vice154	Tardiphaga sp. vice154	True	Illumina; Oxford Nanopore MiniION
+GCA_002266435.3	GCF_002266435.3	SAMN07448754	SRR8157439	PRJNA397110	pacbio_clr_subreads	biosample_matched	not_checked	True	1404768	Bradyrhizobium amphicarpaeae	Bradyrhizobium amphicarpaeae	True	PacBio
+GCA_006459165.2	GCF_006459165.2	SAMN12079237	SRR9326681	PRJNA549279	pacbio_clr_subreads	biosample_matched	not_checked	True	1404367	Bradyrhizobium symbiodeficiens	Bradyrhizobium symbiodeficiens	True	PacBio RSII
+GCA_008932115.1	GCF_008932115.1	SAMN12900461	SRR10227620	PRJNA575551	pacbio_clr_subreads	biosample_matched	not_checked	True	244734	Bradyrhizobium betae	Bradyrhizobium betae	True	PacBio RSII
+GCA_011604645.2	GCF_011604645.2	SAMN14365434	SRR11303647	PRJNA612261	pacbio_clr_subreads	biosample_matched	not_checked	True	1404367	Bradyrhizobium symbiodeficiens	Bradyrhizobium symbiodeficiens	True	PacBio RSII
+GCA_007290395.2	GCF_007290395.2	SAMN12262001	SRR11305042	PRJNA554308	pacbio_clr_subreads	biosample_matched	not_checked	True	1404864	Bradyrhizobium cosmicum	Bradyrhizobium cosmicum	True	PacBio RSII
+GCA_016616425.1	GCF_016616425.1	SAMN16433460	SRR12919154	PRJNA669073	pacbio_clr_subreads	biosample_matched	not_checked	True	1355477	Bradyrhizobium diazoefficiens	Bradyrhizobium diazoefficiens	True	Illumina HiSeq; PacBio RSII
+GCA_011516645.4	GCF_011516645.4	SAMN14360499	SRR13642592	PRJNA612041	pacbio_unresolved	biosample_matched	not_checked	True	1404411	Bradyrhizobium septentrionale	Bradyrhizobium septentrionale	True	PacBio Sequel
+GCA_017565645.3	GCF_017565645.3	SAMN18312838	SRR14069006	PRJNA714589	pacbio_unresolved	biosample_matched	not_checked	True	2823807	Bradyrhizobium barranii subsp. barranii	Bradyrhizobium barranii subsp. barranii	True	PacBio Sequel
+GCA_011516635.5	GCF_011516635.5	SAMN14355770	SRR14069053	PRJNA612001	pacbio_unresolved	biosample_matched	not_checked	True	2819348	Bradyrhizobium barranii subsp. apii	Bradyrhizobium barranii subsp. apii	True	PacBio Sequel
+GCA_011068405.5	GCF_011068405.5	SAMN14212100	SRR14069081	PRJNA608878	pacbio_unresolved	biosample_matched	not_checked	True	2823807	Bradyrhizobium barranii subsp. barranii	Bradyrhizobium barranii subsp. barranii	True	PacBio Sequel
+GCA_025811355.1	GCF_025811355.1	SAMN19678794	SRR14793654	PRJNA737057	pacbio_unresolved	biosample_matched	not_checked	False	1076	Rhodopseudomonas palustris	Rhodopseudomonas palustris	True	PacBio RSII
+GCA_039642825.1	GCF_039642825.1	SAMN23380300	SRR18849468	PRJNA890876	pacbio_unresolved	biosample_matched	not_checked	False	3434357	Rhodopseudomonas sp. P1	Rhodopseudomonas sp. P1	True	PacBio RSII
+GCA_030584845.1	GCF_030584845.1	SAMN34405185	SRR24363122	PRJNA962164	pacbio_hifi_ccs	biosample_matched	not_checked	True	29448	Bradyrhizobium elkanii	Bradyrhizobium elkanii USDA 94	True	PacBio RSII
+GCA_030583585.1	GCF_030583585.1	SAMN34405180	SRR24363277	PRJNA962160	pacbio_hifi_ccs	biosample_matched	not_checked	True	29448	Bradyrhizobium elkanii	Bradyrhizobium elkanii	True	PacBio RSII
+GCA_021088345.1	GCF_021088345.1	SAMN23412897	SRR19205248	PRJNA783021	pacbio_unresolved	biosample_matched	not_checked	True	2898149	Bradyrhizobium ontarionense	Bradyrhizobium ontarionense	True	PacBio Sequel
+GCA_036924635.1	GCF_036924635.1	SAMN39621687	SRR27823314	PRJNA1069205	pacbio_hifi_ccs	biosample_matched	not_checked	True	3117024	Bradyrhizobium sp. AZCC 1699	Bradyrhizobium sp. AZCC 1699	True	PacBio
+GCA_036924845.1	GCF_036924845.1	SAMN39621678	SRR27823318	PRJNA1069194	pacbio_hifi_ccs	biosample_matched	not_checked	True	3117017	Bradyrhizobium sp. AZCC 1614	Bradyrhizobium sp. AZCC 1614	True	PacBio
+GCA_036924575.1	GCF_036924575.1	SAMN39621677	SRR27823321	PRJNA1069196	pacbio_hifi_ccs	biosample_matched	not_checked	True	3117019	Bradyrhizobium sp. AZCC 1577	Bradyrhizobium sp. AZCC 1577	True	PacBio
+GCA_036924675.1	GCF_036924675.1	SAMN39621692	SRR27823322	PRJNA1069208	pacbio_hifi_ccs	biosample_matched	not_checked	True	3117027	Bradyrhizobium sp. AZCC 1578	Bradyrhizobium sp. AZCC 1578	True	PacBio
+GCA_036924715.1	GCF_036924715.1	SAMN39621681	SRR27823327	PRJNA1069193	pacbio_hifi_ccs	biosample_matched	not_checked	True	3117016	Bradyrhizobium sp. AZCC 1721	Bradyrhizobium sp. AZCC 1721	True	PacBio
+GCA_036924835.1		SAMN39613211	SRR27823330	PRJNA1069209	pacbio_hifi_ccs	biosample_matched	not_checked	True	3119825	Nitrobacteraceae bacterium AZCC 1564	Nitrobacteraceae bacterium AZCC 1564	True	PacBio
+GCA_036924525.1	GCF_036924525.1	SAMN39621684	SRR27823331	PRJNA1069210	pacbio_hifi_ccs	biosample_matched	not_checked	True	3117028	Bradyrhizobium sp. AZCC 1719	Bradyrhizobium sp. AZCC 1719	True	PacBio
+GCA_037997155.1	GCF_037997155.1	SAMN40603955	SRR30238175	PRJNA1091664	pacbio_hifi_ccs	biosample_matched	not_checked	True	931866	Bradyrhizobium ottawaense	Bradyrhizobium ottawaense	True	PacBio Sequel
+GCA_034044155.1	GCF_034044155.1	SAMN38199153	SRR30599898	PRJNA1038747	pacbio_unresolved	biosample_matched	not_checked	True	1404799	Tardiphaga sp. 42S5	Tardiphaga sp. 42S5	True	PacBio Sequel
+GCA_024809875.1	GCF_024809875.1	SAMN28058300	SRR35211483	PRJNA834260	pacbio_hifi_ccs	biosample_matched	not_checked	True	375	Bradyrhizobium japonicum	Bradyrhizobium japonicum	True	PacBio
+GCA_025960915.1		SAMN28058310	SRR35211541	PRJNA834275	pacbio_hifi_ccs	biosample_matched	not_checked	True	375	Bradyrhizobium japonicum	Bradyrhizobium diazoefficiens	True	PacBio
+GCA_024171025.1	GCF_024171025.1	SAMN18242786	SRR35212911	PRJNA708491	pacbio_hifi_ccs	biosample_matched	not_checked	True	375	Bradyrhizobium japonicum	Bradyrhizobium japonicum	True	PacBio
+GCA_024170805.1	GCF_024170805.1	SAMN18242911	SRR35212950	PRJNA708493	pacbio_hifi_ccs	biosample_matched	not_checked	True	375	Bradyrhizobium japonicum	Bradyrhizobium japonicum	True	PacBio
+GCA_024170865.1		SAMN18243080	SRR35212954	PRJNA708360	pacbio_hifi_ccs	biosample_matched	not_checked	True	375	Bradyrhizobium japonicum	Bradyrhizobium ottawense USDA 4	True	PacBio
+GCA_024170955.1	GCF_024170955.1	SAMN18242912	SRR35213047	PRJNA708382	pacbio_hifi_ccs	biosample_matched	not_checked	True	375	Bradyrhizobium japonicum	Bradyrhizobium japonicum	True	PacBio
+GCA_024171245.1	GCF_024171245.1	SAMN18242783	SRR35213055	PRJNA708387	pacbio_hifi_ccs	biosample_matched	not_checked	True	29448	Bradyrhizobium elkanii	Bradyrhizobium elkanii	True	PacBio
+GCA_024809255.1	GCF_024809255.1	SAMN28058308	SRR35213099	PRJNA834255	pacbio_hifi_ccs	biosample_matched	not_checked	True	1275962	Bradyrhizobium elkanii USDA 61	Bradyrhizobium elkanii USDA 61	True	PacBio
+GCA_024808485.1	GCF_024808485.1	SAMN28058299	SRR35213121	PRJNA834253	pacbio_hifi_ccs	biosample_matched	not_checked	True	375	Bradyrhizobium japonicum	Bradyrhizobium japonicum	True	PacBio
+GCA_024807815.1	GCF_024807815.1	SAMN28058323	SRR35213519	PRJNA834259	pacbio_hifi_ccs	biosample_matched	not_checked	True	29448	Bradyrhizobium elkanii	Bradyrhizobium elkanii	True	PacBio
+GCA_024808435.1	GCF_024808435.1	SAMN28058232	SRR35214724	PRJNA834238	pacbio_hifi_ccs	biosample_matched	not_checked	True	29448	Bradyrhizobium elkanii	Bradyrhizobium elkanii	True	PacBio
+GCA_024809355.1	GCF_024809355.1	SAMN28058327	SRR35214725	PRJNA834240	pacbio_hifi_ccs	biosample_matched	not_checked	True	375	Bradyrhizobium japonicum	Bradyrhizobium japonicum	True	PacBio
+GCA_024808375.1	GCF_024808375.1	SAMN28058244	SRR35217046	PRJNA834267	pacbio_hifi_ccs	biosample_matched	not_checked	True	29448	Bradyrhizobium elkanii	Bradyrhizobium elkanii	True	PacBio
+GCA_025961105.1		SAMN28058302	SRR35217069	PRJNA834285	pacbio_hifi_ccs	biosample_matched	not_checked	True	375	Bradyrhizobium japonicum	Bradyrhizobium ottawaense	True	PacBio
+GCA_025961095.1	GCF_025961095.1	SAMN28058320	SRR35217126	PRJNA834286	pacbio_hifi_ccs	biosample_matched	not_checked	True	375	Bradyrhizobium japonicum	Bradyrhizobium japonicum	True	PacBio
+GCA_025961655.1	GCF_025961655.1	SAMN28058229	SRR35217137	PRJNA834290	pacbio_hifi_ccs	biosample_matched	not_checked	True	29448	Bradyrhizobium elkanii	Bradyrhizobium elkanii	True	PacBio
+GCA_024171065.1	GCF_024171065.1	SAMN18243361	SRR35225993	PRJNA708361	pacbio_hifi_ccs	biosample_matched	not_checked	True	375	Bradyrhizobium japonicum	Bradyrhizobium japonicum	True	PacBio
+GCA_054822425.1	GCF_054822425.1	SAMN52638233	SRR35984623	PRJNA1344057	pacbio_hifi_ccs	biosample_matched	not_checked	True	2823807	Bradyrhizobium barranii subsp. barranii	Bradyrhizobium barranii subsp. barranii	True	PacBio
+GCA_054822985.1		SAMN52639372	SRR35984624	PRJNA1339497	pacbio_hifi_ccs	biosample_matched	not_checked	True	1355477	Bradyrhizobium diazoefficiens	Bradyrhizobium diazoefficiens	True	PacBio
+GCA_054822345.1	GCF_054822345.1	SAMN52637689	SRR35984692	PRJNA1339303	pacbio_hifi_ccs	biosample_matched	not_checked	True	29448	Bradyrhizobium elkanii	Bradyrhizobium elkanii	True	PacBio
+GCA_054823545.1	GCF_054823545.1	SAMN52637495	SRR35984723	PRJNA1343896	pacbio_hifi_ccs	biosample_matched	not_checked	True	43992	Bradyrhizobium liaoningense	Bradyrhizobium liaoningense	True	PacBio
+GCA_054823565.1	GCF_054823565.1	SAMN52638091	SRR35984809	PRJNA1339627	pacbio_hifi_ccs	biosample_matched	not_checked	True	43992	Bradyrhizobium liaoningense	Bradyrhizobium liaoningense	True	PacBio
+GCA_054823685.1	GCF_054823685.1	SAMN52637587	SRR35984844	PRJNA1339618	pacbio_hifi_ccs	biosample_matched	not_checked	True	2823807	Bradyrhizobium barranii subsp. barranii	Bradyrhizobium barranii subsp. barranii	True	PacBio
+GCA_054823575.1	GCF_054823575.1	SAMN52637215	SRR35984865	PRJNA1339299	pacbio_hifi_ccs	biosample_matched	not_checked	True	1355477	Bradyrhizobium diazoefficiens	Bradyrhizobium diazoefficiens	True	PacBio
+GCA_054823245.1	GCF_054823245.1	SAMN52637408	SRR35984879	PRJNA1339621	pacbio_hifi_ccs	biosample_matched	not_checked	True	43992	Bradyrhizobium liaoningense	Bradyrhizobium liaoningense	True	PacBio
+GCA_054823305.1	GCF_054823305.1	SAMN52637176	SRR35985020	PRJNA1344019	pacbio_hifi_ccs	biosample_matched	not_checked	True	43992	Bradyrhizobium liaoningense	Bradyrhizobium liaoningense	True	PacBio
+GCA_054823275.1	GCF_054823275.1	SAMN52637808	SRR35985046	PRJNA1343824	pacbio_hifi_ccs	biosample_matched	not_checked	True	43992	Bradyrhizobium liaoningense	Bradyrhizobium liaoningense	True	PacBio
+GCA_900103365.1	GCF_900103365.1	SAMN05444050	SRR4237152	PRJNA331272	pacbio_unresolved	biosample_matched	not_checked	True	1882747	Afipia sp. GAS231	Afipia sp. GAS231	True	PacBio RS
+GCA_900129675.1	GCF_900129675.1	SAMN05443247	SRR4237154	PRJNA331278	pacbio_unresolved	biosample_matched	not_checked	True	1437360	Bradyrhizobium erythrophlei	Bradyrhizobium erythrophlei	True	PacBio RS
+GCA_900141755.1	GCF_900141755.1	SAMN05444159	SRR4237159	PRJNA331279	pacbio_unresolved	biosample_matched	not_checked	True	722472	Bradyrhizobium lablabi	Bradyrhizobium lablabi	True	PacBio RS
+GCA_900099825.1	GCF_900099825.1	SAMN05444163	SRR4237166	PRJNA331281	pacbio_unresolved	biosample_matched	not_checked	True	931866	Bradyrhizobium ottawaense	Bradyrhizobium ottawaense	True	PacBio RS
+GCA_900105125.1	GCF_900105125.1	SAMN05444158	SRR4237169	PRJNA331276	pacbio_unresolved	biosample_matched	not_checked	True	255045	Bradyrhizobium canariense	Bradyrhizobium canariense	True	PacBio RS
+GCA_900105125.1	GCF_900105125.1	SAMN05444158	SRR4237170	PRJNA331276	pacbio_unresolved	biosample_matched	not_checked	True	255045	Bradyrhizobium canariense	Bradyrhizobium canariense	True	PacBio RS
+GCA_900129675.1	GCF_900129675.1	SAMN05443247	SRR4244870	PRJNA331278	pacbio_unresolved	biosample_matched	not_checked	True	1437360	Bradyrhizobium erythrophlei	Bradyrhizobium erythrophlei	True	PacBio RS
+GCA_052180175.1	GCF_052180175.1	SAMN50007636	SRR34575923	PRJNA1292882	ont	biosample_matched	not_checked	True	931866	Bradyrhizobium ottawaense	Bradyrhizobium ottawaense	True	Oxford Nanopore MinION
+GCA_052043945.1	GCF_052043945.1	SAMN49775626	SRR35011109	PRJNA1285807	ont	biosample_matched	not_checked	True	3447427	Bradyrhizobium sp. PUT101	Bradyrhizobium sp. PUT101	True	Oxford Nanopore MinION
+GCA_037076585.1	GCF_037076585.1	SAMD00661404	DRR517369	PRJDB17139	ont	biosample_matched	not_checked	True	40137	Afipia carboxidovorans	Afipia carboxidovorans	True	Nanopore MinION
+GCA_977007395.1	GCF_977007395.1	SAMEA120325678	ERR15695453	PRJEB88388	ont	biosample_matched	not_checked	True	3471940	Bradyrhizobium sp. R-92932	Bradyrhizobium liaoningense	True	MinION
+GCA_977012035.1	GCF_977012035.1	SAMEA120399600	ERR15741621	PRJEB88388	ont	biosample_matched	not_checked	True	3471985	Bradyrhizobium sp. R-93102	Bradyrhizobium cenepequi	True	MinION
+GCA_016616885.1	GCF_016616885.1	SAMN16433574	SRR12919160	PRJNA669073	ont	biosample_matched	not_checked	True	1355477	Bradyrhizobium diazoefficiens	Bradyrhizobium diazoefficiens	True	Illumina HiSeq; Oxford Nanopore MinION
+GCA_023072835.1	GCF_023072835.1	SAMN16538586	SRR12935988	PRJNA671608	ont	biosample_matched	not_checked	True	2782630	Bradyrhizobium sp. 156	Bradyrhizobium sp. 156	True	Illumina HiSeq; Oxford Nanopore MinION
+GCA_023100905.1	GCF_023100905.1	SAMN16538637	SRR12936016	PRJNA671608	ont	biosample_matched	not_checked	True	2782678	Bradyrhizobium sp. 4	Bradyrhizobium sp. 4	True	Illumina HiSeq, Oxford Nanopore MinION
+GCA_023072795.1	GCF_023072795.1	SAMN16538626	SRR12936030	PRJNA671608	ont	biosample_matched	not_checked	True	190045	Bradyrhizobium sp. 2	Bradyrhizobium sp. 2	True	Illumina HiSeq; Oxford Nanopore MinION
+GCA_015624485.1	GCF_015624485.1	SAMN16089660	SRR13067349	PRJNA662585	ont	biosample_matched	not_checked	True	83637	Bradyrhizobium genosp. L	Bradyrhizobium genosp. L	True	Illumina; Oxford Nanopore MinION
+GCA_022354745.1	GCF_022354745.1	SAMN12094990	SRR13260924	PRJNA549647	ont	biosample_matched	not_checked	True	2590772	Bradyrhizobium sp. I71	Bradyrhizobium sp. I71	True	Oxford Nanopore GridION; Illumina NextSeq
+GCA_023375135.1	GCF_023375135.1	SAMN23371896	SRR17030679	PRJNA782308	ont	biosample_matched	not_checked	True	574727	Bradyrhizobium sp. C-145	Bradyrhizobium sp. C-145	True	Illumina NextSeq; Oxford Nanopore MinION
+GCA_030272265.2	GCF_030272265.2	SAMN23371906	SRR17042240	PRJNA782308	ont	biosample_matched	not_checked	True	2898442	Bradyrhizobium sp. 62B	Bradyrhizobium sp. 62B	True	Illumina NextSeq; Oxford Nanopore MinION
+GCA_029910015.1	GCF_029910015.1	SAMN20568705	SRR21295172	PRJNA742876	ont	biosample_matched	not_checked	True	2866195	Bradyrhizobium sp. ISRA436	Bradyrhizobium sp. ISRA436	True	Oxford Nanopore MinION and Illumina HiSeq
+GCA_029030725.1	GCF_029030725.1	SAMN31712193	SRR22318474	PRJNA901395	ont	biosample_matched	not_checked	True	290	Afipia carboxydohydrogena	Afipia carboxydohydrogena	True	Oxford Nanopore GridION; Illumina MiSeq
+GCA_024199945.1	GCF_024199945.1	SAMN28667585	SRR19417282	PRJNA842432	ont	biosample_matched	not_checked	True	2949631	Bradyrhizobium sp. CCGUVB4N	Bradyrhizobium sp. CCGUVB4N	True	Illumina NovaSeq; Oxford Nanopore MinION
+GCA_024199885.1	GCF_024199885.1	SAMN28667584	SRR19417283	PRJNA842432	ont	biosample_matched	not_checked	True	2949630	Bradyrhizobium sp. CCGUVB23	Bradyrhizobium sp. CCGUVB23	True	Illumina NovaSeq; Oxford Nanopore MinION
+GCA_032918025.1	GCF_032918025.1	SAMN37684786	SRR26337671	PRJNA1023532	ont	biosample_matched	not_checked	True	3080015	Bradyrhizobium sp. BEA-2-5	Bradyrhizobium sp. BEA-2-5	True	Oxford Nanopore MinION
+GCA_032401055.1	GCF_032401055.1	SAMN37433447	SRR26465730	PRJNA1018331	ont	biosample_matched	not_checked	True	3076039	Tardiphaga sp. 709	Tardiphaga sp. 709	True	Oxford Nanopore MinION
+GCA_041200145.1	GCF_041200145.1	SAMN42719344	SRR30171230	PRJNA1137243	ont	biosample_matched	not_checked	True	3239388	Bradyrhizobium zaerense	Bradyrhizobium zaerense	True	Oxford Nanopore GridION
+GCA_052075925.1	GCF_052075925.1	SAMN42804683	SRR30397198	PRJNA1140558	ont	biosample_matched	not_checked	True	3239014	Bradyrhizobium sp. 1200_D9_N1_2	Bradyrhizobium sp. 1200_D9_N1_2	True	Illumina; Oxford Nanopore
+GCA_051411095.1	GCF_051411095.1	SAMN42804667	SRR30397293	PRJNA1140108	ont	biosample_matched	not_checked	True	3238688	Bradyrhizobium sp. 1050_B9_N1_2	Bradyrhizobium sp. 1050_B9_N1_2	True	Illumina; Oxford Nanopore
+GCA_052075935.1	GCF_052075935.1	SAMN42804666	SRR30397451	PRJNA1142925	ont	biosample_matched	not_checked	True	3240384	Bradyrhizobium sp. 215_C5_N1_1	Bradyrhizobium sp. 215_C5_N1_1	True	Illumina; Oxford Nanopore
+GCA_052075995.1	GCF_052075995.1	SAMN42804661	SRR30399048	PRJNA1143206	ont	biosample_matched	not_checked	True	3240371	Bradyrhizobium sp. 613_E4_N2_2	Bradyrhizobium sp. 613_E4_N2_2	True	Illumina; Oxford Nanopore
+GCA_052076105.1	GCF_052076105.1	SAMN42804673	SRR30426165	PRJNA1143466	ont	biosample_matched	not_checked	True	3240783	Tardiphaga sp. 768_D3_N2_1	Tardiphaga sp. 768_D3_N2_1	True	Illumina; Oxford Nanopore
+GCA_051810965.1	GCF_051810965.1	SAMN42804648	SRR30426464	PRJNA1143468	ont	biosample_matched	not_checked	True	3240785	Tardiphaga sp. 803_E3_N1_3	Tardiphaga sp. 803_E3_N1_3	True	Illumina; Oxford Nanopore
+GCA_052076085.1	GCF_052076085.1	SAMN42804650	SRR30428004	PRJNA1143477	ont	biosample_matched	not_checked	True	3240763	Tardiphaga sp. 862_B3_N1_1	Tardiphaga sp. 862_B3_N1_1	True	Illumina; Oxford Nanopore
+GCA_051811085.1	GCF_051811085.1	SAMN42804668	SRR30428006	PRJNA1143478	ont	biosample_matched	not_checked	True	3240764	Tardiphaga sp. 862_B3_N4_1	Tardiphaga sp. 862_B3_N4_1	True	Illumina; Oxford Nanopore
+GCA_051811105.1	GCF_051811105.1	SAMN42804651	SRR30428065	PRJNA1143487	ont	biosample_matched	not_checked	True	3240768	Tardiphaga sp. 866_E4_N2_3	Tardiphaga sp. 866_E4_N2_3	True	Illumina; Oxford Nanopore
+GCA_049949275.1	GCF_049949275.1	SAMN48030122	SRR33213280	PRJNA662585	ont	biosample_matched	not_checked	True	83626	Bradyrhizobium genosp. A	Bradyrhizobium genosp. A	True	Oxford Nanopore MinION
+GCA_049993385.1	GCF_049993385.1	SAMN47863706	SRR33243133	PRJNA851850	ont	biosample_matched	not_checked	True	3415674	Bradyrhizobium sp. McL0616	Bradyrhizobium sp. McL0616	True	Illumina NovaSeq 6000; Oxford Nanopore GridION
+GCA_053669755.1	GCF_053669755.1	SAMN53214520	SRR36097395	PRJNA1363664	ont	biosample_matched	not_checked	True	1325090	Bradyrhizobium guangdongense	Bradyrhizobium guangdongense	True	Illumina NovaSeq; Oxford Nanopore MinION

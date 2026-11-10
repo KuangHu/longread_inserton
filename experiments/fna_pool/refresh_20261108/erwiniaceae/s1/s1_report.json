@@ -1,0 +1,33 @@
+{
+  "manifest": "experiments/fna_pool/refresh_20261108/erwiniaceae/download_manifest.tsv",
+  "rows": 4926,
+  "status": {
+    "verified": 4925,
+    "failed": 1
+  },
+  "by_purpose": {
+    "gca_identity_check": {
+      "verified": 2420
+    },
+    "primary": {
+      "verified": 2505,
+      "failed": 1
+    }
+  },
+  "annotation": {
+    "annotation_missing": 20,
+    "present": 2485
+  },
+  "pair_checks": {
+    "identical_sequences": 2420
+  },
+  "bytes": 32778749384,
+  "files": 14824,
+  "failed": [
+    {
+      "accession": "GCA_003568535.1",
+      "attempts": 3,
+      "reason": "fna_total_equals_assembly_report"
+    }
+  ]
+}

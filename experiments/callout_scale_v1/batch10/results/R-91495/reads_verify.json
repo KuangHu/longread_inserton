@@ -1,0 +1,52 @@
+{
+  "run": {
+    "sample_id": "R-91495",
+    "run": "ERR15693035",
+    "biosample": "SAMEA120322877",
+    "assembly": "GCA_977005055.1",
+    "platform": "OXFORD_NANOPORE",
+    "instrument_model": "MinION",
+    "role": "callout_scale_v1_batch10",
+    "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR156/035/ERR15693035/ERR15693035.fastq.gz",
+    "archive_read_count": 804075,
+    "archive_base_count": 2081379301,
+    "fastq_bytes": 1686586484,
+    "fastq_md5": "8f7a825f6d76d06b895843c5eba0319c"
+  },
+  "download_started": "2026-10-23T19:53:20-0700",
+  "local_file": "$PROJ/data/reads/ERR15693035/ERR15693035.fastq.gz",
+  "bytes": 1686586484,
+  "md5": "8f7a825f6d76d06b895843c5eba0319c",
+  "sha256": "55a8a97b49662b5b3f3f64b767685e228c9bfe2d2e4140a3e7fe502e32f88879",
+  "rejected_downloads": [],
+  "spots_absent_from_fastq": 0,
+  "summary": {
+    "records": 804075,
+    "bases": 2081379301,
+    "read_unit_counts": {
+      "other_name": 804075
+    },
+    "distinct_zmws": null,
+    "distinct_sra_spots": 804075,
+    "max_records_per_spot": 1,
+    "placeholder_quality_records": 0,
+    "example_headers": [
+      "@ERR15693035.1 a3409790-9fb7-48ad-81ac-85e0efdf5082 qs:f:20.5585 st:Z:2025-07-03T08:55:23.080+00:00 RG:Z:9d80ec1b-5874-4d10-af2d-a514d2335587_dna_r10.4.1_e8.2_400bps_sup@v5.0.0",
+      "@ERR15693035.2 252e1e97-612f-4df6-9057-555bc47b8475 qs:f:23.8757 st:Z:2025-07-03T08:57:28.072+00:00 RG:Z:9d80ec1b-5874-4d10-af2d-a514d2335587_dna_r10.4.1_e8.2_400bps_sup@v5.0.0",
+      "@ERR15693035.3 9cf6e03d-d73b-419e-9d11-765aa8f3f3f1 qs:f:17.082 st:Z:2025-07-03T08:58:19.937+00:00 RG:Z:9d80ec1b-5874-4d10-af2d-a514d2335587_dna_r10.4.1_e8.2_400bps_sup@v5.0.0",
+      "@ERR15693035.4 92dcac3e-945b-4052-8ae6-d08f19af5444 qs:f:21.5504 st:Z:2025-07-03T08:59:36.069+00:00 RG:Z:9d80ec1b-5874-4d10-af2d-a514d2335587_dna_r10.4.1_e8.2_400bps_sup@v5.0.0"
+    ],
+    "mean_length": 2588.5,
+    "median_length": 496,
+    "max_length": 828930,
+    "n50": 5902,
+    "molecule_grouping": "one_record_per_molecule"
+  },
+  "checks": {
+    "bytes_match": true,
+    "md5_match": true,
+    "spot_count_match": true,
+    "base_count_match": true
+  },
+  "status": "verified"
+}

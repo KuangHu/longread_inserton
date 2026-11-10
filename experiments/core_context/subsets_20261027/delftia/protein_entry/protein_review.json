@@ -1,0 +1,42 @@
+{
+  "subset": "delftia",
+  "product_hint_by_scope_structure": {
+    "all:single_gene:hypothetical": 13,
+    "all:single_gene:intron_rt": 1,
+    "all:single_gene:other": 60,
+    "all:single_gene:translation_or_ribosomal": 1,
+    "all:single_gene:transposase_or_IS": 10,
+    "all:two_gene:hypothetical": 8,
+    "all:two_gene:integrase_recombinase_resolvase": 2,
+    "all:two_gene:other": 18,
+    "all:two_gene:phage_like": 1,
+    "all:two_gene:transposase_or_IS": 1,
+    "target_lt2500:single_gene:hypothetical": 13,
+    "target_lt2500:single_gene:intron_rt": 1,
+    "target_lt2500:single_gene:other": 54,
+    "target_lt2500:single_gene:translation_or_ribosomal": 1,
+    "target_lt2500:single_gene:transposase_or_IS": 10,
+    "target_lt2500:two_gene:hypothetical": 8,
+    "target_lt2500:two_gene:integrase_recombinase_resolvase": 2,
+    "target_lt2500:two_gene:other": 15,
+    "target_lt2500:two_gene:phage_like": 1,
+    "target_lt2500:two_gene:transposase_or_IS": 1
+  },
+  "single_gene_graph_overlap": {
+    "all:any_occurrence_in_graph_diff_group:non_IS_hint": 32,
+    "all:any_occurrence_in_graph_diff_group:IS_hint": 9,
+    "all:none_in_graph_diff_group:non_IS_hint": 43,
+    "all:none_in_graph_diff_group:IS_hint": 1,
+    "target_lt2500:any_occurrence_in_graph_diff_group:non_IS_hint": 31,
+    "target_lt2500:any_occurrence_in_graph_diff_group:IS_hint": 9,
+    "target_lt2500:none_in_graph_diff_group:non_IS_hint": 38,
+    "target_lt2500:none_in_graph_diff_group:IS_hint": 1
+  },
+  "case_rule": "are fixed by rule, in the\ntarget_lt2500 scope: single-gene cores with >= 1 different_context_candidate pair, ranked by context classes linked by those pairs, then\nsamples, then core key; the top three are drawn with one occurrence per context class (up to four), plus the\nsimilar-context core with the most samples as a reference. Neighbour genes are coloured by homology group.",
+  "cases": [
+    "different-context candidate PF_3070024975f6: IS481 family transposase (21 occ, 5 samples, 13 classes)",
+    "different-context candidate PF_4b70bb8e2b9d: IS5 family transposase (30 occ, 4 samples, 18 classes)",
+    "different-context candidate PF_ad056eba1256: IS5 family transposase (15 occ, 1 samples, 14 classes)",
+    "similar-context reference PF_002440e45d00: branched-chain amino acid transaminase"
+  ]
+}

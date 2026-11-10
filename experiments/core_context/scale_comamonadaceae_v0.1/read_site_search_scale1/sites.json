@@ -1,0 +1,116 @@
+{
+ "version": "read_site_search_v0.3.2",
+ "main": {
+  "flank": 1000,
+  "molecules": 3
+ },
+ "sites_by_category": {
+  "known": 3397,
+  "in_assembly_not_in_catalog": 809,
+  "not_in_assembly_candidate": 8,
+  "structural_anomaly": 66,
+  "unresolved": 184
+ },
+ "sites_below_molecule_threshold": {
+  "in_assembly_not_in_catalog": 479,
+  "structural_anomaly": 953,
+  "known": 173,
+  "unresolved": 142,
+  "not_in_assembly_candidate": 49
+ },
+ "flags_of_counted_sites": {
+  "cores_disagree": 78,
+  "boundary_unknown": 24,
+  "size_ge_2500": 10
+ },
+ "sites_with_several_cores": 511,
+ "positions_merged_into_sites": 9618,
+ "not_in_assembly_candidates": {
+  "sites": 8,
+  "positions": 9,
+  "cores": 8,
+  "samples": 4,
+  "by_class": {
+   "not_in_assembly:core_absent": 8,
+   "not_in_assembly:other_sequence": 1
+  }
+ },
+ "negative_control_sites_per_gene": {
+  "genes_by_site_count": {
+   "0": 1,
+   "1": 265,
+   "2": 7
+  },
+  "genes_with_several_sites": [
+   {
+    "sample": "SAMN15853741",
+    "gene": "NEG_50S_ribosomal_protein_L2",
+    "kind": "one_locus_junction_differs_gt_TOL",
+    "sites": [
+     "NZ_CP060413.1:185291-186116",
+     "NZ_CP060413.1:185295-186013"
+    ]
+   },
+   {
+    "sample": "SAMN23078433",
+    "gene": "NEG_DNA_polymerase_III_subunit_beta",
+    "kind": "one_locus_junction_differs_gt_TOL",
+    "sites": [
+     "CP087963.1:2938488-2939551",
+     "CP087963.1:2938449-2939461"
+    ]
+   },
+   {
+    "sample": "SAMN23078436",
+    "gene": "NEG_50S_ribosomal_protein_L2",
+    "kind": "one_locus_junction_differs_gt_TOL",
+    "sites": [
+     "CP087966.1:2362381-2363206",
+     "CP087966.1:2362382-2363132"
+    ]
+   },
+   {
+    "sample": "SAMN23078436",
+    "gene": "NEG_DNA_polymerase_III_subunit_beta",
+    "kind": "one_locus_junction_differs_gt_TOL",
+    "sites": [
+     "CP087966.1:2738386-2739455",
+     "CP087966.1:2738476-2739490"
+    ]
+   },
+   {
+    "sample": "SAMN48330266",
+    "gene": "NEG_DNA_gyrase_subunit_B",
+    "kind": "one_locus_junction_differs_gt_TOL",
+    "sites": [
+     "NZ_CM173244.1:2463667-2466185",
+     "NZ_CM173244.1:2463667-2466104"
+    ]
+   },
+   {
+    "sample": "SAMN51281032",
+    "gene": "NEG_DNA-directed_RNA_polymerase_subunit_beta",
+    "kind": "separate_loci",
+    "sites": [
+     "NZ_CM191381.1:668496-672621",
+     "NZ_JBRAYR010000004.1:1101644-1105365"
+    ]
+   },
+   {
+    "sample": "SAMN51281032",
+    "gene": "NEG_DNA-directed_RNA_polymerase_subunit_betap",
+    "kind": "separate_loci",
+    "sites": [
+     "NZ_JBRAYR010000004.1:1105654-1109670",
+     "NZ_CM191381.1:672642-676872"
+    ]
+   }
+  ]
+ },
+ "unplaceable_contexts_ge_N": {
+  "ambiguous_placement (repeat)": 358,
+  "no_anchor_or_unplaced": 90,
+  "inner_end_unaligned (alignment truncated)": 6
+ },
+ "one_sided_observation_groups": 3801
+}

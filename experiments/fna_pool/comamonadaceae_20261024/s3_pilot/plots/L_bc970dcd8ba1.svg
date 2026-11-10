@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="300" font-family="sans-serif">
+<rect width="100%" height="100%" fill="white"/>
+<text x="4" y="16" font-size="12">L_bc970dcd8ba1  SAMEA115832813  core 93 bp  replacement  support not_anchored  boundary exact  tandem False  core copies carrier/partner 1/0</text>
+<line x1="552.4" y1="30" x2="552.4" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<line x1="567.6" y1="30" x2="567.6" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<text x="4" y="64" font-size="11" font-weight="bold">SAMEA115832813 NZ_OZ248562.1 (carrier)</text>
+<line x1="60" y1="100" x2="1060" y2="100" stroke="#888"/>
+<rect x="388.2" y="132" width="164.1" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="470.3" y="152" font-size="9" text-anchor="middle">U</text>
+<rect x="552.4" y="132" width="15.3" height="8" fill="#e76f51" opacity="0.55"/>
+<text x="560.0" y="152" font-size="9" text-anchor="middle">core 93</text>
+<rect x="567.6" y="132" width="164.1" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="649.7" y="152" font-size="9" text-anchor="middle">D</text>
+<polygon points="60.0,109 66.0,103 550.2,103 550.2,115 66.0,115" fill="#3b6fb6"><title>DNA-directed RNA polymerase subunit beta 1707202-1711450 -</title></polygon>
+<text x="60.0" y="125" font-size="8" fill="#333">DNA-directed RNA polymerase subunit beta</text>
+<polygon points="563.5,109 569.5,103 1060.0,103 1060.0,115 569.5,115" fill="#3b6fb6"><title>DNA-directed RNA polymerase subunit beta 1711531-1715644 -</title></polygon>
+<text x="563.5" y="125" font-size="8" fill="#333">DNA-directed RNA polymerase subunit beta</text>
+<text x="60" y="166" font-size="9" fill="#666">NZ_OZ248562.1:1708463-1714556  core 1711463-1711556</text>
+<text x="4" y="184" font-size="11" font-weight="bold">SAMD00549751 NZ_AP027056.1 (partner, + strand, replacement, pair P00063)</text>
+<line x1="60" y1="220" x2="1060" y2="220" stroke="#888"/>
+<rect x="388.2" y="252" width="164.1" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="470.3" y="272" font-size="9" text-anchor="middle">U'</text>
+<rect x="567.6" y="252" width="164.1" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="649.7" y="272" font-size="9" text-anchor="middle">D'</text>
+<rect x="552.4" y="252" width="15.3" height="8" fill="#9b5de5" opacity="0.55"/>
+<text x="560.0" y="272" font-size="9" text-anchor="middle">other side 39</text>
+<polygon points="60.0,229 66.0,223 550.1,223 550.1,235 66.0,235" fill="#3b6fb6"><title>DNA-directed RNA polymerase subunit beta 2426859-2431086 -</title></polygon>
+<text x="60.0" y="245" font-size="8" fill="#333">DNA-directed RNA polymerase subunit beta</text>
+<polygon points="557.8,229 563.8,223 1060.0,223 1060.0,235 563.8,235" fill="#3b6fb6"><title>DNA-directed RNA polymerase subunit beta 2431114-2435227 -</title></polygon>
+<text x="557.8" y="245" font-size="8" fill="#333">DNA-directed RNA polymerase subunit beta</text>
+<text x="60" y="286" font-size="9" fill="#666">NZ_AP027056.1 site 2431100  other-side gap 39 bp  this call's core 1711463-1711556</text>
+</svg>

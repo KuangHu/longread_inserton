@@ -1,0 +1,13 @@
+pair_id	pilot_reason	ani	same_bioproject	organism_a	organism_b	calls	loci	anchored	anchored_lt2500	anchored_tandem	replacement	unresolved	one_flank
+P00595	distance_tier_ani_99.99_100	100.0	False	Variovorax sp. YR752	Variovorax sp. YR747	2	1	0	0	0	0	1	0
+P00351	distance_tier_ani_99_99.99	99.47	False	Variovorax boronicumulans	Variovorax sp. YR282	127	65	21	15	0	15	29	12
+P00290	distance_tier_ani_97_99	97.69	False	Delftia acidovorans	Delftia acidovorans	920	541	157	113	5	115	269	9
+P00034	distance_tier_ani_95_97	95.49	False	Delftia lacustris	Delftia acidovorans	1484	761	140	111	0	151	470	10
+P00111	distance_tier_ani_90_95	90.64	False	Variovorax sp. V213	Variovorax sp. CF247	1691	1057	129	105	0	131	797	107
+P00384	distance_tier_ani_lt90	88.68	False	Variovorax sp. AC189	Variovorax sp. OK614	3472	1905	53	40	0	201	1651	127
+P00063	distance_tier_no_skani_output_same_genus	no_skani	False	Limnohabitans sp. TEGF004	Limnohabitans rimovensis (SeqCode)	62	34	0	0	0	1	33	102
+P00136	clone_partner	100.0	True	Limnohabitans sp. INBF004	Limnohabitans sp. TEGF002	6	3	3	1	0	0	0	0
+P00033	species_neighbour	98.88	False	Delftia lacustris	Delftia tsuruhatensis	476	250	74	57	1	70	106	10
+P00022	nearest_other_species	93.28	False	Comamonas thiooxydans	Comamonas testosteroni	1117	569	88	54	2	121	360	17
+P00007	audit_multi_project_all_vs_all	95.53	False	Comamonas thiooxydans	Comamonas thiooxydans	841	437	74	48	1	113	250	37
+P01143	audit_single_project_all_vs_all	100.0	True	Variovorax sp. OK222	Variovorax sp. OK231	0	0	0	0	0	0	0	0

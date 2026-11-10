@@ -1,0 +1,205 @@
+{
+ "version": "ucd_readcheck_v0.1",
+ "caller": "s3_readcheck_v0.3",
+ "evidence_added": "long_read_position_check",
+ "evidence_source_of_pairs": "assembly_only",
+ "production_ready": false,
+ "note": "reads are mostly the ones the assembly was built from: a self-consistency check of the local U-core-D assembly structure under the current alignment, locus-competition and counting rules; not a proof that every misassembly is excluded, not exact biological insertion boundaries, not mobility or independent insertion events",
+ "units": {
+  "pairs": 36083,
+  "occurrences": 12812,
+  "intervals": 21486,
+  "assemblies": 231,
+  "occurrences_with_multiple_intervals": 2993,
+  "max_intervals_per_occurrence": 26,
+  "intervals_with_multiple_occurrences": 387
+ },
+ "complete": true,
+ "completeness": {
+  "complete": true,
+  "assemblies_expected": 231,
+  "assemblies_complete": 231,
+  "runs_expected": 255,
+  "runs_checked": 255,
+  "intervals_expected": 21486,
+  "intervals_with_result": 21486,
+  "rotated_intervals_expected": 13,
+  "rotated_intervals_with_result": 13,
+  "rotated_runs_expected": 3,
+  "rotated_runs_checked": 3
+ },
+ "interval_class": {
+  "supported": 21092,
+  "locus_ambiguous": 82,
+  "insufficient_coverage": 310,
+  "conflict": 2
+ },
+ "rotated_intervals": {
+  "complete_in_header|supported": 10,
+  "not_complete_in_header|supported": 3
+ },
+ "interval_verdict": {
+  "consistent": 21092,
+  "insufficient": 392,
+  "mixed": 1,
+  "contradicted": 1
+ },
+ "occurrence_class": {
+  "all_intervals_supported": 12510,
+  "no_interval_supported": 300,
+  "conflict_at_an_interval": 2
+ },
+ "occurrence_class_by_role": {
+  "candidate_and_control": {
+   "all_intervals_supported": 79
+  },
+  "candidate_only": {
+   "all_intervals_supported": 8774,
+   "no_interval_supported": 184
+  },
+  "control_only": {
+   "all_intervals_supported": 3657,
+   "no_interval_supported": 116,
+   "conflict_at_an_interval": 2
+  }
+ },
+ "support_by_count_mode": {
+  "assumed_molecules": {
+   "intervals": 1127,
+   "min": 10,
+   "median": 112,
+   "max": 287,
+   "assemblies": 12,
+   "intervals_with_A_matched": 13
+  },
+  "molecules": {
+   "intervals": 16573,
+   "min": 0,
+   "median": 50,
+   "max": 4786,
+   "assemblies": 181,
+   "intervals_with_A_matched": 173
+  },
+  "read_records": {
+   "intervals": 3786,
+   "min": 0,
+   "median": 88,
+   "max": 2826,
+   "assemblies": 38,
+   "intervals_with_A_matched": 7
+  }
+ },
+ "pair_class": {
+  "A|single_gene|candidate": {
+   "both_positions_supported": 3765,
+   "one_position_supported": 22,
+   "no_position_supported": 19
+  },
+  "A|single_gene|conserved_paralog_control": {
+   "both_positions_supported": 187,
+   "one_position_supported": 1,
+   "no_position_supported": 3
+  },
+  "A|two_gene|candidate": {
+   "both_positions_supported": 225,
+   "no_position_supported": 2
+  },
+  "B|single_gene|candidate": {
+   "both_positions_supported": 5000,
+   "one_position_supported": 97
+  },
+  "B|single_gene|conserved_paralog_control": {
+   "both_positions_supported": 3
+  },
+  "B|two_gene|candidate": {
+   "both_positions_supported": 477,
+   "one_position_supported": 25
+  },
+  "B|two_gene|conserved_paralog_control": {
+   "both_positions_supported": 3
+  },
+  "C|single_gene|candidate": {
+   "single_side_supported": 21483,
+   "single_side_not_supported": 280
+  },
+  "C|single_gene|conserved_paralog_control": {
+   "single_side_supported": 19,
+   "single_side_not_supported": 1
+  },
+  "C|two_gene|candidate": {
+   "single_side_supported": 2165,
+   "single_side_not_supported": 34
+  },
+  "C|two_gene|conserved_paralog_control": {
+   "single_side_supported": 4
+  },
+  "control|single_gene|repeated_context_control": {
+   "both_positions_supported": 1549,
+   "one_position_supported": 83,
+   "no_position_supported": 19
+  },
+  "control|two_gene|repeated_context_control": {
+   "both_positions_supported": 559,
+   "one_position_supported": 52,
+   "no_position_supported": 5,
+   "conflict_at_a_position": 1
+  }
+ },
+ "distinct_cores": {
+  "A|single_gene": {
+   "both_positions_supported": 514,
+   "no_position_supported": 19,
+   "one_position_supported": 8
+  },
+  "A|two_gene": {
+   "both_positions_supported": 91,
+   "no_position_supported": 2
+  },
+  "B|single_gene": {
+   "both_positions_supported": 513,
+   "one_position_supported": 35
+  },
+  "B|two_gene": {
+   "both_positions_supported": 127,
+   "one_position_supported": 10
+  },
+  "C|single_gene": {
+   "single_side_not_supported": 105,
+   "single_side_supported": 1820
+  },
+  "C|two_gene": {
+   "single_side_not_supported": 15,
+   "single_side_supported": 418
+  }
+ },
+ "distinct_cores_candidates": {
+  "A|single_gene": {
+   "both_positions_supported": 508,
+   "no_position_supported": 17,
+   "one_position_supported": 7
+  },
+  "A|two_gene": {
+   "both_positions_supported": 91,
+   "no_position_supported": 2
+  },
+  "B|single_gene": {
+   "both_positions_supported": 511,
+   "one_position_supported": 35
+  },
+  "B|two_gene": {
+   "both_positions_supported": 126,
+   "one_position_supported": 10
+  },
+  "C|single_gene": {
+   "single_side_not_supported": 104,
+   "single_side_supported": 1815
+  },
+  "C|two_gene": {
+   "single_side_not_supported": 15,
+   "single_side_supported": 416
+  }
+ },
+ "runs": {
+  "checked": 258
+ }
+}

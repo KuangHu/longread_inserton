@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="420" font-family="sans-serif">
+<rect width="100%" height="100%" fill="white"/>
+<text x="4" y="16" font-size="12">L_af2cbdee8587  SAMN51281027  core 1642 bp  two_flank_anchored  support all_calls_anchored  boundary direction_dependent  tandem False  core copies carrier/partner 1/0</text>
+<line x1="452.6" y1="30" x2="452.6" y2="412" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<line x1="667.4" y1="30" x2="667.4" y2="412" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<text x="4" y="64" font-size="11" font-weight="bold">SAMN51281027 NZ_CM191384.1 (carrier)</text>
+<line x1="60" y1="100" x2="1060" y2="100" stroke="#888"/>
+<rect x="321.7" y="132" width="130.9" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="387.1" y="152" font-size="9" text-anchor="middle">U</text>
+<rect x="452.6" y="132" width="214.9" height="8" fill="#e76f51" opacity="0.55"/>
+<text x="560.0" y="152" font-size="9" text-anchor="middle">core 1642</text>
+<rect x="667.4" y="132" width="130.9" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="732.9" y="152" font-size="9" text-anchor="middle">D</text>
+<polygon points="60.0,85 78.1,85 84.1,91 78.1,97 60.0,97" fill="#3b6fb6"><title>ferrous iron transporter B 2609764-2611660 +</title></polygon>
+<polygon points="87.7,85 119.4,85 125.4,91 119.4,97 87.7,97" fill="#3b6fb6"><title>DUF6587 family protein 2611688-2611976 +</title></polygon>
+<text x="87.7" y="81" font-size="8" fill="#333">DUF6587 </text>
+<polygon points="126.1,85 275.1,85 281.1,91 275.1,97 126.1,97" fill="#3b6fb6"><title>FAD-dependent monooxygenase 2611981-2613166 +</title></polygon>
+<polygon points="284.9,109 290.9,103 448.6,103 448.6,115 290.9,115" fill="#3b6fb6"><title>SMI1/KNR4 family protein 2613195-2614446 -</title></polygon>
+<text x="284.9" y="125" font-size="8" fill="#333">SMI1/KNR4 family protein</text>
+<polygon points="457.3,109 463.3,103 638.6,103 638.6,115 463.3,115" fill="#3b6fb6"><title>reverse transcriptase family protein 2614512-2615898 -</title></polygon>
+<text x="457.3" y="125" font-size="8" fill="#333">reverse transcriptase family protein</text>
+<polygon points="667.4,109 673.4,103 777.0,103 777.0,115 673.4,115" fill="#3b6fb6"><title>tryptophan 2,3-dioxygenase 2616118-2616955 -</title></polygon>
+<text x="667.4" y="125" font-size="8" fill="#333">tryptophan 2,3-dioxygen</text>
+<polygon points="779.2,109 785.2,103 842.8,103 842.8,115 785.2,115" fill="#3b6fb6"><title>hypothetical protein 2616972-2617458 -</title></polygon>
+<polygon points="844.5,109 850.5,103 1012.9,103 1012.9,115 850.5,115" fill="#3b6fb6"><title>kynureninase 2617471-2618758 -</title></polygon>
+<text x="844.5" y="125" font-size="8" fill="#333">kynureninase</text>
+<polygon points="1013.4,109 1019.4,103 1060.0,103 1060.0,115 1019.4,115" fill="#3b6fb6"><title>arylformamidase 2618762-2619428 -</title></polygon>
+<text x="1013.4" y="125" font-size="8" fill="#333">arylformam</text>
+<text x="60" y="166" font-size="9" fill="#666">NZ_CM191384.1:2611476-2619118  core 2614476-2616118</text>
+<text x="4" y="184" font-size="11" font-weight="bold">SAMD00623152 NZ_AP028664.1 (partner, - strand, two_flank_anchored, pair P00111)</text>
+<line x1="60" y1="220" x2="1060" y2="220" stroke="#888"/>
+<rect x="321.7" y="252" width="130.9" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="387.1" y="272" font-size="9" text-anchor="middle">U'</text>
+<rect x="667.4" y="252" width="130.9" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="732.9" y="272" font-size="9" text-anchor="middle">D'</text>
+<rect x="452.6" y="252" width="214.9" height="8" fill="#9b5de5" opacity="0.55"/>
+<text x="560.0" y="272" font-size="9" text-anchor="middle">other side 27</text>
+<polygon points="1014.2,229 1020.2,223 1060.0,223 1060.0,235 1020.2,235" fill="#3b6fb6"><title>arylformamidase 3716404-3717055 -</title></polygon>
+<text x="1014.2" y="245" font-size="8" fill="#333">arylforma</text>
+<polygon points="844.3,229 850.3,223 1012.8,223 1012.8,235 850.3,235" fill="#3b6fb6"><title>kynureninase 3717066-3718353 -</title></polygon>
+<polygon points="779.1,229 785.1,223 842.6,223 842.6,235 785.1,235" fill="#3b6fb6"><title>hypothetical protein 3718366-3718852 -</title></polygon>
+<polygon points="667.4,229 673.4,223 777.0,223 777.0,235 673.4,235" fill="#3b6fb6"><title>tryptophan 2,3-dioxygenase 3718868-3719705 -</title></polygon>
+<polygon points="284.9,229 290.9,223 448.6,223 448.6,235 290.9,235" fill="#3b6fb6"><title>SMI1/KNR4 family protein 3719762-3721013 -</title></polygon>
+<polygon points="127.3,205 276.3,205 282.3,211 276.3,217 127.3,217" fill="#3b6fb6"><title>FAD-dependent monooxygenase 3721033-3722218 +</title></polygon>
+<text x="127.3" y="201" font-size="8" fill="#333">FAD-dependent monooxygenase</text>
+<polygon points="88.9,205 120.6,205 126.6,211 120.6,217 88.9,217" fill="#3b6fb6"><title>DUF6587 family protein 3722223-3722511 +</title></polygon>
+<polygon points="60.0,205 74.7,205 80.7,211 74.7,217 60.0,217" fill="#3b6fb6"><title>ferrous iron transporter B 3722574-3724470 +</title></polygon>
+<text x="60" y="286" font-size="9" fill="#666">NZ_AP028664.1 site 3719705  other-side gap 27 bp  this call's core 2614476-2616118</text>
+<text x="4" y="304" font-size="11" font-weight="bold">SAMD00623152 NZ_AP028664.1 (partner, - strand, two_flank_anchored, pair P00111)</text>
+<line x1="60" y1="340" x2="1060" y2="340" stroke="#888"/>
+<rect x="324.7" y="372" width="130.9" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="390.1" y="392" font-size="9" text-anchor="middle">U'</text>
+<rect x="668.3" y="372" width="130.9" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="733.8" y="392" font-size="9" text-anchor="middle">D'</text>
+<rect x="455.6" y="372" width="212.8" height="8" fill="#9b5de5" opacity="0.55"/>
+<text x="562.0" y="392" font-size="9" text-anchor="middle">other side 11</text>
+<polygon points="1014.2,349 1020.2,343 1060.0,343 1060.0,355 1020.2,355" fill="#3b6fb6"><title>arylformamidase 3716404-3717055 -</title></polygon>
+<text x="1014.2" y="365" font-size="8" fill="#333">arylforma</text>
+<polygon points="844.3,349 850.3,343 1012.8,343 1012.8,355 850.3,355" fill="#3b6fb6"><title>kynureninase 3717066-3718353 -</title></polygon>
+<polygon points="779.1,349 785.1,343 842.6,343 842.6,355 785.1,355" fill="#3b6fb6"><title>hypothetical protein 3718366-3718852 -</title></polygon>
+<polygon points="552.3,349 558.3,343 777.0,343 777.0,355 558.3,355" fill="#3b6fb6"><title>tryptophan 2,3-dioxygenase 3718868-3719705 -</title></polygon>
+<polygon points="284.9,349 290.9,343 448.6,343 448.6,355 290.9,355" fill="#3b6fb6"><title>SMI1/KNR4 family protein 3719762-3721013 -</title></polygon>
+<polygon points="127.3,325 276.3,325 282.3,331 276.3,337 127.3,337" fill="#3b6fb6"><title>FAD-dependent monooxygenase 3721033-3722218 +</title></polygon>
+<text x="127.3" y="321" font-size="8" fill="#333">FAD-dependent monooxygenase</text>
+<polygon points="88.9,325 120.6,325 126.6,331 120.6,337 88.9,337" fill="#3b6fb6"><title>DUF6587 family protein 3722223-3722511 +</title></polygon>
+<polygon points="60.0,325 74.7,325 80.7,331 74.7,337 60.0,337" fill="#3b6fb6"><title>ferrous iron transporter B 3722574-3724470 +</title></polygon>
+<text x="60" y="406" font-size="9" fill="#666">NZ_AP028664.1 site 3719698  other-side gap 11 bp  this call's core 2614499-2616125</text>
+</svg>

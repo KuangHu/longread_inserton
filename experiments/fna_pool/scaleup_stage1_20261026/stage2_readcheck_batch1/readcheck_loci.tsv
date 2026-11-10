@@ -1,0 +1,205 @@
+locus_id	carrier	core_len	locus_support	boundary_consistency	difference_class	tests	test_verdicts	evidence_level	carrier_count_unit	partner_count_units
+L_fc31275de21a	SAMD00076718	2135	all_calls_anchored	exact	presence_absence	2	"{""carrier_only_consistent"": 2}"	E1c	read_records	
+L_dd8872f8bba9	SAMD00260131	1197	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	molecules	
+L_f76e9d7696e6	SAMEA120308855	906	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	molecules	molecules
+L_2095388bc875	SAMD00407106	636	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	molecules	molecules
+L_c1e278666d6d	SAMN28084390	847	all_calls_anchored	exact	presence_absence	9	"{""carrier_only_consistent"": 8, ""both_samples_consistent"": 1}"	E2s	molecules	molecules
+L_78a580db51f1	SAMN28084394	874	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	molecules	
+L_20c02885bee8	SAMD00554136	1480	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	molecules	molecules
+L_15bce06f7c7b	SAMD00554136	797	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	molecules	molecules
+L_1dd061ff44c5	SAMD00554136	1388	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	molecules	molecules
+L_26287ef66667	SAMD00554136	721	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	molecules	molecules
+L_12f20d9f751d	SAMD00571185	1319	all_calls_anchored	exact	presence_absence	5	"{""carrier_only_consistent"": 5}"	E1c	molecules	
+L_37cdfe69bd12	SAMN30525383	1451	all_calls_anchored	exact	presence_absence	3	"{""both_samples_consistent"": 1, ""carrier_only_consistent"": 2}"	E2s	molecules	molecules
+L_d9240fda48f1	SAMN30525383	1596	all_calls_anchored	exact	presence_absence	2	"{""both_samples_consistent"": 2}"	E2	molecules	molecules
+L_f6520a05f0da	SAMD00571185	1133	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	molecules	
+L_5b8d4186daac	SAMEA115676913	922	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	molecules	
+L_2caa154c5ab3	SAMN51281034	1284	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	molecules	
+L_0a12d6b4bbf7	SAMN08775333	1034	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	read_records	
+L_51a72cced946	SAMN08775333	1192	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	read_records	
+L_2d4cff771639	SAMN08775333	872	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	read_records	
+L_1803a81b6dd6	SAMN08775340	1192	all_calls_anchored	exact	presence_absence	2	"{""carrier_only_consistent"": 2}"	E1c	read_records	
+L_c819f61ab96f	SAMN08775340	1192	all_calls_anchored	exact	presence_absence	2	"{""carrier_only_consistent"": 2}"	E1c	read_records	
+L_2d65992e7d72	SAMN08775346	1192	all_calls_anchored	exact	presence_absence	2	"{""carrier_only_consistent"": 2}"	E1c	read_records	
+L_6d359bab178f	SAMEA115676870	1168	all_calls_anchored	exact	presence_absence	3	"{""carrier_only_consistent"": 3}"	E1c	molecules	molecules
+L_e5e9ccb18b06	SAMEA115676863	1760	all_calls_anchored	exact	presence_absence	3	"{""both_samples_consistent"": 1, ""carrier_only_consistent"": 2}"	E2s	molecules	molecules
+L_9fcdfee65038	SAMEA115676863	602	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	molecules	molecules
+L_1a68c9a7b7dd	SAMEA115676839	1969	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	molecules	molecules
+L_5200f7ff1bc6	SAMEA115676864	602	all_calls_anchored	exact	presence_absence	1	"{""partner_only_consistent"": 1}"	E1p	molecules	molecules
+L_8462191a567c	SAMEA115676931	2012	all_calls_anchored	exact	presence_absence	3	"{""both_samples_consistent"": 2, ""carrier_only_consistent"": 1}"	E2s	molecules	molecules
+L_e73f53019983	SAMEA115676931	1589	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	molecules	molecules
+L_13ba77490116	SAMEA115676931	1443	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	molecules	molecules
+L_629b6a1ca1df	SAMEA115676839	937	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	molecules	molecules
+L_19f25fb878dd	SAMEA115676967	2253	all_calls_anchored	exact	presence_absence	3	"{""both_samples_consistent"": 2, ""carrier_only_consistent"": 1}"	E2s	molecules	molecules
+L_0e06138ab9b7	SAMEA115676839	565	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	molecules	molecules
+L_5b7b18959b71	SAMEA115676967	929	all_calls_anchored	exact	presence_absence	3	"{""both_samples_consistent"": 2, ""carrier_only_consistent"": 1}"	E2s	molecules	molecules
+L_6122bca56049	SAMEA115676967	602	all_calls_anchored	exact	presence_absence	2	"{""both_samples_consistent"": 2}"	E2	molecules	molecules
+L_bded63e97ba0	SAMEA115676967	1103	all_calls_anchored	exact	presence_absence	2	"{""both_samples_consistent"": 2}"	E2	molecules	molecules
+L_935ecf8a1fbd	SAMEA115676839	1651	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	molecules	
+L_f32ec83a0ec4	SAMEA115676839	1080	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	molecules	
+L_364f52e4194c	SAMEA115676933	1690	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	molecules	molecules
+L_b1eedc1954e8	SAMEA115676939	1096	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	molecules	molecules
+L_45e0e6bc88e1	SAMEA115676843	1424	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	molecules	molecules
+L_5e257100876d	SAMEA115676956	1096	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	molecules	molecules
+L_2224c9a205fb	SAMEA115676855	1356	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	molecules	molecules
+L_136c6f0de5e5	SAMEA115676855	1424	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	molecules	molecules
+L_05ea6982ee63	SAMEA115676855	953	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	molecules	
+L_0367b6cf032a	SAMEA115676974	1096	all_calls_anchored	exact	presence_absence	4	"{""both_samples_consistent"": 4}"	E2	molecules	molecules
+L_b0460bf1ad92	SAMEA115676862	1424	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	molecules	molecules
+L_90df1daf6923	SAMEA115676862	1096	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	molecules	
+L_69cc79279671	SAMEA115676863	1505	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	molecules	molecules
+L_1be899edb430	SAMEA115676863	1518	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	molecules	
+L_a639b055c820	SAMEA115676863	1645	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	molecules	
+L_ea6520c433e1	SAMEA115676863	1078	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	molecules	
+L_8cfc807f1281	SAMEA115676864	1518	all_calls_anchored	exact	presence_absence	1	"{""not_tested"": 1}"	E0	molecules	
+L_297ed8416122	SAMEA115676864	1078	all_calls_anchored	exact	presence_absence	1	"{""not_tested"": 1}"	E0	molecules	
+L_e113cfe9deef	SAMEA115676870	719	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	molecules	
+L_0aed0393644b	SAMEA115676913	1424	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	molecules	
+L_fead382fb0c3	SAMEA115676931	852	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	molecules	molecules
+L_9df8cdee9dfb	SAMEA115676931	565	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	molecules	molecules
+L_78b8d46fc680	SAMEA115676931	1651	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	molecules	
+L_672d9d038072	SAMEA115676931	1080	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	molecules	
+L_381fe456be18	SAMEA115676933	1424	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	molecules	
+L_80e671f0fa2a	SAMEA115676939	1424	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	molecules	molecules
+L_83eb6e9c624a	SAMEA115676956	1424	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	molecules	molecules
+L_f63b5e162eeb	SAMEA115676958	1672	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	molecules	molecules
+L_6fa6a4fd8bdf	SAMEA115676958	1424	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	molecules	molecules
+L_aba3fb46071a	SAMEA115676967	1651	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	molecules	
+L_6629ccaf3c82	SAMEA115676967	1081	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	molecules	
+L_00caf4ce10ff	SAMEA115676974	1424	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	molecules	molecules
+L_554fa6325722	SAMEA120301455	720	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	molecules	molecules
+L_9fd8b1762a66	SAMEA120308851	1601	all_calls_anchored	exact	presence_absence	2	"{""both_samples_consistent"": 1, ""carrier_only_consistent"": 1}"	E2s	molecules	molecules
+L_d36ec8a1a644	SAMEA120308851	1036	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	molecules	
+L_c998bd6f6a3f	SAMEA120308854	1601	all_calls_anchored	exact	presence_absence	2	"{""both_samples_consistent"": 1, ""carrier_only_consistent"": 1}"	E2s	molecules	molecules
+L_e97a3b24991d	SAMEA120308854	990	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	molecules	
+L_65ad944a175b	SAMEA120308854	1036	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	molecules	
+L_ee4db9335ec1	SAMEA120308864	720	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	molecules	molecules
+L_c97a738553e0	SAMEA120309484	876	all_calls_anchored	exact	presence_absence	2	"{""carrier_only_consistent"": 2}"	E1c	molecules	
+L_9351af72ca0a	SAMEA120309484	1286	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	molecules	
+L_42585246216f	SAMEA120309484	1194	all_calls_anchored	exact	presence_absence	2	"{""carrier_only_consistent"": 2}"	E1c	molecules	
+L_50aecaa8c9da	SAMEA120309485	1284	all_calls_anchored	exact	presence_absence	4	"{""both_samples_consistent"": 3, ""carrier_only_consistent"": 1}"	E2s	molecules	molecules
+L_63cb149d2925	SAMEA120356367	826	all_calls_anchored	exact	presence_absence	5	"{""both_samples_consistent"": 5}"	E2	molecules	molecules
+L_2021b7c977ad	SAMEA120309485	1284	all_calls_anchored	exact	presence_absence	2	"{""both_samples_consistent"": 2}"	E2	molecules	molecules
+L_1d36233e92e9	SAMEA120311175	769	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	molecules	molecules
+L_39f1acf9e7ad	SAMEA120311175	762	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	molecules	read_records
+L_15745284d895	SAMN49042133	1599	all_calls_anchored	exact	presence_absence	4	"{""both_samples_consistent"": 3, ""carrier_only_consistent"": 1}"	E2s	molecules	molecules;read_records
+L_85e8f590c115	SAMEA120314584	1478	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	molecules	
+L_1e45f157051e	SAMEA120314584	1808	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	molecules	molecules
+L_84f29fe25ea8	SAMEA120314636	1022	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	molecules	
+L_cf41064c8d36	SAMEA120314636	1643	all_calls_anchored	exact	presence_absence	2	"{""carrier_only_consistent"": 1, ""both_samples_consistent"": 1}"	E2s	molecules	molecules
+L_ec50c227a71f	SAMN51658614	1352	all_calls_anchored	exact	presence_absence	3	"{""both_samples_consistent"": 3}"	E2	molecules	molecules
+L_f19c11caa32e	SAMEA120314645	1022	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	molecules	
+L_fd2341020a14	SAMEA120314645	1643	all_calls_anchored	exact	presence_absence	2	"{""carrier_only_consistent"": 1, ""both_samples_consistent"": 1}"	E2s	molecules	molecules
+L_f4d27afcafa0	SAMEA120325695	1192	all_calls_anchored	exact	presence_absence	2	"{""both_samples_consistent"": 1, ""carrier_only_consistent"": 1}"	E2s	molecules	molecules
+L_e07c8ace211c	SAMN37751820	1656	all_calls_anchored	exact	presence_absence	4	"{""both_samples_consistent"": 2, ""carrier_only_consistent"": 2}"	E2s	molecules	molecules
+L_213add7aad4c	SAMEA120399599	1022	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	molecules	
+L_52fcc4bcb769	SAMEA6863324	1322	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	molecules	molecules
+L_c8fb53689f80	SAMN05216519	757	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	read_records	molecules
+L_d4d252050ad0	SAMN05828192	1596	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	read_records	molecules
+L_95d0621ff03b	SAMN13450420	1596	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	molecules	molecules
+L_2ed9bd03c14c	SAMN13450421	1596	all_calls_anchored	exact	presence_absence	4	"{""both_samples_consistent"": 2, ""carrier_only_consistent"": 2}"	E2s	molecules	molecules;read_records
+L_2920cf29e193	SAMN23567018	1598	all_calls_anchored	exact	presence_absence	3	"{""both_samples_consistent"": 1, ""carrier_only_consistent"": 2}"	E2s	molecules	molecules
+L_ab90cd4bc540	SAMN37458465	1596	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	molecules	molecules
+L_8f0f69d631c8	SAMN49042133	736	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	molecules	molecules
+L_b63c75c0f4eb	SAMN13450420	1324	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	molecules	
+L_5782bb28ccbb	SAMN23078434	854	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	molecules	
+L_cf265f912186	SAMN51281021	1822	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	molecules	
+L_a44baf55ae6f	SAMN51281023	1822	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	molecules	
+L_b06c262119b1	SAMN43145737	1599	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	molecules	
+L_e8ad3a3fea96	SAMN11265848	1325	all_calls_anchored	exact	presence_absence	3	"{""carrier_only_consistent"": 3}"	E1c	molecules	
+L_edf2d5de3c53	SAMN43145737	1598	all_calls_anchored	exact	presence_absence	9	"{""carrier_only_consistent"": 9}"	E1c	molecules	
+L_1799b003d893	SAMN43145729	665	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	molecules	
+L_a5b3d3676d5e	SAMN11620948	1022	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	molecules	
+L_7f6ad7b81c0c	SAMN43526776	1693	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	molecules	
+L_6fa0bfb4697b	SAMN43526776	1022	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	molecules	
+L_b0db31db067d	SAMN51658614	1022	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	molecules	
+L_7e8b696d565c	SAMN05443405	1453	all_calls_anchored	exact	presence_absence	5	"{""carrier_only_consistent"": 4, ""both_samples_consistent"": 1}"	E2s	read_records	read_records
+L_bdc9121e9924	SAMN33025486	1413	all_calls_anchored	exact	presence_absence	2	"{""carrier_only_consistent"": 2}"	E1c	read_records	
+L_004c598de865	SAMN05443405	1325	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	read_records	
+L_f2bef9620616	SAMN05216519	308	all_calls_anchored	exact	presence_absence	3	"{""carrier_only_consistent"": 3}"	E1c	read_records	
+L_15e9ed0a1f01	SAMN05443405	664	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	read_records	
+L_58d6108abf4c	SAMN05443405	1081	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	read_records	
+L_c94cd7d10528	SAMN05443405	664	all_calls_anchored	exact	presence_absence	3	"{""carrier_only_consistent"": 2, ""both_samples_consistent"": 1}"	E2s	read_records	read_records
+L_6fab944eee80	SAMN05443405	1460	all_calls_anchored	exact	presence_absence	2	"{""carrier_only_consistent"": 1, ""both_samples_consistent"": 1}"	E2s	read_records	read_records
+L_a5c8e82badb5	SAMN05443405	1096	all_calls_anchored	exact	presence_absence	2	"{""carrier_only_consistent"": 1, ""both_samples_consistent"": 1}"	E2s	read_records	read_records
+L_bb5f9764a2dd	SAMN05443405	1296	all_calls_anchored	exact	presence_absence	2	"{""carrier_only_consistent"": 1, ""both_samples_consistent"": 1}"	E2s	read_records	read_records
+L_cfafbbf97cd7	SAMN33025486	1408	all_calls_anchored	exact	presence_absence	2	"{""both_samples_consistent"": 1, ""carrier_only_consistent"": 1}"	E2s	read_records	read_records
+L_7c563a0fa6d3	SAMN33025486	1582	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	read_records	read_records
+L_ec21e5312e6e	SAMN33025486	1453	all_calls_anchored	exact	presence_absence	2	"{""both_samples_consistent"": 1, ""carrier_only_consistent"": 1}"	E2s	read_records	read_records
+L_36e16ced4ca1	SAMN33025486	1119	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	read_records	read_records
+L_01bd88bb2cfa	SAMN33025486	934	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	read_records	read_records
+L_fc4c6e7824e5	SAMN51658617	1643	all_calls_anchored	exact	presence_absence	2	"{""carrier_only_consistent"": 2}"	E1c	molecules	
+L_ee2e7da0da20	SAMN05518800	1626	all_calls_anchored	exact	presence_absence	3	"{""both_samples_consistent"": 3}"	E2	read_records	molecules
+L_d88b777967f7	SAMN47200781	1649	all_calls_anchored	exact	presence_absence	8	"{""carrier_only_consistent"": 4, ""both_samples_consistent"": 4}"	E2s	molecules	molecules
+L_4fce967fd65f	SAMN05714655	222	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	molecules	
+L_dc6e883b4871	SAMN05714662	1243	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	molecules	
+L_b5918e804cc7	SAMN05714662	1192	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	molecules	
+L_d556266ae5ce	SAMN05714662	1631	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	molecules	
+L_f4f9b681d2f8	SAMN56368954	1375	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	molecules	
+L_4786973cda95	SAMN56368954	1122	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	molecules	
+L_768c4f51fa6d	SAMN56368954	1375	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	molecules	
+L_727bde7650fe	SAMN56368954	1376	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	molecules	
+L_30414b8b2351	SAMN07626133	2262	all_calls_anchored	exact	presence_absence	2	"{""both_samples_consistent"": 2}"	E2	read_records	read_records
+L_361e2858247c	SAMN08775346	1839	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	read_records	
+L_aa961c6396ba	SAMN08775346	876	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	read_records	
+L_000d7bd5d7b9	SAMN08775346	1839	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	read_records	
+L_a0771ded0693	SAMN27609613	561	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	molecules	
+L_5af4bacecf17	SAMN27609613	1382	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	molecules	
+L_39c0b3ca95f1	SAMN11265848	1450	all_calls_anchored	exact	presence_absence	2	"{""carrier_only_consistent"": 2}"	E1c	molecules	
+L_3d07537f83b5	SAMN11620948	1607	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	molecules	
+L_108503bb2449	SAMN11620948	1600	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	molecules	molecules
+L_083b06285d7b	SAMN13450420	1319	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	molecules	
+L_5c0e1ed84390	SAMN13450420	1333	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	molecules	
+L_328021c714c3	SAMN13450421	2122	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	molecules	
+L_875f178cd397	SAMN16357166	800	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	molecules	read_records
+L_df52c26a7f79	SAMN33025486	665	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	read_records	
+L_0e5032729ab9	SAMN35085406	1180	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	molecules	
+L_cb968b3d11c6	SAMN35085406	479	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	molecules	
+L_15a6eca72740	SAMN18676188	850	all_calls_anchored	exact	presence_absence	3	"{""carrier_only_consistent"": 3}"	E1c	molecules	
+L_216d673d99f2	SAMN49042133	817	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	molecules	
+L_f9094aae23c4	SAMN23078433	1862	all_calls_anchored	exact	presence_absence	2	"{""both_samples_consistent"": 2}"	E2	molecules	molecules
+L_48c666430594	SAMN23078435	1059	all_calls_anchored	exact	presence_absence	2	"{""both_samples_consistent"": 2}"	E2	molecules	molecules
+L_9ab0df34b64c	SAMN23078436	1606	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	molecules	molecules
+L_47ca6922c80d	SAMN23078436	516	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	molecules	molecules
+L_a237c0ae1693	SAMN23078436	1309	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	molecules	molecules
+L_48a1a4599e91	SAMN23078435	449	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	molecules	molecules
+L_d6e4099054ae	SAMN23078436	882	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	molecules	molecules
+L_32a381c93e4a	SAMN23078436	1357	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	molecules	molecules
+L_88525d5d2e1b	SAMN48330266	877	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	molecules	read_records
+L_426900e3b3b7	SAMN51281053	698	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	molecules	
+L_5b8777d70b75	SAMN30525180	1172	all_calls_anchored	exact	presence_absence	2	"{""carrier_only_consistent"": 2}"	E1c	molecules	
+L_1e59378ff6e6	SAMN30525278	1173	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	molecules	
+L_744dcd07b8a4	SAMN30525383	1319	all_calls_anchored	exact	presence_absence	2	"{""carrier_only_consistent"": 2}"	E1c	molecules	
+L_996d2d04329a	SAMN43145737	1307	all_calls_anchored	exact	presence_absence	2	"{""carrier_only_consistent"": 2}"	E1c	molecules	
+L_e0ab65d3c272	SAMN41832008	1179	all_calls_anchored	exact	presence_absence	2	"{""carrier_only_consistent"": 1, ""both_samples_consistent"": 1}"	E2s	molecules	molecules
+L_25e8f607993b	SAMN56368990	1715	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	molecules	molecules
+L_d14e941b592c	SAMN56368990	1610	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	molecules	molecules
+L_b42eaabbdb29	SAMN51281022	1349	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	molecules	
+L_e9202acc8281	SAMN51658609	990	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	molecules	
+L_4b2d118ce5c5	SAMN43526787	1177	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	molecules	
+L_54bbb141219e	SAMN43526788	1177	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	molecules	
+L_21ec9469f506	SAMN51281055	1602	all_calls_anchored	exact	presence_absence	3	"{""both_samples_consistent"": 3}"	E2	molecules	molecules
+L_b8ac4cc792e6	SAMN51658617	481	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	molecules	molecules
+L_3e3b03a7ccd5	SAMN51658617	872	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	molecules	molecules
+L_f0450e1154f3	SAMN48135827	320	all_calls_anchored	exact	presence_absence	3	"{""both_samples_consistent"": 3}"	E2	molecules	molecules
+L_252311236aee	SAMN51658616	1561	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	molecules	molecules
+L_bd7af023fae3	SAMN51281022	585	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	molecules	molecules
+L_78594b2f9cc1	SAMN51281024	1643	all_calls_anchored	exact	presence_absence	3	"{""both_samples_consistent"": 2, ""carrier_only_consistent"": 1}"	E2s	molecules	molecules
+L_a3df7482c7e2	SAMN51281024	1204	all_calls_anchored	exact	presence_absence	2	"{""both_samples_consistent"": 2}"	E2	molecules	molecules
+L_fcacb662eaa3	SAMN51281056	1364	all_calls_anchored	exact	presence_absence	2	"{""both_samples_consistent"": 2}"	E2	molecules	molecules
+L_8ab8c56ef4a4	SAMN51281056	1602	all_calls_anchored	exact	presence_absence	2	"{""both_samples_consistent"": 2}"	E2	molecules	molecules
+L_8f6914208f2a	SAMN51281056	1664	all_calls_anchored	exact	presence_absence	2	"{""both_samples_consistent"": 2}"	E2	molecules	molecules
+L_e8df34801a19	SAMN51281032	1428	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	molecules	molecules
+L_175263883d39	SAMN51281025	1117	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	molecules	molecules
+L_4d9c85cc5d2f	SAMN51281025	1118	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	molecules	molecules
+L_34773ecc419c	SAMN51281032	1987	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	molecules	molecules
+L_47a04f009428	SAMN51281032	1545	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	molecules	molecules
+L_344ec33c8cb6	SAMN51281025	1428	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	molecules	molecules
+L_711ce3e2102c	SAMN51281052	1231	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	molecules	molecules
+L_2558711ae5af	SAMN51281027	1670	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	molecules	molecules
+L_80b19ac25179	SAMN51281028	1670	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	molecules	molecules
+L_8aa9966558ac	SAMN51281030	1670	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	molecules	molecules
+L_c299d81c195d	SAMN51281032	1670	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	molecules	molecules
+L_8cf66c2be5a1	SAMN51658609	2160	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	molecules	molecules
+L_1823a2195e10	SAMN51658610	1166	all_calls_anchored	exact	presence_absence	1	"{""both_samples_consistent"": 1}"	E2	molecules	molecules
+L_182d2a7b3e36	SAMN56368990	1470	all_calls_anchored	exact	presence_absence	1	"{""carrier_only_consistent"": 1}"	E1c	molecules	

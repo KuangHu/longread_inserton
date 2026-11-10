@@ -1,0 +1,7 @@
+contig	start0	end0	molecules	two_sided	evidence	median_insert_len	families	called
+NZ_CP084255.1	0	0	1	False	anchor_right		SMT4a_RS_R16	False
+NZ_CP084255.1	512413	512417	4	False	anchor_left		SMT4a_PILER_1.1,SMT4a_RS_R11,SMT4a_RS_R46	True
+NZ_CP084255.1	4037454	4037503	50	False	anchor_left		SMT4a_RS_R1,SMT4a_RS_R16,SMT4a_RS_R5	True
+NZ_CP084256.1	1164949	1164949	1	True	cigar_insertion	1318	SMT4a_RS_R42	False
+NZ_CP084257.1	0	49	58	False	anchor_right		SMT4a_RS_R5	True
+NZ_CP084257.1	70296	70296	1	False	anchor_left		SMT4a_RS_R16	False

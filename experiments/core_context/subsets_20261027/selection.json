@@ -1,0 +1,148 @@
+{
+  "rule": "Pick small comparable assembly subsets for the graph entry from measured skani distances.\n\nInputs are the verified fna_pool stage-1 Comamonadaceae catalog (S2 catalog/groups), its skani\ntriangle edges and the per-genome verify.json; nothing is downloaded. Only Complete Genome,\nnon-atypical assemblies with verified FNA + GFF3 + FAA are eligible. For each seed species cluster\nthe anchor is the member with the most near (ANI >= 99) eligible partners from other BioProjects,\nties broken by accession; the other members are taken per ANI-to-anchor bin,\neach from a BioProject and clone group not yet in the subset, in accession order. A bin that cannot\nbe filled is reported as a shortfall, never back-filled from another bin.",
+  "bins": [
+    [
+      "near",
+      99.0,
+      100.01,
+      2
+    ],
+    [
+      "intermediate",
+      95.0,
+      99.0,
+      2
+    ],
+    [
+      "medium",
+      80.0,
+      95.0,
+      2
+    ]
+  ],
+  "catalog": "../fna_pool/scaleup_stage1_20261026/comamonadaceae/s2/catalog.tsv",
+  "catalog_sha256": "6ec4ba8b53ccc6dc9bb454a2f1a889af4c8249c6aa4e95369ae40a33eca56ff7",
+  "edges": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/comamonadaceae/s2/skani_edges.tsv",
+  "edges_sha256": "c410a2abb7a60538402584609d36a9a3ed4ff631e05e51a09e489f7ae418a14a",
+  "seeds": [
+    "delftia=SAMD00046762",
+    "comamonas=SAMD00018645",
+    "paracidovorax=SAMN02598334"
+  ],
+  "eligible": 412,
+  "not_eligible": {
+    "not_complete_or_atypical": 1290,
+    "no_gff3_faa": 3
+  },
+  "bins_filled": [
+    {
+      "subset": "delftia",
+      "bin": "near",
+      "ani_range": [
+        99.0,
+        100.0
+      ],
+      "wanted": 2,
+      "chosen": 2,
+      "candidates_in_range": 2,
+      "shortfall": 0
+    },
+    {
+      "subset": "delftia",
+      "bin": "intermediate",
+      "ani_range": [
+        95.0,
+        99.0
+      ],
+      "wanted": 2,
+      "chosen": 2,
+      "candidates_in_range": 39,
+      "shortfall": 0
+    },
+    {
+      "subset": "delftia",
+      "bin": "medium",
+      "ani_range": [
+        80.0,
+        95.0
+      ],
+      "wanted": 2,
+      "chosen": 2,
+      "candidates_in_range": 3,
+      "shortfall": 0
+    },
+    {
+      "subset": "comamonas",
+      "bin": "near",
+      "ani_range": [
+        99.0,
+        100.0
+      ],
+      "wanted": 2,
+      "chosen": 2,
+      "candidates_in_range": 3,
+      "shortfall": 0
+    },
+    {
+      "subset": "comamonas",
+      "bin": "intermediate",
+      "ani_range": [
+        95.0,
+        99.0
+      ],
+      "wanted": 2,
+      "chosen": 0,
+      "candidates_in_range": 0,
+      "shortfall": 2
+    },
+    {
+      "subset": "comamonas",
+      "bin": "medium",
+      "ani_range": [
+        80.0,
+        95.0
+      ],
+      "wanted": 2,
+      "chosen": 2,
+      "candidates_in_range": 42,
+      "shortfall": 0
+    },
+    {
+      "subset": "paracidovorax",
+      "bin": "near",
+      "ani_range": [
+        99.0,
+        100.0
+      ],
+      "wanted": 2,
+      "chosen": 2,
+      "candidates_in_range": 14,
+      "shortfall": 0
+    },
+    {
+      "subset": "paracidovorax",
+      "bin": "intermediate",
+      "ani_range": [
+        95.0,
+        99.0
+      ],
+      "wanted": 2,
+      "chosen": 0,
+      "candidates_in_range": 0,
+      "shortfall": 2
+    },
+    {
+      "subset": "paracidovorax",
+      "bin": "medium",
+      "ani_range": [
+        80.0,
+        95.0
+      ],
+      "wanted": 2,
+      "chosen": 1,
+      "candidates_in_range": 1,
+      "shortfall": 1
+    }
+  ],
+  "downloads": 0
+}

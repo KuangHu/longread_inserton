@@ -1,0 +1,125 @@
+{
+ "version": "s4_annotate_v0.2",
+ "mmseqs": "17.b804f",
+ "settings": {
+  "family": [
+   "--min-seq-id",
+   "0.9",
+   "-c",
+   "0.8",
+   "--cov-mode",
+   "0",
+   "--cluster-mode",
+   "0",
+   "--cluster-reassign",
+   "1"
+  ],
+  "homology_group": [
+   "--min-seq-id",
+   "0.5",
+   "-c",
+   "0.8",
+   "--cov-mode",
+   "0",
+   "--cluster-mode",
+   "0",
+   "--cluster-reassign",
+   "1"
+  ]
+ },
+ "member_min": {
+  "family": [
+   0.9,
+   0.8
+  ],
+  "homology_group": [
+   0.5,
+   0.8
+  ]
+ },
+ "check_search": [
+  "--exhaustive-search",
+  "1",
+  "--alignment-mode",
+  "3",
+  "-e",
+  "10",
+  "--max-seqs",
+  "100000",
+  "--format-output",
+  "query,target,fident,qcov,tcov,alnlen"
+ ],
+ "distinct_proteins": 290,
+ "member_check": {
+  "family": {
+   "members": 290,
+   "passed": 290,
+   "fail": []
+  },
+  "homology_group": {
+   "members": 290,
+   "passed": 290,
+   "fail": []
+  }
+ },
+ "main": {
+  "loci": 117,
+  "carriers": 89,
+  "species": 34,
+  "cds_units": 157,
+  "distinct_proteins": 100,
+  "families": 83,
+  "homology_groups": 77,
+  "family_architectures": 65
+ },
+ "partner_mixed": {
+  "loci": 5,
+  "carriers": 5,
+  "species": 3,
+  "cds_units": 7,
+  "distinct_proteins": 6,
+  "families": 6,
+  "homology_groups": 6,
+  "family_architectures": 5
+ },
+ "direction_mixed": {
+  "loci": 0,
+  "carriers": 0,
+  "species": 0,
+  "cds_units": 0,
+  "distinct_proteins": 0,
+  "families": 0,
+  "homology_groups": 0,
+  "family_architectures": 0
+ },
+ "short_other_segment": {
+  "loci": 169,
+  "carriers": 117,
+  "species": 38,
+  "cds_units": 223,
+  "distinct_proteins": 135,
+  "families": 111,
+  "homology_groups": 108,
+  "family_architectures": 82
+ },
+ "replacement": {
+  "loci": 66,
+  "carriers": 62,
+  "species": 22,
+  "cds_units": 88,
+  "distinct_proteins": 52,
+  "families": 41,
+  "homology_groups": 40,
+  "family_architectures": 30
+ },
+ "all": {
+  "loci": 357,
+  "carriers": 188,
+  "species": 51,
+  "cds_units": 475,
+  "distinct_proteins": 290,
+  "families": 231,
+  "homology_groups": 217,
+  "family_architectures": 174
+ }
+}

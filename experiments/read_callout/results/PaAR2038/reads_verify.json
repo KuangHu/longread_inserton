@@ -1,0 +1,50 @@
+{
+  "run": {
+    "sample_id": "PaAR2038",
+    "run": "SRR11947722",
+    "biosample": "SAMN14567048",
+    "assembly": "GCA_012689525.1",
+    "platform": "OXFORD_NANOPORE",
+    "instrument_model": "PromethION",
+    "role": "independent_nanopore_control",
+    "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR119/022/SRR11947722/SRR11947722_1.fastq.gz",
+    "archive_read_count": 132813,
+    "archive_base_count": 2112799366,
+    "fastq_bytes": 2146409497,
+    "fastq_md5": "1cfd36ae0a44b7b05db73d8e0b28dee5"
+  },
+  "download_started": "2026-10-22T19:05:16-0700",
+  "local_file": "$PROJ/data/reads/SRR11947722/SRR11947722_1.fastq.gz",
+  "bytes": 2146409497,
+  "md5": "1cfd36ae0a44b7b05db73d8e0b28dee5",
+  "sha256": "7bb4cede6af9b737d342f0f676e80118be65d6f93a168f36af261b2a62a0a63a",
+  "summary": {
+    "records": 132813,
+    "bases": 2112799366,
+    "read_unit_counts": {
+      "name_stripped": 132813
+    },
+    "distinct_zmws": null,
+    "distinct_sra_spots": 132813,
+    "max_records_per_spot": 1,
+    "placeholder_quality_records": 0,
+    "example_headers": [
+      "@SRR11947722.1 1/1",
+      "@SRR11947722.2 2/1",
+      "@SRR11947722.3 3/1",
+      "@SRR11947722.4 4/1"
+    ],
+    "mean_length": 15908.1,
+    "median_length": 13313,
+    "max_length": 140739,
+    "n50": 19730,
+    "molecule_grouping": "one_record_per_molecule"
+  },
+  "checks": {
+    "bytes_match": true,
+    "md5_match": true,
+    "spot_count_match": true,
+    "base_count_match": true
+  },
+  "status": "verified"
+}

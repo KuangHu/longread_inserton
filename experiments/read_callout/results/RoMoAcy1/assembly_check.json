@@ -1,0 +1,39 @@
+{
+  "sample": "RoMoAcy1",
+  "gca": "GCA_019856255.1",
+  "gcf": "GCF_019856255.1",
+  "gca_records": {
+    "CP082160.1": [
+      8044513,
+      "3f03c3dd114bd233288d5ad38e508335a7362eaf42c514e1b344feb034232715"
+    ],
+    "CP082159.1": [
+      744754,
+      "a94380e72e314e78d120a3a164f0464947f356cd4191021f27c067f560f3204f"
+    ],
+    "CP082158.1": [
+      52207,
+      "ef451b433eefb26ce8c4894f545584919e642e90e04a40b0ac5ed83f58901c18"
+    ]
+  },
+  "gcf_records": {
+    "NZ_CP082160.1": [
+      8044513,
+      "3f03c3dd114bd233288d5ad38e508335a7362eaf42c514e1b344feb034232715"
+    ],
+    "NZ_CP082159.1": [
+      744754,
+      "a94380e72e314e78d120a3a164f0464947f356cd4191021f27c067f560f3204f"
+    ],
+    "NZ_CP082158.1": [
+      52207,
+      "ef451b433eefb26ce8c4894f545584919e642e90e04a40b0ac5ed83f58901c18"
+    ]
+  },
+  "identical_sequence_sets": true,
+  "gcf_cds_features": 8206,
+  "fasta": "$PROJ/data/assemblies/RoMoAcy1/GCF_019856255.1/ncbi_dataset/data/GCF_019856255.1/GCF_019856255.1_ASM1985625v1_genomic.fna",
+  "fasta_sha256": "aaf50170a61a80bec89e52cf03d3fdda8fa1640a893d5088d9f5a77cf13b107d",
+  "gbff": "$PROJ/data/assemblies/RoMoAcy1/GCF_019856255.1/ncbi_dataset/data/GCF_019856255.1/genomic.gbff",
+  "gbff_sha256": "55542b42301143a21d774a9e9f9a7af69926758247861a274eba4f21bd978d41"
+}

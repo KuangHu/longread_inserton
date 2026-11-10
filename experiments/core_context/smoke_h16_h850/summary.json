@@ -1,0 +1,40 @@
+{
+  "version": "core_context_graph_v0.1",
+  "discovery_entry": "all_repeated_pangraph_blocks",
+  "gap_inputs": [],
+  "reads_inputs": [],
+  "bounds": {
+    "min_length": 50,
+    "max_length_exclusive": 2500,
+    "flank": 500
+  },
+  "diagnostic_thresholds": {
+    "core_identity": 0.9,
+    "similar_flank": 0.9,
+    "low_flank": 0.7
+  },
+  "graph_sha256": "4d4367d937d6696e610ba9e1a5a7eb49abfafad101dfade7794e8e0e81c1f5ae",
+  "bundle_provenance_sha256": "9ede3fed044b79ef88704eecd2069ca739202e610e7587b9ccf29a57e25ba480",
+  "families": 264,
+  "occurrences": 766,
+  "context_pairs": 1413,
+  "relations": {
+    "different_adjacency_low_flank_similarity_candidate": 348,
+    "context_unresolved": 635,
+    "similar_flanks_candidate_same_context": 161,
+    "core_similarity_below_threshold": 254,
+    "edge_or_missing_context": 15
+  },
+  "excluded_nodes": 0,
+  "truncated_pair_reviews": 0,
+  "annotation_complete": false,
+  "site_groups_computed": false,
+  "production_ready": false,
+  "limitations": [
+    "Graph blocks can split or combine biological cores; 1-2 CDS not yet checked.",
+    "Distinct graph adjacency plus low global flank identity is a diagnostic candidate, not proof of different orthologous sites.",
+    "Circular graph paths are deferred. Linear graph paths do not prove biologically linear contigs.",
+    "Divergent cores missed by graph construction cannot be recovered here; protein-based discovery remains required.",
+    "No mobile activity, novelty, independent event, or long-read validation is inferred."
+  ]
+}

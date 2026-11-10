@@ -1,0 +1,172 @@
+{
+  "schema": "fna_pool_s2_v2",
+  "samples": 2974,
+  "skani_pairs_reported": 641136,
+  "possible_pairs": 4420851,
+  "samples_without_skani_output": [
+    "SAMD00244869",
+    "SAMN02440588",
+    "SAMN08963285",
+    "SAMN11510616",
+    "SAMN14852289",
+    "SAMN16746466",
+    "SAMN17619976",
+    "SAMN35616997",
+    "SAMN39131981",
+    "SAMN43281555",
+    "SAMN47010814",
+    "SAMN55685884"
+  ],
+  "samples_without_skani_output_note": "no skani output under its default screen (~80% ANI k-mer screen) and AF >= 15 reporting; not evidence that no local homology exists",
+  "pair_status": {
+    "in_pair_table": 2963,
+    "no_pair_selected_pending_review": 11
+  },
+  "pair_status_linked": {
+    "in_pair_table": 220
+  },
+  "clone_groups": 2492,
+  "clone_groups_size_gt1": 255,
+  "species_clusters": 746,
+  "species_cluster_sizes": {
+    "1": 386,
+    "2": 154,
+    "3": 69,
+    "4": 32,
+    "5": 25,
+    "6": 14,
+    "7": 10,
+    "8": 9,
+    "9": 11,
+    "10": 4,
+    "11": 3,
+    "12": 2,
+    "13": 2,
+    "14": 3,
+    "17": 2,
+    "18": 1,
+    "19": 1,
+    "21": 2,
+    "22": 1,
+    "23": 3,
+    "26": 1,
+    "27": 1,
+    "37": 2,
+    "39": 1,
+    "42": 1,
+    "47": 1,
+    "51": 1,
+    "61": 1,
+    "71": 1,
+    "75": 1,
+    "613": 1
+  },
+  "species_clusters_ge_10": 36,
+  "genera": 30,
+  "source_rules": "batch50_source_class+v2(word-bounded plant keywords; '<facility> plant' -> facility)",
+  "source_class": {
+    "unclear": 1558,
+    "environmental": 621,
+    "clinical/animal": 514,
+    "plant": 274,
+    "enrichment": 7
+  },
+  "source_class_linked": {
+    "unclear": 119,
+    "environmental": 44,
+    "plant": 20,
+    "enrichment": 5,
+    "clinical/animal": 32
+  },
+  "pairs": 8031,
+  "pairs_with_multiple_reasons": 91,
+  "pairs_by_reason": {
+    "audit_multi_project_all_vs_all": 153,
+    "audit_single_project_all_vs_all": 91,
+    "clone_partner": 470,
+    "distance_tier_ani_90_95": 5,
+    "distance_tier_ani_95_97": 5,
+    "distance_tier_ani_97_99": 5,
+    "distance_tier_ani_99.99_100": 5,
+    "distance_tier_ani_99_99.99": 5,
+    "distance_tier_ani_lt90": 5,
+    "distance_tier_no_skani_output_same_genus": 5,
+    "nearest_other_species": 2674,
+    "species_neighbour": 4699
+  },
+  "pairs_same_cluster_below_species_threshold": [
+    "P00922",
+    "P00924",
+    "P00977",
+    "P00979",
+    "P01506",
+    "P02351",
+    "P02480",
+    "P02483",
+    "P02639",
+    "P03322",
+    "P03324",
+    "P03703",
+    "P03704",
+    "P03929",
+    "P04153",
+    "P04233",
+    "P04234",
+    "P05329",
+    "P05406",
+    "P05696",
+    "P06376",
+    "P06658",
+    "P06659",
+    "P07415",
+    "P07518",
+    "P07521",
+    "P07528",
+    "P07885"
+  ],
+  "pairs_both_linked": 101,
+  "pairs_either_linked": 1180,
+  "audit_clusters": {
+    "single_project": {
+      "id": "SAMEA11953777",
+      "size": 14,
+      "linked": 0,
+      "bioprojects": 1,
+      "organisms": {
+        "Rothia nasimurium": 14
+      }
+    },
+    "multi_project": {
+      "id": "SAMD00046490",
+      "size": 18,
+      "linked": 3,
+      "bioprojects": 18,
+      "organisms": {
+        "Glutamicibacter mysorens NBRC 103060": 1,
+        "Glutamicibacter nicotianae": 12,
+        "Glutamicibacter sp. 0426": 1,
+        "Glutamicibacter sp. HZAU": 1,
+        "Glutamicibacter sp. ZJUTW": 1,
+        "Glutamicibacter sp. FR1": 1,
+        "Glutamicibacter sp. PAEs-4": 1
+      }
+    }
+  },
+  "distance_tier_candidates": {
+    "ani_90_95": 9716,
+    "ani_95_97": 10741,
+    "ani_97_99": 169431,
+    "ani_99.99_100": 1630,
+    "ani_99_99.99": 1392,
+    "ani_lt90": 201065,
+    "no_skani_output_same_genus": 327368
+  },
+  "settings": {
+    "clone": "ANI >= 99.99 and AF >= 95 both",
+    "species": "single linkage over pairs with ANI >= 95 and AF >= 50 both; a cluster label does not mean every member pair meets it (pair_meets_species_threshold)",
+    "neighbours": "1 clone partner, 3 nearest same-cluster non-clone, 1 nearest other-cluster (skani output)",
+    "audit": "all pairs of one single-project and one multi-project cluster with 10-20 members",
+    "distance_tiers": "same genus, different BioProject; up to 5 pairs per tier ['ani_99.99_100', 'ani_99_99.99', 'ani_97_99', 'ani_95_97', 'ani_90_95', 'ani_lt90'] + no skani output; linked first, then SHA256 order",
+    "note": "initial settings for this pool, not calibrated thresholds; S3 must judge each pair from its own alignment"
+  }
+}

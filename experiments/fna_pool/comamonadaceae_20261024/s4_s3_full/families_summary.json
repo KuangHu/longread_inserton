@@ -1,0 +1,87 @@
+{
+ "version": "s4_annotate_v0.1",
+ "mmseqs": "17.b804f",
+ "settings": {
+  "family": [
+   "--min-seq-id",
+   "0.9",
+   "-c",
+   "0.8",
+   "--cov-mode",
+   "0",
+   "--cluster-mode",
+   "0"
+  ],
+  "homology_group": [
+   "--min-seq-id",
+   "0.5",
+   "-c",
+   "0.8",
+   "--cov-mode",
+   "0",
+   "--cluster-mode",
+   "0"
+  ]
+ },
+ "distinct_proteins": 1527,
+ "main": {
+  "loci": 464,
+  "carriers": 221,
+  "species": 129,
+  "cds_units": 545,
+  "distinct_proteins": 384,
+  "families": 294,
+  "homology_groups": 234,
+  "family_architectures": 251
+ },
+ "partner_mixed": {
+  "loci": 51,
+  "carriers": 33,
+  "species": 24,
+  "cds_units": 54,
+  "distinct_proteins": 31,
+  "families": 28,
+  "homology_groups": 27,
+  "family_architectures": 25
+ },
+ "direction_mixed": {
+  "loci": 0,
+  "carriers": 0,
+  "species": 0,
+  "cds_units": 0,
+  "distinct_proteins": 0,
+  "families": 0,
+  "homology_groups": 0,
+  "family_architectures": 0
+ },
+ "short_other_segment": {
+  "loci": 1070,
+  "carriers": 307,
+  "species": 195,
+  "cds_units": 1322,
+  "distinct_proteins": 979,
+  "families": 638,
+  "homology_groups": 596,
+  "family_architectures": 525
+ },
+ "replacement": {
+  "loci": 163,
+  "carriers": 126,
+  "species": 91,
+  "cds_units": 226,
+  "distinct_proteins": 153,
+  "families": 118,
+  "homology_groups": 116,
+  "family_architectures": 90
+ },
+ "all": {
+  "loci": 1748,
+  "carriers": 352,
+  "species": 228,
+  "cds_units": 2147,
+  "distinct_proteins": 1527,
+  "families": 1018,
+  "homology_groups": 887,
+  "family_architectures": 844
+ }
+}

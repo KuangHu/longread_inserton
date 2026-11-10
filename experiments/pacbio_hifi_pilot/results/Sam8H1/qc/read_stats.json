@@ -1,0 +1,34 @@
+{
+  "file": "/global/scratch/users/kh36969/longread_callout/data/reads/SRR13837247/SRR13837247_subreads.fastq.gz",
+  "sha256": "57d4a020eab74a9faf9cd1923c4031058c4093d311cdfccfc35e5213c049151e",
+  "records": 35763,
+  "bases": 277511453,
+  "matches_verify": true,
+  "length": {
+    "min": 124,
+    "median": 7357,
+    "mean": 7759.7,
+    "n50": 7714,
+    "max": 20786,
+    "p05": 5883
+  },
+  "base_qv": {
+    "mean": 72.72,
+    "p05": 29,
+    "p25": 57,
+    "p50": 80,
+    "p75": 93,
+    "p95": 93,
+    "fraction_qv93": 0.3797,
+    "placeholder_qv0": 0
+  },
+  "read_mean_q": {
+    "min": 20.2,
+    "median": 28.25,
+    "max": 93.0,
+    "fraction_ge_q10": 1.0,
+    "fraction_ge_q20": 1.0,
+    "fraction_ge_q30": 0.3883
+  },
+  "definition": "read mean Q = -10 log10(mean base error probability); no reads filtered"
+}

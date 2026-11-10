@@ -1,0 +1,314 @@
+{
+ "version": "ucd_combine_v0.1",
+ "ids": "/global/scratch/users/kh36969/longread_callout/core_context/dna_v0.1/validation/ucd_work_v02/catalogue_ids.txt.gz",
+ "ids_sha256": "4c54d98cd0c7f22100fa20635085f1c98574242397b82d8506e5aae60b3820cf",
+ "expected_pairs": 854446,
+ "replace_ids": "",
+ "replaced_pairs": 0,
+ "reuse": "/global/scratch/users/kh36969/longread_callout/core_context/dna_v0.1/validation/ucd_final_v012",
+ "reuse_version": "",
+ "reuse_ids": "/global/scratch/users/kh36969/longread_callout/core_context/dna_v0.1/validation/ucd_work_v02/reuse_ids.txt.gz",
+ "reused_pairs": 565908,
+ "replace": "",
+ "runs": "/global/scratch/users/kh36969/longread_callout/core_context/dna_v0.1/validation/ucd_work_v02",
+ "completeness": {
+  "candidate_insertion": {
+   "expected": 854446,
+   "observed": 854446,
+   "missing": 0,
+   "duplicated": 0,
+   "unexpected": 0,
+   "without_status": 0,
+   "x_length_inconsistent": 0,
+   "complete": true
+  }
+ },
+ "by_kind": {
+  "candidate_insertion": {
+   "counts": {
+    "code_version": {
+     "ucd_batch_v0.4+85036b24ba7a": 854446
+    },
+    "source_check": {
+     "pass": 854446
+    },
+    "rows_by_source": {
+     "reuse:/global/scratch/users/kh36969/longread_callout/core_context/dna_v0.1/validation/ucd_final_v012": 565908,
+     "run:/global/scratch/users/kh36969/longread_callout/core_context/dna_v0.1/validation/ucd_work_v02": 288538
+    }
+   },
+   "tallies": {
+    "pass": {
+     "pairs": 348575,
+     "occurrences": 28951,
+     "samples": 50,
+     "cores": 1745
+    },
+    "pass|cross_assembly": {
+     "pairs": 324336,
+     "occurrences": 27499,
+     "samples": 50,
+     "cores": 1504
+    },
+    "pass|cross_assembly|dna_segment": {
+     "pairs": 324336,
+     "occurrences": 27499,
+     "samples": 50,
+     "cores": 1504
+    },
+    "pass|same_assembly": {
+     "pairs": 24239,
+     "occurrences": 10226,
+     "samples": 50,
+     "cores": 483
+    },
+    "pass|same_assembly|dna_segment": {
+     "pairs": 24239,
+     "occurrences": 10226,
+     "samples": 50,
+     "cores": 483
+    },
+    "strict": {
+     "pairs": 313666,
+     "occurrences": 17846,
+     "samples": 50,
+     "cores": 944
+    },
+    "strict_excluded": {
+     "pairs": 34909,
+     "occurrences": 11713,
+     "samples": 50,
+     "cores": 951
+    },
+    "strict|cross_assembly": {
+     "pairs": 290081,
+     "occurrences": 16586,
+     "samples": 50,
+     "cores": 740
+    },
+    "strict|cross_assembly|dna_segment": {
+     "pairs": 290081,
+     "occurrences": 16586,
+     "samples": 50,
+     "cores": 740
+    },
+    "strict|same_assembly": {
+     "pairs": 23585,
+     "occurrences": 9453,
+     "samples": 50,
+     "cores": 396
+    },
+    "strict|same_assembly|dna_segment": {
+     "pairs": 23585,
+     "occurrences": 9453,
+     "samples": 50,
+     "cores": 396
+    },
+    "ucd_check:insertion_dissimilar": {
+     "pairs": 422183,
+     "occurrences": 143814,
+     "samples": 50,
+     "cores": 9410
+    },
+    "ucd_check:insertion_dissimilar|cross_assembly": {
+     "pairs": 420121,
+     "occurrences": 143098,
+     "samples": 50,
+     "cores": 9236
+    },
+    "ucd_check:insertion_dissimilar|same_assembly": {
+     "pairs": 2062,
+     "occurrences": 2904,
+     "samples": 50,
+     "cores": 434
+    },
+    "ucd_check:insertion_partial": {
+     "pairs": 3671,
+     "occurrences": 2804,
+     "samples": 50,
+     "cores": 372
+    },
+    "ucd_check:insertion_partial|cross_assembly": {
+     "pairs": 3603,
+     "occurrences": 2730,
+     "samples": 50,
+     "cores": 350
+    },
+    "ucd_check:insertion_partial|same_assembly": {
+     "pairs": 68,
+     "occurrences": 118,
+     "samples": 22,
+     "cores": 36
+    },
+    "ucd_check:insufficient_context": {
+     "pairs": 17185,
+     "occurrences": 12533,
+     "samples": 50,
+     "cores": 882
+    },
+    "ucd_check:insufficient_context|cross_assembly": {
+     "pairs": 17074,
+     "occurrences": 12459,
+     "samples": 50,
+     "cores": 874
+    },
+    "ucd_check:insufficient_context|same_assembly": {
+     "pairs": 111,
+     "occurrences": 156,
+     "samples": 10,
+     "cores": 39
+    },
+    "ucd_check:only_one_side_different": {
+     "pairs": 23802,
+     "occurrences": 13599,
+     "samples": 48,
+     "cores": 1382
+    },
+    "ucd_check:only_one_side_different|cross_assembly": {
+     "pairs": 23737,
+     "occurrences": 13554,
+     "samples": 48,
+     "cores": 1377
+    },
+    "ucd_check:only_one_side_different|same_assembly": {
+     "pairs": 65,
+     "occurrences": 118,
+     "samples": 28,
+     "cores": 24
+    },
+    "ucd_check:rearranged_or_fragmented_insertion": {
+     "pairs": 358,
+     "occurrences": 102,
+     "samples": 29,
+     "cores": 13
+    },
+    "ucd_check:rearranged_or_fragmented_insertion|cross_assembly": {
+     "pairs": 342,
+     "occurrences": 96,
+     "samples": 29,
+     "cores": 11
+    },
+    "ucd_check:rearranged_or_fragmented_insertion|same_assembly": {
+     "pairs": 16,
+     "occurrences": 32,
+     "samples": 16,
+     "cores": 5
+    },
+    "ucd_check:same_context": {
+     "pairs": 5377,
+     "occurrences": 4249,
+     "samples": 46,
+     "cores": 554
+    },
+    "ucd_check:same_context|cross_assembly": {
+     "pairs": 5377,
+     "occurrences": 4249,
+     "samples": 46,
+     "cores": 554
+    },
+    "ucd_check:shared_physical_context": {
+     "pairs": 250,
+     "occurrences": 480,
+     "samples": 44,
+     "cores": 80
+    },
+    "ucd_check:shared_physical_context|same_assembly": {
+     "pairs": 250,
+     "occurrences": 480,
+     "samples": 44,
+     "cores": 80
+    },
+    "ucd_check:swapped_or_rearranged_context": {
+     "pairs": 968,
+     "occurrences": 455,
+     "samples": 36,
+     "cores": 47
+    },
+    "ucd_check:swapped_or_rearranged_context|cross_assembly": {
+     "pairs": 924,
+     "occurrences": 413,
+     "samples": 34,
+     "cores": 38
+    },
+    "ucd_check:swapped_or_rearranged_context|same_assembly": {
+     "pairs": 44,
+     "occurrences": 52,
+     "samples": 5,
+     "cores": 14
+    },
+    "ucd_check:ucd_supported": {
+     "pairs": 348575,
+     "occurrences": 28951,
+     "samples": 50,
+     "cores": 1745
+    },
+    "ucd_check:ucd_supported|cross_assembly": {
+     "pairs": 324336,
+     "occurrences": 27499,
+     "samples": 50,
+     "cores": 1504
+    },
+    "ucd_check:ucd_supported|same_assembly": {
+     "pairs": 24239,
+     "occurrences": 10226,
+     "samples": 50,
+     "cores": 483
+    },
+    "ucd_check:uncertain_context": {
+     "pairs": 32077,
+     "occurrences": 16335,
+     "samples": 50,
+     "cores": 1329
+    },
+    "ucd_check:uncertain_context|cross_assembly": {
+     "pairs": 31585,
+     "occurrences": 16120,
+     "samples": 50,
+     "cores": 1296
+    },
+    "ucd_check:uncertain_context|same_assembly": {
+     "pairs": 492,
+     "occurrences": 513,
+     "samples": 38,
+     "cores": 74
+    }
+   },
+   "strict": {
+    "rule": "pass and 0 < X length < 2500 bp on both sides (from the extracted interval)",
+    "before": {
+     "pairs": 348575,
+     "occurrences": 28951,
+     "samples": 50,
+     "cores": 1745
+    },
+    "after": {
+     "pairs": 313666,
+     "occurrences": 17846,
+     "samples": 50,
+     "cores": 944
+    },
+    "excluded_pairs": 34909,
+    "excluded_side_intervals": 69703,
+    "excluded_distinct_side_intervals": 22406
+   }
+  }
+ },
+ "files": {
+  "all_rows_candidate_insertion.tsv.gz": {
+   "path": "/global/scratch/users/kh36969/longread_callout/core_context/dna_v0.1/validation/final_v02/all_rows_candidate_insertion.tsv.gz",
+   "bytes": 137457297,
+   "sha256": "a109c39e179d959f3cc97aa31aa53f0511e08ea3d852781b6ede3d3ce25ff569"
+  },
+  "pass_candidate_insertion.tsv.gz": {
+   "path": "/global/scratch/users/kh36969/longread_callout/core_context/dna_v0.1/validation/final_v02/pass_candidate_insertion.tsv.gz",
+   "bytes": 47164260,
+   "sha256": "d1458e48c35a31f9f11dadbf210a9ac092f772c46ed0603bf781b10a2117bef0"
+  },
+  "strict_lt2500_candidate_insertion.tsv.gz": {
+   "path": "/global/scratch/users/kh36969/longread_callout/core_context/dna_v0.1/validation/final_v02/strict_lt2500_candidate_insertion.tsv.gz",
+   "bytes": 41675089,
+   "sha256": "14c8a26b0ee3d2df9a2adc0fdde0f56ecd18cc99cb56eb6acc4a1c65c018da4d"
+  }
+ },
+ "at": "2026-11-09 13:52:59"
+}

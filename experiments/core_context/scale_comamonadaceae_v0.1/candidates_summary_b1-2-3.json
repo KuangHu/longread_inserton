@@ -1,0 +1,160 @@
+{
+ "version": "scale_candidates_v0.1",
+ "batches": "1,2,3",
+ "evidence_source": "assembly_only",
+ "production_ready": false,
+ "counts_are_pairs_occurrences_or_cores_not_sites_or_events": true,
+ "boundary_shards_missing": [],
+ "sufficient_core_match": [
+  "homolog_full_coverage",
+  "identical_core_dna"
+ ],
+ "assemblies_with_verified_local_reads": 151,
+ "structures": {
+  "single_gene": {
+   "pairs_by_state": {
+    "same_assembly": {
+     "match_both_lt2500": 16177,
+     "match_span_ge2500": 4747,
+     "match_boundary_unknown_pending": 15788,
+     "partial_core_match_pending": 1186,
+     "no_core_dna_hit": 0
+    },
+    "cross_assembly": {
+     "match_both_lt2500": 70400,
+     "match_span_ge2500": 12280,
+     "match_boundary_unknown_pending": 3419780,
+     "partial_core_match_pending": 76741,
+     "no_core_dna_hit": 110
+    }
+   },
+   "pairs_by_class_grouping_state": {
+    "cross_assembly:multi_x_multi:grouping_unresolved:match_both_lt2500": 12817,
+    "cross_assembly:multi_x_multi:grouping_unresolved:match_boundary_unknown_pending": 596732,
+    "cross_assembly:multi_x_multi:grouping_unresolved:match_span_ge2500": 4618,
+    "cross_assembly:multi_x_multi:grouping_unresolved:partial_core_match_pending": 10301,
+    "cross_assembly:multi_x_multi:supported_positions:match_both_lt2500": 7586,
+    "cross_assembly:multi_x_multi:supported_positions:match_boundary_unknown_pending": 137897,
+    "cross_assembly:multi_x_multi:supported_positions:match_span_ge2500": 4410,
+    "cross_assembly:multi_x_multi:supported_positions:partial_core_match_pending": 6238,
+    "cross_assembly:single_x_multi:grouping_unresolved:match_both_lt2500": 8130,
+    "cross_assembly:single_x_multi:grouping_unresolved:match_boundary_unknown_pending": 366473,
+    "cross_assembly:single_x_multi:grouping_unresolved:match_span_ge2500": 1410,
+    "cross_assembly:single_x_multi:grouping_unresolved:partial_core_match_pending": 8085,
+    "cross_assembly:single_x_multi:supported_positions:match_both_lt2500": 2153,
+    "cross_assembly:single_x_multi:supported_positions:match_boundary_unknown_pending": 51654,
+    "cross_assembly:single_x_multi:supported_positions:match_span_ge2500": 618,
+    "cross_assembly:single_x_multi:supported_positions:partial_core_match_pending": 1508,
+    "cross_assembly:single_x_single:grouping_unresolved:match_both_lt2500": 27790,
+    "cross_assembly:single_x_single:grouping_unresolved:match_boundary_unknown_pending": 2009264,
+    "cross_assembly:single_x_single:grouping_unresolved:match_span_ge2500": 784,
+    "cross_assembly:single_x_single:grouping_unresolved:no_core_dna_hit": 102,
+    "cross_assembly:single_x_single:grouping_unresolved:partial_core_match_pending": 42653,
+    "cross_assembly:single_x_single:supported_positions:match_both_lt2500": 11924,
+    "cross_assembly:single_x_single:supported_positions:match_boundary_unknown_pending": 257760,
+    "cross_assembly:single_x_single:supported_positions:match_span_ge2500": 440,
+    "cross_assembly:single_x_single:supported_positions:no_core_dna_hit": 8,
+    "cross_assembly:single_x_single:supported_positions:partial_core_match_pending": 7956,
+    "same_assembly:same_assembly:grouping_unresolved:match_both_lt2500": 9122,
+    "same_assembly:same_assembly:grouping_unresolved:match_boundary_unknown_pending": 7690,
+    "same_assembly:same_assembly:grouping_unresolved:match_span_ge2500": 2499,
+    "same_assembly:same_assembly:grouping_unresolved:partial_core_match_pending": 398,
+    "same_assembly:same_assembly:supported_positions:match_both_lt2500": 7055,
+    "same_assembly:same_assembly:supported_positions:match_boundary_unknown_pending": 8098,
+    "same_assembly:same_assembly:supported_positions:match_span_ge2500": 2248,
+    "same_assembly:same_assembly:supported_positions:partial_core_match_pending": 788
+   },
+   "distinct_occurrences_in_a_match_both_lt2500_pair": 32629,
+   "distinct_occurrences_only_pending": 227141,
+   "cores_with_match_both_lt2500_pair": 5416,
+   "cores_by_hint": {
+    "other": 2969,
+    "hypothetical": 1472,
+    "transposase_or_IS": 830,
+    "phage_like": 22,
+    "integrase_recombinase_resolvase": 88,
+    "translation_or_ribosomal": 21,
+    "intron_rt": 14
+   },
+   "cores_with_same_assembly_pair": 1346,
+   "cores_only_cross_assembly": 4070,
+   "cores_with_s6_supported_pair": 2588,
+   "cores_where_k3_had_no_different_pair": 591,
+   "cores_with_local_reads": 1759,
+   "validation_batch1_occurrences": 5756,
+   "validation_batch1_cores": 1759,
+   "validation_batch1_assemblies": 149
+  },
+  "two_gene": {
+   "pairs_by_state": {
+    "same_assembly": {
+     "match_both_lt2500": 1069,
+     "match_span_ge2500": 2446,
+     "match_boundary_unknown_pending": 1274,
+     "partial_core_match_pending": 76,
+     "no_core_dna_hit": 0
+    },
+    "cross_assembly": {
+     "match_both_lt2500": 7682,
+     "match_span_ge2500": 13317,
+     "match_boundary_unknown_pending": 213696,
+     "partial_core_match_pending": 38148,
+     "no_core_dna_hit": 0
+    }
+   },
+   "pairs_by_class_grouping_state": {
+    "cross_assembly:multi_x_multi:grouping_unresolved:match_both_lt2500": 249,
+    "cross_assembly:multi_x_multi:grouping_unresolved:match_boundary_unknown_pending": 28468,
+    "cross_assembly:multi_x_multi:grouping_unresolved:match_span_ge2500": 4349,
+    "cross_assembly:multi_x_multi:grouping_unresolved:partial_core_match_pending": 7262,
+    "cross_assembly:multi_x_multi:supported_positions:match_both_lt2500": 472,
+    "cross_assembly:multi_x_multi:supported_positions:match_boundary_unknown_pending": 4151,
+    "cross_assembly:multi_x_multi:supported_positions:match_span_ge2500": 4558,
+    "cross_assembly:multi_x_multi:supported_positions:partial_core_match_pending": 226,
+    "cross_assembly:single_x_multi:grouping_unresolved:match_both_lt2500": 379,
+    "cross_assembly:single_x_multi:grouping_unresolved:match_boundary_unknown_pending": 28200,
+    "cross_assembly:single_x_multi:grouping_unresolved:match_span_ge2500": 1260,
+    "cross_assembly:single_x_multi:grouping_unresolved:partial_core_match_pending": 4173,
+    "cross_assembly:single_x_multi:supported_positions:match_both_lt2500": 328,
+    "cross_assembly:single_x_multi:supported_positions:match_boundary_unknown_pending": 4350,
+    "cross_assembly:single_x_multi:supported_positions:match_span_ge2500": 538,
+    "cross_assembly:single_x_multi:supported_positions:partial_core_match_pending": 397,
+    "cross_assembly:single_x_single:grouping_unresolved:match_both_lt2500": 3482,
+    "cross_assembly:single_x_single:grouping_unresolved:match_boundary_unknown_pending": 114768,
+    "cross_assembly:single_x_single:grouping_unresolved:match_span_ge2500": 1856,
+    "cross_assembly:single_x_single:grouping_unresolved:partial_core_match_pending": 21792,
+    "cross_assembly:single_x_single:supported_positions:match_both_lt2500": 2772,
+    "cross_assembly:single_x_single:supported_positions:match_boundary_unknown_pending": 33759,
+    "cross_assembly:single_x_single:supported_positions:match_span_ge2500": 756,
+    "cross_assembly:single_x_single:supported_positions:partial_core_match_pending": 4298,
+    "same_assembly:same_assembly:grouping_unresolved:match_both_lt2500": 575,
+    "same_assembly:same_assembly:grouping_unresolved:match_boundary_unknown_pending": 801,
+    "same_assembly:same_assembly:grouping_unresolved:match_span_ge2500": 1254,
+    "same_assembly:same_assembly:grouping_unresolved:partial_core_match_pending": 48,
+    "same_assembly:same_assembly:supported_positions:match_both_lt2500": 494,
+    "same_assembly:same_assembly:supported_positions:match_boundary_unknown_pending": 473,
+    "same_assembly:same_assembly:supported_positions:match_span_ge2500": 1192,
+    "same_assembly:same_assembly:supported_positions:partial_core_match_pending": 28
+   },
+   "distinct_occurrences_in_a_match_both_lt2500_pair": 6118,
+   "distinct_occurrences_only_pending": 30743,
+   "cores_with_match_both_lt2500_pair": 1245,
+   "cores_by_hint": {
+    "hypothetical": 302,
+    "other": 831,
+    "integrase_recombinase_resolvase": 11,
+    "transposase_or_IS": 91,
+    "translation_or_ribosomal": 7,
+    "phage_like": 3
+   },
+   "cores_with_same_assembly_pair": 221,
+   "cores_only_cross_assembly": 1024,
+   "cores_with_s6_supported_pair": 590,
+   "cores_where_k3_had_no_different_pair": 172,
+   "cores_with_local_reads": 437,
+   "validation_batch1_occurrences": 1000,
+   "validation_batch1_cores": 437,
+   "validation_batch1_assemblies": 141
+  }
+ }
+}

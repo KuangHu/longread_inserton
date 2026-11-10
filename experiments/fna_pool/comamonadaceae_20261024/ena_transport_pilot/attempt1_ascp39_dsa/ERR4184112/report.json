@@ -1,0 +1,31 @@
+{
+  "run": {
+    "run": "ERR4184112",
+    "fastq_bytes": 3150125496,
+    "fastq_md5": "b0d4c2d7629656cb894787d38316a836",
+    "platform": "OXFORD_NANOPORE",
+    "archive_base_count": 3186912924,
+    "archive_read_count": 1146027
+  },
+  "method": "ena-ascp",
+  "command": [
+    "kingfisher",
+    "get",
+    "-r",
+    "ERR4184112",
+    "-m",
+    "ena-ascp",
+    "-f",
+    "fastq.gz",
+    "--output-directory",
+    "/global/scratch/users/kh36969/longread_callout/fna_pool/ena_transport_pilot/ena-ascp/ERR4184112"
+  ],
+  "return_code": 1,
+  "wall_seconds": 2.5,
+  "files": [],
+  "expected_file": "ERR4184112_1.fastq.gz",
+  "checks": {
+    "file_present": false
+  },
+  "status": "failed"
+}

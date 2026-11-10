@@ -1,0 +1,99 @@
+{
+ "version": "scale_entry_v0.1",
+ "batches": [
+  1,
+  2,
+  3
+ ],
+ "evidence_source": "assembly_only",
+ "production_ready": false,
+ "shards_missing": [],
+ "completeness": {
+  "all:single_gene": {
+   "cores": 751106,
+   "complete": 751106,
+   "pairs_total": 358159989,
+   "pairs_accounted": 358159989,
+   "pairs_not_compared": 0,
+   "cores_above_old_cap": 2710,
+   "largest_core_occurrences": 1658,
+   "largest_core_signatures": 580
+  },
+  "all:two_gene": {
+   "cores": 872913,
+   "complete": 872913,
+   "pairs_total": 183627928,
+   "pairs_accounted": 183627928,
+   "pairs_not_compared": 0,
+   "cores_above_old_cap": 973,
+   "largest_core_occurrences": 1512,
+   "largest_core_signatures": 161
+  },
+  "target_lt2500:single_gene": {
+   "cores": 729832,
+   "complete": 729832,
+   "pairs_total": 347464545,
+   "pairs_accounted": 347464545,
+   "pairs_not_compared": 0,
+   "cores_above_old_cap": 2625,
+   "largest_core_occurrences": 1658,
+   "largest_core_signatures": 580
+  },
+  "target_lt2500:two_gene": {
+   "cores": 671547,
+   "complete": 671547,
+   "pairs_total": 137843165,
+   "pairs_accounted": 137843165,
+   "pairs_not_compared": 0,
+   "cores_above_old_cap": 729,
+   "largest_core_occurrences": 1512,
+   "largest_core_signatures": 161
+  }
+ },
+ "candidates": {
+  "all:single_gene": {
+   "cores_2plus": 751106,
+   "cores_with_different_pair": 18567,
+   "with_cross_assembly_different": 17937,
+   "with_same_assembly_different": 2210,
+   "cross_assembly_only": 16357,
+   "single_copy_per_assembly": 15057,
+   "different_pairs": 5184607,
+   "different_pairs_same_assembly": 30455
+  },
+  "all:two_gene": {
+   "cores_2plus": 872913,
+   "cores_with_different_pair": 6226,
+   "with_cross_assembly_different": 6084,
+   "with_same_assembly_different": 415,
+   "cross_assembly_only": 5811,
+   "single_copy_per_assembly": 5493,
+   "different_pairs": 515080,
+   "different_pairs_same_assembly": 4341
+  },
+  "target_lt2500:single_gene": {
+   "cores_2plus": 729832,
+   "cores_with_different_pair": 17909,
+   "with_cross_assembly_different": 17303,
+   "with_same_assembly_different": 2148,
+   "cross_assembly_only": 15761,
+   "single_copy_per_assembly": 14490,
+   "different_pairs": 5100551,
+   "different_pairs_same_assembly": 30169
+  },
+  "target_lt2500:two_gene": {
+   "cores_2plus": 671547,
+   "cores_with_different_pair": 4836,
+   "with_cross_assembly_different": 4712,
+   "with_same_assembly_different": 375,
+   "cross_assembly_only": 4461,
+   "single_copy_per_assembly": 4189,
+   "different_pairs": 414711,
+   "different_pairs_same_assembly": 4228
+  }
+ },
+ "regression": {
+  "reproduced": 16,
+  "changed": 2
+ }
+}

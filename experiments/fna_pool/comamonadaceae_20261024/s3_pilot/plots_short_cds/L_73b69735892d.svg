@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="300" font-family="sans-serif">
+<rect width="100%" height="100%" fill="white"/>
+<text x="4" y="16" font-size="12">L_73b69735892d  SAMD00076718  core 778 bp  two_flank_anchored  support all_calls_anchored  boundary exact  tandem False  core copies carrier/partner 1/0</text>
+<line x1="502.6" y1="30" x2="502.6" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<line x1="617.4" y1="30" x2="617.4" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<text x="4" y="64" font-size="11" font-weight="bold">SAMD00076718 NZ_AP026738.1 (carrier)</text>
+<line x1="60" y1="100" x2="1060" y2="100" stroke="#888"/>
+<rect x="355.1" y="132" width="147.5" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="428.8" y="152" font-size="9" text-anchor="middle">U</text>
+<rect x="502.6" y="132" width="114.8" height="8" fill="#e76f51" opacity="0.55"/>
+<text x="560.0" y="152" font-size="9" text-anchor="middle">core 778</text>
+<rect x="617.4" y="132" width="147.5" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="691.2" y="152" font-size="9" text-anchor="middle">D</text>
+<polygon points="60.0,85 93.1,85 99.1,91 93.1,97 60.0,97" fill="#3b6fb6"><title>peptidoglycan-associated lipoprotein Pal 1904092-1904620 +</title></polygon>
+<text x="60.0" y="81" font-size="8" fill="#333">peptidog</text>
+<polygon points="98.9,85 205.4,85 211.4,91 205.4,97 98.9,97" fill="#3b6fb6"><title>tol-pal system protein YbgF 1904619-1905381 +</title></polygon>
+<polygon points="211.2,85 326.9,85 332.9,91 326.9,97 211.2,97" fill="#3b6fb6"><title>tRNA threonylcarbamoyladenosine dehydrat 1905380-1906205 +</title></polygon>
+<text x="211.2" y="81" font-size="8" fill="#333">tRNA threonylcarbamoyladen</text>
+<polygon points="347.1,85 352.3,85 358.3,91 352.3,97 347.1,97" fill="#b68a3b"><title>tRNA-Lys 1906301-1906377 +</title></polygon>
+<polygon points="427.1,109 433.1,103 454.5,103 454.5,115 433.1,115" fill="#3b6fb6"><title>hypothetical protein 1906843-1907029 -</title></polygon>
+<polygon points="524.4,85 582.6,85 588.6,91 582.6,97 524.4,97" fill="#3b6fb6"><title>lipocalin family protein 1907503-1907938 +</title></polygon>
+<text x="524.4" y="81" font-size="8" fill="#333">lipocalin fam</text>
+<polygon points="651.8,109 657.8,103 710.6,103 710.6,115 657.8,115" fill="#3b6fb6"><title>c-type cytochrome 1908366-1908765 -</title></polygon>
+<text x="651.8" y="125" font-size="8" fill="#333">c-type cytoc</text>
+<polygon points="710.0,109 716.0,103 794.1,103 794.1,115 716.0,115" fill="#3b6fb6"><title>ferritin-like domain-containing protein 1908761-1909331 -</title></polygon>
+<polygon points="822.2,85 918.9,85 924.9,91 918.9,97 822.2,97" fill="#3b6fb6"><title>RNA polymerase sigma factor 1909521-1910217 +</title></polygon>
+<text x="822.2" y="81" font-size="8" fill="#333">RNA polymerase sigma f</text>
+<polygon points="987.7,85 1054.0,85 1060.0,91 1054.0,97 987.7,97" fill="#3b6fb6"><title>sensor domain-containing phosphodiestera 1910643-1911879 +</title></polygon>
+<text x="987.7" y="81" font-size="8" fill="#333">sensor domain-c</text>
+<text x="60" y="166" font-size="9" fill="#666">NZ_AP026738.1:1904355-1911133  core 1907355-1908133</text>
+<text x="4" y="184" font-size="11" font-weight="bold">SAMD00411011 NZ_AP025193.1 (partner, + strand, two_flank_anchored, pair P00007)</text>
+<line x1="60" y1="220" x2="1060" y2="220" stroke="#888"/>
+<rect x="355.1" y="252" width="147.5" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="428.8" y="272" font-size="9" text-anchor="middle">U'</text>
+<rect x="617.4" y="252" width="147.5" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="691.2" y="272" font-size="9" text-anchor="middle">D'</text>
+<rect x="502.6" y="252" width="114.8" height="8" fill="#ffffff" opacity="0.55"/>
+<polygon points="60.0,205 92.2,205 98.2,211 92.2,217 60.0,217" fill="#3b6fb6"><title>peptidoglycan-associated lipoprotein Pal 1851036-1851564 +</title></polygon>
+<text x="60.0" y="201" font-size="8" fill="#333">peptidog</text>
+<polygon points="98.1,205 204.5,205 210.5,211 204.5,217 98.1,217" fill="#3b6fb6"><title>tol-pal system protein YbgF 1851563-1852325 +</title></polygon>
+<polygon points="210.3,205 326.1,205 332.1,211 326.1,217 210.3,217" fill="#3b6fb6"><title>tRNA threonylcarbamoyladenosine dehydrat 1852324-1853149 +</title></polygon>
+<text x="210.3" y="201" font-size="8" fill="#333">tRNA threonylcarbamoyladen</text>
+<polygon points="346.2,205 351.4,205 357.4,211 351.4,217 346.2,217" fill="#b68a3b"><title>tRNA-Lys 1853245-1853321 +</title></polygon>
+<polygon points="426.9,229 432.9,223 454.4,223 454.4,235 432.9,235" fill="#3b6fb6"><title>hypothetical protein 1853792-1853978 -</title></polygon>
+<polygon points="651.8,229 657.8,223 710.6,223 710.6,235 657.8,235" fill="#3b6fb6"><title>c-type cytochrome 1854538-1854937 -</title></polygon>
+<text x="651.8" y="245" font-size="8" fill="#333">c-type cytoc</text>
+<polygon points="710.0,229 716.0,223 794.1,223 794.1,235 716.0,235" fill="#3b6fb6"><title>ferritin-like domain-containing protein 1854933-1855503 -</title></polygon>
+<polygon points="822.2,205 918.9,205 924.9,211 918.9,217 822.2,217" fill="#3b6fb6"><title>RNA polymerase sigma factor 1855693-1856389 +</title></polygon>
+<text x="822.2" y="201" font-size="8" fill="#333">RNA polymerase sigma f</text>
+<polygon points="987.7,205 1054.0,205 1060.0,211 1054.0,217 987.7,217" fill="#3b6fb6"><title>sensor domain-containing phosphodiestera 1856815-1858051 +</title></polygon>
+<text x="987.7" y="201" font-size="8" fill="#333">sensor domain-c</text>
+<text x="60" y="286" font-size="9" fill="#666">NZ_AP025193.1 site 1854305  other-side gap 0 bp  this call's core 1907355-1908133</text>
+<rect x="502.6" y="218" width="114.8" height="4" fill="#f4f4f4"/><text x="560.0" y="272" font-size="9" text-anchor="middle" fill="#a5372f">empty site</text>
+</svg>

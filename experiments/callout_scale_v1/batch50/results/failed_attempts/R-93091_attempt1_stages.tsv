@@ -1,0 +1,2 @@
+stage	start	end	exit_code	wall	max_rss_kb	command
+fetch_reads	2026-10-24T01:13:10-07:00	2026-10-24T01:17:15-07:00	1	4:05.41	20700	python /global/home/users/kh36969/middle_insertion_callout/longread_inserton/scripts/fetch_long_reads.py fetch --out /global/scratch/users/kh36969/longread_callout/data/reads --runs ERR15695518 

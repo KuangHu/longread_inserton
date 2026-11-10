@@ -1,0 +1,25 @@
+{
+  "manifest": "experiments/fna_pool/refresh_20261108/metamycoplasmataceae/download_manifest.tsv",
+  "rows": 3140,
+  "status": {
+    "verified": 3140
+  },
+  "by_purpose": {
+    "gca_identity_check": {
+      "verified": 1380
+    },
+    "primary": {
+      "verified": 1760
+    }
+  },
+  "annotation": {
+    "present": 1583,
+    "annotation_missing": 177
+  },
+  "pair_checks": {
+    "identical_sequences": 1380
+  },
+  "bytes": 4212574089,
+  "files": 9446,
+  "failed": []
+}

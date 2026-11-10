@@ -1,0 +1,12 @@
+{
+  "schema": "audited_evidence_check_v1",
+  "sample": "FW306-02-B",
+  "status": "pass",
+  "members": 714,
+  "classifier_revision": "nearby_competition_v2",
+  "audited_class_counts": {
+    "audited_full_span": 713,
+    "full_span_cigar_fail": 1
+  },
+  "scope": "Recomputed units/classes from emitted read verdicts; no re-mapping or independent competition check"
+}

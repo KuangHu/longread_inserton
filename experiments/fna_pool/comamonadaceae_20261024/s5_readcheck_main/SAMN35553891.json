@@ -1,0 +1,12 @@
+{
+ "sample": "SAMN35553891",
+ "runs": [],
+ "minimap2_args": [
+  "-c",
+  "--secondary=yes",
+  "-N",
+  "100",
+  "-p",
+  "0.3"
+ ]
+}

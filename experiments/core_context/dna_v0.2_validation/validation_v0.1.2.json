@@ -1,0 +1,132 @@
+{
+ "assemblies": 50,
+ "min_overlap": 0.5,
+ "dna": {
+  "rows": 604941,
+  "source_check": {
+   "pass": 604941
+  },
+  "ucd_check": {
+   "insertion_dissimilar": 417247,
+   "shared_physical_context": 221,
+   "ucd_supported": 114850,
+   "only_one_side_different": 21894,
+   "uncertain_context": 24939,
+   "insertion_partial": 3336,
+   "insufficient_context": 15478,
+   "same_context": 5782,
+   "swapped_or_rearranged_context": 843,
+   "rearranged_or_fragmented_insertion": 351
+  },
+  "final": {
+   "not_passed": 490091,
+   "pass": 114850
+  },
+  "strict_pass": 83912,
+  "strict_by_scope": {
+   "same_assembly": 16727,
+   "cross_assembly": 67185
+  },
+  "strict_by_strands": {
+   "+-": 20850,
+   "--": 21220,
+   "++": 20987,
+   "-+": 20855
+  },
+  "source_check_failures": {},
+  "screen_check_agree": {
+   "True": 604532,
+   "False": 409
+  },
+  "candidate_pairs": 7211086,
+  "pair_status": {
+   "unresolved": 5134481,
+   "resolved": 1404036,
+   "no_shared_block_at_seed": 672569
+  },
+  "unresolved_ends": {
+   "not_reached/resolved": 620649,
+   "not_reached/not_reached": 683429,
+   "resolved/end_in_chain_gap": 41224,
+   "resolved/not_reached": 576414,
+   "shared_to_window_or_contig_end/shared_to_window_or_contig_end": 1890799,
+   "shared_to_window_or_contig_end/not_reached": 174532,
+   "shared_to_window_or_contig_end/resolved": 424947,
+   "resolved/shared_to_window_or_contig_end": 447561,
+   "end_in_chain_gap/resolved": 43996,
+   "end_in_chain_gap/not_reached": 25255,
+   "not_reached/end_in_chain_gap": 26823,
+   "no_shared_block_at_seed/no_shared_block_at_seed": 672569,
+   "not_reached/shared_to_window_or_contig_end": 169864,
+   "shared_to_window_or_contig_end/end_in_chain_gap": 3143,
+   "end_in_chain_gap/shared_to_window_or_contig_end": 3323,
+   "end_in_chain_gap/end_in_chain_gap": 2522
+  },
+  "strict_pass_occurrences": 30026
+ },
+ "recovery": {
+  "protein_strict_pairs": 13673,
+  "classes": {
+   "dna_strict_pass": 5794,
+   "occurrences_not_paired": 5029,
+   "dna_pair_unresolved:not_reached/resolved": 1590,
+   "dna_pair_unresolved:not_reached/not_reached": 588,
+   "dna_pair_unresolved:resolved/not_reached": 423,
+   "dna_pair_unresolved:no_shared_block_at_seed/no_shared_block_at_seed": 139,
+   "dna_pair_unresolved:not_reached/end_in_chain_gap": 38,
+   "dna_pair_unresolved:resolved/end_in_chain_gap": 31,
+   "dna_pair_unresolved:end_in_chain_gap/end_in_chain_gap": 16,
+   "dna_pair_unresolved:end_in_chain_gap/resolved": 14,
+   "dna_pair_unresolved:end_in_chain_gap/not_reached": 8,
+   "not_found": 3
+  },
+  "by_scope": {
+   "cross_assembly": {
+    "occurrences_not_paired": 3455,
+    "dna_pair_unresolved": 2102,
+    "dna_strict_pass": 3225,
+    "not_found": 2
+   },
+   "same_assembly": {
+    "occurrences_not_paired": 1574,
+    "dna_strict_pass": 2569,
+    "dna_pair_unresolved": 745,
+    "not_found": 1
+   }
+  },
+  "by_strands": {
+   "-+": {
+    "occurrences_not_paired": 1178,
+    "dna_strict_pass": 1515,
+    "dna_pair_unresolved": 691,
+    "not_found": 1
+   },
+   "+-": {
+    "occurrences_not_paired": 1293,
+    "dna_strict_pass": 1263,
+    "dna_pair_unresolved": 718,
+    "not_found": 1
+   },
+   "--": {
+    "dna_pair_unresolved": 725,
+    "occurrences_not_paired": 1212,
+    "dna_strict_pass": 1650
+   },
+   "++": {
+    "occurrences_not_paired": 1346,
+    "dna_pair_unresolved": 713,
+    "dna_strict_pass": 1366,
+    "not_found": 1
+   }
+  },
+  "protein_cores": 125,
+  "cores_with_dna_strict_pass": 92,
+  "cores_with_any_dna_check": 92
+ },
+ "controls": {
+  "protein_control_rows": 17,
+  "dna_judgement": {
+   "only_one_side_different -> dna_checked_not_passed:only_one_side_different": 17
+  }
+ }
+}

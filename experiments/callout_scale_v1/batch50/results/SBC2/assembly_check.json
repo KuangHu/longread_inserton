@@ -1,0 +1,80 @@
+{
+  "sample": "SBC2",
+  "gca": "GCA_011039955.1",
+  "gcf": "GCF_011039955.1",
+  "identical_sequence_sets": true,
+  "choice": "gcf_sequence_and_annotation",
+  "gca_records": {
+    "CP049316.1": [
+      3989243,
+      "e332339a94ac1f1e39d01cbad3b9e4c1070e44301e9b43ab6ccd33b04a4756ea"
+    ],
+    "CP049317.1": [
+      1990521,
+      "c94484d8f48d5e00599002cce7e6c71db20c5f86b436f2a67e356a6f2e9c7705"
+    ],
+    "CP049318.1": [
+      1831039,
+      "3b76168f0cb04e217d85b543694db33d5e7812daaececbbab1533cff9d962cbe"
+    ],
+    "CP049319.1": [
+      794780,
+      "70737ef9ae7cee1154673dd81b7be6202bb63644380a038245b6fd663e7550b9"
+    ],
+    "CP049320.1": [
+      377315,
+      "1882ff90bbb14ca701e75a386aaf16f4b9678de08c2b6078e59ec4801b1ea46a"
+    ],
+    "CP049321.1": [
+      195179,
+      "005e63a18c9340bfddb4d431b59bc44639197f4e41a69e57d9d4c4da70886be6"
+    ],
+    "CP049322.1": [
+      120676,
+      "f5bd384001f55c3027593229638cdd4c8faece5f3ae7275339948c94e2a87d71"
+    ],
+    "CP049323.1": [
+      24666,
+      "9277322f93ba05961d87abe1866456d09dd166d08c0d051e92aca134343ac767"
+    ]
+  },
+  "gcf_records": {
+    "NZ_CP049316.1": [
+      3989243,
+      "e332339a94ac1f1e39d01cbad3b9e4c1070e44301e9b43ab6ccd33b04a4756ea"
+    ],
+    "NZ_CP049317.1": [
+      1990521,
+      "c94484d8f48d5e00599002cce7e6c71db20c5f86b436f2a67e356a6f2e9c7705"
+    ],
+    "NZ_CP049318.1": [
+      1831039,
+      "3b76168f0cb04e217d85b543694db33d5e7812daaececbbab1533cff9d962cbe"
+    ],
+    "NZ_CP049319.1": [
+      794780,
+      "70737ef9ae7cee1154673dd81b7be6202bb63644380a038245b6fd663e7550b9"
+    ],
+    "NZ_CP049320.1": [
+      377315,
+      "1882ff90bbb14ca701e75a386aaf16f4b9678de08c2b6078e59ec4801b1ea46a"
+    ],
+    "NZ_CP049321.1": [
+      195179,
+      "005e63a18c9340bfddb4d431b59bc44639197f4e41a69e57d9d4c4da70886be6"
+    ],
+    "NZ_CP049322.1": [
+      120676,
+      "f5bd384001f55c3027593229638cdd4c8faece5f3ae7275339948c94e2a87d71"
+    ],
+    "NZ_CP049323.1": [
+      24666,
+      "9277322f93ba05961d87abe1866456d09dd166d08c0d051e92aca134343ac767"
+    ]
+  },
+  "cds_features": 8323,
+  "fasta": "/global/scratch/users/kh36969/longread_callout/data/assemblies_batch50/SBC2/GCF_011039955.1/ncbi_dataset/data/GCF_011039955.1/GCF_011039955.1_ASM1103995v1_genomic.fna",
+  "fasta_sha256": "9680dd52e601e5b02401a11568081a31c32351c039ff1ffa4edfbb8aa5ca72a4",
+  "gbff": "/global/scratch/users/kh36969/longread_callout/data/assemblies_batch50/SBC2/GCF_011039955.1/ncbi_dataset/data/GCF_011039955.1/genomic.gbff",
+  "gbff_sha256": "6462ca4c522dfcd6a092d2340770fecbf109988989bbe548b38f26ded1a73ac1"
+}

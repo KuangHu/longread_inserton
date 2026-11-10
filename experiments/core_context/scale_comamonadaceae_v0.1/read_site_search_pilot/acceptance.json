@@ -1,0 +1,359 @@
+{
+ "version": "read_site_search_v0.3.2",
+ "batch": "read_site_search_pilot",
+ "expected_samples": 11,
+ "sample_status": {
+  "complete": 11
+ },
+ "samples_not_complete": {},
+ "complete": true,
+ "problems": [],
+ "known_recovery": {
+  "core|not_round5_supported": "201/227",
+  "core|round5_supported": "329/366",
+  "negative_control|not_round5_supported": "30/30"
+ },
+ "negative_control": {
+  "genes_searched": 55,
+  "positions_per_gene": {
+   "0": 8,
+   "1": 47
+  }
+ },
+ "negative_control_extra_positions": 0,
+ "sites": {
+  "version": "read_site_search_v0.3.2",
+  "main": {
+   "flank": 1000,
+   "molecules": 3
+  },
+  "sites_by_category": {
+   "known": 974,
+   "in_assembly_not_in_catalog": 174,
+   "not_in_assembly_candidate": 5,
+   "structural_anomaly": 7,
+   "unresolved": 32
+  },
+  "sites_below_molecule_threshold": {
+   "known": 29,
+   "in_assembly_not_in_catalog": 98,
+   "structural_anomaly": 253,
+   "unresolved": 25,
+   "not_in_assembly_candidate": 13
+  },
+  "flags_of_counted_sites": {
+   "cores_disagree": 45,
+   "boundary_unknown": 2,
+   "size_ge_2500": 2
+  },
+  "sites_with_several_cores": 154,
+  "positions_merged_into_sites": 2778,
+  "not_in_assembly_candidates": {
+   "sites": 5,
+   "positions": 6,
+   "cores": 4,
+   "samples": 3,
+   "by_class": {
+    "not_in_assembly:core_absent": 6
+   }
+  },
+  "negative_control_sites_per_gene": {
+   "genes_by_site_count": {
+    "1": 47
+   },
+   "genes_with_several_sites": []
+  },
+  "unplaceable_contexts_ge_N": {
+   "ambiguous_placement (repeat)": 99,
+   "no_anchor_or_unplaced": 10
+  },
+  "one_sided_observation_groups": 950
+ },
+ "candidates_reviewed": {
+  "evidence": {
+   "tested": 5
+  },
+  "structure": {
+   "checked|met": 4,
+   "checked|unresolved_ambiguous_consensus": 1
+  }
+ },
+ "jobs": [
+  {
+   "job": "27506320_0",
+   "name": "read_site_search",
+   "state": "COMPLETED",
+   "elapsed": "00:01:04",
+   "max_rss": "",
+   "node": "n0360.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506320_0.batch",
+   "name": "batch",
+   "state": "COMPLETED",
+   "elapsed": "00:01:04",
+   "max_rss": "2276268K",
+   "node": "n0360.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506320_1",
+   "name": "read_site_search",
+   "state": "COMPLETED",
+   "elapsed": "00:01:02",
+   "max_rss": "",
+   "node": "n0228.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506320_1.batch",
+   "name": "batch",
+   "state": "COMPLETED",
+   "elapsed": "00:01:02",
+   "max_rss": "1555352K",
+   "node": "n0228.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506320_2",
+   "name": "read_site_search",
+   "state": "COMPLETED",
+   "elapsed": "00:01:07",
+   "max_rss": "",
+   "node": "n0232.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506320_2.batch",
+   "name": "batch",
+   "state": "COMPLETED",
+   "elapsed": "00:01:07",
+   "max_rss": "1490628K",
+   "node": "n0232.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506320_3",
+   "name": "read_site_search",
+   "state": "COMPLETED",
+   "elapsed": "00:00:29",
+   "max_rss": "",
+   "node": "n0235.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506320_3.batch",
+   "name": "batch",
+   "state": "COMPLETED",
+   "elapsed": "00:00:29",
+   "max_rss": "770600K",
+   "node": "n0235.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506320_4",
+   "name": "read_site_search",
+   "state": "COMPLETED",
+   "elapsed": "00:01:13",
+   "max_rss": "",
+   "node": "n0238.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506320_4.batch",
+   "name": "batch",
+   "state": "COMPLETED",
+   "elapsed": "00:01:13",
+   "max_rss": "1431876K",
+   "node": "n0238.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506320_5",
+   "name": "read_site_search",
+   "state": "COMPLETED",
+   "elapsed": "00:01:02",
+   "max_rss": "",
+   "node": "n0241.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506320_5.batch",
+   "name": "batch",
+   "state": "COMPLETED",
+   "elapsed": "00:01:02",
+   "max_rss": "1656820K",
+   "node": "n0241.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506320_6",
+   "name": "read_site_search",
+   "state": "COMPLETED",
+   "elapsed": "00:05:50",
+   "max_rss": "",
+   "node": "n0248.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506320_6.batch",
+   "name": "batch",
+   "state": "COMPLETED",
+   "elapsed": "00:05:50",
+   "max_rss": "3033696K",
+   "node": "n0248.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506320_7",
+   "name": "read_site_search",
+   "state": "COMPLETED",
+   "elapsed": "00:00:42",
+   "max_rss": "",
+   "node": "n0255.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506320_7.batch",
+   "name": "batch",
+   "state": "COMPLETED",
+   "elapsed": "00:00:42",
+   "max_rss": "723672K",
+   "node": "n0255.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506320_8",
+   "name": "read_site_search",
+   "state": "COMPLETED",
+   "elapsed": "00:00:17",
+   "max_rss": "",
+   "node": "n0278.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506320_8.batch",
+   "name": "batch",
+   "state": "COMPLETED",
+   "elapsed": "00:00:17",
+   "max_rss": "404988K",
+   "node": "n0278.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506320_9",
+   "name": "read_site_search",
+   "state": "COMPLETED",
+   "elapsed": "00:00:37",
+   "max_rss": "",
+   "node": "n0279.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506320_9.batch",
+   "name": "batch",
+   "state": "COMPLETED",
+   "elapsed": "00:00:37",
+   "max_rss": "627132K",
+   "node": "n0279.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506320_10",
+   "name": "read_site_search",
+   "state": "COMPLETED",
+   "elapsed": "00:00:25",
+   "max_rss": "",
+   "node": "n0280.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506320_10.batch",
+   "name": "batch",
+   "state": "COMPLETED",
+   "elapsed": "00:00:25",
+   "max_rss": "714520K",
+   "node": "n0280.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506321",
+   "name": "read_site_search",
+   "state": "COMPLETED",
+   "elapsed": "00:01:22",
+   "max_rss": "",
+   "node": "n0339.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506321.batch",
+   "name": "batch",
+   "state": "COMPLETED",
+   "elapsed": "00:01:22",
+   "max_rss": "158132K",
+   "node": "n0339.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506322",
+   "name": "read_site_search",
+   "state": "COMPLETED",
+   "elapsed": "00:03:13",
+   "max_rss": "",
+   "node": "n0339.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506322.batch",
+   "name": "batch",
+   "state": "COMPLETED",
+   "elapsed": "00:03:13",
+   "max_rss": "1613196K",
+   "node": "n0339.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506323",
+   "name": "read_site_search",
+   "state": "COMPLETED",
+   "elapsed": "00:02:02",
+   "max_rss": "",
+   "node": "n0339.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506323.batch",
+   "name": "batch",
+   "state": "COMPLETED",
+   "elapsed": "00:02:02",
+   "max_rss": "647144K",
+   "node": "n0339.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506324",
+   "name": "read_site_search",
+   "state": "COMPLETED",
+   "elapsed": "00:00:05",
+   "max_rss": "",
+   "node": "n0090.lr6",
+   "exit": "0:0"
+  },
+  {
+   "job": "27506324.batch",
+   "name": "batch",
+   "state": "COMPLETED",
+   "elapsed": "00:00:05",
+   "max_rss": "82512K",
+   "node": "n0090.lr6",
+   "exit": "0:0"
+  }
+ ],
+ "failed_jobs": [],
+ "max_rss_gb": 3.03,
+ "disk_bytes": {
+  "work": 488520224,
+  "out": 2493196
+ }
+}

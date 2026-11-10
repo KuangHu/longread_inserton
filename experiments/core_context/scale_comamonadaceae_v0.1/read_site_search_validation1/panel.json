@@ -1,0 +1,24 @@
+{
+ "version": "read_site_search_v0.3",
+ "cores": 1083,
+ "panel_members": 18797,
+ "panel_occurrences": 35666,
+ "panel_bp": 17604417,
+ "negative_control_members": 17,
+ "negative_control_products": {
+  "NEG_DNA-directed_RNA_polymerase_subunit_betap": 7,
+  "NEG_DNA-directed_RNA_polymerase_subunit_beta": 7,
+  "NEG_30S_ribosomal_protein_S3": 2,
+  "NEG_50S_ribosomal_protein_L2": 1
+ },
+ "catalog_occurrences_pilot": 35512,
+ "pilot_samples": [
+  "SAMEA115676833",
+  "SAMN30525383",
+  "SAMN37751820",
+  "SAMN38562701",
+  "SAMN43526786",
+  "SAMN51281039",
+  "SAMN56368990"
+ ]
+}

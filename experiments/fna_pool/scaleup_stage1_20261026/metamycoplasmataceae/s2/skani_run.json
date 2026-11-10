@@ -1,0 +1,8 @@
+{
+  "command": "/global/scratch/users/kh36969/longread_callout/paraburkholderia_ani/skani triangle -l /global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/metamycoplasmataceae/s2/genomes.list -E --slow -t 32 -o /global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/metamycoplasmataceae/s2/skani_edges.tsv",
+  "version": "skani 0.4.0",
+  "binary_sha256": "1482c7d1cf35210bf73c6d06c1b1fc97659dec18194c5355a31af672b6b03c0b",
+  "edges": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/metamycoplasmataceae/s2/skani_edges.tsv",
+  "edges_sha256": "9fa0fbcbd648dc33949483ef87b0005c3389e1e4e913cd89a8068eb5f2b52ce7",
+  "rows": 362086
+}

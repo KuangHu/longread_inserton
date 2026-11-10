@@ -1,0 +1,115 @@
+{
+ "intervals": 21486,
+ "intervals_with_any_count_change": 3401,
+ "position_class": {
+  "conflict -> conflict": 2,
+  "insufficient_coverage -> insufficient_coverage": 308,
+  "insufficient_coverage -> locus_ambiguous": 2,
+  "locus_ambiguous -> conflict": 1,
+  "locus_ambiguous -> locus_ambiguous": 81,
+  "supported -> supported": 21092
+ },
+ "verdict": {
+  "consistent -> consistent": 21092,
+  "contradicted -> contradicted": 1,
+  "insufficient -> contradicted": 1,
+  "insufficient -> insufficient": 391,
+  "mixed -> mixed": 1
+ },
+ "count_totals_v01_v02": {
+  "P": [
+   2508193,
+   2509051
+  ],
+  "A": [
+   475,
+   477
+  ],
+  "P_matched": [
+   2505543,
+   2507165
+  ],
+  "A_matched": [
+   475,
+   477
+  ],
+  "ambiguous": [
+   2,
+   3
+  ],
+  "locus_ambiguous": [
+   351390,
+   363291
+  ],
+  "off_locus": [
+   144837,
+   14826
+  ],
+  "cigar_fail": [
+   13746,
+   9354
+  ]
+ },
+ "count_change_direction": {
+  "P": {
+   "same": 21003,
+   "up": 472,
+   "down": 11
+  },
+  "A": {
+   "same": 21484,
+   "up": 2
+  },
+  "P_matched": {
+   "same": 20690,
+   "up": 786,
+   "down": 10
+  },
+  "A_matched": {
+   "same": 21484,
+   "up": 2
+  },
+  "ambiguous": {
+   "same": 21485,
+   "up": 1
+  },
+  "locus_ambiguous": {
+   "same": 20394,
+   "up": 1065,
+   "down": 27
+  },
+  "off_locus": {
+   "same": 18589,
+   "down": 2813,
+   "up": 84
+  },
+  "cigar_fail": {
+   "same": 20942,
+   "down": 478,
+   "up": 66
+  }
+ },
+ "P_matched_change": {
+  "min": -1,
+  "max": 19,
+  "up": 786,
+  "down": 10
+ },
+ "near_threshold_v01": {
+  "n_near_min_span | insufficient_coverage -> insufficient_coverage": 27,
+  "n_near_min_span | insufficient_coverage -> locus_ambiguous": 2,
+  "n_near_min_span | locus_ambiguous -> conflict": 1,
+  "n_near_min_span | locus_ambiguous -> locus_ambiguous": 31,
+  "n_near_min_span | supported -> supported": 361,
+  "other_share_near_10pct | supported -> supported": 13
+ },
+ "pair_class": {
+  "both_positions_supported -> both_positions_supported": 11768,
+  "conflict_at_a_position -> conflict_at_a_position": 1,
+  "no_position_supported -> no_position_supported": 48,
+  "one_position_supported -> conflict_at_a_position": 1,
+  "one_position_supported -> one_position_supported": 279,
+  "single_side_not_supported -> single_side_not_supported": 315,
+  "single_side_supported -> single_side_supported": 23671
+ }
+}

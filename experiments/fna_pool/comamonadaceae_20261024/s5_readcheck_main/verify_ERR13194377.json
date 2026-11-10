@@ -1,0 +1,48 @@
+{
+  "run": {
+    "run": "ERR13194377",
+    "sample_id": "SAMEA115676961",
+    "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR131/077/ERR13194377/ERR13194377.fastq.gz",
+    "fastq_bytes": 312940894,
+    "fastq_md5": "1427bbd02afd5e65686da4ac5dc6d7da",
+    "platform": "OXFORD_NANOPORE",
+    "archive_base_count": 327335891,
+    "archive_read_count": 45831
+  },
+  "download_started": "2026-10-25T17:37:00-0700",
+  "local_file": "/global/scratch/users/kh36969/longread_callout/data/reads/ERR13194377/ERR13194377.fastq.gz",
+  "bytes": 312940894,
+  "md5": "1427bbd02afd5e65686da4ac5dc6d7da",
+  "sha256": "2c2708bbe2959d81a8d114c814f219353dbf76e07e9588d6d8715ac14a25b12f",
+  "rejected_downloads": [],
+  "spots_absent_from_fastq": 0,
+  "summary": {
+    "records": 45831,
+    "bases": 327335891,
+    "read_unit_counts": {
+      "other_name": 45831
+    },
+    "distinct_zmws": null,
+    "distinct_sra_spots": 45831,
+    "max_records_per_spot": 1,
+    "placeholder_quality_records": 0,
+    "example_headers": [
+      "@ERR13194377.1 6800195c-87d0-4391-82b5-e42e42a2d9fe runid=47dbfd18f17ac8aadb8db66f6f4714a44b240bd3 sampleid=no_sample read=67217 ch=347 start_time=2022-05-16T10:46:55Z model_version_id=2021-05-17_dna_r9.4.1_minion_384_d37a2ab9 barcode=barcode58",
+      "@ERR13194377.2 e8b5c2c4-88ee-4c4f-ae39-4665f50b41a9 runid=47dbfd18f17ac8aadb8db66f6f4714a44b240bd3 sampleid=no_sample read=98510 ch=303 start_time=2022-05-16T10:47:29Z model_version_id=2021-05-17_dna_r9.4.1_minion_384_d37a2ab9 barcode=barcode58",
+      "@ERR13194377.3 deb025e4-c5f2-47ca-98c2-d0f8e07cb4c8 runid=47dbfd18f17ac8aadb8db66f6f4714a44b240bd3 sampleid=no_sample read=70540 ch=134 start_time=2022-05-16T10:47:19Z model_version_id=2021-05-17_dna_r9.4.1_minion_384_d37a2ab9 barcode=barcode58",
+      "@ERR13194377.4 46e07fff-8597-419a-87cd-0cd00a52cc2c runid=47dbfd18f17ac8aadb8db66f6f4714a44b240bd3 sampleid=no_sample read=56584 ch=241 start_time=2022-05-16T10:46:25Z model_version_id=2021-05-17_dna_r9.4.1_minion_384_d37a2ab9 barcode=barcode58"
+    ],
+    "mean_length": 7142.2,
+    "median_length": 3045,
+    "max_length": 96993,
+    "n50": 17352,
+    "molecule_grouping": "one_record_per_molecule"
+  },
+  "checks": {
+    "bytes_match": true,
+    "md5_match": true,
+    "spot_count_match": true,
+    "base_count_match": true
+  },
+  "status": "verified"
+}

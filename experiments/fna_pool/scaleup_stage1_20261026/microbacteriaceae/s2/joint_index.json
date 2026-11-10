@@ -1,0 +1,19 @@
+{
+  "joint_fna": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/microbacteriaceae/s2/joint.fna.gz",
+  "joint_fna_sha256": "9b0fa2dabca95da82c1e95724aa1336a43c1d51bb9c86e9f7256d430b7e67cba",
+  "samples": 3444,
+  "contigs": 201146,
+  "contig_bp": 12123375123,
+  "header": "sample_id|assembly|contig",
+  "check": "every joint record SHA256 equals the S1 record SHA256 of its source FNA",
+  "pool_rows": 3444,
+  "excluded_not_verified": 0,
+  "annotation_status": {
+    "annotation_missing": 178,
+    "present": 3266
+  },
+  "gff_features_out_of_range": 0,
+  "contig_index": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/microbacteriaceae/s2/contig_index.tsv.gz",
+  "contig_index_sha256": "cdfadfecce935b5393ff699462c2a993f16383db199ddc826b613f9599d6a7f4",
+  "gff_features_origin_spanning": 504
+}

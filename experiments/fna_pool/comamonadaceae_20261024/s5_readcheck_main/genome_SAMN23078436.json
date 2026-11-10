@@ -1,0 +1,22 @@
+{
+ "sample": "SAMN23078436",
+ "assembly": "/global/scratch/users/kh36969/longread_callout/fna_pool/comamonadaceae_20261024/data/genomes/GCA_024703875.1/GCA_024703875.1_ASM2470387v1_genomic.fna",
+ "runs": [
+  {
+   "run": "SRR21050828",
+   "molecule_grouping": "one_record_per_molecule",
+   "read_records": 5485,
+   "read_names": 5485,
+   "molecules": 5485,
+   "count_unit": "molecules"
+  }
+ ],
+ "minimap2_args": [
+  "-c",
+  "--secondary=yes",
+  "-N",
+  "50",
+  "-p",
+  "0.5"
+ ]
+}

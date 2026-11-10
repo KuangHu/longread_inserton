@@ -1,0 +1,50 @@
+{
+  "run": {
+    "sample_id": "DdD110",
+    "run": "SRR16235513",
+    "biosample": "SAMN19030608",
+    "assembly": "GCA_020510685.1",
+    "platform": "PACBIO_SMRT",
+    "instrument_model": "Sequel",
+    "role": "phase_C_pacbio_1",
+    "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR162/013/SRR16235513/SRR16235513.fastq.gz",
+    "archive_read_count": 525543,
+    "archive_base_count": 2525540520,
+    "fastq_bytes": 775843604,
+    "fastq_md5": "4b806b690b544dd0e89396a6bb51bc19"
+  },
+  "download_started": "2026-10-22T18:48:50-0700",
+  "local_file": "$PROJ/data/reads/SRR16235513/SRR16235513.fastq.gz",
+  "bytes": 775843604,
+  "md5": "4b806b690b544dd0e89396a6bb51bc19",
+  "sha256": "d7d8c809d844c41b3161c477cc065b07a72b476f422f32729e935371af11b630",
+  "summary": {
+    "records": 525543,
+    "bases": 2525540520,
+    "read_unit_counts": {
+      "subread": 525543
+    },
+    "distinct_zmws": 65876,
+    "distinct_sra_spots": 525543,
+    "max_records_per_spot": 1,
+    "placeholder_quality_records": 525543,
+    "example_headers": [
+      "@SRR16235513.1 m54141_200713_122915/4194394/0_9591",
+      "@SRR16235513.2 m54141_200713_122915/4194394/9675_14305",
+      "@SRR16235513.3 m54141_200713_122915/4194432/0_2823",
+      "@SRR16235513.4 m54141_200713_122915/4194432/2902_20407"
+    ],
+    "mean_length": 4805.6,
+    "median_length": 3431,
+    "max_length": 97725,
+    "n50": 7937,
+    "molecule_grouping": "zmw_from_read_name"
+  },
+  "checks": {
+    "bytes_match": true,
+    "md5_match": true,
+    "spot_count_match": true,
+    "base_count_match": true
+  },
+  "status": "verified"
+}

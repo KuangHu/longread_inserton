@@ -1,0 +1,25 @@
+{
+  "manifest": "experiments/fna_pool/refresh_20261108/actinomycetaceae/download_manifest.tsv",
+  "rows": 2264,
+  "status": {
+    "verified": 2264
+  },
+  "by_purpose": {
+    "gca_identity_check": {
+      "verified": 1124
+    },
+    "primary": {
+      "verified": 1140
+    }
+  },
+  "annotation": {
+    "present": 1133,
+    "annotation_missing": 7
+  },
+  "pair_checks": {
+    "identical_sequences": 1124
+  },
+  "bytes": 7979390944,
+  "files": 6794,
+  "failed": []
+}

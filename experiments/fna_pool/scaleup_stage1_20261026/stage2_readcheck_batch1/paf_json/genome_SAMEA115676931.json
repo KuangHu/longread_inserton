@@ -1,0 +1,22 @@
+{
+ "sample": "SAMEA115676931",
+ "assembly": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/comamonadaceae/data/genomes/GCF_964253985.1/GCF_964253985.1_LjRoot290v2_genomic.fna",
+ "runs": [
+  {
+   "run": "ERR13194347",
+   "molecule_grouping": "one_record_per_molecule",
+   "read_records": 730,
+   "read_names": 730,
+   "molecules": 730,
+   "count_unit": "molecules"
+  }
+ ],
+ "minimap2_args": [
+  "-c",
+  "--secondary=yes",
+  "-N",
+  "50",
+  "-p",
+  "0.5"
+ ]
+}

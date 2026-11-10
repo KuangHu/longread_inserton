@@ -1,0 +1,13 @@
+{
+  "schema": "audited_evidence_check_v1",
+  "sample": "R-93091",
+  "status": "pass",
+  "members": 275,
+  "classifier_revision": "nearby_competition_v2",
+  "audited_class_counts": {
+    "audited_full_span": 264,
+    "edge_limited": 5,
+    "ambiguous_competing": 6
+  },
+  "scope": "Recomputed units/classes from emitted read verdicts; no re-mapping or independent competition check"
+}

@@ -1,0 +1,211 @@
+[
+  {
+    "accession": "GCA_012689525.1",
+    "url": "https://api.ncbi.nlm.nih.gov/datasets/v2/genome/accession/GCA_012689525.1/download?include_annotation_type=GENOME_FASTA",
+    "status": "downloaded_verified_length",
+    "attempt": 1,
+    "fasta_bytes": 10976595,
+    "bases": 10840732,
+    "records": 4,
+    "fasta_sha256": "769497c59e231f9cc3f3b3b275abd4a0e173372b72230e78138bf8a270f226b6",
+    "zip_sha256": "7428e1c34a00f4b92d88e6963743a5adb0a2abc7e595b2bf1e2607a33e7ee23a"
+  },
+  {
+    "accession": "GCA_021483665.1",
+    "url": "https://api.ncbi.nlm.nih.gov/datasets/v2/genome/accession/GCA_021483665.1/download?include_annotation_type=GENOME_FASTA",
+    "status": "downloaded_verified_length",
+    "attempt": 1,
+    "fasta_bytes": 8567922,
+    "bases": 8454837,
+    "records": 81,
+    "fasta_sha256": "ac351030635396251469dd9500054c4004d720848d3d262925c9c7819aa894c8",
+    "zip_sha256": "e9273fc027847bd3e013572ece766412c7c90f2696c366d2398efc70715a4024"
+  },
+  {
+    "accession": "GCA_022879555.1",
+    "url": "https://api.ncbi.nlm.nih.gov/datasets/v2/genome/accession/GCA_022879555.1/download?include_annotation_type=GENOME_FASTA",
+    "status": "downloaded_verified_length",
+    "attempt": 1,
+    "fasta_bytes": 7295671,
+    "bases": 7205263,
+    "records": 5,
+    "fasta_sha256": "0a7deba114a0b6faa0d00258a7ea94076fa2a3052f3e18f0133ab53cf9d1a8e8",
+    "zip_sha256": "a5e6f3a59a4a6a9b5fb6e94630e27efa054233a68f8ca9abed1cd165126efc27"
+  },
+  {
+    "accession": "GCA_047325075.1",
+    "url": "https://api.ncbi.nlm.nih.gov/datasets/v2/genome/accession/GCA_047325075.1/download?include_annotation_type=GENOME_FASTA",
+    "status": "downloaded_verified_length",
+    "attempt": 1,
+    "fasta_bytes": 6883030,
+    "bases": 6797873,
+    "records": 2,
+    "fasta_sha256": "e64482b71578e3924d91520ed6572307c97202d43004fce07f027f73c6656c6e",
+    "zip_sha256": "46180fd83d39e8d062a961a2b9e7b25e4407ed92fbbe47dd497cc1030c7955bc"
+  },
+  {
+    "accession": "GCA_049177125.1",
+    "url": "https://api.ncbi.nlm.nih.gov/datasets/v2/genome/accession/GCA_049177125.1/download?include_annotation_type=GENOME_FASTA",
+    "status": "downloaded_verified_length",
+    "attempt": 1,
+    "fasta_bytes": 7781190,
+    "bases": 7684915,
+    "records": 3,
+    "fasta_sha256": "5d3c37bbc3dad73c1e2141614f015b0807ed4169b9e29b5df668f12f7a7c78d4",
+    "zip_sha256": "2902f8ec10a829b399d9dd89ebdd5e810d63fa5de2b9b19281844b968a3cc10d"
+  },
+  {
+    "accession": "GCA_052372855.1",
+    "url": "https://api.ncbi.nlm.nih.gov/datasets/v2/genome/accession/GCA_052372855.1/download?include_annotation_type=GENOME_FASTA",
+    "status": "downloaded_verified_length",
+    "attempt": 1,
+    "fasta_bytes": 9852540,
+    "bases": 9729755,
+    "records": 12,
+    "fasta_sha256": "6e362572196734ce940ddb55d127e49361cdbdfdda914f6dcb1b1a30e2da093e",
+    "zip_sha256": "8567e52a743d09b63299d7f21b1a4b32b8753ed30f8d5fc7f34c02c7db52494d"
+  },
+  {
+    "accession": "GCA_058782725.1",
+    "url": "https://api.ncbi.nlm.nih.gov/datasets/v2/genome/accession/GCA_058782725.1/download?include_annotation_type=GENOME_FASTA",
+    "status": "downloaded_verified_length",
+    "attempt": 1,
+    "fasta_bytes": 8348267,
+    "bases": 8244798,
+    "records": 4,
+    "fasta_sha256": "493974ad58c45a1aded9d15afd3748247699a3ff7013d5cd7590de790cc8fff6",
+    "zip_sha256": "1b3cdb5f71ff108d2467dcadc7ab655451c8f4ae7286dbbf5b0a3edb35e0746c"
+  },
+  {
+    "accession": "GCA_964252825.2",
+    "url": "https://api.ncbi.nlm.nih.gov/datasets/v2/genome/accession/GCA_964252825.2/download?include_annotation_type=GENOME_FASTA",
+    "status": "downloaded_verified_length",
+    "attempt": 1,
+    "fasta_bytes": 11507419,
+    "bases": 11360794,
+    "records": 36,
+    "fasta_sha256": "31a85f7d0931791d34d7d0d24012ee0744bac1de6f8d38bc087242202618f75d",
+    "zip_sha256": "474c8c4209f5069d669cddcbd7584bfe895f8a02e3e7bf910c98055df947e813"
+  },
+  {
+    "accession": "GCA_964252875.2",
+    "url": "https://api.ncbi.nlm.nih.gov/datasets/v2/genome/accession/GCA_964252875.2/download?include_annotation_type=GENOME_FASTA",
+    "status": "downloaded_verified_length",
+    "attempt": 1,
+    "fasta_bytes": 12140450,
+    "bases": 11989812,
+    "records": 6,
+    "fasta_sha256": "77d2ee2ea6383ab4d71f7c412a80821ed99bb1a2cb01f8b15f09b0a05ff86cb0",
+    "zip_sha256": "5be62793c204c0057cfb968fbb5973a9ae45ad879fa917d001763aa6794dc265"
+  },
+  {
+    "accession": "GCA_964253395.2",
+    "url": "https://api.ncbi.nlm.nih.gov/datasets/v2/genome/accession/GCA_964253395.2/download?include_annotation_type=GENOME_FASTA",
+    "status": "downloaded_verified_length",
+    "attempt": 1,
+    "fasta_bytes": 11285315,
+    "bases": 11144613,
+    "records": 11,
+    "fasta_sha256": "704bfbe4a0d8ac4c4b5bffcf403d6068d82505927e199d2a7885f5f88f1b0cff",
+    "zip_sha256": "337487e391e66e0d3044845f9bda75121ffa89f6eb1edec8337627179a27a6c6"
+  },
+  {
+    "accession": "GCA_964253525.2",
+    "url": "https://api.ncbi.nlm.nih.gov/datasets/v2/genome/accession/GCA_964253525.2/download?include_annotation_type=GENOME_FASTA",
+    "status": "downloaded_verified_length",
+    "attempt": 1,
+    "fasta_bytes": 7348128,
+    "bases": 7257155,
+    "records": 2,
+    "fasta_sha256": "0a770c653fe9c15ac0f0b9c3dac4123800816b3b234fa56e3fd5a25857b6cb31",
+    "zip_sha256": "2b68e5e5cee0e395a4418d8da84352c4744457b4ffa605b626dc29b4e50935ae"
+  },
+  {
+    "accession": "GCA_976997115.1",
+    "url": "https://api.ncbi.nlm.nih.gov/datasets/v2/genome/accession/GCA_976997115.1/download?include_annotation_type=GENOME_FASTA",
+    "status": "downloaded_verified_length",
+    "attempt": 1,
+    "fasta_bytes": 9839752,
+    "bases": 9715413,
+    "records": 21,
+    "fasta_sha256": "9a407d3ec5b62b57c4d6219335858869756a425878a0eb4e3e9a711ea827995a",
+    "zip_sha256": "4b8f48a550ab249cd78765e85df77788d404fa26307ff5888581c54b18a27f23"
+  },
+  {
+    "accession": "GCA_976997195.1",
+    "url": "https://api.ncbi.nlm.nih.gov/datasets/v2/genome/accession/GCA_976997195.1/download?include_annotation_type=GENOME_FASTA",
+    "status": "downloaded_verified_length",
+    "attempt": 1,
+    "fasta_bytes": 9713097,
+    "bases": 9592232,
+    "records": 7,
+    "fasta_sha256": "8c1b870213cbf403dff030ec2f64fed4612fbcfc8ea688c883850af2659bf15c",
+    "zip_sha256": "7369cf4e7fb224960e6fe097b8bc1655056a0b1ba5b56377065436a6c8c965c4"
+  },
+  {
+    "accession": "GCA_977004965.1",
+    "url": "https://api.ncbi.nlm.nih.gov/datasets/v2/genome/accession/GCA_977004965.1/download?include_annotation_type=GENOME_FASTA",
+    "status": "downloaded_verified_length",
+    "attempt": 1,
+    "fasta_bytes": 9496410,
+    "bases": 9378368,
+    "records": 6,
+    "fasta_sha256": "13f15c73b6fe325c3eab0d4421b25043f63ad1c59d177b24dff931bf34d7549a",
+    "zip_sha256": "c329ce9dbafec45a56b971c834503bd74b5034cdaf1fb46f7c8618e6a8b5087a"
+  },
+  {
+    "accession": "GCA_977004995.1",
+    "url": "https://api.ncbi.nlm.nih.gov/datasets/v2/genome/accession/GCA_977004995.1/download?include_annotation_type=GENOME_FASTA",
+    "status": "downloaded_verified_length",
+    "attempt": 1,
+    "fasta_bytes": 9065094,
+    "bases": 8952376,
+    "records": 6,
+    "fasta_sha256": "9fb4c6ba86a60542f591d0226a82a16b1048a26664c567d23109903a51886fb1",
+    "zip_sha256": "de322c18b9a14a7e99f9c41162d9ce5dbabd3b81ebada7672aa884bd9362db4a"
+  },
+  {
+    "accession": "GCA_977005035.1",
+    "url": "https://api.ncbi.nlm.nih.gov/datasets/v2/genome/accession/GCA_977005035.1/download?include_annotation_type=GENOME_FASTA",
+    "status": "downloaded_verified_length",
+    "attempt": 1,
+    "fasta_bytes": 9065223,
+    "bases": 8952503,
+    "records": 6,
+    "fasta_sha256": "cc2a53ebc40a9554d08a5d3c8f238cf84c89b35e044ef234f1d345971738198b",
+    "zip_sha256": "cdb38baea147cef16477b7b9aed0aa32ef01591895de3618c6bae8c18f37d450"
+  },
+  {
+    "accession": "GCA_977005055.1",
+    "url": "https://api.ncbi.nlm.nih.gov/datasets/v2/genome/accession/GCA_977005055.1/download?include_annotation_type=GENOME_FASTA",
+    "status": "downloaded_verified_length",
+    "attempt": 1,
+    "fasta_bytes": 9070638,
+    "bases": 8958119,
+    "records": 4,
+    "fasta_sha256": "54b87622e30016ba4823fc24efbc940d2412445ecc8ea790ea7de69a3692b7b5",
+    "zip_sha256": "6ad831ec7968d45ec57ff23f4e46f0da807368c61b443a19a099e6c0e6b0c8a6"
+  },
+  {
+    "accession": "GCA_977008015.1",
+    "url": "https://api.ncbi.nlm.nih.gov/datasets/v2/genome/accession/GCA_977008015.1/download?include_annotation_type=GENOME_FASTA",
+    "status": "downloaded_verified_length",
+    "attempt": 1,
+    "fasta_bytes": 9071817,
+    "bases": 8959285,
+    "records": 4,
+    "fasta_sha256": "ac7b1046da8c7a095d5cde31cd4a6ab0088ea405196abcf846b7664e6a3c4f64",
+    "zip_sha256": "f4e716e5a6b64630a903a8986f429f9c0677c950cb86a69d0e3bb73fb545d87e"
+  },
+  {
+    "accession": "GCA_977011985.1",
+    "url": "https://api.ncbi.nlm.nih.gov/datasets/v2/genome/accession/GCA_977011985.1/download?include_annotation_type=GENOME_FASTA",
+    "status": "downloaded_verified_length",
+    "attempt": 1,
+    "fasta_bytes": 9070616,
+    "bases": 8958099,
+    "records": 4,
+    "fasta_sha256": "7df40a7109e820b0e959166bf539f69b765cae56357106a3bccdcbbd72a1372e",
+    "zip_sha256": "cc52015ed846a60372723564e0d63a096e661e22cbf4c74ab5b863a481322eee"
+  }
+]

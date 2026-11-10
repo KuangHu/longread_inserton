@@ -1,0 +1,55 @@
+{
+  "schema": "audited_filled_site_v1",
+  "classifier_revision": "nearby_competition_v2",
+  "sample": "R-91497",
+  "members": 491,
+  "reads_touching_candidates": 49857,
+  "cap_reads": 0,
+  "cap_reads_rechecked": 0,
+  "audited_class_counts": {
+    "edge_limited": 0,
+    "audited_full_span": 491,
+    "audited_full_span_with_conflict": 0,
+    "single_unit_full_span": 0,
+    "ambiguous_competing": 0,
+    "full_span_cigar_fail": 0,
+    "conflict_x_absent": 0,
+    "one_side_only": 0,
+    "internal_only": 0,
+    "no_coverage": 0
+  },
+  "long_member_class_counts": {
+    "edge_limited": 0,
+    "audited_full_span": 131,
+    "audited_full_span_with_conflict": 0,
+    "single_unit_full_span": 0,
+    "ambiguous_competing": 0,
+    "full_span_cigar_fail": 0,
+    "conflict_x_absent": 0,
+    "one_side_only": 0,
+    "internal_only": 0,
+    "no_coverage": 0
+  },
+  "v1_comparison": {
+    "v1_members": 491,
+    "changed": 0
+  },
+  "independence": "independence_unverified",
+  "assembly_consistency": "assembly_built_from_these_reads",
+  "thresholds": {
+    "ANCHOR_BP": 100,
+    "MIN_ANCHOR_COVER": 0.9,
+    "MIN_X_COVER": 0.9,
+    "MAX_X_INDEL": 0.1,
+    "MIN_UNITS": 2,
+    "X_DELETED": 0.5,
+    "COMPETE_AS": 0.95,
+    "COMPETE_QUERY_OVERLAP": 0.5,
+    "SECONDARY_CAP": 50,
+    "RECHECK_CAP": 200
+  },
+  "notes": [
+    "Boundary status is never upgraded by read support.",
+    "Support units are distinct reads after collapsing identical alignment signatures; they are not certified independent molecules unless independence says so."
+  ]
+}

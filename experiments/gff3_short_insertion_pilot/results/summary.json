@@ -1,0 +1,30 @@
+{
+  "input_candidates": 70,
+  "core_length_lt_2500": 44,
+  "status_counts": {
+    "review": 30,
+    "eligible_1_2_CDS": 14
+  },
+  "complete_CDS_count_distribution": {
+    "1": 28,
+    "0": 10,
+    "2": 4,
+    "3": 2
+  },
+  "eligible_CDS_count_distribution": {
+    "1": 14
+  },
+  "review_reason_counts_nonexclusive": {
+    "boundary_intersects_feature": 25,
+    "complete_CDS_count_not_1_or_2": 12,
+    "partial": 7,
+    "protein_sequence_missing": 8,
+    "pseudogene": 9
+  },
+  "limits": [
+    "Input discovery used 400-20000 bp; candidates below 400 bp were not searched.",
+    "Annotation eligibility is not insertion validation, family count or independent event count.",
+    "Current annotation snapshot; annotation may change without assembly version change.",
+    "No new read validation or protein clustering in this audit."
+  ]
+}

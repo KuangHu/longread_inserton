@@ -1,0 +1,709 @@
+run	biosample	gca	organism	assembly_level	records	largest_bp	library_strategy	library_selection	source_class	source_note	status	reason
+DRR419000	SAMD00557611		Ralstonia mannitolilytica				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+DRR456269	SAMD00592124	GCA_030297195.1	Burkholderia pseudomallei	Complete Genome			WGS	unspecified	unclear	no host/source metadata	excluded	excluded_species_B_pseudomallei_or_mallei
+DRR456270	SAMD00592125	GCA_030297215.1	Burkholderia pseudomallei	Complete Genome			WGS	unspecified	unclear	no host/source metadata	excluded	excluded_species_B_pseudomallei_or_mallei
+DRR456271	SAMD00592126	GCA_030297235.1	Burkholderia pseudomallei	Complete Genome			WGS	unspecified	unclear	unrecognised host: Rattus norvegicus	excluded	excluded_species_B_pseudomallei_or_mallei
+DRR456272	SAMD00592127	GCA_030297255.1	Burkholderia pseudomallei	Complete Genome			WGS	unspecified	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+DRR456273	SAMD00592128	GCA_030297275.1	Burkholderia pseudomallei	Complete Genome			WGS	RANDOM	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+DRR456274	SAMD00592129	GCA_030297295.1	Burkholderia pseudomallei	Complete Genome			WGS	RANDOM	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+DRR456275	SAMD00592130	GCA_030297315.1	Burkholderia pseudomallei	Complete Genome			WGS	RANDOM	unclear	no host/source metadata	excluded	excluded_species_B_pseudomallei_or_mallei
+DRR456276	SAMD00592131	GCA_030297335.1	Burkholderia pseudomallei	Complete Genome			WGS	RANDOM	unclear	no host/source metadata	excluded	excluded_species_B_pseudomallei_or_mallei
+DRR456277	SAMD00592132	GCA_030297355.1	Burkholderia pseudomallei	Complete Genome			WGS	RANDOM	unclear	no host/source metadata	excluded	excluded_species_B_pseudomallei_or_mallei
+DRR636340	SAMD00881801		Burkholderia vietnamiensis				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+DRR657717	SAMD00889216	GCA_055396965.1	Ralstonia pseudosolanacearum	Complete Genome	2	3859863	Synthetic-Long-Read	other	plant	plant host: Solanum melongena	excluded	library_strategy_not_WGS
+DRR667424	SAMD01229170	GCA_055396695.1	Ralstonia pseudosolanacearum	Complete Genome	2	3859856	Synthetic-Long-Read	other	plant	plant host: Solanum melongena	excluded	library_strategy_not_WGS
+DRR667426	SAMD01229171	GCA_055396595.1	Ralstonia pseudosolanacearum	Complete Genome	2	3975213	Synthetic-Long-Read	other	plant	plant host: Solanum tuberosum	excluded	library_strategy_not_WGS
+DRR667428	SAMD01229172	GCA_055395975.1	Ralstonia pseudosolanacearum	Complete Genome	2	3825018	Synthetic-Long-Read	other	plant	plant host: Solanum melongena	excluded	library_strategy_not_WGS
+DRR667430	SAMD01229173	GCA_055395735.1	Ralstonia pseudosolanacearum	Complete Genome	2	3825025	Synthetic-Long-Read	other	plant	plant host: Solanum melongena	excluded	library_strategy_not_WGS
+DRR667432	SAMD01229174	GCA_055395355.1	Ralstonia pseudosolanacearum	Complete Genome	2	3817949	Synthetic-Long-Read	other	plant	plant host: Solanum melongena	excluded	library_strategy_not_WGS
+DRR667434	SAMD01229175	GCA_055395135.1	Ralstonia pseudosolanacearum	Complete Genome	2	3930316	Synthetic-Long-Read	other	plant	plant host: Solanum lycopersicum	excluded	library_strategy_not_WGS
+DRR667436	SAMD01229176	GCA_055394475.1	Ralstonia pseudosolanacearum	Complete Genome	2	3873661	Synthetic-Long-Read	other	plant	plant host: Solanum melongena	excluded	library_strategy_not_WGS
+DRR667438	SAMD01229177	GCA_055394085.1	Ralstonia pseudosolanacearum	Complete Genome	2	3859476	Synthetic-Long-Read	other	plant	plant host: Solanum melongena	excluded	library_strategy_not_WGS
+DRR667440	SAMD01229178	GCA_055393675.1	Ralstonia pseudosolanacearum	Complete Genome	2	3748644	Synthetic-Long-Read	other	plant	plant host: Solanum lycopersicum	excluded	library_strategy_not_WGS
+DRR667442	SAMD01229179	GCA_055393435.1	Ralstonia pseudosolanacearum	Complete Genome	2	3750393	Synthetic-Long-Read	other	plant	plant host: Solanum lycopersicum	excluded	library_strategy_not_WGS
+DRR667444	SAMD01229180	GCA_055392825.1	Ralstonia pseudosolanacearum	Complete Genome	2	3889075	Synthetic-Long-Read	other	plant	plant host: Solanum lycopersicum	excluded	library_strategy_not_WGS
+DRR667446	SAMD01229181	GCA_055392285.1	Ralstonia pseudosolanacearum	Complete Genome	2	3837594	Synthetic-Long-Read	other	plant	plant host: Solanum melongena	excluded	library_strategy_not_WGS
+DRR667448	SAMD01229182	GCA_055392065.1	Ralstonia pseudosolanacearum	Complete Genome	2	3864193	Synthetic-Long-Read	other	plant	plant host: Solanum lycopersicum	excluded	library_strategy_not_WGS
+DRR667450	SAMD01229183	GCA_055391665.1	Ralstonia pseudosolanacearum	Complete Genome	2	3877464	Synthetic-Long-Read	other	plant	plant host: Solanum lycopersicum	excluded	library_strategy_not_WGS
+DRR667452	SAMD01229184	GCA_055391285.1	Ralstonia pseudosolanacearum	Complete Genome	2	3864274	Synthetic-Long-Read	other	plant	plant host: Solanum melongena	excluded	library_strategy_not_WGS
+DRR667454	SAMD01229185	GCA_055390885.1	Ralstonia pseudosolanacearum	Complete Genome	2	3834609	Synthetic-Long-Read	other	plant	plant host: Solanum lycopersicum	excluded	library_strategy_not_WGS
+DRR667456	SAMD01229186	GCA_055390545.1	Ralstonia pseudosolanacearum	Complete Genome	2	3901396	Synthetic-Long-Read	other	plant	plant host: Solanum melongena	excluded	library_strategy_not_WGS
+DRR667458	SAMD01229187	GCA_055390165.1	Ralstonia pseudosolanacearum	Complete Genome	2	3981626	Synthetic-Long-Read	other	plant	plant host: Solanum lycopersicum	excluded	library_strategy_not_WGS
+DRR667460	SAMD01229188	GCA_055389745.1	Ralstonia pseudosolanacearum	Complete Genome	2	3975104	Synthetic-Long-Read	other	plant	plant host: Solanum lycopersicum	excluded	library_strategy_not_WGS
+DRR667462	SAMD01229189	GCA_055389375.1	Ralstonia pseudosolanacearum	Complete Genome	2	3866563	Synthetic-Long-Read	other	plant	plant host: Solanum melongena	excluded	library_strategy_not_WGS
+DRR667464	SAMD01229190	GCA_055388985.1	Ralstonia pseudosolanacearum	Complete Genome	2	3746404	Synthetic-Long-Read	other	plant	plant host: Solanum melongena	excluded	library_strategy_not_WGS
+DRR667466	SAMD01229191	GCA_055388585.1	Ralstonia pseudosolanacearum	Complete Genome	2	4001663	Synthetic-Long-Read	other	plant	plant host: Solanum lycopersicum	excluded	library_strategy_not_WGS
+DRR667468	SAMD01229192	GCA_055388055.1	Ralstonia pseudosolanacearum	Complete Genome	1	5824784	Synthetic-Long-Read	other	plant	plant host: Solanum melongena	excluded	library_strategy_not_WGS
+DRR667470	SAMD01229193	GCA_055387825.1	Ralstonia pseudosolanacearum	Complete Genome	2	3920407	Synthetic-Long-Read	other	plant	plant host: Solanum lycopersicum	excluded	library_strategy_not_WGS
+DRR667472	SAMD01229194	GCA_055387485.1	Ralstonia pseudosolanacearum	Complete Genome	2	3916609	Synthetic-Long-Read	other	plant	plant host: Solanum lycopersicum	excluded	library_strategy_not_WGS
+DRR667474	SAMD01229195	GCA_055387035.1	Ralstonia pseudosolanacearum	Complete Genome	2	3867810	Synthetic-Long-Read	other	plant	plant host: Solanum lycopersicum	excluded	library_strategy_not_WGS
+DRR667476	SAMD01229196	GCA_055386735.1	Ralstonia pseudosolanacearum	Complete Genome	2	3933133	Synthetic-Long-Read	other	plant	plant host: Solanum lycopersicum	excluded	library_strategy_not_WGS
+DRR667478	SAMD01229197	GCA_055386225.1	Ralstonia pseudosolanacearum	Complete Genome	2	3906617	Synthetic-Long-Read	other	plant	plant host: Solanum lycopersicum	excluded	library_strategy_not_WGS
+DRR667480	SAMD01229198	GCA_055385855.1	Ralstonia pseudosolanacearum	Complete Genome	2	3950773	Synthetic-Long-Read	other	plant	plant host: Solanum melongena	excluded	library_strategy_not_WGS
+DRR667482	SAMD01229199	GCA_055385485.1	Ralstonia pseudosolanacearum	Complete Genome	2	3938464	Synthetic-Long-Read	other	plant	plant host: Solanum lycopersicum	excluded	library_strategy_not_WGS
+DRR667484	SAMD01229200	GCA_055385175.1	Ralstonia pseudosolanacearum	Complete Genome	2	3804279	Synthetic-Long-Read	other	plant	plant host: Solanum lycopersicum	excluded	library_strategy_not_WGS
+DRR667486	SAMD01229201	GCA_055384715.1	Ralstonia pseudosolanacearum	Complete Genome	2	3816377	Synthetic-Long-Read	other	unclear	unrecognised host: Capsicum annuum	excluded	library_strategy_not_WGS
+DRR667488	SAMD01229202	GCA_055542735.1	Ralstonia pseudosolanacearum	Complete Genome	2	3773364	Synthetic-Long-Read	other	plant	plant host: Solanum lycopersicum	excluded	library_strategy_not_WGS
+DRR667490	SAMD01229203	GCA_055383775.1	Ralstonia pseudosolanacearum	Complete Genome	2	3827815	Synthetic-Long-Read	other	plant	plant host: Solanum lycopersicum	excluded	library_strategy_not_WGS
+DRR667492	SAMD01229204	GCA_055383415.1	Ralstonia pseudosolanacearum	Complete Genome	2	3938465	Synthetic-Long-Read	other	plant	plant host: Solanum melongena	excluded	library_strategy_not_WGS
+DRR667494	SAMD01229205	GCA_055383015.1	Ralstonia pseudosolanacearum	Complete Genome	2	4004902	Synthetic-Long-Read	other	plant	plant host: Solanum melongena	excluded	library_strategy_not_WGS
+DRR667496	SAMD01229206	GCA_055382575.1	Ralstonia pseudosolanacearum	Complete Genome	2	3955427	Synthetic-Long-Read	other	plant	plant host: Solanum lycopersicum	excluded	library_strategy_not_WGS
+DRR667498	SAMD01229207	GCA_055382075.1	Ralstonia pseudosolanacearum	Complete Genome	2	3783865	Synthetic-Long-Read	other	plant	plant host: Solanum tuberosum	excluded	library_strategy_not_WGS
+DRR667500	SAMD01229208	GCA_055381715.1	Ralstonia pseudosolanacearum	Complete Genome	2	3906727	Synthetic-Long-Read	other	plant	plant host: Solanum lycopersicum	excluded	library_strategy_not_WGS
+DRR667502	SAMD01229209	GCA_055381295.1	Ralstonia pseudosolanacearum	Complete Genome	2	3994945	Synthetic-Long-Read	other	plant	plant host: Solanum lycopersicum	excluded	library_strategy_not_WGS
+DRR667504	SAMD01229210	GCA_055380885.1	Ralstonia pseudosolanacearum	Complete Genome	2	3791116	Synthetic-Long-Read	other	plant	plant host: Solanum melongena	excluded	library_strategy_not_WGS
+DRR667506	SAMD01229211	GCA_055380435.1	Ralstonia pseudosolanacearum	Complete Genome	2	3862164	Synthetic-Long-Read	other	plant	plant host: Solanum lycopersicum	excluded	library_strategy_not_WGS
+DRR667508	SAMD01229212	GCA_055380045.1	Ralstonia pseudosolanacearum	Complete Genome	2	3981713	Synthetic-Long-Read	other	plant	plant host: Solanum lycopersicum	excluded	library_strategy_not_WGS
+DRR667510	SAMD01229213	GCA_055379705.1	Ralstonia pseudosolanacearum	Complete Genome	2	3904732	Synthetic-Long-Read	other	plant	plant host: Solanum melongena	excluded	library_strategy_not_WGS
+DRR667512	SAMD01229214	GCA_055379425.1	Ralstonia pseudosolanacearum	Complete Genome	2	3737704	Synthetic-Long-Read	other	plant	plant host: Solanum lycopersicum	excluded	library_strategy_not_WGS
+DRR667514	SAMD01229215	GCA_055378945.1	Ralstonia pseudosolanacearum	Complete Genome	2	3818903	Synthetic-Long-Read	other	plant	plant host: Solanum melongena	excluded	library_strategy_not_WGS
+DRR667516	SAMD01229216	GCA_055378695.1	Ralstonia pseudosolanacearum	Complete Genome	2	3824157	Synthetic-Long-Read	other	plant	plant host: Solanum melongena	excluded	library_strategy_not_WGS
+DRR667518	SAMD01229217	GCA_055378275.1	Ralstonia pseudosolanacearum	Complete Genome	2	4104406	Synthetic-Long-Read	other	unclear	unrecognised host: Capsicum annuum	excluded	library_strategy_not_WGS
+DRR667520	SAMD01229218	GCA_055398245.1	Ralstonia pseudosolanacearum	Complete Genome	2	3713932	Synthetic-Long-Read	other	plant	plant host: Solanum lycopersicum	excluded	library_strategy_not_WGS
+DRR667522	SAMD01229219	GCA_055398065.1	Ralstonia pseudosolanacearum	Complete Genome	2	3674427	Synthetic-Long-Read	other	plant	plant host: Solanum lycopersicum	excluded	library_strategy_not_WGS
+DRR667524	SAMD01229220	GCA_055397765.1	Ralstonia pseudosolanacearum	Complete Genome	2	3864280	Synthetic-Long-Read	other	plant	plant host: Solanum melongena	excluded	library_strategy_not_WGS
+DRR667526	SAMD01229221	GCA_055397595.1	Ralstonia pseudosolanacearum	Complete Genome	2	3864277	Synthetic-Long-Read	other	plant	plant host: Solanum melongena	excluded	library_strategy_not_WGS
+DRR667528	SAMD01229222	GCA_055397415.1	Ralstonia pseudosolanacearum	Complete Genome	2	3825313	Synthetic-Long-Read	other	plant	plant host: Solanum melongena	excluded	library_strategy_not_WGS
+DRR667530	SAMD01229223	GCA_055397205.1	Ralstonia pseudosolanacearum	Complete Genome	2	3814727	Synthetic-Long-Read	other	plant	plant host: Solanum melongena	excluded	library_strategy_not_WGS
+DRR667532	SAMD01229224	GCA_055396955.1	Ralstonia pseudosolanacearum	Complete Genome	2	3826397	Synthetic-Long-Read	other	plant	plant host: Solanum lycopersicum	excluded	library_strategy_not_WGS
+DRR667534	SAMD01229225	GCA_055396855.1	Ralstonia pseudosolanacearum	Complete Genome	2	3781035	Synthetic-Long-Read	other	plant	plant host: Solanum melongena	excluded	library_strategy_not_WGS
+DRR667536	SAMD01229226	GCA_055396565.1	Ralstonia pseudosolanacearum	Complete Genome	2	3984380	Synthetic-Long-Read	other	plant	plant host: Solanum lycopersicum	excluded	library_strategy_not_WGS
+DRR667538	SAMD01229227	GCA_055396295.1	Ralstonia pseudosolanacearum	Complete Genome	2	4012282	Synthetic-Long-Read	other	plant	plant host: Solanum melongena	excluded	library_strategy_not_WGS
+DRR667540	SAMD01229228	GCA_055395705.1	Ralstonia pseudosolanacearum	Complete Genome	2	3824159	Synthetic-Long-Read	other	plant	plant host: Solanum melongena	excluded	library_strategy_not_WGS
+DRR667542	SAMD01229229	GCA_055395325.1	Ralstonia pseudosolanacearum	Complete Genome	2	3774554	Synthetic-Long-Read	other	plant	plant host: Solanum lycopersicum	excluded	library_strategy_not_WGS
+DRR667544	SAMD01229230	GCA_055395105.1	Ralstonia pseudosolanacearum	Complete Genome	2	3890103	Synthetic-Long-Read	other	plant	plant host: Solanum melongena	excluded	library_strategy_not_WGS
+DRR667546	SAMD01229231	GCA_055394465.1	Ralstonia pseudosolanacearum	Complete Genome	2	3956462	Synthetic-Long-Read	other	plant	plant host: Solanum lycopersicum	excluded	library_strategy_not_WGS
+DRR667548	SAMD01229232	GCA_055394015.1	Ralstonia pseudosolanacearum	Complete Genome	2	3977633	Synthetic-Long-Read	other	plant	plant host: Solanum lycopersicum	excluded	library_strategy_not_WGS
+DRR667550	SAMD01229233	GCA_055393665.1	Ralstonia pseudosolanacearum	Complete Genome	2	3975237	Synthetic-Long-Read	other	plant	plant host: Solanum melongena	excluded	library_strategy_not_WGS
+DRR667552	SAMD01229234	GCA_055393385.1	Ralstonia pseudosolanacearum	Complete Genome	2	3718867	Synthetic-Long-Read	other	plant	plant host: Solanum melongena	excluded	library_strategy_not_WGS
+DRR667554	SAMD01229235	GCA_055392795.1	Ralstonia pseudosolanacearum	Complete Genome	1	5872279	Synthetic-Long-Read	other	plant	plant host: Solanum melongena	excluded	library_strategy_not_WGS
+DRR667556	SAMD01229236	GCA_055392275.1	Ralstonia pseudosolanacearum	Complete Genome	2	3913610	Synthetic-Long-Read	other	unclear	unrecognised host: Capsicum annuum	excluded	library_strategy_not_WGS
+DRR667558	SAMD01229237	GCA_055392015.1	Ralstonia pseudosolanacearum	Complete Genome	2	3955129	Synthetic-Long-Read	other	unclear	unrecognised host: Capsicum annuum	excluded	library_strategy_not_WGS
+DRR667560	SAMD01229238	GCA_055391615.1	Ralstonia pseudosolanacearum	Complete Genome	2	4092890	Synthetic-Long-Read	other	unclear	unrecognised host: Capsicum annuum	excluded	library_strategy_not_WGS
+DRR667562	SAMD01229239	GCA_055391275.1	Ralstonia pseudosolanacearum	Complete Genome	2	4088548	Synthetic-Long-Read	other	unclear	unrecognised host: Capsicum annuum	excluded	library_strategy_not_WGS
+DRR667564	SAMD01229240	GCA_055390875.1	Ralstonia pseudosolanacearum	Complete Genome	2	3852230	Synthetic-Long-Read	other	plant	plant host: Solanum melongena	excluded	library_strategy_not_WGS
+DRR667566	SAMD01229241	GCA_055390515.1	Ralstonia pseudosolanacearum	Complete Genome	2	3865143	Synthetic-Long-Read	other	plant	plant host: Solanum melongena	excluded	library_strategy_not_WGS
+DRR667568	SAMD01229242	GCA_055390135.1	Ralstonia pseudosolanacearum	Complete Genome	2	3878807	Synthetic-Long-Read	other	plant	plant host: Solanum lycopersicum	excluded	library_strategy_not_WGS
+DRR667570	SAMD01229243	GCA_055389715.1	Ralstonia pseudosolanacearum	Complete Genome	2	3891892	Synthetic-Long-Read	other	plant	plant host: Solanum melongena	excluded	library_strategy_not_WGS
+DRR667572	SAMD01229244	GCA_055389345.1	Ralstonia pseudosolanacearum	Complete Genome	2	3990785	Synthetic-Long-Read	other	plant	plant host: Solanum lycopersicum	excluded	library_strategy_not_WGS
+DRR667574	SAMD01229245	GCA_055388975.1	Ralstonia pseudosolanacearum	Complete Genome	2	3821023	Synthetic-Long-Read	other	plant	plant host: Solanum melongena	excluded	library_strategy_not_WGS
+DRR667576	SAMD01229246	GCA_055388575.1	Ralstonia pseudosolanacearum	Complete Genome	2	3818341	Synthetic-Long-Read	other	plant	plant host: Solanum melongena	excluded	library_strategy_not_WGS
+DRR667578	SAMD01229247	GCA_055388045.1	Ralstonia pseudosolanacearum	Complete Genome	2	3800875	Synthetic-Long-Read	other	plant	plant host: Solanum melongena	excluded	library_strategy_not_WGS
+DRR667580	SAMD01229248	GCA_055387795.1	Ralstonia pseudosolanacearum	Complete Genome	2	3914014	Synthetic-Long-Read	other	plant	plant host: Solanum lycopersicum	excluded	library_strategy_not_WGS
+DRR667582	SAMD01229249	GCA_055387435.1	Ralstonia pseudosolanacearum	Complete Genome	2	3879681	Synthetic-Long-Read	other	plant	plant host: Solanum melongena	excluded	library_strategy_not_WGS
+DRR667584	SAMD01229250	GCA_055387005.1	Ralstonia pseudosolanacearum	Complete Genome	2	3975217	Synthetic-Long-Read	other	plant	plant host: Solanum lycopersicum	excluded	library_strategy_not_WGS
+DRR667586	SAMD01229251	GCA_055386725.1	Ralstonia pseudosolanacearum	Complete Genome	2	3892397	Synthetic-Long-Read	other	plant	plant host: Solanum lycopersicum	excluded	library_strategy_not_WGS
+DRR667588	SAMD01229252	GCA_055386205.1	Ralstonia pseudosolanacearum	Complete Genome	2	4038488	Synthetic-Long-Read	other	plant	plant host: Solanum melongena	excluded	library_strategy_not_WGS
+DRR667590	SAMD01229253	GCA_055385805.1	Ralstonia pseudosolanacearum	Complete Genome	2	3918289	Synthetic-Long-Read	other	plant	plant host: Solanum melongena	excluded	library_strategy_not_WGS
+DRR667592	SAMD01229254	GCA_055385455.1	Ralstonia pseudosolanacearum	Complete Genome	2	3894796	Synthetic-Long-Read	other	plant	plant host: Solanum lycopersicum	excluded	library_strategy_not_WGS
+DRR667594	SAMD01229255	GCA_055385165.1	Ralstonia pseudosolanacearum	Complete Genome	2	3853259	Synthetic-Long-Read	other	plant	plant host: Solanum lycopersicum	excluded	library_strategy_not_WGS
+DRR667596	SAMD01229256	GCA_055384705.1	Ralstonia pseudosolanacearum	Complete Genome	1	5824791	Synthetic-Long-Read	other	plant	plant host: Solanum lycopersicum	excluded	library_strategy_not_WGS
+DRR667598	SAMD01229257	GCA_055384275.1	Ralstonia pseudosolanacearum	Complete Genome	2	3950773	Synthetic-Long-Read	other	plant	plant host: Solanum lycopersicum	excluded	library_strategy_not_WGS
+DRR667600	SAMD01229258	GCA_055383745.1	Ralstonia pseudosolanacearum	Complete Genome	2	3826834	Synthetic-Long-Read	other	plant	plant host: Solanum melongena	excluded	library_strategy_not_WGS
+DRR667602	SAMD01229259	GCA_055383385.1	Ralstonia pseudosolanacearum	Complete Genome	2	4022743	Synthetic-Long-Read	other	plant	plant host: Solanum melongena	excluded	library_strategy_not_WGS
+DRR667604	SAMD01229260	GCA_055382985.1	Ralstonia pseudosolanacearum	Complete Genome	2	3969107	Synthetic-Long-Read	other	plant	plant host: Solanum lycopersicum	excluded	library_strategy_not_WGS
+DRR667606	SAMD01229261	GCA_055382505.1	Ralstonia pseudosolanacearum	Complete Genome	2	3853604	Synthetic-Long-Read	other	plant	plant host: Solanum melongena	excluded	library_strategy_not_WGS
+DRR667608	SAMD01229262	GCA_055382065.1	Ralstonia pseudosolanacearum	Complete Genome	2	3826179	Synthetic-Long-Read	other	plant	plant host: Solanum lycopersicum	excluded	library_strategy_not_WGS
+DRR667610	SAMD01229263	GCA_055381665.1	Ralstonia pseudosolanacearum	Complete Genome	2	3784234	Synthetic-Long-Read	other	plant	plant host: Solanum lycopersicum	excluded	library_strategy_not_WGS
+DRR667612	SAMD01229264	GCA_055381255.1	Ralstonia pseudosolanacearum	Complete Genome	1	5962481	Synthetic-Long-Read	other	plant	plant host: Solanum lycopersicum	excluded	library_strategy_not_WGS
+DRR868490	SAMD01755802		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868491	SAMD01755803		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868492	SAMD01755804		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868493	SAMD01755805		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868494	SAMD01755806		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868495	SAMD01755807		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868496	SAMD01755808		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868497	SAMD01755809		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868498	SAMD01755810		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868499	SAMD01755811		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868500	SAMD01755812		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868501	SAMD01755813		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868502	SAMD01755814		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868503	SAMD01755815		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868504	SAMD01755816		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868505	SAMD01755817		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868506	SAMD01755818		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868507	SAMD01755819		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868508	SAMD01755820		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868509	SAMD01755821		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868510	SAMD01755822		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868511	SAMD01755823		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868512	SAMD01755824		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868513	SAMD01755825		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868514	SAMD01755826		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868515	SAMD01755827		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868516	SAMD01755828		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868517	SAMD01755829		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868518	SAMD01755830		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868519	SAMD01755831		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868520	SAMD01755832		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868521	SAMD01755833		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868522	SAMD01755834		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868523	SAMD01755835		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868524	SAMD01755836		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868525	SAMD01755837		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868526	SAMD01755838		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868527	SAMD01755839		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868528	SAMD01755840		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868529	SAMD01755841		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868530	SAMD01755842		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868531	SAMD01755843		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868532	SAMD01755844		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868533	SAMD01755845		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868534	SAMD01755846		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868535	SAMD01755847		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868536	SAMD01755848		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868537	SAMD01755849		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868538	SAMD01755850		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868539	SAMD01755851		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868540	SAMD01755852		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868541	SAMD01755853		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868542	SAMD01755854		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868543	SAMD01755855		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868544	SAMD01755856		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868545	SAMD01755857		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868546	SAMD01755858		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868547	SAMD01755859		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868548	SAMD01755860		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868549	SAMD01755861		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868550	SAMD01755862		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868551	SAMD01755863		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868552	SAMD01755864		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868553	SAMD01755865		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868554	SAMD01755866		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868555	SAMD01755867		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868556	SAMD01755868		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868557	SAMD01755869		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868558	SAMD01755870		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868559	SAMD01755871		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868560	SAMD01755872		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868561	SAMD01755873		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868562	SAMD01755874		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868563	SAMD01755875		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868564	SAMD01755876		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868565	SAMD01755877		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868566	SAMD01755878		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868567	SAMD01755879		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868568	SAMD01755880		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868569	SAMD01755881		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868570	SAMD01755882		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868571	SAMD01755883		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868572	SAMD01755884		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868573	SAMD01755885		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868574	SAMD01755886		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868575	SAMD01755887		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868576	SAMD01755888		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868577	SAMD01755889		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868578	SAMD01755890		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868579	SAMD01755891		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868580	SAMD01755892		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868581	SAMD01755893		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868582	SAMD01755894		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868583	SAMD01755895		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868584	SAMD01755896		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868585	SAMD01755897		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868586	SAMD01755898		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868587	SAMD01755899		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868588	SAMD01755900		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868589	SAMD01755901		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868590	SAMD01755902		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868591	SAMD01755903		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR868592	SAMD01755904		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR978882	SAMD01755855		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR978886	SAMD01755859		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR978895	SAMD01755868		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+DRR978921	SAMD01755894		Ralstonia solanacearum				OTHER	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+ERR13194293	SAMEA115676877	GCA_964253395.2	Paraburkholderia hospita	Contig			WGS	RANDOM	plant	plant host: Lotus japonicus / root	excluded	continuity_fail: Contig, 11 records in report
+ERR13194296	SAMEA115676880	GCA_964253525.2	Paraburkholderia terricola	Contig	2	4136472	WGS	RANDOM	plant	plant host: Lotus japonicus / root	excluded	already_run: LjRoot223
+ERR13194314	SAMEA115676898	GCA_964252825.2	Paraburkholderia hospita	Contig			WGS	RANDOM	plant	plant host: Lotus japonicus / root	excluded	continuity_fail: Contig, 36 records in report
+ERR13194333	SAMEA115676917	GCA_964252875.2	Paraburkholderia hospita	Contig	6	4148324	WGS	RANDOM	plant	plant host: Lotus japonicus / root	excluded	already_run: LjRoot267
+ERR13194346	SAMEA115676930	GCA_964252755.2	Caballeronia sp. LjRoot29	Contig			WGS	RANDOM	plant	plant host: Lotus japonicus / root	excluded	continuity_fail: Contig, 111 records in report
+ERR13194359	SAMEA115676943	GCA_964253815.2	Caballeronia sp. LjRoot34	Contig			WGS	RANDOM	plant	plant host: Lotus japonicus / root	excluded	continuity_fail: Contig, 36 records in report
+ERR13243091	SAMEA113236558		Burkholderia contaminans LMG 23361				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+ERR13243092	SAMEA113236559		Burkholderia contaminans LMG 23361				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+ERR13243093	SAMEA113236560		Burkholderia contaminans LMG 23361				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+ERR13243094	SAMEA113236561		Burkholderia contaminans LMG 23361				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+ERR13243095	SAMEA113236562		Burkholderia contaminans LMG 23361				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+ERR13243096	SAMEA113236563		Paraburkholderia fungorum NBRC 102489				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+ERR13243097	SAMEA113236564		Paraburkholderia fungorum NBRC 102489				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+ERR13696566	SAMEA116057339	GCA_964264985.1	Burkholderia mycopellens	Complete Genome	4	3585571	WGS	RANDOM	clinical/animal	clinical text: Cystic fibrosis patient	excluded	source_clinical_or_animal: clinical text: Cystic fibrosis patient
+ERR13717737	SAMEA115527457	GCA_964417475.2	Burkholderia pseudomallei	Complete Genome			WGS	RANDOM	environmental	soil	excluded	excluded_species_B_pseudomallei_or_mallei
+ERR14125601	SAMEA117589125		Cupriavidus necator				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+ERR14125683	SAMEA117589120		Burkholderia cenocepacia				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+ERR14126999	SAMEA117589120		Burkholderia cenocepacia				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+ERR14127004	SAMEA117589125		Cupriavidus necator				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+ERR14251423	SAMEA117657080		Burkholderia cenocepacia				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+ERR14251424	SAMEA117657080		Burkholderia cenocepacia				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+ERR14251425	SAMEA117657080		Burkholderia cenocepacia				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+ERR14294006	SAMEA117657080		Burkholderia cenocepacia				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+ERR14789839	SAMEA117657080		Burkholderia cenocepacia				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+ERR15459747	SAMEA117657080		Burkholderia cenocepacia				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+ERR15459748	SAMEA117657080		Burkholderia cenocepacia				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+ERR15459749	SAMEA117657080		Burkholderia cenocepacia				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+ERR15459750	SAMEA117657080		Burkholderia cenocepacia				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+ERR15656051	SAMEA119974473		Ralstonia pickettii				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+ERR15656052	SAMEA119974474		Ralstonia thomasii				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+ERR15656053	SAMEA119974476		Ralstonia pickettii				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+ERR15656054	SAMEA119974480		Ralstonia pickettii				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+ERR15656055	SAMEA119974475		Ralstonia thomasii				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+ERR15686603	SAMEA120314562	GCA_976997115.1	Paraburkholderia xenovorans	Contig			WGS	RANDOM	enrichment	Petroleum hydrocarbon-degrading enrichment culture obtained through enrichment of a PHC-polluted groundwater sample DE_KIE_03_GW	excluded	continuity_fail: Contig, 21 records in report
+ERR15686608	SAMEA120314567	GCA_976997195.1	Paraburkholderia xenovorans	Contig	7	4887713	WGS	RANDOM	enrichment	Petroleum hydrocarbon-degrading enrichment culture obtained through enrichment of a PHC-polluted groundwater sample DE_KIE_06_GW	excluded	already_run: R-92578
+ERR15693035	SAMEA120322877	GCA_977005055.1	Paraburkholderia fungorum	Contig	4	5328804	WGS	RANDOM	enrichment	Cyanide-degrading enrichment culture obtained through enrichment of a cyanide-polluted groundwater sample: DE_STO_02_GW	excluded	already_run: R-91495
+ERR15693036	SAMEA120322878	GCA_977004965.1	Paraburkholderia fungorum	Contig	6	4809629	WGS	RANDOM	enrichment	Cyanide-degrading enrichment culture obtained through enrichment of a cyanide-polluted groundwater sample: DE_STO_02_GW	excluded	already_run: R-91497
+ERR15693049	SAMEA120322886	GCA_977005035.1	Paraburkholderia fungorum	Contig	6	5142045	WGS	RANDOM	enrichment	Petroleum hydrocarbon-degrading enrichment culture obtained through enrichment of a PHC-polluted groundwater sample DE_KIE_03_GW	excluded	already_run: R-92561
+ERR15693058	SAMEA120322892	GCA_977004995.1	Paraburkholderia fungorum	Contig	6	5141936	WGS	RANDOM	enrichment	Petroleum hydrocarbon-degrading enrichment culture obtained through enrichment of a PHC-polluted groundwater sample DE_KIE_06_GW	excluded	already_run: R-92583
+ERR15696517	SAMEA120356365	GCA_977008015.1	Paraburkholderia fungorum	Contig	4	5329989	WGS	RANDOM	enrichment	Cyanide-degrading enrichment culture obtained through enrichment of a cyanide-polluted groundwater sample: DE_RIN_03_GW_bt	excluded	already_run: R-93128
+ERR15741484	SAMEA120399603	GCA_977012025.1	Cupriavidus necator	Contig			WGS	RANDOM	enrichment	HCH-degrading enrichment culture obtained through Bactrap (vermiculite) enrichment of a HCH-polluted soil sample: DE_BIT_08_A_S_BTmh	excluded	continuity_fail: Contig, 62 records in report
+ERR15741619	SAMEA120399597	GCA_977011985.1	Paraburkholderia fungorum	Contig	4	5328796	WGS	RANDOM	enrichment	Cyanide-degrading enrichment culture obtained through enrichment of a cyanide-polluted groundwater sample: DE_RIN_09_GW	excluded	already_run: R-92973
+ERR16064430	SAMEA120862758		Burkholderia stabilis				WGS	unspecified			excluded	no_exact_biosample_genbank_assembly
+ERR16064431	SAMEA120862759		Burkholderia stabilis				WGS	unspecified			excluded	no_exact_biosample_genbank_assembly
+ERR16064433	SAMEA120862761		Burkholderia stabilis				WGS	unspecified			excluded	no_exact_biosample_genbank_assembly
+ERR16064434	SAMEA120862762		Burkholderia stabilis				WGS	unspecified			excluded	no_exact_biosample_genbank_assembly
+ERR16064435	SAMEA120862763		Burkholderia stabilis				WGS	unspecified			excluded	no_exact_biosample_genbank_assembly
+ERR16064436	SAMEA120862764		Burkholderia stabilis				WGS	unspecified			excluded	no_exact_biosample_genbank_assembly
+ERR16064437	SAMEA120862765		Burkholderia stabilis				WGS	unspecified			excluded	no_exact_biosample_genbank_assembly
+ERR16064438	SAMEA120862766		Burkholderia stabilis				WGS	unspecified			excluded	no_exact_biosample_genbank_assembly
+ERR16064439	SAMEA120862767		Burkholderia stabilis				WGS	unspecified			excluded	no_exact_biosample_genbank_assembly
+ERR16064440	SAMEA120862768		Burkholderia stabilis				WGS	unspecified			excluded	no_exact_biosample_genbank_assembly
+ERR16064441	SAMEA120862769		Burkholderia stabilis				WGS	unspecified			excluded	no_exact_biosample_genbank_assembly
+ERR16064442	SAMEA120862770		Burkholderia stabilis				WGS	unspecified			excluded	no_exact_biosample_genbank_assembly
+ERR16064443	SAMEA120862771		Burkholderia stabilis				WGS	unspecified			excluded	no_exact_biosample_genbank_assembly
+ERR16107891	SAMEA120862760		Burkholderia stabilis				WGS	unspecified			excluded	no_exact_biosample_genbank_assembly
+ERR16656002	SAMEA121249153		Ralstonia pseudosolanacearum				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+ERR16913111	SAMEA117760068	GCA_965199385.1	Burkholderia pseudomallei	Complete Genome			WGS	RANDOM	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+ERR16913112	SAMEA117760069	GCA_965211575.1	Burkholderia pseudomallei	Complete Genome			WGS	RANDOM	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+ERR16913113	SAMEA117760070	GCA_965199395.1	Burkholderia pseudomallei	Complete Genome			WGS	RANDOM	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+ERR16913114	SAMEA117760071	GCA_965199425.1	Burkholderia pseudomallei	Complete Genome			WGS	RANDOM	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+ERR16913115	SAMEA117760072	GCA_965199445.1	Burkholderia pseudomallei	Complete Genome			WGS	RANDOM	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+ERR16913116	SAMEA117760073	GCA_965202565.1	Burkholderia pseudomallei	Complete Genome			WGS	RANDOM	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+ERR16913117	SAMEA117760074	GCA_965199435.1	Burkholderia pseudomallei	Complete Genome			WGS	RANDOM	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+ERR16913278	SAMEA117760075	GCA_965199455.1	Burkholderia pseudomallei	Complete Genome			WGS	RANDOM	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+ERR16913303	SAMEA117760076	GCA_965199405.1	Burkholderia pseudomallei	Complete Genome			WGS	RANDOM	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+ERR16913304	SAMEA117760077	GCA_965199415.1	Burkholderia pseudomallei	Complete Genome			WGS	RANDOM	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+ERR16913305	SAMEA117760078	GCA_965199625.1	Burkholderia pseudomallei	Complete Genome			WGS	RANDOM	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+ERR16913306	SAMEA117760079	GCA_965199515.1	Burkholderia pseudomallei	Complete Genome			WGS	RANDOM	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+ERR16913307	SAMEA117760080	GCA_965211595.1	Burkholderia pseudomallei	Complete Genome			WGS	RANDOM	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+ERR16913308	SAMEA117760081	GCA_965199545.1	Burkholderia pseudomallei	Complete Genome			WGS	RANDOM	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+ERR16913309	SAMEA117760082	GCA_965199925.1	Burkholderia pseudomallei	Complete Genome			WGS	RANDOM	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+ERR16913310	SAMEA117760083	GCA_965199775.1	Burkholderia pseudomallei	Complete Genome			WGS	RANDOM	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+ERR16913312	SAMEA117760084	GCA_965199835.1	Burkholderia pseudomallei	Complete Genome			WGS	RANDOM	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+ERR16913313	SAMEA117760085	GCA_965201125.1	Burkholderia pseudomallei	Complete Genome			WGS	RANDOM	clinical/animal	clinical text: bronchoalveolar lavage	excluded	excluded_species_B_pseudomallei_or_mallei
+ERR17365743	SAMEA122764981	GCA_984668195.1	Burkholderia sp. LMG 33096	Complete Genome	4	3724312	WGS	RANDOM	clinical/animal	clinical text: Cystic fibrosis patient	excluded	source_clinical_or_animal: clinical text: Cystic fibrosis patient
+ERR17365764	SAMEA122764982	GCA_984671675.1	Burkholderia sp. LMG 33096	Complete Genome	2	3712491	WGS	RANDOM	clinical/animal	clinical text: Cystic fibrosis patient	excluded	source_clinical_or_animal: clinical text: Cystic fibrosis patient
+ERR17366521	SAMEA122764986	GCA_984668525.1	Burkholderia sp. LMG 34232	Complete Genome	3	3512147	WGS	RANDOM	clinical/animal	clinical text: Cystic fibrosis patient	excluded	source_clinical_or_animal: clinical text: Cystic fibrosis patient
+ERR17373311	SAMEA122764964	GCA_984669585.1	Burkholderia arboris	Complete Genome	3	3624047	WGS	RANDOM	clinical/animal	clinical text: wound	excluded	source_clinical_or_animal: clinical text: wound
+ERR17389585	SAMEA122764971	GCA_984669335.1	Burkholderia arboris	Complete Genome	3	3724193	WGS	RANDOM	clinical/animal	clinical text: Cystic fibrosis patient	excluded	source_clinical_or_animal: clinical text: Cystic fibrosis patient
+ERR17405045	SAMEA122764980	GCA_984667975.1	Burkholderia sp. LMG 33096	Complete Genome	4	3609742	WGS	RANDOM	clinical/animal	clinical text: Cystic fibrosis patient	excluded	source_clinical_or_animal: clinical text: Cystic fibrosis patient
+ERR17405060	SAMEA122764965	GCA_984667835.1	Burkholderia arboris	Complete Genome	5	3656760	WGS	RANDOM	clinical/animal	clinical text: Cystic fibrosis patient	excluded	source_clinical_or_animal: clinical text: Cystic fibrosis patient
+ERR17405860	SAMEA122764977	GCA_984668265.1	Burkholderia arboris	Complete Genome	3	3550230	WGS	RANDOM	clinical/animal	clinical text: Cystic fibrosis patient	excluded	source_clinical_or_animal: clinical text: Cystic fibrosis patient
+ERR17405864	SAMEA122764973	GCA_984667675.1	Burkholderia arboris	Complete Genome	3	3681322	WGS	RANDOM	clinical/animal	clinical text: Cystic fibrosis patient	excluded	source_clinical_or_animal: clinical text: Cystic fibrosis patient
+ERR17405872	SAMEA122764984	GCA_984669325.1	Burkholderia sp. LMG 33096	Complete Genome	3	3609742	WGS	RANDOM	clinical/animal	clinical text: Hospital environment	excluded	source_clinical_or_animal: clinical text: Hospital environment
+ERR6565397	SAMEA9805136		Burkholderia pseudomallei				WGS	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+ERR6565398	SAMEA9805137		Burkholderia pseudomallei				WGS	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+ERR6565399	SAMEA9805138		Burkholderia pseudomallei				WGS	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+ERR6565400	SAMEA9805139		Burkholderia pseudomallei				WGS	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+ERR6565401	SAMEA9805140		Burkholderia pseudomallei				WGS	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+ERR6565402	SAMEA9805141		Burkholderia pseudomallei				WGS	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+ERR6565403	SAMEA9805142		Burkholderia pseudomallei				WGS	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+ERR6565404	SAMEA9805143		Burkholderia pseudomallei				WGS	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+ERR6565405	SAMEA9805144		Burkholderia pseudomallei				WGS	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+ERR6565406	SAMEA9805145		Burkholderia pseudomallei				WGS	RT-PCR			excluded	no_exact_biosample_genbank_assembly
+ERR8007759	SAMEA12292548		Burkholderia cenocepacia				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+ERR8007760	SAMEA12292549		Burkholderia cenocepacia				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+ERR9616712	SAMEA14091967	GCA_939549705.1	Burkholderia mallei	Contig			WGS	RANDOM	unclear	unrecognised host: Equus caballus	excluded	excluded_species_B_pseudomallei_or_mallei
+ERR9616713	SAMEA14091968	GCA_939558745.1	Burkholderia mallei	Contig			WGS	RANDOM	unclear	no host/source metadata	excluded	excluded_species_B_pseudomallei_or_mallei
+ERR9616714	SAMEA14091969	GCA_939549625.1	Burkholderia mallei	Contig			WGS	RANDOM	unclear	unrecognised host: Equus caballus	excluded	excluded_species_B_pseudomallei_or_mallei
+ERR9616715	SAMEA14091970	GCA_939576165.1	Burkholderia mallei	Complete Genome			WGS	RANDOM	unclear	no host/source metadata	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR10566897	SAMN13440810	GCA_009749345.1	Burkholderia pseudomallei	Complete Genome			WGS	RANDOM	environmental	environmental	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR10723046	SAMN13615695		Ralstonia solanacearum				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR11178277	SAMN14206145		Ralstonia solanacearum				WGA	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR11609092	SAMN14693155	GCA_014357995.1	Burkholderia cenocepacia	Complete Genome	4	3673077	WGS	unspecified	clinical/animal	animal or human host: Homo sapiens	excluded	source_clinical_or_animal: animal or human host: Homo sapiens
+SRR11947722	SAMN14567048	GCA_012689525.1	Paraburkholderia aromaticivorans	Complete Genome	4	4573438	WGS	RANDOM PCR	environmental	Alpine forest soil	excluded	already_run: PaAR2038
+SRR12132997	SAMN15230488	GCA_013370285.1	Burkholderia glumae	Contig	4	3549753	WGS	RANDOM	unclear	sample_type mixed culture (not a pure isolate)	reserve	not_pure_isolate: sample_type mixed culture (not a pure isolate)
+SRR12412637	SAMN13876240	GCA_017165495.1	Burkholderia multivorans	Complete Genome	3	3328426	WGS	RANDOM	clinical/animal	animal or human host: Homo sapiens	excluded	source_clinical_or_animal: animal or human host: Homo sapiens
+SRR12412639	SAMN13876239	GCA_017301895.1	Burkholderia multivorans	Chromosome	6	3292233	WGS	RANDOM	clinical/animal	animal or human host: Homo sapiens	excluded	source_clinical_or_animal: animal or human host: Homo sapiens
+SRR12412641	SAMN13876238	GCA_017165515.1	Burkholderia multivorans	Complete Genome	3	3328959	WGS	RANDOM	clinical/animal	animal or human host: Homo sapiens	excluded	source_clinical_or_animal: animal or human host: Homo sapiens
+SRR12412643	SAMN13876237	GCA_017165535.1	Burkholderia multivorans	Complete Genome	3	3329349	WGS	RANDOM	clinical/animal	animal or human host: Homo sapiens	excluded	source_clinical_or_animal: animal or human host: Homo sapiens
+SRR12412644	SAMN15758489	GCA_017165935.1	Burkholderia multivorans	Contig			WGS	RANDOM	clinical/animal	animal or human host: Homo sapiens	excluded	continuity_fail: Contig, 31 records in report
+SRR12412646	SAMN15758488	GCA_017165925.1	Burkholderia multivorans	Contig	7	3447051	WGS	RANDOM	clinical/animal	animal or human host: Homo sapiens	excluded	source_clinical_or_animal: animal or human host: Homo sapiens
+SRR12412648	SAMN13876246	GCA_017301905.1	Burkholderia multivorans	Chromosome	5	3355988	WGS	RANDOM	clinical/animal	animal or human host: Homo sapiens	excluded	source_clinical_or_animal: animal or human host: Homo sapiens
+SRR12412651	SAMN13876245	GCA_017168065.1	Burkholderia multivorans	Contig			WGS	RANDOM	clinical/animal	animal or human host: Homo sapiens	excluded	continuity_fail: Contig, 182 records in report
+SRR12412653	SAMN13876244	GCA_017165175.1	Burkholderia multivorans	Complete Genome	4	3416863	WGS	RANDOM	clinical/animal	animal or human host: Homo sapiens	excluded	source_clinical_or_animal: animal or human host: Homo sapiens
+SRR12412655	SAMN13876243	GCA_017165195.1	Burkholderia multivorans	Complete Genome	3	3330593	WGS	RANDOM	clinical/animal	animal or human host: Homo sapiens	excluded	source_clinical_or_animal: animal or human host: Homo sapiens
+SRR12412657	SAMN13876242	GCA_017165475.1	Burkholderia multivorans	Complete Genome	3	3329413	WGS	RANDOM	clinical/animal	animal or human host: Homo sapiens	excluded	source_clinical_or_animal: animal or human host: Homo sapiens
+SRR12412659	SAMN13876241	GCA_017301875.1	Burkholderia multivorans	Chromosome	10	3162364	WGS	RANDOM	clinical/animal	animal or human host: Homo sapiens	excluded	source_clinical_or_animal: animal or human host: Homo sapiens
+SRR12412661	SAMN13876236	GCA_017165555.1	Burkholderia multivorans	Complete Genome	4	3328147	WGS	RANDOM	clinical/animal	animal or human host: Homo sapiens	excluded	source_clinical_or_animal: animal or human host: Homo sapiens
+SRR12739612	SAMN12697569	GCA_008801925.2	Cupriavidus basilensis	Complete Genome	8	4566734	WGS	RANDOM	enrichment	Sediment of a freshwater pond enriched in a fixed-bed reactor with 2,6-dichlorophenol as sole carbon and energy source	reserve	alternate_run_same_biosample: chosen SRR12739613
+SRR13430628	SAMN17308412	GCA_021483665.1	Paraburkholderia tropica	Contig			WGS	RANDOM	environmental	tar pit sediment tar pit sediment	excluded	continuity_fail: Contig, 81 records in report
+SRR13781387	SAMN18042977	GCA_017220215.1	Caballeronia sp. M1242	Complete Genome	4	2932255	WGS	RANDOM	clinical/animal	animal or human host: Homo sapiens	excluded	source_clinical_or_animal: animal or human host: Homo sapiens
+SRR14073834	SAMN18497773	GCA_017815615.1	Burkholderia latens	Complete Genome	4	3328387	WGS	RANDOM	clinical/animal	animal or human host: Homo sapiens	excluded	source_clinical_or_animal: animal or human host: Homo sapiens
+SRR14073845	SAMN18497773	GCA_017815615.1	Burkholderia latens	Complete Genome	4	3328387	WGS	RANDOM	clinical/animal	animal or human host: Homo sapiens	excluded	source_clinical_or_animal: animal or human host: Homo sapiens
+SRR14075918	SAMN02720836	GCA_000705535.2	Burkholderia seminalis	Complete Genome	3	3561262	WGS	RANDOM	plant	surface-sterilized vetiver roots	excluded	already_run: Bs869T2
+SRR14308056	SAMN18744514	GCA_018223725.1	Cupriavidus sp. KK10	Complete Genome	2	6679877	WGA	RANDOM	enrichment	A bacterial consortium from cattle pasture soil, USA	excluded	library_strategy_not_WGS
+SRR16014001	SAMN21547028	GCA_022879575.1	Caballeronia sp. SL2Y3	Complete Genome	5	2839232	WGS	PCR	clinical/animal	animal or human host: Jalysus wickhami	excluded	source_clinical_or_animal: animal or human host: Jalysus wickhami
+SRR16014003	SAMN21547027	GCA_022879595.1	Caballeronia sp. Lep1P3	Complete Genome	6	3096937	WGS	PCR	clinical/animal	animal or human host: Leptoglossus zonatus	excluded	source_clinical_or_animal: animal or human host: Leptoglossus zonatus
+SRR16014005	SAMN21547026	GCA_022879615.1	Caballeronia grimmiae	Complete Genome	8	2870354	WGS	PCR	clinical/animal	animal or human host: Leptoglossus zonatus	excluded	source_clinical_or_animal: animal or human host: Leptoglossus zonatus
+SRR16014007	SAMN21547025	GCA_022879635.1	Cupriavidus pauculus	Chromosome	4	3483170	WGS	PCR	clinical/animal	animal or human host: Alydus tomentosus	excluded	source_clinical_or_animal: animal or human host: Alydus tomentosus
+SRR16014009	SAMN21547031	GCA_022878925.1	Caballeronia sp. TF1N1	Chromosome	9	2997440	WGS	PCR	clinical/animal	animal or human host: Jalysus wickhami	excluded	continuity_fail: 9 records, largest 2997440 bp
+SRR16014011	SAMN21547030	GCA_023170545.1	Caballeronia sp. Sq4a	Complete Genome	5	2943172	WGS	PCR	clinical/animal	animal or human host: Anasa tristis	excluded	source_clinical_or_animal: animal or human host: Anasa tristis
+SRR16014013	SAMN21547029	GCA_022879555.1	Paraburkholderia terricola	Chromosome	5	4037603	WGS	PCR	environmental	Collected from soil near Alydus sp.	excluded	already_run: SMT4a
+SRR16014015	SAMN21547024	GCA_022879815.1	Caballeronia zhejiangensis	Complete Genome	7	3035511	WGS	PCR	clinical/animal	animal or human host: Anasa tristis	excluded	source_clinical_or_animal: animal or human host: Anasa tristis
+SRR17038420	SAMN23371909	GCA_026958255.1	Burkholderia ambifaria	Complete Genome	3	3495354	WGS	RANDOM	plant	peanut rhizospheric soil	reserve	alternate_run_same_biosample: chosen SRR17038419
+SRR17038421	SAMN23371909	GCA_026958255.1	Burkholderia ambifaria	Complete Genome	3	3495354	WGS	RANDOM	plant	peanut rhizospheric soil	reserve	alternate_run_same_biosample: chosen SRR17038419
+SRR17038422	SAMN23371909	GCA_026958255.1	Burkholderia ambifaria	Complete Genome	3	3495354	WGS	RANDOM	plant	peanut rhizospheric soil	reserve	alternate_run_same_biosample: chosen SRR17038419
+SRR17182378	SAMN21402338	GCA_020667815.1	Cupriavidus pauculus	Contig	5	3676674	WGS	unspecified	clinical/animal	clinical text: Hospital sink trap	excluded	source_clinical_or_animal: clinical text: Hospital sink trap
+SRR17221629	SAMN23806788		Burkholderia multivorans				WGS	unspecified			excluded	no_exact_biosample_genbank_assembly
+SRR18070712	SAMN24289056	GCA_029633645.1	Burkholderia contaminans	Complete Genome	3	3531688	WGS	RANDOM	clinical/animal	animal or human host: Homo sapiens	excluded	source_clinical_or_animal: animal or human host: Homo sapiens
+SRR18070713	SAMN24289055	GCA_029633825.1	Burkholderia contaminans	Complete Genome	7	3816246	WGS	RANDOM	clinical/animal	animal or human host: sheep	excluded	source_clinical_or_animal: animal or human host: sheep
+SRR18253483	SAMN26027413	GCA_022533485.1	Burkholderia contaminans	Complete Genome	4	3627156	AMPLICON	unspecified	environmental	water Water	excluded	library_strategy_not_WGS
+SRR18253485	SAMN26027391	GCA_022631215.1	Ralstonia insidiosa	Complete Genome	5	3722972	AMPLICON	unspecified	environmental	Water	excluded	library_strategy_not_WGS
+SRR18556255	SAMN27097645	GCA_024506485.1	Burkholderia pseudomallei	Contig			WGS	PCR	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR18556256	SAMN27097644	GCA_024506415.1	Burkholderia pseudomallei	Contig			WGS	PCR	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR18649467	SAMN27356647		Ralstonia solanacearum				WGS	RANDOM PCR			excluded	no_exact_biosample_genbank_assembly
+SRR18649469	SAMN27356646		Ralstonia solanacearum				WGS	RANDOM PCR			excluded	no_exact_biosample_genbank_assembly
+SRR18649471	SAMN27356645		Ralstonia solanacearum				WGS	RANDOM PCR			excluded	no_exact_biosample_genbank_assembly
+SRR19887147	SAMN29271629	GCA_025643495.1	Burkholderia multivorans	Complete Genome	4	3495006	WGS	RANDOM	clinical/animal	animal or human host: Homo sapiens	excluded	source_clinical_or_animal: animal or human host: Homo sapiens
+SRR19887148	SAMN29271628	GCA_025643515.1	Burkholderia contaminans	Complete Genome	5	3846952	WGS	RANDOM	clinical/animal	animal or human host: Homo sapiens	excluded	source_clinical_or_animal: animal or human host: Homo sapiens
+SRR19887149	SAMN29271627	GCA_025643535.1	Burkholderia contaminans	Chromosome	5	3848051	WGS	RANDOM	clinical/animal	animal or human host: Homo sapiens	excluded	source_clinical_or_animal: animal or human host: Homo sapiens
+SRR19887150	SAMN29271626	GCA_025643555.1	Burkholderia multivorans	Complete Genome	3	3417441	WGS	RANDOM	clinical/animal	animal or human host: Homo sapiens	excluded	source_clinical_or_animal: animal or human host: Homo sapiens
+SRR19887151	SAMN29271625	GCA_025643575.1	Burkholderia cenocepacia	Complete Genome	4	3777894	WGS	RANDOM	clinical/animal	animal or human host: Homo sapiens	excluded	source_clinical_or_animal: animal or human host: Homo sapiens
+SRR21026239	SAMN30015177	GCA_024704525.1	Pandoraea commovens	Complete Genome	2	5976109	WGS	RANDOM	clinical/animal	animal or human host: Homo sapiens	excluded	source_clinical_or_animal: animal or human host: Homo sapiens
+SRR21541287	SAMN30821931		Ralstonia solanacearum				WGS	RANDOM PCR			excluded	no_exact_biosample_genbank_assembly
+SRR21541301	SAMN27356606		Ralstonia solanacearum				WGS	RANDOM PCR			excluded	no_exact_biosample_genbank_assembly
+SRR21541312	SAMN27356597		Ralstonia solanacearum				WGS	RANDOM PCR			excluded	no_exact_biosample_genbank_assembly
+SRR21541322	SAMN27356554		Ralstonia solanacearum				WGS	RANDOM PCR			excluded	no_exact_biosample_genbank_assembly
+SRR21541333	SAMN30821930		Ralstonia solanacearum				WGS	RANDOM PCR			excluded	no_exact_biosample_genbank_assembly
+SRR21541353	SAMN27356503		Ralstonia solanacearum				WGS	RANDOM PCR			excluded	no_exact_biosample_genbank_assembly
+SRR21541363	SAMN30821937		Ralstonia solanacearum				WGS	RANDOM PCR			excluded	no_exact_biosample_genbank_assembly
+SRR21541364	SAMN27356486		Ralstonia solanacearum				WGS	RANDOM PCR			excluded	no_exact_biosample_genbank_assembly
+SRR21541365	SAMN30821936		Ralstonia solanacearum				WGS	RANDOM PCR			excluded	no_exact_biosample_genbank_assembly
+SRR21541366	SAMN27356657		Ralstonia solanacearum				WGS	RANDOM PCR			excluded	no_exact_biosample_genbank_assembly
+SRR21541368	SAMN27356540		Ralstonia solanacearum				WGS	RANDOM PCR			excluded	no_exact_biosample_genbank_assembly
+SRR21541379	SAMN30821929		Ralstonia solanacearum				WGS	RANDOM PCR			excluded	no_exact_biosample_genbank_assembly
+SRR21541390	SAMN30821926		Ralstonia solanacearum				WGS	RANDOM PCR			excluded	no_exact_biosample_genbank_assembly
+SRR21541395	SAMN27356589		Ralstonia solanacearum				WGS	RANDOM PCR			excluded	no_exact_biosample_genbank_assembly
+SRR21541406	SAMN27356587		Ralstonia solanacearum				WGS	RANDOM PCR			excluded	no_exact_biosample_genbank_assembly
+SRR21541415	SAMN27356654		Ralstonia solanacearum				WGS	RANDOM PCR			excluded	no_exact_biosample_genbank_assembly
+SRR21541416	SAMN30822109		Ralstonia solanacearum				WGS	RANDOM PCR			excluded	no_exact_biosample_genbank_assembly
+SRR21541417	SAMN27356651		Ralstonia solanacearum				WGS	RANDOM PCR			excluded	no_exact_biosample_genbank_assembly
+SRR21541423	SAMN27356637		Ralstonia solanacearum				WGS	RANDOM PCR			excluded	no_exact_biosample_genbank_assembly
+SRR21541434	SAMN30821934		Ralstonia solanacearum				WGS	RANDOM PCR			excluded	no_exact_biosample_genbank_assembly
+SRR21541441	SAMN30821933		Ralstonia solanacearum				WGS	RANDOM PCR			excluded	no_exact_biosample_genbank_assembly
+SRR21541452	SAMN27356558		Ralstonia solanacearum				WGS	RANDOM PCR			excluded	no_exact_biosample_genbank_assembly
+SRR21541463	SAMN27356557		Ralstonia solanacearum				WGS	RANDOM PCR			excluded	no_exact_biosample_genbank_assembly
+SRR21541464	SAMN27356475		Ralstonia solanacearum				WGS	RANDOM PCR			excluded	no_exact_biosample_genbank_assembly
+SRR21541465	SAMN27356472		Ralstonia solanacearum				WGS	RANDOM PCR			excluded	no_exact_biosample_genbank_assembly
+SRR22226953	SAMN31654598	GCA_028462305.2	Burkholderia cepacia	Complete Genome	3	3708767	WGS	RANDOM	clinical/animal	animal or human host: Homo sapiens	excluded	source_clinical_or_animal: animal or human host: Homo sapiens
+SRR22304264	SAMN31539757	GCA_026683835.2	Burkholderia ambifaria	Complete Genome	3	3490225	WGS	unspecified	clinical/animal	animal or human host: Homo sapiens	excluded	source_clinical_or_animal: animal or human host: Homo sapiens
+SRR22426105	SAMN31497846	GCA_026627925.1	Cupriavidus sp. D39	Contig			WGS	RANDOM	environmental	soil	excluded	continuity_fail: Contig, 11 records in report
+SRR23095568	SAMN32672004	GCA_038983115.1	Burkholderia pseudomallei	Complete Genome			WCS	RANDOM	clinical/animal	animal or human host: Homo sapiens	excluded	library_strategy_not_WGS
+SRR23095569	SAMN32672003	GCA_038983225.1	Burkholderia pseudomallei	Complete Genome			WCS	RANDOM	clinical/animal	animal or human host: Homo sapiens	excluded	library_strategy_not_WGS
+SRR23814580	SAMN31858713	GCA_027856555.2	Burkholderia pseudomallei	Contig			WGS	other	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR23814581	SAMN31858712	GCA_027856515.2	Burkholderia pseudomallei	Contig			WGS	other	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR23814582	SAMN31858711	GCA_027856575.2	Burkholderia pseudomallei	Contig			WGS	other	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR23814583	SAMN31858710	GCA_027856595.2	Burkholderia pseudomallei	Contig			WGS	other	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR23814584	SAMN31858708	GCA_027856655.2	Burkholderia pseudomallei	Contig			WGS	other	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR23814585	SAMN31858709	GCA_027856635.2	Burkholderia pseudomallei	Contig			WGS	other	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR23814586	SAMN31858707	GCA_027856615.2	Burkholderia pseudomallei	Contig			WGS	other	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR23814587	SAMN31858728	GCA_027853935.2	Burkholderia pseudomallei	Contig			WGS	other	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR23814588	SAMN31858727	GCA_027853995.2	Burkholderia pseudomallei	Contig			WGS	other	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR23814589	SAMN31858726	GCA_027856355.2	Burkholderia pseudomallei	Contig			WGS	other	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR23814590	SAMN31858725	GCA_027856335.2	Burkholderia pseudomallei	Contig			WGS	other	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR23814591	SAMN31858724	GCA_027856375.2	Burkholderia pseudomallei	Contig			WGS	other	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR23814592	SAMN31858723	GCA_027856395.2	Burkholderia pseudomallei	Contig			WGS	other	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR23814593	SAMN31858722	GCA_027854015.2	Burkholderia pseudomallei	Contig			WGS	other	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR23814594	SAMN31858706	GCA_027856675.2	Burkholderia pseudomallei	Contig			WGS	other	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR23814595	SAMN31858719	GCA_027856435.2	Burkholderia pseudomallei	Contig			WGS	other	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR23814596	SAMN31858699	GCA_027856815.2	Burkholderia pseudomallei	Contig			WGS	other	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR23814597	SAMN31858696	GCA_027856845.2	Burkholderia pseudomallei	Contig			WGS	other	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR23814598	SAMN31858695	GCA_027856855.2	Burkholderia pseudomallei	Contig			WGS	other	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR23814599	SAMN31858694	GCA_027856835.2	Burkholderia pseudomallei	Contig			WGS	other	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR23814600	SAMN31858693	GCA_027856895.2	Burkholderia pseudomallei	Contig			WGS	other	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR23814601	SAMN31858691	GCA_027856915.2	Burkholderia pseudomallei	Contig			WGS	other	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR23814602	SAMN31858690	GCA_027856965.2	Burkholderia pseudomallei	Contig			WGS	other	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR23814603	SAMN31858689	GCA_027856935.2	Burkholderia pseudomallei	Contig			WGS	other	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR23814604	SAMN31858729	GCA_027853925.2	Burkholderia pseudomallei	Contig			WGS	other	unclear	no host/source metadata	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR23814605	SAMN31858705	GCA_027856695.2	Burkholderia pseudomallei	Contig			WGS	other	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR23814606	SAMN31858721	GCA_027856405.2	Burkholderia pseudomallei	Contig			WGS	other	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR23814607	SAMN31858718	GCA_027856445.2	Burkholderia pseudomallei	Contig			WGS	other	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR23814608	SAMN31858717	GCA_027856475.2	Burkholderia pseudomallei	Contig			WGS	other	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR23814609	SAMN31858716	GCA_027854025.2	Burkholderia pseudomallei	Contig			WGS	other	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR23814610	SAMN31858715	GCA_027856535.2	Burkholderia pseudomallei	Contig			WGS	other	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR23814611	SAMN31858714	GCA_027856495.2	Burkholderia pseudomallei	Contig			WGS	other	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR23814612	SAMN31858703	GCA_027856715.2	Burkholderia pseudomallei	Contig			WGS	other	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR23814613	SAMN31858704	GCA_027856735.2	Burkholderia pseudomallei	Contig			WGS	other	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR23814614	SAMN31858702	GCA_027856775.2	Burkholderia pseudomallei	Contig			WGS	other	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR23814615	SAMN31858700	GCA_027856795.2	Burkholderia pseudomallei	Contig			WGS	other	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR23814616	SAMN33713965	GCA_029890095.1	Burkholderia pseudomallei	Contig			WGS	other	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR23814617	SAMN31858701	GCA_027856745.2	Burkholderia pseudomallei	Contig			WGS	other	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR24035307	SAMN33771261		Ralstonia sp. AB8-16				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR24035308	SAMN33771260		Ralstonia sp. AB5-6				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR24035309	SAMN33771259		Ralstonia sp. AB364				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR24035311	SAMN33771257		Ralstonia sp. AB28-4				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR24035313	SAMN33771271		Ralstonia sp. GPP79				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR24035314	SAMN33771269		Ralstonia sp. GP73				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR24035316	SAMN33771270		Ralstonia sp. GPP58				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR24035317	SAMN33771267		Ralstonia sp. GP176				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR24035318	SAMN33771266		Ralstonia sp. GP175				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR24035319	SAMN33771265		Ralstonia sp. GP174				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR24035320	SAMN33771264		Ralstonia sp. GP104				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR24035321	SAMN33771255		Ralstonia sp. AB24-4				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR24035322	SAMN33771254	GCA_045764195.1	Ralstonia sp. AB22-23	Contig	7	2336057	WGS	RANDOM	environmental	soil	excluded	continuity_fail: 7 records, largest 2336057 bp
+SRR24054101	SAMN34027169	GCA_031450985.1	Caballeronia sp. LP003	Contig	7	2966059	WGS	RANDOM	clinical/animal	animal or human host: Leptoglossus phyllopus	excluded	continuity_fail: 7 records, largest 2966059 bp
+SRR24054103	SAMN34027170	GCA_031450995.1	Caballeronia sp. LP006	Contig	6	2989858	WGS	RANDOM	clinical/animal	animal or human host: Leptoglossus phyllopus	excluded	continuity_fail: 6 records, largest 2989858 bp
+SRR24054104	SAMN34027171	GCA_031450875.1	Caballeronia sp. LZ001	Contig	6	5425014	WGS	RANDOM	clinical/animal	animal or human host: Leptoglossus zonatus	excluded	source_clinical_or_animal: animal or human host: Leptoglossus zonatus
+SRR24054105	SAMN34027172	GCA_031450805.1	Caballeronia sp. LZ016	Contig	5	2847285	WGS	RANDOM	clinical/animal	animal or human host: Leptoglossus zonatus	excluded	continuity_fail: 5 records, largest 2847285 bp
+SRR24054106	SAMN34027173	GCA_031450825.1	Caballeronia sp. LZ019	Contig	5	2937535	WGS	RANDOM	clinical/animal	animal or human host: Leptoglossus zonatus	excluded	continuity_fail: 5 records, largest 2937535 bp
+SRR24054107	SAMN34027174	GCA_031450775.1	Caballeronia sp. LZ031	Contig	4	3292967	WGS	RANDOM	clinical/animal	animal or human host: Leptoglossus zonatus	excluded	source_clinical_or_animal: animal or human host: Leptoglossus zonatus
+SRR24054108	SAMN34027175	GCA_031450785.1	Caballeronia sp. LZ062	Contig	3	3012873	WGS	RANDOM	clinical/animal	animal or human host: Leptoglossus zonatus	excluded	source_clinical_or_animal: animal or human host: Leptoglossus zonatus
+SRR24175963	SAMN34192136		Burkholderia vietnamiensis				WGS	size fractionation			excluded	no_exact_biosample_genbank_assembly
+SRR24860065	SAMN34156473	GCA_033870355.1	Burkholderia mallei	Complete Genome			WGS	RANDOM PCR	unclear	unrecognised host: Equus caballus	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR24860066	SAMN34156472	GCA_033870375.1	Burkholderia mallei	Complete Genome			WGS	RANDOM PCR	unclear	unrecognised host: Equus caballus	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR24860067	SAMN34156471	GCA_033870395.1	Burkholderia mallei	Complete Genome			WGS	RANDOM PCR	unclear	unrecognised host: Equus caballus	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR24860068	SAMN34156470	GCA_033956065.1	Burkholderia mallei	Complete Genome			WGS	RANDOM PCR	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR25437086	SAMN36726510		Ralstonia mannitolilytica				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR25437087	SAMN36726509		Ralstonia mannitolilytica				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR25437088	SAMN36726508		Ralstonia mannitolilytica				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR25437089	SAMN36726507		Ralstonia mannitolilytica				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR25437090	SAMN36726506		Ralstonia mannitolilytica				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR25437091	SAMN36726505		Ralstonia mannitolilytica				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR25437092	SAMN36726504		Ralstonia mannitolilytica				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR25437093	SAMN36726503		Ralstonia mannitolilytica				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR25437094	SAMN36726513		Ralstonia pickettii				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR25437095	SAMN36726512		Ralstonia pickettii				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR25437096	SAMN36726511		Ralstonia mannitolilytica				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR25437097	SAMN36726502		Ralstonia mannitolilytica				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR25437098	SAMN36726501		Ralstonia mannitolilytica				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR25461130	SAMN36726504		Ralstonia mannitolilytica				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR25461131	SAMN36726503		Ralstonia mannitolilytica				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR25461385	SAMN36726505		Ralstonia mannitolilytica				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR25461669	SAMN36726507		Ralstonia mannitolilytica				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR27048364	SAMN38644343		Paraburkholderia				WGS	other			excluded	no_exact_biosample_genbank_assembly
+SRR27187200	SAMN38122035	GCA_036352035.1	Burkholderia multivorans	Complete Genome	3	3512161	WGS	RANDOM	clinical/animal	animal or human host: Homo sapiens	excluded	source_clinical_or_animal: animal or human host: Homo sapiens
+SRR27241191	SAMN38879770		Ralstonia solanacearum				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR27547890	SAMN37108316	GCA_030913145.1	Burkholderia pseudomallei	Contig			WGS	RANDOM	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR27548093	SAMN34395335	GCA_030144945.1	Burkholderia pseudomallei	Contig			WGS	RANDOM	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR27732873	SAMN38159256		Ralstonia pseudosolanacearum				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR27732875	SAMN38159251		Ralstonia pseudosolanacearum				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR27732877	SAMN38159255		Ralstonia pseudosolanacearum				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR27732879	SAMN38159254		Ralstonia pseudosolanacearum				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR27732881	SAMN38159253		Ralstonia pseudosolanacearum				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR27732883	SAMN38159252		Ralstonia pseudosolanacearum				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR27732884	SAMN38159261		Ralstonia pseudosolanacearum				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR27732889	SAMN38159259		Ralstonia pseudosolanacearum				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR27732891	SAMN38159258		Ralstonia pseudosolanacearum				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR27732893	SAMN38159257		Ralstonia pseudosolanacearum				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR28096023	SAMN40140100	GCA_038448065.1	Burkholderia pseudomallei	Chromosome			WGS	RANDOM	environmental	environmental soil	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR28096026	SAMN40140117		Burkholderia pseudomallei				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR28096027	SAMN40140099		Burkholderia pseudomallei				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR28096029	SAMN40140116	GCA_038448705.1	Burkholderia pseudomallei	Chromosome			WGS	RANDOM	environmental	environmental soil	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR28096031	SAMN40140115		Burkholderia pseudomallei				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR28096033	SAMN40140114		Burkholderia pseudomallei				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR28096035	SAMN40140113		Burkholderia pseudomallei				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR28096037	SAMN40140112	GCA_038447715.1	Burkholderia pseudomallei	Chromosome			WGS	RANDOM	environmental	environmental soil	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR28096039	SAMN40140101		Burkholderia pseudomallei				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR28096040	SAMN40140108		Burkholderia pseudomallei				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR28096042	SAMN40140107		Burkholderia pseudomallei				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR28096043	SAMN40140098		Burkholderia pseudomallei				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR28096045	SAMN40140106	GCA_038448955.1	Burkholderia pseudomallei	Chromosome			WGS	RANDOM	environmental	environmental soil	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR28096047	SAMN40140105		Burkholderia pseudomallei				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR28096050	SAMN40140111		Burkholderia pseudomallei				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR28096052	SAMN40140110		Burkholderia pseudomallei				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR28096054	SAMN40140109	GCA_038447785.1	Burkholderia pseudomallei	Chromosome			WGS	RANDOM	environmental	environmental soil	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR28096057	SAMN40140104		Burkholderia pseudomallei				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR28096059	SAMN40140103		Burkholderia pseudomallei				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR28096061	SAMN40140102		Burkholderia pseudomallei				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR28096063	SAMN40140097		Burkholderia pseudomallei				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR29580827	SAMN42090654		Cupriavidus necator H16				WGS	other			excluded	no_exact_biosample_genbank_assembly
+SRR29580828	SAMN42090653		Cupriavidus necator H16				WGS	other			excluded	no_exact_biosample_genbank_assembly
+SRR29580829	SAMN42090652		Cupriavidus necator H16				WGS	other			excluded	no_exact_biosample_genbank_assembly
+SRR29580830	SAMN42090651		Cupriavidus necator H16				WGS	other			excluded	no_exact_biosample_genbank_assembly
+SRR29580831	SAMN42090650		Cupriavidus necator H16				WGS	other			excluded	no_exact_biosample_genbank_assembly
+SRR29580832	SAMN42090649		Cupriavidus necator H16				WGS	other			excluded	no_exact_biosample_genbank_assembly
+SRR29580840	SAMN42090648		Cupriavidus necator H16				WGS	other			excluded	no_exact_biosample_genbank_assembly
+SRR29580841	SAMN42090647		Cupriavidus necator H16				WGS	other			excluded	no_exact_biosample_genbank_assembly
+SRR30016864	SAMN42180104		Ralstonia syzygii subsp. celebesensis				WGS	size fractionation			excluded	no_exact_biosample_genbank_assembly
+SRR30278584	SAMN43230437		Burkholderia pseudomallei				WGS	PCR			excluded	no_exact_biosample_genbank_assembly
+SRR30278585	SAMN43230436		Burkholderia pseudomallei				WGS	PCR			excluded	no_exact_biosample_genbank_assembly
+SRR30278586	SAMN43230435		Burkholderia pseudomallei				WGS	PCR			excluded	no_exact_biosample_genbank_assembly
+SRR30278592	SAMN43230441		Burkholderia pseudomallei				WGS	PCR			excluded	no_exact_biosample_genbank_assembly
+SRR30278593	SAMN43230440		Burkholderia pseudomallei				WGS	PCR			excluded	no_exact_biosample_genbank_assembly
+SRR30278594	SAMN43230439		Burkholderia pseudomallei				WGS	PCR			excluded	no_exact_biosample_genbank_assembly
+SRR30278595	SAMN43230438		Burkholderia pseudomallei				WGS	PCR			excluded	no_exact_biosample_genbank_assembly
+SRR30791203	SAMN43911430	GCA_052858145.1	Burkholderia pseudomallei	Complete Genome			WGS	RANDOM	environmental	enviroment (soil)	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR30791205	SAMN43911455	GCA_052854005.1	Burkholderia pseudomallei	Complete Genome			WGS	RANDOM PCR	environmental	enviroment (soil)	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR30791207	SAMN43911455	GCA_052854005.1	Burkholderia pseudomallei	Complete Genome			WGS	RANDOM	environmental	enviroment (soil)	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR30791208	SAMN43911455	GCA_052854005.1	Burkholderia pseudomallei	Complete Genome			WGS	RANDOM	environmental	enviroment (soil)	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR30791210	SAMN43911454	GCA_052854015.1	Burkholderia pseudomallei	Complete Genome			WGS	RANDOM	environmental	enviroment (soil)	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR30791212	SAMN43911453		Burkholderia pseudomallei				WGS	RANDOM PCR			excluded	no_exact_biosample_genbank_assembly
+SRR30791213	SAMN43911453		Burkholderia pseudomallei				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR30791214	SAMN43911453		Burkholderia pseudomallei				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR30791216	SAMN43911452	GCA_052854315.1	Burkholderia pseudomallei	Complete Genome			WGS	RANDOM PCR	environmental	enviroment (soil)	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR30791217	SAMN43911429		Burkholderia pseudomallei				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR30791218	SAMN43911452	GCA_052854315.1	Burkholderia pseudomallei	Complete Genome			WGS	RANDOM	environmental	enviroment (soil)	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR30791219	SAMN43911452	GCA_052854315.1	Burkholderia pseudomallei	Complete Genome			WGS	RANDOM	environmental	enviroment (soil)	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR30791221	SAMN43911451	GCA_052854305.1	Burkholderia pseudomallei	Complete Genome			WGS	RANDOM	environmental	enviroment (soil)	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR30791223	SAMN43911450	GCA_052854605.1	Burkholderia pseudomallei	Complete Genome			WGS	RANDOM PCR	environmental	enviroment (soil)	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR30791224	SAMN43911450	GCA_052854605.1	Burkholderia pseudomallei	Complete Genome			WGS	RANDOM	environmental	enviroment (soil)	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR30791226	SAMN43911449	GCA_052854615.1	Burkholderia pseudomallei	Complete Genome			WGS	RANDOM	environmental	enviroment (soil)	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR30791227	SAMN43911449	GCA_052854615.1	Burkholderia pseudomallei	Complete Genome			WGS	RANDOM	environmental	enviroment (soil)	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR30791230	SAMN43911448	GCA_052854885.1	Burkholderia pseudomallei	Complete Genome			WGS	RANDOM PCR	environmental	enviroment (soil)	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR30791231	SAMN43911448	GCA_052854885.1	Burkholderia pseudomallei	Complete Genome			WGS	RANDOM	environmental	enviroment (soil)	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR30791233	SAMN43911447	GCA_052854895.1	Burkholderia pseudomallei	Complete Genome			WGS	RANDOM	environmental	enviroment (soil)	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR30791235	SAMN43911446		Burkholderia pseudomallei				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR30791237	SAMN43911445		Burkholderia pseudomallei				WGS	RANDOM PCR			excluded	no_exact_biosample_genbank_assembly
+SRR30791238	SAMN43911445		Burkholderia pseudomallei				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR30791239	SAMN43911428		Burkholderia pseudomallei				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR30791240	SAMN43911445		Burkholderia pseudomallei				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR30791242	SAMN43911444	GCA_052855305.1	Burkholderia pseudomallei	Complete Genome			WGS	RANDOM PCR	environmental	enviroment (soil)	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR30791243	SAMN43911444	GCA_052855305.1	Burkholderia pseudomallei	Complete Genome			WGS	RANDOM	environmental	enviroment (soil)	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR30791244	SAMN43911444	GCA_052855305.1	Burkholderia pseudomallei	Complete Genome			WGS	RANDOM	environmental	enviroment (soil)	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR30791246	SAMN43911443	GCA_052855315.1	Burkholderia pseudomallei	Complete Genome			WGS	RANDOM	environmental	enviroment (soil)	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR30791248	SAMN43911442	GCA_052855605.1	Burkholderia pseudomallei	Complete Genome			WGS	RANDOM	environmental	enviroment (soil)	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR30791250	SAMN43911428		Burkholderia pseudomallei				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR30791251	SAMN43911441	GCA_052855615.1	Burkholderia pseudomallei	Complete Genome			WGS	RANDOM PCR	environmental	enviroment (soil)	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR30791252	SAMN43911441	GCA_052855615.1	Burkholderia pseudomallei	Complete Genome			WGS	RANDOM	environmental	enviroment (soil)	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR30791254	SAMN43911440	GCA_052855985.1	Burkholderia pseudomallei	Complete Genome			WGS	RANDOM	environmental	enviroment (soil)	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR30791256	SAMN43911439	GCA_052856205.1	Burkholderia pseudomallei	Complete Genome			WGS	RANDOM PCR	environmental	enviroment (soil)	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR30791257	SAMN43911439	GCA_052856205.1	Burkholderia pseudomallei	Complete Genome			WGS	RANDOM	environmental	enviroment (soil)	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR30791259	SAMN43911438	GCA_052857015.1	Burkholderia pseudomallei	Complete Genome			WGS	RANDOM PCR	environmental	enviroment (soil)	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR30791260	SAMN43911438	GCA_052857015.1	Burkholderia pseudomallei	Complete Genome			WGS	RANDOM	environmental	enviroment (soil)	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR30791262	SAMN43911438	GCA_052857015.1	Burkholderia pseudomallei	Complete Genome			WGS	RANDOM	environmental	enviroment (soil)	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR30791264	SAMN43911437		Burkholderia pseudomallei				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR30791265	SAMN43911437		Burkholderia pseudomallei				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR30791267	SAMN43911436	GCA_052857225.1	Burkholderia pseudomallei	Complete Genome			WGS	RANDOM	environmental	enviroment (soil)	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR30791268	SAMN43911436	GCA_052857225.1	Burkholderia pseudomallei	Complete Genome			WGS	RANDOM	environmental	enviroment (soil)	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR30791270	SAMN43911435		Burkholderia pseudomallei				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR30791272	SAMN43911427	GCA_052858685.1	Burkholderia pseudomallei	Complete Genome			WGS	RANDOM	environmental	enviroment (soil)	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR30791273	SAMN43911434		Burkholderia pseudomallei				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR30791274	SAMN43911434		Burkholderia pseudomallei				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR30791276	SAMN43911433		Burkholderia pseudomallei				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR30791277	SAMN43911433		Burkholderia pseudomallei				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR30791279	SAMN43911432		Burkholderia pseudomallei				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR30791281	SAMN43911431	GCA_052857935.1	Burkholderia pseudomallei	Complete Genome			WGS	RANDOM	environmental	enviroment (soil)	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR30791284	SAMN43911426	GCA_052858755.1	Burkholderia pseudomallei	Complete Genome			WGS	RANDOM	environmental	enviroment (soil)	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR30855454	SAMN44002543		Mycetohabitans endofungorum				WGS	other			excluded	no_exact_biosample_genbank_assembly
+SRR30855455	SAMN44002542		Mycetohabitans rhizoxinica				WGS	other			excluded	no_exact_biosample_genbank_assembly
+SRR30855456	SAMN44002541		Mycetohabitans endofungorum				WGS	other			excluded	no_exact_biosample_genbank_assembly
+SRR30855457	SAMN44002540		Mycetohabitans rhizoxinica				WGS	other			excluded	no_exact_biosample_genbank_assembly
+SRR30855458	SAMN44002539		Mycetohabitans endofungorum				WGS	other			excluded	no_exact_biosample_genbank_assembly
+SRR30855459	SAMN44002538		Mycetohabitans rhizoxinica				WGS	other			excluded	no_exact_biosample_genbank_assembly
+SRR30855460	SAMN44002537		Mycetohabitans rhizoxinica				WGS	other			excluded	no_exact_biosample_genbank_assembly
+SRR30855461	SAMN44002536		Mycetohabitans rhizoxinica				WGS	other			excluded	no_exact_biosample_genbank_assembly
+SRR30855462	SAMN44002544		Mycetohabitans sp. B46				WGS	other			excluded	no_exact_biosample_genbank_assembly
+SRR30855463	SAMN44002535		Mycetohabitans endofungorum				WGS	other			excluded	no_exact_biosample_genbank_assembly
+SRR30855464	SAMN44002534		Mycetohabitans sp. B8				WGS	other			excluded	no_exact_biosample_genbank_assembly
+SRR31872802	SAMN41447235	GCA_052400445.1	Cupriavidus oxalaticus	Complete Genome	3	4006426	WGS	PCR	environmental	soil	pcr_reserve	PCR library (PCR): stress/reserve only
+SRR31877262	SAMN45667634		Burkholderia pseudomallei				WGS	PCR			excluded	no_exact_biosample_genbank_assembly
+SRR32161575	SAMN45667647		Burkholderia pseudomallei				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR32161576	SAMN45667635		Burkholderia pseudomallei				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR32164054	SAMN43145728		Paraburkholderia strydomiana				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR32164107	SAMN43145699		Ralstonia sp. Ralssp121				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR32164116	SAMN43145695		Burkholderia sp. Burksp114				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR32164144	SAMN43145693		Ralstonia sp. Ralssp112				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR32164161	SAMN43145758	GCA_047325075.1	Paraburkholderia phenoliruptrix	Complete Genome	2	4115846	WGS	RANDOM	plant	plant host: Triticum aestivum cv. Catawba / roots	excluded	already_run: CT11-68
+SRR33346929	SAMN48150242		Burkholderia cenocepacia				WGS	other			excluded	no_exact_biosample_genbank_assembly
+SRR33346930	SAMN48150241		Burkholderia cenocepacia				WGS	other			excluded	no_exact_biosample_genbank_assembly
+SRR33346931	SAMN48150240		Burkholderia cenocepacia				WGS	other			excluded	no_exact_biosample_genbank_assembly
+SRR33346932	SAMN48150239		Burkholderia cenocepacia				WGS	other			excluded	no_exact_biosample_genbank_assembly
+SRR33346933	SAMN48150238		Burkholderia cenocepacia				WGS	other			excluded	no_exact_biosample_genbank_assembly
+SRR33346934	SAMN48150237		Burkholderia cenocepacia				WGS	other			excluded	no_exact_biosample_genbank_assembly
+SRR33346935	SAMN48150236		Burkholderia cenocepacia				WGS	other			excluded	no_exact_biosample_genbank_assembly
+SRR33346936	SAMN48150235		Burkholderia cenocepacia				WGS	other			excluded	no_exact_biosample_genbank_assembly
+SRR33346937	SAMN48150234		Burkholderia cenocepacia				WGS	other			excluded	no_exact_biosample_genbank_assembly
+SRR33346938	SAMN48150233		Burkholderia cenocepacia				WGS	other			excluded	no_exact_biosample_genbank_assembly
+SRR33364806	SAMN48075520	GCA_049944985.1	Ralstonia pseudosolanacearum	Scaffold	7	3692990	WGA	PCR	plant	tomato Plant	excluded	library_strategy_not_WGS
+SRR33366061	SAMN48191345	GCA_050113975.1	Ralstonia pseudosolanacearum	Scaffold	6	3666582	WGA	PCR	environmental	Brinjal Field	excluded	library_strategy_not_WGS
+SRR33421098	SAMN48210616	GCA_050171415.1	Ralstonia pseudosolanacearum	Scaffold			WGS	PCR	plant	potato	excluded	continuity_fail: Scaffold, 14 records in report
+SRR33421099	SAMN48210615	GCA_050171465.1	Ralstonia pseudosolanacearum	Scaffold	10	3642351	WGS	PCR	plant	potato	pcr_reserve	PCR library (PCR): stress/reserve only
+SRR33421100	SAMN48210614	GCA_050171515.1	Ralstonia pseudosolanacearum	Scaffold	10	3612648	WGS	PCR	plant	potato	pcr_reserve	PCR library (PCR): stress/reserve only
+SRR33434047	SAMN47339132	GCA_049177125.1	Paraburkholderia sp. DD10	Complete Genome	3	4077509	WGS	RANDOM	environmental	Hyphosphere of Rhizophagus irregularis found in the meadow Soil	excluded	already_run: DD10
+SRR33822592	SAMN48859240		Burkholderia pseudomallei				WGS	PCR			excluded	no_exact_biosample_genbank_assembly
+SRR33822594	SAMN48859239		Burkholderia pseudomallei				WGS	PCR			excluded	no_exact_biosample_genbank_assembly
+SRR33822596	SAMN48859238		Burkholderia pseudomallei				WGS	PCR			excluded	no_exact_biosample_genbank_assembly
+SRR33822599	SAMN48859246		Burkholderia pseudomallei				WGS	PCR			excluded	no_exact_biosample_genbank_assembly
+SRR33822600	SAMN48858972		Burkholderia pseudomallei				WGS	PCR			excluded	no_exact_biosample_genbank_assembly
+SRR33822602	SAMN48859245		Burkholderia pseudomallei				WGS	PCR			excluded	no_exact_biosample_genbank_assembly
+SRR33822604	SAMN48859244		Burkholderia pseudomallei				WGS	PCR			excluded	no_exact_biosample_genbank_assembly
+SRR33822606	SAMN48859243		Burkholderia pseudomallei				WGS	PCR			excluded	no_exact_biosample_genbank_assembly
+SRR33822608	SAMN48859242		Burkholderia pseudomallei				WGS	PCR			excluded	no_exact_biosample_genbank_assembly
+SRR33822610	SAMN48859241		Burkholderia pseudomallei				WGS	PCR			excluded	no_exact_biosample_genbank_assembly
+SRR33822612	SAMN48858949		Burkholderia pseudomallei				WGS	PCR			excluded	no_exact_biosample_genbank_assembly
+SRR33943419	SAMN44438710	GCA_056868375.1	Mycetohabitans rhizoxinica	Complete Genome	2	2530141	WGS	other	clinical/animal	clinical text: Hospital Mattress	excluded	source_clinical_or_animal: clinical text: Hospital Mattress
+SRR33943421	SAMN45934104		Mycetohabitans rhizoxinica				WGS	other			excluded	no_exact_biosample_genbank_assembly
+SRR33943422	SAMN44002544		Mycetohabitans sp. B46				WGS	other			excluded	no_exact_biosample_genbank_assembly
+SRR33943423	SAMN45934102		Mycetohabitans rhizoxinica				WGS	other			excluded	no_exact_biosample_genbank_assembly
+SRR33943424	SAMN45934101		Mycetohabitans rhizoxinica				WGS	other			excluded	no_exact_biosample_genbank_assembly
+SRR33977007	SAMN45934103		Mycetohabitans rhizoxinica				WGS	other			excluded	no_exact_biosample_genbank_assembly
+SRR34063158	SAMN48396344	GCA_050430075.1	Robbsia andropogonis	Complete Genome	8	3612886	WGS	ChIP	plant	plant host: Pueraria montana var. thomsonii	excluded	library_selection_not_genomic_random_like: ChIP
+SRR34675256	SAMN50148296	GCA_051560145.1	Burkholderia pseudomallei	Complete Genome			WGS	unspecified	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR34675257	SAMN50148303	GCA_051560085.1	Burkholderia pseudomallei	Complete Genome			WGS	unspecified	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR34675258	SAMN50148305	GCA_051560105.1	Burkholderia pseudomallei	Complete Genome			WGS	unspecified	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR34675259	SAMN50149471		Burkholderia pseudomallei				WGS	unspecified			excluded	no_exact_biosample_genbank_assembly
+SRR34675265	SAMN50149472		Burkholderia pseudomallei				WGS	unspecified			excluded	no_exact_biosample_genbank_assembly
+SRR34675266	SAMN50148301	GCA_051560065.1	Burkholderia pseudomallei	Complete Genome			WGS	unspecified	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR34675267	SAMN50148299	GCA_051560125.1	Burkholderia pseudomallei	Complete Genome			WGS	unspecified	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR35575410	SAMN49849728	GCA_052372795.1	Ralstonia sp. PR5	Contig			WGS	other	environmental	Sediment from mine tailings pond ENVO:00000546	excluded	continuity_fail: Contig, 14 records in report
+SRR35575411	SAMN49849726	GCA_052372855.1	Paraburkholderia fungorum	Contig			WGS	other	environmental	Sediment from mine tailings pond ENVO:00000546	excluded	continuity_fail: Contig, 12 records in report
+SRR36199688	SAMN53401926		Burkholderia cepacia				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR37523597	SAMN56368888	GCA_058782725.1	Paraburkholderia sp. FW306-02-B	Contig	4	4639961	WGS	RANDOM	environmental	Sediment sample FWB306-02 from ORR	excluded	already_run: FW306-02-B
+SRR37535699	SAMN53736893	GCA_054403015.1	Ralstonia mannitolilytica	Contig	3	3385880	WGS	RANDOM	clinical/animal	animal or human host: Tenualosa ilisha	excluded	source_clinical_or_animal: animal or human host: Tenualosa ilisha
+SRR37535700	SAMN53736892	GCA_054403035.1	Ralstonia mannitolilytica	Contig	2	3378642	WGS	RANDOM	clinical/animal	animal or human host: Tenualosa ilisha	excluded	source_clinical_or_animal: animal or human host: Tenualosa ilisha
+SRR37998083	SAMN57161929		Burkholderia contaminans				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR37998084	SAMN57161928		Ralstonia pickettii				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR39101528	SAMN35000626		Burkholderia pseudomallei				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR39101529	SAMN35000620		Burkholderia pseudomallei				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR39101530	SAMN47409136		Burkholderia pseudomallei				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR39101531	SAMN33797276		Burkholderia pseudomallei				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR39101532	SAMN35000734		Burkholderia pseudomallei				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR39101533	SAMN35000680		Burkholderia pseudomallei				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR39101534	SAMN47409033		Burkholderia pseudomallei				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR39101535	SAMN47409046		Burkholderia pseudomallei				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR39101536	SAMN47409031		Burkholderia pseudomallei				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR39101537	SAMN47409029		Burkholderia pseudomallei				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR39101538	SAMN35000654		Burkholderia pseudomallei				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR39101539	SAMN35000653		Burkholderia pseudomallei				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR39101540	SAMN35000652		Burkholderia pseudomallei				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR39101541	SAMN35000651		Burkholderia pseudomallei				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR39101542	SAMN35000647		Burkholderia pseudomallei				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR39101543	SAMN47409032		Burkholderia pseudomallei				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR39101544	SAMN35000632		Burkholderia pseudomallei				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR39101545	SAMN35000695		Burkholderia pseudomallei				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR39101546	SAMN35000742		Burkholderia pseudomallei				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR39101547	SAMN35000723		Burkholderia pseudomallei				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR39101548	SAMN35000717		Burkholderia pseudomallei				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR39101549	SAMN35000714		Burkholderia pseudomallei				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR39101550	SAMN35000711		Burkholderia pseudomallei				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR39101551	SAMN35000704		Burkholderia pseudomallei				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR39101552	SAMN35000684		Burkholderia pseudomallei				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR39101553	SAMN35000628		Burkholderia pseudomallei				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR39101554	SAMN47409031		Burkholderia pseudomallei				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR39101555	SAMN35000661		Burkholderia pseudomallei				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR39501441	SAMN61447835		Paraburkholderia caledonica				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR40101729	SAMN62258039		Ralstonia solanacearum				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR40101730	SAMN62258038		Ralstonia solanacearum				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR40101731	SAMN62258037		Ralstonia solanacearum				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR40101732	SAMN62258036		Ralstonia solanacearum				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR40101733	SAMN62258035		Ralstonia solanacearum				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR40101734	SAMN62258034		Ralstonia solanacearum				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR40101735	SAMN62258033		Ralstonia solanacearum				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR40101736	SAMN62258032		Ralstonia solanacearum				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR40114049	SAMN61838085	GCA_059639035.1	Ralstonia sp. Amiri-4	Contig	4	3362161	WGS	RANDOM	clinical/animal	animal or human host: Homo sapiens	excluded	source_clinical_or_animal: animal or human host: Homo sapiens
+SRR40114050	SAMN61838084	GCA_059639015.1	Ralstonia sp. Amiri-3	Contig			WGS	RANDOM	clinical/animal	animal or human host: Homo sapiens	excluded	continuity_fail: Contig, 43 records in report
+SRR40114051	SAMN61838083	GCA_059638995.1	Ralstonia sp. Amiri-2	Contig	4	3349655	WGS	RANDOM	clinical/animal	animal or human host: Homo sapiens	excluded	source_clinical_or_animal: animal or human host: Homo sapiens
+SRR40114052	SAMN61838082	GCA_059638975.1	Ralstonia sp. Amiri-1	Contig	3	3338356	WGS	RANDOM	clinical/animal	animal or human host: Homo sapiens	excluded	source_clinical_or_animal: animal or human host: Homo sapiens
+SRR40898483	SAMN63301403	GCA_062018997.1	Burkholderia sp. RLRP	Complete Genome	5	3744242	WGS	RANDOM	enrichment	Rock phosphate-enriched NBRIP medium inoculated with maize rhizosphere subsurface soil (30 to 50 cm)	excluded	ena_fastq_bytes_md5_missing_or_not_single_file
+SRR6334887	SAMN08114790		Burkholderia thailandensis E264				OTHER	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR6334889	SAMN08114791		Burkholderia thailandensis E264				OTHER	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR6470778	SAMN08362572	GCA_002924455.1	Burkholderia contaminans	Chromosome	6	3836231	WGS	RANDOM	clinical/animal	animal or human host: Homo sapiens	excluded	source_clinical_or_animal: animal or human host: Homo sapiens
+SRR8749593	SAMN11081001	GCA_004360205.1	Burkholderia pseudomallei	Contig			WGS	RANDOM	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR8905371	SAMN11081001	GCA_004360205.1	Burkholderia pseudomallei	Contig			WGS	RANDOM	clinical/animal	animal or human host: Homo sapiens	excluded	excluded_species_B_pseudomallei_or_mallei
+SRR9732396	SAMN12335594		Pandoraea sp. Col-0-25				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR9732397	SAMN12335595		Pandoraea sp. Col-0-28				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR9732399	SAMN12335593		Pandoraea sp. Col-0-22				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR9732404	SAMN12335596		Pandoraea sp. Col-0-43				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR9732405	SAMN12335597		Ralstonia pickettii				WGS	RANDOM			excluded	no_exact_biosample_genbank_assembly
+SRR9733839	SAMN03174139	GCA_000807775.2	Pandoraea fibrosis	Complete Genome	1	5592065	WGS	RANDOM	clinical/animal	animal or human host: Homo sapiens	excluded	source_clinical_or_animal: animal or human host: Homo sapiens
+SRR9733841	SAMN03174414	GCA_000807785.2	Pandoraea fibrosis	Complete Genome	1	5592064	WGS	RANDOM	clinical/animal	animal or human host: Homo sapiens	excluded	source_clinical_or_animal: animal or human host: Homo sapiens
+SRR9821894	SAMN03174139	GCA_000807775.2	Pandoraea fibrosis	Complete Genome	1	5592065	WGS	RANDOM	clinical/animal	animal or human host: Homo sapiens	excluded	source_clinical_or_animal: animal or human host: Homo sapiens
+SRR9821956	SAMN03174414	GCA_000807785.2	Pandoraea fibrosis	Complete Genome	1	5592064	WGS	RANDOM	clinical/animal	animal or human host: Homo sapiens	excluded	source_clinical_or_animal: animal or human host: Homo sapiens
