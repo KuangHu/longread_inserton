@@ -175,6 +175,11 @@ PYX
   [ -f $F/index.tsv.gz ] || die "index failed"
 fi
 [ -f $F/target_700_2500_summary.json ] || $PY ucd_target.py --final $F >> $LOG 2>&1 || die "target table failed"
+if [ ! -f $F/core_contexts/core_contexts_summary.json ]; then
+  submit contexts "0" $BIG --cpus-per-task=2 --mem=200G --time=24:00:00 -- \
+    --wrap="cd $CODE; $PY ucd_core_contexts.py --final $F --dna-work $WORK --out $F/core_contexts"
+  [ -f $F/core_contexts/core_contexts_summary.json ] || die "core contexts failed"
+fi
 grep -qx "$F" $WORK/finals.txt 2>/dev/null || echo $F >> $WORK/finals.txt
 
 # ---------------------------------------------------------------- batch report

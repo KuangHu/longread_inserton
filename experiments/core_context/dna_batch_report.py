@@ -91,6 +91,8 @@ def main():
                       note='cumulative over all batches processed in this work dir')
     tj = jl(Path(a.final) / 'target_700_2500_summary.json')
     R['target_700_2500'] = tj['main'] if tj else None  # main table; final['strict_*'] is the wide < 2500 table
+    cj = jl(Path(a.final) / 'core_contexts' / 'core_contexts_summary.json')
+    R['core_contexts'] = {k: cj[k] for k in ('cores', 'cores_by_tier', 'cores_by_evidence', 'cores_ge')} if cj else None
     # resources
     res = Counter()
     peak = {}
