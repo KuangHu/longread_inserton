@@ -19,7 +19,6 @@ A core below a tier whose library sequences still have deferred (not yet enumera
 `insufficient_evidence`, not `below_tier`: unfinished pairs are not evidence of fewer contexts.
 """
 import argparse
-import glob
 import gzip
 import hashlib
 import json
@@ -58,7 +57,7 @@ def max_clique(nodes, adj, cap, distinct=None):
 
     def colour_sort(P):
         classes = []
-        for v in sorted(P, key=lambda x: -len(nb[x])):
+        for v in sorted(P, key=lambda x: (-len(nb[x]), x)):  # ties by name: deterministic
             for c in classes:
                 if not (nb[v] & c):
                     c.add(v)
@@ -67,7 +66,7 @@ def max_clique(nodes, adj, cap, distinct=None):
                 classes.append({v})
         order, cols = [], []
         for k, c in enumerate(classes, 1):
-            for v in c:
+            for v in sorted(c):
                 order.append(v)
                 cols.append(k)
         return order, cols
@@ -92,7 +91,7 @@ def max_clique(nodes, adj, cap, distinct=None):
         return False
 
     if S:
-        best = [next(iter(S))]
+        best = [min(S)]
         expand([], set(S))
     return best[:cap]
 
@@ -101,6 +100,7 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument('--final', required=True, help='dir with all_rows_ / strict_700_2500_candidate_insertion.tsv.gz')
     ap.add_argument('--dna-work', default='', help='dna_discovery work dir (deferred chunks -> insufficient_evidence)')
+    ap.add_argument('--pair-libraries', default='', help='collect pair_other_libraries.tsv.gz (comma-separated)')
     ap.add_argument('--out', required=True)
     a = ap.parse_args()
     fin, out = Path(a.final), Path(a.out)
@@ -156,19 +156,27 @@ def main():
         else:
             fail_pairs.add(k)
     conflict = sum(1 for k in edge_rows if k in fail_pairs)
+    # a pair found through several library sequences is checked once (one core_key); the others count as well for
+    # completeness, or a core would be 'final' while one of its library sequences still has deferred pairs
+    if a.pair_libraries:
+        pos_of_pair = {}
+        for k, ids in edge_rows.items():
+            for i in ids:
+                pos_of_pair[i] = k
+        for f in a.pair_libraries.split(','):
+            with gzip.open(f, 'rt') as fh:
+                fh.readline()
+                for line in fh:
+                    i, lib = line.rstrip('\n').split('\t')
+                    if i in pos_of_pair:
+                        for n in pos_of_pair[i]:
+                            libs_of[n].add(lib)
 
     # deferred library sequences (not yet enumerated / aligned chunks)
     pending = set()
     if a.dna_work:
-        done = set()
-        for f in glob.glob(str(Path(a.dna_work) / 'enum' / 'g*' / 'b*' / 'progress.tsv.gz')):
-            for r in stream(f):
-                k = (r['library_id'], r['chunk'], r['occurrences'])
-                if r['status'] == 'enumerated':
-                    done.add(k)
-                else:
-                    pending.add(k)
-        pending = {k[0] for k in pending - done}
+        import dna_discovery as dd
+        pending = {k[0] for k in dd.pending_chunks(a.dna_work)}
 
     # components
     seen, comps = set(), []

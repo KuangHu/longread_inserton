@@ -1,0 +1,155 @@
+{
+ "version": "dna_validate_v0.2.2",
+ "assemblies": 50,
+ "rules": {
+  "tol_bp": 10,
+  "min_overlap": 0.5,
+  "strict_min_bp": 700,
+  "strict_max_bp": 2500
+ },
+ "dna": {
+  "collect_pair_rows": 10493703,
+  "collect_status": {
+   "unresolved": 6947330,
+   "resolved": 2257904,
+   "no_shared_block_at_seed": 1288469
+  },
+  "resolved_distinct_pairs_input": 534210,
+  "resolved_duplicate_rows": 1723694,
+  "pairs_deferred_rows_high_copy": 0,
+  "checked_rows": 353949,
+  "completeness": {
+   "expected_pairs": 353949,
+   "expected_rows": 353949,
+   "observed_rows": {
+    "candidate_insertion": 353949
+   },
+   "missing": {
+    "candidate_insertion": 0
+   },
+   "duplicated": {},
+   "unexpected": {},
+   "missing_chunks": [],
+   "complete": true
+  },
+  "source_check": {
+   "pass": 353949
+  },
+  "ucd_check": {
+   "shared_physical_context": 132,
+   "ucd_supported": 175473,
+   "insertion_dissimilar": 162692,
+   "only_one_side_different": 3163,
+   "uncertain_context": 5864,
+   "insertion_partial": 1133,
+   "insufficient_context": 3847,
+   "swapped_or_rearranged_context": 631,
+   "same_context": 692,
+   "rearranged_or_fragmented_insertion": 322
+  },
+  "final": {
+   "not_passed": 178476,
+   "pass": 175473
+  },
+  "checked_by_scope": {
+   "same_assembly": 14452,
+   "cross_assembly": 339497
+  },
+  "strict_pass_pairs": 175473,
+  "strict_pass_by_scope": {
+   "same_assembly": 13030,
+   "cross_assembly": 162443
+  },
+  "strict_pass_by_strands": {
+   "++": 44062,
+   "-+": 43138,
+   "+-": 44488,
+   "--": 43785
+  },
+  "strict_pass_occurrences": 38682,
+  "strict_pass_assemblies": 50,
+  "pass_not_strict": 0
+ },
+ "recovery": {
+  "protein_strict_pairs": 13550,
+  "classes": {
+   "recovered_same_interval": 11040,
+   "one_side_recovered:boundary_unresolved:not_reached/resolved": 908,
+   "one_side_recovered:boundary_unresolved:not_reached/not_reached": 641,
+   "one_side_recovered:boundary_unresolved:resolved/not_reached": 491,
+   "one_side_recovered:boundary_unresolved:no_shared_block_at_seed/no_shared_block_at_seed": 260,
+   "one_side_recovered:boundary_unresolved:resolved/end_in_chain_gap": 60,
+   "not_recovered:boundary_unresolved:not_reached/not_reached": 36,
+   "one_side_recovered:boundary_unresolved:not_reached/end_in_chain_gap": 35,
+   "one_side_recovered:boundary_unresolved:end_in_chain_gap/resolved": 23,
+   "not_recovered:boundary_unresolved:resolved/not_reached": 17,
+   "one_side_recovered:boundary_unresolved:end_in_chain_gap/end_in_chain_gap": 16,
+   "not_recovered:correspondence_uncertain": 8,
+   "one_side_recovered:boundary_unresolved:end_in_chain_gap/not_reached": 7,
+   "not_recovered:boundary_unresolved:not_reached/resolved": 6,
+   "not_recovered:no_seed": 2
+  },
+  "top_classes": {
+   "recovered_same_interval": 11040,
+   "one_side_recovered:boundary_unresolved": 2441,
+   "not_recovered:boundary_unresolved": 59,
+   "not_recovered:correspondence_uncertain": 8,
+   "not_recovered:no_seed": 2
+  },
+  "by_scope": {
+   "cross_assembly": {
+    "recovered_same_interval": 7120,
+    "one_side_recovered:boundary_unresolved": 1601,
+    "not_recovered:boundary_unresolved": 34,
+    "not_recovered:no_seed": 2
+   },
+   "same_assembly": {
+    "recovered_same_interval": 3920,
+    "one_side_recovered:boundary_unresolved": 840,
+    "not_recovered:boundary_unresolved": 25,
+    "not_recovered:correspondence_uncertain": 8
+   }
+  },
+  "by_strands": {
+   "-+": {
+    "recovered_same_interval": 2754,
+    "one_side_recovered:boundary_unresolved": 579,
+    "not_recovered:boundary_unresolved": 14,
+    "not_recovered:correspondence_uncertain": 2,
+    "not_recovered:no_seed": 1
+   },
+   "+-": {
+    "recovered_same_interval": 2618,
+    "one_side_recovered:boundary_unresolved": 616,
+    "not_recovered:boundary_unresolved": 19,
+    "not_recovered:no_seed": 1
+   },
+   "--": {
+    "one_side_recovered:boundary_unresolved": 669,
+    "recovered_same_interval": 2884,
+    "not_recovered:boundary_unresolved": 16,
+    "not_recovered:correspondence_uncertain": 2
+   },
+   "++": {
+    "recovered_same_interval": 2784,
+    "one_side_recovered:boundary_unresolved": 577,
+    "not_recovered:boundary_unresolved": 10,
+    "not_recovered:correspondence_uncertain": 4
+   }
+  },
+  "occurrences": {
+   "protein_strict_occurrences": 7407,
+   "in_dna_strict_pass_row": 7257,
+   "in_dna_occurrence_only": 142,
+   "none": 4,
+   "in_checked_dna_row_only": 4
+  },
+  "dna_strict_pass_pairs_without_protein_strict_counterpart": 164477
+ },
+ "controls": {
+  "protein_control_rows": 17,
+  "dna_judgement": {
+   "only_one_side_different -> not_recovered:checks_not_passed": 17
+  }
+ }
+}

@@ -22,6 +22,9 @@ EXCL=n0004.lr6,n0065.lr6,n0072.lr6,n0018.lr6,n0054.lr6
 RETRIES=2
 BIG=--partition=lr_bigmem   # single-task, memory-heavy steps (n0272, 1.5 TB)
 SEED_CHUNK=${SEED_CHUNK:-75}; PART=${PART:-25}; UCD_CHUNK=${UCD_CHUNK:-5000}
+# DESIGN_ONLY=1 (default): a generation enumerates only the priority chunks (context sample per library sequence);
+# every other pair stays deferred and is reported as pending. DESIGN_ONLY=0: all chunks within max_pairs.
+DESIGN=""; [ "${DESIGN_ONLY:-1}" = 1 ] && { DESIGN="--design-only"; MAXG=1; }  # one generation holds every priority chunk
 cd $CODE
 mkdir -p $WORK/runlog
 exec 9>$WORK/runlog/driver.lock
@@ -44,7 +47,7 @@ wait_jobs() {  # wait until none of the given job ids is pending/running (tolera
 submit() {  # submit <stage-label> <index list "0 1 2 ..."> <sbatch args...> -- <script and args...>
   local label=$1 idx=$2; shift 2
   local sargs=() ; while [ "$1" != "--" ]; do sargs+=("$1"); shift; done; shift
-  local ids=() base slice
+  local ids=() base slice call=call$(date +%s%N)
   for base in $(for i in $idx; do echo $(( i / 1000 * 1000 )); done | sort -n | uniq); do
     slice=$(for i in $idx; do [ $(( i / 1000 * 1000 )) -eq $base ] && echo $(( i - base )); done | paste -sd,)
     local j
@@ -58,13 +61,15 @@ submit() {  # submit <stage-label> <index list "0 1 2 ..."> <sbatch args...> -- 
       sleep 60
     done
     [ -z "$j" ] && die "sbatch failed for $label"
-    ids+=($j); echo -e "$TAG\t$label\t$j\toffset=$base\t$(date -Is)" >> $JOBS
+    ids+=($j); echo -e "$TAG\t$label\t$j\toffset=$base\t$(date -Is)\t$call" >> $JOBS
   done
   say "$label submitted: ${ids[*]} ($(echo $idx | wc -w) tasks)"
   wait_jobs "${ids[@]}"
   # nodes where a task failed are excluded from later submissions (scratch I/O errors, node failures)
+  # (only when most tasks succeeded: if most fail, the cause is the job, not the nodes)
   local bad=$(sacct -j $(echo ${ids[*]} | tr ' ' ',') -X -n -o State,NodeList%30 2>/dev/null |
-              awk '$1!="COMPLETED" && $1!="RUNNING" && $1!="PENDING" && $2!="None" {print $2}' | sort -u | paste -sd,)
+              awk '{n++} $1!="COMPLETED" && $1!="RUNNING" && $1!="PENDING" && $2!="None" {f++; b[$2]=1}
+                   END{if (f*4 < n) for (x in b) print x}' | sort -u | paste -sd,)
   if [ -n "$bad" ]; then EXCL="$EXCL,$bad"; say "excluding nodes after failures: $bad"; echo "$bad" >> $WORK/runlog/bad_nodes.txt; fi
 }
 
@@ -72,17 +77,19 @@ run_until_done() {  # run_until_done <label> <missing-fn> <sbatch args...> -- <s
   local label=$1 fn=$2; shift 2
   local miss
   for r in $(seq 0 $RETRIES); do
-    miss=$($fn)
+    miss=$($fn) || die "$label: listing the missing units failed (not treated as complete)"
     [ -z "$miss" ] && { say "$label complete"; return 0; }
     [ $r -gt 0 ] && say "$label retry $r: $(echo $miss | wc -w) units"
     submit $label "$miss" "$@"
   done
-  miss=$($fn); [ -z "$miss" ] || die "$label units still missing after $RETRIES retries: $(echo $miss | head -c 300)"
+  miss=$($fn) || die "$label: listing the missing units failed"
+  [ -z "$miss" ] || die "$label units still missing after $RETRIES retries: $(echo $miss | head -c 300)"
 }
 
 # ---------------------------------------------------------------- discovery
 say "batch $TAG batches=$BATCHES manifest=$MAN max_pairs=$MAXP max_gens=$MAXG commit=$(git -C $CODE rev-parse --short HEAD)"
-if ! grep -q "^chunk" $WORK/chunks.tsv 2>/dev/null || ! awk -F'\t' -v t=$TAG '$2==t' $WORK/chunks.tsv | grep -q .; then
+# (awk decides alone: `awk | grep -q` fails under pipefail when grep exits before awk has written everything)
+if ! awk -F'\t' -v t=$TAG '$2==t{f=1} END{exit !f}' $WORK/chunks.tsv 2>/dev/null; then
   $PY dna_discovery.py plan --work $WORK --manifest $MAN --tag $TAG --batches $BATCHES --chunk-size $SEED_CHUNK \
     --part-size $PART >> $LOG 2>&1 || die "plan failed"
 fi
@@ -99,15 +106,20 @@ if ! grep -q "\"tag\": \"$TAG\"" $WORK/library/lib_*.json 2>/dev/null; then
 fi
 say "library: $(grep -l "\"tag\": \"$TAG\"" $WORK/library/lib_*.json)"
 
-occ_missing() { $PY dna_discovery.py occurrences --work $WORK --manifest $MAN --list | tr ',' ' '; }
+occ_missing() { local o; o=$($PY dna_discovery.py occurrences --work $WORK --manifest $MAN --list) || return 1
+  echo "$o" | tr ',' ' '; }
 run_until_done occurrences occ_missing --cpus-per-task=16 --mem=48G --time=24:00:00 -- \
   dna_batch.sbatch $WORK $MAN occurrences
 
 # ---------------------------------------------------------------- enumerate / align generations
 touch $WORK/gens.tsv
+C=$WORK/collect_$TAG
 for k in $(seq 1 $MAXG); do
+  [ -f $C/collect.json ] && break   # a resumed batch: its generations are closed once collected
   G=$(wc -l < $WORK/gens.tsv)
-  if [ $k -gt 1 ]; then  # resume only if the previous generation left deferred chunks
+  NG=$(awk -F'\t' -v t=$TAG '$2==t && $4!="aligned_not_checked"' $WORK/gens.tsv | wc -l)
+  [ $NG -ge $MAXG ] && break   # this batch already ran MAXG generations
+  if [ $NG -gt 0 ]; then  # resume only if deferred chunks are left
     PREV=$((G - 1))
     pend=$(zcat $WORK/enum/g$PREV/b*/progress.tsv.gz | awk -F'\t' '$6=="deferred"' | wc -l)
     [ $pend -eq 0 ] && break
@@ -115,16 +127,17 @@ for k in $(seq 1 $MAXG); do
   fi
   enum_missing() { for b in $(seq 0 63); do [ -f $WORK/enum/g$G/b$(printf %02d $b)/done.json ] || echo $b; done; }
   run_until_done enumerate_g$G enum_missing --cpus-per-task=2 --mem=32G --time=24:00:00 -- \
-    dna_batch.sbatch $WORK $MAN enumerate --gen $G --max-pairs $MAXP
+    dna_batch.sbatch $WORK $MAN enumerate --gen $G --max-pairs $MAXP $DESIGN
   align_missing() { for s in $(seq 0 127); do [ -f $WORK/align/g$G/k$(printf %03d $s)/done.json ] || echo $s; done; }
   run_until_done align_g$G align_missing --cpus-per-task=16 --mem=64G --time=24:00:00 -- \
     dna_batch.sbatch $WORK $MAN align --gen $G
   echo -e "$G\t$TAG\t$(date -Is)" >> $WORK/gens.tsv
 done
-GENS=$(seq -s, 0 $(( $(wc -l < $WORK/gens.tsv) - 1 )))
+# generations marked aligned_not_checked in gens.tsv (4th column) stay on disk but are not collected / checked
+GENS=$(awk -F'\t' '$4!="aligned_not_checked"{print $1}' $WORK/gens.tsv | paste -sd,)
+[ -f $C/collect.json ] && GENS=$($PY -c "import json;print(json.load(open('$C/collect.json'))['gens'])")
 
 # ---------------------------------------------------------------- collect and the two checks
-C=$WORK/collect_$TAG
 if [ ! -f $C/collect.json ]; then
   submit collect "0" $BIG --cpus-per-task=4 --mem=400G --time=24:00:00 -- \
     --wrap="cd $CODE; $PY dna_discovery.py collect --work $WORK --manifest $MAN --out $C --gens $GENS"
@@ -135,25 +148,27 @@ PREVF=$(tail -1 $WORK/finals.txt 2>/dev/null)
 if [ ! -f $U/freeze.json ]; then
   PI=""; [ -n "$PREVF" ] && PI="--previous-index $PREVF/index.tsv.gz"
   submit freeze "0" $BIG --cpus-per-task=4 --mem=400G --time=24:00:00 -- \
-    --wrap="cd $CODE; $PY ucd_batch.py freeze --out $U --work $UW --manifest $MAN --input-table $C/ucd_input.tsv.gz --kinds candidate_insertion --chunk-size $UCD_CHUNK $PI"
+    --wrap="cd $CODE; $PY ucd_batch.py freeze --out $U --work $UW --manifest $MAN --input-table $C/ucd_input.tsv.gz --kinds candidate_insertion --chunk-size $UCD_CHUNK --sort-mem 100G $PI"
   [ -f $U/freeze.json ] || die "freeze failed"
 fi
+grep -q '"verified"' $U/freeze.json || [ "$($PY -c "import json;print(json.load(open('$U/freeze.json'))['chunks'])")" = 0 ] ||
+  die "freeze verified no source FASTA ($U/sources.tsv.gz)"
 NU=$($PY -c "import json;print(json.load(open('$U/freeze.json'))['chunks'])")
 ucd_missing() { for c in $(seq 0 $((NU - 1))); do [ -f $UW/chunks/c$(printf %04d $c)/done.json ] || echo $c; done; }
 if [ $NU -gt 0 ]; then
   run_until_done checks ucd_missing --cpus-per-task=32 --mem=64G --time=04:00:00 \
-    --export=ALL,OUT=$U,WORK=$UW -- ucd_batch.sbatch chunk
+    --export=ALL,OUT=$U,WORK=$UW -- ucd_batch.sbatch chunk --manifest $MAN
   if [ ! -f $U/merge.json ]; then
-    submit merge "0" $BIG --cpus-per-task=16 --mem=400G --time=24:00:00 --export=ALL,OUT=$U,WORK=$UW -- ucd_batch.sbatch merge
+    submit merge "0" $BIG --cpus-per-task=16 --mem=400G --time=24:00:00 --export=ALL,OUT=$U,WORK=$UW -- ucd_batch.sbatch merge --manifest $MAN
   fi
   grep -q '"complete": true' $U/completeness.json || die "checks incomplete: $U/completeness.json"
 fi
-if [ ! -f $F/strict_lt2500_candidate_insertion.tsv.gz ]; then
+if [ ! -f $F/combined_summary.json ]; then   # written last by combine (a table alone may be a partial file)
   RU=""; [ -n "$PREVF" ] && RU="--reuse $PREVF --reuse-pattern all_rows_%s.tsv.gz --reuse-ids $UW/reuse_ids.txt.gz"
   RN=""; [ $NU -gt 0 ] && RN="--runs $UW"
   submit combine "0" $BIG --cpus-per-task=4 --mem=300G --time=24:00:00 -- \
     --wrap="cd $CODE; $PY ucd_combine.py combine --out $F --work $F --ids $UW/catalogue_ids.txt.gz --kinds candidate_insertion $RU $RN"
-  [ -f $F/strict_lt2500_candidate_insertion.tsv.gz ] || die "combine failed"
+  [ -f $F/combined_summary.json ] || die "combine failed"
 fi
 # fingerprint index of this final (sources: every code_version label with the input tables that hold its rows)
 if [ ! -f $F/index.tsv.gz ]; then
@@ -161,6 +176,7 @@ if [ ! -f $F/index.tsv.gz ]; then
     CV=$(zcat $UW/rows_candidate_insertion.tsv.gz | head -2 | $PY -c "import sys;h=sys.stdin.readline().rstrip('\n').split('\t');v=sys.stdin.readline().rstrip('\n').split('\t');print(dict(zip(h,v))['code_version'])")
     echo -e "$CV\t$UW/input_pairs.tsv.gz\t$U/freeze.json" >> $WORK/index_sources.tsv
   fi
+  touch $WORK/index_sources.tsv
   SRC=$($PY - <<PYX
 from collections import OrderedDict
 d = OrderedDict()
@@ -170,14 +186,18 @@ for l in open('$WORK/index_sources.tsv'):
 print(' '.join("--source '%s|%s|%s'" % (cv, ','.join(v[0]), v[1]) for cv, v in d.items()))
 PYX
 )
+  if [ -z "$SRC" ]; then  # nothing checked in any batch so far: an empty index
+    echo -e "pair_id\tinterval_kind\tfingerprint\tcode_version" | gzip > $F/index.tsv.gz
+  else
   submit index "0" $BIG --cpus-per-task=4 --mem=300G --time=24:00:00 -- \
-    --wrap="cd $CODE; $PY ucd_batch.py index --out $F/index.tsv.gz --final $F --kinds candidate_insertion --manifest $MAN $SRC"
+    --wrap="cd $CODE; $PY ucd_batch.py index --out $F/index.tsv.gz.tmp --final $F --kinds candidate_insertion --manifest $MAN $SRC && mv $F/index.tsv.gz.tmp $F/index.tsv.gz"
+  fi
   [ -f $F/index.tsv.gz ] || die "index failed"
 fi
 [ -f $F/target_700_2500_summary.json ] || $PY ucd_target.py --final $F >> $LOG 2>&1 || die "target table failed"
 if [ ! -f $F/core_contexts/core_contexts_summary.json ]; then
   submit contexts "0" $BIG --cpus-per-task=2 --mem=200G --time=24:00:00 -- \
-    --wrap="cd $CODE; $PY ucd_core_contexts.py --final $F --dna-work $WORK --out $F/core_contexts"
+    --wrap="cd $CODE; $PY ucd_core_contexts.py --final $F --dna-work $WORK --pair-libraries $(ls $WORK/collect_*/pair_other_libraries.tsv.gz 2>/dev/null | paste -sd,) --out $F/core_contexts"
   [ -f $F/core_contexts/core_contexts_summary.json ] || die "core contexts failed"
 fi
 grep -qx "$F" $WORK/finals.txt 2>/dev/null || echo $F >> $WORK/finals.txt

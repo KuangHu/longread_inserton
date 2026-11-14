@@ -108,11 +108,13 @@ def main():
     R['resources_cumulative'] = {k: dict(task_hours=round(v / 3600, 2), peak_rss_gb=round(peak.get(k, 0) / 1e6, 1))
                                  for k, v in res.items()}
     jobs = [l.rstrip('\n').split('\t') for l in open(a.jobs)] if Path(a.jobs).exists() else []
-    R['submissions'] = Counter(j[1] for j in jobs)
-    R['retries'] = {k: v - 1 for k, v in R['submissions'].items() if v > 1}
-    pend = sum(int(r['pairs']) for g in gens[-1:] for p in glob.glob(str(w / 'enum' / ('g%d' % g) / 'b*' /
-                                                                        'progress.tsv.gz'))
-               for r in uc.read_tsv(p) if r['status'] == 'deferred')
+    R['submissions'] = Counter(j[1] for j in jobs)  # sbatch arrays (an array above 1000 tasks is several slices)
+    calls = {}
+    for j in jobs:  # one call = one (re)submission of a stage; rows before v0.2.3 have no call field: per array
+        calls.setdefault(j[1], set()).add(j[5] if len(j) > 5 else j[2])
+    R['retries'] = {k: len(v) - 1 for k, v in calls.items() if len(v) > 1}
+    import dna_discovery as dd
+    pend = sum(dd.pending_chunks(w, gens[-1]).values())
     R['unfinished'] = dict(deferred_pairs_pending=pend, complete=pend == 0)
     Path(a.out).write_text(json.dumps(R, indent=1, default=dict) + '\n')
     print(json.dumps(R, indent=1, default=dict))

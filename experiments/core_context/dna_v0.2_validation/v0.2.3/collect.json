@@ -1,0 +1,40 @@
+{
+ "version": "dna_discovery_v0.2.3",
+ "discovery_source": "dna",
+ "pair_rows": 10493703,
+ "status": {
+  "unresolved": 6947330,
+  "resolved": 2257904,
+  "no_shared_block_at_seed": 1288469
+ },
+ "resolved_distinct": 534210,
+ "resolved_duplicate_rows": 1723694,
+ "target_length": {
+  "min": 700,
+  "max": 2500,
+  "rule": "both X, min <= len < max"
+ },
+ "resolved_distinct_by_length": {
+  "in_target": 353949,
+  "out_of_target": 180261
+ },
+ "sent_to_checks": 353949,
+ "out_of_target": 180261,
+ "scope_sent_to_checks": {
+  "cross_assembly": 339497,
+  "same_assembly": 14452
+ },
+ "pairs_deferred_high_copy": 0,
+ "deferred": {
+  "chunks_pending": 0,
+  "pairs_pending": 0,
+  "libraries_pending": 0
+ },
+ "gens": "0",
+ "source_alignment": {
+  "computed": 10493703
+ },
+ "ucd_input": "/global/scratch/users/kh36969/longread_callout/core_context/dna_v0.1/validation/collect_v023/ucd_input.tsv.gz",
+ "ucd_input_sha256": "dc3ffe704efc6c1429b1bd8c7d3172c70961d7815262a2ee8a25bf79b8a57cbb",
+ "dna_pairs_all_sha256": "2e2125fb2462dece872970a1850acf380fe145d1d6f50f9b79d448bd2625f802"
+}

@@ -55,3 +55,43 @@ missing; 7,029,000 identical; 182,086 changed (wider grid windows / per-pair sea
 Scope: a segment is discovered only if it is a seed in at least one seed chunk or similar to a library sequence; X is
 the shared extent within +/- 3 kb (grid-widened) windows, so pairs whose shared block runs past the window stay
 unresolved. Not an exhaustive census, and not a claim of mobility.
+
+## v0.2.3 / v0.2.4 (2026-11-14): review fixes, corrected pair counts, context-sample pairing
+
+Code review (own review + Codex) fixes are in v0.2.3; the 50-assembly validation was rerun end to end (`v0.2.3/`).
+
+**Correction of the pair counts above.** Before v0.2.3 a pair's ID included the seed order and the library-orientation
+strands, so one pair of X intervals found through several library sequences was checked and counted several times.
+With the ID taken from the two intervals and their relative orientation only:
+
+| 700 <= X < 2500, both checks pass | v0.2.2 (duplicates) | v0.2.3 |
+|---|---|---|
+| pairs | 307,257 | **175,473** |
+| distinct X intervals | 38,708 | 38,682 |
+| same / cross assembly | 22,740 / 284,517 | 13,030 / 162,443 |
+| pairs sent to the checks | 572,344 | 353,949 |
+| cores with >= 2 / 4 / 6 / 8 contexts (any) | 525 / 48 / 34 / 25 | 524 / 48 / 34 / 25 |
+| protein strict pairs recovered, same interval | 11,040 / 13,550 | 11,040 / 13,550 |
+
+Intervals, context tiers and recovery are unchanged; only the pair count was inflated.
+
+**Context-sample pairing (v0.2.4, `v0.2.4_context_sample/`).** At family scale all pairs cannot be formed
+(Microbacteriaceae, 3,266 assemblies: 172 billion pairs over 394,613 library sequences). Each library sequence with
+more than 16 occurrences gets a priority chunk: all pairs among 16 sampled occurrences (up to 8 copies from its top
+assembly, then one per assembly in an assembly order shared by all library sequences). It is a pairing priority, not
+a rule: all other pairs stay deferred and are counted as pending, and a core below a tier with pending pairs is
+`insufficient_evidence`, not below the tier. On the validation set, against all pairs (v0.2.3):
+
+| | all pairs | context sample |
+|---|---|---|
+| source pairs aligned | 10,493,703 | 770,449 |
+| pairs sent to the checks | 353,949 | 44,990 |
+| strict 700-2500 pairs | 175,473 | 3,924 |
+| cores >= 4 / 6 / 8 contexts (any) | 48 / 34 / 25 | 43 / 24 / 11 |
+| cores >= 4 / 6 / 8 (within one assembly) | 41 / 29 / 18 | 35 / 19 / 5 |
+| cores >= 4 / 6 (distinct assemblies) | 16 / 7 | 9 / 3 |
+| cores marked insufficient_evidence | 0 | 216 of 466 |
+
+The sample finds 43 of the 48 main-list cores with 7% of the alignments and 13% of the checks; it undercounts the
+higher tiers (a 16-occurrence sample cannot show every context of a high-copy core). Tier counts from a sampled run
+are lower bounds.

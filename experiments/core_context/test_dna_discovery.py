@@ -171,12 +171,36 @@ class AlignV02(unittest.TestCase):
         for i, o in enumerate(os_):
             o['lo'] = str(i)
         seen = []
+        sample = None
         for c, how, it, size in dd.pair_chunks(len(os_), os_, dd.PARAMS):
             got = list(it)
             self.assertEqual(len(got), size)
+            if c == -1:  # context sample: a priority chunk; its pairs are also in the chunks below
+                sample = got
+                continue
             seen += got
         self.assertEqual(len(seen), 250 * 249 // 2)
         self.assertEqual(len(set(seen)), len(seen))
+        m = dd.PARAMS['context_sample']
+        self.assertEqual(len(sample), m * (m - 1) // 2)
+        self.assertTrue(set(sample) <= set(seen))
+        idx = sorted({i for pr in sample for i in pr})
+        self.assertEqual(idx, dd.context_sample(os_, dd.PARAMS))
+        top = [i for i in idx if os_[i]['sample'] == os_[idx[0]]['sample']]
+        self.assertGreaterEqual(len(top), dd.PARAMS['context_sample_same'])  # copies inside one assembly first
+        self.assertEqual(len({os_[i]['sample'] for i in idx}), 7)           # then every assembly
+
+    def test_chunk_starts_without_rescan(self):
+        g = rnd(1000, 4)
+        os_ = [dict(occ('s%d' % (i % 5), 'c', i, i + 10, '+', g)) for i in range(120)]
+        for i, o in enumerate(os_):
+            o['lo'] = str(i)
+        p = dict(dd.PARAMS, pair_chunk=500)
+        fs = set(dd.design(os_, p)[0])
+        rest = [(i, j) for i in range(120) for j in range(i + 1, 120) if (i, j) not in fs]
+        got = {c: list(it) for c, how, it, size in dd.pair_chunks(120, os_, p) if c > 0}
+        for c, pairs in got.items():
+            self.assertEqual(pairs, rest[(c - 1) * 500:c * 500])
 
 
 if __name__ == '__main__':

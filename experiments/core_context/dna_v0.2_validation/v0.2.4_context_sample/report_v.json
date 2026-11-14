@@ -1,0 +1,213 @@
+{
+ "tag": "v",
+ "input": {
+  "batch_assemblies": 50,
+  "cumulative_assemblies": 50,
+  "manifest_assemblies": 50,
+  "sha256_mismatch": []
+ },
+ "seeds": {
+  "chunks": 1,
+  "done": 1,
+  "seed_loci": 152638,
+  "representatives": 13368
+ },
+ "library": {
+  "shards_total": 1,
+  "this_batch": [
+   {
+    "shard": 0,
+    "tag": "v",
+    "chunk_representatives": 13368,
+    "matched_existing_library": 0,
+    "new_library_sequences": 13287,
+    "bp": 36513155,
+    "params": "b73ad1bcc2230586"
+   }
+  ],
+  "sequences_total": 13287
+ },
+ "occurrences": {
+  "tasks_done": 5,
+  "hits": 316347
+ },
+ "generations": {
+  "0": {
+   "enumerate_tasks": 64,
+   "pairs_enumerated": 770449,
+   "pairs_deferred_this_gen": 10393574,
+   "align_tasks": 128,
+   "sources": 770449,
+   "keys_computed": 502825,
+   "keys_cached": 0,
+   "blast_calls": 97446
+  }
+ },
+ "collect": {
+  "version": "dna_discovery_v0.2.4",
+  "discovery_source": "dna",
+  "pair_rows": 770449,
+  "status": {
+   "unresolved": 535545,
+   "resolved": 196136,
+   "no_shared_block_at_seed": 38768
+  },
+  "resolved_distinct": 86157,
+  "resolved_duplicate_rows": 109979,
+  "target_length": {
+   "min": 700,
+   "max": 2500,
+   "rule": "both X, min <= len < max"
+  },
+  "resolved_distinct_by_length": {
+   "in_target": 44990,
+   "out_of_target": 41167
+  },
+  "sent_to_checks": 44990,
+  "out_of_target": 41167,
+  "scope_sent_to_checks": {
+   "cross_assembly": 43459,
+   "same_assembly": 1531
+  },
+  "pairs_deferred_high_copy": 10393574,
+  "deferred": {
+   "chunks_pending": 5792,
+   "pairs_pending": 10393574,
+   "libraries_pending": 5586
+  },
+  "gens": "0",
+  "source_alignment": {
+   "computed": 770449
+  },
+  "ucd_input": "/global/scratch/users/kh36969/longread_callout/core_context/dna_v0.1/validation/work_v024/collect_v/ucd_input.tsv.gz"
+ },
+ "checks_input": {
+  "catalogue_pairs": 44990,
+  "checked_now": 44990,
+  "pair_status": null,
+  "chunks": 9
+ },
+ "checks_completeness": {
+  "expected_pairs": 44990,
+  "expected_rows": 44990,
+  "observed_rows": {
+   "candidate_insertion": 44990
+  },
+  "missing": {
+   "candidate_insertion": 0
+  },
+  "duplicated": {},
+  "unexpected": {},
+  "missing_chunks": [],
+  "complete": true
+ },
+ "final": {
+  "rows": 44990,
+  "source_check": {
+   "pass": 44990
+  },
+  "ucd_check": {
+   "shared_physical_context": 30,
+   "ucd_supported": 3924,
+   "insertion_dissimilar": 38681,
+   "uncertain_context": 911,
+   "insertion_partial": 239,
+   "only_one_side_different": 486,
+   "swapped_or_rearranged_context": 48,
+   "same_context": 145,
+   "insufficient_context": 500,
+   "rearranged_or_fragmented_insertion": 26
+  },
+  "final_status": {
+   "not_passed": 41066,
+   "pass": 3924
+  },
+  "strict_lt2500_pairs": 3924,
+  "strict_by_scope": {
+   "same_assembly": 1106,
+   "cross_assembly": 2818
+  },
+  "strict_occurrences": 4651,
+  "strict_assemblies": 50,
+  "discovery_source": "dna",
+  "note": "cumulative over all batches processed in this work dir"
+ },
+ "target_700_2500": {
+  "pairs": 3924,
+  "distinct_x_intervals": 4651,
+  "assemblies": 50,
+  "by_scope": {
+   "same_assembly": 1106,
+   "cross_assembly": 2818
+  }
+ },
+ "core_contexts": {
+  "cores": 466,
+  "cores_by_tier": {
+   "exploratory_2_3": 423,
+   "showcase_ge8": 11,
+   "priority_ge6": 13,
+   "main_ge4": 19
+  },
+  "cores_by_evidence": {
+   "final": 250,
+   "insufficient_evidence": 216
+  },
+  "cores_ge": {
+   "any": {
+    "ge2": 466,
+    "insufficient_evidence_below_4": 185,
+    "insufficient_evidence_below_6": 199,
+    "insufficient_evidence_below_8": 207,
+    "ge4": 43,
+    "ge6": 24,
+    "ge8": 11
+   },
+   "single_assembly": {
+    "ge2": 197,
+    "insufficient_evidence_below_2": 142,
+    "insufficient_evidence_below_4": 192,
+    "insufficient_evidence_below_6": 203,
+    "insufficient_evidence_below_8": 213,
+    "ge4": 35,
+    "ge6": 19,
+    "ge8": 5
+   },
+   "distinct_assemblies": {
+    "ge2": 339,
+    "insufficient_evidence_below_4": 207,
+    "insufficient_evidence_below_6": 213,
+    "insufficient_evidence_below_8": 216,
+    "insufficient_evidence_below_2": 24,
+    "ge4": 9,
+    "ge6": 3
+   }
+  }
+ },
+ "resources_cumulative": {
+  "enumerate": {
+   "task_hours": 0.02,
+   "peak_rss_gb": 0.1
+  },
+  "align": {
+   "task_hours": 0.91,
+   "peak_rss_gb": 0.1
+  }
+ },
+ "submissions": {
+  "enumerate_g0": 1,
+  "align_g0": 1,
+  "collect": 1,
+  "freeze": 1,
+  "checks": 1,
+  "merge": 1,
+  "combine": 1,
+  "index": 1,
+  "contexts": 1
+ },
+ "retries": {},
+ "unfinished": {
+  "deferred_pairs_pending": 10393574,
+  "complete": false
+ }
+}

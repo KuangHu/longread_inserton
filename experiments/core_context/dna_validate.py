@@ -19,6 +19,7 @@ Pair-level class of each protein strict pair (first that applies):
   one_side_recovered:<reason>            one X is a side of a DNA strict-pass row (with another partner); the
                                          pair itself is classed by the reasons below
   not_recovered:boundary_unresolved      a DNA pair whose seeds overlap both X is unresolved (reason: ends)
+  */resolved_out_of_target_length         the pair was resolved by the DNA entry with X outside the target length
   not_recovered:pair_deferred            both X have occurrences of one library sequence whose pairs were deferred
   not_recovered:occurrences_not_paired   both X have occurrences of one library sequence, nothing deferred (a gap)
   not_recovered:occurrence_not_detected  occurrences on one / both sides, but of no common library sequence; or a
@@ -131,7 +132,12 @@ def main():
 
     # unresolved / no-block pair rows indexed by locus key (seeds), from the pair table
     unres = defaultdict(list)
-    for r in stream(Path(a.dna_collect) / 'dna_pairs_all.tsv.gz', lambda r: r['status'] != 'resolved'):
+    out_len = defaultdict(list)  # resolved pairs not sent to the checks: X outside the target length (collect)
+    for r in stream(Path(a.dna_collect) / 'dna_pairs_all.tsv.gz',
+                    lambda r: r['status'] != 'resolved' or r.get('length_class') == 'out_of_target'):
+        if r['status'] == 'resolved':
+            out_len[lkey(r)].append({k: r[k] for k in ('a_sample', 'a_contig', 'a_x', 'b_sample', 'b_contig', 'b_x')})
+            continue
         unres[lkey(r)].append({k: r[k] for k in ('a_sample', 'a_contig', 'a_seed', 'b_sample', 'b_contig',
                                                   'b_seed', 'status', 'boundary_up', 'boundary_down')})
     # occurrences, seed loci, deferred library sequences
@@ -151,16 +157,9 @@ def main():
         for r in stream(f):
             if int(r['pairs_deferred']):
                 deferred[r['library_id']] = int(r['pairs_deferred'])
-    done_chunks, pend = set(), {}
-    for f in work.glob('enum/g*/b*/progress.tsv.gz'):  # v0.2 enumerate: chunks never enumerated
-        for r in stream(f):
-            if r['status'] == 'enumerated':
-                done_chunks.add((r['library_id'], r['chunk']))
-            else:
-                pend[(r['library_id'], r['chunk'])] = int(r['pairs'])
-    for (l, c), n in pend.items():
-        if (l, c) not in done_chunks:
-            deferred[l] = deferred.get(l, 0) + n
+    import dna_discovery as dd
+    for (l, c, _), n in dd.pending_chunks(work).items():  # v0.2 enumerate: chunks still deferred (latest generation)
+        deferred[l] = deferred.get(l, 0) + n
 
     def ovl(lst, x):
         return [t for t in lst if min(t[1], x[1]) > max(t[0], x[0])]
@@ -218,7 +217,13 @@ def main():
             return r[s + '_sample'] == X[0] and r[s + '_contig'] == X[1] and bool(ovl([iv(r[s + '_seed'])], X[2]))
         un = [r for r in unres.get(lkey(pr), []) if (seed_ov(r, 'a', A) and seed_ov(r, 'b', B)) or
               (seed_ov(r, 'a', B) and seed_ov(r, 'b', A))]
-        if un:
+        def x_ov(r, s, X):
+            return r[s + '_sample'] == X[0] and r[s + '_contig'] == X[1] and bool(ovl([iv(r[s + '_x'])], X[2]))
+        ol = [r for r in out_len.get(lkey(pr), []) if (x_ov(r, 'a', A) and x_ov(r, 'b', B)) or
+              (x_ov(r, 'a', B) and x_ov(r, 'b', A))]
+        if ol:  # the pair was formed and resolved, but its DNA X is outside the target length: not checked
+            why = 'resolved_out_of_target_length'
+        elif un:
             u = un[0]
             why = 'boundary_unresolved:%s/%s' % (u['boundary_up'], u['boundary_down'])
         else:

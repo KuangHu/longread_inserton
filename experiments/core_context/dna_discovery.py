@@ -41,6 +41,8 @@ least one chunk (two copies inside one chunk, or one copy repeated in one assemb
 sequence; a core whose copies never meet in one chunk and that matches no library sequence is not found.
 """
 import argparse
+import bisect
+import csv
 import gzip
 import hashlib
 import json
@@ -57,7 +59,15 @@ import core_review as cr
 import ucd_batch as ub
 import ucd_compare as uc
 
-VERSION = 'dna_discovery_v0.2.2'
+VERSION = 'dna_discovery_v0.2.4'
+# v0.2.4: context-sample chunk (chunk -1) per library sequence with more than context_sample occurrences: all pairs
+#         among a small deterministic sample of its occurrences (copies inside one assembly first, then one per
+#         assembly in a fixed assembly order shared by all library sequences). It is a pairing PRIORITY for the
+#         distinct-context count, not a rule and not a cap: every other pair stays in its chunk, deferred and
+#         counted. enumerate --design-only enumerates only these priority chunks.
+# v0.2.3: pair_id from the two intervals and their relative orientation only (canonical_pair_id; collect recomputes
+#         it, so earlier align shards stay usable); collect streamed; pending chunks by one rule (pending_chunks);
+#         a retried align task no longer overwrites its generation's cache file; chunk start found without rescan
 # v0.2.2: collect sends only pairs with 700 <= X < 2500 bp on both sides to the checks (others: out_of_target)
 # v0.2.1: alignment keys sharded by subject window (one blastn call per subject with all its queries); per-key
 #         results unchanged (one subject per call in both)
@@ -92,9 +102,12 @@ PARAMS = dict(
     key_shards=128,               # v0.2: alignment-key shards (one align task each)
     target_min=700, target_max=2500,  # v0.2.2: candidate X length of both sides before the two checks (collect);
                                   #       seeds keep 100..10,000 bp, X is never cut to fit
+    context_sample=16,            # v0.2.4: occurrences of the context-sample chunk of a library sequence (priority
+    context_sample_same=8,        #         only): up to this many copies from its top assembly, the rest one per assembly
     buckets=64,                   # occurrence files are split by library sequence into this many buckets
 )
 KIND = 'candidate_insertion'
+csv.field_size_limit(1 << 30)  # the HSP cache keeps all HSPs of a key in one field (repeat-rich windows)
 
 
 def digest_params():
@@ -110,6 +123,29 @@ def write(path, rs, cols):
     tmp = path.with_name('.tmp_' + path.name)  # keeps the .gz suffix, so compression matches the final name
     uc.write_tsv(tmp, rs, cols)
     os.replace(tmp, path)
+
+
+def pending_chunks(w, gen=None):
+    """Chunks still deferred after generation gen (default: the latest): {(library_id, chunk, occurrences): pairs}.
+    Every generation lists each chunk not enumerated before (for the occurrence count of its sequence at that time)
+    as enumerated or deferred, so the deferred rows of the latest generation are exactly what is pending. This is
+    the one rule used by collect, the batch report, dna_validate and ucd_core_contexts."""
+    w = Path(w)
+    if gen is None:
+        gs = [int(p.name[1:]) for p in (w / 'enum').glob('g*') if p.name[1:].isdigit()]
+        if not gs:
+            return {}
+        gen = max(gs)
+    out = {}
+    for pf in sorted((w / 'enum' / ('g%d' % gen)).glob('b*/progress.tsv.gz')):
+        with gzip.open(pf, 'rt') as f:
+            h = f.readline().rstrip('\n').split('\t')
+            il, ic, ip, io, ist = (h.index(c) for c in ('library_id', 'chunk', 'pairs', 'occurrences', 'status'))
+            for line in f:
+                v = line.rstrip('\n').split('\t')
+                if v[ist] == 'deferred':
+                    out[(v[il], v[ic], v[io])] = int(v[ip])
+    return out
 
 
 def manifest(path, batches=None):
@@ -159,8 +195,11 @@ def cmd_plan(a):
                           samples=';'.join(m['sample'] for m in part)))
     if any(c['tag'] == tag for c in old_chunks):
         sys.exit('tag %s already planned' % tag)
-    write(w / 'chunks.tsv', old_chunks + chunks, ['chunk', 'tag', 'family', 'n', 'bp', 'samples'])
+    # parts first, chunks.tsv last: chunks.tsv is the marker of a planned tag (the driver tests it), so an
+    # interruption between the two writes leaves the tag unplanned; parts of such a half plan are replaced
+    old_parts = [r for r in old_parts if r['tag'] != tag]
     write(w / 'parts.tsv', old_parts + parts, ['part', 'tag', 'n', 'samples'])
+    write(w / 'chunks.tsv', old_chunks + chunks, ['chunk', 'tag', 'family', 'n', 'bp', 'samples'])
     info = dict(version=VERSION, tag=tag, batches=batches, manifest=a.manifest, manifest_sha256=ub.sha_file(a.manifest),
                 assemblies=len(ms), already_planned=len(ms) - len(new), new=len(new), seed_chunks=len(chunks),
                 genome_parts=len(parts), chunk_size=a.chunk_size, part_size=a.part_size, params=PARAMS)
@@ -637,12 +676,47 @@ def key_shard(second, rel, nk):
     return int(hashlib.sha1(('%s|%s|%d|%d|%s' % (second + (rel,))).encode()).hexdigest()[:8], 16) % nk
 
 
+def context_sample(occs, p):
+    """Indices of the context sample of one library sequence (occs in occ_id order): up to context_sample_same
+    copies from the assembly with most copies (copies inside one genome are distinct loci), then one occurrence
+    per assembly, round after round, until context_sample. Assemblies are ordered by copies (descending), then by
+    sha1(sample): the tie order does not depend on the library sequence, so overlapping library sequences sample
+    the same assemblies and their pairs share alignment keys and pair IDs."""
+    m, same = p['context_sample'], p['context_sample_same']
+    per = defaultdict(list)
+    for i, o in enumerate(occs):
+        per[o['sample']].append(i)
+    order = sorted(per, key=lambda s: (-len(per[s]), hashlib.sha1(s.encode()).hexdigest()))
+    pick = list(per[order[0]][:same])
+    used = set(pick)
+    r, deepest = 0, len(per[order[0]])
+    while len(pick) < m and r < deepest:
+        for s in order:
+            if r < len(per[s]) and per[s][r] not in used and len(pick) < m:
+                pick.append(per[s][r])
+                used.add(per[s][r])
+        r += 1
+    return sorted(pick)
+
+
+def priority_chunk(c, how, n, p):
+    """Chunks enumerated by enumerate --design-only: the context sample, or all pairs of a sequence that has no
+    more occurrences than the sample."""
+    return c == -1 or (how == 'all_pairs' and n <= p['context_sample'])
+
+
 def pair_chunks(n, occs, p):
     """Deterministic chunks of the n*(n-1)/2 pairs of one library sequence. Up to pair_chunk pairs: one chunk. Above:
     chunk 0 = the occurrence-cover design (DESIGN_PARTNERS partners per occurrence; priority only), then all other
-    pairs in (i, j) order in chunks of pair_chunk. Every pair is in exactly one chunk; the chunk size is not a cap."""
+    pairs in (i, j) order in chunks of pair_chunk. Every pair is in exactly one of these chunks; the chunk size is
+    not a cap. Sequences with more than context_sample occurrences have in addition chunk -1, the context sample
+    (its pairs are also in the chunks above; alignment keys and pair IDs make the repeat free)."""
     total = n * (n - 1) // 2
     C = p['pair_chunk']
+    if n > p['context_sample']:
+        S = context_sample(occs, p)
+        yield -1, 'context_sample', ((S[x], S[y]) for x in range(len(S)) for y in range(x + 1, len(S))), \
+            len(S) * (len(S) - 1) // 2
     if total <= C:
         yield 0, 'all_pairs', ((i, j) for i in range(n) for j in range(i + 1, n)), total
         return
@@ -652,18 +726,26 @@ def pair_chunks(n, occs, p):
     rest = total - len(first)
     nchunks = -(-rest // C)
 
+    # pairs of row i that are not in the design, cumulated: a chunk starts at its row directly (no rescan from 0)
+    in_row = Counter(i for i, _ in fs)
+    cum = [0]
+    for i in range(n):
+        cum.append(cum[-1] + (n - 1 - i) - in_row[i])
+
     def gen(c):
-        k = 0
-        lo, hi = c * C, (c + 1) * C
-        for i in range(n):
+        lo, hi = c * C, min((c + 1) * C, rest)
+        i = bisect.bisect_right(cum, lo) - 1
+        k = cum[i]
+        while k < hi and i < n:
             for j in range(i + 1, n):
                 if (i, j) in fs:
                     continue
-                if lo <= k < hi:
+                if k >= lo:
                     yield i, j
                 k += 1
                 if k >= hi:
                     return
+            i += 1
     for c in range(nchunks):
         yield c + 1, 'remaining', gen(c), min(C, rest - c * C)
 
@@ -702,7 +784,7 @@ def cmd_enumerate(a):
     fos = {k: gzip.open(tmpf[k], 'wt', compresslevel=3) for k in range(NK)}
     for fo in fos.values():
         fo.write('\t'.join(SRC_COLS) + '\n')
-    prog, n_enum, n_def, n_skip, budget = [], 0, 0, 0, a.max_pairs
+    prog, n_enum, n_def, n_skip, budget, n_budget = [], 0, 0, 0, a.max_pairs, 0
     try:
         for lid in sorted(occ):
             os_ = merge_occurrences([dict(o, window='') for o in occ[lid]])
@@ -714,7 +796,9 @@ def cmd_enumerate(a):
                 if (lid, c, n) in done_chunks:
                     n_skip += size
                     continue
-                if budget and n_enum + size > budget and n_enum > 0:
+                prio = priority_chunk(c, how, n, PARAMS)
+                if (a.design_only and not prio) or (not prio and budget and n_budget + size > budget
+                                                    and n_budget > 0):
                     prog.append(dict(library_id=lid, chunk=c, design=how, pairs=size, occurrences=n, status='deferred'))
                     n_def += size
                     continue
@@ -730,12 +814,14 @@ def cmd_enumerate(a):
                     m += 1
                 prog.append(dict(library_id=lid, chunk=c, design=how, pairs=m, occurrences=n, status='enumerated'))
                 n_enum += m
+                n_budget += 0 if prio else m  # priority chunks are outside --max-pairs
         for k in range(NK):
             fos[k].close()
             os.replace(tmpf[k], ed / ('k%03d.tsv.gz' % k))
         write(ed / 'progress.tsv.gz', prog, ['library_id', 'chunk', 'design', 'pairs', 'occurrences', 'status'])
         info = dict(bucket=bucket, gen=a.gen, library_sequences=len(occ), pairs_enumerated=n_enum,
                     pairs_deferred=n_def, pairs_done_earlier=n_skip, max_pairs=a.max_pairs,
+                    design_only=a.design_only,
                     chunks_deferred=sum(r['status'] == 'deferred' for r in prog),
                     wall_s=round(time.time() - t0, 1), params=digest_params(), host=os.uname()[1])
         (ed / 'done.json').write_text(json.dumps(info, indent=1) + '\n')
@@ -744,6 +830,10 @@ def cmd_enumerate(a):
         for fo in fos.values():
             if not fo.closed:
                 fo.close()
+
+
+ALIGN_SETTINGS = dict(task='blastn', strand='plus', dust='no', evalue='1e-5', max_target_seqs=500,
+                      one_subject_per_call=True)  # of _blast_group; recorded with the HSP cache
 
 
 def _blast_group(job):
@@ -789,6 +879,16 @@ def seed_in_window(o):
 ALIGN_COLS = PAIR_COLS + ['align_key', 'chunk', 'alignment']
 
 
+def canonical_pair_id(r):
+    """ID of a pair by its two intervals (X if resolved, else the seeds) and their relative orientation only: the
+    same two intervals reached through another library sequence, in the other order or with both strands flipped
+    are one pair (v0.2.3; before, the seed order and the library-orientation strands entered the hash, so one pair
+    of X intervals could get several IDs and was checked and counted more than once)."""
+    sides = sorted((r[s + '_sample'], r[s + '_contig'], r.get(s + '_x') or r[s + '_seed']) for s in 'ab')
+    rel = '+' if r['a_strand'] == r['b_strand'] else '-'
+    return 'D' + hashlib.sha1('|'.join(sides[0] + sides[1] + (rel,)).encode()).hexdigest()[:14]
+
+
 def cmd_align(a):
     """Per key shard: every distinct alignment key once (cached across generations), then the extension of every
     source pair from the HSPs in its own frame. Each source keeps its own seeds, X and library sequence."""
@@ -810,6 +910,17 @@ def cmd_align(a):
     for b in range(nb):
         srcs.extend(rows(w / 'enum' / ('g%d' % a.gen) / ('b%02d' % b) / ('k%03d.tsv.gz' % s)))
     cache_dir = w / 'align' / 'cache' / ('k%03d' % s)
+    man = {m['sample']: m for m in rows(a.manifest)}
+    # the cache is valid only for the sequences and search it was computed with: the FASTA sha256 of every sample
+    # in it and the alignment settings are recorded and compared before any cached key is used
+    prov_f = cache_dir / 'provenance.json'
+    prov = json.loads(prov_f.read_text()) if prov_f.exists() else dict(align=ALIGN_SETTINGS, samples={})
+    if prov['align'] != ALIGN_SETTINGS:
+        sys.exit('alignment settings differ from the cache in %s; move the cache away to recompute' % cache_dir)
+    stale = sorted(x for x, h in prov['samples'].items() if x in man and man[x]['fna_sha256'] != h)
+    if stale:
+        sys.exit('FASTA sha256 changed for %d cached samples (%s) in %s; move the cache away to recompute' %
+                 (len(stale), stale[:3], cache_dir))
     cache = {}
     for f in sorted(cache_dir.glob('hsps_g*.tsv.gz')):
         for r in rows(f):
@@ -826,7 +937,6 @@ def cmd_align(a):
             sys.exit('key mismatch %s %s' % (key, r['key']))
         keys[key] = (first, second, rel)
     # window sequences, one verified genome at a time
-    man = {m['sample']: m for m in rows(a.manifest)}
     need = defaultdict(set)
     for first, second, rel in keys.values():
         need[first[0]].add(first)
@@ -858,6 +968,16 @@ def cmd_align(a):
                 new.update(res)
     t_blast = time.time() - t1
     cache_dir.mkdir(parents=True, exist_ok=True)
+    if cache_dir.exists() and not prov_f.exists() and any(cache_dir.glob('hsps_g*.tsv.gz')):
+        # cache written before v0.2.3 (no provenance): its samples are those of the cached keys, with the
+        # manifest of this run (the only manifest those generations were run with)
+        for f in sorted(cache_dir.glob('hsps_g*.tsv.gz')):
+            for r in rows(f):
+                for x in (r['first'], r['second']):
+                    prov['samples'][x.split('|')[0]] = man[x.split('|')[0]]['fna_sha256']
+    for smp in need:
+        prov['samples'][smp] = man[smp]['fna_sha256']
+    prov_f.write_text(json.dumps(prov, sort_keys=True) + '\n')
     crow = []
     for key, (first, second, rel) in keys.items():
         hs = new.get(key, [])
@@ -865,7 +985,12 @@ def cmd_align(a):
         cache[key] = (L1, L2, hs)
         crow.append(dict(key=key, first='%s|%s|%d-%d' % first, second='%s|%s|%d-%d' % second, rel=rel, qlen=L1,
                          slen=L2, hsps=';'.join('%d,%d,%d,%d' % h for h in hs)))
-    write(cache_dir / ('hsps_g%d.tsv.gz' % a.gen), crow, ['key', 'first', 'second', 'rel', 'qlen', 'slen', 'hsps'])
+    # a retried task finds this generation's keys already in the cache: keep that file, add only what is new
+    cf = cache_dir / ('hsps_g%d.tsv.gz' % a.gen)
+    if cf.exists() and crow:
+        crow = rows(cf) + crow
+    if crow or not cf.exists():
+        write(cf, crow, ['key', 'first', 'second', 'rel', 'qlen', 'slen', 'hsps'])
     P = []
     for r in srcs:
         A = {k: r['a_' + k] for k in SRC_SIDE}
@@ -905,9 +1030,7 @@ def cmd_align(a):
                 lo, hi = genomic(O, up, down)
                 pr[sd + '_x'] = '%d-%d' % (lo, hi)
                 pr['x_len_' + sd] = hi - lo
-        k2 = (pr['a_sample'], pr['a_contig'], pr.get('a_x') or pr['a_seed'], pr['a_strand'], pr['b_sample'],
-              pr['b_contig'], pr.get('b_x') or pr['b_seed'], pr['b_strand'])
-        pr['pair_id'] = 'D' + hashlib.sha1('|'.join(k2).encode()).hexdigest()[:14]
+        pr['pair_id'] = canonical_pair_id(pr)
         P.append(pr)
     write(out / 'pairs.tsv.gz', P, ALIGN_COLS)
     info = dict(shard=s, gen=a.gen, sources=len(srcs), distinct_keys=len({r['key'] for r in srcs}),
@@ -940,17 +1063,7 @@ def cmd_collect(a):
         miss = [str(u) for u in units if not (u / 'done.json').exists()]
         if miss:
             sys.exit('align shards not done: %d (first %s)' % (len(miss), miss[:3]))
-        enumerated = set()
-        deferred_rows = {}
-        for g in gens:
-            for b in range(nb):
-                for r in rows(w / 'enum' / ('g%d' % g) / ('b%02d' % b) / 'progress.tsv.gz'):
-                    k = (r['library_id'], r['chunk'])
-                    if r['status'] == 'enumerated':
-                        enumerated.add(k)
-                    else:
-                        deferred_rows[k] = int(r['pairs'])
-        pending = {k: v for k, v in deferred_rows.items() if k not in enumerated}
+        pending = pending_chunks(w, max(gens))
         shard_files = [(u / 'pairs.tsv.gz', None) for u in units]
         deferred_info = dict(chunks_pending=len(pending), pairs_pending=sum(pending.values()),
                              libraries_pending=len({k[0] for k in pending}))
@@ -963,14 +1076,19 @@ def cmd_collect(a):
                        for i in range(S)]
         deferred_info = None
     man = {m['sample']: m for m in rows(a.manifest)}
-    seen, dup, st, scope, n_all = {}, Counter(), Counter(), Counter(), 0
-    out_target = set()
+    # streamed: rows are written as they are read; only the pair IDs (as integers) are kept for de-duplication
+    seen, out_target = set(), set()
+    n_dup, st, scope, n_all = 0, Counter(), Counter(), 0
     deferred = 0
     out = Path(a.out)
     out.mkdir(parents=True, exist_ok=True)
-    ci = {c: i for i, c in enumerate(ub.INPUT_COLS)}
-    with gzip.open(out / 'dna_pairs_all.tsv.gz', 'wt') as fa:
+    tmp_in = out / '.tmp_ucd_input.tsv.gz'
+    with gzip.open(out / 'dna_pairs_all.tsv.gz', 'wt', compresslevel=4) as fa, \
+            gzip.open(tmp_in, 'wt', compresslevel=4) as fu, \
+            gzip.open(out / 'pair_other_libraries.tsv.gz', 'wt', compresslevel=4) as fl:
+        fl.write('pair_id\tlibrary_id\n')
         fa.write('\t'.join(PAIR_COLS + ['length_class']) + '\n')
+        fu.write('\t'.join(ub.INPUT_COLS) + '\n')
         alignment = Counter()
         lclass = Counter()  # distinct resolved pairs by target length of both X
         for pf, d in shard_files:
@@ -980,17 +1098,22 @@ def cmd_collect(a):
                 alignment[r.get('alignment', '')] += 1
                 n_all += 1
                 lc = length_class(r)
+                r['pair_id'] = canonical_pair_id(r)  # also for shards written before v0.2.3
                 fa.write('\t'.join([str(r.get(c, '')) for c in PAIR_COLS] + [lc]) + '\n')
                 st[r['status']] += 1
                 if r['status'] != 'resolved':
                     continue
-                if r['pair_id'] in seen or r['pair_id'] in out_target:
-                    dup[r['pair_id']] += 1
+                pk = int(r['pair_id'][1:], 16)
+                if pk in seen or pk in out_target:
+                    n_dup += 1
+                    if pk in seen:  # the pair is kept once; its other library sequences are kept in a side table
+                        fl.write('%s\t%s\n' % (r['pair_id'], r['library_id']))
                     continue
                 lclass[lc] += 1
                 if lc != 'in_target':  # length known and outside the target: not sent to the two checks
-                    out_target.add(r['pair_id'])
+                    out_target.add(pk)
                     continue
+                seen.add(pk)
                 scope[r['pair_scope']] += 1
                 x = dict(pair_id=r['pair_id'], structure='dna_segment', core_key=r['library_id'],
                          pair_scope=r['pair_scope'], copy_class='', s6_grouping='', core_match_class='',
@@ -1010,13 +1133,10 @@ def cmd_collect(a):
                     for f in ub.SIDE:
                         sw['a_' + f], sw['b_' + f] = x['b_' + f], x['a_' + f]
                     x.update(sw)
-                seen[r['pair_id']] = [x.get(c, '') for c in ub.INPUT_COLS]
-    with gzip.open(out / 'ucd_input.tsv.gz', 'wt') as f:
-        f.write('\t'.join(ub.INPUT_COLS) + '\n')
-        for pid in sorted(seen):
-            f.write('\t'.join(str(v) for v in seen[pid]) + '\n')
+                fu.write('\t'.join(str(x.get(c, '')) for c in ub.INPUT_COLS) + '\n')
+    os.replace(tmp_in, out / 'ucd_input.tsv.gz')  # rows in shard order (deterministic); ucd_batch freeze sorts them
     info = dict(version=VERSION, discovery_source='dna', params=PARAMS, pair_rows=n_all, status=dict(st),
-                resolved_distinct=len(seen) + len(out_target), resolved_duplicate_rows=sum(dup.values()),
+                resolved_distinct=len(seen) + len(out_target), resolved_duplicate_rows=n_dup,
                 target_length=dict(min=PARAMS['target_min'], max=PARAMS['target_max'], rule='both X, min <= len < max'),
                 resolved_distinct_by_length=dict(lclass), sent_to_checks=len(seen), out_of_target=len(out_target),
                 scope_sent_to_checks=dict(scope),
@@ -1056,6 +1176,8 @@ def main():
                                                            'new batches)')
         if name == 'enumerate':
             x.add_argument('--max-pairs', type=int, default=0, help='pairs enumerated by this task (0 = all)')
+            x.add_argument('--design-only', action='store_true',
+                           help='enumerate only the priority chunks (context sample); all others stay deferred')
         if name == 'collect':
             x.add_argument('--out', required=True)
             x.add_argument('--gens', default='', help='v0.2: generations of align shards to collect (e.g. 0,1)')

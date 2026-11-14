@@ -37,6 +37,7 @@ import json
 import os
 import shutil
 import socket
+import subprocess
 import sys
 import tempfile
 import time
@@ -47,7 +48,8 @@ from pathlib import Path
 import ucd_checks as ck
 import ucd_compare as uc
 
-VERSION = 'ucd_batch_v0.4'  # v0.4: --input-table (pre-built pair table, e.g. the DNA entry) and --kinds
+VERSION = 'ucd_batch_v0.5'  # v0.5: freeze streamed (external sort; same row order and chunks as v0.4)
+# v0.4: --input-table (pre-built pair table, e.g. the DNA entry) and --kinds
 # The rule that turns input rows into intervals and verdicts into final_status (interval(), work_pair()). Unchanged
 # since v0.2; bump it if that logic changes, so earlier rows stop being reusable.
 DECISION_VERSION = 'decision_v0.2'
@@ -189,9 +191,11 @@ def build_from_catalogue(a, man):
     return rows
 
 
-def classify(a, rows, man, info):
+def classify(a, rows, man, info, counts):
     """new / changed / reused per pair against an earlier result's fingerprint index; retired = earlier IDs not in
-    this catalogue. Only new and changed pairs are run; reused pairs keep their earlier rows (ucd_combine)."""
+    this catalogue. Only new and changed pairs are run; reused pairs keep their earlier rows (ucd_combine).
+    Streamed: yields the rows to run; pair_status.tsv.gz and reuse_ids.txt.gz are written on the way and `info` is
+    completed when the input is exhausted."""
     prev = {}
     with gzip.open(a.previous_index, 'rt') as f:
         f.readline()
@@ -199,37 +203,56 @@ def classify(a, rows, man, info):
             pid, kind, fp, cv = line.rstrip('\n').split('\t')
             prev.setdefault(pid, {})[kind] = (fp, cv)
     cfg, ccfg, code = dict(uc.CONFIG), ck.CHECK_CONFIG, code_hashes()
-    keep, cls, n = [], [], Counter()
-    for r in rows:
-        d = dict(zip(INPUT_COLS, r))
-        fps = {k: fingerprint(d, k, man, cfg, ccfg, code) for k in KINDS}
-        old = prev.get(r[0])
-        if old is None:
-            c = 'new'
-        elif all(old.get(k, ('',))[0] == fps[k] for k in KINDS):
-            c = 'reused'
-        else:
-            c = 'changed'
-        n[c] += 1
-        cls.append(dict(pair_id=r[0], status=c, **{'fp_' + k: fps[k] for k in KINDS},
-                        **{'previous_fp_' + k: (old or {}).get(k, ('',))[0] for k in KINDS},
-                        previous_code_version=(old or {}).get(KINDS[0], ('', ''))[1]))
-        if c != 'reused':
-            keep.append(r)
-    ids = {r[0] for r in rows}
-    retired = sorted(set(prev) - ids)
-    n['retired'] = len(retired)
+    n = Counter()
     w = Path(a.work)
-    uc.write_tsv(w / 'pair_status.tsv.gz', cls + [dict(pair_id=i, status='retired') for i in retired],
-                 ['pair_id', 'status'] + ['fp_' + k for k in KINDS] + ['previous_fp_' + k for k in KINDS] +
-                 ['previous_code_version'])
-    with gzip.open(w / 'reuse_ids.txt.gz', 'wt') as f:
-        f.write('pair_id\n' + ''.join(c['pair_id'] + '\n' for c in cls if c['status'] == 'reused'))
+    cols = ['pair_id', 'status'] + ['fp_' + k for k in KINDS] + ['previous_fp_' + k for k in KINDS] + \
+        ['previous_code_version']
+    with gzip.open(w / 'pair_status.tsv.gz', 'wt') as fs, gzip.open(w / 'reuse_ids.txt.gz', 'wt') as fr:
+        fs.write('\t'.join(cols) + '\n')
+        fr.write('pair_id\n')
+        for r in rows:
+            d = dict(zip(INPUT_COLS, r))
+            fps = {k: fingerprint(d, k, man, cfg, ccfg, code) for k in KINDS}
+            old = prev.pop(r[0], None)  # IDs are unique (checked by freeze), so what is left in prev is retired
+            if old is None:
+                c = 'new'
+            elif all(old.get(k, ('',))[0] == fps[k] for k in KINDS):
+                c = 'reused'
+            else:
+                c = 'changed'
+            n[c] += 1
+            fs.write('\t'.join([r[0], c] + [fps[k] for k in KINDS] + [(old or {}).get(k, ('',))[0] for k in KINDS] +
+                               [(old or {}).get(KINDS[0], ('', ''))[1]]) + '\n')
+            if c == 'reused':
+                fr.write(r[0] + '\n')
+            else:
+                yield r
+        retired = sorted(prev)
+        n['retired'] = len(retired)
+        for i in retired:
+            fs.write('\t'.join([i, 'retired'] + [''] * (len(cols) - 2)) + '\n')
     info.update(previous_index=a.previous_index, previous_index_sha256=sha_file(a.previous_index),
                 pair_status=dict(n), pair_status_table=str(w / 'pair_status.tsv.gz'),
                 pair_status_sha256=sha_file(w / 'pair_status.tsv.gz'), reuse_ids=str(w / 'reuse_ids.txt.gz'),
                 decision_version=DECISION_VERSION)
-    return keep, prev
+
+
+def stream_input(path):
+    """Rows of a pre-built input table as lists in INPUT_COLS order, one at a time (tables of 1e8 rows)."""
+    op = gzip.open if str(path).endswith('.gz') else open
+    with op(path, 'rt') as f:
+        h = f.readline().rstrip('\n').split('\t')
+        idx = [h.index(c) if c in h else None for c in INPUT_COLS]
+        for line in f:
+            v = line.rstrip('\n').split('\t')
+            yield [v[i] if i is not None else '' for i in idx]
+
+
+def ext_sort(args, out, tmp, mem):
+    """GNU sort in the C locale (byte order = Python str order for ASCII) writing `out`; returns the process, whose
+    stdin takes the lines."""
+    return subprocess.Popen(['sort', '-S', mem, '-T', str(tmp), '-o', str(out)] + args, stdin=subprocess.PIPE,
+                            text=True, env=dict(os.environ, LC_ALL='C'))
 
 
 def cmd_index(a):
@@ -282,43 +305,97 @@ def cmd_freeze(a):
         if len(rows) != len(want):
             sys.exit('%d requested IDs not in %s' % (len(want) - len(rows), a.from_input))
     else:
-        if a.input_table:  # pre-built pair table in INPUT_COLS (e.g. dna_discovery.py collect)
-            rows = [[r.get(c, '') for c in INPUT_COLS] for r in uc.read_tsv(a.input_table)]
+        if a.input_table:  # pre-built pair table in INPUT_COLS (e.g. dna_discovery.py collect), streamed
+            rows = stream_input(a.input_table)
             info.update(input_table=a.input_table, input_table_sha256=sha_file(a.input_table))
         else:
             rows = build_from_catalogue(a, man)
-        ids = [r[0] for r in rows]
-        if len(set(ids)) != len(ids):
-            sys.exit('pair_id collision: %d rows, %d distinct IDs' % (len(ids), len(set(ids))))
-        info['catalogue_pairs'] = len(rows)
-        cat = work / 'catalogue_ids.txt.gz'
-        with gzip.open(cat, 'wt') as f:
-            f.write('pair_id\n' + '\n'.join(sorted(ids)) + '\n')
-        info.update(catalogue_ids=str(cat), catalogue_ids_sha256=sha_file(cat))
+    # One pass over the rows (never all in memory): IDs to an external sort (uniqueness, catalogue_ids), rows to an
+    # external sort by (a_sample, b_sample, pair_id) -- the order of the earlier in-memory sort.
+    tmp = work / 'freeze_tmp'
+    shutil.rmtree(tmp, ignore_errors=True)
+    tmp.mkdir()
+    cnt = Counter()
+    catalogue = not a.from_input
+    if catalogue:
+        ps_ids = ext_sort([], tmp / 'ids.sorted', tmp, a.sort_mem)
+
+        def tap(it):
+            for r in it:
+                cnt['catalogue'] += 1
+                ps_ids.stdin.write(r[0] + '\n')
+                yield r
+        rows = tap(rows)
         if a.previous_index:
-            rows, prev = classify(a, rows, man, info)
+            rows = classify(a, rows, man, info, cnt)
         if a.exclude_input:
             ex = ids_of(a.exclude_input)
-            rows = [r for r in rows if r[0] not in ex]
+
+            def drop(it):
+                for r in it:
+                    if r[0] in ex:
+                        cnt['excluded_in_catalogue'] += 1
+                    else:
+                        yield r
+            rows = drop(rows)
+    ps = ext_sort(['-t', '\t', '-k1,1', '-k2,2', '-k3,3'], tmp / 'rows.sorted', tmp, a.sort_mem)
+    for r in rows:
+        ps.stdin.write('\t'.join([r[ci['a_sample']], r[ci['b_sample']], r[0]] + [str(v) for v in r]) + '\n')
+    ps.stdin.close()
+    if ps.wait():
+        sys.exit('sort of the input rows failed')
+    if catalogue:
+        ps_ids.stdin.close()
+        if ps_ids.wait():
+            sys.exit('sort of the pair IDs failed')
+        cat = work / 'catalogue_ids.txt.gz'
+        last, ndup = None, 0
+        with open(tmp / 'ids.sorted') as fi, gzip.open(cat, 'wt') as f:
+            f.write('pair_id\n')
+            for line in fi:
+                ndup += line == last
+                last = line
+                f.write(line)
+        if ndup:
+            sys.exit('pair_id collision: %d rows, %d distinct IDs' % (cnt['catalogue'], cnt['catalogue'] - ndup))
+        info['catalogue_pairs'] = cnt['catalogue']
+        info.update(catalogue_ids=str(cat), catalogue_ids_sha256=sha_file(cat))
+        if a.exclude_input:
             info.update(exclude_input=a.exclude_input, exclude_input_sha256=sha_file(a.exclude_input),
-                        excluded_ids=len(ex), excluded_ids_in_catalogue=len(ex & set(ids)),
-                        remaining_after_difference=len(rows))
-    rows.sort(key=lambda r: (r[ci['a_sample']], r[ci['b_sample']], r[0]))
-    n_chunks = (len(rows) + a.chunk_size - 1) // a.chunk_size
-    (work / 'inputs').mkdir(exist_ok=True)
+                        excluded_ids=len(ex), excluded_ids_in_catalogue=cnt['excluded_in_catalogue'])
+    shutil.rmtree(work / 'inputs', ignore_errors=True)  # chunk inputs of an earlier, unfinished freeze
+    (work / 'inputs').mkdir()
     allp = work / 'input_pairs.tsv.gz'
-    with gzip.open(allp, 'wt') as fa:
-        fa.write('\t'.join(INPUT_COLS) + '\n')
-        for c in range(n_chunks):
-            part = rows[c * a.chunk_size:(c + 1) * a.chunk_size]
-            with gzip.open(work / 'inputs' / ('c%04d.tsv.gz' % c), 'wt') as f:
-                f.write('\t'.join(INPUT_COLS) + '\n')
-                for r in part:
-                    r[ci['chunk']] = c
-                    line = '\t'.join(str(v) for v in r) + '\n'
-                    f.write(line)
-                    fa.write(line)
-    samples = sorted({r[ci[s + '_sample']] for r in rows for s in 'ab'})
+    n_rows, samples, errs = 0, set(), Counter()
+    hdr = '\t'.join(INPUT_COLS) + '\n'
+    f = None
+    with gzip.open(allp, 'wt', compresslevel=4) as fa, open(tmp / 'rows.sorted') as fi:
+        fa.write(hdr)
+        for line in fi:
+            r = line.rstrip('\n').split('\t')[3:]
+            c = n_rows // a.chunk_size
+            if n_rows % a.chunk_size == 0:
+                if f:
+                    f.close()
+                f = gzip.open(work / 'inputs' / ('c%04d.tsv.gz' % c), 'wt', compresslevel=4)
+                f.write(hdr)
+            r[ci['chunk']] = str(c)
+            out_line = '\t'.join(r) + '\n'
+            f.write(out_line)
+            fa.write(out_line)
+            n_rows += 1
+            for sd in 'ab':
+                samples.add(r[ci[sd + '_sample']])
+                for e in r[ci[sd + '_input_error']].split(','):
+                    if e:
+                        errs[e] += 1
+    if f:
+        f.close()
+    n_chunks = (n_rows + a.chunk_size - 1) // a.chunk_size
+    if catalogue and a.exclude_input:
+        info['remaining_after_difference'] = n_rows
+    shutil.rmtree(tmp)
+    samples = sorted(samples)
     src = []
     for smp in samples:
         m = man.get(smp)
@@ -332,7 +409,6 @@ def cmd_freeze(a):
                         status='verified' if h == m['fna_sha256'] else ('missing' if not h else 'sha256_mismatch')))
     uc.write_tsv(out / 'sources.tsv.gz', src, ['sample', 'assembly', 'fasta', 'manifest_sha256', 'observed_sha256',
                                                'bytes', 'status'])
-    errs = Counter(e for r in rows for s in 'ab' for e in r[ci[s + '_input_error']].split(',') if e)
     frz = dict(version=VERSION, screen_version=uc.VERSION, check_version=ck.CHECK_VERSION, config=dict(uc.CONFIG),
                check_config=ck.CHECK_CONFIG, coordinates=ck.COORDS, code_sha256=code_hashes(),
                scope=('two checks of a pre-built pair table (%s)' % a.input_table if a.input_table else
@@ -341,7 +417,7 @@ def cmd_freeze(a):
                kinds=list(KINDS),
                inputs={str(p): sha_file(p) for p in [Path(a.manifest)] +
                        ([Path(a.catalogue)] if a.catalogue not in ('boundary', '') else [])},
-               input_pairs=len(rows), input_pairs_path=str(allp), input_pairs_sha256=sha_file(allp),
+               input_pairs=n_rows, input_pairs_path=str(allp), input_pairs_sha256=sha_file(allp),
                sources_sha256=sha_file(out / 'sources.tsv.gz'), chunk_size=a.chunk_size, chunks=n_chunks,
                input_errors=dict(errs), sources=dict(Counter(s['status'] for s in src)), work=str(work),
                frozen_at=time.strftime('%Y-%m-%d %H:%M:%S'), **info)
@@ -664,6 +740,7 @@ def main():
             x.add_argument('--input-table', default='', help='pre-built input table (INPUT_COLS); all its rows')
             x.add_argument('--kinds', default=','.join(uc.KINDS), help='interval kinds of this run')
             x.add_argument('--chunk-size', type=int, default=5000)
+            x.add_argument('--sort-mem', default='4G', help='memory of the external sort (GNU sort -S)')
         if name == 'chunk':
             x.add_argument('--index', type=int)
             x.add_argument('--offset', type=int, default=0, help='added to SLURM_ARRAY_TASK_ID (arrays > 1000)')
