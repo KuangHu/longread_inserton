@@ -21,7 +21,7 @@ PY=/global/scratch/users/kh36969/longread_callout/env/msi/bin/python
 EXCL=n0004.lr6,n0065.lr6,n0072.lr6,n0018.lr6,n0054.lr6
 RETRIES=2
 BIG=--partition=lr_bigmem   # single-task, memory-heavy steps (n0272, 1.5 TB)
-SEED_CHUNK=${SEED_CHUNK:-75}; PART=${PART:-25}; UCD_CHUNK=${UCD_CHUNK:-5000}
+SEED_CHUNK=${SEED_CHUNK:-75}; PART=${PART:-25}; UCD_CHUNK=${UCD_CHUNK:-5000}; EPACK=${EPACK:-8}
 # DESIGN_ONLY=1 (default): a generation enumerates only the priority chunks (context sample per library sequence);
 # every other pair stays deferred and is reported as pending. DESIGN_ONLY=0: all chunks within max_pairs.
 DESIGN=""; [ "${DESIGN_ONLY:-1}" = 1 ] && { DESIGN="--design-only"; MAXG=1; }  # one generation holds every priority chunk
@@ -80,7 +80,8 @@ run_until_done() {  # run_until_done <label> <missing-fn> <sbatch args...> -- <s
     miss=$($fn) || die "$label: listing the missing units failed (not treated as complete)"
     [ -z "$miss" ] && { say "$label complete"; return 0; }
     [ $r -gt 0 ] && say "$label retry $r: $(echo $miss | wc -w) units"
-    submit $label "$miss" "$@"
+    if [ $r -gt 0 ] && [ -n "${RETRY_ARGS:-}" ]; then submit $label "$miss" $RETRY_ARGS "$@"   # e.g. more memory
+    else submit $label "$miss" "$@"; fi
   done
   miss=$($fn) || die "$label: listing the missing units failed"
   [ -z "$miss" ] || die "$label units still missing after $RETRIES retries: $(echo $miss | head -c 300)"
@@ -97,8 +98,11 @@ NCH=$(awk -F'\t' -v t=$TAG '$2==t' $WORK/chunks.tsv | wc -l)
 say "seed chunks $NCH, parts $(awk -F'\t' -v t=$TAG '$2==t' $WORK/parts.tsv | wc -l)"
 seeds_missing() { awk -F'\t' -v t=$TAG '$2==t{print n++" "$1}' $WORK/chunks.tsv | while read i c; do
   [ -f $WORK/seeds/$c/done.json ] || echo $i; done; }
+# a chunk whose all-vs-all search needs more than a standard node (repeat-rich large genomes) is retried on lr_bigmem
+RETRY_ARGS="$BIG --mem=700G"
 run_until_done seeds seeds_missing --cpus-per-task=32 --mem=90G --time=24:00:00 -- \
   dna_batch.sbatch $WORK $MAN seeds --tag $TAG
+RETRY_ARGS=""
 
 if ! grep -q "\"tag\": \"$TAG\"" $WORK/library/lib_*.json 2>/dev/null; then
   submit library "0" --cpus-per-task=16 --mem=90G --time=24:00:00 -- dna_batch.sbatch $WORK $MAN library --tag $TAG
@@ -125,11 +129,13 @@ for k in $(seq 1 $MAXG); do
     [ $pend -eq 0 ] && break
     say "generation $G: resuming $pend deferred chunks"
   fi
-  enum_missing() { for b in $(seq 0 63); do [ -f $WORK/enum/g$G/b$(printf %02d $b)/done.json ] || echo $b; done; }
-  run_until_done enumerate_g$G enum_missing --cpus-per-task=2 --mem=32G --time=24:00:00 -- \
+  # lr6 jobs are charged a whole node: the 64 buckets run $EPACK to a node job (array task t = buckets t*EPACK ..)
+  enum_missing() { for t in $(seq 0 $((64 / EPACK - 1))); do for b in $(seq $((t * EPACK)) $((t * EPACK + EPACK - 1))); do
+    [ -f $WORK/enum/g$G/b$(printf %02d $b)/done.json ] || { echo $t; break; }; done; done; }
+  run_until_done enumerate_g$G enum_missing --cpus-per-task=32 --mem=90G --time=24:00:00 --export=ALL,PACK=$EPACK -- \
     dna_batch.sbatch $WORK $MAN enumerate --gen $G --max-pairs $MAXP $DESIGN
   align_missing() { for s in $(seq 0 127); do [ -f $WORK/align/g$G/k$(printf %03d $s)/done.json ] || echo $s; done; }
-  run_until_done align_g$G align_missing --cpus-per-task=16 --mem=64G --time=24:00:00 -- \
+  run_until_done align_g$G align_missing --cpus-per-task=32 --mem=90G --time=24:00:00 -- \
     dna_batch.sbatch $WORK $MAN align --gen $G
   echo -e "$G\t$TAG\t$(date -Is)" >> $WORK/gens.tsv
 done

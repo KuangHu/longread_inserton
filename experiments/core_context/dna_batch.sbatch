@@ -28,7 +28,18 @@ source ~/miniconda3/etc/profile.d/conda.sh
 conda activate /global/scratch/users/kh36969/longread_callout/env/msi
 export TMPDIR=${TMPDIR:-/tmp}
 cd $HERE
-/usr/bin/time -v -o $WORK/time/${STAGE}_${SLURM_JOB_ID}_$T.time \
-  python dna_discovery.py $STAGE --work $WORK --manifest $MAN --index $T --threads $SLURM_CPUS_PER_TASK "$@"
-grep -E "Elapsed|Maximum resident" $WORK/time/${STAGE}_${SLURM_JOB_ID}_$T.time
+# PACK=n: array task T runs the units T*n .. T*n+n-1 side by side on the node, each with cpus/n threads (lr6 nodes are
+# exclusive: a job is charged the whole node, so small units share one job). Finished units skip themselves.
+PACK=${PACK:-1}
+TH=$(( SLURM_CPUS_PER_TASK / PACK )); [ $TH -ge 1 ] || TH=1
+pids=()
+for i in $(seq 0 $((PACK - 1))); do
+  U=$(( T * PACK + i ))
+  /usr/bin/time -v -o $WORK/time/${STAGE}_${SLURM_JOB_ID}_$U.time \
+    python dna_discovery.py $STAGE --work $WORK --manifest $MAN --index $U --threads $TH "$@" &
+  pids+=($!)
+done
+rc=0; for p in "${pids[@]}"; do wait $p || rc=1; done
+grep -hE "Elapsed|Maximum resident" $WORK/time/${STAGE}_${SLURM_JOB_ID}_*.time | sort | tail -2
+[ $rc -eq 0 ] || { echo "[$(date -Is)] a unit failed"; exit 1; }
 echo "[$(date -Is)] done"

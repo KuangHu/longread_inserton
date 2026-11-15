@@ -119,8 +119,8 @@ if [ "$MODE" = status ]; then
   exit 0
 fi
 [ "$MODE" = run ] || { echo "mode: run | status"; exit 1; }
-exec 8>$ROOT/queue.lock
-flock -n 8 || { echo "another dna_queue.sh run holds $ROOT/queue.lock"; exit 1; }
+exec 8>$ROOT/$(basename $QUEUE).lock   # one runner per queue file; entries of different files must differ
+flock -n 8 || { echo "another dna_queue.sh run holds the lock of $QUEUE"; exit 1; }
 say "queue start: $(entries | wc -l) entries, $PAR at a time, watch=${WATCH:-0}, code $(git -C $HERE rev-parse --short HEAD)"
 # WATCH=1: the queue file is read again every 10 minutes, so entries appended later (e.g. after a download was
 # verified) are picked up; touch <root>/queue.stop to let it end after the running entries.
