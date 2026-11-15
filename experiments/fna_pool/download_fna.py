@@ -174,8 +174,13 @@ def verify(acc, row, pkg, md5ok):
 
 
 def run(a):
-    if os.environ.get("SLURM_JOB_ID"):  # downloads: transfer node (lrc-xfer) only, never inside a compute job
-        raise SystemExit("download_fna.py run refused inside SLURM job %s: run it on lrc-xfer" % os.environ["SLURM_JOB_ID"])
+    # Downloads run on the transfer node (lrc-xfer) or in a dedicated fetch job, never inside an analysis job.
+    # A fetch job (2026-11-14) is a SLURM job that says so (FETCH_JOB=1) and holds exactly one CPU, i.e. it runs on
+    # a shared partition (lr7) and is charged for one CPU; on node-exclusive partitions (lr6) it is refused.
+    if os.environ.get("SLURM_JOB_ID") and not (os.environ.get("FETCH_JOB") == "1" and
+                                                 os.environ.get("SLURM_CPUS_ON_NODE") == "1"):
+        raise SystemExit("download_fna.py run refused inside SLURM job %s: run it on lrc-xfer, or in a fetch job "
+                         "(FETCH_JOB=1, one CPU on a shared partition)" % os.environ["SLURM_JOB_ID"])
     data = a.data
     (data / "genomes").mkdir(parents=True, exist_ok=True)
     (data / "tmp").mkdir(exist_ok=True)

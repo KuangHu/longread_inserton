@@ -108,7 +108,7 @@ say "library: $(grep -l "\"tag\": \"$TAG\"" $WORK/library/lib_*.json)"
 
 occ_missing() { local o; o=$($PY dna_discovery.py occurrences --work $WORK --manifest $MAN --list) || return 1
   echo "$o" | tr ',' ' '; }
-run_until_done occurrences occ_missing --cpus-per-task=16 --mem=48G --time=24:00:00 -- \
+run_until_done occurrences occ_missing --cpus-per-task=32 --mem=90G --time=24:00:00 -- \
   dna_batch.sbatch $WORK $MAN occurrences
 
 # ---------------------------------------------------------------- enumerate / align generations

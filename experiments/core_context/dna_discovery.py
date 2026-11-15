@@ -44,6 +44,7 @@ import argparse
 import bisect
 import csv
 import gzip
+import multiprocessing
 import hashlib
 import json
 import os
@@ -59,7 +60,7 @@ import core_review as cr
 import ucd_batch as ub
 import ucd_compare as uc
 
-VERSION = 'dna_discovery_v0.2.4'
+VERSION = 'dna_discovery_v0.2.5'
 # v0.2.4: context-sample chunk (chunk -1) per library sequence with more than context_sample occurrences: all pairs
 #         among a small deterministic sample of its occurrences (copies inside one assembly first, then one per
 #         assembly in a fixed assembly order shared by all library sequences). It is a pairing PRIORITY for the
@@ -397,6 +398,38 @@ def occ_tasks(w):
     return [(k, p) for k in shards for p in parts]
 
 
+_OCC_JOB = None
+
+
+def _occ_write(mine):
+    paf, samples, gs, tmpf = _OCC_JOB
+    B, W, mine = PARAMS['buckets'], PARAMS['window'], set(mine)
+    fos = {b: gzip.open(tmpf[b], 'wt') for b in mine}
+    for fo in fos.values():
+        fo.write('\t'.join(OCC_COLS) + '\n')
+    n, per = 0, Counter()
+    with open(paf) as fi:
+        for line in fi:
+            f = line.split('\t', 12)
+            b = shard_of(f[5], B)
+            if b not in mine:
+                continue
+            i, ctg = f[0].split('|', 1)
+            smp, g = samples[int(i)], gs[int(i)]
+            cl, qs, qe, st, lid, ll, ts, te, nm, al = int(f[1]), int(f[2]), int(f[3]), f[4], \
+                f[5], int(f[6]), int(f[7]), int(f[8]), int(f[9]), int(f[10])
+            if qe - qs < PARAMS['occ_min'] or al == 0 or nm / al < PARAMS['seed_identity']:
+                continue
+            lo, hi = max(0, qs - W), min(cl, qe + W)
+            fos[b].write('\t'.join(map(str, (lid, smp, ctg, cl, qs, qe, st, round(nm / al, 4),
+                                             ts, te, ll, lo, hi, g[ctg][lo:hi]))) + '\n')
+            n += 1
+            per[smp] += 1
+    for fo in fos.values():
+        fo.close()
+    return n, per
+
+
 def cmd_occurrences(a):
     w = Path(a.work)
     tasks = occ_tasks(w)
@@ -419,38 +452,39 @@ def cmd_occurrences(a):
     try:
         B = PARAMS['buckets']
         tmpf = {b: Path(str(out / ('b%02d.tsv.gz' % b)) + '.tmp') for b in range(B)}
-        fos = {b: gzip.open(tmpf[b], 'wt') for b in range(B)}
-        for fo in fos.values():
-            fo.write('\t'.join(OCC_COLS) + '\n')
+        gs, paf = {}, tmp / 'q.paf'
         if lib.stat().st_size:
             run([MINIMAP2, '-x', PARAMS['seed_preset'], '-d', str(tmp / 'lib.mmi'), str(lib)],
                 stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-            W = PARAMS['window']
-            if True:
-                for smp in samples:
+            # v0.2.5: the assemblies of the part go through minimap2 as one query file (contig names prefixed with
+            # the assembly index), so the threads work on different contigs at once and the library index is
+            # loaded once. Each query sequence is mapped on its own, in file order: same hits, same order as one
+            # run per assembly (which used one thread: a complete genome is a single query).
+            fa = tmp / 'q.fa'
+            with open(fa, 'w') as f:
+                for i, smp in enumerate(samples):
                     g = verified_fasta(man[smp])
                     if g is None:
                         bad.append(smp)
                         continue
-                    fa = tmp / 'g.fa'
-                    with open(fa, 'w') as f:
-                        for ctg, s in g.items():
-                            f.write('>%s\n%s\n' % (ctg, s))
-                    p = run([MINIMAP2, '-x', PARAMS['seed_preset'], '-c', '-P',
-                             '-t', str(a.threads), str(tmp / 'lib.mmi'), str(fa)], capture_output=True, text=True)
-                    for line in p.stdout.splitlines():
-                        f = line.split('\t')
-                        ctg, cl, qs, qe, st, lid, ll, ts, te, nm, al = f[0], int(f[1]), int(f[2]), int(f[3]), f[4], \
-                            f[5], int(f[6]), int(f[7]), int(f[8]), int(f[9]), int(f[10])
-                        if qe - qs < PARAMS['occ_min'] or al == 0 or nm / al < PARAMS['seed_identity']:
-                            continue
-                        lo, hi = max(0, qs - W), min(cl, qe + W)
-                        fos[shard_of(lid, B)].write('\t'.join(map(str, (lid, smp, ctg, cl, qs, qe, st, round(nm / al, 4),
-                                                                        ts, te, ll, lo, hi, g[ctg][lo:hi]))) + '\n')
-                        n += 1
-                        per[smp] += 1
+                    gs[i] = g
+                    for ctg, s in g.items():
+                        f.write('>%d|%s\n%s\n' % (i, ctg, s))
+            with open(paf, 'w') as fo:
+                run([MINIMAP2, '-x', PARAMS['seed_preset'], '-c', '-P', '-K', '4g',
+                     '-t', str(a.threads), str(tmp / 'lib.mmi'), str(fa)], stdout=fo, stderr=subprocess.DEVNULL)
+        else:
+            paf.write_text('')
+        # v0.2.5: the bucket files are written by a.threads processes, each owning a fixed set of buckets (writing
+        # the gzip files was one thread and most of the wall time); every process reads the hits in the same order.
+        global _OCC_JOB
+        _OCC_JOB = (str(paf), samples, gs, {b: str(p) for b, p in tmpf.items()})
+        nw = max(1, min(a.threads, B))
+        with multiprocessing.get_context('fork').Pool(nw) as pool:
+            for n1, per1 in pool.map(_occ_write, [[b for b in range(B) if b % nw == j] for j in range(nw)]):
+                n += n1
+                per.update(per1)
         for b in range(B):
-            fos[b].close()
             os.replace(tmpf[b], out / ('b%02d.tsv.gz' % b))
         info = dict(library_shard=k, part=part, assemblies=len(samples), sha256_mismatch=bad, hits=n,
                     assemblies_with_hits=len(per), wall_s=round(time.time() - t0, 1), params=digest_params(),
