@@ -62,6 +62,7 @@ PYX
   say "$tag: inputs ok ($n assemblies, batches $batches)"
   # ---- run
   if [ ! -f $W/report_$tag.json ]; then
+    echo running > $D/state
     DESIGN_ONLY=1 UCD_CHUNK=20000 bash $HERE/dna_run.sh $W $man $tag $batches 0 1 > $D/driver.out 2>&1 ||
       { echo run_failed > $D/state; say "$tag: STOP run ($(tail -1 $W/runlog/$tag.log | cut -c1-200))"; return 1; }
   fi
