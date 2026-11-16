@@ -51,14 +51,14 @@ submit() {  # submit <stage-label> <index list "0 1 2 ..."> <sbatch args...> -- 
   for base in $(for i in $idx; do echo $(( i / 1000 * 1000 )); done | sort -n | uniq); do
     slice=$(for i in $idx; do [ $(( i / 1000 * 1000 )) -eq $base ] && echo $(( i - base )); done | paste -sd,)
     local j
-    for try in 1 2 3 4 5; do
+    for try in $(seq 30); do  # up to an hour: the per-user submit limit (3000 tasks) can be hit while many families run
       local exp="--export=ALL,OFFSET=$base" a2=()
       for x in "${sargs[@]}"; do  # a stage's own --export (ucd_batch OUT / WORK) is extended with OFFSET
         case $x in --export=*) exp="$x,OFFSET=$base";; *) a2+=("$x");; esac; done
       j=$(sbatch --parsable $exp --account=pc_rubinlab --partition=lr6 --qos=lr_normal --exclude=$EXCL \
           --output=/global/home/users/kh36969/logs/core_context/%x_%A_%a.out --job-name=d_${TAG}_${label} \
           --array=$slice "${a2[@]}" "$@" 2>>$LOG) && break
-      sleep 60
+      sleep 120
     done
     [ -z "$j" ] && die "sbatch failed for $label"
     ids+=($j); echo -e "$TAG\t$label\t$j\toffset=$base\t$(date -Is)\t$call" >> $JOBS
