@@ -1,0 +1,140 @@
+{
+  "date": "2026-10-24",
+  "ena_url": "https://www.ebi.ac.uk/ena/portal/api/search?result=read_run&query=tax_tree%28119060%29+AND+instrument_platform%3D%22OXFORD_NANOPORE%22&fields=run_accession%2Cstudy_accession%2Csecondary_study_accession%2Csample_accession%2Csecondary_sample_accession%2Ctax_id%2Cscientific_name%2Cstrain%2Cisolate%2Csample_title%2Cinstrument_platform%2Cinstrument_model%2Clibrary_strategy%2Clibrary_source%2Clibrary_selection%2Clibrary_layout%2Cread_count%2Cbase_count%2Cfastq_bytes%2Cfastq_md5%2Cfastq_ftp%2Csubmitted_bytes%2Chost%2Chost_scientific_name%2Cisolation_source%2Cenvironmental_medium%2Cenvironment_biome%2Cbroad_scale_environmental_context%2Ccountry%2Ccollection_date%2Cfirst_public&format=tsv&limit=0",
+  "ena_query": "tax_tree(119060) AND instrument_platform=\"OXFORD_NANOPORE\"",
+  "ena_rows": 1064,
+  "ena_genomic_biosamples": 817,
+  "ncbi_scan": "https://api.ncbi.nlm.nih.gov/datasets/v2/genome/taxon/119060/dataset_report?page_size=1000&filters.assembly_source=genbank (all pages)",
+  "ncbi_pages": [
+    {
+      "page": 1,
+      "reports": 1000,
+      "total_count": 16844
+    },
+    {
+      "page": 2,
+      "reports": 1000,
+      "total_count": 16844
+    },
+    {
+      "page": 3,
+      "reports": 1000,
+      "total_count": 16844
+    },
+    {
+      "page": 4,
+      "reports": 1000,
+      "total_count": 16844
+    },
+    {
+      "page": 5,
+      "reports": 1000,
+      "total_count": 16844
+    },
+    {
+      "page": 6,
+      "reports": 1000,
+      "total_count": 16844
+    },
+    {
+      "page": 7,
+      "reports": 1000,
+      "total_count": 16844
+    },
+    {
+      "page": 8,
+      "reports": 1000,
+      "total_count": 16844
+    },
+    {
+      "page": 9,
+      "reports": 1000,
+      "total_count": 16844
+    },
+    {
+      "page": 10,
+      "reports": 1000,
+      "total_count": 16844
+    },
+    {
+      "page": 11,
+      "reports": 1000,
+      "total_count": 16844
+    },
+    {
+      "page": 12,
+      "reports": 1000,
+      "total_count": 16844
+    },
+    {
+      "page": 13,
+      "reports": 1000,
+      "total_count": 16844
+    },
+    {
+      "page": 14,
+      "reports": 1000,
+      "total_count": 16844
+    },
+    {
+      "page": 15,
+      "reports": 1000,
+      "total_count": 16844
+    },
+    {
+      "page": 16,
+      "reports": 1000,
+      "total_count": 16844
+    },
+    {
+      "page": 17,
+      "reports": 844,
+      "total_count": 16844
+    }
+  ],
+  "ncbi_genbank_reports_scanned": 16844,
+  "ncbi_reports_exact_biosample": 468,
+  "ena_tsv_sha256": "f88b5bbe3c1233b42e276394e1dfa783d03f14c6322a39c7e5b5aed04b90e282",
+  "skani": {
+    "command": [
+      "/global/scratch/users/kh36969/longread_callout/paraburkholderia_ani/skani",
+      "triangle",
+      "-l",
+      "/global/scratch/users/kh36969/longread_callout/batch50_meta/ani/genomes.txt",
+      "-E",
+      "--slow",
+      "-t",
+      "8",
+      "-o",
+      "/global/scratch/users/kh36969/longread_callout/batch50_meta/ani/triangle_c95b653106fe06ca.tsv"
+    ],
+    "version": "skani 0.4.0",
+    "binary_sha256": "1482c7d1cf35210bf73c6d06c1b1fc97659dec18194c5355a31af672b6b03c0b",
+    "genomes": 177,
+    "edges_file": "/global/scratch/users/kh36969/longread_callout/batch50_meta/ani/triangle_c95b653106fe06ca.tsv",
+    "edges_sha256": "5b29df73a145b14cd94ba2608622f5efb344e7c9abf3d7c8e5ea801b22caa409"
+  },
+  "rules": {
+    "clone": "single linkage ANI >= 99.99 and min(AF_ref, AF_query) >= 95",
+    "species_cluster": "single linkage ANI >= 98 (skani reports pairs with AF >= 15)",
+    "ani95_group": "single linkage ANI >= 95 (species-level reference only; not used for selection)",
+    "clone_cap": "2 per clone group in the primary panel; already-run members count against the cap",
+    "continuity": "Complete Genome, or GenBank FASTA records <= 10 and largest record >= 3000000 bp",
+    "library": "WGS/GENOMIC; RANDOM, other, unspecified, size fractionation = non-PCR; any *PCR* = pcr_reserve; others excluded",
+    "species_excluded": "Burkholderia pseudomallei, Burkholderia mallei",
+    "source": "fixed keyword rules in build_panel.source_class over BioSample host/isolation_source/env_medium; ENA fallback",
+    "ranking": "genus tier (Paraburkholderia first), RANDOM first, environmental/plant/enrichment before unclear, Complete before draft, read bases per assembly bp descending, run accession",
+    "diversity": "pass 1 first member per ANI>=98 cluster not already run, pass 2 first member per clone group, pass 3 second clone member",
+    "not_used": "no candidate, tnp, read-spanned or other PILER/RepeatScout output"
+  },
+  "raw_inputs": {
+    "ena_ont_runs.tsv": "f88b5bbe3c1233b42e276394e1dfa783d03f14c6322a39c7e5b5aed04b90e282",
+    "ncbi_biosample_reports.jsonl": "7205d65ce1c0321efb6b5f137236467e26585cbb0fb30d3804552f5fd8446bfe"
+  },
+  "raw_copies_in_repo": "raw/*.gz (gzip of the scratch files above and of the skani edge list)",
+  "downloads": "GenBank (and paired RefSeq for checked rows) genomic FASTA via NCBI Datasets v2 download API; per-record SHA256",
+  "script_sha256": {
+    "build_panel.py": "3fa385c9377c2a8453c6ddecee0edf9381cd0f0ae1aa6bcfd928829ccd28de0c",
+    "fetch_metadata.py": "85103aeea2762408d49fe73e6042d89997c1f586065451e6a9ca86328da57cc7"
+  }
+}

@@ -1,0 +1,8 @@
+sample	genus	organism	assembly	assembly_level	read_type	runs	depth	supported_candidate_cores	reason	sha256
+SAMN51281039	Variovorax	Variovorax sp. OK115	GCF_060373095.1	Complete Genome	ont	SRR40356309	40.0	78	best_of_genus	bb846c885b2ae80ae60342245e79c0493aa675514b8854b0484e95d0eac7cb6a
+SAMN30525383	Delftia	Delftia tsuruhatensis	GCF_029814915.1	Complete Genome	ont	SRR21472668	45.5	33	best_of_genus	8f46dd87e2f032590bf2f091a88a58d66c63047b94d31ae18ffd7348f6838fd1
+SAMN38562701	Comamonas	Comamonas testosteroni	GCF_034424235.1	Complete Genome	pacbio_hifi_ccs	SRR27033690	137.4	31	best_of_genus	dca4c19b7e42c0529d58cb65b2ab457cdae76069f842c1965cb96125febc91ea
+SAMEA115676833	Acidovorax	Acidovorax sp. LjRoot118	GCF_964253575.1	Contig	ont	ERR13194249	62.1	30	best_of_genus	0bec6f1a2af6c11c8e6ca9989c92a634faead3d307f7d2efd56459d11ed6c6a7
+SAMN56368990	Hydrogenophaga	Hydrogenophaga sp. GW460-11-11-14-LB1	GCF_060483935.1	Complete Genome	ont	SRR37524064	127.2	20	best_of_genus	f50e29595737793bc7d638101bff830acb67d02e9923ad776deed76c7fda3f98
+SAMN43526786	Polaromonas	Polaromonas sp. UC242_47	GCF_044452385.1	Contig	ont	SRR30602165	39.9	20	best_of_genus	8e4b52ddd2e4896bcc4e25c5761031443664db0c6cb6d6d2b93dadd42aa015ba
+SAMN37751820	Variovorax	Variovorax paradoxus	GCF_033807875.1	Complete Genome	pacbio_hifi_ccs	SRR26364401	210.8	42	hifi_minimum	0b9c5aaef9ca9d2d2de3c599b2dd8b541c602de41668aa017583da34592ace38

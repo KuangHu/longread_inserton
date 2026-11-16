@@ -1,0 +1,343 @@
+assembly_accession	paired_accession	biosample	run	study	read_type	link_basis	source_run_evidence	run_usable	run_tax_id	run_organism	assembly_organism	genus_agrees	assembly_sequencing_tech
+GCA_020886115.1	GCF_020886115.1	SAMD00409485	DRR321579	PRJDB12412	pacbio_unresolved	biosample_matched	not_checked	True	1751056	Flavobacterium ammonificans	Flavobacterium ammonificans	True	PacBio Sequel; Illumina MiSeq
+GCA_001543325.1	GCF_001543325.1	SAMN04299808	SRR3085341	PRJNA304382	pacbio_clr_subreads	biosample_matched	not_checked	True	1622118	Lutibacter profundi	Lutibacter profundi	True	PacBio
+GCA_030818825.1	GCF_030818825.1	SAMN34265313	SRR24512546	PRJNA957404	pacbio_hifi_ccs	biosample_matched	not_checked	True	3041772	Flavobacterium sp. SORGH_AS_0622	Flavobacterium sp. SORGH_AS_0622	True	PacBio
+GCA_000744835.1	GCF_000744835.1	SAMN02745985	SRR3712185	PRJNA223103	pacbio_unresolved	biosample_matched	not_checked	True	1131812	Flavobacterium sp. 83	Flavobacterium sp. 83	True	Illumina HiSeq 2000; PacBio RS
+GCA_000744835.1	GCF_000744835.1	SAMN02745985	SRR3712187	PRJNA223103	pacbio_unresolved	biosample_matched	not_checked	True	1131812	Flavobacterium sp. 83	Flavobacterium sp. 83	True	Illumina HiSeq 2000; PacBio RS
+GCA_000687935.1	GCF_000687935.1	SAMN02743899	SRR3723548	PRJNA217200	pacbio_unresolved	biosample_matched	not_checked	True	1250006	Polaribacter sp. Hel_I_88	Polaribacter sp. Hel_I_88	True	PacBio RS
+GCA_000688315.1	GCF_000688315.1	SAMN02743898	SRR3723557	PRJNA217216	pacbio_unresolved	biosample_matched	not_checked	True	1249997	Maribacter sp. Hel_I_7	Maribacter sp. Hel_I_7	True	PacBio RS
+GCA_056428965.1	GCF_056428965.1	SAMN54175877	SRR40021656	PRJNA1390260	pacbio_unresolved	biosample_matched	not_checked	False	3480020	Flavobacterium sp. GNP008	Flavobacterium sp. GNP008	True	Oxford Nanopore PromethION; PacBio
+GCA_000744105.1	GCF_000744105.1	SAMN02745580	SRR4063155	PRJNA217215	pacbio_unresolved	biosample_matched	not_checked	True	1392498	Maribacter forsetii DSM 18668	Maribacter forsetii DSM 18668	True	Illumina HiSeq 2000; PacBio RS
+GCA_000934685.1	GCF_000934685.1	SAMN03351825	SRR4131339	PRJNA251769	pacbio_unresolved	biosample_matched	not_checked	True	1249999	Lacinutrix sp. Hel_I_90	Lacinutrix sp. Hel_I_90	True	PacBio RS
+GCA_000744555.1	GCF_000744555.1	SAMN02799635	SRR4131413	PRJNA248513	pacbio_unresolved	biosample_matched	not_checked	True	248905	Zobellia amurskyensis	Zobellia uliginosa	True	PacBio RS
+GCA_000744555.1	GCF_000744555.1	SAMN02799635	SRR4131414	PRJNA248513	pacbio_unresolved	biosample_matched	not_checked	True	248905	Zobellia amurskyensis	Zobellia uliginosa	True	PacBio RS
+GCA_000799465.1	GCF_000799465.1	SAMN02841244	SRR4131416	PRJNA251763	pacbio_unresolved	biosample_matched	not_checked	True	1250004	Psychroserpens sp. Hel_I_66	Psychroserpens sp. Hel_I_66	True	PacBio RS
+GCA_002846595.1	GCF_002846595.1	SAMN04487763	SRR4131418	PRJNA303201	pacbio_unresolved	biosample_matched	not_checked	True	1336805	Polaribacter sp. Hel1_33_96	Polaribacter sp. Hel1_33_96	True	PacBio
+GCA_900106075.1	GCF_900106075.1	SAMN04487762	SRR4131421	PRJNA303193	pacbio_unresolved	biosample_matched	not_checked	True	1336804	Polaribacter sp. Hel1_33_78	Polaribacter sp. Hel1_33_78	True	PacBio RS
+GCA_000745315.1	GCF_000745315.1	SAMN02799644	SRR4131428	PRJNA248520	pacbio_unresolved	biosample_matched	not_checked	True	1250278	Salegentibacter sp. Hel_I_6	Salegentibacter sp. Hel_I_6	True	PacBio RS
+GCA_006714895.1	GCF_006714895.1	SAMN02982988	SRR4136156	PRJNA257842	pacbio_unresolved	biosample_matched	not_checked	True	1249978	Gramella sp. Hel_I_59	Gramella sp. Hel_I_59	True	PacBio
+GCA_007827205.1	GCF_007827205.1	SAMN02982924	SRR4136166	PRJNA257843	pacbio_unresolved	biosample_matched	not_checked	True	1250036	Cellulophaga sp. RHA_52	Cellulophaga sp. RHA_52	True	PacBio
+GCA_007827465.1	GCF_007827465.1	SAMN03159389	SRR4136225	PRJNA265336	pacbio_unresolved	biosample_matched	not_checked	True	1566287	Dokdonia sp. Hel_I_53	Dokdonia sp. Hel_I_53	True	PacBio
+GCA_007827455.1	GCF_007827455.1	SAMN03159350	SRR4136228	PRJNA265337	pacbio_unresolved	biosample_matched	not_checked	True	1566289	Lutibacter sp. Hel_I_33_5	Lutibacter sp. Hel_I_33_5	True	PacBio
+GCA_900104375.1	GCF_900104375.1	SAMN03097699	SRR4136233	PRJNA263069	pacbio_unresolved	biosample_matched	not_checked	True	1250295	Flavobacteriaceae bacterium MAR_2010_188	Flavobacteriaceae bacterium MAR_2010_188	True	PacBio RS
+GCA_007827445.1	GCF_007827445.1	SAMN03097713	SRR4136239	PRJNA263060	pacbio_unresolved	biosample_matched	not_checked	True	1250286	Flavobacteriaceae bacterium MAR_2010_105	Flavobacteriaceae bacterium MAR_2010_105	True	PacBio
+GCA_002846555.1	GCF_002846555.1	SAMN04489736	SRR4184794	PRJNA303195	pacbio_unresolved	biosample_matched	not_checked	True	1250026	Aquimarina sp. MAR_2010_214	Aquimarina sp. MAR_2010_214	True	PacBio
+GCA_002813135.1	GCF_002813135.1	SAMN04489795	SRR4184824	PRJNA303203	pacbio_unresolved	biosample_matched	not_checked	True	1250229	Ulvibacter sp. MAR_2010_11	Ulvibacter sp. MAR_2010_11	True	PacBio
+GCA_900104785.1	GCF_900104785.1	SAMN04515667	SRR4184871	PRJNA311478	pacbio_unresolved	biosample_matched	not_checked	True	1798225	Formosa sp. Hel1_31_208	Formosa sp. Hel1_31_208	True	PacBio RS
+GCA_900143115.1	GCF_900143115.1	SAMN05720268	SRR4244065	PRJNA340740	pacbio_unresolved	biosample_matched	not_checked	True	1896175	Polaribacter sp. KT 15	Polaribacter sp. KT 15	True	PacBio RS
+GCA_020885975.1	GCF_020885975.1	SAMD00409483	DRR321575	PRJDB12412	pacbio_unresolved	biosample_matched	not_checked	True	1751056	Flavobacterium ammonificans	Flavobacterium ammonificans	True	Illumina MiSeq; Sequel II
+GCA_002017945.1	GCF_002017945.1	SAMN06263773	SRR5204211	PRJNA363098	pacbio_clr_subreads	biosample_matched	not_checked	True	1938610	Flavobacterium sp. LM5	Flavobacterium sp. LM5	True	PacBio
+GCA_002754275.1	GCF_002754275.1	SAMN07621436	SRR6824029	PRJNA402421	pacbio_unresolved	biosample_matched	not_checked	True	308053	Flavobacterium sp. 2	Flavobacterium sp. 2	True	PacBio
+GCA_002754275.1	GCF_002754275.1	SAMN07621436	SRR6824030	PRJNA402421	pacbio_unresolved	biosample_matched	not_checked	True	308053	Flavobacterium sp. 2	Flavobacterium sp. 2	True	PacBio
+GCA_002302565.1	GCF_002302565.1	SAMN06289152	SRR5362220	PRJNA369395	pacbio_clr_subreads	biosample_matched	not_checked	True	28188	Capnocytophaga canimorsus	Capnocytophaga canimorsus	True	PacBio; Illumina MiSeq
+GCA_002754315.1	GCF_002754315.1	SAMN07621435	SRR6824076	PRJNA402422	pacbio_unresolved	biosample_matched	not_checked	True	357523	Flavobacterium sp. 11	Flavobacterium sp. 11	True	PacBio
+GCA_003096795.1	GCF_003096795.1	SAMN08777884	SRR6976419	PRJNA442005	pacbio_unresolved	biosample_matched	not_checked	True	2135624	Flavobacterium sp. 103	Flavobacterium sp. 103	True	PacBio
+GCA_004010215.1	GCF_004010215.1	SAMN10477419	SRR8379926	PRJNA506976	pacbio_clr_subreads	biosample_matched	not_checked	True	996	Flavobacterium columnare	Flavobacterium columnare	True	PacBio RSII
+GCA_002302395.1	GCF_002302395.1	SAMN06289148	SRR5362224	PRJNA369395	pacbio_clr_subreads	biosample_matched	not_checked	True	1019	Capnocytophaga sputigena	Capnocytophaga sputigena	True	PacBio; Illumina MiSeq
+GCA_900446675.1	GCF_900446675.1	SAMEA44542168	ERR1883067	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	45242	Capnocytophaga granulosa	Capnocytophaga granulosa	True	PacBio
+GCA_002797935.1	GCF_002797935.1	SAMN07626125	SRR6824008	PRJNA402405	pacbio_unresolved	biosample_matched	not_checked	True	2035200	Flavobacterium sp. 1	Flavobacterium sp. 1	True	PacBio
+GCA_900453725.1	GCF_900453725.1	SAMEA104210761	ERR2225510	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	256	Myroides odoratus	Myroides odoratus	True	PacBio
+GCA_910589745.1	GCF_910589745.1	SAMEA9069200	ERR6356576	PRJEB45371	pacbio_hifi_ccs	biosample_matched	not_checked	True	2820661	Candidatus Arcticimaribacter forsetii	Candidatus Arcticimaribacter forsetii	True	PacBio Sequel and Illumina HiSeq2000
+GCA_001580475.1	GCF_001580475.1	SAMN03382583	SRR10255745	PRJNA276168	pacbio_clr_subreads	biosample_matched	not_checked	True	996	Flavobacterium columnare	Flavobacterium columnare	True	
+GCA_025919725.1	GCF_025919725.1	SAMN20845414	SRR15521775	PRJNA755851	pacbio_unresolved	biosample_matched	not_checked	False	2870839	Flavobacterium agricola	Flavobacterium agricola	True	Oxford Nanopore PromethION
+GCA_002813295.1	GCF_002813295.1	SAMN07626140	SRR6824065	PRJNA402404	pacbio_unresolved	biosample_matched	not_checked	True	2035199	Flavobacterium sp. 5	Flavobacterium sp. 5	True	PacBio
+GCA_020736165.1	GCF_020736165.1	SAMN22091647	SRR17117123	PRJNA231221	pacbio_unresolved	biosample_matched	not_checked	True	1018	Capnocytophaga ochracea	Capnocytophaga ochracea	True	Pacbio; Illumina
+GCA_039778605.1	GCF_039778605.1	SAMN41163488	SRR28875596	PRJNA1107212	pacbio_hifi_ccs	biosample_matched	not_checked	True	3151764	Flavobacterium sp. WV_118_3	Flavobacterium sp. WV_118_3	True	PacBio Sequel
+GCA_002754195.1	GCF_002754195.1	SAMN07626139	SRR6824066	PRJNA402403	pacbio_unresolved	biosample_matched	not_checked	True	2035198	Flavobacterium sp. 9	Flavobacterium sp. 9	True	PacBio
+GCA_003633605.1	GCF_003633605.1	SAMN08777141	SRR6976460	PRJNA442007	pacbio_unresolved	biosample_matched	not_checked	True	2135626	Flavobacterium sp. 120	Flavobacterium sp. 120	True	PacBio
+GCA_003095655.1	GCF_003095655.1	SAMN08952669	SRR33419195	PRJNA450898	pacbio_unresolved	biosample_matched	not_checked	True	2173169	Dokdonia sp. Dokd-P16	Dokdonia sp. Dokd-P16	True	PacBio
+GCA_030817875.1		SAMN34353117	SRR35247524	PRJNA958256	pacbio_hifi_ccs	biosample_matched	not_checked	True	3042261	Flavobacterium sp. W4I14	Flavobacterium sp. W4I14	True	PacBio
+GCA_000744835.1	GCF_000744835.1	SAMN02745985	SRR3712188	PRJNA223103	pacbio_unresolved	biosample_matched	not_checked	True	1131812	Flavobacterium sp. 83	Flavobacterium sp. 83	True	Illumina HiSeq 2000; PacBio RS
+GCA_004139715.1	GCF_004139715.1	SAMN10754312	SRR8453750	PRJNA515365	pacbio_clr_subreads	biosample_matched	not_checked	False	2507538	Muriicola soli	Muriicola soli	True	PacBio RSII
+GCA_000733925.1	GCF_000733925.1	SAMN02744759	SRR3723321	PRJNA225843	pacbio_unresolved	biosample_matched	not_checked	True	616991	Arenibacter algicola	Arenibacter algicola	True	Illumina HiSeq 2000; PacBio RS
+GCA_000687935.1	GCF_000687935.1	SAMN02743899	SRR3723549	PRJNA217200	pacbio_unresolved	biosample_matched	not_checked	True	1250006	Polaribacter sp. Hel_I_88	Polaribacter sp. Hel_I_88	True	PacBio RS
+GCA_000687935.1	GCF_000687935.1	SAMN02743899	SRR3723550	PRJNA217200	pacbio_unresolved	biosample_matched	not_checked	True	1250006	Polaribacter sp. Hel_I_88	Polaribacter sp. Hel_I_88	True	PacBio RS
+GCA_006716585.1	GCF_006716585.1	SAMN05444419	SRR9002702	PRJNA331397	pacbio_unresolved	biosample_matched	not_checked	True	55197	Flavobacterium branchiophilum	Flavobacterium branchiophilum	True	PacBio
+GCA_000733945.1	GCF_000733945.1	SAMN02743906	SRR3723553	PRJNA217201	pacbio_unresolved	biosample_matched	not_checked	True	1392488	Flavimarina sp. Hel_I_48	Flavimarina sp. Hel_I_48	True	Illumina HiSeq 2000
+GCA_000744275.1	GCF_000744275.1	SAMN02745561	SRR3723559	PRJNA217202	pacbio_unresolved	biosample_matched	not_checked	True	1249975	Gillisia sp. Hel_I_29	Gillisia sp. Hel_I_29	True	PacBio RS
+GCA_000744275.1	GCF_000744275.1	SAMN02745561	SRR3723561	PRJNA217202	pacbio_unresolved	biosample_matched	not_checked	True	1249975	Gillisia sp. Hel_I_29	Gillisia sp. Hel_I_29	True	PacBio RS
+GCA_006716585.1	GCF_006716585.1	SAMN05444419	SRR9002703	PRJNA331397	pacbio_unresolved	biosample_matched	not_checked	True	55197	Flavobacterium branchiophilum	Flavobacterium branchiophilum	True	PacBio
+GCA_000744275.1	GCF_000744275.1	SAMN02745561	SRR3723562	PRJNA217202	pacbio_unresolved	biosample_matched	not_checked	True	1249975	Gillisia sp. Hel_I_29	Gillisia sp. Hel_I_29	True	PacBio RS
+GCA_000687915.1	GCF_000687915.1	SAMN02745562	SRR3820561	PRJNA217203	pacbio_unresolved	biosample_matched	not_checked	True	1392489	Leeuwenhoekiella sp. MAR_2009_132	Leeuwenhoekiella sp. MAR_2009_132	True	Illumina HiSeq 2000
+GCA_000687915.1	GCF_000687915.1	SAMN02745562	SRR3820562	PRJNA217203	pacbio_unresolved	biosample_matched	not_checked	True	1392489	Leeuwenhoekiella sp. MAR_2009_132	Leeuwenhoekiella sp. MAR_2009_132	True	Illumina HiSeq 2000
+GCA_000687915.1	GCF_000687915.1	SAMN02745562	SRR3820564	PRJNA217203	pacbio_unresolved	biosample_matched	not_checked	True	1392489	Leeuwenhoekiella sp. MAR_2009_132	Leeuwenhoekiella sp. MAR_2009_132	True	Illumina HiSeq 2000
+GCA_009730375.1	GCF_009730375.1	SAMN11056452	SRR9176582	PRJNA231221	pacbio_clr_subreads	biosample_matched	not_checked	True	2545799	Capnocytophaga sp. FDAARGOS_737	Capnocytophaga sp. FDAARGOS_737	True	Pacbio; Illumina
+GCA_056428925.1	GCF_056428925.1	SAMN54175880	SRR40021666	PRJNA1390260	pacbio_unresolved	biosample_matched	not_checked	False	3480023	Flavobacterium sp. GNP011	Flavobacterium sp. GNP011	True	Oxford Nanopore PromethION; PacBio
+GCA_054343775.1	GCF_054343775.1	SAMN54175875	SRR40021668	PRJNA1390260	pacbio_unresolved	biosample_matched	not_checked	False	3480035	Flavobacterium sp. GNP001	Flavobacterium sp. GNP001	True	Oxford Nanopore PromethION
+GCA_000733925.1	GCF_000733925.1	SAMN02744759	SRR4061919	PRJNA225843	pacbio_unresolved	biosample_matched	not_checked	True	616991	Arenibacter algicola	Arenibacter algicola	True	Illumina HiSeq 2000; PacBio RS
+GCA_000744105.1	GCF_000744105.1	SAMN02745580	SRR4063154	PRJNA217215	pacbio_unresolved	biosample_matched	not_checked	True	1392498	Maribacter forsetii DSM 18668	Maribacter forsetii DSM 18668	True	Illumina HiSeq 2000; PacBio RS
+GCA_041154745.1	GCF_041154745.1	SAMD00771247	DRR546398	PRJDB18023	pacbio_unresolved	biosample_matched	not_checked	True	3143118	Flavobacterium sp. CFS9	Flavobacterium sp. CFS9	True	PacBio Sequel IIe
+GCA_000744105.1	GCF_000744105.1	SAMN02745580	SRR4063157	PRJNA217215	pacbio_unresolved	biosample_matched	not_checked	True	1392498	Maribacter forsetii DSM 18668	Maribacter forsetii DSM 18668	True	Illumina HiSeq 2000; PacBio RS
+GCA_000744105.1	GCF_000744105.1	SAMN02745580	SRR4063158	PRJNA217215	pacbio_unresolved	biosample_matched	not_checked	True	1392498	Maribacter forsetii DSM 18668	Maribacter forsetii DSM 18668	True	Illumina HiSeq 2000; PacBio RS
+GCA_000744105.1	GCF_000744105.1	SAMN02745580	SRR4063161	PRJNA217215	pacbio_unresolved	biosample_matched	not_checked	True	1392498	Maribacter forsetii DSM 18668	Maribacter forsetii DSM 18668	True	Illumina HiSeq 2000; PacBio RS
+GCA_000744105.1	GCF_000744105.1	SAMN02745580	SRR4063162	PRJNA217215	pacbio_unresolved	biosample_matched	not_checked	True	1392498	Maribacter forsetii DSM 18668	Maribacter forsetii DSM 18668	True	Illumina HiSeq 2000; PacBio RS
+GCA_900105105.1	GCF_900105105.1	SAMN05192545	SRR4130940	PRJNA323166	pacbio_unresolved	biosample_matched	not_checked	True	1250153	Maribacter sp. MAR_2009_60	Maribacter dokdonensis	True	PacBio RS
+GCA_900187255.1	GCF_900187255.1	SAMEA44541418	ERR1857500	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	45243	Capnocytophaga haemolytica	Capnocytophaga haemolytica	True	PacBio
+GCA_000934685.1	GCF_000934685.1	SAMN03351825	SRR4131340	PRJNA251769	pacbio_unresolved	biosample_matched	not_checked	True	1249999	Lacinutrix sp. Hel_I_90	Lacinutrix sp. Hel_I_90	True	PacBio RS
+GCA_000744555.1	GCF_000744555.1	SAMN02799635	SRR4131412	PRJNA248513	pacbio_unresolved	biosample_matched	not_checked	True	248905	Zobellia amurskyensis	Zobellia uliginosa	True	PacBio RS
+GCA_900460905.1	GCF_900460905.1	SAMEA44550418	ERR1883081	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	28188	Capnocytophaga canimorsus	Capnocytophaga canimorsus	True	PacBio
+GCA_000799465.1	GCF_000799465.1	SAMN02841244	SRR4131415	PRJNA251763	pacbio_unresolved	biosample_matched	not_checked	True	1250004	Psychroserpens sp. Hel_I_66	Psychroserpens sp. Hel_I_66	True	PacBio RS
+GCA_007827365.1	GCF_007827365.1	SAMN02982923	SRR4136145	PRJNA257845	pacbio_unresolved	biosample_matched	not_checked	True	1250001	Olleya sp. Hel_I_94	Olleya sp. Hel_I_94	True	PacBio
+GCA_900638435.1	GCF_900638435.1	SAMEA104210801	ERR2237819	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	28188	Capnocytophaga canimorsus	Capnocytophaga canimorsus	True	PacBio
+GCA_007827285.1	GCF_007827285.1	SAMN02982925	SRR4136161	PRJNA257847	pacbio_unresolved	biosample_matched	not_checked	True	1249996	Dokdonia sp. Hel_I_63	Dokdonia sp. Hel_I_63	True	PacBio
+GCA_007827275.1	GCF_007827275.1	SAMN02982995	SRR4136178	PRJNA257846	pacbio_unresolved	biosample_matched	not_checked	True	1249981	Gillisia sp. Hel_I_86	Gillisia sp. Hel_I_86	True	PacBio
+GCA_900105985.1	GCF_900105985.1	SAMN04487765	SRR4136231	PRJNA303199	pacbio_unresolved	biosample_matched	not_checked	True	1250198	Tenacibaculum sp. MAR_2010_89	Tenacibaculum sp. MAR_2010_89	True	PacBio RS
+GCA_900104375.1	GCF_900104375.1	SAMN03097699	SRR4136234	PRJNA263069	pacbio_unresolved	biosample_matched	not_checked	True	1250295	Flavobacteriaceae bacterium MAR_2010_188	Flavobacteriaceae bacterium MAR_2010_188	True	PacBio RS
+GCA_943416075.1	GCF_943416075.1	SAMEA14448971	ERR9784239	PRJEB53056	pacbio_unresolved	biosample_matched	not_checked	False	1191889	Aquimarina sp. Aq78	Aquimarina sp. Aq78	True	PacBio Sequel
+GCA_900104765.1	GCF_900104765.1	SAMN04487764	SRR4136235	PRJNA303200	pacbio_unresolved	biosample_matched	not_checked	True	1336796	Gillisia sp. Hel1_33_143	Gillisia sp. Hel1_33_143	True	PacBio RS
+GCA_943733665.1	GCF_943733665.1	SAMEA14448970	ERR9784241	PRJEB53057	pacbio_unresolved	biosample_matched	not_checked	False	1191912	Aquimarina sp. Aq107	Aquimarina sp. Aq107	True	PacBio Sequel
+GCA_900105425.1	GCF_900105425.1	SAMN04489797	SRR4184866	PRJNA303202	pacbio_unresolved	biosample_matched	not_checked	True	1249933	Winogradskyella sp. RHA_55	Winogradskyella sediminis	True	PacBio RS
+GCA_900105425.1	GCF_900105425.1	SAMN04489797	SRR4184867	PRJNA303202	pacbio_unresolved	biosample_matched	not_checked	True	1249933	Winogradskyella sp. RHA_55	Winogradskyella sediminis	True	PacBio RS
+GCA_002813425.1	GCF_002813425.1	SAMN04515664	SRR4184868	PRJNA311483	pacbio_unresolved	biosample_matched	not_checked	True	1798237	Cellulophaga sp. RHA19	Cellulophaga sp. RHA19	True	PacBio
+GCA_023272795.1	GCF_023272795.1	SAMN27734937	SRR19215469	PRJNA830625	pacbio_unresolved	biosample_matched	not_checked	False	2937442	Flavobacterium humidisoli	Flavobacterium humidisoli	True	PacBio
+GCA_900142975.1	GCF_900142975.1	SAMN05878281	SRR4407711	PRJNA345703	pacbio_unresolved	biosample_matched	not_checked	True	143223	Salegentibacter salegens	Salegentibacter salegens	True	PacBio RS
+GCA_030545015.1	GCF_030545015.1	SAMN33802736	SRR26539783	PRJNA946025	pacbio_unresolved	biosample_matched	not_checked	False	3119977	Myroides sp. JBRI-B21084	Myroides sp. JBRI-B21084	True	Pacbio and Miseq
+GCA_900143115.1	GCF_900143115.1	SAMN05720268	SRR5007111	PRJNA340740	pacbio_unresolved	biosample_matched	not_checked	True	1896175	Polaribacter sp. KT 15	Polaribacter sp. KT 15	True	PacBio RS
+GCA_900143115.1	GCF_900143115.1	SAMN05720268	SRR5007112	PRJNA340740	pacbio_unresolved	biosample_matched	not_checked	True	1896175	Polaribacter sp. KT 15	Polaribacter sp. KT 15	True	PacBio RS
+GCA_009901525.1	GCF_009901525.1	SAMN06214045	SRR5178177	PRJNA360649	pacbio_clr_subreads	biosample_matched	not_checked	True	1218801	Kordia antarctica	Kordia antarctica	True	PacBio
+GCA_002017935.1	GCF_002017935.1	SAMN06263772	SRR5204265	PRJNA363097	pacbio_clr_subreads	biosample_matched	not_checked	True	1938609	Flavobacterium sp. LM4	Flavobacterium sp. LM4	True	PacBio
+GCA_001995115.1	GCF_001995115.1	SAMN06277069	SRR5210296	PRJNA369093	pacbio_unresolved	biosample_matched	not_checked	True	996	Flavobacterium columnare	Flavobacterium columnare	True	Illumina HiSeq; PacBio
+GCA_002302515.1	GCF_002302515.1	SAMN06289154	SRR5362218	PRJNA369395	pacbio_clr_subreads	biosample_matched	not_checked	True	1945658	Capnocytophaga sp. H4358	Capnocytophaga sp. H4358	True	PacBio; Illumina MiSeq
+GCA_000963865.1	GCF_000963865.1	SAMN03382536	SRR1822665	PRJNA276921	pacbio_clr_subreads	biosample_matched	not_checked	True	516051	Flagellimonas lutaonensis	Flagellimonas lutaonensis	True	PacBio RS II with P5-C3 chemistry
+GCA_002312885.1	GCF_002312885.1	SAMN06289151	SRR5362221	PRJNA369395	pacbio_clr_subreads	biosample_matched	not_checked	True	1019	Capnocytophaga sputigena	Capnocytophaga sputigena	True	PacBio; Illumina MiSeq
+GCA_002302615.1	GCF_002302615.1	SAMN06289149	SRR5362223	PRJNA369395	pacbio_clr_subreads	biosample_matched	not_checked	True	327575	Capnocytophaga leadbetteri	Capnocytophaga leadbetteri	True	PacBio; Illumina MiSeq
+GCA_002302445.1	GCF_002302445.1	SAMN06289145	SRR5362227	PRJNA369395	pacbio_clr_subreads	biosample_matched	not_checked	True	28188	Capnocytophaga canimorsus	Capnocytophaga canimorsus	True	PacBio; Illumina MiSeq
+GCA_002302655.1	GCF_002302655.1	SAMN06289144	SRR5362228	PRJNA369395	pacbio_clr_subreads	biosample_matched	not_checked	True	28188	Capnocytophaga canimorsus	Capnocytophaga canimorsus	True	PacBio; Illumina MiSeq
+GCA_002813285.1	GCF_002813285.1	SAMN06297457	SRR5460432	PRJNA370768	pacbio_unresolved	biosample_matched	not_checked	True	1250285	Flavobacteriaceae bacterium MAR_2009_75	Flavobacteriaceae bacterium MAR_2009_75	True	PacBio
+GCA_002302495.1	GCF_002302495.1	SAMN06754875	SRR5482516	PRJNA369395	pacbio_clr_subreads	biosample_matched	not_checked	True	1019	Capnocytophaga sputigena	Capnocytophaga sputigena	True	PacBio; Illumina MiSeq
+GCA_044986275.1	GCF_044986275.1	SAMN44581610	SRR31278854	PRJNA1182120	ont	biosample_matched	not_checked	True	28188	Capnocytophaga canimorsus	Capnocytophaga canimorsus	True	Illumina NovaSeq; Oxford Nanopore PromethION
+GCA_051201695.1	GCF_051201695.1	SAMN45697176	SRR31779821	PRJNA1173757	ont	biosample_matched	not_checked	True	3395320	Tenacibaculum sp. nBUS_03	Tenacibaculum sp. nBUS_03	True	Oxford Nanopore MinION
+GCA_046736315.1	GCF_046736315.1	SAMN40603961	SRR34542558	PRJNA996876	ont	biosample_matched	not_checked	True	3135773	Algibacter sp. AS12	Algibacter sp. AS12	True	Oxford Nanopore PromethION
+GCA_019774575.1	GCF_019774575.1	SAMN20804763	SRR15495684	PRJNA591399	ont	biosample_matched	not_checked	False	96345	Flavobacterium psychrophilum	Flavobacterium psychrophilum	True	Oxford Nanopore PromethION
+GCA_030540735.1	GCF_030540735.1	SAMN36465258	SRR25293806	PRJNA995064	ont	biosample_matched	not_checked	True	76832	Myroides odoratimimus	Myroides odoratimimus	True	Illumina HiSeq
+GCA_044594925.1	GCF_044594925.1	SAMN38151484	SRR26752383	PRJNA1036818	ont	biosample_matched	not_checked	True	3093871	Maribacter sp. R77961	Maribacter sp. R77961	True	Oxford Nanopore MinION
+GCA_044595635.1	GCF_044595635.1	SAMN38151478	SRR26752390	PRJNA1036818	ont	biosample_matched	not_checked	True	906888	Nonlabens ulvanivorans	Nonlabens ulvanivorans	True	Oxford Nanopore MinION
+GCA_040822115.1	GCF_040822115.1	SAMN42395752	SRR29831492	PRJNA1134181	ont	biosample_matched	not_checked	True	3234138	Flavobacterium sp. WC2421	Flavobacterium sp. WC2421	True	Illumina NextSeq Oxford Nanopore MinION
+GCA_029894455.1	GCF_029894455.1	SAMN28058344	SRR35247467	PRJNA834324	pacbio_hifi_ccs	biosample_matched	not_checked	True	256	Myroides odoratus	Myroides gitamensis	True	PacBio
+GCA_052683105.1	GCF_052683105.1	SAMN51214225	SRR35310654	PRJNA1321493	ont	biosample_matched	not_checked	True	3461406	Flavobacterium sp. WC2509	Flavobacterium sp. WC2509	True	Oxford Nanopore MinION
+GCA_056160185.1	GCF_056160185.1	SAMN51861943	SRR35850957	PRJNA1334387	ont	biosample_matched	not_checked	True	3477744	Flagellimonas sp. ABD4_174	Flagellimonas sp. ABD4_174	True	Illumina NovaSeq; Oxford Nanopore
+GCA_000708595.3	GCF_000708595.3	SAMN02595199	SRR38100014	PRJNA236204	ont	biosample_matched	not_checked	True	1270193	Flavobacterium sp. KJJ	Flavobacterium sp. KJJ	True	Oxford Nanopore MinION
+GCA_056428965.1	GCF_056428965.1	SAMN54175877	SRR40021657	PRJNA1390260	ont	biosample_matched	not_checked	True	3480020	Flavobacterium sp. GNP008	Flavobacterium sp. GNP008	True	Oxford Nanopore PromethION; PacBio
+GCA_019702945.1	GCF_019702945.1	SAMD00318916	DRR300286	PRJDB11590	ont	biosample_matched	not_checked	True	2830782	Flavobacterium okayamense	Flavobacterium okayamense	True	Miseq; GridION
+GCA_027924665.1	GCF_027924665.1	SAMD00557613	DRR420786	PRJDB14765	ont	biosample_matched	not_checked	True	2994319	Flavobacterium sp. GSB-24	Flavobacterium sp. GSB-24	True	Nanopore GridION X5; Illumina MiSeq
+GCA_059716275.2	GCF_059716275.2	SAMN55977173	SRR37857605	PRJNA1428932	ont	biosample_matched	not_checked	True	3691883	Tenacibaculum sp. TB-56	Tenacibaculum sp. TB-56	True	Oxford Nanopore MinION
+GCA_059716295.2	GCF_059716295.2	SAMN55977172	SRR37857606	PRJNA1428932	ont	biosample_matched	not_checked	True	104268	Tenacibaculum mesophilum	Tenacibaculum mesophilum	True	Oxford Nanopore MinION
+GCA_059716285.2	GCF_059716285.2	SAMN55977171	SRR37857607	PRJNA1428932	ont	biosample_matched	not_checked	True	3691882	Tenacibaculum sp. TB-53	Tenacibaculum sp. TB-53	True	Oxford Nanopore MinION
+GCA_055379785.1	GCF_055379785.1	SAMD00729802	DRR524533	PRJDB17298	ont	biosample_matched	not_checked	False	104268	Tenacibaculum mesophilum	Tenacibaculum mesophilum	True	Illumina MiSeq; Nanopore GridION
+GCA_052295475.1		SAMD01614999	DRR725172	PRJDB35970	ont	biosample_matched	not_checked	True	96345	Flavobacterium psychrophilum	Flavobacterium psychrophilum	True	ILLUMINA
+GCA_055386575.1	GCF_055386575.1	SAMD01614999	DRR725172	PRJDB35970	ont	biosample_matched	not_checked	True	96345	Flavobacterium psychrophilum	Flavobacterium psychrophilum	True	Illumia Miseq; Oxford Nanopore MinION
+GCA_030505355.1	GCF_030505355.1	SAMN36315996	SRR25177531	PRJNA991734	ont	biosample_matched	not_checked	True	29533	Flavobacterium pectinovorum	Flavobacterium pectinovorum	True	Oxford Nanopore MinION
+GCA_044594215.1	GCF_044594215.1	SAMN38151488	SRR26752379	PRJNA1036818	ont	biosample_matched	not_checked	True	3093875	Olleya sp. R77988	Olleya sp. R77988	True	Oxford Nanopore MinION
+GCA_044594645.1	GCF_044594645.1	SAMN38151486	SRR26752381	PRJNA1036818	ont	biosample_matched	not_checked	True	3093873	Algibacter sp. R77976	Algibacter sp. R77976	True	Oxford Nanopore MinION
+GCA_044597005.1	GCF_044597005.1	SAMN38151463	SRR26752406	PRJNA1036818	ont	biosample_matched	not_checked	True	3093854	Maribacter sp. R86514	Maribacter sp. R86514	True	Oxford Nanopore MinION
+GCA_034424295.1	GCF_034424295.1	SAMN38562709	SRR27033672	PRJNA1047486	ont	biosample_matched	not_checked	True	256	Myroides odoratus	Myroides odoratus	True	Oxford Nanopore MinION
+GCA_040112705.1	GCF_040112705.1	SAMN41395297	SRR29024535	PRJNA716944	ont	biosample_matched	not_checked	True	3158549	Flagellimonas sp. MMG031	Flagellimonas sp. MMG031	True	Oxford Nanopore
+GCA_047730165.1	GCF_047730165.1	SAMN42157091	SRR29769140	PRJNA1129510	ont	biosample_matched	not_checked	True	3230969	Patiriisocius sp. Uisw_047	Patiriisocius sp. Uisw_047	True	Oxford Nanopore Technologies r10.4.1
+GCA_034372165.1	GCF_034372165.1	SAMN38477428	SRR30984376	PRJNA1046213	ont	biosample_matched	not_checked	True	3100176	Christiangramia sp. OXR-203	Christiangramia sp. OXR-203	True	Oxford Nanopore MinION
+GCA_057834355.1	GCF_057834355.1	SAMN51819167	SRR35628966	PRJNA1333901	ont	biosample_matched	not_checked	True	3465240	Flavobacterium sp. GL_143	Flavobacterium sp. GL_143	True	Oxford Nanopore
+GCA_020886055.1	GCF_020886055.1	SAMD00409484	DRR321577	PRJDB12412	pacbio_unresolved	biosample_matched	not_checked	True	1751095	Flavobacterium ammoniigenes	Flavobacterium ammoniigenes	True	Illumina MiSeq; Sequel II
+GCA_001543325.1	GCF_001543325.1	SAMN04299808	SRR3085362	PRJNA304382	pacbio_clr_subreads	biosample_matched	not_checked	True	1622118	Lutibacter profundi	Lutibacter profundi	True	PacBio
+GCA_055391795.1	GCF_055391795.1	SAMD00738033	DRR530218	PRJDB17504	pacbio_unresolved	biosample_matched	not_checked	True	3119018	Leeuwenhoekiella obamensis	Leeuwenhoekiella obamensis	True	PacBio Sequel IIe
+GCA_045866215.1		SAMD00799118	DRR581625	PRJDB18432	pacbio_unresolved	biosample_matched	not_checked	True	2670377	Flavobacteriaceae bacterium GF1	Flavobacteriaceae bacterium GF1	True	PacBio Sequel IIe
+GCA_055387725.1	GCF_055387725.1	SAMD01611122	DRR723595	PRJDB20694	pacbio_unresolved	biosample_matched	not_checked	True	488549	Lutaonella thermophila	Lutaonella thermophila	True	PacBio Revio
+GCA_900446695.1	GCF_900446695.1	SAMEA4063027	ERR1716483	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	1019	Capnocytophaga sputigena	Capnocytophaga sputigena	True	PacBio
+GCA_900453765.1	GCF_900453765.1	SAMEA4063030	ERR1716486	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	76832	Myroides odoratimimus	Myroides odoratimimus	True	PacBio
+GCA_900638125.1	GCF_900638125.1	SAMEA104200653	ERR2177085	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	1019	Capnocytophaga sputigena	Capnocytophaga sputigena	True	PacBio
+GCA_900638125.1	GCF_900638125.1	SAMEA104200653	ERR2177096	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	1019	Capnocytophaga sputigena	Capnocytophaga sputigena	True	PacBio
+GCA_900453725.1	GCF_900453725.1	SAMEA104210761	ERR2237828	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	256	Myroides odoratus	Myroides odoratus	True	PacBio
+GCA_921010045.1	GCF_921010045.1	SAMEA11025535	ERR7385029	PRJEB48861	pacbio_unresolved	biosample_matched	not_checked	True	1191734	Aquimarina aquimarini	Aquimarina aquimarini	True	PacBio Sequel
+GCA_918731615.1	GCF_918731615.1	SAMEA10029471	ERR7451481	PRJEB45577	pacbio_unresolved	biosample_matched	not_checked	True	2845819	Flavobacterium sp. CECT 9288	Flavobacterium sp. CECT 9288	True	PacBio_SMRT
+GCA_019930725.1	GCF_019930725.1	SAMN20888885	SRR16259731	PRJNA231221	pacbio_unresolved	biosample_matched	not_checked	True	1018	Capnocytophaga ochracea	Capnocytophaga ochracea	True	Pacbio; Illumina
+GCA_000687915.1	GCF_000687915.1	SAMN02745562	SRR3820563	PRJNA217203	pacbio_unresolved	biosample_matched	not_checked	True	1392489	Leeuwenhoekiella sp. MAR_2009_132	Leeuwenhoekiella sp. MAR_2009_132	True	Illumina HiSeq 2000
+GCA_001880285.1	GCF_001880285.1	SAMN04486749	SRR3823460	PRJNA311623	pacbio_clr_subreads	biosample_matched	not_checked	True	1150389	Flavobacteriaceae bacterium UJ101	Flavobacteriaceae bacterium UJ101	True	PacbioRS2
+GCA_900105545.1	GCF_900105545.1	SAMN05192540	SRR4131116	PRJNA323165	pacbio_unresolved	biosample_matched	not_checked	True	320912	Maribacter dokdonensis	Maribacter dokdonensis	True	PacBio RS
+GCA_000745185.1	GCF_000745185.1	SAMN02799619	SRR4131407	PRJNA248521	pacbio_unresolved	biosample_matched	not_checked	True	1250232	Allomuricauda sp. MAR_2010_75	Allomuricauda sp. MAR_2010_75	True	PacBio RS
+GCA_000745185.1	GCF_000745185.1	SAMN02799619	SRR4131409	PRJNA248521	pacbio_unresolved	biosample_matched	not_checked	True	1250232	Allomuricauda sp. MAR_2010_75	Allomuricauda sp. MAR_2010_75	True	PacBio RS
+GCA_000744555.1	GCF_000744555.1	SAMN02799635	SRR4131411	PRJNA248513	pacbio_unresolved	biosample_matched	not_checked	True	248905	Zobellia amurskyensis	Zobellia uliginosa	True	PacBio RS
+GCA_006789585.1	GCF_006789585.1	SAMN02841241	SRR4131425	PRJNA251764	pacbio_unresolved	biosample_matched	not_checked	True	616991	Arenibacter algicola	Arenibacter algicola	True	PacBio
+GCA_007827365.1	GCF_007827365.1	SAMN02982923	SRR4136146	PRJNA257845	pacbio_unresolved	biosample_matched	not_checked	True	1250001	Olleya sp. Hel_I_94	Olleya sp. Hel_I_94	True	PacBio
+GCA_006714895.1	GCF_006714895.1	SAMN02982988	SRR4136157	PRJNA257842	pacbio_unresolved	biosample_matched	not_checked	True	1249978	Gramella sp. Hel_I_59	Gramella sp. Hel_I_59	True	PacBio
+GCA_006714895.1	GCF_006714895.1	SAMN02982988	SRR4136158	PRJNA257842	pacbio_unresolved	biosample_matched	not_checked	True	1249978	Gramella sp. Hel_I_59	Gramella sp. Hel_I_59	True	PacBio
+GCA_007827235.1	GCF_007827235.1	SAMN02982926	SRR4136167	PRJNA257844	pacbio_unresolved	biosample_matched	not_checked	True	1250050	Maribacter sp. MAR_2009_72	Maribacter sp. MAR_2009_72	True	PacBio
+GCA_007827275.1	GCF_007827275.1	SAMN02982995	SRR4136177	PRJNA257846	pacbio_unresolved	biosample_matched	not_checked	True	1249981	Gillisia sp. Hel_I_86	Gillisia sp. Hel_I_86	True	PacBio
+GCA_007827465.1	GCF_007827465.1	SAMN03159389	SRR4136226	PRJNA265336	pacbio_unresolved	biosample_matched	not_checked	True	1566287	Dokdonia sp. Hel_I_53	Dokdonia sp. Hel_I_53	True	PacBio
+GCA_900105985.1	GCF_900105985.1	SAMN04487765	SRR4136232	PRJNA303199	pacbio_unresolved	biosample_matched	not_checked	True	1250198	Tenacibaculum sp. MAR_2010_89	Tenacibaculum sp. MAR_2010_89	True	PacBio RS
+GCA_900104765.1	GCF_900104765.1	SAMN04487764	SRR4136236	PRJNA303200	pacbio_unresolved	biosample_matched	not_checked	True	1336796	Gillisia sp. Hel1_33_143	Gillisia sp. Hel1_33_143	True	PacBio RS
+GCA_007827445.1	GCF_007827445.1	SAMN03097713	SRR4136240	PRJNA263060	pacbio_unresolved	biosample_matched	not_checked	True	1250286	Flavobacteriaceae bacterium MAR_2010_105	Flavobacteriaceae bacterium MAR_2010_105	True	PacBio
+GCA_900101765.1	GCF_900101765.1	SAMN05192588	SRR4136250	PRJNA323167	pacbio_unresolved	biosample_matched	not_checked	True	1336802	Nonlabens sp. Hel1_33_55	Nonlabens sp. Hel1_33_55	True	PacBio RS
+GCA_900101765.1	GCF_900101765.1	SAMN05192588	SRR4136251	PRJNA323167	pacbio_unresolved	biosample_matched	not_checked	True	1336802	Nonlabens sp. Hel1_33_55	Nonlabens sp. Hel1_33_55	True	PacBio RS
+GCA_002846555.1	GCF_002846555.1	SAMN04489736	SRR4184793	PRJNA303195	pacbio_unresolved	biosample_matched	not_checked	True	1250026	Aquimarina sp. MAR_2010_214	Aquimarina sp. MAR_2010_214	True	PacBio
+GCA_900105455.1	GCF_900105455.1	SAMN04489761	SRR4184802	PRJNA303204	pacbio_unresolved	biosample_matched	not_checked	True	1250059	Tenacibaculum sp. MAR_2009_124	Tenacibaculum sp. MAR_2009_124	True	PacBio RS
+GCA_002813135.1	GCF_002813135.1	SAMN04489795	SRR4184823	PRJNA303203	pacbio_unresolved	biosample_matched	not_checked	True	1250229	Ulvibacter sp. MAR_2010_11	Ulvibacter sp. MAR_2010_11	True	PacBio
+GCA_900105135.1	GCF_900105135.1	SAMN04488553	SRR4184859	PRJNA303205	pacbio_unresolved	biosample_matched	not_checked	True	1250205	Gramella sp. MAR_2010_147	Gramella sp. MAR_2010_147	True	PacBio RS
+GCA_900105135.1	GCF_900105135.1	SAMN04488553	SRR4184860	PRJNA303205	pacbio_unresolved	biosample_matched	not_checked	True	1250205	Gramella sp. MAR_2010_147	Gramella sp. MAR_2010_147	True	PacBio RS
+GCA_900104785.1	GCF_900104785.1	SAMN04515667	SRR4184870	PRJNA311478	pacbio_unresolved	biosample_matched	not_checked	True	1798225	Formosa sp. Hel1_31_208	Formosa sp. Hel1_31_208	True	PacBio RS
+GCA_900105145.1	GCF_900105145.1	SAMN05216503	SRR4235983	PRJNA322881	pacbio_unresolved	biosample_matched	not_checked	True	1855336	Polaribacter sp. KT25b	Polaribacter sp. KT25b	True	PacBio RS
+GCA_900143115.1	GCF_900143115.1	SAMN05720268	SRR4244064	PRJNA340740	pacbio_unresolved	biosample_matched	not_checked	True	1896175	Polaribacter sp. KT 15	Polaribacter sp. KT 15	True	PacBio RS
+GCA_002302635.1	GCF_002302635.1	SAMN06289146	SRR5362226	PRJNA369395	pacbio_clr_subreads	biosample_matched	not_checked	True	1848904	Capnocytophaga stomatis	Capnocytophaga stomatis	True	PacBio; Illumina MiSeq
+GCA_002754275.1	GCF_002754275.1	SAMN07621436	SRR6824032	PRJNA402421	pacbio_unresolved	biosample_matched	not_checked	True	308053	Flavobacterium sp. 2	Flavobacterium sp. 2	True	PacBio
+GCA_002754315.1	GCF_002754315.1	SAMN07621435	SRR6824073	PRJNA402422	pacbio_unresolved	biosample_matched	not_checked	True	357523	Flavobacterium sp. 11	Flavobacterium sp. 11	True	PacBio
+GCA_002754315.1	GCF_002754315.1	SAMN07621435	SRR6824074	PRJNA402422	pacbio_unresolved	biosample_matched	not_checked	True	357523	Flavobacterium sp. 11	Flavobacterium sp. 11	True	PacBio
+GCA_002754315.1	GCF_002754315.1	SAMN07621435	SRR6824075	PRJNA402422	pacbio_unresolved	biosample_matched	not_checked	True	357523	Flavobacterium sp. 11	Flavobacterium sp. 11	True	PacBio
+GCA_004339525.1	GCF_004339525.1	SAMN08777883	SRR6976410	PRJNA442003	pacbio_unresolved	biosample_matched	not_checked	True	2135622	Flavobacterium sp. 90	Flavobacterium sp. 90	True	PacBio
+GCA_003633785.1	GCF_003633785.1	SAMN08777882	SRR6976416	PRJNA442002	pacbio_unresolved	biosample_matched	not_checked	True	2135621	Flavobacterium sp. 81	Flavobacterium sp. 81	True	PacBio
+GCA_003634615.1	GCF_003634615.1	SAMN08776973	SRR6976446	PRJNA442004	pacbio_unresolved	biosample_matched	not_checked	True	2135623	Flavobacterium sp. 102	Flavobacterium sp. 102	True	PacBio
+GCA_004010225.2	GCF_004010225.2	SAMN10531269	SRR8380174	PRJNA508812	pacbio_clr_subreads	biosample_matched	not_checked	True	996	Flavobacterium columnare	Flavobacterium columnare	True	PacBio RSII
+GCA_004684835.2	GCF_004684835.2	SAMN11292555	SRR8820610	PRJNA530066	pacbio_clr_subreads	biosample_matched	not_checked	True	996	Flavobacterium columnare	Flavobacterium columnare	True	PacBio RSII
+GCA_002900095.1	GCF_002900095.1	SAMN04145778	SRR2993974	PRJNA297772	pacbio_clr_subreads	biosample_matched	not_checked	True	270918	Salegentibacter mishustinae	Salegentibacter mishustinae	True	Illumina MiSeq; PacBio
+GCA_047126865.1	GCF_047126865.1	SAMN37883918	SRR32655908	PRJNA912210	pacbio_hifi_ccs	biosample_matched	not_checked	True	3098297	Winogradskyella sp. MIT101101	Winogradskyella sp. MIT101101	True	PacBio RSII
+GCA_000733945.1	GCF_000733945.1	SAMN02743906	SRR3723551	PRJNA217201	pacbio_unresolved	biosample_matched	not_checked	True	1392488	Flavimarina sp. Hel_I_48	Flavimarina sp. Hel_I_48	True	Illumina HiSeq 2000
+GCA_000688315.1	GCF_000688315.1	SAMN02743898	SRR3723558	PRJNA217216	pacbio_unresolved	biosample_matched	not_checked	True	1249997	Maribacter sp. Hel_I_7	Maribacter sp. Hel_I_7	True	PacBio RS
+GCA_000744275.1	GCF_000744275.1	SAMN02745561	SRR3723560	PRJNA217202	pacbio_unresolved	biosample_matched	not_checked	True	1249975	Gillisia sp. Hel_I_29	Gillisia sp. Hel_I_29	True	PacBio RS
+GCA_000744105.1	GCF_000744105.1	SAMN02745580	SRR4063156	PRJNA217215	pacbio_unresolved	biosample_matched	not_checked	True	1392498	Maribacter forsetii DSM 18668	Maribacter forsetii DSM 18668	True	Illumina HiSeq 2000; PacBio RS
+GCA_000744105.1	GCF_000744105.1	SAMN02745580	SRR4063159	PRJNA217215	pacbio_unresolved	biosample_matched	not_checked	True	1392498	Maribacter forsetii DSM 18668	Maribacter forsetii DSM 18668	True	Illumina HiSeq 2000; PacBio RS
+GCA_052296075.1		SAMD01615000	DRR725171	PRJDB35970	ont	biosample_matched	not_checked	True	96345	Flavobacterium psychrophilum	Flavobacterium psychrophilum	True	ILLUMINA
+GCA_055386105.1	GCF_055386105.1	SAMD01615000	DRR725171	PRJDB35970	ont	biosample_matched	not_checked	True	96345	Flavobacterium psychrophilum	Flavobacterium psychrophilum	True	Illumia Miseq; Oxford Nanopore MinION
+GCA_052284055.1		SAMD01614998	DRR725173	PRJDB35970	ont	biosample_matched	not_checked	True	96345	Flavobacterium psychrophilum	Flavobacterium psychrophilum	True	ILLUMINA
+GCA_055386915.1	GCF_055386915.1	SAMD01614998	DRR725173	PRJDB35970	ont	biosample_matched	not_checked	True	96345	Flavobacterium psychrophilum	Flavobacterium psychrophilum	True	Illumia Miseq; Oxford Nanopore MinION
+GCA_030419145.1		SAMN16076811	SRR12608700	PRJNA662106	ont	biosample_matched	not_checked	False	979	Cellulophaga lytica	Cellulophaga lytica	True	Illumina NextSeq; Oxford Nanopore MinION
+GCA_019774515.1	GCF_019774515.1	SAMN20804764	SRR15495683	PRJNA591399	ont	biosample_matched	not_checked	False	2871165	Flavobacterium sp. CHNK8	Flavobacterium sp. CHNK8	True	Oxford Nanopore PromethION
+GCA_044594915.1	GCF_044594915.1	SAMN38151485	SRR26752382	PRJNA1036818	ont	biosample_matched	not_checked	True	3093872	Winogradskyella sp. R77965	Winogradskyella sp. R77965	True	Oxford Nanopore MinION
+GCA_044595335.1	GCF_044595335.1	SAMN38151483	SRR26752384	PRJNA1036818	ont	biosample_matched	not_checked	True	3093870	Polaribacter sp. R77954	Polaribacter sp. R77954	True	Oxford Nanopore MinION
+GCA_042466145.1	GCF_042466145.1	SAMN38151476	SRR26752392	PRJNA1036818	ont	biosample_matched	not_checked	True	3093866	Dokdonia sp. R78006	Dokdonia sp. R78006	True	Oxford Nanopore MinION
+GCA_044597075.1	GCF_044597075.1	SAMN38151462	SRR26752407	PRJNA1036818	ont	biosample_matched	not_checked	True	248907	Zobellia russellii	Zobellia russellii	True	Oxford Nanopore MinION
+GCA_056312135.1	GCF_056312135.1	SAMN51861948	SRR35851010	PRJNA1334387	ont	biosample_matched	not_checked	True	3477740	Seonamhaeicola sp. ABD4_340	Seonamhaeicola sp. ABD4_340	True	Illumina NovaSeq; Oxford Nanopore
+GCA_003795085.1	GCF_003795085.1	SAMN10160287	SRR7957428	PRJNA494285	ont	biosample_matched	not_checked	True	28188	Capnocytophaga canimorsus	Capnocytophaga canimorsus	True	Oxford Nanopore MiniION; Illumina NextSeq
+GCA_030505335.1	GCF_030505335.1	SAMN36315993	SRR25177534	PRJNA991734	ont	biosample_matched	not_checked	True	3059026	Flavobacterium sp. ZE23DGlu08	Flavobacterium sp. ZE23DGlu08	True	Oxford Nanopore MinION
+GCA_041200085.1	GCF_041200085.1	SAMN42395753	SRR29831498	PRJNA1134181	ont	biosample_matched	not_checked	True	3234139	Flavobacterium sp. WC2409	Flavobacterium sp. WC2409	True	Illumina NextSeq Oxford Nanopore MinION
+GCA_030553095.1	GCF_030553095.1	SAMN36637767	SRR34542552	PRJNA996876	ont	biosample_matched	not_checked	True	248906	Zobellia laminariae	Zobellia laminariae	True	Illumina NextSeq
+GCA_060484115.1	GCF_060484115.1	SAMN56368959	SRR37523570	PRJNA1433495	ont	biosample_matched	not_checked	True	3693082	Flavobacterium sp. GW456-11-11-14-LB4	Flavobacterium sp. GW456-11-11-14-LB4	True	Illumina; Oxford Nanopore
+GCA_059417915.1		SAMN56374412	SRR37567345	PRJNA1433590	ont	biosample_matched	not_checked	True	3693644	Flavobacteriaceae bacterium PS_25	Flavobacteriaceae bacterium PS_25	True	Oxford Nanopore MinION
+GCA_059716445.2	GCF_059716445.2	SAMN55977169	SRR37857609	PRJNA1428932	ont	biosample_matched	not_checked	True	104268	Tenacibaculum mesophilum	Tenacibaculum mesophilum	True	Oxford Nanopore MinION
+GCA_059882335.1	GCF_059882335.1	SAMN61668687	SRR39663554	PRJNA1496232	ont	biosample_matched	not_checked	True	3743345	Flavobacterium sp. OHVDL-2026-0007	Flavobacterium sp. OHVDL-2026-0007	True	Oxford Nanopore MinION
+GCA_054343795.1	GCF_054343795.1	SAMN54175876	SRR40021659	PRJNA1390260	ont	biosample_matched	not_checked	True	3480019	Flavobacterium sp. GNP002	Flavobacterium sp. GNP002	True	Oxford Nanopore PromethION
+GCA_056428925.1	GCF_056428925.1	SAMN54175880	SRR40021667	PRJNA1390260	ont	biosample_matched	not_checked	True	3480023	Flavobacterium sp. GNP011	Flavobacterium sp. GNP011	True	Oxford Nanopore PromethION; PacBio
+GCA_027915275.1	GCF_027915275.1	SAMN32539310	SRR23086700	PRJNA917471	pacbio_unresolved	biosample_matched	not_checked	True	1888890	Cellulophaga omnivescoria	Cellulophaga omnivescoria	True	PacBio Sequel
+GCA_001481655.1	GCF_001481655.1	SAMN04270979	SRR3056854	PRJNA302352	pacbio_hifi_ccs	biosample_matched	not_checked	False	76832	Myroides odoratimimus	Myroides odoratimimus	True	PacBio
+GCA_054343795.1	GCF_054343795.1	SAMN54175876	SRR40021658	PRJNA1390260	pacbio_unresolved	biosample_matched	not_checked	False	3480019	Flavobacterium sp. GNP002	Flavobacterium sp. GNP002	True	Oxford Nanopore PromethION
+GCA_000733925.1	GCF_000733925.1	SAMN02744759	SRR4061918	PRJNA225843	pacbio_unresolved	biosample_matched	not_checked	True	616991	Arenibacter algicola	Arenibacter algicola	True	Illumina HiSeq 2000; PacBio RS
+GCA_000744105.1	GCF_000744105.1	SAMN02745580	SRR4063160	PRJNA217215	pacbio_unresolved	biosample_matched	not_checked	True	1392498	Maribacter forsetii DSM 18668	Maribacter forsetii DSM 18668	True	Illumina HiSeq 2000; PacBio RS
+GCA_000799565.1	GCF_000799565.1	SAMN02841239	SRR4131322	PRJNA251768	pacbio_unresolved	biosample_matched	not_checked	True	1249972	Cellulophaga sp. Hel_I_12	Cellulophaga sp. Hel_I_12	True	PacBio RS
+GCA_000799565.1	GCF_000799565.1	SAMN02841239	SRR4131338	PRJNA251768	pacbio_unresolved	biosample_matched	not_checked	True	1249972	Cellulophaga sp. Hel_I_12	Cellulophaga sp. Hel_I_12	True	PacBio RS
+GCA_000799465.1	GCF_000799465.1	SAMN02841244	SRR4131417	PRJNA251763	pacbio_unresolved	biosample_matched	not_checked	True	1250004	Psychroserpens sp. Hel_I_66	Psychroserpens sp. Hel_I_66	True	PacBio RS
+GCA_002846595.1	GCF_002846595.1	SAMN04487763	SRR4131419	PRJNA303201	pacbio_unresolved	biosample_matched	not_checked	True	1336805	Polaribacter sp. Hel1_33_96	Polaribacter sp. Hel1_33_96	True	PacBio
+GCA_900106075.1	GCF_900106075.1	SAMN04487762	SRR4131422	PRJNA303193	pacbio_unresolved	biosample_matched	not_checked	True	1336804	Polaribacter sp. Hel1_33_78	Polaribacter sp. Hel1_33_78	True	PacBio RS
+GCA_006714895.1	GCF_006714895.1	SAMN02982988	SRR4136155	PRJNA257842	pacbio_unresolved	biosample_matched	not_checked	True	1249978	Gramella sp. Hel_I_59	Gramella sp. Hel_I_59	True	PacBio
+GCA_007827285.1	GCF_007827285.1	SAMN02982925	SRR4136159	PRJNA257847	pacbio_unresolved	biosample_matched	not_checked	True	1249996	Dokdonia sp. Hel_I_63	Dokdonia sp. Hel_I_63	True	PacBio
+GCA_007827285.1	GCF_007827285.1	SAMN02982925	SRR4136160	PRJNA257847	pacbio_unresolved	biosample_matched	not_checked	True	1249996	Dokdonia sp. Hel_I_63	Dokdonia sp. Hel_I_63	True	PacBio
+GCA_007827205.1	GCF_007827205.1	SAMN02982924	SRR4136165	PRJNA257843	pacbio_unresolved	biosample_matched	not_checked	True	1250036	Cellulophaga sp. RHA_52	Cellulophaga sp. RHA_52	True	PacBio
+GCA_007827275.1	GCF_007827275.1	SAMN02982995	SRR4136179	PRJNA257846	pacbio_unresolved	biosample_matched	not_checked	True	1249981	Gillisia sp. Hel_I_86	Gillisia sp. Hel_I_86	True	PacBio
+GCA_007827455.1	GCF_007827455.1	SAMN03159350	SRR4136227	PRJNA265337	pacbio_unresolved	biosample_matched	not_checked	True	1566289	Lutibacter sp. Hel_I_33_5	Lutibacter sp. Hel_I_33_5	True	PacBio
+GCA_007827455.1	GCF_007827455.1	SAMN03159350	SRR4136229	PRJNA265337	pacbio_unresolved	biosample_matched	not_checked	True	1566289	Lutibacter sp. Hel_I_33_5	Lutibacter sp. Hel_I_33_5	True	PacBio
+GCA_007827455.1	GCF_007827455.1	SAMN03159350	SRR4136230	PRJNA265337	pacbio_unresolved	biosample_matched	not_checked	True	1566289	Lutibacter sp. Hel_I_33_5	Lutibacter sp. Hel_I_33_5	True	PacBio
+GCA_900105035.1	GCF_900105035.1	SAMN04488552	SRR4184822	PRJNA303206	pacbio_unresolved	biosample_matched	not_checked	True	1250231	Gramella sp. MAR_2010_102	Christiangramia echinicola	False	PacBio RS
+GCA_900105145.1	GCF_900105145.1	SAMN05216503	SRR4235982	PRJNA322881	pacbio_unresolved	biosample_matched	not_checked	True	1855336	Polaribacter sp. KT25b	Polaribacter sp. KT25b	True	PacBio RS
+GCA_900105145.1	GCF_900105145.1	SAMN05216503	SRR4235984	PRJNA322881	pacbio_unresolved	biosample_matched	not_checked	True	1855336	Polaribacter sp. KT25b	Polaribacter sp. KT25b	True	PacBio RS
+GCA_002302415.1	GCF_002302415.1	SAMN06289147	SRR5362225	PRJNA369395	pacbio_clr_subreads	biosample_matched	not_checked	True	1017	Capnocytophaga gingivalis	Capnocytophaga gingivalis	True	PacBio; Illumina MiSeq
+GCA_002302415.1	GCF_002302415.1	SAMN06289147	SRR5482514	PRJNA369395	pacbio_clr_subreads	biosample_matched	not_checked	True	1017	Capnocytophaga gingivalis	Capnocytophaga gingivalis	True	PacBio; Illumina MiSeq
+GCA_002754315.1	GCF_002754315.1	SAMN07621435	SRR6824072	PRJNA402422	pacbio_unresolved	biosample_matched	not_checked	True	357523	Flavobacterium sp. 11	Flavobacterium sp. 11	True	PacBio
+GCA_003634615.1	GCF_003634615.1	SAMN08776973	SRR6976445	PRJNA442004	pacbio_unresolved	biosample_matched	not_checked	True	2135623	Flavobacterium sp. 102	Flavobacterium sp. 102	True	PacBio
+GCA_003633605.1	GCF_003633605.1	SAMN08777141	SRR6976459	PRJNA442007	pacbio_unresolved	biosample_matched	not_checked	True	2135626	Flavobacterium sp. 120	Flavobacterium sp. 120	True	PacBio
+GCA_003550275.1	GCF_003550275.1	SAMN09725931	SRR7777323	PRJNA265355	pacbio_unresolved	biosample_matched	not_checked	True	1250029	Flavobacteriaceae bacterium MAR_2010_72	Flavobacteriaceae bacterium MAR_2010_72	True	PacBio
+GCA_009730375.1	GCF_009730375.1	SAMN11056452	SRR9176581	PRJNA231221	pacbio_clr_subreads	biosample_matched	not_checked	True	2545799	Capnocytophaga sp. FDAARGOS_737	Capnocytophaga sp. FDAARGOS_737	True	Pacbio; Illumina
+GCA_055378385.1	GCF_055378385.1	SAMD00799306	DRR581632	PRJDB18436	pacbio_unresolved	biosample_matched	not_checked	True	3383097	Maribacter sp. C-4077	Maribacter sp. C-4077	True	PacBio Sequel IIe
+GCA_900460915.1	GCF_900460915.1	SAMEA104210763	ERR2225512	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	1018	Capnocytophaga ochracea	Capnocytophaga ochracea	True	PacBio
+GCA_900446705.1	GCF_900446705.1	SAMEA104210786	ERR2237806	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	1018	Capnocytophaga ochracea	Capnocytophaga ochracea	True	PacBio
+GCA_902167265.1	GCF_902167265.1	SAMEA5764747	ERR3426146	PRJEB8920	pacbio_unresolved	biosample_matched	not_checked	False	459526	Flavobacterium anhuiense	Flavobacterium anhuiense	True	PacBio RSII
+GCA_013112255.2	GCF_013112255.2	SAMN14367226	SRR11301546	PRJNA612312	pacbio_unresolved	biosample_matched	not_checked	True	2724135	Flavobacterium sp. CLA17	Flavobacterium sp. CLA17	True	PacBio Sequel
+GCA_013426055.1		SAMN14943929	SRR11814644	PRJNA633452	pacbio_unresolved	biosample_matched	not_checked	True	96345	Flavobacterium psychrophilum	Flavobacterium psychrophilum	True	PacBio RSII
+GCA_016726985.1	GCF_016726985.1	SAMN16357300	SRR12937907	PRJNA231221	pacbio_clr_subreads	biosample_matched	not_checked	True	256	Myroides odoratus	Myroides odoratus	True	Pacbio; Illumina
+GCA_021390175.1	GCF_021390175.1	SAMN24175396	SRR17284493	PRJNA789934	pacbio_unresolved	biosample_matched	not_checked	True	2905121	Flagellimonas sp. HMM57	Flagellimonas sp. HMM57	True	PacBio RSII
+GCA_002900095.1	GCF_002900095.1	SAMN04145778	SRR2993971	PRJNA297772	pacbio_clr_subreads	biosample_matched	not_checked	True	270918	Salegentibacter mishustinae	Salegentibacter mishustinae	True	Illumina MiSeq; PacBio
+GCA_001641185.1	GCF_001641185.1	SAMN04487986	SRR3184081	PRJNA311731	pacbio_clr_subreads	biosample_matched	not_checked	True	2906076	Flavobacterium covae	Flavobacterium covae	True	PacBio
+GCA_001641185.1	GCF_001641185.1	SAMN04487986	SRR3184082	PRJNA311731	pacbio_clr_subreads	biosample_matched	not_checked	True	2906076	Flavobacterium covae	Flavobacterium covae	True	PacBio
+GCA_051669215.1	GCF_051669215.1	SAMN50024580	SRR34660033	PRJNA1293530	pacbio_unresolved	biosample_matched	not_checked	True	279356	Aquimarina muelleri	Aquimarina muelleri	True	PacBio Revio
+GCA_000744835.1	GCF_000744835.1	SAMN02745985	SRR3712186	PRJNA223103	pacbio_unresolved	biosample_matched	not_checked	True	1131812	Flavobacterium sp. 83	Flavobacterium sp. 83	True	Illumina HiSeq 2000; PacBio RS
+GCA_000733925.1	GCF_000733925.1	SAMN02744759	SRR3723320	PRJNA225843	pacbio_unresolved	biosample_matched	not_checked	True	616991	Arenibacter algicola	Arenibacter algicola	True	Illumina HiSeq 2000; PacBio RS
+GCA_000688335.1	GCF_000688335.1	SAMN02743904	SRR3723546	PRJNA217214	pacbio_unresolved	biosample_matched	not_checked	True	1392490	Sediminibacter sp. Hel_I_10	Sediminibacter sp. Hel_I_10	True	Illumina HiSeq 2000
+GCA_000688335.1	GCF_000688335.1	SAMN02743904	SRR3723547	PRJNA217214	pacbio_unresolved	biosample_matched	not_checked	True	1392490	Sediminibacter sp. Hel_I_10	Sediminibacter sp. Hel_I_10	True	Illumina HiSeq 2000
+GCA_000733945.1	GCF_000733945.1	SAMN02743906	SRR3723552	PRJNA217201	pacbio_unresolved	biosample_matched	not_checked	True	1392488	Flavimarina sp. Hel_I_48	Flavimarina sp. Hel_I_48	True	Illumina HiSeq 2000
+GCA_000688315.1	GCF_000688315.1	SAMN02743898	SRR3723556	PRJNA217216	pacbio_unresolved	biosample_matched	not_checked	True	1249997	Maribacter sp. Hel_I_7	Maribacter sp. Hel_I_7	True	PacBio RS
+GCA_000687915.1	GCF_000687915.1	SAMN02745562	SRR3820559	PRJNA217203	pacbio_unresolved	biosample_matched	not_checked	True	1392489	Leeuwenhoekiella sp. MAR_2009_132	Leeuwenhoekiella sp. MAR_2009_132	True	Illumina HiSeq 2000
+GCA_000687915.1	GCF_000687915.1	SAMN02745562	SRR3820560	PRJNA217203	pacbio_unresolved	biosample_matched	not_checked	True	1392489	Leeuwenhoekiella sp. MAR_2009_132	Leeuwenhoekiella sp. MAR_2009_132	True	Illumina HiSeq 2000
+GCA_054343775.1	GCF_054343775.1	SAMN54175875	SRR40021669	PRJNA1390260	ont	biosample_matched	not_checked	True	3480035	Flavobacterium sp. GNP001	Flavobacterium sp. GNP001	True	Oxford Nanopore PromethION
+GCA_060435065.1	GCF_060435065.1	SAMN62268459	SRR40611320	PRJNA1509539	ont	biosample_matched	not_checked	False	3810020	Flavobacteriaceae bacterium R9	Flavobacteriaceae bacterium R9	True	Oxford Nanopore GridION
+GCA_052296045.1		SAMD01615001	DRR725170	PRJDB35970	ont	biosample_matched	not_checked	True	96345	Flavobacterium psychrophilum	Flavobacterium psychrophilum	True	ILLUMINA
+GCA_055385685.1	GCF_055385685.1	SAMD01615001	DRR725170	PRJDB35970	ont	biosample_matched	not_checked	True	96345	Flavobacterium psychrophilum	Flavobacterium psychrophilum	True	Illumia Miseq; Oxford Nanopore MinION
+GCA_055385355.1	GCF_055385355.1	SAMD01615002	DRR725184	PRJDB35971	ont	biosample_matched	not_checked	True	3459700	Flavobacterium sp. KY-23412	Flavobacterium sp. KY-23412	True	Illumia Miseq; Oxford Nanopore MinION
+GCA_002007065.3	GCF_002007065.3	SAMN06295817	SRR10063223	PRJNA370526	ont	biosample_matched	not_checked	True	1179672	Flavobacterium sp. KBS0721	Flavobacterium sp. KBS0721	True	Illumina HiSeq; Oxford Nanopore MiniION
+GCA_023612075.1	GCF_023612075.1	SAMN22814774	SRR24151351	PRJNA776699	ont	biosample_matched	not_checked	True	459526	Flavobacterium anhuiense	Flavobacterium anhuiense	True	Oxford Nanopore MinION
+GCA_044596715.1	GCF_044596715.1	SAMN38151465	SRR26752404	PRJNA1036818	ont	biosample_matched	not_checked	True	3093856	Dokdonia sp. R86516	Dokdonia sp. R86516	True	Oxford Nanopore MinION
+GCA_025252405.1	GCF_025252405.1	SAMN30697779	SRR29761615	PRJNA877399	ont	biosample_matched	not_checked	True	2977321	Flavobacterium sp. TR2	Flavobacterium sp. TR2	True	Illumina NovaSeq; Oxford Nanopore MinION
+GCA_040822075.1	GCF_040822075.1	SAMN42395751	SRR29831488	PRJNA1134181	ont	biosample_matched	not_checked	True	3234137	Flavobacterium sp. WC2430	Flavobacterium sp. WC2430	True	Illumina NextSeq Oxford Nanopore MinION
+GCA_041200105.1	GCF_041200105.1	SAMN42395754	SRR29831489	PRJNA1134181	ont	biosample_matched	not_checked	True	3234140	Flavobacterium sp. WC2429	Flavobacterium sp. WC2429	True	Illumina NextSeq Oxford Nanopore MinION
+GCA_041530365.1	GCF_041530365.1	SAMN42812522	SRR30240091	PRJNA1140139	ont	biosample_matched	not_checked	True	3238809	Capnocytophaga sp. ARDL2	Capnocytophaga sp. ARDL2	True	Oxford Nanopore PromethION
+GCA_049820645.1	GCF_049820645.1	SAMN47772563	SRR33145582	PRJNA1246260	ont	biosample_matched	not_checked	True	1699411	Tenacibaculum ascidiaceicola	Tenacibaculum ascidiaceicola	True	Illumina; Oxford Nanopore
+GCA_049820655.1	GCF_049820655.1	SAMN47772562	SRR33145584	PRJNA1246260	ont	biosample_matched	not_checked	True	979	Cellulophaga lytica	Cellulophaga lytica	True	Illumina; Oxford Nanopore
+GCA_046736295.1	GCF_046736295.1	SAMN40603963	SRR34542555	PRJNA996876	ont	biosample_matched	not_checked	True	3063957	Mariniflexile sp. AS56	Mariniflexile sp. AS56	True	Oxford Nanopore PromethION
+GCA_052218455.1	GCF_052218455.1	SAMN50000908	SRR34674729	PRJNA1292446	ont	biosample_matched	not_checked	True	3450128	Leeuwenhoekiella sp. H156	Leeuwenhoekiella sp. H156	True	Illumina NovaSeq; Oxford Nanopore PromethION
+GCA_057839565.1	GCF_057839565.1	SAMN51819086	SRR35628941	PRJNA1333901	ont	biosample_matched	not_checked	True	3465242	Flavobacterium sp. KH_035	Flavobacterium sp. KH_035	True	Oxford Nanopore
+GCA_054366245.1	GCF_054366245.1	SAMN54117290	SRR36496803	PRJNA1381634	ont	biosample_matched	not_checked	True	3479081	Winogradskyella sp. PC D3.3	Winogradskyella sp. PC D3.3	True	Oxford Nanopore MinION
+GCA_021390195.1	GCF_021390195.1	SAMN24175386	SRR17284691	PRJNA789932	pacbio_unresolved	biosample_matched	not_checked	True	2654676	Flagellimonas sp. CMM7	Flagellimonas sp. CMM7	True	PacBio RSII
+GCA_042179985.1	GCF_042179985.1	SAMN43577918	SRR30979007	PRJNA1159549	pacbio_hifi_ccs	biosample_matched	not_checked	True	107401	Tenacibaculum maritimum	Tenacibaculum maritimum	True	PacBio Sequel
+GCA_000744835.1	GCF_000744835.1	SAMN02745985	SRR3712189	PRJNA223103	pacbio_unresolved	biosample_matched	not_checked	True	1131812	Flavobacterium sp. 83	Flavobacterium sp. 83	True	Illumina HiSeq 2000; PacBio RS
+GCA_900453865.1	GCF_900453865.1	SAMEA4364221	ERR1787537	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	256	Myroides odoratus	Myroides odoratus	True	PacBio
+GCA_900638125.1	GCF_900638125.1	SAMEA104200653	ERR2171933	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	1019	Capnocytophaga sputigena	Capnocytophaga sputigena	True	PacBio
+GCA_900618145.1	GCF_900618145.1	SAMEA104210766	ERR2225513	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	1018	Capnocytophaga ochracea	Capnocytophaga ochracea	True	Pacbio
+GCA_900450525.1	GCF_900450525.1	SAMEA104318185	ERR2503149	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	37752	Flavobacterium hibernum	Flavobacterium hibernum	True	PacBio
+GCA_902167275.1	GCF_902167275.1	SAMEA5764746	ERR3426145	PRJEB8920	pacbio_unresolved	biosample_matched	not_checked	False	459526	Flavobacterium anhuiense	Flavobacterium anhuiense	True	PacBio RSII
+GCA_902167285.2	GCF_902167285.1	SAMEA5764749	ERR3426148	PRJEB8920	pacbio_unresolved	biosample_matched	not_checked	False	459526	Flavobacterium anhuiense	Flavobacterium anhuiense	True	PacBio RSII
+GCA_943373825.1	GCF_943373825.1	SAMEA14448969	ERR9784243	PRJEB53058	pacbio_unresolved	biosample_matched	not_checked	False	1192023	Aquimarina spinulae	Aquimarina spinulae	True	PacBio Sequel
+GCA_943422735.1	GCF_943422735.1	SAMEA14448968	ERR9784244	PRJEB53060	pacbio_unresolved	biosample_matched	not_checked	False	2787736	Aquimarina sp. EL_43	Aquimarina sp. EL_43	True	PacBio Sequel
+GCA_001580475.1	GCF_001580475.1	SAMN03382583	SRR10255744	PRJNA276168	pacbio_clr_subreads	biosample_matched	not_checked	True	996	Flavobacterium columnare	Flavobacterium columnare	True	
+GCA_016727005.1	GCF_016727005.1	SAMN16357301	SRR12937936	PRJNA231221	pacbio_clr_subreads	biosample_matched	not_checked	True	256	Myroides odoratus	Myroides odoratus	True	Pacbio; Illumina
+GCA_035207705.1	GCF_035207705.1	SAMN35705802	SRR24904836	PRJNA828511	pacbio_unresolved	biosample_matched	not_checked	True	3053613	Maribacter sp. BPC-D8	Maribacter sp. BPC-D8	True	PacBio Sequel
+GCA_051013375.1	GCF_051013375.1	SAMN38937573	SRR27309035	PRJNA1054976	pacbio_unresolved	biosample_matched	not_checked	True	391587	Kordia algicida OT-1	Kordia algicida OT-1	True	PacBio Sequel
+GCA_037478105.1	GCF_037478105.1	SAMN40033374	SRR28084235	PRJNA1079200	pacbio_unresolved	biosample_matched	not_checked	True	687844	Flavobacterium ginsenosidimutans	Flavobacterium ginsenosidimutans	True	Illumina NovaSeq; PacBio RS
+GCA_900142975.1	GCF_900142975.1	SAMN05878281	SRR4407712	PRJNA345703	pacbio_unresolved	biosample_matched	not_checked	True	143223	Salegentibacter salegens	Salegentibacter salegens	True	PacBio RS
+GCA_000744275.1	GCF_000744275.1	SAMN02745561	SRR3723563	PRJNA217202	pacbio_unresolved	biosample_matched	not_checked	True	1249975	Gillisia sp. Hel_I_29	Gillisia sp. Hel_I_29	True	PacBio RS
+GCA_056428945.1	GCF_056428945.1	SAMN54175879	SRR40021652	PRJNA1390260	pacbio_unresolved	biosample_matched	not_checked	False	3480022	Flavobacterium sp. GNP010	Flavobacterium sp. GNP010	True	PacBio
+GCA_900105105.1	GCF_900105105.1	SAMN05192545	SRR4130918	PRJNA323166	pacbio_unresolved	biosample_matched	not_checked	True	1250153	Maribacter sp. MAR_2009_60	Maribacter dokdonensis	True	PacBio RS
+GCA_000745185.1	GCF_000745185.1	SAMN02799619	SRR4131408	PRJNA248521	pacbio_unresolved	biosample_matched	not_checked	True	1250232	Allomuricauda sp. MAR_2010_75	Allomuricauda sp. MAR_2010_75	True	PacBio RS
+GCA_000745185.1	GCF_000745185.1	SAMN02799619	SRR4131410	PRJNA248521	pacbio_unresolved	biosample_matched	not_checked	True	1250232	Allomuricauda sp. MAR_2010_75	Allomuricauda sp. MAR_2010_75	True	PacBio RS
+GCA_006789585.1	GCF_006789585.1	SAMN02841241	SRR4131426	PRJNA251764	pacbio_unresolved	biosample_matched	not_checked	True	616991	Arenibacter algicola	Arenibacter algicola	True	PacBio
+GCA_000745315.1	GCF_000745315.1	SAMN02799644	SRR4131427	PRJNA248520	pacbio_unresolved	biosample_matched	not_checked	True	1250278	Salegentibacter sp. Hel_I_6	Salegentibacter sp. Hel_I_6	True	PacBio RS
+GCA_000745315.1	GCF_000745315.1	SAMN02799644	SRR4131429	PRJNA248520	pacbio_unresolved	biosample_matched	not_checked	True	1250278	Salegentibacter sp. Hel_I_6	Salegentibacter sp. Hel_I_6	True	PacBio RS
+GCA_000745315.1	GCF_000745315.1	SAMN02799644	SRR4131430	PRJNA248520	pacbio_unresolved	biosample_matched	not_checked	True	1250278	Salegentibacter sp. Hel_I_6	Salegentibacter sp. Hel_I_6	True	PacBio RS
+GCA_000745315.1	GCF_000745315.1	SAMN02799644	SRR4131431	PRJNA248520	pacbio_unresolved	biosample_matched	not_checked	True	1250278	Salegentibacter sp. Hel_I_6	Salegentibacter sp. Hel_I_6	True	PacBio RS
+GCA_007827235.1	GCF_007827235.1	SAMN02982926	SRR4136168	PRJNA257844	pacbio_unresolved	biosample_matched	not_checked	True	1250050	Maribacter sp. MAR_2009_72	Maribacter sp. MAR_2009_72	True	PacBio
+GCA_007827235.1	GCF_007827235.1	SAMN02982926	SRR4136169	PRJNA257844	pacbio_unresolved	biosample_matched	not_checked	True	1250050	Maribacter sp. MAR_2009_72	Maribacter sp. MAR_2009_72	True	PacBio
+GCA_900104765.1	GCF_900104765.1	SAMN04487764	SRR4136237	PRJNA303200	pacbio_unresolved	biosample_matched	not_checked	True	1336796	Gillisia sp. Hel1_33_143	Gillisia sp. Hel1_33_143	True	PacBio RS
+GCA_007827445.1	GCF_007827445.1	SAMN03097713	SRR4136241	PRJNA263060	pacbio_unresolved	biosample_matched	not_checked	True	1250286	Flavobacteriaceae bacterium MAR_2010_105	Flavobacteriaceae bacterium MAR_2010_105	True	PacBio
+GCA_900105455.1	GCF_900105455.1	SAMN04489761	SRR4184803	PRJNA303204	pacbio_unresolved	biosample_matched	not_checked	True	1250059	Tenacibaculum sp. MAR_2009_124	Tenacibaculum sp. MAR_2009_124	True	PacBio RS
+GCA_900105035.1	GCF_900105035.1	SAMN04488552	SRR4184821	PRJNA303206	pacbio_unresolved	biosample_matched	not_checked	True	1250231	Gramella sp. MAR_2010_102	Christiangramia echinicola	False	PacBio RS
+GCA_002302535.1	GCF_002302535.1	SAMN06289153	SRR5362219	PRJNA369395	pacbio_clr_subreads	biosample_matched	not_checked	True	1945657	Capnocytophaga sp. H2931	Capnocytophaga sp. H2931	True	PacBio; Illumina MiSeq
+GCA_002302595.1	GCF_002302595.1	SAMN06289150	SRR5362222	PRJNA369395	pacbio_clr_subreads	biosample_matched	not_checked	True	1019	Capnocytophaga sputigena	Capnocytophaga sputigena	True	PacBio; Illumina MiSeq
+GCA_002813285.1	GCF_002813285.1	SAMN06297457	SRR5460433	PRJNA370768	pacbio_unresolved	biosample_matched	not_checked	True	1250285	Flavobacteriaceae bacterium MAR_2009_75	Flavobacteriaceae bacterium MAR_2009_75	True	PacBio
+GCA_002302475.1	GCF_002302475.1	SAMN06754876	SRR5482515	PRJNA369395	pacbio_clr_subreads	biosample_matched	not_checked	True	28189	Capnocytophaga cynodegmi	Capnocytophaga cynodegmi	True	PacBio; Illumina MiSeq
+GCA_002234495.1	GCF_002234495.1	SAMN07322679	SRR5826483	PRJNA380207	pacbio_clr_subreads	biosample_matched	not_checked	True	616991	Arenibacter algicola	Arenibacter algicola	True	PacBio
+GCA_002754275.1	GCF_002754275.1	SAMN07621436	SRR6824031	PRJNA402421	pacbio_unresolved	biosample_matched	not_checked	True	308053	Flavobacterium sp. 2	Flavobacterium sp. 2	True	PacBio
+GCA_002754275.1	GCF_002754275.1	SAMN07621436	SRR6824033	PRJNA402421	pacbio_unresolved	biosample_matched	not_checked	True	308053	Flavobacterium sp. 2	Flavobacterium sp. 2	True	PacBio
+GCA_002754195.1	GCF_002754195.1	SAMN07626139	SRR6824067	PRJNA402403	pacbio_unresolved	biosample_matched	not_checked	True	2035198	Flavobacterium sp. 9	Flavobacterium sp. 9	True	PacBio
+GCA_003634825.1	GCF_003634825.1	SAMN08777886	SRR6976496	PRJNA442008	pacbio_unresolved	biosample_matched	not_checked	True	2135627	Flavobacterium sp. 123	Flavobacterium sp. 123	True	PacBio
+GCA_003550275.1	GCF_003550275.1	SAMN09725931	SRR7777324	PRJNA265355	pacbio_unresolved	biosample_matched	not_checked	True	1250029	Flavobacteriaceae bacterium MAR_2010_72	Flavobacteriaceae bacterium MAR_2010_72	True	PacBio
+GCA_009730375.1	GCF_009730375.1	SAMN11056452	SRR9176580	PRJNA231221	pacbio_clr_subreads	biosample_matched	not_checked	True	2545799	Capnocytophaga sp. FDAARGOS_737	Capnocytophaga sp. FDAARGOS_737	True	Pacbio; Illumina
+GCA_047730175.1	GCF_047730175.1	SAMN42157092	SRR29769129	PRJNA1129510	ont	biosample_matched	not_checked	True	3230970	Candidatus Marifrigoribacter sp. Uisw_064	Candidatus Marifrigoribacter sp. Uisw_064	True	Oxford Nanopore Technologies r10.4.1
+GCA_047731265.1	GCF_047731265.1	SAMN42157090	SRR29769151	PRJNA1129510	ont	biosample_matched	not_checked	True	3230968	Patiriisocius sp. Uisw_017	Patiriisocius sp. Uisw_017	True	Oxford Nanopore Technologies r10.4.1
+GCA_041200095.1	GCF_041200095.1	SAMN42395755	SRR29831494	PRJNA1134181	ont	biosample_matched	not_checked	True	3234141	Flavobacterium sp. WC2416	Flavobacterium sp. WC2416	True	Oxford Nanopore MinION
+GCA_059491325.1	GCF_059491325.1	SAMN43145765	SRR32164147	PRJNA1147241	ont	biosample_matched	not_checked	True	3243056	Flavobacterium sp. Flavsp81	Flavobacterium sp. Flavsp81	True	Illumina NextSeq, Oxford Nanopore MinION
+GCA_056156265.1	GCF_056156265.1	SAMN52392036	SRR35742077	PRJNA1335599	ont	biosample_matched	not_checked	True	3469944	Flavobacterium sp. TS_SC_5	Flavobacterium sp. TS_SC_5	True	Illumina; Oxford Nanopore MinION
+GCA_055379615.1	GCF_055379615.1	SAMD00729803	DRR524535	PRJDB17298	ont	biosample_matched	not_checked	False	104268	Tenacibaculum mesophilum	Tenacibaculum mesophilum	True	Illumina MiSeq; Nanopore GridION
+GCA_055384985.1	GCF_055384985.1	SAMD01615003	DRR725185	PRJDB35971	ont	biosample_matched	not_checked	True	3459701	Flavobacterium sp. KY-23415	Flavobacterium sp. KY-23415	True	Illumia Miseq; Oxford Nanopore MinION
+GCA_976997535.1	GCF_976997535.1	SAMEA120314570	ERR15686611	PRJEB88388	ont	biosample_matched	not_checked	True	3471882	Flavobacterium sp. R-92582	Flavobacterium microcysteis	True	MinION
+GCA_976997585.1	GCF_976997585.1	SAMEA120314573	ERR15686820	PRJEB88388	ont	biosample_matched	not_checked	True	3471885	Flavobacterium sp. R-92588	Flavobacterium microcysteis	True	MinION
+GCA_019774595.1	GCF_019774595.1	SAMN20804762	SRR15495685	PRJNA591399	ont	biosample_matched	not_checked	False	96345	Flavobacterium psychrophilum	Flavobacterium psychrophilum	True	Oxford Nanopore PromethION
+GCA_032922765.1	GCF_032922765.1	SAMN37594967	SRR26327162	PRJNA1022162	ont	biosample_matched	not_checked	True	906888	Nonlabens ulvanivorans	Nonlabens ulvanivorans	True	Oxford Nanopore
+GCA_044596045.1	GCF_044596045.1	SAMN38151477	SRR26752391	PRJNA1036818	ont	biosample_matched	not_checked	True	3093867	Allomuricauda sp. R78024	Allomuricauda sp. R78024	True	Oxford Nanopore MinION
+GCA_057840745.1	GCF_057840745.1	SAMN51819059	SRR35628977	PRJNA1333901	ont	biosample_matched	not_checked	True	3465241	Flavobacterium sp. KH_001	Flavobacterium sp. KH_001	True	Oxford Nanopore
+GCA_047344965.1	GCF_047344965.1	SAMN45167325	SRR34435796	PRJNA1193061	ont	biosample_matched	not_checked	True	3394146	Flavobacterium sp. W1B	Flavobacterium sp. W1B	True	Illumina MiSeq; Oxford Nanopore
+GCA_046250155.1	GCF_046250155.1	SAMN45129220	SRR34435798	PRJNA1193061	ont	biosample_matched	not_checked	True	3384157	Flavobacterium sp. PS2	Flavobacterium sp. PS2	True	Illumina MiSeq; Oxford Nanopore
+GCA_046736305.1	GCF_046736305.1	SAMN40603962	SRR34542556	PRJNA996876	ont	biosample_matched	not_checked	True	221126	Algibacter lectus	Algibacter lectus	True	Oxford Nanopore PromethION
+GCA_059716425.2	GCF_059716425.2	SAMN55977170	SRR37857608	PRJNA1428932	ont	biosample_matched	not_checked	True	104268	Tenacibaculum mesophilum	Tenacibaculum mesophilum	True	Oxford Nanopore MinION
+GCF_059716425.1	GCA_059716425.1	SAMN55977170	SRR37857608	PRJNA1428932	ont	biosample_matched	not_checked	True	104268	Tenacibaculum mesophilum	Tenacibaculum mesophilum	True	Oxford Nanopore MinION
+GCA_056428945.1	GCF_056428945.1	SAMN54175879	SRR40021653	PRJNA1390260	ont	biosample_matched	not_checked	True	3480022	Flavobacterium sp. GNP010	Flavobacterium sp. GNP010	True	PacBio

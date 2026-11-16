@@ -1,0 +1,48 @@
+{
+  "run": {
+    "run": "ERR13194280",
+    "sample_id": "SAMEA115676864",
+    "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR131/080/ERR13194280/ERR13194280.fastq.gz",
+    "fastq_bytes": 133151147,
+    "fastq_md5": "5fb81f4496d9a66fde222c2ebb593370",
+    "platform": "OXFORD_NANOPORE",
+    "archive_base_count": 139350616,
+    "archive_read_count": 19011
+  },
+  "download_started": "2026-10-25T17:28:24-0700",
+  "local_file": "/global/scratch/users/kh36969/longread_callout/data/reads/ERR13194280/ERR13194280.fastq.gz",
+  "bytes": 133151147,
+  "md5": "5fb81f4496d9a66fde222c2ebb593370",
+  "sha256": "30f837dca59a0ef1b81c96c24d02d10a406c353b4bba45f8bc9dd9a11f31eebe",
+  "rejected_downloads": [],
+  "spots_absent_from_fastq": 0,
+  "summary": {
+    "records": 19011,
+    "bases": 139350616,
+    "read_unit_counts": {
+      "other_name": 19011
+    },
+    "distinct_zmws": null,
+    "distinct_sra_spots": 19011,
+    "max_records_per_spot": 1,
+    "placeholder_quality_records": 0,
+    "example_headers": [
+      "@ERR13194280.1 7b6e0358-33b7-46ed-be3a-cc6fdb0583c9 runid=2342e2ef08d617049e876391328a5bfbf4d13f7e sampleid=no_sample read=17223 ch=271 start_time=2022-04-04T17:11:29Z model_version_id=2021-05-17_dna_r9.4.1_minion_384_d37a2ab9 barcode=barcode26",
+      "@ERR13194280.2 f90c1842-aaa4-48be-b339-6290a863875c runid=2342e2ef08d617049e876391328a5bfbf4d13f7e sampleid=no_sample read=18829 ch=337 start_time=2022-04-04T17:12:49Z model_version_id=2021-05-17_dna_r9.4.1_minion_384_d37a2ab9 barcode=barcode26",
+      "@ERR13194280.3 53510417-b544-4499-aadf-7a2708fa028c runid=2342e2ef08d617049e876391328a5bfbf4d13f7e sampleid=no_sample read=19051 ch=449 start_time=2022-04-04T17:12:33Z model_version_id=2021-05-17_dna_r9.4.1_minion_384_d37a2ab9 barcode=barcode26",
+      "@ERR13194280.4 c4ae3944-1d58-40f3-87f7-f4a3047f3680 runid=2342e2ef08d617049e876391328a5bfbf4d13f7e sampleid=no_sample read=7398 ch=486 start_time=2022-04-04T17:11:30Z model_version_id=2021-05-17_dna_r9.4.1_minion_384_d37a2ab9 barcode=barcode26"
+    ],
+    "mean_length": 7330.0,
+    "median_length": 3155,
+    "max_length": 100581,
+    "n50": 18033,
+    "molecule_grouping": "one_record_per_molecule"
+  },
+  "checks": {
+    "bytes_match": true,
+    "md5_match": true,
+    "spot_count_match": true,
+    "base_count_match": true
+  },
+  "status": "verified"
+}

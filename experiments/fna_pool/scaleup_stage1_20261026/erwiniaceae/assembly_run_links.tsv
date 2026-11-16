@@ -1,0 +1,246 @@
+assembly_accession	paired_accession	biosample	run	study	read_type	link_basis	source_run_evidence	run_usable	run_tax_id	run_organism	assembly_organism	genus_agrees	assembly_sequencing_tech
+GCA_018326345.1	GCF_018326345.1	SAMD00266192	DRR296100	PRJDB10925	pacbio_unresolved	biosample_matched	not_checked	True	55212	Erwinia rhapontici	Erwinia rhapontici	True	PacBio RS II
+GCA_050155855.1	GCF_050155855.1	SAMN48112090	SRR33417546	PRJNA1254469	pacbio_unresolved	biosample_matched	not_checked	False	472693	Pantoea eucrina	Pantoea eucrina	True	PacBio Sequel IIe; Illumina NovaSeq X-plus
+GCA_059420725.1	GCF_059420725.1	SAMN56369115	SRR37620578	PRJNA1433495	pacbio_unresolved	biosample_matched	not_checked	True	3693199	Pantoea sp. GW821-FHT03E06	Pantoea sp. GW821-FHT03E06	True	PacBio
+GCA_000745075.1	GCF_000745075.1	SAMN02787015	SRR4063113	PRJNA247913	pacbio_unresolved	biosample_matched	not_checked	True	1500895	Erwinia sp. 9145	Erwinia sp. 9145	True	Illumina HiSeq 2000; PacBio RS
+GCA_000745295.1	GCF_000745295.1	SAMN02787012	SRR4063124	PRJNA247914	pacbio_unresolved	biosample_matched	not_checked	True	1500896	Pantoea sp. 9140	Pantoea sp. 9140	True	Illumina HiSeq 2000; PacBio RS
+GCA_000745295.1	GCF_000745295.1	SAMN02787012	SRR4063126	PRJNA247914	pacbio_unresolved	biosample_matched	not_checked	True	1500896	Pantoea sp. 9140	Pantoea sp. 9140	True	Illumina HiSeq 2000; PacBio RS
+GCA_900182855.1	GCF_900182855.1	SAMN02744765	SRR4063148	PRJNA242130	pacbio_unresolved	biosample_matched	not_checked	True	549	Pantoea agglomerans	Pantoea agglomerans	True	Illumina HiSeq 2000,PacBio RS,PacBio RS II
+GCA_900182855.1	GCF_900182855.1	SAMN02744765	SRR4063150	PRJNA242130	pacbio_unresolved	biosample_matched	not_checked	True	549	Pantoea agglomerans	Pantoea agglomerans	True	Illumina HiSeq 2000,PacBio RS,PacBio RS II
+GCA_900182855.1	GCF_900182855.1	SAMN02744765	SRR4063152	PRJNA242130	pacbio_unresolved	biosample_matched	not_checked	True	549	Pantoea agglomerans	Pantoea agglomerans	True	Illumina HiSeq 2000,PacBio RS,PacBio RS II
+GCA_900182855.1	GCF_900182855.1	SAMN02744765	SRR4063153	PRJNA242130	pacbio_unresolved	biosample_matched	not_checked	True	549	Pantoea agglomerans	Pantoea agglomerans	True	Illumina HiSeq 2000,PacBio RS,PacBio RS II
+GCA_900215435.1	GCF_900215435.1	SAMN06273570	SRR5829172	PRJNA364290	pacbio_unresolved	biosample_matched	not_checked	True	1938870	Candidatus Pantoea floridensis	Candidatus Pantoea floridensis	True	PacBio RS,PacBio RS II
+GCA_003201065.1	GCF_003201065.1	SAMN06272756	SRR5829175	PRJNA367742	pacbio_unresolved	biosample_matched	not_checked	True	1938795	Pantoea sp. JKS000250	Pantoea sp. JKS000250	True	PacBio
+GCA_004136415.1	GCF_004136415.1	SAMN09909699	SRR8236060	PRJNA243331	pacbio_unresolved	biosample_matched	not_checked	True	549	Pantoea agglomerans	Pantoea agglomerans	True	PacBio
+GCA_059731165.1	GCF_059731165.1	SAMD00798155	DRR581769	PRJDB17425	pacbio_unresolved	biosample_matched	not_checked	True	59814	Pantoea dispersa	Pantoea dispersa	True	PacBio
+GCA_059730815.1	GCF_059730815.1	SAMD00799326	DRR581999	PRJDB17425	pacbio_unresolved	biosample_matched	not_checked	True	3233516	Pantoea sp. X-Soil-ISGK-285	Pantoea sp. X-Soil-ISGK-285	True	PacBio
+GCA_059730495.1	GCF_059730495.1	SAMD00799340	DRR582013	PRJDB17425	pacbio_unresolved	biosample_matched	not_checked	True	3233530	Pantoea sp. X-Soil-TKNS-1211	Pantoea sp. X-Soil-TKNS-1211	True	PacBio
+GCA_059730475.1	GCF_059730475.1	SAMD00799342	DRR582015	PRJDB17425	pacbio_unresolved	biosample_matched	not_checked	True	3233532	Pantoea sp. X-Soil-TKNS-1280	Pantoea sp. X-Soil-TKNS-1280	True	PacBio
+GCA_000784965.1	GCF_000784965.1	SAMN02709585	SRR1573907	PRJNA242850	pacbio_unresolved	biosample_matched	not_checked	True	1484157	Pantoea sp. PSNIH2	Pantoea sp. PSNIH2	True	PacBio RSII
+GCA_014842695.2	GCF_014842695.2	SAMN16236980	SRR27704964	PRJNA665156	pacbio_unresolved	biosample_matched	not_checked	True	549	Pantoea agglomerans	Pantoea agglomerans	True	PacBio Sequel
+GCA_001558735.2	GCF_001558735.2	SAMN03996307	SRR2822440	PRJNA231221	pacbio_clr_subreads	biosample_matched	not_checked	True	470934	Pantoea vagans	Pantoea vagans	True	PacBio; Illumina
+GCA_030814785.1	GCF_030814785.1	SAMN34299900	SRR35148436	PRJNA958338	pacbio_hifi_ccs	biosample_matched	not_checked	True	549	Pantoea agglomerans	Pantoea agglomerans	True	PacBio
+GCA_030814785.1	GCF_030814785.1	SAMN34299900	SRR35148437	PRJNA958338	pacbio_hifi_ccs	biosample_matched	not_checked	True	549	Pantoea agglomerans	Pantoea agglomerans	True	PacBio
+GCA_024170105.1		SAMN18243422	SRR35198268	PRJNA708487	pacbio_hifi_ccs	biosample_matched	not_checked	True	549	Pantoea agglomerans	Pantoea agglomerans	True	PacBio
+GCA_061255915.1	GCF_061255915.1	SAMD01937875	DRR1069954	PRJDB35911	ont	biosample_matched	not_checked	True	472695	Pantoea septica	Pantoea septica	True	Illumina iSeq; Nanopore MinION
+GCA_054165265.1	GCF_054165265.1	SAMN53916320	SRR36463113	PRJNA1380512	ont	biosample_matched	not_checked	True	553	Pantoea ananatis	Pantoea ananatis	True	Oxford Nanopore MinION; Illumina NextSeq
+GCA_054512635.1	GCF_054512635.1	SAMN54510736	SRR36753142	PRJNA1399953	ont	biosample_matched	not_checked	True	3570047	Pantoea sp. XAF26B01_ASV70	Pantoea sp. XAF26B01_ASV70	True	Oxford Nanopore MinION
+GCA_056712225.1	GCF_056712225.1	SAMN55953008	SRR38955699	PRJNA1419296	ont	biosample_matched	not_checked	True	66269	Pantoea stewartii	Pantoea stewartii	True	Oxford Nanopore
+GCA_056712105.1	GCF_056712105.1	SAMN55953014	SRR38955705	PRJNA1419296	ont	biosample_matched	not_checked	True	66269	Pantoea stewartii	Pantoea stewartii	True	Oxford Nanopore
+GCA_056712475.1	GCF_056712475.1	SAMN55952996	SRR38955706	PRJNA1419296	ont	biosample_matched	not_checked	True	2052056	Pantoea phytobeneficialis	Pantoea phytobeneficialis	True	Oxford Nanopore
+GCA_056712385.1	GCF_056712385.1	SAMN55952999	SRR38955710	PRJNA1419296	ont	biosample_matched	not_checked	True	2052056	Pantoea phytobeneficialis	Pantoea phytobeneficialis	True	Oxford Nanopore
+GCA_056712345.1	GCF_056712345.1	SAMN55953002	SRR38955713	PRJNA1419296	ont	biosample_matched	not_checked	True	66269	Pantoea stewartii	Pantoea stewartii	True	Oxford Nanopore
+GCA_056712035.1	GCF_056712035.1	SAMN55953017	SRR38955720	PRJNA1419296	ont	biosample_matched	not_checked	True	66269	Pantoea stewartii	Pantoea stewartii	True	Oxford Nanopore
+GCA_059366975.1	GCF_059366975.1	SAMN60678772	SRR39076225	PRJNA1441576	ont	biosample_matched	not_checked	True	182337	Erwinia billingiae	Erwinia billingiae	True	Oxford Nanopore MinION
+GCA_059367255.1	GCF_059367255.1	SAMN60678765	SRR39076233	PRJNA1441576	ont	biosample_matched	not_checked	True	182337	Erwinia billingiae	Erwinia billingiae	True	Oxford Nanopore MinION
+GCA_058725045.1	GCF_058725045.1	SAMN60678764	SRR39076234	PRJNA1441576	ont	biosample_matched	not_checked	True	182337	Erwinia billingiae	Erwinia billingiae	True	Oxford Nanopore MinION
+GCA_059628875.1	GCF_059628875.1	SAMN60495002	SRR39237312	PRJNA1129588	ont	biosample_matched	not_checked	True	206499	Erwinia papayae	Erwinia papayae	True	Oxford Nanopore PromethION
+GCA_058242745.1	GCF_058242745.1	SAMN60504623	SRR39237314	PRJNA1129588	ont	biosample_matched	not_checked	True	206499	Erwinia papayae	Erwinia papayae	True	Oxford Nanopore PromethION
+GCA_986269445.1	GCF_986269445.1	SAMEA122935484	ERR17456300	PRJEB115327	ont	biosample_matched	not_checked	True	59814	Pantoea dispersa	Pantoea dispersa	True	Oxford Nanopore MinION
+GCA_016446415.2	GCF_016446415.2	SAMN13762617	SRR11557542	PRJNA599942	ont	biosample_matched	not_checked	True	552	Erwinia amylovora	Erwinia amylovora	True	Oxford Nanopore; Illumina
+GCA_016650465.1	GCF_016650465.1	SAMN17054856	SRR13328099	PRJNA684363	ont	biosample_matched	not_checked	True	2796443	Erwinia sp. TH79	Erwinia sp. TH79	True	Oxford Nanopore MinION; Illumina MiSeq
+GCA_018842675.1	GCF_018842675.1	SAMN18876904	SRR14354751	PRJNA725364	ont	biosample_matched	not_checked	True	2831036	Candidatus Pantoea bituminis	Candidatus Pantoea bituminis	True	Oxford Nanopore
+GCA_021365535.1	GCF_021365535.1	SAMN24011483	SRR17231629	PRJNA788515	ont	biosample_matched	not_checked	True	65700	Erwinia tracheiphila	Erwinia tracheiphila	True	Oxford Nanopore MinION; Illumina HiSeq
+GCA_021365505.1	GCF_021365505.1	SAMN24011482	SRR17231630	PRJNA788515	ont	biosample_matched	not_checked	True	65700	Erwinia tracheiphila	Erwinia tracheiphila	True	Oxford Nanopore MinION; Illumina HiSeq
+GCA_046529495.1	GCF_046529495.1	SAMN32665143	SRR24579686	PRJNA642846	ont	biosample_matched	not_checked	True	574096	Pantoea allii	Pantoea allii	True	Illumina MiSeq; Oxford Nanopore MinION
+GCA_028993655.1	GCF_028993655.1	SAMN33387147	SRR25511210	PRJNA937034	ont	biosample_matched	not_checked	True	59814	Pantoea dispersa	Pantoea dispersa	True	Illumina NovaSeq; Oxford Nanopore MinION
+GCA_031888365.1	GCF_031888365.1	SAMN22046691	SRR26051232	PRJNA642846	ont	biosample_matched	not_checked	True	549	Pantoea agglomerans	Pantoea agglomerans	True	Illumina MiSeq; Oxford Nanopore MinION
+GCA_037081855.1	GCF_037081855.1	SAMN39960343	SRR28204313	PRJNA1077129	ont	biosample_matched	not_checked	True	55211	Erwinia persicina	Erwinia persicina	True	Oxford Nanopore MinION
+GCA_042055235.1	GCF_042055235.1	SAMN41095146	SRR28908321	PRJNA1105117	ont	biosample_matched	not_checked	True	552	Erwinia amylovora	Erwinia amylovora	True	Oxford Nanopore
+GCA_050613375.1	GCF_050613375.1	SAMN41494400	SRR29237964	PRJNA999330	ont	biosample_matched	not_checked	True	55212	Erwinia rhapontici	Erwinia rhapontici	True	Oxford Nanopore MinION
+GCA_019890955.1	GCF_019890955.1	SAMN21035695	SRR19975617	PRJNA758789	ont	biosample_matched	not_checked	True	59814	Pantoea dispersa	Pantoea dispersa	True	Illumina MiSeq; Oxford Nanopore MinION
+GCA_029433915.1	GCF_029433915.1	SAMN33603252	SRR24053353	PRJNA941349	ont	biosample_matched	not_checked	True	66269	Pantoea stewartii	Pantoea stewartii	True	Illumina NovaSeq; Oxford Nanopore MinION
+GCA_030552895.1	GCF_030552895.1	SAMN33960927	SRR24356799	PRJNA949442	ont	biosample_matched	not_checked	True	82987	Tatumella ptyseos	Tatumella ptyseos	True	Oxford Nanopore MinION; Illumina NovaSeq
+GCA_049942775.1		SAMN47281038	SRR32628561	PRJNA1233853	ont	biosample_matched	not_checked	False	1265390	Buchnera aphidicola (Tetraneura sorini)	Buchnera aphidicola (Tetraneura sorini)	True	Oxford Nanopore GridION; Illumina HiSeq
+GCA_062012367.1	GCF_062012367.1	SAMN63117182	SRR40694674	PRJNA1129588	ont	biosample_matched	not_checked	True	206499	Erwinia papayae	Erwinia papayae	True	Oxford Nanopore PromethION
+GCA_024707505.1	GCF_024707505.1	SAMN30153628	SRR20907454	PRJNA866139	pacbio_unresolved	biosample_matched	not_checked	True	2970818	Pantoea sp. SOD02	Pantoea sp. SOD02	True	PacBio RSII; Illumina MiSeq
+GCA_030819005.1	GCF_030819005.1	SAMN34252307	SRR24510239	PRJNA957409	pacbio_hifi_ccs	biosample_matched	not_checked	True	470931	Pantoea anthophila	Pantoea anthophila	True	PacBio
+GCA_057812235.1	GCF_057812235.1	SAMN50736747	SRR36530838	PRJNA1309151	pacbio_unresolved	biosample_matched	not_checked	True	3458450	Pantoea sp. ABR1s	Pantoea sp. ABR1s	True	Illumina NovaSeq; PacBio
+GCA_059730805.1	GCF_059730805.1	SAMD00799327	DRR582000	PRJDB17425	pacbio_unresolved	biosample_matched	not_checked	True	3233517	Pantoea sp. X-Soil-ISGK-355	Pantoea sp. X-Soil-ISGK-355	True	PacBio
+GCA_059730705.1	GCF_059730705.1	SAMD00799331	DRR582004	PRJDB17425	pacbio_unresolved	biosample_matched	not_checked	True	3233521	Pantoea sp. X-Soil-ISGK-259	Pantoea sp. X-Soil-ISGK-259	True	PacBio
+GCA_059730675.1	GCF_059730675.1	SAMD00799334	DRR582007	PRJDB17425	pacbio_unresolved	biosample_matched	not_checked	True	3233524	Pantoea sp. X-Soil-MYKO-1785	Pantoea sp. X-Soil-MYKO-1785	True	PacBio
+GCA_017474015.1	GCF_017474015.1	SAMN15405802	SRR12158098	PRJNA642846	pacbio_unresolved	biosample_matched	not_checked	True	553	Pantoea ananatis	Pantoea ananatis	True	Hybrid (Illumina MiSeq/PacBio RSII)
+GCA_017815635.1	GCF_017815635.1	SAMN18516095	SRR14140347	PRJNA717909	pacbio_unresolved	biosample_matched	not_checked	True	1619313	Duffyella gerundensis	Duffyella gerundensis	True	PacBio
+GCA_019048385.1	GCF_019048385.1	SAMN16357589	SRR15076254	PRJNA231221	pacbio_unresolved	biosample_matched	not_checked	True	549	Pantoea agglomerans	Pantoea agglomerans	True	Pacbio; Illumina
+GCA_020079945.1	GCF_020079945.1	SAMN21400474	SRR15861882	PRJNA762676	pacbio_unresolved	biosample_matched	not_checked	False	472693	Pantoea eucrina	Pantoea eucrina	True	PacBio
+GCA_029505375.1	GCF_029505375.1	SAMN31439202	SRR35217250	PRJNA893717	pacbio_hifi_ccs	biosample_matched	not_checked	True	472694	Pantoea brenneri	Pantoea brenneri	True	PacBio
+GCA_030815835.1	GCF_030815835.1	SAMN34299884	SRR35247439	PRJNA958280	pacbio_hifi_ccs	biosample_matched	not_checked	True	549	Pantoea agglomerans	Pantoea agglomerans	True	PacBio
+GCA_000745075.1	GCF_000745075.1	SAMN02787015	SRR4063114	PRJNA247913	pacbio_unresolved	biosample_matched	not_checked	True	1500895	Erwinia sp. 9145	Erwinia sp. 9145	True	Illumina HiSeq 2000; PacBio RS
+GCA_000745295.1	GCF_000745295.1	SAMN02787012	SRR4063125	PRJNA247914	pacbio_unresolved	biosample_matched	not_checked	True	1500896	Pantoea sp. 9140	Pantoea sp. 9140	True	Illumina HiSeq 2000; PacBio RS
+GCA_900182855.1	GCF_900182855.1	SAMN02744765	SRR4063149	PRJNA242130	pacbio_unresolved	biosample_matched	not_checked	True	549	Pantoea agglomerans	Pantoea agglomerans	True	Illumina HiSeq 2000,PacBio RS,PacBio RS II
+GCA_900182855.1	GCF_900182855.1	SAMN02744765	SRR4063151	PRJNA242130	pacbio_unresolved	biosample_matched	not_checked	True	549	Pantoea agglomerans	Pantoea agglomerans	True	Illumina HiSeq 2000,PacBio RS,PacBio RS II
+GCA_020683125.1	GCF_020683125.1	SAMN22488137	SRR16530817	PRJNA773578	ont	biosample_matched	not_checked	True	55212	Erwinia rhapontici	Erwinia rhapontici	True	Oxford Nanopore; Illumina NovaSeq
+GCA_021365485.1	GCF_021365485.1	SAMN24011484	SRR17231628	PRJNA788515	ont	biosample_matched	not_checked	True	65700	Erwinia tracheiphila	Erwinia tracheiphila	True	Oxford Nanopore MinION; PacBio RSII
+GCA_029433965.2	GCF_029433965.2	SAMN33603251	SRR24055091	PRJNA941349	ont	biosample_matched	not_checked	True	553	Pantoea ananatis	Pantoea ananatis	True	Oxford Nanopore GridION
+GCA_041276585.2	GCF_041276585.2	SAMN42899179	SRR30499446	PRJNA1069770	ont	biosample_matched	not_checked	True	470934	Pantoea vagans	Pantoea vagans	True	Oxford Nanopore PromethION
+GCA_041276505.2	GCF_041276505.2	SAMN42899178	SRR30499447	PRJNA1069770	ont	biosample_matched	not_checked	True	470934	Pantoea vagans	Pantoea vagans	True	Oxford Nanopore PromethION
+GCA_049942765.1		SAMN47281040	SRR32628559	PRJNA1233853	ont	biosample_matched	not_checked	False	3405511	Buchnera aphidicola (Eriosoma harunire)	Buchnera aphidicola (Eriosoma harunire)	True	Oxford Nanopore GridION; Illumina HiSeq
+GCA_054512635.1	GCF_054512635.1	SAMN54510736	SRR36753139	PRJNA1399953	ont	biosample_matched	not_checked	True	3570047	Pantoea sp. XAF26B01_ASV70	Pantoea sp. XAF26B01_ASV70	True	Oxford Nanopore MinION
+GCA_054512635.1	GCF_054512635.1	SAMN54510736	SRR36753140	PRJNA1399953	ont	biosample_matched	not_checked	True	3570047	Pantoea sp. XAF26B01_ASV70	Pantoea sp. XAF26B01_ASV70	True	Oxford Nanopore MinION
+GCA_010523255.1	GCF_010523255.1	SAMN13899307	SRR10953134	PRJNA602576	ont	biosample_matched	not_checked	True	549	Pantoea agglomerans	Pantoea agglomerans	True	Illumina NovaSeq; Oxford Nanopore MiniION
+GCA_002952035.2	GCF_002952035.2	SAMN06827853	SRR10982271	PRJNA384061	ont	biosample_matched	not_checked	True	553	Pantoea ananatis	Pantoea ananatis	True	PacBio
+GCA_025881865.1	GCF_025881865.1	SAMN31088455	SRR21798865	PRJNA885388	ont	biosample_matched	not_checked	True	1619313	Duffyella gerundensis	Duffyella gerundensis	True	Oxford Nanopore MinION
+GCA_025490495.1	GCF_025490495.1	SAMN30959536	SRR25607743	PRJNA883063	ont	biosample_matched	not_checked	True	59814	Pantoea dispersa	Pantoea dispersa	True	Illumina MiSeq; Oxford Nanopore MinION
+GCA_031887785.1	GCF_031887785.1	SAMN22046692	SRR26051229	PRJNA642846	ont	biosample_matched	not_checked	True	549	Pantoea agglomerans	Pantoea agglomerans	True	Illumina MiSeq; Oxford Nanopore MinION
+GCA_031890525.1	GCF_031890525.1	SAMN22046684	SRR26051230	PRJNA642846	ont	biosample_matched	not_checked	True	549	Pantoea agglomerans	Pantoea agglomerans	True	Illumina MiSeq; Oxford Nanopore MinION
+GCA_040959245.1	GCF_040959245.1	SAMN22046689	SRR26051238	PRJNA642846	ont	biosample_matched	not_checked	True	549	Pantoea agglomerans	Pantoea agglomerans	True	Illumina MiSeq; Oxford Nanopore MinION
+GCA_057839525.1	GCF_057839525.1	SAMN51819087	SRR35628940	PRJNA1333901	ont	biosample_matched	not_checked	True	549	Pantoea agglomerans	Pantoea agglomerans	True	Oxford Nanopore
+GCA_058725145.1	GCF_058725145.1	SAMN60678755	SRR39076210	PRJNA1441576	ont	biosample_matched	not_checked	True	182337	Erwinia billingiae	Erwinia billingiae	True	Oxford Nanopore MinION
+GCA_059366735.1	GCF_059366735.1	SAMN60678778	SRR39076218	PRJNA1441576	ont	biosample_matched	not_checked	True	182337	Erwinia billingiae	Erwinia billingiae	True	Oxford Nanopore MinION
+GCA_059366775.1	GCF_059366775.1	SAMN60678777	SRR39076219	PRJNA1441576	ont	biosample_matched	not_checked	True	182337	Erwinia billingiae	Erwinia billingiae	True	Oxford Nanopore MinION
+GCA_059367095.1	GCF_059367095.1	SAMN60678770	SRR39076227	PRJNA1441576	ont	biosample_matched	not_checked	True	182337	Erwinia billingiae	Erwinia billingiae	True	Oxford Nanopore MinION
+GCA_059367355.1	GCF_059367355.1	SAMN60678763	SRR39076235	PRJNA1441576	ont	biosample_matched	not_checked	True	182337	Erwinia billingiae	Erwinia billingiae	True	Oxford Nanopore MinION
+GCA_059367285.1	GCF_059367285.1	SAMN60678762	SRR39076236	PRJNA1441576	ont	biosample_matched	not_checked	True	182337	Erwinia billingiae	Erwinia billingiae	True	Oxford Nanopore MinION
+GCA_059367425.1	GCF_059367425.1	SAMN60678760	SRR39076238	PRJNA1441576	ont	biosample_matched	not_checked	True	182337	Erwinia billingiae	Erwinia billingiae	True	Oxford Nanopore MinION
+GCA_058686235.1	GCF_058686235.1	SAMN60678748	SRR39076242	PRJNA1441576	ont	biosample_matched	not_checked	True	68334	Erwinia aphidicola	Erwinia aphidicola	True	Oxford Nanopore MinION
+GCA_059568225.1	GCF_059568225.1	SAMN60492098	SRR39237322	PRJNA1129588	ont	biosample_matched	not_checked	True	206499	Erwinia papayae	Erwinia papayae	True	Oxford Nanopore PromethION
+GCA_018326325.1	GCF_018326325.1	SAMD00266191	DRR296099	PRJDB10925	pacbio_unresolved	biosample_matched	not_checked	True	55212	Erwinia rhapontici	Erwinia rhapontici	True	PacBio RS II
+GCA_000975275.1	GCF_000975275.1	SAMN03287578	SRR1953063	PRJNA272881	pacbio_unresolved	biosample_matched	not_checked	True	65700	Erwinia tracheiphila	Erwinia tracheiphila	True	PacBio
+GCA_059730585.1	GCF_059730585.1	SAMD00799337	DRR582010	PRJDB17425	pacbio_unresolved	biosample_matched	not_checked	True	3233527	Pantoea sp. X-Soil-YNGN-785	Pantoea sp. X-Soil-YNGN-785	True	PacBio
+GCA_017875755.1	GCF_017875755.1	SAMN17674602	SRR13716976	PRJNA696868	pacbio_unresolved	biosample_matched	not_checked	True	55209	Pantoea cypripedii	Pantoea cypripedii	True	PacBio
+GCA_000784875.3	GCF_000784875.1	SAMN02709496	SRR1573664	PRJNA242843	pacbio_unresolved	biosample_matched	not_checked	True	1484158	Pantoea sp. PSNIH1	Pantoea sp. PSNIH1	True	PacBio RSII
+GCA_032200625.1	GCF_032200625.1	SAMN37199268	SRR25916650	PRJNA674638	pacbio_hifi_ccs	biosample_matched	not_checked	False	549	Pantoea agglomerans	Pantoea agglomerans	True	PacBio
+GCA_005233495.2	GCF_005233495.2	SAMN09062489	SRR27695013	PRJNA459521	pacbio_unresolved	biosample_matched	not_checked	True	549	Pantoea agglomerans	Pantoea agglomerans	True	PacBio Sequel
+GCA_014841465.2	GCF_014841465.2	SAMN16237802	SRR27704968	PRJNA665156	pacbio_unresolved	biosample_matched	not_checked	True	549	Pantoea agglomerans	Pantoea agglomerans	True	PacBio Sequel
+GCA_024169515.1	GCF_024169515.1	SAMN18261510	SRR35147797	PRJNA709558	pacbio_hifi_ccs	biosample_matched	not_checked	True	68334	Erwinia aphidicola	Erwinia aphidicola	True	PacBio
+GCA_001661985.2	GCF_001661985.2	SAMN04961658	SRR24003358	PRJNA320975	pacbio_unresolved	biosample_matched	not_checked	True	48984	Pantoea agglomerans pv. gypsophilae	Pantoea agglomerans pv. gypsophilae	True	PacBio RS
+GCA_031453715.1	GCF_031453715.1	SAMN34252193	SRR24511744	PRJNA957385	pacbio_hifi_ccs	biosample_matched	not_checked	True	59814	Pantoea dispersa	Pantoea dispersa	True	PacBio
+GCA_030819235.1	GCF_030819235.1	SAMN34252303	SRR24511752	PRJNA957416	pacbio_hifi_ccs	biosample_matched	not_checked	True	553	Pantoea ananatis	Pantoea ananatis	True	PacBio
+GCA_000745295.1	GCF_000745295.1	SAMN02787012	SRR4063123	PRJNA247914	pacbio_unresolved	biosample_matched	not_checked	True	1500896	Pantoea sp. 9140	Pantoea sp. 9140	True	Illumina HiSeq 2000; PacBio RS
+GCA_029016125.1	GCF_029016125.1	SAMN21555674	SRR16086228	PRJNA642846	ont	biosample_matched	not_checked	True	549	Pantoea agglomerans	Pantoea agglomerans	True	Oxford Nanopore MinION; Illumina MiSeq
+GCA_031890205.1	GCF_031890205.1	SAMN22046686	SRR26051224	PRJNA642846	ont	biosample_matched	not_checked	True	549	Pantoea agglomerans	Pantoea agglomerans	True	Illumina MiSeq; Oxford Nanopore MinION
+GCA_031889605.1	GCF_031889605.1	SAMN22046690	SRR26051236	PRJNA642846	ont	biosample_matched	not_checked	True	549	Pantoea agglomerans	Pantoea agglomerans	True	NextSeq 500; Oxford Nanopore MinION
+GCA_042055245.1	GCF_042055245.1	SAMN41095147	SRR28908322	PRJNA1105117	ont	biosample_matched	not_checked	True	552	Erwinia amylovora	Erwinia amylovora	True	Oxford Nanopore
+GCA_025853815.1	GCF_025853815.1	SAMN31221728	SRR25607706	PRJNA888841	ont	biosample_matched	not_checked	True	59814	Pantoea dispersa	Pantoea dispersa	True	Illumina MiSeq; Oxford Nanopore MinION
+GCA_057840605.1	GCF_057840605.1	SAMN51819063	SRR35628927	PRJNA1333901	ont	biosample_matched	not_checked	True	549	Pantoea agglomerans	Pantoea agglomerans	True	Oxford Nanopore
+GCA_057839285.1	GCF_057839285.1	SAMN51819093	SRR35628933	PRJNA1333901	ont	biosample_matched	not_checked	True	2485126	Erwinia sp. JUb26	Erwinia sp. JUb26	True	Oxford Nanopore
+GCA_062012365.1	GCF_062012365.1	SAMN63116725	SRR40694675	PRJNA1129588	ont	biosample_matched	not_checked	True	206499	Erwinia papayae	Erwinia papayae	True	Oxford Nanopore PromethION
+GCA_046529425.1	GCF_046529425.1	SAMN32665141	SRR24579689	PRJNA642846	ont	biosample_matched	not_checked	True	574096	Pantoea allii	Pantoea allii	True	Illumina MiSeq; Oxford Nanopore MinION
+GCA_047300805.2	GCF_047300805.2	SAMN46164613	SRR32982199	PRJNA1208068	ont	biosample_matched	not_checked	True	3391839	Erwinia sp. LJJL01	Erwinia sp. LJJL01	True	Oxford Nanopore MinION; Illumina NovaSeq
+GCA_054512635.1	GCF_054512635.1	SAMN54510736	SRR36753143	PRJNA1399953	ont	biosample_matched	not_checked	True	3570047	Pantoea sp. XAF26B01_ASV70	Pantoea sp. XAF26B01_ASV70	True	Oxford Nanopore MinION
+GCA_057005315.1	GCF_057005315.1	SAMN56810711	SRR37910602	PRJNA1446034	ont	biosample_matched	not_checked	True	553	Pantoea ananatis	Pantoea ananatis	True	Oxford Nanopore; Illumina NovaSeq
+GCA_056712285.1	GCF_056712285.1	SAMN55953005	SRR38955716	PRJNA1419296	ont	biosample_matched	not_checked	True	2052056	Pantoea phytobeneficialis	Pantoea phytobeneficialis	True	Oxford Nanopore
+GCA_059367665.1	GCF_059367665.1	SAMN60678754	SRR39076211	PRJNA1441576	ont	biosample_matched	not_checked	True	182337	Erwinia billingiae	Erwinia billingiae	True	Oxford Nanopore MinION
+GCA_059367655.1	GCF_059367655.1	SAMN60678753	SRR39076212	PRJNA1441576	ont	biosample_matched	not_checked	True	182337	Erwinia billingiae	Erwinia billingiae	True	Oxford Nanopore MinION
+GCA_059367735.1	GCF_059367735.1	SAMN60678752	SRR39076213	PRJNA1441576	ont	biosample_matched	not_checked	True	182337	Erwinia billingiae	Erwinia billingiae	True	Oxford Nanopore MinION
+GCA_058686005.1	GCF_058686005.1	SAMN60678780	SRR39076216	PRJNA1441576	ont	biosample_matched	not_checked	True	68334	Erwinia aphidicola	Erwinia aphidicola	True	Oxford Nanopore MinION
+GCA_059366675.1	GCF_059366675.1	SAMN60678779	SRR39076217	PRJNA1441576	ont	biosample_matched	not_checked	True	182337	Erwinia billingiae	Erwinia billingiae	True	Oxford Nanopore MinION
+GCA_058686035.1	GCF_058686035.1	SAMN60678776	SRR39076221	PRJNA1441576	ont	biosample_matched	not_checked	True	68334	Erwinia aphidicola	Erwinia aphidicola	True	Oxford Nanopore MinION
+GCA_059366855.1	GCF_059366855.1	SAMN60678775	SRR39076222	PRJNA1441576	ont	biosample_matched	not_checked	True	182337	Erwinia billingiae	Erwinia billingiae	True	Oxford Nanopore MinION
+GCA_059367125.1	GCF_059367125.1	SAMN60678768	SRR39076229	PRJNA1441576	ont	biosample_matched	not_checked	True	182337	Erwinia billingiae	Erwinia billingiae	True	Oxford Nanopore MinION
+GCA_059367495.1	GCF_059367495.1	SAMN60678759	SRR39076239	PRJNA1441576	ont	biosample_matched	not_checked	True	182337	Erwinia billingiae	Erwinia billingiae	True	Oxford Nanopore MinION
+GCA_059367555.1	GCF_059367555.1	SAMN60678758	SRR39076240	PRJNA1441576	ont	biosample_matched	not_checked	True	182337	Erwinia billingiae	Erwinia billingiae	True	Oxford Nanopore MinION
+GCA_058725105.1	GCF_058725105.1	SAMN60678757	SRR39076241	PRJNA1441576	ont	biosample_matched	not_checked	True	182337	Erwinia billingiae	Erwinia billingiae	True	Oxford Nanopore MinION
+GCA_058686245.1	GCF_058686245.1	SAMN60678747	SRR39076243	PRJNA1441576	ont	biosample_matched	not_checked	True	68334	Erwinia aphidicola	Erwinia aphidicola	True	Oxford Nanopore MinION
+GCA_058242715.1	GCF_058242715.1	SAMN60504655	SRR39237313	PRJNA1129588	ont	biosample_matched	not_checked	True	206499	Erwinia papayae	Erwinia papayae	True	Oxford Nanopore PromethION
+GCA_058215835.1	GCF_058215835.1	SAMN60496557	SRR39237315	PRJNA1129588	ont	biosample_matched	not_checked	True	69222	Erwinia mallotivora	Erwinia mallotivora	True	Oxford Nanopore PromethION
+GCA_058241545.1	GCF_058241545.1	SAMN60496558	SRR39237316	PRJNA1129588	ont	biosample_matched	not_checked	True	206499	Erwinia papayae	Erwinia papayae	True	Oxford Nanopore PromethION
+GCA_059568235.1	GCF_059568235.1	SAMN60495253	SRR39237320	PRJNA1129588	ont	biosample_matched	not_checked	True	206499	Erwinia papayae	Erwinia papayae	True	Oxford Nanopore PromethION
+GCA_018409035.1	GCF_018409035.1	SAMD00266190	DRR296098	PRJDB10925	pacbio_unresolved	biosample_matched	not_checked	True	55212	Erwinia rhapontici	Erwinia rhapontici	True	PacBio RS II
+GCA_007981265.1	GCF_007981265.1	SAMN10461917	SRR9998537	PRJNA506501	pacbio_clr_subreads	biosample_matched	not_checked	True	2490851	Pantoea sp. CCBC3-3-1	Pantoea sp. CCBC3-3-1	True	PacBio RS
+GCA_002952035.2	GCF_002952035.2	SAMN06827853	SRR5483893	PRJNA384061	pacbio_clr_subreads	biosample_matched	not_checked	True	553	Pantoea ananatis	Pantoea ananatis	True	PacBio
+GCA_013364135.1	GCF_013364135.1	SAMN11056395	SRR9163111	PRJNA231221	pacbio_clr_subreads	biosample_matched	not_checked	True	553	Pantoea ananatis	Pantoea ananatis	True	Pacbio; Illumina
+GCA_013364135.1	GCF_013364135.1	SAMN11056395	SRR9163112	PRJNA231221	pacbio_clr_subreads	biosample_matched	not_checked	True	553	Pantoea ananatis	Pantoea ananatis	True	Pacbio; Illumina
+GCA_059730795.1	GCF_059730795.1	SAMD00799328	DRR582001	PRJDB17425	pacbio_unresolved	biosample_matched	not_checked	True	3233518	Pantoea sp. X-Soil-ISGK-275	Pantoea sp. X-Soil-ISGK-275	True	PacBio
+GCA_059730755.1	GCF_059730755.1	SAMD00799330	DRR582003	PRJDB17425	pacbio_unresolved	biosample_matched	not_checked	True	3233520	Pantoea sp. X-Soil-ISGK-313	Pantoea sp. X-Soil-ISGK-313	True	PacBio
+GCA_059730695.1	GCF_059730695.1	SAMD00799332	DRR582005	PRJDB17425	pacbio_unresolved	biosample_matched	not_checked	True	3233522	Pantoea sp. X-Soil-OKNW-556	Pantoea sp. X-Soil-OKNW-556	True	PacBio
+GCA_059730575.1	GCF_059730575.1	SAMD00799338	DRR582011	PRJDB17425	pacbio_unresolved	biosample_matched	not_checked	True	3233528	Pantoea sp. X-Soil-YNGN-775	Pantoea sp. X-Soil-YNGN-775	True	PacBio
+GCA_900454505.1	GCF_900454505.1	SAMEA80454418	ERR2125745	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	549	Pantoea agglomerans	Pantoea agglomerans	True	PacBio
+GCA_900478715.1	GCF_900478715.1	SAMEA2689782	ERR695654	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	82987	Tatumella ptyseos	Tatumella ptyseos	True	PacBio
+GCA_009762725.1	GCF_009762725.1	SAMN13527266	SRR10665756	PRJNA594723	pacbio_clr_subreads	biosample_matched	not_checked	True	549	Pantoea agglomerans	Pantoea agglomerans	True	PacBio RSII; Illumina MiSeq
+GCA_017474165.1	GCF_017474165.1	SAMN15405801	SRR12158100	PRJNA642846	pacbio_unresolved	biosample_matched	not_checked	True	549	Pantoea agglomerans	Pantoea agglomerans	True	Hybrid (Illumina MiSeq/PacBio RSII)
+GCA_021365485.1	GCF_021365485.1	SAMN24011484	SRR17231624	PRJNA788515	pacbio_clr_subreads	biosample_matched	not_checked	True	65700	Erwinia tracheiphila	Erwinia tracheiphila	True	Oxford Nanopore MinION; PacBio RSII
+GCA_021365465.1	GCF_021365465.1	SAMN24011481	SRR17231625	PRJNA788515	pacbio_clr_subreads	biosample_matched	not_checked	True	65700	Erwinia tracheiphila	Erwinia tracheiphila	True	Oxford Nanopore MinION; PacBio RSII
+GCA_000975275.1	GCF_000975275.1	SAMN03287578	SRR1916166	PRJNA272881	pacbio_unresolved	biosample_matched	not_checked	False	65700	Erwinia tracheiphila	Erwinia tracheiphila	True	PacBio
+GCA_025987825.1	GCF_025987825.1	SAMN26865293	SRR21386344	PRJNA818484	pacbio_unresolved	biosample_matched	not_checked	True	552	Erwinia amylovora	Erwinia amylovora	True	Illumina HiSeq; PacBio Sequel
+GCA_031453915.1	GCF_031453915.1	SAMN36520762	SRR25488206	PRJNA995639	pacbio_hifi_ccs	biosample_matched	not_checked	True	3062597	Pantoea sp. SORGH_AS_0659	Pantoea sp. SORGH_AS_0659	True	PacBio
+GCA_032164335.1	GCF_032164335.1	SAMN37199271	SRR25916662	PRJNA674638	pacbio_hifi_ccs	biosample_matched	not_checked	False	92490	Winslowiella toletana	Winslowiella toletana	True	PacBio
+GCA_014839525.2	GCF_014839525.2	SAMN16237033	SRR27704963	PRJNA665156	pacbio_unresolved	biosample_matched	not_checked	True	549	Pantoea agglomerans	Pantoea agglomerans	True	PacBio Sequel
+GCA_001558735.2	GCF_001558735.2	SAMN03996307	SRR2822441	PRJNA231221	pacbio_clr_subreads	biosample_matched	not_checked	True	470934	Pantoea vagans	Pantoea vagans	True	PacBio; Illumina
+GCA_017875755.1	GCF_017875755.1	SAMN17674602	SRR35148482	PRJNA696868	pacbio_hifi_ccs	biosample_matched	not_checked	True	55209	Pantoea cypripedii	Pantoea cypripedii	True	PacBio
+GCA_061255945.1	GCF_061255945.1	SAMD01937874	DRR1069952	PRJDB35911	ont	biosample_matched	not_checked	True	472695	Pantoea septica	Pantoea septica	True	Illumina iSeq; Nanopore MinION
+GCA_018842655.1		SAMN18876905	SRR14354752	PRJNA725364	ont	biosample_matched	not_checked	True	2831035	Candidatus Pantoea haifensis	Candidatus Pantoea haifensis	True	Oxford Nanopore
+GCA_029866845.1	GCF_029866845.1	SAMN33040131	SRR23329897	PRJNA929199	ont	biosample_matched	not_checked	False	3024247	Pantoea sp. SS70	Pantoea sp. SS70	True	Illumina NovaSeq; Oxford Nanopore GridION
+GCA_059419905.1	GCF_059419905.1	SAMN56369162	SRR37523765	PRJNA1433495	ont	biosample_matched	not_checked	True	3693245	Erwinia sp. GW821-FHT05B06	Erwinia sp. GW821-FHT05B06	True	Illumina; Oxford Nanopore
+GCA_062012366.1	GCF_062012366.1	SAMN63117189	SRR40694673	PRJNA1129588	ont	biosample_matched	not_checked	False	206499	Erwinia papayae	Erwinia papayae	True	Oxford Nanopore PromethION
+GCA_003704305.1	GCF_003704305.1	SAMN09840060	SRR8115246	PRJNA486198	ont	biosample_matched	not_checked	True	549	Pantoea agglomerans	Pantoea agglomerans	True	Oxford Nanopore MiniION; Illumina MiSeq
+GCA_016650825.1	GCF_016650825.1	SAMN17054806	SRR13328046	PRJNA684363	ont	biosample_matched	not_checked	False	2796394	Erwinia sp. TH29	Erwinia sp. TH29	True	Oxford Nanopore MinION; Illumina MiSeq
+GCA_019890975.1	GCF_019890975.1	SAMN21035673	SRR15860843	PRJNA758761	ont	biosample_matched	not_checked	True	59814	Pantoea dispersa	Pantoea dispersa	True	Illumina MiSeq; Oxford Nanopore MinION
+GCA_021365465.1	GCF_021365465.1	SAMN24011481	SRR17231631	PRJNA788515	ont	biosample_matched	not_checked	True	65700	Erwinia tracheiphila	Erwinia tracheiphila	True	Oxford Nanopore MinION; PacBio RSII
+GCA_025881875.1	GCF_025881875.1	SAMN31088456	SRR21798866	PRJNA885388	ont	biosample_matched	not_checked	True	1619313	Duffyella gerundensis	Duffyella gerundensis	True	Oxford Nanopore MinION
+GCA_029433915.1	GCF_029433915.1	SAMN33603252	SRR24053352	PRJNA941349	ont	biosample_matched	not_checked	True	66269	Pantoea stewartii	Pantoea stewartii	True	Illumina NovaSeq; Oxford Nanopore MinION
+GCA_029433965.2	GCF_029433965.2	SAMN33603251	SRR24055092	PRJNA941349	ont	biosample_matched	not_checked	True	553	Pantoea ananatis	Pantoea ananatis	True	Oxford Nanopore GridION
+GCA_046529495.1	GCF_046529495.1	SAMN32665143	SRR24579687	PRJNA642846	ont	biosample_matched	not_checked	True	574096	Pantoea allii	Pantoea allii	True	Illumina MiSeq; Oxford Nanopore MinION
+GCA_020783495.1	GCF_020783495.1	SAMN22600026	SRR25382412	PRJNA774971	ont	biosample_matched	not_checked	True	549	Pantoea agglomerans	Pantoea agglomerans	True	Oxford Nanopore MinION; Illumina MiSeq
+GCA_031889865.1	GCF_031889865.1	SAMN22046688	SRR26051240	PRJNA642846	ont	biosample_matched	not_checked	True	549	Pantoea agglomerans	Pantoea agglomerans	True	Illumina MiSeq; Oxford Nanopore MinION
+GCA_040783975.1	GCF_040783975.1	SAMN41001462	SRR28748140	PRJNA1056497	ont	biosample_matched	not_checked	True	3141459	Pantoea sp. Ep11b	Pantoea sp. Ep11b	True	Oxford Nanopore MinION
+GCA_040224035.2	GCF_040224035.2	SAMN40354447	SRR30291091	PRJNA1085284	ont	biosample_matched	not_checked	True	553	Pantoea ananatis	Pantoea ananatis	True	Illumina NovaSeq; Oxford Nanopore PromethION
+GCA_046628135.1	GCF_046628135.1	SAMN45893328	SRR31812281	PRJNA1199959	ont	biosample_matched	not_checked	False	549	Pantoea agglomerans	Pantoea agglomerans	True	Illumina NovaSeq; Oxford Nanopore MinION
+GCA_047325125.1	GCF_047325125.1	SAMN43145698	SRR32164109	PRJNA1147241	ont	biosample_matched	not_checked	True	59814	Pantoea dispersa	Pantoea dispersa	True	Illumina NextSeq, Oxford Nanopore MinION
+GCA_049166605.1		SAMN47517789	SRR32812906	PRJNA1240356	ont	biosample_matched	not_checked	False	549	Pantoea agglomerans	Pantoea agglomerans	True	Oxford Nanopore MinION
+GCA_057835155.1	GCF_057835155.1	SAMN51819148	SRR35628873	PRJNA1333901	ont	biosample_matched	not_checked	True	549	Pantoea agglomerans	Pantoea agglomerans	True	Oxford Nanopore
+GCA_057840505.1	GCF_057840505.1	SAMN51819065	SRR35628905	PRJNA1333901	ont	biosample_matched	not_checked	True	574096	Pantoea allii	Pantoea allii	True	Oxford Nanopore
+GCA_054512635.1	GCF_054512635.1	SAMN54510736	SRR36753138	PRJNA1399953	ont	biosample_matched	not_checked	True	3570047	Pantoea sp. XAF26B01_ASV70	Pantoea sp. XAF26B01_ASV70	True	Oxford Nanopore MinION
+GCA_054512635.1	GCF_054512635.1	SAMN54510736	SRR36753141	PRJNA1399953	ont	biosample_matched	not_checked	True	3570047	Pantoea sp. XAF26B01_ASV70	Pantoea sp. XAF26B01_ASV70	True	Oxford Nanopore MinION
+GCA_054512635.1	GCF_054512635.1	SAMN54510736	SRR36753144	PRJNA1399953	ont	biosample_matched	not_checked	True	3570047	Pantoea sp. XAF26B01_ASV70	Pantoea sp. XAF26B01_ASV70	True	Oxford Nanopore MinION
+GCA_056712115.1	GCF_056712115.1	SAMN55953013	SRR38955704	PRJNA1419296	ont	biosample_matched	not_checked	True	66269	Pantoea stewartii	Pantoea stewartii	True	Oxford Nanopore
+GCA_056712405.1	GCF_056712405.1	SAMN55953000	SRR38955711	PRJNA1419296	ont	biosample_matched	not_checked	True	66269	Pantoea stewartii	Pantoea stewartii	True	Oxford Nanopore
+GCA_059367595.1	GCF_059367595.1	SAMN60678756	SRR39076209	PRJNA1441576	ont	biosample_matched	not_checked	True	182337	Erwinia billingiae	Erwinia billingiae	True	Oxford Nanopore MinION
+GCA_058685995.1	GCF_058685995.1	SAMN60678781	SRR39076215	PRJNA1441576	ont	biosample_matched	not_checked	True	68334	Erwinia aphidicola	Erwinia aphidicola	True	Oxford Nanopore MinION
+GCA_059366835.1	GCF_059366835.1	SAMN60678774	SRR39076223	PRJNA1441576	ont	biosample_matched	not_checked	True	182337	Erwinia billingiae	Erwinia billingiae	True	Oxford Nanopore MinION
+GCA_059366915.1	GCF_059366915.1	SAMN60678773	SRR39076224	PRJNA1441576	ont	biosample_matched	not_checked	True	182337	Erwinia billingiae	Erwinia billingiae	True	Oxford Nanopore MinION
+GCA_059366985.1	GCF_059366985.1	SAMN60678771	SRR39076226	PRJNA1441576	ont	biosample_matched	not_checked	True	182337	Erwinia billingiae	Erwinia billingiae	True	Oxford Nanopore MinION
+GCA_058725005.1	GCF_058725005.1	SAMN60678769	SRR39076228	PRJNA1441576	ont	biosample_matched	not_checked	True	182337	Erwinia billingiae	Erwinia billingiae	True	Oxford Nanopore MinION
+GCA_058686155.1	GCF_058686155.1	SAMN60678749	SRR39076231	PRJNA1441576	ont	biosample_matched	not_checked	True	68334	Erwinia aphidicola	Erwinia aphidicola	True	Oxford Nanopore MinION
+GCA_059367415.1	GCF_059367415.1	SAMN60678761	SRR39076237	PRJNA1441576	ont	biosample_matched	not_checked	True	182337	Erwinia billingiae	Erwinia billingiae	True	Oxford Nanopore MinION
+GCA_058241485.1	GCF_058241485.1	SAMN60496559	SRR39237317	PRJNA1129588	ont	biosample_matched	not_checked	True	206499	Erwinia papayae	Erwinia papayae	True	Oxford Nanopore PromethION
+GCA_058242765.1	GCF_058242765.1	SAMN60504458	SRR39237318	PRJNA1129588	ont	biosample_matched	not_checked	True	206499	Erwinia papayae	Erwinia papayae	True	Oxford Nanopore PromethION
+GCA_058215815.1	GCF_058215815.1	SAMN60496555	SRR39237319	PRJNA1129588	ont	biosample_matched	not_checked	True	69222	Erwinia mallotivora	Erwinia mallotivora	True	Oxford Nanopore PromethION
+GCA_062023723.1	GCF_062023723.1	SAMN61409078	SRR39850618	PRJNA1489719	ont	biosample_matched	not_checked	True	3735961	Erwinia sp. FZB01	Erwinia sp. FZB01	True	Oxford Nanopore PromethION
+GCA_057812255.1	GCF_057812255.1	SAMN50736746	SRR36530839	PRJNA1309151	pacbio_unresolved	biosample_matched	not_checked	True	3458449	Erwinia sp. 2186	Erwinia sp. 2186	True	Illumina NovaSeq; PacBio
+GCA_004117135.1	GCF_004117135.1	SAMN09909698	SRR8236066	PRJNA243331	pacbio_unresolved	biosample_matched	not_checked	True	549	Pantoea agglomerans	Pantoea agglomerans	True	PacBio
+GCA_013364135.1	GCF_013364135.1	SAMN11056395	SRR9163113	PRJNA231221	pacbio_clr_subreads	biosample_matched	not_checked	True	553	Pantoea ananatis	Pantoea ananatis	True	Pacbio; Illumina
+GCA_059731165.1	GCF_059731165.1	SAMD00798155	DRR581768	PRJDB17425	pacbio_unresolved	biosample_matched	not_checked	True	59814	Pantoea dispersa	Pantoea dispersa	True	PacBio
+GCA_059730785.1	GCF_059730785.1	SAMD00799329	DRR582002	PRJDB17425	pacbio_unresolved	biosample_matched	not_checked	True	3233519	Pantoea sp. X-Soil-ISGK-421	Pantoea sp. X-Soil-ISGK-421	True	PacBio
+GCA_059730685.1	GCF_059730685.1	SAMD00799333	DRR582006	PRJDB17425	pacbio_unresolved	biosample_matched	not_checked	True	3233523	Pantoea sp. X-Soil-OKNW-713	Pantoea sp. X-Soil-OKNW-713	True	PacBio
+GCA_059730625.1	GCF_059730625.1	SAMD00799335	DRR582008	PRJDB17425	pacbio_unresolved	biosample_matched	not_checked	True	3233525	Pantoea sp. X-Soil-MYKO-1289	Pantoea sp. X-Soil-MYKO-1289	True	PacBio
+GCA_059730595.1	GCF_059730595.1	SAMD00799336	DRR582009	PRJDB17425	pacbio_unresolved	biosample_matched	not_checked	True	3233526	Pantoea sp. X-Soil-YNGN-844	Pantoea sp. X-Soil-YNGN-844	True	PacBio
+GCA_059730565.1	GCF_059730565.1	SAMD00799339	DRR582012	PRJDB17425	pacbio_unresolved	biosample_matched	not_checked	True	3233529	Pantoea sp. X-Soil-TKNS-1279	Pantoea sp. X-Soil-TKNS-1279	True	PacBio
+GCA_059730485.1	GCF_059730485.1	SAMD00799341	DRR582014	PRJDB17425	pacbio_unresolved	biosample_matched	not_checked	True	3233531	Pantoea sp. X-Soil-TKNS-1207	Pantoea sp. X-Soil-TKNS-1207	True	PacBio
+GCA_900454395.1	GCF_900454395.1	SAMEA104338353	ERR2302897	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	549	Pantoea agglomerans	Pantoea agglomerans	True	PacBio
+GCA_900454405.1	GCF_900454405.1	SAMEA2665125	ERR676894	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	549	Pantoea agglomerans	Pantoea agglomerans	True	PacBio
+GCA_025987805.1	GCF_025987805.1	SAMN26865295	SRR21386341	PRJNA818484	pacbio_unresolved	biosample_matched	not_checked	True	552	Erwinia amylovora	Erwinia amylovora	True	Illumina HiSeq; PacBio Sequel
+GCA_001662025.2	GCF_001662025.2	SAMN04961652	SRR24003359	PRJNA320975	pacbio_unresolved	biosample_matched	not_checked	True	77834	Pantoea agglomerans pv. betae	Pantoea agglomerans pv. betae	True	PacBio RS
+GCA_024170105.1		SAMN18243422	SRR26130531	PRJNA708487	pacbio_unresolved	biosample_matched	not_checked	True	549	Pantoea agglomerans	Pantoea agglomerans	True	PacBio
+GCA_037039485.1	GCF_037039485.1	SAMN38211483	SRR26795840	PRJNA1039321	pacbio_unresolved	biosample_matched	not_checked	True	59814	Pantoea dispersa	Pantoea dispersa	True	PacBio RSII
+GCA_014839085.2	GCF_014839085.2	SAMN16237912	SRR27704966	PRJNA665156	pacbio_unresolved	biosample_matched	not_checked	True	549	Pantoea agglomerans	Pantoea agglomerans	True	PacBio Sequel
+GCA_014839205.2	GCF_014839205.2	SAMN16237653	SRR27704967	PRJNA665156	pacbio_unresolved	biosample_matched	not_checked	True	549	Pantoea agglomerans	Pantoea agglomerans	True	PacBio Sequel
+GCA_029505375.1	GCF_029505375.1	SAMN31439202	SRR35217251	PRJNA893717	pacbio_hifi_ccs	biosample_matched	not_checked	True	472694	Pantoea brenneri	Pantoea brenneri	True	PacBio
+GCA_000745075.1	GCF_000745075.1	SAMN02787015	SRR4063115	PRJNA247913	pacbio_unresolved	biosample_matched	not_checked	True	1500895	Erwinia sp. 9145	Erwinia sp. 9145	True	Illumina HiSeq 2000; PacBio RS
+GCA_900182855.1	GCF_900182855.1	SAMN02744765	SRR4063147	PRJNA242130	pacbio_unresolved	biosample_matched	not_checked	True	549	Pantoea agglomerans	Pantoea agglomerans	True	Illumina HiSeq 2000,PacBio RS,PacBio RS II
+GCA_002313185.2	GCF_002313185.2	SAMN04875531	SRR4120066	PRJNA231221	pacbio_clr_subreads	biosample_matched	not_checked	True	1975707	Pantoea sp. FDAARGOS_194	Pantoea sp. FDAARGOS_194	True	PacBio; Illumina
+GCA_002554555.1	GCF_002554555.1	SAMN07312451	SRR5878889	PRJNA231221	pacbio_clr_subreads	biosample_matched	not_checked	True	549	Pantoea agglomerans	Pantoea agglomerans	True	PacBio; Illumina
+GCA_003485445.1	GCF_003485445.1	SAMN07482636	SRR5937954	PRJNA397630	pacbio_clr_subreads	biosample_matched	not_checked	True	55211	Erwinia persicina	Erwinia persicina	True	PacBio
+GCA_027920325.1	GCF_027920325.1	SAMN32512754	SRR22938818	PRJNA916888	ont	biosample_matched	not_checked	True	2364647	Pantoea piersonii	Pantoea piersonii	True	Illumina MiSeq; Oxford Nanopore MinION
+GCA_030062155.1	GCF_030062155.1	SAMN33296026	SRR23461213	PRJNA935049	ont	biosample_matched	not_checked	False	3028622	Pantoea sp. Lij88	Pantoea sp. Lij88	True	Illumina; Oxford Nanopore GridION
+GCA_007833795.1	GCF_007833795.1	SAMN10160529	SRR7962491	PRJNA494309	ont	biosample_matched	not_checked	True	3098669	Candidatus Pantoea soli	Candidatus Pantoea soli	True	Illumina; Oxford Nanopore
+GCA_024397315.1	GCF_024397315.1	SAMN29758761	SRR20229952	PRJNA858868	ont	biosample_matched	not_checked	True	55211	Erwinia persicina	Erwinia persicina	True	Illumina MiSeq; Oxford Nanopore GridION
+GCA_026104315.1	GCF_026104315.1	SAMN31416257	SRR22015155	PRJNA893243	ont	biosample_matched	not_checked	True	470931	Pantoea anthophila	Pantoea anthophila	True	Oxford Nanopore; BGISEQ-500
+GCA_028623185.1	GCF_028623185.1	SAMN31435602	SRR23682350	PRJNA893880	ont	biosample_matched	not_checked	True	552	Erwinia amylovora	Erwinia amylovora	True	Illumina NovaSeq
+GCA_025919605.1	GCF_025919605.1	SAMN31316846	SRR25592474	PRJNA891272	ont	biosample_matched	not_checked	True	59814	Pantoea dispersa	Pantoea dispersa	True	Illumina MiSeq; Oxford Nanopore MinION
+GCA_030710645.1	GCF_030710645.1	SAMN29257230	SRR19974024	PRJNA851950	ont	biosample_matched	not_checked	True	549	Pantoea agglomerans	Pantoea agglomerans	True	Oxford Nanopore PromethION
+GCA_031890185.1	GCF_031890185.1	SAMN22046687	SRR26051222	PRJNA642846	ont	biosample_matched	not_checked	True	549	Pantoea agglomerans	Pantoea agglomerans	True	Illumina MiSeq; Oxford Nanopore MinION
+GCA_031890505.1	GCF_031890505.1	SAMN22046685	SRR26051226	PRJNA642846	ont	biosample_matched	not_checked	True	549	Pantoea agglomerans	Pantoea agglomerans subsp. jekyllhydei (SeqCode)	True	Illumina MiSeq; Oxford Nanopore MinION
+GCA_031889005.1	GCF_031889005.1	SAMN37359886	SRR26051234	PRJNA642846	ont	biosample_matched	not_checked	True	549	Pantoea agglomerans	Pantoea agglomerans	True	Illumina MiSeq; Oxford Nanopore MinION
+GCA_031891025.1	GCF_031891025.1	SAMN22046683	SRR26051242	PRJNA642846	ont	biosample_matched	not_checked	True	549	Pantoea agglomerans	Pantoea agglomerans	True	Illumina MiSeq; Oxford Nanopore MinION
+GCA_049942965.1		SAMN47281039	SRR32628560	PRJNA1233853	ont	biosample_matched	not_checked	False	3405510	Buchnera aphidicola (Tetraneura akinire)	Buchnera aphidicola (Tetraneura akinire)	True	Oxford Nanopore GridION; Illumina HiSeq
+GCA_051833715.1	GCF_051833715.1	SAMN47922264	SRR33108476	PRJNA1249924	ont	biosample_matched	not_checked	True	665913	Mixta calida	Mixta calida	True	Illumina NextSeq; Oxford Nanopore PromethION
+GCA_054512635.1	GCF_054512635.1	SAMN54510736	SRR36753145	PRJNA1399953	ont	biosample_matched	not_checked	True	3570047	Pantoea sp. XAF26B01_ASV70	Pantoea sp. XAF26B01_ASV70	True	Oxford Nanopore MinION
+GCA_055709975.1	GCF_055709975.1	SAMN56289810	SRR37424671	PRJNA1430600	ont	biosample_matched	not_checked	False	549	Pantoea agglomerans	Pantoea agglomerans	True	Oxford Nanopore GridION
+GCA_056712175.1	GCF_056712175.1	SAMN55953011	SRR38955702	PRJNA1419296	ont	biosample_matched	not_checked	True	66269	Pantoea stewartii	Pantoea stewartii	True	Oxford Nanopore
+GCA_058686115.1	GCF_058686115.1	SAMN60678751	SRR39076214	PRJNA1441576	ont	biosample_matched	not_checked	True	3720980	Erwinia sp. L03-1	Erwinia sp. L03-1	True	Oxford Nanopore MinION
+GCA_058686095.1	GCF_058686095.1	SAMN60678750	SRR39076220	PRJNA1441576	ont	biosample_matched	not_checked	True	68334	Erwinia aphidicola	Erwinia aphidicola	True	Oxford Nanopore MinION
+GCA_059367115.1	GCF_059367115.1	SAMN60678767	SRR39076230	PRJNA1441576	ont	biosample_matched	not_checked	True	182337	Erwinia billingiae	Erwinia billingiae	True	Oxford Nanopore MinION
+GCA_059367215.1	GCF_059367215.1	SAMN60678766	SRR39076232	PRJNA1441576	ont	biosample_matched	not_checked	True	182337	Erwinia billingiae	Erwinia billingiae	True	Oxford Nanopore MinION
+GCA_058241465.1	GCF_058241465.1	SAMN60496561	SRR39237321	PRJNA1129588	ont	biosample_matched	not_checked	True	206499	Erwinia papayae	Erwinia papayae	True	Oxford Nanopore PromethION
+GCA_061130155.1	GCF_061130155.1	SAMN61111444	SRR40497326	PRJNA1482102	ont	biosample_matched	not_checked	True	553	Pantoea ananatis	Pantoea ananatis	True	Oxford Nanopore PromethION

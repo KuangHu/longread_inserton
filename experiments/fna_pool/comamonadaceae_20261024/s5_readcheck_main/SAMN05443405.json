@@ -1,0 +1,25 @@
+{
+ "sample": "SAMN05443405",
+ "runs": [
+  {
+   "run": "SRR9002440",
+   "read_type": "pacbio_unresolved",
+   "preset": "map-pb",
+   "sha256": "9899fe348a7d185954505a793482cb6d75ff22f990787380d8e6aca87b72ab2c"
+  },
+  {
+   "run": "SRR9002441",
+   "read_type": "pacbio_unresolved",
+   "preset": "map-pb",
+   "sha256": "526c6bd5db6b066e90caf239f437734708edd810ce3b1d5d1fce3e9ceec6bdfe"
+  }
+ ],
+ "minimap2_args": [
+  "-c",
+  "--secondary=yes",
+  "-N",
+  "100",
+  "-p",
+  "0.3"
+ ]
+}

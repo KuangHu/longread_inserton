@@ -1,0 +1,125 @@
+{
+ "version": "s4_annotate_v0.2",
+ "mmseqs": "17.b804f",
+ "settings": {
+  "family": [
+   "--min-seq-id",
+   "0.9",
+   "-c",
+   "0.8",
+   "--cov-mode",
+   "0",
+   "--cluster-mode",
+   "0",
+   "--cluster-reassign",
+   "1"
+  ],
+  "homology_group": [
+   "--min-seq-id",
+   "0.5",
+   "-c",
+   "0.8",
+   "--cov-mode",
+   "0",
+   "--cluster-mode",
+   "0",
+   "--cluster-reassign",
+   "1"
+  ]
+ },
+ "member_min": {
+  "family": [
+   0.9,
+   0.8
+  ],
+  "homology_group": [
+   0.5,
+   0.8
+  ]
+ },
+ "check_search": [
+  "--exhaustive-search",
+  "1",
+  "--alignment-mode",
+  "3",
+  "-e",
+  "10",
+  "--max-seqs",
+  "100000",
+  "--format-output",
+  "query,target,fident,qcov,tcov,alnlen"
+ ],
+ "distinct_proteins": 4764,
+ "member_check": {
+  "family": {
+   "members": 4764,
+   "passed": 4764,
+   "fail": []
+  },
+  "homology_group": {
+   "members": 4764,
+   "passed": 4764,
+   "fail": []
+  }
+ },
+ "main": {
+  "loci": 3306,
+  "carriers": 1622,
+  "species": 432,
+  "cds_units": 4053,
+  "distinct_proteins": 2495,
+  "families": 1668,
+  "homology_groups": 1289,
+  "family_architectures": 1388
+ },
+ "partner_mixed": {
+  "loci": 109,
+  "carriers": 105,
+  "species": 55,
+  "cds_units": 145,
+  "distinct_proteins": 117,
+  "families": 96,
+  "homology_groups": 89,
+  "family_architectures": 78
+ },
+ "direction_mixed": {
+  "loci": 14,
+  "carriers": 14,
+  "species": 9,
+  "cds_units": 19,
+  "distinct_proteins": 12,
+  "families": 9,
+  "homology_groups": 9,
+  "family_architectures": 8
+ },
+ "short_other_segment": {
+  "loci": 2368,
+  "carriers": 1436,
+  "species": 429,
+  "cds_units": 2976,
+  "distinct_proteins": 1845,
+  "families": 1377,
+  "homology_groups": 1235,
+  "family_architectures": 1092
+ },
+ "replacement": {
+  "loci": 537,
+  "carriers": 465,
+  "species": 163,
+  "cds_units": 749,
+  "distinct_proteins": 466,
+  "families": 352,
+  "homology_groups": 348,
+  "family_architectures": 253
+ },
+ "all": {
+  "loci": 6334,
+  "carriers": 2193,
+  "species": 566,
+  "cds_units": 7942,
+  "distinct_proteins": 4764,
+  "families": 3180,
+  "homology_groups": 2580,
+  "family_architectures": 2578
+ }
+}

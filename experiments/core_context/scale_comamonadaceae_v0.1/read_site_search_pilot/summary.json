@@ -1,0 +1,1889 @@
+{
+ "version": "read_site_search_v0.3.2",
+ "samples": [
+  "SAMN51658617",
+  "SAMN49042133",
+  "SAMN52101483",
+  "SAMEA115676957",
+  "SAMN30525180",
+  "SAMD00260131",
+  "SAMN11265848",
+  "SAMN15738716",
+  "SAMN41424278",
+  "SAMD00265974",
+  "SAMN37751790"
+ ],
+ "main": {
+  "flank": 1000,
+  "molecules": 3
+ },
+ "grid": {
+  "L500_N1": {
+   "core": {
+    "positions_by_class": {
+     "known_catalog_position_other_core": 665,
+     "known_catalog_position": 521,
+     "homolog_not_in_catalog:same_homology_group": 232,
+     "homolog_not_in_catalog:other_family": 104,
+     "catalog_omission:no_annotated_cds": 8,
+     "catalog_mismatch:coverage": 128,
+     "not_in_assembly:junction": 239,
+     "contig_end_join": 12,
+     "not_in_assembly:core_absent": 24,
+     "not_in_assembly:other_sequence": 2
+    },
+    "positions_below_N": {},
+    "shifted_known_positions": 1157,
+    "unplaceable_contexts": {
+     "unplaceable_context:left_ambiguous|right_placed": 147,
+     "unplaceable_context:left_placed|right_ambiguous": 147,
+     "unplaceable_context:left_no_anchor|right_no_anchor": 23,
+     "unplaceable_context:left_unplaced|right_placed": 162,
+     "unplaceable_context:left_no_anchor|right_placed": 46,
+     "unplaceable_context:left_unplaced|right_no_anchor": 10,
+     "unplaceable_context:left_no_anchor|right_unplaced": 7,
+     "unplaceable_context:left_placed|right_no_anchor": 124,
+     "unplaceable_context:left_placed|right_unplaced": 155,
+     "unplaceable_context:left_unplaced|right_unplaced": 20,
+     "unplaceable_context:left_ambiguous|right_ambiguous": 12,
+     "unplaceable_context:left_ambiguous|right_no_anchor": 4,
+     "unplaceable_context:left_no_anchor|right_ambiguous": 4,
+     "unplaceable_context:left_unplaced|right_ambiguous": 4,
+     "unplaceable_context:left_placed|right_inner_end_unaligned": 7,
+     "unplaceable_context:left_ambiguous|right_unplaced": 4,
+     "unplaceable_context:left_inner_end_unaligned|right_placed": 1
+    }
+   },
+   "neg": {
+    "positions_by_class": {
+     "known_catalog_position_other_core": 20,
+     "known_catalog_position": 30,
+     "not_in_assembly:junction": 6,
+     "catalog_mismatch:coverage": 3
+    },
+    "positions_below_N": {},
+    "shifted_known_positions": 48,
+    "unplaceable_contexts": {
+     "unplaceable_context:left_placed|right_no_anchor": 7,
+     "unplaceable_context:left_no_anchor|right_unplaced": 3,
+     "unplaceable_context:left_no_anchor|right_placed": 4,
+     "unplaceable_context:left_placed|right_unplaced": 6,
+     "unplaceable_context:left_unplaced|right_placed": 9,
+     "unplaceable_context:left_unplaced|right_unplaced": 2,
+     "unplaceable_context:left_unplaced|right_no_anchor": 1,
+     "unplaceable_context:left_ambiguous|right_placed": 1
+    }
+   },
+   "known_recovery": {
+    "core|not_round5_supported": "197/227",
+    "core|round5_supported": "324/366",
+    "negative_control|not_round5_supported": "30/30"
+   },
+   "not_in_assembly_by_boundary_and_size": {
+    "not_in_assembly:junction|no_extension_detected|lt_2500": 65,
+    "not_in_assembly:junction|extension_consistent|lt_2500": 174,
+    "not_in_assembly:core_absent|extension_consistent|lt_2500": 24,
+    "not_in_assembly:other_sequence|no_extension_detected|lt_2500": 2
+   },
+   "positions_with_extra_sequence": {
+    "known_catalog_position_other_core|no_extension_detected": 654,
+    "known_catalog_position|no_extension_detected": 521,
+    "homolog_not_in_catalog|no_extension_detected": 288,
+    "catalog_omission|no_extension_detected": 7,
+    "catalog_mismatch|no_extension_detected": 88,
+    "homolog_not_in_catalog|extension_consistent": 48,
+    "not_in_assembly|no_extension_detected": 67,
+    "not_in_assembly|extension_consistent": 198,
+    "known_catalog_position_other_core|extension_consistent": 10,
+    "contig_end_join|extension_consistent": 7,
+    "catalog_mismatch|extension_consistent": 35,
+    "contig_end_join|no_extension_detected": 5,
+    "known_catalog_position_other_core|unknown": 1,
+    "catalog_mismatch|unknown": 5,
+    "catalog_omission|extension_consistent": 1
+   },
+   "negative_control": {
+    "genes_searched": 55,
+    "positions_per_gene": {
+     "0": 6,
+     "1": 41,
+     "2": 7,
+     "4": 1
+    },
+    "extra_positions": [
+     {
+      "sample": "SAMN49042133",
+      "gene": "NEG_50S_ribosomal_protein_L2",
+      "cls": "known_catalog_position_other_core",
+      "molecules": "115",
+      "contig": "NZ_CP195181.1",
+      "left_pos": "426087",
+      "right_contig": "NZ_CP195181.1",
+      "right_pos": "426912"
+     },
+     {
+      "sample": "SAMN49042133",
+      "gene": "NEG_50S_ribosomal_protein_L2",
+      "cls": "known_catalog_position_other_core",
+      "molecules": "1",
+      "contig": "NZ_CP195181.1",
+      "left_pos": "426087",
+      "right_contig": "NZ_CP195181.1",
+      "right_pos": "426998"
+     },
+     {
+      "sample": "SAMN52101483",
+      "gene": "NEG_30S_ribosomal_protein_S3",
+      "cls": "known_catalog_position",
+      "molecules": "120",
+      "contig": "NZ_CM129821.1",
+      "left_pos": "39710",
+      "right_contig": "NZ_CM129821.1",
+      "right_pos": "40586"
+     },
+     {
+      "sample": "SAMN52101483",
+      "gene": "NEG_DNA-directed_RNA_polymerase_subunit_betap",
+      "cls": "known_catalog_position",
+      "molecules": "58",
+      "contig": "NZ_CM129821.1",
+      "left_pos": "4623821",
+      "right_contig": "NZ_CM129821.1",
+      "right_pos": "4628036"
+     },
+     {
+      "sample": "SAMN52101483",
+      "gene": "NEG_DNA-directed_RNA_polymerase_subunit_betap",
+      "cls": "not_in_assembly:junction",
+      "molecules": "1",
+      "contig": "NZ_CM129821.1",
+      "left_pos": "3921364",
+      "right_contig": "NZ_CM129821.1",
+      "right_pos": "4623821"
+     },
+     {
+      "sample": "SAMN52101483",
+      "gene": "NEG_DNA-directed_RNA_polymerase_subunit_betap",
+      "cls": "not_in_assembly:junction",
+      "molecules": "1",
+      "contig": "NZ_CM129821.1",
+      "left_pos": "4298228",
+      "right_contig": "NZ_CM129821.1",
+      "right_pos": "4623821"
+     },
+     {
+      "sample": "SAMN52101483",
+      "gene": "NEG_30S_ribosomal_protein_S3",
+      "cls": "not_in_assembly:junction",
+      "molecules": "1",
+      "contig": "NZ_CM129821.1",
+      "left_pos": "40586",
+      "right_contig": "NZ_CM129821.1",
+      "right_pos": "5047334"
+     },
+     {
+      "sample": "SAMN52101483",
+      "gene": "NEG_DNA-directed_RNA_polymerase_subunit_betap",
+      "cls": "not_in_assembly:junction",
+      "molecules": "1",
+      "contig": "NZ_CM129821.1",
+      "left_pos": "4628031",
+      "right_contig": "NZ_CM129821.1",
+      "right_pos": "2337101"
+     },
+     {
+      "sample": "SAMN30525180",
+      "gene": "NEG_30S_ribosomal_protein_S3",
+      "cls": "known_catalog_position_other_core",
+      "molecules": "78",
+      "contig": "NZ_JAOCIM010000001.1",
+      "left_pos": "227105",
+      "right_contig": "NZ_JAOCIM010000001.1",
+      "right_pos": "227966"
+     },
+     {
+      "sample": "SAMN30525180",
+      "gene": "NEG_30S_ribosomal_protein_S3",
+      "cls": "known_catalog_position_other_core",
+      "molecules": "1",
+      "contig": "NZ_JAOCIM010000001.1",
+      "left_pos": "227105",
+      "right_contig": "NZ_JAOCIM010000001.1",
+      "right_pos": "228143"
+     },
+     {
+      "sample": "SAMN30525180",
+      "gene": "NEG_50S_ribosomal_protein_L2",
+      "cls": "catalog_mismatch:coverage",
+      "molecules": "67",
+      "contig": "NZ_JAOCIM010000001.1",
+      "left_pos": "225636",
+      "right_contig": "NZ_JAOCIM010000001.1",
+      "right_pos": "226461"
+     },
+     {
+      "sample": "SAMN30525180",
+      "gene": "NEG_50S_ribosomal_protein_L2",
+      "cls": "catalog_mismatch:coverage",
+      "molecules": "2",
+      "contig": "NZ_JAOCIM010000001.1",
+      "left_pos": "225636",
+      "right_contig": "NZ_JAOCIM010000001.1",
+      "right_pos": "226402"
+     },
+     {
+      "sample": "SAMD00260131",
+      "gene": "NEG_30S_ribosomal_protein_S3",
+      "cls": "known_catalog_position_other_core",
+      "molecules": "1",
+      "contig": "NZ_AP024172.1",
+      "left_pos": "468981",
+      "right_contig": "NZ_AP024172.1",
+      "right_pos": "470028"
+     },
+     {
+      "sample": "SAMD00260131",
+      "gene": "NEG_30S_ribosomal_protein_S3",
+      "cls": "known_catalog_position_other_core",
+      "molecules": "125",
+      "contig": "NZ_AP024172.1",
+      "left_pos": "469150",
+      "right_contig": "NZ_AP024172.1",
+      "right_pos": "470023"
+     },
+     {
+      "sample": "SAMD00260131",
+      "gene": "NEG_DNA-directed_RNA_polymerase_subunit_betap",
+      "cls": "known_catalog_position",
+      "molecules": "112",
+      "contig": "NZ_AP024172.1",
+      "left_pos": "507950",
+      "right_contig": "NZ_AP024172.1",
+      "right_pos": "512180"
+     },
+     {
+      "sample": "SAMD00260131",
+      "gene": "NEG_DNA-directed_RNA_polymerase_subunit_betap",
+      "cls": "not_in_assembly:junction",
+      "molecules": "1",
+      "contig": "NZ_AP024172.1",
+      "left_pos": "512193",
+      "right_contig": "NZ_AP024172.1",
+      "right_pos": "3452676"
+     },
+     {
+      "sample": "SAMN11265848",
+      "gene": "NEG_50S_ribosomal_protein_L2",
+      "cls": "known_catalog_position_other_core",
+      "molecules": "255",
+      "contig": "NZ_CM195847.1",
+      "left_pos": "307114",
+      "right_contig": "NZ_CM195847.1",
+      "right_pos": "307903"
+     },
+     {
+      "sample": "SAMN11265848",
+      "gene": "NEG_50S_ribosomal_protein_L2",
+      "cls": "not_in_assembly:junction",
+      "molecules": "1",
+      "contig": "NZ_CM195847.1",
+      "left_pos": "307903",
+      "right_contig": "NZ_CM195847.1",
+      "right_pos": "321715"
+     }
+    ]
+   }
+  },
+  "L500_N2": {
+   "core": {
+    "positions_by_class": {
+     "known_catalog_position_other_core": 623,
+     "known_catalog_position": 520,
+     "homolog_not_in_catalog:same_homology_group": 159,
+     "homolog_not_in_catalog:other_family": 82,
+     "catalog_omission:no_annotated_cds": 8,
+     "catalog_mismatch:coverage": 79,
+     "not_in_assembly:junction": 7,
+     "contig_end_join": 9,
+     "not_in_assembly:core_absent": 5
+    },
+    "positions_below_N": {
+     "homolog_not_in_catalog:other_family": 22,
+     "homolog_not_in_catalog:same_homology_group": 73,
+     "known_catalog_position_other_core": 42,
+     "not_in_assembly:junction": 232,
+     "catalog_mismatch:coverage": 49,
+     "contig_end_join": 3,
+     "not_in_assembly:core_absent": 19,
+     "known_catalog_position": 1,
+     "not_in_assembly:other_sequence": 2
+    },
+    "shifted_known_positions": 224,
+    "unplaceable_contexts": {
+     "unplaceable_context:left_ambiguous|right_placed": 68,
+     "unplaceable_context:left_placed|right_ambiguous": 71,
+     "unplaceable_context:left_no_anchor|right_no_anchor": 14,
+     "unplaceable_context:left_no_anchor|right_placed": 3,
+     "unplaceable_context:left_unplaced|right_no_anchor": 3,
+     "unplaceable_context:left_no_anchor|right_unplaced": 2,
+     "unplaceable_context:left_placed|right_unplaced": 10,
+     "unplaceable_context:left_ambiguous|right_ambiguous": 9,
+     "unplaceable_context:left_unplaced|right_placed": 4,
+     "unplaceable_context:left_unplaced|right_unplaced": 3,
+     "unplaceable_context:left_ambiguous|right_unplaced": 2,
+     "unplaceable_context:left_ambiguous|right_no_anchor": 1,
+     "unplaceable_context:left_placed|right_no_anchor": 2
+    }
+   },
+   "neg": {
+    "positions_by_class": {
+     "known_catalog_position_other_core": 15,
+     "known_catalog_position": 30,
+     "catalog_mismatch:coverage": 3
+    },
+    "positions_below_N": {
+     "known_catalog_position_other_core": 5,
+     "not_in_assembly:junction": 6
+    },
+    "shifted_known_positions": 5,
+    "unplaceable_contexts": {
+     "unplaceable_context:left_no_anchor|right_unplaced": 1,
+     "unplaceable_context:left_no_anchor|right_placed": 1
+    }
+   },
+   "known_recovery": {
+    "core|not_round5_supported": "197/227",
+    "core|round5_supported": "323/366",
+    "negative_control|not_round5_supported": "30/30"
+   },
+   "not_in_assembly_by_boundary_and_size": {
+    "not_in_assembly:junction|extension_consistent|lt_2500": 5,
+    "not_in_assembly:junction|no_extension_detected|lt_2500": 2,
+    "not_in_assembly:core_absent|extension_consistent|lt_2500": 5
+   },
+   "positions_with_extra_sequence": {
+    "known_catalog_position_other_core|no_extension_detected": 619,
+    "known_catalog_position|no_extension_detected": 520,
+    "homolog_not_in_catalog|no_extension_detected": 237,
+    "catalog_omission|no_extension_detected": 7,
+    "catalog_mismatch|no_extension_detected": 72,
+    "not_in_assembly|extension_consistent": 10,
+    "contig_end_join|extension_consistent": 5,
+    "not_in_assembly|no_extension_detected": 2,
+    "contig_end_join|no_extension_detected": 4,
+    "known_catalog_position_other_core|extension_consistent": 3,
+    "known_catalog_position_other_core|unknown": 1,
+    "catalog_mismatch|unknown": 5,
+    "catalog_omission|extension_consistent": 1,
+    "catalog_mismatch|extension_consistent": 2,
+    "homolog_not_in_catalog|extension_consistent": 4
+   },
+   "negative_control": {
+    "genes_searched": 55,
+    "positions_per_gene": {
+     "0": 8,
+     "1": 46,
+     "2": 1
+    },
+    "extra_positions": [
+     {
+      "sample": "SAMN30525180",
+      "gene": "NEG_50S_ribosomal_protein_L2",
+      "cls": "catalog_mismatch:coverage",
+      "molecules": "67",
+      "contig": "NZ_JAOCIM010000001.1",
+      "left_pos": "225636",
+      "right_contig": "NZ_JAOCIM010000001.1",
+      "right_pos": "226461"
+     },
+     {
+      "sample": "SAMN30525180",
+      "gene": "NEG_50S_ribosomal_protein_L2",
+      "cls": "catalog_mismatch:coverage",
+      "molecules": "2",
+      "contig": "NZ_JAOCIM010000001.1",
+      "left_pos": "225636",
+      "right_contig": "NZ_JAOCIM010000001.1",
+      "right_pos": "226402"
+     }
+    ]
+   }
+  },
+  "L500_N3": {
+   "core": {
+    "positions_by_class": {
+     "known_catalog_position_other_core": 605,
+     "known_catalog_position": 519,
+     "homolog_not_in_catalog:same_homology_group": 141,
+     "homolog_not_in_catalog:other_family": 76,
+     "catalog_omission:no_annotated_cds": 6,
+     "catalog_mismatch:coverage": 66,
+     "contig_end_join": 7,
+     "not_in_assembly:core_absent": 5
+    },
+    "positions_below_N": {
+     "homolog_not_in_catalog:other_family": 28,
+     "homolog_not_in_catalog:same_homology_group": 91,
+     "known_catalog_position_other_core": 60,
+     "catalog_omission:no_annotated_cds": 2,
+     "not_in_assembly:junction": 239,
+     "contig_end_join": 5,
+     "catalog_mismatch:coverage": 62,
+     "known_catalog_position": 2,
+     "not_in_assembly:core_absent": 19,
+     "not_in_assembly:other_sequence": 2
+    },
+    "shifted_known_positions": 115,
+    "unplaceable_contexts": {
+     "unplaceable_context:left_ambiguous|right_placed": 61,
+     "unplaceable_context:left_placed|right_ambiguous": 63,
+     "unplaceable_context:left_no_anchor|right_no_anchor": 6,
+     "unplaceable_context:left_no_anchor|right_placed": 3,
+     "unplaceable_context:left_unplaced|right_no_anchor": 3,
+     "unplaceable_context:left_no_anchor|right_unplaced": 2,
+     "unplaceable_context:left_ambiguous|right_ambiguous": 8,
+     "unplaceable_context:left_unplaced|right_placed": 2
+    }
+   },
+   "neg": {
+    "positions_by_class": {
+     "known_catalog_position_other_core": 15,
+     "known_catalog_position": 30,
+     "catalog_mismatch:coverage": 2
+    },
+    "positions_below_N": {
+     "known_catalog_position_other_core": 5,
+     "not_in_assembly:junction": 6,
+     "catalog_mismatch:coverage": 1
+    },
+    "shifted_known_positions": 3,
+    "unplaceable_contexts": {}
+   },
+   "known_recovery": {
+    "core|not_round5_supported": "196/227",
+    "core|round5_supported": "323/366",
+    "negative_control|not_round5_supported": "30/30"
+   },
+   "not_in_assembly_by_boundary_and_size": {
+    "not_in_assembly:core_absent|extension_consistent|lt_2500": 5
+   },
+   "positions_with_extra_sequence": {
+    "known_catalog_position_other_core|no_extension_detected": 604,
+    "known_catalog_position|no_extension_detected": 519,
+    "homolog_not_in_catalog|no_extension_detected": 216,
+    "catalog_omission|no_extension_detected": 6,
+    "catalog_mismatch|no_extension_detected": 65,
+    "contig_end_join|extension_consistent": 4,
+    "contig_end_join|no_extension_detected": 3,
+    "not_in_assembly|extension_consistent": 5,
+    "known_catalog_position_other_core|unknown": 1,
+    "catalog_mismatch|unknown": 1,
+    "homolog_not_in_catalog|extension_consistent": 1
+   },
+   "negative_control": {
+    "genes_searched": 55,
+    "positions_per_gene": {
+     "0": 8,
+     "1": 47
+    },
+    "extra_positions": []
+   }
+  },
+  "L500_N5": {
+   "core": {
+    "positions_by_class": {
+     "known_catalog_position_other_core": 592,
+     "known_catalog_position": 516,
+     "homolog_not_in_catalog:same_homology_group": 125,
+     "homolog_not_in_catalog:other_family": 70,
+     "catalog_omission:no_annotated_cds": 6,
+     "catalog_mismatch:coverage": 57,
+     "contig_end_join": 6,
+     "not_in_assembly:core_absent": 5
+    },
+    "positions_below_N": {
+     "homolog_not_in_catalog:other_family": 34,
+     "homolog_not_in_catalog:same_homology_group": 107,
+     "known_catalog_position_other_core": 73,
+     "catalog_omission:no_annotated_cds": 2,
+     "not_in_assembly:junction": 239,
+     "contig_end_join": 6,
+     "catalog_mismatch:coverage": 71,
+     "known_catalog_position": 5,
+     "not_in_assembly:core_absent": 19,
+     "not_in_assembly:other_sequence": 2
+    },
+    "shifted_known_positions": 66,
+    "unplaceable_contexts": {
+     "unplaceable_context:left_ambiguous|right_placed": 52,
+     "unplaceable_context:left_placed|right_ambiguous": 54,
+     "unplaceable_context:left_no_anchor|right_no_anchor": 3,
+     "unplaceable_context:left_ambiguous|right_ambiguous": 7
+    }
+   },
+   "neg": {
+    "positions_by_class": {
+     "known_catalog_position_other_core": 13,
+     "known_catalog_position": 30,
+     "catalog_mismatch:coverage": 2
+    },
+    "positions_below_N": {
+     "known_catalog_position_other_core": 7,
+     "not_in_assembly:junction": 6,
+     "catalog_mismatch:coverage": 1
+    },
+    "shifted_known_positions": 2,
+    "unplaceable_contexts": {}
+   },
+   "known_recovery": {
+    "core|not_round5_supported": "195/227",
+    "core|round5_supported": "321/366",
+    "negative_control|not_round5_supported": "30/30"
+   },
+   "not_in_assembly_by_boundary_and_size": {
+    "not_in_assembly:core_absent|extension_consistent|lt_2500": 5
+   },
+   "positions_with_extra_sequence": {
+    "known_catalog_position_other_core|no_extension_detected": 592,
+    "known_catalog_position|no_extension_detected": 516,
+    "homolog_not_in_catalog|no_extension_detected": 195,
+    "catalog_omission|no_extension_detected": 6,
+    "catalog_mismatch|no_extension_detected": 57,
+    "contig_end_join|extension_consistent": 4,
+    "contig_end_join|no_extension_detected": 2,
+    "not_in_assembly|extension_consistent": 5
+   },
+   "negative_control": {
+    "genes_searched": 55,
+    "positions_per_gene": {
+     "0": 10,
+     "1": 45
+    },
+    "extra_positions": []
+   }
+  },
+  "L1000_N1": {
+   "core": {
+    "positions_by_class": {
+     "known_catalog_position_other_core": 662,
+     "known_catalog_position": 533,
+     "homolog_not_in_catalog:same_homology_group": 226,
+     "homolog_not_in_catalog:other_family": 109,
+     "catalog_omission:no_annotated_cds": 11,
+     "catalog_mismatch:coverage": 129,
+     "not_in_assembly:junction": 352,
+     "contig_end_join": 13,
+     "not_in_assembly:core_absent": 19
+    },
+    "positions_below_N": {},
+    "shifted_known_positions": 1247,
+    "unplaceable_contexts": {
+     "unplaceable_context:left_placed|right_ambiguous": 112,
+     "unplaceable_context:left_ambiguous|right_placed": 108,
+     "unplaceable_context:left_no_anchor|right_placed": 47,
+     "unplaceable_context:left_unplaced|right_no_anchor": 6,
+     "unplaceable_context:left_no_anchor|right_no_anchor": 26,
+     "unplaceable_context:left_no_anchor|right_unplaced": 4,
+     "unplaceable_context:left_placed|right_unplaced": 80,
+     "unplaceable_context:left_placed|right_no_anchor": 151,
+     "unplaceable_context:left_unplaced|right_placed": 69,
+     "unplaceable_context:left_unplaced|right_unplaced": 5,
+     "unplaceable_context:left_ambiguous|right_ambiguous": 7,
+     "unplaceable_context:left_placed|right_inner_end_unaligned": 6,
+     "unplaceable_context:left_inner_end_unaligned|right_placed": 1,
+     "unplaceable_context:left_inner_end_unaligned|right_unplaced": 1,
+     "unplaceable_context:left_ambiguous|right_no_anchor": 2,
+     "unplaceable_context:left_no_anchor|right_ambiguous": 1,
+     "unplaceable_context:left_ambiguous|right_unplaced": 1
+    }
+   },
+   "neg": {
+    "positions_by_class": {
+     "known_catalog_position_other_core": 18,
+     "known_catalog_position": 30,
+     "not_in_assembly:junction": 6,
+     "catalog_mismatch:coverage": 3
+    },
+    "positions_below_N": {},
+    "shifted_known_positions": 57,
+    "unplaceable_contexts": {
+     "unplaceable_context:left_placed|right_no_anchor": 11,
+     "unplaceable_context:left_no_anchor|right_placed": 6,
+     "unplaceable_context:left_placed|right_unplaced": 2,
+     "unplaceable_context:left_unplaced|right_placed": 6,
+     "unplaceable_context:left_no_anchor|right_unplaced": 1,
+     "unplaceable_context:left_unplaced|right_unplaced": 1
+    }
+   },
+   "known_recovery": {
+    "core|not_round5_supported": "202/227",
+    "core|round5_supported": "331/366",
+    "negative_control|not_round5_supported": "30/30"
+   },
+   "not_in_assembly_by_boundary_and_size": {
+    "not_in_assembly:junction|no_extension_detected|lt_2500": 56,
+    "not_in_assembly:junction|extension_consistent|lt_2500": 285,
+    "not_in_assembly:junction|unknown|lt_2500": 3,
+    "not_in_assembly:junction|extension_consistent|ge_2500": 8,
+    "not_in_assembly:core_absent|extension_consistent|lt_2500": 19
+   },
+   "positions_with_extra_sequence": {
+    "known_catalog_position_other_core|no_extension_detected": 648,
+    "known_catalog_position|no_extension_detected": 533,
+    "homolog_not_in_catalog|no_extension_detected": 286,
+    "catalog_omission|no_extension_detected": 10,
+    "catalog_mismatch|no_extension_detected": 87,
+    "homolog_not_in_catalog|extension_consistent": 49,
+    "not_in_assembly|no_extension_detected": 56,
+    "not_in_assembly|extension_consistent": 312,
+    "not_in_assembly|unknown": 3,
+    "known_catalog_position_other_core|extension_consistent": 13,
+    "contig_end_join|extension_consistent": 8,
+    "catalog_mismatch|extension_consistent": 37,
+    "contig_end_join|no_extension_detected": 5,
+    "known_catalog_position_other_core|unknown": 1,
+    "catalog_mismatch|unknown": 5,
+    "catalog_omission|extension_consistent": 1
+   },
+   "negative_control": {
+    "genes_searched": 55,
+    "positions_per_gene": {
+     "0": 7,
+     "1": 41,
+     "2": 6,
+     "4": 1
+    },
+    "extra_positions": [
+     {
+      "sample": "SAMN49042133",
+      "gene": "NEG_30S_ribosomal_protein_S3",
+      "cls": "known_catalog_position_other_core",
+      "molecules": "85",
+      "contig": "NZ_CP195181.1",
+      "left_pos": "427557",
+      "right_contig": "NZ_CP195181.1",
+      "right_pos": "428430"
+     },
+     {
+      "sample": "SAMN49042133",
+      "gene": "NEG_30S_ribosomal_protein_S3",
+      "cls": "not_in_assembly:junction",
+      "molecules": "1",
+      "contig": "NZ_CP195181.1",
+      "left_pos": "428430",
+      "right_contig": "NZ_CP195181.1",
+      "right_pos": "426963"
+     },
+     {
+      "sample": "SAMN52101483",
+      "gene": "NEG_DNA-directed_RNA_polymerase_subunit_betap",
+      "cls": "known_catalog_position",
+      "molecules": "55",
+      "contig": "NZ_CM129821.1",
+      "left_pos": "4623821",
+      "right_contig": "NZ_CM129821.1",
+      "right_pos": "4628036"
+     },
+     {
+      "sample": "SAMN52101483",
+      "gene": "NEG_DNA-directed_RNA_polymerase_subunit_betap",
+      "cls": "not_in_assembly:junction",
+      "molecules": "1",
+      "contig": "NZ_CM129821.1",
+      "left_pos": "3921364",
+      "right_contig": "NZ_CM129821.1",
+      "right_pos": "4623821"
+     },
+     {
+      "sample": "SAMN52101483",
+      "gene": "NEG_DNA-directed_RNA_polymerase_subunit_betap",
+      "cls": "not_in_assembly:junction",
+      "molecules": "1",
+      "contig": "NZ_CM129821.1",
+      "left_pos": "4298228",
+      "right_contig": "NZ_CM129821.1",
+      "right_pos": "4623821"
+     },
+     {
+      "sample": "SAMN52101483",
+      "gene": "NEG_DNA-directed_RNA_polymerase_subunit_betap",
+      "cls": "not_in_assembly:junction",
+      "molecules": "1",
+      "contig": "NZ_CM129821.1",
+      "left_pos": "4628031",
+      "right_contig": "NZ_CM129821.1",
+      "right_pos": "2337101"
+     },
+     {
+      "sample": "SAMN30525180",
+      "gene": "NEG_30S_ribosomal_protein_S3",
+      "cls": "known_catalog_position_other_core",
+      "molecules": "70",
+      "contig": "NZ_JAOCIM010000001.1",
+      "left_pos": "227105",
+      "right_contig": "NZ_JAOCIM010000001.1",
+      "right_pos": "227966"
+     },
+     {
+      "sample": "SAMN30525180",
+      "gene": "NEG_30S_ribosomal_protein_S3",
+      "cls": "known_catalog_position_other_core",
+      "molecules": "1",
+      "contig": "NZ_JAOCIM010000001.1",
+      "left_pos": "227105",
+      "right_contig": "NZ_JAOCIM010000001.1",
+      "right_pos": "228143"
+     },
+     {
+      "sample": "SAMN30525180",
+      "gene": "NEG_50S_ribosomal_protein_L2",
+      "cls": "catalog_mismatch:coverage",
+      "molecules": "61",
+      "contig": "NZ_JAOCIM010000001.1",
+      "left_pos": "225636",
+      "right_contig": "NZ_JAOCIM010000001.1",
+      "right_pos": "226461"
+     },
+     {
+      "sample": "SAMN30525180",
+      "gene": "NEG_50S_ribosomal_protein_L2",
+      "cls": "catalog_mismatch:coverage",
+      "molecules": "2",
+      "contig": "NZ_JAOCIM010000001.1",
+      "left_pos": "225636",
+      "right_contig": "NZ_JAOCIM010000001.1",
+      "right_pos": "226402"
+     },
+     {
+      "sample": "SAMD00260131",
+      "gene": "NEG_30S_ribosomal_protein_S3",
+      "cls": "known_catalog_position_other_core",
+      "molecules": "1",
+      "contig": "NZ_AP024172.1",
+      "left_pos": "468981",
+      "right_contig": "NZ_AP024172.1",
+      "right_pos": "470028"
+     },
+     {
+      "sample": "SAMD00260131",
+      "gene": "NEG_30S_ribosomal_protein_S3",
+      "cls": "known_catalog_position_other_core",
+      "molecules": "115",
+      "contig": "NZ_AP024172.1",
+      "left_pos": "469150",
+      "right_contig": "NZ_AP024172.1",
+      "right_pos": "470023"
+     },
+     {
+      "sample": "SAMD00260131",
+      "gene": "NEG_DNA-directed_RNA_polymerase_subunit_betap",
+      "cls": "not_in_assembly:junction",
+      "molecules": "1",
+      "contig": "NZ_AP024172.1",
+      "left_pos": "507893",
+      "right_contig": "NZ_AP024172.1",
+      "right_pos": "460943"
+     },
+     {
+      "sample": "SAMD00260131",
+      "gene": "NEG_DNA-directed_RNA_polymerase_subunit_betap",
+      "cls": "known_catalog_position",
+      "molecules": "103",
+      "contig": "NZ_AP024172.1",
+      "left_pos": "507950",
+      "right_contig": "NZ_AP024172.1",
+      "right_pos": "512180"
+     },
+     {
+      "sample": "SAMN11265848",
+      "gene": "NEG_50S_ribosomal_protein_L2",
+      "cls": "known_catalog_position_other_core",
+      "molecules": "202",
+      "contig": "NZ_CM195847.1",
+      "left_pos": "307114",
+      "right_contig": "NZ_CM195847.1",
+      "right_pos": "307903"
+     },
+     {
+      "sample": "SAMN11265848",
+      "gene": "NEG_50S_ribosomal_protein_L2",
+      "cls": "not_in_assembly:junction",
+      "molecules": "1",
+      "contig": "NZ_CM195847.1",
+      "left_pos": "307903",
+      "right_contig": "NZ_CM195847.1",
+      "right_pos": "321715"
+     }
+    ]
+   }
+  },
+  "L1000_N2": {
+   "core": {
+    "positions_by_class": {
+     "known_catalog_position_other_core": 620,
+     "known_catalog_position": 531,
+     "homolog_not_in_catalog:same_homology_group": 154,
+     "homolog_not_in_catalog:other_family": 80,
+     "catalog_omission:no_annotated_cds": 8,
+     "catalog_mismatch:coverage": 78,
+     "not_in_assembly:junction": 16,
+     "contig_end_join": 9,
+     "not_in_assembly:core_absent": 5
+    },
+    "positions_below_N": {
+     "homolog_not_in_catalog:other_family": 29,
+     "homolog_not_in_catalog:same_homology_group": 72,
+     "known_catalog_position_other_core": 42,
+     "catalog_omission:no_annotated_cds": 3,
+     "not_in_assembly:junction": 336,
+     "catalog_mismatch:coverage": 51,
+     "contig_end_join": 4,
+     "not_in_assembly:core_absent": 14,
+     "known_catalog_position": 2
+    },
+    "shifted_known_positions": 197,
+    "unplaceable_contexts": {
+     "unplaceable_context:left_placed|right_ambiguous": 54,
+     "unplaceable_context:left_ambiguous|right_placed": 51,
+     "unplaceable_context:left_unplaced|right_no_anchor": 2,
+     "unplaceable_context:left_no_anchor|right_no_anchor": 14,
+     "unplaceable_context:left_no_anchor|right_unplaced": 2,
+     "unplaceable_context:left_placed|right_no_anchor": 7,
+     "unplaceable_context:left_unplaced|right_placed": 2,
+     "unplaceable_context:left_ambiguous|right_ambiguous": 6,
+     "unplaceable_context:left_ambiguous|right_no_anchor": 2,
+     "unplaceable_context:left_no_anchor|right_ambiguous": 1,
+     "unplaceable_context:left_ambiguous|right_unplaced": 1
+    }
+   },
+   "neg": {
+    "positions_by_class": {
+     "known_catalog_position_other_core": 15,
+     "known_catalog_position": 30,
+     "catalog_mismatch:coverage": 3
+    },
+    "positions_below_N": {
+     "not_in_assembly:junction": 6,
+     "known_catalog_position_other_core": 3
+    },
+    "shifted_known_positions": 4,
+    "unplaceable_contexts": {
+     "unplaceable_context:left_placed|right_no_anchor": 1,
+     "unplaceable_context:left_no_anchor|right_placed": 1
+    }
+   },
+   "known_recovery": {
+    "core|not_round5_supported": "202/227",
+    "core|round5_supported": "329/366",
+    "negative_control|not_round5_supported": "30/30"
+   },
+   "not_in_assembly_by_boundary_and_size": {
+    "not_in_assembly:junction|unknown|lt_2500": 3,
+    "not_in_assembly:junction|extension_consistent|lt_2500": 11,
+    "not_in_assembly:junction|no_extension_detected|lt_2500": 2,
+    "not_in_assembly:core_absent|extension_consistent|lt_2500": 5
+   },
+   "positions_with_extra_sequence": {
+    "known_catalog_position_other_core|no_extension_detected": 614,
+    "known_catalog_position|no_extension_detected": 531,
+    "homolog_not_in_catalog|no_extension_detected": 228,
+    "catalog_omission|no_extension_detected": 7,
+    "catalog_mismatch|no_extension_detected": 72,
+    "not_in_assembly|unknown": 3,
+    "not_in_assembly|extension_consistent": 16,
+    "known_catalog_position_other_core|extension_consistent": 5,
+    "contig_end_join|extension_consistent": 6,
+    "not_in_assembly|no_extension_detected": 2,
+    "contig_end_join|no_extension_detected": 3,
+    "known_catalog_position_other_core|unknown": 1,
+    "catalog_mismatch|unknown": 5,
+    "catalog_omission|extension_consistent": 1,
+    "homolog_not_in_catalog|extension_consistent": 6,
+    "catalog_mismatch|extension_consistent": 1
+   },
+   "negative_control": {
+    "genes_searched": 55,
+    "positions_per_gene": {
+     "0": 8,
+     "1": 46,
+     "2": 1
+    },
+    "extra_positions": [
+     {
+      "sample": "SAMN30525180",
+      "gene": "NEG_50S_ribosomal_protein_L2",
+      "cls": "catalog_mismatch:coverage",
+      "molecules": "61",
+      "contig": "NZ_JAOCIM010000001.1",
+      "left_pos": "225636",
+      "right_contig": "NZ_JAOCIM010000001.1",
+      "right_pos": "226461"
+     },
+     {
+      "sample": "SAMN30525180",
+      "gene": "NEG_50S_ribosomal_protein_L2",
+      "cls": "catalog_mismatch:coverage",
+      "molecules": "2",
+      "contig": "NZ_JAOCIM010000001.1",
+      "left_pos": "225636",
+      "right_contig": "NZ_JAOCIM010000001.1",
+      "right_pos": "226402"
+     }
+    ]
+   }
+  },
+  "L1000_N3": {
+   "core": {
+    "positions_by_class": {
+     "known_catalog_position_other_core": 601,
+     "known_catalog_position": 530,
+     "homolog_not_in_catalog:same_homology_group": 135,
+     "homolog_not_in_catalog:other_family": 75,
+     "catalog_omission:no_annotated_cds": 6,
+     "catalog_mismatch:coverage": 65,
+     "contig_end_join": 8,
+     "not_in_assembly:core_absent": 5,
+     "not_in_assembly:junction": 1
+    },
+    "positions_below_N": {
+     "homolog_not_in_catalog:other_family": 34,
+     "homolog_not_in_catalog:same_homology_group": 91,
+     "known_catalog_position_other_core": 61,
+     "catalog_omission:no_annotated_cds": 5,
+     "not_in_assembly:junction": 351,
+     "catalog_mismatch:coverage": 64,
+     "contig_end_join": 5,
+     "known_catalog_position": 3,
+     "not_in_assembly:core_absent": 14
+    },
+    "shifted_known_positions": 98,
+    "unplaceable_contexts": {
+     "unplaceable_context:left_placed|right_ambiguous": 49,
+     "unplaceable_context:left_ambiguous|right_placed": 45,
+     "unplaceable_context:left_unplaced|right_no_anchor": 2,
+     "unplaceable_context:left_no_anchor|right_no_anchor": 6,
+     "unplaceable_context:left_no_anchor|right_unplaced": 2,
+     "unplaceable_context:left_ambiguous|right_ambiguous": 5
+    }
+   },
+   "neg": {
+    "positions_by_class": {
+     "known_catalog_position_other_core": 15,
+     "known_catalog_position": 30,
+     "catalog_mismatch:coverage": 2
+    },
+    "positions_below_N": {
+     "not_in_assembly:junction": 6,
+     "known_catalog_position_other_core": 3,
+     "catalog_mismatch:coverage": 1
+    },
+    "shifted_known_positions": 3,
+    "unplaceable_contexts": {}
+   },
+   "known_recovery": {
+    "core|not_round5_supported": "201/227",
+    "core|round5_supported": "329/366",
+    "negative_control|not_round5_supported": "30/30"
+   },
+   "not_in_assembly_by_boundary_and_size": {
+    "not_in_assembly:core_absent|extension_consistent|lt_2500": 5,
+    "not_in_assembly:junction|extension_consistent|lt_2500": 1
+   },
+   "positions_with_extra_sequence": {
+    "known_catalog_position_other_core|no_extension_detected": 600,
+    "known_catalog_position|no_extension_detected": 530,
+    "homolog_not_in_catalog|no_extension_detected": 209,
+    "catalog_omission|no_extension_detected": 6,
+    "catalog_mismatch|no_extension_detected": 64,
+    "contig_end_join|extension_consistent": 5,
+    "contig_end_join|no_extension_detected": 3,
+    "not_in_assembly|extension_consistent": 6,
+    "known_catalog_position_other_core|unknown": 1,
+    "homolog_not_in_catalog|extension_consistent": 1,
+    "catalog_mismatch|unknown": 1
+   },
+   "negative_control": {
+    "genes_searched": 55,
+    "positions_per_gene": {
+     "0": 8,
+     "1": 47
+    },
+    "extra_positions": []
+   }
+  },
+  "L1000_N5": {
+   "core": {
+    "positions_by_class": {
+     "known_catalog_position_other_core": 587,
+     "known_catalog_position": 529,
+     "homolog_not_in_catalog:same_homology_group": 123,
+     "homolog_not_in_catalog:other_family": 68,
+     "catalog_omission:no_annotated_cds": 6,
+     "catalog_mismatch:coverage": 58,
+     "contig_end_join": 7,
+     "not_in_assembly:core_absent": 5,
+     "not_in_assembly:junction": 1
+    },
+    "positions_below_N": {
+     "homolog_not_in_catalog:other_family": 41,
+     "homolog_not_in_catalog:same_homology_group": 103,
+     "known_catalog_position_other_core": 75,
+     "catalog_omission:no_annotated_cds": 5,
+     "not_in_assembly:junction": 351,
+     "catalog_mismatch:coverage": 71,
+     "contig_end_join": 6,
+     "known_catalog_position": 4,
+     "not_in_assembly:core_absent": 14
+    },
+    "shifted_known_positions": 59,
+    "unplaceable_contexts": {
+     "unplaceable_context:left_placed|right_ambiguous": 42,
+     "unplaceable_context:left_ambiguous|right_placed": 42,
+     "unplaceable_context:left_no_anchor|right_no_anchor": 3,
+     "unplaceable_context:left_ambiguous|right_ambiguous": 4
+    }
+   },
+   "neg": {
+    "positions_by_class": {
+     "known_catalog_position_other_core": 13,
+     "known_catalog_position": 29,
+     "catalog_mismatch:coverage": 2
+    },
+    "positions_below_N": {
+     "known_catalog_position_other_core": 5,
+     "not_in_assembly:junction": 6,
+     "catalog_mismatch:coverage": 1,
+     "known_catalog_position": 1
+    },
+    "shifted_known_positions": 2,
+    "unplaceable_contexts": {}
+   },
+   "known_recovery": {
+    "core|not_round5_supported": "200/227",
+    "core|round5_supported": "329/366",
+    "negative_control|not_round5_supported": "29/30"
+   },
+   "not_in_assembly_by_boundary_and_size": {
+    "not_in_assembly:core_absent|extension_consistent|lt_2500": 5,
+    "not_in_assembly:junction|extension_consistent|lt_2500": 1
+   },
+   "positions_with_extra_sequence": {
+    "known_catalog_position_other_core|no_extension_detected": 587,
+    "known_catalog_position|no_extension_detected": 529,
+    "homolog_not_in_catalog|no_extension_detected": 191,
+    "catalog_omission|no_extension_detected": 6,
+    "catalog_mismatch|no_extension_detected": 58,
+    "contig_end_join|extension_consistent": 5,
+    "contig_end_join|no_extension_detected": 2,
+    "not_in_assembly|extension_consistent": 6
+   },
+   "negative_control": {
+    "genes_searched": 55,
+    "positions_per_gene": {
+     "0": 11,
+     "1": 44
+    },
+    "extra_positions": []
+   }
+  },
+  "L2000_N1": {
+   "core": {
+    "positions_by_class": {
+     "known_catalog_position_other_core": 658,
+     "known_catalog_position": 550,
+     "homolog_not_in_catalog:same_homology_group": 214,
+     "homolog_not_in_catalog:other_family": 108,
+     "not_in_assembly:junction": 350,
+     "catalog_omission:no_annotated_cds": 8,
+     "catalog_mismatch:coverage": 117,
+     "contig_end_join": 14,
+     "not_in_assembly:core_absent": 17
+    },
+    "positions_below_N": {},
+    "shifted_known_positions": 1250,
+    "unplaceable_contexts": {
+     "unplaceable_context:left_placed|right_ambiguous": 48,
+     "unplaceable_context:left_ambiguous|right_placed": 45,
+     "unplaceable_context:left_no_anchor|right_placed": 113,
+     "unplaceable_context:left_no_anchor|right_no_anchor": 24,
+     "unplaceable_context:left_placed|right_no_anchor": 223,
+     "unplaceable_context:left_placed|right_unplaced": 54,
+     "unplaceable_context:left_unplaced|right_unplaced": 3,
+     "unplaceable_context:left_unplaced|right_placed": 50,
+     "unplaceable_context:left_ambiguous|right_ambiguous": 3,
+     "unplaceable_context:left_placed|right_inner_end_unaligned": 4,
+     "unplaceable_context:left_unplaced|right_ambiguous": 1,
+     "unplaceable_context:left_unplaced|right_inner_end_unaligned": 1,
+     "unplaceable_context:left_inner_end_unaligned|right_placed": 1,
+     "unplaceable_context:left_unplaced|right_no_anchor": 1,
+     "unplaceable_context:left_ambiguous|right_no_anchor": 2
+    }
+   },
+   "neg": {
+    "positions_by_class": {
+     "known_catalog_position_other_core": 15,
+     "known_catalog_position": 28,
+     "not_in_assembly:junction": 8,
+     "catalog_mismatch:coverage": 3,
+     "contig_end_join": 1
+    },
+    "positions_below_N": {},
+    "shifted_known_positions": 38,
+    "unplaceable_contexts": {
+     "unplaceable_context:left_placed|right_no_anchor": 12,
+     "unplaceable_context:left_no_anchor|right_no_anchor": 3,
+     "unplaceable_context:left_no_anchor|right_placed": 10,
+     "unplaceable_context:left_unplaced|right_placed": 1,
+     "unplaceable_context:left_placed|right_unplaced": 3,
+     "unplaceable_context:left_ambiguous|right_placed": 1
+    }
+   },
+   "known_recovery": {
+    "core|not_round5_supported": "209/227",
+    "core|round5_supported": "341/366",
+    "negative_control|not_round5_supported": "28/30"
+   },
+   "not_in_assembly_by_boundary_and_size": {
+    "not_in_assembly:junction|extension_consistent|lt_2500": 304,
+    "not_in_assembly:junction|no_extension_detected|lt_2500": 38,
+    "not_in_assembly:junction|extension_consistent|ge_2500": 6,
+    "not_in_assembly:junction|unknown|lt_2500": 2,
+    "not_in_assembly:core_absent|extension_consistent|lt_2500": 17
+   },
+   "positions_with_extra_sequence": {
+    "known_catalog_position_other_core|no_extension_detected": 648,
+    "known_catalog_position|no_extension_detected": 550,
+    "homolog_not_in_catalog|no_extension_detected": 278,
+    "not_in_assembly|extension_consistent": 327,
+    "catalog_omission|no_extension_detected": 8,
+    "catalog_mismatch|no_extension_detected": 85,
+    "homolog_not_in_catalog|extension_consistent": 44,
+    "not_in_assembly|no_extension_detected": 38,
+    "contig_end_join|extension_consistent": 9,
+    "catalog_mismatch|extension_consistent": 27,
+    "not_in_assembly|unknown": 2,
+    "contig_end_join|no_extension_detected": 5,
+    "known_catalog_position_other_core|extension_consistent": 9,
+    "known_catalog_position_other_core|unknown": 1,
+    "catalog_mismatch|unknown": 5
+   },
+   "negative_control": {
+    "genes_searched": 55,
+    "positions_per_gene": {
+     "0": 11,
+     "1": 36,
+     "2": 6,
+     "3": 1,
+     "4": 1
+    },
+    "extra_positions": [
+     {
+      "sample": "SAMN49042133",
+      "gene": "NEG_50S_ribosomal_protein_L2",
+      "cls": "known_catalog_position_other_core",
+      "molecules": "48",
+      "contig": "NZ_CP195181.1",
+      "left_pos": "426087",
+      "right_contig": "NZ_CP195181.1",
+      "right_pos": "426912"
+     },
+     {
+      "sample": "SAMN49042133",
+      "gene": "NEG_30S_ribosomal_protein_S3",
+      "cls": "known_catalog_position_other_core",
+      "molecules": "44",
+      "contig": "NZ_CP195181.1",
+      "left_pos": "427557",
+      "right_contig": "NZ_CP195181.1",
+      "right_pos": "428430"
+     },
+     {
+      "sample": "SAMN49042133",
+      "gene": "NEG_50S_ribosomal_protein_L2",
+      "cls": "not_in_assembly:junction",
+      "molecules": "1",
+      "contig": "NZ_CP195181.1",
+      "left_pos": "426912",
+      "right_contig": "NZ_CP195181.1",
+      "right_pos": "425188"
+     },
+     {
+      "sample": "SAMN49042133",
+      "gene": "NEG_50S_ribosomal_protein_L2",
+      "cls": "not_in_assembly:junction",
+      "molecules": "1",
+      "contig": "NZ_CP195181.1",
+      "left_pos": "426924",
+      "right_contig": "NZ_CP195181.1",
+      "right_pos": "424481"
+     },
+     {
+      "sample": "SAMN49042133",
+      "gene": "NEG_50S_ribosomal_protein_L2",
+      "cls": "not_in_assembly:junction",
+      "molecules": "1",
+      "contig": "NZ_CP195181.1",
+      "left_pos": "426933",
+      "right_contig": "NZ_CP195181.1",
+      "right_pos": "424996"
+     },
+     {
+      "sample": "SAMN49042133",
+      "gene": "NEG_30S_ribosomal_protein_S3",
+      "cls": "not_in_assembly:junction",
+      "molecules": "1",
+      "contig": "NZ_CP195181.1",
+      "left_pos": "428430",
+      "right_contig": "NZ_CP195181.1",
+      "right_pos": "426963"
+     },
+     {
+      "sample": "SAMN52101483",
+      "gene": "NEG_50S_ribosomal_protein_L2",
+      "cls": "known_catalog_position",
+      "molecules": "67",
+      "contig": "NZ_CM129821.1",
+      "left_pos": "38237",
+      "right_contig": "NZ_CM129821.1",
+      "right_pos": "39062"
+     },
+     {
+      "sample": "SAMN52101483",
+      "gene": "NEG_DNA-directed_RNA_polymerase_subunit_betap",
+      "cls": "known_catalog_position",
+      "molecules": "37",
+      "contig": "NZ_CM129821.1",
+      "left_pos": "4623821",
+      "right_contig": "NZ_CM129821.1",
+      "right_pos": "4628036"
+     },
+     {
+      "sample": "SAMN52101483",
+      "gene": "NEG_50S_ribosomal_protein_L2",
+      "cls": "not_in_assembly:junction",
+      "molecules": "1",
+      "contig": "NZ_CM129821.1",
+      "left_pos": "39062",
+      "right_contig": "NZ_CM129821.1",
+      "right_pos": "301951"
+     },
+     {
+      "sample": "SAMN52101483",
+      "gene": "NEG_DNA-directed_RNA_polymerase_subunit_betap",
+      "cls": "not_in_assembly:junction",
+      "molecules": "1",
+      "contig": "NZ_CM129821.1",
+      "left_pos": "4298228",
+      "right_contig": "NZ_CM129821.1",
+      "right_pos": "4623821"
+     },
+     {
+      "sample": "SAMN30525180",
+      "gene": "NEG_30S_ribosomal_protein_S3",
+      "cls": "known_catalog_position_other_core",
+      "molecules": "46",
+      "contig": "NZ_JAOCIM010000001.1",
+      "left_pos": "227105",
+      "right_contig": "NZ_JAOCIM010000001.1",
+      "right_pos": "227966"
+     },
+     {
+      "sample": "SAMN30525180",
+      "gene": "NEG_30S_ribosomal_protein_S3",
+      "cls": "known_catalog_position_other_core",
+      "molecules": "1",
+      "contig": "NZ_JAOCIM010000001.1",
+      "left_pos": "227105",
+      "right_contig": "NZ_JAOCIM010000001.1",
+      "right_pos": "228143"
+     },
+     {
+      "sample": "SAMN30525180",
+      "gene": "NEG_50S_ribosomal_protein_L2",
+      "cls": "catalog_mismatch:coverage",
+      "molecules": "48",
+      "contig": "NZ_JAOCIM010000001.1",
+      "left_pos": "225636",
+      "right_contig": "NZ_JAOCIM010000001.1",
+      "right_pos": "226461"
+     },
+     {
+      "sample": "SAMN30525180",
+      "gene": "NEG_50S_ribosomal_protein_L2",
+      "cls": "catalog_mismatch:coverage",
+      "molecules": "2",
+      "contig": "NZ_JAOCIM010000001.1",
+      "left_pos": "225636",
+      "right_contig": "NZ_JAOCIM010000001.1",
+      "right_pos": "226402"
+     },
+     {
+      "sample": "SAMD00260131",
+      "gene": "NEG_30S_ribosomal_protein_S3",
+      "cls": "known_catalog_position_other_core",
+      "molecules": "1",
+      "contig": "NZ_AP024172.1",
+      "left_pos": "468981",
+      "right_contig": "NZ_AP024172.1",
+      "right_pos": "470028"
+     },
+     {
+      "sample": "SAMD00260131",
+      "gene": "NEG_30S_ribosomal_protein_S3",
+      "cls": "known_catalog_position_other_core",
+      "molecules": "83",
+      "contig": "NZ_AP024172.1",
+      "left_pos": "469150",
+      "right_contig": "NZ_AP024172.1",
+      "right_pos": "470023"
+     },
+     {
+      "sample": "SAMN11265848",
+      "gene": "NEG_50S_ribosomal_protein_L2",
+      "cls": "known_catalog_position_other_core",
+      "molecules": "128",
+      "contig": "NZ_CM195847.1",
+      "left_pos": "307114",
+      "right_contig": "NZ_CM195847.1",
+      "right_pos": "307903"
+     },
+     {
+      "sample": "SAMN11265848",
+      "gene": "NEG_50S_ribosomal_protein_L2",
+      "cls": "not_in_assembly:junction",
+      "molecules": "1",
+      "contig": "NZ_CM195847.1",
+      "left_pos": "307903",
+      "right_contig": "NZ_CM195847.1",
+      "right_pos": "305702"
+     },
+     {
+      "sample": "SAMN11265848",
+      "gene": "NEG_50S_ribosomal_protein_L2",
+      "cls": "not_in_assembly:junction",
+      "molecules": "1",
+      "contig": "NZ_CM195847.1",
+      "left_pos": "307903",
+      "right_contig": "NZ_CM195847.1",
+      "right_pos": "321715"
+     }
+    ]
+   }
+  },
+  "L2000_N2": {
+   "core": {
+    "positions_by_class": {
+     "known_catalog_position_other_core": 620,
+     "known_catalog_position": 547,
+     "homolog_not_in_catalog:same_homology_group": 146,
+     "homolog_not_in_catalog:other_family": 78,
+     "catalog_omission:no_annotated_cds": 6,
+     "catalog_mismatch:coverage": 78,
+     "not_in_assembly:junction": 13,
+     "contig_end_join": 9,
+     "not_in_assembly:core_absent": 5
+    },
+    "positions_below_N": {
+     "not_in_assembly:junction": 337,
+     "homolog_not_in_catalog:other_family": 30,
+     "homolog_not_in_catalog:same_homology_group": 68,
+     "known_catalog_position_other_core": 38,
+     "catalog_mismatch:coverage": 39,
+     "known_catalog_position": 3,
+     "contig_end_join": 5,
+     "not_in_assembly:core_absent": 12,
+     "catalog_omission:no_annotated_cds": 2
+    },
+    "shifted_known_positions": 162,
+    "unplaceable_contexts": {
+     "unplaceable_context:left_placed|right_ambiguous": 28,
+     "unplaceable_context:left_ambiguous|right_placed": 24,
+     "unplaceable_context:left_no_anchor|right_no_anchor": 12,
+     "unplaceable_context:left_no_anchor|right_placed": 14,
+     "unplaceable_context:left_placed|right_no_anchor": 22,
+     "unplaceable_context:left_placed|right_unplaced": 3,
+     "unplaceable_context:left_ambiguous|right_ambiguous": 3,
+     "unplaceable_context:left_unplaced|right_placed": 1
+    }
+   },
+   "neg": {
+    "positions_by_class": {
+     "known_catalog_position_other_core": 12,
+     "known_catalog_position": 28,
+     "catalog_mismatch:coverage": 3,
+     "contig_end_join": 1
+    },
+    "positions_below_N": {
+     "known_catalog_position_other_core": 3,
+     "not_in_assembly:junction": 8
+    },
+    "shifted_known_positions": 7,
+    "unplaceable_contexts": {
+     "unplaceable_context:left_placed|right_no_anchor": 3,
+     "unplaceable_context:left_no_anchor|right_no_anchor": 1,
+     "unplaceable_context:left_no_anchor|right_placed": 3
+    }
+   },
+   "known_recovery": {
+    "core|not_round5_supported": "209/227",
+    "core|round5_supported": "338/366",
+    "negative_control|not_round5_supported": "28/30"
+   },
+   "not_in_assembly_by_boundary_and_size": {
+    "not_in_assembly:junction|extension_consistent|lt_2500": 9,
+    "not_in_assembly:junction|no_extension_detected|lt_2500": 2,
+    "not_in_assembly:junction|unknown|lt_2500": 2,
+    "not_in_assembly:core_absent|extension_consistent|lt_2500": 5
+   },
+   "positions_with_extra_sequence": {
+    "known_catalog_position_other_core|no_extension_detected": 617,
+    "known_catalog_position|no_extension_detected": 547,
+    "homolog_not_in_catalog|no_extension_detected": 220,
+    "catalog_omission|no_extension_detected": 6,
+    "catalog_mismatch|no_extension_detected": 72,
+    "not_in_assembly|extension_consistent": 14,
+    "contig_end_join|extension_consistent": 6,
+    "not_in_assembly|no_extension_detected": 2,
+    "not_in_assembly|unknown": 2,
+    "contig_end_join|no_extension_detected": 3,
+    "known_catalog_position_other_core|extension_consistent": 2,
+    "known_catalog_position_other_core|unknown": 1,
+    "catalog_mismatch|unknown": 5,
+    "homolog_not_in_catalog|extension_consistent": 4,
+    "catalog_mismatch|extension_consistent": 1
+   },
+   "negative_control": {
+    "genes_searched": 55,
+    "positions_per_gene": {
+     "0": 12,
+     "1": 42,
+     "2": 1
+    },
+    "extra_positions": [
+     {
+      "sample": "SAMN30525180",
+      "gene": "NEG_50S_ribosomal_protein_L2",
+      "cls": "catalog_mismatch:coverage",
+      "molecules": "48",
+      "contig": "NZ_JAOCIM010000001.1",
+      "left_pos": "225636",
+      "right_contig": "NZ_JAOCIM010000001.1",
+      "right_pos": "226461"
+     },
+     {
+      "sample": "SAMN30525180",
+      "gene": "NEG_50S_ribosomal_protein_L2",
+      "cls": "catalog_mismatch:coverage",
+      "molecules": "2",
+      "contig": "NZ_JAOCIM010000001.1",
+      "left_pos": "225636",
+      "right_contig": "NZ_JAOCIM010000001.1",
+      "right_pos": "226402"
+     }
+    ]
+   }
+  },
+  "L2000_N3": {
+   "core": {
+    "positions_by_class": {
+     "known_catalog_position_other_core": 600,
+     "known_catalog_position": 545,
+     "homolog_not_in_catalog:same_homology_group": 132,
+     "homolog_not_in_catalog:other_family": 73,
+     "catalog_omission:no_annotated_cds": 6,
+     "catalog_mismatch:coverage": 65,
+     "contig_end_join": 8,
+     "not_in_assembly:core_absent": 5,
+     "not_in_assembly:junction": 1
+    },
+    "positions_below_N": {
+     "not_in_assembly:junction": 349,
+     "homolog_not_in_catalog:other_family": 35,
+     "homolog_not_in_catalog:same_homology_group": 82,
+     "known_catalog_position_other_core": 58,
+     "catalog_mismatch:coverage": 52,
+     "known_catalog_position": 5,
+     "contig_end_join": 6,
+     "not_in_assembly:core_absent": 12,
+     "catalog_omission:no_annotated_cds": 2
+    },
+    "shifted_known_positions": 79,
+    "unplaceable_contexts": {
+     "unplaceable_context:left_placed|right_ambiguous": 22,
+     "unplaceable_context:left_ambiguous|right_placed": 19,
+     "unplaceable_context:left_no_anchor|right_no_anchor": 5,
+     "unplaceable_context:left_no_anchor|right_placed": 6,
+     "unplaceable_context:left_placed|right_no_anchor": 9,
+     "unplaceable_context:left_ambiguous|right_ambiguous": 3
+    }
+   },
+   "neg": {
+    "positions_by_class": {
+     "known_catalog_position_other_core": 12,
+     "known_catalog_position": 28,
+     "catalog_mismatch:coverage": 2,
+     "contig_end_join": 1
+    },
+    "positions_below_N": {
+     "known_catalog_position_other_core": 3,
+     "not_in_assembly:junction": 8,
+     "catalog_mismatch:coverage": 1
+    },
+    "shifted_known_positions": 3,
+    "unplaceable_contexts": {
+     "unplaceable_context:left_placed|right_no_anchor": 2,
+     "unplaceable_context:left_no_anchor|right_placed": 1
+    }
+   },
+   "known_recovery": {
+    "core|not_round5_supported": "207/227",
+    "core|round5_supported": "338/366",
+    "negative_control|not_round5_supported": "28/30"
+   },
+   "not_in_assembly_by_boundary_and_size": {
+    "not_in_assembly:core_absent|extension_consistent|lt_2500": 5,
+    "not_in_assembly:junction|extension_consistent|lt_2500": 1
+   },
+   "positions_with_extra_sequence": {
+    "known_catalog_position_other_core|no_extension_detected": 599,
+    "known_catalog_position|no_extension_detected": 545,
+    "homolog_not_in_catalog|no_extension_detected": 204,
+    "catalog_omission|no_extension_detected": 6,
+    "catalog_mismatch|no_extension_detected": 65,
+    "contig_end_join|extension_consistent": 6,
+    "contig_end_join|no_extension_detected": 2,
+    "not_in_assembly|extension_consistent": 6,
+    "known_catalog_position_other_core|unknown": 1,
+    "homolog_not_in_catalog|extension_consistent": 1
+   },
+   "negative_control": {
+    "genes_searched": 55,
+    "positions_per_gene": {
+     "0": 12,
+     "1": 43
+    },
+    "extra_positions": []
+   }
+  },
+  "L2000_N5": {
+   "core": {
+    "positions_by_class": {
+     "known_catalog_position_other_core": 585,
+     "known_catalog_position": 541,
+     "homolog_not_in_catalog:same_homology_group": 115,
+     "homolog_not_in_catalog:other_family": 68,
+     "catalog_omission:no_annotated_cds": 6,
+     "catalog_mismatch:coverage": 58,
+     "contig_end_join": 8,
+     "not_in_assembly:core_absent": 5,
+     "not_in_assembly:junction": 1
+    },
+    "positions_below_N": {
+     "not_in_assembly:junction": 349,
+     "homolog_not_in_catalog:other_family": 40,
+     "homolog_not_in_catalog:same_homology_group": 99,
+     "known_catalog_position_other_core": 73,
+     "known_catalog_position": 9,
+     "catalog_mismatch:coverage": 59,
+     "contig_end_join": 6,
+     "not_in_assembly:core_absent": 12,
+     "catalog_omission:no_annotated_cds": 2
+    },
+    "shifted_known_positions": 52,
+    "unplaceable_contexts": {
+     "unplaceable_context:left_placed|right_ambiguous": 16,
+     "unplaceable_context:left_ambiguous|right_placed": 17,
+     "unplaceable_context:left_no_anchor|right_no_anchor": 2,
+     "unplaceable_context:left_no_anchor|right_placed": 3,
+     "unplaceable_context:left_placed|right_no_anchor": 5,
+     "unplaceable_context:left_ambiguous|right_ambiguous": 3
+    }
+   },
+   "neg": {
+    "positions_by_class": {
+     "known_catalog_position_other_core": 11,
+     "known_catalog_position": 27,
+     "catalog_mismatch:coverage": 2,
+     "contig_end_join": 1
+    },
+    "positions_below_N": {
+     "known_catalog_position_other_core": 4,
+     "not_in_assembly:junction": 8,
+     "catalog_mismatch:coverage": 1,
+     "known_catalog_position": 1
+    },
+    "shifted_known_positions": 2,
+    "unplaceable_contexts": {}
+   },
+   "known_recovery": {
+    "core|not_round5_supported": "204/227",
+    "core|round5_supported": "337/366",
+    "negative_control|not_round5_supported": "27/30"
+   },
+   "not_in_assembly_by_boundary_and_size": {
+    "not_in_assembly:core_absent|extension_consistent|lt_2500": 5,
+    "not_in_assembly:junction|extension_consistent|lt_2500": 1
+   },
+   "positions_with_extra_sequence": {
+    "known_catalog_position_other_core|no_extension_detected": 585,
+    "known_catalog_position|no_extension_detected": 541,
+    "homolog_not_in_catalog|no_extension_detected": 183,
+    "catalog_omission|no_extension_detected": 6,
+    "catalog_mismatch|no_extension_detected": 58,
+    "contig_end_join|extension_consistent": 6,
+    "contig_end_join|no_extension_detected": 2,
+    "not_in_assembly|extension_consistent": 6
+   },
+   "negative_control": {
+    "genes_searched": 55,
+    "positions_per_gene": {
+     "0": 14,
+     "1": 41
+    },
+    "extra_positions": []
+   }
+  }
+ },
+ "search": {
+  "SAMN51658617": {
+   "panel_hits": 34254,
+   "reads_with_hits": 21006,
+   "molecules_with_hits": 21006,
+   "observation_status": {
+    "500": {
+     "one_sided": 7574,
+     "placed": 26101,
+     "unplaceable_context": 579
+    },
+    "1000": {
+     "one_sided": 11983,
+     "placed": 21884,
+     "unplaceable_context": 387
+    },
+    "2000": {
+     "one_sided": 18246,
+     "placed": 15720,
+     "unplaceable_context": 288
+    }
+   }
+  },
+  "SAMN49042133": {
+   "panel_hits": 16199,
+   "reads_with_hits": 12159,
+   "molecules_with_hits": 12159,
+   "observation_status": {
+    "500": {
+     "placed": 11472,
+     "one_sided": 4655,
+     "unplaceable_context": 72
+    },
+    "1000": {
+     "placed": 8701,
+     "one_sided": 7433,
+     "unplaceable_context": 65
+    },
+    "2000": {
+     "one_sided": 10934,
+     "placed": 5169,
+     "unplaceable_context": 96
+    }
+   }
+  },
+  "SAMN52101483": {
+   "panel_hits": 17940,
+   "reads_with_hits": 12642,
+   "molecules_with_hits": 12642,
+   "observation_status": {
+    "500": {
+     "one_sided": 3408,
+     "placed": 12501,
+     "unplaceable_context": 2031
+    },
+    "1000": {
+     "one_sided": 5433,
+     "placed": 11228,
+     "unplaceable_context": 1279
+    },
+    "2000": {
+     "one_sided": 9091,
+     "placed": 8655,
+     "unplaceable_context": 194
+    }
+   }
+  },
+  "SAMEA115676957": {
+   "panel_hits": 5151,
+   "reads_with_hits": 2860,
+   "molecules_with_hits": 2860,
+   "observation_status": {
+    "500": {
+     "placed": 4421,
+     "one_sided": 562,
+     "unplaceable_context": 168
+    },
+    "1000": {
+     "placed": 4102,
+     "one_sided": 904,
+     "unplaceable_context": 145
+    },
+    "2000": {
+     "placed": 3387,
+     "one_sided": 1568,
+     "unplaceable_context": 196
+    }
+   }
+  },
+  "SAMN30525180": {
+   "panel_hits": 11870,
+   "reads_with_hits": 7446,
+   "molecules_with_hits": 7446,
+   "observation_status": {
+    "500": {
+     "placed": 9653,
+     "one_sided": 1548,
+     "unplaceable_context": 669
+    },
+    "1000": {
+     "placed": 8890,
+     "one_sided": 2483,
+     "unplaceable_context": 497
+    },
+    "2000": {
+     "placed": 7401,
+     "one_sided": 4082,
+     "unplaceable_context": 387
+    }
+   }
+  },
+  "SAMD00260131": {
+   "panel_hits": 17221,
+   "reads_with_hits": 9466,
+   "molecules_with_hits": 9466,
+   "observation_status": {
+    "500": {
+     "placed": 13866,
+     "unplaceable_context": 349,
+     "one_sided": 3006
+    },
+    "1000": {
+     "placed": 12672,
+     "one_sided": 4444,
+     "unplaceable_context": 105
+    },
+    "2000": {
+     "placed": 10336,
+     "one_sided": 6814,
+     "unplaceable_context": 71
+    }
+   }
+  },
+  "SAMN11265848": {
+   "panel_hits": 48647,
+   "reads_with_hits": 35511,
+   "molecules_with_hits": 35511,
+   "observation_status": {
+    "500": {
+     "one_sided": 15148,
+     "placed": 30918,
+     "unplaceable_context": 2581
+    },
+    "1000": {
+     "one_sided": 21981,
+     "placed": 24713,
+     "unplaceable_context": 1953
+    },
+    "2000": {
+     "one_sided": 30547,
+     "placed": 17551,
+     "unplaceable_context": 549
+    }
+   }
+  },
+  "SAMN15738716": {
+   "panel_hits": 5306,
+   "reads_with_hits": 3815,
+   "molecules_with_hits": 3815,
+   "observation_status": {
+    "500": {
+     "placed": 3824,
+     "one_sided": 839,
+     "unplaceable_context": 643
+    },
+    "1000": {
+     "placed": 3625,
+     "one_sided": 1407,
+     "unplaceable_context": 274
+    },
+    "2000": {
+     "one_sided": 2448,
+     "placed": 2858
+    }
+   }
+  },
+  "SAMN41424278": {
+   "panel_hits": 1982,
+   "reads_with_hits": 1528,
+   "molecules_with_hits": 1528,
+   "observation_status": {
+    "500": {
+     "unplaceable_context": 58,
+     "placed": 1616,
+     "one_sided": 308
+    },
+    "1000": {
+     "placed": 1502,
+     "one_sided": 475,
+     "unplaceable_context": 5
+    },
+    "2000": {
+     "placed": 1160,
+     "one_sided": 814,
+     "unplaceable_context": 8
+    }
+   }
+  },
+  "SAMD00265974": {
+   "panel_hits": 3853,
+   "reads_with_hits": 2924,
+   "molecules_with_hits": 2924,
+   "observation_status": {
+    "500": {
+     "placed": 3071,
+     "one_sided": 592,
+     "unplaceable_context": 190
+    },
+    "1000": {
+     "one_sided": 986,
+     "placed": 2716,
+     "unplaceable_context": 151
+    },
+    "2000": {
+     "one_sided": 1776,
+     "placed": 1962,
+     "unplaceable_context": 115
+    }
+   }
+  },
+  "SAMN37751790": {
+   "panel_hits": 8120,
+   "reads_with_hits": 6700,
+   "molecules_with_hits": 6700,
+   "observation_status": {
+    "500": {
+     "placed": 5398,
+     "one_sided": 2668,
+     "unplaceable_context": 54
+    },
+    "1000": {
+     "placed": 3771,
+     "one_sided": 4315,
+     "unplaceable_context": 34
+    },
+    "2000": {
+     "one_sided": 6691,
+     "placed": 1429
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,11 @@
+{
+ "pad": 300,
+ "rounds": 2,
+ "call_fraction": 0.6,
+ "min_depth": 3,
+ "min_orf_aa": 50,
+ "gene_coverage": 0.9,
+ "candidates": 0,
+ "checked": 0,
+ "structural_anomalies_not_treated_as_insertions": 9
+}

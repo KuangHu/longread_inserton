@@ -1,0 +1,89 @@
+{
+ "version": "read_site_search_v0.3.2",
+ "main": {
+  "flank": 1000,
+  "molecules": 3
+ },
+ "sites_by_category": {
+  "known": 4054,
+  "in_assembly_not_in_catalog": 1083,
+  "not_in_assembly_candidate": 1,
+  "structural_anomaly": 7,
+  "unresolved": 154
+ },
+ "sites_below_molecule_threshold": {
+  "unresolved": 87,
+  "structural_anomaly": 795,
+  "known": 290,
+  "in_assembly_not_in_catalog": 742,
+  "not_in_assembly_candidate": 16
+ },
+ "flags_of_counted_sites": {
+  "cores_disagree": 142,
+  "boundary_unknown": 18
+ },
+ "sites_with_several_cores": 565,
+ "positions_merged_into_sites": 11834,
+ "not_in_assembly_candidates": {
+  "sites": 1,
+  "positions": 2,
+  "cores": 2,
+  "samples": 1,
+  "by_class": {
+   "not_in_assembly:core_absent": 2
+  }
+ },
+ "negative_control_sites_per_gene": {
+  "genes_by_site_count": {
+   "0": 1,
+   "1": 264,
+   "2": 3,
+   "3": 1
+  },
+  "genes_with_several_sites": [
+   {
+    "sample": "SAMN13494298",
+    "gene": "NEG_recombinase_RecA",
+    "kind": "one_locus_junction_differs_gt_TOL",
+    "sites": [
+     "NZ_CP046622.1:5476462-5478236",
+     "NZ_CP046622.1:5477245-5478218"
+    ]
+   },
+   {
+    "sample": "SAMN27609613",
+    "gene": "NEG_50S_ribosomal_protein_L2",
+    "kind": "one_locus_junction_differs_gt_TOL",
+    "sites": [
+     "NZ_JALPKR020000002.1:1295903-1296956",
+     "NZ_JALPKR020000002.1:1296131-1296956",
+     "NZ_JALPKR020000002.1:1296131-1297144"
+    ]
+   },
+   {
+    "sample": "SAMN43145749",
+    "gene": "NEG_50S_ribosomal_protein_L2",
+    "kind": "one_locus_junction_differs_gt_TOL",
+    "sites": [
+     "NZ_CP168512.1:5820578-5821403",
+     "NZ_CP168512.1:5820577-5821514"
+    ]
+   },
+   {
+    "sample": "SAMN51281057",
+    "gene": "NEG_DNA_polymerase_III_subunit_beta",
+    "kind": "one_locus_junction_differs_gt_TOL",
+    "sites": [
+     "NZ_CM191363.1:5178309-5179289",
+     "NZ_CM191363.1:5178309-5179409"
+    ]
+   }
+  ]
+ },
+ "unplaceable_contexts_ge_N": {
+  "ambiguous_placement (repeat)": 143,
+  "no_anchor_or_unplaced": 453,
+  "inner_end_unaligned (alignment truncated)": 1
+ },
+ "one_sided_observation_groups": 5012
+}

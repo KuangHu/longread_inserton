@@ -1,0 +1,25 @@
+{
+  "manifest": "scaleup_stage1_20261026/comamonadaceae/download_manifest.tsv",
+  "rows": 3329,
+  "status": {
+    "verified": 3329
+  },
+  "by_purpose": {
+    "gca_identity_check": {
+      "verified": 1624
+    },
+    "primary": {
+      "verified": 1705
+    }
+  },
+  "annotation": {
+    "present": 1682,
+    "annotation_missing": 23
+  },
+  "pair_checks": {
+    "identical_sequences": 1624
+  },
+  "bytes": 28089026362,
+  "files": 10022,
+  "failed": []
+}

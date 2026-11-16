@@ -1,0 +1,25 @@
+{
+  "manifest": "scaleup_stage1_20261026/metamycoplasmataceae/download_manifest.tsv",
+  "rows": 3099,
+  "status": {
+    "verified": 3099
+  },
+  "by_purpose": {
+    "gca_identity_check": {
+      "verified": 1361
+    },
+    "primary": {
+      "verified": 1738
+    }
+  },
+  "annotation": {
+    "present": 1561,
+    "annotation_missing": 177
+  },
+  "pair_checks": {
+    "identical_sequences": 1361
+  },
+  "bytes": 4146799208,
+  "files": 9320,
+  "failed": []
+}

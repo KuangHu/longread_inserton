@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="325" font-family="sans-serif" font-size="11">
+<rect width="100%" height="100%" fill="white"/>
+<text x="10" y="14">SAMN51281039:NZ_JBRAYW010000004.1:41987-41987:PF_1be4f8302fbc</text>
+<text x="10" y="28">rows = molecules; solid = alignment to P (U+core+D); dashed = alignment to A drawn with the core skipped; dotted lines = span needed (core +/- 300 bp)</text>
+<rect x="150.0" y="36" width="291.5" height="10" fill="#cccccc"/>
+<rect x="441.5" y="36" width="157.1" height="10" fill="#333333"/>
+<rect x="598.5" y="36" width="291.5" height="10" fill="#cccccc"/>
+<text x="150.0" y="60">U (assembly, 2000 bp)</text>
+<text x="441.5" y="60">insert 1078 bp from reads (core hit 1078 bp + extra sequence)</text>
+<text x="602.5" y="60">D (assembly)</text>
+<line x1="397.7" x2="397.7" y1="34" y2="325" stroke="#888" stroke-dasharray="1,3"/>
+<line x1="642.3" x2="642.3" y1="34" y2="325" stroke="#888" stroke-dasharray="1,3"/>
+<text x="10" y="78" fill="#2a7ab0">P</text><text x="25" y="78" fill="#c2452d">A</text><text x="40" y="78" fill="#7b4fa0">conflict</text><text x="90" y="78" fill="#aaaaaa">unknown</text>
+<text x="10" y="91" font-size="9">P_matched</text>
+<line x1="150.0" x2="889.1" y1="88" y2="88" stroke="#2a7ab0" stroke-width="3"/>
+<line x1="150.0" x2="764.1" y1="93" y2="93" stroke="#2a7ab0" stroke-width="3"/>
+<line x1="150.0" x2="890.0" y1="98" y2="98" stroke="#2a7ab0" stroke-width="3"/>
+<line x1="150.0" x2="890.0" y1="103" y2="103" stroke="#2a7ab0" stroke-width="3"/>
+<line x1="150.0" x2="812.3" y1="108" y2="108" stroke="#2a7ab0" stroke-width="3"/>
+<line x1="150.0" x2="890.0" y1="113" y2="113" stroke="#2a7ab0" stroke-width="3"/>
+<line x1="150.0" x2="890.0" y1="118" y2="118" stroke="#2a7ab0" stroke-width="3"/>
+<line x1="150.0" x2="890.0" y1="123" y2="123" stroke="#2a7ab0" stroke-width="3"/>
+<line x1="150.0" x2="890.0" y1="128" y2="128" stroke="#2a7ab0" stroke-width="3"/>
+<line x1="150.0" x2="890.0" y1="133" y2="133" stroke="#2a7ab0" stroke-width="3"/>
+<line x1="150.0" x2="890.0" y1="138" y2="138" stroke="#2a7ab0" stroke-width="3"/>
+<line x1="150.4" x2="890.0" y1="143" y2="143" stroke="#2a7ab0" stroke-width="3"/>
+<line x1="345.1" x2="769.6" y1="148" y2="148" stroke="#2a7ab0" stroke-width="3"/>
+<line x1="358.7" x2="787.8" y1="153" y2="153" stroke="#2a7ab0" stroke-width="3"/>
+<text x="10" y="161" font-size="9">off_locus</text>
+<line x1="319.6" x2="658.9" y1="158" y2="158" stroke="#aaaaaa" stroke-width="3"/>
+<line x1="372.7" x2="890.0" y1="163" y2="163" stroke="#aaaaaa" stroke-width="3"/>
+<text x="10" y="171" font-size="9">partial:ends</text>
+<line x1="150.0" x2="356.5" y1="168" y2="168" stroke="#aaaaaa" stroke-width="3"/>
+<line x1="150.0" x2="446.7" y1="173" y2="173" stroke="#aaaaaa" stroke-width="3"/>
+<line x1="150.0" x2="194.9" y1="178" y2="178" stroke="#aaaaaa" stroke-width="3"/>
+<line x1="150.0" x2="284.4" y1="183" y2="183" stroke="#aaaaaa" stroke-width="3"/>
+<line x1="150.0" x2="310.3" y1="188" y2="188" stroke="#aaaaaa" stroke-width="3"/>
+<line x1="150.0" x2="312.6" y1="193" y2="193" stroke="#aaaaaa" stroke-width="3"/>
+<line x1="150.0" x2="532.2" y1="198" y2="198" stroke="#aaaaaa" stroke-width="3"/>
+<line x1="150.0" x2="219.9" y1="203" y2="203" stroke="#aaaaaa" stroke-width="3"/>
+<line x1="150.0" x2="532.2" y1="208" y2="208" stroke="#aaaaaa" stroke-width="3"/>
+<line x1="150.7" x2="310.3" y1="213" y2="213" stroke="#aaaaaa" stroke-width="3"/>
+<line x1="154.4" x2="189.2" y1="218" y2="218" stroke="#aaaaaa" stroke-width="3"/>
+<line x1="196.8" x2="487.1" y1="223" y2="223" stroke="#aaaaaa" stroke-width="3"/>
+<line x1="372.7" x2="616.6" y1="228" y2="228" stroke="#aaaaaa" stroke-width="3"/>
+<line x1="500.0" x2="823.7" y1="233" y2="233" stroke="#aaaaaa" stroke-width="3"/>
+<line x1="597.2" x2="890.0" y1="238" y2="238" stroke="#aaaaaa" stroke-width="3"/>
+<line x1="646.3" x2="890.0" y1="243" y2="243" stroke="#aaaaaa" stroke-width="3"/>
+<line x1="646.3" x2="890.0" y1="248" y2="248" stroke="#aaaaaa" stroke-width="3"/>
+<line x1="747.5" x2="890.0" y1="253" y2="253" stroke="#aaaaaa" stroke-width="3"/>
+<line x1="751.7" x2="890.0" y1="258" y2="258" stroke="#aaaaaa" stroke-width="3"/>
+<line x1="796.7" x2="890.0" y1="263" y2="263" stroke="#aaaaaa" stroke-width="3"/>
+<line x1="824.7" x2="890.0" y1="268" y2="268" stroke="#aaaaaa" stroke-width="3"/>
+<line x1="832.0" x2="890.0" y1="273" y2="273" stroke="#aaaaaa" stroke-width="3"/>
+<line x1="846.3" x2="890.0" y1="278" y2="278" stroke="#aaaaaa" stroke-width="3"/>
+<text x="10" y="286" font-size="9">partial:short_read</text>
+<line x1="150.0" x2="283.9" y1="283" y2="283" stroke="#aaaaaa" stroke-width="3"/>
+<line x1="150.0" x2="252.4" y1="288" y2="288" stroke="#aaaaaa" stroke-width="3"/>
+<line x1="235.4" x2="386.2" y1="293" y2="293" stroke="#aaaaaa" stroke-width="3"/>
+<line x1="415.2" x2="562.7" y1="298" y2="298" stroke="#aaaaaa" stroke-width="3"/>
+<line x1="457.6" x2="639.2" y1="303" y2="303" stroke="#aaaaaa" stroke-width="3"/>
+<line x1="597.4" x2="748.2" y1="308" y2="308" stroke="#aaaaaa" stroke-width="3"/>
+<line x1="609.3" x2="835.4" y1="313" y2="313" stroke="#aaaaaa" stroke-width="3"/>
+<line x1="634.1" x2="837.4" y1="318" y2="318" stroke="#aaaaaa" stroke-width="3"/>
+</svg>

@@ -1,0 +1,111 @@
+{
+  "discovery_inputs": [
+    "joint assembly FASTA only"
+  ],
+  "gap_calls_used": false,
+  "reads_used": false,
+  "seed_control_used_for_discovery": false,
+  "control_used_for_posthoc_regression": "CONTROL_H16_R33",
+  "control_families": [
+    "PG_16746129357382028253"
+  ],
+  "control_occurrences": 8,
+  "old_control_loci": 6,
+  "old_control_loci_recovered": 6,
+  "comparison": [
+    {
+      "sample": "H16",
+      "contig": "NZ_CP196507.1",
+      "start0": 1999133,
+      "end0": 2000447,
+      "recovered_occurrences": [
+        "PGN_1332221845166225768"
+      ]
+    },
+    {
+      "sample": "H16",
+      "contig": "NZ_CP196509.1",
+      "start0": 104693,
+      "end0": 106007,
+      "recovered_occurrences": [
+        "PGN_2187505618114384584"
+      ]
+    },
+    {
+      "sample": "H16",
+      "contig": "NZ_CP196509.1",
+      "start0": 158367,
+      "end0": 159680,
+      "recovered_occurrences": [
+        "PGN_3203476366883059115"
+      ]
+    },
+    {
+      "sample": "H850",
+      "contig": "NZ_CP196497.1",
+      "start0": 1620566,
+      "end0": 1621873,
+      "recovered_occurrences": [
+        "PGN_730521924942262164"
+      ]
+    },
+    {
+      "sample": "H850",
+      "contig": "NZ_CP196498.1",
+      "start0": 135900,
+      "end0": 137214,
+      "recovered_occurrences": [
+        "PGN_4596586660809582126"
+      ]
+    },
+    {
+      "sample": "H850",
+      "contig": "NZ_CP196499.1",
+      "start0": 451147,
+      "end0": 452460,
+      "recovered_occurrences": [
+        "PGN_12319074124255630129"
+      ]
+    }
+  ],
+  "summary": {
+    "version": "core_context_graph_v0.1",
+    "discovery_entry": "all_repeated_pangraph_blocks",
+    "gap_inputs": [],
+    "reads_inputs": [],
+    "bounds": {
+      "min_length": 50,
+      "max_length_exclusive": 2500,
+      "flank": 500
+    },
+    "diagnostic_thresholds": {
+      "core_identity": 0.9,
+      "similar_flank": 0.9,
+      "low_flank": 0.7
+    },
+    "graph_sha256": "4d4367d937d6696e610ba9e1a5a7eb49abfafad101dfade7794e8e0e81c1f5ae",
+    "bundle_provenance_sha256": "9ede3fed044b79ef88704eecd2069ca739202e610e7587b9ccf29a57e25ba480",
+    "families": 264,
+    "occurrences": 766,
+    "context_pairs": 1413,
+    "relations": {
+      "different_adjacency_low_flank_similarity_candidate": 348,
+      "context_unresolved": 635,
+      "similar_flanks_candidate_same_context": 161,
+      "core_similarity_below_threshold": 254,
+      "edge_or_missing_context": 15
+    },
+    "excluded_nodes": 0,
+    "truncated_pair_reviews": 0,
+    "annotation_complete": false,
+    "site_groups_computed": false,
+    "production_ready": false,
+    "limitations": [
+      "Graph blocks can split or combine biological cores; 1-2 CDS not yet checked.",
+      "Distinct graph adjacency plus low global flank identity is a diagnostic candidate, not proof of different orthologous sites.",
+      "Circular graph paths are deferred. Linear graph paths do not prove biologically linear contigs.",
+      "Divergent cores missed by graph construction cannot be recovered here; protein-based discovery remains required.",
+      "No mobile activity, novelty, independent event, or long-read validation is inferred."
+    ]
+  }
+}

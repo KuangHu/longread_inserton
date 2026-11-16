@@ -1,0 +1,33 @@
+{
+ "version": "ucd_readcheck_v0.1",
+ "evidence_source": "assembly_only",
+ "production_ready": false,
+ "batches": "1,2,3",
+ "assemblies_with_verified_local_reads": 233,
+ "pairs": {
+  "single_gene": {
+   "A": 3997,
+   "B": 5100,
+   "C": 21783
+  },
+  "two_gene": {
+   "A": 227,
+   "B": 505,
+   "C": 2203
+  }
+ },
+ "pairs_conserved_paralog_control": {
+  "A": 191,
+  "B": 6,
+  "C": 24
+ },
+ "pair_assemblies": {
+  "A": 223,
+  "B": 206,
+  "C": 229
+ },
+ "repeated_context_controls": {
+  "single_gene": 1651,
+  "two_gene": 617
+ }
+}

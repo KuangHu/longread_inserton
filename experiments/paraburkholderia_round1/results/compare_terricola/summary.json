@@ -1,0 +1,26 @@
+{
+  "strains": [
+    "SMT4a",
+    "LjRoot223"
+  ],
+  "members": 620,
+  "strict_groups": 286,
+  "clustering_ambiguous_components": 4,
+  "loci": 472,
+  "locus_overlap_ambiguous": 0,
+  "groups_in_two_or_more_strains": 76,
+  "read_rule": "v1 read_callout full-span molecules >= 2 per locus (audited P4 rule not implemented)",
+  "thresholds": {
+    "FAMILY_COVER": 0.9,
+    "FAMILY_IDENTITY": 95.0,
+    "LOCUS_OVERLAP": 0.9,
+    "FLANK_BP": 500,
+    "MIN_FLANK_BP": 250,
+    "FLANK_BLOCK_COVER": 0.8,
+    "SAME_PLACE_BP": 1000,
+    "EMPTY_GAP_BP": 50,
+    "SHARED_SLOP_BP": 100,
+    "MAX_SPAN_BP": 50000,
+    "MIN_SUPPORT": 2
+  }
+}

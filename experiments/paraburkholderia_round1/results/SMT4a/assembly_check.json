@@ -1,0 +1,55 @@
+{
+  "sample": "SMT4a",
+  "gca": "GCA_022879555.1",
+  "gcf": "GCF_022879555.1",
+  "gca_records": {
+    "CP084255.1": [
+      4037603,
+      "aea9ff107efbf1b85d7628485d01f0137f6aa56c397bb9da1731c169a32cec5e"
+    ],
+    "CP084256.1": [
+      3095192,
+      "66f041ae6c92456fead9dfa7a1b5b26732fbaef6d9bfb6b2fa83d2d538184359"
+    ],
+    "CP084257.1": [
+      70396,
+      "82c5bc5659ffa237bbc61bcdce0d9214229026ba9799de168dbcb5b00820f138"
+    ],
+    "CP084258.1": [
+      1345,
+      "f134b15dcde7d30de2f867eaf5aa8b3e79e7bf8f470ea28f4d982e54450e3893"
+    ],
+    "CP084259.1": [
+      727,
+      "6a79371eefcb6ce8a46e535f697fc9998a55517d25f04fbbc0bd84e32d7fedec"
+    ]
+  },
+  "gcf_records": {
+    "NZ_CP084255.1": [
+      4037603,
+      "aea9ff107efbf1b85d7628485d01f0137f6aa56c397bb9da1731c169a32cec5e"
+    ],
+    "NZ_CP084256.1": [
+      3095192,
+      "66f041ae6c92456fead9dfa7a1b5b26732fbaef6d9bfb6b2fa83d2d538184359"
+    ],
+    "NZ_CP084257.1": [
+      70396,
+      "82c5bc5659ffa237bbc61bcdce0d9214229026ba9799de168dbcb5b00820f138"
+    ],
+    "NZ_CP084258.1": [
+      1345,
+      "f134b15dcde7d30de2f867eaf5aa8b3e79e7bf8f470ea28f4d982e54450e3893"
+    ],
+    "NZ_CP084259.1": [
+      727,
+      "6a79371eefcb6ce8a46e535f697fc9998a55517d25f04fbbc0bd84e32d7fedec"
+    ]
+  },
+  "identical_sequence_sets": true,
+  "gcf_cds_features": 6410,
+  "fasta": "$PROJ/data/assemblies/SMT4a/GCF_022879555.1/ncbi_dataset/data/GCF_022879555.1/GCF_022879555.1_ASM2287955v1_genomic.fna",
+  "fasta_sha256": "0c181646a95cdd21c4f1bee38e09e2945c84a713cd6ca7cb71b828d27100d46f",
+  "gbff": "$PROJ/data/assemblies/SMT4a/GCF_022879555.1/ncbi_dataset/data/GCF_022879555.1/genomic.gbff",
+  "gbff_sha256": "712eb95b270c2fb41eeefb2b3fbad54e6445b39de464759f2b623e99027e85a2"
+}

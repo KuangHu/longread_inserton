@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="420" font-family="sans-serif">
+<rect width="100%" height="100%" fill="white"/>
+<text x="4" y="16" font-size="12">L_64d4130d90e7  SAMEA118088312  core 1020 bp  two_flank_anchored  support all_calls_anchored  boundary direction_dependent  tandem False  core copies carrier/partner 1/0</text>
+<line x1="487.4" y1="30" x2="487.4" y2="412" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<line x1="632.6" y1="30" x2="632.6" y2="412" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<text x="4" y="64" font-size="11" font-weight="bold">SAMEA118088312 NZ_OZ253481.1 (carrier)</text>
+<line x1="60" y1="100" x2="1060" y2="100" stroke="#888"/>
+<rect x="344.9" y="132" width="142.5" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="416.1" y="152" font-size="9" text-anchor="middle">U</text>
+<rect x="487.4" y="132" width="145.3" height="8" fill="#e76f51" opacity="0.55"/>
+<text x="560.0" y="152" font-size="9" text-anchor="middle">core 1020</text>
+<rect x="632.6" y="132" width="142.5" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="703.9" y="152" font-size="9" text-anchor="middle">D</text>
+<polygon points="60.0,109 66.0,103 236.5,103 236.5,115 66.0,115" fill="#3b6fb6"><title>pyridoxamine 5'-phosphate oxidase family 154199-156275 -</title></polygon>
+<text x="60.0" y="125" font-size="8" fill="#333">pyridoxamine 5'-phosphate oxidase fami</text>
+<polygon points="243.0,109 249.0,103 330.2,103 330.2,115 249.0,115" fill="#3b6fb6"><title>glutathione S-transferase family protein 156321-156933 -</title></polygon>
+<text x="243.0" y="125" font-size="8" fill="#333">glutathione S-tran</text>
+<polygon points="358.9,85 481.1,85 487.1,91 481.1,97 358.9,97" fill="#3b6fb6"><title>LysR family transcriptional regulator 157134-158034 +</title></polygon>
+<text x="358.9" y="81" font-size="8" fill="#333">LysR family transcriptional</text>
+<polygon points="510.7,109 516.7,103 589.3,103 589.3,115 516.7,115" fill="#3b6fb6"><title>DUF4377 domain-containing protein 158200-158752 -</title></polygon>
+<text x="510.7" y="125" font-size="8" fill="#333">DUF4377 domain-co</text>
+<polygon points="594.0,109 600.0,103 625.7,103 625.7,115 600.0,115" fill="#3b6fb6"><title>hypothetical protein 158785-159007 -</title></polygon>
+<polygon points="630.4,109 636.4,103 669.7,103 669.7,115 636.4,115" fill="#3b6fb6"><title>hypothetical protein 159040-159316 -</title></polygon>
+<text x="630.4" y="125" font-size="8" fill="#333">hypothet</text>
+<polygon points="688.9,109 694.9,103 829.1,103 829.1,115 694.9,115" fill="#3b6fb6"><title>hypothetical protein 159451-160435 -</title></polygon>
+<text x="688.9" y="125" font-size="8" fill="#333">hypothetical protein</text>
+<polygon points="908.7,109 914.7,103 1060.0,103 1060.0,115 914.7,115" fill="#3b6fb6"><title>TonB-dependent receptor domain-containin 160994-162353 -</title></polygon>
+<text x="908.7" y="125" font-size="8" fill="#333">TonB-dependent receptor domain-c</text>
+<text x="60" y="166" font-size="9" fill="#666">NZ_OZ253481.1:155036-162056  core 158036-159056</text>
+<text x="4" y="184" font-size="11" font-weight="bold">SAMN13450421 NZ_CP065695.1 (partner, - strand, two_flank_anchored, pair P00290)</text>
+<line x1="60" y1="220" x2="1060" y2="220" stroke="#888"/>
+<rect x="344.9" y="252" width="142.5" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="416.1" y="272" font-size="9" text-anchor="middle">U'</text>
+<rect x="632.6" y="252" width="142.5" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="703.9" y="272" font-size="9" text-anchor="middle">D'</text>
+<rect x="487.4" y="252" width="145.3" height="8" fill="#9b5de5" opacity="0.55"/>
+<text x="560.0" y="272" font-size="9" text-anchor="middle">other side 30</text>
+<polygon points="900.5,205 1054.0,205 1060.0,211 1054.0,217 900.5,217" fill="#3b6fb6"><title>TonB-dependent receptor 6488184-6490518 +</title></polygon>
+<text x="900.5" y="201" font-size="8" fill="#333">TonB-dependent receptor</text>
+<polygon points="683.8,205 868.0,205 874.0,211 868.0,217 683.8,217" fill="#3b6fb6"><title>sigma-70 family RNA polymerase sigma fac 6490704-6492039 +</title></polygon>
+<polygon points="560.0,229 566.0,223 666.3,223 666.3,235 566.0,235" fill="#3b6fb6"><title>hypothetical protein 6492162-6492414 -</title></polygon>
+<text x="560.0" y="245" font-size="8" fill="#333">hypothetical protein</text>
+<polygon points="358.9,205 481.1,205 487.1,211 481.1,217 358.9,217" fill="#3b6fb6"><title>LysR family transcriptional regulator 6492430-6493330 +</title></polygon>
+<polygon points="243.0,229 249.0,223 330.2,223 330.2,235 249.0,235" fill="#3b6fb6"><title>glutathione S-transferase family protein 6493531-6494143 -</title></polygon>
+<polygon points="60.0,229 66.0,223 236.5,223 236.5,235 66.0,235" fill="#3b6fb6"><title>2Fe-2S iron-sulfur cluster-binding prote 6494189-6496265 -</title></polygon>
+<text x="60" y="286" font-size="9" fill="#666">NZ_CP065695.1 site 6492398  other-side gap 30 bp  this call's core 158036-159056</text>
+<text x="4" y="304" font-size="11" font-weight="bold">SAMN13450421 NZ_CP065695.1 (partner, - strand, two_flank_anchored, pair P00290)</text>
+<line x1="60" y1="340" x2="1060" y2="340" stroke="#888"/>
+<rect x="345.0" y="372" width="142.5" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="416.3" y="392" font-size="9" text-anchor="middle">U'</text>
+<rect x="628.8" y="372" width="142.5" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="700.0" y="392" font-size="9" text-anchor="middle">D'</text>
+<rect x="487.5" y="372" width="141.3" height="8" fill="#9b5de5" opacity="0.55"/>
+<text x="558.1" y="392" font-size="9" text-anchor="middle">other side 2</text>
+<polygon points="900.5,325 1054.0,325 1060.0,331 1054.0,337 900.5,337" fill="#3b6fb6"><title>TonB-dependent receptor 6488184-6490518 +</title></polygon>
+<text x="900.5" y="321" font-size="8" fill="#333">TonB-dependent receptor</text>
+<polygon points="683.8,325 868.0,325 874.0,331 868.0,337 683.8,337" fill="#3b6fb6"><title>sigma-70 family RNA polymerase sigma fac 6490704-6492039 +</title></polygon>
+<polygon points="630.4,349 636.4,343 666.3,343 666.3,355 636.4,355" fill="#3b6fb6"><title>hypothetical protein 6492162-6492414 -</title></polygon>
+<text x="630.4" y="365" font-size="8" fill="#333">hypothe</text>
+<polygon points="358.9,325 481.1,325 487.1,331 481.1,337 358.9,337" fill="#3b6fb6"><title>LysR family transcriptional regulator 6492430-6493330 +</title></polygon>
+<polygon points="243.0,349 249.0,343 330.2,343 330.2,355 249.0,355" fill="#3b6fb6"><title>glutathione S-transferase family protein 6493531-6494143 -</title></polygon>
+<polygon points="60.0,349 66.0,343 236.5,343 236.5,355 66.0,355" fill="#3b6fb6"><title>2Fe-2S iron-sulfur cluster-binding prote 6494189-6496265 -</title></polygon>
+<text x="60" y="406" font-size="9" fill="#666">NZ_CP065695.1 site 6492425  other-side gap 2 bp  this call's core 158037-159029</text>
+</svg>

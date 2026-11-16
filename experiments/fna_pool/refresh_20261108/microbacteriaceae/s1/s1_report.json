@@ -1,0 +1,25 @@
+{
+  "manifest": "experiments/fna_pool/refresh_20261108/microbacteriaceae/download_manifest.tsv",
+  "rows": 6694,
+  "status": {
+    "verified": 6694
+  },
+  "by_purpose": {
+    "gca_identity_check": {
+      "verified": 3241
+    },
+    "primary": {
+      "verified": 3453
+    }
+  },
+  "annotation": {
+    "annotation_missing": 182,
+    "present": 3271
+  },
+  "pair_checks": {
+    "identical_sequences": 3241
+  },
+  "bytes": 35355962447,
+  "files": 19930,
+  "failed": []
+}

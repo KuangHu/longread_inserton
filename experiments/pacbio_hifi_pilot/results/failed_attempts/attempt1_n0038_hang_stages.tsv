@@ -1,0 +1,3 @@
+stage	start	end	exit_code	wall	max_rss_kb	command
+fetch_reads	2026-10-24T17:00:55-07:00	2026-10-24T17:21:54-07:00	0	20:58.72	26100	python /global/home/users/kh36969/middle_insertion_callout/longread_inserton/scripts/fetch_long_reads.py fetch --out /global/scratch/users/kh36969/longread_callout/data/reads --runs SRR13837247 
+read_stats	2026-10-24T17:29:38-07:00	2026-10-24T17:39:20-07:00	0	9:41.58	19928	python /global/home/users/kh36969/middle_insertion_callout/longread_inserton/experiments/pacbio_hifi_pilot/read_stats.py --verify /global/scratch/users/kh36969/longread_callout/data/reads/SRR13837247/verify.json --out /global/scratch/users/kh36969/longread_callout/pacbio_hifi_pilot/Sam8H1/qc/read_stats.json 

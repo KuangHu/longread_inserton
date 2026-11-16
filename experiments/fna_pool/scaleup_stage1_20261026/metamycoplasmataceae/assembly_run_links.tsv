@@ -1,0 +1,232 @@
+assembly_accession	paired_accession	biosample	run	study	read_type	link_basis	source_run_evidence	run_usable	run_tax_id	run_organism	assembly_organism	genus_agrees	assembly_sequencing_tech
+GCA_021385055.1	GCF_021385055.1	SAMN18539619	SRR14651722	PRJNA717738	pacbio_unresolved	biosample_matched	not_checked	False	2110	Mycoplasmopsis agalactiae	Mycoplasmopsis agalactiae	True	PacBio RSII
+GCA_003383595.3	GCF_003383595.3	SAMN09283747	SRR8945310	PRJNA473817	pacbio_unresolved	biosample_matched	not_checked	True	142649	Metamycoplasma phocicerebrale	Metamycoplasma phocicerebrale	True	Illumina MiSeq; PacBio
+GCA_900660475.1	GCF_900660475.1	SAMEA4384075	ERR1805700	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	2100	Mesomycoplasma hyorhinis	Mesomycoplasma hyorhinis	True	PacBio
+GCA_900660515.1	GCF_900660515.1	SAMEA4412696	ERR1813541	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	29553	Mycoplasmopsis bovirhinis	Mycoplasmopsis bovirhinis	True	PacBio
+GCA_900660545.1	GCF_900660545.1	SAMEA4412697	ERR1820611	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	171284	Mycoplasmopsis cynos	Mycoplasmopsis cynos	True	PacBio
+GCA_900476105.1	GCF_900476105.1	SAMEA4434527	ERR1883066	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	53558	Mycoplasmopsis edwardii	Mycoplasmopsis edwardii	True	PacBio
+GCA_900660675.1	GCF_900660675.1	SAMEA104167209	ERR2212613	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	171282	Mycoplasmopsis columboralis	Mycoplasmopsis columboralis	True	PacBio
+GCA_002193015.1	GCF_002193015.1	SAMN06545933	SRR5320243	PRJNA378403	pacbio_hifi_ccs	biosample_matched	not_checked	True	2099	Mesomycoplasma hyopneumoniae	Mesomycoplasma hyopneumoniae	True	Illumina HiSeq; PacBio
+GCA_002749575.1	GCF_002749575.1	SAMN06758738	SRR5482570	PRJNA383048	pacbio_clr_subreads	biosample_matched	not_checked	True	28903	Mycoplasmopsis bovis	Mycoplasmopsis bovis	True	PacBio
+GCA_900660535.1		SAMEA4412695	ERR1813535	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	2115	Mycoplasmopsis fermentans	Mycoplasmopsis fermentans	True	PacBio
+GCA_900660505.1	GCF_900660505.1	SAMEA4434525	ERR1820607	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	86660	Mesomycoplasma dispar	Mesomycoplasma dispar	True	PacBio
+GCA_900660585.1	GCF_900660585.1	SAMEA4434530	ERR1883072	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	29555	Mycoplasmopsis canis	Mycoplasmopsis canis	True	PacBio
+GCA_021497125.1	GCF_021497125.1	SAMN07417188	SRR10295168	PRJNA395903	pacbio_clr_subreads	biosample_matched	not_checked	True	28903	Mycoplasmopsis bovis	Mycoplasmopsis bovis	True	PacBio RS; Illumina MiSeq
+GCA_900660595.1	GCF_900660595.1	SAMEA104200682	ERR2187907	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	2113	Mycoplasmopsis californica	Mycoplasmopsis californica	True	PacBio
+GCA_003354425.1	GCF_003354425.1	SAMN07152271	SRR11675949	PRJNA378768	pacbio_clr_subreads	biosample_matched	not_checked	True	28903	Mycoplasmopsis bovis	Mycoplasmopsis bovis	True	PacBio; Illumina MiSeq
+GCA_900660655.1	GCF_900660655.1	SAMEA104167206	ERR2205692	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	171279	Mycoplasmopsis anatis	Mycoplasmopsis anatis	True	PacBio
+GCA_003354505.1	GCF_003354505.1	SAMN07152213	SRR11675957	PRJNA378768	pacbio_clr_subreads	biosample_matched	not_checked	True	28903	Mycoplasmopsis bovis	Mycoplasmopsis bovis	True	PacBio; Illumina MiSeq
+GCA_900631685.1	GCF_900631685.1	SAMEA104167207	ERR2205693	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	55603	Mycoplasmopsis caviae	Mycoplasmopsis caviae	True	Pacbio
+GCA_003354405.1	GCF_003354405.1	SAMN07152187	SRR11675958	PRJNA378768	pacbio_clr_subreads	biosample_matched	not_checked	True	28903	Mycoplasmopsis bovis	Mycoplasmopsis bovis	True	PacBio; Illumina MiSeq
+GCA_900660685.1	GCF_900660685.1	SAMEA104210788	ERR2237807	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	114881	Mycoplasmopsis columbina	Mycoplasmopsis columbina	True	PacBio
+GCA_003354445.1	GCF_003354445.1	SAMN07152056	SRR11675965	PRJNA378768	pacbio_clr_subreads	biosample_matched	not_checked	True	28903	Mycoplasmopsis bovis	Mycoplasmopsis bovis	True	PacBio; Illumina MiSeq
+GCA_024758565.1	GCF_024758565.1	SAMN20129592	SRR22071529	PRJNA745000	pacbio_clr_subreads	biosample_matched	not_checked	False	29562	Mesomycoplasma ovipneumoniae	Mesomycoplasma ovipneumoniae	True	PacBio Sequel II
+GCA_900660715.1	GCF_900660715.1	SAMEA104224774	ERR2237831	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	2111	Metamycoplasma arthritidis	Metamycoplasma arthritidis	True	PacBio
+GCA_024758585.1	GCF_024758585.1	SAMN20130450	SRR22071683	PRJNA745006	pacbio_clr_subreads	biosample_matched	not_checked	False	29562	Mesomycoplasma ovipneumoniae	Mesomycoplasma ovipneumoniae	True	PacBio Sequel II
+GCA_036972925.1	GCF_036972925.1	SAMN37528859	SRR27145255	PRJNA1018939	ont	biosample_matched	not_checked	True	171284	Mycoplasmopsis cynos	Mycoplasmopsis cynos	True	Illumina MiSeq; Oxford Nanopore MinION
+GCA_021497145.1	GCF_021497145.1	SAMN07417199	SRR10295166	PRJNA395903	pacbio_clr_subreads	biosample_matched	not_checked	True	28903	Mycoplasmopsis bovis	Mycoplasmopsis bovis	True	PacBio RS; Illumina MiSeq
+GCA_021497105.1	GCF_021497105.1	SAMN07152163	SRR10295170	PRJNA395903	pacbio_clr_subreads	biosample_matched	not_checked	True	28903	Mycoplasmopsis bovis	Mycoplasmopsis bovis	True	PacBio RS; Illumina MiSeq
+GCA_009650115.1	GCF_009650115.1	SAMN13193745	SRR10861753	PRJNA587561	pacbio_unresolved	biosample_matched	not_checked	False	28903	Mycoplasmopsis bovis	Mycoplasmopsis bovis	True	Illumina HiSeq; PacBio
+GCA_003354285.1	GCF_003354285.1	SAMN07152284	SRR11675968	PRJNA378768	pacbio_clr_subreads	biosample_matched	not_checked	True	28903	Mycoplasmopsis bovis	Mycoplasmopsis bovis	True	PacBio; Illumina MiSeq
+GCA_003354265.1	GCF_003354265.1	SAMN06842041	SRR11675969	PRJNA378768	pacbio_clr_subreads	biosample_matched	not_checked	True	28903	Mycoplasmopsis bovis	Mycoplasmopsis bovis	True	PacBio; Illumina MiSeq
+GCA_056590955.1	GCF_056590955.1	SAMN50708464	SRR35059603	PRJNA1308627	ont	biosample_matched	not_checked	True	28903	Mycoplasmopsis bovis	Mycoplasmopsis bovis	True	Oxford Nanopore PromethION
+GCA_016807765.1	GCF_016807765.1	SAMN16912282	SRR13132365	PRJNA680748	pacbio_unresolved	biosample_matched	not_checked	True	28903	Mycoplasmopsis bovis	Mycoplasmopsis bovis	True	PacBio; Illumina NovaSeq
+GCA_056590995.1	GCF_056590995.1	SAMN50708462	SRR35059605	PRJNA1308627	ont	biosample_matched	not_checked	True	28903	Mycoplasmopsis bovis	Mycoplasmopsis bovis	True	Oxford Nanopore PromethION
+GCA_021384945.1	GCF_021384945.1	SAMN18539614	SRR14651725	PRJNA717738	pacbio_unresolved	biosample_matched	not_checked	False	2110	Mycoplasmopsis agalactiae	Mycoplasmopsis agalactiae	True	PacBio RSII
+GCA_056591015.1		SAMN50708461	SRR35059606	PRJNA1308627	ont	biosample_matched	not_checked	True	28903	Mycoplasmopsis bovis	Mycoplasmopsis bovis	True	Oxford Nanopore PromethION
+GCA_055395695.1	GCF_055395695.1	SAMD00900369	DRR680680	PRJDB20529	ont	biosample_matched	not_checked	True	28903	Mycoplasmopsis bovis	Mycoplasmopsis bovis	True	MGI DNBSEQ-G400RS;Oxford Nanopore MinION
+GCA_055396555.1	GCF_055396555.1	SAMD00900367	DRR680695	PRJDB20529	ont	biosample_matched	not_checked	True	28903	Mycoplasmopsis bovis	Mycoplasmopsis bovis	True	MGI DNBSEQ-G400RS;Oxford Nanopore MinION
+GCA_055397195.1	GCF_055397195.1	SAMD00900364	DRR680693	PRJDB20529	ont	biosample_matched	not_checked	True	28903	Mycoplasmopsis bovis	Mycoplasmopsis bovis	True	MGI DNBSEQ-G400RS;Oxford Nanopore MinION
+GCA_055395295.1	GCF_055395295.1	SAMD00900370	DRR680697	PRJDB20529	ont	biosample_matched	not_checked	True	28903	Mycoplasmopsis bovis	Mycoplasmopsis bovis	True	MGI DNBSEQ-G400RS;Oxford Nanopore MinION
+GCA_055394005.1	GCF_055394005.1	SAMD00900373	DRR680699	PRJDB20529	ont	biosample_matched	not_checked	True	28903	Mycoplasmopsis bovis	Mycoplasmopsis bovis	True	MGI DNBSEQ-G400RS;Oxford Nanopore MinION
+GCA_988294905.1	GCF_988294905.1	SAMEA122512674	ERR17999608	PRJEB92323	ont	biosample_matched	not_checked	True	2121	Metamycoplasma orale	Metamycoplasma orale	True	OXFORD_NANOPORE, ILLUMINA
+GCA_013367995.1	GCF_013367995.1	SAMN15042594	SRR11901804	PRJNA429440	ont	biosample_matched	not_checked	True	2098	Metamycoplasma hominis	Metamycoplasma hominis	True	Nanopore + Illumina
+GCA_013368015.1	GCF_013368015.1	SAMN15042595	SRR11901803	PRJNA429440	ont	biosample_matched	not_checked	True	2098	Metamycoplasma hominis	Metamycoplasma hominis	True	Nanopore + Illumina
+GCA_013371665.1	GCF_013371665.1	SAMN15042588	SRR11901831	PRJNA429440	ont	biosample_matched	not_checked	True	2098	Metamycoplasma hominis	Metamycoplasma hominis	True	Nanopore + Illumina
+GCA_020150295.1	GCF_020150295.1	SAMN21422653	SRR16005423	PRJNA763075	ont	biosample_matched	not_checked	True	2109	Mycoplasmopsis synoviae	Mycoplasmopsis synoviae	True	Nanopore; Illumina NovaSeq
+GCA_034656275.1	GCF_034656275.1	SAMN37528856	SRR26841315	PRJNA1018939	ont	biosample_matched	not_checked	True	171284	Mycoplasmopsis cynos	Mycoplasmopsis cynos	True	Illumina MiSeq; Oxford Nanopore
+GCA_034647275.2	GCF_034647275.2	SAMN37528871	SRR26841320	PRJNA1018939	ont	biosample_matched	not_checked	True	33923	Mycoplasmopsis felis	Mycoplasmopsis felis	True	Illumina MiSeq; Oxford Nanopore MinION
+GCA_013367855.1	GCF_013367855.1	SAMN15042587	SRR11901832	PRJNA429440	ont	biosample_matched	not_checked	True	2098	Metamycoplasma hominis	Metamycoplasma hominis	True	Nanopore + Illumina
+GCA_034647735.2	GCF_034647735.2	SAMN37528866	SRR26841326	PRJNA1018939	ont	biosample_matched	not_checked	True	33923	Mycoplasmopsis felis	Mycoplasmopsis felis	True	Illumina MiSeq; Oxford Nanopore MinION
+GCA_034646875.2	GCF_034646875.2	SAMN37528875	SRR26841331	PRJNA1018939	ont	biosample_matched	not_checked	True	33923	Mycoplasmopsis felis	Mycoplasmopsis felis	True	Illumina MiSeq; Oxford Nanopore MinION
+GCA_034658015.1	GCF_034658015.1	SAMN37528855	SRR26841316	PRJNA1018939	ont	biosample_matched	not_checked	True	171284	Mycoplasmopsis cynos	Mycoplasmopsis cynos	True	Illumina MiSeq; Oxford Nanopore
+GCA_034647075.2	GCF_034647075.2	SAMN37528873	SRR26841333	PRJNA1018939	ont	biosample_matched	not_checked	True	33923	Mycoplasmopsis felis	Mycoplasmopsis felis	True	Illumina MiSeq; Oxford Nanopore MinION
+GCA_034647815.2	GCF_034647815.2	SAMN37528864	SRR26841317	PRJNA1018939	ont	biosample_matched	not_checked	True	29555	Mycoplasmopsis canis	Mycoplasmopsis canis	True	Illumina MiSeq; Oxford Nanopore MinION
+GCA_038095635.1	GCF_038095635.1	SAMN39783610	SRR28208387	PRJNA1070810	ont	biosample_matched	not_checked	True	29562	Mesomycoplasma ovipneumoniae	Mesomycoplasma ovipneumoniae	True	Oxford Nanopore MinION; Illumina MiSeq
+GCA_034647515.2	GCF_034647515.2	SAMN37528869	SRR26841322	PRJNA1018939	ont	biosample_matched	not_checked	True	33923	Mycoplasmopsis felis	Mycoplasmopsis felis	True	Illumina MiSeq; Oxford Nanopore MinION
+GCA_034648775.1	GCF_034648775.1	SAMN37528862	SRR26841324	PRJNA1018939	ont	biosample_matched	not_checked	True	171284	Mycoplasmopsis cynos	Mycoplasmopsis cynos	True	Illumina MiSeq; Oxford Nanopore
+GCA_038095865.1	GCF_038095865.1	SAMN39783645	SRR28208444	PRJNA1070810	ont	biosample_matched	not_checked	True	29562	Mesomycoplasma ovipneumoniae	Mesomycoplasma ovipneumoniae	True	Oxford Nanopore MinION; Illumina MiSeq
+GCA_038095845.1	GCF_038095845.1	SAMN39783643	SRR28208446	PRJNA1070810	ont	biosample_matched	not_checked	True	29562	Mesomycoplasma ovipneumoniae	Mesomycoplasma ovipneumoniae	True	Oxford Nanopore MinION; Illumina MiSeq
+GCA_034644535.2	GCF_034644535.2	SAMN37528878	SRR26841328	PRJNA1018939	ont	biosample_matched	not_checked	True	33923	Mycoplasmopsis felis	Mycoplasmopsis felis	True	Illumina MiSeq; Oxford Nanopore MinION
+GCA_038095835.1	GCF_038095835.1	SAMN39783642	SRR28208447	PRJNA1070810	ont	biosample_matched	not_checked	True	29562	Mesomycoplasma ovipneumoniae	Mesomycoplasma ovipneumoniae	True	Oxford Nanopore MinION; Illumina MiSeq
+GCA_034646055.2	GCF_034646055.2	SAMN37528876	SRR26841330	PRJNA1018939	ont	biosample_matched	not_checked	True	33923	Mycoplasmopsis felis	Mycoplasmopsis felis	True	Illumina MiSeq; Oxford Nanopore MinION
+GCA_038095815.1	GCF_038095815.1	SAMN39783640	SRR28208449	PRJNA1070810	ont	biosample_matched	not_checked	True	29562	Mesomycoplasma ovipneumoniae	Mesomycoplasma ovipneumoniae	True	Oxford Nanopore MinION; Illumina MiSeq
+GCA_034659635.1	GCF_034659635.1	SAMN37528854	SRR26841336	PRJNA1018939	ont	biosample_matched	not_checked	True	171284	Mycoplasmopsis cynos	Mycoplasmopsis cynos	True	Illumina MiSeq; Oxford Nanopore
+GCA_038095795.1	GCF_038095795.1	SAMN39783638	SRR28208451	PRJNA1070810	ont	biosample_matched	not_checked	True	29562	Mesomycoplasma ovipneumoniae	Mesomycoplasma ovipneumoniae	True	Oxford Nanopore MinION; Illumina MiSeq
+GCA_038095675.1	GCF_038095675.1	SAMN39783614	SRR28208384	PRJNA1070810	ont	biosample_matched	not_checked	True	29562	Mesomycoplasma ovipneumoniae	Mesomycoplasma ovipneumoniae	True	Oxford Nanopore MinION; Illumina MiSeq
+GCA_038095735.1	GCF_038095735.1	SAMN39783622	SRR28208459	PRJNA1070810	ont	biosample_matched	not_checked	True	29562	Mesomycoplasma ovipneumoniae	Mesomycoplasma ovipneumoniae	True	Oxford Nanopore MinION; Illumina MiSeq
+GCA_038095875.1	GCF_038095875.1	SAMN39783646	SRR28208443	PRJNA1070810	ont	biosample_matched	not_checked	True	29562	Mesomycoplasma ovipneumoniae	Mesomycoplasma ovipneumoniae	True	Oxford Nanopore MinION; Illumina MiSeq
+GCA_038096025.1	GCF_038096025.1	SAMN39783672	SRR28208479	PRJNA1070810	ont	biosample_matched	not_checked	True	29562	Mesomycoplasma ovipneumoniae	Mesomycoplasma ovipneumoniae	True	Oxford Nanopore MinION; Illumina MiSeq
+GCA_038095785.1	GCF_038095785.1	SAMN39783637	SRR28208452	PRJNA1070810	ont	biosample_matched	not_checked	True	29562	Mesomycoplasma ovipneumoniae	Mesomycoplasma ovipneumoniae	True	Oxford Nanopore MinION; Illumina MiSeq
+GCA_038095985.1		SAMN39783666	SRR28208483	PRJNA1070810	ont	biosample_matched	not_checked	True	29562	Mesomycoplasma ovipneumoniae	Mesomycoplasma ovipneumoniae	True	Oxford Nanopore MinION; Illumina MiSeq
+GCA_038095775.1	GCF_038095775.1	SAMN39783632	SRR28208454	PRJNA1070810	ont	biosample_matched	not_checked	True	29562	Mesomycoplasma ovipneumoniae	Mesomycoplasma ovipneumoniae	True	Oxford Nanopore MinION; Illumina MiSeq
+GCA_038095905.1	GCF_038095905.1	SAMN39783649	SRR28208492	PRJNA1070810	ont	biosample_matched	not_checked	True	29562	Mesomycoplasma ovipneumoniae	Mesomycoplasma ovipneumoniae	True	Oxford Nanopore MinION; Illumina MiSeq
+GCA_038095765.1	GCF_038095765.1	SAMN39783629	SRR28208455	PRJNA1070810	ont	biosample_matched	not_checked	True	29562	Mesomycoplasma ovipneumoniae	Mesomycoplasma ovipneumoniae	True	Oxford Nanopore MinION; Illumina MiSeq
+GCA_038067095.1	GCF_038067095.1	SAMN39783624	SRR28208457	PRJNA1070810	ont	biosample_matched	not_checked	True	29562	Mesomycoplasma ovipneumoniae	Mesomycoplasma ovipneumoniae	True	Oxford Nanopore MinION; Illumina MiSeq
+GCA_045160055.1	GCF_045160055.1	SAMN23454023	SRR28254437	PRJNA783792	ont	biosample_matched	not_checked	False	56142	Metamycoplasma faucium	Metamycoplasma faucium	True	Oxford Nanopore; Illumina NovaSeq
+GCA_041734235.1	GCF_041734235.1	SAMN38430106	SRR28490801	PRJNA1045244	ont	biosample_matched	not_checked	False	92402	Metamycoplasma equirhinis	Metamycoplasma equirhinis	True	Illumina NovaSeq; Oxford Nanopore GridION
+GCA_038095975.1	GCF_038095975.1	SAMN39783665	SRR28208485	PRJNA1070810	ont	biosample_matched	not_checked	True	29562	Mesomycoplasma ovipneumoniae	Mesomycoplasma ovipneumoniae	True	Oxford Nanopore MinION; Illumina MiSeq
+GCA_025215295.1	GCF_025215295.1	SAMN30346838	SRR21105603	PRJNA869735	ont	biosample_matched	not_checked	True	171284	Mycoplasmopsis cynos	Mycoplasmopsis cynos	True	Oxford Nanopore MinION
+GCA_025215395.1	GCF_025215395.1	SAMN30346838	SRR21105603	PRJNA869735	ont	biosample_matched	not_checked	True	171284	Mycoplasmopsis cynos	Mycoplasmopsis cynos	True	Oxford Nanopore MinION
+GCA_025679115.1		SAMN30346838	SRR21105603	PRJNA869735	ont	biosample_matched	not_checked	True	171284	Mycoplasmopsis cynos	Mycoplasmopsis cynos	True	Oxford Nanopore MinION
+GCA_025679215.1	GCF_025679215.1	SAMN30346838	SRR21105603	PRJNA869735	ont	biosample_matched	not_checked	True	171284	Mycoplasmopsis cynos	Mycoplasmopsis cynos	True	Oxford Nanopore MinION
+GCA_026810765.1	GCF_026810765.1	SAMN30346838	SRR21105603	PRJNA869735	ont	biosample_matched	not_checked	True	171284	Mycoplasmopsis cynos	Mycoplasmopsis cynos	True	Oxford Nanopore MinION
+GCA_026810885.1	GCF_026810885.1	SAMN30346838	SRR21105603	PRJNA869735	ont	biosample_matched	not_checked	True	171284	Mycoplasmopsis cynos	Mycoplasmopsis cynos	True	Oxford Nanopore MinION
+GCA_038095925.1	GCF_038095925.1	SAMN39783652	SRR28208490	PRJNA1070810	ont	biosample_matched	not_checked	True	29562	Mesomycoplasma ovipneumoniae	Mesomycoplasma ovipneumoniae	True	Oxford Nanopore MinION; Illumina MiSeq
+GCA_047914005.1	GCF_047914005.1	SAMN32182837	SRR22699669	PRJNA906261	ont	biosample_matched	not_checked	True	33923	Mycoplasmopsis felis	Mycoplasmopsis felis	True	Illumina NovaSeq
+GCA_038095885.1	GCF_038095885.1	SAMN39783647	SRR28208494	PRJNA1070810	ont	biosample_matched	not_checked	True	29562	Mesomycoplasma ovipneumoniae	Mesomycoplasma ovipneumoniae	True	Oxford Nanopore MinION; Illumina MiSeq
+GCA_047914015.1	GCF_047914015.1	SAMN32182835	SRR22699671	PRJNA906261	ont	biosample_matched	not_checked	True	33923	Mycoplasmopsis felis	Mycoplasmopsis felis	True	Illumina NovaSeq
+GCA_056106105.1	GCF_056106105.1	SAMN50701159	SRR35052992	PRJNA820789	ont	biosample_matched	not_checked	True	28903	Mycoplasmopsis bovis	Mycoplasmopsis bovis	True	Oxford Nanopore PromethION
+GCA_056106185.1	GCF_056106185.1	SAMN50701156	SRR35052995	PRJNA820789	ont	biosample_matched	not_checked	True	28903	Mycoplasmopsis bovis	Mycoplasmopsis bovis	True	Oxford Nanopore PromethION
+GCA_056106205.1	GCF_056106205.1	SAMN50701155	SRR35052996	PRJNA820789	ont	biosample_matched	not_checked	True	28903	Mycoplasmopsis bovis	Mycoplasmopsis bovis	True	Oxford Nanopore PromethION
+GCA_056591035.1	GCF_056591035.1	SAMN50708460	SRR35059607	PRJNA1308627	ont	biosample_matched	not_checked	True	28903	Mycoplasmopsis bovis	Mycoplasmopsis bovis	True	Oxford Nanopore PromethION
+GCA_021384915.1	GCF_021384915.1	SAMN18539613	SRR14651719	PRJNA717738	pacbio_unresolved	biosample_matched	not_checked	False	2110	Mycoplasmopsis agalactiae	Mycoplasmopsis agalactiae	True	PacBio RSII
+GCA_021384965.1	GCF_021384965.1	SAMN18539618	SRR14651720	PRJNA717738	pacbio_unresolved	biosample_matched	not_checked	False	2110	Mycoplasmopsis agalactiae	Mycoplasmopsis agalactiae	True	PacBio RSII
+GCA_021384995.1	GCF_021384995.1	SAMN18539616	SRR14651721	PRJNA717738	pacbio_unresolved	biosample_matched	not_checked	False	2110	Mycoplasmopsis agalactiae	Mycoplasmopsis agalactiae	True	PacBio RSII
+GCA_021384925.1	GCF_021384925.1	SAMN18539615	SRR14651726	PRJNA717738	pacbio_unresolved	biosample_matched	not_checked	False	2110	Mycoplasmopsis agalactiae	Mycoplasmopsis agalactiae	True	PacBio RSII
+GCA_021385075.1	GCF_021385075.1	SAMN18539617	SRR14651728	PRJNA717738	pacbio_unresolved	biosample_matched	not_checked	False	2110	Mycoplasmopsis agalactiae	Mycoplasmopsis agalactiae	True	PacBio RSII
+GCA_900475235.1	GCF_900475235.1	SAMEA3679194	ERR1305739	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	2109	Mycoplasmopsis synoviae	Mycoplasmopsis synoviae	True	PacBio
+GCA_900476065.1	GCF_900476065.1	SAMEA4384243	ERR1802422	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	2100	Mesomycoplasma hyorhinis	Mesomycoplasma hyorhinis	True	PacBio
+GCA_900660445.2	GCF_900660445.2	SAMEA4412694	ERR1805698	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	2124	Metamycoplasma salivarium	Metamycoplasma salivarium	True	PacBio
+GCA_900476125.1	GCF_900476125.1	SAMEA4434528	ERR1820608	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	45363	Metamycoplasma alkalescens	Metamycoplasma alkalescens	True	PacBio
+GCA_900660625.1	GCF_900660625.1	SAMEA4434531	ERR1883073	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	29562	Mesomycoplasma ovipneumoniae	Mesomycoplasma ovipneumoniae	True	PacBio
+GCA_900660675.1	GCF_900660675.1	SAMEA104167209	ERR2205696	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	171282	Mycoplasmopsis columboralis	Mycoplasmopsis columboralis	True	PacBio
+GCA_900660705.1	GCF_900660705.1	SAMEA104210792	ERR2237810	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	114880	Mycoplasmopsis columbinasalis	Mycoplasmopsis columbinasalis	True	PacBio
+GCA_900660735.1	GCF_900660735.1	SAMEA104210811	ERR2237827	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	92401	Metamycoplasma cloacale	Metamycoplasma cloacale	True	PacBio
+GCA_021497185.1	GCF_021497185.1	SAMN07417197	SRR10295162	PRJNA395903	pacbio_clr_subreads	biosample_matched	not_checked	True	28903	Mycoplasmopsis bovis	Mycoplasmopsis bovis	True	PacBio RS; Illumina MiSeq
+GCA_021497165.1	GCF_021497165.1	SAMN07417198	SRR10295164	PRJNA395903	pacbio_clr_subreads	biosample_matched	not_checked	True	28903	Mycoplasmopsis bovis	Mycoplasmopsis bovis	True	PacBio RS; Illumina MiSeq
+GCA_003354525.1	GCF_003354525.1	SAMN07152228	SRR11675954	PRJNA378768	pacbio_clr_subreads	biosample_matched	not_checked	True	28903	Mycoplasmopsis bovis	Mycoplasmopsis bovis	True	PacBio; Illumina MiSeq
+GCA_011996525.1	GCF_011996525.1	SAMN07414165	SRR11675970	PRJNA378768	pacbio_clr_subreads	biosample_matched	not_checked	True	28903	Mycoplasmopsis bovis	Mycoplasmopsis bovis	True	PacBio RS; Illumina MiSeq
+GCA_016807745.1	GCF_016807745.1	SAMN16912281	SRR13132366	PRJNA680748	pacbio_unresolved	biosample_matched	not_checked	True	28903	Mycoplasmopsis bovis	Mycoplasmopsis bovis	True	PacBio; Illumina NovaSeq
+GCA_016807725.1	GCF_016807725.1	SAMN16912280	SRR13132367	PRJNA680748	pacbio_unresolved	biosample_matched	not_checked	True	28903	Mycoplasmopsis bovis	Mycoplasmopsis bovis	True	PacBio; Illumina NovaSeq
+GCA_035918255.1	GCF_035918255.1	SAMN38811045	SRR36608464	PRJNA1051969	pacbio_hifi_ccs	biosample_matched	not_checked	True	29562	Mesomycoplasma ovipneumoniae	Mesomycoplasma ovipneumoniae	True	PacBio Sequel
+GCA_025215315.1	GCF_025215315.1	SAMN30346842	SRR21105599	PRJNA869735	ont	biosample_matched	not_checked	True	33923	Mycoplasmopsis felis	Mycoplasmopsis felis	True	Oxford Nanopore MinION
+GCA_025215415.1	GCF_025215415.1	SAMN30346842	SRR21105599	PRJNA869735	ont	biosample_matched	not_checked	True	33923	Mycoplasmopsis felis	Mycoplasmopsis felis	True	Oxford Nanopore MinION
+GCA_025679055.1	GCF_025679055.1	SAMN30346842	SRR21105599	PRJNA869735	ont	biosample_matched	not_checked	True	33923	Mycoplasmopsis felis	Mycoplasmopsis felis	True	Oxford Nanopore MinION
+GCA_025679065.1	GCF_025679065.1	SAMN30346842	SRR21105599	PRJNA869735	ont	biosample_matched	not_checked	True	33923	Mycoplasmopsis felis	Mycoplasmopsis felis	True	Oxford Nanopore MinION
+GCA_025679155.1	GCF_025679155.1	SAMN30346842	SRR21105599	PRJNA869735	ont	biosample_matched	not_checked	True	33923	Mycoplasmopsis felis	Mycoplasmopsis felis	True	Oxford Nanopore MinION
+GCA_026810525.1	GCF_026810525.1	SAMN30346842	SRR21105599	PRJNA869735	ont	biosample_matched	not_checked	True	33923	Mycoplasmopsis felis	Mycoplasmopsis felis	True	Oxford Nanopore MinION
+GCA_025215255.1		SAMN30346840	SRR21105601	PRJNA869735	ont	biosample_matched	not_checked	True	171284	Mycoplasmopsis cynos	Mycoplasmopsis cynos	True	Oxford Nanopore MinION
+GCA_025215355.1	GCF_025215355.1	SAMN30346840	SRR21105601	PRJNA869735	ont	biosample_matched	not_checked	True	171284	Mycoplasmopsis cynos	Mycoplasmopsis cynos	True	Oxford Nanopore MinION
+GCA_025679195.1		SAMN30346840	SRR21105601	PRJNA869735	ont	biosample_matched	not_checked	True	171284	Mycoplasmopsis cynos	Mycoplasmopsis cynos	True	Oxford Nanopore MinION
+GCA_026810725.1	GCF_026810725.1	SAMN30346840	SRR21105601	PRJNA869735	ont	biosample_matched	not_checked	True	171284	Mycoplasmopsis cynos	Mycoplasmopsis cynos	True	Oxford Nanopore MinION
+GCA_026810785.1	GCF_026810785.1	SAMN30346840	SRR21105601	PRJNA869735	ont	biosample_matched	not_checked	True	171284	Mycoplasmopsis cynos	Mycoplasmopsis cynos	True	Oxford Nanopore MinION
+GCA_026810925.1	GCF_026810925.1	SAMN30346840	SRR21105601	PRJNA869735	ont	biosample_matched	not_checked	True	171284	Mycoplasmopsis cynos	Mycoplasmopsis cynos	True	Oxford Nanopore MinION
+GCA_035894775.1	GCF_035894775.1	SAMN32182836	SRR22699670	PRJNA906261	ont	biosample_matched	not_checked	True	33923	Mycoplasmopsis felis	Mycoplasmopsis felis	True	Illumina NovaSeq
+GCA_002952835.1	GCF_002952835.1	SAMN08362962	SRR6471048	PRJNA429440	ont	biosample_matched	not_checked	True	2098	Metamycoplasma hominis	Metamycoplasma hominis	True	Nanopore; Illumina MiSeq
+GCA_055396845.1	GCF_055396845.1	SAMD00900366	DRR680676	PRJDB20529	ont	biosample_matched	not_checked	True	28903	Mycoplasmopsis bovis	Mycoplasmopsis bovis	True	MGI DNBSEQ-G400RS;Oxford Nanopore MinION
+GCA_055393635.1	GCF_055393635.1	SAMD00900374	DRR680686	PRJDB20529	ont	biosample_matched	not_checked	True	28903	Mycoplasmopsis bovis	Mycoplasmopsis bovis	True	MGI DNBSEQ-G400RS;Oxford Nanopore MinION
+GCA_013367975.1	GCF_013367975.1	SAMN15042593	SRR11901805	PRJNA429440	ont	biosample_matched	not_checked	True	2098	Metamycoplasma hominis	Metamycoplasma hominis	True	Nanopore + Illumina
+GCA_013367955.1	GCF_013367955.1	SAMN15042592	SRR11901806	PRJNA429440	ont	biosample_matched	not_checked	True	2098	Metamycoplasma hominis	Metamycoplasma hominis	True	Nanopore + Illumina
+GCA_013367935.1	GCF_013367935.1	SAMN15042591	SRR11901807	PRJNA429440	ont	biosample_matched	not_checked	True	2098	Metamycoplasma hominis	Metamycoplasma hominis	True	Nanopore + Illumina
+GCA_034651055.1	GCF_034651055.1	SAMN37528860	SRR26841312	PRJNA1018939	ont	biosample_matched	not_checked	True	171284	Mycoplasmopsis cynos	Mycoplasmopsis cynos	True	Illumina MiSeq; Oxford Nanopore
+GCA_034652735.1	GCF_034652735.1	SAMN37528858	SRR26841313	PRJNA1018939	ont	biosample_matched	not_checked	True	171284	Mycoplasmopsis cynos	Mycoplasmopsis cynos	True	Illumina MiSeq; Oxford Nanopore
+GCA_034647055.2	GCF_034647055.2	SAMN37528874	SRR26841332	PRJNA1018939	ont	biosample_matched	not_checked	True	33923	Mycoplasmopsis felis	Mycoplasmopsis felis	True	Illumina MiSeq; Oxford Nanopore MinION
+GCA_034647755.2	GCF_034647755.2	SAMN37528865	SRR26841334	PRJNA1018939	ont	biosample_matched	not_checked	True	171284	Mycoplasmopsis cynos	Mycoplasmopsis cynos	True	Illumina MiSeq; Oxford Nanopore MinION
+GCA_034649355.1	GCF_034649355.1	SAMN37528861	SRR26841335	PRJNA1018939	ont	biosample_matched	not_checked	True	171284	Mycoplasmopsis cynos	Mycoplasmopsis cynos	True	Illumina MiSeq; Oxford Nanopore
+GCA_038095715.1	GCF_038095715.1	SAMN39783620	SRR28208379	PRJNA1070810	ont	biosample_matched	not_checked	True	29562	Mesomycoplasma ovipneumoniae	Mesomycoplasma ovipneumoniae	True	Oxford Nanopore MinION; Illumina MiSeq
+GCA_038095645.1	GCF_038095645.1	SAMN39783611	SRR28208386	PRJNA1070810	ont	biosample_matched	not_checked	True	29562	Mesomycoplasma ovipneumoniae	Mesomycoplasma ovipneumoniae	True	Oxford Nanopore MinION; Illumina MiSeq
+GCA_038095825.1	GCF_038095825.1	SAMN39783641	SRR28208448	PRJNA1070810	ont	biosample_matched	not_checked	True	29562	Mesomycoplasma ovipneumoniae	Mesomycoplasma ovipneumoniae	True	Oxford Nanopore MinION; Illumina MiSeq
+GCA_037449215.1	GCF_037449215.1	SAMN39783681	SRR28208475	PRJNA1070810	ont	biosample_matched	not_checked	True	29562	Mesomycoplasma ovipneumoniae	Mesomycoplasma ovipneumoniae	True	Oxford Nanopore MinION; Illumina MiSeq
+GCA_038096045.1		SAMN39783678	SRR28208477	PRJNA1070810	ont	biosample_matched	not_checked	True	29562	Mesomycoplasma ovipneumoniae	Mesomycoplasma ovipneumoniae	True	Oxford Nanopore MinION; Illumina MiSeq
+GCA_038096015.1	GCF_038096015.1	SAMN39783671	SRR28208480	PRJNA1070810	ont	biosample_matched	not_checked	True	29562	Mesomycoplasma ovipneumoniae	Mesomycoplasma ovipneumoniae	True	Oxford Nanopore MinION; Illumina MiSeq
+GCA_038095965.1	GCF_038095965.1	SAMN39783663	SRR28208486	PRJNA1070810	ont	biosample_matched	not_checked	True	29562	Mesomycoplasma ovipneumoniae	Mesomycoplasma ovipneumoniae	True	Oxford Nanopore MinION; Illumina MiSeq
+GCA_038095955.1	GCF_038095955.1	SAMN39783660	SRR28208487	PRJNA1070810	ont	biosample_matched	not_checked	True	29562	Mesomycoplasma ovipneumoniae	Mesomycoplasma ovipneumoniae	True	Oxford Nanopore MinION; Illumina MiSeq
+GCA_038095945.1	GCF_038095945.1	SAMN39783657	SRR28208488	PRJNA1070810	ont	biosample_matched	not_checked	True	29562	Mesomycoplasma ovipneumoniae	Mesomycoplasma ovipneumoniae	True	Oxford Nanopore MinION; Illumina MiSeq
+GCA_038095915.1	GCF_038095915.1	SAMN39783650	SRR28208491	PRJNA1070810	ont	biosample_matched	not_checked	True	29562	Mesomycoplasma ovipneumoniae	Mesomycoplasma ovipneumoniae	True	Oxford Nanopore MinION; Illumina MiSeq
+GCA_041734225.1	GCF_041734225.1	SAMN38430114	SRR28490800	PRJNA1045244	ont	biosample_matched	not_checked	True	92402	Metamycoplasma equirhinis	Metamycoplasma equirhinis	True	Illumina NovaSeq; Oxford Nanopore GridION
+GCA_056106125.1	GCF_056106125.1	SAMN50701160	SRR35052991	PRJNA820789	ont	biosample_matched	not_checked	True	28903	Mycoplasmopsis bovis	Mycoplasmopsis bovis	True	Oxford Nanopore PromethION
+GCA_056106145.1	GCF_056106145.1	SAMN50701158	SRR35052993	PRJNA820789	ont	biosample_matched	not_checked	True	28903	Mycoplasmopsis bovis	Mycoplasmopsis bovis	True	Oxford Nanopore PromethION
+GCA_056106165.1	GCF_056106165.1	SAMN50701157	SRR35052994	PRJNA820789	ont	biosample_matched	not_checked	True	28903	Mycoplasmopsis bovis	Mycoplasmopsis bovis	True	Oxford Nanopore PromethION
+GCA_056106225.1	GCF_056106225.1	SAMN50701154	SRR35052997	PRJNA820789	ont	biosample_matched	not_checked	True	28903	Mycoplasmopsis bovis	Mycoplasmopsis bovis	True	Oxford Nanopore PromethION
+GCA_056590975.1	GCF_056590975.1	SAMN50708463	SRR35059604	PRJNA1308627	ont	biosample_matched	not_checked	True	28903	Mycoplasmopsis bovis	Mycoplasmopsis bovis	True	Oxford Nanopore PromethION
+GCA_030012565.1	GCF_030012565.1	SAMN34472237	SRR24462972	PRJNA963935	pacbio_hifi_ccs	biosample_matched	not_checked	True	29562	Mesomycoplasma ovipneumoniae	Mesomycoplasma ovipneumoniae	True	PacBio
+GCA_900660435.1	GCF_900660435.1	SAMEA4384073	ERR1802421	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	2121	Metamycoplasma orale	Metamycoplasma orale	True	PacBio
+GCA_900660485.1	GCF_900660485.1	SAMEA4412700	ERR1805702	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	2120	Mesomycoplasma neurolyticum	Mesomycoplasma neurolyticum	True	PacBio
+GCA_900660525.1	GCF_900660525.1	SAMEA4434524	ERR1820609	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	2112	Mycoplasmopsis bovigenitalium	Mycoplasmopsis bovigenitalium	True	PacBio
+GCA_900660555.1	GCF_900660555.1	SAMEA4412698	ERR1820612	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	45361	Mesomycoplasma conjunctivae	Mesomycoplasma conjunctivae	True	PacBio
+GCA_900660605.1	GCF_900660605.1	SAMEA4434532	ERR1883074	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	171285	Mycoplasmopsis glycophila	Mycoplasmopsis glycophila	True	PacBio
+GCA_900660635.1	GCF_900660635.1	SAMEA104167171	ERR2195673	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	76629	Mycoplasmopsis gallopavonis	Mycoplasmopsis gallopavonis	True	PacBio
+GCA_900660645.1	GCF_900660645.1	SAMEA104167208	ERR2205694	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	171281	Mycoplasmopsis citelli	Mycoplasmopsis citelli	True	PacBio
+GCA_900660665.1	GCF_900660665.1	SAMEA104210789	ERR2237808	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	114885	Mycoplasmopsis maculosa	Mycoplasmopsis maculosa	True	PacBio
+GCA_003354365.1	GCF_003354365.1	SAMN07152214	SRR11675956	PRJNA378768	pacbio_clr_subreads	biosample_matched	not_checked	True	28903	Mycoplasmopsis bovis	Mycoplasmopsis bovis	True	PacBio; Illumina MiSeq
+GCA_003354345.1	GCF_003354345.1	SAMN06841978	SRR11675960	PRJNA378768	pacbio_clr_subreads	biosample_matched	not_checked	True	28903	Mycoplasmopsis bovis	Mycoplasmopsis bovis	True	PacBio; Illumina MiSeq
+GCA_003354325.1	GCF_003354325.1	SAMN06561735	SRR11675961	PRJNA378768	pacbio_clr_subreads	biosample_matched	not_checked	True	28903	Mycoplasmopsis bovis	Mycoplasmopsis bovis	True	PacBio; Illumina MiSeq
+GCA_003354485.1	GCF_003354485.1	SAMN06561734	SRR11675962	PRJNA378768	pacbio_clr_subreads	biosample_matched	not_checked	True	28903	Mycoplasmopsis bovis	Mycoplasmopsis bovis	True	PacBio; Illumina MiSeq
+GCA_003354465.1	GCF_003354465.1	SAMN06841955	SRR11675964	PRJNA378768	pacbio_clr_subreads	biosample_matched	not_checked	True	28903	Mycoplasmopsis bovis	Mycoplasmopsis bovis	True	PacBio; Illumina MiSeq
+GCA_009936335.1	GCF_009936335.1	SAMD00199257	DRR204804	PRJDB9149	ont	biosample_matched	not_checked	True	33923	Mycoplasmopsis felis	Mycoplasmopsis felis	True	Oxford Nanopore MinION; IonPGM
+GCA_038095725.1	GCF_038095725.1	SAMN39783621	SRR28208378	PRJNA1070810	ont	biosample_matched	not_checked	True	29562	Mesomycoplasma ovipneumoniae	Mesomycoplasma ovipneumoniae	True	Oxford Nanopore MinION; Illumina MiSeq
+GCA_038095695.1	GCF_038095695.1	SAMN39783617	SRR28208381	PRJNA1070810	ont	biosample_matched	not_checked	True	29562	Mesomycoplasma ovipneumoniae	Mesomycoplasma ovipneumoniae	True	Oxford Nanopore MinION; Illumina MiSeq
+GCA_038095685.1	GCF_038095685.1	SAMN39783616	SRR28208383	PRJNA1070810	ont	biosample_matched	not_checked	True	29562	Mesomycoplasma ovipneumoniae	Mesomycoplasma ovipneumoniae	True	Oxford Nanopore MinION; Illumina MiSeq
+GCA_038095665.1	GCF_038095665.1	SAMN39783613	SRR28208385	PRJNA1070810	ont	biosample_matched	not_checked	True	29562	Mesomycoplasma ovipneumoniae	Mesomycoplasma ovipneumoniae	True	Oxford Nanopore MinION; Illumina MiSeq
+GCA_038095625.1	GCF_038095625.1	SAMN39783609	SRR28208388	PRJNA1070810	ont	biosample_matched	not_checked	True	29562	Mesomycoplasma ovipneumoniae	Mesomycoplasma ovipneumoniae	True	Oxford Nanopore MinION; Illumina MiSeq
+GCA_038095855.1	GCF_038095855.1	SAMN39783644	SRR28208445	PRJNA1070810	ont	biosample_matched	not_checked	True	29562	Mesomycoplasma ovipneumoniae	Mesomycoplasma ovipneumoniae	True	Oxford Nanopore MinION; Illumina MiSeq
+GCA_038095805.1	GCF_038095805.1	SAMN39783639	SRR28208450	PRJNA1070810	ont	biosample_matched	not_checked	True	29562	Mesomycoplasma ovipneumoniae	Mesomycoplasma ovipneumoniae	True	Oxford Nanopore MinION; Illumina MiSeq
+GCA_038095755.1	GCF_038095755.1	SAMN39783626	SRR28208456	PRJNA1070810	ont	biosample_matched	not_checked	True	29562	Mesomycoplasma ovipneumoniae	Mesomycoplasma ovipneumoniae	True	Oxford Nanopore MinION; Illumina MiSeq
+GCA_038096055.1	GCF_038096055.1	SAMN39783680	SRR28208476	PRJNA1070810	ont	biosample_matched	not_checked	True	29562	Mesomycoplasma ovipneumoniae	Mesomycoplasma ovipneumoniae	True	Oxford Nanopore MinION; Illumina MiSeq
+GCA_038095895.1	GCF_038095895.1	SAMN39783648	SRR28208493	PRJNA1070810	ont	biosample_matched	not_checked	True	29562	Mesomycoplasma ovipneumoniae	Mesomycoplasma ovipneumoniae	True	Oxford Nanopore MinION; Illumina MiSeq
+GCA_048069555.1	GCF_048069555.1	SAMN46281272	SRR32028655	PRJNA1211651	ont	biosample_matched	not_checked	True	29561	Mycoplasmopsis meleagridis	Mycoplasmopsis meleagridis	True	Oxford Nanopore MinION
+GCA_055396265.1	GCF_055396265.1	SAMD00900368	DRR680679	PRJDB20529	ont	biosample_matched	not_checked	True	28903	Mycoplasmopsis bovis	Mycoplasmopsis bovis	True	MGI DNBSEQ-G400RS;Oxford Nanopore MinION
+GCA_988339635.1	GCF_988339635.1	SAMEA122512676	ERR18000074	PRJEB92323	ont	biosample_matched	not_checked	True	2100	Mesomycoplasma hyorhinis	Mesomycoplasma hyorhinis	True	OXFORD_NANOPORE, ILLUMINA
+GCA_015476215.1	GCF_015476215.1	SAMN16673634	SRR13518677	PRJNA674728	ont	biosample_matched	not_checked	True	2100	Mesomycoplasma hyorhinis	Mesomycoplasma hyorhinis	True	Illumina MiSeq; Oxford Nanopore MiniION
+GCA_047914025.1	GCF_047914025.1	SAMN32182834	SRR22699672	PRJNA906261	ont	biosample_matched	not_checked	True	33923	Mycoplasmopsis felis	Mycoplasmopsis felis	True	Illumina NovaSeq
+GCA_034654375.1	GCF_034654375.1	SAMN37528857	SRR26841314	PRJNA1018939	ont	biosample_matched	not_checked	True	171284	Mycoplasmopsis cynos	Mycoplasmopsis cynos	True	Illumina MiSeq; Oxford Nanopore
+GCA_034647175.2	GCF_034647175.2	SAMN37528872	SRR26841319	PRJNA1018939	ont	biosample_matched	not_checked	True	33923	Mycoplasmopsis felis	Mycoplasmopsis felis	True	Illumina MiSeq; Oxford Nanopore MinION
+GCA_034647695.2	GCF_034647695.2	SAMN37528868	SRR26841323	PRJNA1018939	ont	biosample_matched	not_checked	True	33923	Mycoplasmopsis felis	Mycoplasmopsis felis	True	Illumina MiSeq; Oxford Nanopore MinION
+GCA_034647715.2	GCF_034647715.2	SAMN37528867	SRR26841325	PRJNA1018939	ont	biosample_matched	not_checked	True	33923	Mycoplasmopsis felis	Mycoplasmopsis felis	True	Illumina MiSeq; Oxford Nanopore MinION
+GCA_034644475.2	GCF_034644475.2	SAMN37528879	SRR26841327	PRJNA1018939	ont	biosample_matched	not_checked	True	33923	Mycoplasmopsis felis	Mycoplasmopsis felis	True	Illumina MiSeq; Oxford Nanopore MinION
+GCA_059696535.1	GCF_059696535.1	SAMD00164370	DRR184752	PRJDB8066	pacbio_unresolved	biosample_matched	not_checked	True	28903	Mycoplasmopsis bovis	Mycoplasmopsis bovis	True	PacBio RSII, Illumina MiniSeq
+GCA_900660495.1	GCF_900660495.1	SAMEA4412701	ERR1805703	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	29556	Mycoplasmopsis gallinacea	Mycoplasmopsis gallinacea	True	PacBio
+GCA_900660565.1	GCF_900660565.1	SAMEA4434526	ERR1883065	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	2099	Mesomycoplasma hyopneumoniae	Mesomycoplasma hyopneumoniae	True	PacBio
+GCA_900660575.1	GCF_900660575.1	SAMEA4434529	ERR1883071	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	2107	Mycoplasmopsis pulmonis	Mycoplasmopsis pulmonis	True	PacBio
+GCA_900660695.1	GCF_900660695.1	SAMEA104210790	ERR2237809	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	29561	Mycoplasmopsis meleagridis	Mycoplasmopsis meleagridis	True	PacBio
+GCA_900660725.1	GCF_900660725.1	SAMEA104224794	ERR2237850	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	2094	Mycoplasmopsis arginini	Mycoplasmopsis arginini	True	PacBio
+GCA_009671165.1	GCF_009671165.1	SAMN10591532	SRR10270520	PRJNA509945	pacbio_unresolved	biosample_matched	not_checked	True	2109	Mycoplasmopsis synoviae	Mycoplasmopsis synoviae	True	PacBio RSII; Illumina HiSeq 4000
+GCA_021497085.1	GCF_021497085.1	SAMN07662835	SRR10295151	PRJNA407761	pacbio_clr_subreads	biosample_matched	not_checked	True	28903	Mycoplasmopsis bovis	Mycoplasmopsis bovis	True	PacBio RS; Illumina MiSeq
+GCA_003354385.1	GCF_003354385.1	SAMN07152215	SRR11675955	PRJNA378768	pacbio_clr_subreads	biosample_matched	not_checked	True	28903	Mycoplasmopsis bovis	Mycoplasmopsis bovis	True	PacBio; Illumina MiSeq
+GCA_011996705.1		SAMN06841993	SRR11675959	PRJNA378768	pacbio_clr_subreads	biosample_matched	not_checked	True	28903	Mycoplasmopsis bovis	Mycoplasmopsis bovis	True	PacBio RS; Illumina MiSeq
+GCA_003354305.1	GCF_003354305.1	SAMN06561721	SRR11675963	PRJNA378768	pacbio_clr_subreads	biosample_matched	not_checked	True	28903	Mycoplasmopsis bovis	Mycoplasmopsis bovis	True	PacBio; Illumina MiSeq
+GCA_013368035.1	GCF_013368035.1	SAMN15042596	SRR11901802	PRJNA429440	pacbio_unresolved	biosample_matched	not_checked	True	2098	Metamycoplasma hominis	Metamycoplasma hominis	True	PacBio
+GCA_016807705.1	GCF_016807705.1	SAMN16912279	SRR13132368	PRJNA680748	pacbio_unresolved	biosample_matched	not_checked	True	28903	Mycoplasmopsis bovis	Mycoplasmopsis bovis	True	PacBio; Illumina NovaSeq
+GCA_021385015.1	GCF_021385015.1	SAMN18539620	SRR14651727	PRJNA717738	pacbio_unresolved	biosample_matched	not_checked	False	2110	Mycoplasmopsis agalactiae	Mycoplasmopsis agalactiae	True	PacBio RSII
+GCA_055396945.1	GCF_055396945.1	SAMD00900365	DRR680675	PRJDB20529	ont	biosample_matched	not_checked	True	28903	Mycoplasmopsis bovis	Mycoplasmopsis bovis	True	MGI DNBSEQ-G400RS;Oxford Nanopore MinION
+GCA_055395075.1	GCF_055395075.1	SAMD00900371	DRR680682	PRJDB20529	ont	biosample_matched	not_checked	True	28903	Mycoplasmopsis bovis	Mycoplasmopsis bovis	True	MGI DNBSEQ-G400RS;Oxford Nanopore MinION
+GCA_055394435.1	GCF_055394435.1	SAMD00900372	DRR680683	PRJDB20529	ont	biosample_matched	not_checked	True	28903	Mycoplasmopsis bovis	Mycoplasmopsis bovis	True	MGI DNBSEQ-G400RS;Oxford Nanopore MinION
+GCA_013367915.1	GCF_013367915.1	SAMN15042590	SRR11901809	PRJNA429440	ont	biosample_matched	not_checked	True	2098	Metamycoplasma hominis	Metamycoplasma hominis	True	Nanopore + Illumina
+GCA_013367895.1	GCF_013367895.1	SAMN15042589	SRR11901820	PRJNA429440	ont	biosample_matched	not_checked	True	2098	Metamycoplasma hominis	Metamycoplasma hominis	True	Nanopore + Illumina
+GCA_034648455.1	GCF_034648455.1	SAMN37528863	SRR26841318	PRJNA1018939	ont	biosample_matched	not_checked	True	171284	Mycoplasmopsis cynos	Mycoplasmopsis cynos	True	Illumina MiSeq; Oxford Nanopore
+GCA_034647315.2	GCF_034647315.2	SAMN37528870	SRR26841321	PRJNA1018939	ont	biosample_matched	not_checked	True	33923	Mycoplasmopsis felis	Mycoplasmopsis felis	True	Illumina MiSeq; Oxford Nanopore MinION
+GCA_034645335.2	GCF_034645335.2	SAMN37528877	SRR26841329	PRJNA1018939	ont	biosample_matched	not_checked	True	33923	Mycoplasmopsis felis	Mycoplasmopsis felis	True	Illumina MiSeq; Oxford Nanopore MinION
+GCA_038095705.1	GCF_038095705.1	SAMN39783618	SRR28208380	PRJNA1070810	ont	biosample_matched	not_checked	True	29562	Mesomycoplasma ovipneumoniae	Mesomycoplasma ovipneumoniae	True	Oxford Nanopore MinION; Illumina MiSeq
+GCA_038095745.1	GCF_038095745.1	SAMN39783623	SRR28208458	PRJNA1070810	ont	biosample_matched	not_checked	True	29562	Mesomycoplasma ovipneumoniae	Mesomycoplasma ovipneumoniae	True	Oxford Nanopore MinION; Illumina MiSeq
+GCA_038096065.1	GCF_038096065.1	SAMN39783682	SRR28208474	PRJNA1070810	ont	biosample_matched	not_checked	True	29562	Mesomycoplasma ovipneumoniae	Mesomycoplasma ovipneumoniae	True	Oxford Nanopore MinION; Illumina MiSeq
+GCA_038096035.1	GCF_038096035.1	SAMN39783674	SRR28208478	PRJNA1070810	ont	biosample_matched	not_checked	True	29562	Mesomycoplasma ovipneumoniae	Mesomycoplasma ovipneumoniae	True	Oxford Nanopore MinION; Illumina MiSeq
+GCA_038096005.1	GCF_038096005.1	SAMN39783670	SRR28208481	PRJNA1070810	ont	biosample_matched	not_checked	True	29562	Mesomycoplasma ovipneumoniae	Mesomycoplasma ovipneumoniae	True	Oxford Nanopore MinION; Illumina MiSeq
+GCA_038095995.1	GCF_038095995.1	SAMN39783668	SRR28208482	PRJNA1070810	ont	biosample_matched	not_checked	True	29562	Mesomycoplasma ovipneumoniae	Mesomycoplasma ovipneumoniae	True	Oxford Nanopore MinION; Illumina MiSeq
+GCA_038095935.1	GCF_038095935.1	SAMN39783654	SRR28208489	PRJNA1070810	ont	biosample_matched	not_checked	True	29562	Mesomycoplasma ovipneumoniae	Mesomycoplasma ovipneumoniae	True	Oxford Nanopore MinION; Illumina MiSeq
+GCA_056591055.1	GCF_056591055.1	SAMN50708459	SRR35059608	PRJNA1308627	ont	biosample_matched	not_checked	True	28903	Mycoplasmopsis bovis	Mycoplasmopsis bovis	True	Oxford Nanopore PromethION
+GCA_056591075.1	GCF_056591075.1	SAMN50708458	SRR35059609	PRJNA1308627	ont	biosample_matched	not_checked	True	28903	Mycoplasmopsis bovis	Mycoplasmopsis bovis	True	Oxford Nanopore PromethION
+GCA_054086365.1	GCF_054086365.1	SAMN51648122	SRR35515410	PRJNA1331764	ont	biosample_matched	not_checked	True	29557	Mycoplasmopsis gallinarum	Mycoplasmopsis gallinarum	True	Oxford Nanopore MinION
+GCA_025215235.1	GCF_025215235.1	SAMN30346841	SRR21105600	PRJNA869735	ont	biosample_matched	not_checked	True	33923	Mycoplasmopsis felis	Mycoplasmopsis felis	True	Oxford Nanopore MinION
+GCA_025215335.1	GCF_025215335.1	SAMN30346841	SRR21105600	PRJNA869735	ont	biosample_matched	not_checked	True	33923	Mycoplasmopsis felis	Mycoplasmopsis felis	True	Oxford Nanopore MinION
+GCA_025215435.1	GCF_025215435.1	SAMN30346841	SRR21105600	PRJNA869735	ont	biosample_matched	not_checked	True	33923	Mycoplasmopsis felis	Mycoplasmopsis felis	True	Oxford Nanopore MinION
+GCA_025679165.1	GCF_025679165.1	SAMN30346841	SRR21105600	PRJNA869735	ont	biosample_matched	not_checked	True	33923	Mycoplasmopsis felis	Mycoplasmopsis felis	True	Oxford Nanopore MinION
+GCA_025679205.1	GCF_025679205.1	SAMN30346841	SRR21105600	PRJNA869735	ont	biosample_matched	not_checked	True	33923	Mycoplasmopsis felis	Mycoplasmopsis felis	True	Oxford Nanopore MinION
+GCA_026810665.1	GCF_026810665.1	SAMN30346841	SRR21105600	PRJNA869735	ont	biosample_matched	not_checked	True	33923	Mycoplasmopsis felis	Mycoplasmopsis felis	True	Oxford Nanopore MinION
+GCA_025215275.1	GCF_025215275.1	SAMN30346839	SRR21105602	PRJNA869735	ont	biosample_matched	not_checked	True	171284	Mycoplasmopsis cynos	Mycoplasmopsis cynos	True	Oxford Nanopore MinION
+GCA_025215375.1	GCF_025215375.1	SAMN30346839	SRR21105602	PRJNA869735	ont	biosample_matched	not_checked	True	171284	Mycoplasmopsis cynos	Mycoplasmopsis cynos	True	Oxford Nanopore MinION
+GCA_025215455.1	GCF_025215455.1	SAMN30346839	SRR21105602	PRJNA869735	ont	biosample_matched	not_checked	True	171284	Mycoplasmopsis cynos	Mycoplasmopsis cynos	True	Oxford Nanopore MinION
+GCA_026810745.1	GCF_026810745.1	SAMN30346839	SRR21105602	PRJNA869735	ont	biosample_matched	not_checked	True	171284	Mycoplasmopsis cynos	Mycoplasmopsis cynos	True	Oxford Nanopore MinION
+GCA_026810805.1	GCF_026810805.1	SAMN30346839	SRR21105602	PRJNA869735	ont	biosample_matched	not_checked	True	171284	Mycoplasmopsis cynos	Mycoplasmopsis cynos	True	Oxford Nanopore MinION
+GCA_026810945.1	GCF_026810945.1	SAMN30346839	SRR21105602	PRJNA869735	ont	biosample_matched	not_checked	True	171284	Mycoplasmopsis cynos	Mycoplasmopsis cynos	True	Oxford Nanopore MinION
+GCA_027627555.1	GCF_027627555.1	SAMN31902539	SRR22696505	PRJNA906261	ont	biosample_matched	not_checked	True	53558	Mycoplasmopsis edwardii	Mycoplasmopsis edwardii	True	Illumina NovaSeq; Oxford Nanopore MinION

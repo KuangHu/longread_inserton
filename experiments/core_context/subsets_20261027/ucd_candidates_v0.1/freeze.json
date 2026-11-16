@@ -1,0 +1,28 @@
+{
+  "version": "ucd_candidates_v0.1",
+  "evidence_source": "assembly_only",
+  "production_ready": false,
+  "per_subset": 4,
+  "rule": "Freeze a small batch of representative U-core-D candidates from the committed S6 v0.1 review of the three\nsubsets, and list the long-read data that already exists for their assemblies. Nothing is downloaded or mapped.\nEvidence stays assembly_only; production_ready=false; a candidate is not an independent insertion event and its\nends are candidate conserved ends at most.\n\nCandidate = one single-gene core, two copies in ONE assembly (different coordinates) that are both supported\npositions (site group or single-observation site), whose S6 host context (N=5 per side) is different on both\nsides, and whose host windows share no physical gene (copies close together can have interlocking windows, e.g. one\ncopy's downstream genes are the other's upstream genes; such a pair does not show two contexts). Admission uses only\nthese gene-order / coordinate rules. Unknown boundaries are allowed; empty sites, gaps, copy number,\nproduct and the flank DNA re-check are not admission criteria.\n\nMain batch: the top PER_SUBSET cores per subset by the ranking below (one pair per core). Read-available supplement:\nthe same rule and ranking restricted to assemblies with a usable linked long-read run, top PER_READ_ASSEMBLY cores per\nsuch assembly not already in the main batch (ids UCDR..). Read availability only chooses this supplement; it is not\nevidence.\nRanking (one pair per core):\n  1. copies with both boundary sides resolved (2, 1, 0)\n  2. flank DNA v2 outer windows not_shared on both sides (auxiliary, ranking only)\n  3. more copies of the core in that assembly\n  4. identifiers\nLong-read listing per assembly: linked runs in the frozen pool metadata (runs.tsv, assembly_run_links), usability,\nbase count and depth estimate (base count / assembly length), whether the FASTQ is already on local disk with a\nverified MD5, and whether any existing alignment covers the candidate (the earlier gap-line genome PAFs hold only\nreads preselected at gap alleles, so they are not used as coverage).\n",
+  "pool": {
+    "comamonas": {
+      "eligible_pairs": 62,
+      "eligible_cores": 13
+    },
+    "delftia": {
+      "eligible_pairs": 199,
+      "eligible_cores": 18,
+      "eligible_cores_in_read_assembly_SAMN13450439": 2,
+      "eligible_cores_in_read_assembly_SAMN31258398": 6
+    },
+    "paracidovorax": {
+      "eligible_pairs": 230,
+      "eligible_cores": 13,
+      "eligible_cores_in_read_assembly_SAMN04157986": 7
+    }
+  },
+  "candidates": 12,
+  "read_available_supplement": 6,
+  "candidates_with_usable_long_reads": 7,
+  "downloads_started": false
+}

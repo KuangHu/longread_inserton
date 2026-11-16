@@ -1,0 +1,19 @@
+{
+ "sample": "SAMEA6863324",
+ "runs": [
+  {
+   "run": "ERR4184149",
+   "read_type": "ont",
+   "preset": "map-ont",
+   "sha256": "2b9fa283b0ceb3819a80a816560af62a27a4e91d1e49d1e70e4ae39af44cb8cb"
+  }
+ ],
+ "minimap2_args": [
+  "-c",
+  "--secondary=yes",
+  "-N",
+  "100",
+  "-p",
+  "0.3"
+ ]
+}

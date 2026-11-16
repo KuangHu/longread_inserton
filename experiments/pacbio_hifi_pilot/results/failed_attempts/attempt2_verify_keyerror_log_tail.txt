@@ -1,0 +1,6 @@
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/global/home/users/kh36969/middle_insertion_callout/longread_inserton/experiments/pacbio_hifi_pilot/verify_assembly.py", line 44, in <dictcomp>
+    rep = {s[acc_key]: s for s in seq}
+           ~^^^^^^^^^
+KeyError: 'refseq_accession'
+stage verify_assembly failed with exit code 1

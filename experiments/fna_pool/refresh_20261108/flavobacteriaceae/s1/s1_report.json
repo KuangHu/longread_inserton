@@ -1,0 +1,26 @@
+{
+  "manifest": "experiments/fna_pool/refresh_20261108/flavobacteriaceae/download_manifest.tsv",
+  "rows": 7246,
+  "status": {
+    "verified": 7246
+  },
+  "by_purpose": {
+    "gca_identity_check": {
+      "verified": 3529
+    },
+    "primary": {
+      "verified": 3717
+    }
+  },
+  "annotation": {
+    "present": 3693,
+    "annotation_missing": 23,
+    "": 1
+  },
+  "pair_checks": {
+    "identical_sequences": 3529
+  },
+  "bytes": 40320931480,
+  "files": 21890,
+  "failed": []
+}

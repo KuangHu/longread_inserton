@@ -1,0 +1,140 @@
+{
+  "schema": "batch50_selection_v1",
+  "date": "2026-10-24",
+  "ena_ont_runs_all_sources": 1064,
+  "ena_ont_genomic_runs_scanned": 867,
+  "ena_ont_genomic_biosamples": 817,
+  "exact_biosample_run_assembly_rows": 490,
+  "exact_biosample_runs": 490,
+  "exact_biosample_assemblies": 468,
+  "funnel": [
+    {
+      "step": "exact BioSample run x current GCA",
+      "rows": 490
+    },
+    {
+      "step": "WGS",
+      "removed": 103,
+      "rows": 387
+    },
+    {
+      "step": "not B. pseudomallei/mallei",
+      "removed": 125,
+      "rows": 262
+    },
+    {
+      "step": "ENA single FASTQ with bytes and MD5",
+      "removed": 1,
+      "rows": 261
+    },
+    {
+      "step": "continuity",
+      "removed": 20,
+      "rows": 241
+    },
+    {
+      "step": "not already run",
+      "removed": 15,
+      "rows": 226
+    },
+    {
+      "step": "source not clinical/animal",
+      "removed": 58,
+      "rows": 168
+    },
+    {
+      "step": "library selection genomic-random-like",
+      "removed": 1,
+      "rows": 167
+    },
+    {
+      "step": "pure isolate",
+      "removed": 1,
+      "rows": 166
+    },
+    {
+      "step": "non-PCR (PCR -> pcr_reserve)",
+      "removed": 3,
+      "rows": 163
+    },
+    {
+      "step": "one run per BioSample",
+      "removed": 4,
+      "rows": 159
+    },
+    {
+      "step": "one assembly per BioSample",
+      "removed": 0,
+      "rows": 159
+    }
+  ],
+  "status_counts": {
+    "ranked_reserve": 81,
+    "excluded": 700,
+    "clone_reserve": 28,
+    "selected": 50,
+    "reserve": 5,
+    "pcr_reserve": 3
+  },
+  "exclusion_reason_counts": {
+    "excluded_species_B_pseudomallei_or_mallei": 125,
+    "no_exact_biosample_genbank_assembly": 377,
+    "already_run": 15,
+    "library_strategy_not_WGS": 103,
+    "continuity_fail": 20,
+    "source_clinical_or_animal": 58,
+    "alternate_run_same_biosample": 4,
+    "library_selection_not_genomic_random_like": 1,
+    "ena_fastq_bytes_md5_missing_or_not_single_file": 1,
+    "not_pure_isolate": 1
+  },
+  "eligible_new_samples": 159,
+  "eligible_by_genus_tier": {
+    "2_burkholderiaceae": 159
+  },
+  "eligible_clone_groups": 116,
+  "eligible_species_clusters": 65,
+  "eligible_clone_groups_not_already_run": 116,
+  "max_new_samples_under_clone_cap": 134,
+  "selected": 50,
+  "selected_by_pass": {
+    "1": 50
+  },
+  "selected_clone_groups": 50,
+  "selected_species_clusters": 50,
+  "selected_ani95_groups": 39,
+  "selected_ani95_groups_shared_with_already_run": 0,
+  "selected_organism_names": 28,
+  "eligible_ani95_groups": 49,
+  "selected_by_genus": {
+    "Cupriavidus": 16,
+    "Ralstonia": 8,
+    "Burkholderia": 18,
+    "Pandoraea": 1,
+    "Caballeronia": 3,
+    "Imbroritus": 1,
+    "Polynucleobacter": 1,
+    "Limnobacter": 1,
+    "Trinickia": 1
+  },
+  "selected_by_source": {
+    "environmental": 25,
+    "enrichment": 11,
+    "plant": 14
+  },
+  "selected_by_continuity": {
+    "complete": 31,
+    "high_contiguity_draft": 19
+  },
+  "selected_by_library_selection": {
+    "RANDOM": 50
+  },
+  "selected_gca_gcf_check": {
+    "done_identical": 49,
+    "no_gcf_use_gca": 1
+  },
+  "selected_fastq_bytes_total": 48532088886,
+  "selected_base_count_total": 53027233620,
+  "panel_size_target": 50,
+  "fifty_available": true
+}

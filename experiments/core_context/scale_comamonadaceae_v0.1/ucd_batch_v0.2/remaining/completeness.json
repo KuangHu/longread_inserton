@@ -1,0 +1,16 @@
+{
+ "expected_pairs": 3799589,
+ "expected_rows": 7599178,
+ "observed_rows": {
+  "cds_core": 3799589,
+  "candidate_insertion": 3799589
+ },
+ "missing": {
+  "cds_core": 0,
+  "candidate_insertion": 0
+ },
+ "duplicated": {},
+ "unexpected": {},
+ "missing_chunks": [],
+ "complete": true
+}

@@ -1,0 +1,24 @@
+{
+  "sample": "CS-K2",
+  "gca": "GCA_036323495.1",
+  "gcf": "GCF_036323495.1",
+  "identical_sequence_sets": true,
+  "choice": "gcf_sequence_and_annotation",
+  "gca_records": {
+    "AP028947.1": [
+      3536915,
+      "fbd0ac412b5dbe0c512ea34a38ab9beb882b353c3fa70d0e88bd95d5f0a2c61e"
+    ]
+  },
+  "gcf_records": {
+    "NZ_AP028947.1": [
+      3536915,
+      "fbd0ac412b5dbe0c512ea34a38ab9beb882b353c3fa70d0e88bd95d5f0a2c61e"
+    ]
+  },
+  "cds_features": 3180,
+  "fasta": "/global/scratch/users/kh36969/longread_callout/data/assemblies_batch50/CS-K2/GCF_036323495.1/ncbi_dataset/data/GCF_036323495.1/GCF_036323495.1_ASM3632349v1_genomic.fna",
+  "fasta_sha256": "08e5675ce369643359c6154d23bfb68c8b026748a72f46d91d7aa3b878325be9",
+  "gbff": "/global/scratch/users/kh36969/longread_callout/data/assemblies_batch50/CS-K2/GCF_036323495.1/ncbi_dataset/data/GCF_036323495.1/genomic.gbff",
+  "gbff_sha256": "34064b8ee6900f6b27af11486a3b1fee8eae0e339b4b78dc3d2d3e626be12199"
+}

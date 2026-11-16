@@ -1,0 +1,55 @@
+{
+ "old_sources": 10493703,
+ "new_files": 128,
+ "counts": {
+  "identical:no_shared_block_at_seed": 1288467,
+  "identical:resolved": 2257904,
+  "identical:unresolved": 6947330,
+  "missing_in_new": 0,
+  "status_changed:no_shared_block_at_seed->unresolved": 2
+ },
+ "examples": [
+  {
+   "key": [
+    "L0_10702",
+    "dna|SAMN03268415|NZ_JXDJ01000003.1|0-598|-",
+    "dna|SAMN21401359|NZ_CP083451.1|2706913-2712632|+"
+   ],
+   "old": [
+    "no_shared_block_at_seed",
+    "",
+    ""
+   ],
+   "new": [
+    "unresolved",
+    "",
+    ""
+   ],
+   "boundary": [
+    "not_reached",
+    "not_reached"
+   ]
+  },
+  {
+   "key": [
+    "L0_8404",
+    "dna|SAMN03268415|NZ_JXDJ01000003.1|0-598|-",
+    "dna|SAMN21401359|NZ_CP083451.1|2706913-2712632|+"
+   ],
+   "old": [
+    "no_shared_block_at_seed",
+    "",
+    ""
+   ],
+   "new": [
+    "unresolved",
+    "",
+    ""
+   ],
+   "boundary": [
+    "not_reached",
+    "not_reached"
+   ]
+  }
+ ]
+}

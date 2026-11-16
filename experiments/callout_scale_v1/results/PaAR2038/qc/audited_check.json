@@ -1,0 +1,10 @@
+{
+  "schema": "audited_evidence_check_v1",
+  "sample": "PaAR2038",
+  "status": "pass",
+  "members": 762,
+  "audited_class_counts": {
+    "audited_full_span": 762
+  },
+  "scope": "Recomputed units/classes from read_evidence.tsv; no re-mapping"
+}

@@ -1,0 +1,83 @@
+{
+ "cuts": 100,
+ "result": {
+  "detected": 99,
+  "not_detected": 1
+ },
+ "other_classes": {},
+ "among_real_run_known": {
+  "detected": 99,
+  "not_detected": 1
+ },
+ "among_not_real_run_known": {},
+ "by_len_bin": {
+  "1000-1499": {
+   "detected": 36
+  },
+  "<1000": {
+   "detected": 37,
+   "not_detected": 1
+  },
+  ">=1500": {
+   "detected": 26
+  }
+ },
+ "by_structure": {
+  "single_gene": {
+   "detected": 63,
+   "not_detected": 1
+  },
+  "two_gene": {
+   "detected": 36
+  }
+ },
+ "by_repeat": {
+  "repeated": {
+   "detected": 53
+  },
+  "single_copy": {
+   "detected": 46,
+   "not_detected": 1
+  }
+ },
+ "by_extra_mode": {
+  "extra": {
+   "detected": 48
+  },
+  "none": {
+   "detected": 51,
+   "not_detected": 1
+  }
+ },
+ "detected_boundary": {
+  "extension_consistent": 47,
+  "no_extension_detected": 50,
+  "unknown": 2
+ },
+ "detected_insert_len_abs_error": {
+  "0-10": 72,
+  "11-50": 27
+ },
+ "detected_extra_max_side_error": {
+  "0-20": 92,
+  ">50": 5,
+  "21-50": 2
+ },
+ "detected_size_class_agrees": 99,
+ "consensus": {
+  "checked|unresolved_unexplained_orfs": 25,
+  "checked|met": 49,
+  "checked|unresolved_ambiguous_consensus": 25
+ },
+ "consensus_len_abs_error": {
+  "0-10": 98,
+  "11-50": 1
+ },
+ "not_in_assembly_away_from_cuts": {
+  "total": 24,
+  "origin": {
+   "one_end_within_2500_of_a_cut": 15,
+   "also_in_real_run": 9
+  }
+ }
+}

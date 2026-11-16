@@ -1,0 +1,2 @@
+stage	start	end	exit_code	wall	max_rss_kb	command
+doctor	2026-10-23T14:09:45-07:00	2026-10-23T14:10:03-07:00	1	0:18.04	46572	bash -c multisite-insertion doctor > $PROJ/callout_scale_v1/t0/doctor.json

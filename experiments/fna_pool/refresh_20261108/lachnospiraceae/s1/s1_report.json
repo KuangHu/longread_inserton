@@ -1,0 +1,39 @@
+{
+  "manifest": "experiments/fna_pool/refresh_20261108/lachnospiraceae/download_manifest.tsv",
+  "rows": 5995,
+  "status": {
+    "verified": 5993,
+    "failed": 2
+  },
+  "by_purpose": {
+    "gca_identity_check": {
+      "verified": 2739
+    },
+    "primary": {
+      "verified": 3254,
+      "failed": 2
+    }
+  },
+  "annotation": {
+    "annotation_missing": 284,
+    "present": 2970
+  },
+  "pair_checks": {
+    "identical_sequences": 2737,
+    "not_checked_download_incomplete": 2
+  },
+  "bytes": 34927639510,
+  "files": 17926,
+  "failed": [
+    {
+      "accession": "GCF_902652075.1",
+      "attempts": 3,
+      "reason": "package_md5_all_ok"
+    },
+    {
+      "accession": "GCF_902652265.1",
+      "attempts": 3,
+      "reason": "package_md5_all_ok"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "manifest": "scaleup_stage1_20261026/microbacteriaceae/download_manifest.tsv",
+  "rows": 6684,
+  "status": {
+    "verified": 6684
+  },
+  "by_purpose": {
+    "gca_identity_check": {
+      "verified": 3240
+    },
+    "primary": {
+      "verified": 3444
+    }
+  },
+  "annotation": {
+    "annotation_missing": 178,
+    "present": 3266
+  },
+  "pair_checks": {
+    "identical_sequences": 3240
+  },
+  "bytes": 35304336115,
+  "files": 19900,
+  "failed": []
+}

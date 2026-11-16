@@ -1,0 +1,24 @@
+{
+  "manifest": "comamonadaceae_20261024/download_manifest.tsv",
+  "rows": 984,
+  "status": {
+    "verified": 984
+  },
+  "by_purpose": {
+    "gca_identity_check": {
+      "verified": 485
+    },
+    "primary": {
+      "verified": 499
+    }
+  },
+  "annotation": {
+    "present": 499
+  },
+  "pair_checks": {
+    "identical_sequences": 485
+  },
+  "bytes": 8616285756,
+  "files": 2966,
+  "failed": []
+}

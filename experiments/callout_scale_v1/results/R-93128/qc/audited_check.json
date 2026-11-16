@@ -1,0 +1,12 @@
+{
+  "schema": "audited_evidence_check_v1",
+  "sample": "R-93128",
+  "status": "pass",
+  "members": 491,
+  "audited_class_counts": {
+    "audited_full_span": 459,
+    "ambiguous_competing": 21,
+    "edge_limited": 11
+  },
+  "scope": "Recomputed units/classes from read_evidence.tsv; no re-mapping"
+}

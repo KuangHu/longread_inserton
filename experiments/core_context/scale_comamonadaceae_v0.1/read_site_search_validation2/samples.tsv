@@ -1,0 +1,7 @@
+sample	genus	organism	assembly	assembly_level	read_type	runs	depth	supported_candidate_cores	reason	sha256
+SAMN48135827	Variovorax	Variovorax sp. YR566	GCF_051992195.1	Complete Genome	ont	SRR33303079	275.3	67	best_of_genus	ce721971f0e0400e70fcd5488b6983a82f27eab616fc521a42bcce590e302701
+SAMD00407106	Delftia	Delftia lacustris	GCF_022846195.1	Complete Genome	ont	DRR319914	275.0	32	best_of_genus	2c1a3ffb824e217ea8866b30103f3e180c23b46315e82a5de46435b645c54339
+SAMEA115676837	Acidovorax	Acidovorax sp. LjRoot129	GCF_964253765.1	Contig	ont	ERR13194253	86.9	25	best_of_genus	be7e3c49e094baab473a230f1ad26dab0e116393e4184ac650d9d4d632bdec19
+SAMN30525278	Comamonas	Comamonas aquatica	GCF_029841605.1	Contig	ont	SRR21472542	64.3	24	best_of_genus	a5092d20e01cb47cbf2bf34d9c2a688465a8724a308653751894d34a45d8c594
+SAMN34353142	Variovorax	Variovorax sp. W2I14	GCF_050435205.1	Contig	pacbio_hifi_ccs	SRR35247518	66.1	36	hifi_minimum	bce1c8763c848b00f6dda5193f41c491f513c9eb12f17db4ae2f46e7de3847a5
+SAMN37752145	Variovorax	Variovorax sp. EBFNA2	GCF_033802765.1	Complete Genome	pacbio_hifi_ccs	SRR26382609	172.5	35	hifi_minimum	7c64c46f29a89f2c559fe8fde3cfb56d510ccb6f3a4b7861840b163323b410a4

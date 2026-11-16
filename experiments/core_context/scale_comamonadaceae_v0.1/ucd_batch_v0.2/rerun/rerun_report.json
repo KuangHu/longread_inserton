@@ -1,0 +1,45 @@
+{
+ "cds_core": {
+  "affected_pairs": 117,
+  "affected_source_check_before": {
+   "fail": 113,
+   "pass": 4
+  },
+  "affected_source_check_after": {
+   "pass": 117
+  },
+  "affected_transitions": {
+   "fail / not_run:source_check_failed -> pass / insertion_dissimilar": 48,
+   "fail / not_run:source_check_failed -> pass / only_one_side_different": 2,
+   "fail / not_run:source_check_failed -> pass / ucd_supported": 55,
+   "fail / not_run:source_check_failed -> pass / uncertain_context": 8,
+   "pass / insertion_dissimilar -> pass / insertion_dissimilar": 4
+  },
+  "affected_new_pass": 55,
+  "affected_remaining_source_reasons": {},
+  "control_pairs": 2000,
+  "control_rows_identical": 2000,
+  "control_columns_differing": {},
+  "control_changed_examples": []
+ },
+ "candidate_insertion": {
+  "affected_pairs": 117,
+  "affected_source_check_before": {
+   "fail": 117
+  },
+  "affected_source_check_after": {
+   "pass": 117
+  },
+  "affected_transitions": {
+   "fail / not_run:source_check_failed -> pass / insertion_dissimilar": 72,
+   "fail / not_run:source_check_failed -> pass / ucd_supported": 44,
+   "fail / not_run:source_check_failed -> pass / uncertain_context": 1
+  },
+  "affected_new_pass": 44,
+  "affected_remaining_source_reasons": {},
+  "control_pairs": 2000,
+  "control_rows_identical": 2000,
+  "control_columns_differing": {},
+  "control_changed_examples": []
+ }
+}

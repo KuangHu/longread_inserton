@@ -1,0 +1,109 @@
+{
+  "source_commit": "ee229861df8d27b6c265ca04c3693662394daa83",
+  "checks": [
+    {
+      "sample": "PaAR2038",
+      "status": "snapshot_tables_consistent",
+      "scope": "Table joins/counts and archived checks only",
+      "input_sha256": {
+        "callout/summary.json": "18f020f7d2cefc864d31515f08d975e5b2bc4fb1abe6245456993617f7517d7d",
+        "callout/all_families_annotated.json": "6a6ed9e72b8f59c3b740c982dceff116d17f492c89098ed0ae6438d12c351d8e",
+        "callout/candidates.bed": "782d8a0a6ac633c1941ebccf7ca3d82a9f5f113fca7e2a5594a9e1ae92b761be",
+        "evidence/member_read_support.tsv": "37f61f48d9bf9eb39d4987c3bc009dff62b357a52e69a0988ebd545506f301af",
+        "evidence/summary.json": "5bf5724adf36a12440712bff5e077b99dcb53660ac727eef4a0562a392a84b90",
+        "reads_verify.json": "63a669bc1b3ed4cc0b1e414bde67863086042cc7699b823b7eaaa5b4bada100c"
+      },
+      "short_records": 236,
+      "long_records": 526,
+      "boundary_source_counts": {
+        "provisional_homology_median": 742,
+        "native_interval_only_unresolved": 14,
+        "homology_extent_censored_at_window": 6
+      },
+      "read_evidence_version": "v1",
+      "audited_read_check": "not_performed",
+      "scale_release_approved": false,
+      "exported_records": 762,
+      "native_families": 149,
+      "long_v1_full_ge2_records": 526
+    },
+    {
+      "sample": "DdD110",
+      "status": "snapshot_tables_consistent",
+      "scope": "Table joins/counts and archived checks only",
+      "input_sha256": {
+        "callout/summary.json": "346de11b1686c88f6959e3270e7bab2164bd4498835f0e46d65e2f776cb24240",
+        "callout/all_families_annotated.json": "48b9d36719837817fd9883b51c96b533092612183ce861f146d035a2b0c4c209",
+        "callout/candidates.bed": "e8c3f627efaee6bdd53872f954af606e4364aeb63162acdf41ebf82705af217c",
+        "evidence/member_read_support.tsv": "5127d9b5998fa08dfe96c3f49fa6118ebea8faa15d2cf3c6770b6cb11da141d9",
+        "evidence/summary.json": "a82e4135af655b2bdd9cc6a647c022012e9a12dd1088f61ddf81b37934f16b9b",
+        "reads_verify.json": "a8c4fbc552c04bd36fe5f1e4e7e363c69a16e05a11264e7116dd9b779f9db8b0"
+      },
+      "short_records": 100,
+      "long_records": 64,
+      "boundary_source_counts": {
+        "provisional_homology_median": 152,
+        "homology_extent_censored_at_window": 8,
+        "native_interval_only_unresolved": 4
+      },
+      "read_evidence_version": "v1",
+      "audited_read_check": "not_performed",
+      "scale_release_approved": false,
+      "exported_records": 164,
+      "native_families": 19,
+      "long_v1_full_ge2_records": 64
+    },
+    {
+      "sample": "AmHOT1A3",
+      "status": "snapshot_tables_consistent",
+      "scope": "Table joins/counts and archived checks only",
+      "input_sha256": {
+        "callout/summary.json": "f57ff213a83d998888eeb265b03b89dd6b9f4c8ad0001c646c5effbade06c3dd",
+        "callout/all_families_annotated.json": "41dae1a05c897c22a442c01b334886edbe498759f9f7b08f5fb3e0b9dc842a01",
+        "callout/candidates.bed": "8931fd775fec8116fa5ce8913aee6ebd284eccebc177364e675980f26444a651",
+        "evidence/member_read_support.tsv": "ad7fdb6622b9752a7592b1d4ed0fdecfbf98df1b400b3d6d6a6ae4708ebdd3d5",
+        "evidence/summary.json": "df0559dbee6ca352dde0c49aa7dc50eeb520528fbbebfea61ab806291dd167d5",
+        "reads_verify.json": "ac10b092257e4e74370e717412233277f84216dd867ebca5403c1ac17d82bd87"
+      },
+      "short_records": 54,
+      "long_records": 134,
+      "boundary_source_counts": {
+        "provisional_homology_median": 174,
+        "native_interval_only_unresolved": 2,
+        "homology_extent_censored_at_window": 12
+      },
+      "read_evidence_version": "v1",
+      "audited_read_check": "not_performed",
+      "scale_release_approved": false,
+      "exported_records": 188,
+      "native_families": 30,
+      "long_v1_full_ge2_records": 134
+    },
+    {
+      "sample": "RoMoAcy1",
+      "status": "snapshot_tables_consistent",
+      "scope": "Table joins/counts and archived checks only",
+      "input_sha256": {
+        "callout/summary.json": "09b20be4bee7053398c22bcc37ead26ea231886e8e004f73400945684c1ce85c",
+        "callout/all_families_annotated.json": "9f3077ffc189691a0fbc8870111741d6467491e85aed1288b8e40e531f43ee67",
+        "callout/candidates.bed": "0d7e707ebcde49fad0b6c6570c0a49b635b6b9c7fdf11cef91e9d65157a66b90",
+        "evidence/member_read_support.tsv": "ed954aa9585638c7f2973e7e986f69421967370f82b906db5caf1f090706e164",
+        "evidence/summary.json": "6444fd64e039b0b8f04ca2a5f05619f6e37586c2d0cff1ecb42ed2bf490a5dc4",
+        "reads_verify.json": "8e5e4c272994cfba7f475db39642e45140b5e7c43d0bcecf30e3dcc5afeb502e"
+      },
+      "short_records": 286,
+      "long_records": 360,
+      "boundary_source_counts": {
+        "provisional_homology_median": 539,
+        "native_interval_only_unresolved": 23,
+        "homology_extent_censored_at_window": 84
+      },
+      "read_evidence_version": "v1",
+      "audited_read_check": "not_performed",
+      "scale_release_approved": false,
+      "exported_records": 646,
+      "native_families": 94,
+      "long_v1_full_ge2_records": 356
+    }
+  ]
+}

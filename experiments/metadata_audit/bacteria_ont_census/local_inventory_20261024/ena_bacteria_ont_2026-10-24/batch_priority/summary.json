@@ -1,0 +1,101 @@
+{
+  "batch_count": 518,
+  "min_samples": 100,
+  "min_studies": 2,
+  "priority_counts": {
+    "hold_insufficient_data": 477,
+    "hold_taxonomy_review": 1,
+    "P1_lower_attention_review": 10,
+    "P2_middle_attention_review": 20,
+    "P3_higher_attention_reference": 10
+  },
+  "literature_queries": 386,
+  "successful_queries": 386,
+  "thresholds": "Relative quartiles of sample-weighted log10(1 + PubMed title/abstract hits) for qualifying families",
+  "lower_attention_group_count": 10,
+  "generated_utc": "2026-10-24T21:21:46.510158+00:00",
+  "exclusion": "Species already marked low_reference, currently E. coli, omitted from eligibility counts and sample weights; source inventory retained",
+  "caveat": "Generic literature attention is not demonstrated saturation of insertion/mobile-element mining. Assembly pairing is not yet verified.",
+  "first_review_batches": [
+    {
+      "family_batch_id": "family_85023",
+      "family_name": "Microbacteriaceae",
+      "eligible_wgs_fastq_samples": 196,
+      "distinct_studies": 64,
+      "largest_study_sample_share": 0.14285714285714285,
+      "attention_score": 2.4792224627536372
+    },
+    {
+      "family_batch_id": "family_2049",
+      "family_name": "Actinomycetaceae",
+      "eligible_wgs_fastq_samples": 119,
+      "distinct_studies": 24,
+      "largest_study_sample_share": 0.6218487394957983,
+      "attention_score": 2.6791804238162573
+    },
+    {
+      "family_batch_id": "family_49546",
+      "family_name": "Flavobacteriaceae",
+      "eligible_wgs_fastq_samples": 118,
+      "distinct_studies": 54,
+      "largest_study_sample_share": 0.09322033898305085,
+      "attention_score": 2.7538629051912866
+    },
+    {
+      "family_batch_id": "family_1643826",
+      "family_name": "Eggerthellaceae",
+      "eligible_wgs_fastq_samples": 120,
+      "distinct_studies": 5,
+      "largest_study_sample_share": 0.95,
+      "attention_score": 2.765703899417348
+    },
+    {
+      "family_batch_id": "family_186803",
+      "family_name": "Lachnospiraceae",
+      "eligible_wgs_fastq_samples": 132,
+      "distinct_studies": 50,
+      "largest_study_sample_share": 0.15151515151515152,
+      "attention_score": 2.7829017295291245
+    },
+    {
+      "family_batch_id": "family_80864",
+      "family_name": "Comamonadaceae",
+      "eligible_wgs_fastq_samples": 247,
+      "distinct_studies": 54,
+      "largest_study_sample_share": 0.24696356275303644,
+      "attention_score": 2.792107600714889
+    },
+    {
+      "family_batch_id": "family_41294",
+      "family_name": "Nitrobacteraceae",
+      "eligible_wgs_fastq_samples": 155,
+      "distinct_studies": 96,
+      "largest_study_sample_share": 0.11612903225806452,
+      "attention_score": 3.036846392685639
+    },
+    {
+      "family_batch_id": "family_1268",
+      "family_name": "Micrococcaceae",
+      "eligible_wgs_fastq_samples": 177,
+      "distinct_studies": 95,
+      "largest_study_sample_share": 0.05649717514124294,
+      "attention_score": 3.097087001585453
+    },
+    {
+      "family_batch_id": "family_2895623",
+      "family_name": "Metamycoplasmataceae",
+      "eligible_wgs_fastq_samples": 176,
+      "distinct_studies": 21,
+      "largest_study_sample_share": 0.26136363636363635,
+      "attention_score": 3.189166750315478
+    },
+    {
+      "family_batch_id": "family_1903409",
+      "family_name": "Erwiniaceae",
+      "eligible_wgs_fastq_samples": 207,
+      "distinct_studies": 68,
+      "largest_study_sample_share": 0.16908212560386474,
+      "attention_score": 3.4618453569524266
+    }
+  ]
+}

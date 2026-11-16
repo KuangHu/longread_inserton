@@ -1,0 +1,19 @@
+{
+  "joint_fna": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/micrococcaceae/s2/joint.fna.gz",
+  "joint_fna_sha256": "86031182c3e1c6e33e1146a43e6664e7489a496336d1c44f3287c33f4a6db7ec",
+  "samples": 2974,
+  "contigs": 204897,
+  "contig_bp": 10426578418,
+  "header": "sample_id|assembly|contig",
+  "check": "every joint record SHA256 equals the S1 record SHA256 of its source FNA",
+  "pool_rows": 2975,
+  "excluded_not_verified": 1,
+  "annotation_status": {
+    "present": 2958,
+    "annotation_missing": 16
+  },
+  "gff_features_out_of_range": 0,
+  "contig_index": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/micrococcaceae/s2/contig_index.tsv.gz",
+  "contig_index_sha256": "ddee176550d8523acab41f04ef003aece945022a7161de6853751728cc62450c",
+  "gff_features_origin_spanning": 468
+}

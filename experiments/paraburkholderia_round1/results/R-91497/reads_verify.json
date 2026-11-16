@@ -1,0 +1,51 @@
+{
+  "run": {
+    "sample_id": "R-91497",
+    "run": "ERR15693036",
+    "biosample": "SAMEA120322878",
+    "assembly": "GCA_977004965.1",
+    "platform": "OXFORD_NANOPORE",
+    "instrument_model": "MinION",
+    "role": "paraburkholderia_round1_fungorum",
+    "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR156/036/ERR15693036/ERR15693036.fastq.gz",
+    "archive_read_count": 621035,
+    "archive_base_count": 1943956481,
+    "fastq_bytes": 1558741756,
+    "fastq_md5": "68d09d77975b5e1374edd409f2bae06d"
+  },
+  "download_started": "2026-10-23T11:03:28-0700",
+  "local_file": "$PROJ/data/reads/ERR15693036/ERR15693036.fastq.gz",
+  "bytes": 1558741756,
+  "md5": "68d09d77975b5e1374edd409f2bae06d",
+  "sha256": "3dc32a9270397187cb0568e2025060555a48f430c8f0c2ab13b81fd56b85c043",
+  "spots_absent_from_fastq": 0,
+  "summary": {
+    "records": 621035,
+    "bases": 1943956481,
+    "read_unit_counts": {
+      "other_name": 621035
+    },
+    "distinct_zmws": null,
+    "distinct_sra_spots": 621035,
+    "max_records_per_spot": 1,
+    "placeholder_quality_records": 1,
+    "example_headers": [
+      "@ERR15693036.1 a1535662-bdd4-4037-ad21-5f836ad8037e qs:f:13.7894 st:Z:2025-07-03T07:26:57.592+00:00 RG:Z:9d80ec1b-5874-4d10-af2d-a514d2335587_dna_r10.4.1_e8.2_400bps_sup@v5.0.0",
+      "@ERR15693036.2 71d8ac78-7990-4d35-adf0-781041ecdb9a qs:f:21.5748 st:Z:2025-07-03T08:53:13.322+00:00 RG:Z:9d80ec1b-5874-4d10-af2d-a514d2335587_dna_r10.4.1_e8.2_400bps_sup@v5.0.0",
+      "@ERR15693036.3 400f0f25-6674-4b0e-a4f7-f7470ae25ff8 qs:f:18.4824 st:Z:2025-07-03T08:55:21.748+00:00 RG:Z:9d80ec1b-5874-4d10-af2d-a514d2335587_dna_r10.4.1_e8.2_400bps_sup@v5.0.0",
+      "@ERR15693036.4 081b9ac2-65c8-4f74-9eca-133b18259e4c qs:f:22.5577 st:Z:2025-07-03T09:00:32.482+00:00 RG:Z:9d80ec1b-5874-4d10-af2d-a514d2335587_dna_r10.4.1_e8.2_400bps_sup@v5.0.0"
+    ],
+    "mean_length": 3130.2,
+    "median_length": 1979,
+    "max_length": 846151,
+    "n50": 6278,
+    "molecule_grouping": "one_record_per_molecule"
+  },
+  "checks": {
+    "bytes_match": true,
+    "md5_match": true,
+    "spot_count_match": true,
+    "base_count_match": true
+  },
+  "status": "verified"
+}

@@ -1,0 +1,429 @@
+{
+ "old_sources": 7211086,
+ "new_files": 128,
+ "counts": {
+  "identical:no_shared_block_at_seed": 656731,
+  "identical:resolved": 1343574,
+  "identical:unresolved": 5028695,
+  "missing_in_new": 0,
+  "only_new:no_shared_block_at_seed": 631733,
+  "only_new:resolved": 783609,
+  "only_new:unresolved": 1867275,
+  "status_changed:no_shared_block_at_seed->resolved": 366,
+  "status_changed:no_shared_block_at_seed->unresolved": 15472,
+  "status_changed:resolved->unresolved": 35888,
+  "status_changed:unresolved->no_shared_block_at_seed": 5,
+  "status_changed:unresolved->resolved": 105781,
+  "x_changed:resolved": 24574
+ },
+ "examples": [
+  {
+   "key": [
+    "L0_1870",
+    "dna|SAMN00713606|NC_015422.1|2203998-2204723|+",
+    "dna|SAMN12418530|NZ_CP042302.1|2007703-2009351|-"
+   ],
+   "old": [
+    "unresolved",
+    "",
+    ""
+   ],
+   "new": [
+    "resolved",
+    "2201692-2207046",
+    "2007607-2012979"
+   ],
+   "boundary": [
+    "resolved",
+    "resolved"
+   ]
+  },
+  {
+   "key": [
+    "L0_1870",
+    "dna|SAMN00713606|NC_015422.1|2205492-2206951|+",
+    "dna|SAMN12418530|NZ_CP042302.1|2007703-2009351|-"
+   ],
+   "old": [
+    "resolved",
+    "2202506-2207046",
+    "2007607-2012165"
+   ],
+   "new": [
+    "unresolved",
+    "",
+    ""
+   ],
+   "boundary": [
+    "shared_to_window_or_contig_end",
+    "resolved"
+   ]
+  },
+  {
+   "key": [
+    "L0_2733",
+    "dna|SAMN00006197|NC_015138.1|5420532-5421896|-",
+    "dna|SAMN12418530|NZ_CP042302.1|4562841-4564086|+"
+   ],
+   "old": [
+    "unresolved",
+    "",
+    ""
+   ],
+   "new": [
+    "resolved",
+    "5417152-5421912",
+    "4560582-4565343"
+   ],
+   "boundary": [
+    "resolved",
+    "resolved"
+   ]
+  },
+  {
+   "key": [
+    "L0_3616",
+    "dna|SAMN05714668|NZ_CP028301.1|3823801-3826170|-",
+    "dna|SAMN50932274|NZ_CP199711.1|2720359-2722779|-"
+   ],
+   "old": [
+    "unresolved",
+    "",
+    ""
+   ],
+   "new": [
+    "resolved",
+    "3821831-3829413",
+    "2718391-2725992"
+   ],
+   "boundary": [
+    "resolved",
+    "resolved"
+   ]
+  },
+  {
+   "key": [
+    "L0_3616",
+    "dna|SAMN05714670|NZ_CP028303.1|3893090-3895459|-",
+    "dna|SAMN50932274|NZ_CP199711.1|2720359-2722779|-"
+   ],
+   "old": [
+    "unresolved",
+    "",
+    ""
+   ],
+   "new": [
+    "resolved",
+    "3891120-3898702",
+    "2718391-2725992"
+   ],
+   "boundary": [
+    "resolved",
+    "resolved"
+   ]
+  },
+  {
+   "key": [
+    "L0_3682",
+    "dna|SAMN08775333|NZ_QEKN01000001.1|2018730-2022813|-",
+    "dna|SAMN47537704|NZ_CP190002.1|373753-379708|+"
+   ],
+   "old": [
+    "resolved",
+    "2018003-2025793",
+    "372673-380435"
+   ],
+   "new": [
+    "unresolved",
+    "",
+    ""
+   ],
+   "boundary": [
+    "shared_to_window_or_contig_end",
+    "resolved"
+   ]
+  },
+  {
+   "key": [
+    "L0_3884",
+    "dna|SAMN05714668|NZ_CP028301.1|493934-500182|+",
+    "dna|SAMN37129707|NZ_CP133289.1|393845-400573|+"
+   ],
+   "old": [
+    "unresolved",
+    "",
+    ""
+   ],
+   "new": [
+    "resolved",
+    "491277-503883",
+    "391117-403713"
+   ],
+   "boundary": [
+    "resolved",
+    "resolved"
+   ]
+  },
+  {
+   "key": [
+    "L0_3995",
+    "dna|SAMN05714656|NZ_CP028289.1|4076813-4078894|-",
+    "dna|SAMN08775346|NZ_RCCQ01000001.1|527056-529368|+"
+   ],
+   "old": [
+    "unresolved",
+    "",
+    ""
+   ],
+   "new": [
+    "resolved",
+    "4073337-4080344",
+    "525663-532636"
+   ],
+   "boundary": [
+    "resolved",
+    "resolved"
+   ]
+  },
+  {
+   "key": [
+    "L0_3995",
+    "dna|SAMN05714668|NZ_CP028301.1|4096713-4098795|-",
+    "dna|SAMN08775346|NZ_RCCQ01000001.1|527056-529368|+"
+   ],
+   "old": [
+    "unresolved",
+    "",
+    ""
+   ],
+   "new": [
+    "resolved",
+    "4093234-4100247",
+    "525663-532642"
+   ],
+   "boundary": [
+    "resolved",
+    "resolved"
+   ]
+  },
+  {
+   "key": [
+    "L0_7892",
+    "dna|SAMN00006197|NC_015138.1|3140525-3141671|-",
+    "dna|SAMN63280568|NZ_CM202695.1|2743051-2744229|-"
+   ],
+   "old": [
+    "resolved",
+    "3138325-3141692",
+    "2740870-2744250"
+   ],
+   "new": [
+    "resolved",
+    "3137490-3141692",
+    "2740061-2744250"
+   ]
+  },
+  {
+   "key": [
+    "L0_7892",
+    "dna|SAMN04489708|NZ_FNJL01000025.1|16252-17398|+",
+    "dna|SAMN16392950|NZ_CP063166.1|2686143-2687240|+"
+   ],
+   "old": [
+    "unresolved",
+    "",
+    ""
+   ],
+   "new": [
+    "resolved",
+    "16231-20993",
+    "2686091-2690881"
+   ],
+   "boundary": [
+    "resolved",
+    "resolved"
+   ]
+  },
+  {
+   "key": [
+    "L0_7892",
+    "dna|SAMN05714667|NZ_CP028300.1|3208927-3210538|-",
+    "dna|SAMN33025486|NZ_CP117193.1|2262277-2263866|-"
+   ],
+   "old": [
+    "unresolved",
+    "",
+    ""
+   ],
+   "new": [
+    "resolved",
+    "3205560-3211922",
+    "2259023-2265363"
+   ],
+   "boundary": [
+    "resolved",
+    "resolved"
+   ]
+  },
+  {
+   "key": [
+    "L0_7892",
+    "dna|SAMN21401359|NZ_CP083451.1|2027919-2029505|+",
+    "dna|SAMN63280568|NZ_CM202695.1|2743051-2744229|-"
+   ],
+   "old": [
+    "resolved",
+    "2026444-2029783",
+    "2740915-2744246"
+   ],
+   "new": [
+    "resolved",
+    "2026444-2030604",
+    "2740096-2744246"
+   ]
+  },
+  {
+   "key": [
+    "L0_8625",
+    "dna|SAMEA115296988|NZ_OZ224513.1|1825491-1826780|-",
+    "dna|SAMN47998638|NZ_CP187561.1|2269654-2270803|-"
+   ],
+   "old": [
+    "unresolved",
+    "",
+    ""
+   ],
+   "new": [
+    "resolved",
+    "1825491-1829743",
+    "2269654-2273887"
+   ],
+   "boundary": [
+    "resolved",
+    "resolved"
+   ]
+  },
+  {
+   "key": [
+    "L0_8808",
+    "dna|SAMN12418601|NZ_CP042323.1|273348-274685|+",
+    "dna|SAMN43282616|NZ_JBHUFQ010000047.1|201467-202820|-"
+   ],
+   "old": [
+    "unresolved",
+    "",
+    ""
+   ],
+   "new": [
+    "resolved",
+    "270241-274923",
+    "201240-205989"
+   ],
+   "boundary": [
+    "resolved",
+    "resolved"
+   ]
+  },
+  {
+   "key": [
+    "L0_9123",
+    "dna|SAMN04009978|NZ_LJGO01000100.1|178999-180858|-",
+    "dna|SAMN35553894|NZ_CP127360.1|4378401-4380377|+"
+   ],
+   "old": [
+    "resolved",
+    "178932-181081",
+    "4378339-4380478"
+   ],
+   "new": [
+    "resolved",
+    "178902-181081",
+    "4378339-4380558"
+   ]
+  },
+  {
+   "key": [
+    "L0_10674",
+    "dna|SAMN12418601|NZ_CP042323.1|273412-274675|-",
+    "dna|SAMN43282616|NZ_JBHUFQ010000047.1|201490-202688|+"
+   ],
+   "old": [
+    "unresolved",
+    "",
+    ""
+   ],
+   "new": [
+    "resolved",
+    "270241-274923",
+    "201240-205989"
+   ],
+   "boundary": [
+    "resolved",
+    "resolved"
+   ]
+  },
+  {
+   "key": [
+    "L0_12792",
+    "dna|SAMN00713606|NC_015422.1|2494260-2495470|-",
+    "dna|SAMN03268415|NZ_JXDJ01000015.1|346833-347999|+"
+   ],
+   "old": [
+    "resolved",
+    "2494207-2498450",
+    "345748-349993"
+   ],
+   "new": [
+    "unresolved",
+    "",
+    ""
+   ],
+   "boundary": [
+    "shared_to_window_or_contig_end",
+    "resolved"
+   ]
+  },
+  {
+   "key": [
+    "L0_3264",
+    "dna|SAMN07718226|NZ_CP023687.1|2969860-2972990|-",
+    "dna|SAMN07718226|NZ_CP023687.1|5044278-5046021|+"
+   ],
+   "old": [
+    "unresolved",
+    "",
+    ""
+   ],
+   "new": [
+    "resolved",
+    "2969805-2975578",
+    "5043974-5049748"
+   ],
+   "boundary": [
+    "resolved",
+    "resolved"
+   ]
+  },
+  {
+   "key": [
+    "L0_3583",
+    "dna|SAMN08775333|NZ_QEKN01000001.1|3733113-3733831|-",
+    "dna|SAMN16392950|NZ_CP063166.1|4566070-4566981|+"
+   ],
+   "old": [
+    "unresolved",
+    "",
+    ""
+   ],
+   "new": [
+    "resolved",
+    "3730068-3735677",
+    "4564227-4569856"
+   ],
+   "boundary": [
+    "resolved",
+    "resolved"
+   ]
+  }
+ ]
+}

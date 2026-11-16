@@ -1,0 +1,167 @@
+{
+  "version": "s6_review_v0.1",
+  "subset": "delftia",
+  "evidence_source": "assembly_only",
+  "production_ready": false,
+  "site_groups_are_independent_insertion_events": false,
+  "parameters": {
+    "flank_bp": 3000,
+    "inner_bp_excluded": 500,
+    "min_outer_bp": 1000,
+    "dna_class": "shared >= 0.5, not_shared <= 0.1 of the outer flank covered; descriptive only"
+  },
+  "structures": {
+    "single_gene": {
+      "occurrences": 492,
+      "boundary": {
+        "not_reviewed_no_different_partner": 118,
+        "reviewed_side_unknown": 160,
+        "both_sides_resolved": 214
+      },
+      "stable_end_partners": {
+        "one_valid_partner": 116,
+        "two_plus_partners_one_assembly": 24,
+        "two_plus_partner_assemblies": 74,
+        "partners_in_two_plus_position_units": 45,
+        "partners_in_no_position_unit": 98
+      },
+      "same_assembly_pairs": {
+        "context_different_both_sides": 273,
+        "context_unknown": 125,
+        "context_repeated_both_sides": 7,
+        "context_repeated_one_side": 1
+      },
+      "same_assembly_pairs_both_supported": {
+        "context_different_both_sides": 199,
+        "context_unknown": 105,
+        "context_repeated_both_sides": 3,
+        "context_repeated_one_side": 1
+      },
+      "same_assembly_dna_vs_class": {
+        "context_different_both_sides": {
+          "not_shared/not_shared": 272,
+          "not_shared/partial": 1
+        },
+        "context_repeated_both_sides": {
+          "not_shared/not_shared": 2,
+          "shared/shared": 4,
+          "partial/partial": 1
+        },
+        "context_repeated_one_side": {
+          "not_shared/shared": 1
+        },
+        "context_unknown": {
+          "not_shared/not_shared": 120,
+          "shared/not_shared": 1,
+          "not_shared/partial": 4
+        }
+      },
+      "cores_with_assembly_2plus_supported_positions": {
+        "context_different_both_sides": 18,
+        "context_unknown": 2,
+        "context_repeated": 1
+      },
+      "position_units": 163,
+      "unit_pairs": {
+        "unknown": 24,
+        "conflicting": 4,
+        "different": 254
+      },
+      "unit_pairs_different_context": {
+        "context_different_both_sides": 167,
+        "context_unknown_in_some_pair": 83,
+        "context_repeated_in_some_pair": 4
+      },
+      "group_group_pairs": {
+        "unknown": 24,
+        "conflicting": 4,
+        "different": 22
+      },
+      "sum_max_pairwise_different_units": 142,
+      "sum_max_pairwise_context_different_units": 129,
+      "cores_with_2plus_pairwise_context_different_units": 24
+    },
+    "two_gene": {
+      "occurrences": 127,
+      "boundary": {
+        "both_sides_resolved": 40,
+        "not_reviewed_no_different_partner": 30,
+        "reviewed_side_unknown": 57
+      },
+      "stable_end_partners": {
+        "one_valid_partner": 30,
+        "two_plus_partners_one_assembly": 0,
+        "two_plus_partner_assemblies": 10,
+        "partners_in_two_plus_position_units": 0,
+        "partners_in_no_position_unit": 18
+      },
+      "same_assembly_pairs": {
+        "context_different_both_sides": 6,
+        "context_unknown": 3
+      },
+      "same_assembly_pairs_both_supported": {
+        "context_different_both_sides": 6,
+        "context_unknown": 2
+      },
+      "same_assembly_dna_vs_class": {
+        "context_different_both_sides": {
+          "not_shared/not_shared": 6
+        },
+        "context_unknown": {
+          "not_shared/not_shared": 1,
+          "not_shared/partial": 1,
+          "partial/not_shared": 1
+        }
+      },
+      "cores_with_assembly_2plus_supported_positions": {
+        "context_different_both_sides": 1,
+        "context_unknown": 1
+      },
+      "position_units": 36,
+      "unit_pairs": {
+        "conflicting": 1,
+        "unknown": 4,
+        "different": 6
+      },
+      "unit_pairs_different_context": {
+        "context_different_both_sides": 5,
+        "context_unknown_in_some_pair": 1
+      },
+      "group_group_pairs": {
+        "conflicting": 1,
+        "unknown": 4
+      },
+      "sum_max_pairwise_different_units": 31,
+      "sum_max_pairwise_context_different_units": 30,
+      "cores_with_2plus_pairwise_context_different_units": 5
+    }
+  },
+  "cases": [
+    {
+      "case": "context_different",
+      "core_key": "PF_4b70bb8e2b9d",
+      "occurrences": [
+        "s|PF_4b70bb8e2b9d|10",
+        "s|PF_4b70bb8e2b9d|11"
+      ]
+    },
+    {
+      "case": "repeated_context",
+      "core_key": "PF_4b70bb8e2b9d",
+      "occurrences": [
+        "s|PF_4b70bb8e2b9d|26",
+        "s|PF_4b70bb8e2b9d|27"
+      ]
+    },
+    {
+      "case": "multiple_correspondence",
+      "core_key": "PF_3070024975f6",
+      "occurrences": [
+        "s|PF_3070024975f6|10",
+        "s|PF_3070024975f6|16",
+        "s|PF_3070024975f6|17"
+      ]
+    }
+  ],
+  "case_rule": "Fixed rules, single-gene cores, one case each when available:\n    context_different: a same-assembly pair of supported positions with both sides different; prefer DNA not_shared on\n      both sides, then a mobile-keyword core, then more core occurrences.\n    repeated_context: a same-assembly pair with both sides same; prefer DNA shared on both sides, then larger support.\n    conserved_paralog_positions: two site groups of a non-mobile core related 'different' with both-side context\n      different; the pair maximising the assemblies shared by both groups, then the smaller group size. Shows the two\n      copies in up to two shared assemblies.\n    multiple_correspondence: an occurrence with ambiguous links to >= 2 copies in one other assembly; most links first.\n    Ties break on identifiers."
+}

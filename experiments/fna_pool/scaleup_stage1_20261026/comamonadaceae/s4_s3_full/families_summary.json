@@ -1,0 +1,129 @@
+{
+ "version": "s4_annotate_v0.2",
+ "mmseqs": "17.b804f",
+ "settings": {
+  "family": [
+   "--min-seq-id",
+   "0.9",
+   "-c",
+   "0.8",
+   "--cov-mode",
+   "0",
+   "--cluster-mode",
+   "0",
+   "--cluster-reassign",
+   "1"
+  ],
+  "homology_group": [
+   "--min-seq-id",
+   "0.5",
+   "-c",
+   "0.8",
+   "--cov-mode",
+   "0",
+   "--cluster-mode",
+   "0",
+   "--cluster-reassign",
+   "1"
+  ]
+ },
+ "member_min": {
+  "family": [
+   0.9,
+   0.8
+  ],
+  "homology_group": [
+   0.5,
+   0.8
+  ]
+ },
+ "check_search": [
+  "--exhaustive-search",
+  "1",
+  "--alignment-mode",
+  "3",
+  "-e",
+  "10",
+  "--max-seqs",
+  "100000",
+  "--format-output",
+  "query,target,fident,qcov,tcov,alnlen"
+ ],
+ "distinct_proteins": 3673,
+ "member_check": {
+  "family": {
+   "members": 3673,
+   "passed": 3672,
+   "fail": [
+    "726dda9259e2d7f8"
+   ]
+  },
+  "homology_group": {
+   "members": 3673,
+   "passed": 3672,
+   "fail": [
+    "726dda9259e2d7f8"
+   ]
+  }
+ },
+ "main": {
+  "loci": 1010,
+  "carriers": 570,
+  "species": 362,
+  "cds_units": 1189,
+  "distinct_proteins": 817,
+  "families": 556,
+  "homology_groups": 465,
+  "family_architectures": 475
+ },
+ "partner_mixed": {
+  "loci": 35,
+  "carriers": 29,
+  "species": 26,
+  "cds_units": 41,
+  "distinct_proteins": 40,
+  "families": 38,
+  "homology_groups": 35,
+  "family_architectures": 32
+ },
+ "direction_mixed": {
+  "loci": 2,
+  "carriers": 2,
+  "species": 2,
+  "cds_units": 3,
+  "distinct_proteins": 3,
+  "families": 3,
+  "homology_groups": 3,
+  "family_architectures": 2
+ },
+ "short_other_segment": {
+  "loci": 2697,
+  "carriers": 960,
+  "species": 604,
+  "cds_units": 3365,
+  "distinct_proteins": 2388,
+  "families": 1639,
+  "homology_groups": 1476,
+  "family_architectures": 1315
+ },
+ "replacement": {
+  "loci": 502,
+  "carriers": 404,
+  "species": 253,
+  "cds_units": 715,
+  "distinct_proteins": 471,
+  "families": 346,
+  "homology_groups": 333,
+  "family_architectures": 252
+ },
+ "all": {
+  "loci": 4246,
+  "carriers": 1130,
+  "species": 708,
+  "cds_units": 5313,
+  "distinct_proteins": 3673,
+  "families": 2460,
+  "homology_groups": 2111,
+  "family_architectures": 1979
+ }
+}

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="300" font-family="sans-serif">
+<rect width="100%" height="100%" fill="white"/>
+<text x="4" y="16" font-size="12">L_128138f94820  SAMD00407106  core 54 bp  two_flank_anchored  support all_calls_anchored  boundary exact  tandem False  core copies carrier/partner 0/0</text>
+<line x1="555.5" y1="30" x2="555.5" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<line x1="564.5" y1="30" x2="564.5" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<text x="4" y="64" font-size="11" font-weight="bold">SAMD00407106 NZ_AP025556.1 (carrier)</text>
+<line x1="60" y1="100" x2="1060" y2="100" stroke="#888"/>
+<rect x="390.4" y="132" width="165.2" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="473.0" y="152" font-size="9" text-anchor="middle">U</text>
+<rect x="555.5" y="132" width="8.9" height="8" fill="#e76f51" opacity="0.55"/>
+<text x="560.0" y="152" font-size="9" text-anchor="middle">core 54</text>
+<rect x="564.5" y="132" width="165.2" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="647.0" y="152" font-size="9" text-anchor="middle">D</text>
+<polygon points="60.0,85 1049.2,85 1055.2,91 1049.2,97 60.0,97" fill="#3b6fb6"><title>non-ribosomal peptide synthetase 2160268-2170240 +</title></polygon>
+<text x="60.0" y="81" font-size="8" fill="#333">non-ribosomal peptide synthetase</text>
+<polygon points="1055.0,85 1055.0,85 1060.0,91 1055.0,97 1055.0,97" fill="#3b6fb6"><title>non-ribosomal peptide synthase/polyketid 2170239-2188779 +</title></polygon>
+<text x="60" y="166" font-size="9" fill="#666">NZ_AP025556.1:2164215-2170269  core 2167215-2167269</text>
+<text x="4" y="184" font-size="11" font-weight="bold">SAMD00571185 NZ_AP027205.1 (partner, + strand, two_flank_anchored, pair P00033)</text>
+<line x1="60" y1="220" x2="1060" y2="220" stroke="#888"/>
+<rect x="390.4" y="252" width="165.2" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="473.0" y="272" font-size="9" text-anchor="middle">U'</text>
+<rect x="564.5" y="252" width="165.2" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="647.0" y="272" font-size="9" text-anchor="middle">D'</text>
+<rect x="555.5" y="252" width="8.9" height="8" fill="#ffffff" opacity="0.55"/>
+<line x1="555.5" y1="211" x2="564.5" y2="211" stroke="#555" stroke-dasharray="2,2"/>
+<polygon points="60.0,205 549.5,205 555.5,211 549.5,217 60.0,217" fill="#3b6fb6"><title>non-ribosomal peptide synthetase 2099090-2106034 +</title></polygon>
+<text x="60.0" y="201" font-size="8" fill="#333">non-ribosomal peptide synthetase</text>
+<polygon points="564.5,205 1049.2,205 1055.2,211 1049.2,217 564.5,217" fill="#3b6fb6"><title>non-ribosomal peptide synthetase 2106034-2109005 +</title></polygon>
+<text x="564.5" y="201" font-size="8" fill="#333">non-ribosomal peptide synthetase</text>
+<polygon points="1055.0,205 1055.0,205 1060.0,211 1055.0,217 1055.0,217" fill="#3b6fb6"><title>non-ribosomal peptide synthase/polyketid 2109004-2127553 +</title></polygon>
+<text x="60" y="286" font-size="9" fill="#666">NZ_AP027205.1 site 2106034  other-side gap 0 bp  this call's core 2167215-2167269</text>
+<rect x="555.5" y="218" width="8.9" height="4" fill="#f4f4f4"/><text x="560.0" y="272" font-size="9" text-anchor="middle" fill="#a5372f">empty site</text>
+</svg>

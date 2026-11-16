@@ -1,0 +1,12 @@
+{
+  "schema": "audited_evidence_check_v1",
+  "sample": "H16",
+  "status": "pass",
+  "members": 271,
+  "classifier_revision": "nearby_competition_v2",
+  "audited_class_counts": {
+    "audited_full_span": 270,
+    "audited_full_span_with_conflict": 1
+  },
+  "scope": "Recomputed units/classes from emitted read verdicts; no re-mapping or independent competition check"
+}

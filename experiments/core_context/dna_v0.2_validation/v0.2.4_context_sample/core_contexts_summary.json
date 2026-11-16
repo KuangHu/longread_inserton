@@ -1,0 +1,54 @@
+{
+ "rules": {
+  "target": "700 <= X < 2500 bp both sides, pass both checks",
+  "position_overlap": 0.5,
+  "contexts": "max clique of pairwise-passing positions",
+  "cap": 12,
+  "tiers": "2-3 exploratory, >=4 main, >=6 priority, >=8 showcase"
+ },
+ "positions_total": 21386,
+ "positions_in_pass_graph": 2268,
+ "cores": 466,
+ "position_pairs_with_pass_and_fail_versions": 0,
+ "cores_by_tier": {
+  "exploratory_2_3": 423,
+  "showcase_ge8": 11,
+  "priority_ge6": 13,
+  "main_ge4": 19
+ },
+ "cores_by_evidence": {
+  "final": 250,
+  "insufficient_evidence": 216
+ },
+ "cores_ge": {
+  "any": {
+   "ge2": 466,
+   "insufficient_evidence_below_4": 185,
+   "insufficient_evidence_below_6": 199,
+   "insufficient_evidence_below_8": 207,
+   "ge4": 43,
+   "ge6": 24,
+   "ge8": 11
+  },
+  "single_assembly": {
+   "ge2": 197,
+   "insufficient_evidence_below_2": 142,
+   "insufficient_evidence_below_4": 192,
+   "insufficient_evidence_below_6": 203,
+   "insufficient_evidence_below_8": 213,
+   "ge4": 35,
+   "ge6": 19,
+   "ge8": 5
+  },
+  "distinct_assemblies": {
+   "ge2": 339,
+   "insufficient_evidence_below_4": 207,
+   "insufficient_evidence_below_6": 213,
+   "insufficient_evidence_below_8": 216,
+   "insufficient_evidence_below_2": 24,
+   "ge4": 9,
+   "ge6": 3
+  }
+ },
+ "pending_library_sequences": 5586
+}

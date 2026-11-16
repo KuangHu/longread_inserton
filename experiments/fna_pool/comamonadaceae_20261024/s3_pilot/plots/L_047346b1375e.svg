@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="300" font-family="sans-serif">
+<rect width="100%" height="100%" fill="white"/>
+<text x="4" y="16" font-size="12">L_047346b1375e  SAMD00076718  core 54 bp  unresolved  support not_anchored  boundary exact  tandem False  core copies carrier/partner 0/0</text>
+<line x1="555.5" y1="30" x2="555.5" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<line x1="564.5" y1="30" x2="564.5" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<text x="4" y="64" font-size="11" font-weight="bold">SAMD00076718 NZ_AP026738.1 (carrier)</text>
+<line x1="60" y1="100" x2="1060" y2="100" stroke="#888"/>
+<rect x="390.4" y="132" width="165.2" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="473.0" y="152" font-size="9" text-anchor="middle">U</text>
+<rect x="555.5" y="132" width="8.9" height="8" fill="#e76f51" opacity="0.55"/>
+<text x="560.0" y="152" font-size="9" text-anchor="middle">core 54</text>
+<rect x="564.5" y="132" width="165.2" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="647.0" y="152" font-size="9" text-anchor="middle">D</text>
+<polygon points="60.0,85 190.4,85 196.4,91 190.4,97 60.0,97" fill="#3b6fb6"><title>SEL1-like repeat protein 888221-889850 +</title></polygon>
+<text x="60.0" y="81" font-size="8" fill="#333">SEL1-like repeat protein</text>
+<polygon points="226.3,85 382.9,85 388.9,91 382.9,97 226.3,97" fill="#3b6fb6"><title>Bug family tripartite tricarboxylate tra 890031-891015 +</title></polygon>
+<text x="226.3" y="81" font-size="8" fill="#333">Bug family tripartite tricarboxylat</text>
+<polygon points="422.1,109 428.1,103 550.4,103 550.4,115 428.1,115" fill="#3b6fb6"><title>glycerophosphodiester phosphodiesterase 891216-891993 -</title></polygon>
+<text x="422.1" y="125" font-size="8" fill="#333">glycerophosphodiester phosp</text>
+<polygon points="580.0,109 586.0,103 746.5,103 746.5,115 586.0,115" fill="#3b6fb6"><title>sn-glycerol-3-phosphate import ATP-bindi 892172-893180 -</title></polygon>
+<text x="580.0" y="125" font-size="8" fill="#333">sn-glycerol-3-phosphate import ATP-b</text>
+<polygon points="756.4,109 762.4,103 897.1,103 897.1,115 762.4,115" fill="#3b6fb6"><title>sn-glycerol-3-phosphate ABC transporter  893240-894092 -</title></polygon>
+<text x="756.4" y="125" font-size="8" fill="#333">sn-glycerol-3-phosphate ABC tr</text>
+<polygon points="897.5,109 903.5,103 1043.2,103 1043.2,115 903.5,115" fill="#3b6fb6"><title>sn-glycerol-3-phosphate ABC transporter  894094-894976 -</title></polygon>
+<text x="60" y="166" font-size="9" fill="#666">NZ_AP026738.1:889024-895078  core 892024-892078</text>
+<text x="4" y="184" font-size="11" font-weight="bold">SAMD00411011 NZ_AP025193.1 (partner, + strand, unresolved, pair P00007)</text>
+<line x1="60" y1="220" x2="1060" y2="220" stroke="#888"/>
+<rect x="390.4" y="252" width="165.2" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="473.0" y="272" font-size="9" text-anchor="middle">U'</text>
+<rect x="564.5" y="252" width="165.2" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="647.0" y="272" font-size="9" text-anchor="middle">D'</text>
+<rect x="555.5" y="252" width="8.9" height="8" fill="#9b5de5" opacity="0.55"/>
+<text x="560.0" y="272" font-size="9" text-anchor="middle">other side 53</text>
+<polygon points="60.0,205 190.1,205 196.1,211 190.1,217 60.0,217" fill="#3b6fb6"><title>SEL1-like repeat protein 899454-901083 +</title></polygon>
+<text x="60.0" y="201" font-size="8" fill="#333">SEL1-like repeat protein</text>
+<polygon points="226.2,205 382.7,205 388.7,211 382.7,217 226.2,217" fill="#3b6fb6"><title>Bug family tripartite tricarboxylate tra 901265-902249 +</title></polygon>
+<text x="226.2" y="201" font-size="8" fill="#333">Bug family tripartite tricarboxylat</text>
+<polygon points="421.9,229 427.9,223 550.3,223 550.3,235 427.9,235" fill="#3b6fb6"><title>glycerophosphodiester phosphodiesterase 902450-903227 -</title></polygon>
+<text x="421.9" y="245" font-size="8" fill="#333">glycerophosphodiester phosp</text>
+<polygon points="583.0,229 589.0,223 749.5,223 749.5,235 589.0,235" fill="#3b6fb6"><title>sn-glycerol-3-phosphate import ATP-bindi 903424-904432 -</title></polygon>
+<text x="583.0" y="245" font-size="8" fill="#333">sn-glycerol-3-phosphate import ATP-b</text>
+<polygon points="760.2,229 766.2,223 900.4,223 900.4,235 766.2,235" fill="#3b6fb6"><title>sn-glycerol-3-phosphate ABC transporter  904497-905346 -</title></polygon>
+<text x="760.2" y="245" font-size="8" fill="#333">sn-glycerol-3-phosphate ABC tr</text>
+<polygon points="900.8,229 906.8,223 1046.5,223 1046.5,235 906.8,235" fill="#3b6fb6"><title>sn-glycerol-3-phosphate ABC transporter  905348-906230 -</title></polygon>
+<text x="60" y="286" font-size="9" fill="#666">NZ_AP025193.1 site 903259  other-side gap 53 bp  this call's core 892024-892078</text>
+</svg>

@@ -1,0 +1,57 @@
+{
+  "tool_version": "pangraph 1.4.0",
+  "command": [
+    "/global/scratch/users/kh36969/longread_callout/env/pangraph-1.4.0/pangraph-x86_64-unknown-linux-gnu",
+    "build",
+    "-j",
+    "16",
+    "--verify",
+    "--no-progress-bar",
+    "/global/scratch/users/kh36969/longread_callout/core_context/subsets_20261027/delftia/bundle/assemblies.fna",
+    "-o",
+    "/global/scratch/users/kh36969/longread_callout/core_context/subsets_20261027/delftia/bundle/graph.json"
+  ],
+  "binary_sha256": "462949f3bd0988054942287ffb820c1cc60731ac0cf99179fbea6189ea518e1a",
+  "build_seconds": 175.738,
+  "inputs": [
+    {
+      "sample": "SAMN13049073",
+      "fasta": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/comamonadaceae/data/genomes/GCF_009362995.1/GCF_009362995.1_ASM936299v1_genomic.fna",
+      "sha256": "840480c6a76efabe9a11fb144a31f8151a5cce8c6adda9577108a34212c938b9"
+    },
+    {
+      "sample": "SAMN14082653",
+      "fasta": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/comamonadaceae/data/genomes/GCF_018437695.1/GCF_018437695.1_ASM1843769v1_genomic.fna",
+      "sha256": "66c243ca1c4e327fb6510f03f466060966f573f34197c2a7e598f9a3041c0963"
+    },
+    {
+      "sample": "SAMN31258398",
+      "fasta": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/comamonadaceae/data/genomes/GCF_033096485.1/GCF_033096485.1_ASM3309648v1_genomic.fna",
+      "sha256": "df098e720f585437e80f4b8842cdf39e83954f8c67692f77402a10fbf2384083"
+    },
+    {
+      "sample": "SAMN34234483",
+      "fasta": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/comamonadaceae/data/genomes/GCA_058437695.1/GCA_058437695.1_ASM5843769v1_genomic.fna",
+      "sha256": "82792d88e5143bac2d8564ad36c30a698d24fcb76c27b8ac836dd0397dc70eaa"
+    },
+    {
+      "sample": "SAMN00623041",
+      "fasta": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/comamonadaceae/data/genomes/GCF_000018665.1/GCF_000018665.1_ASM1866v1_genomic.fna",
+      "sha256": "034d0236111b399266308d0ffaed99cc541912466894fd7e73aa885ec71b7b2d"
+    },
+    {
+      "sample": "SAMN13450439",
+      "fasta": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/comamonadaceae/data/genomes/GCF_016027075.1/GCF_016027075.1_ASM1602707v1_genomic.fna",
+      "sha256": "aa33574cd86e31beee8d55f625359377d406375fd59746dfd4a1644f4bddaf9f"
+    },
+    {
+      "sample": "SAMN15905291",
+      "fasta": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/comamonadaceae/data/genomes/GCF_029870285.2/GCF_029870285.2_ILS_Das_1.2_genomic.fna",
+      "sha256": "1e84c56eab41d74273e6a0b0b91b274d3110d9caa44f7fc8bd4af0d6973ce37a"
+    }
+  ],
+  "graph_sha256": "2604757008b1ac12c9328fd1c6775770772c585d2aa970c87fc96b6754e54b97",
+  "joint_fasta_sha256": "b900262d3c222d59817e859bb6517e9507bd0590db507031a0c12f2ac3a74301",
+  "contigs_sha256": "5ef8edde59d330cea696ff1e83f68569897886a6d854b6e201c7da57f5dce50d",
+  "graph_verify_passed": true
+}

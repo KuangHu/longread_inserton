@@ -1,0 +1,115 @@
+{
+ "version": "ucd_read_evidence_v0.1",
+ "rows": "/global/scratch/users/kh36969/longread_callout/core_context/ucd_batch_v0.2/final/strict_lt2500_candidate_insertion.tsv.gz",
+ "rows_sha256": "0bbd1c8d17d6ee52baf958823a4dcd35d95a17ebc7134cc195f06198a549f836",
+ "sources": {
+  "round5_v02": {
+   "/global/home/users/kh36969/middle_insertion_callout/longread_inserton/experiments/core_context/scale_comamonadaceae_v0.1/readcheck_round5_v02/positions.tsv.gz": "55777421b30ca6e33ba0a90699c066a06e08f4dff541a88e03d92ce48a5900f0",
+   "/global/home/users/kh36969/middle_insertion_callout/longread_inserton/experiments/core_context/scale_comamonadaceae_v0.1/readcheck_round5_v02/interval_map.tsv.gz": "f40740f3ace20d0f78d45ef964f345376fadaf05268ac8475ec60a798f90f091",
+   "/global/home/users/kh36969/middle_insertion_callout/longread_inserton/experiments/core_context/scale_comamonadaceae_v0.1/readcheck_round5_v02/pairs.tsv.gz": "291358ab1984ebd7ee510bcc9457cf7510357a26ad1bcc7f1e9116153ffa3436"
+  },
+  "read_site_search": [
+   "pilot",
+   "validation1",
+   "validation2",
+   "scale1",
+   "scale2",
+   "scale3"
+  ],
+  "pool": "/global/home/users/kh36969/middle_insertion_callout/longread_inserton/experiments/fna_pool/scaleup_stage1_20261026/comamonadaceae/pool.tsv",
+  "manifest_sha256": "ad168d60aa337b80c3a3db61469cb0a0a7dc0f391a90e1d51fa6927a02b6336d"
+ },
+ "rule": {
+  "rc": "exact sample + contig + lo/hi + strand; no inheritance across intervals",
+  "rss": "flank 1000, >= 3 molecules, known_catalog_position*"
+ },
+ "strand_mismatch_rejected": 0,
+ "counts": {
+  "pairs": {
+   "cross_assembly": 40751,
+   "same_assembly": 16394
+  },
+  "rc_side_status": {
+   "no_reads": 84804,
+   "supported": 29018,
+   "insufficient_coverage": 269,
+   "not_tested": 119,
+   "tested_other_interval": 46,
+   "locus_ambiguous": 34
+  },
+  "rss_side_status": {
+   "sample_not_searched": 98639,
+   "recovered": 12892,
+   "not_recovered": 2662,
+   "seen_below_threshold": 97
+  },
+  "rc_pair": {
+   "no_reads|no_reads": 35655,
+   "no_reads|supported": 13264,
+   "supported|supported": 7803,
+   "insufficient_coverage|no_reads": 135,
+   "insufficient_coverage|supported": 96,
+   "no_reads|not_tested": 63,
+   "not_tested|supported": 21,
+   "locus_ambiguous|supported": 19,
+   "insufficient_coverage|insufficient_coverage": 19,
+   "no_reads|tested_other_interval": 17,
+   "locus_ambiguous|no_reads": 15,
+   "not_tested|not_tested": 15,
+   "supported|tested_other_interval": 12,
+   "tested_other_interval|tested_other_interval": 6,
+   "not_tested|tested_other_interval": 5
+  },
+  "rc_pair|same_assembly": {
+   "no_reads|no_reads": 12447,
+   "supported|supported": 3884,
+   "insufficient_coverage|insufficient_coverage": 19,
+   "insufficient_coverage|supported": 15,
+   "locus_ambiguous|supported": 8,
+   "supported|tested_other_interval": 7,
+   "not_tested|not_tested": 7,
+   "tested_other_interval|tested_other_interval": 5,
+   "not_tested|supported": 2
+  },
+  "rss_pair": {
+   "sample_not_searched|sample_not_searched": 45748,
+   "recovered|sample_not_searched": 5035,
+   "recovered|recovered": 3850,
+   "not_recovered|sample_not_searched": 2082,
+   "not_recovered|not_recovered": 213,
+   "not_recovered|recovered": 130,
+   "recovered|seen_below_threshold": 27,
+   "sample_not_searched|seen_below_threshold": 26,
+   "not_recovered|seen_below_threshold": 24,
+   "seen_below_threshold|seen_below_threshold": 10
+  },
+  "final_status_unchanged": {
+   "pass": 57145
+  },
+  "rc_pair|cross_assembly": {
+   "no_reads|no_reads": 23208,
+   "no_reads|supported": 13264,
+   "supported|supported": 3919,
+   "insufficient_coverage|no_reads": 135,
+   "insufficient_coverage|supported": 81,
+   "no_reads|not_tested": 63,
+   "not_tested|supported": 19,
+   "no_reads|tested_other_interval": 17,
+   "locus_ambiguous|no_reads": 15,
+   "locus_ambiguous|supported": 11,
+   "not_tested|not_tested": 8,
+   "not_tested|tested_other_interval": 5,
+   "supported|tested_other_interval": 5,
+   "tested_other_interval|tested_other_interval": 1
+  }
+ },
+ "out_table": {
+  "path": "/global/scratch/users/kh36969/longread_callout/core_context/ucd_batch_v0.2/final/strict_lt2500_candidate_insertion_with_read_evidence.tsv.gz",
+  "sha256": "1fade1c3d81ce8948008faf2807c3e6c33a48410715ad4f06d310dd20e1d3411"
+ },
+ "out_compact": {
+  "path": "scale_comamonadaceae_v0.1/ucd_batch_v0.2/final/strict_candidate_read_evidence.tsv.gz",
+  "sha256": "34af078091e27965a5d7c0d1636611e74f5e6e711308b4e690fd048851d36ad9"
+ },
+ "at": "2026-11-07 22:24:10"
+}

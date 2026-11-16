@@ -1,0 +1,914 @@
+[
+ {
+  "chunk": 0,
+  "pairs": 2000,
+  "rows": 4000,
+  "pair_ids_sha256": "95ef92836bddfc198b512038541eafb24a1454f908e868395d5b19beb72fc163",
+  "rows_sha256": "a37f13046d9f41fb39915db3dad9fd0cc18f544b74e6651534ad18d5895a6537",
+  "input_pairs_sha256": "4436cf68a4e966fc2ea8b9748dbf2f8d9019de63b555947acafa8857b104fb15",
+  "wall_s": 300.1,
+  "threads": 32,
+  "worker_wall_s": 8844.9,
+  "child_process_cpu_s": 2074.4,
+  "host": "n0177.lr6",
+  "slurm": {
+   "job": "27605962",
+   "task": "0",
+   "restart": ""
+  },
+  "finished": "2026-11-07 12:21:18"
+ },
+ {
+  "chunk": 1,
+  "pairs": 2000,
+  "rows": 4000,
+  "pair_ids_sha256": "72864fd23850fcca467d37c10603f52b2afa8979bc7f956e196469d3cb66977c",
+  "rows_sha256": "763f3bb8d81cb20f7099298e3dd4032d0299f020cb4483a56a44840664b2027b",
+  "input_pairs_sha256": "4436cf68a4e966fc2ea8b9748dbf2f8d9019de63b555947acafa8857b104fb15",
+  "wall_s": 284.2,
+  "threads": 32,
+  "worker_wall_s": 8056.8,
+  "child_process_cpu_s": 2066.4,
+  "host": "n0192.lr6",
+  "slurm": {
+   "job": "27606582",
+   "task": "1",
+   "restart": ""
+  },
+  "finished": "2026-11-07 12:29:54"
+ },
+ {
+  "chunk": 2,
+  "pairs": 2000,
+  "rows": 4000,
+  "pair_ids_sha256": "998bda9e697179e8d97b35b3eea31f116f4f7485402453e9b1d151c4be4d118a",
+  "rows_sha256": "91c8c12f3f029cfc0082eda7b6f77d060d5652ff4dd578741f42d0115d396279",
+  "input_pairs_sha256": "4436cf68a4e966fc2ea8b9748dbf2f8d9019de63b555947acafa8857b104fb15",
+  "wall_s": 102.5,
+  "threads": 32,
+  "worker_wall_s": 2915.8,
+  "child_process_cpu_s": 2068.5,
+  "host": "n0210.lr6",
+  "slurm": {
+   "job": "27606582",
+   "task": "2",
+   "restart": ""
+  },
+  "finished": "2026-11-07 12:26:54"
+ },
+ {
+  "chunk": 3,
+  "pairs": 2000,
+  "rows": 4000,
+  "pair_ids_sha256": "88deb45dba5010f2a2a700655e114ee7e3a2e3e0d5c4eb653bc2d8f54aef6bf5",
+  "rows_sha256": "a2aa020e39f7e55f23307025ab422e9ccafb2beb12e4ed19ea22cd2ec0ac34e2",
+  "input_pairs_sha256": "4436cf68a4e966fc2ea8b9748dbf2f8d9019de63b555947acafa8857b104fb15",
+  "wall_s": 299.8,
+  "threads": 32,
+  "worker_wall_s": 8872.4,
+  "child_process_cpu_s": 2018.4,
+  "host": "n0189.lr6",
+  "slurm": {
+   "job": "27606582",
+   "task": "3",
+   "restart": ""
+  },
+  "finished": "2026-11-07 12:32:42"
+ },
+ {
+  "chunk": 4,
+  "pairs": 2000,
+  "rows": 4000,
+  "pair_ids_sha256": "d4bec084312c58d1af042ff35b5df3fd2500902b6a307fa08b68ac99defb674a",
+  "rows_sha256": "245610da4bd7d4a21b79e5f639b87707f64896dc5ed7e55491d376c587d0994c",
+  "input_pairs_sha256": "4436cf68a4e966fc2ea8b9748dbf2f8d9019de63b555947acafa8857b104fb15",
+  "wall_s": 311.3,
+  "threads": 32,
+  "worker_wall_s": 5253.4,
+  "child_process_cpu_s": 2063.8,
+  "host": "n0217.lr6",
+  "slurm": {
+   "job": "27606582",
+   "task": "4",
+   "restart": ""
+  },
+  "finished": "2026-11-07 12:33:00"
+ },
+ {
+  "chunk": 5,
+  "pairs": 2000,
+  "rows": 4000,
+  "pair_ids_sha256": "db7fbdbb5d62b2e6cc104629aa7286ce20c7efa30d71bec9cede7de900313f25",
+  "rows_sha256": "03a250413b065ce2fb2525e111bfd279761d4f7853aa643b844ad8463ec7c1fa",
+  "input_pairs_sha256": "4436cf68a4e966fc2ea8b9748dbf2f8d9019de63b555947acafa8857b104fb15",
+  "wall_s": 96.5,
+  "threads": 32,
+  "worker_wall_s": 2761.9,
+  "child_process_cpu_s": 2059.2,
+  "host": "n0210.lr6",
+  "slurm": {
+   "job": "27606582",
+   "task": "5",
+   "restart": ""
+  },
+  "finished": "2026-11-07 12:28:50"
+ },
+ {
+  "chunk": 6,
+  "pairs": 2000,
+  "rows": 4000,
+  "pair_ids_sha256": "31c5a9618675182fcbabf72acaae3bc54fade61640b58078096ab9dcb41b797c",
+  "rows_sha256": "e58c7e64c12ddfcc23f1aacd5f40d8793cc6549a986df590d39f391bc4dc98ff",
+  "input_pairs_sha256": "4436cf68a4e966fc2ea8b9748dbf2f8d9019de63b555947acafa8857b104fb15",
+  "wall_s": 161.5,
+  "threads": 32,
+  "worker_wall_s": 4791.8,
+  "child_process_cpu_s": 2057.8,
+  "host": "n0218.lr6",
+  "slurm": {
+   "job": "27606582",
+   "task": "6",
+   "restart": ""
+  },
+  "finished": "2026-11-07 12:31:40"
+ },
+ {
+  "chunk": 7,
+  "pairs": 2000,
+  "rows": 4000,
+  "pair_ids_sha256": "2e332ac6d5c385ba908630c828715bc51c69420207a7f7803d32e8953dfa309b",
+  "rows_sha256": "bfbe31213d9ff076bbab9e6ef9c796404dd0c1290b6887d0949c7d1f75ac0d1e",
+  "input_pairs_sha256": "4436cf68a4e966fc2ea8b9748dbf2f8d9019de63b555947acafa8857b104fb15",
+  "wall_s": 105.8,
+  "threads": 32,
+  "worker_wall_s": 2836.7,
+  "child_process_cpu_s": 2090.2,
+  "host": "n0210.lr6",
+  "slurm": {
+   "job": "27606582",
+   "task": "7",
+   "restart": ""
+  },
+  "finished": "2026-11-07 12:31:31"
+ },
+ {
+  "chunk": 8,
+  "pairs": 2000,
+  "rows": 4000,
+  "pair_ids_sha256": "26efef13d0fdbe1a25319a6152e25399fd8eddc47985f26621d8c96745f59788",
+  "rows_sha256": "ad5bfe8c0359ebdd9234c3c16faaf8c0bebdb44d6b3104d2bb80e2ea3eb10e20",
+  "input_pairs_sha256": "4436cf68a4e966fc2ea8b9748dbf2f8d9019de63b555947acafa8857b104fb15",
+  "wall_s": 574.9,
+  "threads": 32,
+  "worker_wall_s": 8988.2,
+  "child_process_cpu_s": 2048.5,
+  "host": "n0219.lr6",
+  "slurm": {
+   "job": "27606582",
+   "task": "8",
+   "restart": ""
+  },
+  "finished": "2026-11-07 12:40:42"
+ },
+ {
+  "chunk": 9,
+  "pairs": 2000,
+  "rows": 4000,
+  "pair_ids_sha256": "714abedd4600211ee4a760a95e0c9daa8eefe31265605591f49896cf10cb80b9",
+  "rows_sha256": "2494ffdd8fef9cdd8b31fa1dd4ac0bc81f54f4ecd9a3d117e307dd5da761c212",
+  "input_pairs_sha256": "4436cf68a4e966fc2ea8b9748dbf2f8d9019de63b555947acafa8857b104fb15",
+  "wall_s": 98.5,
+  "threads": 32,
+  "worker_wall_s": 2873.3,
+  "child_process_cpu_s": 1982.5,
+  "host": "n0192.lr6",
+  "slurm": {
+   "job": "27606582",
+   "task": "9",
+   "restart": ""
+  },
+  "finished": "2026-11-07 12:32:44"
+ },
+ {
+  "chunk": 10,
+  "pairs": 2000,
+  "rows": 4000,
+  "pair_ids_sha256": "056b422ddc96cc4a524dd22748761d89739d55442954760995d0fba18def9c35",
+  "rows_sha256": "873196c0bf7f3e3a14822041bb77e96eba3d29e7bd75ccdb0b0de1ae2f3f6389",
+  "input_pairs_sha256": "4436cf68a4e966fc2ea8b9748dbf2f8d9019de63b555947acafa8857b104fb15",
+  "wall_s": 185.1,
+  "threads": 32,
+  "worker_wall_s": 3333.5,
+  "child_process_cpu_s": 2087.8,
+  "host": "n0221.lr6",
+  "slurm": {
+   "job": "27606582",
+   "task": "10",
+   "restart": ""
+  },
+  "finished": "2026-11-07 12:34:33"
+ },
+ {
+  "chunk": 11,
+  "pairs": 2000,
+  "rows": 4000,
+  "pair_ids_sha256": "ad45e63bc50ca2a66ef23a3ab75aa09671da3943a2625d16fea32fc79eb40177",
+  "rows_sha256": "e823505ad7ce90246898b148471c90b972cf448c215aac9231677cd21a5447d7",
+  "input_pairs_sha256": "4436cf68a4e966fc2ea8b9748dbf2f8d9019de63b555947acafa8857b104fb15",
+  "wall_s": 140.5,
+  "threads": 32,
+  "worker_wall_s": 3289.5,
+  "child_process_cpu_s": 2003.4,
+  "host": "n0175.lr6",
+  "slurm": {
+   "job": "27606582",
+   "task": "11",
+   "restart": ""
+  },
+  "finished": "2026-11-07 12:34:46"
+ },
+ {
+  "chunk": 12,
+  "pairs": 2000,
+  "rows": 4000,
+  "pair_ids_sha256": "47ade1856ffa0ade2f00892c9ef566f7573ff692c7e411dc54adf9eebfe28f1d",
+  "rows_sha256": "6591055e803fe120786f411a4d4fb05185715ed71434c1162b30a1ab7c6301ad",
+  "input_pairs_sha256": "4436cf68a4e966fc2ea8b9748dbf2f8d9019de63b555947acafa8857b104fb15",
+  "wall_s": 110.5,
+  "threads": 32,
+  "worker_wall_s": 3164.3,
+  "child_process_cpu_s": 2092.4,
+  "host": "n0210.lr6",
+  "slurm": {
+   "job": "27606582",
+   "task": "12",
+   "restart": ""
+  },
+  "finished": "2026-11-07 12:34:10"
+ },
+ {
+  "chunk": 13,
+  "pairs": 2000,
+  "rows": 4000,
+  "pair_ids_sha256": "05a0fd8d4cf7e5e67557c0ecde96a4bad806f1ffde1cd8039bc3768f20bf9b47",
+  "rows_sha256": "ad64b9fd438c0598ec4ea0880cdd45daa2c8de82f2cc6becfca63d5c9f7edf95",
+  "input_pairs_sha256": "4436cf68a4e966fc2ea8b9748dbf2f8d9019de63b555947acafa8857b104fb15",
+  "wall_s": 106.4,
+  "threads": 32,
+  "worker_wall_s": 3102.1,
+  "child_process_cpu_s": 2106.5,
+  "host": "n0218.lr6",
+  "slurm": {
+   "job": "27606582",
+   "task": "13",
+   "restart": ""
+  },
+  "finished": "2026-11-07 12:34:09"
+ },
+ {
+  "chunk": 14,
+  "pairs": 2000,
+  "rows": 4000,
+  "pair_ids_sha256": "c2a50cb0dd490473bdb6304065c0653a1577d50b7fa4054c3a5cb14114b4465c",
+  "rows_sha256": "1199ec1141b7f666e750b668d3ca94314b139e95cbb68a72bc06318e468fe246",
+  "input_pairs_sha256": "4436cf68a4e966fc2ea8b9748dbf2f8d9019de63b555947acafa8857b104fb15",
+  "wall_s": 284.4,
+  "threads": 32,
+  "worker_wall_s": 6337.6,
+  "child_process_cpu_s": 4906.0,
+  "host": "n0056.lr6",
+  "slurm": {
+   "job": "27606582",
+   "task": "14",
+   "restart": ""
+  },
+  "finished": "2026-11-07 12:38:18"
+ },
+ {
+  "chunk": 15,
+  "pairs": 2000,
+  "rows": 4000,
+  "pair_ids_sha256": "9b7533d90fb5444b69dfb2016d1f5f14285f9ff6e55baa6c168a2f2bad81eb0e",
+  "rows_sha256": "24ad18249d208c4be16464bf86449148e81812ed8f6b57b08cc64a096ce5b1c6",
+  "input_pairs_sha256": "4436cf68a4e966fc2ea8b9748dbf2f8d9019de63b555947acafa8857b104fb15",
+  "wall_s": 298.6,
+  "threads": 32,
+  "worker_wall_s": 4014.4,
+  "child_process_cpu_s": 2233.5,
+  "host": "n0135.lr6",
+  "slurm": {
+   "job": "27606582",
+   "task": "15",
+   "restart": ""
+  },
+  "finished": "2026-11-07 12:38:07"
+ },
+ {
+  "chunk": 16,
+  "pairs": 2000,
+  "rows": 4000,
+  "pair_ids_sha256": "d06d67f48ad54c9aaaadb04619aba3f47e40079bed19d9373aa7a8a94674e799",
+  "rows_sha256": "d5bf46b75426da557cb36d361108c6aa5b5d27f674521562dfa282aaff90c24d",
+  "input_pairs_sha256": "4436cf68a4e966fc2ea8b9748dbf2f8d9019de63b555947acafa8857b104fb15",
+  "wall_s": 295.9,
+  "threads": 32,
+  "worker_wall_s": 3328.9,
+  "child_process_cpu_s": 2052.7,
+  "host": "n0189.lr6",
+  "slurm": {
+   "job": "27606582",
+   "task": "16",
+   "restart": ""
+  },
+  "finished": "2026-11-07 12:38:08"
+ },
+ {
+  "chunk": 17,
+  "pairs": 2000,
+  "rows": 4000,
+  "pair_ids_sha256": "78ede3605150112ba373e491bbef968ec8e97eae648b1a4e96cb51d8e542d2b9",
+  "rows_sha256": "57346712706c992ef755637ccb21bfd7bb6916a835b98d6c348325ee08e73f54",
+  "input_pairs_sha256": "4436cf68a4e966fc2ea8b9748dbf2f8d9019de63b555947acafa8857b104fb15",
+  "wall_s": 299.2,
+  "threads": 32,
+  "worker_wall_s": 3186.9,
+  "child_process_cpu_s": 2059.6,
+  "host": "n0192.lr6",
+  "slurm": {
+   "job": "27606582",
+   "task": "17",
+   "restart": ""
+  },
+  "finished": "2026-11-07 12:38:06"
+ },
+ {
+  "chunk": 18,
+  "pairs": 2000,
+  "rows": 4000,
+  "pair_ids_sha256": "98b35f5d88bd9b435b22da185cc1af55a77f25e0b1ca1bccb815c04baea12534",
+  "rows_sha256": "2bd1fc8a1a7d000237e1d5616f05ac32dd08c663586b6bb120147eaa7949d678",
+  "input_pairs_sha256": "4436cf68a4e966fc2ea8b9748dbf2f8d9019de63b555947acafa8857b104fb15",
+  "wall_s": 271.8,
+  "threads": 32,
+  "worker_wall_s": 3554.3,
+  "child_process_cpu_s": 2092.0,
+  "host": "n0217.lr6",
+  "slurm": {
+   "job": "27606582",
+   "task": "18",
+   "restart": ""
+  },
+  "finished": "2026-11-07 12:38:07"
+ },
+ {
+  "chunk": 19,
+  "pairs": 2000,
+  "rows": 4000,
+  "pair_ids_sha256": "e91baffb823fa914e53839e9b54c23c85432bcd348afd0f1fd410140a19b7e69",
+  "rows_sha256": "d4fbf7d78a45a192a3057efe48b71f3feae90782f68a1a35155cf938291cbf08",
+  "input_pairs_sha256": "4436cf68a4e966fc2ea8b9748dbf2f8d9019de63b555947acafa8857b104fb15",
+  "wall_s": 447.0,
+  "threads": 32,
+  "worker_wall_s": 7074.9,
+  "child_process_cpu_s": 2234.9,
+  "host": "n0168.lr6",
+  "slurm": {
+   "job": "27606582",
+   "task": "19",
+   "restart": ""
+  },
+  "finished": "2026-11-07 12:42:50"
+ },
+ {
+  "chunk": 20,
+  "pairs": 2000,
+  "rows": 4000,
+  "pair_ids_sha256": "2bb687c5e78aa81009915f8168cca128c52c12725d40ac500fc712733d013827",
+  "rows_sha256": "43fc6b17b12ed15b53d845c84c045324c2cc1772a7d67e8961ad7f9ae4be6b09",
+  "input_pairs_sha256": "4436cf68a4e966fc2ea8b9748dbf2f8d9019de63b555947acafa8857b104fb15",
+  "wall_s": 338.2,
+  "threads": 32,
+  "worker_wall_s": 10576.9,
+  "child_process_cpu_s": 1980.6,
+  "host": "n0169.lr6",
+  "slurm": {
+   "job": "27606582",
+   "task": "20",
+   "restart": ""
+  },
+  "finished": "2026-11-07 12:41:02"
+ },
+ {
+  "chunk": 21,
+  "pairs": 2000,
+  "rows": 4000,
+  "pair_ids_sha256": "39d5dd6d53d99e140995607133133f3cf67dabe7ae54ce5f0f8c54877f890583",
+  "rows_sha256": "c4104b9514155647ad101ac0a25b33ba22e8ff27b932680b1bd2f0c68990fea6",
+  "input_pairs_sha256": "4436cf68a4e966fc2ea8b9748dbf2f8d9019de63b555947acafa8857b104fb15",
+  "wall_s": 200.9,
+  "threads": 32,
+  "worker_wall_s": 3606.8,
+  "child_process_cpu_s": 2067.9,
+  "host": "n0226.lr6",
+  "slurm": {
+   "job": "27606582",
+   "task": "21",
+   "restart": ""
+  },
+  "finished": "2026-11-07 12:38:03"
+ },
+ {
+  "chunk": 22,
+  "pairs": 2000,
+  "rows": 4000,
+  "pair_ids_sha256": "ea88fae5de3e6b1126547b4c2132f1c71fa8e9f9f915145332f2e9fb500c0813",
+  "rows_sha256": "b1c722b21f20082c1a76ca952b14dac22e5305371805d530c5081b9acae6a666",
+  "input_pairs_sha256": "4436cf68a4e966fc2ea8b9748dbf2f8d9019de63b555947acafa8857b104fb15",
+  "wall_s": 202.5,
+  "threads": 32,
+  "worker_wall_s": 4730.3,
+  "child_process_cpu_s": 2104.2,
+  "host": "n0227.lr6",
+  "slurm": {
+   "job": "27606582",
+   "task": "22",
+   "restart": ""
+  },
+  "finished": "2026-11-07 12:38:05"
+ },
+ {
+  "chunk": 23,
+  "pairs": 2000,
+  "rows": 4000,
+  "pair_ids_sha256": "f381a50bb691bd4202d513c8f2a9a03790a2ef8f55d8d0d6f61b8c3fedbdf07b",
+  "rows_sha256": "f3713ab44963fa62fe4b6d19af84890a9758645e21c8f29ec90564e97c679992",
+  "input_pairs_sha256": "4436cf68a4e966fc2ea8b9748dbf2f8d9019de63b555947acafa8857b104fb15",
+  "wall_s": 210.3,
+  "threads": 32,
+  "worker_wall_s": 4684.3,
+  "child_process_cpu_s": 1834.1,
+  "host": "n0340.lr6",
+  "slurm": {
+   "job": "27606582",
+   "task": "23",
+   "restart": ""
+  },
+  "finished": "2026-11-07 12:38:10"
+ },
+ {
+  "chunk": 24,
+  "pairs": 2000,
+  "rows": 4000,
+  "pair_ids_sha256": "7c568cf5a9b47921f2976a9dbd10095efba80cc72b91ddac352e4c20ed2e4c3d",
+  "rows_sha256": "a43edcc0483ea120d1a35088fc6cc3dc1a1c5145bb3b8476b792b95254def2d4",
+  "input_pairs_sha256": "4436cf68a4e966fc2ea8b9748dbf2f8d9019de63b555947acafa8857b104fb15",
+  "wall_s": 202.4,
+  "threads": 32,
+  "worker_wall_s": 3249.2,
+  "child_process_cpu_s": 2085.2,
+  "host": "n0176.lr6",
+  "slurm": {
+   "job": "27606582",
+   "task": "24",
+   "restart": ""
+  },
+  "finished": "2026-11-07 12:40:46"
+ },
+ {
+  "chunk": 25,
+  "pairs": 2000,
+  "rows": 4000,
+  "pair_ids_sha256": "c2a5e51d6c2351750c977247b7f6db948abe2adf773b410c6c6c05a6c1567512",
+  "rows_sha256": "a84100724d0f4a71e7dfce57cfd04048c325a81801336c31b286d0bee73def16",
+  "input_pairs_sha256": "4436cf68a4e966fc2ea8b9748dbf2f8d9019de63b555947acafa8857b104fb15",
+  "wall_s": 438.8,
+  "threads": 32,
+  "worker_wall_s": 6974.9,
+  "child_process_cpu_s": 2196.0,
+  "host": "n0183.lr6",
+  "slurm": {
+   "job": "27606582",
+   "task": "25",
+   "restart": ""
+  },
+  "finished": "2026-11-07 12:42:42"
+ },
+ {
+  "chunk": 26,
+  "pairs": 2000,
+  "rows": 4000,
+  "pair_ids_sha256": "b00469921a23365b93dde7d89d104c65ccf3d56efd0f64bc3d5c2bf9bc4478f3",
+  "rows_sha256": "3f8ec5f645e09cfa2c2fc13bface5e7e06b3fc7482f07e11df2cfbf646567866",
+  "input_pairs_sha256": "4436cf68a4e966fc2ea8b9748dbf2f8d9019de63b555947acafa8857b104fb15",
+  "wall_s": 205.1,
+  "threads": 32,
+  "worker_wall_s": 4028.0,
+  "child_process_cpu_s": 2164.1,
+  "host": "n0190.lr6",
+  "slurm": {
+   "job": "27606582",
+   "task": "26",
+   "restart": ""
+  },
+  "finished": "2026-11-07 12:38:07"
+ },
+ {
+  "chunk": 27,
+  "pairs": 2000,
+  "rows": 4000,
+  "pair_ids_sha256": "f30fccb63d3029384810e5b531fe44f92ff13e911a6f34c0049b57c3d541cf00",
+  "rows_sha256": "719e760e0ae60da2c064c834ad2c92eecd310caf624748aea0bb56f158185016",
+  "input_pairs_sha256": "4436cf68a4e966fc2ea8b9748dbf2f8d9019de63b555947acafa8857b104fb15",
+  "wall_s": 199.6,
+  "threads": 32,
+  "worker_wall_s": 5442.9,
+  "child_process_cpu_s": 1928.7,
+  "host": "n0098.lr6",
+  "slurm": {
+   "job": "27606582",
+   "task": "27",
+   "restart": ""
+  },
+  "finished": "2026-11-07 12:38:02"
+ },
+ {
+  "chunk": 28,
+  "pairs": 2000,
+  "rows": 4000,
+  "pair_ids_sha256": "ad9c821c872af43ae4840205ff2d63a2218662b74b288a46bcd96ba7238842cc",
+  "rows_sha256": "df4f150a3c0049190420857449b5d5f9b22cce7311628ace5d94c106755c9bc7",
+  "input_pairs_sha256": "4436cf68a4e966fc2ea8b9748dbf2f8d9019de63b555947acafa8857b104fb15",
+  "wall_s": 201.2,
+  "threads": 32,
+  "worker_wall_s": 5363.2,
+  "child_process_cpu_s": 1918.4,
+  "host": "n0341.lr6",
+  "slurm": {
+   "job": "27606582",
+   "task": "28",
+   "restart": ""
+  },
+  "finished": "2026-11-07 12:38:04"
+ },
+ {
+  "chunk": 29,
+  "pairs": 2000,
+  "rows": 4000,
+  "pair_ids_sha256": "01a5666da914792c8c4f7c6b7f0de23ebe1040fcef4a778a40f61321b204ab34",
+  "rows_sha256": "31f43d8e564b884d9b806c8632141716a1bec615ddca69258a3ec6d8d892a2f6",
+  "input_pairs_sha256": "4436cf68a4e966fc2ea8b9748dbf2f8d9019de63b555947acafa8857b104fb15",
+  "wall_s": 354.4,
+  "threads": 32,
+  "worker_wall_s": 6478.0,
+  "child_process_cpu_s": 2419.0,
+  "host": "n0078.lr6",
+  "slurm": {
+   "job": "27606582",
+   "task": "29",
+   "restart": ""
+  },
+  "finished": "2026-11-07 12:40:37"
+ },
+ {
+  "chunk": 30,
+  "pairs": 2000,
+  "rows": 4000,
+  "pair_ids_sha256": "50042a6a215ed3a74bea9da67ebc05d6926043b113ee37cc5cd42701a1877bc2",
+  "rows_sha256": "38baca121096bbab8dd88d1511a51bc9999315788ae4acb228ba75893d6c3de6",
+  "input_pairs_sha256": "4436cf68a4e966fc2ea8b9748dbf2f8d9019de63b555947acafa8857b104fb15",
+  "wall_s": 166.1,
+  "threads": 32,
+  "worker_wall_s": 3686.9,
+  "child_process_cpu_s": 2191.7,
+  "host": "n0210.lr6",
+  "slurm": {
+   "job": "27606582",
+   "task": "30",
+   "restart": ""
+  },
+  "finished": "2026-11-07 12:38:08"
+ },
+ {
+  "chunk": 31,
+  "pairs": 2000,
+  "rows": 4000,
+  "pair_ids_sha256": "3c1e9d0c05fea9d9971bd5ca98ffa7f69c3c988791f181eb3e73f09373e14466",
+  "rows_sha256": "cd291209e665e1cf22dc3a5a8717aaeb75b1021727707307815c0b840e13f82a",
+  "input_pairs_sha256": "4436cf68a4e966fc2ea8b9748dbf2f8d9019de63b555947acafa8857b104fb15",
+  "wall_s": 237.4,
+  "threads": 32,
+  "worker_wall_s": 4950.5,
+  "child_process_cpu_s": 2199.7,
+  "host": "n0218.lr6",
+  "slurm": {
+   "job": "27606582",
+   "task": "31",
+   "restart": ""
+  },
+  "finished": "2026-11-07 12:40:49"
+ },
+ {
+  "chunk": 32,
+  "pairs": 2000,
+  "rows": 4000,
+  "pair_ids_sha256": "4b7386df4e167ecaf4c2eb224a25c24ebac9c798af6bfc7f5cfa082d50c2eca2",
+  "rows_sha256": "e580158071b1016e02e2995f931a95976b24ad2123ea3a7e77aefb0b3170fa78",
+  "input_pairs_sha256": "4436cf68a4e966fc2ea8b9748dbf2f8d9019de63b555947acafa8857b104fb15",
+  "wall_s": 315.9,
+  "threads": 32,
+  "worker_wall_s": 7132.1,
+  "child_process_cpu_s": 2259.5,
+  "host": "n0128.lr6",
+  "slurm": {
+   "job": "27606582",
+   "task": "32",
+   "restart": ""
+  },
+  "finished": "2026-11-07 12:40:38"
+ },
+ {
+  "chunk": 33,
+  "pairs": 2000,
+  "rows": 4000,
+  "pair_ids_sha256": "15549b7ccb4828d5389d05efd520b8a7071fa8f507e6e68684b4fd90c322613e",
+  "rows_sha256": "fd2345488bb0424ed1503df7fbfb5de45bd094a958486ed70744ab05acf01995",
+  "input_pairs_sha256": "4436cf68a4e966fc2ea8b9748dbf2f8d9019de63b555947acafa8857b104fb15",
+  "wall_s": 204.3,
+  "threads": 32,
+  "worker_wall_s": 3940.8,
+  "child_process_cpu_s": 1827.3,
+  "host": "n0130.lr6",
+  "slurm": {
+   "job": "27606582",
+   "task": "33",
+   "restart": ""
+  },
+  "finished": "2026-11-07 12:38:07"
+ },
+ {
+  "chunk": 34,
+  "pairs": 2000,
+  "rows": 4000,
+  "pair_ids_sha256": "2ba55958618c95a962e067975682639201c69e73d7b34914eb759b977f59bd39",
+  "rows_sha256": "718a30ead64b9473dc21886466e36a4274830912d66f699938288bd9bda666d4",
+  "input_pairs_sha256": "4436cf68a4e966fc2ea8b9748dbf2f8d9019de63b555947acafa8857b104fb15",
+  "wall_s": 171.0,
+  "threads": 32,
+  "worker_wall_s": 3340.8,
+  "child_process_cpu_s": 2011.9,
+  "host": "n0050.lr6",
+  "slurm": {
+   "job": "27606582",
+   "task": "34",
+   "restart": ""
+  },
+  "finished": "2026-11-07 12:40:50"
+ },
+ {
+  "chunk": 35,
+  "pairs": 2000,
+  "rows": 4000,
+  "pair_ids_sha256": "0199210dd68c34860c7d29f1305f6b326fa231375f76268345642bf9ec965e0f",
+  "rows_sha256": "25b48a931d6bd8d756d8ea7a6e00c0be775c620842a122bda9ba71bca8e0000e",
+  "input_pairs_sha256": "4436cf68a4e966fc2ea8b9748dbf2f8d9019de63b555947acafa8857b104fb15",
+  "wall_s": 323.9,
+  "threads": 32,
+  "worker_wall_s": 7505.8,
+  "child_process_cpu_s": 2427.7,
+  "host": "n0053.lr6",
+  "slurm": {
+   "job": "27606582",
+   "task": "35",
+   "restart": ""
+  },
+  "finished": "2026-11-07 12:40:46"
+ },
+ {
+  "chunk": 36,
+  "pairs": 2000,
+  "rows": 4000,
+  "pair_ids_sha256": "d628eb969fbd20d65fbeb4eb397e4f46f2ddddf75a38f2bd1a8ea06519e3710b",
+  "rows_sha256": "32d306f8145383768bee1439f0dd576cb415e09f78a9694c660dc61af035f778",
+  "input_pairs_sha256": "4436cf68a4e966fc2ea8b9748dbf2f8d9019de63b555947acafa8857b104fb15",
+  "wall_s": 204.3,
+  "threads": 32,
+  "worker_wall_s": 5230.0,
+  "child_process_cpu_s": 2200.3,
+  "host": "n0062.lr6",
+  "slurm": {
+   "job": "27606582",
+   "task": "36",
+   "restart": ""
+  },
+  "finished": "2026-11-07 12:38:07"
+ },
+ {
+  "chunk": 37,
+  "pairs": 2000,
+  "rows": 4000,
+  "pair_ids_sha256": "af7c6e65a1695bcca13349932a3f237ad2d515b3c279af6138f06d47a90837dc",
+  "rows_sha256": "7aa9f874e8ac5f2e6470040f6b3d2671d1039bab399469134536805415b27eed",
+  "input_pairs_sha256": "4436cf68a4e966fc2ea8b9748dbf2f8d9019de63b555947acafa8857b104fb15",
+  "wall_s": 287.4,
+  "threads": 32,
+  "worker_wall_s": 4260.5,
+  "child_process_cpu_s": 2071.0,
+  "host": "n0067.lr6",
+  "slurm": {
+   "job": "27606582",
+   "task": "37",
+   "restart": ""
+  },
+  "finished": "2026-11-07 12:40:51"
+ },
+ {
+  "chunk": 38,
+  "pairs": 2000,
+  "rows": 4000,
+  "pair_ids_sha256": "7278ce83cb002b8b03bbd2cb38cf7918e151306ed797c82e2637f460591084c2",
+  "rows_sha256": "51f072435463ac0ade623864ee66b3e0e2f5988c8a42b2bf95199fd0be4081e7",
+  "input_pairs_sha256": "4436cf68a4e966fc2ea8b9748dbf2f8d9019de63b555947acafa8857b104fb15",
+  "wall_s": 105.3,
+  "threads": 32,
+  "worker_wall_s": 3034.9,
+  "child_process_cpu_s": 2032.8,
+  "host": "n0175.lr6",
+  "slurm": {
+   "job": "27606582",
+   "task": "38",
+   "restart": ""
+  },
+  "finished": "2026-11-07 12:41:39"
+ },
+ {
+  "chunk": 39,
+  "pairs": 2000,
+  "rows": 4000,
+  "pair_ids_sha256": "4a2bd4a9f50a8a043fcad04d822b25dd0b410ad432c23ff02e9fcf7fbdd3257e",
+  "rows_sha256": "105f4540181052f451899701588c8d19a83c4b0141191a7a32a5f974109033af",
+  "input_pairs_sha256": "4436cf68a4e966fc2ea8b9748dbf2f8d9019de63b555947acafa8857b104fb15",
+  "wall_s": 111.6,
+  "threads": 32,
+  "worker_wall_s": 3278.4,
+  "child_process_cpu_s": 2101.8,
+  "host": "n0221.lr6",
+  "slurm": {
+   "job": "27606582",
+   "task": "39",
+   "restart": ""
+  },
+  "finished": "2026-11-07 12:41:22"
+ },
+ {
+  "chunk": 40,
+  "pairs": 2000,
+  "rows": 4000,
+  "pair_ids_sha256": "1fdb0c8b27b02785a75f983044da0361a2d2b005bc1644f4c35dab2857a0db78",
+  "rows_sha256": "f97731e6fe24557f6d2e427cd543e1d2ca724fba1d374ecf167e405869ceabc3",
+  "input_pairs_sha256": "4436cf68a4e966fc2ea8b9748dbf2f8d9019de63b555947acafa8857b104fb15",
+  "wall_s": 165.6,
+  "threads": 32,
+  "worker_wall_s": 5079.6,
+  "child_process_cpu_s": 1988.9,
+  "host": "n0003.lr6",
+  "slurm": {
+   "job": "27606582",
+   "task": "40",
+   "restart": ""
+  },
+  "finished": "2026-11-07 12:42:15"
+ },
+ {
+  "chunk": 41,
+  "pairs": 2000,
+  "rows": 4000,
+  "pair_ids_sha256": "8b3b41c1b547e32baa739358c64839802ceaf5743ede3225ff1056a382c54e1b",
+  "rows_sha256": "7bce58bd4741338ff4209eb046ee187de8a8649e55e603433d778407ad61fe15",
+  "input_pairs_sha256": "4436cf68a4e966fc2ea8b9748dbf2f8d9019de63b555947acafa8857b104fb15",
+  "wall_s": 118.7,
+  "threads": 32,
+  "worker_wall_s": 3405.0,
+  "child_process_cpu_s": 2118.9,
+  "host": "n0131.lr6",
+  "slurm": {
+   "job": "27606582",
+   "task": "41",
+   "restart": ""
+  },
+  "finished": "2026-11-07 12:42:27"
+ },
+ {
+  "chunk": 42,
+  "pairs": 2000,
+  "rows": 4000,
+  "pair_ids_sha256": "10c2d42b0b841dcceeb632a6da0109ecec8bca1e4b7f12a77df08a0d3226dec8",
+  "rows_sha256": "6cc1bf95f0d39d6ef66cb4bb1b79efea98da0880861d413acb5e2d649901c55b",
+  "input_pairs_sha256": "4436cf68a4e966fc2ea8b9748dbf2f8d9019de63b555947acafa8857b104fb15",
+  "wall_s": 132.2,
+  "threads": 32,
+  "worker_wall_s": 3890.9,
+  "child_process_cpu_s": 1882.5,
+  "host": "n0003.lr6",
+  "slurm": {
+   "job": "27608032",
+   "task": "42",
+   "restart": ""
+  },
+  "finished": "2026-11-07 12:53:34"
+ },
+ {
+  "chunk": 43,
+  "pairs": 2000,
+  "rows": 4000,
+  "pair_ids_sha256": "82f5fb47f0e4b3ffa78eb72a09d9a8a6ec9faadac4ec86ba754b834df315d01b",
+  "rows_sha256": "55c0645096d92a6de54ee792d3a53a04ca186f127842d8e627e144ec90fc1607",
+  "input_pairs_sha256": "4436cf68a4e966fc2ea8b9748dbf2f8d9019de63b555947acafa8857b104fb15",
+  "wall_s": 187.0,
+  "threads": 32,
+  "worker_wall_s": 5683.1,
+  "child_process_cpu_s": 2656.4,
+  "host": "n0043.lr6",
+  "slurm": {
+   "job": "27606582",
+   "task": "43",
+   "restart": ""
+  },
+  "finished": "2026-11-07 12:41:07"
+ },
+ {
+  "chunk": 44,
+  "pairs": 2000,
+  "rows": 4000,
+  "pair_ids_sha256": "afbb621af0cf13c000e40f2397aabe0cf1570729f9f0397412478857f0d49803",
+  "rows_sha256": "b2ad35b5f210255c21fbfa7f231828a807b40432296cc5df79881d33b1943e4e",
+  "input_pairs_sha256": "4436cf68a4e966fc2ea8b9748dbf2f8d9019de63b555947acafa8857b104fb15",
+  "wall_s": 117.1,
+  "threads": 32,
+  "worker_wall_s": 3410.4,
+  "child_process_cpu_s": 2090.8,
+  "host": "n0126.lr6",
+  "slurm": {
+   "job": "27606582",
+   "task": "44",
+   "restart": ""
+  },
+  "finished": "2026-11-07 12:41:51"
+ },
+ {
+  "chunk": 45,
+  "pairs": 2000,
+  "rows": 4000,
+  "pair_ids_sha256": "f63f71870ebc25a74611c61b0cbd27871226050c74d902d9f7be52fea5f20adc",
+  "rows_sha256": "88bd8e13a41793454c8a0032db88b47e3f583a763aa3ab3e7a780ff22655ddcd",
+  "input_pairs_sha256": "4436cf68a4e966fc2ea8b9748dbf2f8d9019de63b555947acafa8857b104fb15",
+  "wall_s": 114.8,
+  "threads": 32,
+  "worker_wall_s": 3085.3,
+  "child_process_cpu_s": 1760.5,
+  "host": "n0413.lr6",
+  "slurm": {
+   "job": "27606582",
+   "task": "45",
+   "restart": ""
+  },
+  "finished": "2026-11-07 12:40:51"
+ },
+ {
+  "chunk": 46,
+  "pairs": 2000,
+  "rows": 4000,
+  "pair_ids_sha256": "d2ab0e426020efc2ec0304c92e0745779c452d1c7de1f8c130220b904a712ac7",
+  "rows_sha256": "badd5911b08b12d640bb3b0b56e3fa028f986f2bafdfd09be09b19222292db15",
+  "input_pairs_sha256": "4436cf68a4e966fc2ea8b9748dbf2f8d9019de63b555947acafa8857b104fb15",
+  "wall_s": 146.6,
+  "threads": 32,
+  "worker_wall_s": 3770.8,
+  "child_process_cpu_s": 2055.1,
+  "host": "n0031.lr6",
+  "slurm": {
+   "job": "27606582",
+   "task": "46",
+   "restart": ""
+  },
+  "finished": "2026-11-07 12:40:48"
+ },
+ {
+  "chunk": 47,
+  "pairs": 1328,
+  "rows": 2656,
+  "pair_ids_sha256": "0cf62e4b2ca596b0ab1602258c55d1ab690ad0a8d1f9e06a22df4f8ec78a41a3",
+  "rows_sha256": "b7b4723acbe7c37ad6febe3708bf8ac1f471dc77c219337885fb4fef03c019c0",
+  "input_pairs_sha256": "4436cf68a4e966fc2ea8b9748dbf2f8d9019de63b555947acafa8857b104fb15",
+  "wall_s": 120.5,
+  "threads": 32,
+  "worker_wall_s": 3492.3,
+  "child_process_cpu_s": 1364.7,
+  "host": "n0261.lr6",
+  "slurm": {
+   "job": "27606582",
+   "task": "47",
+   "restart": ""
+  },
+  "finished": "2026-11-07 12:42:18"
+ }
+]

@@ -1,0 +1,110 @@
+{
+  "version": "s6_site_groups_v0.1",
+  "subset": "delftia",
+  "evidence_source": "assembly_only",
+  "scope": "target_lt2500",
+  "parameters": {
+    "N_host": 5,
+    "K_near": 3,
+    "min_support": 2,
+    "max_scan": 15,
+    "mobile_skip": "product keyword only",
+    "mobile_hints": [
+      "integrase_recombinase_resolvase",
+      "phage_like",
+      "transposase_or_IS"
+    ]
+  },
+  "site_groups_are_independent_insertion_events": false,
+  "production_ready": false,
+  "structures": {
+    "single_gene": {
+      "cores": 79,
+      "occurrences": 492,
+      "assemblies": 7,
+      "occurrence_status": {
+        "site_group": 269,
+        "unresolved": 142,
+        "single_observation_site": 81
+      },
+      "unresolved_reasons": {
+        "unresolved_pairs": 69,
+        "conflicting_sides": 26,
+        "conflict_in_component": 41,
+        "ambiguous_multiple_correspondence": 6
+      },
+      "multi_observation_site_groups": 82,
+      "site_group_size": {
+        "5": 8,
+        "2": 27,
+        "3": 33,
+        "7": 2,
+        "4": 5,
+        "6": 7
+      },
+      "single_observation_sites": 81,
+      "cores_with_site_group": 52,
+      "cores_with_assembly_2plus_supported_positions": 21,
+      "pair_verdicts": {
+        "same_position_candidate": 464,
+        "unresolved": 459,
+        "conflicting_sides": 105,
+        "different_position_candidate": 513,
+        "different_position_same_assembly": 406
+      },
+      "pairs_ambiguous_multiple_correspondence": 14,
+      "pairs_repeated_flank_same_assembly": 7,
+      "stable_end_candidates": 214,
+      "stable_end_strictly_lt2500": 214,
+      "stable_end_single_partner": 116,
+      "stable_end_in_site_group": 115,
+      "boundary_unknown": 160
+    },
+    "two_gene": {
+      "cores": 27,
+      "occurrences": 127,
+      "assemblies": 7,
+      "occurrence_status": {
+        "site_group": 84,
+        "unresolved": 34,
+        "single_observation_site": 9
+      },
+      "unresolved_reasons": {
+        "unresolved_pairs": 19,
+        "conflicting_sides": 15
+      },
+      "multi_observation_site_groups": 27,
+      "site_group_size": {
+        "3": 11,
+        "2": 10,
+        "7": 2,
+        "4": 3,
+        "5": 1
+      },
+      "single_observation_sites": 9,
+      "cores_with_site_group": 22,
+      "cores_with_assembly_2plus_supported_positions": 2,
+      "pair_verdicts": {
+        "conflicting_sides": 36,
+        "same_position_candidate": 113,
+        "unresolved": 96,
+        "different_position_candidate": 53,
+        "different_position_same_assembly": 9
+      },
+      "pairs_ambiguous_multiple_correspondence": 0,
+      "pairs_repeated_flank_same_assembly": 0,
+      "stable_end_candidates": 40,
+      "stable_end_strictly_lt2500": 40,
+      "stable_end_single_partner": 30,
+      "stable_end_in_site_group": 25,
+      "boundary_unknown": 57
+    }
+  },
+  "cases": [
+    "PF_4b70bb8e2b9d",
+    "PF_10b9be14a143-,PF_1180b16eba28-",
+    "PF_3070024975f6",
+    "PF_093d47562e00"
+  ],
+  "case_rule": "Fixed rule: per structure, the core with the most multi-observation site groups (ties: occurrences in groups,\n    then key); the mobile-keyword single-gene core with the most site groups; the single-gene core with the most\n    assemblies holding >= 2 supported positions. A core already picked is skipped for the next slot."
+}

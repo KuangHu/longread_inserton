@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="420" font-family="sans-serif">
+<rect width="100%" height="100%" fill="white"/>
+<text x="4" y="16" font-size="12">L_37a7565ccf18  SAMD00623152  core 1243 bp  two_flank_anchored  support all_calls_anchored  boundary direction_dependent  tandem False  core copies carrier/partner 1/0</text>
+<line x1="474.2" y1="30" x2="474.2" y2="412" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<line x1="645.8" y1="30" x2="645.8" y2="412" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<text x="4" y="64" font-size="11" font-weight="bold">SAMD00623152 NZ_AP028664.1 (carrier)</text>
+<line x1="60" y1="100" x2="1060" y2="100" stroke="#888"/>
+<rect x="336.1" y="132" width="138.1" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="405.2" y="152" font-size="9" text-anchor="middle">U</text>
+<rect x="474.2" y="132" width="171.6" height="8" fill="#e76f51" opacity="0.55"/>
+<text x="560.0" y="152" font-size="9" text-anchor="middle">core 1243</text>
+<rect x="645.8" y="132" width="138.1" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="714.8" y="152" font-size="9" text-anchor="middle">D</text>
+<polygon points="60.0,109 66.0,103 141.6,103 141.6,115 66.0,115" fill="#3b6fb6"><title>TSUP family transporter 4854356-4855115 -</title></polygon>
+<text x="60.0" y="125" font-size="8" fill="#333">TSUP family trans</text>
+<polygon points="200.1,85 235.6,85 241.6,91 235.6,97 200.1,97" fill="#3b6fb6"><title>hypothetical protein 4855539-4855839 +</title></polygon>
+<text x="200.1" y="81" font-size="8" fill="#333">hypotheti</text>
+<polygon points="242.9,109 248.9,103 474.1,103 474.1,115 248.9,115" fill="#3b6fb6"><title>thiamine pyrophosphate-binding protein 4855849-4857523 -</title></polygon>
+<text x="242.9" y="125" font-size="8" fill="#333">thiamine pyrophosphate-binding protein</text>
+<polygon points="481.4,109 487.4,103 653.3,103 653.3,115 487.4,115" fill="#3b6fb6"><title>pyridoxal phosphate-dependent aminotrans 4857576-4858821 -</title></polygon>
+<text x="481.4" y="125" font-size="8" fill="#333">pyridoxal phosphate-dependent aminotr</text>
+<polygon points="652.7,109 658.7,103 777.4,103 777.4,115 658.7,115" fill="#3b6fb6"><title>amino acid ABC transporter substrate-bin 4858817-4859720 -</title></polygon>
+<polygon points="790.8,109 796.8,103 1003.3,103 1003.3,115 796.8,115" fill="#3b6fb6"><title>aldehyde dehydrogenase family protein 4859817-4861356 -</title></polygon>
+<text x="790.8" y="125" font-size="8" fill="#333">aldehyde dehydrogenase family protein</text>
+<polygon points="1026.5,109 1032.5,103 1060.0,103 1060.0,115 1032.5,115" fill="#3b6fb6"><title>IclR family transcriptional regulator 4861524-4862385 -</title></polygon>
+<text x="1026.5" y="125" font-size="8" fill="#333">IclR fa</text>
+<text x="60" y="166" font-size="9" fill="#666">NZ_AP028664.1:4854524-4861767  core 4857524-4858767</text>
+<text x="4" y="184" font-size="11" font-weight="bold">SAMN51281027 NZ_CM191384.1 (partner, - strand, two_flank_anchored, pair P00111)</text>
+<line x1="60" y1="220" x2="1060" y2="220" stroke="#888"/>
+<rect x="336.1" y="252" width="138.1" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="405.2" y="272" font-size="9" text-anchor="middle">U'</text>
+<rect x="649.1" y="252" width="138.1" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="718.2" y="272" font-size="9" text-anchor="middle">D'</text>
+<rect x="474.2" y="252" width="174.9" height="8" fill="#9b5de5" opacity="0.55"/>
+<text x="561.7" y="272" font-size="9" text-anchor="middle">other side 30</text>
+<polygon points="1040.0,205 1054.0,205 1060.0,211 1054.0,217 1040.0,217" fill="#3b6fb6"><title>hypothetical protein 1270405-1270906 +</title></polygon>
+<polygon points="790.9,229 796.9,223 1003.4,223 1003.4,235 796.9,235" fill="#3b6fb6"><title>L-piperidine-6-carboxylate dehydrogenase 1271171-1272710 -</title></polygon>
+<text x="790.9" y="245" font-size="8" fill="#333">L-piperidine-6-carboxylate dehydrogenase</text>
+<polygon points="652.7,229 658.7,223 777.8,223 777.8,235 658.7,235" fill="#3b6fb6"><title>amino acid ABC transporter substrate-bin 1272805-1273711 -</title></polygon>
+<polygon points="242.9,229 248.9,223 474.1,223 474.1,235 248.9,235" fill="#3b6fb6"><title>thiamine pyrophosphate-binding protein 1273768-1275442 -</title></polygon>
+<polygon points="198.8,205 234.2,205 240.2,211 234.2,217 198.8,217" fill="#3b6fb6"><title>hypothetical protein 1275462-1275762 +</title></polygon>
+<text x="198.8" y="201" font-size="8" fill="#333">hypotheti</text>
+<polygon points="60.0,229 66.0,223 140.2,223 140.2,235 66.0,235" fill="#3b6fb6"><title>TSUP family transporter 1276186-1276945 -</title></polygon>
+<text x="60" y="286" font-size="9" fill="#666">NZ_CM191384.1 site 1273737  other-side gap 30 bp  this call's core 4857524-4858791</text>
+<text x="4" y="304" font-size="11" font-weight="bold">SAMN51281027 NZ_CM191384.1 (partner, - strand, two_flank_anchored, pair P00111)</text>
+<line x1="60" y1="340" x2="1060" y2="340" stroke="#888"/>
+<rect x="336.1" y="372" width="138.1" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="405.2" y="392" font-size="9" text-anchor="middle">U'</text>
+<rect x="645.8" y="372" width="138.1" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="714.8" y="392" font-size="9" text-anchor="middle">D'</text>
+<rect x="474.2" y="372" width="171.6" height="8" fill="#9b5de5" opacity="0.55"/>
+<text x="560.0" y="392" font-size="9" text-anchor="middle">other side 1</text>
+<polygon points="1040.7,325 1054.0,325 1060.0,331 1054.0,337 1040.7,337" fill="#3b6fb6"><title>hypothetical protein 1270405-1270906 +</title></polygon>
+<polygon points="791.6,349 797.6,343 1004.1,343 1004.1,355 797.6,355" fill="#3b6fb6"><title>L-piperidine-6-carboxylate dehydrogenase 1271171-1272710 -</title></polygon>
+<text x="791.6" y="365" font-size="8" fill="#333">L-piperidine-6-carboxylate dehydrogenase</text>
+<polygon points="653.4,349 659.4,343 778.5,343 778.5,355 659.4,355" fill="#3b6fb6"><title>amino acid ABC transporter substrate-bin 1272805-1273711 -</title></polygon>
+<polygon points="242.9,349 248.9,343 474.1,343 474.1,355 248.9,355" fill="#3b6fb6"><title>thiamine pyrophosphate-binding protein 1273768-1275442 -</title></polygon>
+<polygon points="198.8,325 234.2,325 240.2,331 234.2,337 198.8,337" fill="#3b6fb6"><title>hypothetical protein 1275462-1275762 +</title></polygon>
+<text x="198.8" y="321" font-size="8" fill="#333">hypotheti</text>
+<polygon points="60.0,349 66.0,343 140.2,343 140.2,355 66.0,355" fill="#3b6fb6"><title>TSUP family transporter 1276186-1276945 -</title></polygon>
+<text x="60" y="406" font-size="9" fill="#666">NZ_CM191384.1 site 1273766  other-side gap 1 bp  this call's core 4857524-4858767</text>
+</svg>

@@ -1,0 +1,48 @@
+{
+  "run": {
+    "run": "ERR4184112",
+    "sample_id": "SAMEA6863356",
+    "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR418/002/ERR4184112/ERR4184112_1.fastq.gz",
+    "fastq_bytes": 3150125496,
+    "fastq_md5": "b0d4c2d7629656cb894787d38316a836",
+    "platform": "OXFORD_NANOPORE",
+    "archive_base_count": 3186912924,
+    "archive_read_count": 1146027
+  },
+  "download_started": "2026-10-25T20:24:27-0700",
+  "local_file": "/global/scratch/users/kh36969/longread_callout/data/reads/ERR4184112/ERR4184112_1.fastq.gz",
+  "bytes": 3150125496,
+  "md5": "b0d4c2d7629656cb894787d38316a836",
+  "sha256": "c282d5d6fd91244c9c23a81a1d332bfc2c8f0325fa557d178a51b6baf2447be6",
+  "rejected_downloads": [],
+  "spots_absent_from_fastq": 0,
+  "summary": {
+    "records": 1146027,
+    "bases": 3186912924,
+    "read_unit_counts": {
+      "other_name": 1146027
+    },
+    "distinct_zmws": null,
+    "distinct_sra_spots": 1146027,
+    "max_records_per_spot": 1,
+    "placeholder_quality_records": 0,
+    "example_headers": [
+      "@ERR4184112.1 d475e9b7-7ecb-41d0-a208-3e0f32ebdd54/1",
+      "@ERR4184112.2 a092c2d0-960b-4791-9b1e-c22519f9a542/1",
+      "@ERR4184112.3 d2ced074-d9ef-4402-a21b-71714beb02ba/1",
+      "@ERR4184112.4 8f2ffbc4-66a5-465c-8525-c3f0bfd6aec8/1"
+    ],
+    "mean_length": 2780.8,
+    "median_length": 862,
+    "max_length": 118122,
+    "n50": 8547,
+    "molecule_grouping": "one_record_per_molecule"
+  },
+  "checks": {
+    "bytes_match": true,
+    "md5_match": true,
+    "spot_count_match": true,
+    "base_count_match": true
+  },
+  "status": "verified"
+}

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="300" font-family="sans-serif">
+<rect width="100%" height="100%" fill="white"/>
+<text x="4" y="16" font-size="12">L_10c64698c4ff  SAMEA120314636  core 1049 bp  two_flank_anchored  support all_calls_anchored  boundary exact  tandem False  core copies carrier/partner 3/1</text>
+<line x1="485.6" y1="30" x2="485.6" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<line x1="634.4" y1="30" x2="634.4" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<text x="4" y="64" font-size="11" font-weight="bold">SAMEA120314636 NZ_OZ344929.1 (carrier)</text>
+<line x1="60" y1="100" x2="1060" y2="100" stroke="#888"/>
+<rect x="343.7" y="132" width="141.9" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="414.7" y="152" font-size="9" text-anchor="middle">U</text>
+<rect x="485.6" y="132" width="148.8" height="8" fill="#e76f51" opacity="0.55"/>
+<text x="560.0" y="152" font-size="9" text-anchor="middle">core 1049</text>
+<rect x="634.4" y="132" width="141.9" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="705.3" y="152" font-size="9" text-anchor="middle">D</text>
+<polygon points="60.0,109 66.0,103 279.2,103 279.2,115 66.0,115" fill="#3b6fb6"><title>arylsulfatase 2261748-2264109 -</title></polygon>
+<text x="60.0" y="125" font-size="8" fill="#333">arylsulfatase</text>
+<polygon points="286.7,109 292.7,103 426.3,103 426.3,115 292.7,115" fill="#3b6fb6"><title>Bug family tripartite tricarboxylate tra 2264162-2265146 -</title></polygon>
+<text x="286.7" y="125" font-size="8" fill="#333">Bug family tripartite tricarbo</text>
+<polygon points="461.0,109 467.0,103 484.5,103 484.5,115 467.0,115" fill="#999"><title>acyl-CoA dehydrogenase family protein 2265391-2265556 -</title></polygon>
+<polygon points="485.7,109 491.7,103 620.6,103 620.6,115 491.7,115" fill="#3b6fb6"><title>IS481 family transposase 2265565-2266516 -</title></polygon>
+<text x="485.7" y="125" font-size="8" fill="#333">IS481 family transposase</text>
+<polygon points="634.5,109 640.5,103 1019.3,103 1019.3,115 640.5,115" fill="#3b6fb6"><title>FAD-dependent oxidoreductase 2266614-2269326 -</title></polygon>
+<text x="634.5" y="125" font-size="8" fill="#333">FAD-dependent oxidoreductase</text>
+<polygon points="1049.9,109 1055.9,103 1060.0,103 1060.0,115 1055.9,115" fill="#3b6fb6"><title>winged helix-turn-helix domain-containin 2269542-2270199 -</title></polygon>
+<text x="60" y="166" font-size="9" fill="#666">NZ_OZ344929.1:2262564-2269613  core 2265564-2266613</text>
+<text x="4" y="184" font-size="11" font-weight="bold">SAMN51658614 NZ_CM191347.1 (partner, + strand, two_flank_anchored, pair P00351)</text>
+<line x1="60" y1="220" x2="1060" y2="220" stroke="#888"/>
+<rect x="343.7" y="252" width="141.9" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="414.7" y="272" font-size="9" text-anchor="middle">U'</text>
+<rect x="634.4" y="252" width="141.9" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="705.3" y="272" font-size="9" text-anchor="middle">D'</text>
+<rect x="485.6" y="252" width="148.8" height="8" fill="#ffffff" opacity="0.55"/>
+<polygon points="60.0,229 66.0,223 279.0,223 279.0,235 66.0,235" fill="#3b6fb6"><title>arylsulfatase 2404423-2406784 -</title></polygon>
+<text x="60.0" y="245" font-size="8" fill="#333">arylsulfatase</text>
+<polygon points="286.8,229 292.8,223 426.4,223 426.4,235 292.8,235" fill="#3b6fb6"><title>Bug family tripartite tricarboxylate tra 2406839-2407823 -</title></polygon>
+<text x="286.8" y="245" font-size="8" fill="#333">Bug family tripartite tricarbo</text>
+<polygon points="461.0,229 467.0,223 484.5,223 484.5,235 467.0,235" fill="#999"><title>acyl-CoA dehydrogenase family protein 2408067-2408232 -</title></polygon>
+<polygon points="634.5,229 640.5,223 1019.3,223 1019.3,235 640.5,235" fill="#3b6fb6"><title>FAD-dependent oxidoreductase 2408241-2410953 -</title></polygon>
+<text x="634.5" y="245" font-size="8" fill="#333">FAD-dependent oxidoreductase</text>
+<polygon points="1049.9,229 1055.9,223 1060.0,223 1060.0,235 1055.9,235" fill="#3b6fb6"><title>winged helix-turn-helix domain-containin 2411169-2411826 -</title></polygon>
+<text x="60" y="286" font-size="9" fill="#666">NZ_CM191347.1 site 2408240  other-side gap 0 bp  this call's core 2265564-2266613</text>
+<rect x="485.6" y="218" width="148.8" height="4" fill="#f4f4f4"/><text x="560.0" y="272" font-size="9" text-anchor="middle" fill="#a5372f">empty site</text>
+</svg>

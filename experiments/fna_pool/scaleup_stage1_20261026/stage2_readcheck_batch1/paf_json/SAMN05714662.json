@@ -1,0 +1,19 @@
+{
+ "sample": "SAMN05714662",
+ "runs": [
+  {
+   "run": "SRR4096857",
+   "read_type": "pacbio_clr_subreads",
+   "preset": "map-pb",
+   "sha256": "fae924b8b2e004278bd5f91d1a2a863642e87fd9fa34f0f4a1a449f22c142528"
+  }
+ ],
+ "minimap2_args": [
+  "-c",
+  "--secondary=yes",
+  "-N",
+  "100",
+  "-p",
+  "0.3"
+ ]
+}

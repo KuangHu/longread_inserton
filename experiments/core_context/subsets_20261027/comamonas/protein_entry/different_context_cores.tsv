@@ -1,0 +1,127 @@
+scope	structure	core_key	occurrences	samples	max_copies_in_one_sample	context_classes_provisional	context_classes_linked_by_different_candidate	different_context_candidate	similar_context	one_side_shared_unresolved	insufficient_context_labels	span_range	spacing_range	product_hint	graph_overlap	products
+all	single_gene	PF_147add17340c	29	3	11	29	26	323	0	2	81	1161..1221		transposase_or_IS	graph_diff_group=29	ISL3 family transposase
+all	single_gene	PF_4a2352cf6318	6	2	4	6	6	15	0	0	0	966..987		transposase_or_IS	graph_diff_group=6	IS481 family transposase
+all	single_gene	PF_2d92c93a9d2c	8	4	4	7	5	9	1	1	17	255..255		hypothetical	graph_diff_group=3,no_graph_block_50_2500=5	hypothetical protein
+all	single_gene	PF_8e9360ea03b6	5	1	5	5	5	10	0	0	0	749..749		transposase_or_IS	graph_diff_group=5	IS5 family transposase
+all	single_gene	PF_a48c4c09c8c3	7	1	7	7	5	10	0	0	11	933..933		transposase_or_IS	graph_diff_group=7	IS5-like element ISAav2 family transposase
+all	single_gene	PF_d0a01e3116b8	5	1	5	5	5	10	0	0	0	1379..1379		transposase_or_IS	graph_diff_group=5	IS3 family transposase
+all	single_gene	PF_13ebd7f3de8d	9	5	2	5	4	15	6	7	8	1449..1449		other	graph_diff_group=9	aldehyde dehydrogenase family protein
+all	single_gene	PF_eed8648a18cd	9	4	4	8	4	6	1	0	29	1536..1540		transposase_or_IS	graph_diff_group=9	IS3 family transposase
+all	single_gene	PF_bf588374787a	4	3	2	4	4	4	0	2	0	351..351		other	no_graph_block_50_2500=4	DUF2958 domain-containing protein
+all	single_gene	PF_99b55ca42871	5	1	5	4	4	9	1	0	0	1227..1227		transposase_or_IS	graph_block_other=5	IS256 family transposase
+all	single_gene	PF_b024bc88aa80	4	1	4	4	4	6	0	0	0	1133..1133		transposase_or_IS	graph_diff_group=4	IS3 family transposase
+all	single_gene	PF_384fb1b6b909	8	5	2	3	3	19	9	0	0	1095..1095		other	graph_diff_group=7,no_graph_block_50_2500=1	porin
+all	single_gene	PF_c0f4e1cdb21e	6	5	2	3	3	5	6	4	0	1038..1038		other	graph_diff_group=2,no_graph_block_50_2500=4	porin
+all	single_gene	PF_645a49ceb0cc	7	4	3	7	3	3	0	0	18	624..636		integrase_recombinase_resolvase	graph_diff_group=7	tyrosine-type recombinase/integrase
+all	single_gene	PF_f611ee382c85	3	2	2	3	3	2	0	1	0	261..261		hypothetical	no_graph_block_50_2500=3	hypothetical protein
+all	single_gene	PF_03a494a7c6c2	4	1	4	4	3	3	0	0	3	1151..1151		transposase_or_IS	graph_diff_group=4	IS3 family transposase
+all	single_gene	PF_03926f5d30bd	5	5	1	2	2	4	6	0	0	405..405		other	no_graph_block_50_2500=5	group II truncated hemoglobin
+all	single_gene	PF_0e240dc00acb	5	5	1	2	2	2	6	2	0	1116..1122		other	graph_block_other=4,no_graph_block_50_2500=1	S-(hydroxymethyl)glutathione dehydrogenase/class III alcohol dehydrogenase
+all	single_gene	PF_1195cb1b5d40	5	5	1	2	2	4	6	0	0	2007..2007		other	no_graph_block_50_2500=5	peptidase U32 family protein
+all	single_gene	PF_1659e130c333	5	5	1	2	2	4	6	0	0	456..456		other	no_graph_block_50_2500=5	Lrp/AsnC family transcriptional regulator
+all	single_gene	PF_1d67a41614c1	5	5	1	2	2	4	6	0	0	2193..2193		other	no_graph_block_50_2500=5	malate synthase G
+all	single_gene	PF_2c485cf73dad	5	5	1	3	2	3	3	0	4	1440..1443		other	graph_diff_group=4,no_graph_block_50_2500=1	exodeoxyribonuclease I
+all	single_gene	PF_50316357292f	5	5	1	2	2	4	6	0	0	1443..1452		other	no_graph_block_50_2500=5	NAD-dependent succinate-semialdehyde dehydrogenase
+all	single_gene	PF_51bb7d35e10d	5	5	1	2	2	4	6	0	0	486..486		other	no_graph_block_50_2500=5	FKBP-type peptidyl-prolyl cis-trans isomerase
+all	single_gene	PF_54619673b5e6	5	5	1	2	2	3	6	1	0	2310..2310		other	no_graph_block_50_2500=5	NADP-dependent malic enzyme
+all	single_gene	PF_6ea7376c689e	5	5	1	2	2	3	6	0	1	681..681		hypothetical	graph_block_other=4,no_graph_block_50_2500=1	hypothetical protein
+all	single_gene	PF_7b460066e9f8	5	5	1	4	2	1	1	0	8	1476..1476		other	graph_diff_group=4,no_graph_block_50_2500=1	amino acid permease
+all	single_gene	PF_85dd2f8c7584	6	5	2	2	2	9	6	0	0	480..495		other	no_graph_block_50_2500=6	nucleoside deaminase
+all	single_gene	PF_8fa26f1a7993	5	5	1	2	2	4	6	0	0	783..801		other	no_graph_block_50_2500=5	class D beta-lactamase
+all	single_gene	PF_a2bde094529f	5	5	1	5	2	1	0	3	6	2232..2235		other	no_graph_block_50_2500=5	NADP-dependent isocitrate dehydrogenase
+all	single_gene	PF_aada76694ccc	5	5	1	2	2	4	6	0	0	1452..1452		other	no_graph_block_50_2500=5	aldehyde dehydrogenase
+all	single_gene	PF_b8730567e0b5	5	5	1	3	2	3	3	0	4	1095..1098		other	graph_block_other=4,no_graph_block_50_2500=1	redox-regulated ATPase YchF
+all	single_gene	PF_d4c43788b157	5	5	1	2	2	4	6	0	0	1059..1065		other	graph_block_other=4,no_graph_block_50_2500=1	3-keto-5-aminohexanoate cleavage protein
+all	single_gene	PF_f0f0133870d5	5	5	1	2	2	4	6	0	0	1407..1410		translation_or_ribosomal	no_graph_block_50_2500=5	30S ribosomal protein S12 methylthiotransferase RimO
+all	single_gene	PF_feb6068c84b1	10	5	2	2	2	25	20	0	0	1191..1191		translation_or_ribosomal	graph_diff_group=10	elongation factor Tu
+all	single_gene	PF_02ae4ce34ab8	4	4	1	2	2	3	3	0	0	609..609		other	graph_block_other=3,no_graph_block_50_2500=1	DUF4337 domain-containing protein
+all	single_gene	PF_1025c2929911	6	4	2	2	2	6	7	0	2	1545..1545		other	graph_diff_group=6	PAS domain-containing methyl-accepting chemotaxis protein
+all	single_gene	PF_638667407a1b	4	4	1	2	2	3	3	0	0	1386..1386		other	graph_block_other=3,no_graph_block_50_2500=1	GntP family permease
+all	single_gene	PF_9ddfcd1128db	4	4	1	2	2	3	3	0	0	2214..2238		other	no_graph_block_50_2500=4	AsmA family protein
+all	single_gene	PF_b7e31f186694	4	4	1	2	2	3	3	0	0	417..465		other	graph_block_other=3,no_graph_block_50_2500=1	lactoylglutathione lyase
+all	single_gene	PF_e2e705caf61f	12	4	4	2	2	32	34	0	0	936..1038		other	graph_diff_group=7,no_graph_block_50_2500=5	recombination-associated protein RdgC
+all	single_gene	PF_08d1b4d728e3	4	3	2	3	2	1	1	0	4	507..519		other	graph_block_other=4	GNAT family N-acetyltransferase
+all	single_gene	PF_70de8d132dee	3	3	1	3	2	1	0	0	2	441..441		hypothetical	graph_block_other=3	hypothetical protein
+all	single_gene	PF_183173e8d2b2	2	2	1	2	2	1	0	0	0	2958..2970		other	no_graph_block_50_2500=2	DUF927 domain-containing protein
+all	single_gene	PF_22359fb227a4	2	2	1	2	2	1	0	0	0	1077..1077		transposase_or_IS	graph_block_other=2	IS110 family RNA-guided transposase
+all	single_gene	PF_5e5e5f7369b5	2	2	1	2	2	1	0	0	0	627..627		other	graph_diff_group=2	LysE family translocator
+all	single_gene	PF_88fe58d1b2ba	2	2	1	2	2	1	0	0	0	1251..1251		integrase_recombinase_resolvase	no_graph_block_50_2500=2	tyrosine-type recombinase/integrase
+all	single_gene	PF_91668f223a7c	4	2	3	4	2	1	0	0	5	1014..1041		transposase_or_IS	graph_diff_group=4	IS481 family transposase
+all	single_gene	PF_c6f21ee61fbc	2	2	1	2	2	1	0	0	0	975..975		other	graph_diff_group=2	magnesium/cobalt transporter CorA
+all	single_gene	PF_e96498f6ce6d	2	2	1	2	2	1	0	0	0	1170..1170		integrase_recombinase_resolvase	graph_diff_group=2	tyrosine-type recombinase/integrase
+all	single_gene	PF_fc88a28fe790	5	2	4	5	2	1	0	0	9	1247..1247		transposase_or_IS	graph_diff_group=5	IS3 family transposase
+all	single_gene	PF_d5b138e8d939	3	1	3	3	2	1	0	0	2	987..987		transposase_or_IS	graph_diff_group=3	IS5 family transposase
+all	two_gene	PF_01148e136989+,PF_7148aa16e472+	12	2	7	12	6	15	0	0	51	2302..2314	-11..-11	transposase_or_IS	graph_diff_group=12	IS21 family transposase | IS21-like element helper ATPase IstB
+all	two_gene	PF_56dbb4083369+,PF_c0d69e123985+	10	5	2	2	2	25	20	0	0	1696..1870	13..160	other	graph_block_other=8,graph_diff_group=2	electron transfer flavoprotein subunit alpha/FixB family protein | electron transfer flavoprotein subunit beta/FixA family protein
+all	two_gene	PF_8c3dcd35712e-,PF_da684dcef666-	5	5	1	2	2	4	6	0	0	2029..2110	94..175	other	graph_diff_group=5	chaperonin GroEL | co-chaperone GroES
+all	two_gene	PF_22e7909ab6af-,PF_a29ee53ab3ba+	4	4	1	2	2	3	3	0	0	2647..2671	127..127	other	graph_block_other=3,no_graph_block_50_2500=1	LysR family transcriptional regulator | MFS transporter
+all	two_gene	PF_335e43825459-,PF_f7c4e1b32fe0+	4	4	1	2	2	3	3	0	0	2268..2288	141..143	other	no_graph_block_50_2500=4	FAD-dependent monooxygenase | AraC family transcriptional regulator
+all	two_gene	PF_729335e39e9e-,PF_d6e080a4a703-	4	4	1	2	2	3	3	0	0	2866..2908	52..97	other	graph_block_other=4	Bug family tripartite tricarboxylate transporter substrate binding protein | dihydroxy-acid dehydratase
+all	two_gene	PF_ab592b9905d2-,PF_d21e44b2a2c4+	4	4	1	2	2	3	3	0	0	1543..1543	73..73	other	graph_diff_group=4	MerR family transcriptional regulator | SDR family oxidoreductase
+all	two_gene	PF_65ce1b071091+,PF_b9d6cea8f11a+	5	3	2	2	2	4	6	0	0	1985..2012	11..14	other	graph_diff_group=4,no_graph_block_50_2500=1	acetaldehyde dehydrogenase (acetylating) | 4-hydroxy-2-oxovalerate aldolase
+all	two_gene	PF_b0b28b8801e3+,PF_f35b92d92736+	4	3	2	4	2	1	0	0	5	4145..4147	32..34	other	graph_block_other=4	PAS domain-containing methyl-accepting chemotaxis protein | EAL domain-containing protein
+all	two_gene	PF_3b8b323fb028-,PF_3c9a17d1675b+	2	2	1	2	2	1	0	0	0	1383..1416	117..117	other	graph_diff_group=2	putative quinol monooxygenase | GlxA family transcriptional regulator
+all	two_gene	PF_3e282dc7cc06+,PF_4cb2c0d8fd4d-	2	2	1	2	2	1	0	0	0	1342..1375	-89..-89	integrase_recombinase_resolvase	no_graph_block_50_2500=2	helix-turn-helix transcriptional regulator | tyrosine-type recombinase/integrase
+all	two_gene	PF_5db6a6291249+,PF_8de6b72273c4+	2	1	2	2	2	1	0	0	0	832..849	82..99	other	no_graph_block_50_2500=2	DsrE family protein | carboxymuconolactone decarboxylase family protein
+all	two_gene	PF_edc60a4ca429-,PF_f85a5ac04ba0-	2	1	2	2	2	1	0	0	0	1397..1397	-43..-43	integrase_recombinase_resolvase	graph_diff_group=2	site-specific integrase | hypothetical protein
+target_lt2500	single_gene	PF_147add17340c	29	3	11	29	26	323	0	2	81	1161..1221		transposase_or_IS	graph_diff_group=29	ISL3 family transposase
+target_lt2500	single_gene	PF_4a2352cf6318	6	2	4	6	6	15	0	0	0	966..987		transposase_or_IS	graph_diff_group=6	IS481 family transposase
+target_lt2500	single_gene	PF_2d92c93a9d2c	8	4	4	7	5	9	1	1	17	255..255		hypothetical	graph_diff_group=3,no_graph_block_50_2500=5	hypothetical protein
+target_lt2500	single_gene	PF_8e9360ea03b6	5	1	5	5	5	10	0	0	0	749..749		transposase_or_IS	graph_diff_group=5	IS5 family transposase
+target_lt2500	single_gene	PF_a48c4c09c8c3	7	1	7	7	5	10	0	0	11	933..933		transposase_or_IS	graph_diff_group=7	IS5-like element ISAav2 family transposase
+target_lt2500	single_gene	PF_d0a01e3116b8	5	1	5	5	5	10	0	0	0	1379..1379		transposase_or_IS	graph_diff_group=5	IS3 family transposase
+target_lt2500	single_gene	PF_13ebd7f3de8d	9	5	2	5	4	15	6	7	8	1449..1449		other	graph_diff_group=9	aldehyde dehydrogenase family protein
+target_lt2500	single_gene	PF_eed8648a18cd	9	4	4	8	4	6	1	0	29	1536..1540		transposase_or_IS	graph_diff_group=9	IS3 family transposase
+target_lt2500	single_gene	PF_bf588374787a	4	3	2	4	4	4	0	2	0	351..351		other	no_graph_block_50_2500=4	DUF2958 domain-containing protein
+target_lt2500	single_gene	PF_99b55ca42871	5	1	5	4	4	9	1	0	0	1227..1227		transposase_or_IS	graph_block_other=5	IS256 family transposase
+target_lt2500	single_gene	PF_b024bc88aa80	4	1	4	4	4	6	0	0	0	1133..1133		transposase_or_IS	graph_diff_group=4	IS3 family transposase
+target_lt2500	single_gene	PF_384fb1b6b909	8	5	2	3	3	19	9	0	0	1095..1095		other	graph_diff_group=7,no_graph_block_50_2500=1	porin
+target_lt2500	single_gene	PF_c0f4e1cdb21e	6	5	2	3	3	5	6	4	0	1038..1038		other	graph_diff_group=2,no_graph_block_50_2500=4	porin
+target_lt2500	single_gene	PF_645a49ceb0cc	7	4	3	7	3	3	0	0	18	624..636		integrase_recombinase_resolvase	graph_diff_group=7	tyrosine-type recombinase/integrase
+target_lt2500	single_gene	PF_f611ee382c85	3	2	2	3	3	2	0	1	0	261..261		hypothetical	no_graph_block_50_2500=3	hypothetical protein
+target_lt2500	single_gene	PF_03a494a7c6c2	4	1	4	4	3	3	0	0	3	1151..1151		transposase_or_IS	graph_diff_group=4	IS3 family transposase
+target_lt2500	single_gene	PF_03926f5d30bd	5	5	1	2	2	4	6	0	0	405..405		other	no_graph_block_50_2500=5	group II truncated hemoglobin
+target_lt2500	single_gene	PF_0e240dc00acb	5	5	1	2	2	2	6	2	0	1116..1122		other	graph_block_other=4,no_graph_block_50_2500=1	S-(hydroxymethyl)glutathione dehydrogenase/class III alcohol dehydrogenase
+target_lt2500	single_gene	PF_1195cb1b5d40	5	5	1	2	2	4	6	0	0	2007..2007		other	no_graph_block_50_2500=5	peptidase U32 family protein
+target_lt2500	single_gene	PF_1659e130c333	5	5	1	2	2	4	6	0	0	456..456		other	no_graph_block_50_2500=5	Lrp/AsnC family transcriptional regulator
+target_lt2500	single_gene	PF_1d67a41614c1	5	5	1	2	2	4	6	0	0	2193..2193		other	no_graph_block_50_2500=5	malate synthase G
+target_lt2500	single_gene	PF_2c485cf73dad	5	5	1	3	2	3	3	0	4	1440..1443		other	graph_diff_group=4,no_graph_block_50_2500=1	exodeoxyribonuclease I
+target_lt2500	single_gene	PF_50316357292f	5	5	1	2	2	4	6	0	0	1443..1452		other	no_graph_block_50_2500=5	NAD-dependent succinate-semialdehyde dehydrogenase
+target_lt2500	single_gene	PF_51bb7d35e10d	5	5	1	2	2	4	6	0	0	486..486		other	no_graph_block_50_2500=5	FKBP-type peptidyl-prolyl cis-trans isomerase
+target_lt2500	single_gene	PF_54619673b5e6	5	5	1	2	2	3	6	1	0	2310..2310		other	no_graph_block_50_2500=5	NADP-dependent malic enzyme
+target_lt2500	single_gene	PF_6ea7376c689e	5	5	1	2	2	3	6	0	1	681..681		hypothetical	graph_block_other=4,no_graph_block_50_2500=1	hypothetical protein
+target_lt2500	single_gene	PF_7b460066e9f8	5	5	1	4	2	1	1	0	8	1476..1476		other	graph_diff_group=4,no_graph_block_50_2500=1	amino acid permease
+target_lt2500	single_gene	PF_85dd2f8c7584	6	5	2	2	2	9	6	0	0	480..495		other	no_graph_block_50_2500=6	nucleoside deaminase
+target_lt2500	single_gene	PF_8fa26f1a7993	5	5	1	2	2	4	6	0	0	783..801		other	no_graph_block_50_2500=5	class D beta-lactamase
+target_lt2500	single_gene	PF_a2bde094529f	5	5	1	5	2	1	0	3	6	2232..2235		other	no_graph_block_50_2500=5	NADP-dependent isocitrate dehydrogenase
+target_lt2500	single_gene	PF_aada76694ccc	5	5	1	2	2	4	6	0	0	1452..1452		other	no_graph_block_50_2500=5	aldehyde dehydrogenase
+target_lt2500	single_gene	PF_b8730567e0b5	5	5	1	3	2	3	3	0	4	1095..1098		other	graph_block_other=4,no_graph_block_50_2500=1	redox-regulated ATPase YchF
+target_lt2500	single_gene	PF_d4c43788b157	5	5	1	2	2	4	6	0	0	1059..1065		other	graph_block_other=4,no_graph_block_50_2500=1	3-keto-5-aminohexanoate cleavage protein
+target_lt2500	single_gene	PF_f0f0133870d5	5	5	1	2	2	4	6	0	0	1407..1410		translation_or_ribosomal	no_graph_block_50_2500=5	30S ribosomal protein S12 methylthiotransferase RimO
+target_lt2500	single_gene	PF_feb6068c84b1	10	5	2	2	2	25	20	0	0	1191..1191		translation_or_ribosomal	graph_diff_group=10	elongation factor Tu
+target_lt2500	single_gene	PF_02ae4ce34ab8	4	4	1	2	2	3	3	0	0	609..609		other	graph_block_other=3,no_graph_block_50_2500=1	DUF4337 domain-containing protein
+target_lt2500	single_gene	PF_1025c2929911	6	4	2	2	2	6	7	0	2	1545..1545		other	graph_diff_group=6	PAS domain-containing methyl-accepting chemotaxis protein
+target_lt2500	single_gene	PF_638667407a1b	4	4	1	2	2	3	3	0	0	1386..1386		other	graph_block_other=3,no_graph_block_50_2500=1	GntP family permease
+target_lt2500	single_gene	PF_9ddfcd1128db	4	4	1	2	2	3	3	0	0	2214..2238		other	no_graph_block_50_2500=4	AsmA family protein
+target_lt2500	single_gene	PF_b7e31f186694	4	4	1	2	2	3	3	0	0	417..465		other	graph_block_other=3,no_graph_block_50_2500=1	lactoylglutathione lyase
+target_lt2500	single_gene	PF_e2e705caf61f	12	4	4	2	2	32	34	0	0	936..1038		other	graph_diff_group=7,no_graph_block_50_2500=5	recombination-associated protein RdgC
+target_lt2500	single_gene	PF_08d1b4d728e3	4	3	2	3	2	1	1	0	4	507..519		other	graph_block_other=4	GNAT family N-acetyltransferase
+target_lt2500	single_gene	PF_70de8d132dee	3	3	1	3	2	1	0	0	2	441..441		hypothetical	graph_block_other=3	hypothetical protein
+target_lt2500	single_gene	PF_22359fb227a4	2	2	1	2	2	1	0	0	0	1077..1077		transposase_or_IS	graph_block_other=2	IS110 family RNA-guided transposase
+target_lt2500	single_gene	PF_5e5e5f7369b5	2	2	1	2	2	1	0	0	0	627..627		other	graph_diff_group=2	LysE family translocator
+target_lt2500	single_gene	PF_88fe58d1b2ba	2	2	1	2	2	1	0	0	0	1251..1251		integrase_recombinase_resolvase	no_graph_block_50_2500=2	tyrosine-type recombinase/integrase
+target_lt2500	single_gene	PF_91668f223a7c	4	2	3	4	2	1	0	0	5	1014..1041		transposase_or_IS	graph_diff_group=4	IS481 family transposase
+target_lt2500	single_gene	PF_c6f21ee61fbc	2	2	1	2	2	1	0	0	0	975..975		other	graph_diff_group=2	magnesium/cobalt transporter CorA
+target_lt2500	single_gene	PF_e96498f6ce6d	2	2	1	2	2	1	0	0	0	1170..1170		integrase_recombinase_resolvase	graph_diff_group=2	tyrosine-type recombinase/integrase
+target_lt2500	single_gene	PF_fc88a28fe790	5	2	4	5	2	1	0	0	9	1247..1247		transposase_or_IS	graph_diff_group=5	IS3 family transposase
+target_lt2500	single_gene	PF_d5b138e8d939	3	1	3	3	2	1	0	0	2	987..987		transposase_or_IS	graph_diff_group=3	IS5 family transposase
+target_lt2500	two_gene	PF_01148e136989+,PF_7148aa16e472+	12	2	7	12	6	15	0	0	51	2302..2314	-11..-11	transposase_or_IS	graph_diff_group=12	IS21 family transposase | IS21-like element helper ATPase IstB
+target_lt2500	two_gene	PF_56dbb4083369+,PF_c0d69e123985+	10	5	2	2	2	25	20	0	0	1696..1870	13..160	other	graph_block_other=8,graph_diff_group=2	electron transfer flavoprotein subunit alpha/FixB family protein | electron transfer flavoprotein subunit beta/FixA family protein
+target_lt2500	two_gene	PF_8c3dcd35712e-,PF_da684dcef666-	5	5	1	2	2	4	6	0	0	2029..2110	94..175	other	graph_diff_group=5	chaperonin GroEL | co-chaperone GroES
+target_lt2500	two_gene	PF_335e43825459-,PF_f7c4e1b32fe0+	4	4	1	2	2	3	3	0	0	2268..2288	141..143	other	no_graph_block_50_2500=4	FAD-dependent monooxygenase | AraC family transcriptional regulator
+target_lt2500	two_gene	PF_ab592b9905d2-,PF_d21e44b2a2c4+	4	4	1	2	2	3	3	0	0	1543..1543	73..73	other	graph_diff_group=4	MerR family transcriptional regulator | SDR family oxidoreductase
+target_lt2500	two_gene	PF_65ce1b071091+,PF_b9d6cea8f11a+	5	3	2	2	2	4	6	0	0	1985..2012	11..14	other	graph_diff_group=4,no_graph_block_50_2500=1	acetaldehyde dehydrogenase (acetylating) | 4-hydroxy-2-oxovalerate aldolase
+target_lt2500	two_gene	PF_3b8b323fb028-,PF_3c9a17d1675b+	2	2	1	2	2	1	0	0	0	1383..1416	117..117	other	graph_diff_group=2	putative quinol monooxygenase | GlxA family transcriptional regulator
+target_lt2500	two_gene	PF_3e282dc7cc06+,PF_4cb2c0d8fd4d-	2	2	1	2	2	1	0	0	0	1342..1375	-89..-89	integrase_recombinase_resolvase	no_graph_block_50_2500=2	helix-turn-helix transcriptional regulator | tyrosine-type recombinase/integrase
+target_lt2500	two_gene	PF_5db6a6291249+,PF_8de6b72273c4+	2	1	2	2	2	1	0	0	0	832..849	82..99	other	no_graph_block_50_2500=2	DsrE family protein | carboxymuconolactone decarboxylase family protein
+target_lt2500	two_gene	PF_edc60a4ca429-,PF_f85a5ac04ba0-	2	1	2	2	2	1	0	0	0	1397..1397	-43..-43	integrase_recombinase_resolvase	graph_diff_group=2	site-specific integrase | hypothetical protein

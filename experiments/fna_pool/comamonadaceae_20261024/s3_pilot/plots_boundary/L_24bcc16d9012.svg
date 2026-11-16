@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="420" font-family="sans-serif">
+<rect width="100%" height="100%" fill="white"/>
+<text x="4" y="16" font-size="12">L_24bcc16d9012  SAMD00623152  core 141 bp  two_flank_anchored  support direction_mixed  boundary direction_dependent  tandem False  core copies carrier/partner 1/0</text>
+<line x1="548.5" y1="30" x2="548.5" y2="412" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<line x1="571.5" y1="30" x2="571.5" y2="412" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<text x="4" y="64" font-size="11" font-weight="bold">SAMD00623152 NZ_AP028664.1 (carrier)</text>
+<line x1="60" y1="100" x2="1060" y2="100" stroke="#888"/>
+<rect x="385.7" y="132" width="162.8" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="467.1" y="152" font-size="9" text-anchor="middle">U</text>
+<rect x="548.5" y="132" width="23.0" height="8" fill="#e76f51" opacity="0.55"/>
+<text x="560.0" y="152" font-size="9" text-anchor="middle">core 141</text>
+<rect x="571.5" y="132" width="162.8" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="652.9" y="152" font-size="9" text-anchor="middle">D</text>
+<polygon points="60.0,85 257.1,85 263.1,91 257.1,97 60.0,97" fill="#3b6fb6"><title>RICIN domain-containing protein 4802057-4806764 +</title></polygon>
+<text x="60.0" y="81" font-size="8" fill="#333">RICIN domain-containing protein</text>
+<polygon points="286.3,85 319.4,85 325.4,91 319.4,97 286.3,97" fill="#3b6fb6"><title>F0F1 ATP synthase subunit C 4806907-4807147 +</title></polygon>
+<text x="286.3" y="81" font-size="8" fill="#333">F0F1 ATP</text>
+<polygon points="354.1,85 544.5,85 550.5,91 544.5,97 354.1,97" fill="#3b6fb6"><title>ABC transporter substrate-binding protei 4807323-4808529 +</title></polygon>
+<text x="354.1" y="81" font-size="8" fill="#333">ABC transporter substrate-binding protei</text>
+<polygon points="571.2,85 715.1,85 721.1,91 715.1,97 571.2,97" fill="#3b6fb6"><title>branched-chain amino acid ABC transporte 4808656-4809577 +</title></polygon>
+<text x="571.2" y="81" font-size="8" fill="#333">branched-chain amino acid ABC tr</text>
+<polygon points="720.5,85 875.2,85 881.2,91 875.2,97 720.5,97" fill="#3b6fb6"><title>branched-chain amino acid ABC transporte 4809573-4810560 +</title></polygon>
+<polygon points="880.6,85 997.7,85 1003.7,91 997.7,97 880.6,97" fill="#3b6fb6"><title>ABC transporter ATP-binding protein 4810556-4811312 +</title></polygon>
+<text x="880.6" y="81" font-size="8" fill="#333">ABC transporter ATP-bindin</text>
+<polygon points="1003.0,85 1054.0,85 1060.0,91 1054.0,97 1003.0,97" fill="#3b6fb6"><title>ABC transporter ATP-binding protein 4811308-4812028 +</title></polygon>
+<text x="60" y="166" font-size="9" fill="#666">NZ_AP028664.1:4805517-4811658  core 4808517-4808658</text>
+<text x="4" y="184" font-size="11" font-weight="bold">SAMN51281027 NZ_CM191384.1 (partner, - strand, two_flank_anchored, pair P00111)</text>
+<line x1="60" y1="220" x2="1060" y2="220" stroke="#888"/>
+<rect x="385.7" y="252" width="162.8" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="467.1" y="272" font-size="9" text-anchor="middle">U'</text>
+<rect x="571.5" y="252" width="162.8" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="652.9" y="272" font-size="9" text-anchor="middle">D'</text>
+<rect x="548.5" y="252" width="23.0" height="8" fill="#9b5de5" opacity="0.55"/>
+<text x="560.0" y="272" font-size="9" text-anchor="middle">other side 10</text>
+<polygon points="1002.8,205 1054.0,205 1060.0,211 1054.0,217 1002.8,217" fill="#3b6fb6"><title>ABC transporter ATP-binding protein 1330097-1330829 +</title></polygon>
+<text x="1002.8" y="201" font-size="8" fill="#333">ABC transpor</text>
+<polygon points="880.4,205 997.5,205 1003.5,211 997.5,217 880.4,217" fill="#3b6fb6"><title>ABC transporter ATP-binding protein 1330825-1331581 +</title></polygon>
+<polygon points="721.3,205 875.0,205 881.0,211 875.0,217 721.3,217" fill="#3b6fb6"><title>branched-chain amino acid ABC transporte 1331577-1332558 +</title></polygon>
+<polygon points="569.2,205 715.1,205 721.1,211 715.1,217 569.2,217" fill="#3b6fb6"><title>branched-chain amino acid ABC transporte 1332559-1333480 +</title></polygon>
+<polygon points="354.1,205 565.8,205 571.8,211 565.8,217 354.1,217" fill="#3b6fb6"><title>ABC transporter substrate-binding protei 1333476-1334682 +</title></polygon>
+<polygon points="283.4,205 316.5,205 322.5,211 316.5,217 283.4,217" fill="#3b6fb6"><title>F0F1 ATP synthase subunit C 1334876-1335116 +</title></polygon>
+<polygon points="60.0,205 254.9,205 260.9,211 254.9,217 60.0,217" fill="#3b6fb6"><title>Ig-like domain-containing protein 1335254-1339964 +</title></polygon>
+<text x="60" y="286" font-size="9" fill="#666">NZ_CM191384.1 site 1333478  other-side gap 10 bp  this call's core 4808517-4808658</text>
+<text x="4" y="304" font-size="11" font-weight="bold">SAMN51281027 NZ_CM191384.1 (partner, - strand, replacement, pair P00111)</text>
+<line x1="60" y1="340" x2="1060" y2="340" stroke="#888"/>
+<rect x="387.0" y="372" width="162.8" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="468.4" y="392" font-size="9" text-anchor="middle">U'</text>
+<rect x="575.1" y="372" width="162.8" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="656.5" y="392" font-size="9" text-anchor="middle">D'</text>
+<rect x="549.8" y="372" width="25.2" height="8" fill="#9b5de5" opacity="0.55"/>
+<text x="562.4" y="392" font-size="9" text-anchor="middle">other side 24</text>
+<polygon points="1002.8,325 1054.0,325 1060.0,331 1054.0,337 1002.8,337" fill="#3b6fb6"><title>ABC transporter ATP-binding protein 1330097-1330829 +</title></polygon>
+<text x="1002.8" y="321" font-size="8" fill="#333">ABC transpor</text>
+<polygon points="880.4,325 997.5,325 1003.5,331 997.5,337 880.4,337" fill="#3b6fb6"><title>ABC transporter ATP-binding protein 1330825-1331581 +</title></polygon>
+<polygon points="721.3,325 875.0,325 881.0,331 875.0,337 721.3,337" fill="#3b6fb6"><title>branched-chain amino acid ABC transporte 1331577-1332558 +</title></polygon>
+<polygon points="550.9,325 715.1,325 721.1,331 715.1,337 550.9,337" fill="#3b6fb6"><title>branched-chain amino acid ABC transporte 1332559-1333480 +</title></polygon>
+<polygon points="354.1,325 548.2,325 554.2,331 548.2,337 354.1,337" fill="#3b6fb6"><title>ABC transporter substrate-binding protei 1333476-1334682 +</title></polygon>
+<polygon points="283.4,325 316.5,325 322.5,331 316.5,337 283.4,337" fill="#3b6fb6"><title>F0F1 ATP synthase subunit C 1334876-1335116 +</title></polygon>
+<polygon points="60.0,325 254.9,325 260.9,331 254.9,337 60.0,337" fill="#3b6fb6"><title>Ig-like domain-containing protein 1335254-1339964 +</title></polygon>
+<text x="60" y="406" font-size="9" fill="#666">NZ_CM191384.1 site 1333456  other-side gap 24 bp  this call's core 4808525-4808680</text>
+</svg>

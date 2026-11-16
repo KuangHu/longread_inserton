@@ -1,0 +1,13 @@
+{
+ "sample": "SAMN37754217",
+ "assembly": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/comamonadaceae/data/genomes/GCF_032929295.1/GCF_032929295.1_ASM3292929v1_genomic.fna",
+ "runs": [],
+ "minimap2_args": [
+  "-c",
+  "--secondary=yes",
+  "-N",
+  "50",
+  "-p",
+  "0.5"
+ ]
+}

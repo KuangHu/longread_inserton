@@ -1,0 +1,17 @@
+subset	sample	assembly	total_bp	candidates	linked_runs	usable_runs	runs	usable_bases	depth_estimate	fastq_local	alignment_at_candidates
+comamonas	SAMN02603356	GCF_000093145.3	5373644	UCD01	0	0		0	0.0		
+comamonas	SAMN12671326	GCF_014076415.1	5947116	UCD02;UCD04	0	0		0	0.0		
+comamonas	SAMN24624792	GCF_029026905.1	5894614		0	0		0	0.0		
+comamonas	SAMN29863000	GCF_024496285.1	6159340	UCD03	0	0		0	0.0		
+comamonas	SAMN63279483	GCA_062051890.1	4938260		0	0		0	0.0		
+delftia	SAMN00623041	GCF_000018665.1	6767514		0	0		0	0.0		
+delftia	SAMN13049073	GCF_009362995.1	6711018		0	0		0	0.0		
+delftia	SAMN13450439	GCF_016027075.1	6708547	UCDR01;UCDR02	1	1	SRR12045673:pacbio_clr_subreads:PacBio RS:usable	2134879946	318.2	SRR12045673:local_verified_md5_True	none (gap-line genome PAFs hold only reads preselected at gap alleles)
+delftia	SAMN14082653	GCF_018437695.1	6722355		0	0		0	0.0		
+delftia	SAMN15905291	GCF_029870285.2	5538489	UCD05;UCD07;UCD08	1	0	SRR31943989:ont:MinION:unusable(library_source=GENOMIC SINGLE CELL;library_selection=RANDOM PCR)	0	0.0	SRR31943989:not_local	none (gap-line genome PAFs hold only reads preselected at gap alleles)
+delftia	SAMN31258398	GCF_033096485.1	6685457	UCD06;UCDR03;UCDR04	1	1	SRR22007585:pacbio_unresolved:Sequel:usable	4283260965	640.7	SRR22007585:local_verified_md5_True	none (gap-line genome PAFs hold only reads preselected at gap alleles)
+delftia	SAMN34234483	GCA_058437695.1	6286280		0	0		0	0.0		
+paracidovorax	SAMN00006197	GCF_000176855.2	5482170		0	0		0	0.0		
+paracidovorax	SAMN02598334	GCF_000015325.1	5352772	UCD10;UCD11;UCD12	0	0		0	0.0		
+paracidovorax	SAMN04157986	GCF_001593665.2	4899546	UCDR05;UCDR06	1	1	SRR7524637:pacbio_clr_subreads:PacBio RS II:usable	3606842848	736.2	SRR7524637:local_verified_md5_True	none (gap-line genome PAFs hold only reads preselected at gap alleles)
+paracidovorax	SAMN12418563	GCF_022494965.1	4932026	UCD09	0	0		0	0.0		

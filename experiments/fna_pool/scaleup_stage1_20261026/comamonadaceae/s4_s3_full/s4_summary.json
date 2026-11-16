@@ -1,0 +1,83 @@
+{
+ "version": "s4_annotate_v0.2",
+ "short": 2500,
+ "loci": 125528,
+ "carriers": 1617,
+ "categories": {
+  "boundary_or_repeat_review": 7187,
+  "boundary_intersection": 76306,
+  "gene_integrity_anomaly": 542,
+  "other_structure": 36394,
+  "replacement": 502,
+  "short_other_segment": 2697,
+  "main": 1010,
+  "annotation_pending": 853,
+  "partner_mixed": 35,
+  "direction_mixed": 2
+ },
+ "cds_class": {
+  "1-2_complete_CDS": 28694,
+  "0_CDS": 93483,
+  "contains_pseudo": 1097,
+  ">2_complete_CDS": 1365,
+  "annotation_pending": 853,
+  "contains_partial": 18,
+  "integrity_anomaly": 18
+ },
+ "boundary_relations": {
+  "gene_mostly_outside": 50082,
+  "host_gene_interrupted": 19652,
+  "gene_mostly_inside": 11713,
+  "rna_crossed": 172
+ },
+ "translation": {
+  "match": 40926,
+  "pseudo": 1168,
+  "mismatch": 24
+ },
+ "coding_flags": {
+  "internal_stop": 506,
+  "length_not_codon_multiple": 369,
+  "translation_mismatch": 24,
+  "no_stop": 22,
+  "no_start": 17
+ },
+ "lists": {
+  "main": {
+   "loci": 1010,
+   "carriers": 570,
+   "cds_units": 1189,
+   "protein_ids": 853
+  },
+  "partner_mixed": {
+   "loci": 35,
+   "carriers": 29,
+   "cds_units": 41,
+   "protein_ids": 40
+  },
+  "direction_mixed": {
+   "loci": 2,
+   "carriers": 2,
+   "cds_units": 3,
+   "protein_ids": 3
+  },
+  "short_other_segment": {
+   "loci": 2697,
+   "carriers": 960,
+   "cds_units": 3365,
+   "protein_ids": 2429
+  },
+  "replacement": {
+   "loci": 502,
+   "carriers": 404,
+   "cds_units": 715,
+   "protein_ids": 498
+  },
+  "annotation_pending": {
+   "loci": 853,
+   "carriers": 18,
+   "cds_units": 0,
+   "protein_ids": 0
+  }
+ }
+}

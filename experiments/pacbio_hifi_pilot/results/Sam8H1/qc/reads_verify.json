@@ -1,0 +1,52 @@
+{
+  "run": {
+    "sample_id": "Sam8H1",
+    "run": "SRR13837247",
+    "biosample": "SAMN17825431",
+    "assembly": "GCA_016904925.1",
+    "platform": "PACBIO_SMRT",
+    "instrument_model": "Sequel II",
+    "role": "pacbio_hifi_pilot",
+    "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR138/047/SRR13837247/SRR13837247_subreads.fastq.gz",
+    "archive_read_count": 35763,
+    "archive_base_count": 277511453,
+    "fastq_bytes": 269402451,
+    "fastq_md5": "fd288a5f52bf55203482cffca98ac1f1"
+  },
+  "download_started": "2026-10-24T17:08:40-0700",
+  "local_file": "/global/scratch/users/kh36969/longread_callout/data/reads/SRR13837247/SRR13837247_subreads.fastq.gz",
+  "bytes": 269402451,
+  "md5": "fd288a5f52bf55203482cffca98ac1f1",
+  "sha256": "57d4a020eab74a9faf9cd1923c4031058c4093d311cdfccfc35e5213c049151e",
+  "rejected_downloads": [],
+  "spots_absent_from_fastq": 0,
+  "summary": {
+    "records": 35763,
+    "bases": 277511453,
+    "read_unit_counts": {
+      "name_stripped": 35763
+    },
+    "distinct_zmws": null,
+    "distinct_sra_spots": 35763,
+    "max_records_per_spot": 1,
+    "placeholder_quality_records": 0,
+    "example_headers": [
+      "@SRR13837247.1 1/1",
+      "@SRR13837247.2 2/1",
+      "@SRR13837247.3 3/1",
+      "@SRR13837247.4 4/1"
+    ],
+    "mean_length": 7759.7,
+    "median_length": 7357,
+    "max_length": 20786,
+    "n50": 7714,
+    "molecule_grouping": "molecule_grouping_unavailable"
+  },
+  "checks": {
+    "bytes_match": true,
+    "md5_match": true,
+    "spot_count_match": true,
+    "base_count_match": true
+  },
+  "status": "verified"
+}

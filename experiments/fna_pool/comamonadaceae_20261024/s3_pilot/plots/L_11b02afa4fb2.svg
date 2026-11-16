@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="300" font-family="sans-serif">
+<rect width="100%" height="100%" fill="white"/>
+<text x="4" y="16" font-size="12">L_11b02afa4fb2  SAMN38562701  core 77 bp  two_flank_anchored  support all_calls_anchored  boundary exact  tandem False  core copies carrier/partner 1/0</text>
+<line x1="553.7" y1="30" x2="553.7" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<line x1="566.3" y1="30" x2="566.3" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<text x="4" y="64" font-size="11" font-weight="bold">SAMN38562701 NZ_CP139994.1 (carrier)</text>
+<line x1="60" y1="100" x2="1060" y2="100" stroke="#888"/>
+<rect x="389.1" y="132" width="164.6" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="471.4" y="152" font-size="9" text-anchor="middle">U</text>
+<rect x="553.7" y="132" width="12.7" height="8" fill="#e76f51" opacity="0.55"/>
+<text x="560.0" y="152" font-size="9" text-anchor="middle">core 77</text>
+<rect x="566.3" y="132" width="164.6" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="648.6" y="152" font-size="9" text-anchor="middle">D</text>
+<polygon points="60.0,85 214.9,85 220.9,91 214.9,97 60.0,97" fill="#3b6fb6"><title>ABC transporter ATP-binding protein 5570680-5571658 +</title></polygon>
+<text x="60.0" y="81" font-size="8" fill="#333">ABC transporter ATP-binding protei</text>
+<polygon points="220.3,85 446.8,85 452.8,91 446.8,97 220.3,97" fill="#3b6fb6"><title>hypothetical protein 5571654-5573067 +</title></polygon>
+<polygon points="469.2,85 544.7,85 550.7,91 544.7,97 469.2,97" fill="#3b6fb6"><title>5-(carboxyamino)imidazole ribonucleotide 5573167-5573662 +</title></polygon>
+<text x="469.2" y="81" font-size="8" fill="#333">5-(carboxyamino)i</text>
+<polygon points="550.0,85 748.9,85 754.9,91 748.9,97 550.0,97" fill="#3b6fb6"><title>5-(carboxyamino)imidazole ribonucleotide 5573658-5574903 +</title></polygon>
+<polygon points="781.7,85 940.1,85 946.1,91 940.1,97 781.7,97" fill="#3b6fb6"><title>L-threonylcarbamoyladenylate synthase 5575066-5576065 +</title></polygon>
+<text x="781.7" y="81" font-size="8" fill="#333">L-threonylcarbamoyladenylate syntha</text>
+<polygon points="962.9,109 968.9,103 1060.0,103 1060.0,115 968.9,115" fill="#3b6fb6"><title>OmpW/AlkL family protein 5576167-5576839 -</title></polygon>
+<text x="962.9" y="125" font-size="8" fill="#333">OmpW/AlkL family prot</text>
+<text x="60" y="166" font-size="9" fill="#666">NZ_CP139994.1:5570680-5576757  core 5573680-5573757</text>
+<text x="4" y="184" font-size="11" font-weight="bold">SAMD00076718 NZ_AP026738.1 (partner, + strand, two_flank_anchored, pair P00022)</text>
+<line x1="60" y1="220" x2="1060" y2="220" stroke="#888"/>
+<rect x="389.1" y="252" width="164.6" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="471.4" y="272" font-size="9" text-anchor="middle">U'</text>
+<rect x="566.3" y="252" width="164.6" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="648.6" y="272" font-size="9" text-anchor="middle">D'</text>
+<rect x="553.7" y="252" width="12.7" height="8" fill="#9b5de5" opacity="0.55"/>
+<text x="560.0" y="272" font-size="9" text-anchor="middle">other side 5</text>
+<polygon points="60.0,205 214.9,205 220.9,211 214.9,217 60.0,217" fill="#3b6fb6"><title>ABC transporter ATP-binding protein 5672604-5673582 +</title></polygon>
+<text x="60.0" y="201" font-size="8" fill="#333">ABC transporter ATP-binding protei</text>
+<polygon points="220.3,205 446.8,205 452.8,211 446.8,217 220.3,217" fill="#3b6fb6"><title>hypothetical protein 5673578-5674991 +</title></polygon>
+<polygon points="469.2,205 544.7,205 550.7,211 544.7,217 469.2,217" fill="#3b6fb6"><title>5-(carboxyamino)imidazole ribonucleotide 5675091-5675586 +</title></polygon>
+<text x="469.2" y="201" font-size="8" fill="#333">5-(carboxyamino)i</text>
+<polygon points="550.0,205 748.9,205 754.9,211 748.9,217 550.0,217" fill="#3b6fb6"><title>5-(carboxyamino)imidazole ribonucleotide 5675582-5676755 +</title></polygon>
+<polygon points="784.0,205 942.4,205 948.4,211 942.4,217 784.0,217" fill="#3b6fb6"><title>L-threonylcarbamoyladenylate synthase 5676932-5677931 +</title></polygon>
+<text x="784.0" y="201" font-size="8" fill="#333">L-threonylcarbamoyladenylate syntha</text>
+<polygon points="950.1,229 956.1,223 1060.0,223 1060.0,235 956.1,235" fill="#3b6fb6"><title>Bug family tripartite tricarboxylate tra 5677941-5678907 -</title></polygon>
+<text x="950.1" y="245" font-size="8" fill="#333">Bug family tripartite t</text>
+<text x="60" y="286" font-size="9" fill="#666">NZ_AP026738.1 site 5675604  other-side gap 5 bp  this call's core 5573680-5573757</text>
+</svg>

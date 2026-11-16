@@ -1,0 +1,19 @@
+{
+ "sample": "SAMN43526776",
+ "runs": [
+  {
+   "run": "SRR30602141",
+   "read_type": "ont",
+   "preset": "map-ont",
+   "sha256": "b877fd3d029ee1c487e7ca316c591b3d87c7d93f1fd2dd84f70f5a2efdffecbe"
+  }
+ ],
+ "minimap2_args": [
+  "-c",
+  "--secondary=yes",
+  "-N",
+  "100",
+  "-p",
+  "0.3"
+ ]
+}

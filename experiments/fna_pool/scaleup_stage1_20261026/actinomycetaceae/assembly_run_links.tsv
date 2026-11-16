@@ -1,0 +1,100 @@
+assembly_accession	paired_accession	biosample	run	study	read_type	link_basis	source_run_evidence	run_usable	run_tax_id	run_organism	assembly_organism	genus_agrees	assembly_sequencing_tech
+GCA_019974135.1	GCF_019974135.1	SAMD00394826	DRR318263	PRJDB12084	pacbio_unresolved	biosample_matched	not_checked	True	2755559	Actinomyces capricornis	Actinomyces capricornis	True	PacBio Sequel System
+GCA_014191445.1	GCF_014191445.1	SAMN11512330	SRR9004634	PRJNA538226	pacbio_unresolved	biosample_matched	not_checked	True	1661	Trueperella pyogenes	Trueperella pyogenes	True	PacBio
+GCA_009730335.1	GCF_009730335.1	SAMN11056447	SRR9174990	PRJNA231221	pacbio_clr_subreads	biosample_matched	not_checked	True	1660	Schaalia odontolytica	Schaalia odontolytica	True	Pacbio; Illumina
+GCA_900475915.1	GCF_900475915.1	SAMEA4030753	ERR1656457	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	28264	Arcanobacterium haemolyticum	Arcanobacterium haemolyticum	True	PacBio
+GCA_900453315.1	GCF_900453315.1	SAMEA4063031	ERR1738365	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	144177	Mobiluncus curtisii subsp. curtisii	Mobiluncus curtisii subsp. curtisii	True	PacBio
+GCA_900450555.1	GCF_900450555.1	SAMEA4076723	ERR1766247	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	2051	Mobiluncus curtisii	Mobiluncus curtisii	True	PacBio
+GCA_900637955.1	GCF_900637955.1	SAMEA103924393	ERR2125819	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	312285	Trueperella bialowiezensis	Trueperella bialowiezensis	True	PacBio
+GCA_900618115.1	GCF_900618115.1	SAMEA104062567	ERR2146857	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	1657	Actinobaculum suis	Actinobaculum suis	True	Pacbio
+GCA_900453275.1	GCF_900453275.1	SAMEA104224798	ERR2246643	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	2052	Mobiluncus mulieris	Mobiluncus mulieris	True	PacBio
+GCA_016127995.1	GCF_016127995.1	SAMN16357154	SRR12826219	PRJNA231221	pacbio_clr_subreads	biosample_matched	not_checked	True	52773	Schaalia meyeri	Schaalia meyeri	True	Pacbio; Illumina
+GCA_024584435.1	GCF_024584435.1	SAMN30032671	SRR24086629	PRJNA863379	pacbio_unresolved	biosample_matched	not_checked	False	1660	Schaalia odontolytica	Schaalia odontolytica	True	PacBio Sequel
+GCA_031456295.1	GCF_031456295.1	SAMN18242971	SRR24886706	PRJNA708444	pacbio_unresolved	biosample_matched	not_checked	True	149017	Arcanobacterium hippocoleae	Arcanobacterium hippocoleae	True	PacBio
+GCA_041380025.1	GCF_041380025.1	SAMN42187891	SRR29688559	PRJNA1130396	pacbio_unresolved	biosample_matched	not_checked	True	3231492	Buchananella felis	Buchananella felis	True	PacBio
+GCA_900105865.1	GCF_900105865.1	SAMN04489737	SRR4180926	PRJNA303742	pacbio_unresolved	biosample_matched	not_checked	True	131112	Arcanobacterium phocae	Arcanobacterium phocae	True	PacBio RS
+GCA_029011175.1	GCF_029011175.1	SAMN33275437	SRR23690825	PRJNA934404	ont	biosample_matched	not_checked	True	33007	Winkia neuii	Winkia neuii	True	Oxford Nanopore MinION
+GCA_029011885.1	GCF_029011885.1	SAMN33275429	SRR23690860	PRJNA934404	ont	biosample_matched	not_checked	True	33007	Winkia neuii	Winkia neuii	True	Oxford Nanopore MinION
+GCA_002848005.2		SAMN08193735	SRR25068152	PRJNA316969	ont	biosample_matched	not_checked	False	184870	Varibaculum cambriense	Varibaculum cambriense	True	Nanopore; Illumina
+GCA_040702965.1	GCF_040702965.1	SAMN41327304	SRR29418636	PRJNA1107577	ont	biosample_matched	not_checked	True	1288391	Actinomyces timonensis	Actinomyces timonensis	True	Oxford Nanopore GridION
+GCA_054611555.1	GCF_054611555.1	SAMN54498163	SRR36725823	PRJNA1173529	ont	biosample_matched	not_checked	True	1870995	Actinotignum timonense	Actinotignum timonense	True	Illumina
+GCA_054568075.1	GCF_054568075.1	SAMN54623322	SRR36843391	PRJNA1173529	ont	biosample_matched	not_checked	True	1870995	Actinotignum timonense	Actinotignum timonense	True	Illumina; Oxford Nanopore
+GCA_035621235.1		SAMN38879875	SRR38785543	PRJNA1054007	ont	biosample_matched	not_checked	True	3108501	Actinomycetaceae bacterium MB13-C1-2	Actinomycetaceae bacterium MB13-C1-2	True	Illumina NovaSeq; Oxford Nanopore MinION
+GCA_001995055.1	GCF_001995055.1	SAMD00059584	DRR072224	PRJDB5146	pacbio_unresolved	biosample_matched	not_checked	True	52767	Actinomyces denticolens	Actinomyces denticolens	True	PacBio RSII
+GCA_002356195.1	GCF_002356195.1	SAMD00059583	DRR072240	PRJDB5147	pacbio_unresolved	biosample_matched	not_checked	True	1851395	Actinomyces sp. Chiba101	Actinomyces sp. Chiba101	True	PacBio RSII
+GCA_014204735.1	GCF_014204735.1	SAMN12793120	SRR10918246	PRJNA566818	pacbio_unresolved	biosample_matched	not_checked	True	2052	Mobiluncus mulieris	Mobiluncus mulieris	True	PacBio
+GCA_016726965.1	GCF_016726965.1	SAMN16357297	SRR12937899	PRJNA231221	pacbio_unresolved	biosample_matched	not_checked	True	2051	Mobiluncus curtisii	Mobiluncus curtisii	True	Pacbio; Illumina
+GCA_016694895.1	GCF_016694895.1	SAMN16756449	SRR14274187	PRJNA676127	pacbio_unresolved	biosample_matched	not_checked	True	2789425	Actinomyces sp. HMT 175	Actinomyces sp. HMT 175	True	PacBio Sequel
+GCA_030811095.1	GCF_030811095.1	SAMN18243582	SRR35197853	PRJNA708453	pacbio_hifi_ccs	biosample_matched	not_checked	True	445930	Trueperella abortisuis	Trueperella abortisuis	True	PacBio
+GCA_030811505.1	GCF_030811505.1	SAMN18243425	SRR35198128	PRJNA708457	pacbio_hifi_ccs	biosample_matched	not_checked	True	1803177	Arcanobacterium wilhelmae	Arcanobacterium wilhelmae	True	PacBio
+GCA_030811535.1	GCF_030811535.1	SAMN18242878	SRR35198250	PRJNA708478	pacbio_hifi_ccs	biosample_matched	not_checked	True	312286	Trueperella bonasi	Trueperella bonasi	True	PacBio
+GCA_900105015.1	GCF_900105015.1	SAMN04489715	SRR4180834	PRJNA303643	pacbio_unresolved	biosample_matched	not_checked	True	52773	Schaalia meyeri	Schaalia meyeri	True	PacBio RS
+GCA_900106055.1	GCF_900106055.1	SAMN04489714	SRR4180921	PRJNA303644	pacbio_unresolved	biosample_matched	not_checked	True	131110	Schaalia radingae	Schaalia radingae	True	PacBio RS
+GCA_900105865.1	GCF_900105865.1	SAMN04489737	SRR4180928	PRJNA303742	pacbio_unresolved	biosample_matched	not_checked	True	131112	Arcanobacterium phocae	Arcanobacterium phocae	True	PacBio RS
+GCA_024584435.1	GCF_024584435.1	SAMN30032671	SRR24086630	PRJNA863379	pacbio_unresolved	biosample_matched	not_checked	False	1660	Schaalia odontolytica	Schaalia odontolytica	True	PacBio Sequel
+GCA_040580805.1	GCF_040580805.1	SAMN41478974	SRR30575159	PRJNA1114104	ont	biosample_matched	not_checked	True	1661	Trueperella pyogenes	Trueperella pyogenes	True	Illumina MiSeq
+GCA_042746215.1	GCF_042746215.1	SAMN43921006	SRR30867951	PRJNA316969	ont	biosample_matched	not_checked	True	131111	Schaalia turicensis	Schaalia turicensis	True	Oxford Nanopore; Illumina
+GCA_016904675.1	GCF_016904675.1	SAMN17856003	SRR13679345	PRJNA701248	ont	biosample_matched	not_checked	True	1302235	Arcanobacterium phocisimile	Arcanobacterium phocisimile	True	Oxford Nanopore MinION; Illumina NextSeq
+GCA_024741855.1	GCF_024741855.1	SAMN28052907	SRR19049135	PRJNA834611	ont	biosample_matched	not_checked	True	1661	Trueperella pyogenes	Trueperella pyogenes	True	Oxford Nanopore MinION; Illumina NovaSeq
+GCA_051126205.1	GCF_051126205.1	SAMN39923261	SRR27946202	PRJNA1075715	ont	biosample_matched	not_checked	True	1661	Trueperella pyogenes	Trueperella pyogenes	True	Oxford Nanopore PromethION
+GCA_002860685.3	GCF_002860685.3	SAMN08193627	SRR25068131	PRJNA316969	ont	biosample_matched	not_checked	False	1870995	Actinotignum timonense	Actinotignum timonense	True	Nanopore; Illumina
+GCA_002872015.2	GCF_002872015.2	SAMN07511380	SRR25068154	PRJNA316969	ont	biosample_matched	not_checked	False	190146	Actinotignum urinale	Actinotignum urinale	True	Nanopore; Illumina
+GCA_054483475.1	GCF_054483475.1	SAMN54415782	SRR36660928	PRJNA1173529	ont	biosample_matched	not_checked	True	59505	Actinotignum schaalii	Actinotignum schaalii	True	Oxford Nanopore
+GCA_054483495.1	GCF_054483495.1	SAMN54415925	SRR36661176	PRJNA1173529	ont	biosample_matched	not_checked	True	59505	Actinotignum schaalii	Actinotignum schaalii	True	Illumina
+GCA_900105015.1	GCF_900105015.1	SAMN04489715	SRR4180833	PRJNA303643	pacbio_unresolved	biosample_matched	not_checked	True	52773	Schaalia meyeri	Schaalia meyeri	True	PacBio RS
+GCA_900106055.1	GCF_900106055.1	SAMN04489714	SRR4180920	PRJNA303644	pacbio_unresolved	biosample_matched	not_checked	True	131110	Schaalia radingae	Schaalia radingae	True	PacBio RS
+GCA_900450465.1	GCF_900450465.1	SAMEA44530918	ERR1800579	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	2052	Mobiluncus mulieris	Mobiluncus mulieris	True	PacBio
+GCA_900445045.1	GCF_900445045.1	SAMEA44525668	ERR1802405	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	52767	Actinomyces denticolens	Actinomyces denticolens	True	PacBio
+GCA_900453235.1	GCF_900453235.1	SAMEA4412679	ERR1805683	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	144178	Mobiluncus holmesii	Mobiluncus holmesii	True	PacBio
+GCA_900453215.1	GCF_900453215.1	SAMEA4434523	ERR1820606	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	2052	Mobiluncus mulieris	Mobiluncus mulieris	True	PacBio
+GCA_900445275.1	GCF_900445275.1	SAMEA104016178	ERR2146856	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	28264	Arcanobacterium haemolyticum	Arcanobacterium haemolyticum	True	PacBio
+GCA_016127955.1	GCF_016127955.1	SAMN16357220	SRR12825941	PRJNA231221	pacbio_clr_subreads	biosample_matched	not_checked	True	544580	Actinomyces oris	Actinomyces oris	True	Pacbio; Illumina
+GCA_016725225.1	GCF_016725225.1	SAMN16357296	SRR12937847	PRJNA231221	pacbio_clr_subreads	biosample_matched	not_checked	True	2051	Mobiluncus curtisii	Mobiluncus curtisii	True	Pacbio; Illumina
+GCA_041380175.1	GCF_041380175.1	SAMN42187890	SRR29688560	PRJNA1130396	pacbio_unresolved	biosample_matched	not_checked	True	3231492	Buchananella felis	Buchananella felis	True	PacBio
+GCA_016907845.1	GCF_016907845.1	SAMN17619928	SRR35145719	PRJNA695673	pacbio_hifi_ccs	biosample_matched	not_checked	True	108028	Arcanobacterium pluranimalium	Arcanobacterium pluranimalium	True	PacBio
+GCA_031456295.1	GCF_031456295.1	SAMN18242971	SRR35181476	PRJNA708444	pacbio_hifi_ccs	biosample_matched	not_checked	True	149017	Arcanobacterium hippocoleae	Arcanobacterium hippocoleae	True	PacBio
+GCA_040580745.1	GCF_040580745.1	SAMN41478973	SRR30575160	PRJNA1114104	ont	biosample_matched	not_checked	True	1661	Trueperella pyogenes	Trueperella pyogenes	True	Illumina MiSeq
+GCA_055387755.1	GCF_055387755.1	SAMD00911254	DRR683173	PRJDB20661	ont	biosample_matched	not_checked	True	3421130	Varibaculum sp. GTC20041	Varibaculum sp. GTC20041	True	Illumina NovaSeq 6000; Nanopore PromethION 2i
+GCA_024803565.1	GCF_024803565.1	SAMN27553867	SRR18740465	PRJNA826253	ont	biosample_matched	not_checked	True	1661	Trueperella pyogenes	Trueperella pyogenes	True	Oxford Nanopore MinION; Illumina NovaSeq
+GCA_032822735.1	GCF_032822735.1	SAMN35366346	SRR25068141	PRJNA316969	ont	biosample_matched	not_checked	False	1445614	Actinotignum sanguinis	Actinotignum sanguinis	True	Nanopore; Illumina
+GCA_002860645.2	GCF_002860645.2	SAMN08193630	SRR25068162	PRJNA316969	ont	biosample_matched	not_checked	False	33007	Winkia neuii	Winkia neuii	True	Nanopore; Illumina
+GCA_051027575.1	GCF_051027575.1	SAMN48890636	SRR33824477	PRJNA1271997	ont	biosample_matched	not_checked	False	544580	Actinomyces oris	Actinomyces oris	True	Illumina NovaSeq; Oxford Nanopore GridION
+GCA_043496875.1	GCF_043496875.1	SAMN43960059	SRR36298506	PRJNA316969	ont	biosample_matched	not_checked	True	3427277	Actinotignum cystesis	Actinotignum cystesis	True	Illumina; Oxford Nanopore
+GCA_041380015.1	GCF_041380015.1	SAMN42187892	SRR29688558	PRJNA1130396	pacbio_unresolved	biosample_matched	not_checked	True	3231492	Buchananella felis	Buchananella felis	True	PacBio
+GCA_041380365.1	GCF_041380365.1	SAMN42187889	SRR29688561	PRJNA1130396	pacbio_unresolved	biosample_matched	not_checked	True	3231492	Buchananella felis	Buchananella felis	True	PacBio
+GCA_900637295.1	GCF_900637295.1	SAMEA4412657	ERR1802424	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	52774	Actinomyces slackii	Actinomyces slackii	True	PacBio
+GCA_900445025.1	GCF_900445025.1	SAMEA4504037	ERR1901081	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	1660	Schaalia odontolytica	Schaalia odontolytica	True	PacBio
+GCA_900637975.1	GCF_900637975.1	SAMEA101153668	ERR2125758	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	1656	Actinomyces viscosus	Actinomyces viscosus	True	PacBio
+GCA_900637165.1	GCF_900637165.1	SAMEA44526418	ERR2246641	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	52771	Actinomyces howellii	Actinomyces howellii	True	PacBio
+GCA_016626125.1	GCF_016626125.1	SAMN16756448	SRR13414778	PRJNA676127	pacbio_unresolved	biosample_matched	not_checked	True	2789424	Actinomyces sp. HMT897	Actinomyces sp. HMT897	True	PacBio Sequel
+GCA_900105015.1	GCF_900105015.1	SAMN04489715	SRR4180832	PRJNA303643	pacbio_unresolved	biosample_matched	not_checked	True	52773	Schaalia meyeri	Schaalia meyeri	True	PacBio RS
+GCA_900106055.1	GCF_900106055.1	SAMN04489714	SRR4180922	PRJNA303644	pacbio_unresolved	biosample_matched	not_checked	True	131110	Schaalia radingae	Schaalia radingae	True	PacBio RS
+GCA_002206485.2	GCF_002206485.1	SAMN06173316	SRR5413264	PRJNA231221	pacbio_clr_subreads	biosample_matched	not_checked	True	2052	Mobiluncus mulieris	Mobiluncus mulieris	True	PacBio; Illumina
+GCA_023169925.1	GCF_023169925.1	SAMD00442649	DRR351396	PRJDB13022	ont	biosample_matched	not_checked	True	871541	Actinomyces oris K20	Actinomyces oris K20	True	Illumina MiSeq; Oxford Nanopore MinION
+GCA_054489185.1	GCF_054489185.1	SAMN54513169	SRR36733034	PRJNA1173529	ont	biosample_matched	not_checked	True	1870995	Actinotignum timonense	Actinotignum timonense	True	Illumina; Oxford Nanopore
+GCA_012563545.1	GCF_012563545.1	SAMN14485815	SRR11559465	PRJNA616260	ont	biosample_matched	not_checked	True	2722751	Arcanobacterium buesumense	Arcanobacterium buesumense	True	Oxford Nanopore MiniION; Illumina NextSeq
+GCA_024803545.1	GCF_024803545.1	SAMN20826602	SRR15507454	PRJNA755484	ont	biosample_matched	not_checked	True	1661	Trueperella pyogenes	Trueperella pyogenes	True	Oxford Nanopore MinION; Illumina NovaSeq
+GCA_024803585.1	GCF_024803585.1	SAMN27553866	SRR18740467	PRJNA826253	ont	biosample_matched	not_checked	True	1661	Trueperella pyogenes	Trueperella pyogenes	True	Oxford Nanopore MinION; Illumina NovaSeq
+GCA_002871995.2	GCF_002871995.2	SAMN07511381	SRR25068157	PRJNA316969	ont	biosample_matched	not_checked	False	66228	Gleimia europaea	Gleimia europaea	True	Nanopore; Illumina
+GCA_900105015.1	GCF_900105015.1	SAMN04489715	SRR4180835	PRJNA303643	pacbio_unresolved	biosample_matched	not_checked	True	52773	Schaalia meyeri	Schaalia meyeri	True	PacBio RS
+GCA_900105865.1	GCF_900105865.1	SAMN04489737	SRR4180927	PRJNA303742	pacbio_unresolved	biosample_matched	not_checked	True	131112	Arcanobacterium phocae	Arcanobacterium phocae	True	PacBio RS
+GCA_014191445.1	GCF_014191445.1	SAMN11512330	SRR9004633	PRJNA538226	pacbio_unresolved	biosample_matched	not_checked	True	1661	Trueperella pyogenes	Trueperella pyogenes	True	PacBio
+GCA_900444995.1	GCF_900444995.1	SAMEA4364203	ERR1787521	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	1658	Actinomyces bovis	Actinomyces bovis	True	PacBio
+GCA_900460345.1	GCF_900460345.1	SAMEA4535748	ERR1954488	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	1661	Trueperella pyogenes	Trueperella pyogenes	True	PacBio
+GCA_014204735.1	GCF_014204735.1	SAMN12793120	SRR10918247	PRJNA566818	pacbio_unresolved	biosample_matched	not_checked	True	2052	Mobiluncus mulieris	Mobiluncus mulieris	True	PacBio
+GCA_014208035.1	GCF_014208035.1	SAMN14510501	SRR11612829	PRJNA621368	pacbio_unresolved	biosample_matched	not_checked	True	29316	Schaalia hyovaginalis	Schaalia hyovaginalis	True	PacBio
+GCA_014208035.1	GCF_014208035.1	SAMN14510501	SRR11612830	PRJNA621368	pacbio_unresolved	biosample_matched	not_checked	True	29316	Schaalia hyovaginalis	Schaalia hyovaginalis	True	PacBio
+GCA_016127855.1	GCF_016127855.1	SAMN16357206	SRR12825855	PRJNA231221	pacbio_unresolved	biosample_matched	not_checked	True	1655	Actinomyces naeslundii	Actinomyces naeslundii	True	Pacbio; Illumina
+GCA_019429565.1	GCF_019429565.1	SAMN16756450	SRR15274828	PRJNA676127	pacbio_unresolved	biosample_matched	not_checked	True	2789426	Schaalia sp. ORNL0103	Schaalia sp. ORNL0103	True	PacBio Sequel; Illumina MiSeq
+GCA_016907845.1	GCF_016907845.1	SAMN17619928	SRR18700738	PRJNA695673	pacbio_unresolved	biosample_matched	not_checked	True	108028	Arcanobacterium pluranimalium	Arcanobacterium pluranimalium	True	PacBio
+GCA_030811505.1	GCF_030811505.1	SAMN18243425	SRR24887451	PRJNA708457	pacbio_unresolved	biosample_matched	not_checked	True	1803177	Arcanobacterium wilhelmae	Arcanobacterium wilhelmae	True	PacBio
+GCA_030811425.1	GCF_030811425.1	SAMN18242993	SRR24887453	PRJNA708468	pacbio_unresolved	biosample_matched	not_checked	True	66228	Gleimia europaea	Gleimia europaea	True	PacBio
+GCA_030811535.1	GCF_030811535.1	SAMN18242878	SRR24887456	PRJNA708478	pacbio_unresolved	biosample_matched	not_checked	True	312286	Trueperella bonasi	Trueperella bonasi	True	PacBio
+GCA_030811095.1	GCF_030811095.1	SAMN18243582	SRR24887480	PRJNA708453	pacbio_unresolved	biosample_matched	not_checked	True	445930	Trueperella abortisuis	Trueperella abortisuis	True	PacBio
+GCA_030811425.1	GCF_030811425.1	SAMN18242993	SRR35198244	PRJNA708468	pacbio_hifi_ccs	biosample_matched	not_checked	True	66228	Gleimia europaea	Gleimia europaea	True	PacBio
+GCA_019380255.1	GCF_019380255.1	SAMN14131124	SRR11108582	PRJNA607374	ont	biosample_matched	not_checked	True	131111	Schaalia turicensis	Schaalia turicensis	True	Illumina NovaSeq and Oxford Nanopore MiniION
+GCA_030246965.1	GCF_030246965.1	SAMN35366347	SRR25068138	PRJNA316969	ont	biosample_matched	not_checked	False	59561	Trueperella bernardiae	Trueperella bernardiae	True	Nanopore
+GCA_002871945.2	GCF_002871945.2	SAMN07511383	SRR25068151	PRJNA316969	ont	biosample_matched	not_checked	False	595468	Gleimia hominis	Gleimia hominis	True	Nanopore; Illumina
+GCA_023973165.1	GCF_023973165.1	SAMN29220662	SRR20076306	PRJNA851267	ont	biosample_matched	not_checked	True	1503041	Arcanobacterium pinnipediorum	Arcanobacterium pinnipediorum	True	Illumina NextSeq; Oxford Nanopore MinION
+GCA_029625435.1	GCF_029625435.1	SAMN33983789	SRR24016856	PRJNA950321	ont	biosample_matched	not_checked	True	999183	Arcanobacterium canis	Arcanobacterium canis	True	Illumina MiSeq; Oxford Nanopore MinION
+GCA_029632765.1	GCF_029632765.1	SAMN33987071	SRR24017996	PRJNA950366	ont	biosample_matched	not_checked	True	1803177	Arcanobacterium wilhelmae	Arcanobacterium wilhelmae	True	Illumina MiSeq; Oxford Nanopore MinION

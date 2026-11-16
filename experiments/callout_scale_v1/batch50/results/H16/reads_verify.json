@@ -1,0 +1,52 @@
+{
+  "run": {
+    "sample_id": "H16",
+    "run": "SRR32057873",
+    "biosample": "SAMN45889102",
+    "assembly": "GCA_051903345.1",
+    "platform": "OXFORD_NANOPORE",
+    "instrument_model": "GridION",
+    "role": "callout_scale_v1_batch50",
+    "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR320/073/SRR32057873/SRR32057873_1.fastq.gz",
+    "archive_read_count": 652521,
+    "archive_base_count": 3039416311,
+    "fastq_bytes": 3028822599,
+    "fastq_md5": "e9ad5fdfa6a24ab5824e2afeb6acae39"
+  },
+  "download_started": "2026-10-24T11:13:31-0700",
+  "local_file": "/global/scratch/users/kh36969/longread_callout/data/reads/SRR32057873/SRR32057873_1.fastq.gz",
+  "bytes": 3028822599,
+  "md5": "e9ad5fdfa6a24ab5824e2afeb6acae39",
+  "sha256": "d73f2d825bffdde8bdde09880a3af17ec2db1a6f10840f40c8103652b705c9ae",
+  "rejected_downloads": [],
+  "spots_absent_from_fastq": 0,
+  "summary": {
+    "records": 652521,
+    "bases": 3039416311,
+    "read_unit_counts": {
+      "other_name": 652521
+    },
+    "distinct_zmws": null,
+    "distinct_sra_spots": 652521,
+    "max_records_per_spot": 1,
+    "placeholder_quality_records": 0,
+    "example_headers": [
+      "@SRR32057873.1 2d2e0ee8-e28d-469e-a383-31094daa241d/1",
+      "@SRR32057873.2 b6d40376-626e-4667-b8d8-b48c59f637f4/1",
+      "@SRR32057873.3 9ff990b0-6ba5-4363-b7ed-565e44b27157/1",
+      "@SRR32057873.4 ced437bf-8149-4e38-b7e8-e195ccddb896/1"
+    ],
+    "mean_length": 4658.0,
+    "median_length": 3250,
+    "max_length": 267579,
+    "n50": 6395,
+    "molecule_grouping": "one_record_per_molecule"
+  },
+  "checks": {
+    "bytes_match": true,
+    "md5_match": true,
+    "spot_count_match": true,
+    "base_count_match": true
+  },
+  "status": "verified"
+}

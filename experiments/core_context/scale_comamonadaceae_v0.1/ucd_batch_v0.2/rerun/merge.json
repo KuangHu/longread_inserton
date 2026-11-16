@@ -1,0 +1,53 @@
+{
+ "version": "ucd_batch_v0.2",
+ "completeness": {
+  "expected_pairs": 2117,
+  "expected_rows": 4234,
+  "observed_rows": {
+   "cds_core": 2117,
+   "candidate_insertion": 2117
+  },
+  "missing": {
+   "cds_core": 0,
+   "candidate_insertion": 0
+  },
+  "duplicated": {},
+  "unexpected": {},
+  "missing_chunks": [],
+  "complete": true
+ },
+ "code_versions": {
+  "ucd_batch_v0.2+48a91ae6ca23": 3
+ },
+ "timing": {
+  "chunks": 3,
+  "sum_chunk_wall_s": 227.7,
+  "worker_cpu_s": 2141.3,
+  "worker_wall_s": 6434.9,
+  "first_finished": "2026-11-07 15:49:18",
+  "last_finished": "2026-11-07 15:50:49"
+ },
+ "evidence_sequences_distinct": 20682,
+ "files": {
+  "rows_cds_core.tsv.gz": {
+   "path": "/global/scratch/users/kh36969/longread_callout/core_context/ucd_batch_v0.2/rerun/rows_cds_core.tsv.gz",
+   "bytes": 475884,
+   "sha256": "5f49c2df2962010c353c7477cc635499635ca73506863c6e4a27bb422b254f70"
+  },
+  "rows_candidate_insertion.tsv.gz": {
+   "path": "/global/scratch/users/kh36969/longread_callout/core_context/ucd_batch_v0.2/rerun/rows_candidate_insertion.tsv.gz",
+   "bytes": 467551,
+   "sha256": "fddc495760502cdbadc986f85a8ff4f60401f4db6fbc38eafc1cc5fa87f236dc"
+  },
+  "evidence_sequences.fa.gz": {
+   "path": "/global/scratch/users/kh36969/longread_callout/core_context/ucd_batch_v0.2/rerun/evidence_sequences.fa.gz",
+   "bytes": 3662177,
+   "sha256": "ee3c084ebc29b3583288a0c3573d348bc59a720010aa97b258c7e66793bd2b47"
+  },
+  "evidence_hsps.tsv.gz": {
+   "path": "/global/scratch/users/kh36969/longread_callout/core_context/ucd_batch_v0.2/rerun/evidence_hsps.tsv.gz",
+   "bytes": 162913,
+   "sha256": "5c87feba6e2b7e65e7ed97cb40b724871a5ffae29487d0ed4585bfcf8ac2b383"
+  }
+ }
+}

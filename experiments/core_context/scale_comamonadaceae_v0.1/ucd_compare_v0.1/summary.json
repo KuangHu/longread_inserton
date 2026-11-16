@@ -1,0 +1,239 @@
+{
+ "version": "ucd_compare_v0.1",
+ "config": {
+  "context": 1000,
+  "ins_identity": 90.0,
+  "ins_coverage": 0.9,
+  "ctx_identity": 80.0,
+  "ctx_similar_cov": 0.8,
+  "ctx_different_cov": 0.2,
+  "min_hsp": 30,
+  "evalue": 1e-05,
+  "min_usable_bp": 800,
+  "lc_window": 64,
+  "lc_step": 32,
+  "lc_entropy": 3.0
+ },
+ "input_pairs": 918,
+ "comparisons": 1548,
+ "by_kind_and_verdict": {
+  "cds_core": {
+   "insertion_dissimilar": {
+    "pairs": 83,
+    "occurrences": 139,
+    "samples": 21,
+    "cores": 56
+   },
+   "insertion_partial": {
+    "pairs": 3,
+    "occurrences": 6,
+    "samples": 2,
+    "cores": 3
+   },
+   "insufficient_context": {
+    "pairs": 1,
+    "occurrences": 2,
+    "samples": 1,
+    "cores": 1
+   },
+   "only_one_side_different": {
+    "pairs": 51,
+    "occurrences": 66,
+    "samples": 11,
+    "cores": 28
+   },
+   "same_context": {
+    "pairs": 190,
+    "occurrences": 366,
+    "samples": 15,
+    "cores": 173
+   },
+   "shared_physical_context": {
+    "pairs": 13,
+    "occurrences": 22,
+    "samples": 9,
+    "cores": 9
+   },
+   "swapped_or_rearranged_context": {
+    "pairs": 1,
+    "occurrences": 2,
+    "samples": 1,
+    "cores": 1
+   },
+   "ucd_supported": {
+    "pairs": 442,
+    "occurrences": 419,
+    "samples": 32,
+    "cores": 120
+   },
+   "uncertain_context": {
+    "pairs": 134,
+    "occurrences": 133,
+    "samples": 24,
+    "cores": 55
+   }
+  },
+  "candidate_insertion": {
+   "insertion_dissimilar": {
+    "pairs": 44,
+    "occurrences": 74,
+    "samples": 20,
+    "cores": 32
+   },
+   "insertion_partial": {
+    "pairs": 2,
+    "occurrences": 4,
+    "samples": 1,
+    "cores": 2
+   },
+   "insufficient_context": {
+    "pairs": 1,
+    "occurrences": 2,
+    "samples": 1,
+    "cores": 1
+   },
+   "interval_not_available": {
+    "pairs": 288,
+    "occurrences": 535,
+    "samples": 23,
+    "cores": 234
+   },
+   "swapped_or_rearranged_context": {
+    "pairs": 1,
+    "occurrences": 2,
+    "samples": 1,
+    "cores": 1
+   },
+   "ucd_supported": {
+    "pairs": 573,
+    "occurrences": 515,
+    "samples": 33,
+    "cores": 157
+   },
+   "uncertain_context": {
+    "pairs": 9,
+    "occurrences": 15,
+    "samples": 5,
+    "cores": 7
+   }
+  }
+ },
+ "named_cases": {
+  "UCD10": {
+   "cds_core": "ucd_supported",
+   "candidate_insertion": "ucd_supported"
+  },
+  "UCD11": {
+   "cds_core": "ucd_supported",
+   "candidate_insertion": "ucd_supported"
+  },
+  "UCD12": {
+   "cds_core": "uncertain_context",
+   "candidate_insertion": "ucd_supported"
+  },
+  "UCD01": {
+   "cds_core": "ucd_supported",
+   "candidate_insertion": "ucd_supported"
+  },
+  "UCDR06": {
+   "cds_core": "ucd_supported",
+   "candidate_insertion": "interval_not_available"
+  },
+  "UCDR05": {
+   "cds_core": "ucd_supported",
+   "candidate_insertion": "ucd_supported"
+  },
+  "UCD09": {
+   "cds_core": "uncertain_context",
+   "candidate_insertion": "ucd_supported"
+  },
+  "UCD02": {
+   "cds_core": "ucd_supported",
+   "candidate_insertion": "ucd_supported"
+  },
+  "UCD04": {
+   "cds_core": "ucd_supported",
+   "candidate_insertion": "ucd_supported"
+  },
+  "UCDR01": {
+   "cds_core": "ucd_supported",
+   "candidate_insertion": "ucd_supported"
+  },
+  "UCD05": {
+   "cds_core": "ucd_supported",
+   "candidate_insertion": "ucd_supported"
+  },
+  "UCD07": {
+   "cds_core": "ucd_supported",
+   "candidate_insertion": "ucd_supported"
+  },
+  "UCD08": {
+   "cds_core": "uncertain_context",
+   "candidate_insertion": "ucd_supported"
+  },
+  "UCD03": {
+   "cds_core": "ucd_supported",
+   "candidate_insertion": "ucd_supported"
+  },
+  "UCD06": {
+   "cds_core": "ucd_supported",
+   "candidate_insertion": "ucd_supported"
+  },
+  "UCDR04": {
+   "cds_core": "ucd_supported",
+   "candidate_insertion": "ucd_supported"
+  },
+  "UCDR03": {
+   "cds_core": "ucd_supported",
+   "candidate_insertion": "ucd_supported"
+  }
+ },
+ "verdict_by_reference_context_class": {
+  "cds_core": {
+   "- | insertion_dissimilar": 63,
+   "- | insertion_partial": 3,
+   "- | only_one_side_different": 16,
+   "- | same_context": 190,
+   "- | shared_physical_context": 13,
+   "- | ucd_supported": 27,
+   "- | uncertain_context": 26,
+   "context_different_both_sides | insertion_dissimilar": 20,
+   "context_different_both_sides | insufficient_context": 1,
+   "context_different_both_sides | only_one_side_different": 35,
+   "context_different_both_sides | swapped_or_rearranged_context": 1,
+   "context_different_both_sides | ucd_supported": 415,
+   "context_different_both_sides | uncertain_context": 108
+  },
+  "candidate_insertion": {
+   "- | insertion_dissimilar": 19,
+   "- | interval_not_available": 287,
+   "- | ucd_supported": 31,
+   "- | uncertain_context": 1,
+   "context_different_both_sides | insertion_dissimilar": 25,
+   "context_different_both_sides | insertion_partial": 2,
+   "context_different_both_sides | insufficient_context": 1,
+   "context_different_both_sides | interval_not_available": 1,
+   "context_different_both_sides | swapped_or_rearranged_context": 1,
+   "context_different_both_sides | ucd_supported": 542,
+   "context_different_both_sides | uncertain_context": 8
+  }
+ },
+ "timing": {
+  "wall_s": 238.2,
+  "threads": 16,
+  "cpu_s_per_pair": 3.431
+ },
+ "evidence": {
+  "evidence_sequences.fa.gz": {
+   "path": "/global/scratch/users/kh36969/longread_callout/core_context/ucd_compare_v0.1/evidence_sequences.fa.gz",
+   "sha256": "23c001559551bcea02c81f53836db914f4a102bb393405ba680dfdcc36ec16c5",
+   "bytes": 1171479
+  },
+  "evidence_hsps.tsv.gz": {
+   "path": "/global/scratch/users/kh36969/longread_callout/core_context/ucd_compare_v0.1/evidence_hsps.tsv.gz",
+   "sha256": "1fcc2c3f67c1fb040e5e4d64f565bc74cc489a447711e8aaa94a3cf9b6cf8038",
+   "bytes": 57267
+  }
+ },
+ "input_pairs_sha256": "aa3b07eb4b1b1dad4f1b55023c5be67d42a25f4b073c5a25b4f912cb93634258"
+}

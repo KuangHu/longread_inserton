@@ -1,0 +1,3857 @@
+[
+  {
+    "query": "DZH-419_PILER_0.0",
+    "organism": "DZH-419",
+    "method": "PILER",
+    "native_family": "0.0",
+    "length": 2490,
+    "raw_occurrences": 11,
+    "occurrences": [
+      {
+        "contig": "NZ_JCAOFZ010000003.1",
+        "accession": "NZ_JCAOFZ010000003.1",
+        "start0": 327970,
+        "end0": 330445,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_JCAOFZ010000003.1_feature_753",
+            "type": "CDS",
+            "overlap_bp": 1527,
+            "feature_length_bp": 1527,
+            "product": [
+              "IS21 family transposase"
+            ],
+            "locus_tag": [
+              "AC52KD_RS28335"
+            ]
+          },
+          {
+            "feature_id": "NZ_JCAOFZ010000003.1_feature_755",
+            "type": "CDS",
+            "overlap_bp": 786,
+            "feature_length_bp": 786,
+            "product": [
+              "IS21-like element helper ATPase IstB"
+            ],
+            "locus_tag": [
+              "AC52KD_RS28340"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184206.1",
+        "accession": "NZ_CM184206.1",
+        "start0": 240991,
+        "end0": 243464,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184206.1_feature_442",
+            "type": "CDS",
+            "overlap_bp": 7,
+            "feature_length_bp": 318,
+            "product": [
+              "hypothetical protein"
+            ],
+            "locus_tag": [
+              "AC52KD_RS18710"
+            ]
+          },
+          {
+            "feature_id": "NZ_CM184206.1_feature_444",
+            "type": "CDS",
+            "overlap_bp": 1527,
+            "feature_length_bp": 1527,
+            "product": [
+              "IS21 family transposase"
+            ],
+            "locus_tag": [
+              "AC52KD_RS18715"
+            ]
+          },
+          {
+            "feature_id": "NZ_CM184206.1_feature_446",
+            "type": "CDS",
+            "overlap_bp": 786,
+            "feature_length_bp": 786,
+            "product": [
+              "IS21-like element helper ATPase IstB"
+            ],
+            "locus_tag": [
+              "AC52KD_RS18720"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184206.1",
+        "accession": "NZ_CM184206.1",
+        "start0": 463815,
+        "end0": 466299,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184206.1_feature_848",
+            "type": "CDS",
+            "overlap_bp": 134,
+            "feature_length_bp": 1062,
+            "product": [
+              "sensor histidine kinase"
+            ],
+            "locus_tag": [
+              "AC52KD_RS19725"
+            ]
+          },
+          {
+            "feature_id": "NZ_CM184206.1_feature_850",
+            "type": "CDS",
+            "overlap_bp": 1527,
+            "feature_length_bp": 1527,
+            "product": [
+              "IS21 family transposase"
+            ],
+            "locus_tag": [
+              "AC52KD_RS19730"
+            ]
+          },
+          {
+            "feature_id": "NZ_CM184206.1_feature_852",
+            "type": "CDS",
+            "overlap_bp": 786,
+            "feature_length_bp": 786,
+            "product": [
+              "IS21-like element helper ATPase IstB"
+            ],
+            "locus_tag": [
+              "AC52KD_RS19735"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184206.1",
+        "accession": "NZ_CM184206.1",
+        "start0": 778846,
+        "end0": 781320,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184206.1_feature_1404",
+            "type": "CDS",
+            "overlap_bp": 1527,
+            "feature_length_bp": 1527,
+            "product": [
+              "IS21 family transposase"
+            ],
+            "locus_tag": [
+              "AC52KD_RS21115"
+            ]
+          },
+          {
+            "feature_id": "NZ_CM184206.1_feature_1406",
+            "type": "CDS",
+            "overlap_bp": 786,
+            "feature_length_bp": 786,
+            "product": [
+              "IS21-like element helper ATPase IstB"
+            ],
+            "locus_tag": [
+              "AC52KD_RS21120"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184206.1",
+        "accession": "NZ_CM184206.1",
+        "start0": 1905681,
+        "end0": 1908106,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184206.1_feature_3409",
+            "type": "CDS",
+            "overlap_bp": 786,
+            "feature_length_bp": 786,
+            "product": [
+              "IS21-like element helper ATPase IstB"
+            ],
+            "locus_tag": [
+              "AC52KD_RS26120"
+            ]
+          },
+          {
+            "feature_id": "NZ_CM184206.1_feature_3411",
+            "type": "CDS",
+            "overlap_bp": 1527,
+            "feature_length_bp": 1527,
+            "product": [
+              "IS21 family transposase"
+            ],
+            "locus_tag": [
+              "AC52KD_RS26125"
+            ]
+          },
+          {
+            "feature_id": "NZ_CM184206.1_feature_3413",
+            "type": "CDS",
+            "overlap_bp": 11,
+            "feature_length_bp": 486,
+            "product": [
+              "Mov34/MPN/PAD-1 family protein"
+            ],
+            "locus_tag": [
+              "AC52KD_RS26130"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 73743,
+        "end0": 76221,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184205.1_feature_142",
+            "type": "CDS",
+            "overlap_bp": 786,
+            "feature_length_bp": 786,
+            "product": [
+              "IS21-like element helper ATPase IstB"
+            ],
+            "locus_tag": [
+              "AC52KD_RS00355"
+            ]
+          },
+          {
+            "feature_id": "NZ_CM184205.1_feature_144",
+            "type": "CDS",
+            "overlap_bp": 1527,
+            "feature_length_bp": 1527,
+            "product": [
+              "IS21 family transposase"
+            ],
+            "locus_tag": [
+              "AC52KD_RS00360"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 624681,
+        "end0": 627157,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184205.1_feature_1222",
+            "type": "CDS",
+            "overlap_bp": 1527,
+            "feature_length_bp": 1527,
+            "product": [
+              "IS21 family transposase"
+            ],
+            "locus_tag": [
+              "AC52KD_RS03055"
+            ]
+          },
+          {
+            "feature_id": "NZ_CM184205.1_feature_1224",
+            "type": "CDS",
+            "overlap_bp": 786,
+            "feature_length_bp": 786,
+            "product": [
+              "IS21-like element helper ATPase IstB"
+            ],
+            "locus_tag": [
+              "AC52KD_RS03060"
+            ]
+          },
+          {
+            "feature_id": "NZ_CM184205.1_feature_1226",
+            "type": "CDS",
+            "overlap_bp": 73,
+            "feature_length_bp": 402,
+            "product": [
+              "hypothetical protein"
+            ],
+            "locus_tag": [
+              "AC52KD_RS03065"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 2110167,
+        "end0": 2112642,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184205.1_feature_4075",
+            "type": "CDS",
+            "overlap_bp": 1527,
+            "feature_length_bp": 1527,
+            "product": [
+              "IS21 family transposase"
+            ],
+            "locus_tag": [
+              "AC52KD_RS10185"
+            ]
+          },
+          {
+            "feature_id": "NZ_CM184205.1_feature_4077",
+            "type": "CDS",
+            "overlap_bp": 786,
+            "feature_length_bp": 786,
+            "product": [
+              "IS21-like element helper ATPase IstB"
+            ],
+            "locus_tag": [
+              "AC52KD_RS10190"
+            ]
+          },
+          {
+            "feature_id": "NZ_CM184205.1_feature_4079",
+            "type": "CDS",
+            "overlap_bp": 72,
+            "feature_length_bp": 975,
+            "product": [
+              "aldose 1-epimerase"
+            ],
+            "locus_tag": [
+              "AC52KD_RS10195"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 2324503,
+        "end0": 2326975,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184205.1_feature_4477",
+            "type": "CDS",
+            "overlap_bp": 1527,
+            "feature_length_bp": 1527,
+            "product": [
+              "IS21 family transposase"
+            ],
+            "locus_tag": [
+              "AC52KD_RS11190"
+            ]
+          },
+          {
+            "feature_id": "NZ_CM184205.1_feature_4479",
+            "type": "CDS",
+            "overlap_bp": 786,
+            "feature_length_bp": 786,
+            "product": [
+              "IS21-like element helper ATPase IstB"
+            ],
+            "locus_tag": [
+              "AC52KD_RS11195"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 3325732,
+        "end0": 3328222,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184205.1_feature_6336",
+            "type": "CDS",
+            "overlap_bp": 38,
+            "feature_length_bp": 288,
+            "product": [
+              "hypothetical protein"
+            ],
+            "locus_tag": [
+              "AC52KD_RS15835"
+            ]
+          },
+          {
+            "feature_id": "NZ_CM184205.1_feature_6338",
+            "type": "CDS",
+            "overlap_bp": 1527,
+            "feature_length_bp": 1527,
+            "product": [
+              "IS21 family transposase"
+            ],
+            "locus_tag": [
+              "AC52KD_RS15840"
+            ]
+          },
+          {
+            "feature_id": "NZ_CM184205.1_feature_6340",
+            "type": "CDS",
+            "overlap_bp": 786,
+            "feature_length_bp": 786,
+            "product": [
+              "IS21-like element helper ATPase IstB"
+            ],
+            "locus_tag": [
+              "AC52KD_RS15845"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 3591338,
+        "end0": 3593813,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184205.1_feature_6854",
+            "type": "CDS",
+            "overlap_bp": 1527,
+            "feature_length_bp": 1527,
+            "product": [
+              "IS21 family transposase"
+            ],
+            "locus_tag": [
+              "AC52KD_RS17120"
+            ]
+          },
+          {
+            "feature_id": "NZ_CM184205.1_feature_6856",
+            "type": "CDS",
+            "overlap_bp": 786,
+            "feature_length_bp": 786,
+            "product": [
+              "IS21-like element helper ATPase IstB"
+            ],
+            "locus_tag": [
+              "AC52KD_RS17125"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "DZH-419__NZ_JCAOFZ010000003.1_feature_753",
+      "identity_pct": 99.803,
+      "alignment_aa": 508,
+      "query_start": 120,
+      "query_end": 1643,
+      "evalue": 0.0,
+      "bitscore": 969.0,
+      "subject_length": 508,
+      "title": "IS21 family transposase"
+    },
+    "best_deposited_tnp_hit": {
+      "subject": "DZH-419__NZ_JCAOFZ010000003.1_feature_753",
+      "identity_pct": 99.803,
+      "alignment_aa": 508,
+      "query_start": 120,
+      "query_end": 1643,
+      "evalue": 0.0,
+      "bitscore": 969.0,
+      "subject_length": 508,
+      "title": "IS21 family transposase"
+    },
+    "native_records_overlapping_tnp_CDS": 11,
+    "tnp_supported": true,
+    "deposited_tnp_products": [
+      "IS21 family transposase"
+    ]
+  },
+  {
+    "query": "DZH-419_PILER_1.1",
+    "organism": "DZH-419",
+    "method": "PILER",
+    "native_family": "1.1",
+    "length": 5690,
+    "raw_occurrences": 3,
+    "occurrences": [
+      {
+        "contig": "NZ_CM184206.1",
+        "accession": "NZ_CM184206.1",
+        "start0": 1158355,
+        "end0": 1164045,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184206.1_feature_2092",
+            "type": "rRNA",
+            "overlap_bp": 113,
+            "feature_length_bp": 113,
+            "product": [
+              "5S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "AC52KD_RS22835"
+            ]
+          },
+          {
+            "feature_id": "NZ_CM184206.1_feature_2094",
+            "type": "rRNA",
+            "overlap_bp": 2879,
+            "feature_length_bp": 2879,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "AC52KD_RS22840"
+            ]
+          },
+          {
+            "feature_id": "NZ_CM184206.1_feature_2096",
+            "type": "tRNA",
+            "overlap_bp": 76,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Ala"
+            ],
+            "locus_tag": [
+              "AC52KD_RS22845"
+            ]
+          },
+          {
+            "feature_id": "NZ_CM184206.1_feature_2098",
+            "type": "tRNA",
+            "overlap_bp": 77,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Ile"
+            ],
+            "locus_tag": [
+              "AC52KD_RS22850"
+            ]
+          },
+          {
+            "feature_id": "NZ_CM184206.1_feature_2100",
+            "type": "rRNA",
+            "overlap_bp": 1538,
+            "feature_length_bp": 1538,
+            "product": [
+              "16S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "AC52KD_RS22855"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 2976677,
+        "end0": 2982213,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184205.1_feature_5654",
+            "type": "rRNA",
+            "overlap_bp": 113,
+            "feature_length_bp": 113,
+            "product": [
+              "5S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "AC52KD_RS14130"
+            ]
+          },
+          {
+            "feature_id": "NZ_CM184205.1_feature_5656",
+            "type": "rRNA",
+            "overlap_bp": 2879,
+            "feature_length_bp": 2879,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "AC52KD_RS14135"
+            ]
+          },
+          {
+            "feature_id": "NZ_CM184205.1_feature_5658",
+            "type": "tRNA",
+            "overlap_bp": 76,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Ala"
+            ],
+            "locus_tag": [
+              "AC52KD_RS14140"
+            ]
+          },
+          {
+            "feature_id": "NZ_CM184205.1_feature_5660",
+            "type": "tRNA",
+            "overlap_bp": 77,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Ile"
+            ],
+            "locus_tag": [
+              "AC52KD_RS14145"
+            ]
+          },
+          {
+            "feature_id": "NZ_CM184205.1_feature_5662",
+            "type": "rRNA",
+            "overlap_bp": 1538,
+            "feature_length_bp": 1538,
+            "product": [
+              "16S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "AC52KD_RS14150"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 3166667,
+        "end0": 3172357,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184205.1_feature_6044",
+            "type": "rRNA",
+            "overlap_bp": 113,
+            "feature_length_bp": 113,
+            "product": [
+              "5S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "AC52KD_RS15105"
+            ]
+          },
+          {
+            "feature_id": "NZ_CM184205.1_feature_6046",
+            "type": "rRNA",
+            "overlap_bp": 2879,
+            "feature_length_bp": 2879,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "AC52KD_RS15110"
+            ]
+          },
+          {
+            "feature_id": "NZ_CM184205.1_feature_6048",
+            "type": "tRNA",
+            "overlap_bp": 76,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Ala"
+            ],
+            "locus_tag": [
+              "AC52KD_RS15115"
+            ]
+          },
+          {
+            "feature_id": "NZ_CM184205.1_feature_6050",
+            "type": "tRNA",
+            "overlap_bp": 77,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Ile"
+            ],
+            "locus_tag": [
+              "AC52KD_RS15120"
+            ]
+          },
+          {
+            "feature_id": "NZ_CM184205.1_feature_6052",
+            "type": "rRNA",
+            "overlap_bp": 1538,
+            "feature_length_bp": 1538,
+            "product": [
+              "16S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "AC52KD_RS15125"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "DZH-419_PILER_2.2",
+    "organism": "DZH-419",
+    "method": "PILER",
+    "native_family": "2.2",
+    "length": 510,
+    "raw_occurrences": 3,
+    "occurrences": [
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 2402354,
+        "end0": 2402855,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 2630634,
+        "end0": 2631124,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 2754336,
+        "end0": 2754829,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "DZH-419__NZ_CM184205.1_feature_1318",
+      "identity_pct": 52.941,
+      "alignment_aa": 170,
+      "query_start": 510,
+      "query_end": 16,
+      "evalue": 8.54e-40,
+      "bitscore": 130.0,
+      "subject_length": 181,
+      "title": "hypothetical protein"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "DZH-419_RS_R0",
+    "organism": "DZH-419",
+    "method": "RS",
+    "native_family": "R=0",
+    "length": 232,
+    "raw_occurrences": 52,
+    "occurrences": [
+      {
+        "contig": "NZ_CM184206.1",
+        "accession": "NZ_CM184206.1",
+        "start0": 1864465,
+        "end0": 1864678,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CM184206.1",
+        "accession": "NZ_CM184206.1",
+        "start0": 1689051,
+        "end0": 1689282,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CM184206.1",
+        "accession": "NZ_CM184206.1",
+        "start0": 1688724,
+        "end0": 1688936,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CM184206.1",
+        "accession": "NZ_CM184206.1",
+        "start0": 1413277,
+        "end0": 1413499,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CM184206.1",
+        "accession": "NZ_CM184206.1",
+        "start0": 1358767,
+        "end0": 1358998,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CM184206.1",
+        "accession": "NZ_CM184206.1",
+        "start0": 810899,
+        "end0": 811118,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CM184206.1",
+        "accession": "NZ_CM184206.1",
+        "start0": 298528,
+        "end0": 298758,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CM184206.1",
+        "accession": "NZ_CM184206.1",
+        "start0": 125723,
+        "end0": 125946,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CM184206.1",
+        "accession": "NZ_CM184206.1",
+        "start0": 40537,
+        "end0": 40765,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 3551614,
+        "end0": 3551841,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 3501588,
+        "end0": 3501810,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 3501309,
+        "end0": 3501537,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 3441966,
+        "end0": 3442188,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 3366436,
+        "end0": 3366661,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 3359127,
+        "end0": 3359342,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 3358817,
+        "end0": 3359044,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 3354257,
+        "end0": 3354468,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 3353917,
+        "end0": 3354142,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 3280169,
+        "end0": 3280399,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 3279830,
+        "end0": 3280030,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 3220929,
+        "end0": 3221161,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 3200908,
+        "end0": 3201133,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 2968024,
+        "end0": 2968243,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 2967646,
+        "end0": 2967877,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 2754630,
+        "end0": 2754848,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 2754318,
+        "end0": 2754546,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 2750088,
+        "end0": 2750314,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 2630928,
+        "end0": 2631138,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 2630616,
+        "end0": 2630844,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 2479821,
+        "end0": 2479885,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 2478256,
+        "end0": 2478479,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184205.1_feature_4739",
+            "type": "CDS",
+            "overlap_bp": 73,
+            "feature_length_bp": 348,
+            "product": [
+              "hypothetical protein"
+            ],
+            "locus_tag": [
+              "AC52KD_RS11845"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 2402660,
+        "end0": 2402876,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 2402352,
+        "end0": 2402577,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 1799852,
+        "end0": 1800078,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 1690173,
+        "end0": 1690405,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 1616546,
+        "end0": 1616776,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184205.1_feature_3139",
+            "type": "CDS",
+            "overlap_bp": 1,
+            "feature_length_bp": 1869,
+            "product": [
+              "acyl-CoA dehydrogenase"
+            ],
+            "locus_tag": [
+              "AC52KD_RS07845"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 1305444,
+        "end0": 1305660,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 1152766,
+        "end0": 1152989,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 1152406,
+        "end0": 1152628,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 859135,
+        "end0": 859200,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 792237,
+        "end0": 792465,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 673411,
+        "end0": 673634,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184205.1_feature_1318",
+            "type": "CDS",
+            "overlap_bp": 223,
+            "feature_length_bp": 546,
+            "product": [
+              "hypothetical protein"
+            ],
+            "locus_tag": [
+              "AC52KD_RS03295"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 673111,
+        "end0": 673338,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184205.1_feature_1318",
+            "type": "CDS",
+            "overlap_bp": 227,
+            "feature_length_bp": 546,
+            "product": [
+              "hypothetical protein"
+            ],
+            "locus_tag": [
+              "AC52KD_RS03295"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 298777,
+        "end0": 299002,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 295379,
+        "end0": 295595,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 294914,
+        "end0": 295141,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 176241,
+        "end0": 176468,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 175910,
+        "end0": 176126,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 165759,
+        "end0": 165990,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 165370,
+        "end0": 165584,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 65305,
+        "end0": 65530,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 63559,
+        "end0": 63787,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "DZH-419__NZ_CM184205.1_feature_1318",
+      "identity_pct": 70.0,
+      "alignment_aa": 70,
+      "query_start": 229,
+      "query_end": 20,
+      "evalue": 2.67e-25,
+      "bitscore": 90.1,
+      "subject_length": 181,
+      "title": "hypothetical protein"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "DZH-419_RS_R1",
+    "organism": "DZH-419",
+    "method": "RS",
+    "native_family": "R=1",
+    "length": 2469,
+    "raw_occurrences": 12,
+    "occurrences": [
+      {
+        "contig": "NZ_JCAOFZ010000003.1",
+        "accession": "NZ_JCAOFZ010000003.1",
+        "start0": 327971,
+        "end0": 330439,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_JCAOFZ010000003.1_feature_753",
+            "type": "CDS",
+            "overlap_bp": 1527,
+            "feature_length_bp": 1527,
+            "product": [
+              "IS21 family transposase"
+            ],
+            "locus_tag": [
+              "AC52KD_RS28335"
+            ]
+          },
+          {
+            "feature_id": "NZ_JCAOFZ010000003.1_feature_755",
+            "type": "CDS",
+            "overlap_bp": 786,
+            "feature_length_bp": 786,
+            "product": [
+              "IS21-like element helper ATPase IstB"
+            ],
+            "locus_tag": [
+              "AC52KD_RS28340"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184206.1",
+        "accession": "NZ_CM184206.1",
+        "start0": 1905681,
+        "end0": 1908101,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184206.1_feature_3409",
+            "type": "CDS",
+            "overlap_bp": 786,
+            "feature_length_bp": 786,
+            "product": [
+              "IS21-like element helper ATPase IstB"
+            ],
+            "locus_tag": [
+              "AC52KD_RS26120"
+            ]
+          },
+          {
+            "feature_id": "NZ_CM184206.1_feature_3411",
+            "type": "CDS",
+            "overlap_bp": 1527,
+            "feature_length_bp": 1527,
+            "product": [
+              "IS21 family transposase"
+            ],
+            "locus_tag": [
+              "AC52KD_RS26125"
+            ]
+          },
+          {
+            "feature_id": "NZ_CM184206.1_feature_3413",
+            "type": "CDS",
+            "overlap_bp": 6,
+            "feature_length_bp": 486,
+            "product": [
+              "Mov34/MPN/PAD-1 family protein"
+            ],
+            "locus_tag": [
+              "AC52KD_RS26130"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184206.1",
+        "accession": "NZ_CM184206.1",
+        "start0": 778847,
+        "end0": 781315,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184206.1_feature_1404",
+            "type": "CDS",
+            "overlap_bp": 1527,
+            "feature_length_bp": 1527,
+            "product": [
+              "IS21 family transposase"
+            ],
+            "locus_tag": [
+              "AC52KD_RS21115"
+            ]
+          },
+          {
+            "feature_id": "NZ_CM184206.1_feature_1406",
+            "type": "CDS",
+            "overlap_bp": 786,
+            "feature_length_bp": 786,
+            "product": [
+              "IS21-like element helper ATPase IstB"
+            ],
+            "locus_tag": [
+              "AC52KD_RS21120"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184206.1",
+        "accession": "NZ_CM184206.1",
+        "start0": 463829,
+        "end0": 466297,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184206.1_feature_848",
+            "type": "CDS",
+            "overlap_bp": 120,
+            "feature_length_bp": 1062,
+            "product": [
+              "sensor histidine kinase"
+            ],
+            "locus_tag": [
+              "AC52KD_RS19725"
+            ]
+          },
+          {
+            "feature_id": "NZ_CM184206.1_feature_850",
+            "type": "CDS",
+            "overlap_bp": 1527,
+            "feature_length_bp": 1527,
+            "product": [
+              "IS21 family transposase"
+            ],
+            "locus_tag": [
+              "AC52KD_RS19730"
+            ]
+          },
+          {
+            "feature_id": "NZ_CM184206.1_feature_852",
+            "type": "CDS",
+            "overlap_bp": 786,
+            "feature_length_bp": 786,
+            "product": [
+              "IS21-like element helper ATPase IstB"
+            ],
+            "locus_tag": [
+              "AC52KD_RS19735"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184206.1",
+        "accession": "NZ_CM184206.1",
+        "start0": 240993,
+        "end0": 243461,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184206.1_feature_442",
+            "type": "CDS",
+            "overlap_bp": 5,
+            "feature_length_bp": 318,
+            "product": [
+              "hypothetical protein"
+            ],
+            "locus_tag": [
+              "AC52KD_RS18710"
+            ]
+          },
+          {
+            "feature_id": "NZ_CM184206.1_feature_444",
+            "type": "CDS",
+            "overlap_bp": 1527,
+            "feature_length_bp": 1527,
+            "product": [
+              "IS21 family transposase"
+            ],
+            "locus_tag": [
+              "AC52KD_RS18715"
+            ]
+          },
+          {
+            "feature_id": "NZ_CM184206.1_feature_446",
+            "type": "CDS",
+            "overlap_bp": 786,
+            "feature_length_bp": 786,
+            "product": [
+              "IS21-like element helper ATPase IstB"
+            ],
+            "locus_tag": [
+              "AC52KD_RS18720"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 3591339,
+        "end0": 3593807,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184205.1_feature_6854",
+            "type": "CDS",
+            "overlap_bp": 1527,
+            "feature_length_bp": 1527,
+            "product": [
+              "IS21 family transposase"
+            ],
+            "locus_tag": [
+              "AC52KD_RS17120"
+            ]
+          },
+          {
+            "feature_id": "NZ_CM184205.1_feature_6856",
+            "type": "CDS",
+            "overlap_bp": 786,
+            "feature_length_bp": 786,
+            "product": [
+              "IS21-like element helper ATPase IstB"
+            ],
+            "locus_tag": [
+              "AC52KD_RS17125"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 3325748,
+        "end0": 3328216,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184205.1_feature_6336",
+            "type": "CDS",
+            "overlap_bp": 22,
+            "feature_length_bp": 288,
+            "product": [
+              "hypothetical protein"
+            ],
+            "locus_tag": [
+              "AC52KD_RS15835"
+            ]
+          },
+          {
+            "feature_id": "NZ_CM184205.1_feature_6338",
+            "type": "CDS",
+            "overlap_bp": 1527,
+            "feature_length_bp": 1527,
+            "product": [
+              "IS21 family transposase"
+            ],
+            "locus_tag": [
+              "AC52KD_RS15840"
+            ]
+          },
+          {
+            "feature_id": "NZ_CM184205.1_feature_6340",
+            "type": "CDS",
+            "overlap_bp": 786,
+            "feature_length_bp": 786,
+            "product": [
+              "IS21-like element helper ATPase IstB"
+            ],
+            "locus_tag": [
+              "AC52KD_RS15845"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 2324504,
+        "end0": 2326972,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184205.1_feature_4477",
+            "type": "CDS",
+            "overlap_bp": 1527,
+            "feature_length_bp": 1527,
+            "product": [
+              "IS21 family transposase"
+            ],
+            "locus_tag": [
+              "AC52KD_RS11190"
+            ]
+          },
+          {
+            "feature_id": "NZ_CM184205.1_feature_4479",
+            "type": "CDS",
+            "overlap_bp": 786,
+            "feature_length_bp": 786,
+            "product": [
+              "IS21-like element helper ATPase IstB"
+            ],
+            "locus_tag": [
+              "AC52KD_RS11195"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 2110169,
+        "end0": 2112637,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184205.1_feature_4075",
+            "type": "CDS",
+            "overlap_bp": 1527,
+            "feature_length_bp": 1527,
+            "product": [
+              "IS21 family transposase"
+            ],
+            "locus_tag": [
+              "AC52KD_RS10185"
+            ]
+          },
+          {
+            "feature_id": "NZ_CM184205.1_feature_4077",
+            "type": "CDS",
+            "overlap_bp": 786,
+            "feature_length_bp": 786,
+            "product": [
+              "IS21-like element helper ATPase IstB"
+            ],
+            "locus_tag": [
+              "AC52KD_RS10190"
+            ]
+          },
+          {
+            "feature_id": "NZ_CM184205.1_feature_4079",
+            "type": "CDS",
+            "overlap_bp": 67,
+            "feature_length_bp": 975,
+            "product": [
+              "aldose 1-epimerase"
+            ],
+            "locus_tag": [
+              "AC52KD_RS10195"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 624683,
+        "end0": 627151,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184205.1_feature_1222",
+            "type": "CDS",
+            "overlap_bp": 1527,
+            "feature_length_bp": 1527,
+            "product": [
+              "IS21 family transposase"
+            ],
+            "locus_tag": [
+              "AC52KD_RS03055"
+            ]
+          },
+          {
+            "feature_id": "NZ_CM184205.1_feature_1224",
+            "type": "CDS",
+            "overlap_bp": 786,
+            "feature_length_bp": 786,
+            "product": [
+              "IS21-like element helper ATPase IstB"
+            ],
+            "locus_tag": [
+              "AC52KD_RS03060"
+            ]
+          },
+          {
+            "feature_id": "NZ_CM184205.1_feature_1226",
+            "type": "CDS",
+            "overlap_bp": 67,
+            "feature_length_bp": 402,
+            "product": [
+              "hypothetical protein"
+            ],
+            "locus_tag": [
+              "AC52KD_RS03065"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 329755,
+        "end0": 329805,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184205.1_feature_664",
+            "type": "CDS",
+            "overlap_bp": 50,
+            "feature_length_bp": 1980,
+            "product": [
+              "monovalent cation:proton antiporter family protein"
+            ],
+            "locus_tag": [
+              "AC52KD_RS01660"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 73747,
+        "end0": 76215,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184205.1_feature_142",
+            "type": "CDS",
+            "overlap_bp": 786,
+            "feature_length_bp": 786,
+            "product": [
+              "IS21-like element helper ATPase IstB"
+            ],
+            "locus_tag": [
+              "AC52KD_RS00355"
+            ]
+          },
+          {
+            "feature_id": "NZ_CM184205.1_feature_144",
+            "type": "CDS",
+            "overlap_bp": 1527,
+            "feature_length_bp": 1527,
+            "product": [
+              "IS21 family transposase"
+            ],
+            "locus_tag": [
+              "AC52KD_RS00360"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "DZH-419__NZ_JCAOFZ010000003.1_feature_753",
+      "identity_pct": 99.606,
+      "alignment_aa": 508,
+      "query_start": 105,
+      "query_end": 1628,
+      "evalue": 0.0,
+      "bitscore": 967.0,
+      "subject_length": 508,
+      "title": "IS21 family transposase"
+    },
+    "best_deposited_tnp_hit": {
+      "subject": "DZH-419__NZ_JCAOFZ010000003.1_feature_753",
+      "identity_pct": 99.606,
+      "alignment_aa": 508,
+      "query_start": 105,
+      "query_end": 1628,
+      "evalue": 0.0,
+      "bitscore": 967.0,
+      "subject_length": 508,
+      "title": "IS21 family transposase"
+    },
+    "native_records_overlapping_tnp_CDS": 11,
+    "tnp_supported": true,
+    "deposited_tnp_products": [
+      "IS21 family transposase"
+    ]
+  },
+  {
+    "query": "DZH-419_RS_R2",
+    "organism": "DZH-419",
+    "method": "RS",
+    "native_family": "R=2",
+    "length": 426,
+    "raw_occurrences": 7,
+    "occurrences": [
+      {
+        "contig": "NZ_CM184206.1",
+        "accession": "NZ_CM184206.1",
+        "start0": 1571119,
+        "end0": 1571545,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184206.1_feature_2798",
+            "type": "CDS",
+            "overlap_bp": 426,
+            "feature_length_bp": 1839,
+            "product": [
+              "methyl-accepting chemotaxis protein"
+            ],
+            "locus_tag": [
+              "AC52KD_RS24595"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184206.1",
+        "accession": "NZ_CM184206.1",
+        "start0": 1569031,
+        "end0": 1569457,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184206.1_feature_2796",
+            "type": "CDS",
+            "overlap_bp": 426,
+            "feature_length_bp": 1917,
+            "product": [
+              "methyl-accepting chemotaxis protein"
+            ],
+            "locus_tag": [
+              "AC52KD_RS24590"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184206.1",
+        "accession": "NZ_CM184206.1",
+        "start0": 1420336,
+        "end0": 1420745,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184206.1_feature_2514",
+            "type": "CDS",
+            "overlap_bp": 409,
+            "feature_length_bp": 1545,
+            "product": [
+              "methyl-accepting chemotaxis protein"
+            ],
+            "locus_tag": [
+              "AC52KD_RS23885"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184206.1",
+        "accession": "NZ_CM184206.1",
+        "start0": 844204,
+        "end0": 844630,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184206.1_feature_1522",
+            "type": "CDS",
+            "overlap_bp": 426,
+            "feature_length_bp": 1539,
+            "product": [
+              "methyl-accepting chemotaxis protein"
+            ],
+            "locus_tag": [
+              "AC52KD_RS21410"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 2881740,
+        "end0": 2882166,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184205.1_feature_5496",
+            "type": "CDS",
+            "overlap_bp": 426,
+            "feature_length_bp": 1548,
+            "product": [
+              "methyl-accepting chemotaxis protein"
+            ],
+            "locus_tag": [
+              "AC52KD_RS13735"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 2061998,
+        "end0": 2062424,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184205.1_feature_3975",
+            "type": "CDS",
+            "overlap_bp": 426,
+            "feature_length_bp": 1842,
+            "product": [
+              "methyl-accepting chemotaxis protein"
+            ],
+            "locus_tag": [
+              "AC52KD_RS09935"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 591073,
+        "end0": 591499,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184205.1_feature_1150",
+            "type": "CDS",
+            "overlap_bp": 426,
+            "feature_length_bp": 1803,
+            "product": [
+              "methyl-accepting chemotaxis protein"
+            ],
+            "locus_tag": [
+              "AC52KD_RS02875"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "DZH-419__NZ_CM184206.1_feature_2295",
+      "identity_pct": 90.909,
+      "alignment_aa": 121,
+      "query_start": 425,
+      "query_end": 63,
+      "evalue": 8.79e-51,
+      "bitscore": 166.0,
+      "subject_length": 513,
+      "title": "methyl-accepting chemotaxis protein"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "DZH-419_RS_R3",
+    "organism": "DZH-419",
+    "method": "RS",
+    "native_family": "R=3",
+    "length": 725,
+    "raw_occurrences": 9,
+    "occurrences": [
+      {
+        "contig": "NZ_CM184206.1",
+        "accession": "NZ_CM184206.1",
+        "start0": 1571086,
+        "end0": 1571810,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184206.1_feature_2798",
+            "type": "CDS",
+            "overlap_bp": 724,
+            "feature_length_bp": 1839,
+            "product": [
+              "methyl-accepting chemotaxis protein"
+            ],
+            "locus_tag": [
+              "AC52KD_RS24595"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184206.1",
+        "accession": "NZ_CM184206.1",
+        "start0": 1568998,
+        "end0": 1569722,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184206.1_feature_2796",
+            "type": "CDS",
+            "overlap_bp": 724,
+            "feature_length_bp": 1917,
+            "product": [
+              "methyl-accepting chemotaxis protein"
+            ],
+            "locus_tag": [
+              "AC52KD_RS24590"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184206.1",
+        "accession": "NZ_CM184206.1",
+        "start0": 1393707,
+        "end0": 1394431,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184206.1_feature_2470",
+            "type": "CDS",
+            "overlap_bp": 724,
+            "feature_length_bp": 1569,
+            "product": [
+              "methyl-accepting chemotaxis protein"
+            ],
+            "locus_tag": [
+              "AC52KD_RS23775"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184206.1",
+        "accession": "NZ_CM184206.1",
+        "start0": 1281914,
+        "end0": 1282637,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184206.1_feature_2295",
+            "type": "CDS",
+            "overlap_bp": 723,
+            "feature_length_bp": 1542,
+            "product": [
+              "methyl-accepting chemotaxis protein"
+            ],
+            "locus_tag": [
+              "AC52KD_RS23340"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184206.1",
+        "accession": "NZ_CM184206.1",
+        "start0": 844171,
+        "end0": 844880,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184206.1_feature_1522",
+            "type": "CDS",
+            "overlap_bp": 709,
+            "feature_length_bp": 1539,
+            "product": [
+              "methyl-accepting chemotaxis protein"
+            ],
+            "locus_tag": [
+              "AC52KD_RS21410"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184206.1",
+        "accession": "NZ_CM184206.1",
+        "start0": 588101,
+        "end0": 588825,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184206.1_feature_1048",
+            "type": "CDS",
+            "overlap_bp": 724,
+            "feature_length_bp": 1812,
+            "product": [
+              "methyl-accepting chemotaxis protein"
+            ],
+            "locus_tag": [
+              "AC52KD_RS20225"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 3299403,
+        "end0": 3300121,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184205.1_feature_6288",
+            "type": "CDS",
+            "overlap_bp": 718,
+            "feature_length_bp": 1986,
+            "product": [
+              "methyl-accepting chemotaxis protein"
+            ],
+            "locus_tag": [
+              "AC52KD_RS15715"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 2881475,
+        "end0": 2882199,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184205.1_feature_5496",
+            "type": "CDS",
+            "overlap_bp": 724,
+            "feature_length_bp": 1548,
+            "product": [
+              "methyl-accepting chemotaxis protein"
+            ],
+            "locus_tag": [
+              "AC52KD_RS13735"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 1235075,
+        "end0": 1235780,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184205.1_feature_2397",
+            "type": "CDS",
+            "overlap_bp": 705,
+            "feature_length_bp": 1572,
+            "product": [
+              "methyl-accepting chemotaxis protein"
+            ],
+            "locus_tag": [
+              "AC52KD_RS05990"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "DZH-419__NZ_CM184206.1_feature_2470",
+      "identity_pct": 94.191,
+      "alignment_aa": 241,
+      "query_start": 725,
+      "query_end": 3,
+      "evalue": 2.77e-100,
+      "bitscore": 299.0,
+      "subject_length": 522,
+      "title": "methyl-accepting chemotaxis protein"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "DZH-419_RS_R4",
+    "organism": "DZH-419",
+    "method": "RS",
+    "native_family": "R=4",
+    "length": 61,
+    "raw_occurrences": 9,
+    "occurrences": [
+      {
+        "contig": "NZ_CM184206.1",
+        "accession": "NZ_CM184206.1",
+        "start0": 1406414,
+        "end0": 1406474,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184206.1_feature_2490",
+            "type": "CDS",
+            "overlap_bp": 60,
+            "feature_length_bp": 1143,
+            "product": [
+              "porin"
+            ],
+            "locus_tag": [
+              "AC52KD_RS23825"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184206.1",
+        "accession": "NZ_CM184206.1",
+        "start0": 931292,
+        "end0": 931351,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184206.1_feature_1690",
+            "type": "CDS",
+            "overlap_bp": 59,
+            "feature_length_bp": 1131,
+            "product": [
+              "porin"
+            ],
+            "locus_tag": [
+              "AC52KD_RS21830"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184206.1",
+        "accession": "NZ_CM184206.1",
+        "start0": 782512,
+        "end0": 782570,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184206.1_feature_1408",
+            "type": "CDS",
+            "overlap_bp": 58,
+            "feature_length_bp": 1104,
+            "product": [
+              "porin"
+            ],
+            "locus_tag": [
+              "AC52KD_RS21125"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 3513707,
+        "end0": 3513767,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184205.1_feature_6692",
+            "type": "CDS",
+            "overlap_bp": 60,
+            "feature_length_bp": 1131,
+            "product": [
+              "porin"
+            ],
+            "locus_tag": [
+              "AC52KD_RS16720"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 3200002,
+        "end0": 3200061,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184205.1_feature_6104",
+            "type": "CDS",
+            "overlap_bp": 59,
+            "feature_length_bp": 1056,
+            "product": [
+              "porin"
+            ],
+            "locus_tag": [
+              "AC52KD_RS15255"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 2846733,
+        "end0": 2846788,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184205.1_feature_5426",
+            "type": "CDS",
+            "overlap_bp": 55,
+            "feature_length_bp": 1068,
+            "product": [
+              "porin"
+            ],
+            "locus_tag": [
+              "AC52KD_RS13560"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 2803842,
+        "end0": 2803902,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184205.1_feature_5354",
+            "type": "CDS",
+            "overlap_bp": 60,
+            "feature_length_bp": 1032,
+            "product": [
+              "porin"
+            ],
+            "locus_tag": [
+              "AC52KD_RS13380"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 1590888,
+        "end0": 1590948,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184205.1_feature_3093",
+            "type": "CDS",
+            "overlap_bp": 60,
+            "feature_length_bp": 1068,
+            "product": [
+              "porin"
+            ],
+            "locus_tag": [
+              "AC52KD_RS07730"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 121882,
+        "end0": 121935,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184205.1_feature_232",
+            "type": "CDS",
+            "overlap_bp": 53,
+            "feature_length_bp": 1068,
+            "product": [
+              "porin"
+            ],
+            "locus_tag": [
+              "AC52KD_RS00580"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "DZH-419_RS_R5",
+    "organism": "DZH-419",
+    "method": "RS",
+    "native_family": "R=5",
+    "length": 99,
+    "raw_occurrences": 6,
+    "occurrences": [
+      {
+        "contig": "NZ_CM184206.1",
+        "accession": "NZ_CM184206.1",
+        "start0": 370585,
+        "end0": 370673,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 2506353,
+        "end0": 2506443,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 2273138,
+        "end0": 2273236,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 2011404,
+        "end0": 2011502,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 1138780,
+        "end0": 1138878,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 203061,
+        "end0": 203159,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "DZH-419_RS_R6",
+    "organism": "DZH-419",
+    "method": "RS",
+    "native_family": "R=6",
+    "length": 53,
+    "raw_occurrences": 4,
+    "occurrences": [
+      {
+        "contig": "NZ_CM184206.1",
+        "accession": "NZ_CM184206.1",
+        "start0": 1146610,
+        "end0": 1146660,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184206.1_feature_2066",
+            "type": "CDS",
+            "overlap_bp": 50,
+            "feature_length_bp": 915,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "AC52KD_RS22770"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 3177191,
+        "end0": 3177241,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184205.1_feature_6062",
+            "type": "CDS",
+            "overlap_bp": 50,
+            "feature_length_bp": 1110,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "AC52KD_RS15150"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 1940999,
+        "end0": 1941051,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184205.1_feature_3753",
+            "type": "CDS",
+            "overlap_bp": 52,
+            "feature_length_bp": 1098,
+            "product": [
+              "sn-glycerol-3-phosphate import ATP-binding protein UgpC"
+            ],
+            "locus_tag": [
+              "AC52KD_RS09380"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 1644156,
+        "end0": 1644208,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184205.1_feature_3197",
+            "type": "CDS",
+            "overlap_bp": 52,
+            "feature_length_bp": 1062,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "AC52KD_RS07990"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "DZH-419__NZ_CM184206.1_feature_1964",
+      "identity_pct": 88.235,
+      "alignment_aa": 17,
+      "query_start": 51,
+      "query_end": 1,
+      "evalue": 1.66e-06,
+      "bitscore": 37.7,
+      "subject_length": 273,
+      "title": "ABC transporter ATP-binding protein"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "DZH-419_RS_R7",
+    "organism": "DZH-419",
+    "method": "RS",
+    "native_family": "R=7",
+    "length": 944,
+    "raw_occurrences": 4,
+    "occurrences": [
+      {
+        "contig": "NZ_JCAOFZ010000003.1",
+        "accession": "NZ_JCAOFZ010000003.1",
+        "start0": 145136,
+        "end0": 146079,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_JCAOFZ010000003.1_feature_372",
+            "type": "CDS",
+            "overlap_bp": 869,
+            "feature_length_bp": 987,
+            "product": [
+              "IS1595-like element ISRama1 family transposase"
+            ],
+            "locus_tag": [
+              "AC52KD_RS27385"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184206.1",
+        "accession": "NZ_CM184206.1",
+        "start0": 1462447,
+        "end0": 1463390,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184206.1_feature_2594",
+            "type": "CDS",
+            "overlap_bp": 869,
+            "feature_length_bp": 987,
+            "product": [
+              "IS1595-like element ISRama1 family transposase"
+            ],
+            "locus_tag": [
+              "AC52KD_RS24085"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184206.1",
+        "accession": "NZ_CM184206.1",
+        "start0": 1017612,
+        "end0": 1018555,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184206.1_feature_1868",
+            "type": "CDS",
+            "overlap_bp": 870,
+            "feature_length_bp": 987,
+            "product": [
+              "IS1595-like element ISRama1 family transposase"
+            ],
+            "locus_tag": [
+              "AC52KD_RS22275"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 1008232,
+        "end0": 1009175,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184205.1_feature_1969",
+            "type": "CDS",
+            "overlap_bp": 870,
+            "feature_length_bp": 987,
+            "product": [
+              "IS1595-like element ISRama1 family transposase"
+            ],
+            "locus_tag": [
+              "AC52KD_RS04920"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "DZH-419__NZ_JCAOFZ010000003.1_feature_372",
+      "identity_pct": 100.0,
+      "alignment_aa": 289,
+      "query_start": 944,
+      "query_end": 78,
+      "evalue": 0.0,
+      "bitscore": 596.0,
+      "subject_length": 328,
+      "title": "IS1595-like element ISRama1 family transposase"
+    },
+    "best_deposited_tnp_hit": {
+      "subject": "DZH-419__NZ_JCAOFZ010000003.1_feature_372",
+      "identity_pct": 100.0,
+      "alignment_aa": 289,
+      "query_start": 944,
+      "query_end": 78,
+      "evalue": 0.0,
+      "bitscore": 596.0,
+      "subject_length": 328,
+      "title": "IS1595-like element ISRama1 family transposase"
+    },
+    "native_records_overlapping_tnp_CDS": 4,
+    "tnp_supported": true,
+    "deposited_tnp_products": [
+      "IS1595-like element ISRama1 family transposase"
+    ]
+  },
+  {
+    "query": "DZH-419_RS_R8",
+    "organism": "DZH-419",
+    "method": "RS",
+    "native_family": "R=8",
+    "length": 81,
+    "raw_occurrences": 8,
+    "occurrences": [
+      {
+        "contig": "NZ_CM184206.1",
+        "accession": "NZ_CM184206.1",
+        "start0": 1961428,
+        "end0": 1961508,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184206.1_feature_3531",
+            "type": "CDS",
+            "overlap_bp": 80,
+            "feature_length_bp": 726,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "AC52KD_RS26425"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184206.1",
+        "accession": "NZ_CM184206.1",
+        "start0": 1696798,
+        "end0": 1696874,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184206.1_feature_3030",
+            "type": "CDS",
+            "overlap_bp": 76,
+            "feature_length_bp": 2307,
+            "product": [
+              "cyanophycin metabolism-associated ABC transporter"
+            ],
+            "locus_tag": [
+              "AC52KD_RS25175"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184206.1",
+        "accession": "NZ_CM184206.1",
+        "start0": 137394,
+        "end0": 137474,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184206.1_feature_250",
+            "type": "CDS",
+            "overlap_bp": 80,
+            "feature_length_bp": 699,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "AC52KD_RS18230"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 3438651,
+        "end0": 3438728,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184205.1_feature_6548",
+            "type": "CDS",
+            "overlap_bp": 77,
+            "feature_length_bp": 741,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "AC52KD_RS16360"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 3027673,
+        "end0": 3027753,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184205.1_feature_5760",
+            "type": "CDS",
+            "overlap_bp": 80,
+            "feature_length_bp": 1668,
+            "product": [
+              "energy-dependent translational throttle protein EttA"
+            ],
+            "locus_tag": [
+              "AC52KD_RS14395"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 2252107,
+        "end0": 2252187,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184205.1_feature_4337",
+            "type": "CDS",
+            "overlap_bp": 27,
+            "feature_length_bp": 312,
+            "product": [
+              "ATP-binding cassette domain-containing protein"
+            ],
+            "locus_tag": [
+              "AC52KD_RS10840"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 1566215,
+        "end0": 1566295,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184205.1_feature_3059",
+            "type": "CDS",
+            "overlap_bp": 80,
+            "feature_length_bp": 711,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "AC52KD_RS07645"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 875199,
+        "end0": 875279,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184205.1_feature_1721",
+            "type": "CDS",
+            "overlap_bp": 80,
+            "feature_length_bp": 702,
+            "product": [
+              "ABC transporter ATP-binding protein"
+            ],
+            "locus_tag": [
+              "AC52KD_RS04300"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "DZH-419__NZ_CM184205.1_feature_4868",
+      "identity_pct": 77.778,
+      "alignment_aa": 27,
+      "query_start": 1,
+      "query_end": 81,
+      "evalue": 9.14e-10,
+      "bitscore": 47.8,
+      "subject_length": 238,
+      "title": "ABC transporter ATP-binding protein"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "DZH-419_RS_R9",
+    "organism": "DZH-419",
+    "method": "RS",
+    "native_family": "R=9",
+    "length": 227,
+    "raw_occurrences": 6,
+    "occurrences": [
+      {
+        "contig": "NZ_CM184206.1",
+        "accession": "NZ_CM184206.1",
+        "start0": 1864438,
+        "end0": 1864665,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CM184206.1",
+        "accession": "NZ_CM184206.1",
+        "start0": 125746,
+        "end0": 125973,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 2967997,
+        "end0": 2968225,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 1152427,
+        "end0": 1152655,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 175926,
+        "end0": 176153,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 165384,
+        "end0": 165611,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "DZH-419__NZ_CM184205.1_feature_1318",
+      "identity_pct": 77.143,
+      "alignment_aa": 70,
+      "query_start": 1,
+      "query_end": 207,
+      "evalue": 2.15e-30,
+      "bitscore": 102.0,
+      "subject_length": 181,
+      "title": "hypothetical protein"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "DZH-419_RS_R10",
+    "organism": "DZH-419",
+    "method": "RS",
+    "native_family": "R=10",
+    "length": 459,
+    "raw_occurrences": 5,
+    "occurrences": [
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 3358838,
+        "end0": 3359295,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 2754341,
+        "end0": 2754798,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 2478274,
+        "end0": 2478706,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184205.1_feature_4739",
+            "type": "CDS",
+            "overlap_bp": 300,
+            "feature_length_bp": 348,
+            "product": [
+              "hypothetical protein"
+            ],
+            "locus_tag": [
+              "AC52KD_RS11845"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 2402372,
+        "end0": 2402826,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 673158,
+        "end0": 673616,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184205.1_feature_1318",
+            "type": "CDS",
+            "overlap_bp": 458,
+            "feature_length_bp": 546,
+            "product": [
+              "hypothetical protein"
+            ],
+            "locus_tag": [
+              "AC52KD_RS03295"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "DZH-419__NZ_CM184205.1_feature_1318",
+      "identity_pct": 69.737,
+      "alignment_aa": 152,
+      "query_start": 3,
+      "query_end": 458,
+      "evalue": 5.58e-62,
+      "bitscore": 186.0,
+      "subject_length": 181,
+      "title": "hypothetical protein"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "DZH-419_RS_R11",
+    "organism": "DZH-419",
+    "method": "RS",
+    "native_family": "R=11",
+    "length": 1105,
+    "raw_occurrences": 4,
+    "occurrences": [
+      {
+        "contig": "NZ_JCAOFZ010000003.1",
+        "accession": "NZ_JCAOFZ010000003.1",
+        "start0": 144975,
+        "end0": 146079,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_JCAOFZ010000003.1_feature_372",
+            "type": "CDS",
+            "overlap_bp": 987,
+            "feature_length_bp": 987,
+            "product": [
+              "IS1595-like element ISRama1 family transposase"
+            ],
+            "locus_tag": [
+              "AC52KD_RS27385"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184206.1",
+        "accession": "NZ_CM184206.1",
+        "start0": 1462286,
+        "end0": 1463390,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184206.1_feature_2594",
+            "type": "CDS",
+            "overlap_bp": 987,
+            "feature_length_bp": 987,
+            "product": [
+              "IS1595-like element ISRama1 family transposase"
+            ],
+            "locus_tag": [
+              "AC52KD_RS24085"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184206.1",
+        "accession": "NZ_CM184206.1",
+        "start0": 1017612,
+        "end0": 1018716,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184206.1_feature_1868",
+            "type": "CDS",
+            "overlap_bp": 987,
+            "feature_length_bp": 987,
+            "product": [
+              "IS1595-like element ISRama1 family transposase"
+            ],
+            "locus_tag": [
+              "AC52KD_RS22275"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 1008232,
+        "end0": 1009336,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184205.1_feature_1969",
+            "type": "CDS",
+            "overlap_bp": 987,
+            "feature_length_bp": 987,
+            "product": [
+              "IS1595-like element ISRama1 family transposase"
+            ],
+            "locus_tag": [
+              "AC52KD_RS04920"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "DZH-419__NZ_JCAOFZ010000003.1_feature_372",
+      "identity_pct": 100.0,
+      "alignment_aa": 328,
+      "query_start": 1061,
+      "query_end": 78,
+      "evalue": 0.0,
+      "bitscore": 681.0,
+      "subject_length": 328,
+      "title": "IS1595-like element ISRama1 family transposase"
+    },
+    "best_deposited_tnp_hit": {
+      "subject": "DZH-419__NZ_JCAOFZ010000003.1_feature_372",
+      "identity_pct": 100.0,
+      "alignment_aa": 328,
+      "query_start": 1061,
+      "query_end": 78,
+      "evalue": 0.0,
+      "bitscore": 681.0,
+      "subject_length": 328,
+      "title": "IS1595-like element ISRama1 family transposase"
+    },
+    "native_records_overlapping_tnp_CDS": 4,
+    "tnp_supported": true,
+    "deposited_tnp_products": [
+      "IS1595-like element ISRama1 family transposase"
+    ]
+  },
+  {
+    "query": "DZH-419_RS_R12",
+    "organism": "DZH-419",
+    "method": "RS",
+    "native_family": "R=12",
+    "length": 79,
+    "raw_occurrences": 5,
+    "occurrences": [
+      {
+        "contig": "NZ_CM184206.1",
+        "accession": "NZ_CM184206.1",
+        "start0": 1161820,
+        "end0": 1161898,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184206.1_feature_2096",
+            "type": "tRNA",
+            "overlap_bp": 76,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Ala"
+            ],
+            "locus_tag": [
+              "AC52KD_RS22845"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 3328389,
+        "end0": 3328443,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184205.1_feature_6342",
+            "type": "tRNA",
+            "overlap_bp": 54,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Ala"
+            ],
+            "locus_tag": [
+              "AC52KD_RS15850"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 3170132,
+        "end0": 3170210,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184205.1_feature_6048",
+            "type": "tRNA",
+            "overlap_bp": 76,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Ala"
+            ],
+            "locus_tag": [
+              "AC52KD_RS15115"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 2980118,
+        "end0": 2980196,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184205.1_feature_5658",
+            "type": "tRNA",
+            "overlap_bp": 76,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Ala"
+            ],
+            "locus_tag": [
+              "AC52KD_RS14140"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 2035723,
+        "end0": 2035799,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184205.1_feature_3921",
+            "type": "tRNA",
+            "overlap_bp": 76,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Ala"
+            ],
+            "locus_tag": [
+              "AC52KD_RS09800"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "DZH-419_RS_R13",
+    "organism": "DZH-419",
+    "method": "RS",
+    "native_family": "R=13",
+    "length": 5522,
+    "raw_occurrences": 3,
+    "occurrences": [
+      {
+        "contig": "NZ_CM184206.1",
+        "accession": "NZ_CM184206.1",
+        "start0": 1158379,
+        "end0": 1163900,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184206.1_feature_2092",
+            "type": "rRNA",
+            "overlap_bp": 113,
+            "feature_length_bp": 113,
+            "product": [
+              "5S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "AC52KD_RS22835"
+            ]
+          },
+          {
+            "feature_id": "NZ_CM184206.1_feature_2094",
+            "type": "rRNA",
+            "overlap_bp": 2879,
+            "feature_length_bp": 2879,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "AC52KD_RS22840"
+            ]
+          },
+          {
+            "feature_id": "NZ_CM184206.1_feature_2096",
+            "type": "tRNA",
+            "overlap_bp": 76,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Ala"
+            ],
+            "locus_tag": [
+              "AC52KD_RS22845"
+            ]
+          },
+          {
+            "feature_id": "NZ_CM184206.1_feature_2098",
+            "type": "tRNA",
+            "overlap_bp": 77,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Ile"
+            ],
+            "locus_tag": [
+              "AC52KD_RS22850"
+            ]
+          },
+          {
+            "feature_id": "NZ_CM184206.1_feature_2100",
+            "type": "rRNA",
+            "overlap_bp": 1538,
+            "feature_length_bp": 1538,
+            "product": [
+              "16S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "AC52KD_RS22855"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 3166691,
+        "end0": 3172212,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184205.1_feature_6044",
+            "type": "rRNA",
+            "overlap_bp": 113,
+            "feature_length_bp": 113,
+            "product": [
+              "5S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "AC52KD_RS15105"
+            ]
+          },
+          {
+            "feature_id": "NZ_CM184205.1_feature_6046",
+            "type": "rRNA",
+            "overlap_bp": 2879,
+            "feature_length_bp": 2879,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "AC52KD_RS15110"
+            ]
+          },
+          {
+            "feature_id": "NZ_CM184205.1_feature_6048",
+            "type": "tRNA",
+            "overlap_bp": 76,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Ala"
+            ],
+            "locus_tag": [
+              "AC52KD_RS15115"
+            ]
+          },
+          {
+            "feature_id": "NZ_CM184205.1_feature_6050",
+            "type": "tRNA",
+            "overlap_bp": 77,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Ile"
+            ],
+            "locus_tag": [
+              "AC52KD_RS15120"
+            ]
+          },
+          {
+            "feature_id": "NZ_CM184205.1_feature_6052",
+            "type": "rRNA",
+            "overlap_bp": 1538,
+            "feature_length_bp": 1538,
+            "product": [
+              "16S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "AC52KD_RS15125"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 2976677,
+        "end0": 2982198,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184205.1_feature_5654",
+            "type": "rRNA",
+            "overlap_bp": 113,
+            "feature_length_bp": 113,
+            "product": [
+              "5S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "AC52KD_RS14130"
+            ]
+          },
+          {
+            "feature_id": "NZ_CM184205.1_feature_5656",
+            "type": "rRNA",
+            "overlap_bp": 2879,
+            "feature_length_bp": 2879,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "AC52KD_RS14135"
+            ]
+          },
+          {
+            "feature_id": "NZ_CM184205.1_feature_5658",
+            "type": "tRNA",
+            "overlap_bp": 76,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Ala"
+            ],
+            "locus_tag": [
+              "AC52KD_RS14140"
+            ]
+          },
+          {
+            "feature_id": "NZ_CM184205.1_feature_5660",
+            "type": "tRNA",
+            "overlap_bp": 77,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Ile"
+            ],
+            "locus_tag": [
+              "AC52KD_RS14145"
+            ]
+          },
+          {
+            "feature_id": "NZ_CM184205.1_feature_5662",
+            "type": "rRNA",
+            "overlap_bp": 1538,
+            "feature_length_bp": 1538,
+            "product": [
+              "16S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "AC52KD_RS14150"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "DZH-419_RS_R14",
+    "organism": "DZH-419",
+    "method": "RS",
+    "native_family": "R=14",
+    "length": 2403,
+    "raw_occurrences": 3,
+    "occurrences": [
+      {
+        "contig": "NZ_JCAOFZ010000003.1",
+        "accession": "NZ_JCAOFZ010000003.1",
+        "start0": 33413,
+        "end0": 35815,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_JCAOFZ010000003.1_feature_120",
+            "type": "CDS",
+            "overlap_bp": 1530,
+            "feature_length_bp": 1530,
+            "product": [
+              "IS66 family transposase"
+            ],
+            "locus_tag": [
+              "AC52KD_RS26755"
+            ]
+          },
+          {
+            "feature_id": "NZ_JCAOFZ010000003.1_feature_122",
+            "type": "CDS",
+            "overlap_bp": 345,
+            "feature_length_bp": 345,
+            "product": [
+              "IS66 family insertion sequence element accessory protein TnpB"
+            ],
+            "locus_tag": [
+              "AC52KD_RS26760"
+            ]
+          },
+          {
+            "feature_id": "NZ_JCAOFZ010000003.1_feature_124",
+            "type": "CDS",
+            "overlap_bp": 372,
+            "feature_length_bp": 372,
+            "product": [
+              "IS66-like element accessory protein TnpA"
+            ],
+            "locus_tag": [
+              "AC52KD_RS26765"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184206.1",
+        "accession": "NZ_CM184206.1",
+        "start0": 1155952,
+        "end0": 1158354,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184206.1_feature_2086",
+            "type": "CDS",
+            "overlap_bp": 372,
+            "feature_length_bp": 372,
+            "product": [
+              "IS66-like element accessory protein TnpA"
+            ],
+            "locus_tag": [
+              "AC52KD_RS22820"
+            ]
+          },
+          {
+            "feature_id": "NZ_CM184206.1_feature_2088",
+            "type": "CDS",
+            "overlap_bp": 345,
+            "feature_length_bp": 345,
+            "product": [
+              "IS66 family insertion sequence element accessory protein TnpB"
+            ],
+            "locus_tag": [
+              "AC52KD_RS22825"
+            ]
+          },
+          {
+            "feature_id": "NZ_CM184206.1_feature_2090",
+            "type": "CDS",
+            "overlap_bp": 1530,
+            "feature_length_bp": 1530,
+            "product": [
+              "IS66 family transposase"
+            ],
+            "locus_tag": [
+              "AC52KD_RS22830"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 2347315,
+        "end0": 2349717,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184205.1_feature_4525",
+            "type": "CDS",
+            "overlap_bp": 1530,
+            "feature_length_bp": 1530,
+            "product": [
+              "IS66 family transposase"
+            ],
+            "locus_tag": [
+              "AC52KD_RS11310"
+            ]
+          },
+          {
+            "feature_id": "NZ_CM184205.1_feature_4527",
+            "type": "CDS",
+            "overlap_bp": 345,
+            "feature_length_bp": 345,
+            "product": [
+              "IS66 family insertion sequence element accessory protein TnpB"
+            ],
+            "locus_tag": [
+              "AC52KD_RS11315"
+            ]
+          },
+          {
+            "feature_id": "NZ_CM184205.1_feature_4529",
+            "type": "CDS",
+            "overlap_bp": 372,
+            "feature_length_bp": 372,
+            "product": [
+              "IS66-like element accessory protein TnpA"
+            ],
+            "locus_tag": [
+              "AC52KD_RS11320"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "DZH-419__NZ_JCAOFZ010000003.1_feature_120",
+      "identity_pct": 100.0,
+      "alignment_aa": 509,
+      "query_start": 1559,
+      "query_end": 33,
+      "evalue": 0.0,
+      "bitscore": 989.0,
+      "subject_length": 509,
+      "title": "IS66 family transposase"
+    },
+    "best_deposited_tnp_hit": {
+      "subject": "DZH-419__NZ_JCAOFZ010000003.1_feature_120",
+      "identity_pct": 100.0,
+      "alignment_aa": 509,
+      "query_start": 1559,
+      "query_end": 33,
+      "evalue": 0.0,
+      "bitscore": 989.0,
+      "subject_length": 509,
+      "title": "IS66 family transposase"
+    },
+    "native_records_overlapping_tnp_CDS": 3,
+    "tnp_supported": true,
+    "deposited_tnp_products": [
+      "IS66 family transposase"
+    ]
+  },
+  {
+    "query": "DZH-419_RS_R15",
+    "organism": "DZH-419",
+    "method": "RS",
+    "native_family": "R=15",
+    "length": 62,
+    "raw_occurrences": 3,
+    "occurrences": [
+      {
+        "contig": "NZ_CM184206.1",
+        "accession": "NZ_CM184206.1",
+        "start0": 1155787,
+        "end0": 1155848,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184206.1_feature_2084",
+            "type": "CDS",
+            "overlap_bp": 61,
+            "feature_length_bp": 192,
+            "product": [
+              "amidohydrolase"
+            ],
+            "locus_tag": [
+              "AC52KD_RS22815"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 3166510,
+        "end0": 3166571,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CM184205.1",
+        "accession": "NZ_CM184205.1",
+        "start0": 2976498,
+        "end0": 2976559,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CM184205.1_feature_5652",
+            "type": "CDS",
+            "overlap_bp": 61,
+            "feature_length_bp": 1191,
+            "product": [
+              "M20 aminoacylase family protein"
+            ],
+            "locus_tag": [
+              "AC52KD_RS14125"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "DZH-419__NZ_CM184205.1_feature_5652",
+      "identity_pct": 100.0,
+      "alignment_aa": 20,
+      "query_start": 1,
+      "query_end": 60,
+      "evalue": 7.68e-11,
+      "bitscore": 50.4,
+      "subject_length": 396,
+      "title": "M20 aminoacylase family protein"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  }
+]

@@ -1,0 +1,43 @@
+{
+ "rules": {
+  "target": "700 <= X < 2500 bp both sides, pass both checks",
+  "position_overlap": 0.5,
+  "contexts": "max clique of pairwise-passing positions",
+  "cap": 12,
+  "tiers": "2-3 exploratory, >=4 main, >=6 priority, >=8 showcase"
+ },
+ "positions_total": 73739,
+ "positions_in_pass_graph": 6262,
+ "cores": 525,
+ "position_pairs_with_pass_and_fail_versions": 29,
+ "cores_by_tier": {
+  "exploratory_2_3": 477,
+  "showcase_ge8": 25,
+  "priority_ge6": 9,
+  "main_ge4": 14
+ },
+ "cores_by_evidence": {
+  "final": 525
+ },
+ "cores_ge": {
+  "any": {
+   "ge2": 525,
+   "ge4": 48,
+   "ge6": 34,
+   "ge8": 25
+  },
+  "single_assembly": {
+   "ge2": 211,
+   "ge4": 41,
+   "ge6": 29,
+   "ge8": 18
+  },
+  "distinct_assemblies": {
+   "ge2": 395,
+   "ge4": 16,
+   "ge6": 7,
+   "ge8": 7
+  }
+ },
+ "pending_library_sequences": 0
+}

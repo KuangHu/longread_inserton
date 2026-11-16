@@ -1,0 +1,10 @@
+2026/10/25 09:24:17 PM INFO: Kingfisher v0.5.0
+2026/10/25 09:24:17 PM INFO: Attempting download method ena-ascp for run SRR21808314 ..
+2026/10/25 09:24:17 PM INFO: Using aspera ssh key file: /global/home/users/kh36969/.aspera/sdk/aspera_bypass_rsa.pem
+2026/10/25 09:24:17 PM INFO: Querying ENA for FTP paths for SRR21808314..
+2026/10/25 09:24:18 PM INFO: Downloading 1 FTP read set(s): ftp.sra.ebi.ac.uk/vol1/fastq/SRR218/014/SRR21808314/SRR21808314_1.fastq.gz
+2026/10/25 09:24:18 PM INFO: Running command: ascp -T -l 300m -P33001 -k 2 -i /global/home/users/kh36969/.aspera/sdk/aspera_bypass_rsa.pem era-fasp@fasp.sra.ebi.ac.uk:/vol1/fastq/SRR218/014/SRR21808314/SRR21808314_1.fastq.gz /global/scratch/users/kh36969/longread_callout/fna_pool/ena_transport_pilot/ena-ascp/SRR21808314
+2026/10/25 09:24:34 PM WARNING: Error downloading from ENA with ASCP: Command ascp -T -l 300m -P33001 -k 2 -i /global/home/users/kh36969/.aspera/sdk/aspera_bypass_rsa.pem era-fasp@fasp.sra.ebi.ac.uk:/vol1/fastq/SRR218/014/SRR21808314/SRR21808314_1.fastq.gz /global/scratch/users/kh36969/longread_callout/fna_pool/ena_transport_pilot/ena-ascp/SRR21808314 returned non-zero exit status 1.
+STDERR was: b''STDOUT was: b'\r\nSession Stop  (Error: Client unable to connect to server (check UDP port and firewall))\n'
+2026/10/25 09:24:34 PM WARNING: Method ena-ascp failed
+2026/10/25 09:24:34 PM ERROR: No more specified download methods, cannot continue

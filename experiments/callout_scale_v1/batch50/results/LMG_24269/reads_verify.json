@@ -1,0 +1,52 @@
+{
+  "run": {
+    "sample_id": "LMG_24269",
+    "run": "ERR17405070",
+    "biosample": "SAMEA122764967",
+    "assembly": "GCA_984667945.1",
+    "platform": "OXFORD_NANOPORE",
+    "instrument_model": "MinION",
+    "role": "callout_scale_v1_batch50",
+    "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/ERR174/070/ERR17405070/ERR17405070.fastq.gz",
+    "archive_read_count": 298133,
+    "archive_base_count": 1576725960,
+    "fastq_bytes": 1476997315,
+    "fastq_md5": "6a30cf37c1c16cc8765421ad0602d84d"
+  },
+  "download_started": "2026-10-24T12:40:57-0700",
+  "local_file": "/global/scratch/users/kh36969/longread_callout/data/reads/ERR17405070/ERR17405070.fastq.gz",
+  "bytes": 1476997315,
+  "md5": "6a30cf37c1c16cc8765421ad0602d84d",
+  "sha256": "9ba2b985b5dcbb4829288e23b2628d88c1dfd091d7f35ef4342e3fbef2f23ea0",
+  "rejected_downloads": [],
+  "spots_absent_from_fastq": 0,
+  "summary": {
+    "records": 298133,
+    "bases": 1576725960,
+    "read_unit_counts": {
+      "other_name": 298133
+    },
+    "distinct_zmws": null,
+    "distinct_sra_spots": 298133,
+    "max_records_per_spot": 1,
+    "placeholder_quality_records": 0,
+    "example_headers": [
+      "@ERR17405070.1 05872c13-c8d5-4350-9b4d-ac075943340e;4ee2b73f-942b-48f8-8c37-77fe4efc3a07",
+      "@ERR17405070.2 edf635c3-26f6-4faf-a952-4a2e7f7208e6;80d24047-71d6-4f38-bc99-4c8743f71c50",
+      "@ERR17405070.3 d0f40eb6-6f1b-4d1e-add8-b9dd0ed94f1f;b0b7da3e-923b-4182-a7fc-1e99108e483f",
+      "@ERR17405070.4 ec4c762b-703e-4025-af1d-42e7cf6f4b28;cbe4cfd8-5d1e-49c7-a782-d97edb3c6b8c"
+    ],
+    "mean_length": 5288.7,
+    "median_length": 3802,
+    "max_length": 297530,
+    "n50": 7171,
+    "molecule_grouping": "one_record_per_molecule"
+  },
+  "checks": {
+    "bytes_match": true,
+    "md5_match": true,
+    "spot_count_match": true,
+    "base_count_match": true
+  },
+  "status": "verified"
+}

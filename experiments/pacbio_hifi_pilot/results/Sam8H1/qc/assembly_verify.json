@@ -1,0 +1,70 @@
+{
+  "used_accession": "GCF_016904925.1",
+  "choice": "gcf_sequence_and_annotation",
+  "fasta": "/global/scratch/users/kh36969/longread_callout/data/assemblies_pacbio_pilot/Sam8H1/GCF_016904925.1/ncbi_dataset/data/GCF_016904925.1/GCF_016904925.1_ASM1690492v1_genomic.fna",
+  "fasta_sha256": "725026a3d9f42a1a46403e7da8673dbeb7c36505dbcffb8a02575c68bb126869",
+  "gbff": "/global/scratch/users/kh36969/longread_callout/data/assemblies_pacbio_pilot/Sam8H1/GCF_016904925.1/ncbi_dataset/data/GCF_016904925.1/genomic.gbff",
+  "gbff_sha256": "8fb677dbefbad4cad15cd6772cfc4cb661c4d90e85da60f7d6fa256f7e90a756",
+  "cds_features": 4026,
+  "assembly_level": "Complete Genome",
+  "assembly_method": "CANU v. 2.0",
+  "sequencing_tech": "PacBio",
+  "biosample": "SAMN17825431",
+  "organism": {
+    "taxId": 492670,
+    "organismName": "Bacillus velezensis",
+    "infraspecificNames": {
+      "strain": "Sam8H1"
+    }
+  },
+  "total_bp": 4131713,
+  "records": [
+    {
+      "fasta_id": "NZ_CP069391.1",
+      "length": 3983519,
+      "report_length": 3983519,
+      "role": "assembled-molecule",
+      "location": "Chromosome",
+      "molecule": "chromosome",
+      "genbank_accession": "CP069391.1"
+    },
+    {
+      "fasta_id": "NZ_CP069392.1",
+      "length": 148194,
+      "report_length": 148194,
+      "role": "assembled-molecule",
+      "location": "Plasmid",
+      "molecule": "unnamed1",
+      "genbank_accession": "CP069392.1"
+    }
+  ],
+  "molecule_types": [
+    "Chromosome",
+    "Plasmid"
+  ],
+  "annotation_info": {
+    "name": "GCF_016904925.1-RS_2026_04_02",
+    "provider": "NCBI RefSeq",
+    "releaseDate": "2026-04-02",
+    "stats": {
+      "geneCounts": {
+        "total": 4152,
+        "proteinCoding": 3945,
+        "nonCoding": 126,
+        "pseudogene": 81
+      }
+    },
+    "method": "Best-placed reference protein set; GeneMarkS-2+",
+    "pipeline": "NCBI Prokaryotic Genome Annotation Pipeline (PGAP)",
+    "softwareVersion": "6.10"
+  },
+  "checks": {
+    "biosample_match": true,
+    "total_length_match": true,
+    "fasta_records_equal_report": true,
+    "all_report_records_kept": true,
+    "gca_gcf_same_record_count": true,
+    "annotation_present": true
+  },
+  "status": "pass"
+}

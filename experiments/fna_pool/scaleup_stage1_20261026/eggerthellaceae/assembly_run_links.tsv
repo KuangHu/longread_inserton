@@ -1,0 +1,17 @@
+assembly_accession	paired_accession	biosample	run	study	read_type	link_basis	source_run_evidence	run_usable	run_tax_id	run_organism	assembly_organism	genus_agrees	assembly_sequencing_tech
+GCA_900637575.1	GCF_900637575.1	SAMEA44527918	ERR1940973	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	84110	Slackia heliotrinireducens	Slackia heliotrinireducens	True	PacBio
+GCA_900450505.1	GCF_900450505.1	SAMEA4521473	ERR1911795	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	84109	Slackia exigua	Slackia exigua	True	PacBio
+GCA_022834855.1	GCF_022834855.1	SAMD00389850	DRR307104	PRJDB11902	pacbio_unresolved	biosample_matched	not_checked	True	84112	Eggerthella lenta	Eggerthella lenta	True	Illumina MiSeq; PacBio Sequel
+GCA_022845715.1	GCF_022845715.1	SAMD00389860	DRR307114	PRJDB11902	pacbio_unresolved	biosample_matched	not_checked	True	1907662	Raoultibacter timonensis	Raoultibacter timonensis	True	Illumina MiSeq; PacBio Sequel
+GCA_011405655.2	GCF_011405655.2	SAMD00204449	DRR207928	PRJDB9316	pacbio_unresolved	biosample_matched	not_checked	True	2707299	Adlercreutzia hattorii	Adlercreutzia hattorii	True	Illumina MiSeq; PacBio Sequel
+GCA_022834875.1	GCF_022834875.1	SAMD00389851	DRR307105	PRJDB11902	pacbio_unresolved	biosample_matched	not_checked	True	84112	Eggerthella lenta	Eggerthella lenta	True	Illumina MiSeq; PacBio Sequel
+GCA_022845935.1	GCF_022845935.1	SAMD00389876	DRR307130	PRJDB11902	pacbio_unresolved	biosample_matched	not_checked	True	84112	Eggerthella lenta	Eggerthella lenta	True	Illumina MiSeq; PacBio Sequel
+GCA_042855405.1	GCF_042855405.1	SAMD00759053	DRR538203	PRJDB17661	pacbio_unresolved	biosample_matched	not_checked	True	1335613	Gordonibacter urolithinfaciens	Gordonibacter urolithinfaciens	True	Illumina MiSeq; Pacbio Sequel
+GCA_900637575.1	GCF_900637575.1	SAMEA44527918	ERR1802404	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	84110	Slackia heliotrinireducens	Slackia heliotrinireducens	True	PacBio
+GCA_014192995.1	GCF_014192995.1	SAMN12024756	SRR9647113	PRJNA547278	pacbio_unresolved	biosample_matched	not_checked	True	572010	Slackia isoflavoniconvertens	Slackia isoflavoniconvertens	True	PacBio
+GCA_014192995.1	GCF_014192995.1	SAMN12024756	SRR9647114	PRJNA547278	pacbio_unresolved	biosample_matched	not_checked	True	572010	Slackia isoflavoniconvertens	Slackia isoflavoniconvertens	True	PacBio
+GCA_049191205.1	GCF_049191205.1	SAMN27745308	SRR33570754	PRJNA549513	pacbio_unresolved	biosample_matched	not_checked	True	84109	Slackia exigua	Slackia exigua	True	PacBio Sequel
+GCA_022834895.1		SAMD00389852	DRR307106	PRJDB11902	pacbio_unresolved	biosample_matched	not_checked	True	471189	Gordonibacter pamelaeae	Gordonibacter pamelaeae	True	Illumina MiSeq; PacBio Sequel
+GCA_022845975.1	GCF_022845975.1	SAMD00389889	DRR307143	PRJDB11902	pacbio_unresolved	biosample_matched	not_checked	True	1907662	Raoultibacter timonensis	Raoultibacter timonensis	True	Illumina MiSeq; PacBio Sequel
+GCA_042848385.1	GCF_042848385.1	SAMD00759036	DRR538186	PRJDB17661	pacbio_unresolved	biosample_matched	not_checked	True	84112	Eggerthella lenta	Eggerthella lenta	True	Illumina MiSeq; Pacbio Sequel
+GCA_016865385.1	GCF_016865385.1	SAMN17600865	SRR13605723	PRJNA698616	ont	biosample_matched	not_checked	True	1121021	Adlercreutzia equolifaciens subsp. celatus DSM 18785	Adlercreutzia equolifaciens subsp. celatus	True	Oxford Nanopore Technologies GridION X5

@@ -1,0 +1,30 @@
+{
+  "tool_version": "pangraph 1.4.0",
+  "command": [
+    "wsl",
+    "-d",
+    "Ubuntu",
+    "--",
+    "/mnt/c/Users/hukua/.codex/.chatgpt-projects/g-p-6abf01a71e2081919d0c1234c75d7333/cross_assembly_pilot/bin/pangraph",
+    "build",
+    "-j",
+    "4",
+    "--verify",
+    "--no-progress-bar",
+    "/mnt/c/Users/hukua/.codex/.chatgpt-projects/g-p-6abf01a71e2081919d0c1234c75d7333/core_context_repair/smoke_h16_h850/bundle/assemblies.fna",
+    "-o",
+    "/mnt/c/Users/hukua/.codex/.chatgpt-projects/g-p-6abf01a71e2081919d0c1234c75d7333/core_context_repair/smoke_h16_h850/bundle/graph.json"
+  ],
+  "inputs": [
+    {
+      "path": "C:\\Users\\hukua\\.codex\\.chatgpt-projects\\g-p-6abf01a71e2081919d0c1234c75d7333\\cross_assembly_pilot\\data\\assemblies.fna",
+      "sha256": "2e492862dcb3603cabaf62d7073abf9078644c5ae72e3ef3ece9c929d4924df1"
+    }
+  ],
+  "graph_sha256": "4d4367d937d6696e610ba9e1a5a7eb49abfafad101dfade7794e8e0e81c1f5ae",
+  "joint_fasta_sha256": "2e492862dcb3603cabaf62d7073abf9078644c5ae72e3ef3ece9c929d4924df1",
+  "contigs_sha256": "ae4e66aa4ddc27cc6bcef8894d7d872918bcb6ceb55b7287d38eedfd22ac6ff2",
+  "graph_verify_passed": true,
+  "binary_sha256": "462949f3bd0988054942287ffb820c1cc60731ac0cf99179fbea6189ea518e1a",
+  "build_seconds": 13.153
+}

@@ -1,0 +1,24 @@
+{
+  "command": [
+    "./skani",
+    "dist",
+    "-q",
+    "genomes/GCA_012689525.1.fna",
+    "--rl",
+    "genome_list.txt",
+    "--slow",
+    "-s",
+    "80",
+    "--min-af",
+    "15",
+    "-t",
+    "2",
+    "--detailed",
+    "-o",
+    "ani_to_ar2038.tsv"
+  ],
+  "version": "skani 0.4.0",
+  "binary_sha256": "1482c7d1cf35210bf73c6d06c1b1fc97659dec18194c5355a31af672b6b03c0b",
+  "exit_code": 0,
+  "role": "metadata/ANI audit; no repeat discovery; no reads downloaded"
+}

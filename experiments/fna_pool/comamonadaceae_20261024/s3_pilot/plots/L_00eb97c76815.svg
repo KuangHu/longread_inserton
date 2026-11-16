@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="420" font-family="sans-serif">
+<rect width="100%" height="100%" fill="white"/>
+<text x="4" y="16" font-size="12">L_00eb97c76815  SAMD00623152  core 109 bp  two_flank_anchored  support all_calls_anchored  boundary within_shift  tandem False  core copies carrier/partner 1/1</text>
+<line x1="551.1" y1="30" x2="551.1" y2="412" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<line x1="568.9" y1="30" x2="568.9" y2="412" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<text x="4" y="64" font-size="11" font-weight="bold">SAMD00623152 NZ_AP028664.1 (carrier)</text>
+<line x1="60" y1="100" x2="1060" y2="100" stroke="#888"/>
+<rect x="387.4" y="132" width="163.7" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="469.2" y="152" font-size="9" text-anchor="middle">U</text>
+<rect x="551.1" y="132" width="17.8" height="8" fill="#e76f51" opacity="0.55"/>
+<text x="560.0" y="152" font-size="9" text-anchor="middle">core 109</text>
+<rect x="568.9" y="132" width="163.7" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="650.8" y="152" font-size="9" text-anchor="middle">D</text>
+<polygon points="60.0,85 61.5,85 67.5,91 61.5,97 60.0,97" fill="#3b6fb6"><title>DMT family transporter 116326-117346 +</title></polygon>
+<polygon points="66.2,85 179.6,85 185.6,91 179.6,97 66.2,97" fill="#3b6fb6"><title>tRNA (adenosine(37)-N6)-threonylcarbamoy 117338-118067 +</title></polygon>
+<text x="66.2" y="81" font-size="8" fill="#333">tRNA (adenosine(37)-N6)-t</text>
+<polygon points="195.5,85 278.4,85 284.4,91 278.4,97 195.5,97" fill="#3b6fb6"><title>ribosomal protein S18-alanine N-acetyltr 118128-118671 +</title></polygon>
+<text x="195.5" y="81" font-size="8" fill="#333">ribosomal protein S</text>
+<polygon points="283.8,85 404.5,85 410.5,91 404.5,97 283.8,97" fill="#3b6fb6"><title>uracil-DNA glycosylase family protein 118667-119441 +</title></polygon>
+<polygon points="415.9,85 544.9,85 550.9,91 544.9,97 415.9,97" fill="#3b6fb6"><title>orotidine-5'-phosphate decarboxylase 119474-120299 +</title></polygon>
+<text x="415.9" y="81" font-size="8" fill="#333">orotidine-5'-phosphate decarb</text>
+<polygon points="569.2,109 575.2,103 689.6,103 689.6,115 575.2,115" fill="#3b6fb6"><title>helix-turn-helix domain-containing prote 120411-121146 -</title></polygon>
+<text x="569.2" y="125" font-size="8" fill="#333">helix-turn-helix domain-co</text>
+<polygon points="712.5,85 846.9,85 852.9,91 846.9,97 712.5,97" fill="#3b6fb6"><title>hypothetical protein 121286-122144 +</title></polygon>
+<text x="712.5" y="81" font-size="8" fill="#333">hypothetical protein</text>
+<polygon points="877.0,85 1054.0,85 1060.0,91 1054.0,97 877.0,97" fill="#3b6fb6"><title>MFS transporter 122291-124247 +</title></polygon>
+<text x="877.0" y="81" font-size="8" fill="#333">MFS transporter</text>
+<text x="60" y="166" font-size="9" fill="#666">NZ_AP028664.1:117300-123409  core 120300-120409</text>
+<text x="4" y="184" font-size="11" font-weight="bold">SAMN51281027 NZ_CM191384.1 (partner, - strand, two_flank_anchored, pair P00111)</text>
+<line x1="60" y1="220" x2="1060" y2="220" stroke="#888"/>
+<rect x="387.4" y="252" width="163.7" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="469.2" y="272" font-size="9" text-anchor="middle">U'</text>
+<rect x="569.2" y="252" width="163.7" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="651.1" y="272" font-size="9" text-anchor="middle">D'</text>
+<rect x="551.1" y="252" width="18.2" height="8" fill="#9b5de5" opacity="0.55"/>
+<text x="560.2" y="272" font-size="9" text-anchor="middle">other side 2</text>
+<polygon points="855.4,205 1054.0,205 1060.0,211 1054.0,217 855.4,217" fill="#3b6fb6"><title>MFS transporter 687233-689186 +</title></polygon>
+<text x="855.4" y="201" font-size="8" fill="#333">MFS transporter</text>
+<polygon points="712.6,205 847.1,205 853.1,211 847.1,217 712.6,217" fill="#3b6fb6"><title>hypothetical protein 689200-690058 +</title></polygon>
+<polygon points="569.2,229 575.2,223 689.6,223 689.6,235 575.2,235" fill="#3b6fb6"><title>helix-turn-helix domain-containing prote 690199-690934 -</title></polygon>
+<text x="569.2" y="245" font-size="8" fill="#333">helix-turn-helix domain-co</text>
+<polygon points="415.9,205 544.9,205 550.9,211 544.9,217 415.9,217" fill="#3b6fb6"><title>orotidine-5'-phosphate decarboxylase 690937-691762 +</title></polygon>
+<polygon points="279.8,205 404.5,205 410.5,211 404.5,217 279.8,217" fill="#3b6fb6"><title>uracil-DNA glycosylase 691795-692593 +</title></polygon>
+<polygon points="191.6,205 274.5,205 280.5,211 274.5,217 191.6,217" fill="#3b6fb6"><title>ribosomal protein S18-alanine N-acetyltr 692589-693132 +</title></polygon>
+<polygon points="74.9,205 186.3,205 192.3,211 186.3,217 74.9,217" fill="#3b6fb6"><title>tRNA (adenosine(37)-N6)-threonylcarbamoy 693128-693845 +</title></polygon>
+<polygon points="60.0,205 70.2,205 76.2,211 70.2,217 60.0,217" fill="#3b6fb6"><title>DMT family transporter 693837-694857 +</title></polygon>
+<text x="60" y="286" font-size="9" fill="#666">NZ_CM191384.1 site 690934  other-side gap 2 bp  this call's core 120300-120411</text>
+<text x="4" y="304" font-size="11" font-weight="bold">SAMN51281027 NZ_CM191384.1 (partner, - strand, two_flank_anchored, pair P00111)</text>
+<line x1="60" y1="340" x2="1060" y2="340" stroke="#888"/>
+<rect x="387.4" y="372" width="163.7" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="469.2" y="392" font-size="9" text-anchor="middle">U'</text>
+<rect x="568.9" y="372" width="163.7" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="650.8" y="392" font-size="9" text-anchor="middle">D'</text>
+<rect x="551.1" y="372" width="17.8" height="8" fill="#ffffff" opacity="0.55"/>
+<polygon points="855.4,325 1054.0,325 1060.0,331 1054.0,337 855.4,337" fill="#3b6fb6"><title>MFS transporter 687233-689186 +</title></polygon>
+<text x="855.4" y="321" font-size="8" fill="#333">MFS transporter</text>
+<polygon points="712.6,325 847.1,325 853.1,331 847.1,337 712.6,337" fill="#3b6fb6"><title>hypothetical protein 689200-690058 +</title></polygon>
+<polygon points="569.2,349 575.2,343 689.6,343 689.6,355 575.2,355" fill="#3b6fb6"><title>helix-turn-helix domain-containing prote 690199-690934 -</title></polygon>
+<text x="569.2" y="365" font-size="8" fill="#333">helix-turn-helix domain-co</text>
+<polygon points="415.9,325 544.9,325 550.9,331 544.9,337 415.9,337" fill="#3b6fb6"><title>orotidine-5'-phosphate decarboxylase 690937-691762 +</title></polygon>
+<polygon points="279.8,325 404.5,325 410.5,331 404.5,337 279.8,337" fill="#3b6fb6"><title>uracil-DNA glycosylase 691795-692593 +</title></polygon>
+<polygon points="191.6,325 274.5,325 280.5,331 274.5,337 191.6,337" fill="#3b6fb6"><title>ribosomal protein S18-alanine N-acetyltr 692589-693132 +</title></polygon>
+<polygon points="74.9,325 186.3,325 192.3,331 186.3,337 74.9,337" fill="#3b6fb6"><title>tRNA (adenosine(37)-N6)-threonylcarbamoy 693128-693845 +</title></polygon>
+<polygon points="60.0,325 70.2,325 76.2,331 70.2,337 60.0,337" fill="#3b6fb6"><title>DMT family transporter 693837-694857 +</title></polygon>
+<text x="60" y="406" font-size="9" fill="#666">NZ_CM191384.1 site 690936  other-side gap 0 bp  this call's core 120300-120409</text>
+<rect x="551.1" y="338" width="17.8" height="4" fill="#f4f4f4"/><text x="560.0" y="392" font-size="9" text-anchor="middle" fill="#a5372f">empty site</text>
+</svg>

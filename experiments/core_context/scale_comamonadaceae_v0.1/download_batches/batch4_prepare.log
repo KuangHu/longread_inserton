@@ -1,0 +1,26 @@
+nohup: ignoring input
+storage before: reads dir 206.8 GB in all (204.1 GB verified, 0.0 GB partial); filesystem free 2078.3 TB
+batch: 20 runs, 9.71 GB still to download; free after 2078319.3 GB (minimum 500 GB)
+SAMN28094724 SRR26130517 verified
+SAMEA115676840 ERR13194256 verified
+SAMN43145748 SRR32164180 verified
+SAMN43526786 SRR30602165 verified
+SAMD00735226 DRR527052 verified
+SAMD00549750 DRR413434 verified
+SAMN07626151 SRR6824213 verified
+SAMN07626151 SRR6824214 verified
+SAMN07312438 SRR5872859 verified
+SAMN15097745 SRR11977808 verified
+download interrupted (curl exit 18: curl: (18) transfer closed with 241288214 bytes remaining to read); attempt 1/8
+SAMN51281042 SRR40356306 verified
+SAMN51281041 SRR40356307 verified
+SAMN51281059 SRR40356287 verified
+SAMN51281029 SRR40356320 verified
+SAMN51281045 SRR40356302 verified
+SAMN51658607 SRR40356283 verified
+SAMN51281046 SRR40356301 verified
+SAMN51281048 SRR40356299 verified
+SAMN51281043 SRR40356305 verified
+SAMN51281047 SRR40356300 verified
+storage after: reads dir 230.5 GB in all (227.8 GB verified, 0.0 GB partial); filesystem free 2075.8 TB
+ready manifest: 288 runs, 288 verified; 0 of 20 requested runs not verified

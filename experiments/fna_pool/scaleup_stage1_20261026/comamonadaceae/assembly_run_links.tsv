@@ -1,0 +1,281 @@
+assembly_accession	paired_accession	biosample	run	study	read_type	link_basis	source_run_evidence	run_usable	run_tax_id	run_organism	assembly_organism	genus_agrees	assembly_sequencing_tech
+GCA_002554425.1	GCF_002554425.1	SAMN07312438	SRR5872859	PRJNA231221	pacbio_clr_subreads	biosample_matched	not_checked	True	32013	Comamonas terrigena	Comamonas terrigena	True	PacBio; Illumina
+GCA_002754475.1	GCF_002754475.1	SAMN07626132	SRR6824062	PRJNA402406	pacbio_unresolved	biosample_matched	not_checked	True	2035201	Comamonas sp. 26	Comamonas sp. 26	True	PacBio
+GCA_002754395.1	GCF_002754395.1	SAMN07626146	SRR6824086	PRJNA402423	pacbio_unresolved	biosample_matched	not_checked	True	2035216	Delftia sp. 60	Delftia sp. 60	True	PacBio
+GCA_003633835.1	GCF_003633835.1	SAMN08777898	SRR6976407	PRJNA442013	pacbio_unresolved	biosample_matched	not_checked	True	2135632	Acidovorax sp. 93	Acidovorax sp. 93	True	PacBio
+GCA_003096555.1	GCF_003096555.1	SAMN08777906	SRR6976498	PRJNA442024	pacbio_unresolved	biosample_matched	not_checked	True	2135643	Simplicispira sp. 125	Simplicispira sp. 125	True	PacBio
+GCA_003096435.1	GCF_003096435.1	SAMN08775333	SRR7135406	PRJNA442713	pacbio_unresolved	biosample_matched	not_checked	True	80869	Paracidovorax citrulli	Paracidovorax citrulli	True	PacBio
+GCA_003664145.1	GCF_003664145.1	SAMN08775346	SRR7135408	PRJNA442711	pacbio_unresolved	biosample_matched	not_checked	True	80869	Paracidovorax citrulli	Paracidovorax citrulli	True	PacBio
+GCA_006716905.1	GCF_006716905.1	SAMN05443405	SRR9002440	PRJNA332047	pacbio_unresolved	biosample_matched	not_checked	True	80878	Acidovorax temperans	Acidovorax temperans	True	PacBio
+GCA_016027815.1	GCF_016027815.1	SAMN13450420	SRR12046205	PRJNA231221	pacbio_clr_subreads	biosample_matched	not_checked	True	558537	Delftia lacustris	Delftia lacustris	True	Pacbio; Illumina
+GCA_016027775.1	GCF_016027775.1	SAMN13450421	SRR12046249	PRJNA231221	pacbio_clr_subreads	biosample_matched	not_checked	True	80866	Delftia acidovorans	Delftia acidovorans	True	Pacbio; Illumina
+GCA_022387135.1	GCF_022387135.1	SAMN25942281	SRR18054573	PRJNA806951	pacbio_unresolved	biosample_matched	not_checked	True	2918299	Comamonas sp. B21-038	Comamonas sp. B21-038	True	PacBio Sequel
+GCA_033807855.1	GCF_033807855.1	SAMN37751790	SRR26357062	PRJNA1026575	pacbio_hifi_ccs	biosample_matched	not_checked	True	34072	Variovorax	Variovorax sp. SPNA7	True	PacBio RSII
+GCA_033807875.1	GCF_033807875.1	SAMN37751820	SRR26364401	PRJNA1026576	pacbio_hifi_ccs	biosample_matched	not_checked	True	34073	Variovorax paradoxus	Variovorax paradoxus	True	PacBio RSII
+GCA_033802765.1	GCF_033802765.1	SAMN37752145	SRR26382609	PRJNA1026577	pacbio_hifi_ccs	biosample_matched	not_checked	True	3342097	Variovorax sp. EBFNA2	Variovorax sp. EBFNA2	True	PacBio RSII
+GCA_001412535.1	GCF_001412535.1	SAMN03569611	SRR2012295	PRJNA282432	pacbio_clr_subreads	biosample_matched	not_checked	False	1678128	Limnohabitans sp. 63ED37-2	Limnohabitans sp. 63ED37-2	True	PacBio RS II
+GCA_050627025.1	GCF_050627025.1	SAMN47300695	SRR32649596	PRJNA1234539	pacbio_hifi_ccs	biosample_matched	not_checked	True	1321610	Variovorax paradoxus NBRC 15149	Variovorax paradoxus NBRC 15149	True	PacBio Sequel
+GCA_029892315.1	GCF_029892315.1	SAMN15738716	SRR35181478	PRJNA651892	pacbio_hifi_ccs	biosample_matched	not_checked	True	2760709	Polaromonas sp. CG_23.6	Polaromonas sp. CG_23.6	True	PacBio
+GCA_022846195.1	GCF_022846195.1	SAMD00407106	DRR319914	PRJDB12370	ont	biosample_matched	not_checked	True	558537	Delftia lacustris	Delftia lacustris	True	MiSeq; GridION
+GCA_042697355.1	GCF_042697355.1	SAMN43526787	SRR30602164	PRJNA1090919	ont	biosample_matched	not_checked	True	3350169	Hydrogenophaga sp. UC242_50	Hydrogenophaga sp. UC242_50	True	Oxford Nanopore MinION
+GCA_059491885.1	GCF_059491885.1	SAMN43145742	SRR32164030	PRJNA1147241	ont	biosample_matched	not_checked	True	3243038	Variovorax sp. Varisp46	Variovorax sp. Varisp46	True	Illumina NextSeq, Oxford Nanopore MinION
+GCA_059491925.1	GCF_059491925.1	SAMN43145729	SRR32164052	PRJNA1147241	ont	biosample_matched	not_checked	True	3243028	Variovorax sp. Varisp27	Variovorax sp. Varisp27	True	Illumina NextSeq, Oxford Nanopore MinION
+GCA_050499165.1	GCF_050499165.1	SAMN48330266	SRR33422105	PRJNA1258737	ont	biosample_matched	not_checked	True	1783360	Comamonas sediminis	Comamonas sediminis	True	Oxford Nanopore PromethION; Illumina NovaSeq
+GCA_057748255.1	GCF_057748255.1	SAMN48330266	SRR33422105	PRJNA1258737	ont	biosample_matched	not_checked	True	1783360	Comamonas sediminis	Comamonas sediminis	True	Illumina NovaSeq 6000 and Oxford Nanopore PromethION
+GCA_060372275.1	GCF_060372275.1	SAMN51281059	SRR40356287	PRJNA1327437	ont	biosample_matched	not_checked	True	3462617	Variovorax sp. YR747	Variovorax sp. YR747	True	Oxford Nanopore MinION
+GCA_060372575.1	GCF_060372575.1	SAMN51281051	SRR40356296	PRJNA1327437	ont	biosample_matched	not_checked	True	3462609	Variovorax sp. OV089	Variovorax sp. OV089	True	Oxford Nanopore MinION
+GCA_060372905.1	GCF_060372905.1	SAMN51281044	SRR40356303	PRJNA1327437	ont	biosample_matched	not_checked	True	3462602	Variovorax sp. OK614	Variovorax sp. OK614	True	Oxford Nanopore MinION
+GCA_060372945.1	GCF_060372945.1	SAMN51281042	SRR40356306	PRJNA1327437	ont	biosample_matched	not_checked	True	3462600	Variovorax sp. OK250	Variovorax sp. OK250	True	Oxford Nanopore MinION
+GCA_060421975.1	GCF_060421975.1	SAMN51281036	SRR40356312	PRJNA1327437	ont	biosample_matched	not_checked	True	3462594	Variovorax sp. CF393	Variovorax sp. CF393	True	Oxford Nanopore MinION
+GCA_060373945.1	GCF_060373945.1	SAMN51281016	SRR40356315	PRJNA1327437	ont	biosample_matched	not_checked	True	3462574	Variovorax sp. CF013	Variovorax sp. CF013	True	Oxford Nanopore MinION
+GCA_060373385.1	GCF_060373385.1	SAMN51281029	SRR40356320	PRJNA1327437	ont	biosample_matched	not_checked	True	3462587	Variovorax sp. CF252	Variovorax sp. CF252	True	Oxford Nanopore MinION
+GCA_060373425.1	GCF_060373425.1	SAMN51281028	SRR40356321	PRJNA1327437	ont	biosample_matched	not_checked	True	3462586	Variovorax sp. CF249	Variovorax sp. CF249	True	Oxford Nanopore MinION
+GCA_060373485.1	GCF_060373485.1	SAMN51281027	SRR40356322	PRJNA1327437	ont	biosample_matched	not_checked	True	3462585	Variovorax sp. CF247	Variovorax sp. CF247	True	Oxford Nanopore MinION
+GCA_060373565.1	GCF_060373565.1	SAMN51281025	SRR40356324	PRJNA1327437	ont	biosample_matched	not_checked	True	3462583	Variovorax sp. CF153	Variovorax sp. CF153	True	Oxford Nanopore MinION
+GCA_060373585.1	GCF_060373585.1	SAMN51281024	SRR40356325	PRJNA1327437	ont	biosample_matched	not_checked	True	3462582	Variovorax sp. CF143	Variovorax sp. CF143	True	Oxford Nanopore MinION
+GCA_964253575.2	GCF_964253575.1	SAMEA115676833	ERR13194249	PRJEB75483	ont	biosample_matched	not_checked	True	3342256	Acidovorax sp. LjRoot118	Acidovorax sp. LjRoot118	True	Illumina Novaseq 6000,MinION
+GCA_964253095.2	GCF_964253095.1	SAMEA115676843	ERR13194259	PRJEB75483	ont	biosample_matched	not_checked	True	34073	Variovorax paradoxus	Variovorax paradoxus	True	Illumina Novaseq 6000,MinION
+GCA_964253035.2	GCF_964253035.1	SAMEA115676946	ERR13194362	PRJEB75483	ont	biosample_matched	not_checked	True	3342328	Pseudorhodoferax sp. LjRoot39	Pseudorhodoferax sp. LjRoot39	True	Illumina Novaseq 6000,MinION
+GCA_964253305.2	GCF_964253305.1	SAMEA115676957	ERR13194373	PRJEB75483	ont	biosample_matched	not_checked	True	3342334	Acidovorax sp. LjRoot66	Acidovorax sp. LjRoot66	True	Illumina Novaseq 6000,MinION
+GCA_964253385.2	GCF_964253385.1	SAMEA115676958	ERR13194374	PRJEB75483	ont	biosample_matched	not_checked	True	34073	Variovorax paradoxus	Variovorax paradoxus	True	Illumina Novaseq 6000,MinION
+GCA_964254325.2	GCF_964254325.2	SAMEA115676974	ERR13194390	PRJEB75483	ont	biosample_matched	not_checked	True	34073	Variovorax paradoxus	Variovorax paradoxus	True	Illumina Novaseq 6000,MinION
+GCA_976989065.1	GCF_976989065.1	SAMEA120308854	ERR15680824	PRJEB88388	ont	biosample_matched	not_checked	True	80866	Delftia acidovorans	Delftia acidovorans	True	MinION
+GCA_976995725.1	GCF_976995725.1	SAMEA120311175	ERR15682128	PRJEB88388	ont	biosample_matched	not_checked	True	80866	Delftia acidovorans	Delftia acidovorans	True	MinION
+GCA_977012065.1	GCF_977012065.1	SAMEA120399599	ERR15741489	PRJEB88388	ont	biosample_matched	not_checked	True	436515	Variovorax boronicumulans	Variovorax boronicumulans	True	MinION
+GCA_977012005.1	GCF_977012005.1	SAMEA120399592	ERR15741491	PRJEB88388	ont	biosample_matched	not_checked	True	3471980	Variovorax sp. R-92939	Variovorax durovernensis	True	MinION
+GCA_014843395.1	GCF_014843395.1	SAMN16231215	SRR12697332	PRJNA664737	ont	biosample_matched	not_checked	True	2774875	Variovorax sp. 38R	Variovorax sp. 38R	True	Oxford Nanopore GridION; Illumina HiSeq
+GCA_017976505.1	GCF_017976505.1	SAMN15853741	SRR14226837	PRJNA657966	ont	biosample_matched	not_checked	True	225992	Comamonas kerstersii	Comamonas kerstersii	True	Oxford Nanopore MiniION; Illumina NovaSeq
+GCA_034554595.1	GCF_034554595.1	SAMN37458465	SRR26117949	PRJNA1018956	ont	biosample_matched	not_checked	True	180282	Delftia tsuruhatensis	Delftia tsuruhatensis	True	Illumina MiSeq; Oxford Nanopore MinION
+GCA_029841605.1	GCF_029841605.1	SAMN30525278	SRR21472542	PRJNA868296	ont	biosample_matched	not_checked	True	225991	Comamonas aquatica	Comamonas aquatica	True	Illumina HiSeq; Oxford Nanopore MinION
+GCA_029814915.1	GCF_029814915.1	SAMN30525383	SRR21472668	PRJNA868296	ont	biosample_matched	not_checked	True	180282	Delftia tsuruhatensis	Delftia tsuruhatensis	True	Illumina HiSeq + Oxford Nanopore MiniION
+GCA_029870285.2	GCF_029870285.2	SAMN15905291	SRR31943989	PRJNA659401	ont	biosample_matched	not_checked	False	2767222	Delftia sp. PS-11	Delftia sp. PS-11	True	Illumina; Oxford Nanopore MinION
+GCA_049913225.1	GCF_049913225.1	SAMN47200782	SRR32610404	PRJNA1228643	ont	biosample_matched	not_checked	True	12917	Acidovorax facilis	Acidovorax facilis	True	Illumina NextSeq; Oxford Nanopore GridION
+GCA_053010425.1	GCF_053010425.1	SAMN52101483	SRR35699700	PRJNA1337102	ont	biosample_matched	not_checked	True	1945864	Hydrogenophaga sp. A37	Hydrogenophaga sp. A37	True	Oxford Nanopore MinION
+GCA_002157685.2	GCF_002157685.2	SAMD00076718	DRR396223	PRJDB5621	pacbio_unresolved	biosample_matched	not_checked	True	363952	Comamonas thiooxydans	Comamonas thiooxydans	True	PacBio Sequel
+GCA_027925025.1	GCF_027925025.1	SAMD00549752	DRR413436	PRJDB14571	pacbio_unresolved	biosample_matched	not_checked	True	1751150	Limnohabitans sp. MORI2	Limnohabitans sp. MORI2	True	PacBio Sequel II
+GCA_002754475.1	GCF_002754475.1	SAMN07626132	SRR6824064	PRJNA402406	pacbio_unresolved	biosample_matched	not_checked	True	2035201	Comamonas sp. 26	Comamonas sp. 26	True	PacBio
+GCA_003096455.1	GCF_003096455.1	SAMN08777900	SRR6976417	PRJNA442015	pacbio_unresolved	biosample_matched	not_checked	True	2135634	Acidovorax sp. 99	Acidovorax sp. 99	True	PacBio
+GCA_003058055.1	GCF_003058055.1	SAMN08777389	SRR6976451	PRJNA442019	pacbio_unresolved	biosample_matched	not_checked	True	2135638	Acidovorax sp. 107	Acidovorax sp. 107	True	PacBio
+GCA_003387115.1	GCF_003387115.1	SAMN08777904	SRR6976454	PRJNA442021	pacbio_unresolved	biosample_matched	not_checked	True	2135640	Simplicispira sp. 110	Simplicispira sp. 110	True	PacBio
+GCA_055396085.1	GCF_055396085.1	SAMD00735223	DRR527049	PRJDB17422	pacbio_unresolved	biosample_matched	not_checked	True	509112	Limnohabitans sp. INBF004	Limnohabitans sp. INBF004	True	Pacbio Sequel II
+GCA_900461225.1	GCF_900461225.1	SAMEA4442462	ERR1854437	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	285	Comamonas testosteroni	Comamonas testosteroni	True	PacBio
+GCA_013376875.1	GCF_013376875.1	SAMN10909636	SRR10448205	PRJNA521711	pacbio_unresolved	biosample_matched	not_checked	False	2518343	Acidovorax sp. JMULE5	Acidovorax sp. JMULE5	True	PacBio Sequel
+GCA_016026535.1	GCF_016026535.1	SAMN13450469	SRR12047132	PRJNA231221	pacbio_clr_subreads	biosample_matched	not_checked	True	80866	Delftia acidovorans	Delftia acidovorans	True	Pacbio; Illumina
+GCA_020080045.1	GCF_020080045.1	SAMN21401359	SRR15944127	PRJNA762695	pacbio_unresolved	biosample_matched	not_checked	False	379895	Comamonas odontotermitis	Comamonas odontotermitis	True	PacBio
+GCA_001412575.1	GCF_001412575.1	SAMN03569612	SRR2017784	PRJNA282432	pacbio_clr_subreads	biosample_matched	not_checked	False	1678129	Limnohabitans sp. 103DPR2	Limnohabitans sp. 103DPR2	True	PacBio RS II
+GCA_024372625.1		SAMN29007424	SRR19646381	PRJNA848627	pacbio_hifi_ccs	biosample_matched	not_checked	True	2952996	Comamonadaceae bacterium OTU4NAUVB1	Comamonadaceae bacterium OTU4NAUVB1	True	PacBio
+GCA_050626955.1	GCF_050626955.1	SAMN47300673	SRR32649591	PRJNA1234539	pacbio_hifi_ccs	biosample_matched	not_checked	True	12917	Acidovorax facilis	Acidovorax facilis	True	PacBio Sequel
+GCA_050626995.1	GCF_050626995.1	SAMN47300672	SRR32649602	PRJNA1234539	pacbio_hifi_ccs	biosample_matched	not_checked	True	332657	Polaromonas aquatica	Polaromonas aquatica	True	PacBio Sequel
+GCA_049860745.1	GCF_049860745.1	SAMN47998638	SRR33151858	PRJNA1251142	pacbio_unresolved	biosample_matched	not_checked	False	3416277	Hydrophilobacter chitinilyticus	Hydrophilobacter chitinilyticus	True	PacBio HiFi; Illumina TruSeq
+GCA_030815625.1	GCF_030815625.1	SAMN35085406	SRR35247416	PRJNA958319	pacbio_hifi_ccs	biosample_matched	not_checked	True	3042309	Variovorax sp. W1I1	Variovorax sp. W1I1	True	PacBio
+GCA_050435205.1	GCF_050435205.1	SAMN34353142	SRR35247518	PRJNA958372	pacbio_hifi_ccs	biosample_matched	not_checked	True	3042290	Variovorax sp. W2I14	Variovorax sp. W2I14	True	PacBio
+GCA_001753225.1	GCF_001753225.1	SAMN05828192	SRR4408348	PRJNA344535	pacbio_unresolved	biosample_matched	not_checked	True	180282	Delftia tsuruhatensis	Delftia tsuruhatensis	True	PacBio
+GCA_900215425.1	GCF_900215425.1	SAMN05518800	SRR5742466	PRJNA335047	pacbio_unresolved	biosample_matched	not_checked	True	1884383	Variovorax sp. YR752	Variovorax sp. YR752	True	PacBio RS,Illumina HiSeq 2500-1TB,PacBio RS II
+GCA_900215425.1	GCF_900215425.1	SAMN05518800	SRR5742467	PRJNA335047	pacbio_unresolved	biosample_matched	not_checked	True	1884383	Variovorax sp. YR752	Variovorax sp. YR752	True	PacBio RS,Illumina HiSeq 2500-1TB,PacBio RS II
+GCA_059491555.1	GCF_059491555.1	SAMN43145749	SRR32164178	PRJNA1147241	ont	biosample_matched	not_checked	True	3243044	Variovorax sp. Varisp53	Variovorax sp. Varisp53	True	Illumina NextSeq, Oxford Nanopore MinION
+GCA_042847045.1	GCF_042847045.1	SAMD00797420	DRR576325	PRJDB18340	ont	biosample_matched	not_checked	True	3230736	Acidovorax sacchari	Acidovorax sacchari	True	Nanopore PromethION
+GCA_964254125.2	GCF_964254125.1	SAMEA115676868	ERR13194284	PRJEB75483	ont	biosample_matched	not_checked	True	47920	Acidovorax delafieldii	Acidovorax delafieldii	True	Illumina Novaseq 6000,MinION
+GCA_964253985.2	GCF_964253985.1	SAMEA115676931	ERR13194347	PRJEB75483	ont	biosample_matched	not_checked	True	3342316	Variovorax sp. LjRoot290	Variovorax sp. LjRoot290	True	Illumina Novaseq 6000,MinION
+GCA_964254355.2	GCF_964254355.1	SAMEA115676961	ERR13194377	PRJEB75483	ont	biosample_matched	not_checked	True	3342337	Acidovorax sp. LjRoot74	Acidovorax sp. LjRoot74	True	Illumina Novaseq 6000,MinION
+GCA_976989165.1	GCF_976989165.1	SAMEA120309485	ERR15681453	PRJEB88388	ont	biosample_matched	not_checked	True	3471860	Variovorax sp. R-91771	Variovorax gossypii	True	MinION
+GCA_976997285.1	GCF_976997285.1	SAMEA120314636	ERR15686901	PRJEB88388	ont	biosample_matched	not_checked	True	436515	Variovorax boronicumulans	Variovorax boronicumulans	True	MinION
+GCA_977007205.1	GCF_977007205.1	SAMEA120325695	ERR15695456	PRJEB88388	ont	biosample_matched	not_checked	True	3471948	Variovorax sp. R-92738	Variovorax beijingensis	True	MinION
+GCA_028473645.1	GCF_028473645.1	SAMN28084394	SRR19119756	PRJNA834920	ont	biosample_matched	not_checked	True	2940492	Acidovorax sp. GBBC 1281	Acidovorax sp. GBBC 1281	True	Illumina; Oxford Nanopore
+GCA_028069655.1	GCF_028069655.1	SAMN28084392	SRR19119758	PRJNA834920	ont	biosample_matched	not_checked	True	2940490	Acidovorax sp. NCPPB 4044	Acidovorax sp. NCPPB 4044	True	Illumina; Oxford Nanopore
+GCA_057418825.1	GCF_057418825.1	SAMN42552694	SRR29924133	PRJNA1136798	ont	biosample_matched	not_checked	True	80866	Delftia acidovorans	Delftia acidovorans	True	Oxford Nanopore MinION
+GCA_044056765.1	GCF_044056765.1	SAMN43526780	SRR30602137	PRJNA1090919	ont	biosample_matched	not_checked	True	47920	Acidovorax delafieldii	Acidovorax delafieldii	True	Oxford Nanopore MinION
+GCA_042696965.1	GCF_042696965.1	SAMN43526788	SRR30602163	PRJNA1090919	ont	biosample_matched	not_checked	True	3350170	Hydrogenophaga sp. UC242_53	Hydrogenophaga sp. UC242_53	True	Oxford Nanopore MinION
+GCA_057839205.1		SAMN51819094	SRR35628932	PRJNA1333901	ont	biosample_matched	not_checked	True	1871071	Comamonadaceae bacterium	Comamonadaceae bacterium KH_043	True	Oxford Nanopore
+GCA_060483935.1	GCF_060483935.1	SAMN56368990	SRR37524064	PRJNA1433495	ont	biosample_matched	not_checked	True	3693097	Hydrogenophaga sp. GW460-11-11-14-LB1	Hydrogenophaga sp. GW460-11-11-14-LB1	True	Illumina; Oxford Nanopore
+GCA_060373665.1	GCF_060373665.1	SAMN51281023	SRR40356268	PRJNA1327437	ont	biosample_matched	not_checked	True	3462581	Variovorax sp. CF130	Variovorax sp. CF130	True	Oxford Nanopore MinION
+GCA_060373725.1	GCF_060373725.1	SAMN51281021	SRR40356270	PRJNA1327437	ont	biosample_matched	not_checked	True	3462579	Variovorax sp. CF057	Variovorax sp. CF057	True	Oxford Nanopore MinION
+GCA_060361765.1	GCF_060361765.1	SAMN51658615	SRR40356274	PRJNA1327437	ont	biosample_matched	not_checked	True	3464642	Variovorax sp. YR376	Variovorax sp. YR376	True	Oxford Nanopore
+GCA_060361725.1	GCF_060361725.1	SAMN51658614	SRR40356275	PRJNA1327437	ont	biosample_matched	not_checked	True	3464641	Variovorax sp. YR282	Variovorax sp. YR282	True	Oxford Nanopore
+GCA_060361885.1	GCF_060361885.1	SAMN51658610	SRR40356279	PRJNA1327437	ont	biosample_matched	not_checked	True	3464637	Variovorax sp. YR064	Variovorax sp. YR064	True	Oxford Nanopore
+GCA_060362065.1	GCF_060362065.1	SAMN51658608	SRR40356281	PRJNA1327437	ont	biosample_matched	not_checked	True	3464635	Variovorax sp. OV560	Variovorax sp. OV560	True	Oxford Nanopore
+GCA_060372385.1	GCF_060372385.1	SAMN51281056	SRR40356290	PRJNA1327437	ont	biosample_matched	not_checked	True	3462614	Variovorax sp. OV448	Variovorax sp. OV448	True	Oxford Nanopore MinION
+GCA_060426065.1	GCF_060426065.1	SAMN51281055	SRR40356291	PRJNA1327437	ont	biosample_matched	not_checked	True	3462613	Variovorax sp. OV418	Variovorax sp. OV418	True	Oxford Nanopore MinION
+GCA_060372785.1	GCF_060372785.1	SAMN51281046	SRR40356301	PRJNA1327437	ont	biosample_matched	not_checked	True	3462604	Variovorax sp. OK632	Variovorax sp. OK632	True	Oxford Nanopore MinION
+GCA_060373885.1	GCF_060373885.1	SAMN51281017	SRR40356304	PRJNA1327437	ont	biosample_matched	not_checked	True	3462575	Variovorax sp. CF015	Variovorax sp. CF015	True	Oxford Nanopore MinION
+GCA_060421345.1	GCF_060421345.1	SAMN51281026	SRR40356323	PRJNA1327437	ont	biosample_matched	not_checked	True	3462584	Variovorax sp. CF163	Variovorax sp. CF163	True	Oxford Nanopore MinION
+GCA_060420765.1	GCF_060420765.1	SAMN51281015	SRR40356326	PRJNA1327437	ont	biosample_matched	not_checked	True	3462573	Variovorax sp. BK066	Variovorax sp. BK066	True	Oxford Nanopore MinION
+GCA_027924965.1	GCF_027924965.1	SAMD00549751	DRR413435	PRJDB14571	pacbio_unresolved	biosample_matched	not_checked	True	2986281	Limnohabitans sp. TEGF004	Limnohabitans sp. TEGF004	True	PacBio Sequel II
+GCA_037101375.1	GCF_037101375.1	SAMD00659498	DRR514962	PRJDB17029	pacbio_unresolved	biosample_matched	not_checked	True	3095606	Acidovorax sp. DW039	Acidovorax sp. DW039	True	PacBio Sequel II
+GCA_055396645.1	GCF_055396645.1	SAMD00735222	DRR527048	PRJDB17422	pacbio_unresolved	biosample_matched	not_checked	True	509111	Limnohabitans sp. INBF003	Limnohabitans sp. INBF003	True	Pacbio Sequel II
+GCA_055395845.1	GCF_055395845.1	SAMD00735224	DRR527050	PRJDB17422	pacbio_unresolved	biosample_matched	not_checked	True	509116	Limnohabitans sp. TEGF002	Limnohabitans sp. TEGF002	True	Pacbio Sequel II
+GCA_016027075.1	GCF_016027075.1	SAMN13450439	SRR12045673	PRJNA231221	pacbio_clr_subreads	biosample_matched	not_checked	True	80866	Delftia acidovorans	Delftia acidovorans	True	Pacbio; Illumina
+GCA_016026535.1	GCF_016026535.1	SAMN13450469	SRR12047131	PRJNA231221	pacbio_clr_subreads	biosample_matched	not_checked	True	80866	Delftia acidovorans	Delftia acidovorans	True	Pacbio; Illumina
+GCA_018064205.1	GCF_018064205.1	SAMN18676188	SRR14198828	PRJNA622823	pacbio_clr_subreads	biosample_matched	not_checked	True	225991	Comamonas aquatica	Comamonas aquatica	True	PacBio RSII
+GCA_020510445.1	GCF_020510445.1	SAMN19030610	SRR16235512	PRJNA727717	pacbio_unresolved	biosample_matched	not_checked	True	65656	Hydrogenophaga taeniospiralis	Hydrogenophaga taeniospiralis	True	PacBio Sequel
+GCA_022393415.1	GCF_022393415.1	SAMN25942280	SRR18054574	PRJNA806951	pacbio_unresolved	biosample_matched	not_checked	True	80866	Delftia acidovorans	Delftia acidovorans	True	PacBio Sequel
+GCA_029893635.1	GCF_029893635.1	SAMN28094724	SRR26130517	PRJNA834231	pacbio_hifi_ccs	biosample_matched	not_checked	True	2940551	Variovorax sp. TBS-050B	Variovorax sp. TBS-050B	True	PacBio
+GCA_031453525.1	GCF_031453525.1	SAMN34299950	SRR26131797	PRJNA958353	pacbio_hifi_ccs	biosample_matched	not_checked	True	47920	Acidovorax delafieldii	Acidovorax delafieldii	True	PacBio
+GCA_004563745.2	GCF_004563745.2	SAMN11265848	SRR31313491	PRJNA529413	pacbio_unresolved	biosample_matched	not_checked	False	1302548	Diaphorobacter sp. DS2	Diaphorobacter sp. DS2	True	Oxford Nanopore PromethION; PacBio ONSO
+GCA_003029685.1	GCF_003029685.1	SAMN05714655	SRR4096818	PRJNA340882	pacbio_clr_subreads	biosample_matched	not_checked	True	80867	Paracidovorax avenae	Paracidovorax avenae	True	Illumina MiSeq
+GCA_003019815.1	GCF_003019815.1	SAMN08473591	SRR6750233	PRJNA433268	pacbio_clr_subreads	biosample_matched	not_checked	True	2126319	Variovorax sp. PMC12	Variovorax sp. PMC12	True	PacBio
+GCA_002754375.1	GCF_002754375.1	SAMN07626145	SRR6824079	PRJNA402417	pacbio_unresolved	biosample_matched	not_checked	True	2035212	Variovorax sp. 54	Variovorax sp. 54	True	PacBio
+GCA_002846435.1	GCF_002846435.1	SAMN07626134	SRR6824085	PRJNA402411	pacbio_unresolved	biosample_matched	not_checked	True	2035206	Acidovorax sp. 30	Acidovorax sp. 30	True	PacBio
+GCA_002749705.1	GCF_002749705.1	SAMN07626133	SRR6824088	PRJNA402410	pacbio_unresolved	biosample_matched	not_checked	True	2035205	Acidovorax sp. 56	Acidovorax sp. 56	True	PacBio
+GCA_003688355.1	GCF_003688355.1	SAMN08777390	SRR6976448	PRJNA442016	pacbio_unresolved	biosample_matched	not_checked	True	2135635	Acidovorax sp. 100	Acidovorax sp. 100	True	PacBio
+GCA_003663825.1	GCF_003663825.1	SAMN08777902	SRR6976449	PRJNA442018	pacbio_unresolved	biosample_matched	not_checked	True	2135637	Acidovorax sp. 106	Acidovorax sp. 106	True	PacBio
+GCA_003096555.1	GCF_003096555.1	SAMN08777906	SRR6976497	PRJNA442024	pacbio_unresolved	biosample_matched	not_checked	True	2135643	Simplicispira sp. 125	Simplicispira sp. 125	True	PacBio
+GCA_003096435.1	GCF_003096435.1	SAMN08775333	SRR7135407	PRJNA442713	pacbio_unresolved	biosample_matched	not_checked	True	80869	Paracidovorax citrulli	Paracidovorax citrulli	True	PacBio
+GCA_003664145.1	GCF_003664145.1	SAMN08775346	SRR7135409	PRJNA442711	pacbio_unresolved	biosample_matched	not_checked	True	80869	Paracidovorax citrulli	Paracidovorax citrulli	True	PacBio
+GCA_002056725.1	GCF_002056725.1	SAMN06562982	SRR7284692	PRJNA378865	pacbio_hifi_ccs	biosample_matched	not_checked	True	225992	Comamonas kerstersii	Comamonas kerstersii	True	PacBio
+GCA_006716905.1	GCF_006716905.1	SAMN05443405	SRR9002441	PRJNA332047	pacbio_unresolved	biosample_matched	not_checked	True	80878	Acidovorax temperans	Acidovorax temperans	True	PacBio
+GCA_033096485.1	GCF_033096485.1	SAMN31258398	SRR22007585	PRJNA889817	pacbio_unresolved	biosample_matched	not_checked	True	2986766	Delftia sp. UGAL515B_04	Delftia sp. UGAL515B_04	True	PacBio Sequel
+GCA_031453675.1	GCF_031453675.1	SAMN34252313	SRR24512220	PRJNA957377	pacbio_hifi_ccs	biosample_matched	not_checked	True	1177982	Paracidovorax wautersii	Paracidovorax wautersii	True	PacBio
+GCA_001713375.1	GCF_001713375.1	SAMN04909718	SRR3880379	PRJNA319837	pacbio_hifi_ccs	biosample_matched	not_checked	True	1842537	Hydrogenophaga sp. RAC07	Hydrogenophaga sp. RAC07	True	Pacbio
+GCA_042698915.1	GCF_042698915.1	SAMN43526776	SRR30602141	PRJNA1090919	ont	biosample_matched	not_checked	True	436515	Variovorax boronicumulans	Variovorax boronicumulans	True	Oxford Nanopore MinION
+GCA_964253805.2	GCF_964253805.1	SAMEA115676863	ERR13194279	PRJEB75483	ont	biosample_matched	not_checked	True	3342276	Variovorax sp. LjRoot175	Variovorax sp. LjRoot175	True	Illumina Novaseq 6000,MinION
+GCA_964253865.2	GCF_964253865.1	SAMEA115676939	ERR13194355	PRJEB75483	ont	biosample_matched	not_checked	True	34073	Variovorax paradoxus	Variovorax paradoxus	True	Illumina Novaseq 6000,MinION
+GCA_964341695.1	GCF_964341695.1	SAMEA115296988	ERR14225744	PRJEB71438	ont	biosample_matched	not_checked	False	511108	Ottowia pentelensis	Ottowia pentelensis	True	Oxford Nanopore
+GCA_965211095.1	GCF_965211095.1	SAMEA117659874	ERR14330283	PRJEB85528	ont	biosample_matched	not_checked	False	2109914	Ottowia oryzae	Ottowia oryzae	True	Nanopore
+GCA_976989035.1	GCF_976989035.1	SAMEA120308864	ERR15680836	PRJEB88388	ont	biosample_matched	not_checked	True	80866	Delftia acidovorans	Delftia acidovorans	True	MinION
+GCA_976989265.1	GCF_976989265.1	SAMEA120309484	ERR15681452	PRJEB88388	ont	biosample_matched	not_checked	True	3471859	Variovorax sp. R-91765	Variovorax beijingensis	True	MinION
+GCA_977007995.1	GCF_977007995.1	SAMEA120356367	ERR15696519	PRJEB88388	ont	biosample_matched	not_checked	True	3471964	Variovorax sp. R-93130	Variovorax gossypii	True	MinION
+GCA_903684635.1	GCF_903684635.1	SAMEA6863325	ERR4184150	PRJEB38443	ont	biosample_matched	not_checked	True	180282	Delftia tsuruhatensis	Delftia tsuruhatensis	True	Illumina MiSeq
+GCA_903815225.1	GCF_903815225.1	SAMEA6863325	ERR4184150	PRJEB38443	ont	biosample_matched	not_checked	True	180282	Delftia tsuruhatensis	Delftia tsuruhatensis	True	MiSeq (Illumina),MinION (Nanopore)
+GCA_006323185.2	GCF_006323185.2	SAMN11620948	SRR10064734	PRJNA539822	ont	biosample_matched	not_checked	True	2578111	Variovorax sp. KBS0712	Variovorax sp. KBS0712	True	Illumina HiSeq; Oxford Nanopore MinION
+GCA_009755665.1	GCF_009755665.1	SAMN13494298	SRR10662238	PRJNA593854	ont	biosample_matched	not_checked	True	2714150	Variovorax sp. CSUSB	Variovorax paradoxus	True	Oxford Nanopore & Illumina
+GCA_000263795.2	GCF_000263795.2	SAMN02471431	SRR10820824	PRJNA84413	ont	biosample_matched	not_checked	True	795665	Hydrogenophaga sp. PBC	Hydrogenophaga sp. PBC	True	MiNION; Illumina GAIIx
+GCA_050711835.1	GCF_050711835.1	SAMN37223048	SRR26346327	PRJNA1011529	ont	biosample_matched	not_checked	False	3080983	Variovorax sp. DAIF25	Variovorax sp. DAIF25	True	Oxford Nanopore MinION; Illumina MiSeq
+GCA_016806145.1	GCF_016806145.1	SAMN16392950	SRR12791241	PRJNA667957	ont	biosample_matched	not_checked	True	34073	Variovorax paradoxus	Variovorax paradoxus	True	Illumina iSeq; Oxford Nanopore MinION
+GCA_047325085.1	GCF_047325085.1	SAMN43145737	SRR32164039	PRJNA1147241	ont	biosample_matched	not_checked	True	3243033	Variovorax sp. Varisp41	Variovorax sp. Varisp41	True	Illumina NextSeq, Oxford Nanopore MinION
+GCA_059491565.1	GCF_059491565.1	SAMN43145748	SRR32164180	PRJNA1147241	ont	biosample_matched	not_checked	True	3243043	Polaromonas sp. Polasp52	Polaromonas sp. Polasp52	True	Illumina NextSeq, Oxford Nanopore MinION
+GCA_000263795.2	GCF_000263795.2	SAMN02471431	SRR4450510	PRJNA84413	ont	biosample_matched	not_checked	False	795665	Hydrogenophaga sp. PBC	Hydrogenophaga sp. PBC	True	MiNION; Illumina GAIIx
+GCA_029843545.1	GCF_029843545.1	SAMN30525180	SRR21472835	PRJNA868296	ont	biosample_matched	not_checked	True	225991	Comamonas aquatica	Comamonas aquatica	True	Illumina HiSeq; Oxford Nanopore MinION
+GCA_025666275.1	GCF_025666275.1	SAMN27413147	SRR22212390	PRJNA824721	ont	biosample_matched	not_checked	False	1886637	Delftia sp.	Delftia sp.	True	Oxford Nanopore MinION
+GCA_025309455.1	GCF_025309455.1	SAMN30697778	SRR29761616	PRJNA877399	ont	biosample_matched	not_checked	True	2977320	Comamonas squillarum	Comamonas squillarum	True	Oxford Nanopore MinION; Illumina NovaSeq
+GCA_057457745.1	GCF_057457745.1	SAMN42749333	SRR29926081	PRJNA1139059	ont	biosample_matched	not_checked	True	363952	Comamonas thiooxydans	Comamonas thiooxydans	True	Oxford Nanopore MinION
+GCA_051414805.1	GCF_051414805.1	SAMN43083063	SRR30177525	PRJNA1146025	ont	biosample_matched	not_checked	True	452922	Xenophilus aerolatus	Xenophilus aerolatus	True	Oxford Nanopore PromethION
+GCA_051992195.1	GCF_051992195.1	SAMN48135827	SRR33303079	PRJNA1255178	ont	biosample_matched	not_checked	True	3450237	Variovorax sp. YR566	Variovorax sp. YR566	True	Oxford Nanopore PromethION
+GCA_004563745.2	GCF_004563745.2	SAMN11265848	SRR34023662	PRJNA529413	ont	biosample_matched	not_checked	True	1302548	Diaphorobacter sp. DS2	Diaphorobacter sp. DS2	True	Oxford Nanopore PromethION; PacBio ONSO
+GCA_060373705.1	GCF_060373705.1	SAMN51281022	SRR40356269	PRJNA1327437	ont	biosample_matched	not_checked	True	3462580	Variovorax sp. CF094	Variovorax sp. CF094	True	Oxford Nanopore MinION
+GCA_060421335.1	GCF_060421335.1	SAMN51281020	SRR40356271	PRJNA1327437	ont	biosample_matched	not_checked	True	3462578	Variovorax sp. CF045	Variovorax sp. CF045	True	Oxford Nanopore MinION
+GCA_060361785.1	GCF_060361785.1	SAMN51658616	SRR40356273	PRJNA1327437	ont	biosample_matched	not_checked	True	3464643	Variovorax sp. YR572	Variovorax sp. YR572	True	Oxford Nanopore
+GCA_060361965.1	GCF_060361965.1	SAMN51658611	SRR40356278	PRJNA1327437	ont	biosample_matched	not_checked	True	3464638	Variovorax sp. YR166	Variovorax sp. YR166	True	Oxford Nanopore
+GCA_060362225.1	GCF_060362225.1	SAMN51658604	SRR40356286	PRJNA1327437	ont	biosample_matched	not_checked	True	3464631	Variovorax sp. BK047	Variovorax sp. BK047	True	Oxford Nanopore
+GCA_060372305.1	GCF_060372305.1	SAMN51281057	SRR40356289	PRJNA1327437	ont	biosample_matched	not_checked	True	3462615	Variovorax sp. OV596	Variovorax sp. OV596	True	Oxford Nanopore MinION
+GCA_060372485.1	GCF_060372485.1	SAMN51281053	SRR40356294	PRJNA1327437	ont	biosample_matched	not_checked	True	3462611	Variovorax sp. OV254	Variovorax sp. OV254	True	Oxford Nanopore MinION
+GCA_060372735.1	GCF_060372735.1	SAMN51281048	SRR40356299	PRJNA1327437	ont	biosample_matched	not_checked	True	3462606	Variovorax sp. OK658	Variovorax sp. OK658	True	Oxford Nanopore MinION
+GCA_060373085.1	GCF_060373085.1	SAMN51281040	SRR40356308	PRJNA1327437	ont	biosample_matched	not_checked	True	3462598	Variovorax sp. OK222	Variovorax sp. OK222	True	Oxford Nanopore MinION
+GCA_060426025.1	GCF_060426025.1	SAMN51281038	SRR40356310	PRJNA1327437	ont	biosample_matched	not_checked	True	3462596	Variovorax sp. OK113	Variovorax sp. OK113	True	Oxford Nanopore MinION
+GCA_060373265.1	GCF_060373265.1	SAMN51281034	SRR40356314	PRJNA1327437	ont	biosample_matched	not_checked	True	3462592	Variovorax sp. CF381	Variovorax sp. CF381	True	Oxford Nanopore MinION
+GCA_060421545.1	GCF_060421545.1	SAMN51281031	SRR40356318	PRJNA1327437	ont	biosample_matched	not_checked	True	3462589	Variovorax sp. CF264	Variovorax sp. CF264	True	Oxford Nanopore MinION
+GCA_060373955.1	GCF_060373955.1	SAMN51281014	SRR40356327	PRJNA1327437	ont	biosample_matched	not_checked	True	3462572	Variovorax sp. BK049	Variovorax sp. BK049	True	Oxford Nanopore MinION
+GCA_060484195.1	GCF_060484195.1	SAMN56368954	SRR37523579	PRJNA1433495	ont	biosample_matched	not_checked	True	1813946	Acidovorax sp. GW101-3H11	Acidovorax sp. GW101-3H11	True	Illumina; Oxford Nanopore
+GCA_027924905.1	GCF_027924905.1	SAMD00549750	DRR413434	PRJDB14571	pacbio_unresolved	biosample_matched	not_checked	True	2986280	Limnohabitans sp. INBF002	Limnohabitans sp. INBF002	True	PacBio Sequel II
+GCA_028596105.1	GCF_028596105.1	SAMN33025486	SRR23501622	PRJNA930884	pacbio_unresolved	biosample_matched	not_checked	True	80878	Acidovorax temperans	Acidovorax temperans	True	PacBio Sequel
+GCA_042466645.1	GCF_042466645.1	SAMN41832008	SRR29429604	PRJNA622630	pacbio_clr_subreads	biosample_matched	not_checked	True	3166645	Hydrogenophaga sp. ANAO-22	Hydrogenophaga sp. ANAO-22	True	PacBio RSII
+GCA_040546685.1	GCF_040546685.1	SAMN41513636	SRR29952227	PRJNA1115631	pacbio_hifi_ccs	biosample_matched	not_checked	True	3034231	Variovorax sp. OAS795	Variovorax sp. OAS795	True	PacBio
+GCA_050627005.1	GCF_050627005.1	SAMN47300670	SRR32649614	PRJNA1234539	pacbio_hifi_ccs	biosample_matched	not_checked	True	12917	Acidovorax facilis	Acidovorax facilis	True	PacBio Sequel
+GCA_055395455.1	GCF_055395455.1	SAMD00735225	DRR527051	PRJDB17422	pacbio_unresolved	biosample_matched	not_checked	True	509117	Limnohabitans sp. TEGF003	Limnohabitans sp. TEGF003	True	Pacbio Sequel II
+GCA_016127415.1	GCF_016127415.1	SAMN16357166	SRR12827394	PRJNA231221	pacbio_clr_subreads	biosample_matched	not_checked	True	80866	Delftia acidovorans	Delftia acidovorans	True	Pacbio; Illumina
+GCA_034424235.1	GCF_034424235.1	SAMN38562701	SRR27033690	PRJNA1047486	pacbio_hifi_ccs	biosample_matched	not_checked	True	285	Comamonas testosteroni	Comamonas testosteroni	True	PacBio Sequel
+GCA_003029725.1	GCF_003029725.1	SAMN05714662	SRR4096857	PRJNA340882	pacbio_clr_subreads	biosample_matched	not_checked	True	80867	Paracidovorax avenae	Paracidovorax avenae	True	Illumina MiSeq
+GCA_900215545.1	GCF_900215545.1	SAMN05216519	SRR5166877	PRJNA323325	pacbio_unresolved	biosample_matched	not_checked	True	80866	Delftia acidovorans	Delftia acidovorans	True	PacBio RS,PacBio RS II
+GCA_002754475.1	GCF_002754475.1	SAMN07626132	SRR6824063	PRJNA402406	pacbio_unresolved	biosample_matched	not_checked	True	2035201	Comamonas sp. 26	Comamonas sp. 26	True	PacBio
+GCA_002754175.1	GCF_002754175.1	SAMN07626141	SRR6824077	PRJNA402409	pacbio_unresolved	biosample_matched	not_checked	True	2035204	Acidovorax sp. 59	Acidovorax sp. 59	True	PacBio
+GCA_003096455.1	GCF_003096455.1	SAMN08777900	SRR6976418	PRJNA442015	pacbio_unresolved	biosample_matched	not_checked	True	2135634	Acidovorax sp. 99	Acidovorax sp. 99	True	PacBio
+GCA_003688355.1	GCF_003688355.1	SAMN08777390	SRR6976447	PRJNA442016	pacbio_unresolved	biosample_matched	not_checked	True	2135635	Acidovorax sp. 100	Acidovorax sp. 100	True	PacBio
+GCA_003387115.1	GCF_003387115.1	SAMN08777904	SRR6976455	PRJNA442021	pacbio_unresolved	biosample_matched	not_checked	True	2135640	Simplicispira sp. 110	Simplicispira sp. 110	True	PacBio
+GCA_003387255.1	GCF_003387255.1	SAMN08775340	SRR7135411	PRJNA442712	pacbio_unresolved	biosample_matched	not_checked	True	80869	Paracidovorax citrulli	Paracidovorax citrulli	True	PacBio
+GCA_004328645.1	GCF_004328645.1	SAMN09743972	SRR7743797	PRJNA483535	pacbio_unresolved	biosample_matched	not_checked	True	80880	Hylemonella gracilis	Hylemonella gracilis	True	PacBio RSII
+GCA_019973615.1	GCF_019973615.1	SAMD00265974	DRR259339	PRJDB10411	ont	biosample_matched	not_checked	True	2798804	Rhodoferax lithotrophicus	Rhodoferax lithotrophicus	True	Illumina MiSeq; Oxford Nanopore
+GCA_027923965.1		SAMD00554136	DRR416890	PRJDB14719	ont	biosample_matched	not_checked	True	2993872	Comamonadaceae bacterium OS-1	Comamonadaceae bacterium OS-1	True	Illumina iSeq 100; Oxford Nanopore Technologies MinION
+GCA_027924025.1		SAMD00554137	DRR416892	PRJDB14719	ont	biosample_matched	not_checked	True	2993873	Comamonadaceae bacterium OS-4	Comamonadaceae bacterium OS-4	True	Illumina iSeq 100; Oxford Nanopore Technologies MinION
+GCA_055379645.1	GCF_055379645.1	SAMD00571185	DRR428552	PRJDB15081	ont	biosample_matched	not_checked	True	180282	Delftia tsuruhatensis	Delftia tsuruhatensis	True	Illumina MiSeq; Nanopore GridION
+GCA_024703855.1		SAMN23078435	SRR21050829	PRJNA329489	ont	biosample_matched	not_checked	True	2895563	Polaromonas sp. P2-4	Polaromonas sp. P2-4	True	Oxford Nanopore MinION
+GCA_024703835.1		SAMN23078434	SRR21050830	PRJNA329489	ont	biosample_matched	not_checked	True	2895562	Polaromonas sp. P1(28)-8	Polaromonas sp. P1(28)-8	True	Oxford Nanopore MinION
+GCA_040822085.1	GCF_040822085.1	SAMN42395758	SRR29831490	PRJNA1134181	ont	biosample_matched	not_checked	True	3234144	Rhodoferax sp. WC2427	Rhodoferax sp. WC2427	True	Oxford Nanopore MinION
+GCA_044056785.1	GCF_044056785.1	SAMN43526777	SRR30602140	PRJNA1090919	ont	biosample_matched	not_checked	True	3374554	Variovorax sp. UC122_21	Variovorax sp. UC122_21	True	Oxford Nanopore MinION
+GCA_044055375.1	GCF_044055375.1	SAMN43526803	SRR30602146	PRJNA1090919	ont	biosample_matched	not_checked	True	3374555	Variovorax sp. UC74_104	Variovorax sp. UC74_104	True	Oxford Nanopore MinION
+GCA_044452385.1	GCF_044452385.1	SAMN43526786	SRR30602165	PRJNA1090919	ont	biosample_matched	not_checked	True	3374626	Polaromonas sp. UC242_47	Polaromonas sp. UC242_47	True	Oxford Nanopore MinION
+GCA_004563745.2	GCF_004563745.2	SAMN11265848	SRR31313490	PRJNA529413	ont	biosample_matched	not_checked	True	1302548	Diaphorobacter sp. DS2	Diaphorobacter sp. DS2	True	Oxford Nanopore PromethION; PacBio ONSO
+GCA_049913215.1	GCF_049913215.1	SAMN47200781	SRR32610405	PRJNA1228643	ont	biosample_matched	not_checked	True	3404058	Variovorax sp. R-27	Variovorax sp. R-27	True	Illumina NextSeq; Oxford Nanopore GridION
+GCA_049913215.1	GCF_049913215.1	SAMN47200781	SRR32610406	PRJNA1228643	ont	biosample_matched	not_checked	True	3404058	Variovorax sp. R-27	Variovorax sp. R-27	True	Illumina NextSeq; Oxford Nanopore GridION
+GCA_059084005.1	GCF_059084005.1	SAMN49042133	SRR33981858	PRJNA1276310	ont	biosample_matched	not_checked	True	80866	Delftia acidovorans	Delftia acidovorans	True	Oxford Nanopore MinION
+GCA_964252815.2	GCF_964252815.1	SAMEA115676858	ERR13194274	PRJEB75483	ont	biosample_matched	not_checked	True	47920	Acidovorax delafieldii	Acidovorax delafieldii	True	Illumina Novaseq 6000,MinION
+GCA_964254155.2	GCF_964254155.1	SAMEA115676913	ERR13194329	PRJEB75483	ont	biosample_matched	not_checked	True	34073	Variovorax paradoxus	Variovorax paradoxus	True	Illumina Novaseq 6000,MinION
+GCA_964253075.2	GCF_964253075.1	SAMEA115676933	ERR13194349	PRJEB75483	ont	biosample_matched	not_checked	True	34073	Variovorax paradoxus	Variovorax paradoxus	True	Illumina Novaseq 6000,MinION
+GCA_964254305.2	GCF_964254305.1	SAMEA115676967	ERR13194383	PRJEB75483	ont	biosample_matched	not_checked	True	3342340	Variovorax sp. LjRoot84	Variovorax sp. LjRoot84	True	Illumina Novaseq 6000,MinION
+GCA_976987185.1	GCF_976987185.1	SAMEA120301455	ERR15677731	PRJEB88388	ont	biosample_matched	not_checked	True	80866	Delftia acidovorans	Delftia acidovorans	True	MinION
+GCA_976989105.1	GCF_976989105.1	SAMEA120308851	ERR15680760	PRJEB88388	ont	biosample_matched	not_checked	True	80866	Delftia acidovorans	Delftia acidovorans	True	MinION
+GCA_976988975.1	GCF_976988975.1	SAMEA120308855	ERR15680828	PRJEB88388	ont	biosample_matched	not_checked	True	80866	Delftia acidovorans	Delftia acidovorans	True	MinION
+GCA_976997465.1	GCF_976997465.1	SAMEA120314584	ERR15686824	PRJEB88388	ont	biosample_matched	not_checked	True	3471888	Variovorax sp. R-92678	Variovorax boronicumulans	True	MinION
+GCA_977004815.1	GCF_977004815.1	SAMEA120322934	ERR15693031	PRJEB88388	ont	biosample_matched	not_checked	True	3471924	Variovorax sp. R-91483	Variovorax gossypii	True	MinION
+GCA_028473465.1	GCF_028473465.1	SAMN28084393	SRR19119757	PRJNA834920	ont	biosample_matched	not_checked	True	2940491	Acidovorax sp. GBBC 712	Acidovorax sp. GBBC 712	True	Illumina; Oxford Nanopore
+GCA_028473585.1	GCF_028473585.1	SAMN28084391	SRR19119759	PRJNA834920	ont	biosample_matched	not_checked	True	2940489	Acidovorax sp. NCPPB 3859	Acidovorax sp. NCPPB 3859	True	Illumina; Oxford Nanopore
+GCA_028473605.1	GCF_028473605.1	SAMN28084390	SRR19119760	PRJNA834920	ont	biosample_matched	not_checked	True	2940488	Acidovorax sp. NCPPB 3576	Acidovorax sp. NCPPB 3576	True	Illumina; Oxford Nanopore
+GCA_023195515.2	GCF_023195515.1	SAMN27609613	SRR21808314	PRJNA827450	ont	biosample_matched	not_checked	True	3029170	Variovorax sp. S12S4	Variovorax sp. S12S4	True	Oxford Nanopore MinION
+GCA_060361635.1	GCF_060361635.1	SAMN51658617	SRR40356272	PRJNA1327437	ont	biosample_matched	not_checked	True	3464644	Variovorax sp. YR724	Variovorax sp. YR724	True	Oxford Nanopore
+GCA_060361895.1	GCF_060361895.1	SAMN51658612	SRR40356277	PRJNA1327437	ont	biosample_matched	not_checked	True	3464639	Variovorax sp. YR178	Variovorax sp. YR178	True	Oxford Nanopore
+GCA_060373785.1	GCF_060373785.1	SAMN51281019	SRR40356282	PRJNA1327437	ont	biosample_matched	not_checked	True	3462577	Variovorax sp. CF024	Variovorax sp. CF024	True	Oxford Nanopore MinION
+GCA_060362105.1	GCF_060362105.1	SAMN51658607	SRR40356283	PRJNA1327437	ont	biosample_matched	not_checked	True	3464634	Variovorax sp. OK629	Variovorax sp. OK629	True	Oxford Nanopore
+GCA_060362185.1	GCF_060362185.1	SAMN51658606	SRR40356284	PRJNA1327437	ont	biosample_matched	not_checked	True	3464633	Variovorax sp. OK220	Variovorax sp. OK220	True	Oxford Nanopore
+GCA_060362165.1	GCF_060362165.1	SAMN51658605	SRR40356285	PRJNA1327437	ont	biosample_matched	not_checked	True	3464632	Variovorax sp. CF410	Variovorax sp. CF410	True	Oxford Nanopore
+GCA_060373865.1	GCF_060373865.1	SAMN51281018	SRR40356293	PRJNA1327437	ont	biosample_matched	not_checked	True	3462576	Variovorax sp. CF016	Variovorax sp. CF016	True	Oxford Nanopore MinION
+GCA_060422815.1	GCF_060422815.1	SAMN51281052	SRR40356295	PRJNA1327437	ont	biosample_matched	not_checked	True	3462610	Variovorax sp. OV092	Variovorax sp. OV092	True	Oxford Nanopore MinION
+GCA_060426045.1	GCF_060426045.1	SAMN51281045	SRR40356302	PRJNA1327437	ont	biosample_matched	not_checked	True	3462603	Variovorax sp. OK624	Variovorax sp. OK624	True	Oxford Nanopore MinION
+GCA_060373065.1	GCF_060373065.1	SAMN51281041	SRR40356307	PRJNA1327437	ont	biosample_matched	not_checked	True	3462599	Variovorax sp. OK231	Variovorax sp. OK231	True	Oxford Nanopore MinION
+GCA_060373185.1	GCF_060373185.1	SAMN51281037	SRR40356311	PRJNA1327437	ont	biosample_matched	not_checked	True	3462595	Variovorax sp. CF396	Variovorax sp. CF396	True	Oxford Nanopore MinION
+GCA_060421895.1	GCF_060421895.1	SAMN51281033	SRR40356316	PRJNA1327437	ont	biosample_matched	not_checked	True	3462591	Variovorax sp. CF360	Variovorax sp. CF360	True	Oxford Nanopore MinION
+GCA_900215425.1	GCF_900215425.1	SAMN05518800	SRR5742382	PRJNA335047	pacbio_unresolved	biosample_matched	not_checked	True	1884383	Variovorax sp. YR752	Variovorax sp. YR752	True	PacBio RS,Illumina HiSeq 2500-1TB,PacBio RS II
+GCA_018064205.1	GCF_018064205.1	SAMN18676188	SRR14198827	PRJNA622823	pacbio_clr_subreads	biosample_matched	not_checked	True	225991	Comamonas aquatica	Comamonas aquatica	True	PacBio RSII
+GCA_003019815.1	GCF_003019815.1	SAMN08473591	SRR6686697	PRJNA433268	pacbio_clr_subreads	biosample_matched	not_checked	True	2126319	Variovorax sp. PMC12	Variovorax sp. PMC12	True	PacBio
+GCA_002754175.1	GCF_002754175.1	SAMN07626141	SRR6824078	PRJNA402409	pacbio_unresolved	biosample_matched	not_checked	True	2035204	Acidovorax sp. 59	Acidovorax sp. 59	True	PacBio
+GCA_002754375.1	GCF_002754375.1	SAMN07626145	SRR6824080	PRJNA402417	pacbio_unresolved	biosample_matched	not_checked	True	2035212	Variovorax sp. 54	Variovorax sp. 54	True	PacBio
+GCA_002754375.1	GCF_002754375.1	SAMN07626145	SRR6824081	PRJNA402417	pacbio_unresolved	biosample_matched	not_checked	True	2035212	Variovorax sp. 54	Variovorax sp. 54	True	PacBio
+GCA_002754495.1	GCF_002754495.1	SAMN07626150	SRR6824210	PRJNA402408	pacbio_unresolved	biosample_matched	not_checked	True	2035203	Acidovorax sp. 62	Acidovorax sp. 62	True	PacBio
+GCA_002797445.1	GCF_002797445.1	SAMN07626151	SRR6824213	PRJNA402407	pacbio_unresolved	biosample_matched	not_checked	True	2035202	Acidovorax sp. 69	Acidovorax sp. 69	True	PacBio
+GCA_002797445.1	GCF_002797445.1	SAMN07626151	SRR6824214	PRJNA402407	pacbio_unresolved	biosample_matched	not_checked	True	2035202	Acidovorax sp. 69	Acidovorax sp. 69	True	PacBio
+GCA_003633835.1	GCF_003633835.1	SAMN08777898	SRR6976406	PRJNA442013	pacbio_unresolved	biosample_matched	not_checked	True	2135632	Acidovorax sp. 93	Acidovorax sp. 93	True	PacBio
+GCA_003634645.1	GCF_003634645.1	SAMN08777899	SRR6976412	PRJNA442014	pacbio_unresolved	biosample_matched	not_checked	True	2135633	Acidovorax sp. 94	Acidovorax sp. 94	True	PacBio
+GCA_003663825.1	GCF_003663825.1	SAMN08777902	SRR6976450	PRJNA442018	pacbio_unresolved	biosample_matched	not_checked	True	2135637	Acidovorax sp. 106	Acidovorax sp. 106	True	PacBio
+GCA_003387255.1	GCF_003387255.1	SAMN08775340	SRR7135412	PRJNA442712	pacbio_unresolved	biosample_matched	not_checked	True	80869	Paracidovorax citrulli	Paracidovorax citrulli	True	PacBio
+GCA_001593665.2	GCF_001593665.2	SAMN04157986	SRR7524637	PRJNA298286	pacbio_clr_subreads	biosample_matched	not_checked	True	80869	Paracidovorax citrulli	Paracidovorax citrulli	True	PacBio; Illumina MiSeq
+GCA_055394835.1	GCF_055394835.1	SAMD00735226	DRR527052	PRJDB17422	pacbio_unresolved	biosample_matched	not_checked	True	509119	Limnohabitans sp. TEGF005	Limnohabitans sp. TEGF005	True	Pacbio Sequel II
+GCA_900461435.1	GCF_900461435.1	SAMEA4557833	ERR1749765	PRJEB6403	pacbio_clr_subreads	biosample_matched	not_checked	False	32013	Comamonas terrigena	Comamonas terrigena	True	PacBio
+GCA_013334205.1	GCF_013334205.1	SAMN15097745	SRR11977808	PRJNA637161	pacbio_unresolved	biosample_matched	not_checked	True	2741720	Rhodoferax sp. BAB1	Rhodoferax sp. BAB1	True	PacBio RSII
+GCA_050626895.1	GCF_050626895.1	SAMN47300681	SRR32649611	PRJNA1234539	pacbio_hifi_ccs	biosample_matched	not_checked	True	1321610	Variovorax paradoxus NBRC 15149	Variovorax paradoxus NBRC 15149	True	PacBio Sequel
+GCA_030815975.1	GCF_030815975.1	SAMN34299902	SRR35247470	PRJNA958283	pacbio_hifi_ccs	biosample_matched	not_checked	True	34073	Variovorax paradoxus	Variovorax paradoxus	True	PacBio
+GCA_001714725.1	GCF_001714725.1	SAMN04909706	SRR3880289	PRJNA319830	pacbio_hifi_ccs	biosample_matched	not_checked	True	1842533	Acidovorax sp. RAC01	Acidovorax sp. RAC01	True	PacBio
+GCA_016592015.1	GCF_016592015.1	SAMD00260131	DRR256277	PRJDB10822	ont	biosample_matched	not_checked	True	179636	Alicycliphilus denitrificans	Alicycliphilus denitrificans	True	Nanopore MinION; Illumina NovaSeq
+GCA_024703875.1		SAMN23078436	SRR21050828	PRJNA329489	ont	biosample_matched	not_checked	True	2895564	Polaromonas sp. P1-6	Polaromonas sp. P1-6	True	Oxford Nanopore MinION
+GCA_024703815.1		SAMN23078433	SRR21050831	PRJNA329489	ont	biosample_matched	not_checked	True	2895561	Polaromonas sp. P1(28)-13	Polaromonas sp. P1(28)-13	True	Oxford Nanopore MinION
+GCA_060361845.1	GCF_060361845.1	SAMN51658613	SRR40356276	PRJNA1327437	ont	biosample_matched	not_checked	True	3464640	Variovorax sp. YR271	Variovorax sp. YR271	True	Oxford Nanopore
+GCA_060362035.1	GCF_060362035.1	SAMN51658609	SRR40356280	PRJNA1327437	ont	biosample_matched	not_checked	True	3464636	Variovorax sp. OV586	Variovorax sp. OV586	True	Oxford Nanopore
+GCA_060422895.1	GCF_060422895.1	SAMN51281058	SRR40356288	PRJNA1327437	ont	biosample_matched	not_checked	True	3462616	Variovorax sp. YR389	Variovorax sp. YR389	True	Oxford Nanopore MinION
+GCA_060372445.1	GCF_060372445.1	SAMN51281054	SRR40356292	PRJNA1327437	ont	biosample_matched	not_checked	True	3462612	Variovorax sp. OV307	Variovorax sp. OV307	True	Oxford Nanopore MinION
+GCA_060372635.1	GCF_060372635.1	SAMN51281050	SRR40356297	PRJNA1327437	ont	biosample_matched	not_checked	True	3462608	Variovorax sp. OV017	Variovorax sp. OV017	True	Oxford Nanopore MinION
+GCA_060372645.1	GCF_060372645.1	SAMN51281049	SRR40356298	PRJNA1327437	ont	biosample_matched	not_checked	True	3462607	Variovorax sp. OV006	Variovorax sp. OV006	True	Oxford Nanopore MinION
+GCA_060414525.1	GCF_060414525.1	SAMN51281047	SRR40356300	PRJNA1327437	ont	biosample_matched	not_checked	True	3462605	Variovorax sp. OK638	Variovorax sp. OK638	True	Oxford Nanopore MinION
+GCA_060372925.1	GCF_060372925.1	SAMN51281043	SRR40356305	PRJNA1327437	ont	biosample_matched	not_checked	True	3462601	Variovorax sp. OK565	Variovorax sp. OK565	True	Oxford Nanopore MinION
+GCA_060373095.1	GCF_060373095.1	SAMN51281039	SRR40356309	PRJNA1327437	ont	biosample_matched	not_checked	True	3462597	Variovorax sp. OK115	Variovorax sp. OK115	True	Oxford Nanopore MinION
+GCA_060373275.1	GCF_060373275.1	SAMN51281035	SRR40356313	PRJNA1327437	ont	biosample_matched	not_checked	True	3462593	Variovorax sp. CF391	Variovorax sp. CF391	True	Oxford Nanopore MinION
+GCA_060373345.1	GCF_060373345.1	SAMN51281032	SRR40356317	PRJNA1327437	ont	biosample_matched	not_checked	True	3462590	Variovorax sp. CF277	Variovorax sp. CF277	True	Oxford Nanopore MinION
+GCA_060421535.1	GCF_060421535.1	SAMN51281030	SRR40356319	PRJNA1327437	ont	biosample_matched	not_checked	True	3462588	Variovorax sp. CF256	Variovorax sp. CF256	True	Oxford Nanopore MinION
+GCA_964252695.2	GCF_964252695.1	SAMEA115676832	ERR13194248	PRJEB75483	ont	biosample_matched	not_checked	True	3342255	Acidovorax sp. LjRoot117	Acidovorax sp. LjRoot117	True	Illumina Novaseq 6000,MinION
+GCA_964253765.2	GCF_964253765.1	SAMEA115676837	ERR13194253	PRJEB75483	ont	biosample_matched	not_checked	True	3342260	Acidovorax sp. LjRoot129	Acidovorax sp. LjRoot129	True	Illumina Novaseq 6000,MinION
+GCA_964253755.2	GCF_964253755.1	SAMEA115676839	ERR13194255	PRJEB75483	ont	biosample_matched	not_checked	True	3342261	Variovorax sp. LjRoot130	Variovorax sp. LjRoot130	True	Illumina Novaseq 6000,MinION
+GCA_964252805.2	GCF_964252805.1	SAMEA115676840	ERR13194256	PRJEB75483	ont	biosample_matched	not_checked	True	3342262	Polaromonas sp. LjRoot131	Polaromonas sp. LjRoot131	True	Illumina Novaseq 6000,MinION
+GCA_964253045.2	GCF_964253045.1	SAMEA115676855	ERR13194271	PRJEB75483	ont	biosample_matched	not_checked	True	34073	Variovorax paradoxus	Variovorax paradoxus	True	Illumina Novaseq 6000,MinION
+GCA_964253105.2	GCF_964253105.1	SAMEA115676862	ERR13194278	PRJEB75483	ont	biosample_matched	not_checked	True	34073	Variovorax paradoxus	Variovorax paradoxus	True	Illumina Novaseq 6000,MinION
+GCA_964252785.2	GCF_964252785.1	SAMEA115676864	ERR13194280	PRJEB75483	ont	biosample_matched	not_checked	True	3342277	Variovorax sp. LjRoot178	Variovorax sp. LjRoot178	True	Illumina Novaseq 6000,MinION
+GCA_964253015.2	GCF_964253015.1	SAMEA115676870	ERR13194286	PRJEB75483	ont	biosample_matched	not_checked	True	3342280	Acidovorax sp. LjRoot194	Acidovorax sp. LjRoot194	True	Illumina Novaseq 6000,MinION
+GCA_964252975.2	GCF_964252975.1	SAMEA115676945	ERR13194361	PRJEB75483	ont	biosample_matched	not_checked	True	3342327	Acidovorax sp. LjRoot38	Acidovorax sp. LjRoot38	True	Illumina Novaseq 6000,MinION
+GCA_964253415.2	GCF_964253415.1	SAMEA115676956	ERR13194372	PRJEB75483	ont	biosample_matched	not_checked	True	34073	Variovorax paradoxus	Variovorax paradoxus	True	Illumina Novaseq 6000,MinION
+GCA_965209425.1	GCF_965209425.1	SAMEA117659868	ERR14330277	PRJEB85528	ont	biosample_matched	not_checked	False	80878	Acidovorax temperans	Acidovorax temperans	True	Nanopore
+GCA_976997575.1	GCF_976997575.1	SAMEA120314645	ERR15686910	PRJEB88388	ont	biosample_matched	not_checked	True	436515	Variovorax boronicumulans	Variovorax boronicumulans	True	MinION
+GCA_977011995.1	GCF_977011995.1	SAMEA120399594	ERR15741494	PRJEB88388	ont	biosample_matched	not_checked	True	3471982	Variovorax sp. R-92947	Variovorax durovernensis	True	MinION
+GCA_977011975.1	GCF_977011975.1	SAMEA120399595	ERR15741495	PRJEB88388	ont	biosample_matched	not_checked	True	3471983	Variovorax sp. R-92961	Variovorax durovernensis	True	MinION
+GCA_903684545.1	GCF_903684545.1	SAMEA6863356	ERR4184112	PRJEB38443	ont	biosample_matched	not_checked	True	225991	Comamonas aquatica	Comamonas aquatica	True	Illumina MiSeq
+GCA_903812565.1	GCF_903812565.1	SAMEA6863356	ERR4184112	PRJEB38443	ont	biosample_matched	not_checked	True	225991	Comamonas aquatica	Comamonas aquatica	True	MiSeq (Illumina),MinION (Nanopore)
+GCA_903684615.1	GCF_903684615.1	SAMEA6863324	ERR4184149	PRJEB38443	ont	biosample_matched	not_checked	True	225991	Comamonas aquatica	Comamonas aquatica	True	Illumina MiSeq
+GCA_903815275.1	GCF_903815275.1	SAMEA6863324	ERR4184149	PRJEB38443	ont	biosample_matched	not_checked	True	225991	Comamonas aquatica	Comamonas aquatica	True	MiSeq (Illumina),MinION (Nanopore)
+GCA_014931035.1	GCF_014931035.1	SAMN14538760	SRR11497141	PRJNA623107	ont	biosample_matched	not_checked	False	363952	Comamonas thiooxydans	Comamonas thiooxydans	True	Oxford Nanopore PromethION
+GCA_022117555.1	GCF_022117555.1	SAMN23567018	SRR17102512	PRJNA756567	ont	biosample_matched	not_checked	True	80866	Delftia acidovorans	Delftia acidovorans	True	Illumina NextSeq; ONT MinION
+GCA_028473625.1	GCF_028473625.1	SAMN28084389	SRR19119761	PRJNA834920	ont	biosample_matched	not_checked	True	2940487	Acidovorax sp. NCPPB 2350	Acidovorax sp. NCPPB 2350	True	Illumina; Oxford Nanopore
+GCA_039849035.1	GCF_039849035.1	SAMN41424278	SRR29059439	PRJNA1112398	ont	biosample_matched	not_checked	True	2029117	Vandammella animalimorsus	Vandammella animalimorsus	True	Oxford Nanopore MinION; Illumina MiSeq
+GCA_049913225.1	GCF_049913225.1	SAMN47200782	SRR32610402	PRJNA1228643	ont	biosample_matched	not_checked	True	12917	Acidovorax facilis	Acidovorax facilis	True	Illumina NextSeq; Oxford Nanopore GridION

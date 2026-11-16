@@ -1,0 +1,11 @@
+{
+  "schema": "audited_evidence_check_v1",
+  "sample": "CS-K2",
+  "status": "pass",
+  "members": 100,
+  "classifier_revision": "nearby_competition_v2",
+  "audited_class_counts": {
+    "audited_full_span": 100
+  },
+  "scope": "Recomputed units/classes from emitted read verdicts; no re-mapping or independent competition check"
+}

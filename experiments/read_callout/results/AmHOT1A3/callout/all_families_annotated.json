@@ -1,0 +1,5288 @@
+[
+  {
+    "query": "AmHOT1A3_PILER_0.0",
+    "organism": "AmHOT1A3",
+    "method": "PILER",
+    "native_family": "0.0",
+    "length": 1974,
+    "raw_occurrences": 6,
+    "occurrences": [
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 502692,
+        "end0": 504637,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_891",
+            "type": "CDS",
+            "overlap_bp": 1389,
+            "feature_length_bp": 1389,
+            "product": [
+              "group II intron reverse transcriptase/maturase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS02210"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 1024720,
+        "end0": 1026675,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_1798",
+            "type": "CDS",
+            "overlap_bp": 1389,
+            "feature_length_bp": 1389,
+            "product": [
+              "group II intron reverse transcriptase/maturase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS04500"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 1501413,
+        "end0": 1503361,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_2643",
+            "type": "CDS",
+            "overlap_bp": 1389,
+            "feature_length_bp": 1389,
+            "product": [
+              "group II intron reverse transcriptase/maturase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS06580"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 2455957,
+        "end0": 2457925,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_4291",
+            "type": "CDS",
+            "overlap_bp": 1389,
+            "feature_length_bp": 1389,
+            "product": [
+              "group II intron reverse transcriptase/maturase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS10660"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 2989668,
+        "end0": 2991636,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_5224",
+            "type": "CDS",
+            "overlap_bp": 1389,
+            "feature_length_bp": 1389,
+            "product": [
+              "group II intron reverse transcriptase/maturase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS13005"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 4643816,
+        "end0": 4645752,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_7991",
+            "type": "CDS",
+            "overlap_bp": 1389,
+            "feature_length_bp": 1389,
+            "product": [
+              "group II intron reverse transcriptase/maturase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS19900"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "AmHOT1A3__NZ_CP012202.1_feature_7991",
+      "identity_pct": 100.0,
+      "alignment_aa": 462,
+      "query_start": 1473,
+      "query_end": 88,
+      "evalue": 0.0,
+      "bitscore": 964.0,
+      "subject_length": 462,
+      "title": "group II intron reverse transcriptase/maturase"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "AmHOT1A3_PILER_1.1",
+    "organism": "AmHOT1A3",
+    "method": "PILER",
+    "native_family": "1.1",
+    "length": 1617,
+    "raw_occurrences": 3,
+    "occurrences": [
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 649342,
+        "end0": 650951,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_1161",
+            "type": "CDS",
+            "overlap_bp": 1347,
+            "feature_length_bp": 1347,
+            "product": [
+              "IS1182 family transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS02925"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 3024288,
+        "end0": 3025903,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_5290",
+            "type": "CDS",
+            "overlap_bp": 1347,
+            "feature_length_bp": 1347,
+            "product": [
+              "IS1182 family transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS13170"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 4385442,
+        "end0": 4387059,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_7557",
+            "type": "CDS",
+            "overlap_bp": 1347,
+            "feature_length_bp": 1347,
+            "product": [
+              "IS1182 family transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS18810"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "AmHOT1A3__NZ_CP012202.1_feature_7557",
+      "identity_pct": 100.0,
+      "alignment_aa": 438,
+      "query_start": 1532,
+      "query_end": 219,
+      "evalue": 0.0,
+      "bitscore": 923.0,
+      "subject_length": 448,
+      "title": "IS1182 family transposase"
+    },
+    "best_deposited_tnp_hit": {
+      "subject": "AmHOT1A3__NZ_CP012202.1_feature_7557",
+      "identity_pct": 100.0,
+      "alignment_aa": 438,
+      "query_start": 1532,
+      "query_end": 219,
+      "evalue": 0.0,
+      "bitscore": 923.0,
+      "subject_length": 448,
+      "title": "IS1182 family transposase"
+    },
+    "native_records_overlapping_tnp_CDS": 3,
+    "tnp_supported": true,
+    "deposited_tnp_products": [
+      "IS1182 family transposase"
+    ]
+  },
+  {
+    "query": "AmHOT1A3_PILER_2.2",
+    "organism": "AmHOT1A3",
+    "method": "PILER",
+    "native_family": "2.2",
+    "length": 1412,
+    "raw_occurrences": 9,
+    "occurrences": [
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 179561,
+        "end0": 180931,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_329",
+            "type": "CDS",
+            "overlap_bp": 1197,
+            "feature_length_bp": 1197,
+            "product": [
+              "IS4 family transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS00815"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 776976,
+        "end0": 778345,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_1368",
+            "type": "CDS",
+            "overlap_bp": 1197,
+            "feature_length_bp": 1197,
+            "product": [
+              "IS4 family transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS03430"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 856096,
+        "end0": 857460,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_1524",
+            "type": "CDS",
+            "overlap_bp": 1197,
+            "feature_length_bp": 1197,
+            "product": [
+              "IS4 family transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS03825"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 2545492,
+        "end0": 2546872,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_4451",
+            "type": "CDS",
+            "overlap_bp": 1197,
+            "feature_length_bp": 1197,
+            "product": [
+              "IS4 family transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS11080"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 2642156,
+        "end0": 2643527,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_4621",
+            "type": "CDS",
+            "overlap_bp": 1197,
+            "feature_length_bp": 1197,
+            "product": [
+              "IS4 family transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS11505"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP012202.1_feature_4623",
+            "type": "CDS",
+            "overlap_bp": 1,
+            "feature_length_bp": 2202,
+            "product": [
+              "exodeoxyribonuclease V subunit alpha"
+            ],
+            "locus_tag": [
+              "ACZ81_RS11510"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 3821702,
+        "end0": 3823072,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_6635",
+            "type": "CDS",
+            "overlap_bp": 1197,
+            "feature_length_bp": 1197,
+            "product": [
+              "IS4 family transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS16520"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 3826499,
+        "end0": 3827890,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_6643",
+            "type": "CDS",
+            "overlap_bp": 1197,
+            "feature_length_bp": 1197,
+            "product": [
+              "IS4 family transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS16540"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP012202.1_feature_6645",
+            "type": "CDS",
+            "overlap_bp": 4,
+            "feature_length_bp": 471,
+            "product": [
+              "inner membrane protein YiaA"
+            ],
+            "locus_tag": [
+              "ACZ81_RS16545"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 3830629,
+        "end0": 3832030,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_6653",
+            "type": "CDS",
+            "overlap_bp": 1197,
+            "feature_length_bp": 1197,
+            "product": [
+              "IS4 family transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS16565"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 4231382,
+        "end0": 4232748,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_7299",
+            "type": "CDS",
+            "overlap_bp": 1197,
+            "feature_length_bp": 1197,
+            "product": [
+              "IS4 family transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS18165"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "AmHOT1A3__NZ_CP012202.1_feature_7299",
+      "identity_pct": 100.0,
+      "alignment_aa": 398,
+      "query_start": 146,
+      "query_end": 1339,
+      "evalue": 0.0,
+      "bitscore": 786.0,
+      "subject_length": 398,
+      "title": "IS4 family transposase"
+    },
+    "best_deposited_tnp_hit": {
+      "subject": "AmHOT1A3__NZ_CP012202.1_feature_7299",
+      "identity_pct": 100.0,
+      "alignment_aa": 398,
+      "query_start": 146,
+      "query_end": 1339,
+      "evalue": 0.0,
+      "bitscore": 786.0,
+      "subject_length": 398,
+      "title": "IS4 family transposase"
+    },
+    "native_records_overlapping_tnp_CDS": 9,
+    "tnp_supported": true,
+    "deposited_tnp_products": [
+      "IS4 family transposase"
+    ]
+  },
+  {
+    "query": "AmHOT1A3_PILER_3.3",
+    "organism": "AmHOT1A3",
+    "method": "PILER",
+    "native_family": "3.3",
+    "length": 1441,
+    "raw_occurrences": 4,
+    "occurrences": [
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 333767,
+        "end0": 335203,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_605",
+            "type": "CDS",
+            "overlap_bp": 1329,
+            "feature_length_bp": 1329,
+            "product": [
+              "IS4 family transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS01500"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 1074639,
+        "end0": 1076079,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_1884",
+            "type": "CDS",
+            "overlap_bp": 1329,
+            "feature_length_bp": 1329,
+            "product": [
+              "IS4 family transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS04715"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 1843455,
+        "end0": 1844894,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_3237",
+            "type": "CDS",
+            "overlap_bp": 1329,
+            "feature_length_bp": 1329,
+            "product": [
+              "IS4 family transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS08060"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 4118852,
+        "end0": 4120288,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_7097",
+            "type": "CDS",
+            "overlap_bp": 1329,
+            "feature_length_bp": 1329,
+            "product": [
+              "IS4 family transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS17650"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "AmHOT1A3__NZ_CP012202.1_feature_7097",
+      "identity_pct": 100.0,
+      "alignment_aa": 442,
+      "query_start": 101,
+      "query_end": 1426,
+      "evalue": 0.0,
+      "bitscore": 887.0,
+      "subject_length": 442,
+      "title": "IS4 family transposase"
+    },
+    "best_deposited_tnp_hit": {
+      "subject": "AmHOT1A3__NZ_CP012202.1_feature_7097",
+      "identity_pct": 100.0,
+      "alignment_aa": 442,
+      "query_start": 101,
+      "query_end": 1426,
+      "evalue": 0.0,
+      "bitscore": 887.0,
+      "subject_length": 442,
+      "title": "IS4 family transposase"
+    },
+    "native_records_overlapping_tnp_CDS": 4,
+    "tnp_supported": true,
+    "deposited_tnp_products": [
+      "IS4 family transposase"
+    ]
+  },
+  {
+    "query": "AmHOT1A3_PILER_4.4",
+    "organism": "AmHOT1A3",
+    "method": "PILER",
+    "native_family": "4.4",
+    "length": 2603,
+    "raw_occurrences": 6,
+    "occurrences": [
+      {
+        "contig": "NZ_CP012203.1",
+        "accession": "NZ_CP012203.1",
+        "start0": 9855,
+        "end0": 12450,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012203.1_feature_24",
+            "type": "CDS",
+            "overlap_bp": 755,
+            "feature_length_bp": 755,
+            "product": [
+              "IS21-like element helper ATPase IstB"
+            ],
+            "locus_tag": [
+              "ACZ81_RS21930"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP012203.1_feature_26",
+            "type": "CDS",
+            "overlap_bp": 1545,
+            "feature_length_bp": 1545,
+            "product": [
+              "IS21 family transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS19995"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP012203.1_feature_28",
+            "type": "CDS",
+            "overlap_bp": 8,
+            "feature_length_bp": 545,
+            "product": [
+              "cation efflux transmembrane domain-containing protein"
+            ],
+            "locus_tag": [
+              "ACZ81_RS20005"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 294464,
+        "end0": 297046,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_537",
+            "type": "CDS",
+            "overlap_bp": 747,
+            "feature_length_bp": 747,
+            "product": [
+              "IS21-like element helper ATPase IstB"
+            ],
+            "locus_tag": [
+              "ACZ81_RS01330"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP012202.1_feature_539",
+            "type": "CDS",
+            "overlap_bp": 1539,
+            "feature_length_bp": 1539,
+            "product": [
+              "IS21 family transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS01335"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP012202.1_feature_541",
+            "type": "CDS",
+            "overlap_bp": 66,
+            "feature_length_bp": 633,
+            "product": [
+              "hypothetical protein"
+            ],
+            "locus_tag": [
+              "ACZ81_RS01340"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 1007498,
+        "end0": 1010079,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_1764",
+            "type": "CDS",
+            "overlap_bp": 1539,
+            "feature_length_bp": 1539,
+            "product": [
+              "IS21 family transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS04415"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP012202.1_feature_1766",
+            "type": "CDS",
+            "overlap_bp": 747,
+            "feature_length_bp": 747,
+            "product": [
+              "IS21-like element helper ATPase IstB"
+            ],
+            "locus_tag": [
+              "ACZ81_RS04420"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 1698113,
+        "end0": 1700696,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_3019",
+            "type": "CDS",
+            "overlap_bp": 747,
+            "feature_length_bp": 747,
+            "product": [
+              "IS21-like element helper ATPase IstB"
+            ],
+            "locus_tag": [
+              "ACZ81_RS07515"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP012202.1_feature_3021",
+            "type": "CDS",
+            "overlap_bp": 1539,
+            "feature_length_bp": 1539,
+            "product": [
+              "IS21 family transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS07520"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 2197873,
+        "end0": 2200457,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_3859",
+            "type": "CDS",
+            "overlap_bp": 52,
+            "feature_length_bp": 210,
+            "product": [
+              "hypothetical protein"
+            ],
+            "locus_tag": [
+              "ACZ81_RS09590"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP012202.1_feature_3861",
+            "type": "CDS",
+            "overlap_bp": 1539,
+            "feature_length_bp": 1539,
+            "product": [
+              "IS21 family transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS09595"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP012202.1_feature_3863",
+            "type": "CDS",
+            "overlap_bp": 747,
+            "feature_length_bp": 747,
+            "product": [
+              "IS21-like element helper ATPase IstB"
+            ],
+            "locus_tag": [
+              "ACZ81_RS09600"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 3973169,
+        "end0": 3975748,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_6879",
+            "type": "CDS",
+            "overlap_bp": 51,
+            "feature_length_bp": 2823,
+            "product": [
+              "hypothetical protein"
+            ],
+            "locus_tag": [
+              "ACZ81_RS17125"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP012202.1_feature_6881",
+            "type": "CDS",
+            "overlap_bp": 1539,
+            "feature_length_bp": 1539,
+            "product": [
+              "IS21 family transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS17130"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP012202.1_feature_6883",
+            "type": "CDS",
+            "overlap_bp": 747,
+            "feature_length_bp": 747,
+            "product": [
+              "IS21-like element helper ATPase IstB"
+            ],
+            "locus_tag": [
+              "ACZ81_RS17135"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "AmHOT1A3__NZ_CP012202.1_feature_6881",
+      "identity_pct": 100.0,
+      "alignment_aa": 183,
+      "query_start": 1204,
+      "query_end": 1752,
+      "evalue": 0.0,
+      "bitscore": 381.0,
+      "subject_length": 512,
+      "title": "IS21 family transposase"
+    },
+    "best_deposited_tnp_hit": {
+      "subject": "AmHOT1A3__NZ_CP012202.1_feature_6881",
+      "identity_pct": 100.0,
+      "alignment_aa": 183,
+      "query_start": 1204,
+      "query_end": 1752,
+      "evalue": 0.0,
+      "bitscore": 381.0,
+      "subject_length": 512,
+      "title": "IS21 family transposase"
+    },
+    "native_records_overlapping_tnp_CDS": 6,
+    "tnp_supported": true,
+    "deposited_tnp_products": [
+      "IS21 family transposase"
+    ]
+  },
+  {
+    "query": "AmHOT1A3_PILER_5.5",
+    "organism": "AmHOT1A3",
+    "method": "PILER",
+    "native_family": "5.5",
+    "length": 1423,
+    "raw_occurrences": 4,
+    "occurrences": [
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 486436,
+        "end0": 487853,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_857",
+            "type": "CDS",
+            "overlap_bp": 1035,
+            "feature_length_bp": 1035,
+            "product": [
+              "IS110 family RNA-guided transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS02125"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 891990,
+        "end0": 893407,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_1574",
+            "type": "CDS",
+            "overlap_bp": 1035,
+            "feature_length_bp": 1035,
+            "product": [
+              "IS110 family RNA-guided transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS03950"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 1377151,
+        "end0": 1378567,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_2433",
+            "type": "CDS",
+            "overlap_bp": 1035,
+            "feature_length_bp": 1035,
+            "product": [
+              "IS110 family RNA-guided transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS06065"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 3366403,
+        "end0": 3367823,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_5864",
+            "type": "CDS",
+            "overlap_bp": 1035,
+            "feature_length_bp": 1035,
+            "product": [
+              "IS110 family RNA-guided transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS14610"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "AmHOT1A3__NZ_CP012202.1_feature_5864",
+      "identity_pct": 100.0,
+      "alignment_aa": 344,
+      "query_start": 1329,
+      "query_end": 298,
+      "evalue": 0.0,
+      "bitscore": 719.0,
+      "subject_length": 344,
+      "title": "IS110 family RNA-guided transposase"
+    },
+    "best_deposited_tnp_hit": {
+      "subject": "AmHOT1A3__NZ_CP012202.1_feature_5864",
+      "identity_pct": 100.0,
+      "alignment_aa": 344,
+      "query_start": 1329,
+      "query_end": 298,
+      "evalue": 0.0,
+      "bitscore": 719.0,
+      "subject_length": 344,
+      "title": "IS110 family RNA-guided transposase"
+    },
+    "native_records_overlapping_tnp_CDS": 4,
+    "tnp_supported": true,
+    "deposited_tnp_products": [
+      "IS110 family RNA-guided transposase"
+    ]
+  },
+  {
+    "query": "AmHOT1A3_PILER_6.6",
+    "organism": "AmHOT1A3",
+    "method": "PILER",
+    "native_family": "6.6",
+    "length": 2127,
+    "raw_occurrences": 3,
+    "occurrences": [
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 1214941,
+        "end0": 1217048,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_2144",
+            "type": "CDS",
+            "overlap_bp": 153,
+            "feature_length_bp": 153,
+            "product": [
+              "hypothetical protein"
+            ],
+            "locus_tag": [
+              "ACZ81_RS21300"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP012202.1_feature_2146",
+            "type": "CDS",
+            "overlap_bp": 1272,
+            "feature_length_bp": 1272,
+            "product": [
+              "group II intron reverse transcriptase/maturase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS05360"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 2104323,
+        "end0": 2106425,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_3673",
+            "type": "CDS",
+            "overlap_bp": 153,
+            "feature_length_bp": 153,
+            "product": [
+              "hypothetical protein"
+            ],
+            "locus_tag": [
+              "ACZ81_RS21330"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP012202.1_feature_3675",
+            "type": "CDS",
+            "overlap_bp": 1272,
+            "feature_length_bp": 1272,
+            "product": [
+              "group II intron reverse transcriptase/maturase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS09140"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 2250066,
+        "end0": 2252190,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_3949",
+            "type": "CDS",
+            "overlap_bp": 153,
+            "feature_length_bp": 153,
+            "product": [
+              "hypothetical protein"
+            ],
+            "locus_tag": [
+              "ACZ81_RS21350"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP012202.1_feature_3951",
+            "type": "CDS",
+            "overlap_bp": 1272,
+            "feature_length_bp": 1272,
+            "product": [
+              "group II intron reverse transcriptase/maturase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS09820"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "AmHOT1A3__NZ_CP012202.1_feature_3675",
+      "identity_pct": 100.0,
+      "alignment_aa": 423,
+      "query_start": 767,
+      "query_end": 2035,
+      "evalue": 0.0,
+      "bitscore": 788.0,
+      "subject_length": 423,
+      "title": "group II intron reverse transcriptase/maturase"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "AmHOT1A3_RS_R0",
+    "organism": "AmHOT1A3",
+    "method": "RS",
+    "native_family": "R=0",
+    "length": 268,
+    "raw_occurrences": 15,
+    "occurrences": [
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 3889395,
+        "end0": 3889661,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 3627819,
+        "end0": 3627942,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_6318",
+            "type": "CDS",
+            "overlap_bp": 20,
+            "feature_length_bp": 2106,
+            "product": [
+              "ATP-dependent helicase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS15735"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 3438226,
+        "end0": 3438382,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 3107724,
+        "end0": 3107801,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_5450",
+            "type": "CDS",
+            "overlap_bp": 54,
+            "feature_length_bp": 1314,
+            "product": [
+              "acyltransferase family protein"
+            ],
+            "locus_tag": [
+              "ACZ81_RS13570"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 1692271,
+        "end0": 1692534,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_3007",
+            "type": "CDS",
+            "overlap_bp": 14,
+            "feature_length_bp": 309,
+            "product": [
+              "VOC family protein"
+            ],
+            "locus_tag": [
+              "ACZ81_RS07485"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 1692270,
+        "end0": 1692535,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_3007",
+            "type": "CDS",
+            "overlap_bp": 15,
+            "feature_length_bp": 309,
+            "product": [
+              "VOC family protein"
+            ],
+            "locus_tag": [
+              "ACZ81_RS07485"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 1351561,
+        "end0": 1351641,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_2387",
+            "type": "CDS",
+            "overlap_bp": 3,
+            "feature_length_bp": 711,
+            "product": [
+              "SDR family oxidoreductase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS05950"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 1266843,
+        "end0": 1266941,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 1229174,
+        "end0": 1229438,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_2168",
+            "type": "CDS",
+            "overlap_bp": 15,
+            "feature_length_bp": 434,
+            "product": [
+              "acyl-CoA thioesterase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS05415"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 843820,
+        "end0": 844086,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 782881,
+        "end0": 783148,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 736454,
+        "end0": 736721,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 555480,
+        "end0": 555747,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_985",
+            "type": "CDS",
+            "overlap_bp": 15,
+            "feature_length_bp": 396,
+            "product": [
+              "Rho-binding antiterminator"
+            ],
+            "locus_tag": [
+              "ACZ81_RS21440"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 552658,
+        "end0": 552926,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 530423,
+        "end0": 530508,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "AmHOT1A3__NZ_CP012202.1_feature_6032",
+      "identity_pct": 89.189,
+      "alignment_aa": 74,
+      "query_start": 46,
+      "query_end": 267,
+      "evalue": 3.15e-44,
+      "bitscore": 134.0,
+      "subject_length": 74,
+      "title": "hypothetical protein"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "AmHOT1A3_RS_R1",
+    "organism": "AmHOT1A3",
+    "method": "RS",
+    "native_family": "R=1",
+    "length": 374,
+    "raw_occurrences": 17,
+    "occurrences": [
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 3721084,
+        "end0": 3721319,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 3721060,
+        "end0": 3721319,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 3497489,
+        "end0": 3497724,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 3497465,
+        "end0": 3497724,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 3242941,
+        "end0": 3243176,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 3242917,
+        "end0": 3243176,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_5668",
+            "type": "CDS",
+            "overlap_bp": 4,
+            "feature_length_bp": 1683,
+            "product": [
+              "acyl-CoA dehydrogenase family protein"
+            ],
+            "locus_tag": [
+              "ACZ81_RS14115"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 2637247,
+        "end0": 2637482,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 2637223,
+        "end0": 2637482,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 1789462,
+        "end0": 1789697,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 1789438,
+        "end0": 1789697,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 1786268,
+        "end0": 1786502,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_3141",
+            "type": "CDS",
+            "overlap_bp": 49,
+            "feature_length_bp": 219,
+            "product": [
+              "hypothetical protein"
+            ],
+            "locus_tag": [
+              "ACZ81_RS07820"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 1786261,
+        "end0": 1786502,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_3141",
+            "type": "CDS",
+            "overlap_bp": 49,
+            "feature_length_bp": 219,
+            "product": [
+              "hypothetical protein"
+            ],
+            "locus_tag": [
+              "ACZ81_RS07820"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 1768914,
+        "end0": 1769149,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 1768890,
+        "end0": 1769149,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 1208084,
+        "end0": 1208343,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 706810,
+        "end0": 707045,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 706786,
+        "end0": 707045,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "AmHOT1A3_RS_R2",
+    "organism": "AmHOT1A3",
+    "method": "RS",
+    "native_family": "R=2",
+    "length": 2102,
+    "raw_occurrences": 10,
+    "occurrences": [
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 4498920,
+        "end0": 4501020,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_7737",
+            "type": "CDS",
+            "overlap_bp": 1272,
+            "feature_length_bp": 1272,
+            "product": [
+              "group II intron reverse transcriptase/maturase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS19260"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 4470099,
+        "end0": 4472196,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_7685",
+            "type": "CDS",
+            "overlap_bp": 1272,
+            "feature_length_bp": 1272,
+            "product": [
+              "group II intron reverse transcriptase/maturase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS19130"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP012202.1_feature_7687",
+            "type": "CDS",
+            "overlap_bp": 153,
+            "feature_length_bp": 153,
+            "product": [
+              "hypothetical protein"
+            ],
+            "locus_tag": [
+              "ACZ81_RS21365"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 4449932,
+        "end0": 4452029,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_7649",
+            "type": "CDS",
+            "overlap_bp": 1272,
+            "feature_length_bp": 1272,
+            "product": [
+              "group II intron reverse transcriptase/maturase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS19040"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 2282378,
+        "end0": 2284478,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_3983",
+            "type": "CDS",
+            "overlap_bp": 1272,
+            "feature_length_bp": 1272,
+            "product": [
+              "group II intron reverse transcriptase/maturase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS09900"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 2250086,
+        "end0": 2252187,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_3949",
+            "type": "CDS",
+            "overlap_bp": 153,
+            "feature_length_bp": 153,
+            "product": [
+              "hypothetical protein"
+            ],
+            "locus_tag": [
+              "ACZ81_RS21350"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP012202.1_feature_3951",
+            "type": "CDS",
+            "overlap_bp": 1272,
+            "feature_length_bp": 1272,
+            "product": [
+              "group II intron reverse transcriptase/maturase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS09820"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 2184790,
+        "end0": 2185323,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_3823",
+            "type": "CDS",
+            "overlap_bp": 162,
+            "feature_length_bp": 162,
+            "product": [
+              "hypothetical protein"
+            ],
+            "locus_tag": [
+              "ACZ81_RS09500"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 2182694,
+        "end0": 2184792,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_3819",
+            "type": "CDS",
+            "overlap_bp": 153,
+            "feature_length_bp": 153,
+            "product": [
+              "hypothetical protein"
+            ],
+            "locus_tag": [
+              "ACZ81_RS21335"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP012202.1_feature_3821",
+            "type": "CDS",
+            "overlap_bp": 1272,
+            "feature_length_bp": 1272,
+            "product": [
+              "group II intron reverse transcriptase/maturase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS09495"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 2104325,
+        "end0": 2106422,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_3673",
+            "type": "CDS",
+            "overlap_bp": 153,
+            "feature_length_bp": 153,
+            "product": [
+              "hypothetical protein"
+            ],
+            "locus_tag": [
+              "ACZ81_RS21330"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP012202.1_feature_3675",
+            "type": "CDS",
+            "overlap_bp": 1272,
+            "feature_length_bp": 1272,
+            "product": [
+              "group II intron reverse transcriptase/maturase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS09140"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 1214945,
+        "end0": 1217042,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_2144",
+            "type": "CDS",
+            "overlap_bp": 153,
+            "feature_length_bp": 153,
+            "product": [
+              "hypothetical protein"
+            ],
+            "locus_tag": [
+              "ACZ81_RS21300"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP012202.1_feature_2146",
+            "type": "CDS",
+            "overlap_bp": 1272,
+            "feature_length_bp": 1272,
+            "product": [
+              "group II intron reverse transcriptase/maturase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS05360"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 849178,
+        "end0": 851276,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_1514",
+            "type": "CDS",
+            "overlap_bp": 1272,
+            "feature_length_bp": 1272,
+            "product": [
+              "group II intron reverse transcriptase/maturase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS03800"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "AmHOT1A3__NZ_CP012202.1_feature_3825",
+      "identity_pct": 97.4,
+      "alignment_aa": 423,
+      "query_start": 748,
+      "query_end": 2016,
+      "evalue": 0.0,
+      "bitscore": 788.0,
+      "subject_length": 423,
+      "title": "group II intron reverse transcriptase/maturase"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "AmHOT1A3_RS_R3",
+    "organism": "AmHOT1A3",
+    "method": "RS",
+    "native_family": "R=3",
+    "length": 1366,
+    "raw_occurrences": 10,
+    "occurrences": [
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 4231382,
+        "end0": 4232746,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_7299",
+            "type": "CDS",
+            "overlap_bp": 1197,
+            "feature_length_bp": 1197,
+            "product": [
+              "IS4 family transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS18165"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 3928470,
+        "end0": 3929835,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_6825",
+            "type": "CDS",
+            "overlap_bp": 1197,
+            "feature_length_bp": 1197,
+            "product": [
+              "IS4 family transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS16985"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 3830652,
+        "end0": 3832017,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_6653",
+            "type": "CDS",
+            "overlap_bp": 1197,
+            "feature_length_bp": 1197,
+            "product": [
+              "IS4 family transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS16565"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 3826522,
+        "end0": 3827887,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_6643",
+            "type": "CDS",
+            "overlap_bp": 1197,
+            "feature_length_bp": 1197,
+            "product": [
+              "IS4 family transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS16540"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP012202.1_feature_6645",
+            "type": "CDS",
+            "overlap_bp": 1,
+            "feature_length_bp": 471,
+            "product": [
+              "inner membrane protein YiaA"
+            ],
+            "locus_tag": [
+              "ACZ81_RS16545"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 3821702,
+        "end0": 3823067,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_6635",
+            "type": "CDS",
+            "overlap_bp": 1197,
+            "feature_length_bp": 1197,
+            "product": [
+              "IS4 family transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS16520"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 2642161,
+        "end0": 2643521,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_4621",
+            "type": "CDS",
+            "overlap_bp": 1197,
+            "feature_length_bp": 1197,
+            "product": [
+              "IS4 family transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS11505"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 2545492,
+        "end0": 2546857,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_4451",
+            "type": "CDS",
+            "overlap_bp": 1197,
+            "feature_length_bp": 1197,
+            "product": [
+              "IS4 family transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS11080"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 856101,
+        "end0": 857458,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_1524",
+            "type": "CDS",
+            "overlap_bp": 1197,
+            "feature_length_bp": 1197,
+            "product": [
+              "IS4 family transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS03825"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 776985,
+        "end0": 778340,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_1368",
+            "type": "CDS",
+            "overlap_bp": 1197,
+            "feature_length_bp": 1197,
+            "product": [
+              "IS4 family transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS03430"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 179564,
+        "end0": 180928,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_329",
+            "type": "CDS",
+            "overlap_bp": 1197,
+            "feature_length_bp": 1197,
+            "product": [
+              "IS4 family transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS00815"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "AmHOT1A3__NZ_CP012202.1_feature_7299",
+      "identity_pct": 100.0,
+      "alignment_aa": 398,
+      "query_start": 1236,
+      "query_end": 43,
+      "evalue": 0.0,
+      "bitscore": 786.0,
+      "subject_length": 398,
+      "title": "IS4 family transposase"
+    },
+    "best_deposited_tnp_hit": {
+      "subject": "AmHOT1A3__NZ_CP012202.1_feature_7299",
+      "identity_pct": 100.0,
+      "alignment_aa": 398,
+      "query_start": 1236,
+      "query_end": 43,
+      "evalue": 0.0,
+      "bitscore": 786.0,
+      "subject_length": 398,
+      "title": "IS4 family transposase"
+    },
+    "native_records_overlapping_tnp_CDS": 10,
+    "tnp_supported": true,
+    "deposited_tnp_products": [
+      "IS4 family transposase"
+    ]
+  },
+  {
+    "query": "AmHOT1A3_RS_R4",
+    "organism": "AmHOT1A3",
+    "method": "RS",
+    "native_family": "R=4",
+    "length": 54,
+    "raw_occurrences": 11,
+    "occurrences": [
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 3922293,
+        "end0": 3922347,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_6805",
+            "type": "tRNA",
+            "overlap_bp": 54,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Thr"
+            ],
+            "locus_tag": [
+              "ACZ81_RS16940"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 3065706,
+        "end0": 3065760,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_5364",
+            "type": "tRNA",
+            "overlap_bp": 54,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-His"
+            ],
+            "locus_tag": [
+              "ACZ81_RS13355"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 2418205,
+        "end0": 2418259,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_4219",
+            "type": "tRNA",
+            "overlap_bp": 54,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Gly"
+            ],
+            "locus_tag": [
+              "ACZ81_RS10485"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 1697791,
+        "end0": 1697846,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_3017",
+            "type": "tRNA",
+            "overlap_bp": 55,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Val"
+            ],
+            "locus_tag": [
+              "ACZ81_RS07510"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 1647934,
+        "end0": 1647989,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_2921",
+            "type": "tRNA",
+            "overlap_bp": 55,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Met"
+            ],
+            "locus_tag": [
+              "ACZ81_RS07270"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 1647408,
+        "end0": 1647463,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_2911",
+            "type": "tRNA",
+            "overlap_bp": 55,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Met"
+            ],
+            "locus_tag": [
+              "ACZ81_RS07245"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 1471352,
+        "end0": 1471406,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_2589",
+            "type": "tRNA",
+            "overlap_bp": 54,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Lys"
+            ],
+            "locus_tag": [
+              "ACZ81_RS06445"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 1362379,
+        "end0": 1362434,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_2409",
+            "type": "tRNA",
+            "overlap_bp": 55,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Asn"
+            ],
+            "locus_tag": [
+              "ACZ81_RS06005"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 1010278,
+        "end0": 1010330,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_1768",
+            "type": "tRNA",
+            "overlap_bp": 52,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Ile"
+            ],
+            "locus_tag": [
+              "ACZ81_RS04425"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 527703,
+        "end0": 527757,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_935",
+            "type": "tRNA",
+            "overlap_bp": 54,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Thr"
+            ],
+            "locus_tag": [
+              "ACZ81_RS02320"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 498469,
+        "end0": 498523,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_885",
+            "type": "tRNA",
+            "overlap_bp": 54,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Gly"
+            ],
+            "locus_tag": [
+              "ACZ81_RS02195"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "AmHOT1A3_RS_R5",
+    "organism": "AmHOT1A3",
+    "method": "RS",
+    "native_family": "R=5",
+    "length": 2492,
+    "raw_occurrences": 12,
+    "occurrences": [
+      {
+        "contig": "NZ_CP012203.1",
+        "accession": "NZ_CP012203.1",
+        "start0": 12398,
+        "end0": 12448,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012203.1_feature_28",
+            "type": "CDS",
+            "overlap_bp": 6,
+            "feature_length_bp": 545,
+            "product": [
+              "cation efflux transmembrane domain-containing protein"
+            ],
+            "locus_tag": [
+              "ACZ81_RS20005"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012203.1",
+        "accession": "NZ_CP012203.1",
+        "start0": 9940,
+        "end0": 10282,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012203.1_feature_24",
+            "type": "CDS",
+            "overlap_bp": 342,
+            "feature_length_bp": 755,
+            "product": [
+              "IS21-like element helper ATPase IstB"
+            ],
+            "locus_tag": [
+              "ACZ81_RS21930"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 3973169,
+        "end0": 3975661,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_6879",
+            "type": "CDS",
+            "overlap_bp": 51,
+            "feature_length_bp": 2823,
+            "product": [
+              "hypothetical protein"
+            ],
+            "locus_tag": [
+              "ACZ81_RS17125"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP012202.1_feature_6881",
+            "type": "CDS",
+            "overlap_bp": 1539,
+            "feature_length_bp": 1539,
+            "product": [
+              "IS21 family transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS17130"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP012202.1_feature_6883",
+            "type": "CDS",
+            "overlap_bp": 741,
+            "feature_length_bp": 747,
+            "product": [
+              "IS21-like element helper ATPase IstB"
+            ],
+            "locus_tag": [
+              "ACZ81_RS17135"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 3973164,
+        "end0": 3973219,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_6879",
+            "type": "CDS",
+            "overlap_bp": 55,
+            "feature_length_bp": 2823,
+            "product": [
+              "hypothetical protein"
+            ],
+            "locus_tag": [
+              "ACZ81_RS17125"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 2197874,
+        "end0": 2200366,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_3859",
+            "type": "CDS",
+            "overlap_bp": 51,
+            "feature_length_bp": 210,
+            "product": [
+              "hypothetical protein"
+            ],
+            "locus_tag": [
+              "ACZ81_RS09590"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP012202.1_feature_3861",
+            "type": "CDS",
+            "overlap_bp": 1539,
+            "feature_length_bp": 1539,
+            "product": [
+              "IS21 family transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS09595"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP012202.1_feature_3863",
+            "type": "CDS",
+            "overlap_bp": 741,
+            "feature_length_bp": 747,
+            "product": [
+              "IS21-like element helper ATPase IstB"
+            ],
+            "locus_tag": [
+              "ACZ81_RS09600"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 2197873,
+        "end0": 2197924,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_3859",
+            "type": "CDS",
+            "overlap_bp": 51,
+            "feature_length_bp": 210,
+            "product": [
+              "hypothetical protein"
+            ],
+            "locus_tag": [
+              "ACZ81_RS09590"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 1700644,
+        "end0": 1700694,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 1698202,
+        "end0": 1700694,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_3019",
+            "type": "CDS",
+            "overlap_bp": 740,
+            "feature_length_bp": 747,
+            "product": [
+              "IS21-like element helper ATPase IstB"
+            ],
+            "locus_tag": [
+              "ACZ81_RS07515"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP012202.1_feature_3021",
+            "type": "CDS",
+            "overlap_bp": 1539,
+            "feature_length_bp": 1539,
+            "product": [
+              "IS21 family transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS07520"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 1007498,
+        "end0": 1009990,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_1764",
+            "type": "CDS",
+            "overlap_bp": 1539,
+            "feature_length_bp": 1539,
+            "product": [
+              "IS21 family transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS04415"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP012202.1_feature_1766",
+            "type": "CDS",
+            "overlap_bp": 741,
+            "feature_length_bp": 747,
+            "product": [
+              "IS21-like element helper ATPase IstB"
+            ],
+            "locus_tag": [
+              "ACZ81_RS04420"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 1007498,
+        "end0": 1007548,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 296993,
+        "end0": 297044,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_541",
+            "type": "CDS",
+            "overlap_bp": 51,
+            "feature_length_bp": 633,
+            "product": [
+              "hypothetical protein"
+            ],
+            "locus_tag": [
+              "ACZ81_RS01340"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 294551,
+        "end0": 297043,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_537",
+            "type": "CDS",
+            "overlap_bp": 740,
+            "feature_length_bp": 747,
+            "product": [
+              "IS21-like element helper ATPase IstB"
+            ],
+            "locus_tag": [
+              "ACZ81_RS01330"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP012202.1_feature_539",
+            "type": "CDS",
+            "overlap_bp": 1539,
+            "feature_length_bp": 1539,
+            "product": [
+              "IS21 family transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS01335"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP012202.1_feature_541",
+            "type": "CDS",
+            "overlap_bp": 63,
+            "feature_length_bp": 633,
+            "product": [
+              "hypothetical protein"
+            ],
+            "locus_tag": [
+              "ACZ81_RS01340"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "AmHOT1A3__NZ_CP012202.1_feature_6881",
+      "identity_pct": 100.0,
+      "alignment_aa": 512,
+      "query_start": 2287,
+      "query_end": 752,
+      "evalue": 0.0,
+      "bitscore": 1072.0,
+      "subject_length": 512,
+      "title": "IS21 family transposase"
+    },
+    "best_deposited_tnp_hit": {
+      "subject": "AmHOT1A3__NZ_CP012202.1_feature_6881",
+      "identity_pct": 100.0,
+      "alignment_aa": 512,
+      "query_start": 2287,
+      "query_end": 752,
+      "evalue": 0.0,
+      "bitscore": 1072.0,
+      "subject_length": 512,
+      "title": "IS21 family transposase"
+    },
+    "native_records_overlapping_tnp_CDS": 5,
+    "tnp_supported": true,
+    "deposited_tnp_products": [
+      "IS21 family transposase"
+    ]
+  },
+  {
+    "query": "AmHOT1A3_RS_R6",
+    "organism": "AmHOT1A3",
+    "method": "RS",
+    "native_family": "R=6",
+    "length": 150,
+    "raw_occurrences": 10,
+    "occurrences": [
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 3932998,
+        "end0": 3933145,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_6829",
+            "type": "rRNA",
+            "overlap_bp": 20,
+            "feature_length_bp": 2879,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "ACZ81_RS16995"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 3930086,
+        "end0": 3930164,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_6829",
+            "type": "rRNA",
+            "overlap_bp": 25,
+            "feature_length_bp": 2879,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "ACZ81_RS16995"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 3751719,
+        "end0": 3751866,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_6511",
+            "type": "rRNA",
+            "overlap_bp": 20,
+            "feature_length_bp": 2876,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "ACZ81_RS16210"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 3748810,
+        "end0": 3748888,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_6511",
+            "type": "rRNA",
+            "overlap_bp": 25,
+            "feature_length_bp": 2876,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "ACZ81_RS16210"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 2956854,
+        "end0": 2957001,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_5164",
+            "type": "rRNA",
+            "overlap_bp": 20,
+            "feature_length_bp": 2879,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "ACZ81_RS12855"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 2953942,
+        "end0": 2954020,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_5164",
+            "type": "rRNA",
+            "overlap_bp": 25,
+            "feature_length_bp": 2879,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "ACZ81_RS12855"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 366639,
+        "end0": 366714,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_653",
+            "type": "rRNA",
+            "overlap_bp": 24,
+            "feature_length_bp": 2876,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "ACZ81_RS01615"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 363661,
+        "end0": 363808,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_653",
+            "type": "rRNA",
+            "overlap_bp": 21,
+            "feature_length_bp": 2876,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "ACZ81_RS01615"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 39052,
+        "end0": 39130,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_66",
+            "type": "rRNA",
+            "overlap_bp": 24,
+            "feature_length_bp": 2879,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "ACZ81_RS00165"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 36071,
+        "end0": 36218,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_66",
+            "type": "rRNA",
+            "overlap_bp": 21,
+            "feature_length_bp": 2879,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "ACZ81_RS00165"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "AmHOT1A3_RS_R7",
+    "organism": "AmHOT1A3",
+    "method": "RS",
+    "native_family": "R=7",
+    "length": 1943,
+    "raw_occurrences": 6,
+    "occurrences": [
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 4643816,
+        "end0": 4645757,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_7991",
+            "type": "CDS",
+            "overlap_bp": 1389,
+            "feature_length_bp": 1389,
+            "product": [
+              "group II intron reverse transcriptase/maturase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS19900"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 2989669,
+        "end0": 2991611,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_5224",
+            "type": "CDS",
+            "overlap_bp": 1389,
+            "feature_length_bp": 1389,
+            "product": [
+              "group II intron reverse transcriptase/maturase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS13005"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 2455960,
+        "end0": 2457902,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_4291",
+            "type": "CDS",
+            "overlap_bp": 1389,
+            "feature_length_bp": 1389,
+            "product": [
+              "group II intron reverse transcriptase/maturase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS10660"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 1501416,
+        "end0": 1503358,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_2643",
+            "type": "CDS",
+            "overlap_bp": 1389,
+            "feature_length_bp": 1389,
+            "product": [
+              "group II intron reverse transcriptase/maturase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS06580"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 1024727,
+        "end0": 1026669,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_1798",
+            "type": "CDS",
+            "overlap_bp": 1389,
+            "feature_length_bp": 1389,
+            "product": [
+              "group II intron reverse transcriptase/maturase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS04500"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 502693,
+        "end0": 504635,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_891",
+            "type": "CDS",
+            "overlap_bp": 1389,
+            "feature_length_bp": 1389,
+            "product": [
+              "group II intron reverse transcriptase/maturase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS02210"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "AmHOT1A3__NZ_CP012202.1_feature_7991",
+      "identity_pct": 100.0,
+      "alignment_aa": 462,
+      "query_start": 477,
+      "query_end": 1862,
+      "evalue": 0.0,
+      "bitscore": 964.0,
+      "subject_length": 462,
+      "title": "group II intron reverse transcriptase/maturase"
+    },
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "AmHOT1A3_RS_R8",
+    "organism": "AmHOT1A3",
+    "method": "RS",
+    "native_family": "R=8",
+    "length": 106,
+    "raw_occurrences": 9,
+    "occurrences": [
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 2522077,
+        "end0": 2522178,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 2521118,
+        "end0": 2521223,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_4405",
+            "type": "CDS",
+            "overlap_bp": 5,
+            "feature_length_bp": 282,
+            "product": [
+              "hypothetical protein"
+            ],
+            "locus_tag": [
+              "ACZ81_RS10955"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 2518619,
+        "end0": 2518720,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 2515810,
+        "end0": 2515913,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_4395",
+            "type": "CDS",
+            "overlap_bp": 3,
+            "feature_length_bp": 387,
+            "product": [
+              "tautomerase family protein"
+            ],
+            "locus_tag": [
+              "ACZ81_RS10925"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 579764,
+        "end0": 579869,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 579254,
+        "end0": 579354,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 577114,
+        "end0": 577217,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 576166,
+        "end0": 576271,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_1039",
+            "type": "CDS",
+            "overlap_bp": 6,
+            "feature_length_bp": 405,
+            "product": [
+              "hypothetical protein"
+            ],
+            "locus_tag": [
+              "ACZ81_RS21195"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 574597,
+        "end0": 574702,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_1033",
+            "type": "CDS",
+            "overlap_bp": 6,
+            "feature_length_bp": 357,
+            "product": [
+              "hypothetical protein"
+            ],
+            "locus_tag": [
+              "ACZ81_RS02580"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "AmHOT1A3_RS_R9",
+    "organism": "AmHOT1A3",
+    "method": "RS",
+    "native_family": "R=9",
+    "length": 1783,
+    "raw_occurrences": 5,
+    "occurrences": [
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 3933229,
+        "end0": 3935011,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_6831",
+            "type": "rRNA",
+            "overlap_bp": 1533,
+            "feature_length_bp": 1533,
+            "product": [
+              "16S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "ACZ81_RS17000"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 3752387,
+        "end0": 3754169,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_6517",
+            "type": "rRNA",
+            "overlap_bp": 1533,
+            "feature_length_bp": 1533,
+            "product": [
+              "16S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "ACZ81_RS16225"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 2957429,
+        "end0": 2959110,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_5170",
+            "type": "rRNA",
+            "overlap_bp": 1534,
+            "feature_length_bp": 1534,
+            "product": [
+              "16S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "ACZ81_RS12870"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 361450,
+        "end0": 363232,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_647",
+            "type": "rRNA",
+            "overlap_bp": 1533,
+            "feature_length_bp": 1533,
+            "product": [
+              "16S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "ACZ81_RS01600"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 34204,
+        "end0": 35986,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_64",
+            "type": "rRNA",
+            "overlap_bp": 1533,
+            "feature_length_bp": 1533,
+            "product": [
+              "16S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "ACZ81_RS00160"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "AmHOT1A3_RS_R10",
+    "organism": "AmHOT1A3",
+    "method": "RS",
+    "native_family": "R=10",
+    "length": 3383,
+    "raw_occurrences": 5,
+    "occurrences": [
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 3929839,
+        "end0": 3933223,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_6827",
+            "type": "rRNA",
+            "overlap_bp": 116,
+            "feature_length_bp": 116,
+            "product": [
+              "5S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "ACZ81_RS16990"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP012202.1_feature_6829",
+            "type": "rRNA",
+            "overlap_bp": 2879,
+            "feature_length_bp": 2879,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "ACZ81_RS16995"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 3748565,
+        "end0": 3751945,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_6509",
+            "type": "rRNA",
+            "overlap_bp": 116,
+            "feature_length_bp": 116,
+            "product": [
+              "5S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "ACZ81_RS16205"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP012202.1_feature_6511",
+            "type": "rRNA",
+            "overlap_bp": 2876,
+            "feature_length_bp": 2876,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "ACZ81_RS16210"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 2953697,
+        "end0": 2957079,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_5162",
+            "type": "rRNA",
+            "overlap_bp": 116,
+            "feature_length_bp": 116,
+            "product": [
+              "5S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "ACZ81_RS12850"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP012202.1_feature_5164",
+            "type": "rRNA",
+            "overlap_bp": 2879,
+            "feature_length_bp": 2879,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "ACZ81_RS12855"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 363582,
+        "end0": 366710,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_653",
+            "type": "rRNA",
+            "overlap_bp": 2876,
+            "feature_length_bp": 2876,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "ACZ81_RS01615"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 35992,
+        "end0": 39366,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_66",
+            "type": "rRNA",
+            "overlap_bp": 2879,
+            "feature_length_bp": 2879,
+            "product": [
+              "23S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "ACZ81_RS00165"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP012202.1_feature_68",
+            "type": "rRNA",
+            "overlap_bp": 116,
+            "feature_length_bp": 116,
+            "product": [
+              "5S ribosomal RNA"
+            ],
+            "locus_tag": [
+              "ACZ81_RS00170"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "AmHOT1A3_RS_R11",
+    "organism": "AmHOT1A3",
+    "method": "RS",
+    "native_family": "R=11",
+    "length": 1433,
+    "raw_occurrences": 5,
+    "occurrences": [
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 4118853,
+        "end0": 4120285,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_7097",
+            "type": "CDS",
+            "overlap_bp": 1329,
+            "feature_length_bp": 1329,
+            "product": [
+              "IS4 family transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS17650"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 2834698,
+        "end0": 2834754,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_4939",
+            "type": "CDS",
+            "overlap_bp": 56,
+            "feature_length_bp": 4614,
+            "product": [
+              "FimV/HubP family polar landmark protein"
+            ],
+            "locus_tag": [
+              "ACZ81_RS12300"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 1843461,
+        "end0": 1844891,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_3237",
+            "type": "CDS",
+            "overlap_bp": 1329,
+            "feature_length_bp": 1329,
+            "product": [
+              "IS4 family transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS08060"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 1074644,
+        "end0": 1076076,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_1884",
+            "type": "CDS",
+            "overlap_bp": 1329,
+            "feature_length_bp": 1329,
+            "product": [
+              "IS4 family transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS04715"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 333768,
+        "end0": 335200,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_605",
+            "type": "CDS",
+            "overlap_bp": 1329,
+            "feature_length_bp": 1329,
+            "product": [
+              "IS4 family transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS01500"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "AmHOT1A3__NZ_CP012202.1_feature_7097",
+      "identity_pct": 100.0,
+      "alignment_aa": 442,
+      "query_start": 1338,
+      "query_end": 13,
+      "evalue": 0.0,
+      "bitscore": 887.0,
+      "subject_length": 442,
+      "title": "IS4 family transposase"
+    },
+    "best_deposited_tnp_hit": {
+      "subject": "AmHOT1A3__NZ_CP012202.1_feature_7097",
+      "identity_pct": 100.0,
+      "alignment_aa": 442,
+      "query_start": 1338,
+      "query_end": 13,
+      "evalue": 0.0,
+      "bitscore": 887.0,
+      "subject_length": 442,
+      "title": "IS4 family transposase"
+    },
+    "native_records_overlapping_tnp_CDS": 4,
+    "tnp_supported": true,
+    "deposited_tnp_products": [
+      "IS4 family transposase"
+    ]
+  },
+  {
+    "query": "AmHOT1A3_RS_R12",
+    "organism": "AmHOT1A3",
+    "method": "RS",
+    "native_family": "R=12",
+    "length": 2578,
+    "raw_occurrences": 6,
+    "occurrences": [
+      {
+        "contig": "NZ_CP012203.1",
+        "accession": "NZ_CP012203.1",
+        "start0": 9855,
+        "end0": 10358,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012203.1_feature_24",
+            "type": "CDS",
+            "overlap_bp": 425,
+            "feature_length_bp": 755,
+            "product": [
+              "IS21-like element helper ATPase IstB"
+            ],
+            "locus_tag": [
+              "ACZ81_RS21930"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 3973169,
+        "end0": 3975746,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_6879",
+            "type": "CDS",
+            "overlap_bp": 51,
+            "feature_length_bp": 2823,
+            "product": [
+              "hypothetical protein"
+            ],
+            "locus_tag": [
+              "ACZ81_RS17125"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP012202.1_feature_6881",
+            "type": "CDS",
+            "overlap_bp": 1539,
+            "feature_length_bp": 1539,
+            "product": [
+              "IS21 family transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS17130"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP012202.1_feature_6883",
+            "type": "CDS",
+            "overlap_bp": 747,
+            "feature_length_bp": 747,
+            "product": [
+              "IS21-like element helper ATPase IstB"
+            ],
+            "locus_tag": [
+              "ACZ81_RS17135"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 2197874,
+        "end0": 2200451,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_3859",
+            "type": "CDS",
+            "overlap_bp": 51,
+            "feature_length_bp": 210,
+            "product": [
+              "hypothetical protein"
+            ],
+            "locus_tag": [
+              "ACZ81_RS09590"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP012202.1_feature_3861",
+            "type": "CDS",
+            "overlap_bp": 1539,
+            "feature_length_bp": 1539,
+            "product": [
+              "IS21 family transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS09595"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP012202.1_feature_3863",
+            "type": "CDS",
+            "overlap_bp": 747,
+            "feature_length_bp": 747,
+            "product": [
+              "IS21-like element helper ATPase IstB"
+            ],
+            "locus_tag": [
+              "ACZ81_RS09600"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 1698117,
+        "end0": 1700694,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_3019",
+            "type": "CDS",
+            "overlap_bp": 747,
+            "feature_length_bp": 747,
+            "product": [
+              "IS21-like element helper ATPase IstB"
+            ],
+            "locus_tag": [
+              "ACZ81_RS07515"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP012202.1_feature_3021",
+            "type": "CDS",
+            "overlap_bp": 1539,
+            "feature_length_bp": 1539,
+            "product": [
+              "IS21 family transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS07520"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 1007498,
+        "end0": 1010075,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_1764",
+            "type": "CDS",
+            "overlap_bp": 1539,
+            "feature_length_bp": 1539,
+            "product": [
+              "IS21 family transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS04415"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP012202.1_feature_1766",
+            "type": "CDS",
+            "overlap_bp": 747,
+            "feature_length_bp": 747,
+            "product": [
+              "IS21-like element helper ATPase IstB"
+            ],
+            "locus_tag": [
+              "ACZ81_RS04420"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 294466,
+        "end0": 297043,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_537",
+            "type": "CDS",
+            "overlap_bp": 747,
+            "feature_length_bp": 747,
+            "product": [
+              "IS21-like element helper ATPase IstB"
+            ],
+            "locus_tag": [
+              "ACZ81_RS01330"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP012202.1_feature_539",
+            "type": "CDS",
+            "overlap_bp": 1539,
+            "feature_length_bp": 1539,
+            "product": [
+              "IS21 family transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS01335"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP012202.1_feature_541",
+            "type": "CDS",
+            "overlap_bp": 63,
+            "feature_length_bp": 633,
+            "product": [
+              "hypothetical protein"
+            ],
+            "locus_tag": [
+              "ACZ81_RS01340"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "AmHOT1A3__NZ_CP012202.1_feature_6881",
+      "identity_pct": 100.0,
+      "alignment_aa": 512,
+      "query_start": 2373,
+      "query_end": 838,
+      "evalue": 0.0,
+      "bitscore": 1072.0,
+      "subject_length": 512,
+      "title": "IS21 family transposase"
+    },
+    "best_deposited_tnp_hit": {
+      "subject": "AmHOT1A3__NZ_CP012202.1_feature_6881",
+      "identity_pct": 100.0,
+      "alignment_aa": 512,
+      "query_start": 2373,
+      "query_end": 838,
+      "evalue": 0.0,
+      "bitscore": 1072.0,
+      "subject_length": 512,
+      "title": "IS21 family transposase"
+    },
+    "native_records_overlapping_tnp_CDS": 5,
+    "tnp_supported": true,
+    "deposited_tnp_products": [
+      "IS21 family transposase"
+    ]
+  },
+  {
+    "query": "AmHOT1A3_RS_R13",
+    "organism": "AmHOT1A3",
+    "method": "RS",
+    "native_family": "R=13",
+    "length": 1415,
+    "raw_occurrences": 4,
+    "occurrences": [
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 3366406,
+        "end0": 3367820,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_5864",
+            "type": "CDS",
+            "overlap_bp": 1035,
+            "feature_length_bp": 1035,
+            "product": [
+              "IS110 family RNA-guided transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS14610"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 1377151,
+        "end0": 1378565,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_2433",
+            "type": "CDS",
+            "overlap_bp": 1035,
+            "feature_length_bp": 1035,
+            "product": [
+              "IS110 family RNA-guided transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS06065"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 891990,
+        "end0": 893402,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_1574",
+            "type": "CDS",
+            "overlap_bp": 1035,
+            "feature_length_bp": 1035,
+            "product": [
+              "IS110 family RNA-guided transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS03950"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 486437,
+        "end0": 487851,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_857",
+            "type": "CDS",
+            "overlap_bp": 1035,
+            "feature_length_bp": 1035,
+            "product": [
+              "IS110 family RNA-guided transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS02125"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "AmHOT1A3__NZ_CP012202.1_feature_5864",
+      "identity_pct": 100.0,
+      "alignment_aa": 344,
+      "query_start": 92,
+      "query_end": 1123,
+      "evalue": 0.0,
+      "bitscore": 719.0,
+      "subject_length": 344,
+      "title": "IS110 family RNA-guided transposase"
+    },
+    "best_deposited_tnp_hit": {
+      "subject": "AmHOT1A3__NZ_CP012202.1_feature_5864",
+      "identity_pct": 100.0,
+      "alignment_aa": 344,
+      "query_start": 92,
+      "query_end": 1123,
+      "evalue": 0.0,
+      "bitscore": 719.0,
+      "subject_length": 344,
+      "title": "IS110 family RNA-guided transposase"
+    },
+    "native_records_overlapping_tnp_CDS": 4,
+    "tnp_supported": true,
+    "deposited_tnp_products": [
+      "IS110 family RNA-guided transposase"
+    ]
+  },
+  {
+    "query": "AmHOT1A3_RS_R14",
+    "organism": "AmHOT1A3",
+    "method": "RS",
+    "native_family": "R=14",
+    "length": 80,
+    "raw_occurrences": 4,
+    "occurrences": [
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 3752297,
+        "end0": 3752376,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_6515",
+            "type": "tRNA",
+            "overlap_bp": 75,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Ala"
+            ],
+            "locus_tag": [
+              "ACZ81_RS16220"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 2957339,
+        "end0": 2957418,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_5168",
+            "type": "tRNA",
+            "overlap_bp": 75,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Ala"
+            ],
+            "locus_tag": [
+              "ACZ81_RS12865"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 1545789,
+        "end0": 1545866,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_2725",
+            "type": "tRNA",
+            "overlap_bp": 76,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Ala"
+            ],
+            "locus_tag": [
+              "ACZ81_RS06790"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 363243,
+        "end0": 363322,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_649",
+            "type": "tRNA",
+            "overlap_bp": 76,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Ala"
+            ],
+            "locus_tag": [
+              "ACZ81_RS01605"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "AmHOT1A3_RS_R15",
+    "organism": "AmHOT1A3",
+    "method": "RS",
+    "native_family": "R=15",
+    "length": 1211,
+    "raw_occurrences": 3,
+    "occurrences": [
+      {
+        "contig": "NZ_CP012203.1",
+        "accession": "NZ_CP012203.1",
+        "start0": 135474,
+        "end0": 136684,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012203.1_feature_308",
+            "type": "CDS",
+            "overlap_bp": 480,
+            "feature_length_bp": 540,
+            "product": [
+              "IS66 family transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS21945"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP012203.1_feature_310",
+            "type": "CDS",
+            "overlap_bp": 336,
+            "feature_length_bp": 336,
+            "product": [
+              "IS66 family insertion sequence element accessory protein TnpB"
+            ],
+            "locus_tag": [
+              "ACZ81_RS20645"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP012203.1_feature_312",
+            "type": "CDS",
+            "overlap_bp": 285,
+            "feature_length_bp": 285,
+            "product": [
+              "IS66 family insertion sequence element accessory protein TnpA"
+            ],
+            "locus_tag": [
+              "ACZ81_RS20650"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012203.1",
+        "accession": "NZ_CP012203.1",
+        "start0": 32756,
+        "end0": 33966,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012203.1_feature_74",
+            "type": "CDS",
+            "overlap_bp": 285,
+            "feature_length_bp": 285,
+            "product": [
+              "IS66 family insertion sequence element accessory protein TnpA"
+            ],
+            "locus_tag": [
+              "ACZ81_RS20110"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP012203.1_feature_76",
+            "type": "CDS",
+            "overlap_bp": 336,
+            "feature_length_bp": 336,
+            "product": [
+              "IS66 family insertion sequence element accessory protein TnpB"
+            ],
+            "locus_tag": [
+              "ACZ81_RS20115"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP012203.1_feature_78",
+            "type": "CDS",
+            "overlap_bp": 481,
+            "feature_length_bp": 1579,
+            "product": [
+              "IS66 family transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS20120"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 2777517,
+        "end0": 2778727,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_4831",
+            "type": "CDS",
+            "overlap_bp": 48,
+            "feature_length_bp": 885,
+            "product": [
+              "tyrosine-type recombinase/integrase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS12030"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP012202.1_feature_4833",
+            "type": "CDS",
+            "overlap_bp": 285,
+            "feature_length_bp": 285,
+            "product": [
+              "IS66 family insertion sequence element accessory protein TnpA"
+            ],
+            "locus_tag": [
+              "ACZ81_RS12035"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP012202.1_feature_4835",
+            "type": "CDS",
+            "overlap_bp": 336,
+            "feature_length_bp": 336,
+            "product": [
+              "IS66 family insertion sequence element accessory protein TnpB"
+            ],
+            "locus_tag": [
+              "ACZ81_RS12040"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP012202.1_feature_4837",
+            "type": "CDS",
+            "overlap_bp": 481,
+            "feature_length_bp": 1578,
+            "product": [
+              "IS66 family transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS12045"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "AmHOT1A3__NZ_CP012202.1_feature_4837",
+      "identity_pct": 100.0,
+      "alignment_aa": 160,
+      "query_start": 731,
+      "query_end": 1210,
+      "evalue": 1.18e-108,
+      "bitscore": 327.0,
+      "subject_length": 525,
+      "title": "IS66 family transposase"
+    },
+    "best_deposited_tnp_hit": {
+      "subject": "AmHOT1A3__NZ_CP012202.1_feature_4837",
+      "identity_pct": 100.0,
+      "alignment_aa": 160,
+      "query_start": 731,
+      "query_end": 1210,
+      "evalue": 1.18e-108,
+      "bitscore": 327.0,
+      "subject_length": 525,
+      "title": "IS66 family transposase"
+    },
+    "native_records_overlapping_tnp_CDS": 3,
+    "tnp_supported": true,
+    "deposited_tnp_products": [
+      "IS66 family transposase"
+    ]
+  },
+  {
+    "query": "AmHOT1A3_RS_R16",
+    "organism": "AmHOT1A3",
+    "method": "RS",
+    "native_family": "R=16",
+    "length": 1608,
+    "raw_occurrences": 3,
+    "occurrences": [
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 4385446,
+        "end0": 4387053,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_7557",
+            "type": "CDS",
+            "overlap_bp": 1347,
+            "feature_length_bp": 1347,
+            "product": [
+              "IS1182 family transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS18810"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 3024291,
+        "end0": 3025898,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_5290",
+            "type": "CDS",
+            "overlap_bp": 1347,
+            "feature_length_bp": 1347,
+            "product": [
+              "IS1182 family transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS13170"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 649342,
+        "end0": 650949,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_1161",
+            "type": "CDS",
+            "overlap_bp": 1347,
+            "feature_length_bp": 1347,
+            "product": [
+              "IS1182 family transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS02925"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "AmHOT1A3__NZ_CP012202.1_feature_7557",
+      "identity_pct": 100.0,
+      "alignment_aa": 438,
+      "query_start": 80,
+      "query_end": 1393,
+      "evalue": 0.0,
+      "bitscore": 923.0,
+      "subject_length": 448,
+      "title": "IS1182 family transposase"
+    },
+    "best_deposited_tnp_hit": {
+      "subject": "AmHOT1A3__NZ_CP012202.1_feature_7557",
+      "identity_pct": 100.0,
+      "alignment_aa": 438,
+      "query_start": 80,
+      "query_end": 1393,
+      "evalue": 0.0,
+      "bitscore": 923.0,
+      "subject_length": 448,
+      "title": "IS1182 family transposase"
+    },
+    "native_records_overlapping_tnp_CDS": 3,
+    "tnp_supported": true,
+    "deposited_tnp_products": [
+      "IS1182 family transposase"
+    ]
+  },
+  {
+    "query": "AmHOT1A3_RS_R17",
+    "organism": "AmHOT1A3",
+    "method": "RS",
+    "native_family": "R=17",
+    "length": 233,
+    "raw_occurrences": 3,
+    "occurrences": [
+      {
+        "contig": "NZ_CP012203.1",
+        "accession": "NZ_CP012203.1",
+        "start0": 134819,
+        "end0": 135051,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012203.1_feature_304",
+            "type": "CDS",
+            "overlap_bp": 196,
+            "feature_length_bp": 642,
+            "product": [
+              "IS66 family transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS21935"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP012203.1_feature_306",
+            "type": "CDS",
+            "overlap_bp": 101,
+            "feature_length_bp": 465,
+            "product": [
+              "IS66 family transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS21940"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012203.1",
+        "accession": "NZ_CP012203.1",
+        "start0": 34386,
+        "end0": 34618,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012203.1_feature_78",
+            "type": "CDS",
+            "overlap_bp": 232,
+            "feature_length_bp": 1579,
+            "product": [
+              "IS66 family transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS20120"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 2779147,
+        "end0": 2779379,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_4837",
+            "type": "CDS",
+            "overlap_bp": 232,
+            "feature_length_bp": 1578,
+            "product": [
+              "IS66 family transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS12045"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "AmHOT1A3__NZ_CP012202.1_feature_4837",
+      "identity_pct": 100.0,
+      "alignment_aa": 77,
+      "query_start": 1,
+      "query_end": 231,
+      "evalue": 4.5e-50,
+      "bitscore": 161.0,
+      "subject_length": 525,
+      "title": "IS66 family transposase"
+    },
+    "best_deposited_tnp_hit": {
+      "subject": "AmHOT1A3__NZ_CP012202.1_feature_4837",
+      "identity_pct": 100.0,
+      "alignment_aa": 77,
+      "query_start": 1,
+      "query_end": 231,
+      "evalue": 4.5e-50,
+      "bitscore": 161.0,
+      "subject_length": 525,
+      "title": "IS66 family transposase"
+    },
+    "native_records_overlapping_tnp_CDS": 3,
+    "tnp_supported": true,
+    "deposited_tnp_products": [
+      "IS66 family transposase"
+    ]
+  },
+  {
+    "query": "AmHOT1A3_RS_R18",
+    "organism": "AmHOT1A3",
+    "method": "RS",
+    "native_family": "R=18",
+    "length": 1376,
+    "raw_occurrences": 3,
+    "occurrences": [
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 3496098,
+        "end0": 3497473,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_6094",
+            "type": "CDS",
+            "overlap_bp": 1026,
+            "feature_length_bp": 1026,
+            "product": [
+              "IS110 family RNA-guided transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS15185"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 2635856,
+        "end0": 2637231,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_4605",
+            "type": "CDS",
+            "overlap_bp": 1026,
+            "feature_length_bp": 1026,
+            "product": [
+              "IS110 family RNA-guided transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS11465"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 930574,
+        "end0": 931949,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_1636",
+            "type": "CDS",
+            "overlap_bp": 1,
+            "feature_length_bp": 537,
+            "product": [
+              "redoxin domain-containing protein"
+            ],
+            "locus_tag": [
+              "ACZ81_RS04105"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP012202.1_feature_1638",
+            "type": "CDS",
+            "overlap_bp": 1026,
+            "feature_length_bp": 1026,
+            "product": [
+              "IS110 family RNA-guided transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS04110"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "AmHOT1A3__NZ_CP012202.1_feature_6094",
+      "identity_pct": 100.0,
+      "alignment_aa": 341,
+      "query_start": 96,
+      "query_end": 1118,
+      "evalue": 0.0,
+      "bitscore": 672.0,
+      "subject_length": 341,
+      "title": "IS110 family RNA-guided transposase"
+    },
+    "best_deposited_tnp_hit": {
+      "subject": "AmHOT1A3__NZ_CP012202.1_feature_6094",
+      "identity_pct": 100.0,
+      "alignment_aa": 341,
+      "query_start": 96,
+      "query_end": 1118,
+      "evalue": 0.0,
+      "bitscore": 672.0,
+      "subject_length": 341,
+      "title": "IS110 family RNA-guided transposase"
+    },
+    "native_records_overlapping_tnp_CDS": 3,
+    "tnp_supported": true,
+    "deposited_tnp_products": [
+      "IS110 family RNA-guided transposase"
+    ]
+  },
+  {
+    "query": "AmHOT1A3_RS_R19",
+    "organism": "AmHOT1A3",
+    "method": "RS",
+    "native_family": "R=19",
+    "length": 845,
+    "raw_occurrences": 3,
+    "occurrences": [
+      {
+        "contig": "NZ_CP012203.1",
+        "accession": "NZ_CP012203.1",
+        "start0": 133975,
+        "end0": 134819,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012203.1_feature_302",
+            "type": "CDS",
+            "overlap_bp": 396,
+            "feature_length_bp": 396,
+            "product": [
+              "hypothetical protein"
+            ],
+            "locus_tag": [
+              "ACZ81_RS20635"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP012203.1_feature_304",
+            "type": "CDS",
+            "overlap_bp": 446,
+            "feature_length_bp": 642,
+            "product": [
+              "IS66 family transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS21935"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012203.1",
+        "accession": "NZ_CP012203.1",
+        "start0": 34619,
+        "end0": 35463,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012203.1_feature_78",
+            "type": "CDS",
+            "overlap_bp": 445,
+            "feature_length_bp": 1579,
+            "product": [
+              "IS66 family transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS20120"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP012203.1_feature_80",
+            "type": "CDS",
+            "overlap_bp": 396,
+            "feature_length_bp": 396,
+            "product": [
+              "hypothetical protein"
+            ],
+            "locus_tag": [
+              "ACZ81_RS20125"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 2779379,
+        "end0": 2780223,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_4837",
+            "type": "CDS",
+            "overlap_bp": 445,
+            "feature_length_bp": 1578,
+            "product": [
+              "IS66 family transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS12045"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP012202.1_feature_4839",
+            "type": "CDS",
+            "overlap_bp": 396,
+            "feature_length_bp": 396,
+            "product": [
+              "hypothetical protein"
+            ],
+            "locus_tag": [
+              "ACZ81_RS12050"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "AmHOT1A3__NZ_CP012202.1_feature_4837",
+      "identity_pct": 100.0,
+      "alignment_aa": 147,
+      "query_start": 3,
+      "query_end": 443,
+      "evalue": 3e-104,
+      "bitscore": 310.0,
+      "subject_length": 525,
+      "title": "IS66 family transposase"
+    },
+    "best_deposited_tnp_hit": {
+      "subject": "AmHOT1A3__NZ_CP012202.1_feature_4837",
+      "identity_pct": 100.0,
+      "alignment_aa": 147,
+      "query_start": 3,
+      "query_end": 443,
+      "evalue": 3e-104,
+      "bitscore": 310.0,
+      "subject_length": 525,
+      "title": "IS66 family transposase"
+    },
+    "native_records_overlapping_tnp_CDS": 3,
+    "tnp_supported": true,
+    "deposited_tnp_products": [
+      "IS66 family transposase"
+    ]
+  },
+  {
+    "query": "AmHOT1A3_RS_R20",
+    "organism": "AmHOT1A3",
+    "method": "RS",
+    "native_family": "R=20",
+    "length": 256,
+    "raw_occurrences": 3,
+    "occurrences": [
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 3752175,
+        "end0": 3752430,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_6513",
+            "type": "tRNA",
+            "overlap_bp": 77,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Ile"
+            ],
+            "locus_tag": [
+              "ACZ81_RS16215"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP012202.1_feature_6515",
+            "type": "tRNA",
+            "overlap_bp": 76,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Ala"
+            ],
+            "locus_tag": [
+              "ACZ81_RS16220"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 2957217,
+        "end0": 2957472,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_5166",
+            "type": "tRNA",
+            "overlap_bp": 77,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Ile"
+            ],
+            "locus_tag": [
+              "ACZ81_RS12860"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP012202.1_feature_5168",
+            "type": "tRNA",
+            "overlap_bp": 76,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Ala"
+            ],
+            "locus_tag": [
+              "ACZ81_RS12865"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 363189,
+        "end0": 363444,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_649",
+            "type": "tRNA",
+            "overlap_bp": 76,
+            "feature_length_bp": 76,
+            "product": [
+              "tRNA-Ala"
+            ],
+            "locus_tag": [
+              "ACZ81_RS01605"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP012202.1_feature_651",
+            "type": "tRNA",
+            "overlap_bp": 77,
+            "feature_length_bp": 77,
+            "product": [
+              "tRNA-Ile"
+            ],
+            "locus_tag": [
+              "ACZ81_RS01610"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "AmHOT1A3_RS_R21",
+    "organism": "AmHOT1A3",
+    "method": "RS",
+    "native_family": "R=21",
+    "length": 62,
+    "raw_occurrences": 3,
+    "occurrences": [
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 3935018,
+        "end0": 3935080,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 361381,
+        "end0": 361443,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 34135,
+        "end0": 34197,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": []
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": null,
+    "best_deposited_tnp_hit": null,
+    "native_records_overlapping_tnp_CDS": 0,
+    "tnp_supported": false,
+    "deposited_tnp_products": []
+  },
+  {
+    "query": "AmHOT1A3_RS_R22",
+    "organism": "AmHOT1A3",
+    "method": "RS",
+    "native_family": "R=22",
+    "length": 419,
+    "raw_occurrences": 3,
+    "occurrences": [
+      {
+        "contig": "NZ_CP012203.1",
+        "accession": "NZ_CP012203.1",
+        "start0": 135053,
+        "end0": 135471,
+        "strand": "-",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012203.1_feature_306",
+            "type": "CDS",
+            "overlap_bp": 362,
+            "feature_length_bp": 465,
+            "product": [
+              "IS66 family transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS21940"
+            ]
+          },
+          {
+            "feature_id": "NZ_CP012203.1_feature_308",
+            "type": "CDS",
+            "overlap_bp": 57,
+            "feature_length_bp": 540,
+            "product": [
+              "IS66 family transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS21945"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012203.1",
+        "accession": "NZ_CP012203.1",
+        "start0": 33967,
+        "end0": 34385,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012203.1_feature_78",
+            "type": "CDS",
+            "overlap_bp": 418,
+            "feature_length_bp": 1579,
+            "product": [
+              "IS66 family transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS20120"
+            ]
+          }
+        ]
+      },
+      {
+        "contig": "NZ_CP012202.1",
+        "accession": "NZ_CP012202.1",
+        "start0": 2778728,
+        "end0": 2779146,
+        "strand": "+",
+        "in_bounds": true,
+        "annotations": [
+          {
+            "feature_id": "NZ_CP012202.1_feature_4837",
+            "type": "CDS",
+            "overlap_bp": 418,
+            "feature_length_bp": 1578,
+            "product": [
+              "IS66 family transposase"
+            ],
+            "locus_tag": [
+              "ACZ81_RS12045"
+            ]
+          }
+        ]
+      }
+    ],
+    "consensus_available": true,
+    "best_deposited_protein_hit": {
+      "subject": "AmHOT1A3__NZ_CP012202.1_feature_4837",
+      "identity_pct": 100.0,
+      "alignment_aa": 139,
+      "query_start": 3,
+      "query_end": 419,
+      "evalue": 1.49e-100,
+      "bitscore": 295.0,
+      "subject_length": 525,
+      "title": "IS66 family transposase"
+    },
+    "best_deposited_tnp_hit": {
+      "subject": "AmHOT1A3__NZ_CP012202.1_feature_4837",
+      "identity_pct": 100.0,
+      "alignment_aa": 139,
+      "query_start": 3,
+      "query_end": 419,
+      "evalue": 1.49e-100,
+      "bitscore": 295.0,
+      "subject_length": 525,
+      "title": "IS66 family transposase"
+    },
+    "native_records_overlapping_tnp_CDS": 3,
+    "tnp_supported": true,
+    "deposited_tnp_products": [
+      "IS66 family transposase"
+    ]
+  }
+]

@@ -1,0 +1,12 @@
+[2026-10-24T01:13:04-07:00] host=n0230.lr6 task=34
+sample=R-93091 run=ERR15695518 gca=GCA_977007275.1 gcf=GCF_977007275.1 policy=downsample
+download interrupted (curl exit 127: curl: error while loading shared libraries: libstdc++.so.6: cannot stat shared object: Error 108); attempt 1/8
+download interrupted (curl exit 127: curl: error while loading shared libraries: libstdc++.so.6: cannot stat shared object: Error 108); attempt 2/8
+download interrupted (curl exit 127: curl: error while loading shared libraries: libstdc++.so.6: cannot stat shared object: Error 108); attempt 3/8
+download interrupted (curl exit 127: curl: error while loading shared libraries: libstdc++.so.6: cannot stat shared object: Error 108); attempt 4/8
+download interrupted (curl exit 127: curl: error while loading shared libraries: libstdc++.so.6: cannot stat shared object: Error 108); attempt 5/8
+download interrupted (curl exit 127: curl: error while loading shared libraries: libstdc++.so.6: cannot stat shared object: Error 108); attempt 6/8
+download interrupted (curl exit 127: curl: error while loading shared libraries: libstdc++.so.6: cannot stat shared object: Error 108); attempt 7/8
+download interrupted (curl exit 127: curl: error while loading shared libraries: libstdc++.so.6: cannot stat shared object: Error 108); attempt 8/8
+Download incomplete after 8 attempts: /global/scratch/users/kh36969/longread_callout/data/reads/ERR15695518/ERR15695518.fastq.gz.part
+stage fetch_reads failed with exit code 1

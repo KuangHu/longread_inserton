@@ -1,0 +1,31 @@
+{
+ "sample": "SAMN07626145",
+ "runs": [
+  {
+   "run": "SRR6824080",
+   "read_type": "pacbio_unresolved",
+   "preset": "map-pb",
+   "sha256": "fd9a62d17ade5bdf7a500f76f848db0856cd3a128f1c93fbe5f3604bb99e9846"
+  },
+  {
+   "run": "SRR6824081",
+   "read_type": "pacbio_unresolved",
+   "preset": "map-pb",
+   "sha256": "6ebd517531cff56d1bf4a0f11ed8c1677f1fac57421b51ea39c5858d407435ba"
+  },
+  {
+   "run": "SRR6824079",
+   "read_type": "pacbio_unresolved",
+   "preset": "map-pb",
+   "sha256": "e3b359fa1eaa9233e53c2cf855ee789859c7fd4748bc2b2326f42e865a7457b1"
+  }
+ ],
+ "minimap2_args": [
+  "-c",
+  "--secondary=yes",
+  "-N",
+  "100",
+  "-p",
+  "0.3"
+ ]
+}

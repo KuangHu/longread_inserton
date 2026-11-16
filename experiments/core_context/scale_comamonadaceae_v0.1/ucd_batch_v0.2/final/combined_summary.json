@@ -1,0 +1,688 @@
+{
+ "version": "ucd_combine_v0.1",
+ "ids": "/global/scratch/users/kh36969/longread_callout/core_context/ucd_batch_v0.2/remaining/catalogue_ids.txt.gz",
+ "ids_sha256": "00fa1d373f27e07c2b273d79255208f361bc90989c534c5f1a58eabc5d7658ce",
+ "expected_pairs": 3894917,
+ "replace_ids": "scale_comamonadaceae_v0.1/ucd_batch_v0.2/rerun/affected_ids.txt",
+ "replaced_pairs": 117,
+ "reuse": "/global/scratch/users/kh36969/longread_callout/core_context/ucd_batch_v0.1",
+ "reuse_version": "ucd_batch_v0.1@faa63c3",
+ "replace": "/global/scratch/users/kh36969/longread_callout/core_context/ucd_batch_v0.2/rerun",
+ "runs": "/global/scratch/users/kh36969/longread_callout/core_context/ucd_batch_v0.2/remaining",
+ "completeness": {
+  "cds_core": {
+   "expected": 3894917,
+   "observed": 3894917,
+   "missing": 0,
+   "duplicated": 0,
+   "unexpected": 0,
+   "without_status": 0,
+   "x_length_inconsistent": 0,
+   "complete": true
+  },
+  "candidate_insertion": {
+   "expected": 3894917,
+   "observed": 3894917,
+   "missing": 0,
+   "duplicated": 0,
+   "unexpected": 0,
+   "without_status": 0,
+   "x_length_inconsistent": 0,
+   "complete": true
+  }
+ },
+ "by_kind": {
+  "cds_core": {
+   "counts": {
+    "code_version": {
+     "ucd_batch_v0.2+48a91ae6ca23": 3799706,
+     "ucd_batch_v0.1@faa63c3": 95211
+    },
+    "source_check": {
+     "pass": 3894917
+    },
+    "rows_by_source": {
+     "run:/global/scratch/users/kh36969/longread_callout/core_context/ucd_batch_v0.2/remaining": 3799589,
+     "reuse:/global/scratch/users/kh36969/longread_callout/core_context/ucd_batch_v0.1": 95211,
+     "replace:/global/scratch/users/kh36969/longread_callout/core_context/ucd_batch_v0.2/rerun": 117
+    }
+   },
+   "tallies": {
+    "pass": {
+     "pairs": 1045058,
+     "occurrences": 110789,
+     "samples": 1669,
+     "cores": 7805
+    },
+    "pass|cross_assembly": {
+     "pairs": 1016996,
+     "occurrences": 108776,
+     "samples": 1664,
+     "cores": 7327
+    },
+    "pass|cross_assembly|single_gene": {
+     "pairs": 929274,
+     "occurrences": 92328,
+     "samples": 1660,
+     "cores": 5896
+    },
+    "pass|cross_assembly|two_gene": {
+     "pairs": 87722,
+     "occurrences": 16448,
+     "samples": 1555,
+     "cores": 1431
+    },
+    "pass|same_assembly": {
+     "pairs": 28062,
+     "occurrences": 14068,
+     "samples": 1275,
+     "cores": 1560
+    },
+    "pass|same_assembly|single_gene": {
+     "pairs": 24168,
+     "occurrences": 11956,
+     "samples": 1222,
+     "cores": 1307
+    },
+    "pass|same_assembly|two_gene": {
+     "pairs": 3894,
+     "occurrences": 2112,
+     "samples": 599,
+     "cores": 253
+    },
+    "strict": {
+     "pairs": 1045058,
+     "occurrences": 110789,
+     "samples": 1669,
+     "cores": 7805
+    },
+    "strict|cross_assembly": {
+     "pairs": 1016996,
+     "occurrences": 108776,
+     "samples": 1664,
+     "cores": 7327
+    },
+    "strict|cross_assembly|single_gene": {
+     "pairs": 929274,
+     "occurrences": 92328,
+     "samples": 1660,
+     "cores": 5896
+    },
+    "strict|cross_assembly|two_gene": {
+     "pairs": 87722,
+     "occurrences": 16448,
+     "samples": 1555,
+     "cores": 1431
+    },
+    "strict|same_assembly": {
+     "pairs": 28062,
+     "occurrences": 14068,
+     "samples": 1275,
+     "cores": 1560
+    },
+    "strict|same_assembly|single_gene": {
+     "pairs": 24168,
+     "occurrences": 11956,
+     "samples": 1222,
+     "cores": 1307
+    },
+    "strict|same_assembly|two_gene": {
+     "pairs": 3894,
+     "occurrences": 2112,
+     "samples": 599,
+     "cores": 253
+    },
+    "ucd_check:insertion_dissimilar": {
+     "pairs": 2498385,
+     "occurrences": 218143,
+     "samples": 1677,
+     "cores": 9302
+    },
+    "ucd_check:insertion_dissimilar|cross_assembly": {
+     "pairs": 2497534,
+     "occurrences": 217926,
+     "samples": 1677,
+     "cores": 9248
+    },
+    "ucd_check:insertion_dissimilar|same_assembly": {
+     "pairs": 851,
+     "occurrences": 1411,
+     "samples": 471,
+     "cores": 319
+    },
+    "ucd_check:insertion_partial": {
+     "pairs": 44724,
+     "occurrences": 12215,
+     "samples": 1559,
+     "cores": 1253
+    },
+    "ucd_check:insertion_partial|cross_assembly": {
+     "pairs": 43638,
+     "occurrences": 11986,
+     "samples": 1553,
+     "cores": 1202
+    },
+    "ucd_check:insertion_partial|same_assembly": {
+     "pairs": 1086,
+     "occurrences": 1036,
+     "samples": 211,
+     "cores": 160
+    },
+    "ucd_check:insufficient_context": {
+     "pairs": 2858,
+     "occurrences": 2121,
+     "samples": 748,
+     "cores": 91
+    },
+    "ucd_check:insufficient_context|cross_assembly": {
+     "pairs": 2735,
+     "occurrences": 2075,
+     "samples": 745,
+     "cores": 85
+    },
+    "ucd_check:insufficient_context|same_assembly": {
+     "pairs": 123,
+     "occurrences": 137,
+     "samples": 12,
+     "cores": 13
+    },
+    "ucd_check:only_one_side_different": {
+     "pairs": 80945,
+     "occurrences": 12318,
+     "samples": 1370,
+     "cores": 1273
+    },
+    "ucd_check:only_one_side_different|cross_assembly": {
+     "pairs": 74226,
+     "occurrences": 11829,
+     "samples": 1361,
+     "cores": 1126
+    },
+    "ucd_check:only_one_side_different|same_assembly": {
+     "pairs": 6719,
+     "occurrences": 2513,
+     "samples": 286,
+     "cores": 347
+    },
+    "ucd_check:rearranged_or_fragmented_insertion": {
+     "pairs": 102,
+     "occurrences": 111,
+     "samples": 99,
+     "cores": 9
+    },
+    "ucd_check:rearranged_or_fragmented_insertion|cross_assembly": {
+     "pairs": 100,
+     "occurrences": 108,
+     "samples": 99,
+     "cores": 8
+    },
+    "ucd_check:rearranged_or_fragmented_insertion|same_assembly": {
+     "pairs": 2,
+     "occurrences": 4,
+     "samples": 2,
+     "cores": 2
+    },
+    "ucd_check:same_context": {
+     "pairs": 1507,
+     "occurrences": 1144,
+     "samples": 552,
+     "cores": 131
+    },
+    "ucd_check:same_context|cross_assembly": {
+     "pairs": 1482,
+     "occurrences": 1120,
+     "samples": 547,
+     "cores": 120
+    },
+    "ucd_check:same_context|same_assembly": {
+     "pairs": 25,
+     "occurrences": 35,
+     "samples": 13,
+     "cores": 14
+    },
+    "ucd_check:swapped_or_rearranged_context": {
+     "pairs": 458,
+     "occurrences": 415,
+     "samples": 239,
+     "cores": 81
+    },
+    "ucd_check:swapped_or_rearranged_context|cross_assembly": {
+     "pairs": 383,
+     "occurrences": 361,
+     "samples": 233,
+     "cores": 71
+    },
+    "ucd_check:swapped_or_rearranged_context|same_assembly": {
+     "pairs": 75,
+     "occurrences": 68,
+     "samples": 14,
+     "cores": 18
+    },
+    "ucd_check:ucd_supported": {
+     "pairs": 1045058,
+     "occurrences": 110789,
+     "samples": 1669,
+     "cores": 7805
+    },
+    "ucd_check:ucd_supported|cross_assembly": {
+     "pairs": 1016996,
+     "occurrences": 108776,
+     "samples": 1664,
+     "cores": 7327
+    },
+    "ucd_check:ucd_supported|same_assembly": {
+     "pairs": 28062,
+     "occurrences": 14068,
+     "samples": 1275,
+     "cores": 1560
+    },
+    "ucd_check:uncertain_context": {
+     "pairs": 220880,
+     "occurrences": 30438,
+     "samples": 1636,
+     "cores": 3476
+    },
+    "ucd_check:uncertain_context|cross_assembly": {
+     "pairs": 215060,
+     "occurrences": 29372,
+     "samples": 1630,
+     "cores": 3204
+    },
+    "ucd_check:uncertain_context|same_assembly": {
+     "pairs": 5820,
+     "occurrences": 3844,
+     "samples": 588,
+     "cores": 613
+    }
+   },
+   "strict": {
+    "rule": "pass and 0 < X length < 2500 bp on both sides (from the extracted interval)",
+    "before": {
+     "pairs": 1045058,
+     "occurrences": 110789,
+     "samples": 1669,
+     "cores": 7805
+    },
+    "after": {
+     "pairs": 1045058,
+     "occurrences": 110789,
+     "samples": 1669,
+     "cores": 7805
+    },
+    "excluded_pairs": 0,
+    "excluded_side_intervals": 0,
+    "excluded_distinct_side_intervals": 0
+   }
+  },
+  "candidate_insertion": {
+   "counts": {
+    "code_version": {
+     "ucd_batch_v0.2+48a91ae6ca23": 3799706,
+     "ucd_batch_v0.1@faa63c3": 95211
+    },
+    "source_check": {
+     "not_run": 3765334,
+     "pass": 129529,
+     "fail": 54
+    },
+    "source_failure_reason (sides)": {
+     "interval_out_of_bounds": 54
+    },
+    "rows_by_source": {
+     "run:/global/scratch/users/kh36969/longread_callout/core_context/ucd_batch_v0.2/remaining": 3799589,
+     "reuse:/global/scratch/users/kh36969/longread_callout/core_context/ucd_batch_v0.1": 95211,
+     "replace:/global/scratch/users/kh36969/longread_callout/core_context/ucd_batch_v0.2/rerun": 117
+    },
+    "not_run_reason (sides)": {
+     "candidate_interval_not_available(boundary_up=inconsistent_between_partners,boundary_down=end_not_covered_by_some_partners)": 1722725,
+     "candidate_interval_not_available(boundary_up=end_not_covered_by_some_partners,boundary_down=end_not_covered_by_some_partners,pair_extension_not_determined)": 1194833,
+     "candidate_interval_not_available(boundary_up=inconsistent_between_partners,boundary_down=end_not_covered_by_some_partners,pair_extension_not_determined)": 869195,
+     "candidate_interval_not_available(boundary_up=end_not_covered_by_some_partners,boundary_down=end_not_covered_by_some_partners)": 720983,
+     "candidate_interval_not_available(boundary_down=end_not_covered_by_some_partners)": 449608,
+     "candidate_interval_not_available(boundary_down=end_not_covered_by_some_partners,pair_extension_not_determined)": 366639,
+     "candidate_interval_not_available(boundary_up=inconsistent_between_partners,boundary_down=inconsistent_between_partners)": 321751,
+     "candidate_interval_not_available(boundary_down=end_not_covered,pair_extension_not_determined)": 277080,
+     "candidate_interval_not_available(boundary_up=end_not_covered_by_some_partners,boundary_down=end_not_covered,pair_extension_not_determined)": 240534,
+     "candidate_interval_not_available(boundary_up=inconsistent_between_partners)": 233967,
+     "candidate_interval_not_available(boundary_up=inconsistent_between_partners,boundary_down=end_not_covered,pair_extension_not_determined)": 196544,
+     "candidate_interval_not_available(boundary_up=end_not_covered,boundary_down=end_not_covered_by_some_partners,pair_extension_not_determined)": 154174,
+     "candidate_interval_not_available(boundary_up=end_not_covered_by_some_partners,boundary_down=inconsistent_between_partners)": 117355,
+     "candidate_interval_not_available(boundary_down=inconsistent_between_partners)": 110313,
+     "candidate_interval_not_available(boundary_up=end_not_covered_by_some_partners)": 99984,
+     "candidate_interval_not_available(boundary_up=end_not_covered,pair_extension_not_determined)": 71256,
+     "candidate_interval_not_available(boundary_up=end_not_covered,boundary_down=end_not_covered,pair_extension_not_determined)": 69911,
+     "candidate_interval_not_available(boundary_up=end_not_covered_by_some_partners,pair_extension_not_determined)": 35855,
+     "candidate_interval_not_available(boundary_up=end_not_covered_by_some_partners,boundary_down=inconsistent_between_partners,pair_extension_not_determined)": 30218,
+     "candidate_interval_not_available(boundary_up=end_not_covered,boundary_down=inconsistent_between_partners,pair_extension_not_determined)": 11151,
+     "candidate_interval_not_available(boundary_up=reaches_window_or_contig_end,boundary_down=end_not_covered_by_some_partners)": 5715,
+     "candidate_interval_not_available(boundary_up=reaches_window_or_contig_end,boundary_down=inconsistent_between_partners)": 1679,
+     "candidate_interval_not_available(boundary_up=reaches_window_or_contig_end)": 1596,
+     "candidate_interval_not_available(boundary_up=reaches_window_or_contig_end,boundary_down=end_not_covered_by_some_partners,pair_extension_not_determined)": 1509,
+     "candidate_interval_not_available(boundary_up=inconsistent_between_partners,boundary_down=reaches_window_or_contig_end)": 898,
+     "candidate_interval_not_available(boundary_up=end_not_covered_by_some_partners,boundary_down=reaches_window_or_contig_end)": 800,
+     "candidate_interval_not_available(boundary_down=reaches_window_or_contig_end)": 765,
+     "candidate_interval_not_available(boundary_up=reaches_window_or_contig_end,boundary_down=end_not_covered,pair_extension_not_determined)": 736,
+     "candidate_interval_not_available(boundary_up=reaches_window_or_contig_end,boundary_down=reaches_window_or_contig_end)": 415,
+     "candidate_interval_not_available(boundary_up=reaches_window_or_contig_end,boundary_down=reaches_window_or_contig_end,pair_extension_not_determined)": 223,
+     "candidate_interval_not_available(boundary_up=end_not_covered_by_some_partners,boundary_down=reaches_window_or_contig_end,pair_extension_not_determined)": 100,
+     "candidate_interval_not_available(boundary_up=end_not_covered,boundary_down=reaches_window_or_contig_end,pair_extension_not_determined)": 88,
+     "candidate_interval_not_available(boundary_up=inconsistent_between_partners,boundary_down=reaches_window_or_contig_end,pair_extension_not_determined)": 50,
+     "candidate_interval_not_available(boundary_down=reaches_window_or_contig_end,pair_extension_not_determined)": 26,
+     "candidate_interval_not_available(boundary_up=reaches_window_or_contig_end,pair_extension_not_determined)": 22,
+     "candidate_interval_not_available(boundary_up=reaches_window_or_contig_end,boundary_down=inconsistent_between_partners,pair_extension_not_determined)": 4
+    }
+   },
+   "tallies": {
+    "not_run:candidate_interval_not_available": {
+     "pairs": 3765334,
+     "occurrences": 269724,
+     "samples": 1678,
+     "cores": 10803
+    },
+    "pass": {
+     "pairs": 86528,
+     "occurrences": 28100,
+     "samples": 1621,
+     "cores": 4714
+    },
+    "pass|cross_assembly": {
+     "pairs": 62926,
+     "occurrences": 19209,
+     "samples": 1589,
+     "cores": 3638
+    },
+    "pass|cross_assembly|single_gene": {
+     "pairs": 46451,
+     "occurrences": 14380,
+     "samples": 1566,
+     "cores": 2776
+    },
+    "pass|cross_assembly|two_gene": {
+     "pairs": 16475,
+     "occurrences": 4829,
+     "samples": 1240,
+     "cores": 862
+    },
+    "pass|same_assembly": {
+     "pairs": 23602,
+     "occurrences": 12511,
+     "samples": 1088,
+     "cores": 1658
+    },
+    "pass|same_assembly|single_gene": {
+     "pairs": 20145,
+     "occurrences": 10814,
+     "samples": 1070,
+     "cores": 1336
+    },
+    "pass|same_assembly|two_gene": {
+     "pairs": 3457,
+     "occurrences": 1697,
+     "samples": 336,
+     "cores": 322
+    },
+    "strict": {
+     "pairs": 57145,
+     "occurrences": 24194,
+     "samples": 1617,
+     "cores": 4177
+    },
+    "strict_excluded": {
+     "pairs": 29383,
+     "occurrences": 4107,
+     "samples": 820,
+     "cores": 558
+    },
+    "strict|cross_assembly": {
+     "pairs": 40751,
+     "occurrences": 16613,
+     "samples": 1581,
+     "cores": 3283
+    },
+    "strict|cross_assembly|single_gene": {
+     "pairs": 35935,
+     "occurrences": 13146,
+     "samples": 1556,
+     "cores": 2606
+    },
+    "strict|cross_assembly|two_gene": {
+     "pairs": 4816,
+     "occurrences": 3467,
+     "samples": 1144,
+     "cores": 677
+    },
+    "strict|same_assembly": {
+     "pairs": 16394,
+     "occurrences": 10249,
+     "samples": 1085,
+     "cores": 1379
+    },
+    "strict|same_assembly|single_gene": {
+     "pairs": 15388,
+     "occurrences": 9390,
+     "samples": 1068,
+     "cores": 1178
+    },
+    "strict|same_assembly|two_gene": {
+     "pairs": 1006,
+     "occurrences": 859,
+     "samples": 254,
+     "cores": 201
+    },
+    "ucd_check:insertion_dissimilar": {
+     "pairs": 40873,
+     "occurrences": 17997,
+     "samples": 1649,
+     "cores": 3168
+    },
+    "ucd_check:insertion_dissimilar|cross_assembly": {
+     "pairs": 40296,
+     "occurrences": 17144,
+     "samples": 1647,
+     "cores": 2987
+    },
+    "ucd_check:insertion_dissimilar|same_assembly": {
+     "pairs": 577,
+     "occurrences": 1010,
+     "samples": 358,
+     "cores": 249
+    },
+    "ucd_check:insertion_partial": {
+     "pairs": 263,
+     "occurrences": 331,
+     "samples": 165,
+     "cores": 57
+    },
+    "ucd_check:insertion_partial|cross_assembly": {
+     "pairs": 213,
+     "occurrences": 233,
+     "samples": 125,
+     "cores": 41
+    },
+    "ucd_check:insertion_partial|same_assembly": {
+     "pairs": 50,
+     "occurrences": 98,
+     "samples": 44,
+     "cores": 16
+    },
+    "ucd_check:insufficient_context": {
+     "pairs": 473,
+     "occurrences": 230,
+     "samples": 60,
+     "cores": 25
+    },
+    "ucd_check:insufficient_context|cross_assembly": {
+     "pairs": 414,
+     "occurrences": 166,
+     "samples": 55,
+     "cores": 20
+    },
+    "ucd_check:insufficient_context|same_assembly": {
+     "pairs": 59,
+     "occurrences": 67,
+     "samples": 8,
+     "cores": 7
+    },
+    "ucd_check:not_run": {
+     "pairs": 3765334,
+     "occurrences": 269724,
+     "samples": 1678,
+     "cores": 10803
+    },
+    "ucd_check:not_run:source_check_failed": {
+     "pairs": 54,
+     "occurrences": 63,
+     "samples": 36,
+     "cores": 9
+    },
+    "ucd_check:not_run:source_check_failed|cross_assembly": {
+     "pairs": 40,
+     "occurrences": 48,
+     "samples": 35,
+     "cores": 8
+    },
+    "ucd_check:not_run:source_check_failed|same_assembly": {
+     "pairs": 14,
+     "occurrences": 16,
+     "samples": 2,
+     "cores": 2
+    },
+    "ucd_check:not_run|cross_assembly": {
+     "pairs": 3747086,
+     "occurrences": 268455,
+     "samples": 1678,
+     "cores": 10542
+    },
+    "ucd_check:not_run|same_assembly": {
+     "pairs": 18248,
+     "occurrences": 9209,
+     "samples": 1084,
+     "cores": 1051
+    },
+    "ucd_check:only_one_side_different": {
+     "pairs": 54,
+     "occurrences": 68,
+     "samples": 59,
+     "cores": 16
+    },
+    "ucd_check:only_one_side_different|cross_assembly": {
+     "pairs": 48,
+     "occurrences": 62,
+     "samples": 57,
+     "cores": 14
+    },
+    "ucd_check:only_one_side_different|same_assembly": {
+     "pairs": 6,
+     "occurrences": 11,
+     "samples": 5,
+     "cores": 4
+    },
+    "ucd_check:swapped_or_rearranged_context": {
+     "pairs": 88,
+     "occurrences": 143,
+     "samples": 81,
+     "cores": 46
+    },
+    "ucd_check:swapped_or_rearranged_context|cross_assembly": {
+     "pairs": 68,
+     "occurrences": 106,
+     "samples": 75,
+     "cores": 31
+    },
+    "ucd_check:swapped_or_rearranged_context|same_assembly": {
+     "pairs": 20,
+     "occurrences": 38,
+     "samples": 11,
+     "cores": 18
+    },
+    "ucd_check:ucd_supported": {
+     "pairs": 86528,
+     "occurrences": 28100,
+     "samples": 1621,
+     "cores": 4714
+    },
+    "ucd_check:ucd_supported|cross_assembly": {
+     "pairs": 62926,
+     "occurrences": 19209,
+     "samples": 1589,
+     "cores": 3638
+    },
+    "ucd_check:ucd_supported|same_assembly": {
+     "pairs": 23602,
+     "occurrences": 12511,
+     "samples": 1088,
+     "cores": 1658
+    },
+    "ucd_check:uncertain_context": {
+     "pairs": 1250,
+     "occurrences": 1328,
+     "samples": 648,
+     "cores": 327
+    },
+    "ucd_check:uncertain_context|cross_assembly": {
+     "pairs": 1063,
+     "occurrences": 1069,
+     "samples": 618,
+     "cores": 244
+    },
+    "ucd_check:uncertain_context|same_assembly": {
+     "pairs": 187,
+     "occurrences": 285,
+     "samples": 89,
+     "cores": 89
+    }
+   },
+   "strict": {
+    "rule": "pass and 0 < X length < 2500 bp on both sides (from the extracted interval)",
+    "before": {
+     "pairs": 86528,
+     "occurrences": 28100,
+     "samples": 1621,
+     "cores": 4714
+    },
+    "after": {
+     "pairs": 57145,
+     "occurrences": 24194,
+     "samples": 1617,
+     "cores": 4177
+    },
+    "excluded_pairs": 29383,
+    "excluded_side_intervals": 58721,
+    "excluded_distinct_side_intervals": 15570
+   }
+  }
+ },
+ "files": {
+  "all_rows_cds_core.tsv.gz": {
+   "path": "/global/scratch/users/kh36969/longread_callout/core_context/ucd_batch_v0.2/final/all_rows_cds_core.tsv.gz",
+   "bytes": 547430257,
+   "sha256": "981f3cb51b3559a83ac505b9317bb59fb6d60564924b851408cbd1a97af3560e"
+  },
+  "pass_cds_core.tsv.gz": {
+   "path": "/global/scratch/users/kh36969/longread_callout/core_context/ucd_batch_v0.2/final/pass_cds_core.tsv.gz",
+   "bytes": 133900301,
+   "sha256": "1881d65c3b547d8b05f44af4091e57ddc2ae572d76488818207a79e8dae6c56e"
+  },
+  "strict_lt2500_cds_core.tsv.gz": {
+   "path": "/global/scratch/users/kh36969/longread_callout/core_context/ucd_batch_v0.2/final/strict_lt2500_cds_core.tsv.gz",
+   "bytes": 133900310,
+   "sha256": "fc1983cbd7d70269517252e5129179cacff43d0dac18fd8b406cf009ef709cbc"
+  },
+  "all_rows_candidate_insertion.tsv.gz": {
+   "path": "/global/scratch/users/kh36969/longread_callout/core_context/ucd_batch_v0.2/final/all_rows_candidate_insertion.tsv.gz",
+   "bytes": 220120920,
+   "sha256": "1483c12616011ddd24596530f14d3ee0d5928283f3e2454063aeaa72598f292b"
+  },
+  "pass_candidate_insertion.tsv.gz": {
+   "path": "/global/scratch/users/kh36969/longread_callout/core_context/ucd_batch_v0.2/final/pass_candidate_insertion.tsv.gz",
+   "bytes": 17861826,
+   "sha256": "3b75663ccb2cf61a23707d13df06bcd122e2c3a96fe90d0b048aafe8681d2e61"
+  },
+  "strict_lt2500_candidate_insertion.tsv.gz": {
+   "path": "/global/scratch/users/kh36969/longread_callout/core_context/ucd_batch_v0.2/final/strict_lt2500_candidate_insertion.tsv.gz",
+   "bytes": 15217863,
+   "sha256": "0bbd1c8d17d6ee52baf958823a4dcd35d95a17ebc7134cc195f06198a549f836"
+  }
+ },
+ "at": "2026-11-07 19:22:26"
+}

@@ -1,0 +1,10 @@
+{
+  "schema": "audited_evidence_check_v1",
+  "sample": "R-91497",
+  "status": "pass",
+  "members": 491,
+  "audited_class_counts": {
+    "audited_full_span": 491
+  },
+  "scope": "Recomputed units/classes from read_evidence.tsv; no re-mapping"
+}

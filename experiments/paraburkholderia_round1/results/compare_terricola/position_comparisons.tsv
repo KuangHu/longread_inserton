@@ -1,0 +1,473 @@
+strain	locus_id	other	status	reason	other_contig	other_start0	other_end0	matched_locus
+SMT4a	SMT4a:L7	LjRoot223	shared_position		NZ_CAXURG020000001.1	3773476	3774824	LjRoot223:L3
+SMT4a	SMT4a:L8	LjRoot223	shared_position		NZ_CAXURG020000001.1	1739125	1740471	LjRoot223:L1
+SMT4a	SMT4a:L9	LjRoot223	unresolved	up_unplaced				
+SMT4a	SMT4a:L10	LjRoot223	empty_in_other_assembly		NZ_CAXURG020000002.1	1796326	1796348	
+SMT4a	SMT4a:L11	LjRoot223	unresolved	flank_order_or_distance_inconsistent				
+SMT4a	SMT4a:L12	LjRoot223	empty_in_other_assembly		NZ_CAXURG020000002.1	3057424	3057425	
+SMT4a	SMT4a:L18	LjRoot223	shared_position		NZ_CAXURG020000001.1	3849323	3854959	LjRoot223:L15
+SMT4a	SMT4a:L19	LjRoot223	shared_position		NZ_CAXURG020000001.1	3680567	3686358	LjRoot223:L14
+SMT4a	SMT4a:L20	LjRoot223	shared_position		NZ_CAXURG020000001.1	1161467	1167260	LjRoot223:L13
+SMT4a	SMT4a:L21	LjRoot223	shared_position		NZ_CAXURG020000002.1	789286	795079	LjRoot223:L16
+SMT4a	SMT4a:L22	LjRoot223	unresolved	up_unplaced				
+SMT4a	SMT4a:L28	LjRoot223	empty_in_other_assembly		NZ_CAXURG020000001.1	4124131	4124136	
+SMT4a	SMT4a:L29	LjRoot223	empty_in_other_assembly		NZ_CAXURG020000002.1	111283	111307	
+SMT4a	SMT4a:L30	LjRoot223	unresolved	up_unplaced				
+SMT4a	SMT4a:L31	LjRoot223	unresolved	flank_order_or_distance_inconsistent				
+SMT4a	SMT4a:L32	LjRoot223	unresolved	flanks_on_different_contigs_or_strands				
+SMT4a	SMT4a:L33	LjRoot223	unresolved	up_multiple_places				
+SMT4a	SMT4a:L34	LjRoot223	unresolved	up_multiple_places				
+SMT4a	SMT4a:L35	LjRoot223	unresolved	up_multiple_places				
+SMT4a	SMT4a:L38	LjRoot223	empty_in_other_assembly		NZ_CAXURG020000001.1	713325	713358	
+SMT4a	SMT4a:L39	LjRoot223	unresolved	up_unplaced				
+SMT4a	SMT4a:L40	LjRoot223	unresolved	up_unplaced				
+SMT4a	SMT4a:L41	LjRoot223	unresolved	up_unplaced				
+SMT4a	SMT4a:L42	LjRoot223	empty_in_other_assembly		NZ_CAXURG020000001.1	3720072	3720080	
+SMT4a	SMT4a:L43	LjRoot223	unresolved	up_unplaced				
+SMT4a	SMT4a:L44	LjRoot223	empty_in_other_assembly		NZ_CAXURG020000002.1	190024	190029	
+SMT4a	SMT4a:L50	LjRoot223	unresolved	down_unplaced				
+SMT4a	SMT4a:L51	LjRoot223	unresolved	up_unplaced				
+SMT4a	SMT4a:L52	LjRoot223	other_sequence_in_other_assembly	gap_1408bp	NZ_CAXURG020000001.1	874659	876067	
+SMT4a	SMT4a:L53	LjRoot223	other_sequence_in_other_assembly	gap_1500bp	NZ_CAXURG020000001.1	398336	399836	
+SMT4a	SMT4a:L54	LjRoot223	other_sequence_in_other_assembly	gap_137bp	NZ_CAXURG020000002.1	1970813	1970950	
+SMT4a	SMT4a:L55	LjRoot223	other_sequence_in_other_assembly	gap_1375bp	NZ_CAXURG020000001.1	398461	399836	
+SMT4a	SMT4a:L56	LjRoot223	other_sequence_in_other_assembly	gap_1390bp	NZ_CAXURG020000001.1	874659	876049	
+SMT4a	SMT4a:L57	LjRoot223	unresolved	flanks_on_different_contigs_or_strands				
+SMT4a	SMT4a:L58	LjRoot223	unresolved	up_unplaced				
+SMT4a	SMT4a:L59	LjRoot223	unresolved	down_unplaced				
+SMT4a	SMT4a:L60	LjRoot223	other_sequence_in_other_assembly	gap_1389bp	NZ_CAXURG020000001.1	2915685	2917074	
+SMT4a	SMT4a:L65	LjRoot223	shared_position		NZ_CAXURG020000001.1	2222188	2223534	LjRoot223:L63
+SMT4a	SMT4a:L66	LjRoot223	shared_position		NZ_CAXURG020000001.1	925332	926678	LjRoot223:L62
+SMT4a	SMT4a:L67	LjRoot223	unresolved	up_multiple_places				
+SMT4a	SMT4a:L72	LjRoot223	shared_position		NZ_CAXURG020000001.1	3603996	3605365	LjRoot223:L71
+SMT4a	SMT4a:L73	LjRoot223	unresolved	down_unplaced				
+SMT4a	SMT4a:L74	LjRoot223	other_sequence_in_other_assembly	gap_1655bp	NZ_CAXURG020000001.1	968029	969684	
+SMT4a	SMT4a:L75	LjRoot223	unresolved	up_multiple_places				
+SMT4a	SMT4a:L77	LjRoot223	shared_position		NZ_CAXURG020000002.1	965726	965831	LjRoot223:L76
+SMT4a	SMT4a:L79	LjRoot223	shared_position		NZ_CAXURG020000002.1	658246	658309	LjRoot223:L78
+SMT4a	SMT4a:L80	LjRoot223	other_sequence_in_other_assembly	gap_111bp	NZ_CAXURG020000002.1	598112	598223	
+SMT4a	SMT4a:L82	LjRoot223	shared_position		NZ_CAXURG020000001.1	764197	764295	LjRoot223:L81
+SMT4a	SMT4a:L84	LjRoot223	shared_position		NZ_CAXURG020000001.1	844280	844376	LjRoot223:L83
+SMT4a	SMT4a:L86	LjRoot223	shared_position		NZ_CAXURG020000001.1	992177	992260	LjRoot223:L85
+SMT4a	SMT4a:L88	LjRoot223	shared_position		NZ_CAXURG020000001.1	1223516	1223615	LjRoot223:L87
+SMT4a	SMT4a:L90	LjRoot223	shared_position		NZ_CAXURG020000001.1	1541531	1541629	LjRoot223:L89
+SMT4a	SMT4a:L92	LjRoot223	shared_position		NZ_CAXURG020000001.1	1651133	1651225	LjRoot223:L91
+SMT4a	SMT4a:L93	LjRoot223	other_sequence_in_other_assembly	gap_393bp	NZ_CAXURG020000001.1	2131183	2131576	
+SMT4a	SMT4a:L94	LjRoot223	other_sequence_in_other_assembly	gap_87bp	NZ_CAXURG020000001.1	2172315	2172402	
+SMT4a	SMT4a:L96	LjRoot223	shared_position		NZ_CAXURG020000001.1	2235530	2235636	LjRoot223:L95
+SMT4a	SMT4a:L98	LjRoot223	shared_position		NZ_CAXURG020000001.1	2427019	2427144	LjRoot223:L97
+SMT4a	SMT4a:L99	LjRoot223	other_sequence_in_other_assembly	gap_95bp	NZ_CAXURG020000001.1	2427818	2427913	
+SMT4a	SMT4a:L101	LjRoot223	shared_position		NZ_CAXURG020000001.1	3318105	3318187	LjRoot223:L100
+SMT4a	SMT4a:L102	LjRoot223	other_sequence_in_other_assembly	gap_100bp	NZ_CAXURG020000001.1	3432837	3432937	
+SMT4a	SMT4a:L104	LjRoot223	shared_position		NZ_CAXURG020000001.1	3714627	3714730	LjRoot223:L103
+SMT4a	SMT4a:L105	LjRoot223	other_sequence_in_other_assembly	gap_119bp	NZ_CAXURG020000001.1	4070458	4070577	
+SMT4a	SMT4a:L106	LjRoot223	unresolved	up_multiple_places				
+SMT4a	SMT4a:L107	LjRoot223	unresolved	down_unplaced				
+SMT4a	SMT4a:L108	LjRoot223	unresolved	up_multiple_places				
+SMT4a	SMT4a:L109	LjRoot223	unresolved	up_multiple_places				
+SMT4a	SMT4a:L110	LjRoot223	other_sequence_in_other_assembly	gap_202bp	NZ_CAXURG020000001.1	2934717	2934919	
+SMT4a	SMT4a:L111	LjRoot223	other_sequence_in_other_assembly	gap_211bp	NZ_CAXURG020000001.1	789553	789764	
+SMT4a	SMT4a:L112	LjRoot223	other_sequence_in_other_assembly	gap_1589bp	NZ_CAXURG020000001.1	1218468	1220057	
+SMT4a	SMT4a:L113	LjRoot223	unresolved	down_multiple_places				
+SMT4a	SMT4a:L114	LjRoot223	unresolved	flanks_on_different_contigs_or_strands				
+SMT4a	SMT4a:L115	LjRoot223	unresolved	up_multiple_places				
+SMT4a	SMT4a:L116	LjRoot223	unresolved	up_unplaced				
+SMT4a	SMT4a:L117	LjRoot223	other_sequence_in_other_assembly	gap_223bp	NZ_CAXURG020000001.1	3905561	3905784	
+SMT4a	SMT4a:L118	LjRoot223	other_sequence_in_other_assembly	gap_207bp	NZ_CAXURG020000001.1	3951563	3951770	
+SMT4a	SMT4a:L120	LjRoot223	shared_position		NZ_CAXURG020000002.1	2856219	2856301	LjRoot223:L119
+SMT4a	SMT4a:L122	LjRoot223	shared_position		NZ_CAXURG020000002.1	2808602	2808641	LjRoot223:L121
+SMT4a	SMT4a:L124	LjRoot223	shared_position		NZ_CAXURG020000002.1	2807838	2807881	LjRoot223:L123
+SMT4a	SMT4a:L126	LjRoot223	shared_position		NZ_CAXURG020000002.1	2417972	2418041	LjRoot223:L125
+SMT4a	SMT4a:L128	LjRoot223	shared_position		NZ_CAXURG020000002.1	2016467	2016558	LjRoot223:L127
+SMT4a	SMT4a:L129	LjRoot223	other_sequence_in_other_assembly	gap_63bp	NZ_CAXURG020000002.1	1842628	1842691	
+SMT4a	SMT4a:L130	LjRoot223	other_sequence_in_other_assembly	gap_112bp	NZ_CAXURG020000002.1	1774076	1774188	
+SMT4a	SMT4a:L132	LjRoot223	shared_position		NZ_CAXURG020000002.1	1322207	1322305	LjRoot223:L131
+SMT4a	SMT4a:L134	LjRoot223	shared_position		NZ_CAXURG020000002.1	743880	743952	LjRoot223:L133
+SMT4a	SMT4a:L135	LjRoot223	other_sequence_in_other_assembly	gap_89bp	NZ_CAXURG020000002.1	658628	658717	
+SMT4a	SMT4a:L137	LjRoot223	shared_position		NZ_CAXURG020000002.1	654412	654456	LjRoot223:L136
+SMT4a	SMT4a:L139	LjRoot223	shared_position		NZ_CAXURG020000002.1	450107	450164	LjRoot223:L138
+SMT4a	SMT4a:L141	LjRoot223	shared_position		NZ_CAXURG020000001.1	746390	746493	LjRoot223:L140
+SMT4a	SMT4a:L143	LjRoot223	shared_position		NZ_CAXURG020000001.1	803431	803484	LjRoot223:L142
+SMT4a	SMT4a:L145	LjRoot223	shared_position		NZ_CAXURG020000001.1	843968	844002	LjRoot223:L144
+SMT4a	SMT4a:L147	LjRoot223	shared_position		NZ_CAXURG020000001.1	991780	991833	LjRoot223:L146
+SMT4a	SMT4a:L149	LjRoot223	shared_position		NZ_CAXURG020000001.1	992752	992812	LjRoot223:L148
+SMT4a	SMT4a:L151	LjRoot223	shared_position		NZ_CAXURG020000001.1	1551888	1551942	LjRoot223:L150
+SMT4a	SMT4a:L153	LjRoot223	shared_position		NZ_CAXURG020000001.1	2082511	2082590	LjRoot223:L152
+SMT4a	SMT4a:L155	LjRoot223	shared_position		NZ_CAXURG020000001.1	2426564	2426678	LjRoot223:L154
+SMT4a	SMT4a:L157	LjRoot223	shared_position		NZ_CAXURG020000001.1	2922840	2922904	LjRoot223:L156
+SMT4a	SMT4a:L159	LjRoot223	shared_position		NZ_CAXURG020000001.1	2936346	2936403	LjRoot223:L158
+SMT4a	SMT4a:L161	LjRoot223	shared_position		NZ_CAXURG020000001.1	3417714	3417790	LjRoot223:L160
+SMT4a	SMT4a:L163	LjRoot223	shared_position		NZ_CAXURG020000001.1	3432532	3432582	LjRoot223:L162
+SMT4a	SMT4a:L165	LjRoot223	shared_position		NZ_CAXURG020000001.1	3761354	3761413	LjRoot223:L164
+SMT4a	SMT4a:L167	LjRoot223	shared_position		NZ_CAXURG020000001.1	4060463	4060502	LjRoot223:L166
+SMT4a	SMT4a:L169	LjRoot223	shared_position		NZ_CAXURG020000001.1	4061240	4061318	LjRoot223:L168
+SMT4a	SMT4a:L170	LjRoot223	unresolved	flank_short_or_contig_edge				
+SMT4a	SMT4a:L171	LjRoot223	other_sequence_in_other_assembly	gap_1082bp	NZ_CAXURG020000002.1	932210	933292	
+SMT4a	SMT4a:L172	LjRoot223	unresolved	down_multiple_places				
+SMT4a	SMT4a:L173	LjRoot223	unresolved	down_multiple_places				
+SMT4a	SMT4a:L174	LjRoot223	empty_in_other_assembly		NZ_CAXURG020000001.1	1890568	1890577	
+SMT4a	SMT4a:L176	LjRoot223	shared_position		NZ_CAXURG020000001.1	1170792	1172504	LjRoot223:L175
+SMT4a	SMT4a:L178	LjRoot223	shared_position		NZ_CAXURG020000002.1	2997264	2997801	LjRoot223:L177
+SMT4a	SMT4a:L179	LjRoot223	other_sequence_in_other_assembly	gap_546bp	NZ_CAXURG020000002.1	965575	966121	
+SMT4a	SMT4a:L180	LjRoot223	other_sequence_in_other_assembly	gap_381bp	NZ_CAXURG020000002.1	835394	835775	
+SMT4a	SMT4a:L181	LjRoot223	other_sequence_in_other_assembly	gap_535bp	NZ_CAXURG020000002.1	831011	831546	
+SMT4a	SMT4a:L182	LjRoot223	empty_in_other_assembly		NZ_CAXURG020000002.1	709843	709880	
+SMT4a	SMT4a:L183	LjRoot223	other_sequence_in_other_assembly	gap_383bp	NZ_CAXURG020000002.1	403998	404381	
+SMT4a	SMT4a:L185	LjRoot223	shared_position		NZ_CAXURG020000002.1	385551	386129	LjRoot223:L184
+SMT4a	SMT4a:L186	LjRoot223	other_sequence_in_other_assembly	gap_564bp	NZ_CAXURG020000001.1	287821	288385	
+SMT4a	SMT4a:L187	LjRoot223	other_sequence_in_other_assembly	gap_537bp	NZ_CAXURG020000001.1	387981	388518	
+SMT4a	SMT4a:L188	LjRoot223	other_sequence_in_other_assembly	gap_546bp	NZ_CAXURG020000001.1	1223369	1223915	
+SMT4a	SMT4a:L189	LjRoot223	other_sequence_in_other_assembly	gap_56bp	NZ_CAXURG020000001.1	3551399	3551455	
+SMT4a	SMT4a:L190	LjRoot223	unresolved	up_unplaced				
+SMT4a	SMT4a:L191	LjRoot223	unresolved	up_unplaced				
+SMT4a	SMT4a:L192	LjRoot223	unresolved	down_unplaced				
+SMT4a	SMT4a:L193	LjRoot223	other_sequence_in_other_assembly	gap_1397bp	NZ_CAXURG020000001.1	669032	670429	
+SMT4a	SMT4a:L194	LjRoot223	unresolved	down_unplaced				
+SMT4a	SMT4a:L195	LjRoot223	unresolved	up_unplaced				
+SMT4a	SMT4a:L196	LjRoot223	unresolved	up_unplaced				
+SMT4a	SMT4a:L197	LjRoot223	unresolved	up_unplaced				
+SMT4a	SMT4a:L198	LjRoot223	unresolved	up_unplaced				
+SMT4a	SMT4a:L199	LjRoot223	unresolved	up_unplaced				
+SMT4a	SMT4a:L201	LjRoot223	shared_position		NZ_CAXURG020000002.1	3047371	3047602	LjRoot223:L200
+SMT4a	SMT4a:L202	LjRoot223	other_sequence_in_other_assembly	gap_90bp	NZ_CAXURG020000002.1	2417643	2417733	
+SMT4a	SMT4a:L203	LjRoot223	other_sequence_in_other_assembly	gap_148bp	NZ_CAXURG020000002.1	1772947	1773095	
+SMT4a	SMT4a:L205	LjRoot223	shared_position		NZ_CAXURG020000001.1	788980	789073	LjRoot223:L204
+SMT4a	SMT4a:L206	LjRoot223	other_sequence_in_other_assembly	gap_98bp	NZ_CAXURG020000001.1	2081369	2081467	
+SMT4a	SMT4a:L207	LjRoot223	other_sequence_in_other_assembly	gap_79bp	NZ_CAXURG020000001.1	2082150	2082229	
+SMT4a	SMT4a:L208	LjRoot223	other_sequence_in_other_assembly	gap_114bp	NZ_CAXURG020000001.1	2232203	2232317	
+SMT4a	SMT4a:L210	LjRoot223	shared_position		NZ_CAXURG020000001.1	3416546	3416679	LjRoot223:L209
+SMT4a	SMT4a:L211	LjRoot223	other_sequence_in_other_assembly	gap_145bp	NZ_CAXURG020000001.1	3417275	3417420	
+SMT4a	SMT4a:L212	LjRoot223	other_sequence_in_other_assembly	gap_128bp	NZ_CAXURG020000002.1	2995489	2995617	
+SMT4a	SMT4a:L213	LjRoot223	other_sequence_in_other_assembly	gap_79bp	NZ_CAXURG020000002.1	2092468	2092547	
+SMT4a	SMT4a:L214	LjRoot223	other_sequence_in_other_assembly	gap_82bp	NZ_CAXURG020000002.1	1511584	1511666	
+SMT4a	SMT4a:L215	LjRoot223	other_sequence_in_other_assembly	gap_102bp	NZ_CAXURG020000002.1	177601	177703	
+SMT4a	SMT4a:L216	LjRoot223	other_sequence_in_other_assembly	gap_99bp	NZ_CAXURG020000001.1	450768	450867	
+SMT4a	SMT4a:L217	LjRoot223	other_sequence_in_other_assembly	gap_51bp	NZ_CAXURG020000001.1	1670284	1670335	
+SMT4a	SMT4a:L218	LjRoot223	other_sequence_in_other_assembly	gap_81bp	NZ_CAXURG020000001.1	2071573	2071654	
+SMT4a	SMT4a:L219	LjRoot223	other_sequence_in_other_assembly	gap_102bp	NZ_CAXURG020000001.1	2393161	2393263	
+SMT4a	SMT4a:L220	LjRoot223	other_sequence_in_other_assembly	gap_132bp	NZ_CAXURG020000001.1	2870706	2870838	
+SMT4a	SMT4a:L221	LjRoot223	other_sequence_in_other_assembly	gap_102bp	NZ_CAXURG020000001.1	3597774	3597876	
+SMT4a	SMT4a:L222	LjRoot223	other_sequence_in_other_assembly	gap_90bp	NZ_CAXURG020000001.1	3984492	3984582	
+SMT4a	SMT4a:L224	LjRoot223	shared_position		NZ_CAXURG020000001.1	185804	186478	LjRoot223:L223
+SMT4a	SMT4a:L226	LjRoot223	shared_position		NZ_CAXURG020000002.1	3009635	3010206	LjRoot223:L225
+SMT4a	SMT4a:L227	LjRoot223	unresolved	up_unplaced				
+SMT4a	SMT4a:L229	LjRoot223	shared_position		NZ_CAXURG020000001.1	327196	327870	LjRoot223:L228
+SMT4a	SMT4a:L231	LjRoot223	shared_position		NZ_CAXURG020000001.1	396799	397505	LjRoot223:L230
+SMT4a	SMT4a:L233	LjRoot223	shared_position		NZ_CAXURG020000001.1	1732989	1733674	LjRoot223:L232
+SMT4a	SMT4a:L234	LjRoot223	other_sequence_in_other_assembly	gap_706bp	NZ_CAXURG020000001.1	2075946	2076652	
+SMT4a	SMT4a:L236	LjRoot223	shared_position		NZ_CAXURG020000001.1	2457017	2457676	LjRoot223:L235
+SMT4a	SMT4a:L238	LjRoot223	unresolved	down_multiple_places				
+SMT4a	SMT4a:L240	LjRoot223	shared_position		NZ_CAXURG020000001.1	3988098	3988794	LjRoot223:L239
+SMT4a	SMT4a:L241	LjRoot223	unresolved	flank_short_or_contig_edge				
+SMT4a	SMT4a:L242	LjRoot223	unresolved	flank_short_or_contig_edge				
+SMT4a	SMT4a:L243	LjRoot223	unresolved	up_multiple_places				
+SMT4a	SMT4a:L244	LjRoot223	other_sequence_in_other_assembly	gap_339bp	NZ_CAXURG020000001.1	397678	398017	
+SMT4a	SMT4a:L245	LjRoot223	other_sequence_in_other_assembly	gap_314bp	NZ_CAXURG020000001.1	2930832	2931146	
+SMT4a	SMT4a:L247	LjRoot223	shared_position		NZ_CAXURG020000001.1	3603210	3603534	LjRoot223:L246
+SMT4a	SMT4a:L249	LjRoot223	shared_position		NZ_CAXURG020000001.1	3905086	3905645	LjRoot223:L248
+SMT4a	SMT4a:L250	LjRoot223	unresolved	up_multiple_places				
+SMT4a	SMT4a:L251	LjRoot223	unresolved	up_multiple_places				
+SMT4a	SMT4a:L252	LjRoot223	other_sequence_in_other_assembly	gap_96bp	NZ_CAXURG020000001.1	155063	155159	
+SMT4a	SMT4a:L254	LjRoot223	unresolved	down_multiple_places				
+SMT4a	SMT4a:L255	LjRoot223	unresolved	down_multiple_places				
+SMT4a	SMT4a:L256	LjRoot223	unresolved	flank_order_or_distance_inconsistent				
+SMT4a	SMT4a:L257	LjRoot223	other_sequence_in_other_assembly	gap_95bp	NZ_CAXURG020000001.1	970233	970328	
+SMT4a	SMT4a:L259	LjRoot223	shared_position		NZ_CAXURG020000001.1	2930755	2930837	LjRoot223:L258
+SMT4a	SMT4a:L261	LjRoot223	shared_position		NZ_CAXURG020000002.1	2038172	2038255	LjRoot223:L260
+SMT4a	SMT4a:L262	LjRoot223	other_sequence_in_other_assembly	gap_148bp	NZ_CAXURG020000002.1	1415409	1415557	
+SMT4a	SMT4a:L264	LjRoot223	shared_position		NZ_CAXURG020000001.1	456968	457520	LjRoot223:L263
+SMT4a	SMT4a:L265	LjRoot223	other_sequence_in_other_assembly	gap_99bp	NZ_CAXURG020000001.1	1000711	1000810	
+SMT4a	SMT4a:L267	LjRoot223	shared_position		NZ_CAXURG020000001.1	1292227	1292682	LjRoot223:L266
+SMT4a	SMT4a:L269	LjRoot223	shared_position		NZ_CAXURG020000001.1	2016420	2016692	LjRoot223:L268
+SMT4a	SMT4a:L271	LjRoot223	shared_position		NZ_CAXURG020000001.1	2670828	2671286	LjRoot223:L270
+SMT4a	SMT4a:L272	LjRoot223	unresolved	up_multiple_places				
+SMT4a	SMT4a:L273	LjRoot223	unresolved	up_multiple_places				
+SMT4a	SMT4a:L274	LjRoot223	unresolved	up_multiple_places				
+SMT4a	SMT4a:L275	LjRoot223	unresolved	up_multiple_places				
+SMT4a	SMT4a:L277	LjRoot223	unresolved	down_multiple_places				
+SMT4a	SMT4a:L278	LjRoot223	other_sequence_in_other_assembly	gap_507bp	NZ_CAXURG020000002.1	2471052	2471559	
+SMT4a	SMT4a:L279	LjRoot223	other_sequence_in_other_assembly	gap_663bp	NZ_CAXURG020000002.1	747940	748603	
+SMT4a	SMT4a:L280	LjRoot223	other_sequence_in_other_assembly	gap_668bp	NZ_CAXURG020000002.1	474243	474911	
+SMT4a	SMT4a:L281	LjRoot223	other_sequence_in_other_assembly	gap_616bp	NZ_CAXURG020000001.1	884323	884939	
+SMT4a	SMT4a:L282	LjRoot223	other_sequence_in_other_assembly	gap_72bp	NZ_CAXURG020000001.1	1484504	1484576	
+SMT4a	SMT4a:L283	LjRoot223	other_sequence_in_other_assembly	gap_655bp	NZ_CAXURG020000001.1	3712514	3713169	
+SMT4a	SMT4a:L284	LjRoot223	other_sequence_in_other_assembly	gap_120bp	NZ_CAXURG020000002.1	2446341	2446461	
+SMT4a	SMT4a:L285	LjRoot223	other_sequence_in_other_assembly	gap_303bp	NZ_CAXURG020000002.1	605337	605640	
+SMT4a	SMT4a:L286	LjRoot223	other_sequence_in_other_assembly	gap_256bp	NZ_CAXURG020000002.1	526345	526601	
+SMT4a	SMT4a:L287	LjRoot223	other_sequence_in_other_assembly	gap_162bp	NZ_CAXURG020000001.1	2172306	2172468	
+SMT4a	SMT4a:L288	LjRoot223	other_sequence_in_other_assembly	gap_258bp	NZ_CAXURG020000001.1	3307148	3307406	
+SMT4a	SMT4a:L289	LjRoot223	other_sequence_in_other_assembly	gap_230bp	NZ_CAXURG020000001.1	3359705	3359935	
+SMT4a	SMT4a:L290	LjRoot223	other_sequence_in_other_assembly	gap_1053bp	NZ_CAXURG020000002.1	1793717	1794770	
+SMT4a	SMT4a:L291	LjRoot223	other_sequence_in_other_assembly	gap_52bp	NZ_CAXURG020000001.1	1545988	1546040	
+SMT4a	SMT4a:L292	LjRoot223	other_sequence_in_other_assembly	gap_18589bp	NZ_CAXURG020000001.1	1687603	1706192	
+SMT4a	SMT4a:L294	LjRoot223	shared_position		NZ_CAXURG020000001.1	2656668	2656724	LjRoot223:L293
+SMT4a	SMT4a:L296	LjRoot223	unresolved	down_unplaced				
+SMT4a	SMT4a:L298	LjRoot223	shared_position		NZ_CAXURG020000001.1	3489922	3490027	LjRoot223:L297
+SMT4a	SMT4a:L300	LjRoot223	shared_position		NZ_CAXURG020000001.1	76567	76647	LjRoot223:L299
+SMT4a	SMT4a:L301	LjRoot223	other_sequence_in_other_assembly	gap_2478bp	NZ_CAXURG020000002.1	2862931	2865409	
+SMT4a	SMT4a:L302	LjRoot223	unresolved	up_unplaced				
+SMT4a	SMT4a:L303	LjRoot223	other_sequence_in_other_assembly	gap_2427bp	NZ_CAXURG020000001.1	655336	657763	
+SMT4a	SMT4a:L304	LjRoot223	unresolved	down_unplaced				
+SMT4a	SMT4a:L305	LjRoot223	unresolved	up_unplaced				
+SMT4a	SMT4a:L306	LjRoot223	other_sequence_in_other_assembly	gap_763bp	NZ_CAXURG020000001.1	1937464	1938227	
+SMT4a	SMT4a:L307	LjRoot223	other_sequence_in_other_assembly	gap_2460bp	NZ_CAXURG020000001.1	3494740	3497200	
+SMT4a	SMT4a:L308	LjRoot223	empty_in_other_assembly		NZ_CAXURG020000002.1	1793672	1793717	
+SMT4a	SMT4a:L309	LjRoot223	other_sequence_in_other_assembly	gap_129bp	NZ_CAXURG020000002.1	2475248	2475377	
+SMT4a	SMT4a:L310	LjRoot223	other_sequence_in_other_assembly	gap_267bp	NZ_CAXURG020000002.1	2453694	2453961	
+SMT4a	SMT4a:L311	LjRoot223	other_sequence_in_other_assembly	gap_364bp	NZ_CAXURG020000002.1	1503720	1504084	
+SMT4a	SMT4a:L312	LjRoot223	other_sequence_in_other_assembly	gap_294bp	NZ_CAXURG020000002.1	414176	414470	
+SMT4a	SMT4a:L313	LjRoot223	other_sequence_in_other_assembly	gap_364bp	NZ_CAXURG020000001.1	61164	61528	
+SMT4a	SMT4a:L315	LjRoot223	shared_position		NZ_CAXURG020000002.1	3037420	3037625	LjRoot223:L314
+SMT4a	SMT4a:L317	LjRoot223	shared_position		NZ_CAXURG020000002.1	2879889	2880094	LjRoot223:L316
+SMT4a	SMT4a:L319	LjRoot223	shared_position		NZ_CAXURG020000001.1	2030367	2030566	LjRoot223:L318
+SMT4a	SMT4a:L321	LjRoot223	shared_position		NZ_CAXURG020000001.1	3728430	3728635	LjRoot223:L320
+SMT4a	SMT4a:L322	LjRoot223	other_sequence_in_other_assembly	gap_1492bp	NZ_CAXURG020000002.1	2743652	2745144	
+SMT4a	SMT4a:L324	LjRoot223	other_sequence_in_other_assembly	gap_3048bp	NZ_CAXURG020000001.1	1897064	1900112	
+SMT4a	SMT4a:L325	LjRoot223	unresolved	down_unplaced				
+SMT4a	SMT4a:L326	LjRoot223	shared_position		NZ_CAXURG020000002.1	1807050	1810095	LjRoot223:L323
+SMT4a	SMT4a:L327	LjRoot223	empty_in_other_assembly		NZ_CAXURG020000002.1	575778	575803	
+SMT4a	SMT4a:L328	LjRoot223	unresolved	up_unplaced				
+SMT4a	SMT4a:L329	LjRoot223	unresolved	flank_order_or_distance_inconsistent				
+SMT4a	SMT4a:L330	LjRoot223	unresolved	down_multiple_places				
+SMT4a	SMT4a:L331	LjRoot223	unresolved	down_multiple_places				
+SMT4a	SMT4a:L332	LjRoot223	unresolved	up_multiple_places				
+SMT4a	SMT4a:L336	LjRoot223	unresolved	down_multiple_places				
+SMT4a	SMT4a:L337	LjRoot223	unresolved	up_multiple_places				
+SMT4a	SMT4a:L338	LjRoot223	unresolved	down_multiple_places				
+SMT4a	SMT4a:L339	LjRoot223	unresolved	up_unplaced				
+SMT4a	SMT4a:L340	LjRoot223	unresolved	up_unplaced				
+SMT4a	SMT4a:L341	LjRoot223	unresolved	up_unplaced				
+SMT4a	SMT4a:L342	LjRoot223	unresolved	up_multiple_places				
+SMT4a	SMT4a:L343	LjRoot223	unresolved	up_multiple_places				
+SMT4a	SMT4a:L344	LjRoot223	unresolved	down_multiple_places				
+SMT4a	SMT4a:L345	LjRoot223	unresolved	up_unplaced				
+SMT4a	SMT4a:L346	LjRoot223	unresolved	down_unplaced				
+SMT4a	SMT4a:L347	LjRoot223	other_sequence_in_other_assembly	gap_2665bp	NZ_CAXURG020000002.1	1807050	1809715	
+LjRoot223	LjRoot223:L0	SMT4a	unresolved	up_multiple_places				
+LjRoot223	LjRoot223:L1	SMT4a	shared_position		NZ_CP084255.1	2434603	2435947	SMT4a:L8
+LjRoot223	LjRoot223:L2	SMT4a	empty_in_other_assembly		NZ_CP084255.1	2116993	2117018	
+LjRoot223	LjRoot223:L3	SMT4a	shared_position		NZ_CP084255.1	478280	479626	SMT4a:L7
+LjRoot223	LjRoot223:L4	SMT4a	empty_in_other_assembly		NZ_CP084256.1	783483	783488	
+LjRoot223	LjRoot223:L5	SMT4a	empty_in_other_assembly		NZ_CP084256.1	2395422	2395431	
+LjRoot223	LjRoot223:L6	SMT4a	empty_in_other_assembly		NZ_CP084256.1	2735772	2735778	
+LjRoot223	LjRoot223:L13	SMT4a	unresolved	down_multiple_places				
+LjRoot223	LjRoot223:L14	SMT4a	shared_position		NZ_CP084255.1	568292	574083	SMT4a:L19
+LjRoot223	LjRoot223:L15	SMT4a	shared_position		NZ_CP084255.1	398144	403780	SMT4a:L18
+LjRoot223	LjRoot223:L16	SMT4a	shared_position		NZ_CP084256.1	810918	816712	SMT4a:L21
+LjRoot223	LjRoot223:L17	SMT4a	unresolved	up_unplaced				
+LjRoot223	LjRoot223:L23	SMT4a	empty_in_other_assembly		NZ_CP084255.1	3815130	3815164	
+LjRoot223	LjRoot223:L24	SMT4a	unresolved	up_unplaced				
+LjRoot223	LjRoot223:L25	SMT4a	unresolved	up_unplaced				
+LjRoot223	LjRoot223:L26	SMT4a	unresolved	up_multiple_places				
+LjRoot223	LjRoot223:L27	SMT4a	unresolved	down_unplaced				
+LjRoot223	LjRoot223:L36	SMT4a	unresolved	down_multiple_places				
+LjRoot223	LjRoot223:L37	SMT4a	unresolved	up_unplaced				
+LjRoot223	LjRoot223:L45	SMT4a	other_sequence_in_other_assembly	gap_1407bp	NZ_CP084255.1	1392474	1393881	
+LjRoot223	LjRoot223:L46	SMT4a	unresolved	up_multiple_places				
+LjRoot223	LjRoot223:L47	SMT4a	unresolved	flanks_on_different_contigs_or_strands				
+LjRoot223	LjRoot223:L48	SMT4a	other_sequence_in_other_assembly	gap_1405bp	NZ_CP084255.1	3350931	3352336	
+LjRoot223	LjRoot223:L49	SMT4a	other_sequence_in_other_assembly	gap_1375bp	NZ_CP084255.1	3827592	3828967	
+LjRoot223	LjRoot223:L61	SMT4a	shared_position		NZ_CP084255.1	3517547	3518892	SMT4a:L67
+LjRoot223	LjRoot223:L62	SMT4a	shared_position		NZ_CP084255.1	3300315	3301661	SMT4a:L66
+LjRoot223	LjRoot223:L63	SMT4a	shared_position		NZ_CP084255.1	1953064	1954407	SMT4a:L65
+LjRoot223	LjRoot223:L64	SMT4a	unresolved	down_unplaced				
+LjRoot223	LjRoot223:L68	SMT4a	unresolved	flank_order_or_distance_inconsistent				
+LjRoot223	LjRoot223:L69	SMT4a	unresolved	flank_order_or_distance_inconsistent				
+LjRoot223	LjRoot223:L70	SMT4a	unresolved	up_unplaced				
+LjRoot223	LjRoot223:L71	SMT4a	shared_position		NZ_CP084255.1	649230	650619	SMT4a:L72
+LjRoot223	LjRoot223:L76	SMT4a	shared_position		NZ_CP084256.1	985308	985413	SMT4a:L77
+LjRoot223	LjRoot223:L78	SMT4a	shared_position		NZ_CP084256.1	659928	659993	SMT4a:L79
+LjRoot223	LjRoot223:L81	SMT4a	shared_position		NZ_CP084255.1	3460415	3460513	SMT4a:L82
+LjRoot223	LjRoot223:L83	SMT4a	shared_position		NZ_CP084255.1	3382629	3382725	SMT4a:L84
+LjRoot223	LjRoot223:L85	SMT4a	shared_position		NZ_CP084255.1	3244558	3244640	SMT4a:L86
+LjRoot223	LjRoot223:L87	SMT4a	shared_position		NZ_CP084255.1	3014641	3014740	SMT4a:L88
+LjRoot223	LjRoot223:L89	SMT4a	shared_position		NZ_CP084255.1	2615094	2615192	SMT4a:L90
+LjRoot223	LjRoot223:L91	SMT4a	shared_position		NZ_CP084255.1	2505459	2505551	SMT4a:L92
+LjRoot223	LjRoot223:L95	SMT4a	shared_position		NZ_CP084255.1	1940949	1941055	SMT4a:L96
+LjRoot223	LjRoot223:L97	SMT4a	shared_position		NZ_CP084255.1	1863103	1863228	SMT4a:L98
+LjRoot223	LjRoot223:L100	SMT4a	shared_position		NZ_CP084255.1	1002869	1002951	SMT4a:L101
+LjRoot223	LjRoot223:L103	SMT4a	shared_position		NZ_CP084255.1	539920	540016	SMT4a:L104
+LjRoot223	LjRoot223:L119	SMT4a	shared_position		NZ_CP084256.1	2836919	2837001	SMT4a:L120
+LjRoot223	LjRoot223:L121	SMT4a	shared_position		NZ_CP084256.1	2791852	2791891	SMT4a:L122
+LjRoot223	LjRoot223:L123	SMT4a	shared_position		NZ_CP084256.1	2791088	2791131	SMT4a:L124
+LjRoot223	LjRoot223:L125	SMT4a	shared_position		NZ_CP084256.1	2406163	2406232	SMT4a:L126
+LjRoot223	LjRoot223:L127	SMT4a	shared_position		NZ_CP084256.1	2011153	2011244	SMT4a:L128
+LjRoot223	LjRoot223:L131	SMT4a	shared_position		NZ_CP084256.1	1313747	1313845	SMT4a:L132
+LjRoot223	LjRoot223:L133	SMT4a	shared_position		NZ_CP084256.1	766866	766938	SMT4a:L134
+LjRoot223	LjRoot223:L136	SMT4a	shared_position		NZ_CP084256.1	656096	656140	SMT4a:L137
+LjRoot223	LjRoot223:L138	SMT4a	shared_position		NZ_CP084256.1	449823	449880	SMT4a:L139
+LjRoot223	LjRoot223:L140	SMT4a	shared_position		NZ_CP084255.1	3478216	3478319	SMT4a:L141
+LjRoot223	LjRoot223:L142	SMT4a	shared_position		NZ_CP084255.1	3421226	3421279	SMT4a:L143
+LjRoot223	LjRoot223:L144	SMT4a	shared_position		NZ_CP084255.1	3383003	3383037	SMT4a:L145
+LjRoot223	LjRoot223:L146	SMT4a	shared_position		NZ_CP084255.1	3244985	3245038	SMT4a:L147
+LjRoot223	LjRoot223:L148	SMT4a	shared_position		NZ_CP084255.1	3244006	3244066	SMT4a:L149
+LjRoot223	LjRoot223:L150	SMT4a	shared_position		NZ_CP084255.1	2604781	2604835	SMT4a:L151
+LjRoot223	LjRoot223:L152	SMT4a	shared_position		NZ_CP084255.1	2093999	2094078	SMT4a:L153
+LjRoot223	LjRoot223:L154	SMT4a	shared_position		NZ_CP084255.1	1863569	1863683	SMT4a:L155
+LjRoot223	LjRoot223:L156	SMT4a	shared_position		NZ_CP084255.1	1386676	1386740	SMT4a:L157
+LjRoot223	LjRoot223:L158	SMT4a	shared_position		NZ_CP084255.1	1373177	1373235	SMT4a:L159
+LjRoot223	LjRoot223:L160	SMT4a	shared_position		NZ_CP084255.1	836852	836928	SMT4a:L161
+LjRoot223	LjRoot223:L162	SMT4a	shared_position		NZ_CP084255.1	822060	822110	SMT4a:L163
+LjRoot223	LjRoot223:L164	SMT4a	shared_position		NZ_CP084255.1	491690	491749	SMT4a:L165
+LjRoot223	LjRoot223:L166	SMT4a	shared_position		NZ_CP084255.1	195470	195509	SMT4a:L167
+LjRoot223	LjRoot223:L168	SMT4a	shared_position		NZ_CP084255.1	194654	194732	SMT4a:L169
+LjRoot223	LjRoot223:L175	SMT4a	shared_position		NZ_CP084255.1	3064367	3066079	SMT4a:L176
+LjRoot223	LjRoot223:L177	SMT4a	shared_position		NZ_CP084256.1	2976992	2977550	SMT4a:L178
+LjRoot223	LjRoot223:L184	SMT4a	shared_position		NZ_CP084256.1	384662	385237	SMT4a:L185
+LjRoot223	LjRoot223:L200	SMT4a	shared_position		NZ_CP084256.1	3027291	3027522	SMT4a:L201
+LjRoot223	LjRoot223:L204	SMT4a	shared_position		NZ_CP084255.1	3435637	3435730	SMT4a:L205
+LjRoot223	LjRoot223:L209	SMT4a	shared_position		NZ_CP084255.1	837963	838096	SMT4a:L210
+LjRoot223	LjRoot223:L223	SMT4a	shared_position		NZ_CP084257.1	1692	2366	SMT4a:L224
+LjRoot223	LjRoot223:L225	SMT4a	shared_position		NZ_CP084256.1	2989338	2989953	SMT4a:L226
+LjRoot223	LjRoot223:L228	SMT4a	shared_position		NZ_CP084255.1	3899577	3900236	SMT4a:L229
+LjRoot223	LjRoot223:L230	SMT4a	shared_position		NZ_CP084255.1	3829926	3830624	SMT4a:L231
+LjRoot223	LjRoot223:L232	SMT4a	shared_position		NZ_CP084255.1	2441401	2442070	SMT4a:L233
+LjRoot223	LjRoot223:L235	SMT4a	shared_position		NZ_CP084255.1	1832594	1833230	SMT4a:L236
+LjRoot223	LjRoot223:L237	SMT4a	unresolved	up_multiple_places				
+LjRoot223	LjRoot223:L239	SMT4a	shared_position		NZ_CP084255.1	267178	267865	SMT4a:L240
+LjRoot223	LjRoot223:L246	SMT4a	shared_position		NZ_CP084255.1	651108	651435	SMT4a:L247
+LjRoot223	LjRoot223:L248	SMT4a	shared_position		NZ_CP084255.1	350283	350866	SMT4a:L249
+LjRoot223	LjRoot223:L253	SMT4a	unresolved	up_multiple_places				
+LjRoot223	LjRoot223:L258	SMT4a	shared_position		NZ_CP084255.1	1378743	1378825	SMT4a:L259
+LjRoot223	LjRoot223:L260	SMT4a	shared_position		NZ_CP084256.1	2032860	2032943	SMT4a:L261
+LjRoot223	LjRoot223:L263	SMT4a	shared_position		NZ_CP084255.1	3770728	3771280	SMT4a:L264
+LjRoot223	LjRoot223:L266	SMT4a	shared_position		NZ_CP084255.1	2945574	2946029	SMT4a:L267
+LjRoot223	LjRoot223:L268	SMT4a	shared_position		NZ_CP084255.1	2158587	2158859	SMT4a:L269
+LjRoot223	LjRoot223:L270	SMT4a	shared_position		NZ_CP084255.1	1621778	1622229	SMT4a:L271
+LjRoot223	LjRoot223:L276	SMT4a	unresolved	down_multiple_places				
+LjRoot223	LjRoot223:L293	SMT4a	shared_position		NZ_CP084255.1	1636333	1636389	SMT4a:L294
+LjRoot223	LjRoot223:L295	SMT4a	unresolved	up_unplaced				
+LjRoot223	LjRoot223:L297	SMT4a	shared_position		NZ_CP084255.1	764615	764720	SMT4a:L298
+LjRoot223	LjRoot223:L299	SMT4a	shared_position		NZ_CP084255.1	69625	69699	SMT4a:L300
+LjRoot223	LjRoot223:L314	SMT4a	shared_position		NZ_CP084256.1	3017341	3017546	SMT4a:L315
+LjRoot223	LjRoot223:L316	SMT4a	shared_position		NZ_CP084256.1	2862017	2862222	SMT4a:L317
+LjRoot223	LjRoot223:L318	SMT4a	shared_position		NZ_CP084255.1	2144713	2144912	SMT4a:L319
+LjRoot223	LjRoot223:L320	SMT4a	shared_position		NZ_CP084255.1	524468	524673	SMT4a:L321
+LjRoot223	LjRoot223:L323	SMT4a	shared_position		NZ_CP084256.1	1798568	1801619	SMT4a:L326
+LjRoot223	LjRoot223:L333	SMT4a	unresolved	down_multiple_places				
+LjRoot223	LjRoot223:L334	SMT4a	unresolved	up_multiple_places				
+LjRoot223	LjRoot223:L335	SMT4a	unresolved	down_multiple_places				
+LjRoot223	LjRoot223:L348	SMT4a	other_sequence_in_other_assembly	gap_1446bp	NZ_CP084255.1	1379624	1381070	
+LjRoot223	LjRoot223:L349	SMT4a	unresolved	down_unplaced				
+LjRoot223	LjRoot223:L350	SMT4a	empty_in_other_assembly		NZ_CP084255.1	371214	371230	
+LjRoot223	LjRoot223:L351	SMT4a	unresolved	flank_order_or_distance_inconsistent				
+LjRoot223	LjRoot223:L352	SMT4a	unresolved	flank_order_or_distance_inconsistent				
+LjRoot223	LjRoot223:L353	SMT4a	unresolved	up_multiple_places				
+LjRoot223	LjRoot223:L354	SMT4a	unresolved	flank_order_or_distance_inconsistent				
+LjRoot223	LjRoot223:L355	SMT4a	unresolved	up_multiple_places				
+LjRoot223	LjRoot223:L356	SMT4a	unresolved	up_multiple_places				
+LjRoot223	LjRoot223:L357	SMT4a	unresolved	up_multiple_places				
+LjRoot223	LjRoot223:L358	SMT4a	other_sequence_in_other_assembly	gap_92bp	NZ_CP084256.1	1474247	1474339	
+LjRoot223	LjRoot223:L359	SMT4a	other_sequence_in_other_assembly	gap_179bp	NZ_CP084256.1	655626	655805	
+LjRoot223	LjRoot223:L360	SMT4a	other_sequence_in_other_assembly	gap_93bp	NZ_CP084256.1	602326	602419	
+LjRoot223	LjRoot223:L361	SMT4a	other_sequence_in_other_assembly	gap_95bp	NZ_CP084255.1	185440	185535	
+LjRoot223	LjRoot223:L362	SMT4a	other_sequence_in_other_assembly	gap_81bp	NZ_CP084255.1	821705	821786	
+LjRoot223	LjRoot223:L363	SMT4a	other_sequence_in_other_assembly	gap_95bp	NZ_CP084255.1	1792271	1792366	
+LjRoot223	LjRoot223:L364	SMT4a	empty_in_other_assembly		NZ_CP084255.1	1862329	1862378	
+LjRoot223	LjRoot223:L365	SMT4a	unresolved	up_unplaced				
+LjRoot223	LjRoot223:L366	SMT4a	other_sequence_in_other_assembly	gap_96bp	NZ_CP084255.1	2004182	2004278	
+LjRoot223	LjRoot223:L367	SMT4a	other_sequence_in_other_assembly	gap_105bp	NZ_CP084255.1	2045275	2045380	
+LjRoot223	LjRoot223:L368	SMT4a	unresolved	flanks_on_different_contigs_or_strands				
+LjRoot223	LjRoot223:L369	SMT4a	unresolved	up_unplaced				
+LjRoot223	LjRoot223:L370	SMT4a	unresolved	down_unplaced				
+LjRoot223	LjRoot223:L371	SMT4a	unresolved	up_multiple_places				
+LjRoot223	LjRoot223:L372	SMT4a	unresolved	down_unplaced				
+LjRoot223	LjRoot223:L373	SMT4a	other_sequence_in_other_assembly	gap_217bp	NZ_CP084255.1	153587	153804	
+LjRoot223	LjRoot223:L374	SMT4a	other_sequence_in_other_assembly	gap_219bp	NZ_CP084255.1	153904	154123	
+LjRoot223	LjRoot223:L375	SMT4a	other_sequence_in_other_assembly	gap_217bp	NZ_CP084255.1	303558	303775	
+LjRoot223	LjRoot223:L376	SMT4a	other_sequence_in_other_assembly	gap_213bp	NZ_CP084255.1	350653	350866	
+LjRoot223	LjRoot223:L377	SMT4a	other_sequence_in_other_assembly	gap_210bp	NZ_CP084255.1	304226	304436	
+LjRoot223	LjRoot223:L378	SMT4a	other_sequence_in_other_assembly	gap_235bp	NZ_CP084255.1	350094	350329	
+LjRoot223	LjRoot223:L379	SMT4a	unresolved	up_multiple_places				
+LjRoot223	LjRoot223:L380	SMT4a	other_sequence_in_other_assembly	gap_209bp	NZ_CP084255.1	1374618	1374827	
+LjRoot223	LjRoot223:L381	SMT4a	unresolved	up_multiple_places				
+LjRoot223	LjRoot223:L382	SMT4a	other_sequence_in_other_assembly	gap_219bp	NZ_CP084255.1	3434336	3434555	
+LjRoot223	LjRoot223:L383	SMT4a	other_sequence_in_other_assembly	gap_198bp	NZ_CP084255.1	3434991	3435189	
+LjRoot223	LjRoot223:L384	SMT4a	other_sequence_in_other_assembly	gap_209bp	NZ_CP084255.1	1378541	1378750	
+LjRoot223	LjRoot223:L385	SMT4a	unresolved	down_unplaced				
+LjRoot223	LjRoot223:L386	SMT4a	unresolved	up_multiple_places				
+LjRoot223	LjRoot223:L387	SMT4a	unresolved	up_multiple_places				
+LjRoot223	LjRoot223:L388	SMT4a	unresolved	down_multiple_places				
+LjRoot223	LjRoot223:L389	SMT4a	other_sequence_in_other_assembly	gap_57bp	NZ_CP084255.1	1398375	1398432	
+LjRoot223	LjRoot223:L390	SMT4a	other_sequence_in_other_assembly	gap_197bp	NZ_CP084255.1	1398824	1399021	
+LjRoot223	LjRoot223:L391	SMT4a	unresolved	flanks_on_different_contigs_or_strands				
+LjRoot223	LjRoot223:L392	SMT4a	unresolved	down_multiple_places				
+LjRoot223	LjRoot223:L393	SMT4a	unresolved	up_unplaced				
+LjRoot223	LjRoot223:L394	SMT4a	unresolved	down_unplaced				
+LjRoot223	LjRoot223:L395	SMT4a	unresolved	up_multiple_places				
+LjRoot223	LjRoot223:L396	SMT4a	unresolved	down_multiple_places				
+LjRoot223	LjRoot223:L397	SMT4a	other_sequence_in_other_assembly	gap_95bp	NZ_CP084255.1	3399302	3399397	
+LjRoot223	LjRoot223:L398	SMT4a	other_sequence_in_other_assembly	gap_106bp	NZ_CP084255.1	3401920	3402026	
+LjRoot223	LjRoot223:L399	SMT4a	unresolved	up_multiple_places				
+LjRoot223	LjRoot223:L400	SMT4a	other_sequence_in_other_assembly	gap_3002bp	NZ_CP084255.1	3723599	3726601	
+LjRoot223	LjRoot223:L401	SMT4a	unresolved	up_multiple_places				
+LjRoot223	LjRoot223:L402	SMT4a	other_sequence_in_other_assembly	gap_251bp	NZ_CP084255.1	3829537	3829788	
+LjRoot223	LjRoot223:L403	SMT4a	other_sequence_in_other_assembly	gap_227bp	NZ_CP084255.1	3997338	3997565	
+LjRoot223	LjRoot223:L404	SMT4a	unresolved	flank_order_or_distance_inconsistent				
+LjRoot223	LjRoot223:L405	SMT4a	unresolved	down_multiple_places				
+LjRoot223	LjRoot223:L406	SMT4a	other_sequence_in_other_assembly	gap_110bp	NZ_CP084257.1	62130	62240	
+LjRoot223	LjRoot223:L407	SMT4a	unresolved	flanks_on_different_contigs_or_strands				
+LjRoot223	LjRoot223:L408	SMT4a	unresolved	flanks_on_different_contigs_or_strands				
+LjRoot223	LjRoot223:L409	SMT4a	other_sequence_in_other_assembly	gap_87bp	NZ_CP084256.1	1764289	1764376	
+LjRoot223	LjRoot223:L410	SMT4a	other_sequence_in_other_assembly	gap_74bp	NZ_CP084256.1	660312	660386	
+LjRoot223	LjRoot223:L411	SMT4a	other_sequence_in_other_assembly	gap_55bp	NZ_CP084256.1	2408030	2408085	
+LjRoot223	LjRoot223:L412	SMT4a	other_sequence_in_other_assembly	gap_61bp	NZ_CP084255.1	2891940	2892001	
+LjRoot223	LjRoot223:L413	SMT4a	unresolved	down_multiple_places				
+LjRoot223	LjRoot223:L414	SMT4a	other_sequence_in_other_assembly	gap_678bp	NZ_CP084256.1	2866371	2867049	
+LjRoot223	LjRoot223:L415	SMT4a	other_sequence_in_other_assembly	gap_59bp	NZ_CP084255.1	1823743	1823802	
+LjRoot223	LjRoot223:L416	SMT4a	other_sequence_in_other_assembly	gap_653bp	NZ_CP084255.1	1834614	1835267	
+LjRoot223	LjRoot223:L417	SMT4a	other_sequence_in_other_assembly	gap_675bp	NZ_CP084255.1	2416346	2417021	
+LjRoot223	LjRoot223:L418	SMT4a	unresolved	down_multiple_places				
+LjRoot223	LjRoot223:L419	SMT4a	unresolved	up_multiple_places				
+LjRoot223	LjRoot223:L420	SMT4a	unresolved	up_multiple_places				
+LjRoot223	LjRoot223:L421	SMT4a	unresolved	down_multiple_places				
+LjRoot223	LjRoot223:L422	SMT4a	unresolved	up_multiple_places				
+LjRoot223	LjRoot223:L423	SMT4a	unresolved	down_unplaced				
+LjRoot223	LjRoot223:L424	SMT4a	empty_in_other_assembly		NZ_CP084255.1	3520779	3520783	
+LjRoot223	LjRoot223:L425	SMT4a	unresolved	up_unplaced				
+LjRoot223	LjRoot223:L426	SMT4a	unresolved	up_multiple_places				
+LjRoot223	LjRoot223:L427	SMT4a	other_sequence_in_other_assembly	gap_86bp	NZ_CP084256.1	1567339	1567425	
+LjRoot223	LjRoot223:L428	SMT4a	unresolved	up_unplaced				
+LjRoot223	LjRoot223:L429	SMT4a	other_sequence_in_other_assembly	gap_68bp	NZ_CP084256.1	2405822	2405890	
+LjRoot223	LjRoot223:L430	SMT4a	other_sequence_in_other_assembly	gap_198bp	NZ_CP084256.1	1763085	1763283	
+LjRoot223	LjRoot223:L431	SMT4a	other_sequence_in_other_assembly	gap_128bp	NZ_CP084255.1	837249	837377	
+LjRoot223	LjRoot223:L432	SMT4a	other_sequence_in_other_assembly	gap_173bp	NZ_CP084255.1	1944270	1944443	
+LjRoot223	LjRoot223:L433	SMT4a	other_sequence_in_other_assembly	gap_128bp	NZ_CP084255.1	2094409	2094537	
+LjRoot223	LjRoot223:L434	SMT4a	other_sequence_in_other_assembly	gap_142bp	NZ_CP084255.1	2095123	2095265	
+LjRoot223	LjRoot223:L435	SMT4a	other_sequence_in_other_assembly	gap_80bp	NZ_CP084255.1	2774893	2774973	
+LjRoot223	LjRoot223:L436	SMT4a	unresolved	down_multiple_places				
+LjRoot223	LjRoot223:L437	SMT4a	unresolved	up_multiple_places				
+LjRoot223	LjRoot223:L438	SMT4a	unresolved	down_multiple_places				
+LjRoot223	LjRoot223:L439	SMT4a	unresolved	flanks_on_different_contigs_or_strands				
+LjRoot223	LjRoot223:L440	SMT4a	other_sequence_in_other_assembly	gap_123bp	NZ_CP084256.1	1408868	1408991	
+LjRoot223	LjRoot223:L441	SMT4a	other_sequence_in_other_assembly	gap_114bp	NZ_CP084255.1	3236008	3236122	
+LjRoot223	LjRoot223:L442	SMT4a	other_sequence_in_other_assembly	gap_77bp	NZ_CP084256.1	547034	547111	
+LjRoot223	LjRoot223:L443	SMT4a	other_sequence_in_other_assembly	gap_234bp	NZ_CP084255.1	829451	829685	
+LjRoot223	LjRoot223:L444	SMT4a	other_sequence_in_other_assembly	gap_572bp	NZ_CP084255.1	2044968	2045540	
+LjRoot223	LjRoot223:L445	SMT4a	other_sequence_in_other_assembly	gap_571bp	NZ_CP084255.1	2597896	2598467	
+LjRoot223	LjRoot223:L446	SMT4a	other_sequence_in_other_assembly	gap_226bp	NZ_CP084255.1	3014641	3014867	
+LjRoot223	LjRoot223:L447	SMT4a	other_sequence_in_other_assembly	gap_61bp	NZ_CP084256.1	1982495	1982556	
+LjRoot223	LjRoot223:L448	SMT4a	unresolved	down_multiple_places				
+LjRoot223	LjRoot223:L449	SMT4a	unresolved	flank_order_or_distance_inconsistent				
+LjRoot223	LjRoot223:L450	SMT4a	unresolved	up_multiple_places				
+LjRoot223	LjRoot223:L451	SMT4a	other_sequence_in_other_assembly	gap_115bp	NZ_CP084255.1	3258402	3258517	
+LjRoot223	LjRoot223:L452	SMT4a	unresolved	up_unplaced				
+LjRoot223	LjRoot223:L453	SMT4a	other_sequence_in_other_assembly	gap_125bp	NZ_CP084256.1	242234	242359	
+LjRoot223	LjRoot223:L454	SMT4a	other_sequence_in_other_assembly	gap_72bp	NZ_CP084256.1	43721	43793	
+LjRoot223	LjRoot223:L455	SMT4a	other_sequence_in_other_assembly	gap_167bp	NZ_CP084255.1	580546	580713	
+LjRoot223	LjRoot223:L456	SMT4a	other_sequence_in_other_assembly	gap_135bp	NZ_CP084255.1	1089011	1089146	
+LjRoot223	LjRoot223:L457	SMT4a	other_sequence_in_other_assembly	gap_176bp	NZ_CP084255.1	3001157	3001333	
+LjRoot223	LjRoot223:L458	SMT4a	other_sequence_in_other_assembly	gap_77bp	NZ_CP084255.1	3756599	3756676	
+LjRoot223	LjRoot223:L459	SMT4a	unresolved	down_unplaced				
+LjRoot223	LjRoot223:L460	SMT4a	unresolved	up_unplaced				
+LjRoot223	LjRoot223:L461	SMT4a	other_sequence_in_other_assembly	gap_66bp	NZ_CP084255.1	2610682	2610748	
+LjRoot223	LjRoot223:L462	SMT4a	unresolved	up_unplaced				
+LjRoot223	LjRoot223:L463	SMT4a	unresolved	up_unplaced				
+LjRoot223	LjRoot223:L464	SMT4a	unresolved	up_unplaced				
+LjRoot223	LjRoot223:L465	SMT4a	unresolved	down_unplaced				
+LjRoot223	LjRoot223:L466	SMT4a	other_sequence_in_other_assembly	gap_3052bp	NZ_CP084255.1	2275155	2278207	
+LjRoot223	LjRoot223:L467	SMT4a	unresolved	flank_order_or_distance_inconsistent				
+LjRoot223	LjRoot223:L468	SMT4a	unresolved	flank_order_or_distance_inconsistent				
+LjRoot223	LjRoot223:L469	SMT4a	unresolved	down_multiple_places				
+LjRoot223	LjRoot223:L470	SMT4a	unresolved	down_multiple_places				
+LjRoot223	LjRoot223:L471	SMT4a	unresolved	up_multiple_places				

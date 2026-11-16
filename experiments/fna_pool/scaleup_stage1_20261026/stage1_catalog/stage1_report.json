@@ -1,0 +1,1448 @@
+{
+ "version": "stage1_catalog_v1",
+ "evidence_source": "assembly_only",
+ "read_evidence_status": "long_read_evidence_pending",
+ "per_batch": {
+  "actinomycetaceae": {
+   "batch_id": "family_2049",
+   "taxon_id": "2049",
+   "pool_assemblies": "1139",
+   "pool_biosamples": "1139",
+   "pool_projects": "322",
+   "pool_annotated": "1132",
+   "pool_annotation_coverage": "0.9939",
+   "pool_samples_with_usable_long_reads": "55",
+   "reads_meta_eligible_wgs_fastq_samples": "119",
+   "downloads": {
+    "rows": 2262,
+    "status": {
+     "verified": 2262
+    },
+    "failed": [],
+    "annotation": {
+     "present": 1132,
+     "annotation_missing": 7
+    },
+    "gca_gcf_pair_checks": {
+     "identical_sequences": 1123
+    }
+   },
+   "s2": {
+    "samples": 1139,
+    "excluded_not_verified": 0,
+    "pair_status": {
+     "in_pair_table": 1116,
+     "no_pair_selected_pending_review": 23
+    },
+    "pairs": 3611,
+    "species_clusters": 161,
+    "clone_groups": 816
+   },
+   "s3": {
+    "pairs": 3611,
+    "raw_calls": 1291940,
+    "loci": 450224,
+    "status": {
+     "unresolved": 334511,
+     "replacement": 56340,
+     "two_flank_anchored": 59373
+    },
+    "anchored_lt2500": 52667
+   },
+   "s4": {
+    "short_anchored_loci": 52667,
+    "carriers": 1097,
+    "categories": {
+     "other_structure": 20772,
+     "boundary_intersection": 28186,
+     "boundary_or_repeat_review": 2138,
+     "main": 373,
+     "replacement": 303,
+     "short_other_segment": 574,
+     "gene_integrity_anomaly": 193,
+     "annotation_pending": 114,
+     "direction_mixed": 3,
+     "partner_mixed": 11
+    },
+    "translation": {
+     "match": 8106,
+     "pseudo": 297,
+     "mismatch": 7
+    },
+    "local_distinct_proteins": 993,
+    "local_families": 682,
+    "local_architectures": 543
+   },
+   "catalog": {
+    "loci": 1378,
+    "samples": 672,
+    "assemblies": 672,
+    "bioprojects": 195,
+    "organism_labels": 265,
+    "categories": {
+     "main": 373,
+     "replacement": 303,
+     "short_other_segment": 574,
+     "annotation_pending": 114,
+     "direction_mixed": 3,
+     "partner_mixed": 11
+    },
+    "protein_instances": 1676,
+    "protein_accessions": 994,
+    "distinct_proteins": 993,
+    "families": 682,
+    "homology_groups": 618,
+    "architectures": 543,
+    "distinct_core_sequences": 1067,
+    "local_families": 682,
+    "coding_anomaly_records": {
+     "mismatch": 7
+    },
+    "carrier_read_status_loci": {
+     "no_linked_runs": 1242,
+     "usable_runs_remote_only": 104,
+     "no_usable_runs": 32
+    }
+   }
+  },
+  "comamonadaceae": {
+   "batch_id": "family_80864",
+   "taxon_id": "80864",
+   "pool_assemblies": "1705",
+   "pool_biosamples": "1705",
+   "pool_projects": "894",
+   "pool_annotated": "1682",
+   "pool_annotation_coverage": "0.9865",
+   "pool_samples_with_usable_long_reads": "231",
+   "reads_meta_eligible_wgs_fastq_samples": "247",
+   "downloads": {
+    "rows": 3329,
+    "status": {
+     "verified": 3329
+    },
+    "failed": [],
+    "annotation": {
+     "present": 1682,
+     "annotation_missing": 23
+    },
+    "gca_gcf_pair_checks": {
+     "identical_sequences": 1624
+    }
+   },
+   "s2": {
+    "samples": 1705,
+    "excluded_not_verified": 0,
+    "pair_status": {
+     "in_pair_table": 1691,
+     "no_pair_selected_pending_review": 14
+    },
+    "pairs": 4399,
+    "species_clusters": 571,
+    "clone_groups": 1311
+   },
+   "s3": {
+    "pairs": 4399,
+    "raw_calls": 3579886,
+    "loci": 1250815,
+    "status": {
+     "replacement": 165638,
+     "unresolved": 927927,
+     "two_flank_anchored": 157250
+    },
+    "anchored_lt2500": 125528
+   },
+   "s4": {
+    "short_anchored_loci": 125528,
+    "carriers": 1617,
+    "categories": {
+     "boundary_or_repeat_review": 7187,
+     "boundary_intersection": 76306,
+     "gene_integrity_anomaly": 542,
+     "other_structure": 36394,
+     "replacement": 502,
+     "short_other_segment": 2697,
+     "main": 1010,
+     "annotation_pending": 853,
+     "partner_mixed": 35,
+     "direction_mixed": 2
+    },
+    "translation": {
+     "match": 40926,
+     "pseudo": 1168,
+     "mismatch": 24
+    },
+    "local_distinct_proteins": 3673,
+    "local_families": 2460,
+    "local_architectures": 1979
+   },
+   "catalog": {
+    "loci": 5099,
+    "samples": 1148,
+    "assemblies": 1148,
+    "bioprojects": 594,
+    "organism_labels": 719,
+    "categories": {
+     "replacement": 502,
+     "short_other_segment": 2697,
+     "main": 1010,
+     "annotation_pending": 853,
+     "partner_mixed": 35,
+     "direction_mixed": 2
+    },
+    "protein_instances": 5313,
+    "protein_accessions": 3778,
+    "distinct_proteins": 3673,
+    "families": 2460,
+    "homology_groups": 2113,
+    "architectures": 1979,
+    "distinct_core_sequences": 4167,
+    "local_families": 2460,
+    "coding_anomaly_records": {
+     "mismatch": 24
+    },
+    "carrier_read_status_loci": {
+     "no_linked_runs": 4207,
+     "usable_runs_local_verified": 671,
+     "usable_runs_remote_only": 187,
+     "no_usable_runs": 34
+    }
+   }
+  },
+  "eggerthellaceae": {
+   "batch_id": "family_1643826",
+   "taxon_id": "1643826",
+   "pool_assemblies": "329",
+   "pool_biosamples": "329",
+   "pool_projects": "128",
+   "pool_annotated": "315",
+   "pool_annotation_coverage": "0.9574",
+   "pool_samples_with_usable_long_reads": "11",
+   "reads_meta_eligible_wgs_fastq_samples": "120",
+   "downloads": {
+    "rows": 638,
+    "status": {
+     "verified": 638
+    },
+    "failed": [],
+    "annotation": {
+     "present": 315,
+     "annotation_missing": 14
+    },
+    "gca_gcf_pair_checks": {
+     "identical_sequences": 309
+    }
+   },
+   "s2": {
+    "samples": 329,
+    "excluded_not_verified": 0,
+    "pair_status": {
+     "in_pair_table": 325,
+     "no_pair_selected_pending_review": 4
+    },
+    "pairs": 1004,
+    "species_clusters": 56,
+    "clone_groups": 244
+   },
+   "s3": {
+    "pairs": 1004,
+    "raw_calls": 674748,
+    "loci": 209687,
+    "status": {
+     "unresolved": 157206,
+     "two_flank_anchored": 21213,
+     "replacement": 31268
+    },
+    "anchored_lt2500": 16341
+   },
+   "s4": {
+    "short_anchored_loci": 16341,
+    "carriers": 312,
+    "categories": {
+     "boundary_intersection": 7970,
+     "other_structure": 6246,
+     "short_other_segment": 169,
+     "boundary_or_repeat_review": 849,
+     "main": 117,
+     "gene_integrity_anomaly": 64,
+     "replacement": 66,
+     "partner_mixed": 5,
+     "annotation_pending": 855
+    },
+    "translation": {
+     "match": 3555,
+     "pseudo": 87,
+     "mismatch": 2
+    },
+    "local_distinct_proteins": 290,
+    "local_families": 231,
+    "local_architectures": 174
+   },
+   "catalog": {
+    "loci": 1212,
+    "samples": 200,
+    "assemblies": 200,
+    "bioprojects": 87,
+    "organism_labels": 52,
+    "categories": {
+     "short_other_segment": 169,
+     "main": 117,
+     "replacement": 66,
+     "partner_mixed": 5,
+     "annotation_pending": 855
+    },
+    "protein_instances": 475,
+    "protein_accessions": 291,
+    "distinct_proteins": 290,
+    "families": 231,
+    "homology_groups": 217,
+    "architectures": 174,
+    "distinct_core_sequences": 922,
+    "local_families": 231,
+    "coding_anomaly_records": {
+     "mismatch": 2
+    },
+    "carrier_read_status_loci": {
+     "no_linked_runs": 1198,
+     "usable_runs_remote_only": 14
+    }
+   }
+  },
+  "erwiniaceae": {
+   "batch_id": "family_1903409",
+   "taxon_id": "1903409",
+   "pool_assemblies": "2500",
+   "pool_biosamples": "2500",
+   "pool_projects": "950",
+   "pool_annotated": "2477",
+   "pool_annotation_coverage": "0.9908",
+   "pool_samples_with_usable_long_reads": "187",
+   "reads_meta_eligible_wgs_fastq_samples": "207",
+   "downloads": {
+    "rows": 4911,
+    "status": {
+     "verified": 4910,
+     "failed": 1
+    },
+    "failed": [
+     {
+      "accession": "GCA_003568535.1",
+      "attempts": 3,
+      "reason": "fna_total_equals_assembly_report"
+     }
+    ],
+    "annotation": {
+     "annotation_missing": 23,
+     "present": 2476
+    },
+    "gca_gcf_pair_checks": {
+     "identical_sequences": 2411
+    }
+   },
+   "s2": {
+    "samples": 2499,
+    "excluded_not_verified": 1,
+    "pair_status": {
+     "in_pair_table": 2486,
+     "no_pair_selected_pending_review": 13
+    },
+    "pairs": 8710,
+    "species_clusters": 270,
+    "clone_groups": 1551
+   },
+   "s3": {
+    "pairs": 8710,
+    "raw_calls": 3058673,
+    "loci": 964029,
+    "status": {
+     "unresolved": 719464,
+     "replacement": 116624,
+     "two_flank_anchored": 127941
+    },
+    "anchored_lt2500": 105616
+   },
+   "s4": {
+    "short_anchored_loci": 105616,
+    "carriers": 2361,
+    "categories": {
+     "annotation_pending": 481,
+     "other_structure": 53316,
+     "boundary_intersection": 42850,
+     "boundary_or_repeat_review": 5310,
+     "short_other_segment": 1097,
+     "main": 1072,
+     "gene_integrity_anomaly": 949,
+     "replacement": 505,
+     "direction_mixed": 8,
+     "partner_mixed": 28
+    },
+    "translation": {
+     "match": 25386,
+     "pseudo": 1842,
+     "mismatch": 11
+    },
+    "local_distinct_proteins": 1983,
+    "local_families": 1144,
+    "local_architectures": 874
+   },
+   "catalog": {
+    "loci": 3191,
+    "samples": 1230,
+    "assemblies": 1230,
+    "bioprojects": 535,
+    "organism_labels": 296,
+    "categories": {
+     "annotation_pending": 481,
+     "main": 1072,
+     "short_other_segment": 1097,
+     "replacement": 505,
+     "direction_mixed": 8,
+     "partner_mixed": 28
+    },
+    "protein_instances": 3733,
+    "protein_accessions": 2017,
+    "distinct_proteins": 1983,
+    "families": 1144,
+    "homology_groups": 924,
+    "architectures": 874,
+    "distinct_core_sequences": 2477,
+    "local_families": 1144,
+    "coding_anomaly_records": {
+     "mismatch": 11
+    },
+    "carrier_read_status_loci": {
+     "no_linked_runs": 2656,
+     "usable_runs_remote_only": 512,
+     "no_usable_runs": 23
+    }
+   }
+  },
+  "flavobacteriaceae": {
+   "batch_id": "family_49546",
+   "taxon_id": "49546",
+   "pool_assemblies": "3704",
+   "pool_biosamples": "3704",
+   "pool_projects": "2054",
+   "pool_annotated": "3682",
+   "pool_annotation_coverage": "0.9941",
+   "pool_samples_with_usable_long_reads": "190",
+   "reads_meta_eligible_wgs_fastq_samples": "118",
+   "downloads": {
+    "rows": 7219,
+    "status": {
+     "verified": 7219
+    },
+    "failed": [],
+    "annotation": {
+     "present": 3682,
+     "annotation_missing": 22
+    },
+    "gca_gcf_pair_checks": {
+     "identical_sequences": 3515
+    }
+   },
+   "s2": {
+    "samples": 3704,
+    "excluded_not_verified": 0,
+    "pair_status": {
+     "in_pair_table": 3539,
+     "no_pair_selected_pending_review": 165
+    },
+    "pairs": 7531,
+    "species_clusters": 1612,
+    "clone_groups": 2999
+   },
+   "s3": {
+    "pairs": 7531,
+    "raw_calls": 4292683,
+    "loci": 1695818,
+    "status": {
+     "unresolved": 1357953,
+     "replacement": 203869,
+     "two_flank_anchored": 133996
+    },
+    "anchored_lt2500": 107571
+   },
+   "s4": {
+    "short_anchored_loci": 107571,
+    "carriers": 3266,
+    "categories": {
+     "short_other_segment": 3186,
+     "boundary_intersection": 44989,
+     "other_structure": 42778,
+     "replacement": 1080,
+     "main": 2312,
+     "boundary_or_repeat_review": 12348,
+     "gene_integrity_anomaly": 539,
+     "direction_mixed": 18,
+     "partner_mixed": 75,
+     "annotation_pending": 246
+    },
+    "translation": {
+     "match": 49379,
+     "pseudo": 862,
+     "mismatch": 10
+    },
+    "local_distinct_proteins": 5859,
+    "local_families": 4847,
+    "local_architectures": 3936
+   },
+   "catalog": {
+    "loci": 6917,
+    "samples": 2388,
+    "assemblies": 2388,
+    "bioprojects": 1217,
+    "organism_labels": 1139,
+    "categories": {
+     "main": 2312,
+     "replacement": 1080,
+     "short_other_segment": 3186,
+     "direction_mixed": 18,
+     "partner_mixed": 75,
+     "annotation_pending": 246
+    },
+    "protein_instances": 8596,
+    "protein_accessions": 6080,
+    "distinct_proteins": 5859,
+    "families": 4847,
+    "homology_groups": 4025,
+    "architectures": 3936,
+    "distinct_core_sequences": 5471,
+    "local_families": 4847,
+    "coding_anomaly_records": {
+     "mismatch": 10
+    },
+    "carrier_read_status_loci": {
+     "no_linked_runs": 6323,
+     "usable_runs_remote_only": 450,
+     "no_usable_runs": 144
+    }
+   }
+  },
+  "lachnospiraceae": {
+   "batch_id": "family_186803",
+   "taxon_id": "186803",
+   "pool_assemblies": "3254",
+   "pool_biosamples": "3254",
+   "pool_projects": "669",
+   "pool_annotated": "2970",
+   "pool_annotation_coverage": "0.9127",
+   "pool_samples_with_usable_long_reads": "213",
+   "reads_meta_eligible_wgs_fastq_samples": "132",
+   "downloads": {
+    "rows": 5993,
+    "status": {
+     "verified": 5991,
+     "failed": 2
+    },
+    "failed": [
+     {
+      "accession": "GCF_902652075.1",
+      "attempts": 3,
+      "reason": "package_md5_all_ok"
+     },
+     {
+      "accession": "GCF_902652265.1",
+      "attempts": 3,
+      "reason": "package_md5_all_ok"
+     }
+    ],
+    "annotation": {
+     "annotation_missing": 284,
+     "present": 2968
+    },
+    "gca_gcf_pair_checks": {
+     "identical_sequences": 2737,
+     "not_checked_download_incomplete": 2
+    }
+   },
+   "s2": {
+    "samples": 3252,
+    "excluded_not_verified": 2,
+    "pair_status": {
+     "in_pair_table": 3111,
+     "no_pair_selected_pending_review": 141
+    },
+    "pairs": 8425,
+    "species_clusters": 544,
+    "clone_groups": 2529
+   },
+   "s3": {
+    "pairs": 8425,
+    "raw_calls": 4420424,
+    "loci": 1429768,
+    "status": {
+     "two_flank_anchored": 317394,
+     "replacement": 146329,
+     "unresolved": 966045
+    },
+    "anchored_lt2500": 261573
+   },
+   "s4": {
+    "short_anchored_loci": 261573,
+    "carriers": 3035,
+    "categories": {
+     "annotation_pending": 22840,
+     "other_structure": 103299,
+     "boundary_intersection": 117456,
+     "main": 3306,
+     "short_other_segment": 2368,
+     "boundary_or_repeat_review": 9744,
+     "replacement": 537,
+     "gene_integrity_anomaly": 1900,
+     "partner_mixed": 109,
+     "direction_mixed": 14
+    },
+    "translation": {
+     "match": 40986,
+     "pseudo": 3485,
+     "mismatch": 52
+    },
+    "local_distinct_proteins": 4764,
+    "local_families": 3180,
+    "local_architectures": 2578
+   },
+   "catalog": {
+    "loci": 29174,
+    "samples": 2439,
+    "assemblies": 2439,
+    "bioprojects": 475,
+    "organism_labels": 685,
+    "categories": {
+     "annotation_pending": 22840,
+     "short_other_segment": 2368,
+     "main": 3306,
+     "replacement": 537,
+     "partner_mixed": 109,
+     "direction_mixed": 14
+    },
+    "protein_instances": 7942,
+    "protein_accessions": 4884,
+    "distinct_proteins": 4764,
+    "families": 3179,
+    "homology_groups": 2582,
+    "architectures": 2577,
+    "distinct_core_sequences": 22963,
+    "local_families": 3180,
+    "coding_anomaly_records": {
+     "mismatch": 52
+    },
+    "carrier_read_status_loci": {
+     "no_linked_runs": 28049,
+     "usable_runs_remote_only": 1099,
+     "no_usable_runs": 26
+    }
+   }
+  },
+  "metamycoplasmataceae": {
+   "batch_id": "family_2895623",
+   "taxon_id": "2895623",
+   "pool_assemblies": "1738",
+   "pool_biosamples": "1738",
+   "pool_projects": "396",
+   "pool_annotated": "1561",
+   "pool_annotation_coverage": "0.8982",
+   "pool_samples_with_usable_long_reads": "156",
+   "reads_meta_eligible_wgs_fastq_samples": "176",
+   "downloads": {
+    "rows": 3099,
+    "status": {
+     "verified": 3099
+    },
+    "failed": [],
+    "annotation": {
+     "present": 1561,
+     "annotation_missing": 177
+    },
+    "gca_gcf_pair_checks": {
+     "identical_sequences": 1361
+    }
+   },
+   "s2": {
+    "samples": 1738,
+    "excluded_not_verified": 0,
+    "pair_status": {
+     "in_pair_table": 1721,
+     "no_pair_selected_pending_review": 17
+    },
+    "pairs": 5418,
+    "species_clusters": 83,
+    "clone_groups": 1396
+   },
+   "s3": {
+    "pairs": 5418,
+    "raw_calls": 427601,
+    "loci": 140480,
+    "status": {
+     "unresolved": 118911,
+     "replacement": 7351,
+     "two_flank_anchored": 14218
+    },
+    "anchored_lt2500": 11845
+   },
+   "s4": {
+    "short_anchored_loci": 11845,
+    "carriers": 1410,
+    "categories": {
+     "boundary_intersection": 5703,
+     "boundary_or_repeat_review": 1826,
+     "other_structure": 3064,
+     "gene_integrity_anomaly": 285,
+     "main": 510,
+     "short_other_segment": 105,
+     "replacement": 22,
+     "direction_mixed": 4,
+     "partner_mixed": 12,
+     "annotation_pending": 314
+    },
+    "translation": {
+     "match": 4413,
+     "pseudo": 393,
+     "mismatch": 4
+    },
+    "local_distinct_proteins": 409,
+    "local_families": 226,
+    "local_architectures": 190
+   },
+   "catalog": {
+    "loci": 967,
+    "samples": 493,
+    "assemblies": 493,
+    "bioprojects": 130,
+    "organism_labels": 45,
+    "categories": {
+     "main": 510,
+     "short_other_segment": 105,
+     "replacement": 22,
+     "direction_mixed": 4,
+     "partner_mixed": 12,
+     "annotation_pending": 314
+    },
+    "protein_instances": 728,
+    "protein_accessions": 425,
+    "distinct_proteins": 409,
+    "families": 226,
+    "homology_groups": 183,
+    "architectures": 190,
+    "distinct_core_sequences": 754,
+    "local_families": 226,
+    "coding_anomaly_records": {
+     "mismatch": 4
+    },
+    "carrier_read_status_loci": {
+     "no_linked_runs": 690,
+     "usable_runs_remote_only": 243,
+     "no_usable_runs": 34
+    }
+   }
+  },
+  "microbacteriaceae": {
+   "batch_id": "family_85023",
+   "taxon_id": "85023",
+   "pool_assemblies": "3444",
+   "pool_biosamples": "3444",
+   "pool_projects": "1550",
+   "pool_annotated": "3266",
+   "pool_annotation_coverage": "0.9483",
+   "pool_samples_with_usable_long_reads": "285",
+   "reads_meta_eligible_wgs_fastq_samples": "196",
+   "downloads": {
+    "rows": 6684,
+    "status": {
+     "verified": 6684
+    },
+    "failed": [],
+    "annotation": {
+     "annotation_missing": 178,
+     "present": 3266
+    },
+    "gca_gcf_pair_checks": {
+     "identical_sequences": 3240
+    }
+   },
+   "s2": {
+    "samples": 3444,
+    "excluded_not_verified": 0,
+    "pair_status": {
+     "in_pair_table": 3424,
+     "no_pair_selected_pending_review": 20
+    },
+    "pairs": 8259,
+    "species_clusters": 1190,
+    "clone_groups": 2648
+   },
+   "s3": {
+    "pairs": 8259,
+    "raw_calls": 4771431,
+    "loci": 1809841,
+    "status": {
+     "unresolved": 1358039,
+     "replacement": 206297,
+     "two_flank_anchored": 245505
+    },
+    "anchored_lt2500": 209674
+   },
+   "s4": {
+    "short_anchored_loci": 209674,
+    "carriers": 3195,
+    "categories": {
+     "annotation_pending": 9068,
+     "boundary_intersection": 94012,
+     "other_structure": 80279,
+     "boundary_or_repeat_review": 16177,
+     "replacement": 1148,
+     "short_other_segment": 6753,
+     "main": 1737,
+     "gene_integrity_anomaly": 457,
+     "partner_mixed": 34,
+     "direction_mixed": 9
+    },
+    "translation": {
+     "match": 63057,
+     "pseudo": 1276,
+     "mismatch": 21
+    },
+    "local_distinct_proteins": 8806,
+    "local_families": 6441,
+    "local_architectures": 5169
+   },
+   "catalog": {
+    "loci": 18749,
+    "samples": 2651,
+    "assemblies": 2651,
+    "bioprojects": 1119,
+    "organism_labels": 1506,
+    "categories": {
+     "annotation_pending": 9068,
+     "replacement": 1148,
+     "short_other_segment": 6753,
+     "main": 1737,
+     "partner_mixed": 34,
+     "direction_mixed": 9
+    },
+    "protein_instances": 12433,
+    "protein_accessions": 8844,
+    "distinct_proteins": 8806,
+    "families": 6442,
+    "homology_groups": 5082,
+    "architectures": 5169,
+    "distinct_core_sequences": 12810,
+    "local_families": 6441,
+    "coding_anomaly_records": {
+     "mismatch": 21
+    },
+    "carrier_read_status_loci": {
+     "no_linked_runs": 17560,
+     "usable_runs_remote_only": 931,
+     "no_usable_runs": 258
+    }
+   }
+  },
+  "micrococcaceae": {
+   "batch_id": "family_1268",
+   "taxon_id": "1268",
+   "pool_assemblies": "2975",
+   "pool_biosamples": "2975",
+   "pool_projects": "1364",
+   "pool_annotated": "2959",
+   "pool_annotation_coverage": "0.9946",
+   "pool_samples_with_usable_long_reads": "220",
+   "reads_meta_eligible_wgs_fastq_samples": "177",
+   "downloads": {
+    "rows": 5708,
+    "status": {
+     "verified": 5707,
+     "failed": 1
+    },
+    "failed": [
+     {
+      "accession": "GCA_977014115.1",
+      "attempts": 3,
+      "reason": "annotation_files_complete"
+     }
+    ],
+    "annotation": {
+     "present": 2958,
+     "annotation_missing": 16
+    },
+    "gca_gcf_pair_checks": {
+     "identical_sequences": 2733
+    }
+   },
+   "s2": {
+    "samples": 2974,
+    "excluded_not_verified": 1,
+    "pair_status": {
+     "in_pair_table": 2963,
+     "no_pair_selected_pending_review": 11
+    },
+    "pairs": 8031,
+    "species_clusters": 746,
+    "clone_groups": 2492
+   },
+   "s3": {
+    "pairs": 8031,
+    "raw_calls": 4480277,
+    "loci": 1490247,
+    "status": {
+     "unresolved": 1108335,
+     "replacement": 179718,
+     "two_flank_anchored": 202194
+    },
+    "anchored_lt2500": 171615
+   },
+   "s4": {
+    "short_anchored_loci": 171615,
+    "carriers": 2889,
+    "categories": {
+     "boundary_intersection": 93069,
+     "other_structure": 59036,
+     "annotation_pending": 582,
+     "short_other_segment": 3664,
+     "gene_integrity_anomaly": 851,
+     "boundary_or_repeat_review": 12050,
+     "replacement": 651,
+     "main": 1626,
+     "partner_mixed": 64,
+     "direction_mixed": 22
+    },
+    "translation": {
+     "match": 42282,
+     "pseudo": 1459,
+     "mismatch": 39
+    },
+    "local_distinct_proteins": 5094,
+    "local_families": 3552,
+    "local_architectures": 3001
+   },
+   "catalog": {
+    "loci": 6609,
+    "samples": 2260,
+    "assemblies": 2260,
+    "bioprojects": 1036,
+    "organism_labels": 1002,
+    "categories": {
+     "annotation_pending": 582,
+     "short_other_segment": 3664,
+     "replacement": 651,
+     "main": 1626,
+     "partner_mixed": 64,
+     "direction_mixed": 22
+    },
+    "protein_instances": 7024,
+    "protein_accessions": 5421,
+    "distinct_proteins": 5094,
+    "families": 3552,
+    "homology_groups": 2837,
+    "architectures": 3001,
+    "distinct_core_sequences": 5488,
+    "local_families": 3552,
+    "coding_anomaly_records": {
+     "mismatch": 39
+    },
+    "carrier_read_status_loci": {
+     "no_linked_runs": 5626,
+     "usable_runs_remote_only": 529,
+     "no_usable_runs": 454
+    }
+   }
+  },
+  "nitrobacteraceae": {
+   "batch_id": "family_41294",
+   "taxon_id": "41294",
+   "pool_assemblies": "1975",
+   "pool_biosamples": "1975",
+   "pool_projects": "1115",
+   "pool_annotated": "1971",
+   "pool_annotation_coverage": "0.998",
+   "pool_samples_with_usable_long_reads": "365",
+   "reads_meta_eligible_wgs_fastq_samples": "155",
+   "downloads": {
+    "rows": 3892,
+    "status": {
+     "verified": 3892
+    },
+    "failed": [],
+    "annotation": {
+     "present": 1971,
+     "annotation_missing": 4
+    },
+    "gca_gcf_pair_checks": {
+     "identical_sequences": 1917
+    }
+   },
+   "s2": {
+    "samples": 1975,
+    "excluded_not_verified": 0,
+    "pair_status": {
+     "in_pair_table": 1971,
+     "no_pair_selected_pending_review": 4
+    },
+    "pairs": 6262,
+    "species_clusters": 346,
+    "clone_groups": 1292
+   },
+   "s3": {
+    "pairs": 6262,
+    "raw_calls": 6890874,
+    "loci": 2224868,
+    "status": {
+     "unresolved": 1446140,
+     "replacement": 427629,
+     "two_flank_anchored": 351099
+    },
+    "anchored_lt2500": 295417
+   },
+   "s4": {
+    "short_anchored_loci": 295417,
+    "carriers": 1958,
+    "categories": {
+     "boundary_intersection": 144597,
+     "other_structure": 114841,
+     "boundary_or_repeat_review": 21207,
+     "replacement": 1460,
+     "main": 4351,
+     "short_other_segment": 4866,
+     "gene_integrity_anomaly": 2945,
+     "partner_mixed": 216,
+     "annotation_pending": 885,
+     "direction_mixed": 49
+    },
+    "translation": {
+     "match": 83201,
+     "pseudo": 5146,
+     "mismatch": 14
+    },
+    "local_distinct_proteins": 6024,
+    "local_families": 3890,
+    "local_architectures": 3277
+   },
+   "catalog": {
+    "loci": 11827,
+    "samples": 1827,
+    "assemblies": 1827,
+    "bioprojects": 1041,
+    "organism_labels": 1088,
+    "categories": {
+     "replacement": 1460,
+     "main": 4351,
+     "short_other_segment": 4866,
+     "partner_mixed": 216,
+     "annotation_pending": 885,
+     "direction_mixed": 49
+    },
+    "protein_instances": 12827,
+    "protein_accessions": 6331,
+    "distinct_proteins": 6024,
+    "families": 3890,
+    "homology_groups": 3001,
+    "architectures": 3277,
+    "distinct_core_sequences": 7393,
+    "local_families": 3890,
+    "coding_anomaly_records": {
+     "mismatch": 14
+    },
+    "carrier_read_status_loci": {
+     "no_linked_runs": 8906,
+     "usable_runs_remote_only": 2865,
+     "no_usable_runs": 56
+    }
+   }
+  }
+ },
+ "cross_batch_overlap_rows": 0,
+ "global": {
+  "pool_assemblies_sum": 22763,
+  "pool_biosamples_sum": 22763,
+  "pool_projects_sum": 9442,
+  "pool_annotated_sum": 22015,
+  "pool_samples_with_usable_long_reads_sum": 1913,
+  "downloads": {
+   "verified": 43731,
+   "failed": 4
+  },
+  "downloads_failed": [
+   {
+    "accession": "GCA_003568535.1",
+    "attempts": 3,
+    "reason": "fna_total_equals_assembly_report",
+    "batch": "erwiniaceae"
+   },
+   {
+    "accession": "GCF_902652075.1",
+    "attempts": 3,
+    "reason": "package_md5_all_ok",
+    "batch": "lachnospiraceae"
+   },
+   {
+    "accession": "GCF_902652265.1",
+    "attempts": 3,
+    "reason": "package_md5_all_ok",
+    "batch": "lachnospiraceae"
+   },
+   {
+    "accession": "GCA_977014115.1",
+    "attempts": 3,
+    "reason": "annotation_files_complete",
+    "batch": "micrococcaceae"
+   }
+  ],
+  "annotation": {
+   "present": 22011,
+   "annotation_missing": 748
+  },
+  "s2_excluded_not_verified": 4,
+  "s2_samples": 22759,
+  "s2_pairs": 61650,
+  "s2_no_pair_selected": 412,
+  "s3_raw_calls": 33888537,
+  "s3_loci": 11665777,
+  "s3_anchored_lt2500": 1357847,
+  "s4_short_anchored_loci": 1357847,
+  "s4_categories": {
+   "other_structure": 520025,
+   "boundary_intersection": 655138,
+   "boundary_or_repeat_review": 88836,
+   "main": 16414,
+   "replacement": 6274,
+   "short_other_segment": 25479,
+   "gene_integrity_anomaly": 8725,
+   "annotation_pending": 36238,
+   "direction_mixed": 129,
+   "partner_mixed": 589
+  },
+  "s4_categories_close": true,
+  "s4_translation": {
+   "match": 361291,
+   "pseudo": 16015,
+   "mismatch": 184
+  },
+  "sum_local_families": 26653,
+  "sum_local_distinct_proteins": 37895,
+  "catalog": {
+   "loci": 85123,
+   "samples": 15308,
+   "assemblies": 15308,
+   "bioprojects": 6049,
+   "organism_labels": 6797,
+   "categories": {
+    "main": 16414,
+    "replacement": 6274,
+    "short_other_segment": 25479,
+    "annotation_pending": 36238,
+    "direction_mixed": 129,
+    "partner_mixed": 589
+   },
+   "protein_instances": 60747,
+   "protein_accessions": 39065,
+   "distinct_proteins": 37895,
+   "families": 26643,
+   "homology_groups": 20973,
+   "architectures": 21714,
+   "distinct_core_sequences": 63501,
+   "member_check": {
+    "family": {
+     "members": 37895,
+     "passed": 37895,
+     "fail": []
+    },
+    "homology_group": {
+     "members": 37895,
+     "passed": 37895,
+     "fail": []
+    }
+   },
+   "proteins_in_more_than_one_batch": 0,
+   "families_in_more_than_one_batch": 10,
+   "sum_of_local_families": 26653,
+   "sum_of_local_distinct_proteins": 37895,
+   "local_family_relations": {
+    "one_to_one": 26632,
+    "merged_across_batches": 18,
+    "merged_within_batch": 2,
+    "split;merged_across_batches": 1
+   }
+  },
+  "coding_anomalies": {
+   "records": 184,
+   "by_translation": {
+    "mismatch": 184
+   },
+   "loci": 180,
+   "by_category": {
+    "boundary_intersection": 88,
+    "gene_integrity_anomaly": 96
+   }
+  },
+  "read_metadata": {
+   "carrier_loci_status": {
+    "no_linked_runs": 76457,
+    "usable_runs_remote_only": 6934,
+    "no_usable_runs": 1061,
+    "usable_runs_local_verified": 671
+   },
+   "runs": 4414,
+   "runs_usable": 3244,
+   "runs_verified_local": 162,
+   "distinct_usable_remote_runs_for_candidate_loci": 1908,
+   "est_download_bytes_distinct_runs": 1556288472503,
+   "manifest_rows": 223309,
+   "downloads_started": 0
+  },
+  "pilot_read_evidence_links": {
+   "loci": 464,
+   "link_basis": {
+    "exact_biosample_assembly_contig_coordinates_core": 231,
+    "not_linked": 233
+   },
+   "unmatched_reason": {
+    "unresolved_overlapping_stage1_loci": 88,
+    "identical_core_coordinates_in_stage1_s4_category:boundary_or_repeat_review": 85,
+    "unresolved_no_overlapping_stage1_locus": 47,
+    "carrier_not_in_stage1_pool": 11,
+    "identical_core_coordinates_in_stage1_s3:status=unresolved,core_len=1096": 1,
+    "identical_core_coordinates_in_stage1_s3:status=unresolved,core_len=876": 1
+   },
+   "tests": 743,
+   "test_link_scope": {
+    "same_carrier_partner_test": 268,
+    "not_linked": 361,
+    "same_carrier_locus_partner_not_in_stage1_locus": 114
+   }
+  },
+  "member_check_repairs": [
+   {
+    "level": "homology_group",
+    "member": "77004f24470806360d867b4877217a1aba9fb8f9601973c58f2e85c47cdf8c03",
+    "original_rep": "d5ef725fb2093e937e8cd5f2b9bcd7e475e7fc11905d7f6e3abd65d39ccb70a2",
+    "original_identity": 0.619,
+    "original_member_cov": 0.748,
+    "original_rep_cov": 0.706,
+    "candidates_passing": 0,
+    "action": "singleton_no_passing_representative",
+    "new_rep": "77004f24470806360d867b4877217a1aba9fb8f9601973c58f2e85c47cdf8c03",
+    "new_identity": 1.0,
+    "new_member_cov": 1.0,
+    "new_rep_cov": 1.0
+   }
+  ],
+  "stage2_read_coverage": {
+   "main": {
+    "loci": 16414,
+    "carrier_usable": 3159,
+    "carrier_and_partner_usable": 1088,
+    "carrier_usable_no_partner_usable": 2071,
+    "partner_only_usable": 1621,
+    "no_usable_reads": 11634,
+    "carrier_no_linked_runs": 13034,
+    "best_partner_linked_not_usable": 143,
+    "carrier_remote_downloadable": 2955,
+    "best_partner_no_linked_runs": 13562,
+    "best_partner_remote_downloadable": 2435,
+    "carrier_linked_not_usable": 221,
+    "best_partner_local_verified": 274,
+    "carrier_local_verified": 204,
+    "distinct_runs_to_download": 1506,
+    "carrier_runs_to_download": 1231,
+    "partner_runs_to_download": 275,
+    "est_bytes_known": 1221551833200,
+    "runs_unknown_size": 0,
+    "runs_unknown_size_ids": [],
+    "local_verified_runs_used": 146
+   },
+   "partner_mixed": {
+    "loci": 589,
+    "carrier_usable": 153,
+    "carrier_and_partner_usable": 76,
+    "carrier_usable_no_partner_usable": 77,
+    "partner_only_usable": 110,
+    "no_usable_reads": 326,
+    "carrier_linked_not_usable": 11,
+    "best_partner_no_linked_runs": 391,
+    "carrier_no_linked_runs": 425,
+    "carrier_remote_downloadable": 143,
+    "best_partner_remote_downloadable": 170,
+    "carrier_local_verified": 10,
+    "best_partner_local_verified": 16,
+    "best_partner_linked_not_usable": 12,
+    "distinct_runs_to_download": 266,
+    "carrier_runs_to_download": 141,
+    "partner_runs_to_download": 125,
+    "est_bytes_known": 300452142276,
+    "runs_unknown_size": 0,
+    "runs_unknown_size_ids": [],
+    "local_verified_runs_used": 32
+   },
+   "direction_mixed": {
+    "loci": 129,
+    "carrier_usable": 23,
+    "carrier_and_partner_usable": 12,
+    "carrier_usable_no_partner_usable": 11,
+    "partner_only_usable": 24,
+    "no_usable_reads": 82,
+    "carrier_no_linked_runs": 106,
+    "best_partner_no_linked_runs": 92,
+    "best_partner_local_verified": 1,
+    "carrier_local_verified": 1,
+    "carrier_remote_downloadable": 22,
+    "best_partner_remote_downloadable": 35,
+    "best_partner_linked_not_usable": 1,
+    "distinct_runs_to_download": 48,
+    "carrier_runs_to_download": 22,
+    "partner_runs_to_download": 26,
+    "est_bytes_known": 37180281064,
+    "runs_unknown_size": 0,
+    "runs_unknown_size_ids": [],
+    "local_verified_runs_used": 2
+   },
+   "short_other_segment": {
+    "loci": 25479,
+    "carrier_usable": 3240,
+    "carrier_and_partner_usable": 851,
+    "carrier_usable_no_partner_usable": 2389,
+    "partner_only_usable": 2792,
+    "no_usable_reads": 19447,
+    "carrier_remote_downloadable": 2836,
+    "best_partner_remote_downloadable": 3146,
+    "carrier_no_linked_runs": 21974,
+    "best_partner_no_linked_runs": 21583,
+    "carrier_linked_not_usable": 265,
+    "best_partner_linked_not_usable": 253,
+    "best_partner_local_verified": 497,
+    "carrier_local_verified": 404,
+    "distinct_runs_to_download": 1566,
+    "carrier_runs_to_download": 1319,
+    "partner_runs_to_download": 247,
+    "est_bytes_known": 1292995061289,
+    "runs_unknown_size": 0,
+    "runs_unknown_size_ids": [],
+    "local_verified_runs_used": 141
+   },
+   "replacement": {
+    "loci": 6274,
+    "carrier_usable": 709,
+    "carrier_and_partner_usable": 143,
+    "carrier_usable_no_partner_usable": 566,
+    "partner_only_usable": 601,
+    "no_usable_reads": 4964,
+    "carrier_no_linked_runs": 5507,
+    "best_partner_no_linked_runs": 5479,
+    "carrier_linked_not_usable": 58,
+    "best_partner_linked_not_usable": 51,
+    "best_partner_remote_downloadable": 659,
+    "carrier_remote_downloadable": 657,
+    "carrier_local_verified": 52,
+    "best_partner_local_verified": 85,
+    "distinct_runs_to_download": 868,
+    "carrier_runs_to_download": 593,
+    "partner_runs_to_download": 275,
+    "est_bytes_known": 775060196998,
+    "runs_unknown_size": 0,
+    "runs_unknown_size_ids": [],
+    "local_verified_runs_used": 91
+   },
+   "annotation_pending": {
+    "loci": 36238,
+    "carrier_usable": 321,
+    "carrier_and_partner_usable": 0,
+    "carrier_usable_no_partner_usable": 321,
+    "partner_only_usable": 6527,
+    "no_usable_reads": 29390,
+    "carrier_no_linked_runs": 35411,
+    "best_partner_no_linked_runs": 29518,
+    "best_partner_remote_downloadable": 6405,
+    "best_partner_local_verified": 122,
+    "best_partner_linked_not_usable": 193,
+    "carrier_remote_downloadable": 321,
+    "carrier_linked_not_usable": 506,
+    "distinct_runs_to_download": 124,
+    "carrier_runs_to_download": 14,
+    "partner_runs_to_download": 110,
+    "est_bytes_known": 105735089828,
+    "runs_unknown_size": 0,
+    "runs_unknown_size_ids": [],
+    "local_verified_runs_used": 6
+   },
+   "all": {
+    "loci": 85123,
+    "carrier_usable": 7605,
+    "carrier_and_partner_usable": 2170,
+    "carrier_usable_no_partner_usable": 5435,
+    "partner_only_usable": 11675,
+    "no_usable_reads": 65843,
+    "carrier_no_linked_runs": 76457,
+    "best_partner_linked_not_usable": 653,
+    "best_partner_no_linked_runs": 70625,
+    "carrier_remote_downloadable": 6934,
+    "best_partner_remote_downloadable": 12850,
+    "carrier_linked_not_usable": 1061,
+    "best_partner_local_verified": 995,
+    "carrier_local_verified": 671,
+    "distinct_runs_to_download": 1908,
+    "carrier_runs_to_download": 1736,
+    "partner_runs_to_download": 172,
+    "est_bytes_known": 1556288472503,
+    "runs_unknown_size": 0,
+    "runs_unknown_size_ids": [],
+    "local_verified_runs_used": 158
+   }
+  },
+  "traceability": {
+   "ok": true,
+   "checks": {
+    "global_locus_id_unique": {
+     "ok": true,
+     "detail": 85123
+    },
+    "biosample_in_one_batch": {
+     "ok": true,
+     "detail": []
+    },
+    "assembly_in_one_sample_key": {
+     "ok": true,
+     "detail": []
+    },
+    "core_rows_sample_key_in_catalog": {
+     "ok": true,
+     "detail": ""
+    },
+    "instances_in_protein_catalog": {
+     "ok": true,
+     "detail": 60747
+    },
+    "locus_protein_hashes_in_catalog": {
+     "ok": true,
+     "detail": ""
+    },
+    "instance_locus_in_core_catalog": {
+     "ok": true,
+     "detail": ""
+    },
+    "local_ids_namespaced_and_mapped": {
+     "ok": true,
+     "detail": 48197
+    },
+    "members_pass_final_check_family": {
+     "ok": true,
+     "detail": []
+    },
+    "representatives_are_members_family": {
+     "ok": true,
+     "detail": ""
+    },
+    "members_pass_final_check_homology_group": {
+     "ok": true,
+     "detail": []
+    },
+    "representatives_are_members_homology_group": {
+     "ok": true,
+     "detail": ""
+    },
+    "core_fasta_one_record_per_locus": {
+     "ok": true,
+     "detail": 85123
+    }
+   }
+  },
+  "site_groups": "not computed in stage 1 (S6 merging runs after read evidence); counts here are loci, not site groups"
+ }
+}

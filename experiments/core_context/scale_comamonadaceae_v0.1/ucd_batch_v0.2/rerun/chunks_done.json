@@ -1,0 +1,62 @@
+[
+ {
+  "chunk": 0,
+  "pairs": 1000,
+  "rows": 2000,
+  "pair_ids_sha256": "30f280a639c42d6e1627cad75f63e4e0d7b37dd35a1fbff5dd1aa1e50fb6e0b1",
+  "rows_sha256": "b432e20d5ec39851c371b5bdcf9945dfe939375154715a0e51e813cc4bd54785",
+  "input_pairs_sha256": "ec30df0cd40c93ed453a692fc00c14f64d0a65c7ee16786bd7e8dab8c620e2d9",
+  "code_version": "ucd_batch_v0.2+48a91ae6ca23",
+  "wall_s": 64.5,
+  "threads": 32,
+  "worker_wall_s": 1865.0,
+  "child_process_cpu_s": 914.6,
+  "host": "n0089.lr6",
+  "slurm": {
+   "job": "27615261",
+   "task": "0",
+   "restart": ""
+  },
+  "finished": "2026-11-07 15:49:18"
+ },
+ {
+  "chunk": 1,
+  "pairs": 1000,
+  "rows": 2000,
+  "pair_ids_sha256": "071dcfefd772fd0cd09e7c3c889775f6a4f6a67b12a84aec6256030d1686e934",
+  "rows_sha256": "17aadc114d166355a6e70eef9c25b9a070f4f73bb406b8650fca2262f2744c74",
+  "input_pairs_sha256": "ec30df0cd40c93ed453a692fc00c14f64d0a65c7ee16786bd7e8dab8c620e2d9",
+  "code_version": "ucd_batch_v0.2+48a91ae6ca23",
+  "wall_s": 79.3,
+  "threads": 32,
+  "worker_wall_s": 2215.3,
+  "child_process_cpu_s": 1084.5,
+  "host": "n0263.lr6",
+  "slurm": {
+   "job": "27615261",
+   "task": "1",
+   "restart": ""
+  },
+  "finished": "2026-11-07 15:49:33"
+ },
+ {
+  "chunk": 2,
+  "pairs": 117,
+  "rows": 234,
+  "pair_ids_sha256": "27753d29542505ed57a0b285fcadd81da5b35be8b4bdd5fc2c97dbccffeeba00",
+  "rows_sha256": "369c48573a801f5a85f10fee48b9c284812b24591191059b913529bde426c608",
+  "input_pairs_sha256": "ec30df0cd40c93ed453a692fc00c14f64d0a65c7ee16786bd7e8dab8c620e2d9",
+  "code_version": "ucd_batch_v0.2+48a91ae6ca23",
+  "wall_s": 83.9,
+  "threads": 32,
+  "worker_wall_s": 2354.6,
+  "child_process_cpu_s": 142.2,
+  "host": "n0234.lr6",
+  "slurm": {
+   "job": "27615261",
+   "task": "2",
+   "restart": ""
+  },
+  "finished": "2026-11-07 15:50:49"
+ }
+]

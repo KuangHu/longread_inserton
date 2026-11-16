@@ -1,0 +1,1 @@
+minimap2 -x map-ont -c --secondary=yes -N 50 -p 0.8 -I 8G -t 16 /global/scratch/users/kh36969/longread_callout/data/assemblies_batch50/CS-K2/GCF_036323495.1/ncbi_dataset/data/GCF_036323495.1/GCF_036323495.1_ASM3632349v1_genomic.fna /global/scratch/users/kh36969/longread_callout/data/reads/SRR25907068/SRR25907068_1.fastq.gz

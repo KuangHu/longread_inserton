@@ -1,0 +1,18 @@
+{
+ "pair_status": {
+  "reused": 565908,
+  "new": 288538,
+  "retired": 39033
+ },
+ "input_pairs": 288538,
+ "catalogue_pairs": 854446,
+ "chunks": 58,
+ "code_sha256": {
+  "ucd_compare.py": "4909ad161c41a2a8279c7348377cd39acec8e9a3c9a60699c6169a1a9c3d70b7",
+  "ucd_checks.py": "35111726de4e9bbfdee693ad3e21a72d82164f76554e117a78d28c64e86d3cb5",
+  "ucd_batch.py": "a0ea448ec8dd56d280ca8fff3697a46d53c7ef2f385b20c62b982c89746080a7"
+ },
+ "decision_version": "decision_v0.2",
+ "input_table_sha256": "803a46a9ae0824f3b1c5f84482621b0e120125b34caac365c9e498125ed06fc3",
+ "previous_index_sha256": "1831852c983bf9d0f25daccf70b51aad79c587ee51061293ee8fd431bf03cff8"
+}

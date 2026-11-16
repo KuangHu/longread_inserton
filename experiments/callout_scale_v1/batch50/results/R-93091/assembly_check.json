@@ -1,0 +1,40 @@
+{
+  "sample": "R-93091",
+  "gca": "GCA_977007275.1",
+  "gcf": "GCF_977007275.1",
+  "identical_sequence_sets": true,
+  "choice": "gcf_sequence_and_annotation",
+  "gca_records": {
+    "CDRMUQ010000001.1": [
+      3538634,
+      "984c4d617f56a7965ffd267d616be56ce1e5ec4de4b89e91a570b20c80f9de55"
+    ],
+    "CDRMUQ010000002.1": [
+      1837102,
+      "a3e88ca07e3205c6865312d227ec185e2bb10f4963ebfdfef22c32e154c5dec8"
+    ],
+    "CDRMUQ010000003.1": [
+      8310,
+      "dddc68e542cb57f2d8606cebde0a903dbabe10d5b8c52ae5425e0217440eb9ec"
+    ]
+  },
+  "gcf_records": {
+    "NZ_CDRMUQ010000001.1": [
+      3538634,
+      "984c4d617f56a7965ffd267d616be56ce1e5ec4de4b89e91a570b20c80f9de55"
+    ],
+    "NZ_CDRMUQ010000002.1": [
+      1837102,
+      "a3e88ca07e3205c6865312d227ec185e2bb10f4963ebfdfef22c32e154c5dec8"
+    ],
+    "NZ_CDRMUQ010000003.1": [
+      8310,
+      "dddc68e542cb57f2d8606cebde0a903dbabe10d5b8c52ae5425e0217440eb9ec"
+    ]
+  },
+  "cds_features": 4905,
+  "fasta": "/global/scratch/users/kh36969/longread_callout/data/assemblies_batch50/R-93091/GCF_977007275.1/ncbi_dataset/data/GCF_977007275.1/GCF_977007275.1_Cupriavidus_sp._R-93091_assembly_genomic.fna",
+  "fasta_sha256": "6fafbc25f53d28c38a1c50586fa5504afad96dc267c64d861ee232c153cbcf6d",
+  "gbff": "/global/scratch/users/kh36969/longread_callout/data/assemblies_batch50/R-93091/GCF_977007275.1/ncbi_dataset/data/GCF_977007275.1/genomic.gbff",
+  "gbff_sha256": "3c6569a6840b6c1df2afd6d66a0f92a4c14cbc11a0139a8fa00910a7411d6d5e"
+}

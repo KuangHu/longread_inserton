@@ -1,0 +1,74 @@
+{
+  "version": "flank_dna_v2",
+  "subset": "comamonas",
+  "evidence_source": "assembly_only",
+  "production_ready": false,
+  "use": "auxiliary report only; never changes S6 groups, context classes or admission",
+  "parameters": {
+    "flank_bp": 3000,
+    "inner_bp_excluded": 500,
+    "min_outer_bp": 1000,
+    "blastn": "-task blastn -strand both -dust no -evalue 1e-5",
+    "shared": ">= 0.5",
+    "not_shared": "<= 0.1 (no outer alignment detected by this check; not proof of no shared DNA)"
+  },
+  "structures": {
+    "single_gene": {
+      "same_assembly_pairs": 262,
+      "changed": 0,
+      "transitions": {},
+      "v2_by_context": {
+        "context_different_both_sides": {
+          "not_shared/not_shared": 190,
+          "not_shared/partial": 1
+        },
+        "context_repeated_both_sides": {
+          "shared/shared": 2,
+          "partial/partial": 1
+        },
+        "context_repeated_one_side": {
+          "not_shared/partial": 1,
+          "not_shared/shared": 1
+        },
+        "context_unknown": {
+          "not_shared/not_shared": 60,
+          "partial/not_shared": 4,
+          "shared/not_shared": 1,
+          "partial/partial": 1
+        }
+      },
+      "other_orientation_match": {
+        "context_unknown": 2
+      },
+      "other_orientation_match_windows_can_overlap": 1,
+      "windows_can_overlap": {
+        "context_unknown": 1,
+        "context_different_both_sides": 1
+      },
+      "host_genes_shared_physically": {
+        "context_unknown": 1,
+        "context_different_both_sides": 2
+      }
+    },
+    "two_gene": {
+      "same_assembly_pairs": 40,
+      "changed": 0,
+      "transitions": {},
+      "v2_by_context": {
+        "context_different_both_sides": {
+          "not_shared/not_shared": 22
+        },
+        "context_unknown": {
+          "not_shared/not_shared": 17,
+          "partial/partial": 1
+        }
+      },
+      "other_orientation_match": {},
+      "other_orientation_match_windows_can_overlap": 0,
+      "windows_can_overlap": {},
+      "host_genes_shared_physically": {}
+    }
+  },
+  "case_pairs": 11,
+  "case_pairs_changed": []
+}

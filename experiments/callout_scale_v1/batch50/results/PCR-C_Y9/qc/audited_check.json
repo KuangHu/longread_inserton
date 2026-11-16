@@ -1,0 +1,12 @@
+{
+  "schema": "audited_evidence_check_v1",
+  "sample": "PCR-C_Y9",
+  "status": "pass",
+  "members": 338,
+  "classifier_revision": "nearby_competition_v2",
+  "audited_class_counts": {
+    "audited_full_span": 334,
+    "edge_limited": 4
+  },
+  "scope": "Recomputed units/classes from emitted read verdicts; no re-mapping or independent competition check"
+}

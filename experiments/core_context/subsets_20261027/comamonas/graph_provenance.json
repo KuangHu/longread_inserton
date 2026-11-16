@@ -1,0 +1,47 @@
+{
+  "tool_version": "pangraph 1.4.0",
+  "command": [
+    "/global/scratch/users/kh36969/longread_callout/env/pangraph-1.4.0/pangraph-x86_64-unknown-linux-gnu",
+    "build",
+    "-j",
+    "16",
+    "--verify",
+    "--no-progress-bar",
+    "/global/scratch/users/kh36969/longread_callout/core_context/subsets_20261027/comamonas/bundle/assemblies.fna",
+    "-o",
+    "/global/scratch/users/kh36969/longread_callout/core_context/subsets_20261027/comamonas/bundle/graph.json"
+  ],
+  "binary_sha256": "462949f3bd0988054942287ffb820c1cc60731ac0cf99179fbea6189ea518e1a",
+  "build_seconds": 93.409,
+  "inputs": [
+    {
+      "sample": "SAMN24624792",
+      "fasta": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/comamonadaceae/data/genomes/GCF_029026905.1/GCF_029026905.1_ASM2902690v1_genomic.fna",
+      "sha256": "c895d444b4c5d286bba6b78eacff17c16b1acf4de39d967b65d633a101d90e0f"
+    },
+    {
+      "sample": "SAMN12671326",
+      "fasta": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/comamonadaceae/data/genomes/GCF_014076415.1/GCF_014076415.1_ASM1407641v1_genomic.fna",
+      "sha256": "1652ffaa5d273af7b78584b2d120d6277ad558d09d9b2705d9e3ed782b90ab41"
+    },
+    {
+      "sample": "SAMN29863000",
+      "fasta": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/comamonadaceae/data/genomes/GCF_024496285.1/GCF_024496285.1_ASM2449628v1_genomic.fna",
+      "sha256": "653f57234663e1552521b05cc4212dd4cadc424114fe1297491cedc3331f2d92"
+    },
+    {
+      "sample": "SAMN63279483",
+      "fasta": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/comamonadaceae/data/genomes/GCA_062051890.1/GCA_062051890.1_ASM62051890v1_genomic.fna",
+      "sha256": "d704af3b8a5da144302f38deedd16cf266fee860e1eb08df05c46bcc4c0b8b13"
+    },
+    {
+      "sample": "SAMN02603356",
+      "fasta": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/comamonadaceae/data/genomes/GCF_000093145.3/GCF_000093145.3_ASM9314v2_genomic.fna",
+      "sha256": "e3fd74c1ef82f9e927e0ba7d061e5d9f787dea6b50abab73eefbb4c7760c0811"
+    }
+  ],
+  "graph_sha256": "cd611a997934dbaf1c227d09d2a5f9048cac9bba6396110bc60d492db32df163",
+  "joint_fasta_sha256": "ea0fbc09d9226579c3bcfac732552a4f6d46825edbd342521c4f87046172505e",
+  "contigs_sha256": "52af3b1b9cfe7cf20ac08a2216f96c26c26e54e0bef536c04c65b6298462867d",
+  "graph_verify_passed": true
+}

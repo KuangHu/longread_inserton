@@ -1,0 +1,52 @@
+{
+ "version": "ucd_batch_v0.2",
+ "screen_version": "ucd_compare_v0.1.1",
+ "check_version": "ucd_checks_v0.1",
+ "config": {
+  "context": 1000,
+  "ins_identity": 90.0,
+  "ins_coverage": 0.9,
+  "ctx_identity": 80.0,
+  "ctx_similar_cov": 0.8,
+  "ctx_different_cov": 0.2,
+  "min_hsp": 30,
+  "evalue": 1e-05,
+  "min_usable_bp": 800,
+  "lc_window": 64,
+  "lc_step": 32,
+  "lc_entropy": 3.0
+ },
+ "check_config": {
+  "max_chain_overlap": 20
+ },
+ "coordinates": "0-based half-open, forward strand of the contig as in the source FASTA; U/X/D sequences are given in the insertion orientation (minus strand = reverse complement of the forward interval)",
+ "code_sha256": {
+  "ucd_compare.py": "4909ad161c41a2a8279c7348377cd39acec8e9a3c9a60699c6169a1a9c3d70b7",
+  "ucd_checks.py": "35111726de4e9bbfdee693ad3e21a72d82164f76554e117a78d28c64e86d3cb5",
+  "ucd_batch.py": "a58aec7f968046f2de892f01f0029e905d30752c250bbe96200f6b5e7a5b9be4"
+ },
+ "scope": "full comparison of an existing candidate catalogue (boundary review core pairs, b1-2-3); not a complete discovery over all FASTA",
+ "inputs": {
+  "/global/home/users/kh36969/middle_insertion_callout/longread_inserton/experiments/core_context/scale_comamonadaceae_v0.1/manifest.tsv": "ad168d60aa337b80c3a3db61469cb0a0a7dc0f391a90e1d51fa6927a02b6336d"
+ },
+ "input_pairs": 3799589,
+ "input_pairs_path": "/global/scratch/users/kh36969/longread_callout/core_context/ucd_batch_v0.2/remaining/input_pairs.tsv.gz",
+ "input_pairs_sha256": "65b397654a7a81bee23f39385a86febf8342454217380d678470789bac92e444",
+ "sources_sha256": "bdc77c68cf62d2df77e3263cb30d2d800e6bf77a28cfd73ccb8e8a854c3a42dd",
+ "chunk_size": 5000,
+ "chunks": 760,
+ "input_errors": {},
+ "sources": {
+  "verified": 1678
+ },
+ "work": "/global/scratch/users/kh36969/longread_callout/core_context/ucd_batch_v0.2/remaining",
+ "frozen_at": "2026-11-07 15:53:27",
+ "catalogue_pairs": 3894917,
+ "catalogue_ids": "/global/scratch/users/kh36969/longread_callout/core_context/ucd_batch_v0.2/remaining/catalogue_ids.txt.gz",
+ "catalogue_ids_sha256": "00fa1d373f27e07c2b273d79255208f361bc90989c534c5f1a58eabc5d7658ce",
+ "exclude_input": "scale_comamonadaceae_v0.1/ucd_batch_v0.1/input_pairs.tsv.gz",
+ "exclude_input_sha256": "4436cf68a4e966fc2ea8b9748dbf2f8d9019de63b555947acafa8857b104fb15",
+ "excluded_ids": 95328,
+ "excluded_ids_in_catalogue": 95328,
+ "remaining_after_difference": 3799589
+}

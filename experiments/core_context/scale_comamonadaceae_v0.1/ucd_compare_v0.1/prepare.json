@@ -1,0 +1,37 @@
+{
+ "version": "ucd_compare_v0.1",
+ "pairs": 918,
+ "by_source": {
+  "dev_validation_samples": 901,
+  "named_case": 17
+ },
+ "named_cases_found": [
+  "UCD01",
+  "UCD02",
+  "UCD03",
+  "UCD04",
+  "UCD05",
+  "UCD06",
+  "UCD07",
+  "UCD08",
+  "UCD09",
+  "UCD10",
+  "UCD11",
+  "UCD12",
+  "UCDR01",
+  "UCDR03",
+  "UCDR04",
+  "UCDR05",
+  "UCDR06"
+ ],
+ "named_cases_missing": [
+  "UCDR02"
+ ],
+ "samples": 24,
+ "inputs": {
+  "/global/home/users/kh36969/middle_insertion_callout/longread_inserton/experiments/core_context/scale_comamonadaceae_v0.1/readcheck_round5/pairs.tsv.gz": "56f4333ef1a8073027d88cab4e74a3c198775f360a27c37de3f3c94f6d58e9c1",
+  "scale_comamonadaceae_v0.1/read_site_search_pilot/samples.tsv": "d5dc652d4358cbabdab470af2d4a2868296c6a51854ab28a9267f9f138ef42bd",
+  "scale_comamonadaceae_v0.1/read_site_search_validation1/samples.tsv": "e8126faa36c77be624628e83a0c44090f550ec1114c34257dd85e6b461cf4b9d",
+  "scale_comamonadaceae_v0.1/read_site_search_validation2/samples.tsv": "ce0ca9104296513bda00a16cc89bfc11b72eba94b89e77ac8152ae22d7a90c9f"
+ }
+}

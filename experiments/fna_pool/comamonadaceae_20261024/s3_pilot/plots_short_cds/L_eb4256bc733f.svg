@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="300" font-family="sans-serif">
+<rect width="100%" height="100%" fill="white"/>
+<text x="4" y="16" font-size="12">L_eb4256bc733f  SAMD00407106  core 2064 bp  two_flank_anchored  support all_calls_anchored  boundary exact  tandem False  core copies carrier/partner 1/0</text>
+<line x1="432.0" y1="30" x2="432.0" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<line x1="688.0" y1="30" x2="688.0" y2="292" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<text x="4" y="64" font-size="11" font-weight="bold">SAMD00407106 NZ_AP025556.1 (carrier)</text>
+<line x1="60" y1="100" x2="1060" y2="100" stroke="#888"/>
+<rect x="308.0" y="132" width="124.0" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="370.0" y="152" font-size="9" text-anchor="middle">U</text>
+<rect x="432.0" y="132" width="256.0" height="8" fill="#e76f51" opacity="0.55"/>
+<text x="560.0" y="152" font-size="9" text-anchor="middle">core 2064</text>
+<rect x="688.0" y="132" width="124.0" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="750.0" y="152" font-size="9" text-anchor="middle">D</text>
+<polygon points="60.0,109 66.0,103 194.8,103 194.8,115 66.0,115" fill="#3b6fb6"><title>class II fumarate hydratase 4260828-4262220 -</title></polygon>
+<text x="60.0" y="125" font-size="8" fill="#333">class II fumarate hydratase</text>
+<polygon points="233.6,85 420.3,85 426.3,91 420.3,97 233.6,97" fill="#3b6fb6"><title>fumarate hydratase 4262533-4264087 +</title></polygon>
+<text x="233.6" y="81" font-size="8" fill="#333">fumarate hydratase</text>
+<polygon points="436.9,109 442.9,103 648.5,103 648.5,115 442.9,115" fill="#3b6fb6"><title>SGNH/GDSL hydrolase family protein 4264172-4265879 -</title></polygon>
+<text x="436.9" y="125" font-size="8" fill="#333">SGNH/GDSL hydrolase family protein</text>
+<polygon points="688.0,85 760.5,85 766.5,91 760.5,97 688.0,97" fill="#3b6fb6"><title>class I SAM-dependent methyltransferase 4266197-4266830 +</title></polygon>
+<text x="688.0" y="81" font-size="8" fill="#333">class I SAM-depen</text>
+<polygon points="766.0,85 832.9,85 838.9,91 832.9,97 766.0,97" fill="#3b6fb6"><title>GNAT family N-acetyltransferase 4266826-4267414 +</title></polygon>
+<polygon points="846.1,85 950.6,85 956.6,91 950.6,97 846.1,97" fill="#3b6fb6"><title>glutamate racemase 4267472-4268363 +</title></polygon>
+<text x="846.1" y="81" font-size="8" fill="#333">glutamate racemase</text>
+<polygon points="956.7,109 962.7,103 1032.6,103 1032.6,115 962.7,115" fill="#3b6fb6"><title>M48 metallopeptidase family protein 4268364-4268976 -</title></polygon>
+<text x="956.7" y="125" font-size="8" fill="#333">M48 metallopepti</text>
+<polygon points="1036.6,109 1042.6,103 1060.0,103 1060.0,115 1042.6,115" fill="#3b6fb6"><title>DUF6806 family protein 4269008-4269635 -</title></polygon>
+<text x="60" y="166" font-size="9" fill="#666">NZ_AP025556.1:4261133-4269197  core 4264133-4266197</text>
+<text x="4" y="184" font-size="11" font-weight="bold">SAMEA120308855 NZ_CDRKIR010000001.1 (partner, + strand, two_flank_anchored, pair P00034)</text>
+<line x1="60" y1="220" x2="1060" y2="220" stroke="#888"/>
+<rect x="308.0" y="252" width="124.0" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="370.0" y="272" font-size="9" text-anchor="middle">U'</text>
+<rect x="688.0" y="252" width="124.0" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="750.0" y="272" font-size="9" text-anchor="middle">D'</text>
+<rect x="432.0" y="252" width="256.0" height="8" fill="#9b5de5" opacity="0.55"/>
+<text x="560.0" y="272" font-size="9" text-anchor="middle">other side 53</text>
+<polygon points="60.0,229 66.0,223 194.7,223 194.7,235 66.0,235" fill="#3b6fb6"><title>class II fumarate hydratase 4400093-4401485 -</title></polygon>
+<text x="60.0" y="245" font-size="8" fill="#333">class II fumarate hydratase</text>
+<polygon points="233.5,205 420.2,205 426.2,211 420.2,217 233.5,217" fill="#3b6fb6"><title>fumarate hydratase 4401798-4403352 +</title></polygon>
+<text x="233.5" y="201" font-size="8" fill="#333">fumarate hydratase</text>
+<polygon points="688.0,205 760.5,205 766.5,211 760.5,217 688.0,217" fill="#3b6fb6"><title>class I SAM-dependent methyltransferase 4403452-4404085 +</title></polygon>
+<text x="688.0" y="201" font-size="8" fill="#333">class I SAM-depen</text>
+<polygon points="766.0,205 832.9,205 838.9,211 832.9,217 766.0,217" fill="#3b6fb6"><title>GNAT family N-acetyltransferase 4404081-4404669 +</title></polygon>
+<polygon points="846.1,205 950.6,205 956.6,211 950.6,217 846.1,217" fill="#3b6fb6"><title>glutamate racemase 4404727-4405618 +</title></polygon>
+<text x="846.1" y="201" font-size="8" fill="#333">glutamate racemase</text>
+<polygon points="956.7,229 962.7,223 1032.6,223 1032.6,235 962.7,235" fill="#3b6fb6"><title>M48 metallopeptidase family protein 4405619-4406231 -</title></polygon>
+<text x="956.7" y="245" font-size="8" fill="#333">M48 metallopepti</text>
+<polygon points="1036.6,229 1042.6,223 1060.0,223 1060.0,235 1042.6,235" fill="#3b6fb6"><title>DUF6806 family protein 4406263-4406890 -</title></polygon>
+<text x="60" y="286" font-size="9" fill="#666">NZ_CDRKIR010000001.1 site 4403399  other-side gap 53 bp  this call's core 4264133-4266197</text>
+</svg>

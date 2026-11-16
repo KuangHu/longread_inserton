@@ -1,0 +1,72 @@
+{
+  "sample": "R-92578",
+  "gca": "GCA_976997195.1",
+  "gcf": "GCF_976997195.1",
+  "identical_sequence_sets": true,
+  "choice": "gcf_sequence_and_annotation",
+  "gca_records": {
+    "CDRLMQ010000001.1": [
+      4887713,
+      "b9485896e5a9fb1a8f317613db5dadd9608d1992a9d596badaa6cdf91bc0c066"
+    ],
+    "CDRLMQ010000002.1": [
+      3162019,
+      "9a75308eb3db0ed68b3464bd2b4695cb3fe54b95dbdf8a8201edbd9f1109f59c"
+    ],
+    "CDRLMQ010000003.1": [
+      491024,
+      "12cd0bbb3718c1668ecf6fc67edc3a631ecd966ad5658d9ab82e0725da78fc7d"
+    ],
+    "CDRLMQ010000004.1": [
+      450278,
+      "b84b1fdc328678bd1d778612770556127e0144d8f715bcbfcec96b345feb114e"
+    ],
+    "CDRLMQ010000005.1": [
+      449906,
+      "a73119e70f0d192b0eae9f0533f331ac679348ffc59db864bf6c90ee81559527"
+    ],
+    "CDRLMQ010000006.1": [
+      146255,
+      "415e9ffaab6c08c3e78eb79e4edc534c5e34fe47e71bdf7f544c35b0bea93b60"
+    ],
+    "CDRLMQ010000007.1": [
+      5037,
+      "71e57431f7ef7c9d14ab65a3f73772aa5ce10604b9bc0bab39c883b089b08a01"
+    ]
+  },
+  "gcf_records": {
+    "NZ_CDRLMQ010000001.1": [
+      4887713,
+      "b9485896e5a9fb1a8f317613db5dadd9608d1992a9d596badaa6cdf91bc0c066"
+    ],
+    "NZ_CDRLMQ010000002.1": [
+      3162019,
+      "9a75308eb3db0ed68b3464bd2b4695cb3fe54b95dbdf8a8201edbd9f1109f59c"
+    ],
+    "NZ_CDRLMQ010000003.1": [
+      491024,
+      "12cd0bbb3718c1668ecf6fc67edc3a631ecd966ad5658d9ab82e0725da78fc7d"
+    ],
+    "NZ_CDRLMQ010000004.1": [
+      450278,
+      "b84b1fdc328678bd1d778612770556127e0144d8f715bcbfcec96b345feb114e"
+    ],
+    "NZ_CDRLMQ010000005.1": [
+      449906,
+      "a73119e70f0d192b0eae9f0533f331ac679348ffc59db864bf6c90ee81559527"
+    ],
+    "NZ_CDRLMQ010000006.1": [
+      146255,
+      "415e9ffaab6c08c3e78eb79e4edc534c5e34fe47e71bdf7f544c35b0bea93b60"
+    ],
+    "NZ_CDRLMQ010000007.1": [
+      5037,
+      "71e57431f7ef7c9d14ab65a3f73772aa5ce10604b9bc0bab39c883b089b08a01"
+    ]
+  },
+  "cds_features": 8812,
+  "fasta": "$PROJ/data/assemblies_batch10/R-92578/GCF_976997195.1/ncbi_dataset/data/GCF_976997195.1/GCF_976997195.1_ASM97699719v1_genomic.fna",
+  "fasta_sha256": "3f402cd0b123a731eeeb84ebb637be7072c57e0709fa23e154f11f318ce6ad7e",
+  "gbff": "$PROJ/data/assemblies_batch10/R-92578/GCF_976997195.1/ncbi_dataset/data/GCF_976997195.1/genomic.gbff",
+  "gbff_sha256": "578809315f9f1e2642a67b113674456cca3a85d3faf84a48a0b9b0947753e421"
+}

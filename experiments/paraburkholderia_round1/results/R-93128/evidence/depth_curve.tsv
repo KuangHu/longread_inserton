@@ -1,0 +1,17 @@
+depth	seed	molecules	edge_limited	full_span_and_empty_allele	empty_allele_only	full_span	both_junctions_separate	one_junction	ambiguous_multimapping	internal_only	no_coverage	nonreference_family_sites	nonreference_family_two_sided	unassigned_insertion_sites
+5	11	7126	11	0	0	451	2	1	21	0	5	0	0	0
+5	29	7026	11	0	0	443	7	2	21	0	7	0	0	0
+5	47	6923	11	0	0	443	8	6	22	0	1	0	0	0
+10	11	14097	11	0	0	459	0	0	21	0	0	0	0	0
+10	29	13940	11	0	0	459	0	0	21	0	0	0	0	0
+10	47	13979	11	0	0	459	0	0	21	0	0	0	0	0
+20	11	28264	11	0	0	459	0	0	21	0	0	0	0	0
+20	29	27992	11	0	0	459	0	0	21	0	0	0	0	0
+20	47	27899	11	0	0	459	0	0	21	0	0	0	0	1
+40	11	56360	11	0	0	463	0	2	15	0	0	1	0	0
+40	29	56172	11	0	0	459	0	0	21	0	0	2	0	0
+40	47	55988	11	0	0	459	0	0	21	0	0	1	0	1
+80	11	112572	11	0	0	463	0	2	15	0	0	4	0	4
+80	29	112396	11	0	0	463	0	2	15	0	0	4	0	2
+80	47	112421	11	0	0	463	0	2	15	0	0	4	0	4
+86.7	11	121832	11	0	0	463	0	2	15	0	0	5	0	4

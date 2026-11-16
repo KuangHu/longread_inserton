@@ -1,0 +1,44 @@
+{
+ "version": "read_site_search_v0.3.2",
+ "main": {
+  "flank": 1000,
+  "molecules": 3
+ },
+ "sites_by_category": {
+  "known": 617,
+  "in_assembly_not_in_catalog": 149,
+  "not_in_assembly_candidate": 0,
+  "structural_anomaly": 0,
+  "unresolved": 28
+ },
+ "sites_below_molecule_threshold": {
+  "known": 21,
+  "in_assembly_not_in_catalog": 71,
+  "structural_anomaly": 15,
+  "unresolved": 23,
+  "not_in_assembly_candidate": 3
+ },
+ "flags_of_counted_sites": {
+  "cores_disagree": 4,
+  "boundary_unknown": 1
+ },
+ "sites_with_several_cores": 78,
+ "positions_merged_into_sites": 1379,
+ "not_in_assembly_candidates": {
+  "sites": 0,
+  "positions": 0,
+  "cores": 0,
+  "samples": 0,
+  "by_class": {}
+ },
+ "negative_control_sites_per_gene": {
+  "genes_by_site_count": {
+   "1": 25
+  },
+  "genes_with_several_sites": []
+ },
+ "unplaceable_contexts_ge_N": {
+  "ambiguous_placement (repeat)": 11
+ },
+ "one_sided_observation_groups": 640
+}

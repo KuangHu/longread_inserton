@@ -1,0 +1,18 @@
+{
+  "evidence_source": "assembly_only",
+  "production_ready": false,
+  "pairs": 18,
+  "main": {
+    "n": 12,
+    "identical_core_dna": 7,
+    "core_dna_identity_min": 94.342,
+    "core_dna_coverage_min": 1.0,
+    "protein_identity_min": 97.037,
+    "near_relation": {
+      "different_context_candidate": 12
+    }
+  },
+  "not_in_core_review": [
+    "UCDR03"
+  ]
+}

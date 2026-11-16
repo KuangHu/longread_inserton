@@ -1,0 +1,19 @@
+{
+  "joint_fna": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/flavobacteriaceae/s2/joint.fna.gz",
+  "joint_fna_sha256": "625c51bad00503d5d0d826da0b6e623ca0cf0138323a40cb7750fd898e68daef",
+  "samples": 3704,
+  "contigs": 213687,
+  "contig_bp": 13888145539,
+  "header": "sample_id|assembly|contig",
+  "check": "every joint record SHA256 equals the S1 record SHA256 of its source FNA",
+  "pool_rows": 3704,
+  "excluded_not_verified": 0,
+  "annotation_status": {
+    "present": 3682,
+    "annotation_missing": 22
+  },
+  "gff_features_out_of_range": 0,
+  "contig_index": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/flavobacteriaceae/s2/contig_index.tsv.gz",
+  "contig_index_sha256": "fe6583e19cc42532880994a3598ea3195f7dadb4af3d540a412dcb256af1594a",
+  "gff_features_origin_spanning": 536
+}

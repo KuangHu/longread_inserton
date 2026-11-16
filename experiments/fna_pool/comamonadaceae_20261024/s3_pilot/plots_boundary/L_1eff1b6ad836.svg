@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="420" font-family="sans-serif">
+<rect width="100%" height="100%" fill="white"/>
+<text x="4" y="16" font-size="12">L_1eff1b6ad836  SAMN51281027  core 850 bp  two_flank_anchored  support direction_mixed  boundary direction_dependent  tandem False  core copies carrier/partner 1/0</text>
+<line x1="498.0" y1="30" x2="498.0" y2="412" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<line x1="622.0" y1="30" x2="622.0" y2="412" stroke="#e76f51" stroke-dasharray="3,3" opacity="0.6"/>
+<text x="4" y="64" font-size="11" font-weight="bold">SAMN51281027 NZ_CM191384.1 (carrier)</text>
+<line x1="60" y1="100" x2="1060" y2="100" stroke="#888"/>
+<rect x="352.0" y="132" width="146.0" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="425.0" y="152" font-size="9" text-anchor="middle">U</text>
+<rect x="498.0" y="132" width="124.1" height="8" fill="#e76f51" opacity="0.55"/>
+<text x="560.0" y="152" font-size="9" text-anchor="middle">core 850</text>
+<rect x="622.0" y="132" width="146.0" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="695.0" y="152" font-size="9" text-anchor="middle">D</text>
+<polygon points="60.0,109 66.0,103 90.7,103 90.7,115 66.0,115" fill="#3b6fb6"><title>2-hydroxyacid dehydrogenase 5063403-5064384 -</title></polygon>
+<text x="60.0" y="125" font-size="8" fill="#333">2-hydr</text>
+<polygon points="90.9,109 96.9,103 230.2,103 230.2,115 96.9,115" fill="#3b6fb6"><title>sugar kinase 5064386-5065340 -</title></polygon>
+<polygon points="248.2,85 492.2,85 498.2,91 492.2,97 248.2,97" fill="#3b6fb6"><title>hypothetical protein 5065463-5067176 +</title></polygon>
+<text x="248.2" y="81" font-size="8" fill="#333">hypothetical protein</text>
+<polygon points="506.4,85 608.2,85 614.2,91 608.2,97 506.4,97" fill="#3b6fb6"><title>metallophosphoesterase family protein 5067232-5067970 +</title></polygon>
+<text x="506.4" y="81" font-size="8" fill="#333">metallophosphoesterase </text>
+<polygon points="615.6,109 621.6,103 694.0,103 694.0,115 621.6,115" fill="#3b6fb6"><title>cysteine hydrolase family protein 5067980-5068517 -</title></polygon>
+<text x="615.6" y="125" font-size="8" fill="#333">cysteine hydrolas</text>
+<polygon points="703.4,109 709.4,103 935.9,103 935.9,115 709.4,115" fill="#3b6fb6"><title>esterase/lipase family protein 5068581-5070174 -</title></polygon>
+<text x="703.4" y="125" font-size="8" fill="#333">esterase/lipase family protein</text>
+<polygon points="968.3,85 1054.0,85 1060.0,91 1054.0,97 968.3,97" fill="#3b6fb6"><title>MBL fold metallo-hydrolase 5070396-5071518 +</title></polygon>
+<text x="968.3" y="81" font-size="8" fill="#333">MBL fold metallo-hy</text>
+<text x="60" y="166" font-size="9" fill="#666">NZ_CM191384.1:5064174-5071024  core 5067174-5068024</text>
+<text x="4" y="184" font-size="11" font-weight="bold">SAMD00623152 NZ_AP028664.1 (partner, - strand, two_flank_anchored, pair P00111)</text>
+<line x1="60" y1="220" x2="1060" y2="220" stroke="#888"/>
+<rect x="352.0" y="252" width="146.0" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="425.0" y="272" font-size="9" text-anchor="middle">U'</text>
+<rect x="622.0" y="252" width="146.0" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="695.0" y="272" font-size="9" text-anchor="middle">D'</text>
+<rect x="498.0" y="252" width="124.1" height="8" fill="#9b5de5" opacity="0.55"/>
+<text x="560.0" y="272" font-size="9" text-anchor="middle">other side 40</text>
+<polygon points="966.1,205 1054.0,205 1060.0,211 1054.0,217 966.1,217" fill="#3b6fb6"><title>MBL fold metallo-hydrolase 1660783-1661905 +</title></polygon>
+<text x="966.1" y="201" font-size="8" fill="#333">MBL fold metallo-hyd</text>
+<polygon points="703.6,229 709.6,223 936.2,223 936.2,235 709.6,235" fill="#3b6fb6"><title>esterase/lipase family protein 1662110-1663703 -</title></polygon>
+<text x="703.6" y="245" font-size="8" fill="#333">esterase/lipase family protein</text>
+<polygon points="507.3,229 513.3,223 694.0,223 694.0,235 513.3,235" fill="#3b6fb6"><title>cysteine hydrolase family protein 1663769-1664300 -</title></polygon>
+<polygon points="246.9,205 498.3,205 504.3,211 498.3,217 246.9,217" fill="#3b6fb6"><title>hypothetical protein 1664300-1666022 +</title></polygon>
+<polygon points="129.1,229 135.1,223 227.2,223 227.2,235 135.1,235" fill="#3b6fb6"><title>amino acid ABC transporter permease 1666157-1666829 -</title></polygon>
+<polygon points="60.0,229 66.0,223 125.1,223 125.1,235 66.0,235" fill="#3b6fb6"><title>amino acid ABC transporter permease 1666856-1667510 -</title></polygon>
+<text x="60" y="286" font-size="9" fill="#666">NZ_AP028664.1 site 1664262  other-side gap 40 bp  this call's core 5067174-5068024</text>
+<text x="4" y="304" font-size="11" font-weight="bold">SAMD00623152 NZ_AP028664.1 (partner, - strand, unresolved, pair P00111)</text>
+<line x1="60" y1="340" x2="1060" y2="340" stroke="#888"/>
+<rect x="352.0" y="372" width="146.0" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="425.0" y="392" font-size="9" text-anchor="middle">U'</text>
+<rect x="616.9" y="372" width="146.0" height="8" fill="#2a9d8f" opacity="0.55"/>
+<text x="689.9" y="392" font-size="9" text-anchor="middle">D'</text>
+<rect x="498.0" y="372" width="119.0" height="8" fill="#9b5de5" opacity="0.55"/>
+<text x="557.4" y="392" font-size="9" text-anchor="middle">other side 5</text>
+<polygon points="966.1,325 1054.0,325 1060.0,331 1054.0,337 966.1,337" fill="#3b6fb6"><title>MBL fold metallo-hydrolase 1660783-1661905 +</title></polygon>
+<text x="966.1" y="321" font-size="8" fill="#333">MBL fold metallo-hyd</text>
+<polygon points="703.6,349 709.6,343 936.2,343 936.2,355 709.6,355" fill="#3b6fb6"><title>esterase/lipase family protein 1662110-1663703 -</title></polygon>
+<text x="703.6" y="365" font-size="8" fill="#333">esterase/lipase family protein</text>
+<polygon points="569.3,349 575.3,343 694.0,343 694.0,355 575.3,355" fill="#3b6fb6"><title>cysteine hydrolase family protein 1663769-1664300 -</title></polygon>
+<polygon points="246.9,325 539.7,325 545.7,331 539.7,337 246.9,337" fill="#3b6fb6"><title>hypothetical protein 1664300-1666022 +</title></polygon>
+<polygon points="129.1,349 135.1,343 227.2,343 227.2,355 135.1,355" fill="#3b6fb6"><title>amino acid ABC transporter permease 1666157-1666829 -</title></polygon>
+<polygon points="60.0,349 66.0,343 125.1,343 125.1,355 66.0,355" fill="#3b6fb6"><title>amino acid ABC transporter permease 1666856-1667510 -</title></polygon>
+<text x="60" y="406" font-size="9" fill="#666">NZ_AP028664.1 site 1664297  other-side gap 5 bp  this call's core 5067174-5067989</text>
+</svg>

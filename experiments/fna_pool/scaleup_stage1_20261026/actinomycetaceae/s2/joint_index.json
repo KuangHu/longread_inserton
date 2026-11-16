@@ -1,0 +1,19 @@
+{
+  "joint_fna": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/actinomycetaceae/s2/joint.fna.gz",
+  "joint_fna_sha256": "dc38a147f5010016734556caa5ab281b3af3d7ea2c14bb76ab9a456aca1d9e3a",
+  "samples": 1139,
+  "contigs": 64314,
+  "contig_bp": 2700926116,
+  "header": "sample_id|assembly|contig",
+  "check": "every joint record SHA256 equals the S1 record SHA256 of its source FNA",
+  "pool_rows": 1139,
+  "excluded_not_verified": 0,
+  "annotation_status": {
+    "present": 1132,
+    "annotation_missing": 7
+  },
+  "gff_features_out_of_range": 0,
+  "contig_index": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/actinomycetaceae/s2/contig_index.tsv.gz",
+  "contig_index_sha256": "180aa5f4fbfdaaed2a25713a2a3db4cd3c4ee5b63c307f1b77590b6950c26ec1",
+  "gff_features_origin_spanning": 74
+}

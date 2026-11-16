@@ -1,0 +1,107 @@
+structure	core_key	products	product_hint	occurrences	assemblies	copies_per_assembly	site_groups	single_observation_sites	unresolved	position_units	unit_pairs_different	unit_pairs_ambiguous	unit_pairs_conflicting	unit_pairs_unknown	max_pairwise_different_units	max_pairwise_context_different_units	same_assembly_pairs	sa_context_different_both_sides	sa_context_repeated_both_sides	sa_context_repeated_one_side	sa_context_unknown	assemblies_2plus_supported_positions	assemblies_2plus_supported_split	core_2plus_supported_class
+single_gene	PF_01fddc14c19a	sigma-70 family RNA polymerase sigma factor	other	6	6	1,1,1,1,1,1,0	1	0	1	1	0	0	0	0	1	1	0	0	0	0	0	0		
+single_gene	PF_0706cfdd30af	OsmC family protein	other	6	6	1,1,1,1,1,1,0	2	0	1	2	0	0	0	1	1	1	0	0	0	0	0	0		
+single_gene	PF_093d47562e00	elongation factor Tu	translation_or_ribosomal	14	7	2,2,2,2,2,2,2	2	0	0	2	0	0	0	1	1	1	7	6	0	0	1	7	SAMN00623041:context_different_both_sides;SAMN13049073:context_different_both_sides;SAMN13450439:context_different_both_sides;SAMN14082653:context_different_both_sides;SAMN15905291:context_different_both_sides;SAMN31258398:context_different_both_sides;SAMN34234483:context_unknown	context_different_both_sides
+single_gene	PF_0986c31d126b	3-hydroxybutyryl-CoA dehydrogenase	other	6	6	1,1,1,0,1,1,1	1	0	1	1	0	0	0	0	1	1	0	0	0	0	0	0		
+single_gene	PF_0ee80b5caacb	IPTL-CTERM sorting domain-containing protein	other	6	4	2,1,2,1,0,0,0	2	0	1	2	0	0	0	1	1	1	2	0	0	0	2	2	SAMN13049073:context_unknown;SAMN31258398:context_unknown	context_unknown
+single_gene	PF_0f2243aa1c72	H-NS histone family protein	other	6	6	1,1,1,1,1,1,0	2	0	1	2	0	0	0	1	1	1	0	0	0	0	0	0		
+single_gene	PF_0f72883da08f	polyhydroxyalkanoate synthesis repressor PhaR	other	7	7	1,1,1,1,1,1,1	2	0	1	2	0	0	1	0	1	1	0	0	0	0	0	0		
+single_gene	PF_155be031282b	H-NS histone family protein	other	3	3	1,1,1,0,0,0,0	1	0	1	1	0	0	0	0	1	1	0	0	0	0	0	0		
+single_gene	PF_1845d4b37840	hypothetical protein	hypothetical	5	5	1,1,1,0,1,1,0	0	1	4	1	0	0	0	0	1	1	0	0	0	0	0	0		
+single_gene	PF_19beb8334344	chloride channel protein	other	7	7	1,1,1,1,1,1,1	2	0	2	2	0	0	0	1	1	1	0	0	0	0	0	0		
+single_gene	PF_1a77463c4687	amino acid permease	other	7	7	1,1,1,1,1,1,1	1	0	1	1	0	0	0	0	1	1	0	0	0	0	0	0		
+single_gene	PF_1c0870c76ded	hypothetical protein	hypothetical	11	6	2,2,2,2,2,1,0	3	0	3	3	0	0	0	3	1	1	5	2	0	0	3	3	SAMN13049073:context_unknown;SAMN14082653:context_unknown;SAMN31258398:context_different_both_sides	context_different_both_sides
+single_gene	PF_1ddd711a5bf2	OmpW/AlkL family protein	other	7	7	1,1,1,1,1,1,1	2	0	1	2	0	0	0	1	1	1	0	0	0	0	0	0		
+single_gene	PF_213e1fe4036d	hypothetical protein	hypothetical	2	1	0,0,0,0,2,0,0	0	2	0	2	1	0	0	0	2	2	1	1	0	0	0	1	SAMN00623041:context_different_both_sides	context_different_both_sides
+single_gene	PF_27aade44a958	winged helix-turn-helix transcriptional regulator	other	8	6	2,1,2,1,1,1,0	2	0	4	2	0	0	0	1	1	1	2	0	0	0	2	2	SAMN13049073:context_unknown;SAMN31258398:context_unknown	context_unknown
+single_gene	PF_287b7798e81b	DUF2721 domain-containing protein	other	7	7	1,1,1,1,1,1,1	0	0	7	0	0	0	0	0	0	0	0	0	0	0	0	0		
+single_gene	PF_2dceae43e454	LysR family transcriptional regulator	other	7	7	1,1,1,1,1,1,1	1	0	2	1	0	0	0	0	1	1	0	0	0	0	0	0		
+single_gene	PF_302f2721eddf	tRNA 2-thiouridine(34) synthase MnmA	other	7	7	1,1,1,1,1,1,1	1	0	1	1	0	0	0	0	1	1	0	0	0	0	0	0		
+single_gene	PF_3070024975f6	IS481 family transposase	transposase_or_IS	21	5	2,6,6,1,6,0,0	4	0	12	4	6	0	0	0	4	4	46	43	2	0	1	2	SAMN14082653:context_different_both_sides;SAMN31258398:context_different_both_sides	context_different_both_sides
+single_gene	PF_3309915bbea2	LysE family translocator	other	7	7	1,1,1,1,1,1,1	2	0	1	2	0	0	1	0	1	1	0	0	0	0	0	0		
+single_gene	PF_37867f8d51e0	group II truncated hemoglobin	other	7	7	1,1,1,1,1,1,1	1	0	1	1	0	0	0	0	1	1	0	0	0	0	0	0		
+single_gene	PF_3c183465e22f	phenylacetate--CoA ligase PaaK	other	11	6	2,2,2,1,2,2,0	2	0	0	2	0	0	0	1	1	1	5	5	0	0	0	5	SAMN00623041:context_different_both_sides;SAMN13049073:context_different_both_sides;SAMN13450439:context_different_both_sides;SAMN14082653:context_different_both_sides;SAMN31258398:context_different_both_sides	context_different_both_sides
+single_gene	PF_3eb30cb1f5dc	isocitrate lyase/PEP mutase family protein	other	6	6	1,1,1,1,1,1,0	2	0	1	2	0	0	1	0	1	1	0	0	0	0	0	0		
+single_gene	PF_3f8be2a432a1	YitT family protein	other	7	7	1,1,1,1,1,1,1	1	0	2	1	0	0	0	0	1	1	0	0	0	0	0	0		
+single_gene	PF_3fb0178972fc	UDP-N-acetylglucosamine 1-carboxyvinyltransferase	other	7	7	1,1,1,1,1,1,1	1	1	0	2	1	0	0	0	2	2	0	0	0	0	0	0		
+single_gene	PF_488082a167d2	hypothetical protein	hypothetical	8	5	2,2,2,1,1,0,0	1	0	5	1	0	0	0	0	1	1	3	3	0	0	0	0		
+single_gene	PF_49ba5fbdf5dd	helix-turn-helix domain-containing protein	other	2	2	0,0,0,1,0,1,0	0	2	0	2	1	0	0	0	2	2	0	0	0	0	0	0		
+single_gene	PF_4b70bb8e2b9d	IS5 family transposase	transposase_or_IS	30	4	5,8,9,0,8,0,0	7	0	12	7	15	0	0	6	6	6	102	72	1	0	29	3	SAMN13049073:context_different_both_sides;SAMN14082653:context_different_both_sides+context_unknown;SAMN31258398:context_different_both_sides+context_unknown	context_different_both_sides
+single_gene	PF_504ff69a3eba	IS3 family transposase	transposase_or_IS	5	1	0,5,0,0,0,0,0	0	5	0	5	10	0	0	0	5	3	10	3	0	0	7	1	SAMN14082653:context_different_both_sides+context_unknown	context_different_both_sides
+single_gene	PF_53da0dc40e01	ATP-dependent RNA helicase DbpA	other	6	6	1,1,1,0,1,1,1	2	0	1	2	0	0	0	1	1	1	0	0	0	0	0	0		
+single_gene	PF_5470db02176c	SGNH/GDSL hydrolase family protein	other	5	5	1,1,1,0,1,1,0	1	0	2	1	0	0	0	0	1	1	0	0	0	0	0	0		
+single_gene	PF_548ebcc5514f	TonB-dependent siderophore receptor	other	6	6	1,1,1,0,1,1,1	1	0	3	1	0	0	0	0	1	1	0	0	0	0	0	0		
+single_gene	PF_554d0124ac2c	glutathione-disulfide reductase	other	7	7	1,1,1,1,1,1,1	2	0	1	2	0	0	0	1	1	1	0	0	0	0	0	0		
+single_gene	PF_596309165a05	IS5 family transposase	transposase_or_IS	2	1	0,0,0,0,0,0,2	0	2	0	2	1	0	0	0	2	2	1	1	0	0	0	1	SAMN15905291:context_different_both_sides	context_different_both_sides
+single_gene	PF_5cd22bca3972	hypothetical protein	hypothetical	7	5	1,1,1,2,2,0,0	2	0	1	2	0	0	0	1	1	1	2	1	0	0	1	1	SAMN00623041:context_different_both_sides	context_different_both_sides
+single_gene	PF_623a7fcb9f04	SprT-like domain-containing protein	other	6	6	1,1,1,1,1,1,0	2	0	1	2	0	0	0	1	1	1	0	0	0	0	0	0		
+single_gene	PF_661da79e8b1b	group II intron reverse transcriptase/maturase	intron_rt	7	1	0,0,0,0,0,0,7	0	7	0	7	21	0	0	0	7	7	21	21	0	0	0	1	SAMN15905291:context_different_both_sides	context_different_both_sides
+single_gene	PF_6cd26d7d4348	hypothetical protein	hypothetical	4	4	1,1,1,1,0,0,0	1	0	1	1	0	0	0	0	1	1	0	0	0	0	0	0		
+single_gene	PF_6e6c9b40b631	LysR substrate-binding domain-containing protein	other	7	7	1,1,1,1,1,1,1	1	0	2	1	0	0	0	0	1	1	0	0	0	0	0	0		
+single_gene	PF_702d6ce8c735	sulfite exporter TauE/SafE family protein	other	6	6	1,1,1,0,1,1,1	1	0	2	1	0	0	0	0	1	1	0	0	0	0	0	0		
+single_gene	PF_721e32addfeb	ogr/Delta-like zinc finger family protein	other	4	4	1,1,1,0,1,0,0	1	1	0	2	1	0	0	0	2	2	0	0	0	0	0	0		
+single_gene	PF_7236020d2fcc	peroxiredoxin	other	6	6	1,1,1,0,1,1,1	1	0	1	1	0	0	0	0	1	1	0	0	0	0	0	0		
+single_gene	PF_76500a758702	hypothetical protein	hypothetical	2	2	0,0,0,0,1,1,0	0	2	0	2	1	0	0	0	2	2	0	0	0	0	0	0		
+single_gene	PF_7ce7fe7dcc32	hypothetical protein	hypothetical	5	5	1,1,1,1,0,1,0	1	0	2	1	0	0	0	0	1	1	0	0	0	0	0	0		
+single_gene	PF_8218a1c3d97b	IS3 family transposase	transposase_or_IS	5	1	0,0,0,0,0,0,5	0	5	0	5	10	0	0	0	5	4	10	6	0	0	4	1	SAMN15905291:context_different_both_sides+context_unknown	context_different_both_sides
+single_gene	PF_827ba3cf5aa7	DNA cytosine methyltransferase	other	3	3	1,1,1,0,0,0,0	1	1	0	2	1	0	0	0	2	2	0	0	0	0	0	0		
+single_gene	PF_866237f80769	hypothetical protein	hypothetical	2	2	0,0,0,1,1,0,0	0	0	2	0	0	0	0	0	0	0	0	0	0	0	0	0		
+single_gene	PF_89117ba41d0e	glutathione S-transferase family protein	other	7	7	1,1,1,1,1,1,1	2	0	1	2	0	0	0	1	1	1	0	0	0	0	0	0		
+single_gene	PF_8e0bb7804a8c	hypothetical protein	hypothetical	2	2	0,0,1,0,0,0,1	0	2	0	2	1	0	0	0	2	2	0	0	0	0	0	0		
+single_gene	PF_93861fdcabf4	undecaprenyl-diphosphate phosphatase	other	7	7	1,1,1,1,1,1,1	0	0	7	0	0	0	0	0	0	0	0	0	0	0	0	0		
+single_gene	PF_93cae76b0644	fasciclin domain-containing protein	other	6	6	1,1,1,1,1,1,0	0	0	6	0	0	0	0	0	0	0	0	0	0	0	0	0		
+single_gene	PF_a1badc608c61	transporter	other	6	6	1,1,1,0,1,1,1	1	0	2	1	0	0	0	0	1	1	0	0	0	0	0	0		
+single_gene	PF_a4b39ee6aea3	M16 family metallopeptidase	other	5	5	1,1,1,0,1,1,0	0	0	5	0	0	0	0	0	0	0	0	0	0	0	0	0		
+single_gene	PF_a9b031ceb8f5	helix-turn-helix domain-containing protein	other	4	4	1,1,1,1,0,0,0	1	0	1	1	0	0	0	0	1	1	0	0	0	0	0	0		
+single_gene	PF_ac056db7bb31	IS30 family transposase	transposase_or_IS	10	5	1,3,4,0,1,1,0	3	0	3	3	1	0	0	2	2	2	9	6	0	0	3	2	SAMN14082653:context_different_both_sides+context_unknown;SAMN31258398:context_different_both_sides+context_unknown	context_different_both_sides
+single_gene	PF_ad056eba1256	IS5 family transposase	transposase_or_IS	15	1	0,0,0,0,0,0,15	0	15	0	15	105	0	0	0	15	10	105	54	1	0	50	1	SAMN15905291:context_different_both_sides+context_repeated_both_sides+context_unknown	context_different_both_sides
+single_gene	PF_adc4ad803994	IS5 family transposase	transposase_or_IS	9	1	0,0,0,0,0,0,9	0	9	0	9	36	0	0	0	9	7	36	21	1	0	14	1	SAMN15905291:context_different_both_sides+context_repeated_both_sides+context_unknown	context_different_both_sides
+single_gene	PF_aee840e08b6d	LysR family transcriptional regulator	other	3	3	0,0,0,1,0,1,1	1	0	1	1	0	0	0	0	1	1	0	0	0	0	0	0		
+single_gene	PF_b60e0e925c6d	DUF4337 domain-containing protein	other	7	7	1,1,1,1,1,1,1	0	0	7	0	0	0	0	0	0	0	0	0	0	0	0	0		
+single_gene	PF_b70e264b24a2	hypothetical protein	hypothetical	3	3	1,0,1,1,0,0,0	1	1	0	2	1	0	0	0	2	2	0	0	0	0	0	0		
+single_gene	PF_b70f42f77aef	aldo/keto reductase	other	7	7	1,1,1,1,1,1,1	1	0	1	1	0	0	0	0	1	1	0	0	0	0	0	0		
+single_gene	PF_bd73a80fa0dd	Imm58 family immunity protein	other	4	4	1,1,1,1,0,0,0	1	0	1	1	0	0	0	0	1	1	0	0	0	0	0	0		
+single_gene	PF_c05792c6c80e	DUF6616 family protein	other	5	5	1,1,1,0,1,1,0	1	0	2	1	0	0	0	0	1	1	0	0	0	0	0	0		
+single_gene	PF_c1a8ea4fe94b	ArnT family glycosyltransferase	other	6	6	1,1,1,1,1,1,0	1	0	3	1	0	0	0	0	1	1	0	0	0	0	0	0		
+single_gene	PF_c4f89ecc618b	helix-turn-helix transcriptional regulator	other	7	6	1,1,1,1,2,1,0	0	0	7	0	0	0	0	0	0	0	1	0	1	0	0	0		
+single_gene	PF_c641e753ac2c	tryptophan 2,3-dioxygenase	other	7	7	1,1,1,1,1,1,1	1	0	1	1	0	0	0	0	1	1	0	0	0	0	0	0		
+single_gene	PF_cb2a3c4e35b3	IS630 family transposase	transposase_or_IS	3	1	0,0,0,0,0,0,3	0	3	0	3	3	0	0	0	3	3	3	3	0	0	0	1	SAMN15905291:context_different_both_sides	context_different_both_sides
+single_gene	PF_cc2bba7f988e	hypothetical protein	hypothetical	2	2	1,1,0,0,0,0,0	0	2	0	2	1	0	0	0	2	2	0	0	0	0	0	0		
+single_gene	PF_ccc1461b9d44	SOS response-associated peptidase	other	2	1	0,0,0,0,2,0,0	0	2	0	2	1	0	0	0	2	2	1	1	0	0	0	1	SAMN00623041:context_different_both_sides	context_different_both_sides
+single_gene	PF_ce0cce1973e1	tripartite tricarboxylate transporter substrate binding protein	other	7	7	1,1,1,1,1,1,1	2	0	2	2	0	0	1	0	1	1	0	0	0	0	0	0		
+single_gene	PF_d796f492fa26	methyl-accepting chemotaxis protein	other	3	1	0,0,0,0,0,0,3	0	3	0	3	3	0	0	0	3	3	3	3	0	0	0	1	SAMN15905291:context_different_both_sides	context_different_both_sides
+single_gene	PF_ea7c22e3fd99	IS5 family transposase	transposase_or_IS	8	1	0,0,0,0,0,0,8	0	8	0	8	28	0	0	0	8	7	28	21	0	0	7	1	SAMN15905291:context_different_both_sides+context_unknown	context_different_both_sides
+single_gene	PF_ec17db5f6c3a	energy-coupling factor ABC transporter permease	other	6	6	1,1,1,1,0,1,1	1	0	3	1	0	0	0	0	1	1	0	0	0	0	0	0		
+single_gene	PF_ef29af2d030f	flavin-dependent oxidoreductase	other	6	6	1,1,1,0,1,1,1	1	0	1	1	0	0	0	0	1	1	0	0	0	0	0	0		
+single_gene	PF_eff861f11550	hypothetical protein	hypothetical	3	1	0,0,0,0,3,0,0	0	3	0	3	3	0	0	0	3	1	3	0	1	1	1	1	SAMN00623041:context_repeated_both_sides+context_repeated_one_side+context_unknown	context_repeated
+single_gene	PF_f3f544fcb335	BRO-N domain-containing protein	other	2	2	0,0,0,0,1,1,0	0	2	0	2	1	0	0	0	2	2	0	0	0	0	0	0		
+single_gene	PF_f53ad98f728e	HNH endonuclease	other	2	2	0,0,1,0,1,0,0	0	0	2	0	0	0	0	0	0	0	0	0	0	0	0	0		
+single_gene	PF_f73808909245	metallophosphoesterase family protein	other	3	3	0,0,0,0,1,1,1	1	0	1	1	0	0	0	0	1	1	0	0	0	0	0	0		
+single_gene	PF_fc49068bda90	HNH endonuclease	other	2	2	1,0,0,0,1,0,0	0	2	0	2	1	0	0	0	2	2	0	0	0	0	0	0		
+two_gene	PF_0009c278bd55-,PF_0edf6a811ea2+	DUF445 domain-containing protein | DUF3297 family protein	other	6	6	1,1,1,1,1,1,0	2	0	0	2	0	0	1	0	1	1	0	0	0	0	0	0		
+two_gene	PF_0368e9ee9685-,PF_649217a327d9-	metallophosphoesterase | dihydrofolate reductase	other	6	6	1,1,1,1,1,0,1	1	0	3	1	0	0	0	0	1	1	0	0	0	0	0	0		
+two_gene	PF_0706cfdd30af+,PF_623a7fcb9f04-	OsmC family protein | SprT-like domain-containing protein	other	5	5	1,1,1,1,1,0,0	2	0	0	2	0	0	0	1	1	1	0	0	0	0	0	0		
+two_gene	PF_0b66421b38e4-,PF_bb5c9b78d9c7-	GNAT family N-acetyltransferase | acetyltransferase	other	3	3	0,0,0,1,1,1,0	0	0	3	0	0	0	0	0	0	0	0	0	0	0	0	0		
+two_gene	PF_0fe2af4edbea-,PF_27aade44a958+	glutathione transferase GstA | winged helix-turn-helix transcriptional regulator	other	6	6	1,1,1,1,1,1,0	1	0	4	1	0	0	0	0	1	1	0	0	0	0	0	0		
+two_gene	PF_10b9be14a143-,PF_1180b16eba28-	electron transfer flavoprotein subunit alpha/FixB family protein | electron transfer flavoprotein subunit beta/FixA family protein	other	14	7	2,2,2,2,2,2,2	2	0	0	2	0	0	0	1	1	1	7	6	0	0	1	7	SAMN00623041:context_different_both_sides;SAMN13049073:context_different_both_sides;SAMN13450439:context_different_both_sides;SAMN14082653:context_different_both_sides;SAMN15905291:context_different_both_sides;SAMN31258398:context_different_both_sides;SAMN34234483:context_unknown	context_different_both_sides
+two_gene	PF_11a0e2f41609+,PF_5ed5672f467e+	NAD(P)/FAD-dependent oxidoreductase | VUT family protein	other	6	6	1,1,1,0,1,1,1	1	0	2	1	0	0	0	0	1	1	0	0	0	0	0	0		
+two_gene	PF_180745c985d5-,PF_6b5eb7d16b15+	winged helix-turn-helix transcriptional regulator | D-amino acid dehydrogenase	other	6	6	1,1,1,0,1,1,1	1	0	1	1	0	0	0	0	1	1	0	0	0	0	0	0		
+two_gene	PF_18e8934cbf0b-,PF_4d5357431930-	glutathione transferase | hypothetical protein	hypothetical	6	6	1,1,1,1,1,1,0	1	0	2	1	0	0	0	0	1	1	0	0	0	0	0	0		
+two_gene	PF_19beb8334344+,PF_c52c0fddf6ce+	chloride channel protein | MgtC/SapB family protein	other	6	6	1,1,1,1,1,1,0	2	0	1	2	0	0	0	1	1	1	0	0	0	0	0	0		
+two_gene	PF_1ddd711a5bf2-,PF_89117ba41d0e+	glutathione S-transferase family protein | OmpW/AlkL family protein	other	3	3	0,0,0,0,1,1,1	1	0	1	1	0	0	0	0	1	1	0	0	0	0	0	0		
+two_gene	PF_22c84af82ef4-,PF_2c743d400be4+	LysR family transcriptional regulator | NAD(P)H-quinone oxidoreductase	other	7	7	1,1,1,1,1,1,1	2	0	1	2	0	0	0	1	1	1	0	0	0	0	0	0		
+two_gene	PF_27aade44a958+,PF_c58792f6b8d0+	winged helix-turn-helix transcriptional regulator | AraC family transcriptional regulator	other	4	4	1,0,1,0,1,1,0	1	0	2	1	0	0	0	0	1	1	0	0	0	0	0	0		
+two_gene	PF_3070024975f6+,PF_5cd22bca3972+	hypothetical protein | IS481 family transposase	transposase_or_IS	3	3	0,1,1,0,1,0,0	1	1	0	2	1	0	0	0	2	2	0	0	0	0	0	0		
+two_gene	PF_54163d779c24+,PF_e653c39dbf45+	tyrosine-type recombinase/integrase | DUF4224 domain-containing protein	integrase_recombinase_resolvase	3	3	0,1,1,0,1,0,0	1	0	1	1	0	0	0	0	1	1	0	0	0	0	0	0		
+two_gene	PF_59f02ec91a35+,PF_ebabcd779403+	hypothetical protein | RNA polymerase sigma factor	hypothetical	3	3	0,0,0,1,1,1,0	0	0	3	0	0	0	0	0	0	0	0	0	0	0	0	0		
+two_gene	PF_5cd22bca3972+,PF_6e6c9b40b631+	LysR substrate-binding domain-containing protein | hypothetical protein	hypothetical	5	5	1,1,1,1,1,0,0	1	0	1	1	0	0	0	0	1	1	0	0	0	0	0	0		
+two_gene	PF_69967150422e+,PF_6b0914474380+	MFS transporter | single-stranded DNA-binding protein	other	4	4	1,1,1,0,0,0,1	1	1	0	2	1	0	0	0	2	2	0	0	0	0	0	0		
+two_gene	PF_6d7668b57079+,PF_c6d8d18b81e4+	hypothetical protein | lysozyme	hypothetical	3	3	0,1,1,0,1,0,0	1	0	1	1	0	0	0	0	1	1	0	0	0	0	0	0		
+two_gene	PF_746ce8b59335-,PF_c88a4184cf9c+	LysR family transcriptional regulator | SDR family NAD(P)-dependent oxidoreductase	other	5	5	1,1,1,0,1,1,0	1	0	2	1	0	0	0	0	1	1	0	0	0	0	0	0		
+two_gene	PF_83145752a16b-,PF_a27193128b2e-	phage protein NinX family protein | hypothetical protein	phage_like	2	1	0,0,0,0,2,0,0	0	2	0	2	1	0	0	0	2	1	1	0	0	0	1	1	SAMN00623041:context_unknown	context_unknown
+two_gene	PF_95c9b3b4d0b1+,PF_a15ccfb95ad8+	HNH endonuclease signature motif containing protein | hypothetical protein	hypothetical	2	2	0,1,1,0,0,0,0	0	2	0	2	1	0	0	0	2	2	0	0	0	0	0	0		
+two_gene	PF_a386eb61434b-,PF_c588098e50aa-	hypothetical protein | hypothetical protein	hypothetical	4	4	1,1,1,0,1,0,0	1	1	0	2	1	0	0	0	2	2	0	0	0	0	0	0		
+two_gene	PF_ad7500c0a851-,PF_c3390e92a768+	N-acetyl-gamma-glutamyl-phosphate reductase | LysR family transcriptional regulator	other	5	5	1,1,1,0,1,1,0	1	0	2	1	0	0	0	0	1	1	0	0	0	0	0	0		
+two_gene	PF_bbf57b65e145+,PF_d1d00aa2d48a+	low molecular weight protein-tyrosine-phosphatase | hypothetical protein	hypothetical	4	4	0,1,1,0,1,1,0	1	0	2	1	0	0	0	0	1	1	0	0	0	0	0	0		
+two_gene	PF_e215c5b412c2-,PF_e88f34983cba-	hypothetical protein | hypothetical protein	hypothetical	3	2	0,0,1,0,2,0,0	0	1	2	1	0	0	0	0	1	1	1	0	0	0	1	0		
+two_gene	PF_e21b29e5d43b+,PF_e499bcabd34c+	PDDEXK nuclease domain-containing protein | tyrosine-type recombinase/integrase	integrase_recombinase_resolvase	3	3	0,1,1,0,1,0,0	1	1	0	2	1	0	0	0	2	2	0	0	0	0	0	0		

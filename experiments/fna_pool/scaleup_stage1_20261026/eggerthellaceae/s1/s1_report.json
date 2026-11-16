@@ -1,0 +1,25 @@
+{
+  "manifest": "scaleup_stage1_20261026/eggerthellaceae/download_manifest.tsv",
+  "rows": 638,
+  "status": {
+    "verified": 638
+  },
+  "by_purpose": {
+    "gca_identity_check": {
+      "verified": 309
+    },
+    "primary": {
+      "verified": 329
+    }
+  },
+  "annotation": {
+    "present": 315,
+    "annotation_missing": 14
+  },
+  "pair_checks": {
+    "identical_sequences": 309
+  },
+  "bytes": 2940596938,
+  "files": 1906,
+  "failed": []
+}

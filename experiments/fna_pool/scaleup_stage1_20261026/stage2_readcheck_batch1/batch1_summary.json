@@ -1,0 +1,280 @@
+{
+ "version": "stage2_readcheck_v1",
+ "caller": "s3_readcheck_v0.3",
+ "evidence_source_added": "long_read_known_site_check",
+ "batch": "comamonadaceae",
+ "targets": 204,
+ "loci_tested": 204,
+ "tests": 320,
+ "test_report_class": {
+  "carrier_only_consistent": 167,
+  "both_samples_consistent": 150,
+  "partner_only_consistent": 1,
+  "insufficient_coverage": 2
+ },
+ "test_verdicts": {
+  "carrier_only_consistent": 167,
+  "both_samples_consistent": 150,
+  "partner_only_consistent": 1,
+  "not_tested": 2
+ },
+ "side_verdicts": {
+  "consistent/no_reads": 165,
+  "consistent/consistent": 150,
+  "consistent/insufficient": 2,
+  "insufficient/consistent": 1,
+  "insufficient/no_reads": 2
+ },
+ "locus_evidence_levels": {
+  "E1c": 90,
+  "E2": 85,
+  "E2s": 26,
+  "E1p": 1,
+  "E0": 2
+ },
+ "loci_any_test_class": {
+  "both_samples_consistent": 111,
+  "carrier_only_consistent": 116,
+  "insufficient_coverage": 2,
+  "partner_only_consistent": 1
+ },
+ "samples": {
+  "carriers": 97,
+  "partners": 111,
+  "both_roles": 41,
+  "carriers_with_local_reads": 97,
+  "partners_with_local_reads": 23
+ },
+ "runs": {
+  "checked": 134,
+  "status": {
+   "local_verified_ok": 130,
+   "linked_not_usable": 1,
+   "not_local": 3
+  },
+  "used": 130,
+  "used_by_read_type": {
+   "pacbio_unresolved": 22,
+   "ont": 97,
+   "pacbio_clr_subreads": 8,
+   "pacbio_hifi_ccs": 3
+  }
+ },
+ "molecules_excluded": {
+  "locus_ambiguous": 129,
+  "off_locus": 68,
+  "ambiguous": 0,
+  "cigar_fail": 486
+ },
+ "anomalies": {
+  "side_with_reads_insufficient": 5,
+  "run_linked_not_usable": 1,
+  "run_not_local": 3
+ },
+ "pilot_comparison": {
+  "linked_tests": 382,
+  "status": {
+   "test_not_in_batch1": 236,
+   "same_verdicts": 146
+  },
+  "by_scope": {
+   "same_carrier_locus_partner_not_in_stage1_locus": {
+    "test_not_in_batch1": 114
+   },
+   "same_carrier_partner_test": {
+    "test_not_in_batch1": 122,
+    "same_verdicts": 146
+   }
+  },
+  "counts_identical": 146,
+  "changes": {},
+  "not_in_batch1_reasons": {
+   "locus_not_target:carrier_without_local_reads": 192,
+   "locus_tested_partner_call_not_in_stage1_locus": 42,
+   "locus_not_target:stage1_category=partner_mixed": 2
+  }
+ },
+ "next_batch": {
+  "main_carrier_and_partner_usable": {
+   "loci": 973,
+   "new_runs_in_tier": 600,
+   "bytes_known": 500400260032,
+   "runs_unknown_size": 0
+  },
+  "main_carrier_only_usable": {
+   "loci": 1982,
+   "new_runs_in_tier": 736,
+   "bytes_known": 585700576006,
+   "runs_unknown_size": 0
+  },
+  "main_partner_only_usable": {
+   "loci": 1621,
+   "new_runs_in_tier": 170,
+   "bytes_known": 135450997162,
+   "runs_unknown_size": 0
+  }
+ },
+ "next_batch_note": "metadata only, nothing downloaded; each run counted once, in its highest tier",
+ "batch1_followup": {
+  "items": {
+   "E2s_test_without_two_sided_result": 45,
+   "test_side_with_reads_insufficient": 5,
+   "partner_runs_not_local": 3,
+   "side_supported_only_by_pacbio_unresolved_carrier": 51,
+   "side_supported_only_by_pacbio_unresolved_partner": 17
+  },
+  "loci": 58,
+  "runs_to_download": [
+   "SRR40356274",
+   "SRR40356277",
+   "SRR40356297"
+  ],
+  "bytes_to_download": 1458612936
+ },
+ "pacbio_unresolved": {
+  "runs_used": 22,
+  "test_sides_only_unresolved": 68,
+  "consistent_sides_only_unresolved": 68,
+  "loci_carrier_support_only_unresolved": 30,
+  "both_consistent_tests_with_an_unresolved_only_side": 22,
+  "note": "mapped with map-pb as in v0.3; kept as unresolved, not counted as CLR or HiFi"
+ },
+ "next_batch_p1_chunks": {
+  "rule": "per family, sorted by BioSample and run, <= 50000000000 bytes and <= 40 runs per chunk",
+  "chunks": [
+   {
+    "chunk_id": "p1_actinomycetaceae_01",
+    "batch": "actinomycetaceae",
+    "runs": 9,
+    "bytes": 5608423973
+   },
+   {
+    "chunk_id": "p1_comamonadaceae_01",
+    "batch": "comamonadaceae",
+    "runs": 6,
+    "bytes": 2210496836
+   },
+   {
+    "chunk_id": "p1_eggerthellaceae_01",
+    "batch": "eggerthellaceae",
+    "runs": 2,
+    "bytes": 132269012
+   },
+   {
+    "chunk_id": "p1_erwiniaceae_01",
+    "batch": "erwiniaceae",
+    "runs": 40,
+    "bytes": 30817041097
+   },
+   {
+    "chunk_id": "p1_erwiniaceae_02",
+    "batch": "erwiniaceae",
+    "runs": 27,
+    "bytes": 19354635650
+   },
+   {
+    "chunk_id": "p1_flavobacteriaceae_01",
+    "batch": "flavobacteriaceae",
+    "runs": 40,
+    "bytes": 19458928567
+   },
+   {
+    "chunk_id": "p1_flavobacteriaceae_02",
+    "batch": "flavobacteriaceae",
+    "runs": 24,
+    "bytes": 19370086730
+   },
+   {
+    "chunk_id": "p1_lachnospiraceae_01",
+    "batch": "lachnospiraceae",
+    "runs": 40,
+    "bytes": 13817894252
+   },
+   {
+    "chunk_id": "p1_lachnospiraceae_02",
+    "batch": "lachnospiraceae",
+    "runs": 25,
+    "bytes": 29687200100
+   },
+   {
+    "chunk_id": "p1_metamycoplasmataceae_01",
+    "batch": "metamycoplasmataceae",
+    "runs": 40,
+    "bytes": 19281041274
+   },
+   {
+    "chunk_id": "p1_metamycoplasmataceae_02",
+    "batch": "metamycoplasmataceae",
+    "runs": 23,
+    "bytes": 14245172231
+   },
+   {
+    "chunk_id": "p1_microbacteriaceae_01",
+    "batch": "microbacteriaceae",
+    "runs": 40,
+    "bytes": 24064563174
+   },
+   {
+    "chunk_id": "p1_microbacteriaceae_02",
+    "batch": "microbacteriaceae",
+    "runs": 27,
+    "bytes": 13082074419
+   },
+   {
+    "chunk_id": "p1_micrococcaceae_01",
+    "batch": "micrococcaceae",
+    "runs": 40,
+    "bytes": 23991995030
+   },
+   {
+    "chunk_id": "p1_micrococcaceae_02",
+    "batch": "micrococcaceae",
+    "runs": 3,
+    "bytes": 232680407
+   },
+   {
+    "chunk_id": "p1_nitrobacteraceae_01",
+    "batch": "nitrobacteraceae",
+    "runs": 32,
+    "bytes": 42391756636
+   },
+   {
+    "chunk_id": "p1_nitrobacteraceae_02",
+    "batch": "nitrobacteraceae",
+    "runs": 35,
+    "bytes": 49972099599
+   },
+   {
+    "chunk_id": "p1_nitrobacteraceae_03",
+    "batch": "nitrobacteraceae",
+    "runs": 25,
+    "bytes": 49671417557
+   },
+   {
+    "chunk_id": "p1_nitrobacteraceae_04",
+    "batch": "nitrobacteraceae",
+    "runs": 40,
+    "bytes": 27510718206
+   },
+   {
+    "chunk_id": "p1_nitrobacteraceae_05",
+    "batch": "nitrobacteraceae",
+    "runs": 31,
+    "bytes": 48884759183
+   },
+   {
+    "chunk_id": "p1_nitrobacteraceae_06",
+    "batch": "nitrobacteraceae",
+    "runs": 40,
+    "bytes": 38506843890
+   },
+   {
+    "chunk_id": "p1_nitrobacteraceae_07",
+    "batch": "nitrobacteraceae",
+    "runs": 11,
+    "bytes": 8108162209
+   }
+  ],
+  "resume": "a chunk is fetched with s3_readcheck fetch logic; runs with verify.json are skipped, .part files resume"
+ }
+}

@@ -1,0 +1,19 @@
+{
+  "joint_fna": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/metamycoplasmataceae/s2/joint.fna.gz",
+  "joint_fna_sha256": "e179688ac1ce71074796b3102b46852606792639d77b25d1f9c63e24bb7101bc",
+  "samples": 1738,
+  "contigs": 90234,
+  "contig_bp": 1570243776,
+  "header": "sample_id|assembly|contig",
+  "check": "every joint record SHA256 equals the S1 record SHA256 of its source FNA",
+  "pool_rows": 1738,
+  "excluded_not_verified": 0,
+  "annotation_status": {
+    "present": 1561,
+    "annotation_missing": 177
+  },
+  "gff_features_out_of_range": 0,
+  "contig_index": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/metamycoplasmataceae/s2/contig_index.tsv.gz",
+  "contig_index_sha256": "b7b902758c7b32edfce5e977ac4b11a5ee6575985ec3669b0d3c1fcf990bf089",
+  "gff_features_origin_spanning": 220
+}

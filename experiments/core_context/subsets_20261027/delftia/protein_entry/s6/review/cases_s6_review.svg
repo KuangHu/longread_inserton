@@ -1,0 +1,189 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="454">
+<rect width="100%" height="100%" fill="white"/>
+<text x="14" y="24" font-size="16">delftia: S6 v0.1 review cases (target scope, assembly only)</text>
+<text x="14" y="42" font-size="10">Host windows (5 genes per side after skipping mobile-keyword genes, red box = number skipped) in core orientation, coloured by homology group. Outer flank DNA = blastn coverage of 500-3000 bp beyond each core end; a cross-check only.</text>
+<text x="14" y="56" font-size="10">Position units (site groups, single-observation sites) are not independent insertion events.</text>
+<text x="14" y="70" font-size="12" font-weight="bold">context_different | single_gene PF_4b70bb8e2b9d: IS5 family transposase | 30 occ / 4 assemblies, copies 5,8,9,0,8,0,0</text>
+<text x="14" y="92" font-size="10">SAMN13049073 NZ_CP045291.1:4537806-4538587 (-)</text>
+<text x="14" y="103" font-size="9" fill="#555">group PF_4b70bb8e2b9d|0</text>
+<polygon points="309,84 372,84 372,102 309,102 300,93" fill="hsl(246,55%,60%)" stroke="#666" stroke-width="0.5"><title>PH_b629ccc191b2 | hypothetical protein</title></polygon>
+<text x="310" y="96" font-size="7">hypothetical</text>
+<polygon points="385,84 448,84 448,102 385,102 376,93" fill="hsl(157,55%,66%)" stroke="#666" stroke-width="0.5"><title>PH_b36312d09cef | hypothetical protein</title></polygon>
+<text x="386" y="96" font-size="7">hypothetical</text>
+<polygon points="452,84 515,84 524,93 515,102 452,102" fill="hsl(309,55%,56%)" stroke="#666" stroke-width="0.5"><title>PH_9f613bcf81a2 | LexA family protein</title></polygon>
+<text x="462" y="96" font-size="7">LexA family </text>
+<polygon points="537,84 600,84 600,102 537,102 528,93" fill="hsl(89,55%,57%)" stroke="#666" stroke-width="0.5"><title>PH_822ae203e521 | HNH endonuclease</title></polygon>
+<text x="538" y="96" font-size="7">HNH endonucl</text>
+<polygon points="613,84 676,84 676,102 613,102 604,93" fill="hsl(337,55%,60%)" stroke="#666" stroke-width="0.5"><title>PH_37374ec3925c | methylamine utilization protein MauJ</title></polygon>
+<text x="614" y="96" font-size="7">methylamine </text>
+<rect x="680" y="84" width="22" height="18" fill="none" stroke="#c0392b" stroke-dasharray="3,2"/><text x="683" y="96" font-size="8" fill="#c0392b">1m</text>
+<polygon points="706,84 769,84 778,93 769,102 706,102" fill="#edc06f" stroke="#666" stroke-width="0.5"><title>core</title></polygon>
+<text x="716" y="96" font-size="7">core</text>
+<polygon points="817,84 880,84 880,102 817,102 808,93" fill="hsl(39,55%,72%)" stroke="#666" stroke-width="0.5"><title>PH_72940593673f | hypothetical protein</title></polygon>
+<text x="818" y="96" font-size="7">hypothetical</text>
+<polygon points="884,84 947,84 956,93 947,102 884,102" fill="hsl(280,55%,59%)" stroke="#666" stroke-width="0.5"><title>PH_e0de220860ec | hypothetical protein</title></polygon>
+<text x="894" y="96" font-size="7">hypothetical</text>
+<polygon points="960,84 1023,84 1032,93 1023,102 960,102" fill="hsl(106,55%,62%)" stroke="#666" stroke-width="0.5"><title>PH_26cc6ace058e | hypothetical protein</title></polygon>
+<text x="970" y="96" font-size="7">hypothetical</text>
+<polygon points="1045,84 1108,84 1108,102 1045,102 1036,93" fill="hsl(274,55%,61%)" stroke="#666" stroke-width="0.5"><title>PH_25cabdadda1e | porin</title></polygon>
+<text x="1046" y="96" font-size="7">porin</text>
+<polygon points="1121,84 1184,84 1184,102 1121,102 1112,93" fill="hsl(251,55%,70%)" stroke="#666" stroke-width="0.5"><title>PH_81bc9809017c | substrate-binding domain-containing protein</title></polygon>
+<text x="1122" y="96" font-size="7">substrate-bi</text>
+<text x="14" y="124" font-size="10">SAMN13049073 NZ_CP045291.1:4903192-4904002 (-)</text>
+<text x="14" y="135" font-size="9" fill="#555">group PF_4b70bb8e2b9d|1</text>
+<polygon points="309,116 372,116 372,134 309,134 300,125" fill="hsl(113,55%,68%)" stroke="#666" stroke-width="0.5"><title>PH_54c07be28e2f | DUF5655 domain-containing protein</title></polygon>
+<text x="310" y="128" font-size="7">DUF5655 doma</text>
+<polygon points="385,116 448,116 448,134 385,134 376,125" fill="hsl(140,55%,67%)" stroke="#666" stroke-width="0.5"><title>PH_639a4fe13338 | class I SAM-dependent DNA methyltransferase</title></polygon>
+<text x="386" y="128" font-size="7">class I SAM-</text>
+<polygon points="461,116 524,116 524,134 461,134 452,125" fill="hsl(116,55%,56%)" stroke="#666" stroke-width="0.5"><title>PH_748a482f2a5f | hypothetical protein</title></polygon>
+<text x="462" y="128" font-size="7">hypothetical</text>
+<polygon points="537,116 600,116 600,134 537,134 528,125" fill="hsl(134,55%,64%)" stroke="#666" stroke-width="0.5"><title>PH_74bdd597a41b | AAA family ATPase</title></polygon>
+<text x="538" y="128" font-size="7">AAA family A</text>
+<polygon points="613,116 676,116 676,134 613,134 604,125" fill="hsl(311,55%,59%)" stroke="#666" stroke-width="0.5"><title>PH_a4a9a7d147bd | restriction endonuclease subunit S</title></polygon>
+<text x="614" y="128" font-size="7">restriction </text>
+<polygon points="706,116 769,116 778,125 769,134 706,134" fill="#edc06f" stroke="#666" stroke-width="0.5"><title>core</title></polygon>
+<text x="716" y="128" font-size="7">core</text>
+<polygon points="817,116 880,116 880,134 817,134 808,125" fill="hsl(359,55%,63%)" stroke="#666" stroke-width="0.5"><title>PH_86b7d8a19aa5 | hypothetical protein</title></polygon>
+<text x="818" y="128" font-size="7">hypothetical</text>
+<polygon points="893,116 956,116 956,134 893,134 884,125" fill="hsl(183,55%,62%)" stroke="#666" stroke-width="0.5"><title>PH_da185b8b29d9 | type I restriction-modification enzyme R subunit C-terminal domain-containing protein</title></polygon>
+<text x="894" y="128" font-size="7">type I restr</text>
+<polygon points="969,116 1032,116 1032,134 969,134 960,125" fill="hsl(172,55%,59%)" stroke="#666" stroke-width="0.5"><title>PH_a1a2348c3faa | type II toxin-antitoxin system RelE/ParE family toxin</title></polygon>
+<text x="970" y="128" font-size="7">type II toxi</text>
+<polygon points="1045,116 1108,116 1108,134 1045,134 1036,125" fill="hsl(207,55%,56%)" stroke="#666" stroke-width="0.5"><title>PH_8217c6080f88 | type II toxin-antitoxin system Phd/YefM family antitoxin</title></polygon>
+<text x="1046" y="128" font-size="7">type II toxi</text>
+<polygon points="1112,116 1175,116 1184,125 1175,134 1112,134" fill="hsl(330,55%,64%)" stroke="#666" stroke-width="0.5"><title>PH_ad2926a3622c | hypothetical protein</title></polygon>
+<text x="1122" y="128" font-size="7">hypothetical</text>
+<text x="300" y="152" font-size="9" fill="#333">10 vs 11: different_position_same_assembly | host up different (0) down different (0) | context_different_both_sides | outer flank DNA up not_shared (0.0) down not_shared (0.0)</text>
+<text x="14" y="176" font-size="12" font-weight="bold">repeated_context | single_gene PF_4b70bb8e2b9d: IS5 family transposase | 30 occ / 4 assemblies, copies 5,8,9,0,8,0,0</text>
+<text x="14" y="198" font-size="10">SAMN31258398 NZ_CP109906.1:5194335-5195143 (-)</text>
+<text x="14" y="209" font-size="9" fill="#555">unresolved: unresolved_pairs</text>
+<polygon points="300,190 363,190 372,199 363,208 300,208" fill="hsl(8,55%,71%)" stroke="#666" stroke-width="0.5"><title>PH_1bda5c043d91 | response regulator transcription factor</title></polygon>
+<text x="310" y="202" font-size="7">response reg</text>
+<polygon points="385,190 448,190 448,208 385,208 376,199" fill="hsl(164,55%,69%)" stroke="#666" stroke-width="0.5"><title>PH_375bc27afc4c | hypothetical protein</title></polygon>
+<text x="386" y="202" font-size="7">hypothetical</text>
+<polygon points="452,190 515,190 524,199 515,208 452,208" fill="hsl(38,55%,57%)" stroke="#666" stroke-width="0.5"><title>PH_7fcfdc3e51fb | methyl-accepting chemotaxis protein</title></polygon>
+<text x="462" y="202" font-size="7">methyl-accep</text>
+<polygon points="537,190 600,190 600,208 537,208 528,199" fill="hsl(158,55%,64%)" stroke="#666" stroke-width="0.5"><title>PH_23c3c3c65036 | Bro-N domain-containing protein</title></polygon>
+<text x="538" y="202" font-size="7">Bro-N domain</text>
+<polygon points="613,190 676,190 676,208 613,208 604,199" fill="hsl(223,55%,66%)" stroke="#666" stroke-width="0.5"><title>PH_30b6e13bdb0a | hypothetical protein</title></polygon>
+<text x="614" y="202" font-size="7">hypothetical</text>
+<rect x="680" y="190" width="22" height="18" fill="none" stroke="#c0392b" stroke-dasharray="3,2"/><text x="683" y="202" font-size="8" fill="#c0392b">1m</text>
+<polygon points="706,190 769,190 778,199 769,208 706,208" fill="#edc06f" stroke="#666" stroke-width="0.5"><title>core</title></polygon>
+<text x="716" y="202" font-size="7">core</text>
+<rect x="782" y="190" width="22" height="18" fill="none" stroke="#c0392b" stroke-dasharray="3,2"/><text x="785" y="202" font-size="8" fill="#c0392b">1m</text>
+<polygon points="808,190 871,190 880,199 871,208 808,208" fill="hsl(239,55%,65%)" stroke="#666" stroke-width="0.5"><title>PH_cc4e1fa65078 | hypothetical protein</title></polygon>
+<text x="818" y="202" font-size="7">hypothetical</text>
+<polygon points="893,190 956,190 956,208 893,208 884,199" fill="hsl(301,55%,57%)" stroke="#666" stroke-width="0.5"><title>PH_c58792f6b8d0 | GyrI-like domain-containing protein</title></polygon>
+<text x="894" y="202" font-size="7">GyrI-like do</text>
+<polygon points="969,190 1032,190 1032,208 969,208 960,199" fill="hsl(206,55%,64%)" stroke="#666" stroke-width="0.5"><title>PH_093fdd2d5d8e | winged helix-turn-helix transcriptional regulator</title></polygon>
+<text x="970" y="202" font-size="7">winged helix</text>
+<polygon points="1036,190 1099,190 1108,199 1099,208 1036,208" fill="hsl(87,55%,70%)" stroke="#666" stroke-width="0.5"><title>PH_ba8c29d97d0d | hypothetical protein</title></polygon>
+<text x="1046" y="202" font-size="7">hypothetical</text>
+<polygon points="1112,190 1175,190 1184,199 1175,208 1112,208" fill="hsl(13,55%,62%)" stroke="#666" stroke-width="0.5"><title>PH_661929c5faf4 | glycosyl hydrolase family 18 protein</title></polygon>
+<text x="1122" y="202" font-size="7">glycosyl hyd</text>
+<text x="14" y="230" font-size="10">SAMN31258398 NZ_CP109906.1:5195211-5196019 (-)</text>
+<text x="14" y="241" font-size="9" fill="#555">unresolved: unresolved_pairs</text>
+<polygon points="300,222 363,222 372,231 363,240 300,240" fill="hsl(8,55%,71%)" stroke="#666" stroke-width="0.5"><title>PH_1bda5c043d91 | response regulator transcription factor</title></polygon>
+<text x="310" y="234" font-size="7">response reg</text>
+<polygon points="385,222 448,222 448,240 385,240 376,231" fill="hsl(164,55%,69%)" stroke="#666" stroke-width="0.5"><title>PH_375bc27afc4c | hypothetical protein</title></polygon>
+<text x="386" y="234" font-size="7">hypothetical</text>
+<polygon points="452,222 515,222 524,231 515,240 452,240" fill="hsl(38,55%,57%)" stroke="#666" stroke-width="0.5"><title>PH_7fcfdc3e51fb | methyl-accepting chemotaxis protein</title></polygon>
+<text x="462" y="234" font-size="7">methyl-accep</text>
+<polygon points="537,222 600,222 600,240 537,240 528,231" fill="hsl(158,55%,64%)" stroke="#666" stroke-width="0.5"><title>PH_23c3c3c65036 | Bro-N domain-containing protein</title></polygon>
+<text x="538" y="234" font-size="7">Bro-N domain</text>
+<polygon points="613,222 676,222 676,240 613,240 604,231" fill="hsl(223,55%,66%)" stroke="#666" stroke-width="0.5"><title>PH_30b6e13bdb0a | hypothetical protein</title></polygon>
+<text x="614" y="234" font-size="7">hypothetical</text>
+<polygon points="706,222 769,222 778,231 769,240 706,240" fill="#edc06f" stroke="#666" stroke-width="0.5"><title>core</title></polygon>
+<text x="716" y="234" font-size="7">core</text>
+<rect x="782" y="222" width="22" height="18" fill="none" stroke="#c0392b" stroke-dasharray="3,2"/><text x="785" y="234" font-size="8" fill="#c0392b">2m</text>
+<polygon points="808,222 871,222 880,231 871,240 808,240" fill="hsl(239,55%,65%)" stroke="#666" stroke-width="0.5"><title>PH_cc4e1fa65078 | hypothetical protein</title></polygon>
+<text x="818" y="234" font-size="7">hypothetical</text>
+<polygon points="893,222 956,222 956,240 893,240 884,231" fill="hsl(301,55%,57%)" stroke="#666" stroke-width="0.5"><title>PH_c58792f6b8d0 | GyrI-like domain-containing protein</title></polygon>
+<text x="894" y="234" font-size="7">GyrI-like do</text>
+<polygon points="969,222 1032,222 1032,240 969,240 960,231" fill="hsl(206,55%,64%)" stroke="#666" stroke-width="0.5"><title>PH_093fdd2d5d8e | winged helix-turn-helix transcriptional regulator</title></polygon>
+<text x="970" y="234" font-size="7">winged helix</text>
+<polygon points="1036,222 1099,222 1108,231 1099,240 1036,240" fill="hsl(87,55%,70%)" stroke="#666" stroke-width="0.5"><title>PH_ba8c29d97d0d | hypothetical protein</title></polygon>
+<text x="1046" y="234" font-size="7">hypothetical</text>
+<polygon points="1112,222 1175,222 1184,231 1175,240 1112,240" fill="hsl(13,55%,62%)" stroke="#666" stroke-width="0.5"><title>PH_661929c5faf4 | glycosyl hydrolase family 18 protein</title></polygon>
+<text x="1122" y="234" font-size="7">glycosyl hyd</text>
+<text x="300" y="258" font-size="9" fill="#333">26 vs 27: different_position_same_assembly | host up same (5) down same (5) | context_repeated_both_sides | outer flank DNA up shared (0.65) down shared (0.65)</text>
+<text x="14" y="282" font-size="12" font-weight="bold">multiple_correspondence | single_gene PF_3070024975f6: IS481 family transposase | 21 occ / 5 assemblies, copies 2,6,6,1,6,0,0</text>
+<text x="14" y="304" font-size="10">SAMN14082653 NZ_CP049795.1:1444102-1445289 (+)</text>
+<text x="14" y="315" font-size="9" fill="#555">unresolved: ambiguous_multiple_correspondence</text>
+<polygon points="300,296 363,296 372,305 363,314 300,314" fill="hsl(160,55%,63%)" stroke="#666" stroke-width="0.5"><title>PH_85bb39ed67b5 | aminotransferase-like domain-containing protein</title></polygon>
+<text x="310" y="308" font-size="7">aminotransfe</text>
+<polygon points="376,296 439,296 448,305 439,314 376,314" fill="hsl(36,55%,64%)" stroke="#666" stroke-width="0.5"><title>PH_0d4a2d14f533 | TonB-dependent receptor family protein</title></polygon>
+<text x="386" y="308" font-size="7">TonB-depende</text>
+<polygon points="461,296 524,296 524,314 461,314 452,305" fill="hsl(250,55%,60%)" stroke="#666" stroke-width="0.5"><title>PH_35b2058e5920 | Bug family tripartite tricarboxylate transporter substrate binding protein</title></polygon>
+<text x="462" y="308" font-size="7">Bug family t</text>
+<polygon points="537,296 600,296 600,314 537,314 528,305" fill="hsl(286,55%,69%)" stroke="#666" stroke-width="0.5"><title>PH_ba4b481dc531 | dihydroxy-acid dehydratase</title></polygon>
+<text x="538" y="308" font-size="7">dihydroxy-ac</text>
+<polygon points="613,296 676,296 676,314 613,314 604,305" fill="hsl(111,55%,59%)" stroke="#666" stroke-width="0.5"><title>PH_74e05632798d | helix-turn-helix domain-containing protein</title></polygon>
+<text x="614" y="308" font-size="7">helix-turn-h</text>
+<rect x="680" y="296" width="22" height="18" fill="none" stroke="#c0392b" stroke-dasharray="3,2"/><text x="683" y="308" font-size="8" fill="#c0392b">1m</text>
+<polygon points="706,296 769,296 778,305 769,314 706,314" fill="#edc06f" stroke="#666" stroke-width="0.5"><title>core</title></polygon>
+<text x="716" y="308" font-size="7">core</text>
+<polygon points="817,296 880,296 880,314 817,314 808,305" fill="hsl(85,55%,74%)" stroke="#666" stroke-width="0.5"><title>PH_8137b9ce6d9f | cytochrome c oxidase accessory protein CcoG</title></polygon>
+<text x="818" y="308" font-size="7">cytochrome c</text>
+<polygon points="893,296 956,296 956,314 893,314 884,305" fill="hsl(286,55%,73%)" stroke="#666" stroke-width="0.5"><title>PH_e68ed1d7a17b | hypothetical protein</title></polygon>
+<text x="894" y="308" font-size="7">hypothetical</text>
+<polygon points="960,296 1023,296 1032,305 1023,314 960,314" fill="hsl(267,55%,73%)" stroke="#666" stroke-width="0.5"><title>PH_f4e7e699880e | DUF2157 domain-containing protein</title></polygon>
+<text x="970" y="308" font-size="7">DUF2157 doma</text>
+<polygon points="1036,296 1099,296 1108,305 1099,314 1036,314" fill="hsl(246,55%,64%)" stroke="#666" stroke-width="0.5"><title>PH_d269b6a0f5dc | GDYXXLXY domain-containing protein</title></polygon>
+<text x="1046" y="308" font-size="7">GDYXXLXY dom</text>
+<polygon points="1121,296 1184,296 1184,314 1121,314 1112,305" fill="hsl(120,55%,74%)" stroke="#666" stroke-width="0.5"><title>PH_5373b1ec9993 | CaiB/BaiF CoA transferase family protein</title></polygon>
+<text x="1122" y="308" font-size="7">CaiB/BaiF Co</text>
+<text x="14" y="336" font-size="10">SAMN31258398 NZ_CP109906.1:5756947-5758134 (+)</text>
+<text x="14" y="347" font-size="9" fill="#555">unresolved: ambiguous_multiple_correspondence</text>
+<polygon points="300,328 363,328 372,337 363,346 300,346" fill="hsl(0,55%,56%)" stroke="#666" stroke-width="0.5"><title>PH_a5239010d231 | LysR family transcriptional regulator</title></polygon>
+<text x="310" y="340" font-size="7">LysR family </text>
+<polygon points="376,328 439,328 448,337 439,346 376,346" fill="hsl(79,55%,68%)" stroke="#666" stroke-width="0.5"><title>PH_13824b958e8d | tRNA 5-hydroxyuridine modification protein YegQ</title></polygon>
+<text x="386" y="340" font-size="7">tRNA 5-hydro</text>
+<polygon points="452,328 515,328 524,337 515,346 452,346" fill="hsl(344,55%,67%)" stroke="#666" stroke-width="0.5"><title>PH_f9d17fdf9088 | hypothetical protein</title></polygon>
+<text x="462" y="340" font-size="7">hypothetical</text>
+<polygon points="528,328 591,328 600,337 591,346 528,346" fill="hsl(160,55%,63%)" stroke="#666" stroke-width="0.5"><title>PH_85bb39ed67b5 | PLP-dependent aminotransferase family protein</title></polygon>
+<text x="538" y="340" font-size="7">PLP-dependen</text>
+<polygon points="604,328 667,328 676,337 667,346 604,346" fill="hsl(36,55%,64%)" stroke="#666" stroke-width="0.5"><title>PH_0d4a2d14f533 | TonB-dependent receptor family protein</title></polygon>
+<text x="614" y="340" font-size="7">TonB-depende</text>
+<polygon points="706,328 769,328 778,337 769,346 706,346" fill="#edc06f" stroke="#666" stroke-width="0.5"><title>core</title></polygon>
+<text x="716" y="340" font-size="7">core</text>
+<rect x="782" y="328" width="22" height="18" fill="none" stroke="#c0392b" stroke-dasharray="3,2"/><text x="785" y="340" font-size="8" fill="#c0392b">1m</text>
+<polygon points="817,328 880,328 880,346 817,346 808,337" fill="hsl(250,55%,60%)" stroke="#666" stroke-width="0.5"><title>PH_35b2058e5920 | Bug family tripartite tricarboxylate transporter substrate binding protein</title></polygon>
+<text x="818" y="340" font-size="7">Bug family t</text>
+<polygon points="893,328 956,328 956,346 893,346 884,337" fill="hsl(286,55%,69%)" stroke="#666" stroke-width="0.5"><title>PH_ba4b481dc531 | dihydroxy-acid dehydratase</title></polygon>
+<text x="894" y="340" font-size="7">dihydroxy-ac</text>
+<polygon points="969,328 1032,328 1032,346 969,346 960,337" fill="hsl(111,55%,59%)" stroke="#666" stroke-width="0.5"><title>PH_74e05632798d | helix-turn-helix domain-containing protein</title></polygon>
+<text x="970" y="340" font-size="7">helix-turn-h</text>
+<polygon points="1045,328 1108,328 1108,346 1045,346 1036,337" fill="hsl(85,55%,74%)" stroke="#666" stroke-width="0.5"><title>PH_8137b9ce6d9f | cytochrome c oxidase accessory protein CcoG</title></polygon>
+<text x="1046" y="340" font-size="7">cytochrome c</text>
+<polygon points="1121,328 1184,328 1184,346 1121,346 1112,337" fill="hsl(286,55%,73%)" stroke="#666" stroke-width="0.5"><title>PH_e68ed1d7a17b | hypothetical protein</title></polygon>
+<text x="1122" y="340" font-size="7">hypothetical</text>
+<text x="14" y="368" font-size="10">SAMN31258398 NZ_CP109906.1:5761961-5763148 (+)</text>
+<text x="14" y="379" font-size="9" fill="#555">unresolved: ambiguous_multiple_correspondence</text>
+<polygon points="300,360 363,360 372,369 363,378 300,378" fill="hsl(160,55%,63%)" stroke="#666" stroke-width="0.5"><title>PH_85bb39ed67b5 | PLP-dependent aminotransferase family protein</title></polygon>
+<text x="310" y="372" font-size="7">PLP-dependen</text>
+<polygon points="376,360 439,360 448,369 439,378 376,378" fill="hsl(36,55%,64%)" stroke="#666" stroke-width="0.5"><title>PH_0d4a2d14f533 | TonB-dependent receptor family protein</title></polygon>
+<text x="386" y="372" font-size="7">TonB-depende</text>
+<polygon points="461,360 524,360 524,378 461,378 452,369" fill="hsl(250,55%,60%)" stroke="#666" stroke-width="0.5"><title>PH_35b2058e5920 | Bug family tripartite tricarboxylate transporter substrate binding protein</title></polygon>
+<text x="462" y="372" font-size="7">Bug family t</text>
+<polygon points="537,360 600,360 600,378 537,378 528,369" fill="hsl(286,55%,69%)" stroke="#666" stroke-width="0.5"><title>PH_ba4b481dc531 | dihydroxy-acid dehydratase</title></polygon>
+<text x="538" y="372" font-size="7">dihydroxy-ac</text>
+<polygon points="613,360 676,360 676,378 613,378 604,369" fill="hsl(111,55%,59%)" stroke="#666" stroke-width="0.5"><title>PH_74e05632798d | helix-turn-helix domain-containing protein</title></polygon>
+<text x="614" y="372" font-size="7">helix-turn-h</text>
+<rect x="680" y="360" width="22" height="18" fill="none" stroke="#c0392b" stroke-dasharray="3,2"/><text x="683" y="372" font-size="8" fill="#c0392b">1m</text>
+<polygon points="706,360 769,360 778,369 769,378 706,378" fill="#edc06f" stroke="#666" stroke-width="0.5"><title>core</title></polygon>
+<text x="716" y="372" font-size="7">core</text>
+<polygon points="817,360 880,360 880,378 817,378 808,369" fill="hsl(85,55%,74%)" stroke="#666" stroke-width="0.5"><title>PH_8137b9ce6d9f | cytochrome c oxidase accessory protein CcoG</title></polygon>
+<text x="818" y="372" font-size="7">cytochrome c</text>
+<polygon points="893,360 956,360 956,378 893,378 884,369" fill="hsl(286,55%,73%)" stroke="#666" stroke-width="0.5"><title>PH_e68ed1d7a17b | hypothetical protein</title></polygon>
+<text x="894" y="372" font-size="7">hypothetical</text>
+<polygon points="960,360 1023,360 1032,369 1023,378 960,378" fill="hsl(267,55%,73%)" stroke="#666" stroke-width="0.5"><title>PH_f4e7e699880e | DUF2157 domain-containing protein</title></polygon>
+<text x="970" y="372" font-size="7">DUF2157 doma</text>
+<polygon points="1036,360 1099,360 1108,369 1099,378 1036,378" fill="hsl(246,55%,64%)" stroke="#666" stroke-width="0.5"><title>PH_d269b6a0f5dc | GDYXXLXY domain-containing protein</title></polygon>
+<text x="1046" y="372" font-size="7">GDYXXLXY dom</text>
+<polygon points="1121,360 1184,360 1184,378 1121,378 1112,369" fill="hsl(120,55%,74%)" stroke="#666" stroke-width="0.5"><title>PH_5373b1ec9993 | CaiB/BaiF CoA transferase family protein</title></polygon>
+<text x="1122" y="372" font-size="7">CaiB/BaiF Co</text>
+<text x="300" y="396" font-size="9" fill="#333">10 vs 16: same_position_candidate | host up same (2) down same (2) | cross_assembly_host_sides:same/same | outer flank DNA up not_shared (0.0) down not_shared (0.0) | ambiguous link</text>
+<text x="300" y="408" font-size="9" fill="#333">10 vs 17: same_position_candidate | host up same (5) down same (5) | cross_assembly_host_sides:same/same | outer flank DNA up shared (1.0) down shared (1.0) | ambiguous link</text>
+<text x="300" y="420" font-size="9" fill="#333">16 vs 17: different_position_same_assembly | host up same (2) down same (2) | context_repeated_both_sides | outer flank DNA up not_shared (0.0) down not_shared (0.0)</text>
+</svg>

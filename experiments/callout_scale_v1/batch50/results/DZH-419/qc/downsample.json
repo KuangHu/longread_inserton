@@ -1,0 +1,19 @@
+{
+  "method": "sha256(seed:read_name) order, take until target bases",
+  "seed": 20261024,
+  "target_depth": 80.0,
+  "assembly_bp": 6072431,
+  "target_bases": 485794480,
+  "threshold_key": "4079a075c94d39a2d8e508390920eac1ab13661a4983bc33a9e3038005b65f23",
+  "input_file": "/global/scratch/users/kh36969/longread_callout/data/reads/SRR39705685/SRR39705685_1.fastq.gz",
+  "input_sha256": "c694e02c9eb6b09fb209f9e50436ce442c26064845ee7efd7886201c7d726ca7",
+  "input_reads": 262507,
+  "input_bases": 1926573050,
+  "input_depth": 317.3,
+  "output_file": "/global/scratch/users/kh36969/longread_callout/data/reads_downsampled/SRR39705685/SRR39705685_80x_seed20261024.fastq.gz",
+  "output_reads": 66334,
+  "output_bases": 485800430,
+  "output_depth": 80.0,
+  "output_sha256": "0c10a8e98142badc7443699697e276748a5b662033eb70a22c9f4aa3f1c8a433",
+  "downsampled": true
+}

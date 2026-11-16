@@ -1,0 +1,674 @@
+{
+ "version": "stage1_catalog_v1",
+ "created": "2026-10-26T22:32:21-0700",
+ "commit": "05d19d23162b3c278337552782685c558d541e95",
+ "evidence_source": "assembly_only",
+ "parameters": {
+  "context": 300,
+  "lists": [
+   "main",
+   "partner_mixed",
+   "direction_mixed",
+   "short_other_segment",
+   "replacement"
+  ],
+  "pending": "annotation_pending",
+  "mmseqs_settings": {
+   "family": [
+    "--min-seq-id",
+    "0.9",
+    "-c",
+    "0.8",
+    "--cov-mode",
+    "0",
+    "--cluster-mode",
+    "0",
+    "--cluster-reassign",
+    "1"
+   ],
+   "homology_group": [
+    "--min-seq-id",
+    "0.5",
+    "-c",
+    "0.8",
+    "--cov-mode",
+    "0",
+    "--cluster-mode",
+    "0",
+    "--cluster-reassign",
+    "1"
+   ]
+  },
+  "member_min": {
+   "family": [
+    0.9,
+    0.8
+   ],
+   "homology_group": [
+    0.5,
+    0.8
+   ]
+  },
+  "member_align": [
+   "--alignment-mode",
+   "3",
+   "-e",
+   "10",
+   "-a"
+  ],
+  "id_scheme": "F1_/H1_/A1_ + sha256[:12]; <batch>:<id> for loci, samples, local families"
+ },
+ "software": {
+  "python": "3.11.17",
+  "mmseqs": "/global/scratch/users/kh36969/longread_callout/env/s4/bin/mmseqs",
+  "mmseqs_version": "17.b804f",
+  "mmseqs_sha256": "b98e00c5e2262a836720fd674679439f5727b5636eaeee191ed27f3c38c49020"
+ },
+ "scratch_files": {
+  "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/stage1_catalog/proteins.faa": {
+   "sha256": "2a0a10d5f6ae715da7b564412d9ea230f6963a4feba6e2b60d3640d983ae59b5",
+   "bytes": 12240916,
+   "produced_by_mode": "proteins",
+   "rebuild": "git checkout 05d19d23162b3c278337552782685c558d541e95; sbatch experiments/fna_pool/stage1_catalog.sbatch (proteins -> cluster -> catalog), or the single mode named"
+  },
+  "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/stage1_catalog/protein_instances.tsv.gz": {
+   "sha256": "e13720ec9359ff9f5575eaacb551ba7f907c2498b198f3dee4930e034c6c1336",
+   "bytes": 3577599,
+   "produced_by_mode": "proteins",
+   "rebuild": "git checkout 05d19d23162b3c278337552782685c558d541e95; sbatch experiments/fna_pool/stage1_catalog.sbatch (proteins -> cluster -> catalog), or the single mode named"
+  },
+  "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/stage1_catalog/candidate_cores.fa": {
+   "sha256": "6f3a9b3b8f2880c7b891280441074f6689bd903bdf7329a502952079bd641bfd",
+   "bytes": 85510628,
+   "produced_by_mode": "catalog",
+   "rebuild": "git checkout 05d19d23162b3c278337552782685c558d541e95; sbatch experiments/fna_pool/stage1_catalog.sbatch (proteins -> cluster -> catalog), or the single mode named"
+  },
+  "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/stage1_catalog/mmseqs/family_cluster.tsv": {
+   "sha256": "6fd4f3e9412537fc4f7edb8b9aac2e9b98396d84a5ca1e7e3d4cf1364c8dfec3",
+   "bytes": 4926350,
+   "produced_by_mode": "cluster",
+   "rebuild": "git checkout 05d19d23162b3c278337552782685c558d541e95; sbatch experiments/fna_pool/stage1_catalog.sbatch (proteins -> cluster -> catalog), or the single mode named"
+  },
+  "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/stage1_catalog/mmseqs/family_members.m8": {
+   "sha256": "2dcd70dfbfede9f02b7b23a540bfc335159ec164cdeb6d1fde6f0f387df7cff8",
+   "bytes": 5754722,
+   "produced_by_mode": "cluster",
+   "rebuild": "git checkout 05d19d23162b3c278337552782685c558d541e95; sbatch experiments/fna_pool/stage1_catalog.sbatch (proteins -> cluster -> catalog), or the single mode named"
+  },
+  "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/stage1_catalog/mmseqs/homology_group_cluster.tsv": {
+   "sha256": "22a1611d25a56ad5776d30a7a62a254b901880cc8e20e896e7032ea06db48851",
+   "bytes": 4926350,
+   "produced_by_mode": "cluster",
+   "rebuild": "git checkout 05d19d23162b3c278337552782685c558d541e95; sbatch experiments/fna_pool/stage1_catalog.sbatch (proteins -> cluster -> catalog), or the single mode named"
+  },
+  "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/stage1_catalog/mmseqs/homology_group_members.m8": {
+   "sha256": "135241b933ae67e16bf5e68e788046e3028b57f5d4151d672c07f5dbb6c05289",
+   "bytes": 5754566,
+   "produced_by_mode": "cluster",
+   "rebuild": "git checkout 05d19d23162b3c278337552782685c558d541e95; sbatch experiments/fna_pool/stage1_catalog.sbatch (proteins -> cluster -> catalog), or the single mode named"
+  },
+  "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/stage1_catalog/mmseqs/repair_homology_group/hits.m8": {
+   "sha256": "a90e8bdef82171895624fed26173b0b36c564dcc88ab71bd62f68c8b69becbb0",
+   "bytes": 757,
+   "produced_by_mode": "catalog",
+   "rebuild": "git checkout 05d19d23162b3c278337552782685c558d541e95; sbatch experiments/fna_pool/stage1_catalog.sbatch (proteins -> cluster -> catalog), or the single mode named"
+  }
+ },
+ "inputs": {
+  "actinomycetaceae": {
+   "s4/candidate_loci_families.tsv": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/actinomycetaceae/s4_s3_full/candidate_loci_families.tsv",
+    "sha256": "498713362e9c0ce2b90f095024bfbf3cc4f96cc489ed1bca542da3ee699dbacd"
+   },
+   "s4/seed_catalog.fa": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/actinomycetaceae/s4_s3_full/seed_catalog.fa",
+    "sha256": "f937a8cf8dd10270cd683ac56c74b647fa94941f1cdf3c1b354d5874180bcaa7"
+   },
+   "s4/seed_catalog.tsv": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/actinomycetaceae/s4_s3_full/seed_catalog.tsv",
+    "sha256": "42c010e36d94117a08deb38ebf808702faba254c477ff3000f7bff54965d79ee"
+   },
+   "s4/list_annotation_pending.tsv": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/actinomycetaceae/s4_s3_full/list_annotation_pending.tsv",
+    "sha256": "6ffef5013895846bcdedc0e1e06b3f370905675022f337d36f5359f31a77ed3d"
+   },
+   "s4/protein_members.tsv": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/actinomycetaceae/s4_s3_full/protein_members.tsv",
+    "sha256": "632430ad07684fa4521c0311aa2aed8c41215d4f43a75040c4525ecaeb0241e2"
+   },
+   "s4/families_summary.json": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/actinomycetaceae/s4_s3_full/families_summary.json",
+    "sha256": "d7bee02bb472965e3e6a320965c30cf9981c673487f6b43085e9655b3c8e1305"
+   },
+   "s4/s4_summary.json": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/actinomycetaceae/s4_s3_full/s4_summary.json",
+    "sha256": "7d2d53c1c0c0feb7c67facb0653472f6dc4a12cb6029b707d746dbf28826d024"
+   },
+   "s4/s4_loci.tsv.gz": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/actinomycetaceae/s4_s3_full/s4_loci.tsv.gz",
+    "sha256": "0ba915e54e40a028fcaeda0e14d42975895b7fc59af39ac5c1544a4239d421d8"
+   },
+   "s3_full/pairs.tsv": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/actinomycetaceae/s3_full/pairs.tsv",
+    "sha256": "ce9ca1444f02ad4d348a30a81ae52e5ecafc8a2235ebacfad13b1af554799ae7"
+   },
+   "s2/contig_index.tsv.gz": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/actinomycetaceae/s2/contig_index.tsv.gz",
+    "sha256": "180aa5f4fbfdaaed2a25713a2a3db4cd3c4ee5b63c307f1b77590b6950c26ec1"
+   },
+   "repo/s2/catalog.tsv": {
+    "path": "/global/home/users/kh36969/middle_insertion_callout/longread_inserton/experiments/fna_pool/scaleup_stage1_20261026/actinomycetaceae/s2/catalog.tsv",
+    "sha256": "1480b87801e69ade2b2e16c2378b92b005a0f0c11bb03c6ac12c17731717bc83"
+   },
+   "repo/runs.tsv": {
+    "path": "/global/home/users/kh36969/middle_insertion_callout/longread_inserton/experiments/fna_pool/scaleup_stage1_20261026/actinomycetaceae/runs.tsv",
+    "sha256": "50134677ce6b179199329b4a654dba492622c930f2949c3d194f00922150e7ca"
+   },
+   "repo/assembly_run_links.tsv": {
+    "path": "/global/home/users/kh36969/middle_insertion_callout/longread_inserton/experiments/fna_pool/scaleup_stage1_20261026/actinomycetaceae/assembly_run_links.tsv",
+    "sha256": "be5814ac846e3184736f860c12778f289dbba05d9e59716fd3a8c35d6461a97e"
+   }
+  },
+  "comamonadaceae": {
+   "s4/candidate_loci_families.tsv": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/comamonadaceae/s4_s3_full/candidate_loci_families.tsv",
+    "sha256": "8df20c7dfcebeb8c00cf3c3b94f3c6e043225f7219ec492f6d3c084f161b5024"
+   },
+   "s4/seed_catalog.fa": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/comamonadaceae/s4_s3_full/seed_catalog.fa",
+    "sha256": "bdff97e13c5efd9e61362fe6a9c88d391bcbfe8af37218be60dbc07899eee9f2"
+   },
+   "s4/seed_catalog.tsv": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/comamonadaceae/s4_s3_full/seed_catalog.tsv",
+    "sha256": "0f0b71fdfeb8e4f699a7e38be9095bf8203277c1fd04067bd888e7f90831a64b"
+   },
+   "s4/list_annotation_pending.tsv": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/comamonadaceae/s4_s3_full/list_annotation_pending.tsv",
+    "sha256": "d9ec5a25a523bec0c20375ae2cb19b128dac50516fde87c9266f455be1571f76"
+   },
+   "s4/protein_members.tsv": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/comamonadaceae/s4_s3_full/protein_members.tsv",
+    "sha256": "f0924e86512d1b0efb1ede52f5a36a476c37ee8c4b073cd9e1d4406db27945dc"
+   },
+   "s4/families_summary.json": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/comamonadaceae/s4_s3_full/families_summary.json",
+    "sha256": "b786fc16a05559b7b6b981c9612010794d84856952ce1ae41f150b85b6aab047"
+   },
+   "s4/s4_summary.json": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/comamonadaceae/s4_s3_full/s4_summary.json",
+    "sha256": "08eac0c6a9a86ffc591bfa96888ad0e712554bc7247a8e0ebff45dc34111ba84"
+   },
+   "s4/s4_loci.tsv.gz": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/comamonadaceae/s4_s3_full/s4_loci.tsv.gz",
+    "sha256": "94d619f2589952e41730ff37fe5693ec3f0260ae8a54a4e72a5533000ddc2c4b"
+   },
+   "s3_full/pairs.tsv": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/comamonadaceae/s3_full/pairs.tsv",
+    "sha256": "517af198b5607e63aedc7d955d22eb44dbe25898d13dd44a891b8cb75a7ffbfe"
+   },
+   "s2/contig_index.tsv.gz": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/comamonadaceae/s2/contig_index.tsv.gz",
+    "sha256": "bdbb91269a8e52f1baed944767d1d46da3d3cdd70ae1a6803ee419fb2268531e"
+   },
+   "repo/s2/catalog.tsv": {
+    "path": "/global/home/users/kh36969/middle_insertion_callout/longread_inserton/experiments/fna_pool/scaleup_stage1_20261026/comamonadaceae/s2/catalog.tsv",
+    "sha256": "6ec4ba8b53ccc6dc9bb454a2f1a889af4c8249c6aa4e95369ae40a33eca56ff7"
+   },
+   "repo/runs.tsv": {
+    "path": "/global/home/users/kh36969/middle_insertion_callout/longread_inserton/experiments/fna_pool/scaleup_stage1_20261026/comamonadaceae/runs.tsv",
+    "sha256": "b620f167de6f10302ad6bafe6b58791ef336abebcfa64d8fa8fc8a0f0e650795"
+   },
+   "repo/assembly_run_links.tsv": {
+    "path": "/global/home/users/kh36969/middle_insertion_callout/longread_inserton/experiments/fna_pool/scaleup_stage1_20261026/comamonadaceae/assembly_run_links.tsv",
+    "sha256": "17c7acd6522fdeceb4445f3fc3c789e1e7a457cc1dfcd539feaf790595b5bae2"
+   },
+   "s3_full/merged/loci.tsv": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/comamonadaceae/s3_full/merged/loci.tsv",
+    "sha256": "906c396711a51198cc9d3c8c125d3df9491b10425c915feb13f31112dd37fc38"
+   }
+  },
+  "eggerthellaceae": {
+   "s4/candidate_loci_families.tsv": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/eggerthellaceae/s4_s3_full/candidate_loci_families.tsv",
+    "sha256": "382d5e0535ceb8a621844fa2be9b886ab1605e4b728542f91a5ec7f349996852"
+   },
+   "s4/seed_catalog.fa": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/eggerthellaceae/s4_s3_full/seed_catalog.fa",
+    "sha256": "fdd5f8315a796fe05219f7e54a563efdbfee84e4c2faf47e817b58cc197bff05"
+   },
+   "s4/seed_catalog.tsv": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/eggerthellaceae/s4_s3_full/seed_catalog.tsv",
+    "sha256": "e5f2189e3761845a72091562c0628a957c8dc77f02aa1b66dcba98e2d3968443"
+   },
+   "s4/list_annotation_pending.tsv": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/eggerthellaceae/s4_s3_full/list_annotation_pending.tsv",
+    "sha256": "1eaf3b6d841eff4bc5516bc9acb606208a953d47f44ee66fbea45e44f8a64739"
+   },
+   "s4/protein_members.tsv": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/eggerthellaceae/s4_s3_full/protein_members.tsv",
+    "sha256": "e4cc63e941a7d7cedd3e7d5a73a6ce13e47b7a9c5726eb1e47c69dd8f085fc12"
+   },
+   "s4/families_summary.json": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/eggerthellaceae/s4_s3_full/families_summary.json",
+    "sha256": "43067b5399eee6adfa638c7b8df71266c7d0854dfd8c627f7efe105f8f1f385f"
+   },
+   "s4/s4_summary.json": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/eggerthellaceae/s4_s3_full/s4_summary.json",
+    "sha256": "0d116fba5ee6b6c14b4ade63e8682a93b7088af968db0c820bf178e32d92aa69"
+   },
+   "s4/s4_loci.tsv.gz": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/eggerthellaceae/s4_s3_full/s4_loci.tsv.gz",
+    "sha256": "680cb633f79a9ee05135b015691212b960be6399bf3898f308ef21ca9b9e02b2"
+   },
+   "s3_full/pairs.tsv": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/eggerthellaceae/s3_full/pairs.tsv",
+    "sha256": "f72e746b1367d6d02c72e4143bd7489d5a5bc7cb5570c222589369f85f52f6d8"
+   },
+   "s2/contig_index.tsv.gz": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/eggerthellaceae/s2/contig_index.tsv.gz",
+    "sha256": "4497ace2f42ad790b03f437254e8dacbcfae61579ea833402302cc2dbe231d0c"
+   },
+   "repo/s2/catalog.tsv": {
+    "path": "/global/home/users/kh36969/middle_insertion_callout/longread_inserton/experiments/fna_pool/scaleup_stage1_20261026/eggerthellaceae/s2/catalog.tsv",
+    "sha256": "5aad3892548e5c106d042a28c75ffc801cbf337fe28903f73acb10ddc1d64627"
+   },
+   "repo/runs.tsv": {
+    "path": "/global/home/users/kh36969/middle_insertion_callout/longread_inserton/experiments/fna_pool/scaleup_stage1_20261026/eggerthellaceae/runs.tsv",
+    "sha256": "818657d1c53aba78956f3295df98faeb2e8d99a305edbc26e7cce553111800b8"
+   },
+   "repo/assembly_run_links.tsv": {
+    "path": "/global/home/users/kh36969/middle_insertion_callout/longread_inserton/experiments/fna_pool/scaleup_stage1_20261026/eggerthellaceae/assembly_run_links.tsv",
+    "sha256": "bde5d68b3951f938ea2f1c5014f8aedde9ff65953fdef556e05890a22623f5dd"
+   }
+  },
+  "erwiniaceae": {
+   "s4/candidate_loci_families.tsv": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/erwiniaceae/s4_s3_full/candidate_loci_families.tsv",
+    "sha256": "99fc9efa9b88e349a891ab3b5cfd504c7f64dc12956c319e7d00f2f205abaf90"
+   },
+   "s4/seed_catalog.fa": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/erwiniaceae/s4_s3_full/seed_catalog.fa",
+    "sha256": "b3040241e7e0477d947d7d7de9b56f366101f34fe219059f98e0714c5de23e78"
+   },
+   "s4/seed_catalog.tsv": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/erwiniaceae/s4_s3_full/seed_catalog.tsv",
+    "sha256": "00575f2fd7d6ff4cc80c558379b2a2c674e7216e5655676f2c06f2c80a270839"
+   },
+   "s4/list_annotation_pending.tsv": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/erwiniaceae/s4_s3_full/list_annotation_pending.tsv",
+    "sha256": "aef2adc432d1fa4b64e10dd51194e56d80aa9ba31e7f94e10ed8d5c760484ba8"
+   },
+   "s4/protein_members.tsv": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/erwiniaceae/s4_s3_full/protein_members.tsv",
+    "sha256": "4b88590b1f62fbcd854bd4b43e6c4d8aacb20dbeda79f8505fc46cd5de1dba2e"
+   },
+   "s4/families_summary.json": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/erwiniaceae/s4_s3_full/families_summary.json",
+    "sha256": "8cca3ae37bc688248532b9c67528494c04379013cc2e137555870dae96c9575a"
+   },
+   "s4/s4_summary.json": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/erwiniaceae/s4_s3_full/s4_summary.json",
+    "sha256": "1d145f383055d977b20f2be77c80d2e81f69d734e5b2821f4ff35ed506cddb66"
+   },
+   "s4/s4_loci.tsv.gz": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/erwiniaceae/s4_s3_full/s4_loci.tsv.gz",
+    "sha256": "de6fa8c782d349dc1c90c72ae08a02bda9b07ede8f258610708db20d0d0ab184"
+   },
+   "s3_full/pairs.tsv": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/erwiniaceae/s3_full/pairs.tsv",
+    "sha256": "1ca4b8c97c150d9afbe8c010d2ec79c220ce8e8259854b2cb15c197829fa9a13"
+   },
+   "s2/contig_index.tsv.gz": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/erwiniaceae/s2/contig_index.tsv.gz",
+    "sha256": "893b68c4b1b99dba6a4279fa907a7d9785369b3db7f9217eb2521c87c06902d8"
+   },
+   "repo/s2/catalog.tsv": {
+    "path": "/global/home/users/kh36969/middle_insertion_callout/longread_inserton/experiments/fna_pool/scaleup_stage1_20261026/erwiniaceae/s2/catalog.tsv",
+    "sha256": "72b781f28fc2275da857b3c92997dabd0a123c6448f22f76c775b5c0affd4208"
+   },
+   "repo/runs.tsv": {
+    "path": "/global/home/users/kh36969/middle_insertion_callout/longread_inserton/experiments/fna_pool/scaleup_stage1_20261026/erwiniaceae/runs.tsv",
+    "sha256": "237313b8e0ae4b171c0a3db0e2ac842c97ea2e07ba138fb1f551006cb48572ad"
+   },
+   "repo/assembly_run_links.tsv": {
+    "path": "/global/home/users/kh36969/middle_insertion_callout/longread_inserton/experiments/fna_pool/scaleup_stage1_20261026/erwiniaceae/assembly_run_links.tsv",
+    "sha256": "dffaf96a89555fe03ad9bb74febfbfd1cb65bf012296cbb9b2620e8ecb48e721"
+   }
+  },
+  "flavobacteriaceae": {
+   "s4/candidate_loci_families.tsv": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/flavobacteriaceae/s4_s3_full/candidate_loci_families.tsv",
+    "sha256": "56262a7f22677247f87047248f300a0ba2bb98d84ac33b167e676e38dc307276"
+   },
+   "s4/seed_catalog.fa": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/flavobacteriaceae/s4_s3_full/seed_catalog.fa",
+    "sha256": "34ade43a142d09bb3e67d4ee6204ff9d61e889e88dd7d52ba54856184e04a53f"
+   },
+   "s4/seed_catalog.tsv": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/flavobacteriaceae/s4_s3_full/seed_catalog.tsv",
+    "sha256": "a6c309d65deb2c1533f553f4f4a7fb341a0f5ba53d71b5ea009aec1eb220f1b7"
+   },
+   "s4/list_annotation_pending.tsv": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/flavobacteriaceae/s4_s3_full/list_annotation_pending.tsv",
+    "sha256": "aa50c8062516327eba851dcca6a074651e37414d89252bdbd441096bdbabb089"
+   },
+   "s4/protein_members.tsv": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/flavobacteriaceae/s4_s3_full/protein_members.tsv",
+    "sha256": "6812f79f7bfb8e49fdea813317bfb763073ec3db995a41670395db558186b7d1"
+   },
+   "s4/families_summary.json": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/flavobacteriaceae/s4_s3_full/families_summary.json",
+    "sha256": "8a71b90affd01925d4e31682ae6afbaaccc2525668b11aa449b92a96f853ca41"
+   },
+   "s4/s4_summary.json": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/flavobacteriaceae/s4_s3_full/s4_summary.json",
+    "sha256": "be21bc74b4d83c9e608bceaa6d3b2de2dba81aaf14e1683798a7f7995d9706dc"
+   },
+   "s4/s4_loci.tsv.gz": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/flavobacteriaceae/s4_s3_full/s4_loci.tsv.gz",
+    "sha256": "fdb011f640cd31eb3d2766f39a74b0fe2ea790904ad678e6bdf7b9113f967c8c"
+   },
+   "s3_full/pairs.tsv": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/flavobacteriaceae/s3_full/pairs.tsv",
+    "sha256": "26d1440388c8ed7db2cfa690cd120fb29d689f0f1afd5524533bf1ef010f4c45"
+   },
+   "s2/contig_index.tsv.gz": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/flavobacteriaceae/s2/contig_index.tsv.gz",
+    "sha256": "fe6583e19cc42532880994a3598ea3195f7dadb4af3d540a412dcb256af1594a"
+   },
+   "repo/s2/catalog.tsv": {
+    "path": "/global/home/users/kh36969/middle_insertion_callout/longread_inserton/experiments/fna_pool/scaleup_stage1_20261026/flavobacteriaceae/s2/catalog.tsv",
+    "sha256": "0837d5ae6b539ac8d0e9919edf8511b51ad97c4fe78d0ac6d493ee1ddfc75e20"
+   },
+   "repo/runs.tsv": {
+    "path": "/global/home/users/kh36969/middle_insertion_callout/longread_inserton/experiments/fna_pool/scaleup_stage1_20261026/flavobacteriaceae/runs.tsv",
+    "sha256": "90081f935bfd4b9a5b8686d3eb64b4810e0df4467aae911fb9dd21493aa13738"
+   },
+   "repo/assembly_run_links.tsv": {
+    "path": "/global/home/users/kh36969/middle_insertion_callout/longread_inserton/experiments/fna_pool/scaleup_stage1_20261026/flavobacteriaceae/assembly_run_links.tsv",
+    "sha256": "42a5640ed875c608fcec5066c23d6628efd2b2367caababee80de9eeef1211ba"
+   }
+  },
+  "lachnospiraceae": {
+   "s4/candidate_loci_families.tsv": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/lachnospiraceae/s4_s3_full/candidate_loci_families.tsv",
+    "sha256": "f640edaec8b4123216b8e432b110b8444be589142c37d9bd3ba04fcd4981411b"
+   },
+   "s4/seed_catalog.fa": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/lachnospiraceae/s4_s3_full/seed_catalog.fa",
+    "sha256": "5ed0915110c2e922f3df3f07c1ecd3995722bc8ec42a0c5d39a582732dbc2d9f"
+   },
+   "s4/seed_catalog.tsv": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/lachnospiraceae/s4_s3_full/seed_catalog.tsv",
+    "sha256": "b739ec17b6525e5d96c241bec015fb24553b2cabec430a2b4b381247e8dc8889"
+   },
+   "s4/list_annotation_pending.tsv": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/lachnospiraceae/s4_s3_full/list_annotation_pending.tsv",
+    "sha256": "1b6e9af6105d5e4f574144ca47e6ce692a3fc82dcfafea216b6a177cb93ab864"
+   },
+   "s4/protein_members.tsv": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/lachnospiraceae/s4_s3_full/protein_members.tsv",
+    "sha256": "18248d43bd9bad3f1565f08b09723fd6e0a36c33fcbabd3482a4240dfbe9d111"
+   },
+   "s4/families_summary.json": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/lachnospiraceae/s4_s3_full/families_summary.json",
+    "sha256": "527716ffcd3ff71cbc167202d68ff05c4cd1c28723610be45baf831a59aea92e"
+   },
+   "s4/s4_summary.json": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/lachnospiraceae/s4_s3_full/s4_summary.json",
+    "sha256": "dd36b0ec4c28c5a60aaaafbf1327b52afe1517af1939382d97e8c722a682ab97"
+   },
+   "s4/s4_loci.tsv.gz": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/lachnospiraceae/s4_s3_full/s4_loci.tsv.gz",
+    "sha256": "509c277d2914d27e5aaa172e076f89aeb8d92e7b32c740a71bfb8e3cd57e77cc"
+   },
+   "s3_full/pairs.tsv": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/lachnospiraceae/s3_full/pairs.tsv",
+    "sha256": "70112ceb55fa7622bcf0d1cca9ad5331d61394625e323baf36a17fedc06058cf"
+   },
+   "s2/contig_index.tsv.gz": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/lachnospiraceae/s2/contig_index.tsv.gz",
+    "sha256": "d6b8e2c09e319fd0355ffc493bb8b2041b776611930b61e48edcfb493134edc8"
+   },
+   "repo/s2/catalog.tsv": {
+    "path": "/global/home/users/kh36969/middle_insertion_callout/longread_inserton/experiments/fna_pool/scaleup_stage1_20261026/lachnospiraceae/s2/catalog.tsv",
+    "sha256": "54f48e9ce54df4f74b7e5d9569dceff058fed0008b32e7641c26534612b032f1"
+   },
+   "repo/runs.tsv": {
+    "path": "/global/home/users/kh36969/middle_insertion_callout/longread_inserton/experiments/fna_pool/scaleup_stage1_20261026/lachnospiraceae/runs.tsv",
+    "sha256": "f0cc3dcf0209be4e2ab86c77237f33ef482f31b667ce1a0e3753ae6fd338df61"
+   },
+   "repo/assembly_run_links.tsv": {
+    "path": "/global/home/users/kh36969/middle_insertion_callout/longread_inserton/experiments/fna_pool/scaleup_stage1_20261026/lachnospiraceae/assembly_run_links.tsv",
+    "sha256": "e4a74ee231717a3670fb2618aad8b3a2e1a50706f6088177c623fe46cc22452a"
+   }
+  },
+  "metamycoplasmataceae": {
+   "s4/candidate_loci_families.tsv": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/metamycoplasmataceae/s4_s3_full/candidate_loci_families.tsv",
+    "sha256": "7afaa8a2d9ab7ab27c6b54a537676b43b4f6280cb877656fc1c5fe3d3a21d1a0"
+   },
+   "s4/seed_catalog.fa": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/metamycoplasmataceae/s4_s3_full/seed_catalog.fa",
+    "sha256": "7361b78ba91b837ce8d581ef13abb372cecef4d9fafa20a9ca47348cb82f9e46"
+   },
+   "s4/seed_catalog.tsv": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/metamycoplasmataceae/s4_s3_full/seed_catalog.tsv",
+    "sha256": "ddbe5da2c9fbcac0bfc18fac82d5d2d11f95b2040aa9aae67454f11fa398a2b4"
+   },
+   "s4/list_annotation_pending.tsv": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/metamycoplasmataceae/s4_s3_full/list_annotation_pending.tsv",
+    "sha256": "2cafa899437a67eeb95a01a3a1130dc611d6c92bbfb42fa769f79f7f62a87419"
+   },
+   "s4/protein_members.tsv": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/metamycoplasmataceae/s4_s3_full/protein_members.tsv",
+    "sha256": "53ea398c8ef3fed0513b9445b2efc94f1ae795d0cafc829d5ef3eab89612cf92"
+   },
+   "s4/families_summary.json": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/metamycoplasmataceae/s4_s3_full/families_summary.json",
+    "sha256": "258cc6bb946e422058e1280f5d2fdea90396f443f09c62e3e747810ecb553f33"
+   },
+   "s4/s4_summary.json": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/metamycoplasmataceae/s4_s3_full/s4_summary.json",
+    "sha256": "1913becc645df4887b7d699330867cb96ab38809d64a393bd3cfba397905946d"
+   },
+   "s4/s4_loci.tsv.gz": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/metamycoplasmataceae/s4_s3_full/s4_loci.tsv.gz",
+    "sha256": "f0bcd868ebb773c0f68c92770e5f13c57b0c4b562e30c1cea82a0fe7305c15a0"
+   },
+   "s3_full/pairs.tsv": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/metamycoplasmataceae/s3_full/pairs.tsv",
+    "sha256": "66109f2e89fa961b36318cdd6c035f3011c09db65c874db97745ddb6f9efefdc"
+   },
+   "s2/contig_index.tsv.gz": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/metamycoplasmataceae/s2/contig_index.tsv.gz",
+    "sha256": "b7b902758c7b32edfce5e977ac4b11a5ee6575985ec3669b0d3c1fcf990bf089"
+   },
+   "repo/s2/catalog.tsv": {
+    "path": "/global/home/users/kh36969/middle_insertion_callout/longread_inserton/experiments/fna_pool/scaleup_stage1_20261026/metamycoplasmataceae/s2/catalog.tsv",
+    "sha256": "048121baf043828c96f72055652386706cb17a10cb97db22fc3409bd6e933d18"
+   },
+   "repo/runs.tsv": {
+    "path": "/global/home/users/kh36969/middle_insertion_callout/longread_inserton/experiments/fna_pool/scaleup_stage1_20261026/metamycoplasmataceae/runs.tsv",
+    "sha256": "557a4a9c9034aabc975f3652ce53a9e895287cb350a45045fd629e4c78fd749d"
+   },
+   "repo/assembly_run_links.tsv": {
+    "path": "/global/home/users/kh36969/middle_insertion_callout/longread_inserton/experiments/fna_pool/scaleup_stage1_20261026/metamycoplasmataceae/assembly_run_links.tsv",
+    "sha256": "9268a6b12cf5d1cb4bcafc3c0e9280b2147ff4d68c94effd8da47e452c159865"
+   }
+  },
+  "microbacteriaceae": {
+   "s4/candidate_loci_families.tsv": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/microbacteriaceae/s4_s3_full/candidate_loci_families.tsv",
+    "sha256": "0fc424142ddb0dd8a1059532e1559596781f1851de46a77128c37f402ae499ed"
+   },
+   "s4/seed_catalog.fa": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/microbacteriaceae/s4_s3_full/seed_catalog.fa",
+    "sha256": "1a33d55c7dcfb404b8bf1b39b33fe1eb631feb7c0a80b293ba64ed1f5951b7d1"
+   },
+   "s4/seed_catalog.tsv": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/microbacteriaceae/s4_s3_full/seed_catalog.tsv",
+    "sha256": "b96f1a354828fde782b054e372772cf8b6006f406a1b009d6e55ea9ba9430d4b"
+   },
+   "s4/list_annotation_pending.tsv": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/microbacteriaceae/s4_s3_full/list_annotation_pending.tsv",
+    "sha256": "89969b07f6c3fc997e9da426e7f04f639f1b81781bccc675f9c83e402414fe2d"
+   },
+   "s4/protein_members.tsv": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/microbacteriaceae/s4_s3_full/protein_members.tsv",
+    "sha256": "b97c3def3f9c017528b8b7bbb5dd0462691f470164314765b21ce4b40a2ccb59"
+   },
+   "s4/families_summary.json": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/microbacteriaceae/s4_s3_full/families_summary.json",
+    "sha256": "3b2aa3e5bbce22c5c48395bbcf8ba519a5d03c5b06a7eaa723704c5c830f8a1f"
+   },
+   "s4/s4_summary.json": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/microbacteriaceae/s4_s3_full/s4_summary.json",
+    "sha256": "c0a856e0d69b6de91d085b14155d0964aaf57c9383d59561961e0dc49709b3be"
+   },
+   "s4/s4_loci.tsv.gz": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/microbacteriaceae/s4_s3_full/s4_loci.tsv.gz",
+    "sha256": "3e44c69a376e69a6d1fa5019bc2ae6df6e43b1b44e10cc9c33b8b311949aa4be"
+   },
+   "s3_full/pairs.tsv": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/microbacteriaceae/s3_full/pairs.tsv",
+    "sha256": "714780dcc93823b648212ecea319b92f72293d3a6cefd084e6cd4e7e30fa82f7"
+   },
+   "s2/contig_index.tsv.gz": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/microbacteriaceae/s2/contig_index.tsv.gz",
+    "sha256": "cdfadfecce935b5393ff699462c2a993f16383db199ddc826b613f9599d6a7f4"
+   },
+   "repo/s2/catalog.tsv": {
+    "path": "/global/home/users/kh36969/middle_insertion_callout/longread_inserton/experiments/fna_pool/scaleup_stage1_20261026/microbacteriaceae/s2/catalog.tsv",
+    "sha256": "6f91177a51e8f298cda4ca1a1b34c5757e39ee6130f827804d47d25ac2a2f6b1"
+   },
+   "repo/runs.tsv": {
+    "path": "/global/home/users/kh36969/middle_insertion_callout/longread_inserton/experiments/fna_pool/scaleup_stage1_20261026/microbacteriaceae/runs.tsv",
+    "sha256": "22f2c71658d9c8791d259b3e0444e8b601657bfb8c8161b8a62891ebf9ddd8a6"
+   },
+   "repo/assembly_run_links.tsv": {
+    "path": "/global/home/users/kh36969/middle_insertion_callout/longread_inserton/experiments/fna_pool/scaleup_stage1_20261026/microbacteriaceae/assembly_run_links.tsv",
+    "sha256": "41f8a4385fce006239851439d737a4bbcc706591897a06f4e82e3256fa309163"
+   }
+  },
+  "micrococcaceae": {
+   "s4/candidate_loci_families.tsv": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/micrococcaceae/s4_s3_full/candidate_loci_families.tsv",
+    "sha256": "90a2ebc7c5b88f334887ba7dc16309050860d013d7e43f9c5dd0f99966985440"
+   },
+   "s4/seed_catalog.fa": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/micrococcaceae/s4_s3_full/seed_catalog.fa",
+    "sha256": "2a6b5a142aa1d94eaef74ce368849f602aa93c781c2e409cadfdc5e98fc8a52c"
+   },
+   "s4/seed_catalog.tsv": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/micrococcaceae/s4_s3_full/seed_catalog.tsv",
+    "sha256": "953e4aace9a17de32ee01874e827c1e8c886e02ae0f8c298ca3c82035cf7eb89"
+   },
+   "s4/list_annotation_pending.tsv": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/micrococcaceae/s4_s3_full/list_annotation_pending.tsv",
+    "sha256": "35d6dc76cd87dfb59bc9a8304bfd339166e713fab6263322fa29cd0922e42eeb"
+   },
+   "s4/protein_members.tsv": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/micrococcaceae/s4_s3_full/protein_members.tsv",
+    "sha256": "fd8a3595af69c3d558036cf6cbcc7c26feb9c49b8d2fa3a6aebc08ff045913fd"
+   },
+   "s4/families_summary.json": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/micrococcaceae/s4_s3_full/families_summary.json",
+    "sha256": "b2374f2bf6e91228645dd950a87c26fd470017927b04dfcb5bf41e7dfcc131f8"
+   },
+   "s4/s4_summary.json": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/micrococcaceae/s4_s3_full/s4_summary.json",
+    "sha256": "7ba0215b7c72da606b6c206894bbcda21dd2edd8fbf6427fda2c8b452d3b2703"
+   },
+   "s4/s4_loci.tsv.gz": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/micrococcaceae/s4_s3_full/s4_loci.tsv.gz",
+    "sha256": "0788d4523e202a32cef96a48ed38e202983c4f596be78922f5199ac07b22cf88"
+   },
+   "s3_full/pairs.tsv": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/micrococcaceae/s3_full/pairs.tsv",
+    "sha256": "25f7eb37a68c7646746e9ac73d564c05f8829d7909e925e6211530b2a44e8099"
+   },
+   "s2/contig_index.tsv.gz": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/micrococcaceae/s2/contig_index.tsv.gz",
+    "sha256": "ddee176550d8523acab41f04ef003aece945022a7161de6853751728cc62450c"
+   },
+   "repo/s2/catalog.tsv": {
+    "path": "/global/home/users/kh36969/middle_insertion_callout/longread_inserton/experiments/fna_pool/scaleup_stage1_20261026/micrococcaceae/s2/catalog.tsv",
+    "sha256": "9fe1abb3d9d7539386bf0454ad33b5723103dddef2f61c324dd1501f3d89f642"
+   },
+   "repo/runs.tsv": {
+    "path": "/global/home/users/kh36969/middle_insertion_callout/longread_inserton/experiments/fna_pool/scaleup_stage1_20261026/micrococcaceae/runs.tsv",
+    "sha256": "a67f2565cfc052838a9e91c743b0ec356cbdf7c8bbe07bc767155c0e53d0fa59"
+   },
+   "repo/assembly_run_links.tsv": {
+    "path": "/global/home/users/kh36969/middle_insertion_callout/longread_inserton/experiments/fna_pool/scaleup_stage1_20261026/micrococcaceae/assembly_run_links.tsv",
+    "sha256": "e6c3402b34ef42892d02d71770ed57f0598429fe454737159a622e40dc471655"
+   }
+  },
+  "nitrobacteraceae": {
+   "s4/candidate_loci_families.tsv": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/nitrobacteraceae/s4_s3_full/candidate_loci_families.tsv",
+    "sha256": "7909ceac237f03083d1a2a65682ac712d3f3851cc332c2d5b318a23bc1a99126"
+   },
+   "s4/seed_catalog.fa": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/nitrobacteraceae/s4_s3_full/seed_catalog.fa",
+    "sha256": "a6b6cbbde46427990c4e87f5b918be2b764b197cb040d177fd927f9a6831fc70"
+   },
+   "s4/seed_catalog.tsv": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/nitrobacteraceae/s4_s3_full/seed_catalog.tsv",
+    "sha256": "ee7400b6d89db59d65b24c79ebe306b1e12cbff40d27b71d7dad25a93d17f5f2"
+   },
+   "s4/list_annotation_pending.tsv": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/nitrobacteraceae/s4_s3_full/list_annotation_pending.tsv",
+    "sha256": "db44bc2db8c994cb5aa99ab2c46a2579f2e5d544de8586124bde7d21f7ad6e83"
+   },
+   "s4/protein_members.tsv": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/nitrobacteraceae/s4_s3_full/protein_members.tsv",
+    "sha256": "1b8d318f8e25b5cfe5803be4ed957078ca15138d4ab335f9c680245557ba1f66"
+   },
+   "s4/families_summary.json": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/nitrobacteraceae/s4_s3_full/families_summary.json",
+    "sha256": "4cad39d220cde5eb62225e90258d25bff0fcb04648fdddc7b1693b3f0e49e989"
+   },
+   "s4/s4_summary.json": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/nitrobacteraceae/s4_s3_full/s4_summary.json",
+    "sha256": "e833659eebbe03bc6eaaecce23c83f6a1f8e532f747bdd4031d051012b5115ac"
+   },
+   "s4/s4_loci.tsv.gz": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/nitrobacteraceae/s4_s3_full/s4_loci.tsv.gz",
+    "sha256": "b47650bbfd2b72b196ecf43633bb5eab56acd1d93052f7da430b4493b6a46d89"
+   },
+   "s3_full/pairs.tsv": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/nitrobacteraceae/s3_full/pairs.tsv",
+    "sha256": "a330c8ed846f81ed3fc0574e549e4e852b244ffb0da85d437a6a3f192095379c"
+   },
+   "s2/contig_index.tsv.gz": {
+    "path": "/global/scratch/users/kh36969/longread_callout/fna_pool/scaleup_stage1_20261026/nitrobacteraceae/s2/contig_index.tsv.gz",
+    "sha256": "3105dc9843afbdb22384eaeb2537a3acb9732079fa418860d38259aef0a7854e"
+   },
+   "repo/s2/catalog.tsv": {
+    "path": "/global/home/users/kh36969/middle_insertion_callout/longread_inserton/experiments/fna_pool/scaleup_stage1_20261026/nitrobacteraceae/s2/catalog.tsv",
+    "sha256": "c96553e41358a1b6925b13ab3ec4ce6eda4a45e9eb9255adaacbc8d5a1d8522a"
+   },
+   "repo/runs.tsv": {
+    "path": "/global/home/users/kh36969/middle_insertion_callout/longread_inserton/experiments/fna_pool/scaleup_stage1_20261026/nitrobacteraceae/runs.tsv",
+    "sha256": "679d4f1ba8cdcb53c551771e3bb822b9bfd9790c74acf4ec132c73e3219bbbb7"
+   },
+   "repo/assembly_run_links.tsv": {
+    "path": "/global/home/users/kh36969/middle_insertion_callout/longread_inserton/experiments/fna_pool/scaleup_stage1_20261026/nitrobacteraceae/assembly_run_links.tsv",
+    "sha256": "a85541b0314a82a486ea653dcb39b7df4a38395218551dc4415645b3e9c02488"
+   }
+  },
+  "baseline_pilot": {
+   "comamonadaceae_20261024/s5_readcheck_main/readcheck_loci.tsv": "b216a96ba2bca412e00f4cb0ca6793b318bded2dafd6bbc11567253733a00ba2",
+   "comamonadaceae_20261024/s5_readcheck_main/readcheck_tests.tsv": "e675a9c847963113d7faf83fb10f2fc0f57feab27ff5d745d7595817b2239dfa",
+   "comamonadaceae_20261024/s4_s3_full_v02/seed_catalog.tsv": "2ddcccffc8c28e517ecdd115579212a7b67d174faa52ed044d1763ea05ea222d",
+   "comamonadaceae_20261024/s2/catalog.tsv": "bb64fb481e8b304f1a325e0d52b24fb62a4d5d0bc8abbea683d24ccd010f66b5",
+   "comamonadaceae_20261024/s4_s3_full_v02/list_main.tsv": "d2bbfc58cdc2aff02663530b7208bd63015e0118bab21f57783a031c5822848e",
+   "comamonadaceae_20261024/s4_s3_full_v02/list_partner_mixed.tsv": "8a2e55a9a7b4da8fbb2ac5474dc08612fe767d207cd8acd69aeb090b8d8df048",
+   "comamonadaceae_20261024/s4_s3_full_v02/list_direction_mixed.tsv": "6e5acc36a8153adc53c49bbf617d96d3fcfd4059a8dab125ef3524d085236cc4",
+   "comamonadaceae_20261024/s4_s3_full_v02/list_short_other_segment.tsv": "2e130f73ea9c16c537aab0b7368b159ec0dbbd7d418f12583d5ef25daceb160d",
+   "comamonadaceae_20261024/s4_s3_full_v02/list_replacement.tsv": "a4bbb250227ccb230bfb0b79d49e357645fe4d86229099ddcf65c1f3794c428a"
+  }
+ }
+}

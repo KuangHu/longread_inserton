@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="320" font-family="sans-serif" font-size="11">
+<rect width="100%" height="100%" fill="white"/>
+<text x="40" y="18" font-size="13" fill="#222">orientation / swapped: VP_e90421fa9b5b|candidate_insertion IS1182 family transposase</text>
+<rect x="40.0" y="70" width="248.5" height="18" fill="#6b8fb8" opacity="0.55"/>
+<text x="42.0" y="66" fill="#222">U_A 1000 bp</text>
+<rect x="288.5" y="70" width="403.0" height="18" fill="#d9822b" opacity="0.55"/>
+<text x="290.5" y="66" fill="#222">X_A 1622 bp</text>
+<rect x="691.5" y="70" width="248.5" height="18" fill="#5aa36b" opacity="0.55"/>
+<text x="693.5" y="66" fill="#222">D_A 1000 bp</text>
+<text x="40" y="104" fill="#999">s|SAMN48135827|NZ_CP197092.1|1146 </text>
+<rect x="40.0" y="170" width="248.5" height="18" fill="#6b8fb8" opacity="0.55"/>
+<text x="42.0" y="166" fill="#222">U_B 1000 bp</text>
+<rect x="288.5" y="170" width="403.0" height="18" fill="#d9822b" opacity="0.55"/>
+<text x="290.5" y="166" fill="#222">X_B 1622 bp</text>
+<rect x="691.5" y="170" width="248.5" height="18" fill="#5aa36b" opacity="0.55"/>
+<text x="693.5" y="166" fill="#222">D_B 1000 bp</text>
+<text x="40" y="204" fill="#999">s|SAMN48135827|NZ_CP197093.1|241 </text>
+<rect x="40.0" y="96" width="248.5" height="6" fill="#c0392b"/>
+<rect x="691.5" y="196" width="248.5" height="6" fill="#c0392b"/>
+<rect x="691.5" y="96" width="248.5" height="6" fill="#c0392b"/>
+<rect x="40.0" y="196" width="248.5" height="6" fill="#c0392b"/>
+<text x="40" y="222" fill="#222">X/X′: identity 99.94%, coverage 1.0 / 1.0 (insertion_similar)</text>
+<text x="40" y="237" fill="#222">U/U: different (id 0.0%, cov 0.0 / 0.0)   D/D: different (id 0.0%, cov 0.0 / 0.0)</text>
+<text x="40" y="252" fill="#222">inverted same side: UU_inv different (cov 0.0 / 0.0), DD_inv different (cov 0.0 / 0.0)</text>
+<text x="40" y="267" fill="#222">cross side: UD different (cov 0.0 / 0.0), UD_inv similar (cov 1.0 / 1.0), DU different (cov 0.0 / 0.0), DU_inv similar (cov 1.0 / 1.0)</text>
+<text x="40" y="282" fill="#222">verdict: swapped_or_rearranged_context   [candidate_insertion]</text>
+<text x="40" y="314" fill="#999">blocks under a flank: reliable HSPs (≥80%, ≥30 bp); dark = same side, same strand; red = inverted or cross side</text>
+</svg>
