@@ -80,7 +80,11 @@ run_until_done() {  # run_until_done <label> <missing-fn> <sbatch args...> -- <s
     miss=$($fn) || die "$label: listing the missing units failed (not treated as complete)"
     [ -z "$miss" ] && { say "$label complete"; return 0; }
     [ $r -gt 0 ] && say "$label retry $r: $(echo $miss | wc -w) units"
-    if [ $r -gt 0 ] && [ -n "${RETRY_ARGS:-}" ]; then submit $label "$miss" $RETRY_ARGS "$@"   # e.g. more memory
+    if [ $r -gt 0 ] && [ -n "${RETRY_ARGS:-}" ]; then   # e.g. more memory: placed after the stage's own sbatch
+      local pre=() post=() seen=0 x                      # args (the later option wins), before the "--"
+      for x in "$@"; do if [ $seen = 0 ] && [ "$x" = "--" ]; then seen=1; fi
+        if [ $seen = 0 ]; then pre+=("$x"); else post+=("$x"); fi; done
+      submit $label "$miss" "${pre[@]}" $RETRY_ARGS "${post[@]}"
     else submit $label "$miss" "$@"; fi
   done
   miss=$($fn) || die "$label: listing the missing units failed"
